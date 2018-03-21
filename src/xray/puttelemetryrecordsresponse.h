@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTTELEMETRYRECORDSRESPONSE_H
 #define QTAWS_PUTTELEMETRYRECORDSRESPONSE_H
 
+#include "xrayresponse.h"
+#include "puttelemetryrecordsrequest.h"
+
+namespace AWS {
+
+namespace xray {
+
+class PutTelemetryRecordsResponsePrivate;
+
+class QTAWS_EXPORT PutTelemetryRecordsResponse : public PutTelemetryRecordsResponse {
+    Q_OBJECT
+
+public:
+    PutTelemetryRecordsResponse(const PutTelemetryRecordsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutTelemetryRecordsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutTelemetryRecordsResponse)
+    Q_DISABLE_COPY(PutTelemetryRecordsResponse)
+
+};
+
+} // namespace xray
+} // namespace AWS
+
 #endif

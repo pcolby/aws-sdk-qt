@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEORIGINENDPOINTRESPONSE_H
 #define QTAWS_CREATEORIGINENDPOINTRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "createoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class CreateOriginEndpointResponsePrivate;
+
+class QTAWS_EXPORT CreateOriginEndpointResponse : public CreateOriginEndpointResponse {
+    Q_OBJECT
+
+public:
+    CreateOriginEndpointResponse(const CreateOriginEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateOriginEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateOriginEndpointResponse)
+    Q_DISABLE_COPY(CreateOriginEndpointResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

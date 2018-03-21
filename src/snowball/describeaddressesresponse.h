@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEADDRESSESRESPONSE_H
 #define QTAWS_DESCRIBEADDRESSESRESPONSE_H
 
+#include "snowballresponse.h"
+#include "describeaddressesrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class DescribeAddressesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAddressesResponse : public DescribeAddressesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAddressesResponse(const DescribeAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAddressesResponse)
+    Q_DISABLE_COPY(DescribeAddressesResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

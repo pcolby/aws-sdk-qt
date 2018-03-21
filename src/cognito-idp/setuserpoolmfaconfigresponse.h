@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETUSERPOOLMFACONFIGRESPONSE_H
 #define QTAWS_SETUSERPOOLMFACONFIGRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "setuserpoolmfaconfigrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class SetUserPoolMfaConfigResponsePrivate;
+
+class QTAWS_EXPORT SetUserPoolMfaConfigResponse : public SetUserPoolMfaConfigResponse {
+    Q_OBJECT
+
+public:
+    SetUserPoolMfaConfigResponse(const SetUserPoolMfaConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetUserPoolMfaConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetUserPoolMfaConfigResponse)
+    Q_DISABLE_COPY(SetUserPoolMfaConfigResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

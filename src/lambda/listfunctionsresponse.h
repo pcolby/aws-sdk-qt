@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTFUNCTIONSRESPONSE_H
 #define QTAWS_LISTFUNCTIONSRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "listfunctionsrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class ListFunctionsResponsePrivate;
+
+class QTAWS_EXPORT ListFunctionsResponse : public ListFunctionsResponse {
+    Q_OBJECT
+
+public:
+    ListFunctionsResponse(const ListFunctionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListFunctionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListFunctionsResponse)
+    Q_DISABLE_COPY(ListFunctionsResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

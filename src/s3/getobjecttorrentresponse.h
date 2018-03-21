@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOBJECTTORRENTRESPONSE_H
 #define QTAWS_GETOBJECTTORRENTRESPONSE_H
 
+#include "s3response.h"
+#include "getobjecttorrentrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetObjectTorrentResponsePrivate;
+
+class QTAWS_EXPORT GetObjectTorrentResponse : public GetObjectTorrentResponse {
+    Q_OBJECT
+
+public:
+    GetObjectTorrentResponse(const GetObjectTorrentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetObjectTorrentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetObjectTorrentResponse)
+    Q_DISABLE_COPY(GetObjectTorrentResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

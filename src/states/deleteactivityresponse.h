@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEACTIVITYRESPONSE_H
 #define QTAWS_DELETEACTIVITYRESPONSE_H
 
+#include "statesresponse.h"
+#include "deleteactivityrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class DeleteActivityResponsePrivate;
+
+class QTAWS_EXPORT DeleteActivityResponse : public DeleteActivityResponse {
+    Q_OBJECT
+
+public:
+    DeleteActivityResponse(const DeleteActivityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteActivityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteActivityResponse)
+    Q_DISABLE_COPY(DeleteActivityResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECOREDEFINITIONRESPONSE_H
 #define QTAWS_CREATECOREDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "createcoredefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class CreateCoreDefinitionResponsePrivate;
+
+class QTAWS_EXPORT CreateCoreDefinitionResponse : public CreateCoreDefinitionResponse {
+    Q_OBJECT
+
+public:
+    CreateCoreDefinitionResponse(const CreateCoreDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCoreDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCoreDefinitionResponse)
+    Q_DISABLE_COPY(CreateCoreDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

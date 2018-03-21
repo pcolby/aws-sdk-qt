@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUCKETCORSRESPONSE_H
 #define QTAWS_DELETEBUCKETCORSRESPONSE_H
 
+#include "s3response.h"
+#include "deletebucketcorsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class DeleteBucketCorsResponsePrivate;
+
+class QTAWS_EXPORT DeleteBucketCorsResponse : public DeleteBucketCorsResponse {
+    Q_OBJECT
+
+public:
+    DeleteBucketCorsResponse(const DeleteBucketCorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBucketCorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketCorsResponse)
+    Q_DISABLE_COPY(DeleteBucketCorsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

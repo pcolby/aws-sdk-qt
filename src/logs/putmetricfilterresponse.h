@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTMETRICFILTERRESPONSE_H
 #define QTAWS_PUTMETRICFILTERRESPONSE_H
 
+#include "logsresponse.h"
+#include "putmetricfilterrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutMetricFilterResponsePrivate;
+
+class QTAWS_EXPORT PutMetricFilterResponse : public PutMetricFilterResponse {
+    Q_OBJECT
+
+public:
+    PutMetricFilterResponse(const PutMetricFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutMetricFilterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutMetricFilterResponse)
+    Q_DISABLE_COPY(PutMetricFilterResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

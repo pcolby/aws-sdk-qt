@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 
+#include "emailresponse.h"
+#include "deleteconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteConfigurationSetEventDestinationResponsePrivate;
+
+class QTAWS_EXPORT DeleteConfigurationSetEventDestinationResponse : public DeleteConfigurationSetEventDestinationResponse {
+    Q_OBJECT
+
+public:
+    DeleteConfigurationSetEventDestinationResponse(const DeleteConfigurationSetEventDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConfigurationSetEventDestinationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigurationSetEventDestinationResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetEventDestinationResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

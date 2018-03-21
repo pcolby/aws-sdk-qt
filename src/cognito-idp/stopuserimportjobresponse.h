@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPUSERIMPORTJOBRESPONSE_H
 #define QTAWS_STOPUSERIMPORTJOBRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "stopuserimportjobrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class StopUserImportJobResponsePrivate;
+
+class QTAWS_EXPORT StopUserImportJobResponse : public StopUserImportJobResponse {
+    Q_OBJECT
+
+public:
+    StopUserImportJobResponse(const StopUserImportJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopUserImportJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopUserImportJobResponse)
+    Q_DISABLE_COPY(StopUserImportJobResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

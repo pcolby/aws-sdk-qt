@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMAINTENANCEWINDOWRESPONSE_H
 #define QTAWS_DELETEMAINTENANCEWINDOWRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deletemaintenancewindowrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeleteMaintenanceWindowResponsePrivate;
+
+class QTAWS_EXPORT DeleteMaintenanceWindowResponse : public DeleteMaintenanceWindowResponse {
+    Q_OBJECT
+
+public:
+    DeleteMaintenanceWindowResponse(const DeleteMaintenanceWindowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMaintenanceWindowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMaintenanceWindowResponse)
+    Q_DISABLE_COPY(DeleteMaintenanceWindowResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESERVICEACCESSPOLICIESRESPONSE_H
 #define QTAWS_UPDATESERVICEACCESSPOLICIESRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "updateserviceaccesspoliciesrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class UpdateServiceAccessPoliciesResponsePrivate;
+
+class QTAWS_EXPORT UpdateServiceAccessPoliciesResponse : public UpdateServiceAccessPoliciesResponse {
+    Q_OBJECT
+
+public:
+    UpdateServiceAccessPoliciesResponse(const UpdateServiceAccessPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateServiceAccessPoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceAccessPoliciesResponse)
+    Q_DISABLE_COPY(UpdateServiceAccessPoliciesResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

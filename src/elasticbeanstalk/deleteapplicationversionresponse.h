@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAPPLICATIONVERSIONRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONVERSIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteapplicationversionrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DeleteApplicationVersionResponsePrivate;
+
+class QTAWS_EXPORT DeleteApplicationVersionResponse : public DeleteApplicationVersionResponse {
+    Q_OBJECT
+
+public:
+    DeleteApplicationVersionResponse(const DeleteApplicationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteApplicationVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationVersionResponse)
+    Q_DISABLE_COPY(DeleteApplicationVersionResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

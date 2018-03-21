@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKRESULTRESPONSE_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKRESULTRESPONSE_H
 
+#include "supportresponse.h"
+#include "describetrustedadvisorcheckresultrequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class DescribeTrustedAdvisorCheckResultResponsePrivate;
+
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckResultResponse : public DescribeTrustedAdvisorCheckResultResponse {
+    Q_OBJECT
+
+public:
+    DescribeTrustedAdvisorCheckResultResponse(const DescribeTrustedAdvisorCheckResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTrustedAdvisorCheckResultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTrustedAdvisorCheckResultResponse)
+    Q_DISABLE_COPY(DescribeTrustedAdvisorCheckResultResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

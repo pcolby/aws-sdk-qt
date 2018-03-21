@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSRESPONSE_H
 #define QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSRESPONSE_H
 
+#include "cloud9response.h"
+#include "describeenvironmentmembershipsrequest.h"
+
+namespace AWS {
+
+namespace cloud9 {
+
+class DescribeEnvironmentMembershipsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentMembershipsResponse : public DescribeEnvironmentMembershipsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEnvironmentMembershipsResponse(const DescribeEnvironmentMembershipsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEnvironmentMembershipsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentMembershipsResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentMembershipsResponse)
+
+};
+
+} // namespace cloud9
+} // namespace AWS
+
 #endif

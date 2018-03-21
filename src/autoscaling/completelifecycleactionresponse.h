@@ -20,4 +20,33 @@
 #ifndef QTAWS_COMPLETELIFECYCLEACTIONRESPONSE_H
 #define QTAWS_COMPLETELIFECYCLEACTIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "completelifecycleactionrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class CompleteLifecycleActionResponsePrivate;
+
+class QTAWS_EXPORT CompleteLifecycleActionResponse : public CompleteLifecycleActionResponse {
+    Q_OBJECT
+
+public:
+    CompleteLifecycleActionResponse(const CompleteLifecycleActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CompleteLifecycleActionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CompleteLifecycleActionResponse)
+    Q_DISABLE_COPY(CompleteLifecycleActionResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

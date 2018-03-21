@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEBOTVERSIONRESPONSE_H
 #define QTAWS_CREATEBOTVERSIONRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "createbotversionrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class CreateBotVersionResponsePrivate;
+
+class QTAWS_EXPORT CreateBotVersionResponse : public CreateBotVersionResponse {
+    Q_OBJECT
+
+public:
+    CreateBotVersionResponse(const CreateBotVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateBotVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateBotVersionResponse)
+    Q_DISABLE_COPY(CreateBotVersionResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

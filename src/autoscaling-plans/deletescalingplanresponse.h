@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESCALINGPLANRESPONSE_H
 #define QTAWS_DELETESCALINGPLANRESPONSE_H
 
+#include "autoscaling-plansresponse.h"
+#include "deletescalingplanrequest.h"
+
+namespace AWS {
+
+namespace autoscaling-plans {
+
+class DeleteScalingPlanResponsePrivate;
+
+class QTAWS_EXPORT DeleteScalingPlanResponse : public DeleteScalingPlanResponse {
+    Q_OBJECT
+
+public:
+    DeleteScalingPlanResponse(const DeleteScalingPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteScalingPlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteScalingPlanResponse)
+    Q_DISABLE_COPY(DeleteScalingPlanResponse)
+
+};
+
+} // namespace autoscaling-plans
+} // namespace AWS
+
 #endif

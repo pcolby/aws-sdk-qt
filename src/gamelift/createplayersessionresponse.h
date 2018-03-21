@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPLAYERSESSIONRESPONSE_H
 #define QTAWS_CREATEPLAYERSESSIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "createplayersessionrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class CreatePlayerSessionResponsePrivate;
+
+class QTAWS_EXPORT CreatePlayerSessionResponse : public CreatePlayerSessionResponse {
+    Q_OBJECT
+
+public:
+    CreatePlayerSessionResponse(const CreatePlayerSessionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePlayerSessionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlayerSessionResponse)
+    Q_DISABLE_COPY(CreatePlayerSessionResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

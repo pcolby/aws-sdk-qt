@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORVAULTRESPONSE_H
 #define QTAWS_LISTTAGSFORVAULTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "listtagsforvaultrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class ListTagsForVaultResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForVaultResponse : public ListTagsForVaultResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForVaultResponse(const ListTagsForVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForVaultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForVaultResponse)
+    Q_DISABLE_COPY(ListTagsForVaultResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

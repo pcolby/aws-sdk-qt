@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROJECTRESPONSE_H
 #define QTAWS_DELETEPROJECTRESPONSE_H
 
+#include "codestarresponse.h"
+#include "deleteprojectrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class DeleteProjectResponsePrivate;
+
+class QTAWS_EXPORT DeleteProjectResponse : public DeleteProjectResponse {
+    Q_OBJECT
+
+public:
+    DeleteProjectResponse(const DeleteProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProjectResponse)
+    Q_DISABLE_COPY(DeleteProjectResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

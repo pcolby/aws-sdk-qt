@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESQLINJECTIONMATCHSETRESPONSE_H
 #define QTAWS_UPDATESQLINJECTIONMATCHSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "updatesqlinjectionmatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class UpdateSqlInjectionMatchSetResponsePrivate;
+
+class QTAWS_EXPORT UpdateSqlInjectionMatchSetResponse : public UpdateSqlInjectionMatchSetResponse {
+    Q_OBJECT
+
+public:
+    UpdateSqlInjectionMatchSetResponse(const UpdateSqlInjectionMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSqlInjectionMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSqlInjectionMatchSetResponse)
+    Q_DISABLE_COPY(UpdateSqlInjectionMatchSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

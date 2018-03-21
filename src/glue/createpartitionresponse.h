@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPARTITIONRESPONSE_H
 #define QTAWS_CREATEPARTITIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "createpartitionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class CreatePartitionResponsePrivate;
+
+class QTAWS_EXPORT CreatePartitionResponse : public CreatePartitionResponse {
+    Q_OBJECT
+
+public:
+    CreatePartitionResponse(const CreatePartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePartitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePartitionResponse)
+    Q_DISABLE_COPY(CreatePartitionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

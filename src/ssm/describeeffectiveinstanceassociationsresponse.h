@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSRESPONSE_H
 #define QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeeffectiveinstanceassociationsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeEffectiveInstanceAssociationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsResponse : public DescribeEffectiveInstanceAssociationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEffectiveInstanceAssociationsResponse(const DescribeEffectiveInstanceAssociationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEffectiveInstanceAssociationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEffectiveInstanceAssociationsResponse)
+    Q_DISABLE_COPY(DescribeEffectiveInstanceAssociationsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

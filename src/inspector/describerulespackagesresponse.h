@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERULESPACKAGESRESPONSE_H
 #define QTAWS_DESCRIBERULESPACKAGESRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "describerulespackagesrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class DescribeRulesPackagesResponsePrivate;
+
+class QTAWS_EXPORT DescribeRulesPackagesResponse : public DescribeRulesPackagesResponse {
+    Q_OBJECT
+
+public:
+    DescribeRulesPackagesResponse(const DescribeRulesPackagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRulesPackagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRulesPackagesResponse)
+    Q_DISABLE_COPY(DescribeRulesPackagesResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

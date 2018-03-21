@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETLOADBALANCERSRESPONSE_H
 #define QTAWS_GETLOADBALANCERSRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetLoadBalancersResponsePrivate;
+
+class QTAWS_EXPORT GetLoadBalancersResponse : public GetLoadBalancersResponse {
+    Q_OBJECT
+
+public:
+    GetLoadBalancersResponse(const GetLoadBalancersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetLoadBalancersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetLoadBalancersResponse)
+    Q_DISABLE_COPY(GetLoadBalancersResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

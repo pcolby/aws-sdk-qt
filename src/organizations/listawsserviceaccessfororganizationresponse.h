@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_H
 #define QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "listawsserviceaccessfororganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class ListAWSServiceAccessForOrganizationResponsePrivate;
+
+class QTAWS_EXPORT ListAWSServiceAccessForOrganizationResponse : public ListAWSServiceAccessForOrganizationResponse {
+    Q_OBJECT
+
+public:
+    ListAWSServiceAccessForOrganizationResponse(const ListAWSServiceAccessForOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAWSServiceAccessForOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAWSServiceAccessForOrganizationResponse)
+    Q_DISABLE_COPY(ListAWSServiceAccessForOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

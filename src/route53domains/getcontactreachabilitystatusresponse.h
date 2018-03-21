@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONTACTREACHABILITYSTATUSRESPONSE_H
 #define QTAWS_GETCONTACTREACHABILITYSTATUSRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "getcontactreachabilitystatusrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class GetContactReachabilityStatusResponsePrivate;
+
+class QTAWS_EXPORT GetContactReachabilityStatusResponse : public GetContactReachabilityStatusResponse {
+    Q_OBJECT
+
+public:
+    GetContactReachabilityStatusResponse(const GetContactReachabilityStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetContactReachabilityStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetContactReachabilityStatusResponse)
+    Q_DISABLE_COPY(GetContactReachabilityStatusResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

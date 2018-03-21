@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERESOLVERRESPONSE_H
 #define QTAWS_CREATERESOLVERRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "createresolverrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class CreateResolverResponsePrivate;
+
+class QTAWS_EXPORT CreateResolverResponse : public CreateResolverResponse {
+    Q_OBJECT
+
+public:
+    CreateResolverResponse(const CreateResolverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateResolverRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateResolverResponse)
+    Q_DISABLE_COPY(CreateResolverResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

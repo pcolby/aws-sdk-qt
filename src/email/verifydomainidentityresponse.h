@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYDOMAINIDENTITYRESPONSE_H
 #define QTAWS_VERIFYDOMAINIDENTITYRESPONSE_H
 
+#include "emailresponse.h"
+#include "verifydomainidentityrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class VerifyDomainIdentityResponsePrivate;
+
+class QTAWS_EXPORT VerifyDomainIdentityResponse : public VerifyDomainIdentityResponse {
+    Q_OBJECT
+
+public:
+    VerifyDomainIdentityResponse(const VerifyDomainIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifyDomainIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifyDomainIdentityResponse)
+    Q_DISABLE_COPY(VerifyDomainIdentityResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

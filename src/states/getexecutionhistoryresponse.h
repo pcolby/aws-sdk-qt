@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETEXECUTIONHISTORYRESPONSE_H
 #define QTAWS_GETEXECUTIONHISTORYRESPONSE_H
 
+#include "statesresponse.h"
+#include "getexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class GetExecutionHistoryResponsePrivate;
+
+class QTAWS_EXPORT GetExecutionHistoryResponse : public GetExecutionHistoryResponse {
+    Q_OBJECT
+
+public:
+    GetExecutionHistoryResponse(const GetExecutionHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetExecutionHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetExecutionHistoryResponse)
+    Q_DISABLE_COPY(GetExecutionHistoryResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

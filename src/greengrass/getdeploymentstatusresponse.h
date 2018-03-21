@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDEPLOYMENTSTATUSRESPONSE_H
 #define QTAWS_GETDEPLOYMENTSTATUSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getdeploymentstatusrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetDeploymentStatusResponsePrivate;
+
+class QTAWS_EXPORT GetDeploymentStatusResponse : public GetDeploymentStatusResponse {
+    Q_OBJECT
+
+public:
+    GetDeploymentStatusResponse(const GetDeploymentStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDeploymentStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDeploymentStatusResponse)
+    Q_DISABLE_COPY(GetDeploymentStatusResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

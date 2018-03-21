@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECHANNELRESPONSE_H
 #define QTAWS_DESCRIBECHANNELRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "describechannelrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class DescribeChannelResponsePrivate;
+
+class QTAWS_EXPORT DescribeChannelResponse : public DescribeChannelResponse {
+    Q_OBJECT
+
+public:
+    DescribeChannelResponse(const DescribeChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeChannelResponse)
+    Q_DISABLE_COPY(DescribeChannelResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURCHASEPROVISIONEDCAPACITYRESPONSE_H
 #define QTAWS_PURCHASEPROVISIONEDCAPACITYRESPONSE_H
 
+#include "glacierresponse.h"
+#include "purchaseprovisionedcapacityrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class PurchaseProvisionedCapacityResponsePrivate;
+
+class QTAWS_EXPORT PurchaseProvisionedCapacityResponse : public PurchaseProvisionedCapacityResponse {
+    Q_OBJECT
+
+public:
+    PurchaseProvisionedCapacityResponse(const PurchaseProvisionedCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurchaseProvisionedCapacityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseProvisionedCapacityResponse)
+    Q_DISABLE_COPY(PurchaseProvisionedCapacityResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

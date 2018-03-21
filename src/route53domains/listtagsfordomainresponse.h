@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORDOMAINRESPONSE_H
 #define QTAWS_LISTTAGSFORDOMAINRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "listtagsfordomainrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class ListTagsForDomainResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForDomainResponse : public ListTagsForDomainResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForDomainResponse(const ListTagsForDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForDomainResponse)
+    Q_DISABLE_COPY(ListTagsForDomainResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

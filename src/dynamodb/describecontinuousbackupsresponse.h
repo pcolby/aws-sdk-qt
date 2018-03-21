@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONTINUOUSBACKUPSRESPONSE_H
 #define QTAWS_DESCRIBECONTINUOUSBACKUPSRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "describecontinuousbackupsrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DescribeContinuousBackupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeContinuousBackupsResponse : public DescribeContinuousBackupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeContinuousBackupsResponse(const DescribeContinuousBackupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeContinuousBackupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeContinuousBackupsResponse)
+    Q_DISABLE_COPY(DescribeContinuousBackupsResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

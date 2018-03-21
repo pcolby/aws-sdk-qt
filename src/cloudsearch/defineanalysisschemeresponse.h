@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEFINEANALYSISSCHEMERESPONSE_H
 #define QTAWS_DEFINEANALYSISSCHEMERESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "defineanalysisschemerequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DefineAnalysisSchemeResponsePrivate;
+
+class QTAWS_EXPORT DefineAnalysisSchemeResponse : public DefineAnalysisSchemeResponse {
+    Q_OBJECT
+
+public:
+    DefineAnalysisSchemeResponse(const DefineAnalysisSchemeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DefineAnalysisSchemeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DefineAnalysisSchemeResponse)
+    Q_DISABLE_COPY(DefineAnalysisSchemeResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

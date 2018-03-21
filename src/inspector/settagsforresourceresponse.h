@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETTAGSFORRESOURCERESPONSE_H
 #define QTAWS_SETTAGSFORRESOURCERESPONSE_H
 
+#include "inspectorresponse.h"
+#include "settagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class SetTagsForResourceResponsePrivate;
+
+class QTAWS_EXPORT SetTagsForResourceResponse : public SetTagsForResourceResponse {
+    Q_OBJECT
+
+public:
+    SetTagsForResourceResponse(const SetTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetTagsForResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetTagsForResourceResponse)
+    Q_DISABLE_COPY(SetTagsForResourceResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

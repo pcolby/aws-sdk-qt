@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTASSESSMENTTARGETSRESPONSE_H
 #define QTAWS_LISTASSESSMENTTARGETSRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "listassessmenttargetsrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class ListAssessmentTargetsResponsePrivate;
+
+class QTAWS_EXPORT ListAssessmentTargetsResponse : public ListAssessmentTargetsResponse {
+    Q_OBJECT
+
+public:
+    ListAssessmentTargetsResponse(const ListAssessmentTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAssessmentTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAssessmentTargetsResponse)
+    Q_DISABLE_COPY(ListAssessmentTargetsResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

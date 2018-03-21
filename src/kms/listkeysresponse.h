@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTKEYSRESPONSE_H
 #define QTAWS_LISTKEYSRESPONSE_H
 
+#include "kmsresponse.h"
+#include "listkeysrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ListKeysResponsePrivate;
+
+class QTAWS_EXPORT ListKeysResponse : public ListKeysResponse {
+    Q_OBJECT
+
+public:
+    ListKeysResponse(const ListKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListKeysResponse)
+    Q_DISABLE_COPY(ListKeysResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

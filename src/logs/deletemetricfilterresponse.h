@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMETRICFILTERRESPONSE_H
 #define QTAWS_DELETEMETRICFILTERRESPONSE_H
 
+#include "logsresponse.h"
+#include "deletemetricfilterrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteMetricFilterResponsePrivate;
+
+class QTAWS_EXPORT DeleteMetricFilterResponse : public DeleteMetricFilterResponse {
+    Q_OBJECT
+
+public:
+    DeleteMetricFilterResponse(const DeleteMetricFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMetricFilterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMetricFilterResponse)
+    Q_DISABLE_COPY(DeleteMetricFilterResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

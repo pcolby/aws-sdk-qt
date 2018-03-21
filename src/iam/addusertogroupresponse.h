@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDUSERTOGROUPRESPONSE_H
 #define QTAWS_ADDUSERTOGROUPRESPONSE_H
 
+#include "iamresponse.h"
+#include "addusertogrouprequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class AddUserToGroupResponsePrivate;
+
+class QTAWS_EXPORT AddUserToGroupResponse : public AddUserToGroupResponse {
+    Q_OBJECT
+
+public:
+    AddUserToGroupResponse(const AddUserToGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddUserToGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddUserToGroupResponse)
+    Q_DISABLE_COPY(AddUserToGroupResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCERESPONSE_H
 #define QTAWS_UPDATETAGSFORRESOURCERESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updatetagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class UpdateTagsForResourceResponsePrivate;
+
+class QTAWS_EXPORT UpdateTagsForResourceResponse : public UpdateTagsForResourceResponse {
+    Q_OBJECT
+
+public:
+    UpdateTagsForResourceResponse(const UpdateTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTagsForResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagsForResourceResponse)
+    Q_DISABLE_COPY(UpdateTagsForResourceResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

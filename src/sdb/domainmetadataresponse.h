@@ -20,4 +20,33 @@
 #ifndef QTAWS_DOMAINMETADATARESPONSE_H
 #define QTAWS_DOMAINMETADATARESPONSE_H
 
+#include "sdbresponse.h"
+#include "domainmetadatarequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class DomainMetadataResponsePrivate;
+
+class QTAWS_EXPORT DomainMetadataResponse : public DomainMetadataResponse {
+    Q_OBJECT
+
+public:
+    DomainMetadataResponse(const DomainMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DomainMetadataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DomainMetadataResponse)
+    Q_DISABLE_COPY(DomainMetadataResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

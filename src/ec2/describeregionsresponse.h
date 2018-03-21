@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREGIONSRESPONSE_H
 #define QTAWS_DESCRIBEREGIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeregionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeRegionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeRegionsResponse : public DescribeRegionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeRegionsResponse(const DescribeRegionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRegionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRegionsResponse)
+    Q_DISABLE_COPY(DescribeRegionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEVIRTUALMFADEVICERESPONSE_H
 #define QTAWS_CREATEVIRTUALMFADEVICERESPONSE_H
 
+#include "iamresponse.h"
+#include "createvirtualmfadevicerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreateVirtualMFADeviceResponsePrivate;
+
+class QTAWS_EXPORT CreateVirtualMFADeviceResponse : public CreateVirtualMFADeviceResponse {
+    Q_OBJECT
+
+public:
+    CreateVirtualMFADeviceResponse(const CreateVirtualMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateVirtualMFADeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateVirtualMFADeviceResponse)
+    Q_DISABLE_COPY(CreateVirtualMFADeviceResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

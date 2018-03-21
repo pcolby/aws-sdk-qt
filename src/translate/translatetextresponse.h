@@ -20,4 +20,33 @@
 #ifndef QTAWS_TRANSLATETEXTRESPONSE_H
 #define QTAWS_TRANSLATETEXTRESPONSE_H
 
+#include "translateresponse.h"
+#include "translatetextrequest.h"
+
+namespace AWS {
+
+namespace translate {
+
+class TranslateTextResponsePrivate;
+
+class QTAWS_EXPORT TranslateTextResponse : public TranslateTextResponse {
+    Q_OBJECT
+
+public:
+    TranslateTextResponse(const TranslateTextRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TranslateTextRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TranslateTextResponse)
+    Q_DISABLE_COPY(TranslateTextResponse)
+
+};
+
+} // namespace translate
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESTREAMPROCESSORRESPONSE_H
 #define QTAWS_CREATESTREAMPROCESSORRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "createstreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class CreateStreamProcessorResponsePrivate;
+
+class QTAWS_EXPORT CreateStreamProcessorResponse : public CreateStreamProcessorResponse {
+    Q_OBJECT
+
+public:
+    CreateStreamProcessorResponse(const CreateStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateStreamProcessorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamProcessorResponse)
+    Q_DISABLE_COPY(CreateStreamProcessorResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEAPIKEYRESPONSE_H
 #define QTAWS_CREATEAPIKEYRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "createapikeyrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class CreateApiKeyResponsePrivate;
+
+class QTAWS_EXPORT CreateApiKeyResponse : public CreateApiKeyResponse {
+    Q_OBJECT
+
+public:
+    CreateApiKeyResponse(const CreateApiKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateApiKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateApiKeyResponse)
+    Q_DISABLE_COPY(CreateApiKeyResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

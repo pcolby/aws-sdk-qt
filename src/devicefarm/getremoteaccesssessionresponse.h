@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREMOTEACCESSSESSIONRESPONSE_H
 #define QTAWS_GETREMOTEACCESSSESSIONRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetRemoteAccessSessionResponsePrivate;
+
+class QTAWS_EXPORT GetRemoteAccessSessionResponse : public GetRemoteAccessSessionResponse {
+    Q_OBJECT
+
+public:
+    GetRemoteAccessSessionResponse(const GetRemoteAccessSessionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRemoteAccessSessionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRemoteAccessSessionResponse)
+    Q_DISABLE_COPY(GetRemoteAccessSessionResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

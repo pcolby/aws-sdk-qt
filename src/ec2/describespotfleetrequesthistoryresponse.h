@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESPOTFLEETREQUESTHISTORYRESPONSE_H
 #define QTAWS_DESCRIBESPOTFLEETREQUESTHISTORYRESPONSE_H
 
+#include "ec2response.h"
+#include "describespotfleetrequesthistoryrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeSpotFleetRequestHistoryResponsePrivate;
+
+class QTAWS_EXPORT DescribeSpotFleetRequestHistoryResponse : public DescribeSpotFleetRequestHistoryResponse {
+    Q_OBJECT
+
+public:
+    DescribeSpotFleetRequestHistoryResponse(const DescribeSpotFleetRequestHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSpotFleetRequestHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotFleetRequestHistoryResponse)
+    Q_DISABLE_COPY(DescribeSpotFleetRequestHistoryResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

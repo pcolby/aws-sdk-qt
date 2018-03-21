@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTRENDERTEMPLATERESPONSE_H
 #define QTAWS_TESTRENDERTEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "testrendertemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class TestRenderTemplateResponsePrivate;
+
+class QTAWS_EXPORT TestRenderTemplateResponse : public TestRenderTemplateResponse {
+    Q_OBJECT
+
+public:
+    TestRenderTemplateResponse(const TestRenderTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestRenderTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestRenderTemplateResponse)
+    Q_DISABLE_COPY(TestRenderTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

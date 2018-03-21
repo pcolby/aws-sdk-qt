@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELOGGROUPRESPONSE_H
 #define QTAWS_DELETELOGGROUPRESPONSE_H
 
+#include "logsresponse.h"
+#include "deleteloggrouprequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteLogGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteLogGroupResponse : public DeleteLogGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteLogGroupResponse(const DeleteLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLogGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLogGroupResponse)
+    Q_DISABLE_COPY(DeleteLogGroupResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

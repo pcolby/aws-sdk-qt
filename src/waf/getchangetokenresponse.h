@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCHANGETOKENRESPONSE_H
 #define QTAWS_GETCHANGETOKENRESPONSE_H
 
+#include "wafresponse.h"
+#include "getchangetokenrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class GetChangeTokenResponsePrivate;
+
+class QTAWS_EXPORT GetChangeTokenResponse : public GetChangeTokenResponse {
+    Q_OBJECT
+
+public:
+    GetChangeTokenResponse(const GetChangeTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetChangeTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetChangeTokenResponse)
+    Q_DISABLE_COPY(GetChangeTokenResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTRESPONSE_H
 #define QTAWS_GETACCOUNTRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getaccountrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetAccountResponsePrivate;
+
+class QTAWS_EXPORT GetAccountResponse : public GetAccountResponse {
+    Q_OBJECT
+
+public:
+    GetAccountResponse(const GetAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountResponse)
+    Q_DISABLE_COPY(GetAccountResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

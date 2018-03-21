@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_H
 #define QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_H
 
+#include "ceresponse.h"
+#include "getreservationutilizationrequest.h"
+
+namespace AWS {
+
+namespace ce {
+
+class GetReservationUtilizationResponsePrivate;
+
+class QTAWS_EXPORT GetReservationUtilizationResponse : public GetReservationUtilizationResponse {
+    Q_OBJECT
+
+public:
+    GetReservationUtilizationResponse(const GetReservationUtilizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReservationUtilizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReservationUtilizationResponse)
+    Q_DISABLE_COPY(GetReservationUtilizationResponse)
+
+};
+
+} // namespace ce
+} // namespace AWS
+
 #endif

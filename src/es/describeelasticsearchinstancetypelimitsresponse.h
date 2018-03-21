@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_H
 #define QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_H
 
+#include "esresponse.h"
+#include "describeelasticsearchinstancetypelimitsrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class DescribeElasticsearchInstanceTypeLimitsResponsePrivate;
+
+class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsResponse : public DescribeElasticsearchInstanceTypeLimitsResponse {
+    Q_OBJECT
+
+public:
+    DescribeElasticsearchInstanceTypeLimitsResponse(const DescribeElasticsearchInstanceTypeLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeElasticsearchInstanceTypeLimitsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticsearchInstanceTypeLimitsResponse)
+    Q_DISABLE_COPY(DescribeElasticsearchInstanceTypeLimitsResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

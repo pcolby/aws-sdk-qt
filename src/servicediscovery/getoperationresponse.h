@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOPERATIONRESPONSE_H
 #define QTAWS_GETOPERATIONRESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "getoperationrequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class GetOperationResponsePrivate;
+
+class QTAWS_EXPORT GetOperationResponse : public GetOperationResponse {
+    Q_OBJECT
+
+public:
+    GetOperationResponse(const GetOperationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetOperationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationResponse)
+    Q_DISABLE_COPY(GetOperationResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

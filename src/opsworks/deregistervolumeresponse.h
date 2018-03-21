@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERVOLUMERESPONSE_H
 #define QTAWS_DEREGISTERVOLUMERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "deregistervolumerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DeregisterVolumeResponsePrivate;
+
+class QTAWS_EXPORT DeregisterVolumeResponse : public DeregisterVolumeResponse {
+    Q_OBJECT
+
+public:
+    DeregisterVolumeResponse(const DeregisterVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterVolumeResponse)
+    Q_DISABLE_COPY(DeregisterVolumeResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

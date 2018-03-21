@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSMSCHANNELRESPONSE_H
 #define QTAWS_GETSMSCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getsmschannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetSmsChannelResponsePrivate;
+
+class QTAWS_EXPORT GetSmsChannelResponse : public GetSmsChannelResponse {
+    Q_OBJECT
+
+public:
+    GetSmsChannelResponse(const GetSmsChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSmsChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSmsChannelResponse)
+    Q_DISABLE_COPY(GetSmsChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPARAMETERSRESPONSE_H
 #define QTAWS_GETPARAMETERSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "getparametersrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetParametersResponsePrivate;
+
+class QTAWS_EXPORT GetParametersResponse : public GetParametersResponse {
+    Q_OBJECT
+
+public:
+    GetParametersResponse(const GetParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetParametersResponse)
+    Q_DISABLE_COPY(GetParametersResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

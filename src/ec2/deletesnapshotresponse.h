@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESNAPSHOTRESPONSE_H
 #define QTAWS_DELETESNAPSHOTRESPONSE_H
 
+#include "ec2response.h"
+#include "deletesnapshotrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteSnapshotResponsePrivate;
+
+class QTAWS_EXPORT DeleteSnapshotResponse : public DeleteSnapshotResponse {
+    Q_OBJECT
+
+public:
+    DeleteSnapshotResponse(const DeleteSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotResponse)
+    Q_DISABLE_COPY(DeleteSnapshotResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

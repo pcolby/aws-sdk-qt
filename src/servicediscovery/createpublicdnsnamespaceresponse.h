@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPUBLICDNSNAMESPACERESPONSE_H
 #define QTAWS_CREATEPUBLICDNSNAMESPACERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "createpublicdnsnamespacerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class CreatePublicDnsNamespaceResponsePrivate;
+
+class QTAWS_EXPORT CreatePublicDnsNamespaceResponse : public CreatePublicDnsNamespaceResponse {
+    Q_OBJECT
+
+public:
+    CreatePublicDnsNamespaceResponse(const CreatePublicDnsNamespaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePublicDnsNamespaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePublicDnsNamespaceResponse)
+    Q_DISABLE_COPY(CreatePublicDnsNamespaceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSRESPONSE_H
 #define QTAWS_DISASSOCIATEMEMBERSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "disassociatemembersrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DisassociateMembersResponsePrivate;
+
+class QTAWS_EXPORT DisassociateMembersResponse : public DisassociateMembersResponse {
+    Q_OBJECT
+
+public:
+    DisassociateMembersResponse(const DisassociateMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateMembersResponse)
+    Q_DISABLE_COPY(DisassociateMembersResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

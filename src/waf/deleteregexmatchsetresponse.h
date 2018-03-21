@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREGEXMATCHSETRESPONSE_H
 #define QTAWS_DELETEREGEXMATCHSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "deleteregexmatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class DeleteRegexMatchSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteRegexMatchSetResponse : public DeleteRegexMatchSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteRegexMatchSetResponse(const DeleteRegexMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRegexMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRegexMatchSetResponse)
+    Q_DISABLE_COPY(DeleteRegexMatchSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

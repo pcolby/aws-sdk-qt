@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHFROMINDEXRESPONSE_H
 #define QTAWS_DETACHFROMINDEXRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "detachfromindexrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DetachFromIndexResponsePrivate;
+
+class QTAWS_EXPORT DetachFromIndexResponse : public DetachFromIndexResponse {
+    Q_OBJECT
+
+public:
+    DetachFromIndexResponse(const DetachFromIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachFromIndexRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachFromIndexResponse)
+    Q_DISABLE_COPY(DetachFromIndexResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

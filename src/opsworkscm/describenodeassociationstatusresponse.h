@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENODEASSOCIATIONSTATUSRESPONSE_H
 #define QTAWS_DESCRIBENODEASSOCIATIONSTATUSRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "describenodeassociationstatusrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class DescribeNodeAssociationStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeNodeAssociationStatusResponse : public DescribeNodeAssociationStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeNodeAssociationStatusResponse(const DescribeNodeAssociationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNodeAssociationStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNodeAssociationStatusResponse)
+    Q_DISABLE_COPY(DescribeNodeAssociationStatusResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

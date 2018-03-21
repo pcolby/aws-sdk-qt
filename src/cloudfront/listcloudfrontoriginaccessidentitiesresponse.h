@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESRESPONSE_H
 #define QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "listcloudfrontoriginaccessidentitiesrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class ListCloudFrontOriginAccessIdentitiesResponsePrivate;
+
+class QTAWS_EXPORT ListCloudFrontOriginAccessIdentitiesResponse : public ListCloudFrontOriginAccessIdentitiesResponse {
+    Q_OBJECT
+
+public:
+    ListCloudFrontOriginAccessIdentitiesResponse(const ListCloudFrontOriginAccessIdentitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCloudFrontOriginAccessIdentitiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCloudFrontOriginAccessIdentitiesResponse)
+    Q_DISABLE_COPY(ListCloudFrontOriginAccessIdentitiesResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

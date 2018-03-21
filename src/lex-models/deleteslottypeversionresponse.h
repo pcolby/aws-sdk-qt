@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESLOTTYPEVERSIONRESPONSE_H
 #define QTAWS_DELETESLOTTYPEVERSIONRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "deleteslottypeversionrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class DeleteSlotTypeVersionResponsePrivate;
+
+class QTAWS_EXPORT DeleteSlotTypeVersionResponse : public DeleteSlotTypeVersionResponse {
+    Q_OBJECT
+
+public:
+    DeleteSlotTypeVersionResponse(const DeleteSlotTypeVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSlotTypeVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSlotTypeVersionResponse)
+    Q_DISABLE_COPY(DeleteSlotTypeVersionResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

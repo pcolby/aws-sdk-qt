@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRECORDSRESPONSE_H
 #define QTAWS_GETRECORDSRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "getrecordsrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class GetRecordsResponsePrivate;
+
+class QTAWS_EXPORT GetRecordsResponse : public GetRecordsResponse {
+    Q_OBJECT
+
+public:
+    GetRecordsResponse(const GetRecordsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRecordsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRecordsResponse)
+    Q_DISABLE_COPY(GetRecordsResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

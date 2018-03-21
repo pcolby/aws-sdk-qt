@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_H
 
+#include "iot-jobs-dataresponse.h"
+#include "getpendingjobexecutionsrequest.h"
+
+namespace AWS {
+
+namespace iot-jobs-data {
+
+class GetPendingJobExecutionsResponsePrivate;
+
+class QTAWS_EXPORT GetPendingJobExecutionsResponse : public GetPendingJobExecutionsResponse {
+    Q_OBJECT
+
+public:
+    GetPendingJobExecutionsResponse(const GetPendingJobExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPendingJobExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPendingJobExecutionsResponse)
+    Q_DISABLE_COPY(GetPendingJobExecutionsResponse)
+
+};
+
+} // namespace iot-jobs-data
+} // namespace AWS
+
 #endif

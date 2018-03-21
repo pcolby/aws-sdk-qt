@@ -20,4 +20,33 @@
 #ifndef QTAWS_ALLOCATECONNECTIONONINTERCONNECTRESPONSE_H
 #define QTAWS_ALLOCATECONNECTIONONINTERCONNECTRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "allocateconnectiononinterconnectrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class AllocateConnectionOnInterconnectResponsePrivate;
+
+class QTAWS_EXPORT AllocateConnectionOnInterconnectResponse : public AllocateConnectionOnInterconnectResponse {
+    Q_OBJECT
+
+public:
+    AllocateConnectionOnInterconnectResponse(const AllocateConnectionOnInterconnectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AllocateConnectionOnInterconnectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AllocateConnectionOnInterconnectResponse)
+    Q_DISABLE_COPY(AllocateConnectionOnInterconnectResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

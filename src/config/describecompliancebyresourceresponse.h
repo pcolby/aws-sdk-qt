@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_H
 #define QTAWS_DESCRIBECOMPLIANCEBYRESOURCERESPONSE_H
 
+#include "configresponse.h"
+#include "describecompliancebyresourcerequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DescribeComplianceByResourceResponsePrivate;
+
+class QTAWS_EXPORT DescribeComplianceByResourceResponse : public DescribeComplianceByResourceResponse {
+    Q_OBJECT
+
+public:
+    DescribeComplianceByResourceResponse(const DescribeComplianceByResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeComplianceByResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeComplianceByResourceResponse)
+    Q_DISABLE_COPY(DescribeComplianceByResourceResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

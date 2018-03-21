@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTLIFECYCLEHOOKRESPONSE_H
 #define QTAWS_PUTLIFECYCLEHOOKRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "putlifecyclehookrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class PutLifecycleHookResponsePrivate;
+
+class QTAWS_EXPORT PutLifecycleHookResponse : public PutLifecycleHookResponse {
+    Q_OBJECT
+
+public:
+    PutLifecycleHookResponse(const PutLifecycleHookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutLifecycleHookRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecycleHookResponse)
+    Q_DISABLE_COPY(PutLifecycleHookResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

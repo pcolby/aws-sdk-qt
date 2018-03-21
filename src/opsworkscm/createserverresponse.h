@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESERVERRESPONSE_H
 #define QTAWS_CREATESERVERRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "createserverrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class CreateServerResponsePrivate;
+
+class QTAWS_EXPORT CreateServerResponse : public CreateServerResponse {
+    Q_OBJECT
+
+public:
+    CreateServerResponse(const CreateServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateServerResponse)
+    Q_DISABLE_COPY(CreateServerResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELRESPONSE_H
 #define QTAWS_DELETEDELIVERYCHANNELRESPONSE_H
 
+#include "configresponse.h"
+#include "deletedeliverychannelrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DeleteDeliveryChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteDeliveryChannelResponse : public DeleteDeliveryChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteDeliveryChannelResponse(const DeleteDeliveryChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDeliveryChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeliveryChannelResponse)
+    Q_DISABLE_COPY(DeleteDeliveryChannelResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

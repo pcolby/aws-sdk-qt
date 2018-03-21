@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_H
 #define QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describegamesessionplacementrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeGameSessionPlacementResponsePrivate;
+
+class QTAWS_EXPORT DescribeGameSessionPlacementResponse : public DescribeGameSessionPlacementResponse {
+    Q_OBJECT
+
+public:
+    DescribeGameSessionPlacementResponse(const DescribeGameSessionPlacementRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeGameSessionPlacementRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeGameSessionPlacementResponse)
+    Q_DISABLE_COPY(DescribeGameSessionPlacementResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

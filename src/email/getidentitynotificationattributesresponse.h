@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_H
 
+#include "emailresponse.h"
+#include "getidentitynotificationattributesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetIdentityNotificationAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetIdentityNotificationAttributesResponse : public GetIdentityNotificationAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetIdentityNotificationAttributesResponse(const GetIdentityNotificationAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIdentityNotificationAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityNotificationAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityNotificationAttributesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDTAGSTOVAULTRESPONSE_H
 #define QTAWS_ADDTAGSTOVAULTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "addtagstovaultrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class AddTagsToVaultResponsePrivate;
+
+class QTAWS_EXPORT AddTagsToVaultResponse : public AddTagsToVaultResponse {
+    Q_OBJECT
+
+public:
+    AddTagsToVaultResponse(const AddTagsToVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddTagsToVaultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToVaultResponse)
+    Q_DISABLE_COPY(AddTagsToVaultResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

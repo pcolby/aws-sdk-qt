@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTLIMITRESPONSE_H
 #define QTAWS_GETACCOUNTLIMITRESPONSE_H
 
+#include "route53response.h"
+#include "getaccountlimitrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetAccountLimitResponsePrivate;
+
+class QTAWS_EXPORT GetAccountLimitResponse : public GetAccountLimitResponse {
+    Q_OBJECT
+
+public:
+    GetAccountLimitResponse(const GetAccountLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountLimitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountLimitResponse)
+    Q_DISABLE_COPY(GetAccountLimitResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

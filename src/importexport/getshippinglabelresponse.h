@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSHIPPINGLABELRESPONSE_H
 #define QTAWS_GETSHIPPINGLABELRESPONSE_H
 
+#include "importexportresponse.h"
+#include "getshippinglabelrequest.h"
+
+namespace AWS {
+
+namespace importexport {
+
+class GetShippingLabelResponsePrivate;
+
+class QTAWS_EXPORT GetShippingLabelResponse : public GetShippingLabelResponse {
+    Q_OBJECT
+
+public:
+    GetShippingLabelResponse(const GetShippingLabelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetShippingLabelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetShippingLabelResponse)
+    Q_DISABLE_COPY(GetShippingLabelResponse)
+
+};
+
+} // namespace importexport
+} // namespace AWS
+
 #endif

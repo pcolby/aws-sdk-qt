@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRUNRESPONSE_H
 #define QTAWS_GETRUNRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getrunrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetRunResponsePrivate;
+
+class QTAWS_EXPORT GetRunResponse : public GetRunResponse {
+    Q_OBJECT
+
+public:
+    GetRunResponse(const GetRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRunRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRunResponse)
+    Q_DISABLE_COPY(GetRunResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

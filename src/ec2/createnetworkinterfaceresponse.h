@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENETWORKINTERFACERESPONSE_H
 #define QTAWS_CREATENETWORKINTERFACERESPONSE_H
 
+#include "ec2response.h"
+#include "createnetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateNetworkInterfaceResponsePrivate;
+
+class QTAWS_EXPORT CreateNetworkInterfaceResponse : public CreateNetworkInterfaceResponse {
+    Q_OBJECT
+
+public:
+    CreateNetworkInterfaceResponse(const CreateNetworkInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNetworkInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNetworkInterfaceResponse)
+    Q_DISABLE_COPY(CreateNetworkInterfaceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

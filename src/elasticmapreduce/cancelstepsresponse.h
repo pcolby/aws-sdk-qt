@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELSTEPSRESPONSE_H
 #define QTAWS_CANCELSTEPSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "cancelstepsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class CancelStepsResponsePrivate;
+
+class QTAWS_EXPORT CancelStepsResponse : public CancelStepsResponse {
+    Q_OBJECT
+
+public:
+    CancelStepsResponse(const CancelStepsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelStepsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelStepsResponse)
+    Q_DISABLE_COPY(CancelStepsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

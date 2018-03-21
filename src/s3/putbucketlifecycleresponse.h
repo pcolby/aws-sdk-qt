@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTBUCKETLIFECYCLERESPONSE_H
 #define QTAWS_PUTBUCKETLIFECYCLERESPONSE_H
 
+#include "s3response.h"
+#include "putbucketlifecyclerequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutBucketLifecycleResponsePrivate;
+
+class QTAWS_EXPORT PutBucketLifecycleResponse : public PutBucketLifecycleResponse {
+    Q_OBJECT
+
+public:
+    PutBucketLifecycleResponse(const PutBucketLifecycleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutBucketLifecycleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketLifecycleResponse)
+    Q_DISABLE_COPY(PutBucketLifecycleResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

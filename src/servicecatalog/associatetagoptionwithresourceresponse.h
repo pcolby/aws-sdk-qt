@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATETAGOPTIONWITHRESOURCERESPONSE_H
 #define QTAWS_ASSOCIATETAGOPTIONWITHRESOURCERESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "associatetagoptionwithresourcerequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class AssociateTagOptionWithResourceResponsePrivate;
+
+class QTAWS_EXPORT AssociateTagOptionWithResourceResponse : public AssociateTagOptionWithResourceResponse {
+    Q_OBJECT
+
+public:
+    AssociateTagOptionWithResourceResponse(const AssociateTagOptionWithResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateTagOptionWithResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateTagOptionWithResourceResponse)
+    Q_DISABLE_COPY(AssociateTagOptionWithResourceResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

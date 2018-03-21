@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPORTTASKRUNNERHEARTBEATRESPONSE_H
 #define QTAWS_REPORTTASKRUNNERHEARTBEATRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "reporttaskrunnerheartbeatrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class ReportTaskRunnerHeartbeatResponsePrivate;
+
+class QTAWS_EXPORT ReportTaskRunnerHeartbeatResponse : public ReportTaskRunnerHeartbeatResponse {
+    Q_OBJECT
+
+public:
+    ReportTaskRunnerHeartbeatResponse(const ReportTaskRunnerHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReportTaskRunnerHeartbeatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReportTaskRunnerHeartbeatResponse)
+    Q_DISABLE_COPY(ReportTaskRunnerHeartbeatResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

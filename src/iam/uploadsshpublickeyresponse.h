@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPLOADSSHPUBLICKEYRESPONSE_H
 #define QTAWS_UPLOADSSHPUBLICKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "uploadsshpublickeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UploadSSHPublicKeyResponsePrivate;
+
+class QTAWS_EXPORT UploadSSHPublicKeyResponse : public UploadSSHPublicKeyResponse {
+    Q_OBJECT
+
+public:
+    UploadSSHPublicKeyResponse(const UploadSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UploadSSHPublicKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UploadSSHPublicKeyResponse)
+    Q_DISABLE_COPY(UploadSSHPublicKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

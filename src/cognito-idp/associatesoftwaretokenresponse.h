@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_H
 #define QTAWS_ASSOCIATESOFTWARETOKENRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "associatesoftwaretokenrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AssociateSoftwareTokenResponsePrivate;
+
+class QTAWS_EXPORT AssociateSoftwareTokenResponse : public AssociateSoftwareTokenResponse {
+    Q_OBJECT
+
+public:
+    AssociateSoftwareTokenResponse(const AssociateSoftwareTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateSoftwareTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateSoftwareTokenResponse)
+    Q_DISABLE_COPY(AssociateSoftwareTokenResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

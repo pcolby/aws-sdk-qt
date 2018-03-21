@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETHINGTYPERESPONSE_H
 #define QTAWS_DELETETHINGTYPERESPONSE_H
 
+#include "iotresponse.h"
+#include "deletethingtyperequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeleteThingTypeResponsePrivate;
+
+class QTAWS_EXPORT DeleteThingTypeResponse : public DeleteThingTypeResponse {
+    Q_OBJECT
+
+public:
+    DeleteThingTypeResponse(const DeleteThingTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteThingTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteThingTypeResponse)
+    Q_DISABLE_COPY(DeleteThingTypeResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

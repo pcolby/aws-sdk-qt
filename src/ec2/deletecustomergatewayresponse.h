@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECUSTOMERGATEWAYRESPONSE_H
 #define QTAWS_DELETECUSTOMERGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "deletecustomergatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteCustomerGatewayResponsePrivate;
+
+class QTAWS_EXPORT DeleteCustomerGatewayResponse : public DeleteCustomerGatewayResponse {
+    Q_OBJECT
+
+public:
+    DeleteCustomerGatewayResponse(const DeleteCustomerGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCustomerGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomerGatewayResponse)
+    Q_DISABLE_COPY(DeleteCustomerGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTASSOCIATEDSTACKSRESPONSE_H
 #define QTAWS_LISTASSOCIATEDSTACKSRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "listassociatedstacksrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class ListAssociatedStacksResponsePrivate;
+
+class QTAWS_EXPORT ListAssociatedStacksResponse : public ListAssociatedStacksResponse {
+    Q_OBJECT
+
+public:
+    ListAssociatedStacksResponse(const ListAssociatedStacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAssociatedStacksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAssociatedStacksResponse)
+    Q_DISABLE_COPY(ListAssociatedStacksResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

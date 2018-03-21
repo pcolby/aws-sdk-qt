@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_H
 #define QTAWS_SENDCUSTOMVERIFICATIONEMAILRESPONSE_H
 
+#include "emailresponse.h"
+#include "sendcustomverificationemailrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SendCustomVerificationEmailResponsePrivate;
+
+class QTAWS_EXPORT SendCustomVerificationEmailResponse : public SendCustomVerificationEmailResponse {
+    Q_OBJECT
+
+public:
+    SendCustomVerificationEmailResponse(const SendCustomVerificationEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendCustomVerificationEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendCustomVerificationEmailResponse)
+    Q_DISABLE_COPY(SendCustomVerificationEmailResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEFACETFROMOBJECTRESPONSE_H
 #define QTAWS_REMOVEFACETFROMOBJECTRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "removefacetfromobjectrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class RemoveFacetFromObjectResponsePrivate;
+
+class QTAWS_EXPORT RemoveFacetFromObjectResponse : public RemoveFacetFromObjectResponse {
+    Q_OBJECT
+
+public:
+    RemoveFacetFromObjectResponse(const RemoveFacetFromObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveFacetFromObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveFacetFromObjectResponse)
+    Q_DISABLE_COPY(RemoveFacetFromObjectResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

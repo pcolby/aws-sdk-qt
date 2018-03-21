@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELIFECYCLEPOLICYRESPONSE_H
 #define QTAWS_DELETELIFECYCLEPOLICYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "deletelifecyclepolicyrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class DeleteLifecyclePolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteLifecyclePolicyResponse : public DeleteLifecyclePolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteLifecyclePolicyResponse(const DeleteLifecyclePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLifecyclePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLifecyclePolicyResponse)
+    Q_DISABLE_COPY(DeleteLifecyclePolicyResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

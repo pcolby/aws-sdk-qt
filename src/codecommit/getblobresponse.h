@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBLOBRESPONSE_H
 #define QTAWS_GETBLOBRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getblobrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetBlobResponsePrivate;
+
+class QTAWS_EXPORT GetBlobResponse : public GetBlobResponse {
+    Q_OBJECT
+
+public:
+    GetBlobResponse(const GetBlobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBlobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBlobResponse)
+    Q_DISABLE_COPY(GetBlobResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

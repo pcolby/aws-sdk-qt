@@ -20,4 +20,33 @@
 #ifndef QTAWS_GRANTACCESSRESPONSE_H
 #define QTAWS_GRANTACCESSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "grantaccessrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class GrantAccessResponsePrivate;
+
+class QTAWS_EXPORT GrantAccessResponse : public GrantAccessResponse {
+    Q_OBJECT
+
+public:
+    GrantAccessResponse(const GrantAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GrantAccessRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GrantAccessResponse)
+    Q_DISABLE_COPY(GrantAccessResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

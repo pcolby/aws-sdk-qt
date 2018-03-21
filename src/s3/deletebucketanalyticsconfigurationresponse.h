@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUCKETANALYTICSCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEBUCKETANALYTICSCONFIGURATIONRESPONSE_H
 
+#include "s3response.h"
+#include "deletebucketanalyticsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class DeleteBucketAnalyticsConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteBucketAnalyticsConfigurationResponse : public DeleteBucketAnalyticsConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteBucketAnalyticsConfigurationResponse(const DeleteBucketAnalyticsConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBucketAnalyticsConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketAnalyticsConfigurationResponse)
+    Q_DISABLE_COPY(DeleteBucketAnalyticsConfigurationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

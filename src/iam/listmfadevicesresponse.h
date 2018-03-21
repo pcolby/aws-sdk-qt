@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTMFADEVICESRESPONSE_H
 #define QTAWS_LISTMFADEVICESRESPONSE_H
 
+#include "iamresponse.h"
+#include "listmfadevicesrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListMFADevicesResponsePrivate;
+
+class QTAWS_EXPORT ListMFADevicesResponse : public ListMFADevicesResponse {
+    Q_OBJECT
+
+public:
+    ListMFADevicesResponse(const ListMFADevicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListMFADevicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListMFADevicesResponse)
+    Q_DISABLE_COPY(ListMFADevicesResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

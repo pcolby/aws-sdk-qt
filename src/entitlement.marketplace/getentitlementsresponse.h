@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETENTITLEMENTSRESPONSE_H
 #define QTAWS_GETENTITLEMENTSRESPONSE_H
 
+#include "entitlement.marketplaceresponse.h"
+#include "getentitlementsrequest.h"
+
+namespace AWS {
+
+namespace entitlement.marketplace {
+
+class GetEntitlementsResponsePrivate;
+
+class QTAWS_EXPORT GetEntitlementsResponse : public GetEntitlementsResponse {
+    Q_OBJECT
+
+public:
+    GetEntitlementsResponse(const GetEntitlementsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetEntitlementsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetEntitlementsResponse)
+    Q_DISABLE_COPY(GetEntitlementsResponse)
+
+};
+
+} // namespace entitlement.marketplace
+} // namespace AWS
+
 #endif

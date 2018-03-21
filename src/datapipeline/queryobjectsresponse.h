@@ -20,4 +20,33 @@
 #ifndef QTAWS_QUERYOBJECTSRESPONSE_H
 #define QTAWS_QUERYOBJECTSRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "queryobjectsrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class QueryObjectsResponsePrivate;
+
+class QTAWS_EXPORT QueryObjectsResponse : public QueryObjectsResponse {
+    Q_OBJECT
+
+public:
+    QueryObjectsResponse(const QueryObjectsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const QueryObjectsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(QueryObjectsResponse)
+    Q_DISABLE_COPY(QueryObjectsResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

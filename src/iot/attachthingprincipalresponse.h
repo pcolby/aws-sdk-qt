@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHTHINGPRINCIPALRESPONSE_H
 #define QTAWS_ATTACHTHINGPRINCIPALRESPONSE_H
 
+#include "iotresponse.h"
+#include "attachthingprincipalrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class AttachThingPrincipalResponsePrivate;
+
+class QTAWS_EXPORT AttachThingPrincipalResponse : public AttachThingPrincipalResponse {
+    Q_OBJECT
+
+public:
+    AttachThingPrincipalResponse(const AttachThingPrincipalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachThingPrincipalRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachThingPrincipalResponse)
+    Q_DISABLE_COPY(AttachThingPrincipalResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

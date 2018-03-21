@@ -20,4 +20,33 @@
 #ifndef QTAWS_POSTCOMMENTREPLYRESPONSE_H
 #define QTAWS_POSTCOMMENTREPLYRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "postcommentreplyrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class PostCommentReplyResponsePrivate;
+
+class QTAWS_EXPORT PostCommentReplyResponse : public PostCommentReplyResponse {
+    Q_OBJECT
+
+public:
+    PostCommentReplyResponse(const PostCommentReplyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PostCommentReplyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PostCommentReplyResponse)
+    Q_DISABLE_COPY(PostCommentReplyResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

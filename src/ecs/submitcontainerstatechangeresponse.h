@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUBMITCONTAINERSTATECHANGERESPONSE_H
 #define QTAWS_SUBMITCONTAINERSTATECHANGERESPONSE_H
 
+#include "ecsresponse.h"
+#include "submitcontainerstatechangerequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class SubmitContainerStateChangeResponsePrivate;
+
+class QTAWS_EXPORT SubmitContainerStateChangeResponse : public SubmitContainerStateChangeResponse {
+    Q_OBJECT
+
+public:
+    SubmitContainerStateChangeResponse(const SubmitContainerStateChangeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SubmitContainerStateChangeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SubmitContainerStateChangeResponse)
+    Q_DISABLE_COPY(SubmitContainerStateChangeResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

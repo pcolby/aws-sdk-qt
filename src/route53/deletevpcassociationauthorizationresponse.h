@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPCASSOCIATIONAUTHORIZATIONRESPONSE_H
 #define QTAWS_DELETEVPCASSOCIATIONAUTHORIZATIONRESPONSE_H
 
+#include "route53response.h"
+#include "deletevpcassociationauthorizationrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class DeleteVPCAssociationAuthorizationResponsePrivate;
+
+class QTAWS_EXPORT DeleteVPCAssociationAuthorizationResponse : public DeleteVPCAssociationAuthorizationResponse {
+    Q_OBJECT
+
+public:
+    DeleteVPCAssociationAuthorizationResponse(const DeleteVPCAssociationAuthorizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVPCAssociationAuthorizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVPCAssociationAuthorizationResponse)
+    Q_DISABLE_COPY(DeleteVPCAssociationAuthorizationResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

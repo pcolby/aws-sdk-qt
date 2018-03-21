@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSERVICERESPONSE_H
 #define QTAWS_GETSERVICERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "getservicerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class GetServiceResponsePrivate;
+
+class QTAWS_EXPORT GetServiceResponse : public GetServiceResponse {
+    Q_OBJECT
+
+public:
+    GetServiceResponse(const GetServiceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetServiceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetServiceResponse)
+    Q_DISABLE_COPY(GetServiceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

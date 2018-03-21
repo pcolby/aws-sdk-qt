@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTSLOTTYPERESPONSE_H
 #define QTAWS_PUTSLOTTYPERESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "putslottyperequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class PutSlotTypeResponsePrivate;
+
+class QTAWS_EXPORT PutSlotTypeResponse : public PutSlotTypeResponse {
+    Q_OBJECT
+
+public:
+    PutSlotTypeResponse(const PutSlotTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutSlotTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutSlotTypeResponse)
+    Q_DISABLE_COPY(PutSlotTypeResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

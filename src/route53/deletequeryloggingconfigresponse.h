@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEQUERYLOGGINGCONFIGRESPONSE_H
 #define QTAWS_DELETEQUERYLOGGINGCONFIGRESPONSE_H
 
+#include "route53response.h"
+#include "deletequeryloggingconfigrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class DeleteQueryLoggingConfigResponsePrivate;
+
+class QTAWS_EXPORT DeleteQueryLoggingConfigResponse : public DeleteQueryLoggingConfigResponse {
+    Q_OBJECT
+
+public:
+    DeleteQueryLoggingConfigResponse(const DeleteQueryLoggingConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteQueryLoggingConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteQueryLoggingConfigResponse)
+    Q_DISABLE_COPY(DeleteQueryLoggingConfigResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

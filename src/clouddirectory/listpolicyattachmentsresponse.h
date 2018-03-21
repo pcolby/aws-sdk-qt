@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPOLICYATTACHMENTSRESPONSE_H
 #define QTAWS_LISTPOLICYATTACHMENTSRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listpolicyattachmentsrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListPolicyAttachmentsResponsePrivate;
+
+class QTAWS_EXPORT ListPolicyAttachmentsResponse : public ListPolicyAttachmentsResponse {
+    Q_OBJECT
+
+public:
+    ListPolicyAttachmentsResponse(const ListPolicyAttachmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPolicyAttachmentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPolicyAttachmentsResponse)
+    Q_DISABLE_COPY(ListPolicyAttachmentsResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

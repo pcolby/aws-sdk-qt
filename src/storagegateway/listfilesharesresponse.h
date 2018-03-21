@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTFILESHARESRESPONSE_H
 #define QTAWS_LISTFILESHARESRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "listfilesharesrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class ListFileSharesResponsePrivate;
+
+class QTAWS_EXPORT ListFileSharesResponse : public ListFileSharesResponse {
+    Q_OBJECT
+
+public:
+    ListFileSharesResponse(const ListFileSharesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListFileSharesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListFileSharesResponse)
+    Q_DISABLE_COPY(ListFileSharesResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

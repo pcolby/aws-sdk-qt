@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDEPLOYMENTCONFIGRESPONSE_H
 #define QTAWS_CREATEDEPLOYMENTCONFIGRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "createdeploymentconfigrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class CreateDeploymentConfigResponsePrivate;
+
+class QTAWS_EXPORT CreateDeploymentConfigResponse : public CreateDeploymentConfigResponse {
+    Q_OBJECT
+
+public:
+    CreateDeploymentConfigResponse(const CreateDeploymentConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDeploymentConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeploymentConfigResponse)
+    Q_DISABLE_COPY(CreateDeploymentConfigResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

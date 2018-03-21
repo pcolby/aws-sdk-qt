@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETVAULTACCESSPOLICYRESPONSE_H
 #define QTAWS_SETVAULTACCESSPOLICYRESPONSE_H
 
+#include "glacierresponse.h"
+#include "setvaultaccesspolicyrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class SetVaultAccessPolicyResponsePrivate;
+
+class QTAWS_EXPORT SetVaultAccessPolicyResponse : public SetVaultAccessPolicyResponse {
+    Q_OBJECT
+
+public:
+    SetVaultAccessPolicyResponse(const SetVaultAccessPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetVaultAccessPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetVaultAccessPolicyResponse)
+    Q_DISABLE_COPY(SetVaultAccessPolicyResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEADMCHANNELRESPONSE_H
 #define QTAWS_DELETEADMCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deleteadmchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteAdmChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteAdmChannelResponse : public DeleteAdmChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteAdmChannelResponse(const DeleteAdmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAdmChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAdmChannelResponse)
+    Q_DISABLE_COPY(DeleteAdmChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

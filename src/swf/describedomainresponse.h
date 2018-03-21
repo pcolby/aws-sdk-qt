@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDOMAINRESPONSE_H
 #define QTAWS_DESCRIBEDOMAINRESPONSE_H
 
+#include "swfresponse.h"
+#include "describedomainrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class DescribeDomainResponsePrivate;
+
+class QTAWS_EXPORT DescribeDomainResponse : public DescribeDomainResponse {
+    Q_OBJECT
+
+public:
+    DescribeDomainResponse(const DescribeDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDomainResponse)
+    Q_DISABLE_COPY(DescribeDomainResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

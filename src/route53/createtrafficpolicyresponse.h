@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETRAFFICPOLICYRESPONSE_H
 #define QTAWS_CREATETRAFFICPOLICYRESPONSE_H
 
+#include "route53response.h"
+#include "createtrafficpolicyrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class CreateTrafficPolicyResponsePrivate;
+
+class QTAWS_EXPORT CreateTrafficPolicyResponse : public CreateTrafficPolicyResponse {
+    Q_OBJECT
+
+public:
+    CreateTrafficPolicyResponse(const CreateTrafficPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTrafficPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTrafficPolicyResponse)
+    Q_DISABLE_COPY(CreateTrafficPolicyResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

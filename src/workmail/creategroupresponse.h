@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_H
 #define QTAWS_CREATEGROUPRESPONSE_H
 
+#include "workmailresponse.h"
+#include "creategrouprequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class CreateGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateGroupResponse : public CreateGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateGroupResponse(const CreateGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateGroupResponse)
+    Q_DISABLE_COPY(CreateGroupResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

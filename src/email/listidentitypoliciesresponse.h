@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTIDENTITYPOLICIESRESPONSE_H
 #define QTAWS_LISTIDENTITYPOLICIESRESPONSE_H
 
+#include "emailresponse.h"
+#include "listidentitypoliciesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class ListIdentityPoliciesResponsePrivate;
+
+class QTAWS_EXPORT ListIdentityPoliciesResponse : public ListIdentityPoliciesResponse {
+    Q_OBJECT
+
+public:
+    ListIdentityPoliciesResponse(const ListIdentityPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListIdentityPoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListIdentityPoliciesResponse)
+    Q_DISABLE_COPY(ListIdentityPoliciesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRESOURCESRESPONSE_H
 #define QTAWS_GETRESOURCESRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getresourcesrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetResourcesResponsePrivate;
+
+class QTAWS_EXPORT GetResourcesResponse : public GetResourcesResponse {
+    Q_OBJECT
+
+public:
+    GetResourcesResponse(const GetResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetResourcesResponse)
+    Q_DISABLE_COPY(GetResourcesResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

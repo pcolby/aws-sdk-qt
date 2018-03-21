@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTLAUNCHPATHSRESPONSE_H
 #define QTAWS_LISTLAUNCHPATHSRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "listlaunchpathsrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class ListLaunchPathsResponsePrivate;
+
+class QTAWS_EXPORT ListLaunchPathsResponse : public ListLaunchPathsResponse {
+    Q_OBJECT
+
+public:
+    ListLaunchPathsResponse(const ListLaunchPathsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListLaunchPathsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListLaunchPathsResponse)
+    Q_DISABLE_COPY(ListLaunchPathsResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

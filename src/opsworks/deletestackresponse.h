@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESTACKRESPONSE_H
 #define QTAWS_DELETESTACKRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "deletestackrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DeleteStackResponsePrivate;
+
+class QTAWS_EXPORT DeleteStackResponse : public DeleteStackResponse {
+    Q_OBJECT
+
+public:
+    DeleteStackResponse(const DeleteStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteStackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStackResponse)
+    Q_DISABLE_COPY(DeleteStackResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

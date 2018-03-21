@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTATTACHEDROLEPOLICIESRESPONSE_H
 #define QTAWS_LISTATTACHEDROLEPOLICIESRESPONSE_H
 
+#include "iamresponse.h"
+#include "listattachedrolepoliciesrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListAttachedRolePoliciesResponsePrivate;
+
+class QTAWS_EXPORT ListAttachedRolePoliciesResponse : public ListAttachedRolePoliciesResponse {
+    Q_OBJECT
+
+public:
+    ListAttachedRolePoliciesResponse(const ListAttachedRolePoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAttachedRolePoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAttachedRolePoliciesResponse)
+    Q_DISABLE_COPY(ListAttachedRolePoliciesResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

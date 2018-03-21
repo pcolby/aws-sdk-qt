@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETRESPONSE_H
 #define QTAWS_CREATECONFIGURATIONSETRESPONSE_H
 
+#include "emailresponse.h"
+#include "createconfigurationsetrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class CreateConfigurationSetResponsePrivate;
+
+class QTAWS_EXPORT CreateConfigurationSetResponse : public CreateConfigurationSetResponse {
+    Q_OBJECT
+
+public:
+    CreateConfigurationSetResponse(const CreateConfigurationSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateConfigurationSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationSetResponse)
+    Q_DISABLE_COPY(CreateConfigurationSetResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

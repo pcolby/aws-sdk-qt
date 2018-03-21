@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECHAPCREDENTIALSRESPONSE_H
 #define QTAWS_UPDATECHAPCREDENTIALSRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updatechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateChapCredentialsResponsePrivate;
+
+class QTAWS_EXPORT UpdateChapCredentialsResponse : public UpdateChapCredentialsResponse {
+    Q_OBJECT
+
+public:
+    UpdateChapCredentialsResponse(const UpdateChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateChapCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateChapCredentialsResponse)
+    Q_DISABLE_COPY(UpdateChapCredentialsResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

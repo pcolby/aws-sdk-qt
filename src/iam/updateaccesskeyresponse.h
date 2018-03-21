@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEACCESSKEYRESPONSE_H
 #define QTAWS_UPDATEACCESSKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "updateaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateAccessKeyResponsePrivate;
+
+class QTAWS_EXPORT UpdateAccessKeyResponse : public UpdateAccessKeyResponse {
+    Q_OBJECT
+
+public:
+    UpdateAccessKeyResponse(const UpdateAccessKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAccessKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAccessKeyResponse)
+    Q_DISABLE_COPY(UpdateAccessKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

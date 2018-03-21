@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLERADIUSRESPONSE_H
 #define QTAWS_DISABLERADIUSRESPONSE_H
 
+#include "dsresponse.h"
+#include "disableradiusrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DisableRadiusResponsePrivate;
+
+class QTAWS_EXPORT DisableRadiusResponse : public DisableRadiusResponse {
+    Q_OBJECT
+
+public:
+    DisableRadiusResponse(const DisableRadiusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableRadiusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableRadiusResponse)
+    Q_DISABLE_COPY(DisableRadiusResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

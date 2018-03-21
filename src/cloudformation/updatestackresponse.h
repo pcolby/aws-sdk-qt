@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESTACKRESPONSE_H
 #define QTAWS_UPDATESTACKRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "updatestackrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class UpdateStackResponsePrivate;
+
+class QTAWS_EXPORT UpdateStackResponse : public UpdateStackResponse {
+    Q_OBJECT
+
+public:
+    UpdateStackResponse(const UpdateStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateStackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStackResponse)
+    Q_DISABLE_COPY(UpdateStackResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

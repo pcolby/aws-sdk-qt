@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPARAMETERGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEPARAMETERGROUPSRESPONSE_H
 
+#include "daxresponse.h"
+#include "describeparametergroupsrequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class DescribeParameterGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeParameterGroupsResponse : public DescribeParameterGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeParameterGroupsResponse(const DescribeParameterGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeParameterGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeParameterGroupsResponse)
+    Q_DISABLE_COPY(DescribeParameterGroupsResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

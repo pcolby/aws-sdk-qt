@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_H
 #define QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "describecacheengineversionsrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DescribeCacheEngineVersionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeCacheEngineVersionsResponse : public DescribeCacheEngineVersionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeCacheEngineVersionsResponse(const DescribeCacheEngineVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCacheEngineVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCacheEngineVersionsResponse)
+    Q_DISABLE_COPY(DescribeCacheEngineVersionsResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESENDCONTACTREACHABILITYEMAILRESPONSE_H
 #define QTAWS_RESENDCONTACTREACHABILITYEMAILRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "resendcontactreachabilityemailrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class ResendContactReachabilityEmailResponsePrivate;
+
+class QTAWS_EXPORT ResendContactReachabilityEmailResponse : public ResendContactReachabilityEmailResponse {
+    Q_OBJECT
+
+public:
+    ResendContactReachabilityEmailResponse(const ResendContactReachabilityEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResendContactReachabilityEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResendContactReachabilityEmailResponse)
+    Q_DISABLE_COPY(ResendContactReachabilityEmailResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

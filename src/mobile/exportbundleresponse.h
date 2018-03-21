@@ -20,4 +20,33 @@
 #ifndef QTAWS_EXPORTBUNDLERESPONSE_H
 #define QTAWS_EXPORTBUNDLERESPONSE_H
 
+#include "mobileresponse.h"
+#include "exportbundlerequest.h"
+
+namespace AWS {
+
+namespace mobile {
+
+class ExportBundleResponsePrivate;
+
+class QTAWS_EXPORT ExportBundleResponse : public ExportBundleResponse {
+    Q_OBJECT
+
+public:
+    ExportBundleResponse(const ExportBundleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ExportBundleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ExportBundleResponse)
+    Q_DISABLE_COPY(ExportBundleResponse)
+
+};
+
+} // namespace mobile
+} // namespace AWS
+
 #endif

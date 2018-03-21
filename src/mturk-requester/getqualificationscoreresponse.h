@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETQUALIFICATIONSCORERESPONSE_H
 #define QTAWS_GETQUALIFICATIONSCORERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "getqualificationscorerequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class GetQualificationScoreResponsePrivate;
+
+class QTAWS_EXPORT GetQualificationScoreResponse : public GetQualificationScoreResponse {
+    Q_OBJECT
+
+public:
+    GetQualificationScoreResponse(const GetQualificationScoreRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetQualificationScoreRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetQualificationScoreResponse)
+    Q_DISABLE_COPY(GetQualificationScoreResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

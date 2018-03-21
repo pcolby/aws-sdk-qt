@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTKEYPOLICYRESPONSE_H
 #define QTAWS_PUTKEYPOLICYRESPONSE_H
 
+#include "kmsresponse.h"
+#include "putkeypolicyrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class PutKeyPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutKeyPolicyResponse : public PutKeyPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutKeyPolicyResponse(const PutKeyPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutKeyPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutKeyPolicyResponse)
+    Q_DISABLE_COPY(PutKeyPolicyResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

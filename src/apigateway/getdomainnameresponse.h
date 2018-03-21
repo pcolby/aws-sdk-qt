@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOMAINNAMERESPONSE_H
 #define QTAWS_GETDOMAINNAMERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getdomainnamerequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetDomainNameResponsePrivate;
+
+class QTAWS_EXPORT GetDomainNameResponse : public GetDomainNameResponse {
+    Q_OBJECT
+
+public:
+    GetDomainNameResponse(const GetDomainNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDomainNameRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainNameResponse)
+    Q_DISABLE_COPY(GetDomainNameResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

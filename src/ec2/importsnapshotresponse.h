@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTSNAPSHOTRESPONSE_H
 #define QTAWS_IMPORTSNAPSHOTRESPONSE_H
 
+#include "ec2response.h"
+#include "importsnapshotrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ImportSnapshotResponsePrivate;
+
+class QTAWS_EXPORT ImportSnapshotResponse : public ImportSnapshotResponse {
+    Q_OBJECT
+
+public:
+    ImportSnapshotResponse(const ImportSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportSnapshotResponse)
+    Q_DISABLE_COPY(ImportSnapshotResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

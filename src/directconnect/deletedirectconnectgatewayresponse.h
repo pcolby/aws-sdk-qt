@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDIRECTCONNECTGATEWAYRESPONSE_H
 #define QTAWS_DELETEDIRECTCONNECTGATEWAYRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "deletedirectconnectgatewayrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class DeleteDirectConnectGatewayResponsePrivate;
+
+class QTAWS_EXPORT DeleteDirectConnectGatewayResponse : public DeleteDirectConnectGatewayResponse {
+    Q_OBJECT
+
+public:
+    DeleteDirectConnectGatewayResponse(const DeleteDirectConnectGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDirectConnectGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDirectConnectGatewayResponse)
+    Q_DISABLE_COPY(DeleteDirectConnectGatewayResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

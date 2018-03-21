@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPIPELINESRESPONSE_H
 #define QTAWS_DESCRIBEPIPELINESRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "describepipelinesrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class DescribePipelinesResponsePrivate;
+
+class QTAWS_EXPORT DescribePipelinesResponse : public DescribePipelinesResponse {
+    Q_OBJECT
+
+public:
+    DescribePipelinesResponse(const DescribePipelinesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePipelinesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePipelinesResponse)
+    Q_DISABLE_COPY(DescribePipelinesResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

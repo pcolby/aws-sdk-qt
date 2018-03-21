@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPOLICYRESPONSE_H
 #define QTAWS_DESCRIBEPOLICYRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "describepolicyrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class DescribePolicyResponsePrivate;
+
+class QTAWS_EXPORT DescribePolicyResponse : public DescribePolicyResponse {
+    Q_OBJECT
+
+public:
+    DescribePolicyResponse(const DescribePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePolicyResponse)
+    Q_DISABLE_COPY(DescribePolicyResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

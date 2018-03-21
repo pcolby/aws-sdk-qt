@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTCOPYGRANTSRESPONSE_H
 #define QTAWS_DESCRIBESNAPSHOTCOPYGRANTSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describesnapshotcopygrantsrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeSnapshotCopyGrantsResponsePrivate;
+
+class QTAWS_EXPORT DescribeSnapshotCopyGrantsResponse : public DescribeSnapshotCopyGrantsResponse {
+    Q_OBJECT
+
+public:
+    DescribeSnapshotCopyGrantsResponse(const DescribeSnapshotCopyGrantsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSnapshotCopyGrantsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSnapshotCopyGrantsResponse)
+    Q_DISABLE_COPY(DescribeSnapshotCopyGrantsResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

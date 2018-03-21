@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEBROKERRESPONSE_H
 #define QTAWS_UPDATEBROKERRESPONSE_H
 
+#include "mqresponse.h"
+#include "updatebrokerrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class UpdateBrokerResponsePrivate;
+
+class QTAWS_EXPORT UpdateBrokerResponse : public UpdateBrokerResponse {
+    Q_OBJECT
+
+public:
+    UpdateBrokerResponse(const UpdateBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateBrokerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBrokerResponse)
+    Q_DISABLE_COPY(UpdateBrokerResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

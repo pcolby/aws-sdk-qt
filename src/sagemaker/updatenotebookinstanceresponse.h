@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATENOTEBOOKINSTANCERESPONSE_H
 #define QTAWS_UPDATENOTEBOOKINSTANCERESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "updatenotebookinstancerequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class UpdateNotebookInstanceResponsePrivate;
+
+class QTAWS_EXPORT UpdateNotebookInstanceResponse : public UpdateNotebookInstanceResponse {
+    Q_OBJECT
+
+public:
+    UpdateNotebookInstanceResponse(const UpdateNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateNotebookInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNotebookInstanceResponse)
+    Q_DISABLE_COPY(UpdateNotebookInstanceResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

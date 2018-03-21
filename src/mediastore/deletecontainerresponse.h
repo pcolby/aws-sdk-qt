@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONTAINERRESPONSE_H
 #define QTAWS_DELETECONTAINERRESPONSE_H
 
+#include "mediastoreresponse.h"
+#include "deletecontainerrequest.h"
+
+namespace AWS {
+
+namespace mediastore {
+
+class DeleteContainerResponsePrivate;
+
+class QTAWS_EXPORT DeleteContainerResponse : public DeleteContainerResponse {
+    Q_OBJECT
+
+public:
+    DeleteContainerResponse(const DeleteContainerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteContainerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteContainerResponse)
+    Q_DISABLE_COPY(DeleteContainerResponse)
+
+};
+
+} // namespace mediastore
+} // namespace AWS
+
 #endif

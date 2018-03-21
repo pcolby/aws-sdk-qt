@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSRESPONSE_H
 #define QTAWS_DESCRIBESERVICEERRORSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeserviceerrorsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeServiceErrorsResponsePrivate;
+
+class QTAWS_EXPORT DescribeServiceErrorsResponse : public DescribeServiceErrorsResponse {
+    Q_OBJECT
+
+public:
+    DescribeServiceErrorsResponse(const DescribeServiceErrorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeServiceErrorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeServiceErrorsResponse)
+    Q_DISABLE_COPY(DescribeServiceErrorsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

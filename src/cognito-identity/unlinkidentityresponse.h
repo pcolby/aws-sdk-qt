@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNLINKIDENTITYRESPONSE_H
 #define QTAWS_UNLINKIDENTITYRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "unlinkidentityrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class UnlinkIdentityResponsePrivate;
+
+class QTAWS_EXPORT UnlinkIdentityResponse : public UnlinkIdentityResponse {
+    Q_OBJECT
+
+public:
+    UnlinkIdentityResponse(const UnlinkIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnlinkIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnlinkIdentityResponse)
+    Q_DISABLE_COPY(UnlinkIdentityResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

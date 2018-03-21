@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERDEVICERESPONSE_H
 #define QTAWS_REGISTERDEVICERESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "registerdevicerequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class RegisterDeviceResponsePrivate;
+
+class QTAWS_EXPORT RegisterDeviceResponse : public RegisterDeviceResponse {
+    Q_OBJECT
+
+public:
+    RegisterDeviceResponse(const RegisterDeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterDeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterDeviceResponse)
+    Q_DISABLE_COPY(RegisterDeviceResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

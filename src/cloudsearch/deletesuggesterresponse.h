@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESUGGESTERRESPONSE_H
 #define QTAWS_DELETESUGGESTERRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "deletesuggesterrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DeleteSuggesterResponsePrivate;
+
+class QTAWS_EXPORT DeleteSuggesterResponse : public DeleteSuggesterResponse {
+    Q_OBJECT
+
+public:
+    DeleteSuggesterResponse(const DeleteSuggesterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSuggesterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSuggesterResponse)
+    Q_DISABLE_COPY(DeleteSuggesterResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

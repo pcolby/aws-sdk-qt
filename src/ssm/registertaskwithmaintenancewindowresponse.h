@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERTASKWITHMAINTENANCEWINDOWRESPONSE_H
 #define QTAWS_REGISTERTASKWITHMAINTENANCEWINDOWRESPONSE_H
 
+#include "ssmresponse.h"
+#include "registertaskwithmaintenancewindowrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class RegisterTaskWithMaintenanceWindowResponsePrivate;
+
+class QTAWS_EXPORT RegisterTaskWithMaintenanceWindowResponse : public RegisterTaskWithMaintenanceWindowResponse {
+    Q_OBJECT
+
+public:
+    RegisterTaskWithMaintenanceWindowResponse(const RegisterTaskWithMaintenanceWindowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterTaskWithMaintenanceWindowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterTaskWithMaintenanceWindowResponse)
+    Q_DISABLE_COPY(RegisterTaskWithMaintenanceWindowResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

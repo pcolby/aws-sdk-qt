@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETFINDINGSRESPONSE_H
 #define QTAWS_GETFINDINGSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "getfindingsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class GetFindingsResponsePrivate;
+
+class QTAWS_EXPORT GetFindingsResponse : public GetFindingsResponse {
+    Q_OBJECT
+
+public:
+    GetFindingsResponse(const GetFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetFindingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetFindingsResponse)
+    Q_DISABLE_COPY(GetFindingsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

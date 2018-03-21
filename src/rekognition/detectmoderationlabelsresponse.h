@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETECTMODERATIONLABELSRESPONSE_H
 #define QTAWS_DETECTMODERATIONLABELSRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "detectmoderationlabelsrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class DetectModerationLabelsResponsePrivate;
+
+class QTAWS_EXPORT DetectModerationLabelsResponse : public DetectModerationLabelsResponse {
+    Q_OBJECT
+
+public:
+    DetectModerationLabelsResponse(const DetectModerationLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetectModerationLabelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetectModerationLabelsResponse)
+    Q_DISABLE_COPY(DetectModerationLabelsResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

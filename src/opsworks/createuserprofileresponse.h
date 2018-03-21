@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEUSERPROFILERESPONSE_H
 #define QTAWS_CREATEUSERPROFILERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "createuserprofilerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class CreateUserProfileResponsePrivate;
+
+class QTAWS_EXPORT CreateUserProfileResponse : public CreateUserProfileResponse {
+    Q_OBJECT
+
+public:
+    CreateUserProfileResponse(const CreateUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateUserProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserProfileResponse)
+    Q_DISABLE_COPY(CreateUserProfileResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

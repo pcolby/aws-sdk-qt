@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGRANTSRESPONSE_H
 #define QTAWS_LISTGRANTSRESPONSE_H
 
+#include "kmsresponse.h"
+#include "listgrantsrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ListGrantsResponsePrivate;
+
+class QTAWS_EXPORT ListGrantsResponse : public ListGrantsResponse {
+    Q_OBJECT
+
+public:
+    ListGrantsResponse(const ListGrantsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGrantsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGrantsResponse)
+    Q_DISABLE_COPY(ListGrantsResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

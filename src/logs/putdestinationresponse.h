@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTDESTINATIONRESPONSE_H
 #define QTAWS_PUTDESTINATIONRESPONSE_H
 
+#include "logsresponse.h"
+#include "putdestinationrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutDestinationResponsePrivate;
+
+class QTAWS_EXPORT PutDestinationResponse : public PutDestinationResponse {
+    Q_OBJECT
+
+public:
+    PutDestinationResponse(const PutDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutDestinationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutDestinationResponse)
+    Q_DISABLE_COPY(PutDestinationResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

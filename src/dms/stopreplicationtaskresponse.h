@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPREPLICATIONTASKRESPONSE_H
 #define QTAWS_STOPREPLICATIONTASKRESPONSE_H
 
+#include "dmsresponse.h"
+#include "stopreplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class StopReplicationTaskResponsePrivate;
+
+class QTAWS_EXPORT StopReplicationTaskResponse : public StopReplicationTaskResponse {
+    Q_OBJECT
+
+public:
+    StopReplicationTaskResponse(const StopReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopReplicationTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopReplicationTaskResponse)
+    Q_DISABLE_COPY(StopReplicationTaskResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

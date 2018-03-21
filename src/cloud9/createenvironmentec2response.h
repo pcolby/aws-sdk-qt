@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEENVIRONMENTEC2RESPONSE_H
 #define QTAWS_CREATEENVIRONMENTEC2RESPONSE_H
 
+#include "cloud9response.h"
+#include "createenvironmentec2request.h"
+
+namespace AWS {
+
+namespace cloud9 {
+
+class CreateEnvironmentEC2ResponsePrivate;
+
+class QTAWS_EXPORT CreateEnvironmentEC2Response : public CreateEnvironmentEC2Response {
+    Q_OBJECT
+
+public:
+    CreateEnvironmentEC2Response(const CreateEnvironmentEC2Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateEnvironmentEC2Request * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateEnvironmentEC2Response)
+    Q_DISABLE_COPY(CreateEnvironmentEC2Response)
+
+};
+
+} // namespace cloud9
+} // namespace AWS
+
 #endif

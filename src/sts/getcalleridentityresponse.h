@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCALLERIDENTITYRESPONSE_H
 #define QTAWS_GETCALLERIDENTITYRESPONSE_H
 
+#include "stsresponse.h"
+#include "getcalleridentityrequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class GetCallerIdentityResponsePrivate;
+
+class QTAWS_EXPORT GetCallerIdentityResponse : public GetCallerIdentityResponse {
+    Q_OBJECT
+
+public:
+    GetCallerIdentityResponse(const GetCallerIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCallerIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCallerIdentityResponse)
+    Q_DISABLE_COPY(GetCallerIdentityResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

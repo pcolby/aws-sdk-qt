@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTENVIRONMENTSRESPONSE_H
 #define QTAWS_LISTENVIRONMENTSRESPONSE_H
 
+#include "cloud9response.h"
+#include "listenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace cloud9 {
+
+class ListEnvironmentsResponsePrivate;
+
+class QTAWS_EXPORT ListEnvironmentsResponse : public ListEnvironmentsResponse {
+    Q_OBJECT
+
+public:
+    ListEnvironmentsResponse(const ListEnvironmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListEnvironmentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListEnvironmentsResponse)
+    Q_DISABLE_COPY(ListEnvironmentsResponse)
+
+};
+
+} // namespace cloud9
+} // namespace AWS
+
 #endif

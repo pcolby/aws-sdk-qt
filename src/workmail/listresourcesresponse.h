@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCESRESPONSE_H
 #define QTAWS_LISTRESOURCESRESPONSE_H
 
+#include "workmailresponse.h"
+#include "listresourcesrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class ListResourcesResponsePrivate;
+
+class QTAWS_EXPORT ListResourcesResponse : public ListResourcesResponse {
+    Q_OBJECT
+
+public:
+    ListResourcesResponse(const ListResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourcesResponse)
+    Q_DISABLE_COPY(ListResourcesResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESUBNETGROUPRESPONSE_H
 #define QTAWS_UPDATESUBNETGROUPRESPONSE_H
 
+#include "daxresponse.h"
+#include "updatesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class UpdateSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT UpdateSubnetGroupResponse : public UpdateSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    UpdateSubnetGroupResponse(const UpdateSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSubnetGroupResponse)
+    Q_DISABLE_COPY(UpdateSubnetGroupResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

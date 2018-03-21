@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESYNCMFADEVICERESPONSE_H
 #define QTAWS_RESYNCMFADEVICERESPONSE_H
 
+#include "iamresponse.h"
+#include "resyncmfadevicerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ResyncMFADeviceResponsePrivate;
+
+class QTAWS_EXPORT ResyncMFADeviceResponse : public ResyncMFADeviceResponse {
+    Q_OBJECT
+
+public:
+    ResyncMFADeviceResponse(const ResyncMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResyncMFADeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResyncMFADeviceResponse)
+    Q_DISABLE_COPY(ResyncMFADeviceResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

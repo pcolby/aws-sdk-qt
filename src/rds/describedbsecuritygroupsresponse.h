@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDBSECURITYGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEDBSECURITYGROUPSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describedbsecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeDBSecurityGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDBSecurityGroupsResponse : public DescribeDBSecurityGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDBSecurityGroupsResponse(const DescribeDBSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDBSecurityGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDBSecurityGroupsResponse)
+    Q_DISABLE_COPY(DescribeDBSecurityGroupsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

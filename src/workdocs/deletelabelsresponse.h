@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELABELSRESPONSE_H
 #define QTAWS_DELETELABELSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "deletelabelsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DeleteLabelsResponsePrivate;
+
+class QTAWS_EXPORT DeleteLabelsResponse : public DeleteLabelsResponse {
+    Q_OBJECT
+
+public:
+    DeleteLabelsResponse(const DeleteLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLabelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLabelsResponse)
+    Q_DISABLE_COPY(DeleteLabelsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYCLUSTERPARAMETERGROUPRESPONSE_H
 #define QTAWS_MODIFYCLUSTERPARAMETERGROUPRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "modifyclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class ModifyClusterParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT ModifyClusterParameterGroupResponse : public ModifyClusterParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    ModifyClusterParameterGroupResponse(const ModifyClusterParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyClusterParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyClusterParameterGroupResponse)
+    Q_DISABLE_COPY(ModifyClusterParameterGroupResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

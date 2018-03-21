@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINLISTDEVICESRESPONSE_H
 #define QTAWS_ADMINLISTDEVICESRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminlistdevicesrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminListDevicesResponsePrivate;
+
+class QTAWS_EXPORT AdminListDevicesResponse : public AdminListDevicesResponse {
+    Q_OBJECT
+
+public:
+    AdminListDevicesResponse(const AdminListDevicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminListDevicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminListDevicesResponse)
+    Q_DISABLE_COPY(AdminListDevicesResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

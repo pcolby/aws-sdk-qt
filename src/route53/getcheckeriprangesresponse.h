@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCHECKERIPRANGESRESPONSE_H
 #define QTAWS_GETCHECKERIPRANGESRESPONSE_H
 
+#include "route53response.h"
+#include "getcheckeriprangesrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetCheckerIpRangesResponsePrivate;
+
+class QTAWS_EXPORT GetCheckerIpRangesResponse : public GetCheckerIpRangesResponse {
+    Q_OBJECT
+
+public:
+    GetCheckerIpRangesResponse(const GetCheckerIpRangesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCheckerIpRangesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCheckerIpRangesResponse)
+    Q_DISABLE_COPY(GetCheckerIpRangesResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_H
 #define QTAWS_LISTAPPLICATIONVERSIONSRESPONSE_H
 
+#include "serverlessreporesponse.h"
+#include "listapplicationversionsrequest.h"
+
+namespace AWS {
+
+namespace serverlessrepo {
+
+class ListApplicationVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListApplicationVersionsResponse : public ListApplicationVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListApplicationVersionsResponse(const ListApplicationVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListApplicationVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListApplicationVersionsResponse)
+    Q_DISABLE_COPY(ListApplicationVersionsResponse)
+
+};
+
+} // namespace serverlessrepo
+} // namespace AWS
+
 #endif

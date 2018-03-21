@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEPARAMETERSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeparametersrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeParametersResponse : public DescribeParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeParametersResponse(const DescribeParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeParametersResponse)
+    Q_DISABLE_COPY(DescribeParametersResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

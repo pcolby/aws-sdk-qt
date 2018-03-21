@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETRAFFICPOLICYCOMMENTRESPONSE_H
 #define QTAWS_UPDATETRAFFICPOLICYCOMMENTRESPONSE_H
 
+#include "route53response.h"
+#include "updatetrafficpolicycommentrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class UpdateTrafficPolicyCommentResponsePrivate;
+
+class QTAWS_EXPORT UpdateTrafficPolicyCommentResponse : public UpdateTrafficPolicyCommentResponse {
+    Q_OBJECT
+
+public:
+    UpdateTrafficPolicyCommentResponse(const UpdateTrafficPolicyCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTrafficPolicyCommentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTrafficPolicyCommentResponse)
+    Q_DISABLE_COPY(UpdateTrafficPolicyCommentResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

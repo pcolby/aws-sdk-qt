@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECHANGESETRESPONSE_H
 #define QTAWS_DELETECHANGESETRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "deletechangesetrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class DeleteChangeSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteChangeSetResponse : public DeleteChangeSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteChangeSetResponse(const DeleteChangeSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteChangeSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteChangeSetResponse)
+    Q_DISABLE_COPY(DeleteChangeSetResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

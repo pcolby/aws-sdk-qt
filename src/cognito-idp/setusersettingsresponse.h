@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETUSERSETTINGSRESPONSE_H
 #define QTAWS_SETUSERSETTINGSRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "setusersettingsrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class SetUserSettingsResponsePrivate;
+
+class QTAWS_EXPORT SetUserSettingsResponse : public SetUserSettingsResponse {
+    Q_OBJECT
+
+public:
+    SetUserSettingsResponse(const SetUserSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetUserSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetUserSettingsResponse)
+    Q_DISABLE_COPY(SetUserSettingsResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

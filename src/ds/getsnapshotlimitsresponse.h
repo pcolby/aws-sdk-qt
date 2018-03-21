@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSNAPSHOTLIMITSRESPONSE_H
 #define QTAWS_GETSNAPSHOTLIMITSRESPONSE_H
 
+#include "dsresponse.h"
+#include "getsnapshotlimitsrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class GetSnapshotLimitsResponsePrivate;
+
+class QTAWS_EXPORT GetSnapshotLimitsResponse : public GetSnapshotLimitsResponse {
+    Q_OBJECT
+
+public:
+    GetSnapshotLimitsResponse(const GetSnapshotLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSnapshotLimitsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSnapshotLimitsResponse)
+    Q_DISABLE_COPY(GetSnapshotLimitsResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

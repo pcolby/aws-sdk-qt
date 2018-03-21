@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETALARMSTATERESPONSE_H
 #define QTAWS_SETALARMSTATERESPONSE_H
 
+#include "monitoringresponse.h"
+#include "setalarmstaterequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class SetAlarmStateResponsePrivate;
+
+class QTAWS_EXPORT SetAlarmStateResponse : public SetAlarmStateResponse {
+    Q_OBJECT
+
+public:
+    SetAlarmStateResponse(const SetAlarmStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetAlarmStateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetAlarmStateResponse)
+    Q_DISABLE_COPY(SetAlarmStateResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

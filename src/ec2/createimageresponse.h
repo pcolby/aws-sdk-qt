@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEIMAGERESPONSE_H
 #define QTAWS_CREATEIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "createimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateImageResponsePrivate;
+
+class QTAWS_EXPORT CreateImageResponse : public CreateImageResponse {
+    Q_OBJECT
+
+public:
+    CreateImageResponse(const CreateImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateImageResponse)
+    Q_DISABLE_COPY(CreateImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREMOTEACCESSSESSIONSRESPONSE_H
 #define QTAWS_LISTREMOTEACCESSSESSIONSRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "listremoteaccesssessionsrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ListRemoteAccessSessionsResponsePrivate;
+
+class QTAWS_EXPORT ListRemoteAccessSessionsResponse : public ListRemoteAccessSessionsResponse {
+    Q_OBJECT
+
+public:
+    ListRemoteAccessSessionsResponse(const ListRemoteAccessSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRemoteAccessSessionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRemoteAccessSessionsResponse)
+    Q_DISABLE_COPY(ListRemoteAccessSessionsResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

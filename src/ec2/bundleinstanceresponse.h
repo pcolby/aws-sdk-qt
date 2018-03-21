@@ -20,4 +20,33 @@
 #ifndef QTAWS_BUNDLEINSTANCERESPONSE_H
 #define QTAWS_BUNDLEINSTANCERESPONSE_H
 
+#include "ec2response.h"
+#include "bundleinstancerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class BundleInstanceResponsePrivate;
+
+class QTAWS_EXPORT BundleInstanceResponse : public BundleInstanceResponse {
+    Q_OBJECT
+
+public:
+    BundleInstanceResponse(const BundleInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BundleInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BundleInstanceResponse)
+    Q_DISABLE_COPY(BundleInstanceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

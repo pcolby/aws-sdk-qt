@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELCERTIFICATETRANSFERRESPONSE_H
 #define QTAWS_CANCELCERTIFICATETRANSFERRESPONSE_H
 
+#include "iotresponse.h"
+#include "cancelcertificatetransferrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CancelCertificateTransferResponsePrivate;
+
+class QTAWS_EXPORT CancelCertificateTransferResponse : public CancelCertificateTransferResponse {
+    Q_OBJECT
+
+public:
+    CancelCertificateTransferResponse(const CancelCertificateTransferRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelCertificateTransferRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelCertificateTransferResponse)
+    Q_DISABLE_COPY(CancelCertificateTransferResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

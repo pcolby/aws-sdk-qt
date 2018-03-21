@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTEVENTPATTERNRESPONSE_H
 #define QTAWS_TESTEVENTPATTERNRESPONSE_H
 
+#include "eventsresponse.h"
+#include "testeventpatternrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class TestEventPatternResponsePrivate;
+
+class QTAWS_EXPORT TestEventPatternResponse : public TestEventPatternResponse {
+    Q_OBJECT
+
+public:
+    TestEventPatternResponse(const TestEventPatternRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestEventPatternRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestEventPatternResponse)
+    Q_DISABLE_COPY(TestEventPatternResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

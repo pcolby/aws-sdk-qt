@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECHAPCREDENTIALSRESPONSE_H
 #define QTAWS_DELETECHAPCREDENTIALSRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "deletechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DeleteChapCredentialsResponsePrivate;
+
+class QTAWS_EXPORT DeleteChapCredentialsResponse : public DeleteChapCredentialsResponse {
+    Q_OBJECT
+
+public:
+    DeleteChapCredentialsResponse(const DeleteChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteChapCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteChapCredentialsResponse)
+    Q_DISABLE_COPY(DeleteChapCredentialsResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

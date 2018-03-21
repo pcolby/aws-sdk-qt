@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERELASTICIPRESPONSE_H
 #define QTAWS_DEREGISTERELASTICIPRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "deregisterelasticiprequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DeregisterElasticIpResponsePrivate;
+
+class QTAWS_EXPORT DeregisterElasticIpResponse : public DeregisterElasticIpResponse {
+    Q_OBJECT
+
+public:
+    DeregisterElasticIpResponse(const DeregisterElasticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterElasticIpRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterElasticIpResponse)
+    Q_DISABLE_COPY(DeregisterElasticIpResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

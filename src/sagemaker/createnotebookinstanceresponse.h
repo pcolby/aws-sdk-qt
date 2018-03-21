@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENOTEBOOKINSTANCERESPONSE_H
 #define QTAWS_CREATENOTEBOOKINSTANCERESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "createnotebookinstancerequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class CreateNotebookInstanceResponsePrivate;
+
+class QTAWS_EXPORT CreateNotebookInstanceResponse : public CreateNotebookInstanceResponse {
+    Q_OBJECT
+
+public:
+    CreateNotebookInstanceResponse(const CreateNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNotebookInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNotebookInstanceResponse)
+    Q_DISABLE_COPY(CreateNotebookInstanceResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

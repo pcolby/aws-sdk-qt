@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMDATASETRESPONSE_H
 #define QTAWS_UNSUBSCRIBEFROMDATASETRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "unsubscribefromdatasetrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class UnsubscribeFromDatasetResponsePrivate;
+
+class QTAWS_EXPORT UnsubscribeFromDatasetResponse : public UnsubscribeFromDatasetResponse {
+    Q_OBJECT
+
+public:
+    UnsubscribeFromDatasetResponse(const UnsubscribeFromDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnsubscribeFromDatasetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnsubscribeFromDatasetResponse)
+    Q_DISABLE_COPY(UnsubscribeFromDatasetResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEFPGAIMAGERESPONSE_H
 #define QTAWS_CREATEFPGAIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "createfpgaimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateFpgaImageResponsePrivate;
+
+class QTAWS_EXPORT CreateFpgaImageResponse : public CreateFpgaImageResponse {
+    Q_OBJECT
+
+public:
+    CreateFpgaImageResponse(const CreateFpgaImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateFpgaImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateFpgaImageResponse)
+    Q_DISABLE_COPY(CreateFpgaImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINSTANCESRESPONSE_H
 #define QTAWS_LISTINSTANCESRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "listinstancesrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class ListInstancesResponsePrivate;
+
+class QTAWS_EXPORT ListInstancesResponse : public ListInstancesResponse {
+    Q_OBJECT
+
+public:
+    ListInstancesResponse(const ListInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListInstancesResponse)
+    Q_DISABLE_COPY(ListInstancesResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

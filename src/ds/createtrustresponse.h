@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETRUSTRESPONSE_H
 #define QTAWS_CREATETRUSTRESPONSE_H
 
+#include "dsresponse.h"
+#include "createtrustrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class CreateTrustResponsePrivate;
+
+class QTAWS_EXPORT CreateTrustResponse : public CreateTrustResponse {
+    Q_OBJECT
+
+public:
+    CreateTrustResponse(const CreateTrustRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTrustRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTrustResponse)
+    Q_DISABLE_COPY(CreateTrustResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

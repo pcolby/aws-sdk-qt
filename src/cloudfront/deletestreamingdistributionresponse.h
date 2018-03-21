@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESTREAMINGDISTRIBUTIONRESPONSE_H
 #define QTAWS_DELETESTREAMINGDISTRIBUTIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "deletestreamingdistributionrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class DeleteStreamingDistributionResponsePrivate;
+
+class QTAWS_EXPORT DeleteStreamingDistributionResponse : public DeleteStreamingDistributionResponse {
+    Q_OBJECT
+
+public:
+    DeleteStreamingDistributionResponse(const DeleteStreamingDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteStreamingDistributionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStreamingDistributionResponse)
+    Q_DISABLE_COPY(DeleteStreamingDistributionResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEACTIVITYTYPERESPONSE_H
 #define QTAWS_DESCRIBEACTIVITYTYPERESPONSE_H
 
+#include "swfresponse.h"
+#include "describeactivitytyperequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class DescribeActivityTypeResponsePrivate;
+
+class QTAWS_EXPORT DescribeActivityTypeResponse : public DescribeActivityTypeResponse {
+    Q_OBJECT
+
+public:
+    DescribeActivityTypeResponse(const DescribeActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeActivityTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeActivityTypeResponse)
+    Q_DISABLE_COPY(DescribeActivityTypeResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

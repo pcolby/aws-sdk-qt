@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDBSECURITYGROUPRESPONSE_H
 #define QTAWS_DELETEDBSECURITYGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "deletedbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DeleteDBSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteDBSecurityGroupResponse : public DeleteDBSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteDBSecurityGroupResponse(const DeleteDBSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDBSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDBSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteDBSecurityGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFPGAIMAGESRESPONSE_H
 #define QTAWS_DESCRIBEFPGAIMAGESRESPONSE_H
 
+#include "ec2response.h"
+#include "describefpgaimagesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeFpgaImagesResponsePrivate;
+
+class QTAWS_EXPORT DescribeFpgaImagesResponse : public DescribeFpgaImagesResponse {
+    Q_OBJECT
+
+public:
+    DescribeFpgaImagesResponse(const DescribeFpgaImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFpgaImagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFpgaImagesResponse)
+    Q_DISABLE_COPY(DescribeFpgaImagesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

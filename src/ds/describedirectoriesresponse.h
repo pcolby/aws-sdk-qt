@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDIRECTORIESRESPONSE_H
 #define QTAWS_DESCRIBEDIRECTORIESRESPONSE_H
 
+#include "dsresponse.h"
+#include "describedirectoriesrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DescribeDirectoriesResponsePrivate;
+
+class QTAWS_EXPORT DescribeDirectoriesResponse : public DescribeDirectoriesResponse {
+    Q_OBJECT
+
+public:
+    DescribeDirectoriesResponse(const DescribeDirectoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDirectoriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDirectoriesResponse)
+    Q_DISABLE_COPY(DescribeDirectoriesResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

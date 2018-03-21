@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGROUPSRESPONSE_H
 #define QTAWS_LISTGROUPSRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "listgroupsrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ListGroupsResponsePrivate;
+
+class QTAWS_EXPORT ListGroupsResponse : public ListGroupsResponse {
+    Q_OBJECT
+
+public:
+    ListGroupsResponse(const ListGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGroupsResponse)
+    Q_DISABLE_COPY(ListGroupsResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOLVERRESPONSE_H
 #define QTAWS_DELETERESOLVERRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "deleteresolverrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class DeleteResolverResponsePrivate;
+
+class QTAWS_EXPORT DeleteResolverResponse : public DeleteResolverResponse {
+    Q_OBJECT
+
+public:
+    DeleteResolverResponse(const DeleteResolverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResolverRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResolverResponse)
+    Q_DISABLE_COPY(DeleteResolverResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

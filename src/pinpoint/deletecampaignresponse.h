@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECAMPAIGNRESPONSE_H
 #define QTAWS_DELETECAMPAIGNRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deletecampaignrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteCampaignResponsePrivate;
+
+class QTAWS_EXPORT DeleteCampaignResponse : public DeleteCampaignResponse {
+    Q_OBJECT
+
+public:
+    DeleteCampaignResponse(const DeleteCampaignRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCampaignRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCampaignResponse)
+    Q_DISABLE_COPY(DeleteCampaignResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

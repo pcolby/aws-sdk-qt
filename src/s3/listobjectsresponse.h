@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTOBJECTSRESPONSE_H
 #define QTAWS_LISTOBJECTSRESPONSE_H
 
+#include "s3response.h"
+#include "listobjectsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class ListObjectsResponsePrivate;
+
+class QTAWS_EXPORT ListObjectsResponse : public ListObjectsResponse {
+    Q_OBJECT
+
+public:
+    ListObjectsResponse(const ListObjectsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListObjectsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectsResponse)
+    Q_DISABLE_COPY(ListObjectsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

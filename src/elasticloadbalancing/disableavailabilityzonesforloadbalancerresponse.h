@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEAVAILABILITYZONESFORLOADBALANCERRESPONSE_H
 #define QTAWS_DISABLEAVAILABILITYZONESFORLOADBALANCERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "disableavailabilityzonesforloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DisableAvailabilityZonesForLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT DisableAvailabilityZonesForLoadBalancerResponse : public DisableAvailabilityZonesForLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    DisableAvailabilityZonesForLoadBalancerResponse(const DisableAvailabilityZonesForLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableAvailabilityZonesForLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableAvailabilityZonesForLoadBalancerResponse)
+    Q_DISABLE_COPY(DisableAvailabilityZonesForLoadBalancerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTNAMEDQUERIESRESPONSE_H
 #define QTAWS_LISTNAMEDQUERIESRESPONSE_H
 
+#include "athenaresponse.h"
+#include "listnamedqueriesrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class ListNamedQueriesResponsePrivate;
+
+class QTAWS_EXPORT ListNamedQueriesResponse : public ListNamedQueriesResponse {
+    Q_OBJECT
+
+public:
+    ListNamedQueriesResponse(const ListNamedQueriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListNamedQueriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListNamedQueriesResponse)
+    Q_DISABLE_COPY(ListNamedQueriesResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

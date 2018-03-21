@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBUNLOCKCODERESPONSE_H
 #define QTAWS_GETJOBUNLOCKCODERESPONSE_H
 
+#include "snowballresponse.h"
+#include "getjobunlockcoderequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class GetJobUnlockCodeResponsePrivate;
+
+class QTAWS_EXPORT GetJobUnlockCodeResponse : public GetJobUnlockCodeResponse {
+    Q_OBJECT
+
+public:
+    GetJobUnlockCodeResponse(const GetJobUnlockCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobUnlockCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobUnlockCodeResponse)
+    Q_DISABLE_COPY(GetJobUnlockCodeResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEFLEETRESPONSE_H
 #define QTAWS_UPDATEFLEETRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "updatefleetrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class UpdateFleetResponsePrivate;
+
+class QTAWS_EXPORT UpdateFleetResponse : public UpdateFleetResponse {
+    Q_OBJECT
+
+public:
+    UpdateFleetResponse(const UpdateFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateFleetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFleetResponse)
+    Q_DISABLE_COPY(UpdateFleetResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

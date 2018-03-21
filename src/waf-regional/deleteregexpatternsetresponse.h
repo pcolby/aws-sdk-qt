@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREGEXPATTERNSETRESPONSE_H
 #define QTAWS_DELETEREGEXPATTERNSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "deleteregexpatternsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DeleteRegexPatternSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteRegexPatternSetResponse : public DeleteRegexPatternSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteRegexPatternSetResponse(const DeleteRegexPatternSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRegexPatternSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRegexPatternSetResponse)
+    Q_DISABLE_COPY(DeleteRegexPatternSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAGGREGATEIDFORMATRESPONSE_H
 #define QTAWS_DESCRIBEAGGREGATEIDFORMATRESPONSE_H
 
+#include "ec2response.h"
+#include "describeaggregateidformatrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeAggregateIdFormatResponsePrivate;
+
+class QTAWS_EXPORT DescribeAggregateIdFormatResponse : public DescribeAggregateIdFormatResponse {
+    Q_OBJECT
+
+public:
+    DescribeAggregateIdFormatResponse(const DescribeAggregateIdFormatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAggregateIdFormatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAggregateIdFormatResponse)
+    Q_DISABLE_COPY(DescribeAggregateIdFormatResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

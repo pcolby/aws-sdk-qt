@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONSRESPONSE_H
 #define QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeenvironmentmanagedactionsrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DescribeEnvironmentManagedActionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentManagedActionsResponse : public DescribeEnvironmentManagedActionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEnvironmentManagedActionsResponse(const DescribeEnvironmentManagedActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEnvironmentManagedActionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentManagedActionsResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentManagedActionsResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

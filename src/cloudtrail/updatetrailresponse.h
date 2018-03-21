@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETRAILRESPONSE_H
 #define QTAWS_UPDATETRAILRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "updatetrailrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class UpdateTrailResponsePrivate;
+
+class QTAWS_EXPORT UpdateTrailResponse : public UpdateTrailResponse {
+    Q_OBJECT
+
+public:
+    UpdateTrailResponse(const UpdateTrailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTrailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTrailResponse)
+    Q_DISABLE_COPY(UpdateTrailResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

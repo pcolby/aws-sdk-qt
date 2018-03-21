@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEIPSETRESPONSE_H
 #define QTAWS_DELETEIPSETRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "deleteipsetrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DeleteIPSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteIPSetResponse : public DeleteIPSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteIPSetResponse(const DeleteIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteIPSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIPSetResponse)
+    Q_DISABLE_COPY(DeleteIPSetResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

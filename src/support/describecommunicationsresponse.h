@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECOMMUNICATIONSRESPONSE_H
 #define QTAWS_DESCRIBECOMMUNICATIONSRESPONSE_H
 
+#include "supportresponse.h"
+#include "describecommunicationsrequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class DescribeCommunicationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeCommunicationsResponse : public DescribeCommunicationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeCommunicationsResponse(const DescribeCommunicationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCommunicationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCommunicationsResponse)
+    Q_DISABLE_COPY(DescribeCommunicationsResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

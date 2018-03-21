@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEUSERDEFINEDFUNCTIONRESPONSE_H
 #define QTAWS_UPDATEUSERDEFINEDFUNCTIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "updateuserdefinedfunctionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdateUserDefinedFunctionResponsePrivate;
+
+class QTAWS_EXPORT UpdateUserDefinedFunctionResponse : public UpdateUserDefinedFunctionResponse {
+    Q_OBJECT
+
+public:
+    UpdateUserDefinedFunctionResponse(const UpdateUserDefinedFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateUserDefinedFunctionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateUserDefinedFunctionResponse)
+    Q_DISABLE_COPY(UpdateUserDefinedFunctionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

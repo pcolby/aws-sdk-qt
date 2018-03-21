@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEROUTETABLERESPONSE_H
 #define QTAWS_DISASSOCIATEROUTETABLERESPONSE_H
 
+#include "ec2response.h"
+#include "disassociateroutetablerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DisassociateRouteTableResponsePrivate;
+
+class QTAWS_EXPORT DisassociateRouteTableResponse : public DisassociateRouteTableResponse {
+    Q_OBJECT
+
+public:
+    DisassociateRouteTableResponse(const DisassociateRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateRouteTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateRouteTableResponse)
+    Q_DISABLE_COPY(DisassociateRouteTableResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

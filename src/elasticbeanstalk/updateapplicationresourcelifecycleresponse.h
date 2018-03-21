@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLERESPONSE_H
 #define QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLERESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateapplicationresourcelifecyclerequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class UpdateApplicationResourceLifecycleResponsePrivate;
+
+class QTAWS_EXPORT UpdateApplicationResourceLifecycleResponse : public UpdateApplicationResourceLifecycleResponse {
+    Q_OBJECT
+
+public:
+    UpdateApplicationResourceLifecycleResponse(const UpdateApplicationResourceLifecycleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateApplicationResourceLifecycleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationResourceLifecycleResponse)
+    Q_DISABLE_COPY(UpdateApplicationResourceLifecycleResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

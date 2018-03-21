@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOCUMENTATIONVERSIONRESPONSE_H
 #define QTAWS_UPDATEDOCUMENTATIONVERSIONRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updatedocumentationversionrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateDocumentationVersionResponsePrivate;
+
+class QTAWS_EXPORT UpdateDocumentationVersionResponse : public UpdateDocumentationVersionResponse {
+    Q_OBJECT
+
+public:
+    UpdateDocumentationVersionResponse(const UpdateDocumentationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDocumentationVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDocumentationVersionResponse)
+    Q_DISABLE_COPY(UpdateDocumentationVersionResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

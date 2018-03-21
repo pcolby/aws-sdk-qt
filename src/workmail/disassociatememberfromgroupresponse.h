@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERFROMGROUPRESPONSE_H
 #define QTAWS_DISASSOCIATEMEMBERFROMGROUPRESPONSE_H
 
+#include "workmailresponse.h"
+#include "disassociatememberfromgrouprequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class DisassociateMemberFromGroupResponsePrivate;
+
+class QTAWS_EXPORT DisassociateMemberFromGroupResponse : public DisassociateMemberFromGroupResponse {
+    Q_OBJECT
+
+public:
+    DisassociateMemberFromGroupResponse(const DisassociateMemberFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateMemberFromGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateMemberFromGroupResponse)
+    Q_DISABLE_COPY(DisassociateMemberFromGroupResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

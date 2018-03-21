@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOBJECTINFORMATIONRESPONSE_H
 #define QTAWS_GETOBJECTINFORMATIONRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "getobjectinformationrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class GetObjectInformationResponsePrivate;
+
+class QTAWS_EXPORT GetObjectInformationResponse : public GetObjectInformationResponse {
+    Q_OBJECT
+
+public:
+    GetObjectInformationResponse(const GetObjectInformationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetObjectInformationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetObjectInformationResponse)
+    Q_DISABLE_COPY(GetObjectInformationResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

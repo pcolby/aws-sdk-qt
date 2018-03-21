@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBDOCUMENTRESPONSE_H
 #define QTAWS_GETJOBDOCUMENTRESPONSE_H
 
+#include "iotresponse.h"
+#include "getjobdocumentrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class GetJobDocumentResponsePrivate;
+
+class QTAWS_EXPORT GetJobDocumentResponse : public GetJobDocumentResponse {
+    Q_OBJECT
+
+public:
+    GetJobDocumentResponse(const GetJobDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobDocumentResponse)
+    Q_DISABLE_COPY(GetJobDocumentResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_POLLFORDECISIONTASKRESPONSE_H
 #define QTAWS_POLLFORDECISIONTASKRESPONSE_H
 
+#include "swfresponse.h"
+#include "pollfordecisiontaskrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class PollForDecisionTaskResponsePrivate;
+
+class QTAWS_EXPORT PollForDecisionTaskResponse : public PollForDecisionTaskResponse {
+    Q_OBJECT
+
+public:
+    PollForDecisionTaskResponse(const PollForDecisionTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PollForDecisionTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PollForDecisionTaskResponse)
+    Q_DISABLE_COPY(PollForDecisionTaskResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

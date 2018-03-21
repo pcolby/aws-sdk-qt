@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEEVALUATIONRESULTSRESPONSE_H
 #define QTAWS_DELETEEVALUATIONRESULTSRESPONSE_H
 
+#include "configresponse.h"
+#include "deleteevaluationresultsrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DeleteEvaluationResultsResponsePrivate;
+
+class QTAWS_EXPORT DeleteEvaluationResultsResponse : public DeleteEvaluationResultsResponse {
+    Q_OBJECT
+
+public:
+    DeleteEvaluationResultsResponse(const DeleteEvaluationResultsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEvaluationResultsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEvaluationResultsResponse)
+    Q_DISABLE_COPY(DeleteEvaluationResultsResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

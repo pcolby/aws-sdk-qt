@@ -20,4 +20,33 @@
 #ifndef QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_H
 #define QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "postcommentforcomparedcommitrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class PostCommentForComparedCommitResponsePrivate;
+
+class QTAWS_EXPORT PostCommentForComparedCommitResponse : public PostCommentForComparedCommitResponse {
+    Q_OBJECT
+
+public:
+    PostCommentForComparedCommitResponse(const PostCommentForComparedCommitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PostCommentForComparedCommitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PostCommentForComparedCommitResponse)
+    Q_DISABLE_COPY(PostCommentForComparedCommitResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

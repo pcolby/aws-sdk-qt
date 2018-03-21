@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEROUTETABLESRESPONSE_H
 #define QTAWS_DESCRIBEROUTETABLESRESPONSE_H
 
+#include "ec2response.h"
+#include "describeroutetablesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeRouteTablesResponsePrivate;
+
+class QTAWS_EXPORT DescribeRouteTablesResponse : public DescribeRouteTablesResponse {
+    Q_OBJECT
+
+public:
+    DescribeRouteTablesResponse(const DescribeRouteTablesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRouteTablesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRouteTablesResponse)
+    Q_DISABLE_COPY(DescribeRouteTablesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

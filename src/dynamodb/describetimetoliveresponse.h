@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETIMETOLIVERESPONSE_H
 #define QTAWS_DESCRIBETIMETOLIVERESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "describetimetoliverequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DescribeTimeToLiveResponsePrivate;
+
+class QTAWS_EXPORT DescribeTimeToLiveResponse : public DescribeTimeToLiveResponse {
+    Q_OBJECT
+
+public:
+    DescribeTimeToLiveResponse(const DescribeTimeToLiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTimeToLiveRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTimeToLiveResponse)
+    Q_DISABLE_COPY(DescribeTimeToLiveResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

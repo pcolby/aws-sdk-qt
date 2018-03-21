@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYVOLUMEATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYVOLUMEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifyvolumeattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyVolumeAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyVolumeAttributeResponse : public ModifyVolumeAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyVolumeAttributeResponse(const ModifyVolumeAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyVolumeAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVolumeAttributeResponse)
+    Q_DISABLE_COPY(ModifyVolumeAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

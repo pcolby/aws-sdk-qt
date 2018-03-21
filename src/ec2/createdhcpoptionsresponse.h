@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDHCPOPTIONSRESPONSE_H
 #define QTAWS_CREATEDHCPOPTIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "createdhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateDhcpOptionsResponsePrivate;
+
+class QTAWS_EXPORT CreateDhcpOptionsResponse : public CreateDhcpOptionsResponse {
+    Q_OBJECT
+
+public:
+    CreateDhcpOptionsResponse(const CreateDhcpOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDhcpOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDhcpOptionsResponse)
+    Q_DISABLE_COPY(CreateDhcpOptionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

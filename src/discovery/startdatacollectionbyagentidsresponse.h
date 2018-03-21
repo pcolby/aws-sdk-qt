@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTDATACOLLECTIONBYAGENTIDSRESPONSE_H
 #define QTAWS_STARTDATACOLLECTIONBYAGENTIDSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "startdatacollectionbyagentidsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class StartDataCollectionByAgentIdsResponsePrivate;
+
+class QTAWS_EXPORT StartDataCollectionByAgentIdsResponse : public StartDataCollectionByAgentIdsResponse {
+    Q_OBJECT
+
+public:
+    StartDataCollectionByAgentIdsResponse(const StartDataCollectionByAgentIdsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartDataCollectionByAgentIdsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartDataCollectionByAgentIdsResponse)
+    Q_DISABLE_COPY(StartDataCollectionByAgentIdsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

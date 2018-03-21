@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBOTCHANNELASSOCIATIONRESPONSE_H
 #define QTAWS_GETBOTCHANNELASSOCIATIONRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getbotchannelassociationrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetBotChannelAssociationResponsePrivate;
+
+class QTAWS_EXPORT GetBotChannelAssociationResponse : public GetBotChannelAssociationResponse {
+    Q_OBJECT
+
+public:
+    GetBotChannelAssociationResponse(const GetBotChannelAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBotChannelAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBotChannelAssociationResponse)
+    Q_DISABLE_COPY(GetBotChannelAssociationResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

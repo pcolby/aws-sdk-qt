@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTMETHODRESPONSE_H
 #define QTAWS_PUTMETHODRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "putmethodrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class PutMethodResponsePrivate;
+
+class QTAWS_EXPORT PutMethodResponse : public PutMethodResponse {
+    Q_OBJECT
+
+public:
+    PutMethodResponse(const PutMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutMethodRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutMethodResponse)
+    Q_DISABLE_COPY(PutMethodResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

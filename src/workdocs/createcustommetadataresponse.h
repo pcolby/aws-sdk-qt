@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECUSTOMMETADATARESPONSE_H
 #define QTAWS_CREATECUSTOMMETADATARESPONSE_H
 
+#include "workdocsresponse.h"
+#include "createcustommetadatarequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class CreateCustomMetadataResponsePrivate;
+
+class QTAWS_EXPORT CreateCustomMetadataResponse : public CreateCustomMetadataResponse {
+    Q_OBJECT
+
+public:
+    CreateCustomMetadataResponse(const CreateCustomMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCustomMetadataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomMetadataResponse)
+    Q_DISABLE_COPY(CreateCustomMetadataResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

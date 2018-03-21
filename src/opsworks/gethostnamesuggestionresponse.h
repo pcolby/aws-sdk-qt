@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETHOSTNAMESUGGESTIONRESPONSE_H
 #define QTAWS_GETHOSTNAMESUGGESTIONRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "gethostnamesuggestionrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class GetHostnameSuggestionResponsePrivate;
+
+class QTAWS_EXPORT GetHostnameSuggestionResponse : public GetHostnameSuggestionResponse {
+    Q_OBJECT
+
+public:
+    GetHostnameSuggestionResponse(const GetHostnameSuggestionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetHostnameSuggestionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetHostnameSuggestionResponse)
+    Q_DISABLE_COPY(GetHostnameSuggestionResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

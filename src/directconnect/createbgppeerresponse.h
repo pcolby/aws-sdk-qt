@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEBGPPEERRESPONSE_H
 #define QTAWS_CREATEBGPPEERRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "createbgppeerrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class CreateBGPPeerResponsePrivate;
+
+class QTAWS_EXPORT CreateBGPPeerResponse : public CreateBGPPeerResponse {
+    Q_OBJECT
+
+public:
+    CreateBGPPeerResponse(const CreateBGPPeerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateBGPPeerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateBGPPeerResponse)
+    Q_DISABLE_COPY(CreateBGPPeerResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

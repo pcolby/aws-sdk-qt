@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEWEBHOOKRESPONSE_H
 #define QTAWS_DELETEWEBHOOKRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "deletewebhookrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class DeleteWebhookResponsePrivate;
+
+class QTAWS_EXPORT DeleteWebhookResponse : public DeleteWebhookResponse {
+    Q_OBJECT
+
+public:
+    DeleteWebhookResponse(const DeleteWebhookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteWebhookRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteWebhookResponse)
+    Q_DISABLE_COPY(DeleteWebhookResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

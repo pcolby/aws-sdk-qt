@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDETECTDOMINANTLANGUAGERESPONSE_H
 #define QTAWS_BATCHDETECTDOMINANTLANGUAGERESPONSE_H
 
+#include "comprehendresponse.h"
+#include "batchdetectdominantlanguagerequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class BatchDetectDominantLanguageResponsePrivate;
+
+class QTAWS_EXPORT BatchDetectDominantLanguageResponse : public BatchDetectDominantLanguageResponse {
+    Q_OBJECT
+
+public:
+    BatchDetectDominantLanguageResponse(const BatchDetectDominantLanguageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDetectDominantLanguageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectDominantLanguageResponse)
+    Q_DISABLE_COPY(BatchDetectDominantLanguageResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

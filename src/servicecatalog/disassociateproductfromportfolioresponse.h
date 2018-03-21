@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEPRODUCTFROMPORTFOLIORESPONSE_H
 #define QTAWS_DISASSOCIATEPRODUCTFROMPORTFOLIORESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "disassociateproductfromportfoliorequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DisassociateProductFromPortfolioResponsePrivate;
+
+class QTAWS_EXPORT DisassociateProductFromPortfolioResponse : public DisassociateProductFromPortfolioResponse {
+    Q_OBJECT
+
+public:
+    DisassociateProductFromPortfolioResponse(const DisassociateProductFromPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateProductFromPortfolioRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateProductFromPortfolioResponse)
+    Q_DISABLE_COPY(DisassociateProductFromPortfolioResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

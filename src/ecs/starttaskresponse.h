@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTTASKRESPONSE_H
 #define QTAWS_STARTTASKRESPONSE_H
 
+#include "ecsresponse.h"
+#include "starttaskrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class StartTaskResponsePrivate;
+
+class QTAWS_EXPORT StartTaskResponse : public StartTaskResponse {
+    Q_OBJECT
+
+public:
+    StartTaskResponse(const StartTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartTaskResponse)
+    Q_DISABLE_COPY(StartTaskResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

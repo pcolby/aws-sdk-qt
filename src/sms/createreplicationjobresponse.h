@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREPLICATIONJOBRESPONSE_H
 #define QTAWS_CREATEREPLICATIONJOBRESPONSE_H
 
+#include "smsresponse.h"
+#include "createreplicationjobrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class CreateReplicationJobResponsePrivate;
+
+class QTAWS_EXPORT CreateReplicationJobResponse : public CreateReplicationJobResponse {
+    Q_OBJECT
+
+public:
+    CreateReplicationJobResponse(const CreateReplicationJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateReplicationJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateReplicationJobResponse)
+    Q_DISABLE_COPY(CreateReplicationJobResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GENERATEDATASETRESPONSE_H
 #define QTAWS_GENERATEDATASETRESPONSE_H
 
+#include "marketplacecommerceanalyticsresponse.h"
+#include "generatedatasetrequest.h"
+
+namespace AWS {
+
+namespace marketplacecommerceanalytics {
+
+class GenerateDataSetResponsePrivate;
+
+class QTAWS_EXPORT GenerateDataSetResponse : public GenerateDataSetResponse {
+    Q_OBJECT
+
+public:
+    GenerateDataSetResponse(const GenerateDataSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GenerateDataSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GenerateDataSetResponse)
+    Q_DISABLE_COPY(GenerateDataSetResponse)
+
+};
+
+} // namespace marketplacecommerceanalytics
+} // namespace AWS
+
 #endif

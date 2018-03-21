@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSRESPONSE_H
 #define QTAWS_SETVISIBLETOALLUSERSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "setvisibletoallusersrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class SetVisibleToAllUsersResponsePrivate;
+
+class QTAWS_EXPORT SetVisibleToAllUsersResponse : public SetVisibleToAllUsersResponse {
+    Q_OBJECT
+
+public:
+    SetVisibleToAllUsersResponse(const SetVisibleToAllUsersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetVisibleToAllUsersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetVisibleToAllUsersResponse)
+    Q_DISABLE_COPY(SetVisibleToAllUsersResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

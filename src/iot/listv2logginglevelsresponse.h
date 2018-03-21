@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTV2LOGGINGLEVELSRESPONSE_H
 #define QTAWS_LISTV2LOGGINGLEVELSRESPONSE_H
 
+#include "iotresponse.h"
+#include "listv2logginglevelsrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListV2LoggingLevelsResponsePrivate;
+
+class QTAWS_EXPORT ListV2LoggingLevelsResponse : public ListV2LoggingLevelsResponse {
+    Q_OBJECT
+
+public:
+    ListV2LoggingLevelsResponse(const ListV2LoggingLevelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListV2LoggingLevelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListV2LoggingLevelsResponse)
+    Q_DISABLE_COPY(ListV2LoggingLevelsResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESERVICESPECIFICCREDENTIALRESPONSE_H
 #define QTAWS_CREATESERVICESPECIFICCREDENTIALRESPONSE_H
 
+#include "iamresponse.h"
+#include "createservicespecificcredentialrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreateServiceSpecificCredentialResponsePrivate;
+
+class QTAWS_EXPORT CreateServiceSpecificCredentialResponse : public CreateServiceSpecificCredentialResponse {
+    Q_OBJECT
+
+public:
+    CreateServiceSpecificCredentialResponse(const CreateServiceSpecificCredentialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateServiceSpecificCredentialRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateServiceSpecificCredentialResponse)
+    Q_DISABLE_COPY(CreateServiceSpecificCredentialResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

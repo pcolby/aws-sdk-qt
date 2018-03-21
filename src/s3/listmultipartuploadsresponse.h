@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTMULTIPARTUPLOADSRESPONSE_H
 #define QTAWS_LISTMULTIPARTUPLOADSRESPONSE_H
 
+#include "s3response.h"
+#include "listmultipartuploadsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class ListMultipartUploadsResponsePrivate;
+
+class QTAWS_EXPORT ListMultipartUploadsResponse : public ListMultipartUploadsResponse {
+    Q_OBJECT
+
+public:
+    ListMultipartUploadsResponse(const ListMultipartUploadsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListMultipartUploadsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListMultipartUploadsResponse)
+    Q_DISABLE_COPY(ListMultipartUploadsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

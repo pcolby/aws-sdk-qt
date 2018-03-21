@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_H
 #define QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "starttopicsdetectionjobrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class StartTopicsDetectionJobResponsePrivate;
+
+class QTAWS_EXPORT StartTopicsDetectionJobResponse : public StartTopicsDetectionJobResponse {
+    Q_OBJECT
+
+public:
+    StartTopicsDetectionJobResponse(const StartTopicsDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartTopicsDetectionJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartTopicsDetectionJobResponse)
+    Q_DISABLE_COPY(StartTopicsDetectionJobResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

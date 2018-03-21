@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPASSWORDDATARESPONSE_H
 #define QTAWS_GETPASSWORDDATARESPONSE_H
 
+#include "ec2response.h"
+#include "getpassworddatarequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class GetPasswordDataResponsePrivate;
+
+class QTAWS_EXPORT GetPasswordDataResponse : public GetPasswordDataResponse {
+    Q_OBJECT
+
+public:
+    GetPasswordDataResponse(const GetPasswordDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPasswordDataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPasswordDataResponse)
+    Q_DISABLE_COPY(GetPasswordDataResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

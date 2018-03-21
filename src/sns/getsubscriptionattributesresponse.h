@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSUBSCRIPTIONATTRIBUTESRESPONSE_H
 #define QTAWS_GETSUBSCRIPTIONATTRIBUTESRESPONSE_H
 
+#include "snsresponse.h"
+#include "getsubscriptionattributesrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class GetSubscriptionAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetSubscriptionAttributesResponse : public GetSubscriptionAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetSubscriptionAttributesResponse(const GetSubscriptionAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSubscriptionAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSubscriptionAttributesResponse)
+    Q_DISABLE_COPY(GetSubscriptionAttributesResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

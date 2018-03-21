@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDTEMPLATEDEMAILRESPONSE_H
 #define QTAWS_SENDTEMPLATEDEMAILRESPONSE_H
 
+#include "emailresponse.h"
+#include "sendtemplatedemailrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SendTemplatedEmailResponsePrivate;
+
+class QTAWS_EXPORT SendTemplatedEmailResponse : public SendTemplatedEmailResponse {
+    Q_OBJECT
+
+public:
+    SendTemplatedEmailResponse(const SendTemplatedEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendTemplatedEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendTemplatedEmailResponse)
+    Q_DISABLE_COPY(SendTemplatedEmailResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

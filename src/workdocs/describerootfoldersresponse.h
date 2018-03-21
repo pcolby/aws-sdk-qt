@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEROOTFOLDERSRESPONSE_H
 #define QTAWS_DESCRIBEROOTFOLDERSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describerootfoldersrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeRootFoldersResponsePrivate;
+
+class QTAWS_EXPORT DescribeRootFoldersResponse : public DescribeRootFoldersResponse {
+    Q_OBJECT
+
+public:
+    DescribeRootFoldersResponse(const DescribeRootFoldersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRootFoldersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRootFoldersResponse)
+    Q_DISABLE_COPY(DescribeRootFoldersResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

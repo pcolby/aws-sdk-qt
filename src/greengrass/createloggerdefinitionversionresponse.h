@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELOGGERDEFINITIONVERSIONRESPONSE_H
 #define QTAWS_CREATELOGGERDEFINITIONVERSIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "createloggerdefinitionversionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class CreateLoggerDefinitionVersionResponsePrivate;
+
+class QTAWS_EXPORT CreateLoggerDefinitionVersionResponse : public CreateLoggerDefinitionVersionResponse {
+    Q_OBJECT
+
+public:
+    CreateLoggerDefinitionVersionResponse(const CreateLoggerDefinitionVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLoggerDefinitionVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLoggerDefinitionVersionResponse)
+    Q_DISABLE_COPY(CreateLoggerDefinitionVersionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRETENTIONPOLICYRESPONSE_H
 #define QTAWS_PUTRETENTIONPOLICYRESPONSE_H
 
+#include "logsresponse.h"
+#include "putretentionpolicyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutRetentionPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutRetentionPolicyResponse : public PutRetentionPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutRetentionPolicyResponse(const PutRetentionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRetentionPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRetentionPolicyResponse)
+    Q_DISABLE_COPY(PutRetentionPolicyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

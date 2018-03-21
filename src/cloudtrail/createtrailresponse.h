@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETRAILRESPONSE_H
 #define QTAWS_CREATETRAILRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "createtrailrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class CreateTrailResponsePrivate;
+
+class QTAWS_EXPORT CreateTrailResponse : public CreateTrailResponse {
+    Q_OBJECT
+
+public:
+    CreateTrailResponse(const CreateTrailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTrailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTrailResponse)
+    Q_DISABLE_COPY(CreateTrailResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

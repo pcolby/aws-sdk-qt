@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_H
 
+#include "emailresponse.h"
+#include "getidentitydkimattributesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetIdentityDkimAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetIdentityDkimAttributesResponse : public GetIdentityDkimAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetIdentityDkimAttributesResponse(const GetIdentityDkimAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIdentityDkimAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityDkimAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityDkimAttributesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

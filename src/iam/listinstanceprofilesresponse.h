@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESRESPONSE_H
 #define QTAWS_LISTINSTANCEPROFILESRESPONSE_H
 
+#include "iamresponse.h"
+#include "listinstanceprofilesrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListInstanceProfilesResponsePrivate;
+
+class QTAWS_EXPORT ListInstanceProfilesResponse : public ListInstanceProfilesResponse {
+    Q_OBJECT
+
+public:
+    ListInstanceProfilesResponse(const ListInstanceProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListInstanceProfilesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListInstanceProfilesResponse)
+    Q_DISABLE_COPY(ListInstanceProfilesResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

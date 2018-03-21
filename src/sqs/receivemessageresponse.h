@@ -20,4 +20,33 @@
 #ifndef QTAWS_RECEIVEMESSAGERESPONSE_H
 #define QTAWS_RECEIVEMESSAGERESPONSE_H
 
+#include "sqsresponse.h"
+#include "receivemessagerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class ReceiveMessageResponsePrivate;
+
+class QTAWS_EXPORT ReceiveMessageResponse : public ReceiveMessageResponse {
+    Q_OBJECT
+
+public:
+    ReceiveMessageResponse(const ReceiveMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReceiveMessageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReceiveMessageResponse)
+    Q_DISABLE_COPY(ReceiveMessageResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

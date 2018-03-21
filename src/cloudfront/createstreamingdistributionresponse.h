@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONRESPONSE_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "createstreamingdistributionrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class CreateStreamingDistributionResponsePrivate;
+
+class QTAWS_EXPORT CreateStreamingDistributionResponse : public CreateStreamingDistributionResponse {
+    Q_OBJECT
+
+public:
+    CreateStreamingDistributionResponse(const CreateStreamingDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateStreamingDistributionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamingDistributionResponse)
+    Q_DISABLE_COPY(CreateStreamingDistributionResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

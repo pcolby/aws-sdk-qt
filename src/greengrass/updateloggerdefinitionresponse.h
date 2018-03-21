@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATELOGGERDEFINITIONRESPONSE_H
 #define QTAWS_UPDATELOGGERDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "updateloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class UpdateLoggerDefinitionResponsePrivate;
+
+class QTAWS_EXPORT UpdateLoggerDefinitionResponse : public UpdateLoggerDefinitionResponse {
+    Q_OBJECT
+
+public:
+    UpdateLoggerDefinitionResponse(const UpdateLoggerDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateLoggerDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLoggerDefinitionResponse)
+    Q_DISABLE_COPY(UpdateLoggerDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

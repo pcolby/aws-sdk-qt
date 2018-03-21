@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSRESPONSE_H
 #define QTAWS_GETACCOUNTSETTINGSRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "getaccountsettingsrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class GetAccountSettingsResponsePrivate;
+
+class QTAWS_EXPORT GetAccountSettingsResponse : public GetAccountSettingsResponse {
+    Q_OBJECT
+
+public:
+    GetAccountSettingsResponse(const GetAccountSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountSettingsResponse)
+    Q_DISABLE_COPY(GetAccountSettingsResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

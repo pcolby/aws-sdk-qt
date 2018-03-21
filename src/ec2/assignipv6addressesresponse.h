@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_H
 #define QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_H
 
+#include "ec2response.h"
+#include "assignipv6addressesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AssignIpv6AddressesResponsePrivate;
+
+class QTAWS_EXPORT AssignIpv6AddressesResponse : public AssignIpv6AddressesResponse {
+    Q_OBJECT
+
+public:
+    AssignIpv6AddressesResponse(const AssignIpv6AddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssignIpv6AddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssignIpv6AddressesResponse)
+    Q_DISABLE_COPY(AssignIpv6AddressesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

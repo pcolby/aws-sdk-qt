@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEHITWITHHITTYPERESPONSE_H
 #define QTAWS_CREATEHITWITHHITTYPERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "createhitwithhittyperequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class CreateHITWithHITTypeResponsePrivate;
+
+class QTAWS_EXPORT CreateHITWithHITTypeResponse : public CreateHITWithHITTypeResponse {
+    Q_OBJECT
+
+public:
+    CreateHITWithHITTypeResponse(const CreateHITWithHITTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateHITWithHITTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateHITWithHITTypeResponse)
+    Q_DISABLE_COPY(CreateHITWithHITTypeResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

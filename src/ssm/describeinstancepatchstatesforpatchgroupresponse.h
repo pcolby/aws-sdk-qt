@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_H
 #define QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeinstancepatchstatesforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeInstancePatchStatesForPatchGroupResponsePrivate;
+
+class QTAWS_EXPORT DescribeInstancePatchStatesForPatchGroupResponse : public DescribeInstancePatchStatesForPatchGroupResponse {
+    Q_OBJECT
+
+public:
+    DescribeInstancePatchStatesForPatchGroupResponse(const DescribeInstancePatchStatesForPatchGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeInstancePatchStatesForPatchGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstancePatchStatesForPatchGroupResponse)
+    Q_DISABLE_COPY(DescribeInstancePatchStatesForPatchGroupResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERESOURCESERVERRESPONSE_H
 #define QTAWS_CREATERESOURCESERVERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "createresourceserverrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class CreateResourceServerResponsePrivate;
+
+class QTAWS_EXPORT CreateResourceServerResponse : public CreateResourceServerResponse {
+    Q_OBJECT
+
+public:
+    CreateResourceServerResponse(const CreateResourceServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateResourceServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateResourceServerResponse)
+    Q_DISABLE_COPY(CreateResourceServerResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVAULTACCESSPOLICYRESPONSE_H
 #define QTAWS_DELETEVAULTACCESSPOLICYRESPONSE_H
 
+#include "glacierresponse.h"
+#include "deletevaultaccesspolicyrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class DeleteVaultAccessPolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteVaultAccessPolicyResponse : public DeleteVaultAccessPolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteVaultAccessPolicyResponse(const DeleteVaultAccessPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVaultAccessPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVaultAccessPolicyResponse)
+    Q_DISABLE_COPY(DeleteVaultAccessPolicyResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

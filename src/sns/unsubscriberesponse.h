@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNSUBSCRIBERESPONSE_H
 #define QTAWS_UNSUBSCRIBERESPONSE_H
 
+#include "snsresponse.h"
+#include "unsubscriberequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class UnsubscribeResponsePrivate;
+
+class QTAWS_EXPORT UnsubscribeResponse : public UnsubscribeResponse {
+    Q_OBJECT
+
+public:
+    UnsubscribeResponse(const UnsubscribeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnsubscribeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnsubscribeResponse)
+    Q_DISABLE_COPY(UnsubscribeResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEOBJECTRESPONSE_H
 #define QTAWS_DESCRIBEOBJECTRESPONSE_H
 
+#include "mediastore-dataresponse.h"
+#include "describeobjectrequest.h"
+
+namespace AWS {
+
+namespace mediastore-data {
+
+class DescribeObjectResponsePrivate;
+
+class QTAWS_EXPORT DescribeObjectResponse : public DescribeObjectResponse {
+    Q_OBJECT
+
+public:
+    DescribeObjectResponse(const DescribeObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeObjectResponse)
+    Q_DISABLE_COPY(DescribeObjectResponse)
+
+};
+
+} // namespace mediastore-data
+} // namespace AWS
+
 #endif

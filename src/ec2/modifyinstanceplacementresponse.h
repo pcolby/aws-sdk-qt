@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_H
 #define QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyinstanceplacementrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyInstancePlacementResponsePrivate;
+
+class QTAWS_EXPORT ModifyInstancePlacementResponse : public ModifyInstancePlacementResponse {
+    Q_OBJECT
+
+public:
+    ModifyInstancePlacementResponse(const ModifyInstancePlacementRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyInstancePlacementRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyInstancePlacementResponse)
+    Q_DISABLE_COPY(ModifyInstancePlacementResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

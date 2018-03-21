@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESCRIPTRESPONSE_H
 #define QTAWS_CREATESCRIPTRESPONSE_H
 
+#include "glueresponse.h"
+#include "createscriptrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class CreateScriptResponsePrivate;
+
+class QTAWS_EXPORT CreateScriptResponse : public CreateScriptResponse {
+    Q_OBJECT
+
+public:
+    CreateScriptResponse(const CreateScriptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateScriptRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateScriptResponse)
+    Q_DISABLE_COPY(CreateScriptResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

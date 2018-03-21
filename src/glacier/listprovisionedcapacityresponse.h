@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_H
 #define QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_H
 
+#include "glacierresponse.h"
+#include "listprovisionedcapacityrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class ListProvisionedCapacityResponsePrivate;
+
+class QTAWS_EXPORT ListProvisionedCapacityResponse : public ListProvisionedCapacityResponse {
+    Q_OBJECT
+
+public:
+    ListProvisionedCapacityResponse(const ListProvisionedCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListProvisionedCapacityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListProvisionedCapacityResponse)
+    Q_DISABLE_COPY(ListProvisionedCapacityResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

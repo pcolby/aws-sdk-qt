@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYOPTIONGROUPRESPONSE_H
 #define QTAWS_MODIFYOPTIONGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "modifyoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class ModifyOptionGroupResponsePrivate;
+
+class QTAWS_EXPORT ModifyOptionGroupResponse : public ModifyOptionGroupResponse {
+    Q_OBJECT
+
+public:
+    ModifyOptionGroupResponse(const ModifyOptionGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyOptionGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyOptionGroupResponse)
+    Q_DISABLE_COPY(ModifyOptionGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

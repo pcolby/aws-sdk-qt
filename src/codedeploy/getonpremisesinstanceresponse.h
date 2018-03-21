@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETONPREMISESINSTANCERESPONSE_H
 #define QTAWS_GETONPREMISESINSTANCERESPONSE_H
 
+#include "codedeployresponse.h"
+#include "getonpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class GetOnPremisesInstanceResponsePrivate;
+
+class QTAWS_EXPORT GetOnPremisesInstanceResponse : public GetOnPremisesInstanceResponse {
+    Q_OBJECT
+
+public:
+    GetOnPremisesInstanceResponse(const GetOnPremisesInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetOnPremisesInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetOnPremisesInstanceResponse)
+    Q_DISABLE_COPY(GetOnPremisesInstanceResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

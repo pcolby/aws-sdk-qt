@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMMANDINVOCATIONRESPONSE_H
 #define QTAWS_GETCOMMANDINVOCATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "getcommandinvocationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetCommandInvocationResponsePrivate;
+
+class QTAWS_EXPORT GetCommandInvocationResponse : public GetCommandInvocationResponse {
+    Q_OBJECT
+
+public:
+    GetCommandInvocationResponse(const GetCommandInvocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCommandInvocationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCommandInvocationResponse)
+    Q_DISABLE_COPY(GetCommandInvocationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

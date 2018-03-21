@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCLASSIFIERSRESPONSE_H
 #define QTAWS_GETCLASSIFIERSRESPONSE_H
 
+#include "glueresponse.h"
+#include "getclassifiersrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetClassifiersResponsePrivate;
+
+class QTAWS_EXPORT GetClassifiersResponse : public GetClassifiersResponse {
+    Q_OBJECT
+
+public:
+    GetClassifiersResponse(const GetClassifiersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetClassifiersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetClassifiersResponse)
+    Q_DISABLE_COPY(GetClassifiersResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

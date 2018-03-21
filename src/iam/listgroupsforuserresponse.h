@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGROUPSFORUSERRESPONSE_H
 #define QTAWS_LISTGROUPSFORUSERRESPONSE_H
 
+#include "iamresponse.h"
+#include "listgroupsforuserrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListGroupsForUserResponsePrivate;
+
+class QTAWS_EXPORT ListGroupsForUserResponse : public ListGroupsForUserResponse {
+    Q_OBJECT
+
+public:
+    ListGroupsForUserResponse(const ListGroupsForUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGroupsForUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGroupsForUserResponse)
+    Q_DISABLE_COPY(ListGroupsForUserResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

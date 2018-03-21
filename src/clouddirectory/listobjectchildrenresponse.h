@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTOBJECTCHILDRENRESPONSE_H
 #define QTAWS_LISTOBJECTCHILDRENRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listobjectchildrenrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListObjectChildrenResponsePrivate;
+
+class QTAWS_EXPORT ListObjectChildrenResponse : public ListObjectChildrenResponse {
+    Q_OBJECT
+
+public:
+    ListObjectChildrenResponse(const ListObjectChildrenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListObjectChildrenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectChildrenResponse)
+    Q_DISABLE_COPY(ListObjectChildrenResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

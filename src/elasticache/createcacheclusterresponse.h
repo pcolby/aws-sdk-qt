@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECACHECLUSTERRESPONSE_H
 #define QTAWS_CREATECACHECLUSTERRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "createcacheclusterrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class CreateCacheClusterResponsePrivate;
+
+class QTAWS_EXPORT CreateCacheClusterResponse : public CreateCacheClusterResponse {
+    Q_OBJECT
+
+public:
+    CreateCacheClusterResponse(const CreateCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCacheClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCacheClusterResponse)
+    Q_DISABLE_COPY(CreateCacheClusterResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

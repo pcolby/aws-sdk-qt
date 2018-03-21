@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAUTHORIZERSRESPONSE_H
 #define QTAWS_LISTAUTHORIZERSRESPONSE_H
 
+#include "iotresponse.h"
+#include "listauthorizersrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListAuthorizersResponsePrivate;
+
+class QTAWS_EXPORT ListAuthorizersResponse : public ListAuthorizersResponse {
+    Q_OBJECT
+
+public:
+    ListAuthorizersResponse(const ListAuthorizersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAuthorizersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAuthorizersResponse)
+    Q_DISABLE_COPY(ListAuthorizersResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

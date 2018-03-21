@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTHANDSHAKESFORACCOUNTRESPONSE_H
 #define QTAWS_LISTHANDSHAKESFORACCOUNTRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "listhandshakesforaccountrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class ListHandshakesForAccountResponsePrivate;
+
+class QTAWS_EXPORT ListHandshakesForAccountResponse : public ListHandshakesForAccountResponse {
+    Q_OBJECT
+
+public:
+    ListHandshakesForAccountResponse(const ListHandshakesForAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListHandshakesForAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListHandshakesForAccountResponse)
+    Q_DISABLE_COPY(ListHandshakesForAccountResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENETWORKACLSRESPONSE_H
 #define QTAWS_DESCRIBENETWORKACLSRESPONSE_H
 
+#include "ec2response.h"
+#include "describenetworkaclsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeNetworkAclsResponsePrivate;
+
+class QTAWS_EXPORT DescribeNetworkAclsResponse : public DescribeNetworkAclsResponse {
+    Q_OBJECT
+
+public:
+    DescribeNetworkAclsResponse(const DescribeNetworkAclsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNetworkAclsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNetworkAclsResponse)
+    Q_DISABLE_COPY(DescribeNetworkAclsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

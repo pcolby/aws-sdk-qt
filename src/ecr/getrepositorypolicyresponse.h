@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREPOSITORYPOLICYRESPONSE_H
 #define QTAWS_GETREPOSITORYPOLICYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "getrepositorypolicyrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class GetRepositoryPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetRepositoryPolicyResponse : public GetRepositoryPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetRepositoryPolicyResponse(const GetRepositoryPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRepositoryPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRepositoryPolicyResponse)
+    Q_DISABLE_COPY(GetRepositoryPolicyResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERATEBASEDRULERESPONSE_H
 #define QTAWS_UPDATERATEBASEDRULERESPONSE_H
 
+#include "wafresponse.h"
+#include "updateratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class UpdateRateBasedRuleResponsePrivate;
+
+class QTAWS_EXPORT UpdateRateBasedRuleResponse : public UpdateRateBasedRuleResponse {
+    Q_OBJECT
+
+public:
+    UpdateRateBasedRuleResponse(const UpdateRateBasedRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRateBasedRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRateBasedRuleResponse)
+    Q_DISABLE_COPY(UpdateRateBasedRuleResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

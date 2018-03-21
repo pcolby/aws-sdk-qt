@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOURCESERVERRESPONSE_H
 #define QTAWS_DELETERESOURCESERVERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "deleteresourceserverrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DeleteResourceServerResponsePrivate;
+
+class QTAWS_EXPORT DeleteResourceServerResponse : public DeleteResourceServerResponse {
+    Q_OBJECT
+
+public:
+    DeleteResourceServerResponse(const DeleteResourceServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResourceServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceServerResponse)
+    Q_DISABLE_COPY(DeleteResourceServerResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

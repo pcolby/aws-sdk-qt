@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYUSERATTRIBUTERESPONSE_H
 #define QTAWS_VERIFYUSERATTRIBUTERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "verifyuserattributerequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class VerifyUserAttributeResponsePrivate;
+
+class QTAWS_EXPORT VerifyUserAttributeResponse : public VerifyUserAttributeResponse {
+    Q_OBJECT
+
+public:
+    VerifyUserAttributeResponse(const VerifyUserAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifyUserAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifyUserAttributeResponse)
+    Q_DISABLE_COPY(VerifyUserAttributeResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

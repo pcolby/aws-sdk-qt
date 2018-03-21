@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETDEPLOYMENTGROUPSRESPONSE_H
 #define QTAWS_BATCHGETDEPLOYMENTGROUPSRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "batchgetdeploymentgroupsrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class BatchGetDeploymentGroupsResponsePrivate;
+
+class QTAWS_EXPORT BatchGetDeploymentGroupsResponse : public BatchGetDeploymentGroupsResponse {
+    Q_OBJECT
+
+public:
+    BatchGetDeploymentGroupsResponse(const BatchGetDeploymentGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetDeploymentGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetDeploymentGroupsResponse)
+    Q_DISABLE_COPY(BatchGetDeploymentGroupsResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

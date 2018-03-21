@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTRAILSTATUSRESPONSE_H
 #define QTAWS_GETTRAILSTATUSRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "gettrailstatusrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class GetTrailStatusResponsePrivate;
+
+class QTAWS_EXPORT GetTrailStatusResponse : public GetTrailStatusResponse {
+    Q_OBJECT
+
+public:
+    GetTrailStatusResponse(const GetTrailStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTrailStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTrailStatusResponse)
+    Q_DISABLE_COPY(GetTrailStatusResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINSTANCEACCESSRESPONSE_H
 #define QTAWS_GETINSTANCEACCESSRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "getinstanceaccessrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class GetInstanceAccessResponsePrivate;
+
+class QTAWS_EXPORT GetInstanceAccessResponse : public GetInstanceAccessResponse {
+    Q_OBJECT
+
+public:
+    GetInstanceAccessResponse(const GetInstanceAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetInstanceAccessRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetInstanceAccessResponse)
+    Q_DISABLE_COPY(GetInstanceAccessResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

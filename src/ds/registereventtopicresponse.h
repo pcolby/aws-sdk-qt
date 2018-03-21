@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTEREVENTTOPICRESPONSE_H
 #define QTAWS_REGISTEREVENTTOPICRESPONSE_H
 
+#include "dsresponse.h"
+#include "registereventtopicrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class RegisterEventTopicResponsePrivate;
+
+class QTAWS_EXPORT RegisterEventTopicResponse : public RegisterEventTopicResponse {
+    Q_OBJECT
+
+public:
+    RegisterEventTopicResponse(const RegisterEventTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterEventTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterEventTopicResponse)
+    Q_DISABLE_COPY(RegisterEventTopicResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

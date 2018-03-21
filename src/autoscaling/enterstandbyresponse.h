@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENTERSTANDBYRESPONSE_H
 #define QTAWS_ENTERSTANDBYRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "enterstandbyrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class EnterStandbyResponsePrivate;
+
+class QTAWS_EXPORT EnterStandbyResponse : public EnterStandbyResponse {
+    Q_OBJECT
+
+public:
+    EnterStandbyResponse(const EnterStandbyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnterStandbyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnterStandbyResponse)
+    Q_DISABLE_COPY(EnterStandbyResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

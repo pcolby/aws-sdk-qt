@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSCHEMAEXTENSIONSRESPONSE_H
 #define QTAWS_LISTSCHEMAEXTENSIONSRESPONSE_H
 
+#include "dsresponse.h"
+#include "listschemaextensionsrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class ListSchemaExtensionsResponsePrivate;
+
+class QTAWS_EXPORT ListSchemaExtensionsResponse : public ListSchemaExtensionsResponse {
+    Q_OBJECT
+
+public:
+    ListSchemaExtensionsResponse(const ListSchemaExtensionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSchemaExtensionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSchemaExtensionsResponse)
+    Q_DISABLE_COPY(ListSchemaExtensionsResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

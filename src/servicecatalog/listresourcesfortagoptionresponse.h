@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCESFORTAGOPTIONRESPONSE_H
 #define QTAWS_LISTRESOURCESFORTAGOPTIONRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "listresourcesfortagoptionrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class ListResourcesForTagOptionResponsePrivate;
+
+class QTAWS_EXPORT ListResourcesForTagOptionResponse : public ListResourcesForTagOptionResponse {
+    Q_OBJECT
+
+public:
+    ListResourcesForTagOptionResponse(const ListResourcesForTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourcesForTagOptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourcesForTagOptionResponse)
+    Q_DISABLE_COPY(ListResourcesForTagOptionResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

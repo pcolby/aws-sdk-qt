@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREQUESTVALIDATORRESPONSE_H
 #define QTAWS_DELETEREQUESTVALIDATORRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deleterequestvalidatorrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteRequestValidatorResponsePrivate;
+
+class QTAWS_EXPORT DeleteRequestValidatorResponse : public DeleteRequestValidatorResponse {
+    Q_OBJECT
+
+public:
+    DeleteRequestValidatorResponse(const DeleteRequestValidatorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRequestValidatorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRequestValidatorResponse)
+    Q_DISABLE_COPY(DeleteRequestValidatorResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

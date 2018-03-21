@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENETWORKACLRESPONSE_H
 #define QTAWS_DELETENETWORKACLRESPONSE_H
 
+#include "ec2response.h"
+#include "deletenetworkaclrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteNetworkAclResponsePrivate;
+
+class QTAWS_EXPORT DeleteNetworkAclResponse : public DeleteNetworkAclResponse {
+    Q_OBJECT
+
+public:
+    DeleteNetworkAclResponse(const DeleteNetworkAclRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNetworkAclRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkAclResponse)
+    Q_DISABLE_COPY(DeleteNetworkAclResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

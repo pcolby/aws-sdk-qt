@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSAMPLEDREQUESTSRESPONSE_H
 #define QTAWS_GETSAMPLEDREQUESTSRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "getsampledrequestsrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class GetSampledRequestsResponsePrivate;
+
+class QTAWS_EXPORT GetSampledRequestsResponse : public GetSampledRequestsResponse {
+    Q_OBJECT
+
+public:
+    GetSampledRequestsResponse(const GetSampledRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSampledRequestsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSampledRequestsResponse)
+    Q_DISABLE_COPY(GetSampledRequestsResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

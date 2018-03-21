@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGROUPRESPONSE_H
 #define QTAWS_GETGROUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "getgrouprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class GetGroupResponsePrivate;
+
+class QTAWS_EXPORT GetGroupResponse : public GetGroupResponse {
+    Q_OBJECT
+
+public:
+    GetGroupResponse(const GetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupResponse)
+    Q_DISABLE_COPY(GetGroupResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

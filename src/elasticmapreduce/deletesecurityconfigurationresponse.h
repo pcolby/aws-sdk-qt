@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "deletesecurityconfigurationrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class DeleteSecurityConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteSecurityConfigurationResponse : public DeleteSecurityConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteSecurityConfigurationResponse(const DeleteSecurityConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSecurityConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSecurityConfigurationResponse)
+    Q_DISABLE_COPY(DeleteSecurityConfigurationResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

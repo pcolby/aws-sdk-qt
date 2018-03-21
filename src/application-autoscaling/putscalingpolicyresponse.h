@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTSCALINGPOLICYRESPONSE_H
 #define QTAWS_PUTSCALINGPOLICYRESPONSE_H
 
+#include "application-autoscalingresponse.h"
+#include "putscalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace application-autoscaling {
+
+class PutScalingPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutScalingPolicyResponse : public PutScalingPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutScalingPolicyResponse(const PutScalingPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutScalingPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutScalingPolicyResponse)
+    Q_DISABLE_COPY(PutScalingPolicyResponse)
+
+};
+
+} // namespace application-autoscaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_H
 #define QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "deletebotchannelassociationrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class DeleteBotChannelAssociationResponsePrivate;
+
+class QTAWS_EXPORT DeleteBotChannelAssociationResponse : public DeleteBotChannelAssociationResponse {
+    Q_OBJECT
+
+public:
+    DeleteBotChannelAssociationResponse(const DeleteBotChannelAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBotChannelAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBotChannelAssociationResponse)
+    Q_DISABLE_COPY(DeleteBotChannelAssociationResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "updateserverengineattributesrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class UpdateServerEngineAttributesResponsePrivate;
+
+class QTAWS_EXPORT UpdateServerEngineAttributesResponse : public UpdateServerEngineAttributesResponse {
+    Q_OBJECT
+
+public:
+    UpdateServerEngineAttributesResponse(const UpdateServerEngineAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateServerEngineAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServerEngineAttributesResponse)
+    Q_DISABLE_COPY(UpdateServerEngineAttributesResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

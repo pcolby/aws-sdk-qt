@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONNECTORSRESPONSE_H
 #define QTAWS_GETCONNECTORSRESPONSE_H
 
+#include "smsresponse.h"
+#include "getconnectorsrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class GetConnectorsResponsePrivate;
+
+class QTAWS_EXPORT GetConnectorsResponse : public GetConnectorsResponse {
+    Q_OBJECT
+
+public:
+    GetConnectorsResponse(const GetConnectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetConnectorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetConnectorsResponse)
+    Q_DISABLE_COPY(GetConnectorsResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINGETUSERRESPONSE_H
 #define QTAWS_ADMINGETUSERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "admingetuserrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminGetUserResponsePrivate;
+
+class QTAWS_EXPORT AdminGetUserResponse : public AdminGetUserResponse {
+    Q_OBJECT
+
+public:
+    AdminGetUserResponse(const AdminGetUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminGetUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminGetUserResponse)
+    Q_DISABLE_COPY(AdminGetUserResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

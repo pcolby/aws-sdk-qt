@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBRANCHESRESPONSE_H
 #define QTAWS_LISTBRANCHESRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "listbranchesrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class ListBranchesResponsePrivate;
+
+class QTAWS_EXPORT ListBranchesResponse : public ListBranchesResponse {
+    Q_OBJECT
+
+public:
+    ListBranchesResponse(const ListBranchesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBranchesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBranchesResponse)
+    Q_DISABLE_COPY(ListBranchesResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

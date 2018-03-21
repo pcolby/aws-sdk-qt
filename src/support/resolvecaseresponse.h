@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESOLVECASERESPONSE_H
 #define QTAWS_RESOLVECASERESPONSE_H
 
+#include "supportresponse.h"
+#include "resolvecaserequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class ResolveCaseResponsePrivate;
+
+class QTAWS_EXPORT ResolveCaseResponse : public ResolveCaseResponse {
+    Q_OBJECT
+
+public:
+    ResolveCaseResponse(const ResolveCaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResolveCaseRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResolveCaseResponse)
+    Q_DISABLE_COPY(ResolveCaseResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

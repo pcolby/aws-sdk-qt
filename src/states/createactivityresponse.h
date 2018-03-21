@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEACTIVITYRESPONSE_H
 #define QTAWS_CREATEACTIVITYRESPONSE_H
 
+#include "statesresponse.h"
+#include "createactivityrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class CreateActivityResponsePrivate;
+
+class QTAWS_EXPORT CreateActivityResponse : public CreateActivityResponse {
+    Q_OBJECT
+
+public:
+    CreateActivityResponse(const CreateActivityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateActivityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateActivityResponse)
+    Q_DISABLE_COPY(CreateActivityResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

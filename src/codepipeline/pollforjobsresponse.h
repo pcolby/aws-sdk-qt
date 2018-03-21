@@ -20,4 +20,33 @@
 #ifndef QTAWS_POLLFORJOBSRESPONSE_H
 #define QTAWS_POLLFORJOBSRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "pollforjobsrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class PollForJobsResponsePrivate;
+
+class QTAWS_EXPORT PollForJobsResponse : public PollForJobsResponse {
+    Q_OBJECT
+
+public:
+    PollForJobsResponse(const PollForJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PollForJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PollForJobsResponse)
+    Q_DISABLE_COPY(PollForJobsResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

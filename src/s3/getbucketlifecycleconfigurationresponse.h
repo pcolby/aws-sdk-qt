@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETLIFECYCLECONFIGURATIONRESPONSE_H
 #define QTAWS_GETBUCKETLIFECYCLECONFIGURATIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketlifecycleconfigurationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketLifecycleConfigurationResponsePrivate;
+
+class QTAWS_EXPORT GetBucketLifecycleConfigurationResponse : public GetBucketLifecycleConfigurationResponse {
+    Q_OBJECT
+
+public:
+    GetBucketLifecycleConfigurationResponse(const GetBucketLifecycleConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketLifecycleConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketLifecycleConfigurationResponse)
+    Q_DISABLE_COPY(GetBucketLifecycleConfigurationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

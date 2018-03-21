@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEEMAILCHANNELRESPONSE_H
 #define QTAWS_UPDATEEMAILCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updateemailchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateEmailChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateEmailChannelResponse : public UpdateEmailChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateEmailChannelResponse(const UpdateEmailChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateEmailChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEmailChannelResponse)
+    Q_DISABLE_COPY(UpdateEmailChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

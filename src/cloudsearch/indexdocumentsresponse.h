@@ -20,4 +20,33 @@
 #ifndef QTAWS_INDEXDOCUMENTSRESPONSE_H
 #define QTAWS_INDEXDOCUMENTSRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "indexdocumentsrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class IndexDocumentsResponsePrivate;
+
+class QTAWS_EXPORT IndexDocumentsResponse : public IndexDocumentsResponse {
+    Q_OBJECT
+
+public:
+    IndexDocumentsResponse(const IndexDocumentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const IndexDocumentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(IndexDocumentsResponse)
+    Q_DISABLE_COPY(IndexDocumentsResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

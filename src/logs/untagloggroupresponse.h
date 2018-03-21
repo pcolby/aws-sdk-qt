@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGLOGGROUPRESPONSE_H
 #define QTAWS_UNTAGLOGGROUPRESPONSE_H
 
+#include "logsresponse.h"
+#include "untagloggrouprequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class UntagLogGroupResponsePrivate;
+
+class QTAWS_EXPORT UntagLogGroupResponse : public UntagLogGroupResponse {
+    Q_OBJECT
+
+public:
+    UntagLogGroupResponse(const UntagLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagLogGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagLogGroupResponse)
+    Q_DISABLE_COPY(UntagLogGroupResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

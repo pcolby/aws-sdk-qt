@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREGISTRATIONCODERESPONSE_H
 #define QTAWS_DELETEREGISTRATIONCODERESPONSE_H
 
+#include "iotresponse.h"
+#include "deleteregistrationcoderequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeleteRegistrationCodeResponsePrivate;
+
+class QTAWS_EXPORT DeleteRegistrationCodeResponse : public DeleteRegistrationCodeResponse {
+    Q_OBJECT
+
+public:
+    DeleteRegistrationCodeResponse(const DeleteRegistrationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRegistrationCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRegistrationCodeResponse)
+    Q_DISABLE_COPY(DeleteRegistrationCodeResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

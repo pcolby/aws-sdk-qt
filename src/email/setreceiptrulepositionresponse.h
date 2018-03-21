@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETRECEIPTRULEPOSITIONRESPONSE_H
 #define QTAWS_SETRECEIPTRULEPOSITIONRESPONSE_H
 
+#include "emailresponse.h"
+#include "setreceiptrulepositionrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SetReceiptRulePositionResponsePrivate;
+
+class QTAWS_EXPORT SetReceiptRulePositionResponse : public SetReceiptRulePositionResponse {
+    Q_OBJECT
+
+public:
+    SetReceiptRulePositionResponse(const SetReceiptRulePositionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetReceiptRulePositionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetReceiptRulePositionResponse)
+    Q_DISABLE_COPY(SetReceiptRulePositionResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

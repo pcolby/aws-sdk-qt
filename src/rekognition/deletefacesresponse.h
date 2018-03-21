@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFACESRESPONSE_H
 #define QTAWS_DELETEFACESRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "deletefacesrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class DeleteFacesResponsePrivate;
+
+class QTAWS_EXPORT DeleteFacesResponse : public DeleteFacesResponse {
+    Q_OBJECT
+
+public:
+    DeleteFacesResponse(const DeleteFacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFacesResponse)
+    Q_DISABLE_COPY(DeleteFacesResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

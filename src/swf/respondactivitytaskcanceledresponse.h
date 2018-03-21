@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCANCELEDRESPONSE_H
 #define QTAWS_RESPONDACTIVITYTASKCANCELEDRESPONSE_H
 
+#include "swfresponse.h"
+#include "respondactivitytaskcanceledrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RespondActivityTaskCanceledResponsePrivate;
+
+class QTAWS_EXPORT RespondActivityTaskCanceledResponse : public RespondActivityTaskCanceledResponse {
+    Q_OBJECT
+
+public:
+    RespondActivityTaskCanceledResponse(const RespondActivityTaskCanceledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RespondActivityTaskCanceledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RespondActivityTaskCanceledResponse)
+    Q_DISABLE_COPY(RespondActivityTaskCanceledResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

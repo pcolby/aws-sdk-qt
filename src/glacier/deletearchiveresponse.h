@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEARCHIVERESPONSE_H
 #define QTAWS_DELETEARCHIVERESPONSE_H
 
+#include "glacierresponse.h"
+#include "deletearchiverequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class DeleteArchiveResponsePrivate;
+
+class QTAWS_EXPORT DeleteArchiveResponse : public DeleteArchiveResponse {
+    Q_OBJECT
+
+public:
+    DeleteArchiveResponse(const DeleteArchiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteArchiveRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteArchiveResponse)
+    Q_DISABLE_COPY(DeleteArchiveResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

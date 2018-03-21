@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECOMMENTRESPONSE_H
 #define QTAWS_UPDATECOMMENTRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updatecommentrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdateCommentResponsePrivate;
+
+class QTAWS_EXPORT UpdateCommentResponse : public UpdateCommentResponse {
+    Q_OBJECT
+
+public:
+    UpdateCommentResponse(const UpdateCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateCommentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCommentResponse)
+    Q_DISABLE_COPY(UpdateCommentResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

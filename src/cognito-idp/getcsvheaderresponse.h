@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCSVHEADERRESPONSE_H
 #define QTAWS_GETCSVHEADERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "getcsvheaderrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class GetCSVHeaderResponsePrivate;
+
+class QTAWS_EXPORT GetCSVHeaderResponse : public GetCSVHeaderResponse {
+    Q_OBJECT
+
+public:
+    GetCSVHeaderResponse(const GetCSVHeaderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCSVHeaderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCSVHeaderResponse)
+    Q_DISABLE_COPY(GetCSVHeaderResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

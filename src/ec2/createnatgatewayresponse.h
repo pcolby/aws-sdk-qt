@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENATGATEWAYRESPONSE_H
 #define QTAWS_CREATENATGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "createnatgatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateNatGatewayResponsePrivate;
+
+class QTAWS_EXPORT CreateNatGatewayResponse : public CreateNatGatewayResponse {
+    Q_OBJECT
+
+public:
+    CreateNatGatewayResponse(const CreateNatGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNatGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNatGatewayResponse)
+    Q_DISABLE_COPY(CreateNatGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

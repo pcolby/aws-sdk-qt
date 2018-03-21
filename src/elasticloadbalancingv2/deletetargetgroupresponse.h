@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETARGETGROUPRESPONSE_H
 #define QTAWS_DELETETARGETGROUPRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "deletetargetgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DeleteTargetGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteTargetGroupResponse : public DeleteTargetGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteTargetGroupResponse(const DeleteTargetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTargetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTargetGroupResponse)
+    Q_DISABLE_COPY(DeleteTargetGroupResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEWEBACLRESPONSE_H
 #define QTAWS_CREATEWEBACLRESPONSE_H
 
+#include "wafresponse.h"
+#include "createwebaclrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class CreateWebACLResponsePrivate;
+
+class QTAWS_EXPORT CreateWebACLResponse : public CreateWebACLResponse {
+    Q_OBJECT
+
+public:
+    CreateWebACLResponse(const CreateWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateWebACLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateWebACLResponse)
+    Q_DISABLE_COPY(CreateWebACLResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

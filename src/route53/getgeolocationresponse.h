@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGEOLOCATIONRESPONSE_H
 #define QTAWS_GETGEOLOCATIONRESPONSE_H
 
+#include "route53response.h"
+#include "getgeolocationrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetGeoLocationResponsePrivate;
+
+class QTAWS_EXPORT GetGeoLocationResponse : public GetGeoLocationResponse {
+    Q_OBJECT
+
+public:
+    GetGeoLocationResponse(const GetGeoLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGeoLocationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGeoLocationResponse)
+    Q_DISABLE_COPY(GetGeoLocationResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SIGNUPRESPONSE_H
 #define QTAWS_SIGNUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "signuprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class SignUpResponsePrivate;
+
+class QTAWS_EXPORT SignUpResponse : public SignUpResponse {
+    Q_OBJECT
+
+public:
+    SignUpResponse(const SignUpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SignUpRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SignUpResponse)
+    Q_DISABLE_COPY(SignUpResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

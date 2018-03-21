@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUNDLESRESPONSE_H
 #define QTAWS_GETBUNDLESRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getbundlesrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetBundlesResponsePrivate;
+
+class QTAWS_EXPORT GetBundlesResponse : public GetBundlesResponse {
+    Q_OBJECT
+
+public:
+    GetBundlesResponse(const GetBundlesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBundlesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBundlesResponse)
+    Q_DISABLE_COPY(GetBundlesResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

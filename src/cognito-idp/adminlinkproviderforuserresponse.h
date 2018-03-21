@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_H
 #define QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminlinkproviderforuserrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminLinkProviderForUserResponsePrivate;
+
+class QTAWS_EXPORT AdminLinkProviderForUserResponse : public AdminLinkProviderForUserResponse {
+    Q_OBJECT
+
+public:
+    AdminLinkProviderForUserResponse(const AdminLinkProviderForUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminLinkProviderForUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminLinkProviderForUserResponse)
+    Q_DISABLE_COPY(AdminLinkProviderForUserResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

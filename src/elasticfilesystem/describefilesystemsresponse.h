@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSRESPONSE_H
 #define QTAWS_DESCRIBEFILESYSTEMSRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "describefilesystemsrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class DescribeFileSystemsResponsePrivate;
+
+class QTAWS_EXPORT DescribeFileSystemsResponse : public DescribeFileSystemsResponse {
+    Q_OBJECT
+
+public:
+    DescribeFileSystemsResponse(const DescribeFileSystemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFileSystemsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFileSystemsResponse)
+    Q_DISABLE_COPY(DescribeFileSystemsResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

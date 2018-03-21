@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTPERMISSIONRESPONSE_H
 #define QTAWS_PUTPERMISSIONRESPONSE_H
 
+#include "eventsresponse.h"
+#include "putpermissionrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class PutPermissionResponsePrivate;
+
+class QTAWS_EXPORT PutPermissionResponse : public PutPermissionResponse {
+    Q_OBJECT
+
+public:
+    PutPermissionResponse(const PutPermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutPermissionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutPermissionResponse)
+    Q_DISABLE_COPY(PutPermissionResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

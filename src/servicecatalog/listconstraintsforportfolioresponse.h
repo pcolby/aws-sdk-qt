@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_H
 #define QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "listconstraintsforportfoliorequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class ListConstraintsForPortfolioResponsePrivate;
+
+class QTAWS_EXPORT ListConstraintsForPortfolioResponse : public ListConstraintsForPortfolioResponse {
+    Q_OBJECT
+
+public:
+    ListConstraintsForPortfolioResponse(const ListConstraintsForPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListConstraintsForPortfolioRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListConstraintsForPortfolioResponse)
+    Q_DISABLE_COPY(ListConstraintsForPortfolioResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

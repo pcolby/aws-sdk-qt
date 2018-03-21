@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAPPLICATIONRESPONSE_H
 #define QTAWS_GETAPPLICATIONRESPONSE_H
 
+#include "serverlessreporesponse.h"
+#include "getapplicationrequest.h"
+
+namespace AWS {
+
+namespace serverlessrepo {
+
+class GetApplicationResponsePrivate;
+
+class QTAWS_EXPORT GetApplicationResponse : public GetApplicationResponse {
+    Q_OBJECT
+
+public:
+    GetApplicationResponse(const GetApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetApplicationResponse)
+    Q_DISABLE_COPY(GetApplicationResponse)
+
+};
+
+} // namespace serverlessrepo
+} // namespace AWS
+
 #endif

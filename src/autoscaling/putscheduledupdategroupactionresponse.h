@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_H
 #define QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "putscheduledupdategroupactionrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class PutScheduledUpdateGroupActionResponsePrivate;
+
+class QTAWS_EXPORT PutScheduledUpdateGroupActionResponse : public PutScheduledUpdateGroupActionResponse {
+    Q_OBJECT
+
+public:
+    PutScheduledUpdateGroupActionResponse(const PutScheduledUpdateGroupActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutScheduledUpdateGroupActionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutScheduledUpdateGroupActionResponse)
+    Q_DISABLE_COPY(PutScheduledUpdateGroupActionResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

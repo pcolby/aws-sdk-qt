@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPATCHBASELINERESPONSE_H
 #define QTAWS_DELETEPATCHBASELINERESPONSE_H
 
+#include "ssmresponse.h"
+#include "deletepatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeletePatchBaselineResponsePrivate;
+
+class QTAWS_EXPORT DeletePatchBaselineResponse : public DeletePatchBaselineResponse {
+    Q_OBJECT
+
+public:
+    DeletePatchBaselineResponse(const DeletePatchBaselineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeletePatchBaselineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeletePatchBaselineResponse)
+    Q_DISABLE_COPY(DeletePatchBaselineResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

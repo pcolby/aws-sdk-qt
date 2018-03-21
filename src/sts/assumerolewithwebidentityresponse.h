@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_H
 #define QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_H
 
+#include "stsresponse.h"
+#include "assumerolewithwebidentityrequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class AssumeRoleWithWebIdentityResponsePrivate;
+
+class QTAWS_EXPORT AssumeRoleWithWebIdentityResponse : public AssumeRoleWithWebIdentityResponse {
+    Q_OBJECT
+
+public:
+    AssumeRoleWithWebIdentityResponse(const AssumeRoleWithWebIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssumeRoleWithWebIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssumeRoleWithWebIdentityResponse)
+    Q_DISABLE_COPY(AssumeRoleWithWebIdentityResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

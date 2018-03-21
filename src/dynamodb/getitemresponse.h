@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETITEMRESPONSE_H
 #define QTAWS_GETITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "getitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class GetItemResponsePrivate;
+
+class QTAWS_EXPORT GetItemResponse : public GetItemResponse {
+    Q_OBJECT
+
+public:
+    GetItemResponse(const GetItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetItemResponse)
+    Q_DISABLE_COPY(GetItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

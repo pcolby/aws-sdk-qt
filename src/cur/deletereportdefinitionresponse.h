@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 #define QTAWS_DELETEREPORTDEFINITIONRESPONSE_H
 
+#include "curresponse.h"
+#include "deletereportdefinitionrequest.h"
+
+namespace AWS {
+
+namespace cur {
+
+class DeleteReportDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeleteReportDefinitionResponse : public DeleteReportDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeleteReportDefinitionResponse(const DeleteReportDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReportDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReportDefinitionResponse)
+    Q_DISABLE_COPY(DeleteReportDefinitionResponse)
+
+};
+
+} // namespace cur
+} // namespace AWS
+
 #endif

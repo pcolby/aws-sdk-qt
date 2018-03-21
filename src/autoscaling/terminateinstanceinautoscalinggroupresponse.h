@@ -20,4 +20,33 @@
 #ifndef QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_H
 #define QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "terminateinstanceinautoscalinggrouprequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class TerminateInstanceInAutoScalingGroupResponsePrivate;
+
+class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupResponse : public TerminateInstanceInAutoScalingGroupResponse {
+    Q_OBJECT
+
+public:
+    TerminateInstanceInAutoScalingGroupResponse(const TerminateInstanceInAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TerminateInstanceInAutoScalingGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TerminateInstanceInAutoScalingGroupResponse)
+    Q_DISABLE_COPY(TerminateInstanceInAutoScalingGroupResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

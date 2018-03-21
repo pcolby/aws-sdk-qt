@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNPEERVPCRESPONSE_H
 #define QTAWS_UNPEERVPCRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "unpeervpcrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class UnpeerVpcResponsePrivate;
+
+class QTAWS_EXPORT UnpeerVpcResponse : public UnpeerVpcResponse {
+    Q_OBJECT
+
+public:
+    UnpeerVpcResponse(const UnpeerVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnpeerVpcRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnpeerVpcResponse)
+    Q_DISABLE_COPY(UnpeerVpcResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

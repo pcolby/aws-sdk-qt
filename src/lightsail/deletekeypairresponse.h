@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEKEYPAIRRESPONSE_H
 #define QTAWS_DELETEKEYPAIRRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "deletekeypairrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class DeleteKeyPairResponsePrivate;
+
+class QTAWS_EXPORT DeleteKeyPairResponse : public DeleteKeyPairResponse {
+    Q_OBJECT
+
+public:
+    DeleteKeyPairResponse(const DeleteKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteKeyPairRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteKeyPairResponse)
+    Q_DISABLE_COPY(DeleteKeyPairResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

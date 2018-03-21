@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSIZECONSTRAINTSETRESPONSE_H
 #define QTAWS_GETSIZECONSTRAINTSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "getsizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class GetSizeConstraintSetResponsePrivate;
+
+class QTAWS_EXPORT GetSizeConstraintSetResponse : public GetSizeConstraintSetResponse {
+    Q_OBJECT
+
+public:
+    GetSizeConstraintSetResponse(const GetSizeConstraintSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSizeConstraintSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSizeConstraintSetResponse)
+    Q_DISABLE_COPY(GetSizeConstraintSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

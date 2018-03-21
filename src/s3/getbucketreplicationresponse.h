@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETREPLICATIONRESPONSE_H
 #define QTAWS_GETBUCKETREPLICATIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketreplicationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketReplicationResponsePrivate;
+
+class QTAWS_EXPORT GetBucketReplicationResponse : public GetBucketReplicationResponse {
+    Q_OBJECT
+
+public:
+    GetBucketReplicationResponse(const GetBucketReplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketReplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketReplicationResponse)
+    Q_DISABLE_COPY(GetBucketReplicationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

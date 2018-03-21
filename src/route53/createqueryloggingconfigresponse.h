@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEQUERYLOGGINGCONFIGRESPONSE_H
 #define QTAWS_CREATEQUERYLOGGINGCONFIGRESPONSE_H
 
+#include "route53response.h"
+#include "createqueryloggingconfigrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class CreateQueryLoggingConfigResponsePrivate;
+
+class QTAWS_EXPORT CreateQueryLoggingConfigResponse : public CreateQueryLoggingConfigResponse {
+    Q_OBJECT
+
+public:
+    CreateQueryLoggingConfigResponse(const CreateQueryLoggingConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateQueryLoggingConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateQueryLoggingConfigResponse)
+    Q_DISABLE_COPY(CreateQueryLoggingConfigResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

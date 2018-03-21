@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESNAPSHOTCOPYGRANTRESPONSE_H
 #define QTAWS_DELETESNAPSHOTCOPYGRANTRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "deletesnapshotcopygrantrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DeleteSnapshotCopyGrantResponsePrivate;
+
+class QTAWS_EXPORT DeleteSnapshotCopyGrantResponse : public DeleteSnapshotCopyGrantResponse {
+    Q_OBJECT
+
+public:
+    DeleteSnapshotCopyGrantResponse(const DeleteSnapshotCopyGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSnapshotCopyGrantRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotCopyGrantResponse)
+    Q_DISABLE_COPY(DeleteSnapshotCopyGrantResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

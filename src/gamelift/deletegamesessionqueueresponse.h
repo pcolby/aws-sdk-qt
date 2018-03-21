@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEGAMESESSIONQUEUERESPONSE_H
 #define QTAWS_DELETEGAMESESSIONQUEUERESPONSE_H
 
+#include "gameliftresponse.h"
+#include "deletegamesessionqueuerequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DeleteGameSessionQueueResponsePrivate;
+
+class QTAWS_EXPORT DeleteGameSessionQueueResponse : public DeleteGameSessionQueueResponse {
+    Q_OBJECT
+
+public:
+    DeleteGameSessionQueueResponse(const DeleteGameSessionQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteGameSessionQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGameSessionQueueResponse)
+    Q_DISABLE_COPY(DeleteGameSessionQueueResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

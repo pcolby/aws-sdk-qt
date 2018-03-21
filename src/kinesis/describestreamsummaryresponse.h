@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTREAMSUMMARYRESPONSE_H
 #define QTAWS_DESCRIBESTREAMSUMMARYRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "describestreamsummaryrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class DescribeStreamSummaryResponsePrivate;
+
+class QTAWS_EXPORT DescribeStreamSummaryResponse : public DescribeStreamSummaryResponse {
+    Q_OBJECT
+
+public:
+    DescribeStreamSummaryResponse(const DescribeStreamSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStreamSummaryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamSummaryResponse)
+    Q_DISABLE_COPY(DescribeStreamSummaryResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

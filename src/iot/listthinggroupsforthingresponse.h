@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTHINGGROUPSFORTHINGRESPONSE_H
 #define QTAWS_LISTTHINGGROUPSFORTHINGRESPONSE_H
 
+#include "iotresponse.h"
+#include "listthinggroupsforthingrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListThingGroupsForThingResponsePrivate;
+
+class QTAWS_EXPORT ListThingGroupsForThingResponse : public ListThingGroupsForThingResponse {
+    Q_OBJECT
+
+public:
+    ListThingGroupsForThingResponse(const ListThingGroupsForThingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListThingGroupsForThingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListThingGroupsForThingResponse)
+    Q_DISABLE_COPY(ListThingGroupsForThingResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPTHINGREGISTRATIONTASKRESPONSE_H
 #define QTAWS_STOPTHINGREGISTRATIONTASKRESPONSE_H
 
+#include "iotresponse.h"
+#include "stopthingregistrationtaskrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class StopThingRegistrationTaskResponsePrivate;
+
+class QTAWS_EXPORT StopThingRegistrationTaskResponse : public StopThingRegistrationTaskResponse {
+    Q_OBJECT
+
+public:
+    StopThingRegistrationTaskResponse(const StopThingRegistrationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopThingRegistrationTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopThingRegistrationTaskResponse)
+    Q_DISABLE_COPY(StopThingRegistrationTaskResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

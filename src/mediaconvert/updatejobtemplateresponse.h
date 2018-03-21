@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEJOBTEMPLATERESPONSE_H
 #define QTAWS_UPDATEJOBTEMPLATERESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "updatejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class UpdateJobTemplateResponsePrivate;
+
+class QTAWS_EXPORT UpdateJobTemplateResponse : public UpdateJobTemplateResponse {
+    Q_OBJECT
+
+public:
+    UpdateJobTemplateResponse(const UpdateJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateJobTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateJobTemplateResponse)
+    Q_DISABLE_COPY(UpdateJobTemplateResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAUTOSCALINGINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBEAUTOSCALINGINSTANCESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describeautoscalinginstancesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeAutoScalingInstancesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAutoScalingInstancesResponse : public DescribeAutoScalingInstancesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAutoScalingInstancesResponse(const DescribeAutoScalingInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAutoScalingInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAutoScalingInstancesResponse)
+    Q_DISABLE_COPY(DescribeAutoScalingInstancesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

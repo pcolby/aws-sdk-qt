@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINSTANCEATTRIBUTERESPONSE_H
 #define QTAWS_DESCRIBEINSTANCEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "describeinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeInstanceAttributeResponsePrivate;
+
+class QTAWS_EXPORT DescribeInstanceAttributeResponse : public DescribeInstanceAttributeResponse {
+    Q_OBJECT
+
+public:
+    DescribeInstanceAttributeResponse(const DescribeInstanceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeInstanceAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstanceAttributeResponse)
+    Q_DISABLE_COPY(DescribeInstanceAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

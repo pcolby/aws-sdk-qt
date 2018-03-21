@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBRUNSRESPONSE_H
 #define QTAWS_GETJOBRUNSRESPONSE_H
 
+#include "glueresponse.h"
+#include "getjobrunsrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetJobRunsResponsePrivate;
+
+class QTAWS_EXPORT GetJobRunsResponse : public GetJobRunsResponse {
+    Q_OBJECT
+
+public:
+    GetJobRunsResponse(const GetJobRunsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobRunsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobRunsResponse)
+    Q_DISABLE_COPY(GetJobRunsResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

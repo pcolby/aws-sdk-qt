@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESERVERCERTIFICATERESPONSE_H
 #define QTAWS_UPDATESERVERCERTIFICATERESPONSE_H
 
+#include "iamresponse.h"
+#include "updateservercertificaterequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateServerCertificateResponsePrivate;
+
+class QTAWS_EXPORT UpdateServerCertificateResponse : public UpdateServerCertificateResponse {
+    Q_OBJECT
+
+public:
+    UpdateServerCertificateResponse(const UpdateServerCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateServerCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServerCertificateResponse)
+    Q_DISABLE_COPY(UpdateServerCertificateResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSERVICEROLEFORACCOUNTRESPONSE_H
 #define QTAWS_GETSERVICEROLEFORACCOUNTRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getserviceroleforaccountrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetServiceRoleForAccountResponsePrivate;
+
+class QTAWS_EXPORT GetServiceRoleForAccountResponse : public GetServiceRoleForAccountResponse {
+    Q_OBJECT
+
+public:
+    GetServiceRoleForAccountResponse(const GetServiceRoleForAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetServiceRoleForAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetServiceRoleForAccountResponse)
+    Q_DISABLE_COPY(GetServiceRoleForAccountResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

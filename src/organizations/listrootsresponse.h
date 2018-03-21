@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTROOTSRESPONSE_H
 #define QTAWS_LISTROOTSRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "listrootsrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class ListRootsResponsePrivate;
+
+class QTAWS_EXPORT ListRootsResponse : public ListRootsResponse {
+    Q_OBJECT
+
+public:
+    ListRootsResponse(const ListRootsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRootsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRootsResponse)
+    Q_DISABLE_COPY(ListRootsResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

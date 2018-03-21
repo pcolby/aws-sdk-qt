@@ -20,4 +20,33 @@
 #ifndef QTAWS_RUNTASKRESPONSE_H
 #define QTAWS_RUNTASKRESPONSE_H
 
+#include "ecsresponse.h"
+#include "runtaskrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class RunTaskResponsePrivate;
+
+class QTAWS_EXPORT RunTaskResponse : public RunTaskResponse {
+    Q_OBJECT
+
+public:
+    RunTaskResponse(const RunTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RunTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RunTaskResponse)
+    Q_DISABLE_COPY(RunTaskResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

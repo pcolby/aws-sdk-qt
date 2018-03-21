@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHSKILLGROUPSRESPONSE_H
 #define QTAWS_SEARCHSKILLGROUPSRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "searchskillgroupsrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class SearchSkillGroupsResponsePrivate;
+
+class QTAWS_EXPORT SearchSkillGroupsResponse : public SearchSkillGroupsResponse {
+    Q_OBJECT
+
+public:
+    SearchSkillGroupsResponse(const SearchSkillGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchSkillGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchSkillGroupsResponse)
+    Q_DISABLE_COPY(SearchSkillGroupsResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

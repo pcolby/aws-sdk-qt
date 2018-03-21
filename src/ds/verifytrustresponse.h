@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYTRUSTRESPONSE_H
 #define QTAWS_VERIFYTRUSTRESPONSE_H
 
+#include "dsresponse.h"
+#include "verifytrustrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class VerifyTrustResponsePrivate;
+
+class QTAWS_EXPORT VerifyTrustResponse : public VerifyTrustResponse {
+    Q_OBJECT
+
+public:
+    VerifyTrustResponse(const VerifyTrustRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifyTrustRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifyTrustResponse)
+    Q_DISABLE_COPY(VerifyTrustResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

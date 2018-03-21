@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOCUMENTRESPONSE_H
 #define QTAWS_UPDATEDOCUMENTRESPONSE_H
 
+#include "ssmresponse.h"
+#include "updatedocumentrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class UpdateDocumentResponsePrivate;
+
+class QTAWS_EXPORT UpdateDocumentResponse : public UpdateDocumentResponse {
+    Q_OBJECT
+
+public:
+    UpdateDocumentResponse(const UpdateDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDocumentResponse)
+    Q_DISABLE_COPY(UpdateDocumentResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

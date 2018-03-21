@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESEGMENTRESPONSE_H
 #define QTAWS_UPDATESEGMENTRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updatesegmentrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateSegmentResponsePrivate;
+
+class QTAWS_EXPORT UpdateSegmentResponse : public UpdateSegmentResponse {
+    Q_OBJECT
+
+public:
+    UpdateSegmentResponse(const UpdateSegmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSegmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSegmentResponse)
+    Q_DISABLE_COPY(UpdateSegmentResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

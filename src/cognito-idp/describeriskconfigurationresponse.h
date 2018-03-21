@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERISKCONFIGURATIONRESPONSE_H
 #define QTAWS_DESCRIBERISKCONFIGURATIONRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "describeriskconfigurationrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DescribeRiskConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DescribeRiskConfigurationResponse : public DescribeRiskConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DescribeRiskConfigurationResponse(const DescribeRiskConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRiskConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRiskConfigurationResponse)
+    Q_DISABLE_COPY(DescribeRiskConfigurationResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

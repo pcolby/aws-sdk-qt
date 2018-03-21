@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETAPESRESPONSE_H
 #define QTAWS_DESCRIBETAPESRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describetapesrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeTapesResponsePrivate;
+
+class QTAWS_EXPORT DescribeTapesResponse : public DescribeTapesResponse {
+    Q_OBJECT
+
+public:
+    DescribeTapesResponse(const DescribeTapesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTapesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTapesResponse)
+    Q_DISABLE_COPY(DescribeTapesResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

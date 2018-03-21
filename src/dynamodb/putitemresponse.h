@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTITEMRESPONSE_H
 #define QTAWS_PUTITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "putitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class PutItemResponsePrivate;
+
+class QTAWS_EXPORT PutItemResponse : public PutItemResponse {
+    Q_OBJECT
+
+public:
+    PutItemResponse(const PutItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutItemResponse)
+    Q_DISABLE_COPY(PutItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

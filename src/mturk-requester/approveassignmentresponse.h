@@ -20,4 +20,33 @@
 #ifndef QTAWS_APPROVEASSIGNMENTRESPONSE_H
 #define QTAWS_APPROVEASSIGNMENTRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "approveassignmentrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ApproveAssignmentResponsePrivate;
+
+class QTAWS_EXPORT ApproveAssignmentResponse : public ApproveAssignmentResponse {
+    Q_OBJECT
+
+public:
+    ApproveAssignmentResponse(const ApproveAssignmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ApproveAssignmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ApproveAssignmentResponse)
+    Q_DISABLE_COPY(ApproveAssignmentResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

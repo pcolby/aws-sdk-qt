@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEUSERRESPONSE_H
 #define QTAWS_UPDATEUSERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "updateuserrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class UpdateUserResponsePrivate;
+
+class QTAWS_EXPORT UpdateUserResponse : public UpdateUserResponse {
+    Q_OBJECT
+
+public:
+    UpdateUserResponse(const UpdateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateUserResponse)
+    Q_DISABLE_COPY(UpdateUserResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

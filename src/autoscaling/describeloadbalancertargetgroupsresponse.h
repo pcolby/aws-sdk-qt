@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_H
 #define QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describeloadbalancertargetgroupsrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeLoadBalancerTargetGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeLoadBalancerTargetGroupsResponse : public DescribeLoadBalancerTargetGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeLoadBalancerTargetGroupsResponse(const DescribeLoadBalancerTargetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLoadBalancerTargetGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLoadBalancerTargetGroupsResponse)
+    Q_DISABLE_COPY(DescribeLoadBalancerTargetGroupsResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYNETWORKINTERFACEATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYNETWORKINTERFACEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifynetworkinterfaceattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyNetworkInterfaceAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyNetworkInterfaceAttributeResponse : public ModifyNetworkInterfaceAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyNetworkInterfaceAttributeResponse(const ModifyNetworkInterfaceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyNetworkInterfaceAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyNetworkInterfaceAttributeResponse)
+    Q_DISABLE_COPY(ModifyNetworkInterfaceAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

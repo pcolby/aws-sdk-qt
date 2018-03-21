@@ -20,4 +20,33 @@
 #ifndef QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_H
 #define QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_H
 
+#include "swfresponse.h"
+#include "requestcancelworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RequestCancelWorkflowExecutionResponsePrivate;
+
+class QTAWS_EXPORT RequestCancelWorkflowExecutionResponse : public RequestCancelWorkflowExecutionResponse {
+    Q_OBJECT
+
+public:
+    RequestCancelWorkflowExecutionResponse(const RequestCancelWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RequestCancelWorkflowExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RequestCancelWorkflowExecutionResponse)
+    Q_DISABLE_COPY(RequestCancelWorkflowExecutionResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

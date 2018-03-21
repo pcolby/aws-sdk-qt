@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_H
 #define QTAWS_UPDATEPROJECTRESPONSE_H
 
+#include "mobileresponse.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace mobile {
+
+class UpdateProjectResponsePrivate;
+
+class QTAWS_EXPORT UpdateProjectResponse : public UpdateProjectResponse {
+    Q_OBJECT
+
+public:
+    UpdateProjectResponse(const UpdateProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProjectResponse)
+    Q_DISABLE_COPY(UpdateProjectResponse)
+
+};
+
+} // namespace mobile
+} // namespace AWS
+
 #endif

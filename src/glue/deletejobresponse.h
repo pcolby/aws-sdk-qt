@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEJOBRESPONSE_H
 #define QTAWS_DELETEJOBRESPONSE_H
 
+#include "glueresponse.h"
+#include "deletejobrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteJobResponsePrivate;
+
+class QTAWS_EXPORT DeleteJobResponse : public DeleteJobResponse {
+    Q_OBJECT
+
+public:
+    DeleteJobResponse(const DeleteJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteJobResponse)
+    Q_DISABLE_COPY(DeleteJobResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

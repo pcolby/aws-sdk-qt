@@ -20,4 +20,33 @@
 #ifndef QTAWS_REORDERRECEIPTRULESETRESPONSE_H
 #define QTAWS_REORDERRECEIPTRULESETRESPONSE_H
 
+#include "emailresponse.h"
+#include "reorderreceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class ReorderReceiptRuleSetResponsePrivate;
+
+class QTAWS_EXPORT ReorderReceiptRuleSetResponse : public ReorderReceiptRuleSetResponse {
+    Q_OBJECT
+
+public:
+    ReorderReceiptRuleSetResponse(const ReorderReceiptRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReorderReceiptRuleSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReorderReceiptRuleSetResponse)
+    Q_DISABLE_COPY(ReorderReceiptRuleSetResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

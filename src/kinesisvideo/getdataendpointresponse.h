@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDATAENDPOINTRESPONSE_H
 #define QTAWS_GETDATAENDPOINTRESPONSE_H
 
+#include "kinesisvideoresponse.h"
+#include "getdataendpointrequest.h"
+
+namespace AWS {
+
+namespace kinesisvideo {
+
+class GetDataEndpointResponsePrivate;
+
+class QTAWS_EXPORT GetDataEndpointResponse : public GetDataEndpointResponse {
+    Q_OBJECT
+
+public:
+    GetDataEndpointResponse(const GetDataEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDataEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDataEndpointResponse)
+    Q_DISABLE_COPY(GetDataEndpointResponse)
+
+};
+
+} // namespace kinesisvideo
+} // namespace AWS
+
 #endif

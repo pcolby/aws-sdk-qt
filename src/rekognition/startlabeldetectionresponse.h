@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTLABELDETECTIONRESPONSE_H
 #define QTAWS_STARTLABELDETECTIONRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "startlabeldetectionrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class StartLabelDetectionResponsePrivate;
+
+class QTAWS_EXPORT StartLabelDetectionResponse : public StartLabelDetectionResponse {
+    Q_OBJECT
+
+public:
+    StartLabelDetectionResponse(const StartLabelDetectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartLabelDetectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartLabelDetectionResponse)
+    Q_DISABLE_COPY(StartLabelDetectionResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

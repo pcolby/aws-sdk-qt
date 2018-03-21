@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESERVERRESPONSE_H
 #define QTAWS_UPDATESERVERRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "updateserverrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class UpdateServerResponsePrivate;
+
+class QTAWS_EXPORT UpdateServerResponse : public UpdateServerResponse {
+    Q_OBJECT
+
+public:
+    UpdateServerResponse(const UpdateServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServerResponse)
+    Q_DISABLE_COPY(UpdateServerResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERIMAGERESPONSE_H
 #define QTAWS_DEREGISTERIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "deregisterimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeregisterImageResponsePrivate;
+
+class QTAWS_EXPORT DeregisterImageResponse : public DeregisterImageResponse {
+    Q_OBJECT
+
+public:
+    DeregisterImageResponse(const DeregisterImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterImageResponse)
+    Q_DISABLE_COPY(DeregisterImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

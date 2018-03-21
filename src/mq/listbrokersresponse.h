@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBROKERSRESPONSE_H
 #define QTAWS_LISTBROKERSRESPONSE_H
 
+#include "mqresponse.h"
+#include "listbrokersrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class ListBrokersResponsePrivate;
+
+class QTAWS_EXPORT ListBrokersResponse : public ListBrokersResponse {
+    Q_OBJECT
+
+public:
+    ListBrokersResponse(const ListBrokersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBrokersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBrokersResponse)
+    Q_DISABLE_COPY(ListBrokersResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

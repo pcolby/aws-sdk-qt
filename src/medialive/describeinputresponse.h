@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINPUTRESPONSE_H
 #define QTAWS_DESCRIBEINPUTRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "describeinputrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class DescribeInputResponsePrivate;
+
+class QTAWS_EXPORT DescribeInputResponse : public DescribeInputResponse {
+    Q_OBJECT
+
+public:
+    DescribeInputResponse(const DescribeInputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeInputRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInputResponse)
+    Q_DISABLE_COPY(DescribeInputResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

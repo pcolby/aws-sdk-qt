@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREUSABLEDELEGATIONSETSRESPONSE_H
 #define QTAWS_LISTREUSABLEDELEGATIONSETSRESPONSE_H
 
+#include "route53response.h"
+#include "listreusabledelegationsetsrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ListReusableDelegationSetsResponsePrivate;
+
+class QTAWS_EXPORT ListReusableDelegationSetsResponse : public ListReusableDelegationSetsResponse {
+    Q_OBJECT
+
+public:
+    ListReusableDelegationSetsResponse(const ListReusableDelegationSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListReusableDelegationSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListReusableDelegationSetsResponse)
+    Q_DISABLE_COPY(ListReusableDelegationSetsResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

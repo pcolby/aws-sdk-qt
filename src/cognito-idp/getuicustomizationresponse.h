@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUICUSTOMIZATIONRESPONSE_H
 #define QTAWS_GETUICUSTOMIZATIONRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "getuicustomizationrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class GetUICustomizationResponsePrivate;
+
+class QTAWS_EXPORT GetUICustomizationResponse : public GetUICustomizationResponse {
+    Q_OBJECT
+
+public:
+    GetUICustomizationResponse(const GetUICustomizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUICustomizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUICustomizationResponse)
+    Q_DISABLE_COPY(GetUICustomizationResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

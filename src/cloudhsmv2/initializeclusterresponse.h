@@ -20,4 +20,33 @@
 #ifndef QTAWS_INITIALIZECLUSTERRESPONSE_H
 #define QTAWS_INITIALIZECLUSTERRESPONSE_H
 
+#include "cloudhsmv2response.h"
+#include "initializeclusterrequest.h"
+
+namespace AWS {
+
+namespace cloudhsmv2 {
+
+class InitializeClusterResponsePrivate;
+
+class QTAWS_EXPORT InitializeClusterResponse : public InitializeClusterResponse {
+    Q_OBJECT
+
+public:
+    InitializeClusterResponse(const InitializeClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InitializeClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InitializeClusterResponse)
+    Q_DISABLE_COPY(InitializeClusterResponse)
+
+};
+
+} // namespace cloudhsmv2
+} // namespace AWS
+
 #endif

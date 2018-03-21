@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSNOWBALLUSAGERESPONSE_H
 #define QTAWS_GETSNOWBALLUSAGERESPONSE_H
 
+#include "snowballresponse.h"
+#include "getsnowballusagerequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class GetSnowballUsageResponsePrivate;
+
+class QTAWS_EXPORT GetSnowballUsageResponse : public GetSnowballUsageResponse {
+    Q_OBJECT
+
+public:
+    GetSnowballUsageResponse(const GetSnowballUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSnowballUsageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSnowballUsageResponse)
+    Q_DISABLE_COPY(GetSnowballUsageResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

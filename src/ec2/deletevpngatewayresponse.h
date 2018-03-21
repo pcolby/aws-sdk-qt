@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPNGATEWAYRESPONSE_H
 #define QTAWS_DELETEVPNGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "deletevpngatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteVpnGatewayResponsePrivate;
+
+class QTAWS_EXPORT DeleteVpnGatewayResponse : public DeleteVpnGatewayResponse {
+    Q_OBJECT
+
+public:
+    DeleteVpnGatewayResponse(const DeleteVpnGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVpnGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpnGatewayResponse)
+    Q_DISABLE_COPY(DeleteVpnGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

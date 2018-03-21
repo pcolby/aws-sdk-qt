@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_H
 #define QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "attachloadbalancertosubnetsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class AttachLoadBalancerToSubnetsResponsePrivate;
+
+class QTAWS_EXPORT AttachLoadBalancerToSubnetsResponse : public AttachLoadBalancerToSubnetsResponse {
+    Q_OBJECT
+
+public:
+    AttachLoadBalancerToSubnetsResponse(const AttachLoadBalancerToSubnetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachLoadBalancerToSubnetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachLoadBalancerToSubnetsResponse)
+    Q_DISABLE_COPY(AttachLoadBalancerToSubnetsResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

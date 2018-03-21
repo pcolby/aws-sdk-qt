@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERTHINGRESPONSE_H
 #define QTAWS_REGISTERTHINGRESPONSE_H
 
+#include "iotresponse.h"
+#include "registerthingrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class RegisterThingResponsePrivate;
+
+class QTAWS_EXPORT RegisterThingResponse : public RegisterThingResponse {
+    Q_OBJECT
+
+public:
+    RegisterThingResponse(const RegisterThingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterThingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterThingResponse)
+    Q_DISABLE_COPY(RegisterThingResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

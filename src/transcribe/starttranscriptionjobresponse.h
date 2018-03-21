@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTTRANSCRIPTIONJOBRESPONSE_H
 #define QTAWS_STARTTRANSCRIPTIONJOBRESPONSE_H
 
+#include "transcriberesponse.h"
+#include "starttranscriptionjobrequest.h"
+
+namespace AWS {
+
+namespace transcribe {
+
+class StartTranscriptionJobResponsePrivate;
+
+class QTAWS_EXPORT StartTranscriptionJobResponse : public StartTranscriptionJobResponse {
+    Q_OBJECT
+
+public:
+    StartTranscriptionJobResponse(const StartTranscriptionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartTranscriptionJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartTranscriptionJobResponse)
+    Q_DISABLE_COPY(StartTranscriptionJobResponse)
+
+};
+
+} // namespace transcribe
+} // namespace AWS
+
 #endif

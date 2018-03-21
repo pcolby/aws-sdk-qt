@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETIDENTITYDKIMENABLEDRESPONSE_H
 #define QTAWS_SETIDENTITYDKIMENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "setidentitydkimenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SetIdentityDkimEnabledResponsePrivate;
+
+class QTAWS_EXPORT SetIdentityDkimEnabledResponse : public SetIdentityDkimEnabledResponse {
+    Q_OBJECT
+
+public:
+    SetIdentityDkimEnabledResponse(const SetIdentityDkimEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetIdentityDkimEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityDkimEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityDkimEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

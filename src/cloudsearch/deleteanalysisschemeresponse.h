@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEANALYSISSCHEMERESPONSE_H
 #define QTAWS_DELETEANALYSISSCHEMERESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "deleteanalysisschemerequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DeleteAnalysisSchemeResponsePrivate;
+
+class QTAWS_EXPORT DeleteAnalysisSchemeResponse : public DeleteAnalysisSchemeResponse {
+    Q_OBJECT
+
+public:
+    DeleteAnalysisSchemeResponse(const DeleteAnalysisSchemeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAnalysisSchemeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAnalysisSchemeResponse)
+    Q_DISABLE_COPY(DeleteAnalysisSchemeResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

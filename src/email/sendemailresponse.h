@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDEMAILRESPONSE_H
 #define QTAWS_SENDEMAILRESPONSE_H
 
+#include "emailresponse.h"
+#include "sendemailrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SendEmailResponsePrivate;
+
+class QTAWS_EXPORT SendEmailResponse : public SendEmailResponse {
+    Q_OBJECT
+
+public:
+    SendEmailResponse(const SendEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendEmailResponse)
+    Q_DISABLE_COPY(SendEmailResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

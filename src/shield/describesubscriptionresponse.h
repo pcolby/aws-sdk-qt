@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONRESPONSE_H
 #define QTAWS_DESCRIBESUBSCRIPTIONRESPONSE_H
 
+#include "shieldresponse.h"
+#include "describesubscriptionrequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class DescribeSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT DescribeSubscriptionResponse : public DescribeSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    DescribeSubscriptionResponse(const DescribeSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSubscriptionResponse)
+    Q_DISABLE_COPY(DescribeSubscriptionResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

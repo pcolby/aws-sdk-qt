@@ -20,4 +20,33 @@
 #ifndef QTAWS_FORGETDEVICERESPONSE_H
 #define QTAWS_FORGETDEVICERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "forgetdevicerequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ForgetDeviceResponsePrivate;
+
+class QTAWS_EXPORT ForgetDeviceResponse : public ForgetDeviceResponse {
+    Q_OBJECT
+
+public:
+    ForgetDeviceResponse(const ForgetDeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ForgetDeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ForgetDeviceResponse)
+    Q_DISABLE_COPY(ForgetDeviceResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

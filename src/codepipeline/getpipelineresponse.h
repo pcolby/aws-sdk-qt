@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPIPELINERESPONSE_H
 #define QTAWS_GETPIPELINERESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "getpipelinerequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class GetPipelineResponsePrivate;
+
+class QTAWS_EXPORT GetPipelineResponse : public GetPipelineResponse {
+    Q_OBJECT
+
+public:
+    GetPipelineResponse(const GetPipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPipelineResponse)
+    Q_DISABLE_COPY(GetPipelineResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

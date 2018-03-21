@@ -20,4 +20,33 @@
 #ifndef QTAWS_TAGRESPONSE_H
 #define QTAWS_TAGRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "tagrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class TagResponsePrivate;
+
+class QTAWS_EXPORT TagResponse : public TagResponse {
+    Q_OBJECT
+
+public:
+    TagResponse(const TagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TagResponse)
+    Q_DISABLE_COPY(TagResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

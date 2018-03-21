@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDOMAINNAMESRESPONSE_H
 #define QTAWS_LISTDOMAINNAMESRESPONSE_H
 
+#include "esresponse.h"
+#include "listdomainnamesrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class ListDomainNamesResponsePrivate;
+
+class QTAWS_EXPORT ListDomainNamesResponse : public ListDomainNamesResponse {
+    Q_OBJECT
+
+public:
+    ListDomainNamesResponse(const ListDomainNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDomainNamesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDomainNamesResponse)
+    Q_DISABLE_COPY(ListDomainNamesResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

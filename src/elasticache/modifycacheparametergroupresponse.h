@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYCACHEPARAMETERGROUPRESPONSE_H
 #define QTAWS_MODIFYCACHEPARAMETERGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "modifycacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class ModifyCacheParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT ModifyCacheParameterGroupResponse : public ModifyCacheParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    ModifyCacheParameterGroupResponse(const ModifyCacheParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyCacheParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyCacheParameterGroupResponse)
+    Q_DISABLE_COPY(ModifyCacheParameterGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETHREATINTELSETRESPONSE_H
 #define QTAWS_DELETETHREATINTELSETRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "deletethreatintelsetrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DeleteThreatIntelSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteThreatIntelSetResponse : public DeleteThreatIntelSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteThreatIntelSetResponse(const DeleteThreatIntelSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteThreatIntelSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteThreatIntelSetResponse)
+    Q_DISABLE_COPY(DeleteThreatIntelSetResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

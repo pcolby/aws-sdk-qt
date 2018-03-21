@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTOBJECTTAGGINGRESPONSE_H
 #define QTAWS_PUTOBJECTTAGGINGRESPONSE_H
 
+#include "s3response.h"
+#include "putobjecttaggingrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutObjectTaggingResponsePrivate;
+
+class QTAWS_EXPORT PutObjectTaggingResponse : public PutObjectTaggingResponse {
+    Q_OBJECT
+
+public:
+    PutObjectTaggingResponse(const PutObjectTaggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutObjectTaggingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutObjectTaggingResponse)
+    Q_DISABLE_COPY(PutObjectTaggingResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

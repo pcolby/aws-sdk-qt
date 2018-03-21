@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEALARMHISTORYRESPONSE_H
 #define QTAWS_DESCRIBEALARMHISTORYRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "describealarmhistoryrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class DescribeAlarmHistoryResponsePrivate;
+
+class QTAWS_EXPORT DescribeAlarmHistoryResponse : public DescribeAlarmHistoryResponse {
+    Q_OBJECT
+
+public:
+    DescribeAlarmHistoryResponse(const DescribeAlarmHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAlarmHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAlarmHistoryResponse)
+    Q_DISABLE_COPY(DescribeAlarmHistoryResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

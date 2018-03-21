@@ -20,4 +20,33 @@
 #ifndef QTAWS_LOOKUPPOLICYRESPONSE_H
 #define QTAWS_LOOKUPPOLICYRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "lookuppolicyrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class LookupPolicyResponsePrivate;
+
+class QTAWS_EXPORT LookupPolicyResponse : public LookupPolicyResponse {
+    Q_OBJECT
+
+public:
+    LookupPolicyResponse(const LookupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const LookupPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(LookupPolicyResponse)
+    Q_DISABLE_COPY(LookupPolicyResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

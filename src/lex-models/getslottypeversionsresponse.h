@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSLOTTYPEVERSIONSRESPONSE_H
 #define QTAWS_GETSLOTTYPEVERSIONSRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getslottypeversionsrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetSlotTypeVersionsResponsePrivate;
+
+class QTAWS_EXPORT GetSlotTypeVersionsResponse : public GetSlotTypeVersionsResponse {
+    Q_OBJECT
+
+public:
+    GetSlotTypeVersionsResponse(const GetSlotTypeVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSlotTypeVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSlotTypeVersionsResponse)
+    Q_DISABLE_COPY(GetSlotTypeVersionsResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

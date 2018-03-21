@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMMENTRESPONSE_H
 #define QTAWS_GETCOMMENTRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getcommentrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetCommentResponsePrivate;
+
+class QTAWS_EXPORT GetCommentResponse : public GetCommentResponse {
+    Q_OBJECT
+
+public:
+    GetCommentResponse(const GetCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCommentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCommentResponse)
+    Q_DISABLE_COPY(GetCommentResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

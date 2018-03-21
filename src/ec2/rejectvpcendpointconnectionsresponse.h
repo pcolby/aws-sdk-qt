@@ -20,4 +20,33 @@
 #ifndef QTAWS_REJECTVPCENDPOINTCONNECTIONSRESPONSE_H
 #define QTAWS_REJECTVPCENDPOINTCONNECTIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "rejectvpcendpointconnectionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class RejectVpcEndpointConnectionsResponsePrivate;
+
+class QTAWS_EXPORT RejectVpcEndpointConnectionsResponse : public RejectVpcEndpointConnectionsResponse {
+    Q_OBJECT
+
+public:
+    RejectVpcEndpointConnectionsResponse(const RejectVpcEndpointConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RejectVpcEndpointConnectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RejectVpcEndpointConnectionsResponse)
+    Q_DISABLE_COPY(RejectVpcEndpointConnectionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

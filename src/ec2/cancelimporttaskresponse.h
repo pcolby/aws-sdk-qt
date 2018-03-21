@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELIMPORTTASKRESPONSE_H
 #define QTAWS_CANCELIMPORTTASKRESPONSE_H
 
+#include "ec2response.h"
+#include "cancelimporttaskrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CancelImportTaskResponsePrivate;
+
+class QTAWS_EXPORT CancelImportTaskResponse : public CancelImportTaskResponse {
+    Q_OBJECT
+
+public:
+    CancelImportTaskResponse(const CancelImportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelImportTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelImportTaskResponse)
+    Q_DISABLE_COPY(CancelImportTaskResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

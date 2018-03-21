@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYFPGAIMAGEATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYFPGAIMAGEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifyfpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyFpgaImageAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyFpgaImageAttributeResponse : public ModifyFpgaImageAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyFpgaImageAttributeResponse(const ModifyFpgaImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyFpgaImageAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyFpgaImageAttributeResponse)
+    Q_DISABLE_COPY(ModifyFpgaImageAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

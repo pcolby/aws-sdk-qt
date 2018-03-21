@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETFILEUPLOADURLRESPONSE_H
 #define QTAWS_GETFILEUPLOADURLRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "getfileuploadurlrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class GetFileUploadURLResponsePrivate;
+
+class QTAWS_EXPORT GetFileUploadURLResponse : public GetFileUploadURLResponse {
+    Q_OBJECT
+
+public:
+    GetFileUploadURLResponse(const GetFileUploadURLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetFileUploadURLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetFileUploadURLResponse)
+    Q_DISABLE_COPY(GetFileUploadURLResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

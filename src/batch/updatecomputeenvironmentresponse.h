@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECOMPUTEENVIRONMENTRESPONSE_H
 #define QTAWS_UPDATECOMPUTEENVIRONMENTRESPONSE_H
 
+#include "batchresponse.h"
+#include "updatecomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class UpdateComputeEnvironmentResponsePrivate;
+
+class QTAWS_EXPORT UpdateComputeEnvironmentResponse : public UpdateComputeEnvironmentResponse {
+    Q_OBJECT
+
+public:
+    UpdateComputeEnvironmentResponse(const UpdateComputeEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateComputeEnvironmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateComputeEnvironmentResponse)
+    Q_DISABLE_COPY(UpdateComputeEnvironmentResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

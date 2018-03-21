@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEATTRIBUTESRESPONSE_H
 #define QTAWS_DELETEATTRIBUTESRESPONSE_H
 
+#include "ecsresponse.h"
+#include "deleteattributesrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class DeleteAttributesResponsePrivate;
+
+class QTAWS_EXPORT DeleteAttributesResponse : public DeleteAttributesResponse {
+    Q_OBJECT
+
+public:
+    DeleteAttributesResponse(const DeleteAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAttributesResponse)
+    Q_DISABLE_COPY(DeleteAttributesResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_H
 #define QTAWS_LISTDISCOVEREDRESOURCESRESPONSE_H
 
+#include "configresponse.h"
+#include "listdiscoveredresourcesrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class ListDiscoveredResourcesResponsePrivate;
+
+class QTAWS_EXPORT ListDiscoveredResourcesResponse : public ListDiscoveredResourcesResponse {
+    Q_OBJECT
+
+public:
+    ListDiscoveredResourcesResponse(const ListDiscoveredResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDiscoveredResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDiscoveredResourcesResponse)
+    Q_DISABLE_COPY(ListDiscoveredResourcesResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

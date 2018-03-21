@@ -20,4 +20,33 @@
 #ifndef QTAWS_QUERYRESPONSE_H
 #define QTAWS_QUERYRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "queryrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class QueryResponsePrivate;
+
+class QTAWS_EXPORT QueryResponse : public QueryResponse {
+    Q_OBJECT
+
+public:
+    QueryResponse(const QueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const QueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(QueryResponse)
+    Q_DISABLE_COPY(QueryResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

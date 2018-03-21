@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEACCESSKEYRESPONSE_H
 #define QTAWS_DELETEACCESSKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "deleteaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteAccessKeyResponsePrivate;
+
+class QTAWS_EXPORT DeleteAccessKeyResponse : public DeleteAccessKeyResponse {
+    Q_OBJECT
+
+public:
+    DeleteAccessKeyResponse(const DeleteAccessKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAccessKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAccessKeyResponse)
+    Q_DISABLE_COPY(DeleteAccessKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

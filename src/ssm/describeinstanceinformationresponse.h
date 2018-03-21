@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_H
 #define QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeinstanceinformationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeInstanceInformationResponsePrivate;
+
+class QTAWS_EXPORT DescribeInstanceInformationResponse : public DescribeInstanceInformationResponse {
+    Q_OBJECT
+
+public:
+    DescribeInstanceInformationResponse(const DescribeInstanceInformationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeInstanceInformationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstanceInformationResponse)
+    Q_DISABLE_COPY(DescribeInstanceInformationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTACCOUNTALIASESRESPONSE_H
 #define QTAWS_LISTACCOUNTALIASESRESPONSE_H
 
+#include "iamresponse.h"
+#include "listaccountaliasesrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListAccountAliasesResponsePrivate;
+
+class QTAWS_EXPORT ListAccountAliasesResponse : public ListAccountAliasesResponse {
+    Q_OBJECT
+
+public:
+    ListAccountAliasesResponse(const ListAccountAliasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAccountAliasesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAccountAliasesResponse)
+    Q_DISABLE_COPY(ListAccountAliasesResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

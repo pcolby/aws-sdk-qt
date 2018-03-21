@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESTREAMRESPONSE_H
 #define QTAWS_CREATESTREAMRESPONSE_H
 
+#include "iotresponse.h"
+#include "createstreamrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CreateStreamResponsePrivate;
+
+class QTAWS_EXPORT CreateStreamResponse : public CreateStreamResponse {
+    Q_OBJECT
+
+public:
+    CreateStreamResponse(const CreateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamResponse)
+    Q_DISABLE_COPY(CreateStreamResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

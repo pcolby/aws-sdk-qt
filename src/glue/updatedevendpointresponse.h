@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDEVENDPOINTRESPONSE_H
 #define QTAWS_UPDATEDEVENDPOINTRESPONSE_H
 
+#include "glueresponse.h"
+#include "updatedevendpointrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdateDevEndpointResponsePrivate;
+
+class QTAWS_EXPORT UpdateDevEndpointResponse : public UpdateDevEndpointResponse {
+    Q_OBJECT
+
+public:
+    UpdateDevEndpointResponse(const UpdateDevEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDevEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDevEndpointResponse)
+    Q_DISABLE_COPY(UpdateDevEndpointResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

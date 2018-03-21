@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_H
 #define QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "associateserviceroletoaccountrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class AssociateServiceRoleToAccountResponsePrivate;
+
+class QTAWS_EXPORT AssociateServiceRoleToAccountResponse : public AssociateServiceRoleToAccountResponse {
+    Q_OBJECT
+
+public:
+    AssociateServiceRoleToAccountResponse(const AssociateServiceRoleToAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateServiceRoleToAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateServiceRoleToAccountResponse)
+    Q_DISABLE_COPY(AssociateServiceRoleToAccountResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTHIRDPARTYJOBDETAILSRESPONSE_H
 #define QTAWS_GETTHIRDPARTYJOBDETAILSRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "getthirdpartyjobdetailsrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class GetThirdPartyJobDetailsResponsePrivate;
+
+class QTAWS_EXPORT GetThirdPartyJobDetailsResponse : public GetThirdPartyJobDetailsResponse {
+    Q_OBJECT
+
+public:
+    GetThirdPartyJobDetailsResponse(const GetThirdPartyJobDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetThirdPartyJobDetailsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetThirdPartyJobDetailsResponse)
+    Q_DISABLE_COPY(GetThirdPartyJobDetailsResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

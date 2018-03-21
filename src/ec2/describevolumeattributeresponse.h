@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVOLUMEATTRIBUTERESPONSE_H
 #define QTAWS_DESCRIBEVOLUMEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "describevolumeattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeVolumeAttributeResponsePrivate;
+
+class QTAWS_EXPORT DescribeVolumeAttributeResponse : public DescribeVolumeAttributeResponse {
+    Q_OBJECT
+
+public:
+    DescribeVolumeAttributeResponse(const DescribeVolumeAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVolumeAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVolumeAttributeResponse)
+    Q_DISABLE_COPY(DescribeVolumeAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

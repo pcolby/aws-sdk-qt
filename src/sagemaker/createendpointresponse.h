@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEENDPOINTRESPONSE_H
 #define QTAWS_CREATEENDPOINTRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "createendpointrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class CreateEndpointResponsePrivate;
+
+class QTAWS_EXPORT CreateEndpointResponse : public CreateEndpointResponse {
+    Q_OBJECT
+
+public:
+    CreateEndpointResponse(const CreateEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateEndpointResponse)
+    Q_DISABLE_COPY(CreateEndpointResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

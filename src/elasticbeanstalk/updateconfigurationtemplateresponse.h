@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONFIGURATIONTEMPLATERESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONTEMPLATERESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class UpdateConfigurationTemplateResponsePrivate;
+
+class QTAWS_EXPORT UpdateConfigurationTemplateResponse : public UpdateConfigurationTemplateResponse {
+    Q_OBJECT
+
+public:
+    UpdateConfigurationTemplateResponse(const UpdateConfigurationTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConfigurationTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationTemplateResponse)
+    Q_DISABLE_COPY(UpdateConfigurationTemplateResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

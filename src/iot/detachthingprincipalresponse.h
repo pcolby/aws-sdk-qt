@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHTHINGPRINCIPALRESPONSE_H
 #define QTAWS_DETACHTHINGPRINCIPALRESPONSE_H
 
+#include "iotresponse.h"
+#include "detachthingprincipalrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DetachThingPrincipalResponsePrivate;
+
+class QTAWS_EXPORT DetachThingPrincipalResponse : public DetachThingPrincipalResponse {
+    Q_OBJECT
+
+public:
+    DetachThingPrincipalResponse(const DetachThingPrincipalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachThingPrincipalRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachThingPrincipalResponse)
+    Q_DISABLE_COPY(DetachThingPrincipalResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

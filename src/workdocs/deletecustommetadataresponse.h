@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECUSTOMMETADATARESPONSE_H
 #define QTAWS_DELETECUSTOMMETADATARESPONSE_H
 
+#include "workdocsresponse.h"
+#include "deletecustommetadatarequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DeleteCustomMetadataResponsePrivate;
+
+class QTAWS_EXPORT DeleteCustomMetadataResponse : public DeleteCustomMetadataResponse {
+    Q_OBJECT
+
+public:
+    DeleteCustomMetadataResponse(const DeleteCustomMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCustomMetadataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomMetadataResponse)
+    Q_DISABLE_COPY(DeleteCustomMetadataResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

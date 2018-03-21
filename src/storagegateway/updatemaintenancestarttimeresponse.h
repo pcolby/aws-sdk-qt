@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMAINTENANCESTARTTIMERESPONSE_H
 #define QTAWS_UPDATEMAINTENANCESTARTTIMERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updatemaintenancestarttimerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateMaintenanceStartTimeResponsePrivate;
+
+class QTAWS_EXPORT UpdateMaintenanceStartTimeResponse : public UpdateMaintenanceStartTimeResponse {
+    Q_OBJECT
+
+public:
+    UpdateMaintenanceStartTimeResponse(const UpdateMaintenanceStartTimeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateMaintenanceStartTimeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMaintenanceStartTimeResponse)
+    Q_DISABLE_COPY(UpdateMaintenanceStartTimeResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

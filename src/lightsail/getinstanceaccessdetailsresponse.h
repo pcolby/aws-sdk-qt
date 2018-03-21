@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINSTANCEACCESSDETAILSRESPONSE_H
 #define QTAWS_GETINSTANCEACCESSDETAILSRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getinstanceaccessdetailsrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetInstanceAccessDetailsResponsePrivate;
+
+class QTAWS_EXPORT GetInstanceAccessDetailsResponse : public GetInstanceAccessDetailsResponse {
+    Q_OBJECT
+
+public:
+    GetInstanceAccessDetailsResponse(const GetInstanceAccessDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetInstanceAccessDetailsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetInstanceAccessDetailsResponse)
+    Q_DISABLE_COPY(GetInstanceAccessDetailsResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

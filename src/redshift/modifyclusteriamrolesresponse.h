@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_H
 #define QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "modifyclusteriamrolesrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class ModifyClusterIamRolesResponsePrivate;
+
+class QTAWS_EXPORT ModifyClusterIamRolesResponse : public ModifyClusterIamRolesResponse {
+    Q_OBJECT
+
+public:
+    ModifyClusterIamRolesResponse(const ModifyClusterIamRolesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyClusterIamRolesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyClusterIamRolesResponse)
+    Q_DISABLE_COPY(ModifyClusterIamRolesResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

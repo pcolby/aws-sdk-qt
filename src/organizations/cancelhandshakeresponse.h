@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELHANDSHAKERESPONSE_H
 #define QTAWS_CANCELHANDSHAKERESPONSE_H
 
+#include "organizationsresponse.h"
+#include "cancelhandshakerequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class CancelHandshakeResponsePrivate;
+
+class QTAWS_EXPORT CancelHandshakeResponse : public CancelHandshakeResponse {
+    Q_OBJECT
+
+public:
+    CancelHandshakeResponse(const CancelHandshakeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelHandshakeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelHandshakeResponse)
+    Q_DISABLE_COPY(CancelHandshakeResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

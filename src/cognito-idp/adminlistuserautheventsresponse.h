@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_H
 #define QTAWS_ADMINLISTUSERAUTHEVENTSRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminlistuserautheventsrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminListUserAuthEventsResponsePrivate;
+
+class QTAWS_EXPORT AdminListUserAuthEventsResponse : public AdminListUserAuthEventsResponse {
+    Q_OBJECT
+
+public:
+    AdminListUserAuthEventsResponse(const AdminListUserAuthEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminListUserAuthEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminListUserAuthEventsResponse)
+    Q_DISABLE_COPY(AdminListUserAuthEventsResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

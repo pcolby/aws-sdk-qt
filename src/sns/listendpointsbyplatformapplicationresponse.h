@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_H
 #define QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_H
 
+#include "snsresponse.h"
+#include "listendpointsbyplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class ListEndpointsByPlatformApplicationResponsePrivate;
+
+class QTAWS_EXPORT ListEndpointsByPlatformApplicationResponse : public ListEndpointsByPlatformApplicationResponse {
+    Q_OBJECT
+
+public:
+    ListEndpointsByPlatformApplicationResponse(const ListEndpointsByPlatformApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListEndpointsByPlatformApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListEndpointsByPlatformApplicationResponse)
+    Q_DISABLE_COPY(ListEndpointsByPlatformApplicationResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_H
 #define QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "setloadbalancerpoliciesoflistenerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class SetLoadBalancerPoliciesOfListenerResponsePrivate;
+
+class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerResponse : public SetLoadBalancerPoliciesOfListenerResponse {
+    Q_OBJECT
+
+public:
+    SetLoadBalancerPoliciesOfListenerResponse(const SetLoadBalancerPoliciesOfListenerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetLoadBalancerPoliciesOfListenerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBalancerPoliciesOfListenerResponse)
+    Q_DISABLE_COPY(SetLoadBalancerPoliciesOfListenerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

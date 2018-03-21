@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECLUSTERRESPONSE_H
 #define QTAWS_UPDATECLUSTERRESPONSE_H
 
+#include "daxresponse.h"
+#include "updateclusterrequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class UpdateClusterResponsePrivate;
+
+class QTAWS_EXPORT UpdateClusterResponse : public UpdateClusterResponse {
+    Q_OBJECT
+
+public:
+    UpdateClusterResponse(const UpdateClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateClusterResponse)
+    Q_DISABLE_COPY(UpdateClusterResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describeaccountattributesrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeAccountAttributesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAccountAttributesResponse : public DescribeAccountAttributesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAccountAttributesResponse(const DescribeAccountAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAccountAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountAttributesResponse)
+    Q_DISABLE_COPY(DescribeAccountAttributesResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

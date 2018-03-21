@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERESTAPIRESPONSE_H
 #define QTAWS_CREATERESTAPIRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "createrestapirequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class CreateRestApiResponsePrivate;
+
+class QTAWS_EXPORT CreateRestApiResponse : public CreateRestApiResponse {
+    Q_OBJECT
+
+public:
+    CreateRestApiResponse(const CreateRestApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRestApiRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRestApiResponse)
+    Q_DISABLE_COPY(CreateRestApiResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

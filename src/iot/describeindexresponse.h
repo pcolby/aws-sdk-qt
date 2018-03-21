@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINDEXRESPONSE_H
 #define QTAWS_DESCRIBEINDEXRESPONSE_H
 
+#include "iotresponse.h"
+#include "describeindexrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DescribeIndexResponsePrivate;
+
+class QTAWS_EXPORT DescribeIndexResponse : public DescribeIndexResponse {
+    Q_OBJECT
+
+public:
+    DescribeIndexResponse(const DescribeIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeIndexRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIndexResponse)
+    Q_DISABLE_COPY(DescribeIndexResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

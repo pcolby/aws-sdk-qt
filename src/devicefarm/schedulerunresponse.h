@@ -20,4 +20,33 @@
 #ifndef QTAWS_SCHEDULERUNRESPONSE_H
 #define QTAWS_SCHEDULERUNRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "schedulerunrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ScheduleRunResponsePrivate;
+
+class QTAWS_EXPORT ScheduleRunResponse : public ScheduleRunResponse {
+    Q_OBJECT
+
+public:
+    ScheduleRunResponse(const ScheduleRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ScheduleRunRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ScheduleRunResponse)
+    Q_DISABLE_COPY(ScheduleRunResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

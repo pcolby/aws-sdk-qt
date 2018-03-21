@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEGROUPQUERYRESPONSE_H
 #define QTAWS_UPDATEGROUPQUERYRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "updategroupqueryrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class UpdateGroupQueryResponsePrivate;
+
+class QTAWS_EXPORT UpdateGroupQueryResponse : public UpdateGroupQueryResponse {
+    Q_OBJECT
+
+public:
+    UpdateGroupQueryResponse(const UpdateGroupQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateGroupQueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGroupQueryResponse)
+    Q_DISABLE_COPY(UpdateGroupQueryResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

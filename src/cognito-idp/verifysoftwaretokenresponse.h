@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENRESPONSE_H
 #define QTAWS_VERIFYSOFTWARETOKENRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "verifysoftwaretokenrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class VerifySoftwareTokenResponsePrivate;
+
+class QTAWS_EXPORT VerifySoftwareTokenResponse : public VerifySoftwareTokenResponse {
+    Q_OBJECT
+
+public:
+    VerifySoftwareTokenResponse(const VerifySoftwareTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifySoftwareTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifySoftwareTokenResponse)
+    Q_DISABLE_COPY(VerifySoftwareTokenResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

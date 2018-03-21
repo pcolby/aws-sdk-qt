@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describeorderabledbinstanceoptionsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeOrderableDBInstanceOptionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsResponse : public DescribeOrderableDBInstanceOptionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeOrderableDBInstanceOptionsResponse(const DescribeOrderableDBInstanceOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeOrderableDBInstanceOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrderableDBInstanceOptionsResponse)
+    Q_DISABLE_COPY(DescribeOrderableDBInstanceOptionsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINVALIDATIONRESPONSE_H
 #define QTAWS_CREATEINVALIDATIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "createinvalidationrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class CreateInvalidationResponsePrivate;
+
+class QTAWS_EXPORT CreateInvalidationResponse : public CreateInvalidationResponse {
+    Q_OBJECT
+
+public:
+    CreateInvalidationResponse(const CreateInvalidationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInvalidationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInvalidationResponse)
+    Q_DISABLE_COPY(CreateInvalidationResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

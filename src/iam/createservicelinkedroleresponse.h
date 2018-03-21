@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESERVICELINKEDROLERESPONSE_H
 #define QTAWS_CREATESERVICELINKEDROLERESPONSE_H
 
+#include "iamresponse.h"
+#include "createservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreateServiceLinkedRoleResponsePrivate;
+
+class QTAWS_EXPORT CreateServiceLinkedRoleResponse : public CreateServiceLinkedRoleResponse {
+    Q_OBJECT
+
+public:
+    CreateServiceLinkedRoleResponse(const CreateServiceLinkedRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateServiceLinkedRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateServiceLinkedRoleResponse)
+    Q_DISABLE_COPY(CreateServiceLinkedRoleResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

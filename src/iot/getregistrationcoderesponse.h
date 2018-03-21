@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREGISTRATIONCODERESPONSE_H
 #define QTAWS_GETREGISTRATIONCODERESPONSE_H
 
+#include "iotresponse.h"
+#include "getregistrationcoderequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class GetRegistrationCodeResponsePrivate;
+
+class QTAWS_EXPORT GetRegistrationCodeResponse : public GetRegistrationCodeResponse {
+    Q_OBJECT
+
+public:
+    GetRegistrationCodeResponse(const GetRegistrationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRegistrationCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRegistrationCodeResponse)
+    Q_DISABLE_COPY(GetRegistrationCodeResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

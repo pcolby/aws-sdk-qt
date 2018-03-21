@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTEPRESPONSE_H
 #define QTAWS_DESCRIBESTEPRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "describesteprequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class DescribeStepResponsePrivate;
+
+class QTAWS_EXPORT DescribeStepResponse : public DescribeStepResponse {
+    Q_OBJECT
+
+public:
+    DescribeStepResponse(const DescribeStepRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStepRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStepResponse)
+    Q_DISABLE_COPY(DescribeStepResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

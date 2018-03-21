@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTMETRICDATARESPONSE_H
 #define QTAWS_PUTMETRICDATARESPONSE_H
 
+#include "monitoringresponse.h"
+#include "putmetricdatarequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class PutMetricDataResponsePrivate;
+
+class QTAWS_EXPORT PutMetricDataResponse : public PutMetricDataResponse {
+    Q_OBJECT
+
+public:
+    PutMetricDataResponse(const PutMetricDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutMetricDataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutMetricDataResponse)
+    Q_DISABLE_COPY(PutMetricDataResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

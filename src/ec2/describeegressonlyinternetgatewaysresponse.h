@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEGRESSONLYINTERNETGATEWAYSRESPONSE_H
 #define QTAWS_DESCRIBEEGRESSONLYINTERNETGATEWAYSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeegressonlyinternetgatewaysrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeEgressOnlyInternetGatewaysResponsePrivate;
+
+class QTAWS_EXPORT DescribeEgressOnlyInternetGatewaysResponse : public DescribeEgressOnlyInternetGatewaysResponse {
+    Q_OBJECT
+
+public:
+    DescribeEgressOnlyInternetGatewaysResponse(const DescribeEgressOnlyInternetGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEgressOnlyInternetGatewaysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEgressOnlyInternetGatewaysResponse)
+    Q_DISABLE_COPY(DescribeEgressOnlyInternetGatewaysResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

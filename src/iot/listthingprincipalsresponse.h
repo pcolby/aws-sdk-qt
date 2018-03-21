@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTHINGPRINCIPALSRESPONSE_H
 #define QTAWS_LISTTHINGPRINCIPALSRESPONSE_H
 
+#include "iotresponse.h"
+#include "listthingprincipalsrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListThingPrincipalsResponsePrivate;
+
+class QTAWS_EXPORT ListThingPrincipalsResponse : public ListThingPrincipalsResponse {
+    Q_OBJECT
+
+public:
+    ListThingPrincipalsResponse(const ListThingPrincipalsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListThingPrincipalsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListThingPrincipalsResponse)
+    Q_DISABLE_COPY(ListThingPrincipalsResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

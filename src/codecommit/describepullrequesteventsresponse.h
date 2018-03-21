@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPULLREQUESTEVENTSRESPONSE_H
 #define QTAWS_DESCRIBEPULLREQUESTEVENTSRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "describepullrequesteventsrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class DescribePullRequestEventsResponsePrivate;
+
+class QTAWS_EXPORT DescribePullRequestEventsResponse : public DescribePullRequestEventsResponse {
+    Q_OBJECT
+
+public:
+    DescribePullRequestEventsResponse(const DescribePullRequestEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePullRequestEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePullRequestEventsResponse)
+    Q_DISABLE_COPY(DescribePullRequestEventsResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

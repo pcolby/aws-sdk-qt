@@ -20,4 +20,33 @@
 #ifndef QTAWS_RETRIEVEENVIRONMENTINFORESPONSE_H
 #define QTAWS_RETRIEVEENVIRONMENTINFORESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "retrieveenvironmentinforequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class RetrieveEnvironmentInfoResponsePrivate;
+
+class QTAWS_EXPORT RetrieveEnvironmentInfoResponse : public RetrieveEnvironmentInfoResponse {
+    Q_OBJECT
+
+public:
+    RetrieveEnvironmentInfoResponse(const RetrieveEnvironmentInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RetrieveEnvironmentInfoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RetrieveEnvironmentInfoResponse)
+    Q_DISABLE_COPY(RetrieveEnvironmentInfoResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

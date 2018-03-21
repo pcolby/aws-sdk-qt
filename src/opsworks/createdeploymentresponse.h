@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDEPLOYMENTRESPONSE_H
 #define QTAWS_CREATEDEPLOYMENTRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "createdeploymentrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class CreateDeploymentResponsePrivate;
+
+class QTAWS_EXPORT CreateDeploymentResponse : public CreateDeploymentResponse {
+    Q_OBJECT
+
+public:
+    CreateDeploymentResponse(const CreateDeploymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDeploymentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeploymentResponse)
+    Q_DISABLE_COPY(CreateDeploymentResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

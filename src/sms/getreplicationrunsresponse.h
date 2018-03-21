@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREPLICATIONRUNSRESPONSE_H
 #define QTAWS_GETREPLICATIONRUNSRESPONSE_H
 
+#include "smsresponse.h"
+#include "getreplicationrunsrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class GetReplicationRunsResponsePrivate;
+
+class QTAWS_EXPORT GetReplicationRunsResponse : public GetReplicationRunsResponse {
+    Q_OBJECT
+
+public:
+    GetReplicationRunsResponse(const GetReplicationRunsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReplicationRunsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReplicationRunsResponse)
+    Q_DISABLE_COPY(GetReplicationRunsResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

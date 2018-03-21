@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSUBSCRIPTIONSTATERESPONSE_H
 #define QTAWS_GETSUBSCRIPTIONSTATERESPONSE_H
 
+#include "shieldresponse.h"
+#include "getsubscriptionstaterequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class GetSubscriptionStateResponsePrivate;
+
+class QTAWS_EXPORT GetSubscriptionStateResponse : public GetSubscriptionStateResponse {
+    Q_OBJECT
+
+public:
+    GetSubscriptionStateResponse(const GetSubscriptionStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSubscriptionStateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSubscriptionStateResponse)
+    Q_DISABLE_COPY(GetSubscriptionStateResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

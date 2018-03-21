@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESCHEMASRESPONSE_H
 #define QTAWS_DESCRIBESCHEMASRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describeschemasrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeSchemasResponsePrivate;
+
+class QTAWS_EXPORT DescribeSchemasResponse : public DescribeSchemasResponse {
+    Q_OBJECT
+
+public:
+    DescribeSchemasResponse(const DescribeSchemasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSchemasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSchemasResponse)
+    Q_DISABLE_COPY(DescribeSchemasResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

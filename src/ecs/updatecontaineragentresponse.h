@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONTAINERAGENTRESPONSE_H
 #define QTAWS_UPDATECONTAINERAGENTRESPONSE_H
 
+#include "ecsresponse.h"
+#include "updatecontaineragentrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class UpdateContainerAgentResponsePrivate;
+
+class QTAWS_EXPORT UpdateContainerAgentResponse : public UpdateContainerAgentResponse {
+    Q_OBJECT
+
+public:
+    UpdateContainerAgentResponse(const UpdateContainerAgentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateContainerAgentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateContainerAgentResponse)
+    Q_DISABLE_COPY(UpdateContainerAgentResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

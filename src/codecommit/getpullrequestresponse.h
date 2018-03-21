@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPULLREQUESTRESPONSE_H
 #define QTAWS_GETPULLREQUESTRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getpullrequestrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetPullRequestResponsePrivate;
+
+class QTAWS_EXPORT GetPullRequestResponse : public GetPullRequestResponse {
+    Q_OBJECT
+
+public:
+    GetPullRequestResponse(const GetPullRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPullRequestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPullRequestResponse)
+    Q_DISABLE_COPY(GetPullRequestResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

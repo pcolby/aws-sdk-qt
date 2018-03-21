@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTLOCALDISKSRESPONSE_H
 #define QTAWS_LISTLOCALDISKSRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "listlocaldisksrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class ListLocalDisksResponsePrivate;
+
+class QTAWS_EXPORT ListLocalDisksResponse : public ListLocalDisksResponse {
+    Q_OBJECT
+
+public:
+    ListLocalDisksResponse(const ListLocalDisksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListLocalDisksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListLocalDisksResponse)
+    Q_DISABLE_COPY(ListLocalDisksResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

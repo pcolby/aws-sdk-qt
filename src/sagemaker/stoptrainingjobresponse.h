@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPTRAININGJOBRESPONSE_H
 #define QTAWS_STOPTRAININGJOBRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "stoptrainingjobrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class StopTrainingJobResponsePrivate;
+
+class QTAWS_EXPORT StopTrainingJobResponse : public StopTrainingJobResponse {
+    Q_OBJECT
+
+public:
+    StopTrainingJobResponse(const StopTrainingJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopTrainingJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopTrainingJobResponse)
+    Q_DISABLE_COPY(StopTrainingJobResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

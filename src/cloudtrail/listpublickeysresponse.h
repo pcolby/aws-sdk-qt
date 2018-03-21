@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPUBLICKEYSRESPONSE_H
 #define QTAWS_LISTPUBLICKEYSRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "listpublickeysrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class ListPublicKeysResponsePrivate;
+
+class QTAWS_EXPORT ListPublicKeysResponse : public ListPublicKeysResponse {
+    Q_OBJECT
+
+public:
+    ListPublicKeysResponse(const ListPublicKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPublicKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPublicKeysResponse)
+    Q_DISABLE_COPY(ListPublicKeysResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

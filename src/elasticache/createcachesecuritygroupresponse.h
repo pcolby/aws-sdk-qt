@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECACHESECURITYGROUPRESPONSE_H
 #define QTAWS_CREATECACHESECURITYGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "createcachesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class CreateCacheSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateCacheSecurityGroupResponse : public CreateCacheSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateCacheSecurityGroupResponse(const CreateCacheSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCacheSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCacheSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateCacheSecurityGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

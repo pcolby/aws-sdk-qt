@@ -20,4 +20,33 @@
 #ifndef QTAWS_SCHEDULEKEYDELETIONRESPONSE_H
 #define QTAWS_SCHEDULEKEYDELETIONRESPONSE_H
 
+#include "kmsresponse.h"
+#include "schedulekeydeletionrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ScheduleKeyDeletionResponsePrivate;
+
+class QTAWS_EXPORT ScheduleKeyDeletionResponse : public ScheduleKeyDeletionResponse {
+    Q_OBJECT
+
+public:
+    ScheduleKeyDeletionResponse(const ScheduleKeyDeletionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ScheduleKeyDeletionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ScheduleKeyDeletionResponse)
+    Q_DISABLE_COPY(ScheduleKeyDeletionResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

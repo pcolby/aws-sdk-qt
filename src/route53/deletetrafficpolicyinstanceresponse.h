@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETRAFFICPOLICYINSTANCERESPONSE_H
 #define QTAWS_DELETETRAFFICPOLICYINSTANCERESPONSE_H
 
+#include "route53response.h"
+#include "deletetrafficpolicyinstancerequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class DeleteTrafficPolicyInstanceResponsePrivate;
+
+class QTAWS_EXPORT DeleteTrafficPolicyInstanceResponse : public DeleteTrafficPolicyInstanceResponse {
+    Q_OBJECT
+
+public:
+    DeleteTrafficPolicyInstanceResponse(const DeleteTrafficPolicyInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTrafficPolicyInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrafficPolicyInstanceResponse)
+    Q_DISABLE_COPY(DeleteTrafficPolicyInstanceResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

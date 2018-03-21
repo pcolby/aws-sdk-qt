@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEADDITIONALASSIGNMENTSFORHITRESPONSE_H
 #define QTAWS_CREATEADDITIONALASSIGNMENTSFORHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "createadditionalassignmentsforhitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class CreateAdditionalAssignmentsForHITResponsePrivate;
+
+class QTAWS_EXPORT CreateAdditionalAssignmentsForHITResponse : public CreateAdditionalAssignmentsForHITResponse {
+    Q_OBJECT
+
+public:
+    CreateAdditionalAssignmentsForHITResponse(const CreateAdditionalAssignmentsForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAdditionalAssignmentsForHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAdditionalAssignmentsForHITResponse)
+    Q_DISABLE_COPY(CreateAdditionalAssignmentsForHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

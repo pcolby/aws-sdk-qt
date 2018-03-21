@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSFROMONPREMISESINSTANCESRESPONSE_H
 #define QTAWS_REMOVETAGSFROMONPREMISESINSTANCESRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "removetagsfromonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class RemoveTagsFromOnPremisesInstancesResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesResponse : public RemoveTagsFromOnPremisesInstancesResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsFromOnPremisesInstancesResponse(const RemoveTagsFromOnPremisesInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsFromOnPremisesInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromOnPremisesInstancesResponse)
+    Q_DISABLE_COPY(RemoveTagsFromOnPremisesInstancesResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETIDENTITYNOTIFICATIONTOPICRESPONSE_H
 #define QTAWS_SETIDENTITYNOTIFICATIONTOPICRESPONSE_H
 
+#include "emailresponse.h"
+#include "setidentitynotificationtopicrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SetIdentityNotificationTopicResponsePrivate;
+
+class QTAWS_EXPORT SetIdentityNotificationTopicResponse : public SetIdentityNotificationTopicResponse {
+    Q_OBJECT
+
+public:
+    SetIdentityNotificationTopicResponse(const SetIdentityNotificationTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetIdentityNotificationTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityNotificationTopicResponse)
+    Q_DISABLE_COPY(SetIdentityNotificationTopicResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

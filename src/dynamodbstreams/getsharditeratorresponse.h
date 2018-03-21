@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSHARDITERATORRESPONSE_H
 #define QTAWS_GETSHARDITERATORRESPONSE_H
 
+#include "dynamodbstreamsresponse.h"
+#include "getsharditeratorrequest.h"
+
+namespace AWS {
+
+namespace dynamodbstreams {
+
+class GetShardIteratorResponsePrivate;
+
+class QTAWS_EXPORT GetShardIteratorResponse : public GetShardIteratorResponse {
+    Q_OBJECT
+
+public:
+    GetShardIteratorResponse(const GetShardIteratorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetShardIteratorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetShardIteratorResponse)
+    Q_DISABLE_COPY(GetShardIteratorResponse)
+
+};
+
+} // namespace dynamodbstreams
+} // namespace AWS
+
 #endif

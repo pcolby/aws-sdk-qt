@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERUNTIMECONFIGURATIONRESPONSE_H
 #define QTAWS_DESCRIBERUNTIMECONFIGURATIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describeruntimeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeRuntimeConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DescribeRuntimeConfigurationResponse : public DescribeRuntimeConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DescribeRuntimeConfigurationResponse(const DescribeRuntimeConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRuntimeConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRuntimeConfigurationResponse)
+    Q_DISABLE_COPY(DescribeRuntimeConfigurationResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

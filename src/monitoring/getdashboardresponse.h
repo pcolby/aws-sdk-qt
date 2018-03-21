@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDASHBOARDRESPONSE_H
 #define QTAWS_GETDASHBOARDRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "getdashboardrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class GetDashboardResponsePrivate;
+
+class QTAWS_EXPORT GetDashboardResponse : public GetDashboardResponse {
+    Q_OBJECT
+
+public:
+    GetDashboardResponse(const GetDashboardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDashboardRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDashboardResponse)
+    Q_DISABLE_COPY(GetDashboardResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

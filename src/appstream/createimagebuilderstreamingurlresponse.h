@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEIMAGEBUILDERSTREAMINGURLRESPONSE_H
 #define QTAWS_CREATEIMAGEBUILDERSTREAMINGURLRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "createimagebuilderstreamingurlrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class CreateImageBuilderStreamingURLResponsePrivate;
+
+class QTAWS_EXPORT CreateImageBuilderStreamingURLResponse : public CreateImageBuilderStreamingURLResponse {
+    Q_OBJECT
+
+public:
+    CreateImageBuilderStreamingURLResponse(const CreateImageBuilderStreamingURLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateImageBuilderStreamingURLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateImageBuilderStreamingURLResponse)
+    Q_DISABLE_COPY(CreateImageBuilderStreamingURLResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

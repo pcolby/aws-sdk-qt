@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATERESPONSE_H
 #define QTAWS_GETSIGNINGCERTIFICATERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "getsigningcertificaterequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class GetSigningCertificateResponsePrivate;
+
+class QTAWS_EXPORT GetSigningCertificateResponse : public GetSigningCertificateResponse {
+    Q_OBJECT
+
+public:
+    GetSigningCertificateResponse(const GetSigningCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSigningCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSigningCertificateResponse)
+    Q_DISABLE_COPY(GetSigningCertificateResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

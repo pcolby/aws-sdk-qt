@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERRESPONSE_H
 #define QTAWS_DELETECONDITIONALFORWARDERRESPONSE_H
 
+#include "dsresponse.h"
+#include "deleteconditionalforwarderrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DeleteConditionalForwarderResponsePrivate;
+
+class QTAWS_EXPORT DeleteConditionalForwarderResponse : public DeleteConditionalForwarderResponse {
+    Q_OBJECT
+
+public:
+    DeleteConditionalForwarderResponse(const DeleteConditionalForwarderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConditionalForwarderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConditionalForwarderResponse)
+    Q_DISABLE_COPY(DeleteConditionalForwarderResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

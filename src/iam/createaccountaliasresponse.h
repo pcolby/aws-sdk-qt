@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEACCOUNTALIASRESPONSE_H
 #define QTAWS_CREATEACCOUNTALIASRESPONSE_H
 
+#include "iamresponse.h"
+#include "createaccountaliasrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreateAccountAliasResponsePrivate;
+
+class QTAWS_EXPORT CreateAccountAliasResponse : public CreateAccountAliasResponse {
+    Q_OBJECT
+
+public:
+    CreateAccountAliasResponse(const CreateAccountAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAccountAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAccountAliasResponse)
+    Q_DISABLE_COPY(CreateAccountAliasResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

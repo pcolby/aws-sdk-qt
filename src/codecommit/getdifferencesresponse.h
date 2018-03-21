@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDIFFERENCESRESPONSE_H
 #define QTAWS_GETDIFFERENCESRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getdifferencesrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetDifferencesResponsePrivate;
+
+class QTAWS_EXPORT GetDifferencesResponse : public GetDifferencesResponse {
+    Q_OBJECT
+
+public:
+    GetDifferencesResponse(const GetDifferencesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDifferencesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDifferencesResponse)
+    Q_DISABLE_COPY(GetDifferencesResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

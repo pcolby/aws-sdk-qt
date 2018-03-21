@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDEFAULTBRANCHRESPONSE_H
 #define QTAWS_UPDATEDEFAULTBRANCHRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updatedefaultbranchrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdateDefaultBranchResponsePrivate;
+
+class QTAWS_EXPORT UpdateDefaultBranchResponse : public UpdateDefaultBranchResponse {
+    Q_OBJECT
+
+public:
+    UpdateDefaultBranchResponse(const UpdateDefaultBranchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDefaultBranchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDefaultBranchResponse)
+    Q_DISABLE_COPY(UpdateDefaultBranchResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

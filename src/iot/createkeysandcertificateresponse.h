@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEKEYSANDCERTIFICATERESPONSE_H
 #define QTAWS_CREATEKEYSANDCERTIFICATERESPONSE_H
 
+#include "iotresponse.h"
+#include "createkeysandcertificaterequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CreateKeysAndCertificateResponsePrivate;
+
+class QTAWS_EXPORT CreateKeysAndCertificateResponse : public CreateKeysAndCertificateResponse {
+    Q_OBJECT
+
+public:
+    CreateKeysAndCertificateResponse(const CreateKeysAndCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateKeysAndCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateKeysAndCertificateResponse)
+    Q_DISABLE_COPY(CreateKeysAndCertificateResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

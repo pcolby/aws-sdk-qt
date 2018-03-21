@@ -20,4 +20,33 @@
 #ifndef QTAWS_AUTHORIZESECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_AUTHORIZESECURITYGROUPINGRESSRESPONSE_H
 
+#include "ec2response.h"
+#include "authorizesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AuthorizeSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT AuthorizeSecurityGroupIngressResponse : public AuthorizeSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    AuthorizeSecurityGroupIngressResponse(const AuthorizeSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AuthorizeSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeSecurityGroupIngressResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

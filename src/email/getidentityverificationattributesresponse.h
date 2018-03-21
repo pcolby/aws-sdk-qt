@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_H
 
+#include "emailresponse.h"
+#include "getidentityverificationattributesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetIdentityVerificationAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetIdentityVerificationAttributesResponse : public GetIdentityVerificationAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetIdentityVerificationAttributesResponse(const GetIdentityVerificationAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIdentityVerificationAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityVerificationAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityVerificationAttributesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMS3RESPONSE_H
 #define QTAWS_CREATEDATASOURCEFROMS3RESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createdatasourcefroms3request.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateDataSourceFromS3ResponsePrivate;
+
+class QTAWS_EXPORT CreateDataSourceFromS3Response : public CreateDataSourceFromS3Response {
+    Q_OBJECT
+
+public:
+    CreateDataSourceFromS3Response(const CreateDataSourceFromS3Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDataSourceFromS3Request * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceFromS3Response)
+    Q_DISABLE_COPY(CreateDataSourceFromS3Response)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

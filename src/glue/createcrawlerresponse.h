@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECRAWLERRESPONSE_H
 #define QTAWS_CREATECRAWLERRESPONSE_H
 
+#include "glueresponse.h"
+#include "createcrawlerrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class CreateCrawlerResponsePrivate;
+
+class QTAWS_EXPORT CreateCrawlerResponse : public CreateCrawlerResponse {
+    Q_OBJECT
+
+public:
+    CreateCrawlerResponse(const CreateCrawlerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCrawlerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCrawlerResponse)
+    Q_DISABLE_COPY(CreateCrawlerResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

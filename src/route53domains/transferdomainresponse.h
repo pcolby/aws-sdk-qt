@@ -20,4 +20,33 @@
 #ifndef QTAWS_TRANSFERDOMAINRESPONSE_H
 #define QTAWS_TRANSFERDOMAINRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "transferdomainrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class TransferDomainResponsePrivate;
+
+class QTAWS_EXPORT TransferDomainResponse : public TransferDomainResponse {
+    Q_OBJECT
+
+public:
+    TransferDomainResponse(const TransferDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TransferDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TransferDomainResponse)
+    Q_DISABLE_COPY(TransferDomainResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

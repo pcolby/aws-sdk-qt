@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_H
 #define QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "listavailablesolutionstacksrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class ListAvailableSolutionStacksResponsePrivate;
+
+class QTAWS_EXPORT ListAvailableSolutionStacksResponse : public ListAvailableSolutionStacksResponse {
+    Q_OBJECT
+
+public:
+    ListAvailableSolutionStacksResponse(const ListAvailableSolutionStacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAvailableSolutionStacksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAvailableSolutionStacksResponse)
+    Q_DISABLE_COPY(ListAvailableSolutionStacksResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

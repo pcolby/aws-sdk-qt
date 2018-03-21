@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEHSMCLIENTCERTIFICATERESPONSE_H
 #define QTAWS_CREATEHSMCLIENTCERTIFICATERESPONSE_H
 
+#include "redshiftresponse.h"
+#include "createhsmclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class CreateHsmClientCertificateResponsePrivate;
+
+class QTAWS_EXPORT CreateHsmClientCertificateResponse : public CreateHsmClientCertificateResponse {
+    Q_OBJECT
+
+public:
+    CreateHsmClientCertificateResponse(const CreateHsmClientCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateHsmClientCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateHsmClientCertificateResponse)
+    Q_DISABLE_COPY(CreateHsmClientCertificateResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

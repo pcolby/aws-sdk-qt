@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEAPPLICATIONRESPONSE_H
 #define QTAWS_CREATEAPPLICATIONRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "createapplicationrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class CreateApplicationResponsePrivate;
+
+class QTAWS_EXPORT CreateApplicationResponse : public CreateApplicationResponse {
+    Q_OBJECT
+
+public:
+    CreateApplicationResponse(const CreateApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateApplicationResponse)
+    Q_DISABLE_COPY(CreateApplicationResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

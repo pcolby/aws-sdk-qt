@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describestackprovisioningparametersrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeStackProvisioningParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeStackProvisioningParametersResponse : public DescribeStackProvisioningParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeStackProvisioningParametersResponse(const DescribeStackProvisioningParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStackProvisioningParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStackProvisioningParametersResponse)
+    Q_DISABLE_COPY(DescribeStackProvisioningParametersResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERAIDARRAYSRESPONSE_H
 #define QTAWS_DESCRIBERAIDARRAYSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeraidarraysrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeRaidArraysResponsePrivate;
+
+class QTAWS_EXPORT DescribeRaidArraysResponse : public DescribeRaidArraysResponse {
+    Q_OBJECT
+
+public:
+    DescribeRaidArraysResponse(const DescribeRaidArraysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRaidArraysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRaidArraysResponse)
+    Q_DISABLE_COPY(DescribeRaidArraysResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

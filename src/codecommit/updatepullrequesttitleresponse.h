@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPULLREQUESTTITLERESPONSE_H
 #define QTAWS_UPDATEPULLREQUESTTITLERESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updatepullrequesttitlerequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdatePullRequestTitleResponsePrivate;
+
+class QTAWS_EXPORT UpdatePullRequestTitleResponse : public UpdatePullRequestTitleResponse {
+    Q_OBJECT
+
+public:
+    UpdatePullRequestTitleResponse(const UpdatePullRequestTitleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePullRequestTitleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePullRequestTitleResponse)
+    Q_DISABLE_COPY(UpdatePullRequestTitleResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_H
 #define QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "deregisterinstancesfromloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DeregisterInstancesFromLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerResponse : public DeregisterInstancesFromLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    DeregisterInstancesFromLoadBalancerResponse(const DeregisterInstancesFromLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterInstancesFromLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterInstancesFromLoadBalancerResponse)
+    Q_DISABLE_COPY(DeregisterInstancesFromLoadBalancerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

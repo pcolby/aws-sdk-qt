@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEGROUPRESPONSE_H
 #define QTAWS_DESCRIBEGROUPRESPONSE_H
 
+#include "workmailresponse.h"
+#include "describegrouprequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class DescribeGroupResponsePrivate;
+
+class QTAWS_EXPORT DescribeGroupResponse : public DescribeGroupResponse {
+    Q_OBJECT
+
+public:
+    DescribeGroupResponse(const DescribeGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeGroupResponse)
+    Q_DISABLE_COPY(DescribeGroupResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describeenginedefaultclusterparametersrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeEngineDefaultClusterParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeEngineDefaultClusterParametersResponse : public DescribeEngineDefaultClusterParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeEngineDefaultClusterParametersResponse(const DescribeEngineDefaultClusterParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEngineDefaultClusterParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEngineDefaultClusterParametersResponse)
+    Q_DISABLE_COPY(DescribeEngineDefaultClusterParametersResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

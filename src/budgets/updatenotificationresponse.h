@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATENOTIFICATIONRESPONSE_H
 #define QTAWS_UPDATENOTIFICATIONRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "updatenotificationrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class UpdateNotificationResponsePrivate;
+
+class QTAWS_EXPORT UpdateNotificationResponse : public UpdateNotificationResponse {
+    Q_OBJECT
+
+public:
+    UpdateNotificationResponse(const UpdateNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNotificationResponse)
+    Q_DISABLE_COPY(UpdateNotificationResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

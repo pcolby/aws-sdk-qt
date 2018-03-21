@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPWORKSPACESRESPONSE_H
 #define QTAWS_STOPWORKSPACESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "stopworkspacesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class StopWorkspacesResponsePrivate;
+
+class QTAWS_EXPORT StopWorkspacesResponse : public StopWorkspacesResponse {
+    Q_OBJECT
+
+public:
+    StopWorkspacesResponse(const StopWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopWorkspacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopWorkspacesResponse)
+    Q_DISABLE_COPY(StopWorkspacesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

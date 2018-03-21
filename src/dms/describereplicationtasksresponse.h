@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONTASKSRESPONSE_H
 #define QTAWS_DESCRIBEREPLICATIONTASKSRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describereplicationtasksrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeReplicationTasksResponsePrivate;
+
+class QTAWS_EXPORT DescribeReplicationTasksResponse : public DescribeReplicationTasksResponse {
+    Q_OBJECT
+
+public:
+    DescribeReplicationTasksResponse(const DescribeReplicationTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReplicationTasksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReplicationTasksResponse)
+    Q_DISABLE_COPY(DescribeReplicationTasksResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDWORKINGSTORAGERESPONSE_H
 #define QTAWS_ADDWORKINGSTORAGERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "addworkingstoragerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class AddWorkingStorageResponsePrivate;
+
+class QTAWS_EXPORT AddWorkingStorageResponse : public AddWorkingStorageResponse {
+    Q_OBJECT
+
+public:
+    AddWorkingStorageResponse(const AddWorkingStorageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddWorkingStorageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddWorkingStorageResponse)
+    Q_DISABLE_COPY(AddWorkingStorageResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

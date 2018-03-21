@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSDKTYPERESPONSE_H
 #define QTAWS_GETSDKTYPERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getsdktyperequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetSdkTypeResponsePrivate;
+
+class QTAWS_EXPORT GetSdkTypeResponse : public GetSdkTypeResponse {
+    Q_OBJECT
+
+public:
+    GetSdkTypeResponse(const GetSdkTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSdkTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSdkTypeResponse)
+    Q_DISABLE_COPY(GetSdkTypeResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

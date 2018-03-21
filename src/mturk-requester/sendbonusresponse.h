@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDBONUSRESPONSE_H
 #define QTAWS_SENDBONUSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "sendbonusrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class SendBonusResponsePrivate;
+
+class QTAWS_EXPORT SendBonusResponse : public SendBonusResponse {
+    Q_OBJECT
+
+public:
+    SendBonusResponse(const SendBonusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendBonusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendBonusResponse)
+    Q_DISABLE_COPY(SendBonusResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

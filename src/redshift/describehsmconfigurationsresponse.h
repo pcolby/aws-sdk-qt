@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_H
 #define QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describehsmconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeHsmConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeHsmConfigurationsResponse : public DescribeHsmConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeHsmConfigurationsResponse(const DescribeHsmConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeHsmConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHsmConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeHsmConfigurationsResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

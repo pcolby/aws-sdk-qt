@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_H
 #define QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "deletevpcpeeringauthorizationrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DeleteVpcPeeringAuthorizationResponsePrivate;
+
+class QTAWS_EXPORT DeleteVpcPeeringAuthorizationResponse : public DeleteVpcPeeringAuthorizationResponse {
+    Q_OBJECT
+
+public:
+    DeleteVpcPeeringAuthorizationResponse(const DeleteVpcPeeringAuthorizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVpcPeeringAuthorizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcPeeringAuthorizationResponse)
+    Q_DISABLE_COPY(DeleteVpcPeeringAuthorizationResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

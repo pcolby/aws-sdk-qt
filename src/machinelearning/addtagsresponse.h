@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_H
 #define QTAWS_ADDTAGSRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class AddTagsResponsePrivate;
+
+class QTAWS_EXPORT AddTagsResponse : public AddTagsResponse {
+    Q_OBJECT
+
+public:
+    AddTagsResponse(const AddTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsResponse)
+    Q_DISABLE_COPY(AddTagsResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

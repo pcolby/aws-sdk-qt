@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTCONTAINERPOLICYRESPONSE_H
 #define QTAWS_PUTCONTAINERPOLICYRESPONSE_H
 
+#include "mediastoreresponse.h"
+#include "putcontainerpolicyrequest.h"
+
+namespace AWS {
+
+namespace mediastore {
+
+class PutContainerPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutContainerPolicyResponse : public PutContainerPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutContainerPolicyResponse(const PutContainerPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutContainerPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutContainerPolicyResponse)
+    Q_DISABLE_COPY(PutContainerPolicyResponse)
+
+};
+
+} // namespace mediastore
+} // namespace AWS
+
 #endif

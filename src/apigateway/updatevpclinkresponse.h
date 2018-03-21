@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEVPCLINKRESPONSE_H
 #define QTAWS_UPDATEVPCLINKRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updatevpclinkrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateVpcLinkResponsePrivate;
+
+class QTAWS_EXPORT UpdateVpcLinkResponse : public UpdateVpcLinkResponse {
+    Q_OBJECT
+
+public:
+    UpdateVpcLinkResponse(const UpdateVpcLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateVpcLinkRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateVpcLinkResponse)
+    Q_DISABLE_COPY(UpdateVpcLinkResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

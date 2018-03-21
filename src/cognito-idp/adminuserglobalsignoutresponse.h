@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminuserglobalsignoutrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminUserGlobalSignOutResponsePrivate;
+
+class QTAWS_EXPORT AdminUserGlobalSignOutResponse : public AdminUserGlobalSignOutResponse {
+    Q_OBJECT
+
+public:
+    AdminUserGlobalSignOutResponse(const AdminUserGlobalSignOutRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminUserGlobalSignOutRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminUserGlobalSignOutResponse)
+    Q_DISABLE_COPY(AdminUserGlobalSignOutResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

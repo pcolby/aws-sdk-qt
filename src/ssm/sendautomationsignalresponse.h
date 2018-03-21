@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDAUTOMATIONSIGNALRESPONSE_H
 #define QTAWS_SENDAUTOMATIONSIGNALRESPONSE_H
 
+#include "ssmresponse.h"
+#include "sendautomationsignalrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class SendAutomationSignalResponsePrivate;
+
+class QTAWS_EXPORT SendAutomationSignalResponse : public SendAutomationSignalResponse {
+    Q_OBJECT
+
+public:
+    SendAutomationSignalResponse(const SendAutomationSignalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendAutomationSignalRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendAutomationSignalResponse)
+    Q_DISABLE_COPY(SendAutomationSignalResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

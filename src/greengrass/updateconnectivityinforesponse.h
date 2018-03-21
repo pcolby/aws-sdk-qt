@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONNECTIVITYINFORESPONSE_H
 #define QTAWS_UPDATECONNECTIVITYINFORESPONSE_H
 
+#include "greengrassresponse.h"
+#include "updateconnectivityinforequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class UpdateConnectivityInfoResponsePrivate;
+
+class QTAWS_EXPORT UpdateConnectivityInfoResponse : public UpdateConnectivityInfoResponse {
+    Q_OBJECT
+
+public:
+    UpdateConnectivityInfoResponse(const UpdateConnectivityInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConnectivityInfoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConnectivityInfoResponse)
+    Q_DISABLE_COPY(UpdateConnectivityInfoResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

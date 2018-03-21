@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELISTENERSRESPONSE_H
 #define QTAWS_DESCRIBELISTENERSRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "describelistenersrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DescribeListenersResponsePrivate;
+
+class QTAWS_EXPORT DescribeListenersResponse : public DescribeListenersResponse {
+    Q_OBJECT
+
+public:
+    DescribeListenersResponse(const DescribeListenersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeListenersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeListenersResponse)
+    Q_DISABLE_COPY(DescribeListenersResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

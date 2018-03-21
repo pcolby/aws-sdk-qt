@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_H
 #define QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "updateorganizationalunitrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class UpdateOrganizationalUnitResponsePrivate;
+
+class QTAWS_EXPORT UpdateOrganizationalUnitResponse : public UpdateOrganizationalUnitResponse {
+    Q_OBJECT
+
+public:
+    UpdateOrganizationalUnitResponse(const UpdateOrganizationalUnitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateOrganizationalUnitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateOrganizationalUnitResponse)
+    Q_DISABLE_COPY(UpdateOrganizationalUnitResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTAPPROVALRESULTRESPONSE_H
 #define QTAWS_PUTAPPROVALRESULTRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "putapprovalresultrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class PutApprovalResultResponsePrivate;
+
+class QTAWS_EXPORT PutApprovalResultResponse : public PutApprovalResultResponse {
+    Q_OBJECT
+
+public:
+    PutApprovalResultResponse(const PutApprovalResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutApprovalResultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutApprovalResultResponse)
+    Q_DISABLE_COPY(PutApprovalResultResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

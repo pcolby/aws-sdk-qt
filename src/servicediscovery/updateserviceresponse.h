@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESERVICERESPONSE_H
 #define QTAWS_UPDATESERVICERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "updateservicerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class UpdateServiceResponsePrivate;
+
+class QTAWS_EXPORT UpdateServiceResponse : public UpdateServiceResponse {
+    Q_OBJECT
+
+public:
+    UpdateServiceResponse(const UpdateServiceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateServiceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceResponse)
+    Q_DISABLE_COPY(UpdateServiceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

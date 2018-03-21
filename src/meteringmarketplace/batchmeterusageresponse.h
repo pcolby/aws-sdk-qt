@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHMETERUSAGERESPONSE_H
 #define QTAWS_BATCHMETERUSAGERESPONSE_H
 
+#include "meteringmarketplaceresponse.h"
+#include "batchmeterusagerequest.h"
+
+namespace AWS {
+
+namespace meteringmarketplace {
+
+class BatchMeterUsageResponsePrivate;
+
+class QTAWS_EXPORT BatchMeterUsageResponse : public BatchMeterUsageResponse {
+    Q_OBJECT
+
+public:
+    BatchMeterUsageResponse(const BatchMeterUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchMeterUsageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchMeterUsageResponse)
+    Q_DISABLE_COPY(BatchMeterUsageResponse)
+
+};
+
+} // namespace meteringmarketplace
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTROLEPOLICYRESPONSE_H
 #define QTAWS_PUTROLEPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "putrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class PutRolePolicyResponsePrivate;
+
+class QTAWS_EXPORT PutRolePolicyResponse : public PutRolePolicyResponse {
+    Q_OBJECT
+
+public:
+    PutRolePolicyResponse(const PutRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRolePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRolePolicyResponse)
+    Q_DISABLE_COPY(PutRolePolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

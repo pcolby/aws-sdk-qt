@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINERESPONSE_H
 #define QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINERESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeeffectivepatchesforpatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeEffectivePatchesForPatchBaselineResponsePrivate;
+
+class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineResponse : public DescribeEffectivePatchesForPatchBaselineResponse {
+    Q_OBJECT
+
+public:
+    DescribeEffectivePatchesForPatchBaselineResponse(const DescribeEffectivePatchesForPatchBaselineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEffectivePatchesForPatchBaselineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEffectivePatchesForPatchBaselineResponse)
+    Q_DISABLE_COPY(DescribeEffectivePatchesForPatchBaselineResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

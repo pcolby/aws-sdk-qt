@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSTATUSRESPONSE_H
 #define QTAWS_GETSTATUSRESPONSE_H
 
+#include "importexportresponse.h"
+#include "getstatusrequest.h"
+
+namespace AWS {
+
+namespace importexport {
+
+class GetStatusResponsePrivate;
+
+class QTAWS_EXPORT GetStatusResponse : public GetStatusResponse {
+    Q_OBJECT
+
+public:
+    GetStatusResponse(const GetStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetStatusResponse)
+    Q_DISABLE_COPY(GetStatusResponse)
+
+};
+
+} // namespace importexport
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDBINSTANCERESPONSE_H
 #define QTAWS_DELETEDBINSTANCERESPONSE_H
 
+#include "rdsresponse.h"
+#include "deletedbinstancerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DeleteDBInstanceResponsePrivate;
+
+class QTAWS_EXPORT DeleteDBInstanceResponse : public DeleteDBInstanceResponse {
+    Q_OBJECT
+
+public:
+    DeleteDBInstanceResponse(const DeleteDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDBInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDBInstanceResponse)
+    Q_DISABLE_COPY(DeleteDBInstanceResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

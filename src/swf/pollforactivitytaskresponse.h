@@ -20,4 +20,33 @@
 #ifndef QTAWS_POLLFORACTIVITYTASKRESPONSE_H
 #define QTAWS_POLLFORACTIVITYTASKRESPONSE_H
 
+#include "swfresponse.h"
+#include "pollforactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class PollForActivityTaskResponsePrivate;
+
+class QTAWS_EXPORT PollForActivityTaskResponse : public PollForActivityTaskResponse {
+    Q_OBJECT
+
+public:
+    PollForActivityTaskResponse(const PollForActivityTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PollForActivityTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PollForActivityTaskResponse)
+    Q_DISABLE_COPY(PollForActivityTaskResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

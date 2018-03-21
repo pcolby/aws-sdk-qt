@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMPRODUCTINSTANCERESPONSE_H
 #define QTAWS_CONFIRMPRODUCTINSTANCERESPONSE_H
 
+#include "ec2response.h"
+#include "confirmproductinstancerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ConfirmProductInstanceResponsePrivate;
+
+class QTAWS_EXPORT ConfirmProductInstanceResponse : public ConfirmProductInstanceResponse {
+    Q_OBJECT
+
+public:
+    ConfirmProductInstanceResponse(const ConfirmProductInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmProductInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmProductInstanceResponse)
+    Q_DISABLE_COPY(ConfirmProductInstanceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

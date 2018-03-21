@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPLATFORMENDPOINTRESPONSE_H
 #define QTAWS_CREATEPLATFORMENDPOINTRESPONSE_H
 
+#include "snsresponse.h"
+#include "createplatformendpointrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class CreatePlatformEndpointResponsePrivate;
+
+class QTAWS_EXPORT CreatePlatformEndpointResponse : public CreatePlatformEndpointResponse {
+    Q_OBJECT
+
+public:
+    CreatePlatformEndpointResponse(const CreatePlatformEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePlatformEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlatformEndpointResponse)
+    Q_DISABLE_COPY(CreatePlatformEndpointResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

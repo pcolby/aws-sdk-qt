@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTATTRIBUTESRESPONSE_H
 #define QTAWS_PUTATTRIBUTESRESPONSE_H
 
+#include "ecsresponse.h"
+#include "putattributesrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class PutAttributesResponsePrivate;
+
+class QTAWS_EXPORT PutAttributesResponse : public PutAttributesResponse {
+    Q_OBJECT
+
+public:
+    PutAttributesResponse(const PutAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutAttributesResponse)
+    Q_DISABLE_COPY(PutAttributesResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

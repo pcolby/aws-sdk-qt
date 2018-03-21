@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDINSTANCEGROUPSRESPONSE_H
 #define QTAWS_ADDINSTANCEGROUPSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "addinstancegroupsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class AddInstanceGroupsResponsePrivate;
+
+class QTAWS_EXPORT AddInstanceGroupsResponse : public AddInstanceGroupsResponse {
+    Q_OBJECT
+
+public:
+    AddInstanceGroupsResponse(const AddInstanceGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddInstanceGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddInstanceGroupsResponse)
+    Q_DISABLE_COPY(AddInstanceGroupsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

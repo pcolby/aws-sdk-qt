@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSRESPONSE_H
 #define QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describenotificationsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeNotificationSubscriptionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeNotificationSubscriptionsResponse : public DescribeNotificationSubscriptionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeNotificationSubscriptionsResponse(const DescribeNotificationSubscriptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNotificationSubscriptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNotificationSubscriptionsResponse)
+    Q_DISABLE_COPY(DescribeNotificationSubscriptionsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

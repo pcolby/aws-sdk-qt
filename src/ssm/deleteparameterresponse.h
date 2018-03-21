@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPARAMETERRESPONSE_H
 #define QTAWS_DELETEPARAMETERRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deleteparameterrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeleteParameterResponsePrivate;
+
+class QTAWS_EXPORT DeleteParameterResponse : public DeleteParameterResponse {
+    Q_OBJECT
+
+public:
+    DeleteParameterResponse(const DeleteParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteParameterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteParameterResponse)
+    Q_DISABLE_COPY(DeleteParameterResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

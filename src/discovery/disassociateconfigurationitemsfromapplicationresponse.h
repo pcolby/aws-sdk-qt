@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "disassociateconfigurationitemsfromapplicationrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class DisassociateConfigurationItemsFromApplicationResponsePrivate;
+
+class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationResponse : public DisassociateConfigurationItemsFromApplicationResponse {
+    Q_OBJECT
+
+public:
+    DisassociateConfigurationItemsFromApplicationResponse(const DisassociateConfigurationItemsFromApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateConfigurationItemsFromApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateConfigurationItemsFromApplicationResponse)
+    Q_DISABLE_COPY(DisassociateConfigurationItemsFromApplicationResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

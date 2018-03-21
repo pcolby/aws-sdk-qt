@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_H
 #define QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_H
 
+#include "iamresponse.h"
+#include "addclientidtoopenidconnectproviderrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class AddClientIDToOpenIDConnectProviderResponsePrivate;
+
+class QTAWS_EXPORT AddClientIDToOpenIDConnectProviderResponse : public AddClientIDToOpenIDConnectProviderResponse {
+    Q_OBJECT
+
+public:
+    AddClientIDToOpenIDConnectProviderResponse(const AddClientIDToOpenIDConnectProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddClientIDToOpenIDConnectProviderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddClientIDToOpenIDConnectProviderResponse)
+    Q_DISABLE_COPY(AddClientIDToOpenIDConnectProviderResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

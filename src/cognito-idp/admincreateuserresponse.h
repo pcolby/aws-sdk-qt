@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINCREATEUSERRESPONSE_H
 #define QTAWS_ADMINCREATEUSERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "admincreateuserrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminCreateUserResponsePrivate;
+
+class QTAWS_EXPORT AdminCreateUserResponse : public AdminCreateUserResponse {
+    Q_OBJECT
+
+public:
+    AdminCreateUserResponse(const AdminCreateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminCreateUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminCreateUserResponse)
+    Q_DISABLE_COPY(AdminCreateUserResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRULERESPONSE_H
 #define QTAWS_GETRULERESPONSE_H
 
+#include "wafresponse.h"
+#include "getrulerequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class GetRuleResponsePrivate;
+
+class QTAWS_EXPORT GetRuleResponse : public GetRuleResponse {
+    Q_OBJECT
+
+public:
+    GetRuleResponse(const GetRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRuleResponse)
+    Q_DISABLE_COPY(GetRuleResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETOPICRESPONSE_H
 #define QTAWS_CREATETOPICRESPONSE_H
 
+#include "snsresponse.h"
+#include "createtopicrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class CreateTopicResponsePrivate;
+
+class QTAWS_EXPORT CreateTopicResponse : public CreateTopicResponse {
+    Q_OBJECT
+
+public:
+    CreateTopicResponse(const CreateTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTopicResponse)
+    Q_DISABLE_COPY(CreateTopicResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

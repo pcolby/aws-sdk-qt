@@ -20,4 +20,33 @@
 #ifndef QTAWS_COMPLETELAYERUPLOADRESPONSE_H
 #define QTAWS_COMPLETELAYERUPLOADRESPONSE_H
 
+#include "ecrresponse.h"
+#include "completelayeruploadrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class CompleteLayerUploadResponsePrivate;
+
+class QTAWS_EXPORT CompleteLayerUploadResponse : public CompleteLayerUploadResponse {
+    Q_OBJECT
+
+public:
+    CompleteLayerUploadResponse(const CompleteLayerUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CompleteLayerUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CompleteLayerUploadResponse)
+    Q_DISABLE_COPY(CompleteLayerUploadResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

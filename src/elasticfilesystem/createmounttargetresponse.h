@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMOUNTTARGETRESPONSE_H
 #define QTAWS_CREATEMOUNTTARGETRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "createmounttargetrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class CreateMountTargetResponsePrivate;
+
+class QTAWS_EXPORT CreateMountTargetResponse : public CreateMountTargetResponse {
+    Q_OBJECT
+
+public:
+    CreateMountTargetResponse(const CreateMountTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateMountTargetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateMountTargetResponse)
+    Q_DISABLE_COPY(CreateMountTargetResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_H
 #define QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "increasestreamretentionperiodrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class IncreaseStreamRetentionPeriodResponsePrivate;
+
+class QTAWS_EXPORT IncreaseStreamRetentionPeriodResponse : public IncreaseStreamRetentionPeriodResponse {
+    Q_OBJECT
+
+public:
+    IncreaseStreamRetentionPeriodResponse(const IncreaseStreamRetentionPeriodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const IncreaseStreamRetentionPeriodRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(IncreaseStreamRetentionPeriodResponse)
+    Q_DISABLE_COPY(IncreaseStreamRetentionPeriodResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_CREATEREPLICATIONINSTANCERESPONSE_H
 
+#include "dmsresponse.h"
+#include "createreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class CreateReplicationInstanceResponsePrivate;
+
+class QTAWS_EXPORT CreateReplicationInstanceResponse : public CreateReplicationInstanceResponse {
+    Q_OBJECT
+
+public:
+    CreateReplicationInstanceResponse(const CreateReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateReplicationInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateReplicationInstanceResponse)
+    Q_DISABLE_COPY(CreateReplicationInstanceResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

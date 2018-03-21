@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describeeventcategoriesrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeEventCategoriesResponsePrivate;
+
+class QTAWS_EXPORT DescribeEventCategoriesResponse : public DescribeEventCategoriesResponse {
+    Q_OBJECT
+
+public:
+    DescribeEventCategoriesResponse(const DescribeEventCategoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEventCategoriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventCategoriesResponse)
+    Q_DISABLE_COPY(DescribeEventCategoriesResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

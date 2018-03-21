@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELAUNCHCONFIGURATIONRESPONSE_H
 #define QTAWS_CREATELAUNCHCONFIGURATIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "createlaunchconfigurationrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class CreateLaunchConfigurationResponsePrivate;
+
+class QTAWS_EXPORT CreateLaunchConfigurationResponse : public CreateLaunchConfigurationResponse {
+    Q_OBJECT
+
+public:
+    CreateLaunchConfigurationResponse(const CreateLaunchConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLaunchConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLaunchConfigurationResponse)
+    Q_DISABLE_COPY(CreateLaunchConfigurationResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

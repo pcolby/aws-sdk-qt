@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMMENTSFORPULLREQUESTRESPONSE_H
 #define QTAWS_GETCOMMENTSFORPULLREQUESTRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getcommentsforpullrequestrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetCommentsForPullRequestResponsePrivate;
+
+class QTAWS_EXPORT GetCommentsForPullRequestResponse : public GetCommentsForPullRequestResponse {
+    Q_OBJECT
+
+public:
+    GetCommentsForPullRequestResponse(const GetCommentsForPullRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCommentsForPullRequestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCommentsForPullRequestResponse)
+    Q_DISABLE_COPY(GetCommentsForPullRequestResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOADBASEDAUTOSCALINGRESPONSE_H
 #define QTAWS_DESCRIBELOADBASEDAUTOSCALINGRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeloadbasedautoscalingrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeLoadBasedAutoScalingResponsePrivate;
+
+class QTAWS_EXPORT DescribeLoadBasedAutoScalingResponse : public DescribeLoadBasedAutoScalingResponse {
+    Q_OBJECT
+
+public:
+    DescribeLoadBasedAutoScalingResponse(const DescribeLoadBasedAutoScalingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLoadBasedAutoScalingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLoadBasedAutoScalingResponse)
+    Q_DISABLE_COPY(DescribeLoadBasedAutoScalingResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

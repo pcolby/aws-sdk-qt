@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEJOBSRESPONSE_H
 #define QTAWS_DESCRIBEJOBSRESPONSE_H
 
+#include "batchresponse.h"
+#include "describejobsrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class DescribeJobsResponsePrivate;
+
+class QTAWS_EXPORT DescribeJobsResponse : public DescribeJobsResponse {
+    Q_OBJECT
+
+public:
+    DescribeJobsResponse(const DescribeJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobsResponse)
+    Q_DISABLE_COPY(DescribeJobsResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

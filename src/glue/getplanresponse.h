@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPLANRESPONSE_H
 #define QTAWS_GETPLANRESPONSE_H
 
+#include "glueresponse.h"
+#include "getplanrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetPlanResponsePrivate;
+
+class QTAWS_EXPORT GetPlanResponse : public GetPlanResponse {
+    Q_OBJECT
+
+public:
+    GetPlanResponse(const GetPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPlanResponse)
+    Q_DISABLE_COPY(GetPlanResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEELASTICIPSRESPONSE_H
 #define QTAWS_DESCRIBEELASTICIPSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeelasticipsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeElasticIpsResponsePrivate;
+
+class QTAWS_EXPORT DescribeElasticIpsResponse : public DescribeElasticIpsResponse {
+    Q_OBJECT
+
+public:
+    DescribeElasticIpsResponse(const DescribeElasticIpsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeElasticIpsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticIpsResponse)
+    Q_DISABLE_COPY(DescribeElasticIpsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

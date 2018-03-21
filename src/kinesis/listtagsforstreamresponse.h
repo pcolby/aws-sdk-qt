@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORSTREAMRESPONSE_H
 #define QTAWS_LISTTAGSFORSTREAMRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "listtagsforstreamrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class ListTagsForStreamResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForStreamResponse : public ListTagsForStreamResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForStreamResponse(const ListTagsForStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForStreamResponse)
+    Q_DISABLE_COPY(ListTagsForStreamResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

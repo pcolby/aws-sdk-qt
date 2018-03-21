@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEVPCFROMHOSTEDZONERESPONSE_H
 #define QTAWS_DISASSOCIATEVPCFROMHOSTEDZONERESPONSE_H
 
+#include "route53response.h"
+#include "disassociatevpcfromhostedzonerequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class DisassociateVPCFromHostedZoneResponsePrivate;
+
+class QTAWS_EXPORT DisassociateVPCFromHostedZoneResponse : public DisassociateVPCFromHostedZoneResponse {
+    Q_OBJECT
+
+public:
+    DisassociateVPCFromHostedZoneResponse(const DisassociateVPCFromHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateVPCFromHostedZoneRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateVPCFromHostedZoneResponse)
+    Q_DISABLE_COPY(DisassociateVPCFromHostedZoneResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

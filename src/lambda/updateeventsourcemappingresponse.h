@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEEVENTSOURCEMAPPINGRESPONSE_H
 #define QTAWS_UPDATEEVENTSOURCEMAPPINGRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "updateeventsourcemappingrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class UpdateEventSourceMappingResponsePrivate;
+
+class QTAWS_EXPORT UpdateEventSourceMappingResponse : public UpdateEventSourceMappingResponse {
+    Q_OBJECT
+
+public:
+    UpdateEventSourceMappingResponse(const UpdateEventSourceMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateEventSourceMappingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEventSourceMappingResponse)
+    Q_DISABLE_COPY(UpdateEventSourceMappingResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

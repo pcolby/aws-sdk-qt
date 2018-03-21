@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYDOMAINDKIMRESPONSE_H
 #define QTAWS_VERIFYDOMAINDKIMRESPONSE_H
 
+#include "emailresponse.h"
+#include "verifydomaindkimrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class VerifyDomainDkimResponsePrivate;
+
+class QTAWS_EXPORT VerifyDomainDkimResponse : public VerifyDomainDkimResponse {
+    Q_OBJECT
+
+public:
+    VerifyDomainDkimResponse(const VerifyDomainDkimRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifyDomainDkimRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifyDomainDkimResponse)
+    Q_DISABLE_COPY(VerifyDomainDkimResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

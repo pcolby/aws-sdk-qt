@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEALIASRESPONSE_H
 #define QTAWS_CREATEALIASRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "createaliasrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class CreateAliasResponsePrivate;
+
+class QTAWS_EXPORT CreateAliasResponse : public CreateAliasResponse {
+    Q_OBJECT
+
+public:
+    CreateAliasResponse(const CreateAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAliasResponse)
+    Q_DISABLE_COPY(CreateAliasResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

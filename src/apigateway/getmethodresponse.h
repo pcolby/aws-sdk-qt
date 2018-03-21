@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMETHODRESPONSE_H
 #define QTAWS_GETMETHODRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getmethodrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetMethodResponsePrivate;
+
+class QTAWS_EXPORT GetMethodResponse : public GetMethodResponse {
+    Q_OBJECT
+
+public:
+    GetMethodResponse(const GetMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMethodRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMethodResponse)
+    Q_DISABLE_COPY(GetMethodResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

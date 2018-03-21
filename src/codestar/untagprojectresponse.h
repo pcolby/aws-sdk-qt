@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGPROJECTRESPONSE_H
 #define QTAWS_UNTAGPROJECTRESPONSE_H
 
+#include "codestarresponse.h"
+#include "untagprojectrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class UntagProjectResponsePrivate;
+
+class QTAWS_EXPORT UntagProjectResponse : public UntagProjectResponse {
+    Q_OBJECT
+
+public:
+    UntagProjectResponse(const UntagProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagProjectResponse)
+    Q_DISABLE_COPY(UntagProjectResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

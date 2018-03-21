@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTHEALTHCHECKSRESPONSE_H
 #define QTAWS_LISTHEALTHCHECKSRESPONSE_H
 
+#include "route53response.h"
+#include "listhealthchecksrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ListHealthChecksResponsePrivate;
+
+class QTAWS_EXPORT ListHealthChecksResponse : public ListHealthChecksResponse {
+    Q_OBJECT
+
+public:
+    ListHealthChecksResponse(const ListHealthChecksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListHealthChecksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListHealthChecksResponse)
+    Q_DISABLE_COPY(ListHealthChecksResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

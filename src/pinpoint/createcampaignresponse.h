@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECAMPAIGNRESPONSE_H
 #define QTAWS_CREATECAMPAIGNRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "createcampaignrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class CreateCampaignResponsePrivate;
+
+class QTAWS_EXPORT CreateCampaignResponse : public CreateCampaignResponse {
+    Q_OBJECT
+
+public:
+    CreateCampaignResponse(const CreateCampaignRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCampaignRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCampaignResponse)
+    Q_DISABLE_COPY(CreateCampaignResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

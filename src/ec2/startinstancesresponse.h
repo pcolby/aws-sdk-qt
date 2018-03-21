@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTINSTANCESRESPONSE_H
 #define QTAWS_STARTINSTANCESRESPONSE_H
 
+#include "ec2response.h"
+#include "startinstancesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class StartInstancesResponsePrivate;
+
+class QTAWS_EXPORT StartInstancesResponse : public StartInstancesResponse {
+    Q_OBJECT
+
+public:
+    StartInstancesResponse(const StartInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartInstancesResponse)
+    Q_DISABLE_COPY(StartInstancesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

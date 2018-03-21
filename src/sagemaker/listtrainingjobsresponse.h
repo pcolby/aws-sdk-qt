@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTRAININGJOBSRESPONSE_H
 #define QTAWS_LISTTRAININGJOBSRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "listtrainingjobsrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class ListTrainingJobsResponsePrivate;
+
+class QTAWS_EXPORT ListTrainingJobsResponse : public ListTrainingJobsResponse {
+    Q_OBJECT
+
+public:
+    ListTrainingJobsResponse(const ListTrainingJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTrainingJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTrainingJobsResponse)
+    Q_DISABLE_COPY(ListTrainingJobsResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

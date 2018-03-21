@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEVAULTRESPONSE_H
 #define QTAWS_CREATEVAULTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "createvaultrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class CreateVaultResponsePrivate;
+
+class QTAWS_EXPORT CreateVaultResponse : public CreateVaultResponse {
+    Q_OBJECT
+
+public:
+    CreateVaultResponse(const CreateVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateVaultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateVaultResponse)
+    Q_DISABLE_COPY(CreateVaultResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

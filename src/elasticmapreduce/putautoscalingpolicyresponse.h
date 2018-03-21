@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_H
 #define QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "putautoscalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class PutAutoScalingPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutAutoScalingPolicyResponse : public PutAutoScalingPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutAutoScalingPolicyResponse(const PutAutoScalingPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutAutoScalingPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutAutoScalingPolicyResponse)
+    Q_DISABLE_COPY(PutAutoScalingPolicyResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCONTAINERINSTANCESRESPONSE_H
 #define QTAWS_LISTCONTAINERINSTANCESRESPONSE_H
 
+#include "ecsresponse.h"
+#include "listcontainerinstancesrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class ListContainerInstancesResponsePrivate;
+
+class QTAWS_EXPORT ListContainerInstancesResponse : public ListContainerInstancesResponse {
+    Q_OBJECT
+
+public:
+    ListContainerInstancesResponse(const ListContainerInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListContainerInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListContainerInstancesResponse)
+    Q_DISABLE_COPY(ListContainerInstancesResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

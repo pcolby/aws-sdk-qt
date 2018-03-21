@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEUSERATTRIBUTESRESPONSE_H
 #define QTAWS_UPDATEUSERATTRIBUTESRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "updateuserattributesrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class UpdateUserAttributesResponsePrivate;
+
+class QTAWS_EXPORT UpdateUserAttributesResponse : public UpdateUserAttributesResponse {
+    Q_OBJECT
+
+public:
+    UpdateUserAttributesResponse(const UpdateUserAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateUserAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateUserAttributesResponse)
+    Q_DISABLE_COPY(UpdateUserAttributesResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

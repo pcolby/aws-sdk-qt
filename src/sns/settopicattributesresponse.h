@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETTOPICATTRIBUTESRESPONSE_H
 #define QTAWS_SETTOPICATTRIBUTESRESPONSE_H
 
+#include "snsresponse.h"
+#include "settopicattributesrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class SetTopicAttributesResponsePrivate;
+
+class QTAWS_EXPORT SetTopicAttributesResponse : public SetTopicAttributesResponse {
+    Q_OBJECT
+
+public:
+    SetTopicAttributesResponse(const SetTopicAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetTopicAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetTopicAttributesResponse)
+    Q_DISABLE_COPY(SetTopicAttributesResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

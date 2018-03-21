@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREPLICATIONGROUPRESPONSE_H
 #define QTAWS_CREATEREPLICATIONGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "createreplicationgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class CreateReplicationGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateReplicationGroupResponse : public CreateReplicationGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateReplicationGroupResponse(const CreateReplicationGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateReplicationGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateReplicationGroupResponse)
+    Q_DISABLE_COPY(CreateReplicationGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

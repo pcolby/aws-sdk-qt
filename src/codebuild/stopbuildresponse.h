@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPBUILDRESPONSE_H
 #define QTAWS_STOPBUILDRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "stopbuildrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class StopBuildResponsePrivate;
+
+class QTAWS_EXPORT StopBuildResponse : public StopBuildResponse {
+    Q_OBJECT
+
+public:
+    StopBuildResponse(const StopBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopBuildRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopBuildResponse)
+    Q_DISABLE_COPY(StopBuildResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

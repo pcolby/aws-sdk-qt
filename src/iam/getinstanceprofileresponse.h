@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINSTANCEPROFILERESPONSE_H
 #define QTAWS_GETINSTANCEPROFILERESPONSE_H
 
+#include "iamresponse.h"
+#include "getinstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetInstanceProfileResponsePrivate;
+
+class QTAWS_EXPORT GetInstanceProfileResponse : public GetInstanceProfileResponse {
+    Q_OBJECT
+
+public:
+    GetInstanceProfileResponse(const GetInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetInstanceProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetInstanceProfileResponse)
+    Q_DISABLE_COPY(GetInstanceProfileResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

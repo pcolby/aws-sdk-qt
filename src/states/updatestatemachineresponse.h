@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESTATEMACHINERESPONSE_H
 #define QTAWS_UPDATESTATEMACHINERESPONSE_H
 
+#include "statesresponse.h"
+#include "updatestatemachinerequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class UpdateStateMachineResponsePrivate;
+
+class QTAWS_EXPORT UpdateStateMachineResponse : public UpdateStateMachineResponse {
+    Q_OBJECT
+
+public:
+    UpdateStateMachineResponse(const UpdateStateMachineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateStateMachineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStateMachineResponse)
+    Q_DISABLE_COPY(UpdateStateMachineResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

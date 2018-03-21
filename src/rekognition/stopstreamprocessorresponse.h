@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPSTREAMPROCESSORRESPONSE_H
 #define QTAWS_STOPSTREAMPROCESSORRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "stopstreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class StopStreamProcessorResponsePrivate;
+
+class QTAWS_EXPORT StopStreamProcessorResponse : public StopStreamProcessorResponse {
+    Q_OBJECT
+
+public:
+    StopStreamProcessorResponse(const StopStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopStreamProcessorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopStreamProcessorResponse)
+    Q_DISABLE_COPY(StopStreamProcessorResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

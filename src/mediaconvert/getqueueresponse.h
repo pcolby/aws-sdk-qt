@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETQUEUERESPONSE_H
 #define QTAWS_GETQUEUERESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "getqueuerequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class GetQueueResponsePrivate;
+
+class QTAWS_EXPORT GetQueueResponse : public GetQueueResponse {
+    Q_OBJECT
+
+public:
+    GetQueueResponse(const GetQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetQueueResponse)
+    Q_DISABLE_COPY(GetQueueResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

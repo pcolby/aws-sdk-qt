@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATECREATEDARTIFACTRESPONSE_H
 #define QTAWS_ASSOCIATECREATEDARTIFACTRESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "associatecreatedartifactrequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class AssociateCreatedArtifactResponsePrivate;
+
+class QTAWS_EXPORT AssociateCreatedArtifactResponse : public AssociateCreatedArtifactResponse {
+    Q_OBJECT
+
+public:
+    AssociateCreatedArtifactResponse(const AssociateCreatedArtifactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateCreatedArtifactRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateCreatedArtifactResponse)
+    Q_DISABLE_COPY(AssociateCreatedArtifactResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

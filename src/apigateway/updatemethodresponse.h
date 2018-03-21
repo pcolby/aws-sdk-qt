@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMETHODRESPONSE_H
 #define QTAWS_UPDATEMETHODRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updatemethodrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateMethodResponsePrivate;
+
+class QTAWS_EXPORT UpdateMethodResponse : public UpdateMethodResponse {
+    Q_OBJECT
+
+public:
+    UpdateMethodResponse(const UpdateMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateMethodRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMethodResponse)
+    Q_DISABLE_COPY(UpdateMethodResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

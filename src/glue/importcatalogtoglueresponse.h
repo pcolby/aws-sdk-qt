@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTCATALOGTOGLUERESPONSE_H
 #define QTAWS_IMPORTCATALOGTOGLUERESPONSE_H
 
+#include "glueresponse.h"
+#include "importcatalogtogluerequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class ImportCatalogToGlueResponsePrivate;
+
+class QTAWS_EXPORT ImportCatalogToGlueResponse : public ImportCatalogToGlueResponse {
+    Q_OBJECT
+
+public:
+    ImportCatalogToGlueResponse(const ImportCatalogToGlueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportCatalogToGlueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportCatalogToGlueResponse)
+    Q_DISABLE_COPY(ImportCatalogToGlueResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERVOLUMERESPONSE_H
 #define QTAWS_REGISTERVOLUMERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "registervolumerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class RegisterVolumeResponsePrivate;
+
+class QTAWS_EXPORT RegisterVolumeResponse : public RegisterVolumeResponse {
+    Q_OBJECT
+
+public:
+    RegisterVolumeResponse(const RegisterVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterVolumeResponse)
+    Q_DISABLE_COPY(RegisterVolumeResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

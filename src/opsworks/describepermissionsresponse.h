@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPERMISSIONSRESPONSE_H
 #define QTAWS_DESCRIBEPERMISSIONSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describepermissionsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribePermissionsResponsePrivate;
+
+class QTAWS_EXPORT DescribePermissionsResponse : public DescribePermissionsResponse {
+    Q_OBJECT
+
+public:
+    DescribePermissionsResponse(const DescribePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePermissionsResponse)
+    Q_DISABLE_COPY(DescribePermissionsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

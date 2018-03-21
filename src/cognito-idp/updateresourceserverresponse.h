@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERESOURCESERVERRESPONSE_H
 #define QTAWS_UPDATERESOURCESERVERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "updateresourceserverrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class UpdateResourceServerResponsePrivate;
+
+class QTAWS_EXPORT UpdateResourceServerResponse : public UpdateResourceServerResponse {
+    Q_OBJECT
+
+public:
+    UpdateResourceServerResponse(const UpdateResourceServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateResourceServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResourceServerResponse)
+    Q_DISABLE_COPY(UpdateResourceServerResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEINSTANCERESPONSE_H
 #define QTAWS_UPDATEINSTANCERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "updateinstancerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class UpdateInstanceResponsePrivate;
+
+class QTAWS_EXPORT UpdateInstanceResponse : public UpdateInstanceResponse {
+    Q_OBJECT
+
+public:
+    UpdateInstanceResponse(const UpdateInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateInstanceResponse)
+    Q_DISABLE_COPY(UpdateInstanceResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

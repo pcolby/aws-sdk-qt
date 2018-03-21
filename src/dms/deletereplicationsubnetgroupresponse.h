@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_H
 #define QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_H
 
+#include "dmsresponse.h"
+#include "deletereplicationsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DeleteReplicationSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteReplicationSubnetGroupResponse : public DeleteReplicationSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteReplicationSubnetGroupResponse(const DeleteReplicationSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReplicationSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteReplicationSubnetGroupResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

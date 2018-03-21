@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAPPLICATIONRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteapplicationrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DeleteApplicationResponsePrivate;
+
+class QTAWS_EXPORT DeleteApplicationResponse : public DeleteApplicationResponse {
+    Q_OBJECT
+
+public:
+    DeleteApplicationResponse(const DeleteApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationResponse)
+    Q_DISABLE_COPY(DeleteApplicationResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

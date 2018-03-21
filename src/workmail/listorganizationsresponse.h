@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTORGANIZATIONSRESPONSE_H
 #define QTAWS_LISTORGANIZATIONSRESPONSE_H
 
+#include "workmailresponse.h"
+#include "listorganizationsrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class ListOrganizationsResponsePrivate;
+
+class QTAWS_EXPORT ListOrganizationsResponse : public ListOrganizationsResponse {
+    Q_OBJECT
+
+public:
+    ListOrganizationsResponse(const ListOrganizationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListOrganizationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListOrganizationsResponse)
+    Q_DISABLE_COPY(ListOrganizationsResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

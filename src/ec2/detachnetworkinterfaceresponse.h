@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHNETWORKINTERFACERESPONSE_H
 #define QTAWS_DETACHNETWORKINTERFACERESPONSE_H
 
+#include "ec2response.h"
+#include "detachnetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DetachNetworkInterfaceResponsePrivate;
+
+class QTAWS_EXPORT DetachNetworkInterfaceResponse : public DetachNetworkInterfaceResponse {
+    Q_OBJECT
+
+public:
+    DetachNetworkInterfaceResponse(const DetachNetworkInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachNetworkInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachNetworkInterfaceResponse)
+    Q_DISABLE_COPY(DetachNetworkInterfaceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGCMCHANNELRESPONSE_H
 #define QTAWS_GETGCMCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getgcmchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetGcmChannelResponsePrivate;
+
+class QTAWS_EXPORT GetGcmChannelResponse : public GetGcmChannelResponse {
+    Q_OBJECT
+
+public:
+    GetGcmChannelResponse(const GetGcmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGcmChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGcmChannelResponse)
+    Q_DISABLE_COPY(GetGcmChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

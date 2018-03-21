@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETHINGSHADOWRESPONSE_H
 #define QTAWS_UPDATETHINGSHADOWRESPONSE_H
 
+#include "iot-dataresponse.h"
+#include "updatethingshadowrequest.h"
+
+namespace AWS {
+
+namespace iot-data {
+
+class UpdateThingShadowResponsePrivate;
+
+class QTAWS_EXPORT UpdateThingShadowResponse : public UpdateThingShadowResponse {
+    Q_OBJECT
+
+public:
+    UpdateThingShadowResponse(const UpdateThingShadowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateThingShadowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateThingShadowResponse)
+    Q_DISABLE_COPY(UpdateThingShadowResponse)
+
+};
+
+} // namespace iot-data
+} // namespace AWS
+
 #endif

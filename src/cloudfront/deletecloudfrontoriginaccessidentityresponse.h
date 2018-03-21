@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_H
 #define QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "deletecloudfrontoriginaccessidentityrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class DeleteCloudFrontOriginAccessIdentityResponsePrivate;
+
+class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityResponse : public DeleteCloudFrontOriginAccessIdentityResponse {
+    Q_OBJECT
+
+public:
+    DeleteCloudFrontOriginAccessIdentityResponse(const DeleteCloudFrontOriginAccessIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCloudFrontOriginAccessIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCloudFrontOriginAccessIdentityResponse)
+    Q_DISABLE_COPY(DeleteCloudFrontOriginAccessIdentityResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

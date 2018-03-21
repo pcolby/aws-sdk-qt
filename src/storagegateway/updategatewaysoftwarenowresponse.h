@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEGATEWAYSOFTWARENOWRESPONSE_H
 #define QTAWS_UPDATEGATEWAYSOFTWARENOWRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updategatewaysoftwarenowrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateGatewaySoftwareNowResponsePrivate;
+
+class QTAWS_EXPORT UpdateGatewaySoftwareNowResponse : public UpdateGatewaySoftwareNowResponse {
+    Q_OBJECT
+
+public:
+    UpdateGatewaySoftwareNowResponse(const UpdateGatewaySoftwareNowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateGatewaySoftwareNowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGatewaySoftwareNowResponse)
+    Q_DISABLE_COPY(UpdateGatewaySoftwareNowResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETYPERESPONSE_H
 #define QTAWS_CREATETYPERESPONSE_H
 
+#include "appsyncresponse.h"
+#include "createtyperequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class CreateTypeResponsePrivate;
+
+class QTAWS_EXPORT CreateTypeResponse : public CreateTypeResponse {
+    Q_OBJECT
+
+public:
+    CreateTypeResponse(const CreateTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTypeResponse)
+    Q_DISABLE_COPY(CreateTypeResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

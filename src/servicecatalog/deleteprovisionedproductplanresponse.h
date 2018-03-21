@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROVISIONEDPRODUCTPLANRESPONSE_H
 #define QTAWS_DELETEPROVISIONEDPRODUCTPLANRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "deleteprovisionedproductplanrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DeleteProvisionedProductPlanResponsePrivate;
+
+class QTAWS_EXPORT DeleteProvisionedProductPlanResponse : public DeleteProvisionedProductPlanResponse {
+    Q_OBJECT
+
+public:
+    DeleteProvisionedProductPlanResponse(const DeleteProvisionedProductPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProvisionedProductPlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProvisionedProductPlanResponse)
+    Q_DISABLE_COPY(DeleteProvisionedProductPlanResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

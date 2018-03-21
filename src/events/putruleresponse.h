@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRULERESPONSE_H
 #define QTAWS_PUTRULERESPONSE_H
 
+#include "eventsresponse.h"
+#include "putrulerequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class PutRuleResponsePrivate;
+
+class QTAWS_EXPORT PutRuleResponse : public PutRuleResponse {
+    Q_OBJECT
+
+public:
+    PutRuleResponse(const PutRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRuleResponse)
+    Q_DISABLE_COPY(PutRuleResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

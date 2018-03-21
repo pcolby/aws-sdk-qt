@@ -20,4 +20,33 @@
 #ifndef QTAWS_REJECTPORTFOLIOSHARERESPONSE_H
 #define QTAWS_REJECTPORTFOLIOSHARERESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "rejectportfoliosharerequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class RejectPortfolioShareResponsePrivate;
+
+class QTAWS_EXPORT RejectPortfolioShareResponse : public RejectPortfolioShareResponse {
+    Q_OBJECT
+
+public:
+    RejectPortfolioShareResponse(const RejectPortfolioShareRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RejectPortfolioShareRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RejectPortfolioShareResponse)
+    Q_DISABLE_COPY(RejectPortfolioShareResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

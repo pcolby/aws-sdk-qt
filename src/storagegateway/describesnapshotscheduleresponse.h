@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSCHEDULERESPONSE_H
 #define QTAWS_DESCRIBESNAPSHOTSCHEDULERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describesnapshotschedulerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeSnapshotScheduleResponsePrivate;
+
+class QTAWS_EXPORT DescribeSnapshotScheduleResponse : public DescribeSnapshotScheduleResponse {
+    Q_OBJECT
+
+public:
+    DescribeSnapshotScheduleResponse(const DescribeSnapshotScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSnapshotScheduleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSnapshotScheduleResponse)
+    Q_DISABLE_COPY(DescribeSnapshotScheduleResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

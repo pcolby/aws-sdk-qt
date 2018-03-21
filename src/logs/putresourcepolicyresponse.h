@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYRESPONSE_H
 #define QTAWS_PUTRESOURCEPOLICYRESPONSE_H
 
+#include "logsresponse.h"
+#include "putresourcepolicyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutResourcePolicyResponsePrivate;
+
+class QTAWS_EXPORT PutResourcePolicyResponse : public PutResourcePolicyResponse {
+    Q_OBJECT
+
+public:
+    PutResourcePolicyResponse(const PutResourcePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutResourcePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutResourcePolicyResponse)
+    Q_DISABLE_COPY(PutResourcePolicyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

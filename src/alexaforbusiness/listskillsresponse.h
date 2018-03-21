@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSKILLSRESPONSE_H
 #define QTAWS_LISTSKILLSRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "listskillsrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class ListSkillsResponsePrivate;
+
+class QTAWS_EXPORT ListSkillsResponse : public ListSkillsResponse {
+    Q_OBJECT
+
+public:
+    ListSkillsResponse(const ListSkillsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSkillsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSkillsResponse)
+    Q_DISABLE_COPY(ListSkillsResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

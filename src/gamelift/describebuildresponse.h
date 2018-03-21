@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBUILDRESPONSE_H
 #define QTAWS_DESCRIBEBUILDRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describebuildrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeBuildResponsePrivate;
+
+class QTAWS_EXPORT DescribeBuildResponse : public DescribeBuildResponse {
+    Q_OBJECT
+
+public:
+    DescribeBuildResponse(const DescribeBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBuildRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBuildResponse)
+    Q_DISABLE_COPY(DescribeBuildResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

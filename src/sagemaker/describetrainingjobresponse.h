@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETRAININGJOBRESPONSE_H
 #define QTAWS_DESCRIBETRAININGJOBRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "describetrainingjobrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class DescribeTrainingJobResponsePrivate;
+
+class QTAWS_EXPORT DescribeTrainingJobResponse : public DescribeTrainingJobResponse {
+    Q_OBJECT
+
+public:
+    DescribeTrainingJobResponse(const DescribeTrainingJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTrainingJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTrainingJobResponse)
+    Q_DISABLE_COPY(DescribeTrainingJobResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

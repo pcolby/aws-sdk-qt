@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_H
 #define QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "batchchecklayeravailabilityrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class BatchCheckLayerAvailabilityResponsePrivate;
+
+class QTAWS_EXPORT BatchCheckLayerAvailabilityResponse : public BatchCheckLayerAvailabilityResponse {
+    Q_OBJECT
+
+public:
+    BatchCheckLayerAvailabilityResponse(const BatchCheckLayerAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchCheckLayerAvailabilityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchCheckLayerAvailabilityResponse)
+    Q_DISABLE_COPY(BatchCheckLayerAvailabilityResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_H
 
+#include "sqsresponse.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class RemovePermissionResponsePrivate;
+
+class QTAWS_EXPORT RemovePermissionResponse : public RemovePermissionResponse {
+    Q_OBJECT
+
+public:
+    RemovePermissionResponse(const RemovePermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemovePermissionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemovePermissionResponse)
+    Q_DISABLE_COPY(RemovePermissionResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

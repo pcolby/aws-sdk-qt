@@ -20,4 +20,33 @@
 #ifndef QTAWS_REJECTCERTIFICATETRANSFERRESPONSE_H
 #define QTAWS_REJECTCERTIFICATETRANSFERRESPONSE_H
 
+#include "iotresponse.h"
+#include "rejectcertificatetransferrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class RejectCertificateTransferResponsePrivate;
+
+class QTAWS_EXPORT RejectCertificateTransferResponse : public RejectCertificateTransferResponse {
+    Q_OBJECT
+
+public:
+    RejectCertificateTransferResponse(const RejectCertificateTransferRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RejectCertificateTransferRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RejectCertificateTransferResponse)
+    Q_DISABLE_COPY(RejectCertificateTransferResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

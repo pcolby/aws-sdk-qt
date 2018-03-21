@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFOLDERRESPONSE_H
 #define QTAWS_DELETEFOLDERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "deletefolderrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DeleteFolderResponsePrivate;
+
+class QTAWS_EXPORT DeleteFolderResponse : public DeleteFolderResponse {
+    Q_OBJECT
+
+public:
+    DeleteFolderResponse(const DeleteFolderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFolderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFolderResponse)
+    Q_DISABLE_COPY(DeleteFolderResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_COMPLETEVAULTLOCKRESPONSE_H
 #define QTAWS_COMPLETEVAULTLOCKRESPONSE_H
 
+#include "glacierresponse.h"
+#include "completevaultlockrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class CompleteVaultLockResponsePrivate;
+
+class QTAWS_EXPORT CompleteVaultLockResponse : public CompleteVaultLockResponse {
+    Q_OBJECT
+
+public:
+    CompleteVaultLockResponse(const CompleteVaultLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CompleteVaultLockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CompleteVaultLockResponse)
+    Q_DISABLE_COPY(CompleteVaultLockResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

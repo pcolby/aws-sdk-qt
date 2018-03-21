@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETEVENTSELECTORSRESPONSE_H
 #define QTAWS_GETEVENTSELECTORSRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "geteventselectorsrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class GetEventSelectorsResponsePrivate;
+
+class QTAWS_EXPORT GetEventSelectorsResponse : public GetEventSelectorsResponse {
+    Q_OBJECT
+
+public:
+    GetEventSelectorsResponse(const GetEventSelectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetEventSelectorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetEventSelectorsResponse)
+    Q_DISABLE_COPY(GetEventSelectorsResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

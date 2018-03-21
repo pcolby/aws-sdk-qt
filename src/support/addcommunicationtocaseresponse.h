@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_H
 #define QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_H
 
+#include "supportresponse.h"
+#include "addcommunicationtocaserequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class AddCommunicationToCaseResponsePrivate;
+
+class QTAWS_EXPORT AddCommunicationToCaseResponse : public AddCommunicationToCaseResponse {
+    Q_OBJECT
+
+public:
+    AddCommunicationToCaseResponse(const AddCommunicationToCaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddCommunicationToCaseRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddCommunicationToCaseResponse)
+    Q_DISABLE_COPY(AddCommunicationToCaseResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

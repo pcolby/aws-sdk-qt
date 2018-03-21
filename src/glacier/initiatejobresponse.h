@@ -20,4 +20,33 @@
 #ifndef QTAWS_INITIATEJOBRESPONSE_H
 #define QTAWS_INITIATEJOBRESPONSE_H
 
+#include "glacierresponse.h"
+#include "initiatejobrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class InitiateJobResponsePrivate;
+
+class QTAWS_EXPORT InitiateJobResponse : public InitiateJobResponse {
+    Q_OBJECT
+
+public:
+    InitiateJobResponse(const InitiateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InitiateJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InitiateJobResponse)
+    Q_DISABLE_COPY(InitiateJobResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

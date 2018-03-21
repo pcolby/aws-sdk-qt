@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTJOBSRESPONSE_H
 #define QTAWS_LISTJOBSRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "listjobsrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ListJobsResponsePrivate;
+
+class QTAWS_EXPORT ListJobsResponse : public ListJobsResponse {
+    Q_OBJECT
+
+public:
+    ListJobsResponse(const ListJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListJobsResponse)
+    Q_DISABLE_COPY(ListJobsResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELEXICONRESPONSE_H
 #define QTAWS_DELETELEXICONRESPONSE_H
 
+#include "pollyresponse.h"
+#include "deletelexiconrequest.h"
+
+namespace AWS {
+
+namespace polly {
+
+class DeleteLexiconResponsePrivate;
+
+class QTAWS_EXPORT DeleteLexiconResponse : public DeleteLexiconResponse {
+    Q_OBJECT
+
+public:
+    DeleteLexiconResponse(const DeleteLexiconRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLexiconRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLexiconResponse)
+    Q_DISABLE_COPY(DeleteLexiconResponse)
+
+};
+
+} // namespace polly
+} // namespace AWS
+
 #endif

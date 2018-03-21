@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEFOLDERRESPONSE_H
 #define QTAWS_UPDATEFOLDERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "updatefolderrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class UpdateFolderResponsePrivate;
+
+class QTAWS_EXPORT UpdateFolderResponse : public UpdateFolderResponse {
+    Q_OBJECT
+
+public:
+    UpdateFolderResponse(const UpdateFolderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateFolderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFolderResponse)
+    Q_DISABLE_COPY(UpdateFolderResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

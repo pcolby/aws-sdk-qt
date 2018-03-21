@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFACETRESPONSE_H
 #define QTAWS_DELETEFACETRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "deletefacetrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DeleteFacetResponsePrivate;
+
+class QTAWS_EXPORT DeleteFacetResponse : public DeleteFacetResponse {
+    Q_OBJECT
+
+public:
+    DeleteFacetResponse(const DeleteFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFacetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFacetResponse)
+    Q_DISABLE_COPY(DeleteFacetResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

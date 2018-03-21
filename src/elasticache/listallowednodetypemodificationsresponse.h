@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSRESPONSE_H
 #define QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "listallowednodetypemodificationsrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class ListAllowedNodeTypeModificationsResponsePrivate;
+
+class QTAWS_EXPORT ListAllowedNodeTypeModificationsResponse : public ListAllowedNodeTypeModificationsResponse {
+    Q_OBJECT
+
+public:
+    ListAllowedNodeTypeModificationsResponse(const ListAllowedNodeTypeModificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAllowedNodeTypeModificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAllowedNodeTypeModificationsResponse)
+    Q_DISABLE_COPY(ListAllowedNodeTypeModificationsResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

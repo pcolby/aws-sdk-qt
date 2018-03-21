@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSENDSTATISTICSRESPONSE_H
 #define QTAWS_GETSENDSTATISTICSRESPONSE_H
 
+#include "emailresponse.h"
+#include "getsendstatisticsrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetSendStatisticsResponsePrivate;
+
+class QTAWS_EXPORT GetSendStatisticsResponse : public GetSendStatisticsResponse {
+    Q_OBJECT
+
+public:
+    GetSendStatisticsResponse(const GetSendStatisticsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSendStatisticsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSendStatisticsResponse)
+    Q_DISABLE_COPY(GetSendStatisticsResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

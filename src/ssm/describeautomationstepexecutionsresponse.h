@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAUTOMATIONSTEPEXECUTIONSRESPONSE_H
 #define QTAWS_DESCRIBEAUTOMATIONSTEPEXECUTIONSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeautomationstepexecutionsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeAutomationStepExecutionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeAutomationStepExecutionsResponse : public DescribeAutomationStepExecutionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeAutomationStepExecutionsResponse(const DescribeAutomationStepExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAutomationStepExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAutomationStepExecutionsResponse)
+    Q_DISABLE_COPY(DescribeAutomationStepExecutionsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

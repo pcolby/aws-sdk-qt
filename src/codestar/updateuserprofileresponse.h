@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEUSERPROFILERESPONSE_H
 #define QTAWS_UPDATEUSERPROFILERESPONSE_H
 
+#include "codestarresponse.h"
+#include "updateuserprofilerequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class UpdateUserProfileResponsePrivate;
+
+class QTAWS_EXPORT UpdateUserProfileResponse : public UpdateUserProfileResponse {
+    Q_OBJECT
+
+public:
+    UpdateUserProfileResponse(const UpdateUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateUserProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateUserProfileResponse)
+    Q_DISABLE_COPY(UpdateUserProfileResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

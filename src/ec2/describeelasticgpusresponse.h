@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEELASTICGPUSRESPONSE_H
 #define QTAWS_DESCRIBEELASTICGPUSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeelasticgpusrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeElasticGpusResponsePrivate;
+
+class QTAWS_EXPORT DescribeElasticGpusResponse : public DescribeElasticGpusResponse {
+    Q_OBJECT
+
+public:
+    DescribeElasticGpusResponse(const DescribeElasticGpusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeElasticGpusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticGpusResponse)
+    Q_DISABLE_COPY(DescribeElasticGpusResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

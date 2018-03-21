@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENDPOINTRESPONSE_H
 #define QTAWS_DESCRIBEENDPOINTRESPONSE_H
 
+#include "iotresponse.h"
+#include "describeendpointrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DescribeEndpointResponsePrivate;
+
+class QTAWS_EXPORT DescribeEndpointResponse : public DescribeEndpointResponse {
+    Q_OBJECT
+
+public:
+    DescribeEndpointResponse(const DescribeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEndpointResponse)
+    Q_DISABLE_COPY(DescribeEndpointResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

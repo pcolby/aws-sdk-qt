@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEROUTETABLERESPONSE_H
 #define QTAWS_DELETEROUTETABLERESPONSE_H
 
+#include "ec2response.h"
+#include "deleteroutetablerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteRouteTableResponsePrivate;
+
+class QTAWS_EXPORT DeleteRouteTableResponse : public DeleteRouteTableResponse {
+    Q_OBJECT
+
+public:
+    DeleteRouteTableResponse(const DeleteRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRouteTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRouteTableResponse)
+    Q_DISABLE_COPY(DeleteRouteTableResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

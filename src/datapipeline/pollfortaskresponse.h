@@ -20,4 +20,33 @@
 #ifndef QTAWS_POLLFORTASKRESPONSE_H
 #define QTAWS_POLLFORTASKRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "pollfortaskrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class PollForTaskResponsePrivate;
+
+class QTAWS_EXPORT PollForTaskResponse : public PollForTaskResponse {
+    Q_OBJECT
+
+public:
+    PollForTaskResponse(const PollForTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PollForTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PollForTaskResponse)
+    Q_DISABLE_COPY(PollForTaskResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESECURITYCONFIGURATIONRESPONSE_H
 #define QTAWS_CREATESECURITYCONFIGURATIONRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "createsecurityconfigurationrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class CreateSecurityConfigurationResponsePrivate;
+
+class QTAWS_EXPORT CreateSecurityConfigurationResponse : public CreateSecurityConfigurationResponse {
+    Q_OBJECT
+
+public:
+    CreateSecurityConfigurationResponse(const CreateSecurityConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSecurityConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSecurityConfigurationResponse)
+    Q_DISABLE_COPY(CreateSecurityConfigurationResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

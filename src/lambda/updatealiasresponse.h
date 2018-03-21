@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEALIASRESPONSE_H
 #define QTAWS_UPDATEALIASRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "updatealiasrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class UpdateAliasResponsePrivate;
+
+class QTAWS_EXPORT UpdateAliasResponse : public UpdateAliasResponse {
+    Q_OBJECT
+
+public:
+    UpdateAliasResponse(const UpdateAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAliasResponse)
+    Q_DISABLE_COPY(UpdateAliasResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

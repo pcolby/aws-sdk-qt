@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESCALINGPLANRESPONSE_H
 #define QTAWS_CREATESCALINGPLANRESPONSE_H
 
+#include "autoscaling-plansresponse.h"
+#include "createscalingplanrequest.h"
+
+namespace AWS {
+
+namespace autoscaling-plans {
+
+class CreateScalingPlanResponsePrivate;
+
+class QTAWS_EXPORT CreateScalingPlanResponse : public CreateScalingPlanResponse {
+    Q_OBJECT
+
+public:
+    CreateScalingPlanResponse(const CreateScalingPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateScalingPlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateScalingPlanResponse)
+    Q_DISABLE_COPY(CreateScalingPlanResponse)
+
+};
+
+} // namespace autoscaling-plans
+} // namespace AWS
+
 #endif

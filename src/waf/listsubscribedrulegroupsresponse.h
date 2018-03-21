@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSUBSCRIBEDRULEGROUPSRESPONSE_H
 #define QTAWS_LISTSUBSCRIBEDRULEGROUPSRESPONSE_H
 
+#include "wafresponse.h"
+#include "listsubscribedrulegroupsrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class ListSubscribedRuleGroupsResponsePrivate;
+
+class QTAWS_EXPORT ListSubscribedRuleGroupsResponse : public ListSubscribedRuleGroupsResponse {
+    Q_OBJECT
+
+public:
+    ListSubscribedRuleGroupsResponse(const ListSubscribedRuleGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSubscribedRuleGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSubscribedRuleGroupsResponse)
+    Q_DISABLE_COPY(ListSubscribedRuleGroupsResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

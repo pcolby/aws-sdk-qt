@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERONPREMISESINSTANCERESPONSE_H
 #define QTAWS_REGISTERONPREMISESINSTANCERESPONSE_H
 
+#include "codedeployresponse.h"
+#include "registeronpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class RegisterOnPremisesInstanceResponsePrivate;
+
+class QTAWS_EXPORT RegisterOnPremisesInstanceResponse : public RegisterOnPremisesInstanceResponse {
+    Q_OBJECT
+
+public:
+    RegisterOnPremisesInstanceResponse(const RegisterOnPremisesInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterOnPremisesInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterOnPremisesInstanceResponse)
+    Q_DISABLE_COPY(RegisterOnPremisesInstanceResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

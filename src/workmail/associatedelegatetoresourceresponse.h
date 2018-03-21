@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEDELEGATETORESOURCERESPONSE_H
 #define QTAWS_ASSOCIATEDELEGATETORESOURCERESPONSE_H
 
+#include "workmailresponse.h"
+#include "associatedelegatetoresourcerequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class AssociateDelegateToResourceResponsePrivate;
+
+class QTAWS_EXPORT AssociateDelegateToResourceResponse : public AssociateDelegateToResourceResponse {
+    Q_OBJECT
+
+public:
+    AssociateDelegateToResourceResponse(const AssociateDelegateToResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateDelegateToResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateDelegateToResourceResponse)
+    Q_DISABLE_COPY(AssociateDelegateToResourceResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUGGESTRESPONSE_H
 #define QTAWS_SUGGESTRESPONSE_H
 
+#include "cloudsearchdomainresponse.h"
+#include "suggestrequest.h"
+
+namespace AWS {
+
+namespace cloudsearchdomain {
+
+class SuggestResponsePrivate;
+
+class QTAWS_EXPORT SuggestResponse : public SuggestResponse {
+    Q_OBJECT
+
+public:
+    SuggestResponse(const SuggestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SuggestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SuggestResponse)
+    Q_DISABLE_COPY(SuggestResponse)
+
+};
+
+} // namespace cloudsearchdomain
+} // namespace AWS
+
 #endif

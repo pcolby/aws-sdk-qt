@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEALIASRESPONSE_H
 #define QTAWS_DESCRIBEALIASRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describealiasrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeAliasResponsePrivate;
+
+class QTAWS_EXPORT DescribeAliasResponse : public DescribeAliasResponse {
+    Q_OBJECT
+
+public:
+    DescribeAliasResponse(const DescribeAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAliasResponse)
+    Q_DISABLE_COPY(DescribeAliasResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

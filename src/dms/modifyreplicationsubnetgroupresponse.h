@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYREPLICATIONSUBNETGROUPRESPONSE_H
 #define QTAWS_MODIFYREPLICATIONSUBNETGROUPRESPONSE_H
 
+#include "dmsresponse.h"
+#include "modifyreplicationsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class ModifyReplicationSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT ModifyReplicationSubnetGroupResponse : public ModifyReplicationSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    ModifyReplicationSubnetGroupResponse(const ModifyReplicationSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyReplicationSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyReplicationSubnetGroupResponse)
+    Q_DISABLE_COPY(ModifyReplicationSubnetGroupResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

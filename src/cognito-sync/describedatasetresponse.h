@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDATASETRESPONSE_H
 #define QTAWS_DESCRIBEDATASETRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "describedatasetrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class DescribeDatasetResponsePrivate;
+
+class QTAWS_EXPORT DescribeDatasetResponse : public DescribeDatasetResponse {
+    Q_OBJECT
+
+public:
+    DescribeDatasetResponse(const DescribeDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDatasetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDatasetResponse)
+    Q_DISABLE_COPY(DescribeDatasetResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

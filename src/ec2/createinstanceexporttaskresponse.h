@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINSTANCEEXPORTTASKRESPONSE_H
 #define QTAWS_CREATEINSTANCEEXPORTTASKRESPONSE_H
 
+#include "ec2response.h"
+#include "createinstanceexporttaskrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateInstanceExportTaskResponsePrivate;
+
+class QTAWS_EXPORT CreateInstanceExportTaskResponse : public CreateInstanceExportTaskResponse {
+    Q_OBJECT
+
+public:
+    CreateInstanceExportTaskResponse(const CreateInstanceExportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInstanceExportTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInstanceExportTaskResponse)
+    Q_DISABLE_COPY(CreateInstanceExportTaskResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

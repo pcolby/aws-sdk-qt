@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPLOGGINGRESPONSE_H
 #define QTAWS_STOPLOGGINGRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "stoploggingrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class StopLoggingResponsePrivate;
+
+class QTAWS_EXPORT StopLoggingResponse : public StopLoggingResponse {
+    Q_OBJECT
+
+public:
+    StopLoggingResponse(const StopLoggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopLoggingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopLoggingResponse)
+    Q_DISABLE_COPY(StopLoggingResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

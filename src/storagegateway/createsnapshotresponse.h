@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESNAPSHOTRESPONSE_H
 #define QTAWS_CREATESNAPSHOTRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "createsnapshotrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class CreateSnapshotResponsePrivate;
+
+class QTAWS_EXPORT CreateSnapshotResponse : public CreateSnapshotResponse {
+    Q_OBJECT
+
+public:
+    CreateSnapshotResponse(const CreateSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSnapshotResponse)
+    Q_DISABLE_COPY(CreateSnapshotResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENETWORKPROFILERESPONSE_H
 #define QTAWS_CREATENETWORKPROFILERESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "createnetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class CreateNetworkProfileResponsePrivate;
+
+class QTAWS_EXPORT CreateNetworkProfileResponse : public CreateNetworkProfileResponse {
+    Q_OBJECT
+
+public:
+    CreateNetworkProfileResponse(const CreateNetworkProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNetworkProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNetworkProfileResponse)
+    Q_DISABLE_COPY(CreateNetworkProfileResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

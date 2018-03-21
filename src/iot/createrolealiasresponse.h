@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEROLEALIASRESPONSE_H
 #define QTAWS_CREATEROLEALIASRESPONSE_H
 
+#include "iotresponse.h"
+#include "createrolealiasrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CreateRoleAliasResponsePrivate;
+
+class QTAWS_EXPORT CreateRoleAliasResponse : public CreateRoleAliasResponse {
+    Q_OBJECT
+
+public:
+    CreateRoleAliasResponse(const CreateRoleAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRoleAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRoleAliasResponse)
+    Q_DISABLE_COPY(CreateRoleAliasResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

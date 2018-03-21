@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERESOURCEGROUPRESPONSE_H
 #define QTAWS_CREATERESOURCEGROUPRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "createresourcegrouprequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class CreateResourceGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateResourceGroupResponse : public CreateResourceGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateResourceGroupResponse(const CreateResourceGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateResourceGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateResourceGroupResponse)
+    Q_DISABLE_COPY(CreateResourceGroupResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

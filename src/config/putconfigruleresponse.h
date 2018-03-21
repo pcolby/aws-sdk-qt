@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTCONFIGRULERESPONSE_H
 #define QTAWS_PUTCONFIGRULERESPONSE_H
 
+#include "configresponse.h"
+#include "putconfigrulerequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class PutConfigRuleResponsePrivate;
+
+class QTAWS_EXPORT PutConfigRuleResponse : public PutConfigRuleResponse {
+    Q_OBJECT
+
+public:
+    PutConfigRuleResponse(const PutConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutConfigRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutConfigRuleResponse)
+    Q_DISABLE_COPY(PutConfigRuleResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

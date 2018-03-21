@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEALLFEATURESRESPONSE_H
 #define QTAWS_ENABLEALLFEATURESRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "enableallfeaturesrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class EnableAllFeaturesResponsePrivate;
+
+class QTAWS_EXPORT EnableAllFeaturesResponse : public EnableAllFeaturesResponse {
+    Q_OBJECT
+
+public:
+    EnableAllFeaturesResponse(const EnableAllFeaturesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableAllFeaturesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableAllFeaturesResponse)
+    Q_DISABLE_COPY(EnableAllFeaturesResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

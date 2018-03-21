@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPULLREQUESTRESPONSE_H
 #define QTAWS_CREATEPULLREQUESTRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "createpullrequestrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class CreatePullRequestResponsePrivate;
+
+class QTAWS_EXPORT CreatePullRequestResponse : public CreatePullRequestResponse {
+    Q_OBJECT
+
+public:
+    CreatePullRequestResponse(const CreatePullRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePullRequestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePullRequestResponse)
+    Q_DISABLE_COPY(CreatePullRequestResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

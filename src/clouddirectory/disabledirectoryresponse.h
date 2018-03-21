@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEDIRECTORYRESPONSE_H
 #define QTAWS_DISABLEDIRECTORYRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "disabledirectoryrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DisableDirectoryResponsePrivate;
+
+class QTAWS_EXPORT DisableDirectoryResponse : public DisableDirectoryResponse {
+    Q_OBJECT
+
+public:
+    DisableDirectoryResponse(const DisableDirectoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableDirectoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableDirectoryResponse)
+    Q_DISABLE_COPY(DisableDirectoryResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

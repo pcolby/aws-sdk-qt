@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGROUPCERTIFICATEAUTHORITIESRESPONSE_H
 #define QTAWS_LISTGROUPCERTIFICATEAUTHORITIESRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listgroupcertificateauthoritiesrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListGroupCertificateAuthoritiesResponsePrivate;
+
+class QTAWS_EXPORT ListGroupCertificateAuthoritiesResponse : public ListGroupCertificateAuthoritiesResponse {
+    Q_OBJECT
+
+public:
+    ListGroupCertificateAuthoritiesResponse(const ListGroupCertificateAuthoritiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGroupCertificateAuthoritiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGroupCertificateAuthoritiesResponse)
+    Q_DISABLE_COPY(ListGroupCertificateAuthoritiesResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

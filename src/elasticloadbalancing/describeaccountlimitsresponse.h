@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "describeaccountlimitsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DescribeAccountLimitsResponsePrivate;
+
+class QTAWS_EXPORT DescribeAccountLimitsResponse : public DescribeAccountLimitsResponse {
+    Q_OBJECT
+
+public:
+    DescribeAccountLimitsResponse(const DescribeAccountLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAccountLimitsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountLimitsResponse)
+    Q_DISABLE_COPY(DescribeAccountLimitsResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

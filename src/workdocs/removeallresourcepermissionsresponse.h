@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEALLRESOURCEPERMISSIONSRESPONSE_H
 #define QTAWS_REMOVEALLRESOURCEPERMISSIONSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "removeallresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class RemoveAllResourcePermissionsResponsePrivate;
+
+class QTAWS_EXPORT RemoveAllResourcePermissionsResponse : public RemoveAllResourcePermissionsResponse {
+    Q_OBJECT
+
+public:
+    RemoveAllResourcePermissionsResponse(const RemoveAllResourcePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveAllResourcePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAllResourcePermissionsResponse)
+    Q_DISABLE_COPY(RemoveAllResourcePermissionsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

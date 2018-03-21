@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERULERESPONSE_H
 #define QTAWS_UPDATERULERESPONSE_H
 
+#include "wafresponse.h"
+#include "updaterulerequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class UpdateRuleResponsePrivate;
+
+class QTAWS_EXPORT UpdateRuleResponse : public UpdateRuleResponse {
+    Q_OBJECT
+
+public:
+    UpdateRuleResponse(const UpdateRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRuleResponse)
+    Q_DISABLE_COPY(UpdateRuleResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERECEIPTRULESETRESPONSE_H
 #define QTAWS_DESCRIBERECEIPTRULESETRESPONSE_H
 
+#include "emailresponse.h"
+#include "describereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DescribeReceiptRuleSetResponsePrivate;
+
+class QTAWS_EXPORT DescribeReceiptRuleSetResponse : public DescribeReceiptRuleSetResponse {
+    Q_OBJECT
+
+public:
+    DescribeReceiptRuleSetResponse(const DescribeReceiptRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReceiptRuleSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReceiptRuleSetResponse)
+    Q_DISABLE_COPY(DescribeReceiptRuleSetResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

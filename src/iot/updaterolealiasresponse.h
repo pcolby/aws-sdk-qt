@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEROLEALIASRESPONSE_H
 #define QTAWS_UPDATEROLEALIASRESPONSE_H
 
+#include "iotresponse.h"
+#include "updaterolealiasrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class UpdateRoleAliasResponsePrivate;
+
+class QTAWS_EXPORT UpdateRoleAliasResponse : public UpdateRoleAliasResponse {
+    Q_OBJECT
+
+public:
+    UpdateRoleAliasResponse(const UpdateRoleAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRoleAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRoleAliasResponse)
+    Q_DISABLE_COPY(UpdateRoleAliasResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

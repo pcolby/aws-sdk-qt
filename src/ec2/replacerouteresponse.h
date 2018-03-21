@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPLACEROUTERESPONSE_H
 #define QTAWS_REPLACEROUTERESPONSE_H
 
+#include "ec2response.h"
+#include "replacerouterequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReplaceRouteResponsePrivate;
+
+class QTAWS_EXPORT ReplaceRouteResponse : public ReplaceRouteResponse {
+    Q_OBJECT
+
+public:
+    ReplaceRouteResponse(const ReplaceRouteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReplaceRouteRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceRouteResponse)
+    Q_DISABLE_COPY(ReplaceRouteResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

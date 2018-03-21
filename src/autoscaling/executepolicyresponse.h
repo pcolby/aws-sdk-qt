@@ -20,4 +20,33 @@
 #ifndef QTAWS_EXECUTEPOLICYRESPONSE_H
 #define QTAWS_EXECUTEPOLICYRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "executepolicyrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class ExecutePolicyResponsePrivate;
+
+class QTAWS_EXPORT ExecutePolicyResponse : public ExecutePolicyResponse {
+    Q_OBJECT
+
+public:
+    ExecutePolicyResponse(const ExecutePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ExecutePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ExecutePolicyResponse)
+    Q_DISABLE_COPY(ExecutePolicyResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

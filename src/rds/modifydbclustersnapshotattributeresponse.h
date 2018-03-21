@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYDBCLUSTERSNAPSHOTATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYDBCLUSTERSNAPSHOTATTRIBUTERESPONSE_H
 
+#include "rdsresponse.h"
+#include "modifydbclustersnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class ModifyDBClusterSnapshotAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyDBClusterSnapshotAttributeResponse : public ModifyDBClusterSnapshotAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyDBClusterSnapshotAttributeResponse(const ModifyDBClusterSnapshotAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyDBClusterSnapshotAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyDBClusterSnapshotAttributeResponse)
+    Q_DISABLE_COPY(ModifyDBClusterSnapshotAttributeResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

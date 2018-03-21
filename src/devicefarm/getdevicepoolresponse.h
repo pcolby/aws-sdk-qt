@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDEVICEPOOLRESPONSE_H
 #define QTAWS_GETDEVICEPOOLRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getdevicepoolrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetDevicePoolResponsePrivate;
+
+class QTAWS_EXPORT GetDevicePoolResponse : public GetDevicePoolResponse {
+    Q_OBJECT
+
+public:
+    GetDevicePoolResponse(const GetDevicePoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDevicePoolRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDevicePoolResponse)
+    Q_DISABLE_COPY(GetDevicePoolResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYVPCATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYVPCATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifyvpcattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyVpcAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyVpcAttributeResponse : public ModifyVpcAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyVpcAttributeResponse(const ModifyVpcAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyVpcAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcAttributeResponse)
+    Q_DISABLE_COPY(ModifyVpcAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELKEYDELETIONRESPONSE_H
 #define QTAWS_CANCELKEYDELETIONRESPONSE_H
 
+#include "kmsresponse.h"
+#include "cancelkeydeletionrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class CancelKeyDeletionResponsePrivate;
+
+class QTAWS_EXPORT CancelKeyDeletionResponse : public CancelKeyDeletionResponse {
+    Q_OBJECT
+
+public:
+    CancelKeyDeletionResponse(const CancelKeyDeletionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelKeyDeletionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelKeyDeletionResponse)
+    Q_DISABLE_COPY(CancelKeyDeletionResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

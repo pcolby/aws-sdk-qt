@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_H
 #define QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_H
 
+#include "logsresponse.h"
+#include "describeresourcepoliciesrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DescribeResourcePoliciesResponsePrivate;
+
+class QTAWS_EXPORT DescribeResourcePoliciesResponse : public DescribeResourcePoliciesResponse {
+    Q_OBJECT
+
+public:
+    DescribeResourcePoliciesResponse(const DescribeResourcePoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeResourcePoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeResourcePoliciesResponse)
+    Q_DISABLE_COPY(DescribeResourcePoliciesResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

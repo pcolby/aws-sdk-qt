@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOPERATIONSFORRESOURCERESPONSE_H
 #define QTAWS_GETOPERATIONSFORRESOURCERESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getoperationsforresourcerequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetOperationsForResourceResponsePrivate;
+
+class QTAWS_EXPORT GetOperationsForResourceResponse : public GetOperationsForResourceResponse {
+    Q_OBJECT
+
+public:
+    GetOperationsForResourceResponse(const GetOperationsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetOperationsForResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationsForResourceResponse)
+    Q_DISABLE_COPY(GetOperationsForResourceResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

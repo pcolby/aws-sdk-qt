@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETHOSTEDZONECOUNTRESPONSE_H
 #define QTAWS_GETHOSTEDZONECOUNTRESPONSE_H
 
+#include "route53response.h"
+#include "gethostedzonecountrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetHostedZoneCountResponsePrivate;
+
+class QTAWS_EXPORT GetHostedZoneCountResponse : public GetHostedZoneCountResponse {
+    Q_OBJECT
+
+public:
+    GetHostedZoneCountResponse(const GetHostedZoneCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetHostedZoneCountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetHostedZoneCountResponse)
+    Q_DISABLE_COPY(GetHostedZoneCountResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

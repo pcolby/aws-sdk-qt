@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETAGSFORDOMAINRESPONSE_H
 #define QTAWS_DELETETAGSFORDOMAINRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "deletetagsfordomainrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class DeleteTagsForDomainResponsePrivate;
+
+class QTAWS_EXPORT DeleteTagsForDomainResponse : public DeleteTagsForDomainResponse {
+    Q_OBJECT
+
+public:
+    DeleteTagsForDomainResponse(const DeleteTagsForDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTagsForDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsForDomainResponse)
+    Q_DISABLE_COPY(DeleteTagsForDomainResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

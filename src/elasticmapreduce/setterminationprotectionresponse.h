@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONRESPONSE_H
 #define QTAWS_SETTERMINATIONPROTECTIONRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "setterminationprotectionrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class SetTerminationProtectionResponsePrivate;
+
+class QTAWS_EXPORT SetTerminationProtectionResponse : public SetTerminationProtectionResponse {
+    Q_OBJECT
+
+public:
+    SetTerminationProtectionResponse(const SetTerminationProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetTerminationProtectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetTerminationProtectionResponse)
+    Q_DISABLE_COPY(SetTerminationProtectionResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

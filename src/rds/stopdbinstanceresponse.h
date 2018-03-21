@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPDBINSTANCERESPONSE_H
 #define QTAWS_STOPDBINSTANCERESPONSE_H
 
+#include "rdsresponse.h"
+#include "stopdbinstancerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class StopDBInstanceResponsePrivate;
+
+class QTAWS_EXPORT StopDBInstanceResponse : public StopDBInstanceResponse {
+    Q_OBJECT
+
+public:
+    StopDBInstanceResponse(const StopDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopDBInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopDBInstanceResponse)
+    Q_DISABLE_COPY(StopDBInstanceResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETDEFAULTAUTHORIZERRESPONSE_H
 #define QTAWS_SETDEFAULTAUTHORIZERRESPONSE_H
 
+#include "iotresponse.h"
+#include "setdefaultauthorizerrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class SetDefaultAuthorizerResponsePrivate;
+
+class QTAWS_EXPORT SetDefaultAuthorizerResponse : public SetDefaultAuthorizerResponse {
+    Q_OBJECT
+
+public:
+    SetDefaultAuthorizerResponse(const SetDefaultAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetDefaultAuthorizerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetDefaultAuthorizerResponse)
+    Q_DISABLE_COPY(SetDefaultAuthorizerResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAPNSVOIPSANDBOXCHANNELRESPONSE_H
 #define QTAWS_DELETEAPNSVOIPSANDBOXCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deleteapnsvoipsandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteApnsVoipSandboxChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteApnsVoipSandboxChannelResponse : public DeleteApnsVoipSandboxChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteApnsVoipSandboxChannelResponse(const DeleteApnsVoipSandboxChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteApnsVoipSandboxChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApnsVoipSandboxChannelResponse)
+    Q_DISABLE_COPY(DeleteApnsVoipSandboxChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETANALYTICSCONFIGURATIONRESPONSE_H
 #define QTAWS_GETBUCKETANALYTICSCONFIGURATIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketanalyticsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketAnalyticsConfigurationResponsePrivate;
+
+class QTAWS_EXPORT GetBucketAnalyticsConfigurationResponse : public GetBucketAnalyticsConfigurationResponse {
+    Q_OBJECT
+
+public:
+    GetBucketAnalyticsConfigurationResponse(const GetBucketAnalyticsConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketAnalyticsConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketAnalyticsConfigurationResponse)
+    Q_DISABLE_COPY(GetBucketAnalyticsConfigurationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

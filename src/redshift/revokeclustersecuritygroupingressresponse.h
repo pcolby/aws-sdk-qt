@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "revokeclustersecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class RevokeClusterSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT RevokeClusterSecurityGroupIngressResponse : public RevokeClusterSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    RevokeClusterSecurityGroupIngressResponse(const RevokeClusterSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeClusterSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeClusterSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(RevokeClusterSecurityGroupIngressResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

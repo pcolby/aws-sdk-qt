@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDOMAINRESPONSE_H
 #define QTAWS_CREATEDOMAINRESPONSE_H
 
+#include "sdbresponse.h"
+#include "createdomainrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class CreateDomainResponsePrivate;
+
+class QTAWS_EXPORT CreateDomainResponse : public CreateDomainResponse {
+    Q_OBJECT
+
+public:
+    CreateDomainResponse(const CreateDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDomainResponse)
+    Q_DISABLE_COPY(CreateDomainResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

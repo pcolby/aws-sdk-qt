@@ -20,4 +20,33 @@
 #ifndef QTAWS_ALLOCATEHOSTSRESPONSE_H
 #define QTAWS_ALLOCATEHOSTSRESPONSE_H
 
+#include "ec2response.h"
+#include "allocatehostsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AllocateHostsResponsePrivate;
+
+class QTAWS_EXPORT AllocateHostsResponse : public AllocateHostsResponse {
+    Q_OBJECT
+
+public:
+    AllocateHostsResponse(const AllocateHostsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AllocateHostsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AllocateHostsResponse)
+    Q_DISABLE_COPY(AllocateHostsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

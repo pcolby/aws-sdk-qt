@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGRESOURCESRESPONSE_H
 #define QTAWS_UNTAGRESOURCESRESPONSE_H
 
+#include "resourcegroupstaggingapiresponse.h"
+#include "untagresourcesrequest.h"
+
+namespace AWS {
+
+namespace resourcegroupstaggingapi {
+
+class UntagResourcesResponsePrivate;
+
+class QTAWS_EXPORT UntagResourcesResponse : public UntagResourcesResponse {
+    Q_OBJECT
+
+public:
+    UntagResourcesResponse(const UntagResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourcesResponse)
+    Q_DISABLE_COPY(UntagResourcesResponse)
+
+};
+
+} // namespace resourcegroupstaggingapi
+} // namespace AWS
+
 #endif

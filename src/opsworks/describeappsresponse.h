@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAPPSRESPONSE_H
 #define QTAWS_DESCRIBEAPPSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeappsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeAppsResponsePrivate;
+
+class QTAWS_EXPORT DescribeAppsResponse : public DescribeAppsResponse {
+    Q_OBJECT
+
+public:
+    DescribeAppsResponse(const DescribeAppsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAppsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAppsResponse)
+    Q_DISABLE_COPY(DescribeAppsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

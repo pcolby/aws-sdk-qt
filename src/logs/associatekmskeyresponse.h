@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEKMSKEYRESPONSE_H
 #define QTAWS_ASSOCIATEKMSKEYRESPONSE_H
 
+#include "logsresponse.h"
+#include "associatekmskeyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class AssociateKmsKeyResponsePrivate;
+
+class QTAWS_EXPORT AssociateKmsKeyResponse : public AssociateKmsKeyResponse {
+    Q_OBJECT
+
+public:
+    AssociateKmsKeyResponse(const AssociateKmsKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateKmsKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateKmsKeyResponse)
+    Q_DISABLE_COPY(AssociateKmsKeyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

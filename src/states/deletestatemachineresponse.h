@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESTATEMACHINERESPONSE_H
 #define QTAWS_DELETESTATEMACHINERESPONSE_H
 
+#include "statesresponse.h"
+#include "deletestatemachinerequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class DeleteStateMachineResponsePrivate;
+
+class QTAWS_EXPORT DeleteStateMachineResponse : public DeleteStateMachineResponse {
+    Q_OBJECT
+
+public:
+    DeleteStateMachineResponse(const DeleteStateMachineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteStateMachineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStateMachineResponse)
+    Q_DISABLE_COPY(DeleteStateMachineResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

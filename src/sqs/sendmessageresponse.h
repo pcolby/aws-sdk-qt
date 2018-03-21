@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDMESSAGERESPONSE_H
 #define QTAWS_SENDMESSAGERESPONSE_H
 
+#include "sqsresponse.h"
+#include "sendmessagerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class SendMessageResponsePrivate;
+
+class QTAWS_EXPORT SendMessageResponse : public SendMessageResponse {
+    Q_OBJECT
+
+public:
+    SendMessageResponse(const SendMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendMessageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendMessageResponse)
+    Q_DISABLE_COPY(SendMessageResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

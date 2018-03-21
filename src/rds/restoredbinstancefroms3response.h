@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTOREDBINSTANCEFROMS3RESPONSE_H
 #define QTAWS_RESTOREDBINSTANCEFROMS3RESPONSE_H
 
+#include "rdsresponse.h"
+#include "restoredbinstancefroms3request.h"
+
+namespace AWS {
+
+namespace rds {
+
+class RestoreDBInstanceFromS3ResponsePrivate;
+
+class QTAWS_EXPORT RestoreDBInstanceFromS3Response : public RestoreDBInstanceFromS3Response {
+    Q_OBJECT
+
+public:
+    RestoreDBInstanceFromS3Response(const RestoreDBInstanceFromS3Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreDBInstanceFromS3Request * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreDBInstanceFromS3Response)
+    Q_DISABLE_COPY(RestoreDBInstanceFromS3Response)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

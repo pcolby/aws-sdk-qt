@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESECURITYGROUPRESPONSE_H
 #define QTAWS_DELETESECURITYGROUPRESPONSE_H
 
+#include "ec2response.h"
+#include "deletesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteSecurityGroupResponse : public DeleteSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteSecurityGroupResponse(const DeleteSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteSecurityGroupResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

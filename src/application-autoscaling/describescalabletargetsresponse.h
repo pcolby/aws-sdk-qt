@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESCALABLETARGETSRESPONSE_H
 #define QTAWS_DESCRIBESCALABLETARGETSRESPONSE_H
 
+#include "application-autoscalingresponse.h"
+#include "describescalabletargetsrequest.h"
+
+namespace AWS {
+
+namespace application-autoscaling {
+
+class DescribeScalableTargetsResponsePrivate;
+
+class QTAWS_EXPORT DescribeScalableTargetsResponse : public DescribeScalableTargetsResponse {
+    Q_OBJECT
+
+public:
+    DescribeScalableTargetsResponse(const DescribeScalableTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeScalableTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScalableTargetsResponse)
+    Q_DISABLE_COPY(DescribeScalableTargetsResponse)
+
+};
+
+} // namespace application-autoscaling
+} // namespace AWS
+
 #endif

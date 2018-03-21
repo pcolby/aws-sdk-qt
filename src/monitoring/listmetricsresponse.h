@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTMETRICSRESPONSE_H
 #define QTAWS_LISTMETRICSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "listmetricsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class ListMetricsResponsePrivate;
+
+class QTAWS_EXPORT ListMetricsResponse : public ListMetricsResponse {
+    Q_OBJECT
+
+public:
+    ListMetricsResponse(const ListMetricsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListMetricsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListMetricsResponse)
+    Q_DISABLE_COPY(ListMetricsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

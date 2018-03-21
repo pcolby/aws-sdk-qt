@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDBOUNCERESPONSE_H
 #define QTAWS_SENDBOUNCERESPONSE_H
 
+#include "emailresponse.h"
+#include "sendbouncerequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SendBounceResponsePrivate;
+
+class QTAWS_EXPORT SendBounceResponse : public SendBounceResponse {
+    Q_OBJECT
+
+public:
+    SendBounceResponse(const SendBounceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendBounceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendBounceResponse)
+    Q_DISABLE_COPY(SendBounceResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

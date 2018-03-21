@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMERGECONFLICTSRESPONSE_H
 #define QTAWS_GETMERGECONFLICTSRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getmergeconflictsrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetMergeConflictsResponsePrivate;
+
+class QTAWS_EXPORT GetMergeConflictsResponse : public GetMergeConflictsResponse {
+    Q_OBJECT
+
+public:
+    GetMergeConflictsResponse(const GetMergeConflictsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMergeConflictsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMergeConflictsResponse)
+    Q_DISABLE_COPY(GetMergeConflictsResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

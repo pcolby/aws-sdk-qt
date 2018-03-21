@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEASSOCIATIONBATCHRESPONSE_H
 #define QTAWS_CREATEASSOCIATIONBATCHRESPONSE_H
 
+#include "ssmresponse.h"
+#include "createassociationbatchrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class CreateAssociationBatchResponsePrivate;
+
+class QTAWS_EXPORT CreateAssociationBatchResponse : public CreateAssociationBatchResponse {
+    Q_OBJECT
+
+public:
+    CreateAssociationBatchResponse(const CreateAssociationBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAssociationBatchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAssociationBatchResponse)
+    Q_DISABLE_COPY(CreateAssociationBatchResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

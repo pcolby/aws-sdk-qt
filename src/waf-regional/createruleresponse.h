@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERULERESPONSE_H
 #define QTAWS_CREATERULERESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "createrulerequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class CreateRuleResponsePrivate;
+
+class QTAWS_EXPORT CreateRuleResponse : public CreateRuleResponse {
+    Q_OBJECT
+
+public:
+    CreateRuleResponse(const CreateRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRuleResponse)
+    Q_DISABLE_COPY(CreateRuleResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

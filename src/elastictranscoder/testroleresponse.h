@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTROLERESPONSE_H
 #define QTAWS_TESTROLERESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "testrolerequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class TestRoleResponsePrivate;
+
+class QTAWS_EXPORT TestRoleResponse : public TestRoleResponse {
+    Q_OBJECT
+
+public:
+    TestRoleResponse(const TestRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestRoleResponse)
+    Q_DISABLE_COPY(TestRoleResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

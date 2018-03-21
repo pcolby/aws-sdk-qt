@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTRIGGERSRESPONSE_H
 #define QTAWS_GETTRIGGERSRESPONSE_H
 
+#include "glueresponse.h"
+#include "gettriggersrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetTriggersResponsePrivate;
+
+class QTAWS_EXPORT GetTriggersResponse : public GetTriggersResponse {
+    Q_OBJECT
+
+public:
+    GetTriggersResponse(const GetTriggersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTriggersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTriggersResponse)
+    Q_DISABLE_COPY(GetTriggersResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

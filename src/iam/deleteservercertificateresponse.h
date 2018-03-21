@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESERVERCERTIFICATERESPONSE_H
 #define QTAWS_DELETESERVERCERTIFICATERESPONSE_H
 
+#include "iamresponse.h"
+#include "deleteservercertificaterequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteServerCertificateResponsePrivate;
+
+class QTAWS_EXPORT DeleteServerCertificateResponse : public DeleteServerCertificateResponse {
+    Q_OBJECT
+
+public:
+    DeleteServerCertificateResponse(const DeleteServerCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteServerCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServerCertificateResponse)
+    Q_DISABLE_COPY(DeleteServerCertificateResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELAGRESPONSE_H
 #define QTAWS_CREATELAGRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "createlagrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class CreateLagResponsePrivate;
+
+class QTAWS_EXPORT CreateLagResponse : public CreateLagResponse {
+    Q_OBJECT
+
+public:
+    CreateLagResponse(const CreateLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLagResponse)
+    Q_DISABLE_COPY(CreateLagResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

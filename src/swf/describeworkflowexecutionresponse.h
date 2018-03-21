@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEWORKFLOWEXECUTIONRESPONSE_H
 #define QTAWS_DESCRIBEWORKFLOWEXECUTIONRESPONSE_H
 
+#include "swfresponse.h"
+#include "describeworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class DescribeWorkflowExecutionResponsePrivate;
+
+class QTAWS_EXPORT DescribeWorkflowExecutionResponse : public DescribeWorkflowExecutionResponse {
+    Q_OBJECT
+
+public:
+    DescribeWorkflowExecutionResponse(const DescribeWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeWorkflowExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkflowExecutionResponse)
+    Q_DISABLE_COPY(DescribeWorkflowExecutionResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETHOSTEDZONELIMITRESPONSE_H
 #define QTAWS_GETHOSTEDZONELIMITRESPONSE_H
 
+#include "route53response.h"
+#include "gethostedzonelimitrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetHostedZoneLimitResponsePrivate;
+
+class QTAWS_EXPORT GetHostedZoneLimitResponse : public GetHostedZoneLimitResponse {
+    Q_OBJECT
+
+public:
+    GetHostedZoneLimitResponse(const GetHostedZoneLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetHostedZoneLimitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetHostedZoneLimitResponse)
+    Q_DISABLE_COPY(GetHostedZoneLimitResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

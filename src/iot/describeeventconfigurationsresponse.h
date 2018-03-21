@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEVENTCONFIGURATIONSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTCONFIGURATIONSRESPONSE_H
 
+#include "iotresponse.h"
+#include "describeeventconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DescribeEventConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEventConfigurationsResponse : public DescribeEventConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEventConfigurationsResponse(const DescribeEventConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEventConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeEventConfigurationsResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

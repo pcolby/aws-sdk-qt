@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVELISTENERCERTIFICATESRESPONSE_H
 #define QTAWS_REMOVELISTENERCERTIFICATESRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "removelistenercertificatesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class RemoveListenerCertificatesResponsePrivate;
+
+class QTAWS_EXPORT RemoveListenerCertificatesResponse : public RemoveListenerCertificatesResponse {
+    Q_OBJECT
+
+public:
+    RemoveListenerCertificatesResponse(const RemoveListenerCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveListenerCertificatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveListenerCertificatesResponse)
+    Q_DISABLE_COPY(RemoveListenerCertificatesResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

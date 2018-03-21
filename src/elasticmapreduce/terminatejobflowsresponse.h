@@ -20,4 +20,33 @@
 #ifndef QTAWS_TERMINATEJOBFLOWSRESPONSE_H
 #define QTAWS_TERMINATEJOBFLOWSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "terminatejobflowsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class TerminateJobFlowsResponsePrivate;
+
+class QTAWS_EXPORT TerminateJobFlowsResponse : public TerminateJobFlowsResponse {
+    Q_OBJECT
+
+public:
+    TerminateJobFlowsResponse(const TerminateJobFlowsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TerminateJobFlowsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TerminateJobFlowsResponse)
+    Q_DISABLE_COPY(TerminateJobFlowsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

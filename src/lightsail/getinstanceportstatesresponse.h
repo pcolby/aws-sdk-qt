@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINSTANCEPORTSTATESRESPONSE_H
 #define QTAWS_GETINSTANCEPORTSTATESRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getinstanceportstatesrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetInstancePortStatesResponsePrivate;
+
+class QTAWS_EXPORT GetInstancePortStatesResponse : public GetInstancePortStatesResponse {
+    Q_OBJECT
+
+public:
+    GetInstancePortStatesResponse(const GetInstancePortStatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetInstancePortStatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetInstancePortStatesResponse)
+    Q_DISABLE_COPY(GetInstancePortStatesResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

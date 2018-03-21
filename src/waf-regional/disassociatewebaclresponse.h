@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEWEBACLRESPONSE_H
 #define QTAWS_DISASSOCIATEWEBACLRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "disassociatewebaclrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DisassociateWebACLResponsePrivate;
+
+class QTAWS_EXPORT DisassociateWebACLResponse : public DisassociateWebACLResponse {
+    Q_OBJECT
+
+public:
+    DisassociateWebACLResponse(const DisassociateWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateWebACLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateWebACLResponse)
+    Q_DISABLE_COPY(DisassociateWebACLResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

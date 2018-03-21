@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEACTIVATIONRESPONSE_H
 #define QTAWS_CREATEACTIVATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "createactivationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class CreateActivationResponsePrivate;
+
+class QTAWS_EXPORT CreateActivationResponse : public CreateActivationResponse {
+    Q_OBJECT
+
+public:
+    CreateActivationResponse(const CreateActivationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateActivationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateActivationResponse)
+    Q_DISABLE_COPY(CreateActivationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

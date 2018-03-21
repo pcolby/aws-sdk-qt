@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPSTACKRESPONSE_H
 #define QTAWS_STOPSTACKRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "stopstackrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class StopStackResponsePrivate;
+
+class QTAWS_EXPORT StopStackResponse : public StopStackResponse {
+    Q_OBJECT
+
+public:
+    StopStackResponse(const StopStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopStackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopStackResponse)
+    Q_DISABLE_COPY(StopStackResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

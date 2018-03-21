@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONSOLEOUTPUTRESPONSE_H
 #define QTAWS_GETCONSOLEOUTPUTRESPONSE_H
 
+#include "ec2response.h"
+#include "getconsoleoutputrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class GetConsoleOutputResponsePrivate;
+
+class QTAWS_EXPORT GetConsoleOutputResponse : public GetConsoleOutputResponse {
+    Q_OBJECT
+
+public:
+    GetConsoleOutputResponse(const GetConsoleOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetConsoleOutputRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetConsoleOutputResponse)
+    Q_DISABLE_COPY(GetConsoleOutputResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

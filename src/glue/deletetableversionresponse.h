@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETABLEVERSIONRESPONSE_H
 #define QTAWS_DELETETABLEVERSIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "deletetableversionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteTableVersionResponsePrivate;
+
+class QTAWS_EXPORT DeleteTableVersionResponse : public DeleteTableVersionResponse {
+    Q_OBJECT
+
+public:
+    DeleteTableVersionResponse(const DeleteTableVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTableVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTableVersionResponse)
+    Q_DISABLE_COPY(DeleteTableVersionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

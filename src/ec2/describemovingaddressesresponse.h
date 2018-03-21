@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEMOVINGADDRESSESRESPONSE_H
 #define QTAWS_DESCRIBEMOVINGADDRESSESRESPONSE_H
 
+#include "ec2response.h"
+#include "describemovingaddressesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeMovingAddressesResponsePrivate;
+
+class QTAWS_EXPORT DescribeMovingAddressesResponse : public DescribeMovingAddressesResponse {
+    Q_OBJECT
+
+public:
+    DescribeMovingAddressesResponse(const DescribeMovingAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeMovingAddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMovingAddressesResponse)
+    Q_DISABLE_COPY(DescribeMovingAddressesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

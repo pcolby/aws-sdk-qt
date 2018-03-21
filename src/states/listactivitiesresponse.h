@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTACTIVITIESRESPONSE_H
 #define QTAWS_LISTACTIVITIESRESPONSE_H
 
+#include "statesresponse.h"
+#include "listactivitiesrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class ListActivitiesResponsePrivate;
+
+class QTAWS_EXPORT ListActivitiesResponse : public ListActivitiesResponse {
+    Q_OBJECT
+
+public:
+    ListActivitiesResponse(const ListActivitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListActivitiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListActivitiesResponse)
+    Q_DISABLE_COPY(ListActivitiesResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

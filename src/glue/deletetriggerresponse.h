@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETRIGGERRESPONSE_H
 #define QTAWS_DELETETRIGGERRESPONSE_H
 
+#include "glueresponse.h"
+#include "deletetriggerrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteTriggerResponsePrivate;
+
+class QTAWS_EXPORT DeleteTriggerResponse : public DeleteTriggerResponse {
+    Q_OBJECT
+
+public:
+    DeleteTriggerResponse(const DeleteTriggerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTriggerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTriggerResponse)
+    Q_DISABLE_COPY(DeleteTriggerResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

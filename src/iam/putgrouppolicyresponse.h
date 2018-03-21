@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTGROUPPOLICYRESPONSE_H
 #define QTAWS_PUTGROUPPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "putgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class PutGroupPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutGroupPolicyResponse : public PutGroupPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutGroupPolicyResponse(const PutGroupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutGroupPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutGroupPolicyResponse)
+    Q_DISABLE_COPY(PutGroupPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

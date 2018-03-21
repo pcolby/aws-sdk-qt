@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECLUSTERSRESPONSE_H
 #define QTAWS_DESCRIBECLUSTERSRESPONSE_H
 
+#include "ecsresponse.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class DescribeClustersResponsePrivate;
+
+class QTAWS_EXPORT DescribeClustersResponse : public DescribeClustersResponse {
+    Q_OBJECT
+
+public:
+    DescribeClustersResponse(const DescribeClustersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeClustersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeClustersResponse)
+    Q_DISABLE_COPY(DescribeClustersResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

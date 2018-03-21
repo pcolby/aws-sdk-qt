@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINTERNETGATEWAYRESPONSE_H
 #define QTAWS_CREATEINTERNETGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "createinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateInternetGatewayResponsePrivate;
+
+class QTAWS_EXPORT CreateInternetGatewayResponse : public CreateInternetGatewayResponse {
+    Q_OBJECT
+
+public:
+    CreateInternetGatewayResponse(const CreateInternetGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInternetGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInternetGatewayResponse)
+    Q_DISABLE_COPY(CreateInternetGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPLATFORMVERSIONRESPONSE_H
 #define QTAWS_CREATEPLATFORMVERSIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createplatformversionrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class CreatePlatformVersionResponsePrivate;
+
+class QTAWS_EXPORT CreatePlatformVersionResponse : public CreatePlatformVersionResponse {
+    Q_OBJECT
+
+public:
+    CreatePlatformVersionResponse(const CreatePlatformVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePlatformVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlatformVersionResponse)
+    Q_DISABLE_COPY(CreatePlatformVersionResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

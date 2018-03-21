@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEHAPGRESPONSE_H
 #define QTAWS_DELETEHAPGRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "deletehapgrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class DeleteHapgResponsePrivate;
+
+class QTAWS_EXPORT DeleteHapgResponse : public DeleteHapgResponse {
+    Q_OBJECT
+
+public:
+    DeleteHapgResponse(const DeleteHapgRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteHapgRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHapgResponse)
+    Q_DISABLE_COPY(DeleteHapgResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

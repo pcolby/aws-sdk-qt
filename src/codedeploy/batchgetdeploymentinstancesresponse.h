@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETDEPLOYMENTINSTANCESRESPONSE_H
 #define QTAWS_BATCHGETDEPLOYMENTINSTANCESRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "batchgetdeploymentinstancesrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class BatchGetDeploymentInstancesResponsePrivate;
+
+class QTAWS_EXPORT BatchGetDeploymentInstancesResponse : public BatchGetDeploymentInstancesResponse {
+    Q_OBJECT
+
+public:
+    BatchGetDeploymentInstancesResponse(const BatchGetDeploymentInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetDeploymentInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetDeploymentInstancesResponse)
+    Q_DISABLE_COPY(BatchGetDeploymentInstancesResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

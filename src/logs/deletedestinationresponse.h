@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDESTINATIONRESPONSE_H
 #define QTAWS_DELETEDESTINATIONRESPONSE_H
 
+#include "logsresponse.h"
+#include "deletedestinationrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteDestinationResponsePrivate;
+
+class QTAWS_EXPORT DeleteDestinationResponse : public DeleteDestinationResponse {
+    Q_OBJECT
+
+public:
+    DeleteDestinationResponse(const DeleteDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDestinationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDestinationResponse)
+    Q_DISABLE_COPY(DeleteDestinationResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

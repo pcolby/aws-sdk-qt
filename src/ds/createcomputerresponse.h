@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECOMPUTERRESPONSE_H
 #define QTAWS_CREATECOMPUTERRESPONSE_H
 
+#include "dsresponse.h"
+#include "createcomputerrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class CreateComputerResponsePrivate;
+
+class QTAWS_EXPORT CreateComputerResponse : public CreateComputerResponse {
+    Q_OBJECT
+
+public:
+    CreateComputerResponse(const CreateComputerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateComputerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateComputerResponse)
+    Q_DISABLE_COPY(CreateComputerResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

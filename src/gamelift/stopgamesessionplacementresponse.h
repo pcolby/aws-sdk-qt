@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPGAMESESSIONPLACEMENTRESPONSE_H
 #define QTAWS_STOPGAMESESSIONPLACEMENTRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "stopgamesessionplacementrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class StopGameSessionPlacementResponsePrivate;
+
+class QTAWS_EXPORT StopGameSessionPlacementResponse : public StopGameSessionPlacementResponse {
+    Q_OBJECT
+
+public:
+    StopGameSessionPlacementResponse(const StopGameSessionPlacementRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopGameSessionPlacementRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopGameSessionPlacementResponse)
+    Q_DISABLE_COPY(StopGameSessionPlacementResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

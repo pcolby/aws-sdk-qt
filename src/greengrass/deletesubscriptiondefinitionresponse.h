@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_H
 #define QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "deletesubscriptiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class DeleteSubscriptionDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeleteSubscriptionDefinitionResponse : public DeleteSubscriptionDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeleteSubscriptionDefinitionResponse(const DeleteSubscriptionDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSubscriptionDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriptionDefinitionResponse)
+    Q_DISABLE_COPY(DeleteSubscriptionDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

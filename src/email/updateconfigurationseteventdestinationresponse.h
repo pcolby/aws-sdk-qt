@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_H
 
+#include "emailresponse.h"
+#include "updateconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateConfigurationSetEventDestinationResponsePrivate;
+
+class QTAWS_EXPORT UpdateConfigurationSetEventDestinationResponse : public UpdateConfigurationSetEventDestinationResponse {
+    Q_OBJECT
+
+public:
+    UpdateConfigurationSetEventDestinationResponse(const UpdateConfigurationSetEventDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConfigurationSetEventDestinationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationSetEventDestinationResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetEventDestinationResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

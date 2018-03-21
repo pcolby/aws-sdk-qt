@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDATASOURCERESPONSE_H
 #define QTAWS_CREATEDATASOURCERESPONSE_H
 
+#include "appsyncresponse.h"
+#include "createdatasourcerequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class CreateDataSourceResponsePrivate;
+
+class QTAWS_EXPORT CreateDataSourceResponse : public CreateDataSourceResponse {
+    Q_OBJECT
+
+public:
+    CreateDataSourceResponse(const CreateDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDataSourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceResponse)
+    Q_DISABLE_COPY(CreateDataSourceResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

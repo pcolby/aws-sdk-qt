@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELAUNCHTEMPLATEVERSIONSRESPONSE_H
 #define QTAWS_DESCRIBELAUNCHTEMPLATEVERSIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describelaunchtemplateversionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeLaunchTemplateVersionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeLaunchTemplateVersionsResponse : public DescribeLaunchTemplateVersionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeLaunchTemplateVersionsResponse(const DescribeLaunchTemplateVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLaunchTemplateVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLaunchTemplateVersionsResponse)
+    Q_DISABLE_COPY(DescribeLaunchTemplateVersionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

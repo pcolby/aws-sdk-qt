@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATETEAMMEMBERRESPONSE_H
 #define QTAWS_DISASSOCIATETEAMMEMBERRESPONSE_H
 
+#include "codestarresponse.h"
+#include "disassociateteammemberrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class DisassociateTeamMemberResponsePrivate;
+
+class QTAWS_EXPORT DisassociateTeamMemberResponse : public DisassociateTeamMemberResponse {
+    Q_OBJECT
+
+public:
+    DisassociateTeamMemberResponse(const DisassociateTeamMemberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateTeamMemberRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateTeamMemberResponse)
+    Q_DISABLE_COPY(DisassociateTeamMemberResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMAPPINGRESPONSE_H
 #define QTAWS_GETMAPPINGRESPONSE_H
 
+#include "glueresponse.h"
+#include "getmappingrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetMappingResponsePrivate;
+
+class QTAWS_EXPORT GetMappingResponse : public GetMappingResponse {
+    Q_OBJECT
+
+public:
+    GetMappingResponse(const GetMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMappingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMappingResponse)
+    Q_DISABLE_COPY(GetMappingResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

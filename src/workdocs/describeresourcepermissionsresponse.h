@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERESOURCEPERMISSIONSRESPONSE_H
 #define QTAWS_DESCRIBERESOURCEPERMISSIONSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describeresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeResourcePermissionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeResourcePermissionsResponse : public DescribeResourcePermissionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeResourcePermissionsResponse(const DescribeResourcePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeResourcePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeResourcePermissionsResponse)
+    Q_DISABLE_COPY(DescribeResourcePermissionsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_EXPORTPROJECTRESPONSE_H
 #define QTAWS_EXPORTPROJECTRESPONSE_H
 
+#include "mobileresponse.h"
+#include "exportprojectrequest.h"
+
+namespace AWS {
+
+namespace mobile {
+
+class ExportProjectResponsePrivate;
+
+class QTAWS_EXPORT ExportProjectResponse : public ExportProjectResponse {
+    Q_OBJECT
+
+public:
+    ExportProjectResponse(const ExportProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ExportProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ExportProjectResponse)
+    Q_DISABLE_COPY(ExportProjectResponse)
+
+};
+
+} // namespace mobile
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTSCHEMAEXTENSIONRESPONSE_H
 #define QTAWS_STARTSCHEMAEXTENSIONRESPONSE_H
 
+#include "dsresponse.h"
+#include "startschemaextensionrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class StartSchemaExtensionResponsePrivate;
+
+class QTAWS_EXPORT StartSchemaExtensionResponse : public StartSchemaExtensionResponse {
+    Q_OBJECT
+
+public:
+    StartSchemaExtensionResponse(const StartSchemaExtensionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartSchemaExtensionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartSchemaExtensionResponse)
+    Q_DISABLE_COPY(StartSchemaExtensionResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

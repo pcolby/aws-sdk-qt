@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYSUBNETATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYSUBNETATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifysubnetattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifySubnetAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifySubnetAttributeResponse : public ModifySubnetAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifySubnetAttributeResponse(const ModifySubnetAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifySubnetAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifySubnetAttributeResponse)
+    Q_DISABLE_COPY(ModifySubnetAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

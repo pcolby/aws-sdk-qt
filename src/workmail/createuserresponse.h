@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEUSERRESPONSE_H
 #define QTAWS_CREATEUSERRESPONSE_H
 
+#include "workmailresponse.h"
+#include "createuserrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class CreateUserResponsePrivate;
+
+class QTAWS_EXPORT CreateUserResponse : public CreateUserResponse {
+    Q_OBJECT
+
+public:
+    CreateUserResponse(const CreateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserResponse)
+    Q_DISABLE_COPY(CreateUserResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

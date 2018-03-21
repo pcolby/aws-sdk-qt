@@ -20,4 +20,33 @@
 #ifndef QTAWS_SIGNALRESOURCERESPONSE_H
 #define QTAWS_SIGNALRESOURCERESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "signalresourcerequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class SignalResourceResponsePrivate;
+
+class QTAWS_EXPORT SignalResourceResponse : public SignalResourceResponse {
+    Q_OBJECT
+
+public:
+    SignalResourceResponse(const SignalResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SignalResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SignalResourceResponse)
+    Q_DISABLE_COPY(SignalResourceResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDEPLOYMENTINSTANCESRESPONSE_H
 #define QTAWS_LISTDEPLOYMENTINSTANCESRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "listdeploymentinstancesrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class ListDeploymentInstancesResponsePrivate;
+
+class QTAWS_EXPORT ListDeploymentInstancesResponse : public ListDeploymentInstancesResponse {
+    Q_OBJECT
+
+public:
+    ListDeploymentInstancesResponse(const ListDeploymentInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDeploymentInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDeploymentInstancesResponse)
+    Q_DISABLE_COPY(ListDeploymentInstancesResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

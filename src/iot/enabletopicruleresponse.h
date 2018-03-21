@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLETOPICRULERESPONSE_H
 #define QTAWS_ENABLETOPICRULERESPONSE_H
 
+#include "iotresponse.h"
+#include "enabletopicrulerequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class EnableTopicRuleResponsePrivate;
+
+class QTAWS_EXPORT EnableTopicRuleResponse : public EnableTopicRuleResponse {
+    Q_OBJECT
+
+public:
+    EnableTopicRuleResponse(const EnableTopicRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableTopicRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableTopicRuleResponse)
+    Q_DISABLE_COPY(EnableTopicRuleResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

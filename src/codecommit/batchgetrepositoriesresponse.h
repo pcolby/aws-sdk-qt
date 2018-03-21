@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETREPOSITORIESRESPONSE_H
 #define QTAWS_BATCHGETREPOSITORIESRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "batchgetrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class BatchGetRepositoriesResponsePrivate;
+
+class QTAWS_EXPORT BatchGetRepositoriesResponse : public BatchGetRepositoriesResponse {
+    Q_OBJECT
+
+public:
+    BatchGetRepositoriesResponse(const BatchGetRepositoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetRepositoriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetRepositoriesResponse)
+    Q_DISABLE_COPY(BatchGetRepositoriesResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

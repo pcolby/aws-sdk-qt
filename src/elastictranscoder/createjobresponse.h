@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_H
 #define QTAWS_CREATEJOBRESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "createjobrequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class CreateJobResponsePrivate;
+
+class QTAWS_EXPORT CreateJobResponse : public CreateJobResponse {
+    Q_OBJECT
+
+public:
+    CreateJobResponse(const CreateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobResponse)
+    Q_DISABLE_COPY(CreateJobResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

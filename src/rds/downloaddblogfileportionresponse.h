@@ -20,4 +20,33 @@
 #ifndef QTAWS_DOWNLOADDBLOGFILEPORTIONRESPONSE_H
 #define QTAWS_DOWNLOADDBLOGFILEPORTIONRESPONSE_H
 
+#include "rdsresponse.h"
+#include "downloaddblogfileportionrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DownloadDBLogFilePortionResponsePrivate;
+
+class QTAWS_EXPORT DownloadDBLogFilePortionResponse : public DownloadDBLogFilePortionResponse {
+    Q_OBJECT
+
+public:
+    DownloadDBLogFilePortionResponse(const DownloadDBLogFilePortionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DownloadDBLogFilePortionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DownloadDBLogFilePortionResponse)
+    Q_DISABLE_COPY(DownloadDBLogFilePortionResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

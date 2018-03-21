@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHANGERESOURCERECORDSETSRESPONSE_H
 #define QTAWS_CHANGERESOURCERECORDSETSRESPONSE_H
 
+#include "route53response.h"
+#include "changeresourcerecordsetsrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ChangeResourceRecordSetsResponsePrivate;
+
+class QTAWS_EXPORT ChangeResourceRecordSetsResponse : public ChangeResourceRecordSetsResponse {
+    Q_OBJECT
+
+public:
+    ChangeResourceRecordSetsResponse(const ChangeResourceRecordSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ChangeResourceRecordSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ChangeResourceRecordSetsResponse)
+    Q_DISABLE_COPY(ChangeResourceRecordSetsResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

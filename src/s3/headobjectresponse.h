@@ -20,4 +20,33 @@
 #ifndef QTAWS_HEADOBJECTRESPONSE_H
 #define QTAWS_HEADOBJECTRESPONSE_H
 
+#include "s3response.h"
+#include "headobjectrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class HeadObjectResponsePrivate;
+
+class QTAWS_EXPORT HeadObjectResponse : public HeadObjectResponse {
+    Q_OBJECT
+
+public:
+    HeadObjectResponse(const HeadObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const HeadObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(HeadObjectResponse)
+    Q_DISABLE_COPY(HeadObjectResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

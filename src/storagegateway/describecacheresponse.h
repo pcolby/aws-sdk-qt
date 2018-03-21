@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECACHERESPONSE_H
 #define QTAWS_DESCRIBECACHERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describecacherequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeCacheResponsePrivate;
+
+class QTAWS_EXPORT DescribeCacheResponse : public DescribeCacheResponse {
+    Q_OBJECT
+
+public:
+    DescribeCacheResponse(const DescribeCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCacheRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCacheResponse)
+    Q_DISABLE_COPY(DescribeCacheResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

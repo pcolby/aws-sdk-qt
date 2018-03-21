@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERECEIPTRULERESPONSE_H
 #define QTAWS_DELETERECEIPTRULERESPONSE_H
 
+#include "emailresponse.h"
+#include "deletereceiptrulerequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteReceiptRuleResponsePrivate;
+
+class QTAWS_EXPORT DeleteReceiptRuleResponse : public DeleteReceiptRuleResponse {
+    Q_OBJECT
+
+public:
+    DeleteReceiptRuleResponse(const DeleteReceiptRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReceiptRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReceiptRuleResponse)
+    Q_DISABLE_COPY(DeleteReceiptRuleResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

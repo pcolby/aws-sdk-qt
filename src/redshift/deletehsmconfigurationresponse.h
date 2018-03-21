@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEHSMCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEHSMCONFIGURATIONRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "deletehsmconfigurationrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DeleteHsmConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteHsmConfigurationResponse : public DeleteHsmConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteHsmConfigurationResponse(const DeleteHsmConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteHsmConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHsmConfigurationResponse)
+    Q_DISABLE_COPY(DeleteHsmConfigurationResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

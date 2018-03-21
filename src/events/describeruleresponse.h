@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERULERESPONSE_H
 #define QTAWS_DESCRIBERULERESPONSE_H
 
+#include "eventsresponse.h"
+#include "describerulerequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class DescribeRuleResponsePrivate;
+
+class QTAWS_EXPORT DescribeRuleResponse : public DescribeRuleResponse {
+    Q_OBJECT
+
+public:
+    DescribeRuleResponse(const DescribeRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRuleResponse)
+    Q_DISABLE_COPY(DescribeRuleResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

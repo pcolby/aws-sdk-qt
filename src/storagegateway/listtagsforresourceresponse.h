@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class ListTagsForResourceResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForResourceResponse : public ListTagsForResourceResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForResourceResponse(const ListTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourceResponse)
+    Q_DISABLE_COPY(ListTagsForResourceResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

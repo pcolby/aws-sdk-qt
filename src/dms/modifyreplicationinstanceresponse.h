@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_MODIFYREPLICATIONINSTANCERESPONSE_H
 
+#include "dmsresponse.h"
+#include "modifyreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class ModifyReplicationInstanceResponsePrivate;
+
+class QTAWS_EXPORT ModifyReplicationInstanceResponse : public ModifyReplicationInstanceResponse {
+    Q_OBJECT
+
+public:
+    ModifyReplicationInstanceResponse(const ModifyReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyReplicationInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyReplicationInstanceResponse)
+    Q_DISABLE_COPY(ModifyReplicationInstanceResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

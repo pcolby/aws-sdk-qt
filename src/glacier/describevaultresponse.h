@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVAULTRESPONSE_H
 #define QTAWS_DESCRIBEVAULTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "describevaultrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class DescribeVaultResponsePrivate;
+
+class QTAWS_EXPORT DescribeVaultResponse : public DescribeVaultResponse {
+    Q_OBJECT
+
+public:
+    DescribeVaultResponse(const DescribeVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVaultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVaultResponse)
+    Q_DISABLE_COPY(DescribeVaultResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

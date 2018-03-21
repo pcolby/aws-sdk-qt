@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBROKERRESPONSE_H
 #define QTAWS_DESCRIBEBROKERRESPONSE_H
 
+#include "mqresponse.h"
+#include "describebrokerrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class DescribeBrokerResponsePrivate;
+
+class QTAWS_EXPORT DescribeBrokerResponse : public DescribeBrokerResponse {
+    Q_OBJECT
+
+public:
+    DescribeBrokerResponse(const DescribeBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBrokerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBrokerResponse)
+    Q_DISABLE_COPY(DescribeBrokerResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

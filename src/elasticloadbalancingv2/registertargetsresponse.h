@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERTARGETSRESPONSE_H
 #define QTAWS_REGISTERTARGETSRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "registertargetsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class RegisterTargetsResponsePrivate;
+
+class QTAWS_EXPORT RegisterTargetsResponse : public RegisterTargetsResponse {
+    Q_OBJECT
+
+public:
+    RegisterTargetsResponse(const RegisterTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterTargetsResponse)
+    Q_DISABLE_COPY(RegisterTargetsResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

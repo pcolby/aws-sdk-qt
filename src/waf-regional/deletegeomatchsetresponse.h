@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEGEOMATCHSETRESPONSE_H
 #define QTAWS_DELETEGEOMATCHSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "deletegeomatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DeleteGeoMatchSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteGeoMatchSetResponse : public DeleteGeoMatchSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteGeoMatchSetResponse(const DeleteGeoMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteGeoMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGeoMatchSetResponse)
+    Q_DISABLE_COPY(DeleteGeoMatchSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

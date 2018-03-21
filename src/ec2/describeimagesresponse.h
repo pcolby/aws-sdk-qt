@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEIMAGESRESPONSE_H
 #define QTAWS_DESCRIBEIMAGESRESPONSE_H
 
+#include "ec2response.h"
+#include "describeimagesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeImagesResponsePrivate;
+
+class QTAWS_EXPORT DescribeImagesResponse : public DescribeImagesResponse {
+    Q_OBJECT
+
+public:
+    DescribeImagesResponse(const DescribeImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeImagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImagesResponse)
+    Q_DISABLE_COPY(DescribeImagesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

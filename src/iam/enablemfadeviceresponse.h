@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEMFADEVICERESPONSE_H
 #define QTAWS_ENABLEMFADEVICERESPONSE_H
 
+#include "iamresponse.h"
+#include "enablemfadevicerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class EnableMFADeviceResponsePrivate;
+
+class QTAWS_EXPORT EnableMFADeviceResponse : public EnableMFADeviceResponse {
+    Q_OBJECT
+
+public:
+    EnableMFADeviceResponse(const EnableMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableMFADeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableMFADeviceResponse)
+    Q_DISABLE_COPY(EnableMFADeviceResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

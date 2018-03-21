@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERTASKDEFINITIONRESPONSE_H
 #define QTAWS_REGISTERTASKDEFINITIONRESPONSE_H
 
+#include "ecsresponse.h"
+#include "registertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class RegisterTaskDefinitionResponsePrivate;
+
+class QTAWS_EXPORT RegisterTaskDefinitionResponse : public RegisterTaskDefinitionResponse {
+    Q_OBJECT
+
+public:
+    RegisterTaskDefinitionResponse(const RegisterTaskDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterTaskDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterTaskDefinitionResponse)
+    Q_DISABLE_COPY(RegisterTaskDefinitionResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

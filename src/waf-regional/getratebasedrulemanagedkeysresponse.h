@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "getratebasedrulemanagedkeysrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class GetRateBasedRuleManagedKeysResponsePrivate;
+
+class QTAWS_EXPORT GetRateBasedRuleManagedKeysResponse : public GetRateBasedRuleManagedKeysResponse {
+    Q_OBJECT
+
+public:
+    GetRateBasedRuleManagedKeysResponse(const GetRateBasedRuleManagedKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRateBasedRuleManagedKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRateBasedRuleManagedKeysResponse)
+    Q_DISABLE_COPY(GetRateBasedRuleManagedKeysResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

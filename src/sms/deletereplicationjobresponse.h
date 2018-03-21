@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBRESPONSE_H
 #define QTAWS_DELETEREPLICATIONJOBRESPONSE_H
 
+#include "smsresponse.h"
+#include "deletereplicationjobrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class DeleteReplicationJobResponsePrivate;
+
+class QTAWS_EXPORT DeleteReplicationJobResponse : public DeleteReplicationJobResponse {
+    Q_OBJECT
+
+public:
+    DeleteReplicationJobResponse(const DeleteReplicationJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReplicationJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationJobResponse)
+    Q_DISABLE_COPY(DeleteReplicationJobResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOLVERSRESPONSE_H
 #define QTAWS_LISTRESOLVERSRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "listresolversrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class ListResolversResponsePrivate;
+
+class QTAWS_EXPORT ListResolversResponse : public ListResolversResponse {
+    Q_OBJECT
+
+public:
+    ListResolversResponse(const ListResolversRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResolversRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResolversResponse)
+    Q_DISABLE_COPY(ListResolversResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_MERGESHARDSRESPONSE_H
 #define QTAWS_MERGESHARDSRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "mergeshardsrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class MergeShardsResponsePrivate;
+
+class QTAWS_EXPORT MergeShardsResponse : public MergeShardsResponse {
+    Q_OBJECT
+
+public:
+    MergeShardsResponse(const MergeShardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const MergeShardsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(MergeShardsResponse)
+    Q_DISABLE_COPY(MergeShardsResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

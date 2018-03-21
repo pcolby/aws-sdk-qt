@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_H
 #define QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_H
 
+#include "batchresponse.h"
+#include "deletecomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class DeleteComputeEnvironmentResponsePrivate;
+
+class QTAWS_EXPORT DeleteComputeEnvironmentResponse : public DeleteComputeEnvironmentResponse {
+    Q_OBJECT
+
+public:
+    DeleteComputeEnvironmentResponse(const DeleteComputeEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteComputeEnvironmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteComputeEnvironmentResponse)
+    Q_DISABLE_COPY(DeleteComputeEnvironmentResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

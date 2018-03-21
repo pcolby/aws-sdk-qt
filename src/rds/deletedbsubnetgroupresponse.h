@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDBSUBNETGROUPRESPONSE_H
 #define QTAWS_DELETEDBSUBNETGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "deletedbsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DeleteDBSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteDBSubnetGroupResponse : public DeleteDBSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteDBSubnetGroupResponse(const DeleteDBSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDBSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDBSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteDBSubnetGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMLMODELRESPONSE_H
 #define QTAWS_CREATEMLMODELRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createmlmodelrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateMLModelResponsePrivate;
+
+class QTAWS_EXPORT CreateMLModelResponse : public CreateMLModelResponse {
+    Q_OBJECT
+
+public:
+    CreateMLModelResponse(const CreateMLModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateMLModelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateMLModelResponse)
+    Q_DISABLE_COPY(CreateMLModelResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

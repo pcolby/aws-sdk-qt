@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYINSTANCEATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYINSTANCEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifyinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyInstanceAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyInstanceAttributeResponse : public ModifyInstanceAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyInstanceAttributeResponse(const ModifyInstanceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyInstanceAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyInstanceAttributeResponse)
+    Q_DISABLE_COPY(ModifyInstanceAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTRESPONSE_H
 #define QTAWS_GETPARAMETERSFORIMPORTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "getparametersforimportrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class GetParametersForImportResponsePrivate;
+
+class QTAWS_EXPORT GetParametersForImportResponse : public GetParametersForImportResponse {
+    Q_OBJECT
+
+public:
+    GetParametersForImportResponse(const GetParametersForImportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetParametersForImportRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetParametersForImportResponse)
+    Q_DISABLE_COPY(GetParametersForImportResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

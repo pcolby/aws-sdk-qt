@@ -20,4 +20,33 @@
 #ifndef QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_H
 #define QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "validateconfigurationsettingsrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class ValidateConfigurationSettingsResponsePrivate;
+
+class QTAWS_EXPORT ValidateConfigurationSettingsResponse : public ValidateConfigurationSettingsResponse {
+    Q_OBJECT
+
+public:
+    ValidateConfigurationSettingsResponse(const ValidateConfigurationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ValidateConfigurationSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ValidateConfigurationSettingsResponse)
+    Q_DISABLE_COPY(ValidateConfigurationSettingsResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

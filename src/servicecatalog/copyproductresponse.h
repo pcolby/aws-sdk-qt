@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYPRODUCTRESPONSE_H
 #define QTAWS_COPYPRODUCTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "copyproductrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class CopyProductResponsePrivate;
+
+class QTAWS_EXPORT CopyProductResponse : public CopyProductResponse {
+    Q_OBJECT
+
+public:
+    CopyProductResponse(const CopyProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopyProductRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopyProductResponse)
+    Q_DISABLE_COPY(CopyProductResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

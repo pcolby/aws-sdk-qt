@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETABLERESPONSE_H
 #define QTAWS_DESCRIBETABLERESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "describetablerequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DescribeTableResponsePrivate;
+
+class QTAWS_EXPORT DescribeTableResponse : public DescribeTableResponse {
+    Q_OBJECT
+
+public:
+    DescribeTableResponse(const DescribeTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTableResponse)
+    Q_DISABLE_COPY(DescribeTableResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

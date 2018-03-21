@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENOTIFICATIONCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETENOTIFICATIONCONFIGURATIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "deletenotificationconfigurationrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DeleteNotificationConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteNotificationConfigurationResponse : public DeleteNotificationConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteNotificationConfigurationResponse(const DeleteNotificationConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNotificationConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationConfigurationResponse)
+    Q_DISABLE_COPY(DeleteNotificationConfigurationResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

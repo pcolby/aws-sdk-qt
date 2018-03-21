@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETVAULTLOCKRESPONSE_H
 #define QTAWS_GETVAULTLOCKRESPONSE_H
 
+#include "glacierresponse.h"
+#include "getvaultlockrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class GetVaultLockResponsePrivate;
+
+class QTAWS_EXPORT GetVaultLockResponse : public GetVaultLockResponse {
+    Q_OBJECT
+
+public:
+    GetVaultLockResponse(const GetVaultLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetVaultLockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetVaultLockResponse)
+    Q_DISABLE_COPY(GetVaultLockResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

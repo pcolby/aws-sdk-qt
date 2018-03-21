@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGROUPRESOURCESRESPONSE_H
 #define QTAWS_LISTGROUPRESOURCESRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "listgroupresourcesrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class ListGroupResourcesResponsePrivate;
+
+class QTAWS_EXPORT ListGroupResourcesResponse : public ListGroupResourcesResponse {
+    Q_OBJECT
+
+public:
+    ListGroupResourcesResponse(const ListGroupResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGroupResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGroupResourcesResponse)
+    Q_DISABLE_COPY(ListGroupResourcesResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

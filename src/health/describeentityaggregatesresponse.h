@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENTITYAGGREGATESRESPONSE_H
 #define QTAWS_DESCRIBEENTITYAGGREGATESRESPONSE_H
 
+#include "healthresponse.h"
+#include "describeentityaggregatesrequest.h"
+
+namespace AWS {
+
+namespace health {
+
+class DescribeEntityAggregatesResponsePrivate;
+
+class QTAWS_EXPORT DescribeEntityAggregatesResponse : public DescribeEntityAggregatesResponse {
+    Q_OBJECT
+
+public:
+    DescribeEntityAggregatesResponse(const DescribeEntityAggregatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEntityAggregatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEntityAggregatesResponse)
+    Q_DISABLE_COPY(DescribeEntityAggregatesResponse)
+
+};
+
+} // namespace health
+} // namespace AWS
+
 #endif

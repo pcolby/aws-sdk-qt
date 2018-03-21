@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEOBJECTRESPONSE_H
 #define QTAWS_CREATEOBJECTRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "createobjectrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class CreateObjectResponsePrivate;
+
+class QTAWS_EXPORT CreateObjectResponse : public CreateObjectResponse {
+    Q_OBJECT
+
+public:
+    CreateObjectResponse(const CreateObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateObjectResponse)
+    Q_DISABLE_COPY(CreateObjectResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

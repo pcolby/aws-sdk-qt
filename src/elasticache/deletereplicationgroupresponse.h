@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPLICATIONGROUPRESPONSE_H
 #define QTAWS_DELETEREPLICATIONGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "deletereplicationgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DeleteReplicationGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteReplicationGroupResponse : public DeleteReplicationGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteReplicationGroupResponse(const DeleteReplicationGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReplicationGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationGroupResponse)
+    Q_DISABLE_COPY(DeleteReplicationGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_BULKPUBLISHRESPONSE_H
 #define QTAWS_BULKPUBLISHRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "bulkpublishrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class BulkPublishResponsePrivate;
+
+class QTAWS_EXPORT BulkPublishResponse : public BulkPublishResponse {
+    Q_OBJECT
+
+public:
+    BulkPublishResponse(const BulkPublishRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BulkPublishRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BulkPublishResponse)
+    Q_DISABLE_COPY(BulkPublishResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

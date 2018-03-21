@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSESSIONTOKENRESPONSE_H
 #define QTAWS_GETSESSIONTOKENRESPONSE_H
 
+#include "stsresponse.h"
+#include "getsessiontokenrequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class GetSessionTokenResponsePrivate;
+
+class QTAWS_EXPORT GetSessionTokenResponse : public GetSessionTokenResponse {
+    Q_OBJECT
+
+public:
+    GetSessionTokenResponse(const GetSessionTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSessionTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSessionTokenResponse)
+    Q_DISABLE_COPY(GetSessionTokenResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

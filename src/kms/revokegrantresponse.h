@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKEGRANTRESPONSE_H
 #define QTAWS_REVOKEGRANTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "revokegrantrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class RevokeGrantResponsePrivate;
+
+class QTAWS_EXPORT RevokeGrantResponse : public RevokeGrantResponse {
+    Q_OBJECT
+
+public:
+    RevokeGrantResponse(const RevokeGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeGrantRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeGrantResponse)
+    Q_DISABLE_COPY(RevokeGrantResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

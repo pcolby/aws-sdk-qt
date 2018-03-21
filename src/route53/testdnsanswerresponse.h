@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTDNSANSWERRESPONSE_H
 #define QTAWS_TESTDNSANSWERRESPONSE_H
 
+#include "route53response.h"
+#include "testdnsanswerrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class TestDNSAnswerResponsePrivate;
+
+class QTAWS_EXPORT TestDNSAnswerResponse : public TestDNSAnswerResponse {
+    Q_OBJECT
+
+public:
+    TestDNSAnswerResponse(const TestDNSAnswerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestDNSAnswerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestDNSAnswerResponse)
+    Q_DISABLE_COPY(TestDNSAnswerResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

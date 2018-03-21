@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPCPEERINGCONNECTIONRESPONSE_H
 #define QTAWS_DELETEVPCPEERINGCONNECTIONRESPONSE_H
 
+#include "ec2response.h"
+#include "deletevpcpeeringconnectionrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteVpcPeeringConnectionResponsePrivate;
+
+class QTAWS_EXPORT DeleteVpcPeeringConnectionResponse : public DeleteVpcPeeringConnectionResponse {
+    Q_OBJECT
+
+public:
+    DeleteVpcPeeringConnectionResponse(const DeleteVpcPeeringConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVpcPeeringConnectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcPeeringConnectionResponse)
+    Q_DISABLE_COPY(DeleteVpcPeeringConnectionResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

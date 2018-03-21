@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUCKETMETRICSCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEBUCKETMETRICSCONFIGURATIONRESPONSE_H
 
+#include "s3response.h"
+#include "deletebucketmetricsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class DeleteBucketMetricsConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteBucketMetricsConfigurationResponse : public DeleteBucketMetricsConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteBucketMetricsConfigurationResponse(const DeleteBucketMetricsConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBucketMetricsConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketMetricsConfigurationResponse)
+    Q_DISABLE_COPY(DeleteBucketMetricsConfigurationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

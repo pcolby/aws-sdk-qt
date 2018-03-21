@@ -20,4 +20,33 @@
 #ifndef QTAWS_MOVEADDRESSTOVPCRESPONSE_H
 #define QTAWS_MOVEADDRESSTOVPCRESPONSE_H
 
+#include "ec2response.h"
+#include "moveaddresstovpcrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class MoveAddressToVpcResponsePrivate;
+
+class QTAWS_EXPORT MoveAddressToVpcResponse : public MoveAddressToVpcResponse {
+    Q_OBJECT
+
+public:
+    MoveAddressToVpcResponse(const MoveAddressToVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const MoveAddressToVpcRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(MoveAddressToVpcResponse)
+    Q_DISABLE_COPY(MoveAddressToVpcResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

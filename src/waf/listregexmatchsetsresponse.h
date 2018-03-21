@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREGEXMATCHSETSRESPONSE_H
 #define QTAWS_LISTREGEXMATCHSETSRESPONSE_H
 
+#include "wafresponse.h"
+#include "listregexmatchsetsrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class ListRegexMatchSetsResponsePrivate;
+
+class QTAWS_EXPORT ListRegexMatchSetsResponse : public ListRegexMatchSetsResponse {
+    Q_OBJECT
+
+public:
+    ListRegexMatchSetsResponse(const ListRegexMatchSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRegexMatchSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRegexMatchSetsResponse)
+    Q_DISABLE_COPY(ListRegexMatchSetsResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

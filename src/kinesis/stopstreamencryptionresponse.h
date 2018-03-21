@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPSTREAMENCRYPTIONRESPONSE_H
 #define QTAWS_STOPSTREAMENCRYPTIONRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "stopstreamencryptionrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class StopStreamEncryptionResponsePrivate;
+
+class QTAWS_EXPORT StopStreamEncryptionResponse : public StopStreamEncryptionResponse {
+    Q_OBJECT
+
+public:
+    StopStreamEncryptionResponse(const StopStreamEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopStreamEncryptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopStreamEncryptionResponse)
+    Q_DISABLE_COPY(StopStreamEncryptionResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

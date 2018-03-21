@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYDBSNAPSHOTRESPONSE_H
 #define QTAWS_COPYDBSNAPSHOTRESPONSE_H
 
+#include "rdsresponse.h"
+#include "copydbsnapshotrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class CopyDBSnapshotResponsePrivate;
+
+class QTAWS_EXPORT CopyDBSnapshotResponse : public CopyDBSnapshotResponse {
+    Q_OBJECT
+
+public:
+    CopyDBSnapshotResponse(const CopyDBSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopyDBSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopyDBSnapshotResponse)
+    Q_DISABLE_COPY(CopyDBSnapshotResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_H
 #define QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "stopdatacollectionbyagentidsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class StopDataCollectionByAgentIdsResponsePrivate;
+
+class QTAWS_EXPORT StopDataCollectionByAgentIdsResponse : public StopDataCollectionByAgentIdsResponse {
+    Q_OBJECT
+
+public:
+    StopDataCollectionByAgentIdsResponse(const StopDataCollectionByAgentIdsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopDataCollectionByAgentIdsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopDataCollectionByAgentIdsResponse)
+    Q_DISABLE_COPY(StopDataCollectionByAgentIdsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

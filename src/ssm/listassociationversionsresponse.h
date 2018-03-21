@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTASSOCIATIONVERSIONSRESPONSE_H
 #define QTAWS_LISTASSOCIATIONVERSIONSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listassociationversionsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListAssociationVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListAssociationVersionsResponse : public ListAssociationVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListAssociationVersionsResponse(const ListAssociationVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAssociationVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAssociationVersionsResponse)
+    Q_DISABLE_COPY(ListAssociationVersionsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

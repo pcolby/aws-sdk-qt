@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFUNCTIONRESPONSE_H
 #define QTAWS_DELETEFUNCTIONRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "deletefunctionrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class DeleteFunctionResponsePrivate;
+
+class QTAWS_EXPORT DeleteFunctionResponse : public DeleteFunctionResponse {
+    Q_OBJECT
+
+public:
+    DeleteFunctionResponse(const DeleteFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFunctionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFunctionResponse)
+    Q_DISABLE_COPY(DeleteFunctionResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTPIPELINEEXECUTIONRESPONSE_H
 #define QTAWS_STARTPIPELINEEXECUTIONRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "startpipelineexecutionrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class StartPipelineExecutionResponsePrivate;
+
+class QTAWS_EXPORT StartPipelineExecutionResponse : public StartPipelineExecutionResponse {
+    Q_OBJECT
+
+public:
+    StartPipelineExecutionResponse(const StartPipelineExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartPipelineExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartPipelineExecutionResponse)
+    Q_DISABLE_COPY(StartPipelineExecutionResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

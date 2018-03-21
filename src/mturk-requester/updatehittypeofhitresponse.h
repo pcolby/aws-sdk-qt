@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEHITTYPEOFHITRESPONSE_H
 #define QTAWS_UPDATEHITTYPEOFHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "updatehittypeofhitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class UpdateHITTypeOfHITResponsePrivate;
+
+class QTAWS_EXPORT UpdateHITTypeOfHITResponse : public UpdateHITTypeOfHITResponse {
+    Q_OBJECT
+
+public:
+    UpdateHITTypeOfHITResponse(const UpdateHITTypeOfHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateHITTypeOfHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateHITTypeOfHITResponse)
+    Q_DISABLE_COPY(UpdateHITTypeOfHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

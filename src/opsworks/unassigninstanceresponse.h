@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNASSIGNINSTANCERESPONSE_H
 #define QTAWS_UNASSIGNINSTANCERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "unassigninstancerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class UnassignInstanceResponsePrivate;
+
+class QTAWS_EXPORT UnassignInstanceResponse : public UnassignInstanceResponse {
+    Q_OBJECT
+
+public:
+    UnassignInstanceResponse(const UnassignInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnassignInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnassignInstanceResponse)
+    Q_DISABLE_COPY(UnassignInstanceResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

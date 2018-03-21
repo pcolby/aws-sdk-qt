@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPLACEMENTGROUPRESPONSE_H
 #define QTAWS_CREATEPLACEMENTGROUPRESPONSE_H
 
+#include "ec2response.h"
+#include "createplacementgrouprequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreatePlacementGroupResponsePrivate;
+
+class QTAWS_EXPORT CreatePlacementGroupResponse : public CreatePlacementGroupResponse {
+    Q_OBJECT
+
+public:
+    CreatePlacementGroupResponse(const CreatePlacementGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePlacementGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlacementGroupResponse)
+    Q_DISABLE_COPY(CreatePlacementGroupResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

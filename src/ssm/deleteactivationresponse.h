@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEACTIVATIONRESPONSE_H
 #define QTAWS_DELETEACTIVATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deleteactivationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeleteActivationResponsePrivate;
+
+class QTAWS_EXPORT DeleteActivationResponse : public DeleteActivationResponse {
+    Q_OBJECT
+
+public:
+    DeleteActivationResponse(const DeleteActivationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteActivationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteActivationResponse)
+    Q_DISABLE_COPY(DeleteActivationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONFIGRESPONSE_H
 #define QTAWS_GETCONFIGRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "getconfigrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class GetConfigResponsePrivate;
+
+class QTAWS_EXPORT GetConfigResponse : public GetConfigResponse {
+    Q_OBJECT
+
+public:
+    GetConfigResponse(const GetConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetConfigResponse)
+    Q_DISABLE_COPY(GetConfigResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

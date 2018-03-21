@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_H
 #define QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_H
 
+#include "emailresponse.h"
+#include "listverifiedemailaddressesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class ListVerifiedEmailAddressesResponsePrivate;
+
+class QTAWS_EXPORT ListVerifiedEmailAddressesResponse : public ListVerifiedEmailAddressesResponse {
+    Q_OBJECT
+
+public:
+    ListVerifiedEmailAddressesResponse(const ListVerifiedEmailAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListVerifiedEmailAddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListVerifiedEmailAddressesResponse)
+    Q_DISABLE_COPY(ListVerifiedEmailAddressesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEIDENTITYRESPONSE_H
 #define QTAWS_DESCRIBEIDENTITYRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "describeidentityrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class DescribeIdentityResponsePrivate;
+
+class QTAWS_EXPORT DescribeIdentityResponse : public DescribeIdentityResponse {
+    Q_OBJECT
+
+public:
+    DescribeIdentityResponse(const DescribeIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdentityResponse)
+    Q_DISABLE_COPY(DescribeIdentityResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

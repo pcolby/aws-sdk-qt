@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPARAMETERHISTORYRESPONSE_H
 #define QTAWS_GETPARAMETERHISTORYRESPONSE_H
 
+#include "ssmresponse.h"
+#include "getparameterhistoryrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetParameterHistoryResponsePrivate;
+
+class QTAWS_EXPORT GetParameterHistoryResponse : public GetParameterHistoryResponse {
+    Q_OBJECT
+
+public:
+    GetParameterHistoryResponse(const GetParameterHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetParameterHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetParameterHistoryResponse)
+    Q_DISABLE_COPY(GetParameterHistoryResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

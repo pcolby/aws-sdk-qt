@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTBUCKETWEBSITERESPONSE_H
 #define QTAWS_PUTBUCKETWEBSITERESPONSE_H
 
+#include "s3response.h"
+#include "putbucketwebsiterequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutBucketWebsiteResponsePrivate;
+
+class QTAWS_EXPORT PutBucketWebsiteResponse : public PutBucketWebsiteResponse {
+    Q_OBJECT
+
+public:
+    PutBucketWebsiteResponse(const PutBucketWebsiteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutBucketWebsiteRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketWebsiteResponse)
+    Q_DISABLE_COPY(PutBucketWebsiteResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

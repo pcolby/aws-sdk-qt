@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTIMAGEBUILDERRESPONSE_H
 #define QTAWS_STARTIMAGEBUILDERRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "startimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class StartImageBuilderResponsePrivate;
+
+class QTAWS_EXPORT StartImageBuilderResponse : public StartImageBuilderResponse {
+    Q_OBJECT
+
+public:
+    StartImageBuilderResponse(const StartImageBuilderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartImageBuilderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartImageBuilderResponse)
+    Q_DISABLE_COPY(StartImageBuilderResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

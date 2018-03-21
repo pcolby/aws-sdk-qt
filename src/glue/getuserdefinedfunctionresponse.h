@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUSERDEFINEDFUNCTIONRESPONSE_H
 #define QTAWS_GETUSERDEFINEDFUNCTIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "getuserdefinedfunctionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetUserDefinedFunctionResponsePrivate;
+
+class QTAWS_EXPORT GetUserDefinedFunctionResponse : public GetUserDefinedFunctionResponse {
+    Q_OBJECT
+
+public:
+    GetUserDefinedFunctionResponse(const GetUserDefinedFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUserDefinedFunctionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUserDefinedFunctionResponse)
+    Q_DISABLE_COPY(GetUserDefinedFunctionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

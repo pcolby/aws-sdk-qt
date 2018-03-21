@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEIMAGEBUILDERSRESPONSE_H
 #define QTAWS_DESCRIBEIMAGEBUILDERSRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "describeimagebuildersrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DescribeImageBuildersResponsePrivate;
+
+class QTAWS_EXPORT DescribeImageBuildersResponse : public DescribeImageBuildersResponse {
+    Q_OBJECT
+
+public:
+    DescribeImageBuildersResponse(const DescribeImageBuildersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeImageBuildersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImageBuildersResponse)
+    Q_DISABLE_COPY(DescribeImageBuildersResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

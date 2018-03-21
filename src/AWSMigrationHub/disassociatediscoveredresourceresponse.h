@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEDISCOVEREDRESOURCERESPONSE_H
 #define QTAWS_DISASSOCIATEDISCOVEREDRESOURCERESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "disassociatediscoveredresourcerequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class DisassociateDiscoveredResourceResponsePrivate;
+
+class QTAWS_EXPORT DisassociateDiscoveredResourceResponse : public DisassociateDiscoveredResourceResponse {
+    Q_OBJECT
+
+public:
+    DisassociateDiscoveredResourceResponse(const DisassociateDiscoveredResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateDiscoveredResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateDiscoveredResourceResponse)
+    Q_DISABLE_COPY(DisassociateDiscoveredResourceResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

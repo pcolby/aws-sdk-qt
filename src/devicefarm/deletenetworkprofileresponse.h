@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENETWORKPROFILERESPONSE_H
 #define QTAWS_DELETENETWORKPROFILERESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "deletenetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class DeleteNetworkProfileResponsePrivate;
+
+class QTAWS_EXPORT DeleteNetworkProfileResponse : public DeleteNetworkProfileResponse {
+    Q_OBJECT
+
+public:
+    DeleteNetworkProfileResponse(const DeleteNetworkProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNetworkProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkProfileResponse)
+    Q_DISABLE_COPY(DeleteNetworkProfileResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

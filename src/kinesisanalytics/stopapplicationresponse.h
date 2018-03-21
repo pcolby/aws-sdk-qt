@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPAPPLICATIONRESPONSE_H
 #define QTAWS_STOPAPPLICATIONRESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "stopapplicationrequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class StopApplicationResponsePrivate;
+
+class QTAWS_EXPORT StopApplicationResponse : public StopApplicationResponse {
+    Q_OBJECT
+
+public:
+    StopApplicationResponse(const StopApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopApplicationResponse)
+    Q_DISABLE_COPY(StopApplicationResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

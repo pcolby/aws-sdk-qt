@@ -20,4 +20,33 @@
 #ifndef QTAWS_ABORTMULTIPARTUPLOADRESPONSE_H
 #define QTAWS_ABORTMULTIPARTUPLOADRESPONSE_H
 
+#include "glacierresponse.h"
+#include "abortmultipartuploadrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class AbortMultipartUploadResponsePrivate;
+
+class QTAWS_EXPORT AbortMultipartUploadResponse : public AbortMultipartUploadResponse {
+    Q_OBJECT
+
+public:
+    AbortMultipartUploadResponse(const AbortMultipartUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AbortMultipartUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AbortMultipartUploadResponse)
+    Q_DISABLE_COPY(AbortMultipartUploadResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

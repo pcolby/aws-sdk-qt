@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETIMETOLIVERESPONSE_H
 #define QTAWS_UPDATETIMETOLIVERESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "updatetimetoliverequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class UpdateTimeToLiveResponsePrivate;
+
+class QTAWS_EXPORT UpdateTimeToLiveResponse : public UpdateTimeToLiveResponse {
+    Q_OBJECT
+
+public:
+    UpdateTimeToLiveResponse(const UpdateTimeToLiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTimeToLiveRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTimeToLiveResponse)
+    Q_DISABLE_COPY(UpdateTimeToLiveResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

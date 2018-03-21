@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_H
 #define QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "addapplicationreferencedatasourcerequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class AddApplicationReferenceDataSourceResponsePrivate;
+
+class QTAWS_EXPORT AddApplicationReferenceDataSourceResponse : public AddApplicationReferenceDataSourceResponse {
+    Q_OBJECT
+
+public:
+    AddApplicationReferenceDataSourceResponse(const AddApplicationReferenceDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddApplicationReferenceDataSourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddApplicationReferenceDataSourceResponse)
+    Q_DISABLE_COPY(AddApplicationReferenceDataSourceResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

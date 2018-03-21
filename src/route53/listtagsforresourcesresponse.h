@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCESRESPONSE_H
 #define QTAWS_LISTTAGSFORRESOURCESRESPONSE_H
 
+#include "route53response.h"
+#include "listtagsforresourcesrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ListTagsForResourcesResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForResourcesResponse : public ListTagsForResourcesResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForResourcesResponse(const ListTagsForResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourcesResponse)
+    Q_DISABLE_COPY(ListTagsForResourcesResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

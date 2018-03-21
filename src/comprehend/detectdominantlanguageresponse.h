@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETECTDOMINANTLANGUAGERESPONSE_H
 #define QTAWS_DETECTDOMINANTLANGUAGERESPONSE_H
 
+#include "comprehendresponse.h"
+#include "detectdominantlanguagerequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class DetectDominantLanguageResponsePrivate;
+
+class QTAWS_EXPORT DetectDominantLanguageResponse : public DetectDominantLanguageResponse {
+    Q_OBJECT
+
+public:
+    DetectDominantLanguageResponse(const DetectDominantLanguageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetectDominantLanguageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetectDominantLanguageResponse)
+    Q_DISABLE_COPY(DetectDominantLanguageResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

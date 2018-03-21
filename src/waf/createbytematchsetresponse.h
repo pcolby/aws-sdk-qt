@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETRESPONSE_H
 #define QTAWS_CREATEBYTEMATCHSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "createbytematchsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class CreateByteMatchSetResponsePrivate;
+
+class QTAWS_EXPORT CreateByteMatchSetResponse : public CreateByteMatchSetResponse {
+    Q_OBJECT
+
+public:
+    CreateByteMatchSetResponse(const CreateByteMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateByteMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateByteMatchSetResponse)
+    Q_DISABLE_COPY(CreateByteMatchSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

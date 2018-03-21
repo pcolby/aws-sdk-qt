@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETABLERESPONSE_H
 #define QTAWS_UPDATETABLERESPONSE_H
 
+#include "glueresponse.h"
+#include "updatetablerequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdateTableResponsePrivate;
+
+class QTAWS_EXPORT UpdateTableResponse : public UpdateTableResponse {
+    Q_OBJECT
+
+public:
+    UpdateTableResponse(const UpdateTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTableResponse)
+    Q_DISABLE_COPY(UpdateTableResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

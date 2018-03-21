@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMESSAGERESPONSE_H
 #define QTAWS_DELETEMESSAGERESPONSE_H
 
+#include "sqsresponse.h"
+#include "deletemessagerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class DeleteMessageResponsePrivate;
+
+class QTAWS_EXPORT DeleteMessageResponse : public DeleteMessageResponse {
+    Q_OBJECT
+
+public:
+    DeleteMessageResponse(const DeleteMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMessageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMessageResponse)
+    Q_DISABLE_COPY(DeleteMessageResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVIRTUALMFADEVICERESPONSE_H
 #define QTAWS_DELETEVIRTUALMFADEVICERESPONSE_H
 
+#include "iamresponse.h"
+#include "deletevirtualmfadevicerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteVirtualMFADeviceResponsePrivate;
+
+class QTAWS_EXPORT DeleteVirtualMFADeviceResponse : public DeleteVirtualMFADeviceResponse {
+    Q_OBJECT
+
+public:
+    DeleteVirtualMFADeviceResponse(const DeleteVirtualMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVirtualMFADeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVirtualMFADeviceResponse)
+    Q_DISABLE_COPY(DeleteVirtualMFADeviceResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

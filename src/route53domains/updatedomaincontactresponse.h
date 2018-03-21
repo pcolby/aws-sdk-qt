@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOMAINCONTACTRESPONSE_H
 #define QTAWS_UPDATEDOMAINCONTACTRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "updatedomaincontactrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class UpdateDomainContactResponsePrivate;
+
+class QTAWS_EXPORT UpdateDomainContactResponse : public UpdateDomainContactResponse {
+    Q_OBJECT
+
+public:
+    UpdateDomainContactResponse(const UpdateDomainContactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDomainContactRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDomainContactResponse)
+    Q_DISABLE_COPY(UpdateDomainContactResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

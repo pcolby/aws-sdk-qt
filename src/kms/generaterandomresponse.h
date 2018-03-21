@@ -20,4 +20,33 @@
 #ifndef QTAWS_GENERATERANDOMRESPONSE_H
 #define QTAWS_GENERATERANDOMRESPONSE_H
 
+#include "kmsresponse.h"
+#include "generaterandomrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class GenerateRandomResponsePrivate;
+
+class QTAWS_EXPORT GenerateRandomResponse : public GenerateRandomResponse {
+    Q_OBJECT
+
+public:
+    GenerateRandomResponse(const GenerateRandomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GenerateRandomRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GenerateRandomResponse)
+    Q_DISABLE_COPY(GenerateRandomResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

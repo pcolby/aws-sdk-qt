@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEFLEETRESPONSE_H
 #define QTAWS_DISASSOCIATEFLEETRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "disassociatefleetrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DisassociateFleetResponsePrivate;
+
+class QTAWS_EXPORT DisassociateFleetResponse : public DisassociateFleetResponse {
+    Q_OBJECT
+
+public:
+    DisassociateFleetResponse(const DisassociateFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateFleetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateFleetResponse)
+    Q_DISABLE_COPY(DisassociateFleetResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

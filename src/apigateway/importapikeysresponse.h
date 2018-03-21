@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTAPIKEYSRESPONSE_H
 #define QTAWS_IMPORTAPIKEYSRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "importapikeysrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class ImportApiKeysResponsePrivate;
+
+class QTAWS_EXPORT ImportApiKeysResponse : public ImportApiKeysResponse {
+    Q_OBJECT
+
+public:
+    ImportApiKeysResponse(const ImportApiKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportApiKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportApiKeysResponse)
+    Q_DISABLE_COPY(ImportApiKeysResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

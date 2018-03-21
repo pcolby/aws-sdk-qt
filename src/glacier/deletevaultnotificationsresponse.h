@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVAULTNOTIFICATIONSRESPONSE_H
 #define QTAWS_DELETEVAULTNOTIFICATIONSRESPONSE_H
 
+#include "glacierresponse.h"
+#include "deletevaultnotificationsrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class DeleteVaultNotificationsResponsePrivate;
+
+class QTAWS_EXPORT DeleteVaultNotificationsResponse : public DeleteVaultNotificationsResponse {
+    Q_OBJECT
+
+public:
+    DeleteVaultNotificationsResponse(const DeleteVaultNotificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVaultNotificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVaultNotificationsResponse)
+    Q_DISABLE_COPY(DeleteVaultNotificationsResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

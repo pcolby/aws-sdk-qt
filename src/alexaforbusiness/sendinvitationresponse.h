@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDINVITATIONRESPONSE_H
 #define QTAWS_SENDINVITATIONRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "sendinvitationrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class SendInvitationResponsePrivate;
+
+class QTAWS_EXPORT SendInvitationResponse : public SendInvitationResponse {
+    Q_OBJECT
+
+public:
+    SendInvitationResponse(const SendInvitationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendInvitationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendInvitationResponse)
+    Q_DISABLE_COPY(SendInvitationResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

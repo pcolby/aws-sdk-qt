@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENCRYPTRESPONSE_H
 #define QTAWS_ENCRYPTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "encryptrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class EncryptResponsePrivate;
+
+class QTAWS_EXPORT EncryptResponse : public EncryptResponse {
+    Q_OBJECT
+
+public:
+    EncryptResponse(const EncryptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EncryptRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EncryptResponse)
+    Q_DISABLE_COPY(EncryptResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

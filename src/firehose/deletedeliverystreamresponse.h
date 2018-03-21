@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDELIVERYSTREAMRESPONSE_H
 #define QTAWS_DELETEDELIVERYSTREAMRESPONSE_H
 
+#include "firehoseresponse.h"
+#include "deletedeliverystreamrequest.h"
+
+namespace AWS {
+
+namespace firehose {
+
+class DeleteDeliveryStreamResponsePrivate;
+
+class QTAWS_EXPORT DeleteDeliveryStreamResponse : public DeleteDeliveryStreamResponse {
+    Q_OBJECT
+
+public:
+    DeleteDeliveryStreamResponse(const DeleteDeliveryStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDeliveryStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeliveryStreamResponse)
+    Q_DISABLE_COPY(DeleteDeliveryStreamResponse)
+
+};
+
+} // namespace firehose
+} // namespace AWS
+
 #endif

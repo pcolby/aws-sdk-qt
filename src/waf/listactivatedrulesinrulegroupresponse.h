@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTACTIVATEDRULESINRULEGROUPRESPONSE_H
 #define QTAWS_LISTACTIVATEDRULESINRULEGROUPRESPONSE_H
 
+#include "wafresponse.h"
+#include "listactivatedrulesinrulegrouprequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class ListActivatedRulesInRuleGroupResponsePrivate;
+
+class QTAWS_EXPORT ListActivatedRulesInRuleGroupResponse : public ListActivatedRulesInRuleGroupResponse {
+    Q_OBJECT
+
+public:
+    ListActivatedRulesInRuleGroupResponse(const ListActivatedRulesInRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListActivatedRulesInRuleGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListActivatedRulesInRuleGroupResponse)
+    Q_DISABLE_COPY(ListActivatedRulesInRuleGroupResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTYPERESPONSE_H
 #define QTAWS_GETTYPERESPONSE_H
 
+#include "appsyncresponse.h"
+#include "gettyperequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class GetTypeResponsePrivate;
+
+class QTAWS_EXPORT GetTypeResponse : public GetTypeResponse {
+    Q_OBJECT
+
+public:
+    GetTypeResponse(const GetTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTypeResponse)
+    Q_DISABLE_COPY(GetTypeResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETNAMEDQUERYRESPONSE_H
 #define QTAWS_BATCHGETNAMEDQUERYRESPONSE_H
 
+#include "athenaresponse.h"
+#include "batchgetnamedqueryrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class BatchGetNamedQueryResponsePrivate;
+
+class QTAWS_EXPORT BatchGetNamedQueryResponse : public BatchGetNamedQueryResponse {
+    Q_OBJECT
+
+public:
+    BatchGetNamedQueryResponse(const BatchGetNamedQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetNamedQueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetNamedQueryResponse)
+    Q_DISABLE_COPY(BatchGetNamedQueryResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

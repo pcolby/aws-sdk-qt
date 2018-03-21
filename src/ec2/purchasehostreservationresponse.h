@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURCHASEHOSTRESERVATIONRESPONSE_H
 #define QTAWS_PURCHASEHOSTRESERVATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "purchasehostreservationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class PurchaseHostReservationResponsePrivate;
+
+class QTAWS_EXPORT PurchaseHostReservationResponse : public PurchaseHostReservationResponse {
+    Q_OBJECT
+
+public:
+    PurchaseHostReservationResponse(const PurchaseHostReservationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurchaseHostReservationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseHostReservationResponse)
+    Q_DISABLE_COPY(PurchaseHostReservationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

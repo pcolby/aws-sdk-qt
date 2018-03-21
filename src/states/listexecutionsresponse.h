@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTEXECUTIONSRESPONSE_H
 #define QTAWS_LISTEXECUTIONSRESPONSE_H
 
+#include "statesresponse.h"
+#include "listexecutionsrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class ListExecutionsResponsePrivate;
+
+class QTAWS_EXPORT ListExecutionsResponse : public ListExecutionsResponse {
+    Q_OBJECT
+
+public:
+    ListExecutionsResponse(const ListExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListExecutionsResponse)
+    Q_DISABLE_COPY(ListExecutionsResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

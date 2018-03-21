@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEBUCKETRESPONSE_H
 #define QTAWS_CREATEBUCKETRESPONSE_H
 
+#include "s3response.h"
+#include "createbucketrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class CreateBucketResponsePrivate;
+
+class QTAWS_EXPORT CreateBucketResponse : public CreateBucketResponse {
+    Q_OBJECT
+
+public:
+    CreateBucketResponse(const CreateBucketRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateBucketRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateBucketResponse)
+    Q_DISABLE_COPY(CreateBucketResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUTTERANCESVIEWRESPONSE_H
 #define QTAWS_GETUTTERANCESVIEWRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getutterancesviewrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetUtterancesViewResponsePrivate;
+
+class QTAWS_EXPORT GetUtterancesViewResponse : public GetUtterancesViewResponse {
+    Q_OBJECT
+
+public:
+    GetUtterancesViewResponse(const GetUtterancesViewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUtterancesViewRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUtterancesViewResponse)
+    Q_DISABLE_COPY(GetUtterancesViewResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

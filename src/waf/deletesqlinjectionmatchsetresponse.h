@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "deletesqlinjectionmatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class DeleteSqlInjectionMatchSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetResponse : public DeleteSqlInjectionMatchSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteSqlInjectionMatchSetResponse(const DeleteSqlInjectionMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSqlInjectionMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSqlInjectionMatchSetResponse)
+    Q_DISABLE_COPY(DeleteSqlInjectionMatchSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

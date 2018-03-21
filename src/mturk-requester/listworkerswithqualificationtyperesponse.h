@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listworkerswithqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListWorkersWithQualificationTypeResponsePrivate;
+
+class QTAWS_EXPORT ListWorkersWithQualificationTypeResponse : public ListWorkersWithQualificationTypeResponse {
+    Q_OBJECT
+
+public:
+    ListWorkersWithQualificationTypeResponse(const ListWorkersWithQualificationTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListWorkersWithQualificationTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListWorkersWithQualificationTypeResponse)
+    Q_DISABLE_COPY(ListWorkersWithQualificationTypeResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

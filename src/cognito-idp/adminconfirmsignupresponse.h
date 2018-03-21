@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINCONFIRMSIGNUPRESPONSE_H
 #define QTAWS_ADMINCONFIRMSIGNUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminconfirmsignuprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminConfirmSignUpResponsePrivate;
+
+class QTAWS_EXPORT AdminConfirmSignUpResponse : public AdminConfirmSignUpResponse {
+    Q_OBJECT
+
+public:
+    AdminConfirmSignUpResponse(const AdminConfirmSignUpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminConfirmSignUpRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminConfirmSignUpResponse)
+    Q_DISABLE_COPY(AdminConfirmSignUpResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

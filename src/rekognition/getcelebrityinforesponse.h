@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCELEBRITYINFORESPONSE_H
 #define QTAWS_GETCELEBRITYINFORESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "getcelebrityinforequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class GetCelebrityInfoResponsePrivate;
+
+class QTAWS_EXPORT GetCelebrityInfoResponse : public GetCelebrityInfoResponse {
+    Q_OBJECT
+
+public:
+    GetCelebrityInfoResponse(const GetCelebrityInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCelebrityInfoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCelebrityInfoResponse)
+    Q_DISABLE_COPY(GetCelebrityInfoResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

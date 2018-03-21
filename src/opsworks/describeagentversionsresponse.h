@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAGENTVERSIONSRESPONSE_H
 #define QTAWS_DESCRIBEAGENTVERSIONSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeagentversionsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeAgentVersionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeAgentVersionsResponse : public DescribeAgentVersionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeAgentVersionsResponse(const DescribeAgentVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAgentVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAgentVersionsResponse)
+    Q_DISABLE_COPY(DescribeAgentVersionsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEPRECATEACTIVITYTYPERESPONSE_H
 #define QTAWS_DEPRECATEACTIVITYTYPERESPONSE_H
 
+#include "swfresponse.h"
+#include "deprecateactivitytyperequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class DeprecateActivityTypeResponsePrivate;
+
+class QTAWS_EXPORT DeprecateActivityTypeResponse : public DeprecateActivityTypeResponse {
+    Q_OBJECT
+
+public:
+    DeprecateActivityTypeResponse(const DeprecateActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeprecateActivityTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateActivityTypeResponse)
+    Q_DISABLE_COPY(DeprecateActivityTypeResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

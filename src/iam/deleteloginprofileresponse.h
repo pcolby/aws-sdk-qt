@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELOGINPROFILERESPONSE_H
 #define QTAWS_DELETELOGINPROFILERESPONSE_H
 
+#include "iamresponse.h"
+#include "deleteloginprofilerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteLoginProfileResponsePrivate;
+
+class QTAWS_EXPORT DeleteLoginProfileResponse : public DeleteLoginProfileResponse {
+    Q_OBJECT
+
+public:
+    DeleteLoginProfileResponse(const DeleteLoginProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLoginProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLoginProfileResponse)
+    Q_DISABLE_COPY(DeleteLoginProfileResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

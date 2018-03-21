@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEIPROUTESRESPONSE_H
 #define QTAWS_REMOVEIPROUTESRESPONSE_H
 
+#include "dsresponse.h"
+#include "removeiproutesrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class RemoveIpRoutesResponsePrivate;
+
+class QTAWS_EXPORT RemoveIpRoutesResponse : public RemoveIpRoutesResponse {
+    Q_OBJECT
+
+public:
+    RemoveIpRoutesResponse(const RemoveIpRoutesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveIpRoutesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveIpRoutesResponse)
+    Q_DISABLE_COPY(RemoveIpRoutesResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

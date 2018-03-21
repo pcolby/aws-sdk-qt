@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "sendtesteventnotificationrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class SendTestEventNotificationResponsePrivate;
+
+class QTAWS_EXPORT SendTestEventNotificationResponse : public SendTestEventNotificationResponse {
+    Q_OBJECT
+
+public:
+    SendTestEventNotificationResponse(const SendTestEventNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendTestEventNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendTestEventNotificationResponse)
+    Q_DISABLE_COPY(SendTestEventNotificationResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGRESPONSE_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGRESPONSE_H
 
+#include "esresponse.h"
+#include "describeelasticsearchdomainconfigrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class DescribeElasticsearchDomainConfigResponsePrivate;
+
+class QTAWS_EXPORT DescribeElasticsearchDomainConfigResponse : public DescribeElasticsearchDomainConfigResponse {
+    Q_OBJECT
+
+public:
+    DescribeElasticsearchDomainConfigResponse(const DescribeElasticsearchDomainConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeElasticsearchDomainConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticsearchDomainConfigResponse)
+    Q_DISABLE_COPY(DescribeElasticsearchDomainConfigResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

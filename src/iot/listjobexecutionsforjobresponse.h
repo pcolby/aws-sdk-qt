@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORJOBRESPONSE_H
 #define QTAWS_LISTJOBEXECUTIONSFORJOBRESPONSE_H
 
+#include "iotresponse.h"
+#include "listjobexecutionsforjobrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListJobExecutionsForJobResponsePrivate;
+
+class QTAWS_EXPORT ListJobExecutionsForJobResponse : public ListJobExecutionsForJobResponse {
+    Q_OBJECT
+
+public:
+    ListJobExecutionsForJobResponse(const ListJobExecutionsForJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListJobExecutionsForJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListJobExecutionsForJobResponse)
+    Q_DISABLE_COPY(ListJobExecutionsForJobResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

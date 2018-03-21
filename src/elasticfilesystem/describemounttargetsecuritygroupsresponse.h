@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "describemounttargetsecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class DescribeMountTargetSecurityGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeMountTargetSecurityGroupsResponse : public DescribeMountTargetSecurityGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeMountTargetSecurityGroupsResponse(const DescribeMountTargetSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeMountTargetSecurityGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMountTargetSecurityGroupsResponse)
+    Q_DISABLE_COPY(DescribeMountTargetSecurityGroupsResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

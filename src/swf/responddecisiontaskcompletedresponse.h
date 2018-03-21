@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESPONDDECISIONTASKCOMPLETEDRESPONSE_H
 #define QTAWS_RESPONDDECISIONTASKCOMPLETEDRESPONSE_H
 
+#include "swfresponse.h"
+#include "responddecisiontaskcompletedrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RespondDecisionTaskCompletedResponsePrivate;
+
+class QTAWS_EXPORT RespondDecisionTaskCompletedResponse : public RespondDecisionTaskCompletedResponse {
+    Q_OBJECT
+
+public:
+    RespondDecisionTaskCompletedResponse(const RespondDecisionTaskCompletedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RespondDecisionTaskCompletedRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RespondDecisionTaskCompletedResponse)
+    Q_DISABLE_COPY(RespondDecisionTaskCompletedResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESESSIONSRESPONSE_H
 #define QTAWS_DESCRIBESESSIONSRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "describesessionsrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DescribeSessionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeSessionsResponse : public DescribeSessionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeSessionsResponse(const DescribeSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSessionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSessionsResponse)
+    Q_DISABLE_COPY(DescribeSessionsResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

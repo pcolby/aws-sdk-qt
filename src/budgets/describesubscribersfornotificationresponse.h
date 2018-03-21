@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "describesubscribersfornotificationrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class DescribeSubscribersForNotificationResponsePrivate;
+
+class QTAWS_EXPORT DescribeSubscribersForNotificationResponse : public DescribeSubscribersForNotificationResponse {
+    Q_OBJECT
+
+public:
+    DescribeSubscribersForNotificationResponse(const DescribeSubscribersForNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSubscribersForNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSubscribersForNotificationResponse)
+    Q_DISABLE_COPY(DescribeSubscribersForNotificationResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

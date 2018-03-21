@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFUNCTIONCONCURRENCYRESPONSE_H
 #define QTAWS_DELETEFUNCTIONCONCURRENCYRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "deletefunctionconcurrencyrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class DeleteFunctionConcurrencyResponsePrivate;
+
+class QTAWS_EXPORT DeleteFunctionConcurrencyResponse : public DeleteFunctionConcurrencyResponse {
+    Q_OBJECT
+
+public:
+    DeleteFunctionConcurrencyResponse(const DeleteFunctionConcurrencyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFunctionConcurrencyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFunctionConcurrencyResponse)
+    Q_DISABLE_COPY(DeleteFunctionConcurrencyResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

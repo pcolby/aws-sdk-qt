@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDIRECTORYRESPONSE_H
 #define QTAWS_GETDIRECTORYRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "getdirectoryrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class GetDirectoryResponsePrivate;
+
+class QTAWS_EXPORT GetDirectoryResponse : public GetDirectoryResponse {
+    Q_OBJECT
+
+public:
+    GetDirectoryResponse(const GetDirectoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDirectoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDirectoryResponse)
+    Q_DISABLE_COPY(GetDirectoryResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

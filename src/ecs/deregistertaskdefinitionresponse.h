@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERTASKDEFINITIONRESPONSE_H
 #define QTAWS_DEREGISTERTASKDEFINITIONRESPONSE_H
 
+#include "ecsresponse.h"
+#include "deregistertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class DeregisterTaskDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeregisterTaskDefinitionResponse : public DeregisterTaskDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeregisterTaskDefinitionResponse(const DeregisterTaskDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterTaskDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterTaskDefinitionResponse)
+    Q_DISABLE_COPY(DeregisterTaskDefinitionResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

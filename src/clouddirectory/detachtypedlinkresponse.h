@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHTYPEDLINKRESPONSE_H
 #define QTAWS_DETACHTYPEDLINKRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "detachtypedlinkrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DetachTypedLinkResponsePrivate;
+
+class QTAWS_EXPORT DetachTypedLinkResponse : public DetachTypedLinkResponse {
+    Q_OBJECT
+
+public:
+    DetachTypedLinkResponse(const DetachTypedLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachTypedLinkRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachTypedLinkResponse)
+    Q_DISABLE_COPY(DetachTypedLinkResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

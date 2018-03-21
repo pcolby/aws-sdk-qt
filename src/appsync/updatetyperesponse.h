@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETYPERESPONSE_H
 #define QTAWS_UPDATETYPERESPONSE_H
 
+#include "appsyncresponse.h"
+#include "updatetyperequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class UpdateTypeResponsePrivate;
+
+class QTAWS_EXPORT UpdateTypeResponse : public UpdateTypeResponse {
+    Q_OBJECT
+
+public:
+    UpdateTypeResponse(const UpdateTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTypeResponse)
+    Q_DISABLE_COPY(UpdateTypeResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

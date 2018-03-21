@@ -20,4 +20,33 @@
 #ifndef QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_H
 #define QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "validatepipelinedefinitionrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class ValidatePipelineDefinitionResponsePrivate;
+
+class QTAWS_EXPORT ValidatePipelineDefinitionResponse : public ValidatePipelineDefinitionResponse {
+    Q_OBJECT
+
+public:
+    ValidatePipelineDefinitionResponse(const ValidatePipelineDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ValidatePipelineDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ValidatePipelineDefinitionResponse)
+    Q_DISABLE_COPY(ValidatePipelineDefinitionResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

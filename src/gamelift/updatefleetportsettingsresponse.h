@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEFLEETPORTSETTINGSRESPONSE_H
 #define QTAWS_UPDATEFLEETPORTSETTINGSRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "updatefleetportsettingsrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class UpdateFleetPortSettingsResponsePrivate;
+
+class QTAWS_EXPORT UpdateFleetPortSettingsResponse : public UpdateFleetPortSettingsResponse {
+    Q_OBJECT
+
+public:
+    UpdateFleetPortSettingsResponse(const UpdateFleetPortSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateFleetPortSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFleetPortSettingsResponse)
+    Q_DISABLE_COPY(UpdateFleetPortSettingsResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

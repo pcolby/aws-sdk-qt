@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDCACHERESPONSE_H
 #define QTAWS_ADDCACHERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "addcacherequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class AddCacheResponsePrivate;
+
+class QTAWS_EXPORT AddCacheResponse : public AddCacheResponse {
+    Q_OBJECT
+
+public:
+    AddCacheResponse(const AddCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddCacheRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddCacheResponse)
+    Q_DISABLE_COPY(AddCacheResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELAGRESPONSE_H
 #define QTAWS_DELETELAGRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "deletelagrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class DeleteLagResponsePrivate;
+
+class QTAWS_EXPORT DeleteLagResponse : public DeleteLagResponse {
+    Q_OBJECT
+
+public:
+    DeleteLagResponse(const DeleteLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLagResponse)
+    Q_DISABLE_COPY(DeleteLagResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

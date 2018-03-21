@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONDITIONALFORWARDERSRESPONSE_H
 #define QTAWS_DESCRIBECONDITIONALFORWARDERSRESPONSE_H
 
+#include "dsresponse.h"
+#include "describeconditionalforwardersrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DescribeConditionalForwardersResponsePrivate;
+
+class QTAWS_EXPORT DescribeConditionalForwardersResponse : public DescribeConditionalForwardersResponse {
+    Q_OBJECT
+
+public:
+    DescribeConditionalForwardersResponse(const DescribeConditionalForwardersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeConditionalForwardersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConditionalForwardersResponse)
+    Q_DISABLE_COPY(DescribeConditionalForwardersResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

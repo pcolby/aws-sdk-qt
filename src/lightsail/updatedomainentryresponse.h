@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOMAINENTRYRESPONSE_H
 #define QTAWS_UPDATEDOMAINENTRYRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "updatedomainentryrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class UpdateDomainEntryResponsePrivate;
+
+class QTAWS_EXPORT UpdateDomainEntryResponse : public UpdateDomainEntryResponse {
+    Q_OBJECT
+
+public:
+    UpdateDomainEntryResponse(const UpdateDomainEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDomainEntryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDomainEntryResponse)
+    Q_DISABLE_COPY(UpdateDomainEntryResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESUBNETRESPONSE_H
 #define QTAWS_DELETESUBNETRESPONSE_H
 
+#include "ec2response.h"
+#include "deletesubnetrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteSubnetResponsePrivate;
+
+class QTAWS_EXPORT DeleteSubnetResponse : public DeleteSubnetResponse {
+    Q_OBJECT
+
+public:
+    DeleteSubnetResponse(const DeleteSubnetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSubnetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubnetResponse)
+    Q_DISABLE_COPY(DeleteSubnetResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

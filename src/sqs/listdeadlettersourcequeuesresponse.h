@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_H
 
+#include "sqsresponse.h"
+#include "listdeadlettersourcequeuesrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class ListDeadLetterSourceQueuesResponsePrivate;
+
+class QTAWS_EXPORT ListDeadLetterSourceQueuesResponse : public ListDeadLetterSourceQueuesResponse {
+    Q_OBJECT
+
+public:
+    ListDeadLetterSourceQueuesResponse(const ListDeadLetterSourceQueuesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDeadLetterSourceQueuesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDeadLetterSourceQueuesResponse)
+    Q_DISABLE_COPY(ListDeadLetterSourceQueuesResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

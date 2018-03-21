@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminremoveuserfromgrouprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminRemoveUserFromGroupResponsePrivate;
+
+class QTAWS_EXPORT AdminRemoveUserFromGroupResponse : public AdminRemoveUserFromGroupResponse {
+    Q_OBJECT
+
+public:
+    AdminRemoveUserFromGroupResponse(const AdminRemoveUserFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminRemoveUserFromGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminRemoveUserFromGroupResponse)
+    Q_DISABLE_COPY(AdminRemoveUserFromGroupResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

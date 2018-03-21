@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_H
 #define QTAWS_ADMINRESPONDTOAUTHCHALLENGERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminrespondtoauthchallengerequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminRespondToAuthChallengeResponsePrivate;
+
+class QTAWS_EXPORT AdminRespondToAuthChallengeResponse : public AdminRespondToAuthChallengeResponse {
+    Q_OBJECT
+
+public:
+    AdminRespondToAuthChallengeResponse(const AdminRespondToAuthChallengeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminRespondToAuthChallengeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminRespondToAuthChallengeResponse)
+    Q_DISABLE_COPY(AdminRespondToAuthChallengeResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

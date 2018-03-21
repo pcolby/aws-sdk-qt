@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETNAMESPACERESPONSE_H
 #define QTAWS_GETNAMESPACERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "getnamespacerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class GetNamespaceResponsePrivate;
+
+class QTAWS_EXPORT GetNamespaceResponse : public GetNamespaceResponse {
+    Q_OBJECT
+
+public:
+    GetNamespaceResponse(const GetNamespaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetNamespaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetNamespaceResponse)
+    Q_DISABLE_COPY(GetNamespaceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_H
 
+#include "configresponse.h"
+#include "describeconfigruleevaluationstatusrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DescribeConfigRuleEvaluationStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusResponse : public DescribeConfigRuleEvaluationStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeConfigRuleEvaluationStatusResponse(const DescribeConfigRuleEvaluationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeConfigRuleEvaluationStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigRuleEvaluationStatusResponse)
+    Q_DISABLE_COPY(DescribeConfigRuleEvaluationStatusResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

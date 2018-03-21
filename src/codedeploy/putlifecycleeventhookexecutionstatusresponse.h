@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSRESPONSE_H
 #define QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "putlifecycleeventhookexecutionstatusrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class PutLifecycleEventHookExecutionStatusResponsePrivate;
+
+class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusResponse : public PutLifecycleEventHookExecutionStatusResponse {
+    Q_OBJECT
+
+public:
+    PutLifecycleEventHookExecutionStatusResponse(const PutLifecycleEventHookExecutionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutLifecycleEventHookExecutionStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecycleEventHookExecutionStatusResponse)
+    Q_DISABLE_COPY(PutLifecycleEventHookExecutionStatusResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

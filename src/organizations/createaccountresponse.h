@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEACCOUNTRESPONSE_H
 #define QTAWS_CREATEACCOUNTRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "createaccountrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class CreateAccountResponsePrivate;
+
+class QTAWS_EXPORT CreateAccountResponse : public CreateAccountResponse {
+    Q_OBJECT
+
+public:
+    CreateAccountResponse(const CreateAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAccountResponse)
+    Q_DISABLE_COPY(CreateAccountResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

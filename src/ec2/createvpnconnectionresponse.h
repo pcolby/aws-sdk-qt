@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEVPNCONNECTIONRESPONSE_H
 #define QTAWS_CREATEVPNCONNECTIONRESPONSE_H
 
+#include "ec2response.h"
+#include "createvpnconnectionrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateVpnConnectionResponsePrivate;
+
+class QTAWS_EXPORT CreateVpnConnectionResponse : public CreateVpnConnectionResponse {
+    Q_OBJECT
+
+public:
+    CreateVpnConnectionResponse(const CreateVpnConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateVpnConnectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateVpnConnectionResponse)
+    Q_DISABLE_COPY(CreateVpnConnectionResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

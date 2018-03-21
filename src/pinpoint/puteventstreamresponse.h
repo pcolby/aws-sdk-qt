@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTEVENTSTREAMRESPONSE_H
 #define QTAWS_PUTEVENTSTREAMRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "puteventstreamrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class PutEventStreamResponsePrivate;
+
+class QTAWS_EXPORT PutEventStreamResponse : public PutEventStreamResponse {
+    Q_OBJECT
+
+public:
+    PutEventStreamResponse(const PutEventStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutEventStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutEventStreamResponse)
+    Q_DISABLE_COPY(PutEventStreamResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

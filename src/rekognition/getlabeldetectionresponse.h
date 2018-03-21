@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETLABELDETECTIONRESPONSE_H
 #define QTAWS_GETLABELDETECTIONRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "getlabeldetectionrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class GetLabelDetectionResponsePrivate;
+
+class QTAWS_EXPORT GetLabelDetectionResponse : public GetLabelDetectionResponse {
+    Q_OBJECT
+
+public:
+    GetLabelDetectionResponse(const GetLabelDetectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetLabelDetectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetLabelDetectionResponse)
+    Q_DISABLE_COPY(GetLabelDetectionResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

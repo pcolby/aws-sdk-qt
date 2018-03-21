@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOPENIDTOKENRESPONSE_H
 #define QTAWS_GETOPENIDTOKENRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "getopenidtokenrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class GetOpenIdTokenResponsePrivate;
+
+class QTAWS_EXPORT GetOpenIdTokenResponse : public GetOpenIdTokenResponse {
+    Q_OBJECT
+
+public:
+    GetOpenIdTokenResponse(const GetOpenIdTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetOpenIdTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetOpenIdTokenResponse)
+    Q_DISABLE_COPY(GetOpenIdTokenResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

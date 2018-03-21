@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTSUMMARYRESPONSE_H
 #define QTAWS_GETACCOUNTSUMMARYRESPONSE_H
 
+#include "iamresponse.h"
+#include "getaccountsummaryrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetAccountSummaryResponsePrivate;
+
+class QTAWS_EXPORT GetAccountSummaryResponse : public GetAccountSummaryResponse {
+    Q_OBJECT
+
+public:
+    GetAccountSummaryResponse(const GetAccountSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountSummaryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountSummaryResponse)
+    Q_DISABLE_COPY(GetAccountSummaryResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

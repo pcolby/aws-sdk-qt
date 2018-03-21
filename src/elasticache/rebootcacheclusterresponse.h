@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTCACHECLUSTERRESPONSE_H
 #define QTAWS_REBOOTCACHECLUSTERRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "rebootcacheclusterrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class RebootCacheClusterResponsePrivate;
+
+class QTAWS_EXPORT RebootCacheClusterResponse : public RebootCacheClusterResponse {
+    Q_OBJECT
+
+public:
+    RebootCacheClusterResponse(const RebootCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootCacheClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootCacheClusterResponse)
+    Q_DISABLE_COPY(RebootCacheClusterResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

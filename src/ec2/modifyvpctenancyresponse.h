@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYVPCTENANCYRESPONSE_H
 #define QTAWS_MODIFYVPCTENANCYRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyvpctenancyrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyVpcTenancyResponsePrivate;
+
+class QTAWS_EXPORT ModifyVpcTenancyResponse : public ModifyVpcTenancyResponse {
+    Q_OBJECT
+
+public:
+    ModifyVpcTenancyResponse(const ModifyVpcTenancyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyVpcTenancyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcTenancyResponse)
+    Q_DISABLE_COPY(ModifyVpcTenancyResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

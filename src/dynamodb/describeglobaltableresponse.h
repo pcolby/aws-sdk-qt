@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEGLOBALTABLERESPONSE_H
 #define QTAWS_DESCRIBEGLOBALTABLERESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "describeglobaltablerequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DescribeGlobalTableResponsePrivate;
+
+class QTAWS_EXPORT DescribeGlobalTableResponse : public DescribeGlobalTableResponse {
+    Q_OBJECT
+
+public:
+    DescribeGlobalTableResponse(const DescribeGlobalTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeGlobalTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeGlobalTableResponse)
+    Q_DISABLE_COPY(DescribeGlobalTableResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOGSTREAMSRESPONSE_H
 #define QTAWS_DESCRIBELOGSTREAMSRESPONSE_H
 
+#include "logsresponse.h"
+#include "describelogstreamsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DescribeLogStreamsResponsePrivate;
+
+class QTAWS_EXPORT DescribeLogStreamsResponse : public DescribeLogStreamsResponse {
+    Q_OBJECT
+
+public:
+    DescribeLogStreamsResponse(const DescribeLogStreamsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLogStreamsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLogStreamsResponse)
+    Q_DISABLE_COPY(DescribeLogStreamsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

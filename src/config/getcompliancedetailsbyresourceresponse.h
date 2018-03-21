@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYRESOURCERESPONSE_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYRESOURCERESPONSE_H
 
+#include "configresponse.h"
+#include "getcompliancedetailsbyresourcerequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class GetComplianceDetailsByResourceResponsePrivate;
+
+class QTAWS_EXPORT GetComplianceDetailsByResourceResponse : public GetComplianceDetailsByResourceResponse {
+    Q_OBJECT
+
+public:
+    GetComplianceDetailsByResourceResponse(const GetComplianceDetailsByResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetComplianceDetailsByResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetComplianceDetailsByResourceResponse)
+    Q_DISABLE_COPY(GetComplianceDetailsByResourceResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

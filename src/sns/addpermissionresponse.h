@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDPERMISSIONRESPONSE_H
 #define QTAWS_ADDPERMISSIONRESPONSE_H
 
+#include "snsresponse.h"
+#include "addpermissionrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class AddPermissionResponsePrivate;
+
+class QTAWS_EXPORT AddPermissionResponse : public AddPermissionResponse {
+    Q_OBJECT
+
+public:
+    AddPermissionResponse(const AddPermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddPermissionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddPermissionResponse)
+    Q_DISABLE_COPY(AddPermissionResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

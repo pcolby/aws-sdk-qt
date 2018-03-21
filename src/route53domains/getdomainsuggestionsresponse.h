@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOMAINSUGGESTIONSRESPONSE_H
 #define QTAWS_GETDOMAINSUGGESTIONSRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "getdomainsuggestionsrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class GetDomainSuggestionsResponsePrivate;
+
+class QTAWS_EXPORT GetDomainSuggestionsResponse : public GetDomainSuggestionsResponse {
+    Q_OBJECT
+
+public:
+    GetDomainSuggestionsResponse(const GetDomainSuggestionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDomainSuggestionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainSuggestionsResponse)
+    Q_DISABLE_COPY(GetDomainSuggestionsResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

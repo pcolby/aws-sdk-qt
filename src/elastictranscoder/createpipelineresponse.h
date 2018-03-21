@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPIPELINERESPONSE_H
 #define QTAWS_CREATEPIPELINERESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "createpipelinerequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class CreatePipelineResponsePrivate;
+
+class QTAWS_EXPORT CreatePipelineResponse : public CreatePipelineResponse {
+    Q_OBJECT
+
+public:
+    CreatePipelineResponse(const CreatePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePipelineResponse)
+    Q_DISABLE_COPY(CreatePipelineResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

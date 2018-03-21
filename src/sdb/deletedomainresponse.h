@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDOMAINRESPONSE_H
 #define QTAWS_DELETEDOMAINRESPONSE_H
 
+#include "sdbresponse.h"
+#include "deletedomainrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class DeleteDomainResponsePrivate;
+
+class QTAWS_EXPORT DeleteDomainResponse : public DeleteDomainResponse {
+    Q_OBJECT
+
+public:
+    DeleteDomainResponse(const DeleteDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDomainResponse)
+    Q_DISABLE_COPY(DeleteDomainResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

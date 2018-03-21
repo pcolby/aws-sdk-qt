@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_H
 #define QTAWS_SENDBULKTEMPLATEDEMAILRESPONSE_H
 
+#include "emailresponse.h"
+#include "sendbulktemplatedemailrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SendBulkTemplatedEmailResponsePrivate;
+
+class QTAWS_EXPORT SendBulkTemplatedEmailResponse : public SendBulkTemplatedEmailResponse {
+    Q_OBJECT
+
+public:
+    SendBulkTemplatedEmailResponse(const SendBulkTemplatedEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendBulkTemplatedEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendBulkTemplatedEmailResponse)
+    Q_DISABLE_COPY(SendBulkTemplatedEmailResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

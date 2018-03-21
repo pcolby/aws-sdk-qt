@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHINTERNETGATEWAYRESPONSE_H
 #define QTAWS_DETACHINTERNETGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "detachinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DetachInternetGatewayResponsePrivate;
+
+class QTAWS_EXPORT DetachInternetGatewayResponse : public DetachInternetGatewayResponse {
+    Q_OBJECT
+
+public:
+    DetachInternetGatewayResponse(const DetachInternetGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachInternetGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachInternetGatewayResponse)
+    Q_DISABLE_COPY(DetachInternetGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

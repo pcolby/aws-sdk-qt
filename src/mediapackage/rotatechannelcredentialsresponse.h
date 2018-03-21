@@ -20,4 +20,33 @@
 #ifndef QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_H
 #define QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "rotatechannelcredentialsrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class RotateChannelCredentialsResponsePrivate;
+
+class QTAWS_EXPORT RotateChannelCredentialsResponse : public RotateChannelCredentialsResponse {
+    Q_OBJECT
+
+public:
+    RotateChannelCredentialsResponse(const RotateChannelCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RotateChannelCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RotateChannelCredentialsResponse)
+    Q_DISABLE_COPY(RotateChannelCredentialsResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

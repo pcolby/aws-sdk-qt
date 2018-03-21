@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETLOGGINGOPTIONSRESPONSE_H
 #define QTAWS_SETLOGGINGOPTIONSRESPONSE_H
 
+#include "iotresponse.h"
+#include "setloggingoptionsrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class SetLoggingOptionsResponsePrivate;
+
+class QTAWS_EXPORT SetLoggingOptionsResponse : public SetLoggingOptionsResponse {
+    Q_OBJECT
+
+public:
+    SetLoggingOptionsResponse(const SetLoggingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetLoggingOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetLoggingOptionsResponse)
+    Q_DISABLE_COPY(SetLoggingOptionsResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

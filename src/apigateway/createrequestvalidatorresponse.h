@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREQUESTVALIDATORRESPONSE_H
 #define QTAWS_CREATEREQUESTVALIDATORRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "createrequestvalidatorrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class CreateRequestValidatorResponsePrivate;
+
+class QTAWS_EXPORT CreateRequestValidatorResponse : public CreateRequestValidatorResponse {
+    Q_OBJECT
+
+public:
+    CreateRequestValidatorResponse(const CreateRequestValidatorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRequestValidatorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRequestValidatorResponse)
+    Q_DISABLE_COPY(CreateRequestValidatorResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

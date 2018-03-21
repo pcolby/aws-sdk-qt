@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_H
 #define QTAWS_DESCRIBETAGSRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DescribeTagsResponsePrivate;
+
+class QTAWS_EXPORT DescribeTagsResponse : public DescribeTagsResponse {
+    Q_OBJECT
+
+public:
+    DescribeTagsResponse(const DescribeTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTagsResponse)
+    Q_DISABLE_COPY(DescribeTagsResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

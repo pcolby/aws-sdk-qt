@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTLIFECYCLEPOLICYRESPONSE_H
 #define QTAWS_PUTLIFECYCLEPOLICYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "putlifecyclepolicyrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class PutLifecyclePolicyResponsePrivate;
+
+class QTAWS_EXPORT PutLifecyclePolicyResponse : public PutLifecyclePolicyResponse {
+    Q_OBJECT
+
+public:
+    PutLifecyclePolicyResponse(const PutLifecyclePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutLifecyclePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecyclePolicyResponse)
+    Q_DISABLE_COPY(PutLifecyclePolicyResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESRESPONSE_H
 #define QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESRESPONSE_H
 
+#include "emailresponse.h"
+#include "getidentitymailfromdomainattributesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetIdentityMailFromDomainAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetIdentityMailFromDomainAttributesResponse : public GetIdentityMailFromDomainAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetIdentityMailFromDomainAttributesResponse(const GetIdentityMailFromDomainAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIdentityMailFromDomainAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityMailFromDomainAttributesResponse)
+    Q_DISABLE_COPY(GetIdentityMailFromDomainAttributesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

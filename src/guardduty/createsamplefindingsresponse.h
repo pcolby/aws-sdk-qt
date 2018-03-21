@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESAMPLEFINDINGSRESPONSE_H
 #define QTAWS_CREATESAMPLEFINDINGSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "createsamplefindingsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class CreateSampleFindingsResponsePrivate;
+
+class QTAWS_EXPORT CreateSampleFindingsResponse : public CreateSampleFindingsResponse {
+    Q_OBJECT
+
+public:
+    CreateSampleFindingsResponse(const CreateSampleFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSampleFindingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSampleFindingsResponse)
+    Q_DISABLE_COPY(CreateSampleFindingsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

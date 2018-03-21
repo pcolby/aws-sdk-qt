@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBUCKETMETRICSCONFIGURATIONSRESPONSE_H
 #define QTAWS_LISTBUCKETMETRICSCONFIGURATIONSRESPONSE_H
 
+#include "s3response.h"
+#include "listbucketmetricsconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class ListBucketMetricsConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT ListBucketMetricsConfigurationsResponse : public ListBucketMetricsConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    ListBucketMetricsConfigurationsResponse(const ListBucketMetricsConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBucketMetricsConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBucketMetricsConfigurationsResponse)
+    Q_DISABLE_COPY(ListBucketMetricsConfigurationsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LEAVEORGANIZATIONRESPONSE_H
 #define QTAWS_LEAVEORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "leaveorganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class LeaveOrganizationResponsePrivate;
+
+class QTAWS_EXPORT LeaveOrganizationResponse : public LeaveOrganizationResponse {
+    Q_OBJECT
+
+public:
+    LeaveOrganizationResponse(const LeaveOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const LeaveOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(LeaveOrganizationResponse)
+    Q_DISABLE_COPY(LeaveOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

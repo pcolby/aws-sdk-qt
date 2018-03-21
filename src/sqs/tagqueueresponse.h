@@ -20,4 +20,33 @@
 #ifndef QTAWS_TAGQUEUERESPONSE_H
 #define QTAWS_TAGQUEUERESPONSE_H
 
+#include "sqsresponse.h"
+#include "tagqueuerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class TagQueueResponsePrivate;
+
+class QTAWS_EXPORT TagQueueResponse : public TagQueueResponse {
+    Q_OBJECT
+
+public:
+    TagQueueResponse(const TagQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TagQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TagQueueResponse)
+    Q_DISABLE_COPY(TagQueueResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

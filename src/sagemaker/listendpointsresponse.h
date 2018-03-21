@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTENDPOINTSRESPONSE_H
 #define QTAWS_LISTENDPOINTSRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "listendpointsrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class ListEndpointsResponsePrivate;
+
+class QTAWS_EXPORT ListEndpointsResponse : public ListEndpointsResponse {
+    Q_OBJECT
+
+public:
+    ListEndpointsResponse(const ListEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListEndpointsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListEndpointsResponse)
+    Q_DISABLE_COPY(ListEndpointsResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

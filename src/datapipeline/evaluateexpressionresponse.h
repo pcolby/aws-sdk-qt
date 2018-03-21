@@ -20,4 +20,33 @@
 #ifndef QTAWS_EVALUATEEXPRESSIONRESPONSE_H
 #define QTAWS_EVALUATEEXPRESSIONRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "evaluateexpressionrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class EvaluateExpressionResponsePrivate;
+
+class QTAWS_EXPORT EvaluateExpressionResponse : public EvaluateExpressionResponse {
+    Q_OBJECT
+
+public:
+    EvaluateExpressionResponse(const EvaluateExpressionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EvaluateExpressionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EvaluateExpressionResponse)
+    Q_DISABLE_COPY(EvaluateExpressionResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

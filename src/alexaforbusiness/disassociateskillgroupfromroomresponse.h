@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATESKILLGROUPFROMROOMRESPONSE_H
 #define QTAWS_DISASSOCIATESKILLGROUPFROMROOMRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "disassociateskillgroupfromroomrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class DisassociateSkillGroupFromRoomResponsePrivate;
+
+class QTAWS_EXPORT DisassociateSkillGroupFromRoomResponse : public DisassociateSkillGroupFromRoomResponse {
+    Q_OBJECT
+
+public:
+    DisassociateSkillGroupFromRoomResponse(const DisassociateSkillGroupFromRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateSkillGroupFromRoomRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateSkillGroupFromRoomResponse)
+    Q_DISABLE_COPY(DisassociateSkillGroupFromRoomResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

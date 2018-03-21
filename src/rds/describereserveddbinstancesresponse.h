@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESRESPONSE_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describereserveddbinstancesrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeReservedDBInstancesResponsePrivate;
+
+class QTAWS_EXPORT DescribeReservedDBInstancesResponse : public DescribeReservedDBInstancesResponse {
+    Q_OBJECT
+
+public:
+    DescribeReservedDBInstancesResponse(const DescribeReservedDBInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReservedDBInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReservedDBInstancesResponse)
+    Q_DISABLE_COPY(DescribeReservedDBInstancesResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

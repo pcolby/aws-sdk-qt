@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEEVALUATIONRESPONSE_H
 #define QTAWS_DELETEEVALUATIONRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "deleteevaluationrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class DeleteEvaluationResponsePrivate;
+
+class QTAWS_EXPORT DeleteEvaluationResponse : public DeleteEvaluationResponse {
+    Q_OBJECT
+
+public:
+    DeleteEvaluationResponse(const DeleteEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEvaluationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEvaluationResponse)
+    Q_DISABLE_COPY(DeleteEvaluationResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

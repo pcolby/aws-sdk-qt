@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETDESIREDCAPACITYRESPONSE_H
 #define QTAWS_SETDESIREDCAPACITYRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "setdesiredcapacityrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class SetDesiredCapacityResponsePrivate;
+
+class QTAWS_EXPORT SetDesiredCapacityResponse : public SetDesiredCapacityResponse {
+    Q_OBJECT
+
+public:
+    SetDesiredCapacityResponse(const SetDesiredCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetDesiredCapacityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetDesiredCapacityResponse)
+    Q_DISABLE_COPY(SetDesiredCapacityResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

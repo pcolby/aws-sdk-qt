@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDELETEATTRIBUTESRESPONSE_H
 #define QTAWS_BATCHDELETEATTRIBUTESRESPONSE_H
 
+#include "sdbresponse.h"
+#include "batchdeleteattributesrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class BatchDeleteAttributesResponsePrivate;
+
+class QTAWS_EXPORT BatchDeleteAttributesResponse : public BatchDeleteAttributesResponse {
+    Q_OBJECT
+
+public:
+    BatchDeleteAttributesResponse(const BatchDeleteAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDeleteAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteAttributesResponse)
+    Q_DISABLE_COPY(BatchDeleteAttributesResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

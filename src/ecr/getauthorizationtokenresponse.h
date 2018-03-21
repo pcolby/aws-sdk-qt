@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAUTHORIZATIONTOKENRESPONSE_H
 #define QTAWS_GETAUTHORIZATIONTOKENRESPONSE_H
 
+#include "ecrresponse.h"
+#include "getauthorizationtokenrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class GetAuthorizationTokenResponsePrivate;
+
+class QTAWS_EXPORT GetAuthorizationTokenResponse : public GetAuthorizationTokenResponse {
+    Q_OBJECT
+
+public:
+    GetAuthorizationTokenResponse(const GetAuthorizationTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAuthorizationTokenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAuthorizationTokenResponse)
+    Q_DISABLE_COPY(GetAuthorizationTokenResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

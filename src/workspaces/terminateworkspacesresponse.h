@@ -20,4 +20,33 @@
 #ifndef QTAWS_TERMINATEWORKSPACESRESPONSE_H
 #define QTAWS_TERMINATEWORKSPACESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "terminateworkspacesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class TerminateWorkspacesResponsePrivate;
+
+class QTAWS_EXPORT TerminateWorkspacesResponse : public TerminateWorkspacesResponse {
+    Q_OBJECT
+
+public:
+    TerminateWorkspacesResponse(const TerminateWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TerminateWorkspacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TerminateWorkspacesResponse)
+    Q_DISABLE_COPY(TerminateWorkspacesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

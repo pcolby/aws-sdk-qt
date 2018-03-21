@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_H
 #define QTAWS_UNTAGRESOURCERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UntagResourceResponsePrivate;
+
+class QTAWS_EXPORT UntagResourceResponse : public UntagResourceResponse {
+    Q_OBJECT
+
+public:
+    UntagResourceResponse(const UntagResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourceResponse)
+    Q_DISABLE_COPY(UntagResourceResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

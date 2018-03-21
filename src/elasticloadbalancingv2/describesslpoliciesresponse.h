@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESSLPOLICIESRESPONSE_H
 #define QTAWS_DESCRIBESSLPOLICIESRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "describesslpoliciesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DescribeSSLPoliciesResponsePrivate;
+
+class QTAWS_EXPORT DescribeSSLPoliciesResponse : public DescribeSSLPoliciesResponse {
+    Q_OBJECT
+
+public:
+    DescribeSSLPoliciesResponse(const DescribeSSLPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSSLPoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSSLPoliciesResponse)
+    Q_DISABLE_COPY(DescribeSSLPoliciesResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

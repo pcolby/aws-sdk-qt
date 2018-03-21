@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSRESPONSE_H
 #define QTAWS_PUTCOMPLIANCEITEMSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "putcomplianceitemsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class PutComplianceItemsResponsePrivate;
+
+class QTAWS_EXPORT PutComplianceItemsResponse : public PutComplianceItemsResponse {
+    Q_OBJECT
+
+public:
+    PutComplianceItemsResponse(const PutComplianceItemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutComplianceItemsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutComplianceItemsResponse)
+    Q_DISABLE_COPY(PutComplianceItemsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

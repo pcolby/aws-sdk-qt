@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEADDRESSESRESPONSE_H
 #define QTAWS_DESCRIBEADDRESSESRESPONSE_H
 
+#include "ec2response.h"
+#include "describeaddressesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeAddressesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAddressesResponse : public DescribeAddressesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAddressesResponse(const DescribeAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAddressesResponse)
+    Q_DISABLE_COPY(DescribeAddressesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

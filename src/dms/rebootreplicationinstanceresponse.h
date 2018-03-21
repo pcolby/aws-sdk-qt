@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_H
 
+#include "dmsresponse.h"
+#include "rebootreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class RebootReplicationInstanceResponsePrivate;
+
+class QTAWS_EXPORT RebootReplicationInstanceResponse : public RebootReplicationInstanceResponse {
+    Q_OBJECT
+
+public:
+    RebootReplicationInstanceResponse(const RebootReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootReplicationInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootReplicationInstanceResponse)
+    Q_DISABLE_COPY(RebootReplicationInstanceResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

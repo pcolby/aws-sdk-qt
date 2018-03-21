@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUSAGERESPONSE_H
 #define QTAWS_GETUSAGERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getusagerequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetUsageResponsePrivate;
+
+class QTAWS_EXPORT GetUsageResponse : public GetUsageResponse {
+    Q_OBJECT
+
+public:
+    GetUsageResponse(const GetUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUsageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUsageResponse)
+    Q_DISABLE_COPY(GetUsageResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

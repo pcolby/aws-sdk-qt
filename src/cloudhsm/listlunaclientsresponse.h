@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTLUNACLIENTSRESPONSE_H
 #define QTAWS_LISTLUNACLIENTSRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "listlunaclientsrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class ListLunaClientsResponsePrivate;
+
+class QTAWS_EXPORT ListLunaClientsResponse : public ListLunaClientsResponse {
+    Q_OBJECT
+
+public:
+    ListLunaClientsResponse(const ListLunaClientsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListLunaClientsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListLunaClientsResponse)
+    Q_DISABLE_COPY(ListLunaClientsResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

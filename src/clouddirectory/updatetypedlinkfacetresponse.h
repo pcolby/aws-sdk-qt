@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETYPEDLINKFACETRESPONSE_H
 #define QTAWS_UPDATETYPEDLINKFACETRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "updatetypedlinkfacetrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class UpdateTypedLinkFacetResponsePrivate;
+
+class QTAWS_EXPORT UpdateTypedLinkFacetResponse : public UpdateTypedLinkFacetResponse {
+    Q_OBJECT
+
+public:
+    UpdateTypedLinkFacetResponse(const UpdateTypedLinkFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTypedLinkFacetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTypedLinkFacetResponse)
+    Q_DISABLE_COPY(UpdateTypedLinkFacetResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUSERATTRIBUTEVERIFICATIONCODERESPONSE_H
 #define QTAWS_GETUSERATTRIBUTEVERIFICATIONCODERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "getuserattributeverificationcoderequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class GetUserAttributeVerificationCodeResponsePrivate;
+
+class QTAWS_EXPORT GetUserAttributeVerificationCodeResponse : public GetUserAttributeVerificationCodeResponse {
+    Q_OBJECT
+
+public:
+    GetUserAttributeVerificationCodeResponse(const GetUserAttributeVerificationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUserAttributeVerificationCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUserAttributeVerificationCodeResponse)
+    Q_DISABLE_COPY(GetUserAttributeVerificationCodeResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

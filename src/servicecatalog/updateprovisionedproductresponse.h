@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPROVISIONEDPRODUCTRESPONSE_H
 #define QTAWS_UPDATEPROVISIONEDPRODUCTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "updateprovisionedproductrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class UpdateProvisionedProductResponsePrivate;
+
+class QTAWS_EXPORT UpdateProvisionedProductResponse : public UpdateProvisionedProductResponse {
+    Q_OBJECT
+
+public:
+    UpdateProvisionedProductResponse(const UpdateProvisionedProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateProvisionedProductRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProvisionedProductResponse)
+    Q_DISABLE_COPY(UpdateProvisionedProductResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REQUESTUPLOADCREDENTIALSRESPONSE_H
 #define QTAWS_REQUESTUPLOADCREDENTIALSRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "requestuploadcredentialsrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class RequestUploadCredentialsResponsePrivate;
+
+class QTAWS_EXPORT RequestUploadCredentialsResponse : public RequestUploadCredentialsResponse {
+    Q_OBJECT
+
+public:
+    RequestUploadCredentialsResponse(const RequestUploadCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RequestUploadCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RequestUploadCredentialsResponse)
+    Q_DISABLE_COPY(RequestUploadCredentialsResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

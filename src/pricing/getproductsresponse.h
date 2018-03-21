@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPRODUCTSRESPONSE_H
 #define QTAWS_GETPRODUCTSRESPONSE_H
 
+#include "pricingresponse.h"
+#include "getproductsrequest.h"
+
+namespace AWS {
+
+namespace pricing {
+
+class GetProductsResponsePrivate;
+
+class QTAWS_EXPORT GetProductsResponse : public GetProductsResponse {
+    Q_OBJECT
+
+public:
+    GetProductsResponse(const GetProductsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetProductsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetProductsResponse)
+    Q_DISABLE_COPY(GetProductsResponse)
+
+};
+
+} // namespace pricing
+} // namespace AWS
+
 #endif

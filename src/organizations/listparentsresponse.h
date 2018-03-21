@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPARENTSRESPONSE_H
 #define QTAWS_LISTPARENTSRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "listparentsrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class ListParentsResponsePrivate;
+
+class QTAWS_EXPORT ListParentsResponse : public ListParentsResponse {
+    Q_OBJECT
+
+public:
+    ListParentsResponse(const ListParentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListParentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListParentsResponse)
+    Q_DISABLE_COPY(ListParentsResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

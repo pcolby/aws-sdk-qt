@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMASTERACCOUNTRESPONSE_H
 #define QTAWS_GETMASTERACCOUNTRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "getmasteraccountrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class GetMasterAccountResponsePrivate;
+
+class QTAWS_EXPORT GetMasterAccountResponse : public GetMasterAccountResponse {
+    Q_OBJECT
+
+public:
+    GetMasterAccountResponse(const GetMasterAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMasterAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMasterAccountResponse)
+    Q_DISABLE_COPY(GetMasterAccountResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

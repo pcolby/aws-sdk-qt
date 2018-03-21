@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETEMPLATERESPONSE_H
 #define QTAWS_DELETETEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "deletetemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteTemplateResponsePrivate;
+
+class QTAWS_EXPORT DeleteTemplateResponse : public DeleteTemplateResponse {
+    Q_OBJECT
+
+public:
+    DeleteTemplateResponse(const DeleteTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTemplateResponse)
+    Q_DISABLE_COPY(DeleteTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

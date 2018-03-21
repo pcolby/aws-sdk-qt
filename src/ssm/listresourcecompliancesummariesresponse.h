@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCECOMPLIANCESUMMARIESRESPONSE_H
 #define QTAWS_LISTRESOURCECOMPLIANCESUMMARIESRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listresourcecompliancesummariesrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListResourceComplianceSummariesResponsePrivate;
+
+class QTAWS_EXPORT ListResourceComplianceSummariesResponse : public ListResourceComplianceSummariesResponse {
+    Q_OBJECT
+
+public:
+    ListResourceComplianceSummariesResponse(const ListResourceComplianceSummariesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourceComplianceSummariesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceComplianceSummariesResponse)
+    Q_DISABLE_COPY(ListResourceComplianceSummariesResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

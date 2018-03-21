@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESAMLPROVIDERRESPONSE_H
 #define QTAWS_UPDATESAMLPROVIDERRESPONSE_H
 
+#include "iamresponse.h"
+#include "updatesamlproviderrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateSAMLProviderResponsePrivate;
+
+class QTAWS_EXPORT UpdateSAMLProviderResponse : public UpdateSAMLProviderResponse {
+    Q_OBJECT
+
+public:
+    UpdateSAMLProviderResponse(const UpdateSAMLProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSAMLProviderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSAMLProviderResponse)
+    Q_DISABLE_COPY(UpdateSAMLProviderResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

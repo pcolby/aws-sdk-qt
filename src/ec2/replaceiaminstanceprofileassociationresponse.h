@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPLACEIAMINSTANCEPROFILEASSOCIATIONRESPONSE_H
 #define QTAWS_REPLACEIAMINSTANCEPROFILEASSOCIATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "replaceiaminstanceprofileassociationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReplaceIamInstanceProfileAssociationResponsePrivate;
+
+class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationResponse : public ReplaceIamInstanceProfileAssociationResponse {
+    Q_OBJECT
+
+public:
+    ReplaceIamInstanceProfileAssociationResponse(const ReplaceIamInstanceProfileAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReplaceIamInstanceProfileAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceIamInstanceProfileAssociationResponse)
+    Q_DISABLE_COPY(ReplaceIamInstanceProfileAssociationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTHITSFORQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_LISTHITSFORQUALIFICATIONTYPERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listhitsforqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListHITsForQualificationTypeResponsePrivate;
+
+class QTAWS_EXPORT ListHITsForQualificationTypeResponse : public ListHITsForQualificationTypeResponse {
+    Q_OBJECT
+
+public:
+    ListHITsForQualificationTypeResponse(const ListHITsForQualificationTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListHITsForQualificationTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListHITsForQualificationTypeResponse)
+    Q_DISABLE_COPY(ListHITsForQualificationTypeResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

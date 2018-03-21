@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESSHPUBLICKEYRESPONSE_H
 #define QTAWS_DELETESSHPUBLICKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "deletesshpublickeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteSSHPublicKeyResponsePrivate;
+
+class QTAWS_EXPORT DeleteSSHPublicKeyResponse : public DeleteSSHPublicKeyResponse {
+    Q_OBJECT
+
+public:
+    DeleteSSHPublicKeyResponse(const DeleteSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSSHPublicKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSSHPublicKeyResponse)
+    Q_DISABLE_COPY(DeleteSSHPublicKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONTENTMODERATIONRESPONSE_H
 #define QTAWS_GETCONTENTMODERATIONRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "getcontentmoderationrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class GetContentModerationResponsePrivate;
+
+class QTAWS_EXPORT GetContentModerationResponse : public GetContentModerationResponse {
+    Q_OBJECT
+
+public:
+    GetContentModerationResponse(const GetContentModerationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetContentModerationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetContentModerationResponse)
+    Q_DISABLE_COPY(GetContentModerationResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

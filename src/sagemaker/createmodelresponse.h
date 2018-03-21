@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMODELRESPONSE_H
 #define QTAWS_CREATEMODELRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "createmodelrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class CreateModelResponsePrivate;
+
+class QTAWS_EXPORT CreateModelResponse : public CreateModelResponse {
+    Q_OBJECT
+
+public:
+    CreateModelResponse(const CreateModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateModelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateModelResponse)
+    Q_DISABLE_COPY(CreateModelResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

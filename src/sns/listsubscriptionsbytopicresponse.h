@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONSBYTOPICRESPONSE_H
 #define QTAWS_LISTSUBSCRIPTIONSBYTOPICRESPONSE_H
 
+#include "snsresponse.h"
+#include "listsubscriptionsbytopicrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class ListSubscriptionsByTopicResponsePrivate;
+
+class QTAWS_EXPORT ListSubscriptionsByTopicResponse : public ListSubscriptionsByTopicResponse {
+    Q_OBJECT
+
+public:
+    ListSubscriptionsByTopicResponse(const ListSubscriptionsByTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSubscriptionsByTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSubscriptionsByTopicResponse)
+    Q_DISABLE_COPY(ListSubscriptionsByTopicResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

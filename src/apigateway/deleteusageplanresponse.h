@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEUSAGEPLANRESPONSE_H
 #define QTAWS_DELETEUSAGEPLANRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deleteusageplanrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteUsagePlanResponsePrivate;
+
+class QTAWS_EXPORT DeleteUsagePlanResponse : public DeleteUsagePlanResponse {
+    Q_OBJECT
+
+public:
+    DeleteUsagePlanResponse(const DeleteUsagePlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteUsagePlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUsagePlanResponse)
+    Q_DISABLE_COPY(DeleteUsagePlanResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTFRAGMENTSRESPONSE_H
 #define QTAWS_LISTFRAGMENTSRESPONSE_H
 
+#include "kinesis-video-archived-mediaresponse.h"
+#include "listfragmentsrequest.h"
+
+namespace AWS {
+
+namespace kinesis-video-archived-media {
+
+class ListFragmentsResponsePrivate;
+
+class QTAWS_EXPORT ListFragmentsResponse : public ListFragmentsResponse {
+    Q_OBJECT
+
+public:
+    ListFragmentsResponse(const ListFragmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListFragmentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListFragmentsResponse)
+    Q_DISABLE_COPY(ListFragmentsResponse)
+
+};
+
+} // namespace kinesis-video-archived-media
+} // namespace AWS
+
 #endif

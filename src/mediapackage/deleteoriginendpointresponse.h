@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEORIGINENDPOINTRESPONSE_H
 #define QTAWS_DELETEORIGINENDPOINTRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "deleteoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class DeleteOriginEndpointResponsePrivate;
+
+class QTAWS_EXPORT DeleteOriginEndpointResponse : public DeleteOriginEndpointResponse {
+    Q_OBJECT
+
+public:
+    DeleteOriginEndpointResponse(const DeleteOriginEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteOriginEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOriginEndpointResponse)
+    Q_DISABLE_COPY(DeleteOriginEndpointResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

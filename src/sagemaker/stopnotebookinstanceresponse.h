@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPNOTEBOOKINSTANCERESPONSE_H
 #define QTAWS_STOPNOTEBOOKINSTANCERESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "stopnotebookinstancerequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class StopNotebookInstanceResponsePrivate;
+
+class QTAWS_EXPORT StopNotebookInstanceResponse : public StopNotebookInstanceResponse {
+    Q_OBJECT
+
+public:
+    StopNotebookInstanceResponse(const StopNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopNotebookInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopNotebookInstanceResponse)
+    Q_DISABLE_COPY(StopNotebookInstanceResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

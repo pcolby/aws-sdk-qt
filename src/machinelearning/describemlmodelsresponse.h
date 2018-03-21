@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEMLMODELSRESPONSE_H
 #define QTAWS_DESCRIBEMLMODELSRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "describemlmodelsrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class DescribeMLModelsResponsePrivate;
+
+class QTAWS_EXPORT DescribeMLModelsResponse : public DescribeMLModelsResponse {
+    Q_OBJECT
+
+public:
+    DescribeMLModelsResponse(const DescribeMLModelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeMLModelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMLModelsResponse)
+    Q_DISABLE_COPY(DescribeMLModelsResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

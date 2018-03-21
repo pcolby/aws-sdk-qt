@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPTASKRESPONSE_H
 #define QTAWS_STOPTASKRESPONSE_H
 
+#include "ecsresponse.h"
+#include "stoptaskrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class StopTaskResponsePrivate;
+
+class QTAWS_EXPORT StopTaskResponse : public StopTaskResponse {
+    Q_OBJECT
+
+public:
+    StopTaskResponse(const StopTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopTaskResponse)
+    Q_DISABLE_COPY(StopTaskResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

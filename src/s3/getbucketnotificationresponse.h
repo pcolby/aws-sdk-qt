@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETNOTIFICATIONRESPONSE_H
 #define QTAWS_GETBUCKETNOTIFICATIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketnotificationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketNotificationResponsePrivate;
+
+class QTAWS_EXPORT GetBucketNotificationResponse : public GetBucketNotificationResponse {
+    Q_OBJECT
+
+public:
+    GetBucketNotificationResponse(const GetBucketNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketNotificationResponse)
+    Q_DISABLE_COPY(GetBucketNotificationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

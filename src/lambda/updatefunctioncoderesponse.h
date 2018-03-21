@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEFUNCTIONCODERESPONSE_H
 #define QTAWS_UPDATEFUNCTIONCODERESPONSE_H
 
+#include "lambdaresponse.h"
+#include "updatefunctioncoderequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class UpdateFunctionCodeResponsePrivate;
+
+class QTAWS_EXPORT UpdateFunctionCodeResponse : public UpdateFunctionCodeResponse {
+    Q_OBJECT
+
+public:
+    UpdateFunctionCodeResponse(const UpdateFunctionCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateFunctionCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFunctionCodeResponse)
+    Q_DISABLE_COPY(UpdateFunctionCodeResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

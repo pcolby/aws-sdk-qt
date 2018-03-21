@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBACKUPSRESPONSE_H
 #define QTAWS_LISTBACKUPSRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "listbackupsrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class ListBackupsResponsePrivate;
+
+class QTAWS_EXPORT ListBackupsResponse : public ListBackupsResponse {
+    Q_OBJECT
+
+public:
+    ListBackupsResponse(const ListBackupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBackupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBackupsResponse)
+    Q_DISABLE_COPY(ListBackupsResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

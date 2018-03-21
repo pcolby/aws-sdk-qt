@@ -20,4 +20,33 @@
 #ifndef QTAWS_OPTINPHONENUMBERRESPONSE_H
 #define QTAWS_OPTINPHONENUMBERRESPONSE_H
 
+#include "snsresponse.h"
+#include "optinphonenumberrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class OptInPhoneNumberResponsePrivate;
+
+class QTAWS_EXPORT OptInPhoneNumberResponse : public OptInPhoneNumberResponse {
+    Q_OBJECT
+
+public:
+    OptInPhoneNumberResponse(const OptInPhoneNumberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const OptInPhoneNumberRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(OptInPhoneNumberResponse)
+    Q_DISABLE_COPY(OptInPhoneNumberResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

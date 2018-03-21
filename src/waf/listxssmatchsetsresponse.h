@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTXSSMATCHSETSRESPONSE_H
 #define QTAWS_LISTXSSMATCHSETSRESPONSE_H
 
+#include "wafresponse.h"
+#include "listxssmatchsetsrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class ListXssMatchSetsResponsePrivate;
+
+class QTAWS_EXPORT ListXssMatchSetsResponse : public ListXssMatchSetsResponse {
+    Q_OBJECT
+
+public:
+    ListXssMatchSetsResponse(const ListXssMatchSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListXssMatchSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListXssMatchSetsResponse)
+    Q_DISABLE_COPY(ListXssMatchSetsResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETRAILSRESPONSE_H
 #define QTAWS_DESCRIBETRAILSRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "describetrailsrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class DescribeTrailsResponsePrivate;
+
+class QTAWS_EXPORT DescribeTrailsResponse : public DescribeTrailsResponse {
+    Q_OBJECT
+
+public:
+    DescribeTrailsResponse(const DescribeTrailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTrailsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTrailsResponse)
+    Q_DISABLE_COPY(DescribeTrailsResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

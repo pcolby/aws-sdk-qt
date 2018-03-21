@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_H
 
+#include "dsresponse.h"
+#include "updatenumberofdomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class UpdateNumberOfDomainControllersResponsePrivate;
+
+class QTAWS_EXPORT UpdateNumberOfDomainControllersResponse : public UpdateNumberOfDomainControllersResponse {
+    Q_OBJECT
+
+public:
+    UpdateNumberOfDomainControllersResponse(const UpdateNumberOfDomainControllersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateNumberOfDomainControllersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNumberOfDomainControllersResponse)
+    Q_DISABLE_COPY(UpdateNumberOfDomainControllersResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

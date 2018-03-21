@@ -20,4 +20,33 @@
 #ifndef QTAWS_TAGSTREAMRESPONSE_H
 #define QTAWS_TAGSTREAMRESPONSE_H
 
+#include "kinesisvideoresponse.h"
+#include "tagstreamrequest.h"
+
+namespace AWS {
+
+namespace kinesisvideo {
+
+class TagStreamResponsePrivate;
+
+class QTAWS_EXPORT TagStreamResponse : public TagStreamResponse {
+    Q_OBJECT
+
+public:
+    TagStreamResponse(const TagStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TagStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TagStreamResponse)
+    Q_DISABLE_COPY(TagStreamResponse)
+
+};
+
+} // namespace kinesisvideo
+} // namespace AWS
+
 #endif

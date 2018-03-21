@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESECURITYGROUPRESPONSE_H
 #define QTAWS_CREATESECURITYGROUPRESPONSE_H
 
+#include "ec2response.h"
+#include "createsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateSecurityGroupResponse : public CreateSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateSecurityGroupResponse(const CreateSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateSecurityGroupResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

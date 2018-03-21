@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBUNDLESRESPONSE_H
 #define QTAWS_LISTBUNDLESRESPONSE_H
 
+#include "mobileresponse.h"
+#include "listbundlesrequest.h"
+
+namespace AWS {
+
+namespace mobile {
+
+class ListBundlesResponsePrivate;
+
+class QTAWS_EXPORT ListBundlesResponse : public ListBundlesResponse {
+    Q_OBJECT
+
+public:
+    ListBundlesResponse(const ListBundlesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBundlesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBundlesResponse)
+    Q_DISABLE_COPY(ListBundlesResponse)
+
+};
+
+} // namespace mobile
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSLOGGROUPRESPONSE_H
 #define QTAWS_LISTTAGSLOGGROUPRESPONSE_H
 
+#include "logsresponse.h"
+#include "listtagsloggrouprequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class ListTagsLogGroupResponsePrivate;
+
+class QTAWS_EXPORT ListTagsLogGroupResponse : public ListTagsLogGroupResponse {
+    Q_OBJECT
+
+public:
+    ListTagsLogGroupResponse(const ListTagsLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsLogGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsLogGroupResponse)
+    Q_DISABLE_COPY(ListTagsLogGroupResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTWORKFLOWTYPESRESPONSE_H
 #define QTAWS_LISTWORKFLOWTYPESRESPONSE_H
 
+#include "swfresponse.h"
+#include "listworkflowtypesrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class ListWorkflowTypesResponsePrivate;
+
+class QTAWS_EXPORT ListWorkflowTypesResponse : public ListWorkflowTypesResponse {
+    Q_OBJECT
+
+public:
+    ListWorkflowTypesResponse(const ListWorkflowTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListWorkflowTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListWorkflowTypesResponse)
+    Q_DISABLE_COPY(ListWorkflowTypesResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

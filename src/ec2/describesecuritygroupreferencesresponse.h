@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESECURITYGROUPREFERENCESRESPONSE_H
 #define QTAWS_DESCRIBESECURITYGROUPREFERENCESRESPONSE_H
 
+#include "ec2response.h"
+#include "describesecuritygroupreferencesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeSecurityGroupReferencesResponsePrivate;
+
+class QTAWS_EXPORT DescribeSecurityGroupReferencesResponse : public DescribeSecurityGroupReferencesResponse {
+    Q_OBJECT
+
+public:
+    DescribeSecurityGroupReferencesResponse(const DescribeSecurityGroupReferencesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSecurityGroupReferencesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSecurityGroupReferencesResponse)
+    Q_DISABLE_COPY(DescribeSecurityGroupReferencesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

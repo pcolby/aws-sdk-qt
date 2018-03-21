@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRULESRESPONSE_H
 #define QTAWS_LISTRULESRESPONSE_H
 
+#include "eventsresponse.h"
+#include "listrulesrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class ListRulesResponsePrivate;
+
+class QTAWS_EXPORT ListRulesResponse : public ListRulesResponse {
+    Q_OBJECT
+
+public:
+    ListRulesResponse(const ListRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRulesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRulesResponse)
+    Q_DISABLE_COPY(ListRulesResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

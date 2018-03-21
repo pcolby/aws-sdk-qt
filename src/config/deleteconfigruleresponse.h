@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONFIGRULERESPONSE_H
 #define QTAWS_DELETECONFIGRULERESPONSE_H
 
+#include "configresponse.h"
+#include "deleteconfigrulerequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DeleteConfigRuleResponsePrivate;
+
+class QTAWS_EXPORT DeleteConfigRuleResponse : public DeleteConfigRuleResponse {
+    Q_OBJECT
+
+public:
+    DeleteConfigRuleResponse(const DeleteConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConfigRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigRuleResponse)
+    Q_DISABLE_COPY(DeleteConfigRuleResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

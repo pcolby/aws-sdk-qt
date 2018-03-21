@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTELEMETRYMETADATARESPONSE_H
 #define QTAWS_GETTELEMETRYMETADATARESPONSE_H
 
+#include "inspectorresponse.h"
+#include "gettelemetrymetadatarequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class GetTelemetryMetadataResponsePrivate;
+
+class QTAWS_EXPORT GetTelemetryMetadataResponse : public GetTelemetryMetadataResponse {
+    Q_OBJECT
+
+public:
+    GetTelemetryMetadataResponse(const GetTelemetryMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTelemetryMetadataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTelemetryMetadataResponse)
+    Q_DISABLE_COPY(GetTelemetryMetadataResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

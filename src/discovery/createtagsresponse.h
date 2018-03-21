@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_H
 #define QTAWS_CREATETAGSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "createtagsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class CreateTagsResponsePrivate;
+
+class QTAWS_EXPORT CreateTagsResponse : public CreateTagsResponse {
+    Q_OBJECT
+
+public:
+    CreateTagsResponse(const CreateTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTagsResponse)
+    Q_DISABLE_COPY(CreateTagsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

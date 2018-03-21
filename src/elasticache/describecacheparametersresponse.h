@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECACHEPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBECACHEPARAMETERSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "describecacheparametersrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DescribeCacheParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeCacheParametersResponse : public DescribeCacheParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeCacheParametersResponse(const DescribeCacheParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCacheParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCacheParametersResponse)
+    Q_DISABLE_COPY(DescribeCacheParametersResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

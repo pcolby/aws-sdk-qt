@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTLSCERTIFICATERESPONSE_H
 #define QTAWS_ATTACHLOADBALANCERTLSCERTIFICATERESPONSE_H
 
+#include "lightsailresponse.h"
+#include "attachloadbalancertlscertificaterequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class AttachLoadBalancerTlsCertificateResponsePrivate;
+
+class QTAWS_EXPORT AttachLoadBalancerTlsCertificateResponse : public AttachLoadBalancerTlsCertificateResponse {
+    Q_OBJECT
+
+public:
+    AttachLoadBalancerTlsCertificateResponse(const AttachLoadBalancerTlsCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachLoadBalancerTlsCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachLoadBalancerTlsCertificateResponse)
+    Q_DISABLE_COPY(AttachLoadBalancerTlsCertificateResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

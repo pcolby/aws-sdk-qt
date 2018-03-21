@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDIMENSIONVALUESRESPONSE_H
 #define QTAWS_GETDIMENSIONVALUESRESPONSE_H
 
+#include "ceresponse.h"
+#include "getdimensionvaluesrequest.h"
+
+namespace AWS {
+
+namespace ce {
+
+class GetDimensionValuesResponsePrivate;
+
+class QTAWS_EXPORT GetDimensionValuesResponse : public GetDimensionValuesResponse {
+    Q_OBJECT
+
+public:
+    GetDimensionValuesResponse(const GetDimensionValuesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDimensionValuesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDimensionValuesResponse)
+    Q_DISABLE_COPY(GetDimensionValuesResponse)
+
+};
+
+} // namespace ce
+} // namespace AWS
+
 #endif

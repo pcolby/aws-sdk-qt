@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 #define QTAWS_UPDATECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "updatecustomverificationemailtemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateCustomVerificationEmailTemplateResponsePrivate;
+
+class QTAWS_EXPORT UpdateCustomVerificationEmailTemplateResponse : public UpdateCustomVerificationEmailTemplateResponse {
+    Q_OBJECT
+
+public:
+    UpdateCustomVerificationEmailTemplateResponse(const UpdateCustomVerificationEmailTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateCustomVerificationEmailTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCustomVerificationEmailTemplateResponse)
+    Q_DISABLE_COPY(UpdateCustomVerificationEmailTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

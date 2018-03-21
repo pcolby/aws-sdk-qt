@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHVOLUMERESPONSE_H
 #define QTAWS_DETACHVOLUMERESPONSE_H
 
+#include "ec2response.h"
+#include "detachvolumerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DetachVolumeResponsePrivate;
+
+class QTAWS_EXPORT DetachVolumeResponse : public DetachVolumeResponse {
+    Q_OBJECT
+
+public:
+    DetachVolumeResponse(const DetachVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachVolumeResponse)
+    Q_DISABLE_COPY(DetachVolumeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

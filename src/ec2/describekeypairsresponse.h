@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEKEYPAIRSRESPONSE_H
 #define QTAWS_DESCRIBEKEYPAIRSRESPONSE_H
 
+#include "ec2response.h"
+#include "describekeypairsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeKeyPairsResponsePrivate;
+
+class QTAWS_EXPORT DescribeKeyPairsResponse : public DescribeKeyPairsResponse {
+    Q_OBJECT
+
+public:
+    DescribeKeyPairsResponse(const DescribeKeyPairsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeKeyPairsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeKeyPairsResponse)
+    Q_DISABLE_COPY(DescribeKeyPairsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

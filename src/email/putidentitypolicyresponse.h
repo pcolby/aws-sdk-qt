@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTIDENTITYPOLICYRESPONSE_H
 #define QTAWS_PUTIDENTITYPOLICYRESPONSE_H
 
+#include "emailresponse.h"
+#include "putidentitypolicyrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class PutIdentityPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutIdentityPolicyResponse : public PutIdentityPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutIdentityPolicyResponse(const PutIdentityPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutIdentityPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutIdentityPolicyResponse)
+    Q_DISABLE_COPY(PutIdentityPolicyResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERRDSDBINSTANCERESPONSE_H
 #define QTAWS_REGISTERRDSDBINSTANCERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "registerrdsdbinstancerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class RegisterRdsDbInstanceResponsePrivate;
+
+class QTAWS_EXPORT RegisterRdsDbInstanceResponse : public RegisterRdsDbInstanceResponse {
+    Q_OBJECT
+
+public:
+    RegisterRdsDbInstanceResponse(const RegisterRdsDbInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterRdsDbInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterRdsDbInstanceResponse)
+    Q_DISABLE_COPY(RegisterRdsDbInstanceResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESETSNAPSHOTATTRIBUTERESPONSE_H
 #define QTAWS_RESETSNAPSHOTATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "resetsnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ResetSnapshotAttributeResponsePrivate;
+
+class QTAWS_EXPORT ResetSnapshotAttributeResponse : public ResetSnapshotAttributeResponse {
+    Q_OBJECT
+
+public:
+    ResetSnapshotAttributeResponse(const ResetSnapshotAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResetSnapshotAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResetSnapshotAttributeResponse)
+    Q_DISABLE_COPY(ResetSnapshotAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

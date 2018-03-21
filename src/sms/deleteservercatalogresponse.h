@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESERVERCATALOGRESPONSE_H
 #define QTAWS_DELETESERVERCATALOGRESPONSE_H
 
+#include "smsresponse.h"
+#include "deleteservercatalogrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class DeleteServerCatalogResponsePrivate;
+
+class QTAWS_EXPORT DeleteServerCatalogResponse : public DeleteServerCatalogResponse {
+    Q_OBJECT
+
+public:
+    DeleteServerCatalogResponse(const DeleteServerCatalogRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteServerCatalogRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServerCatalogResponse)
+    Q_DISABLE_COPY(DeleteServerCatalogResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

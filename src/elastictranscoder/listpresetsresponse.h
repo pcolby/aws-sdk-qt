@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPRESETSRESPONSE_H
 #define QTAWS_LISTPRESETSRESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "listpresetsrequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class ListPresetsResponsePrivate;
+
+class QTAWS_EXPORT ListPresetsResponse : public ListPresetsResponse {
+    Q_OBJECT
+
+public:
+    ListPresetsResponse(const ListPresetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPresetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPresetsResponse)
+    Q_DISABLE_COPY(ListPresetsResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

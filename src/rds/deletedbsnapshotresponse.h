@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDBSNAPSHOTRESPONSE_H
 #define QTAWS_DELETEDBSNAPSHOTRESPONSE_H
 
+#include "rdsresponse.h"
+#include "deletedbsnapshotrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DeleteDBSnapshotResponsePrivate;
+
+class QTAWS_EXPORT DeleteDBSnapshotResponse : public DeleteDBSnapshotResponse {
+    Q_OBJECT
+
+public:
+    DeleteDBSnapshotResponse(const DeleteDBSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDBSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDBSnapshotResponse)
+    Q_DISABLE_COPY(DeleteDBSnapshotResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

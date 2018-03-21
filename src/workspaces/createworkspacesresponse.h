@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEWORKSPACESRESPONSE_H
 #define QTAWS_CREATEWORKSPACESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "createworkspacesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class CreateWorkspacesResponsePrivate;
+
+class QTAWS_EXPORT CreateWorkspacesResponse : public CreateWorkspacesResponse {
+    Q_OBJECT
+
+public:
+    CreateWorkspacesResponse(const CreateWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateWorkspacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateWorkspacesResponse)
+    Q_DISABLE_COPY(CreateWorkspacesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

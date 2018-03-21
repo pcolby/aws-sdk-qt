@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTTHIRDPARTYJOBFAILURERESULTRESPONSE_H
 #define QTAWS_PUTTHIRDPARTYJOBFAILURERESULTRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "putthirdpartyjobfailureresultrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class PutThirdPartyJobFailureResultResponsePrivate;
+
+class QTAWS_EXPORT PutThirdPartyJobFailureResultResponse : public PutThirdPartyJobFailureResultResponse {
+    Q_OBJECT
+
+public:
+    PutThirdPartyJobFailureResultResponse(const PutThirdPartyJobFailureResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutThirdPartyJobFailureResultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutThirdPartyJobFailureResultResponse)
+    Q_DISABLE_COPY(PutThirdPartyJobFailureResultResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

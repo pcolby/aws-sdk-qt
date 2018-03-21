@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPCHANNELRESPONSE_H
 #define QTAWS_STOPCHANNELRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "stopchannelrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class StopChannelResponsePrivate;
+
+class QTAWS_EXPORT StopChannelResponse : public StopChannelResponse {
+    Q_OBJECT
+
+public:
+    StopChannelResponse(const StopChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopChannelResponse)
+    Q_DISABLE_COPY(StopChannelResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

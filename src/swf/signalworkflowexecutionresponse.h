@@ -20,4 +20,33 @@
 #ifndef QTAWS_SIGNALWORKFLOWEXECUTIONRESPONSE_H
 #define QTAWS_SIGNALWORKFLOWEXECUTIONRESPONSE_H
 
+#include "swfresponse.h"
+#include "signalworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class SignalWorkflowExecutionResponsePrivate;
+
+class QTAWS_EXPORT SignalWorkflowExecutionResponse : public SignalWorkflowExecutionResponse {
+    Q_OBJECT
+
+public:
+    SignalWorkflowExecutionResponse(const SignalWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SignalWorkflowExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SignalWorkflowExecutionResponse)
+    Q_DISABLE_COPY(SignalWorkflowExecutionResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

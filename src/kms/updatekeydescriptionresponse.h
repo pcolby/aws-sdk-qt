@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEKEYDESCRIPTIONRESPONSE_H
 #define QTAWS_UPDATEKEYDESCRIPTIONRESPONSE_H
 
+#include "kmsresponse.h"
+#include "updatekeydescriptionrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class UpdateKeyDescriptionResponsePrivate;
+
+class QTAWS_EXPORT UpdateKeyDescriptionResponse : public UpdateKeyDescriptionResponse {
+    Q_OBJECT
+
+public:
+    UpdateKeyDescriptionResponse(const UpdateKeyDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateKeyDescriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateKeyDescriptionResponse)
+    Q_DISABLE_COPY(UpdateKeyDescriptionResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

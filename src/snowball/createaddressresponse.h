@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEADDRESSRESPONSE_H
 #define QTAWS_CREATEADDRESSRESPONSE_H
 
+#include "snowballresponse.h"
+#include "createaddressrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class CreateAddressResponsePrivate;
+
+class QTAWS_EXPORT CreateAddressResponse : public CreateAddressResponse {
+    Q_OBJECT
+
+public:
+    CreateAddressResponse(const CreateAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAddressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAddressResponse)
+    Q_DISABLE_COPY(CreateAddressResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

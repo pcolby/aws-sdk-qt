@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTJOBSUCCESSRESULTRESPONSE_H
 #define QTAWS_PUTJOBSUCCESSRESULTRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "putjobsuccessresultrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class PutJobSuccessResultResponsePrivate;
+
+class QTAWS_EXPORT PutJobSuccessResultResponse : public PutJobSuccessResultResponse {
+    Q_OBJECT
+
+public:
+    PutJobSuccessResultResponse(const PutJobSuccessResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutJobSuccessResultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutJobSuccessResultResponse)
+    Q_DISABLE_COPY(PutJobSuccessResultResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

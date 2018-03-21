@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETWEBACLFORRESOURCERESPONSE_H
 #define QTAWS_GETWEBACLFORRESOURCERESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "getwebaclforresourcerequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class GetWebACLForResourceResponsePrivate;
+
+class QTAWS_EXPORT GetWebACLForResourceResponse : public GetWebACLForResourceResponse {
+    Q_OBJECT
+
+public:
+    GetWebACLForResourceResponse(const GetWebACLForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetWebACLForResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetWebACLForResourceResponse)
+    Q_DISABLE_COPY(GetWebACLForResourceResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

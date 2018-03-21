@@ -20,4 +20,33 @@
 #ifndef QTAWS_INCREASEREPLICATIONFACTORRESPONSE_H
 #define QTAWS_INCREASEREPLICATIONFACTORRESPONSE_H
 
+#include "daxresponse.h"
+#include "increasereplicationfactorrequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class IncreaseReplicationFactorResponsePrivate;
+
+class QTAWS_EXPORT IncreaseReplicationFactorResponse : public IncreaseReplicationFactorResponse {
+    Q_OBJECT
+
+public:
+    IncreaseReplicationFactorResponse(const IncreaseReplicationFactorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const IncreaseReplicationFactorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(IncreaseReplicationFactorResponse)
+    Q_DISABLE_COPY(IncreaseReplicationFactorResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

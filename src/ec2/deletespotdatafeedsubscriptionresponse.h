@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONRESPONSE_H
 #define QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONRESPONSE_H
 
+#include "ec2response.h"
+#include "deletespotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteSpotDatafeedSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionResponse : public DeleteSpotDatafeedSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    DeleteSpotDatafeedSubscriptionResponse(const DeleteSpotDatafeedSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSpotDatafeedSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSpotDatafeedSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteSpotDatafeedSubscriptionResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVOICESRESPONSE_H
 #define QTAWS_DESCRIBEVOICESRESPONSE_H
 
+#include "pollyresponse.h"
+#include "describevoicesrequest.h"
+
+namespace AWS {
+
+namespace polly {
+
+class DescribeVoicesResponsePrivate;
+
+class QTAWS_EXPORT DescribeVoicesResponse : public DescribeVoicesResponse {
+    Q_OBJECT
+
+public:
+    DescribeVoicesResponse(const DescribeVoicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVoicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVoicesResponse)
+    Q_DISABLE_COPY(DescribeVoicesResponse)
+
+};
+
+} // namespace polly
+} // namespace AWS
+
 #endif

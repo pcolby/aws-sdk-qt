@@ -20,4 +20,33 @@
 #ifndef QTAWS_DECLINEINVITATIONSRESPONSE_H
 #define QTAWS_DECLINEINVITATIONSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "declineinvitationsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DeclineInvitationsResponsePrivate;
+
+class QTAWS_EXPORT DeclineInvitationsResponse : public DeclineInvitationsResponse {
+    Q_OBJECT
+
+public:
+    DeclineInvitationsResponse(const DeclineInvitationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeclineInvitationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeclineInvitationsResponse)
+    Q_DISABLE_COPY(DeclineInvitationsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

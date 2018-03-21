@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYIMAGEATTRIBUTERESPONSE_H
 #define QTAWS_MODIFYIMAGEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "modifyimageattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyImageAttributeResponsePrivate;
+
+class QTAWS_EXPORT ModifyImageAttributeResponse : public ModifyImageAttributeResponse {
+    Q_OBJECT
+
+public:
+    ModifyImageAttributeResponse(const ModifyImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyImageAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyImageAttributeResponse)
+    Q_DISABLE_COPY(ModifyImageAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

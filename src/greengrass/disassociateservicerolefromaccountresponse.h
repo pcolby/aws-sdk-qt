@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTRESPONSE_H
 #define QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "disassociateservicerolefromaccountrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class DisassociateServiceRoleFromAccountResponsePrivate;
+
+class QTAWS_EXPORT DisassociateServiceRoleFromAccountResponse : public DisassociateServiceRoleFromAccountResponse {
+    Q_OBJECT
+
+public:
+    DisassociateServiceRoleFromAccountResponse(const DisassociateServiceRoleFromAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateServiceRoleFromAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateServiceRoleFromAccountResponse)
+    Q_DISABLE_COPY(DisassociateServiceRoleFromAccountResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

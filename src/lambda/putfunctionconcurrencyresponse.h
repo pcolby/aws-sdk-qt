@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTFUNCTIONCONCURRENCYRESPONSE_H
 #define QTAWS_PUTFUNCTIONCONCURRENCYRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "putfunctionconcurrencyrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class PutFunctionConcurrencyResponsePrivate;
+
+class QTAWS_EXPORT PutFunctionConcurrencyResponse : public PutFunctionConcurrencyResponse {
+    Q_OBJECT
+
+public:
+    PutFunctionConcurrencyResponse(const PutFunctionConcurrencyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutFunctionConcurrencyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutFunctionConcurrencyResponse)
+    Q_DISABLE_COPY(PutFunctionConcurrencyResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

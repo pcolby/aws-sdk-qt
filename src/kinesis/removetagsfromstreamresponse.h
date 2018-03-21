@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSFROMSTREAMRESPONSE_H
 #define QTAWS_REMOVETAGSFROMSTREAMRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "removetagsfromstreamrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class RemoveTagsFromStreamResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsFromStreamResponse : public RemoveTagsFromStreamResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsFromStreamResponse(const RemoveTagsFromStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsFromStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromStreamResponse)
+    Q_DISABLE_COPY(RemoveTagsFromStreamResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

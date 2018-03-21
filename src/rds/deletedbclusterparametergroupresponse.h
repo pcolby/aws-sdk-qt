@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDBCLUSTERPARAMETERGROUPRESPONSE_H
 #define QTAWS_DELETEDBCLUSTERPARAMETERGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "deletedbclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DeleteDBClusterParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteDBClusterParameterGroupResponse : public DeleteDBClusterParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteDBClusterParameterGroupResponse(const DeleteDBClusterParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDBClusterParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDBClusterParameterGroupResponse)
+    Q_DISABLE_COPY(DeleteDBClusterParameterGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

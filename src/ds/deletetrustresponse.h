@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETRUSTRESPONSE_H
 #define QTAWS_DELETETRUSTRESPONSE_H
 
+#include "dsresponse.h"
+#include "deletetrustrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DeleteTrustResponsePrivate;
+
+class QTAWS_EXPORT DeleteTrustResponse : public DeleteTrustResponse {
+    Q_OBJECT
+
+public:
+    DeleteTrustResponse(const DeleteTrustRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTrustRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrustResponse)
+    Q_DISABLE_COPY(DeleteTrustResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

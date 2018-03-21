@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEACCOUNTRESPONSE_H
 #define QTAWS_UPDATEACCOUNTRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updateaccountrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateAccountResponsePrivate;
+
+class QTAWS_EXPORT UpdateAccountResponse : public UpdateAccountResponse {
+    Q_OBJECT
+
+public:
+    UpdateAccountResponse(const UpdateAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAccountResponse)
+    Q_DISABLE_COPY(UpdateAccountResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

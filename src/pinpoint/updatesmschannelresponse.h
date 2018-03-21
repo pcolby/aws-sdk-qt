@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESMSCHANNELRESPONSE_H
 #define QTAWS_UPDATESMSCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updatesmschannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateSmsChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateSmsChannelResponse : public UpdateSmsChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateSmsChannelResponse(const UpdateSmsChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSmsChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSmsChannelResponse)
+    Q_DISABLE_COPY(UpdateSmsChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

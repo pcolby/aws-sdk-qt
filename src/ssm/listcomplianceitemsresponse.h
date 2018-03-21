@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCOMPLIANCEITEMSRESPONSE_H
 #define QTAWS_LISTCOMPLIANCEITEMSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listcomplianceitemsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListComplianceItemsResponsePrivate;
+
+class QTAWS_EXPORT ListComplianceItemsResponse : public ListComplianceItemsResponse {
+    Q_OBJECT
+
+public:
+    ListComplianceItemsResponse(const ListComplianceItemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListComplianceItemsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListComplianceItemsResponse)
+    Q_DISABLE_COPY(ListComplianceItemsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

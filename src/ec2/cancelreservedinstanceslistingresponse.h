@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELRESERVEDINSTANCESLISTINGRESPONSE_H
 #define QTAWS_CANCELRESERVEDINSTANCESLISTINGRESPONSE_H
 
+#include "ec2response.h"
+#include "cancelreservedinstanceslistingrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CancelReservedInstancesListingResponsePrivate;
+
+class QTAWS_EXPORT CancelReservedInstancesListingResponse : public CancelReservedInstancesListingResponse {
+    Q_OBJECT
+
+public:
+    CancelReservedInstancesListingResponse(const CancelReservedInstancesListingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelReservedInstancesListingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelReservedInstancesListingResponse)
+    Q_DISABLE_COPY(CancelReservedInstancesListingResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

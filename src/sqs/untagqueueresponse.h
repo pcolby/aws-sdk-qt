@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGQUEUERESPONSE_H
 #define QTAWS_UNTAGQUEUERESPONSE_H
 
+#include "sqsresponse.h"
+#include "untagqueuerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class UntagQueueResponsePrivate;
+
+class QTAWS_EXPORT UntagQueueResponse : public UntagQueueResponse {
+    Q_OBJECT
+
+public:
+    UntagQueueResponse(const UntagQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagQueueResponse)
+    Q_DISABLE_COPY(UntagQueueResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

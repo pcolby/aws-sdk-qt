@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTQUERYEXECUTIONSRESPONSE_H
 #define QTAWS_LISTQUERYEXECUTIONSRESPONSE_H
 
+#include "athenaresponse.h"
+#include "listqueryexecutionsrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class ListQueryExecutionsResponsePrivate;
+
+class QTAWS_EXPORT ListQueryExecutionsResponse : public ListQueryExecutionsResponse {
+    Q_OBJECT
+
+public:
+    ListQueryExecutionsResponse(const ListQueryExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListQueryExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListQueryExecutionsResponse)
+    Q_DISABLE_COPY(ListQueryExecutionsResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUBLISHVERSIONRESPONSE_H
 #define QTAWS_PUBLISHVERSIONRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "publishversionrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class PublishVersionResponsePrivate;
+
+class QTAWS_EXPORT PublishVersionResponse : public PublishVersionResponse {
+    Q_OBJECT
+
+public:
+    PublishVersionResponse(const PublishVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PublishVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PublishVersionResponse)
+    Q_DISABLE_COPY(PublishVersionResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

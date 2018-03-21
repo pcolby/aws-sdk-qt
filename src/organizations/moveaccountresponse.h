@@ -20,4 +20,33 @@
 #ifndef QTAWS_MOVEACCOUNTRESPONSE_H
 #define QTAWS_MOVEACCOUNTRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "moveaccountrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class MoveAccountResponsePrivate;
+
+class QTAWS_EXPORT MoveAccountResponse : public MoveAccountResponse {
+    Q_OBJECT
+
+public:
+    MoveAccountResponse(const MoveAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const MoveAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(MoveAccountResponse)
+    Q_DISABLE_COPY(MoveAccountResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

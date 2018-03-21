@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEENHANCEDMONITORINGRESPONSE_H
 #define QTAWS_DISABLEENHANCEDMONITORINGRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "disableenhancedmonitoringrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class DisableEnhancedMonitoringResponsePrivate;
+
+class QTAWS_EXPORT DisableEnhancedMonitoringResponse : public DisableEnhancedMonitoringResponse {
+    Q_OBJECT
+
+public:
+    DisableEnhancedMonitoringResponse(const DisableEnhancedMonitoringRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableEnhancedMonitoringRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableEnhancedMonitoringResponse)
+    Q_DISABLE_COPY(DisableEnhancedMonitoringResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

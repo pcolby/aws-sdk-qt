@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREALTIMEENDPOINTRESPONSE_H
 #define QTAWS_DELETEREALTIMEENDPOINTRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "deleterealtimeendpointrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class DeleteRealtimeEndpointResponsePrivate;
+
+class QTAWS_EXPORT DeleteRealtimeEndpointResponse : public DeleteRealtimeEndpointResponse {
+    Q_OBJECT
+
+public:
+    DeleteRealtimeEndpointResponse(const DeleteRealtimeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRealtimeEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRealtimeEndpointResponse)
+    Q_DISABLE_COPY(DeleteRealtimeEndpointResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

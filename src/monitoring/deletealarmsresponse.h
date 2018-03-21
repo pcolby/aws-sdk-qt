@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEALARMSRESPONSE_H
 #define QTAWS_DELETEALARMSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "deletealarmsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class DeleteAlarmsResponsePrivate;
+
+class QTAWS_EXPORT DeleteAlarmsResponse : public DeleteAlarmsResponse {
+    Q_OBJECT
+
+public:
+    DeleteAlarmsResponse(const DeleteAlarmsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAlarmsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAlarmsResponse)
+    Q_DISABLE_COPY(DeleteAlarmsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

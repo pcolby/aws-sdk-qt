@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETRESPONSE_H
 #define QTAWS_DELETESIZECONSTRAINTSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "deletesizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DeleteSizeConstraintSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteSizeConstraintSetResponse : public DeleteSizeConstraintSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteSizeConstraintSetResponse(const DeleteSizeConstraintSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSizeConstraintSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSizeConstraintSetResponse)
+    Q_DISABLE_COPY(DeleteSizeConstraintSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTOPICSRESPONSE_H
 #define QTAWS_LISTTOPICSRESPONSE_H
 
+#include "snsresponse.h"
+#include "listtopicsrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class ListTopicsResponsePrivate;
+
+class QTAWS_EXPORT ListTopicsResponse : public ListTopicsResponse {
+    Q_OBJECT
+
+public:
+    ListTopicsResponse(const ListTopicsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTopicsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTopicsResponse)
+    Q_DISABLE_COPY(ListTopicsResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

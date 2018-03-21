@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEATTACHMENTRESPONSE_H
 #define QTAWS_DESCRIBEATTACHMENTRESPONSE_H
 
+#include "supportresponse.h"
+#include "describeattachmentrequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class DescribeAttachmentResponsePrivate;
+
+class QTAWS_EXPORT DescribeAttachmentResponse : public DescribeAttachmentResponse {
+    Q_OBJECT
+
+public:
+    DescribeAttachmentResponse(const DescribeAttachmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAttachmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAttachmentResponse)
+    Q_DISABLE_COPY(DescribeAttachmentResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

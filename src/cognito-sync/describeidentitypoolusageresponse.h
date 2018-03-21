@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEIDENTITYPOOLUSAGERESPONSE_H
 #define QTAWS_DESCRIBEIDENTITYPOOLUSAGERESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "describeidentitypoolusagerequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class DescribeIdentityPoolUsageResponsePrivate;
+
+class QTAWS_EXPORT DescribeIdentityPoolUsageResponse : public DescribeIdentityPoolUsageResponse {
+    Q_OBJECT
+
+public:
+    DescribeIdentityPoolUsageResponse(const DescribeIdentityPoolUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeIdentityPoolUsageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdentityPoolUsageResponse)
+    Q_DISABLE_COPY(DescribeIdentityPoolUsageResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

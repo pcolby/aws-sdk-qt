@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSETTINGSRESPONSE_H
 #define QTAWS_DESCRIBECONFIGURATIONSETTINGSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeconfigurationsettingsrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DescribeConfigurationSettingsResponsePrivate;
+
+class QTAWS_EXPORT DescribeConfigurationSettingsResponse : public DescribeConfigurationSettingsResponse {
+    Q_OBJECT
+
+public:
+    DescribeConfigurationSettingsResponse(const DescribeConfigurationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeConfigurationSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigurationSettingsResponse)
+    Q_DISABLE_COPY(DescribeConfigurationSettingsResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

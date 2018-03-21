@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEJOBTEMPLATERESPONSE_H
 #define QTAWS_CREATEJOBTEMPLATERESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "createjobtemplaterequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class CreateJobTemplateResponsePrivate;
+
+class QTAWS_EXPORT CreateJobTemplateResponse : public CreateJobTemplateResponse {
+    Q_OBJECT
+
+public:
+    CreateJobTemplateResponse(const CreateJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateJobTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobTemplateResponse)
+    Q_DISABLE_COPY(CreateJobTemplateResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

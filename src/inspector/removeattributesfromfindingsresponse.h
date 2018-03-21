@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_H
 #define QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "removeattributesfromfindingsrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class RemoveAttributesFromFindingsResponsePrivate;
+
+class QTAWS_EXPORT RemoveAttributesFromFindingsResponse : public RemoveAttributesFromFindingsResponse {
+    Q_OBJECT
+
+public:
+    RemoveAttributesFromFindingsResponse(const RemoveAttributesFromFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveAttributesFromFindingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAttributesFromFindingsResponse)
+    Q_DISABLE_COPY(RemoveAttributesFromFindingsResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

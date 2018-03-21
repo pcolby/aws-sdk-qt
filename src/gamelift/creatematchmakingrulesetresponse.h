@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMATCHMAKINGRULESETRESPONSE_H
 #define QTAWS_CREATEMATCHMAKINGRULESETRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "creatematchmakingrulesetrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class CreateMatchmakingRuleSetResponsePrivate;
+
+class QTAWS_EXPORT CreateMatchmakingRuleSetResponse : public CreateMatchmakingRuleSetResponse {
+    Q_OBJECT
+
+public:
+    CreateMatchmakingRuleSetResponse(const CreateMatchmakingRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateMatchmakingRuleSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateMatchmakingRuleSetResponse)
+    Q_DISABLE_COPY(CreateMatchmakingRuleSetResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

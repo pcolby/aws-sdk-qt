@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCURRENTUSERRESPONSE_H
 #define QTAWS_GETCURRENTUSERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "getcurrentuserrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class GetCurrentUserResponsePrivate;
+
+class QTAWS_EXPORT GetCurrentUserResponse : public GetCurrentUserResponse {
+    Q_OBJECT
+
+public:
+    GetCurrentUserResponse(const GetCurrentUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCurrentUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCurrentUserResponse)
+    Q_DISABLE_COPY(GetCurrentUserResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

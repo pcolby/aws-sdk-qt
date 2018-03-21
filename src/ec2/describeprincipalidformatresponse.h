@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPRINCIPALIDFORMATRESPONSE_H
 #define QTAWS_DESCRIBEPRINCIPALIDFORMATRESPONSE_H
 
+#include "ec2response.h"
+#include "describeprincipalidformatrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribePrincipalIdFormatResponsePrivate;
+
+class QTAWS_EXPORT DescribePrincipalIdFormatResponse : public DescribePrincipalIdFormatResponse {
+    Q_OBJECT
+
+public:
+    DescribePrincipalIdFormatResponse(const DescribePrincipalIdFormatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePrincipalIdFormatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePrincipalIdFormatResponse)
+    Q_DISABLE_COPY(DescribePrincipalIdFormatResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

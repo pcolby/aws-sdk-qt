@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTHREATINTELSETSRESPONSE_H
 #define QTAWS_LISTTHREATINTELSETSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "listthreatintelsetsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class ListThreatIntelSetsResponsePrivate;
+
+class QTAWS_EXPORT ListThreatIntelSetsResponse : public ListThreatIntelSetsResponse {
+    Q_OBJECT
+
+public:
+    ListThreatIntelSetsResponse(const ListThreatIntelSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListThreatIntelSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListThreatIntelSetsResponse)
+    Q_DISABLE_COPY(ListThreatIntelSetsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAGENTSRESPONSE_H
 #define QTAWS_DESCRIBEAGENTSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "describeagentsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class DescribeAgentsResponsePrivate;
+
+class QTAWS_EXPORT DescribeAgentsResponse : public DescribeAgentsResponse {
+    Q_OBJECT
+
+public:
+    DescribeAgentsResponse(const DescribeAgentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAgentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAgentsResponse)
+    Q_DISABLE_COPY(DescribeAgentsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

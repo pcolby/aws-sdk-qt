@@ -20,4 +20,33 @@
 #ifndef QTAWS_ACTIVATEUSERRESPONSE_H
 #define QTAWS_ACTIVATEUSERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "activateuserrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class ActivateUserResponsePrivate;
+
+class QTAWS_EXPORT ActivateUserResponse : public ActivateUserResponse {
+    Q_OBJECT
+
+public:
+    ActivateUserResponse(const ActivateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ActivateUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ActivateUserResponse)
+    Q_DISABLE_COPY(ActivateUserResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

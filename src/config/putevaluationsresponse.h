@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTEVALUATIONSRESPONSE_H
 #define QTAWS_PUTEVALUATIONSRESPONSE_H
 
+#include "configresponse.h"
+#include "putevaluationsrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class PutEvaluationsResponsePrivate;
+
+class QTAWS_EXPORT PutEvaluationsResponse : public PutEvaluationsResponse {
+    Q_OBJECT
+
+public:
+    PutEvaluationsResponse(const PutEvaluationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutEvaluationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutEvaluationsResponse)
+    Q_DISABLE_COPY(PutEvaluationsResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

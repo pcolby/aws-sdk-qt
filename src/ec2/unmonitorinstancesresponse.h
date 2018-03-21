@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNMONITORINSTANCESRESPONSE_H
 #define QTAWS_UNMONITORINSTANCESRESPONSE_H
 
+#include "ec2response.h"
+#include "unmonitorinstancesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class UnmonitorInstancesResponsePrivate;
+
+class QTAWS_EXPORT UnmonitorInstancesResponse : public UnmonitorInstancesResponse {
+    Q_OBJECT
+
+public:
+    UnmonitorInstancesResponse(const UnmonitorInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnmonitorInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnmonitorInstancesResponse)
+    Q_DISABLE_COPY(UnmonitorInstancesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

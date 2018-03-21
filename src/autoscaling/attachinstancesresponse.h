@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHINSTANCESRESPONSE_H
 #define QTAWS_ATTACHINSTANCESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "attachinstancesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class AttachInstancesResponsePrivate;
+
+class QTAWS_EXPORT AttachInstancesResponse : public AttachInstancesResponse {
+    Q_OBJECT
+
+public:
+    AttachInstancesResponse(const AttachInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachInstancesResponse)
+    Q_DISABLE_COPY(AttachInstancesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

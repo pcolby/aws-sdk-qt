@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECASERESPONSE_H
 #define QTAWS_CREATECASERESPONSE_H
 
+#include "supportresponse.h"
+#include "createcaserequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class CreateCaseResponsePrivate;
+
+class QTAWS_EXPORT CreateCaseResponse : public CreateCaseResponse {
+    Q_OBJECT
+
+public:
+    CreateCaseResponse(const CreateCaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCaseRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCaseResponse)
+    Q_DISABLE_COPY(CreateCaseResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

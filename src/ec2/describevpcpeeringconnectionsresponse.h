@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVPCPEERINGCONNECTIONSRESPONSE_H
 #define QTAWS_DESCRIBEVPCPEERINGCONNECTIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describevpcpeeringconnectionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeVpcPeeringConnectionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeVpcPeeringConnectionsResponse : public DescribeVpcPeeringConnectionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeVpcPeeringConnectionsResponse(const DescribeVpcPeeringConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVpcPeeringConnectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcPeeringConnectionsResponse)
+    Q_DISABLE_COPY(DescribeVpcPeeringConnectionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETTASKSTATUSRESPONSE_H
 #define QTAWS_SETTASKSTATUSRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "settaskstatusrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class SetTaskStatusResponsePrivate;
+
+class QTAWS_EXPORT SetTaskStatusResponse : public SetTaskStatusResponse {
+    Q_OBJECT
+
+public:
+    SetTaskStatusResponse(const SetTaskStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetTaskStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetTaskStatusResponse)
+    Q_DISABLE_COPY(SetTaskStatusResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

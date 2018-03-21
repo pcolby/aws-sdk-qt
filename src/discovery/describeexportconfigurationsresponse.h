@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEXPORTCONFIGURATIONSRESPONSE_H
 #define QTAWS_DESCRIBEEXPORTCONFIGURATIONSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "describeexportconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class DescribeExportConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeExportConfigurationsResponse : public DescribeExportConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeExportConfigurationsResponse(const DescribeExportConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeExportConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeExportConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeExportConfigurationsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

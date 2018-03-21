@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESTAGERESPONSE_H
 #define QTAWS_CREATESTAGERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "createstagerequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class CreateStageResponsePrivate;
+
+class QTAWS_EXPORT CreateStageResponse : public CreateStageResponse {
+    Q_OBJECT
+
+public:
+    CreateStageResponse(const CreateStageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateStageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateStageResponse)
+    Q_DISABLE_COPY(CreateStageResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

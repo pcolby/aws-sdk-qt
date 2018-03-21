@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSUMEROLEWITHSAMLRESPONSE_H
 #define QTAWS_ASSUMEROLEWITHSAMLRESPONSE_H
 
+#include "stsresponse.h"
+#include "assumerolewithsamlrequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class AssumeRoleWithSAMLResponsePrivate;
+
+class QTAWS_EXPORT AssumeRoleWithSAMLResponse : public AssumeRoleWithSAMLResponse {
+    Q_OBJECT
+
+public:
+    AssumeRoleWithSAMLResponse(const AssumeRoleWithSAMLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssumeRoleWithSAMLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssumeRoleWithSAMLResponse)
+    Q_DISABLE_COPY(AssumeRoleWithSAMLResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

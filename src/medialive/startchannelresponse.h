@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTCHANNELRESPONSE_H
 #define QTAWS_STARTCHANNELRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "startchannelrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class StartChannelResponsePrivate;
+
+class QTAWS_EXPORT StartChannelResponse : public StartChannelResponse {
+    Q_OBJECT
+
+public:
+    StartChannelResponse(const StartChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartChannelResponse)
+    Q_DISABLE_COPY(StartChannelResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

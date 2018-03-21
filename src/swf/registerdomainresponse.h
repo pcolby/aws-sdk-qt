@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERDOMAINRESPONSE_H
 #define QTAWS_REGISTERDOMAINRESPONSE_H
 
+#include "swfresponse.h"
+#include "registerdomainrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RegisterDomainResponsePrivate;
+
+class QTAWS_EXPORT RegisterDomainResponse : public RegisterDomainResponse {
+    Q_OBJECT
+
+public:
+    RegisterDomainResponse(const RegisterDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterDomainResponse)
+    Q_DISABLE_COPY(RegisterDomainResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

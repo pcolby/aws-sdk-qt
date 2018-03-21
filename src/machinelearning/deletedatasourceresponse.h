@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDATASOURCERESPONSE_H
 #define QTAWS_DELETEDATASOURCERESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "deletedatasourcerequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class DeleteDataSourceResponsePrivate;
+
+class QTAWS_EXPORT DeleteDataSourceResponse : public DeleteDataSourceResponse {
+    Q_OBJECT
+
+public:
+    DeleteDataSourceResponse(const DeleteDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDataSourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDataSourceResponse)
+    Q_DISABLE_COPY(DeleteDataSourceResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHANGEPASSWORDRESPONSE_H
 #define QTAWS_CHANGEPASSWORDRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "changepasswordrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ChangePasswordResponsePrivate;
+
+class QTAWS_EXPORT ChangePasswordResponse : public ChangePasswordResponse {
+    Q_OBJECT
+
+public:
+    ChangePasswordResponse(const ChangePasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ChangePasswordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ChangePasswordResponse)
+    Q_DISABLE_COPY(ChangePasswordResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

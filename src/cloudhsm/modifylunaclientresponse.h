@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYLUNACLIENTRESPONSE_H
 #define QTAWS_MODIFYLUNACLIENTRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "modifylunaclientrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class ModifyLunaClientResponsePrivate;
+
+class QTAWS_EXPORT ModifyLunaClientResponse : public ModifyLunaClientResponse {
+    Q_OBJECT
+
+public:
+    ModifyLunaClientResponse(const ModifyLunaClientRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyLunaClientRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyLunaClientResponse)
+    Q_DISABLE_COPY(ModifyLunaClientResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

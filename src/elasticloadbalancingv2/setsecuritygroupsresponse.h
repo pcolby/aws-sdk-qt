@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETSECURITYGROUPSRESPONSE_H
 #define QTAWS_SETSECURITYGROUPSRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "setsecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class SetSecurityGroupsResponsePrivate;
+
+class QTAWS_EXPORT SetSecurityGroupsResponse : public SetSecurityGroupsResponse {
+    Q_OBJECT
+
+public:
+    SetSecurityGroupsResponse(const SetSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetSecurityGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetSecurityGroupsResponse)
+    Q_DISABLE_COPY(SetSecurityGroupsResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

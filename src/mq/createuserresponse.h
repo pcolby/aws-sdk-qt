@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEUSERRESPONSE_H
 #define QTAWS_CREATEUSERRESPONSE_H
 
+#include "mqresponse.h"
+#include "createuserrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class CreateUserResponsePrivate;
+
+class QTAWS_EXPORT CreateUserResponse : public CreateUserResponse {
+    Q_OBJECT
+
+public:
+    CreateUserResponse(const CreateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserResponse)
+    Q_DISABLE_COPY(CreateUserResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

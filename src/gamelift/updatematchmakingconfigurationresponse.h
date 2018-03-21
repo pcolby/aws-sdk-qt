@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMATCHMAKINGCONFIGURATIONRESPONSE_H
 #define QTAWS_UPDATEMATCHMAKINGCONFIGURATIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "updatematchmakingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class UpdateMatchmakingConfigurationResponsePrivate;
+
+class QTAWS_EXPORT UpdateMatchmakingConfigurationResponse : public UpdateMatchmakingConfigurationResponse {
+    Q_OBJECT
+
+public:
+    UpdateMatchmakingConfigurationResponse(const UpdateMatchmakingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateMatchmakingConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMatchmakingConfigurationResponse)
+    Q_DISABLE_COPY(UpdateMatchmakingConfigurationResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

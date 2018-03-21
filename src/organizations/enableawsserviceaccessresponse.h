@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEAWSSERVICEACCESSRESPONSE_H
 #define QTAWS_ENABLEAWSSERVICEACCESSRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "enableawsserviceaccessrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class EnableAWSServiceAccessResponsePrivate;
+
+class QTAWS_EXPORT EnableAWSServiceAccessResponse : public EnableAWSServiceAccessResponse {
+    Q_OBJECT
+
+public:
+    EnableAWSServiceAccessResponse(const EnableAWSServiceAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableAWSServiceAccessRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableAWSServiceAccessResponse)
+    Q_DISABLE_COPY(EnableAWSServiceAccessResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

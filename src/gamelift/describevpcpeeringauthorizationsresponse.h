@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVPCPEERINGAUTHORIZATIONSRESPONSE_H
 #define QTAWS_DESCRIBEVPCPEERINGAUTHORIZATIONSRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describevpcpeeringauthorizationsrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeVpcPeeringAuthorizationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeVpcPeeringAuthorizationsResponse : public DescribeVpcPeeringAuthorizationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeVpcPeeringAuthorizationsResponse(const DescribeVpcPeeringAuthorizationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVpcPeeringAuthorizationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcPeeringAuthorizationsResponse)
+    Q_DISABLE_COPY(DescribeVpcPeeringAuthorizationsResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

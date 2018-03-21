@@ -20,4 +20,33 @@
 #ifndef QTAWS_CLEARDEFAULTAUTHORIZERRESPONSE_H
 #define QTAWS_CLEARDEFAULTAUTHORIZERRESPONSE_H
 
+#include "iotresponse.h"
+#include "cleardefaultauthorizerrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ClearDefaultAuthorizerResponsePrivate;
+
+class QTAWS_EXPORT ClearDefaultAuthorizerResponse : public ClearDefaultAuthorizerResponse {
+    Q_OBJECT
+
+public:
+    ClearDefaultAuthorizerResponse(const ClearDefaultAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ClearDefaultAuthorizerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ClearDefaultAuthorizerResponse)
+    Q_DISABLE_COPY(ClearDefaultAuthorizerResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_H
 #define QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_H
 
+#include "smsresponse.h"
+#include "startondemandreplicationrunrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class StartOnDemandReplicationRunResponsePrivate;
+
+class QTAWS_EXPORT StartOnDemandReplicationRunResponse : public StartOnDemandReplicationRunResponse {
+    Q_OBJECT
+
+public:
+    StartOnDemandReplicationRunResponse(const StartOnDemandReplicationRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartOnDemandReplicationRunRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartOnDemandReplicationRunResponse)
+    Q_DISABLE_COPY(StartOnDemandReplicationRunResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

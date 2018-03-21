@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINPUTRESPONSE_H
 #define QTAWS_DELETEINPUTRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "deleteinputrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class DeleteInputResponsePrivate;
+
+class QTAWS_EXPORT DeleteInputResponse : public DeleteInputResponse {
+    Q_OBJECT
+
+public:
+    DeleteInputResponse(const DeleteInputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteInputRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInputResponse)
+    Q_DISABLE_COPY(DeleteInputResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

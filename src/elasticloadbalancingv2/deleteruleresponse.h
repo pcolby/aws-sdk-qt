@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERULERESPONSE_H
 #define QTAWS_DELETERULERESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "deleterulerequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DeleteRuleResponsePrivate;
+
+class QTAWS_EXPORT DeleteRuleResponse : public DeleteRuleResponse {
+    Q_OBJECT
+
+public:
+    DeleteRuleResponse(const DeleteRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRuleResponse)
+    Q_DISABLE_COPY(DeleteRuleResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

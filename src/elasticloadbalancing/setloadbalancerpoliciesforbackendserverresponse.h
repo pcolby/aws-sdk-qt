@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERRESPONSE_H
 #define QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "setloadbalancerpoliciesforbackendserverrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class SetLoadBalancerPoliciesForBackendServerResponsePrivate;
+
+class QTAWS_EXPORT SetLoadBalancerPoliciesForBackendServerResponse : public SetLoadBalancerPoliciesForBackendServerResponse {
+    Q_OBJECT
+
+public:
+    SetLoadBalancerPoliciesForBackendServerResponse(const SetLoadBalancerPoliciesForBackendServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetLoadBalancerPoliciesForBackendServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBalancerPoliciesForBackendServerResponse)
+    Q_DISABLE_COPY(SetLoadBalancerPoliciesForBackendServerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

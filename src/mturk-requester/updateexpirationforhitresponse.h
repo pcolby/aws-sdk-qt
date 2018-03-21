@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_H
 #define QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "updateexpirationforhitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class UpdateExpirationForHITResponsePrivate;
+
+class QTAWS_EXPORT UpdateExpirationForHITResponse : public UpdateExpirationForHITResponse {
+    Q_OBJECT
+
+public:
+    UpdateExpirationForHITResponse(const UpdateExpirationForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateExpirationForHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateExpirationForHITResponse)
+    Q_DISABLE_COPY(UpdateExpirationForHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

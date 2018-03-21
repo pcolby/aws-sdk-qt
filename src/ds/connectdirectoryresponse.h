@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONNECTDIRECTORYRESPONSE_H
 #define QTAWS_CONNECTDIRECTORYRESPONSE_H
 
+#include "dsresponse.h"
+#include "connectdirectoryrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class ConnectDirectoryResponsePrivate;
+
+class QTAWS_EXPORT ConnectDirectoryResponse : public ConnectDirectoryResponse {
+    Q_OBJECT
+
+public:
+    ConnectDirectoryResponse(const ConnectDirectoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConnectDirectoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConnectDirectoryResponse)
+    Q_DISABLE_COPY(ConnectDirectoryResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

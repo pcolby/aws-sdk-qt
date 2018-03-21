@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBOUTPUTRESPONSE_H
 #define QTAWS_GETJOBOUTPUTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "getjoboutputrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class GetJobOutputResponsePrivate;
+
+class QTAWS_EXPORT GetJobOutputResponse : public GetJobOutputResponse {
+    Q_OBJECT
+
+public:
+    GetJobOutputResponse(const GetJobOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobOutputRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobOutputResponse)
+    Q_DISABLE_COPY(GetJobOutputResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

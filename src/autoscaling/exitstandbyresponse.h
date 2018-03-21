@@ -20,4 +20,33 @@
 #ifndef QTAWS_EXITSTANDBYRESPONSE_H
 #define QTAWS_EXITSTANDBYRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "exitstandbyrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class ExitStandbyResponsePrivate;
+
+class QTAWS_EXPORT ExitStandbyResponse : public ExitStandbyResponse {
+    Q_OBJECT
+
+public:
+    ExitStandbyResponse(const ExitStandbyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ExitStandbyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ExitStandbyResponse)
+    Q_DISABLE_COPY(ExitStandbyResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

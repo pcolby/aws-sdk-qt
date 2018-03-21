@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELRETRIEVALRESPONSE_H
 #define QTAWS_CANCELRETRIEVALRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "cancelretrievalrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class CancelRetrievalResponsePrivate;
+
+class QTAWS_EXPORT CancelRetrievalResponse : public CancelRetrievalResponse {
+    Q_OBJECT
+
+public:
+    CancelRetrievalResponse(const CancelRetrievalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelRetrievalRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelRetrievalResponse)
+    Q_DISABLE_COPY(CancelRetrievalResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

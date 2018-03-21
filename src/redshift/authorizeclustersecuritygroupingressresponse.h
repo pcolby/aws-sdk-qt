@@ -20,4 +20,33 @@
 #ifndef QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "authorizeclustersecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class AuthorizeClusterSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressResponse : public AuthorizeClusterSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    AuthorizeClusterSecurityGroupIngressResponse(const AuthorizeClusterSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AuthorizeClusterSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeClusterSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeClusterSecurityGroupIngressResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

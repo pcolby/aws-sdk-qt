@@ -20,4 +20,33 @@
 #ifndef QTAWS_INVOKERESPONSE_H
 #define QTAWS_INVOKERESPONSE_H
 
+#include "lambdaresponse.h"
+#include "invokerequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class InvokeResponsePrivate;
+
+class QTAWS_EXPORT InvokeResponse : public InvokeResponse {
+    Q_OBJECT
+
+public:
+    InvokeResponse(const InvokeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InvokeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InvokeResponse)
+    Q_DISABLE_COPY(InvokeResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

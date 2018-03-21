@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEHAPGRESPONSE_H
 #define QTAWS_CREATEHAPGRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "createhapgrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class CreateHapgResponsePrivate;
+
+class QTAWS_EXPORT CreateHapgResponse : public CreateHapgResponse {
+    Q_OBJECT
+
+public:
+    CreateHapgResponse(const CreateHapgRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateHapgRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateHapgResponse)
+    Q_DISABLE_COPY(CreateHapgResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

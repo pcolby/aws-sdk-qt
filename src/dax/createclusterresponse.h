@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECLUSTERRESPONSE_H
 #define QTAWS_CREATECLUSTERRESPONSE_H
 
+#include "daxresponse.h"
+#include "createclusterrequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class CreateClusterResponsePrivate;
+
+class QTAWS_EXPORT CreateClusterResponse : public CreateClusterResponse {
+    Q_OBJECT
+
+public:
+    CreateClusterResponse(const CreateClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateClusterResponse)
+    Q_DISABLE_COPY(CreateClusterResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

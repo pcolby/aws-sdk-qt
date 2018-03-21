@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_H
 #define QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "createdirectconnectgatewayassociationrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class CreateDirectConnectGatewayAssociationResponsePrivate;
+
+class QTAWS_EXPORT CreateDirectConnectGatewayAssociationResponse : public CreateDirectConnectGatewayAssociationResponse {
+    Q_OBJECT
+
+public:
+    CreateDirectConnectGatewayAssociationResponse(const CreateDirectConnectGatewayAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDirectConnectGatewayAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDirectConnectGatewayAssociationResponse)
+    Q_DISABLE_COPY(CreateDirectConnectGatewayAssociationResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

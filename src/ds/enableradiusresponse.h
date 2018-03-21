@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLERADIUSRESPONSE_H
 #define QTAWS_ENABLERADIUSRESPONSE_H
 
+#include "dsresponse.h"
+#include "enableradiusrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class EnableRadiusResponsePrivate;
+
+class QTAWS_EXPORT EnableRadiusResponse : public EnableRadiusResponse {
+    Q_OBJECT
+
+public:
+    EnableRadiusResponse(const EnableRadiusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableRadiusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableRadiusResponse)
+    Q_DISABLE_COPY(EnableRadiusResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

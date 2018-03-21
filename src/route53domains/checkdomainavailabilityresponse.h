@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHECKDOMAINAVAILABILITYRESPONSE_H
 #define QTAWS_CHECKDOMAINAVAILABILITYRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "checkdomainavailabilityrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class CheckDomainAvailabilityResponsePrivate;
+
+class QTAWS_EXPORT CheckDomainAvailabilityResponse : public CheckDomainAvailabilityResponse {
+    Q_OBJECT
+
+public:
+    CheckDomainAvailabilityResponse(const CheckDomainAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CheckDomainAvailabilityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CheckDomainAvailabilityResponse)
+    Q_DISABLE_COPY(CheckDomainAvailabilityResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "updateapplicationrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class UpdateApplicationResponsePrivate;
+
+class QTAWS_EXPORT UpdateApplicationResponse : public UpdateApplicationResponse {
+    Q_OBJECT
+
+public:
+    UpdateApplicationResponse(const UpdateApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationResponse)
+    Q_DISABLE_COPY(UpdateApplicationResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

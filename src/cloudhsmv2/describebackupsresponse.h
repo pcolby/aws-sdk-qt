@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBACKUPSRESPONSE_H
 #define QTAWS_DESCRIBEBACKUPSRESPONSE_H
 
+#include "cloudhsmv2response.h"
+#include "describebackupsrequest.h"
+
+namespace AWS {
+
+namespace cloudhsmv2 {
+
+class DescribeBackupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeBackupsResponse : public DescribeBackupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeBackupsResponse(const DescribeBackupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBackupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBackupsResponse)
+    Q_DISABLE_COPY(DescribeBackupsResponse)
+
+};
+
+} // namespace cloudhsmv2
+} // namespace AWS
+
 #endif

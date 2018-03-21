@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAPPRESPONSE_H
 #define QTAWS_DELETEAPPRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deleteapprequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteAppResponsePrivate;
+
+class QTAWS_EXPORT DeleteAppResponse : public DeleteAppResponse {
+    Q_OBJECT
+
+public:
+    DeleteAppResponse(const DeleteAppRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAppRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAppResponse)
+    Q_DISABLE_COPY(DeleteAppResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESSHPUBLICKEYRESPONSE_H
 #define QTAWS_UPDATESSHPUBLICKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "updatesshpublickeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateSSHPublicKeyResponsePrivate;
+
+class QTAWS_EXPORT UpdateSSHPublicKeyResponse : public UpdateSSHPublicKeyResponse {
+    Q_OBJECT
+
+public:
+    UpdateSSHPublicKeyResponse(const UpdateSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSSHPublicKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSSHPublicKeyResponse)
+    Q_DISABLE_COPY(UpdateSSHPublicKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

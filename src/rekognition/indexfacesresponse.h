@@ -20,4 +20,33 @@
 #ifndef QTAWS_INDEXFACESRESPONSE_H
 #define QTAWS_INDEXFACESRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "indexfacesrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class IndexFacesResponsePrivate;
+
+class QTAWS_EXPORT IndexFacesResponse : public IndexFacesResponse {
+    Q_OBJECT
+
+public:
+    IndexFacesResponse(const IndexFacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const IndexFacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(IndexFacesResponse)
+    Q_DISABLE_COPY(IndexFacesResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

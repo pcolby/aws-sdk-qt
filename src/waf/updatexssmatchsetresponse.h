@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETRESPONSE_H
 #define QTAWS_UPDATEXSSMATCHSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "updatexssmatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class UpdateXssMatchSetResponsePrivate;
+
+class QTAWS_EXPORT UpdateXssMatchSetResponse : public UpdateXssMatchSetResponse {
+    Q_OBJECT
+
+public:
+    UpdateXssMatchSetResponse(const UpdateXssMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateXssMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateXssMatchSetResponse)
+    Q_DISABLE_COPY(UpdateXssMatchSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

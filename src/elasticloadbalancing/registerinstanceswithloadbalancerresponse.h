@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERINSTANCESWITHLOADBALANCERRESPONSE_H
 #define QTAWS_REGISTERINSTANCESWITHLOADBALANCERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "registerinstanceswithloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class RegisterInstancesWithLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT RegisterInstancesWithLoadBalancerResponse : public RegisterInstancesWithLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    RegisterInstancesWithLoadBalancerResponse(const RegisterInstancesWithLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterInstancesWithLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterInstancesWithLoadBalancerResponse)
+    Q_DISABLE_COPY(RegisterInstancesWithLoadBalancerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

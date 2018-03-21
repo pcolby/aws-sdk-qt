@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTRESPONSE_H
 #define QTAWS_DESCRIBEDOCUMENTRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describedocumentrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeDocumentResponsePrivate;
+
+class QTAWS_EXPORT DescribeDocumentResponse : public DescribeDocumentResponse {
+    Q_OBJECT
+
+public:
+    DescribeDocumentResponse(const DescribeDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDocumentResponse)
+    Q_DISABLE_COPY(DescribeDocumentResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

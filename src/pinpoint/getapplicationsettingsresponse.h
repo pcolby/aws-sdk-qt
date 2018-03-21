@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAPPLICATIONSETTINGSRESPONSE_H
 #define QTAWS_GETAPPLICATIONSETTINGSRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getapplicationsettingsrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetApplicationSettingsResponsePrivate;
+
+class QTAWS_EXPORT GetApplicationSettingsResponse : public GetApplicationSettingsResponse {
+    Q_OBJECT
+
+public:
+    GetApplicationSettingsResponse(const GetApplicationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetApplicationSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetApplicationSettingsResponse)
+    Q_DISABLE_COPY(GetApplicationSettingsResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

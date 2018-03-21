@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEFILESYSTEMRESPONSE_H
 #define QTAWS_CREATEFILESYSTEMRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "createfilesystemrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class CreateFileSystemResponsePrivate;
+
+class QTAWS_EXPORT CreateFileSystemResponse : public CreateFileSystemResponse {
+    Q_OBJECT
+
+public:
+    CreateFileSystemResponse(const CreateFileSystemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateFileSystemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateFileSystemResponse)
+    Q_DISABLE_COPY(CreateFileSystemResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

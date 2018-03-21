@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEHSMCLIENTCERTIFICATERESPONSE_H
 #define QTAWS_DELETEHSMCLIENTCERTIFICATERESPONSE_H
 
+#include "redshiftresponse.h"
+#include "deletehsmclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DeleteHsmClientCertificateResponsePrivate;
+
+class QTAWS_EXPORT DeleteHsmClientCertificateResponse : public DeleteHsmClientCertificateResponse {
+    Q_OBJECT
+
+public:
+    DeleteHsmClientCertificateResponse(const DeleteHsmClientCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteHsmClientCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHsmClientCertificateResponse)
+    Q_DISABLE_COPY(DeleteHsmClientCertificateResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

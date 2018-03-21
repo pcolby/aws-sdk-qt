@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "describeenginedefaultparametersrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DescribeEngineDefaultParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeEngineDefaultParametersResponse : public DescribeEngineDefaultParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeEngineDefaultParametersResponse(const DescribeEngineDefaultParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEngineDefaultParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEngineDefaultParametersResponse)
+    Q_DISABLE_COPY(DescribeEngineDefaultParametersResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

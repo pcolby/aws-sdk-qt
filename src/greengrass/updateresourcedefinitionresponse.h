@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_H
 #define QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "updateresourcedefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class UpdateResourceDefinitionResponsePrivate;
+
+class QTAWS_EXPORT UpdateResourceDefinitionResponse : public UpdateResourceDefinitionResponse {
+    Q_OBJECT
+
+public:
+    UpdateResourceDefinitionResponse(const UpdateResourceDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateResourceDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResourceDefinitionResponse)
+    Q_DISABLE_COPY(UpdateResourceDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

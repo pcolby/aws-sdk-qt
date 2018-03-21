@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDEVICESTATUSRESPONSE_H
 #define QTAWS_UPDATEDEVICESTATUSRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "updatedevicestatusrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class UpdateDeviceStatusResponsePrivate;
+
+class QTAWS_EXPORT UpdateDeviceStatusResponse : public UpdateDeviceStatusResponse {
+    Q_OBJECT
+
+public:
+    UpdateDeviceStatusResponse(const UpdateDeviceStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDeviceStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDeviceStatusResponse)
+    Q_DISABLE_COPY(UpdateDeviceStatusResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

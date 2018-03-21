@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHPRINCIPALPOLICYRESPONSE_H
 #define QTAWS_DETACHPRINCIPALPOLICYRESPONSE_H
 
+#include "iotresponse.h"
+#include "detachprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DetachPrincipalPolicyResponsePrivate;
+
+class QTAWS_EXPORT DetachPrincipalPolicyResponse : public DetachPrincipalPolicyResponse {
+    Q_OBJECT
+
+public:
+    DetachPrincipalPolicyResponse(const DetachPrincipalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachPrincipalPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachPrincipalPolicyResponse)
+    Q_DISABLE_COPY(DetachPrincipalPolicyResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

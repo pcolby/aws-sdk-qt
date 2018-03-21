@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEUSERFROMGROUPRESPONSE_H
 #define QTAWS_REMOVEUSERFROMGROUPRESPONSE_H
 
+#include "iamresponse.h"
+#include "removeuserfromgrouprequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class RemoveUserFromGroupResponsePrivate;
+
+class QTAWS_EXPORT RemoveUserFromGroupResponse : public RemoveUserFromGroupResponse {
+    Q_OBJECT
+
+public:
+    RemoveUserFromGroupResponse(const RemoveUserFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveUserFromGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveUserFromGroupResponse)
+    Q_DISABLE_COPY(RemoveUserFromGroupResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

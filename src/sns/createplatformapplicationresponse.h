@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_H
 #define QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_H
 
+#include "snsresponse.h"
+#include "createplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class CreatePlatformApplicationResponsePrivate;
+
+class QTAWS_EXPORT CreatePlatformApplicationResponse : public CreatePlatformApplicationResponse {
+    Q_OBJECT
+
+public:
+    CreatePlatformApplicationResponse(const CreatePlatformApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePlatformApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlatformApplicationResponse)
+    Q_DISABLE_COPY(CreatePlatformApplicationResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEUTTERANCESRESPONSE_H
 #define QTAWS_DELETEUTTERANCESRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "deleteutterancesrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class DeleteUtterancesResponsePrivate;
+
+class QTAWS_EXPORT DeleteUtterancesResponse : public DeleteUtterancesResponse {
+    Q_OBJECT
+
+public:
+    DeleteUtterancesResponse(const DeleteUtterancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteUtterancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUtterancesResponse)
+    Q_DISABLE_COPY(DeleteUtterancesResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

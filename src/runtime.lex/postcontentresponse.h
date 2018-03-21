@@ -20,4 +20,33 @@
 #ifndef QTAWS_POSTCONTENTRESPONSE_H
 #define QTAWS_POSTCONTENTRESPONSE_H
 
+#include "runtime.lexresponse.h"
+#include "postcontentrequest.h"
+
+namespace AWS {
+
+namespace runtime.lex {
+
+class PostContentResponsePrivate;
+
+class QTAWS_EXPORT PostContentResponse : public PostContentResponse {
+    Q_OBJECT
+
+public:
+    PostContentResponse(const PostContentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PostContentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PostContentResponse)
+    Q_DISABLE_COPY(PostContentResponse)
+
+};
+
+} // namespace runtime.lex
+} // namespace AWS
+
 #endif

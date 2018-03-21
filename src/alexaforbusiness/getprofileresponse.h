@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPROFILERESPONSE_H
 #define QTAWS_GETPROFILERESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "getprofilerequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class GetProfileResponsePrivate;
+
+class QTAWS_EXPORT GetProfileResponse : public GetProfileResponse {
+    Q_OBJECT
+
+public:
+    GetProfileResponse(const GetProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetProfileResponse)
+    Q_DISABLE_COPY(GetProfileResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

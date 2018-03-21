@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_H
 #define QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "deleteclustersecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DeleteClusterSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteClusterSecurityGroupResponse : public DeleteClusterSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteClusterSecurityGroupResponse(const DeleteClusterSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteClusterSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteClusterSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteClusterSecurityGroupResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

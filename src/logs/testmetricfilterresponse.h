@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTMETRICFILTERRESPONSE_H
 #define QTAWS_TESTMETRICFILTERRESPONSE_H
 
+#include "logsresponse.h"
+#include "testmetricfilterrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class TestMetricFilterResponsePrivate;
+
+class QTAWS_EXPORT TestMetricFilterResponse : public TestMetricFilterResponse {
+    Q_OBJECT
+
+public:
+    TestMetricFilterResponse(const TestMetricFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestMetricFilterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestMetricFilterResponse)
+    Q_DISABLE_COPY(TestMetricFilterResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

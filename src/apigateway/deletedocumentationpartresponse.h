@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONPARTRESPONSE_H
 #define QTAWS_DELETEDOCUMENTATIONPARTRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deletedocumentationpartrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteDocumentationPartResponsePrivate;
+
+class QTAWS_EXPORT DeleteDocumentationPartResponse : public DeleteDocumentationPartResponse {
+    Q_OBJECT
+
+public:
+    DeleteDocumentationPartResponse(const DeleteDocumentationPartRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDocumentationPartRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDocumentationPartResponse)
+    Q_DISABLE_COPY(DeleteDocumentationPartResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

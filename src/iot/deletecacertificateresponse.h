@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECACERTIFICATERESPONSE_H
 #define QTAWS_DELETECACERTIFICATERESPONSE_H
 
+#include "iotresponse.h"
+#include "deletecacertificaterequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeleteCACertificateResponsePrivate;
+
+class QTAWS_EXPORT DeleteCACertificateResponse : public DeleteCACertificateResponse {
+    Q_OBJECT
+
+public:
+    DeleteCACertificateResponse(const DeleteCACertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCACertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCACertificateResponse)
+    Q_DISABLE_COPY(DeleteCACertificateResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

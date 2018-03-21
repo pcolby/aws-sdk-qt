@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTALESECURITYGROUPSRESPONSE_H
 #define QTAWS_DESCRIBESTALESECURITYGROUPSRESPONSE_H
 
+#include "ec2response.h"
+#include "describestalesecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeStaleSecurityGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeStaleSecurityGroupsResponse : public DescribeStaleSecurityGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeStaleSecurityGroupsResponse(const DescribeStaleSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStaleSecurityGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStaleSecurityGroupsResponse)
+    Q_DISABLE_COPY(DescribeStaleSecurityGroupsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

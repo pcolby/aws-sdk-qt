@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describereplicationsubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeReplicationSubnetGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeReplicationSubnetGroupsResponse : public DescribeReplicationSubnetGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeReplicationSubnetGroupsResponse(const DescribeReplicationSubnetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReplicationSubnetGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReplicationSubnetGroupsResponse)
+    Q_DISABLE_COPY(DescribeReplicationSubnetGroupsResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

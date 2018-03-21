@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_H
 
+#include "esresponse.h"
+#include "listelasticsearchinstancetypesrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class ListElasticsearchInstanceTypesResponsePrivate;
+
+class QTAWS_EXPORT ListElasticsearchInstanceTypesResponse : public ListElasticsearchInstanceTypesResponse {
+    Q_OBJECT
+
+public:
+    ListElasticsearchInstanceTypesResponse(const ListElasticsearchInstanceTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListElasticsearchInstanceTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListElasticsearchInstanceTypesResponse)
+    Q_DISABLE_COPY(ListElasticsearchInstanceTypesResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

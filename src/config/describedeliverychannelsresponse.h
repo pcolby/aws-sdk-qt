@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSRESPONSE_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSRESPONSE_H
 
+#include "configresponse.h"
+#include "describedeliverychannelsrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DescribeDeliveryChannelsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDeliveryChannelsResponse : public DescribeDeliveryChannelsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDeliveryChannelsResponse(const DescribeDeliveryChannelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDeliveryChannelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDeliveryChannelsResponse)
+    Q_DISABLE_COPY(DescribeDeliveryChannelsResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

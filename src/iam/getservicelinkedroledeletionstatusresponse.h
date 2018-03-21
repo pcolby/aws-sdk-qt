@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSRESPONSE_H
 #define QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSRESPONSE_H
 
+#include "iamresponse.h"
+#include "getservicelinkedroledeletionstatusrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetServiceLinkedRoleDeletionStatusResponsePrivate;
+
+class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusResponse : public GetServiceLinkedRoleDeletionStatusResponse {
+    Q_OBJECT
+
+public:
+    GetServiceLinkedRoleDeletionStatusResponse(const GetServiceLinkedRoleDeletionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetServiceLinkedRoleDeletionStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetServiceLinkedRoleDeletionStatusResponse)
+    Q_DISABLE_COPY(GetServiceLinkedRoleDeletionStatusResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

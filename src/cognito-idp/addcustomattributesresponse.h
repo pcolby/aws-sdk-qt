@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_H
 #define QTAWS_ADDCUSTOMATTRIBUTESRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "addcustomattributesrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AddCustomAttributesResponsePrivate;
+
+class QTAWS_EXPORT AddCustomAttributesResponse : public AddCustomAttributesResponse {
+    Q_OBJECT
+
+public:
+    AddCustomAttributesResponse(const AddCustomAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddCustomAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddCustomAttributesResponse)
+    Q_DISABLE_COPY(AddCustomAttributesResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

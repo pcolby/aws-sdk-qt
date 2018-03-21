@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHECKDNSAVAILABILITYRESPONSE_H
 #define QTAWS_CHECKDNSAVAILABILITYRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "checkdnsavailabilityrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class CheckDNSAvailabilityResponsePrivate;
+
+class QTAWS_EXPORT CheckDNSAvailabilityResponse : public CheckDNSAvailabilityResponse {
+    Q_OBJECT
+
+public:
+    CheckDNSAvailabilityResponse(const CheckDNSAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CheckDNSAvailabilityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CheckDNSAvailabilityResponse)
+    Q_DISABLE_COPY(CheckDNSAvailabilityResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

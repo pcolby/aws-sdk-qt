@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEBANDWIDTHRATELIMITRESPONSE_H
 #define QTAWS_UPDATEBANDWIDTHRATELIMITRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updatebandwidthratelimitrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateBandwidthRateLimitResponsePrivate;
+
+class QTAWS_EXPORT UpdateBandwidthRateLimitResponse : public UpdateBandwidthRateLimitResponse {
+    Q_OBJECT
+
+public:
+    UpdateBandwidthRateLimitResponse(const UpdateBandwidthRateLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateBandwidthRateLimitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBandwidthRateLimitResponse)
+    Q_DISABLE_COPY(UpdateBandwidthRateLimitResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

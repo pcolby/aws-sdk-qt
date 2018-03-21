@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESTREAMRESPONSE_H
 #define QTAWS_DELETESTREAMRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "deletestreamrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class DeleteStreamResponsePrivate;
+
+class QTAWS_EXPORT DeleteStreamResponse : public DeleteStreamResponse {
+    Q_OBJECT
+
+public:
+    DeleteStreamResponse(const DeleteStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStreamResponse)
+    Q_DISABLE_COPY(DeleteStreamResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

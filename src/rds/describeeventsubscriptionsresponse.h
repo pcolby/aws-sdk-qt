@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describeeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeEventSubscriptionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEventSubscriptionsResponse : public DescribeEventSubscriptionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEventSubscriptionsResponse(const DescribeEventSubscriptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEventSubscriptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventSubscriptionsResponse)
+    Q_DISABLE_COPY(DescribeEventSubscriptionsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

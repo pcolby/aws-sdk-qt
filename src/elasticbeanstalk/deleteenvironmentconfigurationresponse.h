@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "deleteenvironmentconfigurationrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DeleteEnvironmentConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteEnvironmentConfigurationResponse : public DeleteEnvironmentConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteEnvironmentConfigurationResponse(const DeleteEnvironmentConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEnvironmentConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEnvironmentConfigurationResponse)
+    Q_DISABLE_COPY(DeleteEnvironmentConfigurationResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

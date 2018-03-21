@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRECORDSRESPONSE_H
 #define QTAWS_PUTRECORDSRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "putrecordsrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class PutRecordsResponsePrivate;
+
+class QTAWS_EXPORT PutRecordsResponse : public PutRecordsResponse {
+    Q_OBJECT
+
+public:
+    PutRecordsResponse(const PutRecordsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRecordsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRecordsResponse)
+    Q_DISABLE_COPY(PutRecordsResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

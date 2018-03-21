@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTASSOCIATIONSRESPONSE_H
 #define QTAWS_LISTASSOCIATIONSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listassociationsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListAssociationsResponsePrivate;
+
+class QTAWS_EXPORT ListAssociationsResponse : public ListAssociationsResponse {
+    Q_OBJECT
+
+public:
+    ListAssociationsResponse(const ListAssociationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAssociationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAssociationsResponse)
+    Q_DISABLE_COPY(ListAssociationsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

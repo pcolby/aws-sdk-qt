@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHUSERPOLICYRESPONSE_H
 #define QTAWS_DETACHUSERPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "detachuserpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DetachUserPolicyResponsePrivate;
+
+class QTAWS_EXPORT DetachUserPolicyResponse : public DetachUserPolicyResponse {
+    Q_OBJECT
+
+public:
+    DetachUserPolicyResponse(const DetachUserPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachUserPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachUserPolicyResponse)
+    Q_DISABLE_COPY(DetachUserPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

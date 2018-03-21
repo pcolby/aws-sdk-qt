@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDEVELOPMENTSCHEMAARNSRESPONSE_H
 #define QTAWS_LISTDEVELOPMENTSCHEMAARNSRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listdevelopmentschemaarnsrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListDevelopmentSchemaArnsResponsePrivate;
+
+class QTAWS_EXPORT ListDevelopmentSchemaArnsResponse : public ListDevelopmentSchemaArnsResponse {
+    Q_OBJECT
+
+public:
+    ListDevelopmentSchemaArnsResponse(const ListDevelopmentSchemaArnsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDevelopmentSchemaArnsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDevelopmentSchemaArnsResponse)
+    Q_DISABLE_COPY(ListDevelopmentSchemaArnsResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

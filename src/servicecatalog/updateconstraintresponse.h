@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONSTRAINTRESPONSE_H
 #define QTAWS_UPDATECONSTRAINTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "updateconstraintrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class UpdateConstraintResponsePrivate;
+
+class QTAWS_EXPORT UpdateConstraintResponse : public UpdateConstraintResponse {
+    Q_OBJECT
+
+public:
+    UpdateConstraintResponse(const UpdateConstraintRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConstraintRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConstraintResponse)
+    Q_DISABLE_COPY(UpdateConstraintResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

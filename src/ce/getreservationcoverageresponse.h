@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGERESPONSE_H
 #define QTAWS_GETRESERVATIONCOVERAGERESPONSE_H
 
+#include "ceresponse.h"
+#include "getreservationcoveragerequest.h"
+
+namespace AWS {
+
+namespace ce {
+
+class GetReservationCoverageResponsePrivate;
+
+class QTAWS_EXPORT GetReservationCoverageResponse : public GetReservationCoverageResponse {
+    Q_OBJECT
+
+public:
+    GetReservationCoverageResponse(const GetReservationCoverageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReservationCoverageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReservationCoverageResponse)
+    Q_DISABLE_COPY(GetReservationCoverageResponse)
+
+};
+
+} // namespace ce
+} // namespace AWS
+
 #endif

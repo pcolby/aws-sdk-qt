@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEALARMACTIONSRESPONSE_H
 #define QTAWS_DISABLEALARMACTIONSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "disablealarmactionsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class DisableAlarmActionsResponsePrivate;
+
+class QTAWS_EXPORT DisableAlarmActionsResponse : public DisableAlarmActionsResponse {
+    Q_OBJECT
+
+public:
+    DisableAlarmActionsResponse(const DisableAlarmActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableAlarmActionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableAlarmActionsResponse)
+    Q_DISABLE_COPY(DisableAlarmActionsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

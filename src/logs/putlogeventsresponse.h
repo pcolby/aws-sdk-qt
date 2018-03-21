@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTLOGEVENTSRESPONSE_H
 #define QTAWS_PUTLOGEVENTSRESPONSE_H
 
+#include "logsresponse.h"
+#include "putlogeventsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutLogEventsResponsePrivate;
+
+class QTAWS_EXPORT PutLogEventsResponse : public PutLogEventsResponse {
+    Q_OBJECT
+
+public:
+    PutLogEventsResponse(const PutLogEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutLogEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutLogEventsResponse)
+    Q_DISABLE_COPY(PutLogEventsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

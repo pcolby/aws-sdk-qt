@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPLOADLAYERPARTRESPONSE_H
 #define QTAWS_UPLOADLAYERPARTRESPONSE_H
 
+#include "ecrresponse.h"
+#include "uploadlayerpartrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class UploadLayerPartResponsePrivate;
+
+class QTAWS_EXPORT UploadLayerPartResponse : public UploadLayerPartResponse {
+    Q_OBJECT
+
+public:
+    UploadLayerPartResponse(const UploadLayerPartRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UploadLayerPartRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UploadLayerPartResponse)
+    Q_DISABLE_COPY(UploadLayerPartResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

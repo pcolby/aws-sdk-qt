@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEITEMRESPONSE_H
 #define QTAWS_UPDATEITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "updateitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class UpdateItemResponsePrivate;
+
+class QTAWS_EXPORT UpdateItemResponse : public UpdateItemResponse {
+    Q_OBJECT
+
+public:
+    UpdateItemResponse(const UpdateItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateItemResponse)
+    Q_DISABLE_COPY(UpdateItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

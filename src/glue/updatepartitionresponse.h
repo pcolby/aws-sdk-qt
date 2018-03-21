@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPARTITIONRESPONSE_H
 #define QTAWS_UPDATEPARTITIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "updatepartitionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdatePartitionResponsePrivate;
+
+class QTAWS_EXPORT UpdatePartitionResponse : public UpdatePartitionResponse {
+    Q_OBJECT
+
+public:
+    UpdatePartitionResponse(const UpdatePartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePartitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePartitionResponse)
+    Q_DISABLE_COPY(UpdatePartitionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

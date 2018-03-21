@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERADIUSRESPONSE_H
 #define QTAWS_UPDATERADIUSRESPONSE_H
 
+#include "dsresponse.h"
+#include "updateradiusrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class UpdateRadiusResponsePrivate;
+
+class QTAWS_EXPORT UpdateRadiusResponse : public UpdateRadiusResponse {
+    Q_OBJECT
+
+public:
+    UpdateRadiusResponse(const UpdateRadiusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRadiusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRadiusResponse)
+    Q_DISABLE_COPY(UpdateRadiusResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEBAIDUCHANNELRESPONSE_H
 #define QTAWS_UPDATEBAIDUCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updatebaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateBaiduChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateBaiduChannelResponse : public UpdateBaiduChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateBaiduChannelResponse(const UpdateBaiduChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateBaiduChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBaiduChannelResponse)
+    Q_DISABLE_COPY(UpdateBaiduChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

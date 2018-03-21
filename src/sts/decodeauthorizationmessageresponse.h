@@ -20,4 +20,33 @@
 #ifndef QTAWS_DECODEAUTHORIZATIONMESSAGERESPONSE_H
 #define QTAWS_DECODEAUTHORIZATIONMESSAGERESPONSE_H
 
+#include "stsresponse.h"
+#include "decodeauthorizationmessagerequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class DecodeAuthorizationMessageResponsePrivate;
+
+class QTAWS_EXPORT DecodeAuthorizationMessageResponse : public DecodeAuthorizationMessageResponse {
+    Q_OBJECT
+
+public:
+    DecodeAuthorizationMessageResponse(const DecodeAuthorizationMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DecodeAuthorizationMessageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DecodeAuthorizationMessageResponse)
+    Q_DISABLE_COPY(DecodeAuthorizationMessageResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

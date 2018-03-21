@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEACCESSKEYRESPONSE_H
 #define QTAWS_CREATEACCESSKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "createaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreateAccessKeyResponsePrivate;
+
+class QTAWS_EXPORT CreateAccessKeyResponse : public CreateAccessKeyResponse {
+    Q_OBJECT
+
+public:
+    CreateAccessKeyResponse(const CreateAccessKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAccessKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAccessKeyResponse)
+    Q_DISABLE_COPY(CreateAccessKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

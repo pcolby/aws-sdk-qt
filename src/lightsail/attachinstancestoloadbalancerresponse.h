@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHINSTANCESTOLOADBALANCERRESPONSE_H
 #define QTAWS_ATTACHINSTANCESTOLOADBALANCERRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "attachinstancestoloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class AttachInstancesToLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT AttachInstancesToLoadBalancerResponse : public AttachInstancesToLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    AttachInstancesToLoadBalancerResponse(const AttachInstancesToLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachInstancesToLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachInstancesToLoadBalancerResponse)
+    Q_DISABLE_COPY(AttachInstancesToLoadBalancerResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

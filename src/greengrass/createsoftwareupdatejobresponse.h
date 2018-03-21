@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESOFTWAREUPDATEJOBRESPONSE_H
 #define QTAWS_CREATESOFTWAREUPDATEJOBRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "createsoftwareupdatejobrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class CreateSoftwareUpdateJobResponsePrivate;
+
+class QTAWS_EXPORT CreateSoftwareUpdateJobResponse : public CreateSoftwareUpdateJobResponse {
+    Q_OBJECT
+
+public:
+    CreateSoftwareUpdateJobResponse(const CreateSoftwareUpdateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSoftwareUpdateJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSoftwareUpdateJobResponse)
+    Q_DISABLE_COPY(CreateSoftwareUpdateJobResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

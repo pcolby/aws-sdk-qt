@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETCORSRESPONSE_H
 #define QTAWS_GETBUCKETCORSRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketcorsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketCorsResponsePrivate;
+
+class QTAWS_EXPORT GetBucketCorsResponse : public GetBucketCorsResponse {
+    Q_OBJECT
+
+public:
+    GetBucketCorsResponse(const GetBucketCorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketCorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketCorsResponse)
+    Q_DISABLE_COPY(GetBucketCorsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

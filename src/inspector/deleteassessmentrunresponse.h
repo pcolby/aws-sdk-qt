@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEASSESSMENTRUNRESPONSE_H
 #define QTAWS_DELETEASSESSMENTRUNRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "deleteassessmentrunrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class DeleteAssessmentRunResponsePrivate;
+
+class QTAWS_EXPORT DeleteAssessmentRunResponse : public DeleteAssessmentRunResponse {
+    Q_OBJECT
+
+public:
+    DeleteAssessmentRunResponse(const DeleteAssessmentRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAssessmentRunRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAssessmentRunResponse)
+    Q_DISABLE_COPY(DeleteAssessmentRunResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

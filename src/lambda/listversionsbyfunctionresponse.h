@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTVERSIONSBYFUNCTIONRESPONSE_H
 #define QTAWS_LISTVERSIONSBYFUNCTIONRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "listversionsbyfunctionrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class ListVersionsByFunctionResponsePrivate;
+
+class QTAWS_EXPORT ListVersionsByFunctionResponse : public ListVersionsByFunctionResponse {
+    Q_OBJECT
+
+public:
+    ListVersionsByFunctionResponse(const ListVersionsByFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListVersionsByFunctionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListVersionsByFunctionResponse)
+    Q_DISABLE_COPY(ListVersionsByFunctionResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

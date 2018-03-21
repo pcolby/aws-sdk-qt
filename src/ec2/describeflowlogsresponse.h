@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFLOWLOGSRESPONSE_H
 #define QTAWS_DESCRIBEFLOWLOGSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeflowlogsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeFlowLogsResponsePrivate;
+
+class QTAWS_EXPORT DescribeFlowLogsResponse : public DescribeFlowLogsResponse {
+    Q_OBJECT
+
+public:
+    DescribeFlowLogsResponse(const DescribeFlowLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFlowLogsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFlowLogsResponse)
+    Q_DISABLE_COPY(DescribeFlowLogsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ALLOCATESTATICIPRESPONSE_H
 #define QTAWS_ALLOCATESTATICIPRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "allocatestaticiprequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class AllocateStaticIpResponsePrivate;
+
+class QTAWS_EXPORT AllocateStaticIpResponse : public AllocateStaticIpResponse {
+    Q_OBJECT
+
+public:
+    AllocateStaticIpResponse(const AllocateStaticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AllocateStaticIpRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AllocateStaticIpResponse)
+    Q_DISABLE_COPY(AllocateStaticIpResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

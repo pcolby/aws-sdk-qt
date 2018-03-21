@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDOMAINENTRYRESPONSE_H
 #define QTAWS_DELETEDOMAINENTRYRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "deletedomainentryrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class DeleteDomainEntryResponsePrivate;
+
+class QTAWS_EXPORT DeleteDomainEntryResponse : public DeleteDomainEntryResponse {
+    Q_OBJECT
+
+public:
+    DeleteDomainEntryResponse(const DeleteDomainEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDomainEntryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDomainEntryResponse)
+    Q_DISABLE_COPY(DeleteDomainEntryResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

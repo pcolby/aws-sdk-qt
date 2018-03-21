@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLESSORESPONSE_H
 #define QTAWS_ENABLESSORESPONSE_H
 
+#include "dsresponse.h"
+#include "enablessorequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class EnableSsoResponsePrivate;
+
+class QTAWS_EXPORT EnableSsoResponse : public EnableSsoResponse {
+    Q_OBJECT
+
+public:
+    EnableSsoResponse(const EnableSsoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableSsoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableSsoResponse)
+    Q_DISABLE_COPY(EnableSsoResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

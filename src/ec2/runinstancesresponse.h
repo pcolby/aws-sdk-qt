@@ -20,4 +20,33 @@
 #ifndef QTAWS_RUNINSTANCESRESPONSE_H
 #define QTAWS_RUNINSTANCESRESPONSE_H
 
+#include "ec2response.h"
+#include "runinstancesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class RunInstancesResponsePrivate;
+
+class QTAWS_EXPORT RunInstancesResponse : public RunInstancesResponse {
+    Q_OBJECT
+
+public:
+    RunInstancesResponse(const RunInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RunInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RunInstancesResponse)
+    Q_DISABLE_COPY(RunInstancesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

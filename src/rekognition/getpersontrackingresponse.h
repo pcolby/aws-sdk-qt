@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPERSONTRACKINGRESPONSE_H
 #define QTAWS_GETPERSONTRACKINGRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "getpersontrackingrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class GetPersonTrackingResponsePrivate;
+
+class QTAWS_EXPORT GetPersonTrackingResponse : public GetPersonTrackingResponse {
+    Q_OBJECT
+
+public:
+    GetPersonTrackingResponse(const GetPersonTrackingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPersonTrackingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPersonTrackingResponse)
+    Q_DISABLE_COPY(GetPersonTrackingResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEOTAUPDATERESPONSE_H
 #define QTAWS_CREATEOTAUPDATERESPONSE_H
 
+#include "iotresponse.h"
+#include "createotaupdaterequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CreateOTAUpdateResponsePrivate;
+
+class QTAWS_EXPORT CreateOTAUpdateResponse : public CreateOTAUpdateResponse {
+    Q_OBJECT
+
+public:
+    CreateOTAUpdateResponse(const CreateOTAUpdateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateOTAUpdateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateOTAUpdateResponse)
+    Q_DISABLE_COPY(CreateOTAUpdateResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

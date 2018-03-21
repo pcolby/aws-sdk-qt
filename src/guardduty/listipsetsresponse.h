@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTIPSETSRESPONSE_H
 #define QTAWS_LISTIPSETSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "listipsetsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class ListIPSetsResponsePrivate;
+
+class QTAWS_EXPORT ListIPSetsResponse : public ListIPSetsResponse {
+    Q_OBJECT
+
+public:
+    ListIPSetsResponse(const ListIPSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListIPSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListIPSetsResponse)
+    Q_DISABLE_COPY(ListIPSetsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURCHASERESERVEDINSTANCESOFFERINGRESPONSE_H
 #define QTAWS_PURCHASERESERVEDINSTANCESOFFERINGRESPONSE_H
 
+#include "ec2response.h"
+#include "purchasereservedinstancesofferingrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class PurchaseReservedInstancesOfferingResponsePrivate;
+
+class QTAWS_EXPORT PurchaseReservedInstancesOfferingResponse : public PurchaseReservedInstancesOfferingResponse {
+    Q_OBJECT
+
+public:
+    PurchaseReservedInstancesOfferingResponse(const PurchaseReservedInstancesOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurchaseReservedInstancesOfferingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseReservedInstancesOfferingResponse)
+    Q_DISABLE_COPY(PurchaseReservedInstancesOfferingResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

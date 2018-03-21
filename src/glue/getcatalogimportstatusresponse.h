@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_H
 #define QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_H
 
+#include "glueresponse.h"
+#include "getcatalogimportstatusrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetCatalogImportStatusResponsePrivate;
+
+class QTAWS_EXPORT GetCatalogImportStatusResponse : public GetCatalogImportStatusResponse {
+    Q_OBJECT
+
+public:
+    GetCatalogImportStatusResponse(const GetCatalogImportStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCatalogImportStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCatalogImportStatusResponse)
+    Q_DISABLE_COPY(GetCatalogImportStatusResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

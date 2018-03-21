@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSTACKSRESPONSE_H
 #define QTAWS_LISTSTACKSRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "liststacksrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class ListStacksResponsePrivate;
+
+class QTAWS_EXPORT ListStacksResponse : public ListStacksResponse {
+    Q_OBJECT
+
+public:
+    ListStacksResponse(const ListStacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListStacksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListStacksResponse)
+    Q_DISABLE_COPY(ListStacksResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

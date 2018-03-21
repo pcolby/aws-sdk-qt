@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTCONNECTIONNOTIFICATIONRESPONSE_H
 #define QTAWS_MODIFYVPCENDPOINTCONNECTIONNOTIFICATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyvpcendpointconnectionnotificationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyVpcEndpointConnectionNotificationResponsePrivate;
+
+class QTAWS_EXPORT ModifyVpcEndpointConnectionNotificationResponse : public ModifyVpcEndpointConnectionNotificationResponse {
+    Q_OBJECT
+
+public:
+    ModifyVpcEndpointConnectionNotificationResponse(const ModifyVpcEndpointConnectionNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyVpcEndpointConnectionNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcEndpointConnectionNotificationResponse)
+    Q_DISABLE_COPY(ModifyVpcEndpointConnectionNotificationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

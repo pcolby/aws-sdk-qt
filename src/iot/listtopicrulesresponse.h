@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTOPICRULESRESPONSE_H
 #define QTAWS_LISTTOPICRULESRESPONSE_H
 
+#include "iotresponse.h"
+#include "listtopicrulesrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListTopicRulesResponsePrivate;
+
+class QTAWS_EXPORT ListTopicRulesResponse : public ListTopicRulesResponse {
+    Q_OBJECT
+
+public:
+    ListTopicRulesResponse(const ListTopicRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTopicRulesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTopicRulesResponse)
+    Q_DISABLE_COPY(ListTopicRulesResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

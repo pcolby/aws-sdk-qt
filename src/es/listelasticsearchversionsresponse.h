@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSRESPONSE_H
 
+#include "esresponse.h"
+#include "listelasticsearchversionsrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class ListElasticsearchVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListElasticsearchVersionsResponse : public ListElasticsearchVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListElasticsearchVersionsResponse(const ListElasticsearchVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListElasticsearchVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListElasticsearchVersionsResponse)
+    Q_DISABLE_COPY(ListElasticsearchVersionsResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

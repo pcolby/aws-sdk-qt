@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECUSTOMACTIONTYPERESPONSE_H
 #define QTAWS_DELETECUSTOMACTIONTYPERESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "deletecustomactiontyperequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class DeleteCustomActionTypeResponsePrivate;
+
+class QTAWS_EXPORT DeleteCustomActionTypeResponse : public DeleteCustomActionTypeResponse {
+    Q_OBJECT
+
+public:
+    DeleteCustomActionTypeResponse(const DeleteCustomActionTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCustomActionTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomActionTypeResponse)
+    Q_DISABLE_COPY(DeleteCustomActionTypeResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

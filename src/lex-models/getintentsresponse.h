@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINTENTSRESPONSE_H
 #define QTAWS_GETINTENTSRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getintentsrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetIntentsResponsePrivate;
+
+class QTAWS_EXPORT GetIntentsResponse : public GetIntentsResponse {
+    Q_OBJECT
+
+public:
+    GetIntentsResponse(const GetIntentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIntentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIntentsResponse)
+    Q_DISABLE_COPY(GetIntentsResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

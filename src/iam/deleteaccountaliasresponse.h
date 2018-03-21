@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEACCOUNTALIASRESPONSE_H
 #define QTAWS_DELETEACCOUNTALIASRESPONSE_H
 
+#include "iamresponse.h"
+#include "deleteaccountaliasrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteAccountAliasResponsePrivate;
+
+class QTAWS_EXPORT DeleteAccountAliasResponse : public DeleteAccountAliasResponse {
+    Q_OBJECT
+
+public:
+    DeleteAccountAliasResponse(const DeleteAccountAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAccountAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAccountAliasResponse)
+    Q_DISABLE_COPY(DeleteAccountAliasResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

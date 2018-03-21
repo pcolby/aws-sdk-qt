@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPIPELINENOTIFICATIONSRESPONSE_H
 #define QTAWS_UPDATEPIPELINENOTIFICATIONSRESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "updatepipelinenotificationsrequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class UpdatePipelineNotificationsResponsePrivate;
+
+class QTAWS_EXPORT UpdatePipelineNotificationsResponse : public UpdatePipelineNotificationsResponse {
+    Q_OBJECT
+
+public:
+    UpdatePipelineNotificationsResponse(const UpdatePipelineNotificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePipelineNotificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePipelineNotificationsResponse)
+    Q_DISABLE_COPY(UpdatePipelineNotificationsResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

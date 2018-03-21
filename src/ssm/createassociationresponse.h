@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEASSOCIATIONRESPONSE_H
 #define QTAWS_CREATEASSOCIATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "createassociationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class CreateAssociationResponsePrivate;
+
+class QTAWS_EXPORT CreateAssociationResponse : public CreateAssociationResponse {
+    Q_OBJECT
+
+public:
+    CreateAssociationResponse(const CreateAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAssociationResponse)
+    Q_DISABLE_COPY(CreateAssociationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

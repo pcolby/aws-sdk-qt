@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERECORDRESPONSE_H
 #define QTAWS_DESCRIBERECORDRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "describerecordrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DescribeRecordResponsePrivate;
+
+class QTAWS_EXPORT DescribeRecordResponse : public DescribeRecordResponse {
+    Q_OBJECT
+
+public:
+    DescribeRecordResponse(const DescribeRecordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRecordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRecordResponse)
+    Q_DISABLE_COPY(DescribeRecordResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSUITESRESPONSE_H
 #define QTAWS_LISTSUITESRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "listsuitesrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ListSuitesResponsePrivate;
+
+class QTAWS_EXPORT ListSuitesResponse : public ListSuitesResponse {
+    Q_OBJECT
+
+public:
+    ListSuitesResponse(const ListSuitesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSuitesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSuitesResponse)
+    Q_DISABLE_COPY(ListSuitesResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

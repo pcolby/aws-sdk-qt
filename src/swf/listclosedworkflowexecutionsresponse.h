@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSRESPONSE_H
 #define QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSRESPONSE_H
 
+#include "swfresponse.h"
+#include "listclosedworkflowexecutionsrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class ListClosedWorkflowExecutionsResponsePrivate;
+
+class QTAWS_EXPORT ListClosedWorkflowExecutionsResponse : public ListClosedWorkflowExecutionsResponse {
+    Q_OBJECT
+
+public:
+    ListClosedWorkflowExecutionsResponse(const ListClosedWorkflowExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListClosedWorkflowExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListClosedWorkflowExecutionsResponse)
+    Q_DISABLE_COPY(ListClosedWorkflowExecutionsResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

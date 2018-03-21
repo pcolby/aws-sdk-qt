@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 #define QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "deletecustomverificationemailtemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteCustomVerificationEmailTemplateResponsePrivate;
+
+class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateResponse : public DeleteCustomVerificationEmailTemplateResponse {
+    Q_OBJECT
+
+public:
+    DeleteCustomVerificationEmailTemplateResponse(const DeleteCustomVerificationEmailTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCustomVerificationEmailTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomVerificationEmailTemplateResponse)
+    Q_DISABLE_COPY(DeleteCustomVerificationEmailTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

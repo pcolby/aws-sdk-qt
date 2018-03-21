@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTMODELSRESPONSE_H
 #define QTAWS_LISTMODELSRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "listmodelsrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class ListModelsResponsePrivate;
+
+class QTAWS_EXPORT ListModelsResponse : public ListModelsResponse {
+    Q_OBJECT
+
+public:
+    ListModelsResponse(const ListModelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListModelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListModelsResponse)
+    Q_DISABLE_COPY(ListModelsResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

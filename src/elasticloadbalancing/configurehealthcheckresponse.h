@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIGUREHEALTHCHECKRESPONSE_H
 #define QTAWS_CONFIGUREHEALTHCHECKRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "configurehealthcheckrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class ConfigureHealthCheckResponsePrivate;
+
+class QTAWS_EXPORT ConfigureHealthCheckResponse : public ConfigureHealthCheckResponse {
+    Q_OBJECT
+
+public:
+    ConfigureHealthCheckResponse(const ConfigureHealthCheckRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfigureHealthCheckRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfigureHealthCheckResponse)
+    Q_DISABLE_COPY(ConfigureHealthCheckResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

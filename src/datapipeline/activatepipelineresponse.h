@@ -20,4 +20,33 @@
 #ifndef QTAWS_ACTIVATEPIPELINERESPONSE_H
 #define QTAWS_ACTIVATEPIPELINERESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "activatepipelinerequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class ActivatePipelineResponsePrivate;
+
+class QTAWS_EXPORT ActivatePipelineResponse : public ActivatePipelineResponse {
+    Q_OBJECT
+
+public:
+    ActivatePipelineResponse(const ActivatePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ActivatePipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ActivatePipelineResponse)
+    Q_DISABLE_COPY(ActivatePipelineResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

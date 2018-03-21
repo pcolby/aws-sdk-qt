@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGROUPCERTIFICATECONFIGURATIONRESPONSE_H
 #define QTAWS_GETGROUPCERTIFICATECONFIGURATIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getgroupcertificateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetGroupCertificateConfigurationResponsePrivate;
+
+class QTAWS_EXPORT GetGroupCertificateConfigurationResponse : public GetGroupCertificateConfigurationResponse {
+    Q_OBJECT
+
+public:
+    GetGroupCertificateConfigurationResponse(const GetGroupCertificateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGroupCertificateConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupCertificateConfigurationResponse)
+    Q_DISABLE_COPY(GetGroupCertificateConfigurationResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

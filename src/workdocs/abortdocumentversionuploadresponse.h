@@ -20,4 +20,33 @@
 #ifndef QTAWS_ABORTDOCUMENTVERSIONUPLOADRESPONSE_H
 #define QTAWS_ABORTDOCUMENTVERSIONUPLOADRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "abortdocumentversionuploadrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class AbortDocumentVersionUploadResponsePrivate;
+
+class QTAWS_EXPORT AbortDocumentVersionUploadResponse : public AbortDocumentVersionUploadResponse {
+    Q_OBJECT
+
+public:
+    AbortDocumentVersionUploadResponse(const AbortDocumentVersionUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AbortDocumentVersionUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AbortDocumentVersionUploadResponse)
+    Q_DISABLE_COPY(AbortDocumentVersionUploadResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGROUPQUERYRESPONSE_H
 #define QTAWS_GETGROUPQUERYRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "getgroupqueryrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class GetGroupQueryResponsePrivate;
+
+class QTAWS_EXPORT GetGroupQueryResponse : public GetGroupQueryResponse {
+    Q_OBJECT
+
+public:
+    GetGroupQueryResponse(const GetGroupQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGroupQueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupQueryResponse)
+    Q_DISABLE_COPY(GetGroupQueryResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

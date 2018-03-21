@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPOLICYRESPONSE_H
 #define QTAWS_GETPOLICYRESPONSE_H
 
+#include "iotresponse.h"
+#include "getpolicyrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class GetPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetPolicyResponse : public GetPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetPolicyResponse(const GetPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPolicyResponse)
+    Q_DISABLE_COPY(GetPolicyResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

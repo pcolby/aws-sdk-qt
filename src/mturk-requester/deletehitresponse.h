@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEHITRESPONSE_H
 #define QTAWS_DELETEHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "deletehitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class DeleteHITResponsePrivate;
+
+class QTAWS_EXPORT DeleteHITResponse : public DeleteHITResponse {
+    Q_OBJECT
+
+public:
+    DeleteHITResponse(const DeleteHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHITResponse)
+    Q_DISABLE_COPY(DeleteHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

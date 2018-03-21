@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEOPERATINGSYSTEMSRESPONSE_H
 #define QTAWS_DESCRIBEOPERATINGSYSTEMSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeoperatingsystemsrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeOperatingSystemsResponsePrivate;
+
+class QTAWS_EXPORT DescribeOperatingSystemsResponse : public DescribeOperatingSystemsResponse {
+    Q_OBJECT
+
+public:
+    DescribeOperatingSystemsResponse(const DescribeOperatingSystemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeOperatingSystemsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOperatingSystemsResponse)
+    Q_DISABLE_COPY(DescribeOperatingSystemsResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

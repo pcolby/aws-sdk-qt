@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETLOGEVENTSRESPONSE_H
 #define QTAWS_GETLOGEVENTSRESPONSE_H
 
+#include "logsresponse.h"
+#include "getlogeventsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class GetLogEventsResponsePrivate;
+
+class QTAWS_EXPORT GetLogEventsResponse : public GetLogEventsResponse {
+    Q_OBJECT
+
+public:
+    GetLogEventsResponse(const GetLogEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetLogEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetLogEventsResponse)
+    Q_DISABLE_COPY(GetLogEventsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

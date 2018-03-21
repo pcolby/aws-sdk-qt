@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPARTITIONRESPONSE_H
 #define QTAWS_DELETEPARTITIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "deletepartitionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeletePartitionResponsePrivate;
+
+class QTAWS_EXPORT DeletePartitionResponse : public DeletePartitionResponse {
+    Q_OBJECT
+
+public:
+    DeletePartitionResponse(const DeletePartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeletePartitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeletePartitionResponse)
+    Q_DISABLE_COPY(DeletePartitionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

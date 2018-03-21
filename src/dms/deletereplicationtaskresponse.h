@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPLICATIONTASKRESPONSE_H
 #define QTAWS_DELETEREPLICATIONTASKRESPONSE_H
 
+#include "dmsresponse.h"
+#include "deletereplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DeleteReplicationTaskResponsePrivate;
+
+class QTAWS_EXPORT DeleteReplicationTaskResponse : public DeleteReplicationTaskResponse {
+    Q_OBJECT
+
+public:
+    DeleteReplicationTaskResponse(const DeleteReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReplicationTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationTaskResponse)
+    Q_DISABLE_COPY(DeleteReplicationTaskResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

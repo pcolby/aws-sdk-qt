@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSFROMVAULTRESPONSE_H
 #define QTAWS_REMOVETAGSFROMVAULTRESPONSE_H
 
+#include "glacierresponse.h"
+#include "removetagsfromvaultrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class RemoveTagsFromVaultResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsFromVaultResponse : public RemoveTagsFromVaultResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsFromVaultResponse(const RemoveTagsFromVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsFromVaultRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromVaultResponse)
+    Q_DISABLE_COPY(RemoveTagsFromVaultResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

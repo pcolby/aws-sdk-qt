@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 #define QTAWS_GETDISCOVERYSUMMARYRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "getdiscoverysummaryrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class GetDiscoverySummaryResponsePrivate;
+
+class QTAWS_EXPORT GetDiscoverySummaryResponse : public GetDiscoverySummaryResponse {
+    Q_OBJECT
+
+public:
+    GetDiscoverySummaryResponse(const GetDiscoverySummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDiscoverySummaryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDiscoverySummaryResponse)
+    Q_DISABLE_COPY(GetDiscoverySummaryResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBUILDENVIRONMENTRESPONSE_H
 #define QTAWS_REBUILDENVIRONMENTRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "rebuildenvironmentrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class RebuildEnvironmentResponsePrivate;
+
+class QTAWS_EXPORT RebuildEnvironmentResponse : public RebuildEnvironmentResponse {
+    Q_OBJECT
+
+public:
+    RebuildEnvironmentResponse(const RebuildEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebuildEnvironmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebuildEnvironmentResponse)
+    Q_DISABLE_COPY(RebuildEnvironmentResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

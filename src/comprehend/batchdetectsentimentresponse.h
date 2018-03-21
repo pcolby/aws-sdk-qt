@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDETECTSENTIMENTRESPONSE_H
 #define QTAWS_BATCHDETECTSENTIMENTRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "batchdetectsentimentrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class BatchDetectSentimentResponsePrivate;
+
+class QTAWS_EXPORT BatchDetectSentimentResponse : public BatchDetectSentimentResponse {
+    Q_OBJECT
+
+public:
+    BatchDetectSentimentResponse(const BatchDetectSentimentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDetectSentimentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectSentimentResponse)
+    Q_DISABLE_COPY(BatchDetectSentimentResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESUBSCRIBERRESPONSE_H
 #define QTAWS_UPDATESUBSCRIBERRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "updatesubscriberrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class UpdateSubscriberResponsePrivate;
+
+class QTAWS_EXPORT UpdateSubscriberResponse : public UpdateSubscriberResponse {
+    Q_OBJECT
+
+public:
+    UpdateSubscriberResponse(const UpdateSubscriberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSubscriberRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSubscriberResponse)
+    Q_DISABLE_COPY(UpdateSubscriberResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

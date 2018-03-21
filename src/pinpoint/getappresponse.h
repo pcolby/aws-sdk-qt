@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAPPRESPONSE_H
 #define QTAWS_GETAPPRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getapprequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetAppResponsePrivate;
+
+class QTAWS_EXPORT GetAppResponse : public GetAppResponse {
+    Q_OBJECT
+
+public:
+    GetAppResponse(const GetAppRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAppRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAppResponse)
+    Q_DISABLE_COPY(GetAppResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

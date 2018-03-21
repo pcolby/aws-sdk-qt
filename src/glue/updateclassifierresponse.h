@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECLASSIFIERRESPONSE_H
 #define QTAWS_UPDATECLASSIFIERRESPONSE_H
 
+#include "glueresponse.h"
+#include "updateclassifierrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdateClassifierResponsePrivate;
+
+class QTAWS_EXPORT UpdateClassifierResponse : public UpdateClassifierResponse {
+    Q_OBJECT
+
+public:
+    UpdateClassifierResponse(const UpdateClassifierRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateClassifierRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateClassifierResponse)
+    Q_DISABLE_COPY(UpdateClassifierResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

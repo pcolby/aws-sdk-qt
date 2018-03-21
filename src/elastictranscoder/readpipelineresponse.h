@@ -20,4 +20,33 @@
 #ifndef QTAWS_READPIPELINERESPONSE_H
 #define QTAWS_READPIPELINERESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "readpipelinerequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class ReadPipelineResponsePrivate;
+
+class QTAWS_EXPORT ReadPipelineResponse : public ReadPipelineResponse {
+    Q_OBJECT
+
+public:
+    ReadPipelineResponse(const ReadPipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReadPipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReadPipelineResponse)
+    Q_DISABLE_COPY(ReadPipelineResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

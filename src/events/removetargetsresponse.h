@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETARGETSRESPONSE_H
 #define QTAWS_REMOVETARGETSRESPONSE_H
 
+#include "eventsresponse.h"
+#include "removetargetsrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class RemoveTargetsResponsePrivate;
+
+class QTAWS_EXPORT RemoveTargetsResponse : public RemoveTargetsResponse {
+    Q_OBJECT
+
+public:
+    RemoveTargetsResponse(const RemoveTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTargetsResponse)
+    Q_DISABLE_COPY(RemoveTargetsResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

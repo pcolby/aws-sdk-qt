@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECACHEDISCSIVOLUMERESPONSE_H
 #define QTAWS_CREATECACHEDISCSIVOLUMERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "createcachediscsivolumerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class CreateCachediSCSIVolumeResponsePrivate;
+
+class QTAWS_EXPORT CreateCachediSCSIVolumeResponse : public CreateCachediSCSIVolumeResponse {
+    Q_OBJECT
+
+public:
+    CreateCachediSCSIVolumeResponse(const CreateCachediSCSIVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCachediSCSIVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCachediSCSIVolumeResponse)
+    Q_DISABLE_COPY(CreateCachediSCSIVolumeResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETHINGTYPERESPONSE_H
 #define QTAWS_CREATETHINGTYPERESPONSE_H
 
+#include "iotresponse.h"
+#include "createthingtyperequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class CreateThingTypeResponsePrivate;
+
+class QTAWS_EXPORT CreateThingTypeResponse : public CreateThingTypeResponse {
+    Q_OBJECT
+
+public:
+    CreateThingTypeResponse(const CreateThingTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateThingTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateThingTypeResponse)
+    Q_DISABLE_COPY(CreateThingTypeResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

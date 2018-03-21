@@ -20,4 +20,33 @@
 #ifndef QTAWS_RETRIEVEDOMAINAUTHCODERESPONSE_H
 #define QTAWS_RETRIEVEDOMAINAUTHCODERESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "retrievedomainauthcoderequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class RetrieveDomainAuthCodeResponsePrivate;
+
+class QTAWS_EXPORT RetrieveDomainAuthCodeResponse : public RetrieveDomainAuthCodeResponse {
+    Q_OBJECT
+
+public:
+    RetrieveDomainAuthCodeResponse(const RetrieveDomainAuthCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RetrieveDomainAuthCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RetrieveDomainAuthCodeResponse)
+    Q_DISABLE_COPY(RetrieveDomainAuthCodeResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

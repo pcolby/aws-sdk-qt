@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPARAMETERGROUPRESPONSE_H
 #define QTAWS_CREATEPARAMETERGROUPRESPONSE_H
 
+#include "daxresponse.h"
+#include "createparametergrouprequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class CreateParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateParameterGroupResponse : public CreateParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateParameterGroupResponse(const CreateParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateParameterGroupResponse)
+    Q_DISABLE_COPY(CreateParameterGroupResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

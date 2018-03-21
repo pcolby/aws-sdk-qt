@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_H
 #define QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "describealarmsformetricrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class DescribeAlarmsForMetricResponsePrivate;
+
+class QTAWS_EXPORT DescribeAlarmsForMetricResponse : public DescribeAlarmsForMetricResponse {
+    Q_OBJECT
+
+public:
+    DescribeAlarmsForMetricResponse(const DescribeAlarmsForMetricRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAlarmsForMetricRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAlarmsForMetricResponse)
+    Q_DISABLE_COPY(DescribeAlarmsForMetricResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

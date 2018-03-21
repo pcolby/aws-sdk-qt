@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTOPERATIONSRESPONSE_H
 #define QTAWS_LISTOPERATIONSRESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "listoperationsrequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class ListOperationsResponsePrivate;
+
+class QTAWS_EXPORT ListOperationsResponse : public ListOperationsResponse {
+    Q_OBJECT
+
+public:
+    ListOperationsResponse(const ListOperationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListOperationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListOperationsResponse)
+    Q_DISABLE_COPY(ListOperationsResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

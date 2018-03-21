@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEIMAGEBUILDERRESPONSE_H
 #define QTAWS_DELETEIMAGEBUILDERRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "deleteimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DeleteImageBuilderResponsePrivate;
+
+class QTAWS_EXPORT DeleteImageBuilderResponse : public DeleteImageBuilderResponse {
+    Q_OBJECT
+
+public:
+    DeleteImageBuilderResponse(const DeleteImageBuilderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteImageBuilderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteImageBuilderResponse)
+    Q_DISABLE_COPY(DeleteImageBuilderResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

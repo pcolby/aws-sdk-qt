@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRATEBASEDRULERESPONSE_H
 #define QTAWS_GETRATEBASEDRULERESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "getratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class GetRateBasedRuleResponsePrivate;
+
+class QTAWS_EXPORT GetRateBasedRuleResponse : public GetRateBasedRuleResponse {
+    Q_OBJECT
+
+public:
+    GetRateBasedRuleResponse(const GetRateBasedRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetRateBasedRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetRateBasedRuleResponse)
+    Q_DISABLE_COPY(GetRateBasedRuleResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

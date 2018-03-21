@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTGATEWAYRESPONSE_H
 #define QTAWS_STARTGATEWAYRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "startgatewayrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class StartGatewayResponsePrivate;
+
+class QTAWS_EXPORT StartGatewayResponse : public StartGatewayResponse {
+    Q_OBJECT
+
+public:
+    StartGatewayResponse(const StartGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartGatewayResponse)
+    Q_DISABLE_COPY(StartGatewayResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_H
 #define QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "addresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class AddResourcePermissionsResponsePrivate;
+
+class QTAWS_EXPORT AddResourcePermissionsResponse : public AddResourcePermissionsResponse {
+    Q_OBJECT
+
+public:
+    AddResourcePermissionsResponse(const AddResourcePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddResourcePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddResourcePermissionsResponse)
+    Q_DISABLE_COPY(AddResourcePermissionsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

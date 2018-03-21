@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEUSERDEFINEDFUNCTIONRESPONSE_H
 #define QTAWS_DELETEUSERDEFINEDFUNCTIONRESPONSE_H
 
+#include "glueresponse.h"
+#include "deleteuserdefinedfunctionrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteUserDefinedFunctionResponsePrivate;
+
+class QTAWS_EXPORT DeleteUserDefinedFunctionResponse : public DeleteUserDefinedFunctionResponse {
+    Q_OBJECT
+
+public:
+    DeleteUserDefinedFunctionResponse(const DeleteUserDefinedFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteUserDefinedFunctionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserDefinedFunctionResponse)
+    Q_DISABLE_COPY(DeleteUserDefinedFunctionResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

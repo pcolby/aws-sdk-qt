@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDELETEBUILDSRESPONSE_H
 #define QTAWS_BATCHDELETEBUILDSRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "batchdeletebuildsrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class BatchDeleteBuildsResponsePrivate;
+
+class QTAWS_EXPORT BatchDeleteBuildsResponse : public BatchDeleteBuildsResponse {
+    Q_OBJECT
+
+public:
+    BatchDeleteBuildsResponse(const BatchDeleteBuildsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDeleteBuildsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteBuildsResponse)
+    Q_DISABLE_COPY(BatchDeleteBuildsResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

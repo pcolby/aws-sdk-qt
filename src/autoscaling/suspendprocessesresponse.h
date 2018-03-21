@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUSPENDPROCESSESRESPONSE_H
 #define QTAWS_SUSPENDPROCESSESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "suspendprocessesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class SuspendProcessesResponsePrivate;
+
+class QTAWS_EXPORT SuspendProcessesResponse : public SuspendProcessesResponse {
+    Q_OBJECT
+
+public:
+    SuspendProcessesResponse(const SuspendProcessesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SuspendProcessesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SuspendProcessesResponse)
+    Q_DISABLE_COPY(SuspendProcessesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

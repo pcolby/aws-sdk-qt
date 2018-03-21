@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAVAILABLEZONESRESPONSE_H
 #define QTAWS_LISTAVAILABLEZONESRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "listavailablezonesrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class ListAvailableZonesResponsePrivate;
+
+class QTAWS_EXPORT ListAvailableZonesResponse : public ListAvailableZonesResponse {
+    Q_OBJECT
+
+public:
+    ListAvailableZonesResponse(const ListAvailableZonesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAvailableZonesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAvailableZonesResponse)
+    Q_DISABLE_COPY(ListAvailableZonesResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRULEGROUPSRESPONSE_H
 #define QTAWS_LISTRULEGROUPSRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "listrulegroupsrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class ListRuleGroupsResponsePrivate;
+
+class QTAWS_EXPORT ListRuleGroupsResponse : public ListRuleGroupsResponse {
+    Q_OBJECT
+
+public:
+    ListRuleGroupsResponse(const ListRuleGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRuleGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRuleGroupsResponse)
+    Q_DISABLE_COPY(ListRuleGroupsResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

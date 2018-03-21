@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_H
 #define QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_H
 
+#include "workmailresponse.h"
+#include "updateprimaryemailaddressrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class UpdatePrimaryEmailAddressResponsePrivate;
+
+class QTAWS_EXPORT UpdatePrimaryEmailAddressResponse : public UpdatePrimaryEmailAddressResponse {
+    Q_OBJECT
+
+public:
+    UpdatePrimaryEmailAddressResponse(const UpdatePrimaryEmailAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePrimaryEmailAddressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePrimaryEmailAddressResponse)
+    Q_DISABLE_COPY(UpdatePrimaryEmailAddressResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

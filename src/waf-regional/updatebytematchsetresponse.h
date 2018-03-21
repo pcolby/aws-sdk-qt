@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEBYTEMATCHSETRESPONSE_H
 #define QTAWS_UPDATEBYTEMATCHSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "updatebytematchsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class UpdateByteMatchSetResponsePrivate;
+
+class QTAWS_EXPORT UpdateByteMatchSetResponse : public UpdateByteMatchSetResponse {
+    Q_OBJECT
+
+public:
+    UpdateByteMatchSetResponse(const UpdateByteMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateByteMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateByteMatchSetResponse)
+    Q_DISABLE_COPY(UpdateByteMatchSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

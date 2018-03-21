@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETSTACKPOLICYRESPONSE_H
 #define QTAWS_SETSTACKPOLICYRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "setstackpolicyrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class SetStackPolicyResponsePrivate;
+
+class QTAWS_EXPORT SetStackPolicyResponse : public SetStackPolicyResponse {
+    Q_OBJECT
+
+public:
+    SetStackPolicyResponse(const SetStackPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetStackPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetStackPolicyResponse)
+    Q_DISABLE_COPY(SetStackPolicyResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

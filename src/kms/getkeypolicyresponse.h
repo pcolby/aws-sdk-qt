@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETKEYPOLICYRESPONSE_H
 #define QTAWS_GETKEYPOLICYRESPONSE_H
 
+#include "kmsresponse.h"
+#include "getkeypolicyrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class GetKeyPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetKeyPolicyResponse : public GetKeyPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetKeyPolicyResponse(const GetKeyPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetKeyPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetKeyPolicyResponse)
+    Q_DISABLE_COPY(GetKeyPolicyResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

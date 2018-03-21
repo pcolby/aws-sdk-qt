@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESPOTINSTANCEREQUESTSRESPONSE_H
 #define QTAWS_DESCRIBESPOTINSTANCEREQUESTSRESPONSE_H
 
+#include "ec2response.h"
+#include "describespotinstancerequestsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeSpotInstanceRequestsResponsePrivate;
+
+class QTAWS_EXPORT DescribeSpotInstanceRequestsResponse : public DescribeSpotInstanceRequestsResponse {
+    Q_OBJECT
+
+public:
+    DescribeSpotInstanceRequestsResponse(const DescribeSpotInstanceRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSpotInstanceRequestsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotInstanceRequestsResponse)
+    Q_DISABLE_COPY(DescribeSpotInstanceRequestsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

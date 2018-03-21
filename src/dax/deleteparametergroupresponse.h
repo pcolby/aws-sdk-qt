@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPARAMETERGROUPRESPONSE_H
 #define QTAWS_DELETEPARAMETERGROUPRESPONSE_H
 
+#include "daxresponse.h"
+#include "deleteparametergrouprequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class DeleteParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteParameterGroupResponse : public DeleteParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteParameterGroupResponse(const DeleteParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteParameterGroupResponse)
+    Q_DISABLE_COPY(DeleteParameterGroupResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

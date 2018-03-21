@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOURCEDEFINITIONRESPONSE_H
 #define QTAWS_DELETERESOURCEDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "deleteresourcedefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class DeleteResourceDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeleteResourceDefinitionResponse : public DeleteResourceDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeleteResourceDefinitionResponse(const DeleteResourceDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResourceDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceDefinitionResponse)
+    Q_DISABLE_COPY(DeleteResourceDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

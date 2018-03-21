@@ -20,4 +20,33 @@
 #ifndef QTAWS_RUNSCHEDULEDINSTANCESRESPONSE_H
 #define QTAWS_RUNSCHEDULEDINSTANCESRESPONSE_H
 
+#include "ec2response.h"
+#include "runscheduledinstancesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class RunScheduledInstancesResponsePrivate;
+
+class QTAWS_EXPORT RunScheduledInstancesResponse : public RunScheduledInstancesResponse {
+    Q_OBJECT
+
+public:
+    RunScheduledInstancesResponse(const RunScheduledInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RunScheduledInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RunScheduledInstancesResponse)
+    Q_DISABLE_COPY(RunScheduledInstancesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

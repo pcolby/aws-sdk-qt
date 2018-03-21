@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPIPELINERESPONSE_H
 #define QTAWS_UPDATEPIPELINERESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "updatepipelinerequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class UpdatePipelineResponsePrivate;
+
+class QTAWS_EXPORT UpdatePipelineResponse : public UpdatePipelineResponse {
+    Q_OBJECT
+
+public:
+    UpdatePipelineResponse(const UpdatePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePipelineResponse)
+    Q_DISABLE_COPY(UpdatePipelineResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

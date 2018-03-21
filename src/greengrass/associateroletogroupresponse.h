@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEROLETOGROUPRESPONSE_H
 #define QTAWS_ASSOCIATEROLETOGROUPRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "associateroletogrouprequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class AssociateRoleToGroupResponsePrivate;
+
+class QTAWS_EXPORT AssociateRoleToGroupResponse : public AssociateRoleToGroupResponse {
+    Q_OBJECT
+
+public:
+    AssociateRoleToGroupResponse(const AssociateRoleToGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateRoleToGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateRoleToGroupResponse)
+    Q_DISABLE_COPY(AssociateRoleToGroupResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

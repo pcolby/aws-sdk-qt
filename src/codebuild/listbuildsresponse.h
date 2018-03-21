@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBUILDSRESPONSE_H
 #define QTAWS_LISTBUILDSRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "listbuildsrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class ListBuildsResponsePrivate;
+
+class QTAWS_EXPORT ListBuildsResponse : public ListBuildsResponse {
+    Q_OBJECT
+
+public:
+    ListBuildsResponse(const ListBuildsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBuildsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBuildsResponse)
+    Q_DISABLE_COPY(ListBuildsResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

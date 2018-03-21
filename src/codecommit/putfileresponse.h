@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTFILERESPONSE_H
 #define QTAWS_PUTFILERESPONSE_H
 
+#include "codecommitresponse.h"
+#include "putfilerequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class PutFileResponsePrivate;
+
+class QTAWS_EXPORT PutFileResponse : public PutFileResponse {
+    Q_OBJECT
+
+public:
+    PutFileResponse(const PutFileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutFileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutFileResponse)
+    Q_DISABLE_COPY(PutFileResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

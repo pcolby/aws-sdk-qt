@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_H
 #define QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_H
 
+#include "inspectorresponse.h"
+#include "describecrossaccountaccessrolerequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class DescribeCrossAccountAccessRoleResponsePrivate;
+
+class QTAWS_EXPORT DescribeCrossAccountAccessRoleResponse : public DescribeCrossAccountAccessRoleResponse {
+    Q_OBJECT
+
+public:
+    DescribeCrossAccountAccessRoleResponse(const DescribeCrossAccountAccessRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCrossAccountAccessRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCrossAccountAccessRoleResponse)
+    Q_DISABLE_COPY(DescribeCrossAccountAccessRoleResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

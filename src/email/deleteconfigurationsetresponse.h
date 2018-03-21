@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONSETRESPONSE_H
 
+#include "emailresponse.h"
+#include "deleteconfigurationsetrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteConfigurationSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteConfigurationSetResponse : public DeleteConfigurationSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteConfigurationSetResponse(const DeleteConfigurationSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConfigurationSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigurationSetResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

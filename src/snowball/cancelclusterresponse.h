@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELCLUSTERRESPONSE_H
 #define QTAWS_CANCELCLUSTERRESPONSE_H
 
+#include "snowballresponse.h"
+#include "cancelclusterrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class CancelClusterResponsePrivate;
+
+class QTAWS_EXPORT CancelClusterResponse : public CancelClusterResponse {
+    Q_OBJECT
+
+public:
+    CancelClusterResponse(const CancelClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelClusterResponse)
+    Q_DISABLE_COPY(CancelClusterResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

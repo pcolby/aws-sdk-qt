@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENETWORKINTERFACEPERMISSIONSRESPONSE_H
 #define QTAWS_DESCRIBENETWORKINTERFACEPERMISSIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describenetworkinterfacepermissionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeNetworkInterfacePermissionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeNetworkInterfacePermissionsResponse : public DescribeNetworkInterfacePermissionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeNetworkInterfacePermissionsResponse(const DescribeNetworkInterfacePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNetworkInterfacePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNetworkInterfacePermissionsResponse)
+    Q_DISABLE_COPY(DescribeNetworkInterfacePermissionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDATARETENTIONRESPONSE_H
 #define QTAWS_UPDATEDATARETENTIONRESPONSE_H
 
+#include "kinesisvideoresponse.h"
+#include "updatedataretentionrequest.h"
+
+namespace AWS {
+
+namespace kinesisvideo {
+
+class UpdateDataRetentionResponsePrivate;
+
+class QTAWS_EXPORT UpdateDataRetentionResponse : public UpdateDataRetentionResponse {
+    Q_OBJECT
+
+public:
+    UpdateDataRetentionResponse(const UpdateDataRetentionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDataRetentionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDataRetentionResponse)
+    Q_DISABLE_COPY(UpdateDataRetentionResponse)
+
+};
+
+} // namespace kinesisvideo
+} // namespace AWS
+
 #endif

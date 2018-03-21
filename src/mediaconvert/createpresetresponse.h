@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPRESETRESPONSE_H
 #define QTAWS_CREATEPRESETRESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "createpresetrequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class CreatePresetResponsePrivate;
+
+class QTAWS_EXPORT CreatePresetResponse : public CreatePresetResponse {
+    Q_OBJECT
+
+public:
+    CreatePresetResponse(const CreatePresetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePresetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePresetResponse)
+    Q_DISABLE_COPY(CreatePresetResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

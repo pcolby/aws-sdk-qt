@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPROJECTRESPONSE_H
 #define QTAWS_GETPROJECTRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getprojectrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetProjectResponsePrivate;
+
+class QTAWS_EXPORT GetProjectResponse : public GetProjectResponse {
+    Q_OBJECT
+
+public:
+    GetProjectResponse(const GetProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetProjectResponse)
+    Q_DISABLE_COPY(GetProjectResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

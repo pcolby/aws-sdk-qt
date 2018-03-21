@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_H
 #define QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "deletecacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DeleteCacheParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteCacheParameterGroupResponse : public DeleteCacheParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteCacheParameterGroupResponse(const DeleteCacheParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCacheParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCacheParameterGroupResponse)
+    Q_DISABLE_COPY(DeleteCacheParameterGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

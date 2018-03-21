@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENOTIFICATIONSUBSCRIPTIONRESPONSE_H
 #define QTAWS_DELETENOTIFICATIONSUBSCRIPTIONRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "deletenotificationsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DeleteNotificationSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT DeleteNotificationSubscriptionResponse : public DeleteNotificationSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    DeleteNotificationSubscriptionResponse(const DeleteNotificationSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNotificationSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteNotificationSubscriptionResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

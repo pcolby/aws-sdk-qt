@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETLOCALCONSOLEPASSWORDRESPONSE_H
 #define QTAWS_SETLOCALCONSOLEPASSWORDRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "setlocalconsolepasswordrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class SetLocalConsolePasswordResponsePrivate;
+
+class QTAWS_EXPORT SetLocalConsolePasswordResponse : public SetLocalConsolePasswordResponse {
+    Q_OBJECT
+
+public:
+    SetLocalConsolePasswordResponse(const SetLocalConsolePasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetLocalConsolePasswordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetLocalConsolePasswordResponse)
+    Q_DISABLE_COPY(SetLocalConsolePasswordResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESENDCONFIRMATIONCODERESPONSE_H
 #define QTAWS_RESENDCONFIRMATIONCODERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "resendconfirmationcoderequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ResendConfirmationCodeResponsePrivate;
+
+class QTAWS_EXPORT ResendConfirmationCodeResponse : public ResendConfirmationCodeResponse {
+    Q_OBJECT
+
+public:
+    ResendConfirmationCodeResponse(const ResendConfirmationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResendConfirmationCodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResendConfirmationCodeResponse)
+    Q_DISABLE_COPY(ResendConfirmationCodeResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

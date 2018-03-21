@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCHANNELSRESPONSE_H
 #define QTAWS_LISTCHANNELSRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "listchannelsrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class ListChannelsResponsePrivate;
+
+class QTAWS_EXPORT ListChannelsResponse : public ListChannelsResponse {
+    Q_OBJECT
+
+public:
+    ListChannelsResponse(const ListChannelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListChannelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListChannelsResponse)
+    Q_DISABLE_COPY(ListChannelsResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

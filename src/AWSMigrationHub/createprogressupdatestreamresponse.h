@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPROGRESSUPDATESTREAMRESPONSE_H
 #define QTAWS_CREATEPROGRESSUPDATESTREAMRESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "createprogressupdatestreamrequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class CreateProgressUpdateStreamResponsePrivate;
+
+class QTAWS_EXPORT CreateProgressUpdateStreamResponse : public CreateProgressUpdateStreamResponse {
+    Q_OBJECT
+
+public:
+    CreateProgressUpdateStreamResponse(const CreateProgressUpdateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateProgressUpdateStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateProgressUpdateStreamResponse)
+    Q_DISABLE_COPY(CreateProgressUpdateStreamResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

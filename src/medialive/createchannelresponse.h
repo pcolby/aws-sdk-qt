@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECHANNELRESPONSE_H
 #define QTAWS_CREATECHANNELRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "createchannelrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class CreateChannelResponsePrivate;
+
+class QTAWS_EXPORT CreateChannelResponse : public CreateChannelResponse {
+    Q_OBJECT
+
+public:
+    CreateChannelResponse(const CreateChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateChannelResponse)
+    Q_DISABLE_COPY(CreateChannelResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

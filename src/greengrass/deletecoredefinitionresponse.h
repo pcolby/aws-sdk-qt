@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECOREDEFINITIONRESPONSE_H
 #define QTAWS_DELETECOREDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "deletecoredefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class DeleteCoreDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeleteCoreDefinitionResponse : public DeleteCoreDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeleteCoreDefinitionResponse(const DeleteCoreDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCoreDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCoreDefinitionResponse)
+    Q_DISABLE_COPY(DeleteCoreDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

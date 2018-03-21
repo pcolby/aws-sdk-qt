@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTLEXICONRESPONSE_H
 #define QTAWS_PUTLEXICONRESPONSE_H
 
+#include "pollyresponse.h"
+#include "putlexiconrequest.h"
+
+namespace AWS {
+
+namespace polly {
+
+class PutLexiconResponsePrivate;
+
+class QTAWS_EXPORT PutLexiconResponse : public PutLexiconResponse {
+    Q_OBJECT
+
+public:
+    PutLexiconResponse(const PutLexiconRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutLexiconRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutLexiconResponse)
+    Q_DISABLE_COPY(PutLexiconResponse)
+
+};
+
+} // namespace polly
+} // namespace AWS
+
 #endif

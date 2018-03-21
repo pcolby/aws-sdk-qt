@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHLOADBALANCERSRESPONSE_H
 #define QTAWS_DETACHLOADBALANCERSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "detachloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DetachLoadBalancersResponsePrivate;
+
+class QTAWS_EXPORT DetachLoadBalancersResponse : public DetachLoadBalancersResponse {
+    Q_OBJECT
+
+public:
+    DetachLoadBalancersResponse(const DetachLoadBalancersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachLoadBalancersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachLoadBalancersResponse)
+    Q_DISABLE_COPY(DetachLoadBalancersResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

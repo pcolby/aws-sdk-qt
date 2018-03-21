@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBAIDUCHANNELRESPONSE_H
 #define QTAWS_DELETEBAIDUCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deletebaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteBaiduChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteBaiduChannelResponse : public DeleteBaiduChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteBaiduChannelResponse(const DeleteBaiduChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBaiduChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBaiduChannelResponse)
+    Q_DISABLE_COPY(DeleteBaiduChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

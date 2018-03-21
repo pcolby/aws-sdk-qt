@@ -20,4 +20,33 @@
 #ifndef QTAWS_NOTIFYWHENUPLOADEDRESPONSE_H
 #define QTAWS_NOTIFYWHENUPLOADEDRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "notifywhenuploadedrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class NotifyWhenUploadedResponsePrivate;
+
+class QTAWS_EXPORT NotifyWhenUploadedResponse : public NotifyWhenUploadedResponse {
+    Q_OBJECT
+
+public:
+    NotifyWhenUploadedResponse(const NotifyWhenUploadedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const NotifyWhenUploadedRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(NotifyWhenUploadedResponse)
+    Q_DISABLE_COPY(NotifyWhenUploadedResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

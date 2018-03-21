@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONTEXTKEYSFORPRINCIPALPOLICYRESPONSE_H
 #define QTAWS_GETCONTEXTKEYSFORPRINCIPALPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "getcontextkeysforprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetContextKeysForPrincipalPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetContextKeysForPrincipalPolicyResponse : public GetContextKeysForPrincipalPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetContextKeysForPrincipalPolicyResponse(const GetContextKeysForPrincipalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetContextKeysForPrincipalPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetContextKeysForPrincipalPolicyResponse)
+    Q_DISABLE_COPY(GetContextKeysForPrincipalPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

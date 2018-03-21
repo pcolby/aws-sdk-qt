@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCRESPONSE_H
 #define QTAWS_LISTRESOURCEDATASYNCRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListResourceDataSyncResponsePrivate;
+
+class QTAWS_EXPORT ListResourceDataSyncResponse : public ListResourceDataSyncResponse {
+    Q_OBJECT
+
+public:
+    ListResourceDataSyncResponse(const ListResourceDataSyncRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourceDataSyncRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceDataSyncResponse)
+    Q_DISABLE_COPY(ListResourceDataSyncResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

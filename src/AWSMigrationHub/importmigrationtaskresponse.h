@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTMIGRATIONTASKRESPONSE_H
 #define QTAWS_IMPORTMIGRATIONTASKRESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "importmigrationtaskrequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class ImportMigrationTaskResponsePrivate;
+
+class QTAWS_EXPORT ImportMigrationTaskResponse : public ImportMigrationTaskResponse {
+    Q_OBJECT
+
+public:
+    ImportMigrationTaskResponse(const ImportMigrationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportMigrationTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportMigrationTaskResponse)
+    Q_DISABLE_COPY(ImportMigrationTaskResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

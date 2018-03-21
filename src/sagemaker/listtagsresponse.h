@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_H
 #define QTAWS_LISTTAGSRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "listtagsrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class ListTagsResponsePrivate;
+
+class QTAWS_EXPORT ListTagsResponse : public ListTagsResponse {
+    Q_OBJECT
+
+public:
+    ListTagsResponse(const ListTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsResponse)
+    Q_DISABLE_COPY(ListTagsResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

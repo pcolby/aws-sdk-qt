@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTFAILOVERRESPONSE_H
 #define QTAWS_TESTFAILOVERRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "testfailoverrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class TestFailoverResponsePrivate;
+
+class QTAWS_EXPORT TestFailoverResponse : public TestFailoverResponse {
+    Q_OBJECT
+
+public:
+    TestFailoverResponse(const TestFailoverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestFailoverRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestFailoverResponse)
+    Q_DISABLE_COPY(TestFailoverResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

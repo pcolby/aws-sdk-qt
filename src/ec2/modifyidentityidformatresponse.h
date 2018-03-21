@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYIDENTITYIDFORMATRESPONSE_H
 #define QTAWS_MODIFYIDENTITYIDFORMATRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyidentityidformatrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyIdentityIdFormatResponsePrivate;
+
+class QTAWS_EXPORT ModifyIdentityIdFormatResponse : public ModifyIdentityIdFormatResponse {
+    Q_OBJECT
+
+public:
+    ModifyIdentityIdFormatResponse(const ModifyIdentityIdFormatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyIdentityIdFormatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyIdentityIdFormatResponse)
+    Q_DISABLE_COPY(ModifyIdentityIdFormatResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

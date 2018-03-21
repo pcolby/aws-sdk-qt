@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMATCHMAKINGCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEMATCHMAKINGCONFIGURATIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "deletematchmakingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DeleteMatchmakingConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteMatchmakingConfigurationResponse : public DeleteMatchmakingConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteMatchmakingConfigurationResponse(const DeleteMatchmakingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMatchmakingConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMatchmakingConfigurationResponse)
+    Q_DISABLE_COPY(DeleteMatchmakingConfigurationResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

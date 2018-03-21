@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETAGOPTIONRESPONSE_H
 #define QTAWS_UPDATETAGOPTIONRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "updatetagoptionrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class UpdateTagOptionResponsePrivate;
+
+class QTAWS_EXPORT UpdateTagOptionResponse : public UpdateTagOptionResponse {
+    Q_OBJECT
+
+public:
+    UpdateTagOptionResponse(const UpdateTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTagOptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagOptionResponse)
+    Q_DISABLE_COPY(UpdateTagOptionResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

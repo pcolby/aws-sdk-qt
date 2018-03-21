@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_H
 #define QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updateapnssandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateApnsSandboxChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateApnsSandboxChannelResponse : public UpdateApnsSandboxChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateApnsSandboxChannelResponse(const UpdateApnsSandboxChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateApnsSandboxChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApnsSandboxChannelResponse)
+    Q_DISABLE_COPY(UpdateApnsSandboxChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

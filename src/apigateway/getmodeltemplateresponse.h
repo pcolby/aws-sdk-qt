@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMODELTEMPLATERESPONSE_H
 #define QTAWS_GETMODELTEMPLATERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getmodeltemplaterequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetModelTemplateResponsePrivate;
+
+class QTAWS_EXPORT GetModelTemplateResponse : public GetModelTemplateResponse {
+    Q_OBJECT
+
+public:
+    GetModelTemplateResponse(const GetModelTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetModelTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetModelTemplateResponse)
+    Q_DISABLE_COPY(GetModelTemplateResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

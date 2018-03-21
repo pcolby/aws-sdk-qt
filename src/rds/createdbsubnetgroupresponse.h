@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDBSUBNETGROUPRESPONSE_H
 #define QTAWS_CREATEDBSUBNETGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "createdbsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class CreateDBSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateDBSubnetGroupResponse : public CreateDBSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateDBSubnetGroupResponse(const CreateDBSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDBSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateDBSubnetGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

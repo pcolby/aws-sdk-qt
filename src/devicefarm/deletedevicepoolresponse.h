@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDEVICEPOOLRESPONSE_H
 #define QTAWS_DELETEDEVICEPOOLRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "deletedevicepoolrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class DeleteDevicePoolResponsePrivate;
+
+class QTAWS_EXPORT DeleteDevicePoolResponse : public DeleteDevicePoolResponse {
+    Q_OBJECT
+
+public:
+    DeleteDevicePoolResponse(const DeleteDevicePoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDevicePoolRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDevicePoolResponse)
+    Q_DISABLE_COPY(DeleteDevicePoolResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

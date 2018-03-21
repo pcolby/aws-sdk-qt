@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTVOLUMERESPONSE_H
 #define QTAWS_IMPORTVOLUMERESPONSE_H
 
+#include "ec2response.h"
+#include "importvolumerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ImportVolumeResponsePrivate;
+
+class QTAWS_EXPORT ImportVolumeResponse : public ImportVolumeResponse {
+    Q_OBJECT
+
+public:
+    ImportVolumeResponse(const ImportVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportVolumeResponse)
+    Q_DISABLE_COPY(ImportVolumeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

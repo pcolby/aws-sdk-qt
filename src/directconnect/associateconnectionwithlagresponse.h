@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_H
 #define QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "associateconnectionwithlagrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class AssociateConnectionWithLagResponsePrivate;
+
+class QTAWS_EXPORT AssociateConnectionWithLagResponse : public AssociateConnectionWithLagResponse {
+    Q_OBJECT
+
+public:
+    AssociateConnectionWithLagResponse(const AssociateConnectionWithLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateConnectionWithLagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateConnectionWithLagResponse)
+    Q_DISABLE_COPY(AssociateConnectionWithLagResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

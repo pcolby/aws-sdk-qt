@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEOPTIONGROUPSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describeoptiongroupsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeOptionGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeOptionGroupsResponse : public DescribeOptionGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeOptionGroupsResponse(const DescribeOptionGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeOptionGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOptionGroupsResponse)
+    Q_DISABLE_COPY(DescribeOptionGroupsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

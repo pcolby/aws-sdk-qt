@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRULESPACKAGESRESPONSE_H
 #define QTAWS_LISTRULESPACKAGESRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "listrulespackagesrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class ListRulesPackagesResponsePrivate;
+
+class QTAWS_EXPORT ListRulesPackagesResponse : public ListRulesPackagesResponse {
+    Q_OBJECT
+
+public:
+    ListRulesPackagesResponse(const ListRulesPackagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRulesPackagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRulesPackagesResponse)
+    Q_DISABLE_COPY(ListRulesPackagesResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

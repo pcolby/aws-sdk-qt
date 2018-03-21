@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTINTENTRESPONSE_H
 #define QTAWS_PUTINTENTRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "putintentrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class PutIntentResponsePrivate;
+
+class QTAWS_EXPORT PutIntentResponse : public PutIntentResponse {
+    Q_OBJECT
+
+public:
+    PutIntentResponse(const PutIntentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutIntentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutIntentResponse)
+    Q_DISABLE_COPY(PutIntentResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

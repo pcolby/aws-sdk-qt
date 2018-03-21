@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEEVALUATIONRESPONSE_H
 #define QTAWS_CREATEEVALUATIONRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createevaluationrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateEvaluationResponsePrivate;
+
+class QTAWS_EXPORT CreateEvaluationResponse : public CreateEvaluationResponse {
+    Q_OBJECT
+
+public:
+    CreateEvaluationResponse(const CreateEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateEvaluationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateEvaluationResponse)
+    Q_DISABLE_COPY(CreateEvaluationResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

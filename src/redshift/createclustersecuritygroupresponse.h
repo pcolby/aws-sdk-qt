@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECLUSTERSECURITYGROUPRESPONSE_H
 #define QTAWS_CREATECLUSTERSECURITYGROUPRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "createclustersecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class CreateClusterSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateClusterSecurityGroupResponse : public CreateClusterSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateClusterSecurityGroupResponse(const CreateClusterSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateClusterSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateClusterSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateClusterSecurityGroupResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

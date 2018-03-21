@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEADJUSTMENTTYPESRESPONSE_H
 #define QTAWS_DESCRIBEADJUSTMENTTYPESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describeadjustmenttypesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeAdjustmentTypesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAdjustmentTypesResponse : public DescribeAdjustmentTypesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAdjustmentTypesResponse(const DescribeAdjustmentTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAdjustmentTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAdjustmentTypesResponse)
+    Q_DISABLE_COPY(DescribeAdjustmentTypesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

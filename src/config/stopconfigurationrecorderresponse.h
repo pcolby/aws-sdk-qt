@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_H
 #define QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_H
 
+#include "configresponse.h"
+#include "stopconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class StopConfigurationRecorderResponsePrivate;
+
+class QTAWS_EXPORT StopConfigurationRecorderResponse : public StopConfigurationRecorderResponse {
+    Q_OBJECT
+
+public:
+    StopConfigurationRecorderResponse(const StopConfigurationRecorderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopConfigurationRecorderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopConfigurationRecorderResponse)
+    Q_DISABLE_COPY(StopConfigurationRecorderResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

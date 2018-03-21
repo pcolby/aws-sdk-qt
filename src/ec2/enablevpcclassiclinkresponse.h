@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEVPCCLASSICLINKRESPONSE_H
 #define QTAWS_ENABLEVPCCLASSICLINKRESPONSE_H
 
+#include "ec2response.h"
+#include "enablevpcclassiclinkrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class EnableVpcClassicLinkResponsePrivate;
+
+class QTAWS_EXPORT EnableVpcClassicLinkResponse : public EnableVpcClassicLinkResponse {
+    Q_OBJECT
+
+public:
+    EnableVpcClassicLinkResponse(const EnableVpcClassicLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableVpcClassicLinkRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableVpcClassicLinkResponse)
+    Q_DISABLE_COPY(EnableVpcClassicLinkResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

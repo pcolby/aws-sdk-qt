@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEFINEEXPRESSIONRESPONSE_H
 #define QTAWS_DEFINEEXPRESSIONRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "defineexpressionrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DefineExpressionResponsePrivate;
+
+class QTAWS_EXPORT DefineExpressionResponse : public DefineExpressionResponse {
+    Q_OBJECT
+
+public:
+    DefineExpressionResponse(const DefineExpressionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DefineExpressionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DefineExpressionResponse)
+    Q_DISABLE_COPY(DefineExpressionResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

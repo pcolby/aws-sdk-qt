@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTDELIVERYCHANNELRESPONSE_H
 #define QTAWS_PUTDELIVERYCHANNELRESPONSE_H
 
+#include "configresponse.h"
+#include "putdeliverychannelrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class PutDeliveryChannelResponsePrivate;
+
+class QTAWS_EXPORT PutDeliveryChannelResponse : public PutDeliveryChannelResponse {
+    Q_OBJECT
+
+public:
+    PutDeliveryChannelResponse(const PutDeliveryChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutDeliveryChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutDeliveryChannelResponse)
+    Q_DISABLE_COPY(PutDeliveryChannelResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

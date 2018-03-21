@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBTEMPLATERESPONSE_H
 #define QTAWS_GETJOBTEMPLATERESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "getjobtemplaterequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class GetJobTemplateResponsePrivate;
+
+class QTAWS_EXPORT GetJobTemplateResponse : public GetJobTemplateResponse {
+    Q_OBJECT
+
+public:
+    GetJobTemplateResponse(const GetJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobTemplateResponse)
+    Q_DISABLE_COPY(GetJobTemplateResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

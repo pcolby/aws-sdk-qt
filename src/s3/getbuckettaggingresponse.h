@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETTAGGINGRESPONSE_H
 #define QTAWS_GETBUCKETTAGGINGRESPONSE_H
 
+#include "s3response.h"
+#include "getbuckettaggingrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketTaggingResponsePrivate;
+
+class QTAWS_EXPORT GetBucketTaggingResponse : public GetBucketTaggingResponse {
+    Q_OBJECT
+
+public:
+    GetBucketTaggingResponse(const GetBucketTaggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketTaggingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketTaggingResponse)
+    Q_DISABLE_COPY(GetBucketTaggingResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

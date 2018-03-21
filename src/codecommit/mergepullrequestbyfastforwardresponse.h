@@ -20,4 +20,33 @@
 #ifndef QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_H
 #define QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "mergepullrequestbyfastforwardrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class MergePullRequestByFastForwardResponsePrivate;
+
+class QTAWS_EXPORT MergePullRequestByFastForwardResponse : public MergePullRequestByFastForwardResponse {
+    Q_OBJECT
+
+public:
+    MergePullRequestByFastForwardResponse(const MergePullRequestByFastForwardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const MergePullRequestByFastForwardRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(MergePullRequestByFastForwardResponse)
+    Q_DISABLE_COPY(MergePullRequestByFastForwardResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

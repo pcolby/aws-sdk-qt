@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPRODUCTRESPONSE_H
 #define QTAWS_CREATEPRODUCTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "createproductrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class CreateProductResponsePrivate;
+
+class QTAWS_EXPORT CreateProductResponse : public CreateProductResponse {
+    Q_OBJECT
+
+public:
+    CreateProductResponse(const CreateProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateProductRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateProductResponse)
+    Q_DISABLE_COPY(CreateProductResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUBSCRIBETODATASETRESPONSE_H
 #define QTAWS_SUBSCRIBETODATASETRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "subscribetodatasetrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class SubscribeToDatasetResponsePrivate;
+
+class QTAWS_EXPORT SubscribeToDatasetResponse : public SubscribeToDatasetResponse {
+    Q_OBJECT
+
+public:
+    SubscribeToDatasetResponse(const SubscribeToDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SubscribeToDatasetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SubscribeToDatasetResponse)
+    Q_DISABLE_COPY(SubscribeToDatasetResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

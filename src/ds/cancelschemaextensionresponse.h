@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_H
 #define QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_H
 
+#include "dsresponse.h"
+#include "cancelschemaextensionrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class CancelSchemaExtensionResponsePrivate;
+
+class QTAWS_EXPORT CancelSchemaExtensionResponse : public CancelSchemaExtensionResponse {
+    Q_OBJECT
+
+public:
+    CancelSchemaExtensionResponse(const CancelSchemaExtensionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelSchemaExtensionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelSchemaExtensionResponse)
+    Q_DISABLE_COPY(CancelSchemaExtensionResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_H
 #define QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeChapCredentialsResponsePrivate;
+
+class QTAWS_EXPORT DescribeChapCredentialsResponse : public DescribeChapCredentialsResponse {
+    Q_OBJECT
+
+public:
+    DescribeChapCredentialsResponse(const DescribeChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeChapCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeChapCredentialsResponse)
+    Q_DISABLE_COPY(DescribeChapCredentialsResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

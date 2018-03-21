@@ -20,4 +20,33 @@
 #ifndef QTAWS_REQUESTCERTIFICATERESPONSE_H
 #define QTAWS_REQUESTCERTIFICATERESPONSE_H
 
+#include "acmresponse.h"
+#include "requestcertificaterequest.h"
+
+namespace AWS {
+
+namespace acm {
+
+class RequestCertificateResponsePrivate;
+
+class QTAWS_EXPORT RequestCertificateResponse : public RequestCertificateResponse {
+    Q_OBJECT
+
+public:
+    RequestCertificateResponse(const RequestCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RequestCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RequestCertificateResponse)
+    Q_DISABLE_COPY(RequestCertificateResponse)
+
+};
+
+} // namespace acm
+} // namespace AWS
+
 #endif

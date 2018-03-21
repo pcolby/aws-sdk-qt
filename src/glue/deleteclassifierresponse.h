@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECLASSIFIERRESPONSE_H
 #define QTAWS_DELETECLASSIFIERRESPONSE_H
 
+#include "glueresponse.h"
+#include "deleteclassifierrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteClassifierResponsePrivate;
+
+class QTAWS_EXPORT DeleteClassifierResponse : public DeleteClassifierResponse {
+    Q_OBJECT
+
+public:
+    DeleteClassifierResponse(const DeleteClassifierRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteClassifierRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteClassifierResponse)
+    Q_DISABLE_COPY(DeleteClassifierResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

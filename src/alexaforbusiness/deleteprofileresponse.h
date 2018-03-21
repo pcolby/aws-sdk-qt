@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROFILERESPONSE_H
 #define QTAWS_DELETEPROFILERESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "deleteprofilerequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class DeleteProfileResponsePrivate;
+
+class QTAWS_EXPORT DeleteProfileResponse : public DeleteProfileResponse {
+    Q_OBJECT
+
+public:
+    DeleteProfileResponse(const DeleteProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProfileResponse)
+    Q_DISABLE_COPY(DeleteProfileResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

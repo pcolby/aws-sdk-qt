@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINUPDATEDEVICESTATUSRESPONSE_H
 #define QTAWS_ADMINUPDATEDEVICESTATUSRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminupdatedevicestatusrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminUpdateDeviceStatusResponsePrivate;
+
+class QTAWS_EXPORT AdminUpdateDeviceStatusResponse : public AdminUpdateDeviceStatusResponse {
+    Q_OBJECT
+
+public:
+    AdminUpdateDeviceStatusResponse(const AdminUpdateDeviceStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminUpdateDeviceStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminUpdateDeviceStatusResponse)
+    Q_DISABLE_COPY(AdminUpdateDeviceStatusResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

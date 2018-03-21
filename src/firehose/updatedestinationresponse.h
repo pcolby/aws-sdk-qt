@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDESTINATIONRESPONSE_H
 #define QTAWS_UPDATEDESTINATIONRESPONSE_H
 
+#include "firehoseresponse.h"
+#include "updatedestinationrequest.h"
+
+namespace AWS {
+
+namespace firehose {
+
+class UpdateDestinationResponsePrivate;
+
+class QTAWS_EXPORT UpdateDestinationResponse : public UpdateDestinationResponse {
+    Q_OBJECT
+
+public:
+    UpdateDestinationResponse(const UpdateDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDestinationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDestinationResponse)
+    Q_DISABLE_COPY(UpdateDestinationResponse)
+
+};
+
+} // namespace firehose
+} // namespace AWS
+
 #endif

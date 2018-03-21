@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEXECUTIONRESPONSE_H
 #define QTAWS_DESCRIBEEXECUTIONRESPONSE_H
 
+#include "statesresponse.h"
+#include "describeexecutionrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class DescribeExecutionResponsePrivate;
+
+class QTAWS_EXPORT DescribeExecutionResponse : public DescribeExecutionResponse {
+    Q_OBJECT
+
+public:
+    DescribeExecutionResponse(const DescribeExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeExecutionResponse)
+    Q_DISABLE_COPY(DescribeExecutionResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEKEYPAIRRESPONSE_H
 #define QTAWS_CREATEKEYPAIRRESPONSE_H
 
+#include "ec2response.h"
+#include "createkeypairrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateKeyPairResponsePrivate;
+
+class QTAWS_EXPORT CreateKeyPairResponse : public CreateKeyPairResponse {
+    Q_OBJECT
+
+public:
+    CreateKeyPairResponse(const CreateKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateKeyPairRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateKeyPairResponse)
+    Q_DISABLE_COPY(CreateKeyPairResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

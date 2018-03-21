@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEGROUPVERSIONRESPONSE_H
 #define QTAWS_CREATEGROUPVERSIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "creategroupversionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class CreateGroupVersionResponsePrivate;
+
+class QTAWS_EXPORT CreateGroupVersionResponse : public CreateGroupVersionResponse {
+    Q_OBJECT
+
+public:
+    CreateGroupVersionResponse(const CreateGroupVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateGroupVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateGroupVersionResponse)
+    Q_DISABLE_COPY(CreateGroupVersionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

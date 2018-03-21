@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFPGAIMAGERESPONSE_H
 #define QTAWS_DELETEFPGAIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "deletefpgaimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteFpgaImageResponsePrivate;
+
+class QTAWS_EXPORT DeleteFpgaImageResponse : public DeleteFpgaImageResponse {
+    Q_OBJECT
+
+public:
+    DeleteFpgaImageResponse(const DeleteFpgaImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFpgaImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFpgaImageResponse)
+    Q_DISABLE_COPY(DeleteFpgaImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

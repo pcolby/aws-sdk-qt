@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOCUMENTPATHRESPONSE_H
 #define QTAWS_GETDOCUMENTPATHRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "getdocumentpathrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class GetDocumentPathResponsePrivate;
+
+class QTAWS_EXPORT GetDocumentPathResponse : public GetDocumentPathResponse {
+    Q_OBJECT
+
+public:
+    GetDocumentPathResponse(const GetDocumentPathRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDocumentPathRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDocumentPathResponse)
+    Q_DISABLE_COPY(GetDocumentPathResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

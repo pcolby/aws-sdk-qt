@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPORTTASKPROGRESSRESPONSE_H
 #define QTAWS_REPORTTASKPROGRESSRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "reporttaskprogressrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class ReportTaskProgressResponsePrivate;
+
+class QTAWS_EXPORT ReportTaskProgressResponse : public ReportTaskProgressResponse {
+    Q_OBJECT
+
+public:
+    ReportTaskProgressResponse(const ReportTaskProgressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReportTaskProgressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReportTaskProgressResponse)
+    Q_DISABLE_COPY(ReportTaskProgressResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

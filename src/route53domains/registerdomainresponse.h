@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERDOMAINRESPONSE_H
 #define QTAWS_REGISTERDOMAINRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "registerdomainrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class RegisterDomainResponsePrivate;
+
+class QTAWS_EXPORT RegisterDomainResponse : public RegisterDomainResponse {
+    Q_OBJECT
+
+public:
+    RegisterDomainResponse(const RegisterDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterDomainResponse)
+    Q_DISABLE_COPY(RegisterDomainResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

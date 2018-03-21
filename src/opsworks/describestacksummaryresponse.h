@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTACKSUMMARYRESPONSE_H
 #define QTAWS_DESCRIBESTACKSUMMARYRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describestacksummaryrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeStackSummaryResponsePrivate;
+
+class QTAWS_EXPORT DescribeStackSummaryResponse : public DescribeStackSummaryResponse {
+    Q_OBJECT
+
+public:
+    DescribeStackSummaryResponse(const DescribeStackSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStackSummaryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStackSummaryResponse)
+    Q_DISABLE_COPY(DescribeStackSummaryResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

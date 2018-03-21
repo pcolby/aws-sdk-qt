@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPLACENETWORKACLASSOCIATIONRESPONSE_H
 #define QTAWS_REPLACENETWORKACLASSOCIATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "replacenetworkaclassociationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReplaceNetworkAclAssociationResponsePrivate;
+
+class QTAWS_EXPORT ReplaceNetworkAclAssociationResponse : public ReplaceNetworkAclAssociationResponse {
+    Q_OBJECT
+
+public:
+    ReplaceNetworkAclAssociationResponse(const ReplaceNetworkAclAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReplaceNetworkAclAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceNetworkAclAssociationResponse)
+    Q_DISABLE_COPY(ReplaceNetworkAclAssociationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINSTANCESNAPSHOTRESPONSE_H
 #define QTAWS_DELETEINSTANCESNAPSHOTRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "deleteinstancesnapshotrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class DeleteInstanceSnapshotResponsePrivate;
+
+class QTAWS_EXPORT DeleteInstanceSnapshotResponse : public DeleteInstanceSnapshotResponse {
+    Q_OBJECT
+
+public:
+    DeleteInstanceSnapshotResponse(const DeleteInstanceSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteInstanceSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInstanceSnapshotResponse)
+    Q_DISABLE_COPY(DeleteInstanceSnapshotResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

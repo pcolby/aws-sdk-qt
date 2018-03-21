@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRECORDRESPONSE_H
 #define QTAWS_PUTRECORDRESPONSE_H
 
+#include "firehoseresponse.h"
+#include "putrecordrequest.h"
+
+namespace AWS {
+
+namespace firehose {
+
+class PutRecordResponsePrivate;
+
+class QTAWS_EXPORT PutRecordResponse : public PutRecordResponse {
+    Q_OBJECT
+
+public:
+    PutRecordResponse(const PutRecordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRecordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRecordResponse)
+    Q_DISABLE_COPY(PutRecordResponse)
+
+};
+
+} // namespace firehose
+} // namespace AWS
+
 #endif

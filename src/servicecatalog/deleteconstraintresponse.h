@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONSTRAINTRESPONSE_H
 #define QTAWS_DELETECONSTRAINTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "deleteconstraintrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DeleteConstraintResponsePrivate;
+
+class QTAWS_EXPORT DeleteConstraintResponse : public DeleteConstraintResponse {
+    Q_OBJECT
+
+public:
+    DeleteConstraintResponse(const DeleteConstraintRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConstraintRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConstraintResponse)
+    Q_DISABLE_COPY(DeleteConstraintResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERMANAGEDINSTANCERESPONSE_H
 #define QTAWS_DEREGISTERMANAGEDINSTANCERESPONSE_H
 
+#include "ssmresponse.h"
+#include "deregistermanagedinstancerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeregisterManagedInstanceResponsePrivate;
+
+class QTAWS_EXPORT DeregisterManagedInstanceResponse : public DeregisterManagedInstanceResponse {
+    Q_OBJECT
+
+public:
+    DeregisterManagedInstanceResponse(const DeregisterManagedInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterManagedInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterManagedInstanceResponse)
+    Q_DISABLE_COPY(DeregisterManagedInstanceResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_H
 #define QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "createpresignednotebookinstanceurlrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class CreatePresignedNotebookInstanceUrlResponsePrivate;
+
+class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlResponse : public CreatePresignedNotebookInstanceUrlResponse {
+    Q_OBJECT
+
+public:
+    CreatePresignedNotebookInstanceUrlResponse(const CreatePresignedNotebookInstanceUrlRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePresignedNotebookInstanceUrlRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePresignedNotebookInstanceUrlResponse)
+    Q_DISABLE_COPY(CreatePresignedNotebookInstanceUrlResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

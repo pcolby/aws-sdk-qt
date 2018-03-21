@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONRESPONSE_H
 #define QTAWS_DESCRIBEAPPLICATIONRESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "describeapplicationrequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class DescribeApplicationResponsePrivate;
+
+class QTAWS_EXPORT DescribeApplicationResponse : public DescribeApplicationResponse {
+    Q_OBJECT
+
+public:
+    DescribeApplicationResponse(const DescribeApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeApplicationResponse)
+    Q_DISABLE_COPY(DescribeApplicationResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

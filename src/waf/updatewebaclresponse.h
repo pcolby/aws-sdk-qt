@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEWEBACLRESPONSE_H
 #define QTAWS_UPDATEWEBACLRESPONSE_H
 
+#include "wafresponse.h"
+#include "updatewebaclrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class UpdateWebACLResponsePrivate;
+
+class QTAWS_EXPORT UpdateWebACLResponse : public UpdateWebACLResponse {
+    Q_OBJECT
+
+public:
+    UpdateWebACLResponse(const UpdateWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateWebACLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateWebACLResponse)
+    Q_DISABLE_COPY(UpdateWebACLResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

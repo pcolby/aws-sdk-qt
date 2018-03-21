@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDMESSAGESRESPONSE_H
 #define QTAWS_SENDMESSAGESRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "sendmessagesrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class SendMessagesResponsePrivate;
+
+class QTAWS_EXPORT SendMessagesResponse : public SendMessagesResponse {
+    Q_OBJECT
+
+public:
+    SendMessagesResponse(const SendMessagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendMessagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendMessagesResponse)
+    Q_DISABLE_COPY(SendMessagesResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

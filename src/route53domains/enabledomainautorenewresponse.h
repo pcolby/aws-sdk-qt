@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEDOMAINAUTORENEWRESPONSE_H
 #define QTAWS_ENABLEDOMAINAUTORENEWRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "enabledomainautorenewrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class EnableDomainAutoRenewResponsePrivate;
+
+class QTAWS_EXPORT EnableDomainAutoRenewResponse : public EnableDomainAutoRenewResponse {
+    Q_OBJECT
+
+public:
+    EnableDomainAutoRenewResponse(const EnableDomainAutoRenewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableDomainAutoRenewRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableDomainAutoRenewResponse)
+    Q_DISABLE_COPY(EnableDomainAutoRenewResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

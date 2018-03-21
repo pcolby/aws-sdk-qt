@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMININITIATEAUTHRESPONSE_H
 #define QTAWS_ADMININITIATEAUTHRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "admininitiateauthrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminInitiateAuthResponsePrivate;
+
+class QTAWS_EXPORT AdminInitiateAuthResponse : public AdminInitiateAuthResponse {
+    Q_OBJECT
+
+public:
+    AdminInitiateAuthResponse(const AdminInitiateAuthRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminInitiateAuthRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminInitiateAuthResponse)
+    Q_DISABLE_COPY(AdminInitiateAuthResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

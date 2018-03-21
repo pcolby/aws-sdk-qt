@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETARGETGROUPATTRIBUTESRESPONSE_H
 #define QTAWS_DESCRIBETARGETGROUPATTRIBUTESRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "describetargetgroupattributesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DescribeTargetGroupAttributesResponsePrivate;
+
+class QTAWS_EXPORT DescribeTargetGroupAttributesResponse : public DescribeTargetGroupAttributesResponse {
+    Q_OBJECT
+
+public:
+    DescribeTargetGroupAttributesResponse(const DescribeTargetGroupAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTargetGroupAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTargetGroupAttributesResponse)
+    Q_DISABLE_COPY(DescribeTargetGroupAttributesResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

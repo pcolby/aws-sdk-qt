@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBASEPATHMAPPINGRESPONSE_H
 #define QTAWS_DELETEBASEPATHMAPPINGRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deletebasepathmappingrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteBasePathMappingResponsePrivate;
+
+class QTAWS_EXPORT DeleteBasePathMappingResponse : public DeleteBasePathMappingResponse {
+    Q_OBJECT
+
+public:
+    DeleteBasePathMappingResponse(const DeleteBasePathMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBasePathMappingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBasePathMappingResponse)
+    Q_DISABLE_COPY(DeleteBasePathMappingResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

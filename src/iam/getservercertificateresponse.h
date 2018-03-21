@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSERVERCERTIFICATERESPONSE_H
 #define QTAWS_GETSERVERCERTIFICATERESPONSE_H
 
+#include "iamresponse.h"
+#include "getservercertificaterequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetServerCertificateResponsePrivate;
+
+class QTAWS_EXPORT GetServerCertificateResponse : public GetServerCertificateResponse {
+    Q_OBJECT
+
+public:
+    GetServerCertificateResponse(const GetServerCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetServerCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetServerCertificateResponse)
+    Q_DISABLE_COPY(GetServerCertificateResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

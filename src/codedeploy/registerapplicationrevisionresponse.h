@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERAPPLICATIONREVISIONRESPONSE_H
 #define QTAWS_REGISTERAPPLICATIONREVISIONRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "registerapplicationrevisionrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class RegisterApplicationRevisionResponsePrivate;
+
+class QTAWS_EXPORT RegisterApplicationRevisionResponse : public RegisterApplicationRevisionResponse {
+    Q_OBJECT
+
+public:
+    RegisterApplicationRevisionResponse(const RegisterApplicationRevisionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterApplicationRevisionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterApplicationRevisionResponse)
+    Q_DISABLE_COPY(RegisterApplicationRevisionResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

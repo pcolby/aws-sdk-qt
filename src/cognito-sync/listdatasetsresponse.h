@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDATASETSRESPONSE_H
 #define QTAWS_LISTDATASETSRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "listdatasetsrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class ListDatasetsResponsePrivate;
+
+class QTAWS_EXPORT ListDatasetsResponse : public ListDatasetsResponse {
+    Q_OBJECT
+
+public:
+    ListDatasetsResponse(const ListDatasetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDatasetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDatasetsResponse)
+    Q_DISABLE_COPY(ListDatasetsResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

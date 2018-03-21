@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPCENDPOINTCONNECTIONNOTIFICATIONSRESPONSE_H
 #define QTAWS_DELETEVPCENDPOINTCONNECTIONNOTIFICATIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "deletevpcendpointconnectionnotificationsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteVpcEndpointConnectionNotificationsResponsePrivate;
+
+class QTAWS_EXPORT DeleteVpcEndpointConnectionNotificationsResponse : public DeleteVpcEndpointConnectionNotificationsResponse {
+    Q_OBJECT
+
+public:
+    DeleteVpcEndpointConnectionNotificationsResponse(const DeleteVpcEndpointConnectionNotificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVpcEndpointConnectionNotificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcEndpointConnectionNotificationsResponse)
+    Q_DISABLE_COPY(DeleteVpcEndpointConnectionNotificationsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

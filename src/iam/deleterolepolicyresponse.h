@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEROLEPOLICYRESPONSE_H
 #define QTAWS_DELETEROLEPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "deleterolepolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteRolePolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteRolePolicyResponse : public DeleteRolePolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteRolePolicyResponse(const DeleteRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRolePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRolePolicyResponse)
+    Q_DISABLE_COPY(DeleteRolePolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

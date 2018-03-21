@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOURCERESPONSE_H
 #define QTAWS_DELETERESOURCERESPONSE_H
 
+#include "workmailresponse.h"
+#include "deleteresourcerequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class DeleteResourceResponsePrivate;
+
+class QTAWS_EXPORT DeleteResourceResponse : public DeleteResourceResponse {
+    Q_OBJECT
+
+public:
+    DeleteResourceResponse(const DeleteResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceResponse)
+    Q_DISABLE_COPY(DeleteResourceResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

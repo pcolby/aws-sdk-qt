@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORPROJECTRESPONSE_H
 #define QTAWS_LISTTAGSFORPROJECTRESPONSE_H
 
+#include "codestarresponse.h"
+#include "listtagsforprojectrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class ListTagsForProjectResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForProjectResponse : public ListTagsForProjectResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForProjectResponse(const ListTagsForProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForProjectResponse)
+    Q_DISABLE_COPY(ListTagsForProjectResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

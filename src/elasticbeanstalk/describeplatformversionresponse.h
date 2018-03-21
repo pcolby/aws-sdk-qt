@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPLATFORMVERSIONRESPONSE_H
 #define QTAWS_DESCRIBEPLATFORMVERSIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeplatformversionrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DescribePlatformVersionResponsePrivate;
+
+class QTAWS_EXPORT DescribePlatformVersionResponse : public DescribePlatformVersionResponse {
+    Q_OBJECT
+
+public:
+    DescribePlatformVersionResponse(const DescribePlatformVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePlatformVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePlatformVersionResponse)
+    Q_DISABLE_COPY(DescribePlatformVersionResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

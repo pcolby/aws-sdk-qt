@@ -20,4 +20,33 @@
 #ifndef QTAWS_FILTERLOGEVENTSRESPONSE_H
 #define QTAWS_FILTERLOGEVENTSRESPONSE_H
 
+#include "logsresponse.h"
+#include "filterlogeventsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class FilterLogEventsResponsePrivate;
+
+class QTAWS_EXPORT FilterLogEventsResponse : public FilterLogEventsResponse {
+    Q_OBJECT
+
+public:
+    FilterLogEventsResponse(const FilterLogEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const FilterLogEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(FilterLogEventsResponse)
+    Q_DISABLE_COPY(FilterLogEventsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

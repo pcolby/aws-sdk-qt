@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEIDENTITYPOOLRESPONSE_H
 #define QTAWS_UPDATEIDENTITYPOOLRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "updateidentitypoolrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class UpdateIdentityPoolResponsePrivate;
+
+class QTAWS_EXPORT UpdateIdentityPoolResponse : public UpdateIdentityPoolResponse {
+    Q_OBJECT
+
+public:
+    UpdateIdentityPoolResponse(const UpdateIdentityPoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateIdentityPoolRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIdentityPoolResponse)
+    Q_DISABLE_COPY(UpdateIdentityPoolResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_H
 #define QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "authorizesnapshotaccessrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class AuthorizeSnapshotAccessResponsePrivate;
+
+class QTAWS_EXPORT AuthorizeSnapshotAccessResponse : public AuthorizeSnapshotAccessResponse {
+    Q_OBJECT
+
+public:
+    AuthorizeSnapshotAccessResponse(const AuthorizeSnapshotAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AuthorizeSnapshotAccessRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeSnapshotAccessResponse)
+    Q_DISABLE_COPY(AuthorizeSnapshotAccessResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

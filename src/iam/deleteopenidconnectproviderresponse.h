@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEOPENIDCONNECTPROVIDERRESPONSE_H
 #define QTAWS_DELETEOPENIDCONNECTPROVIDERRESPONSE_H
 
+#include "iamresponse.h"
+#include "deleteopenidconnectproviderrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DeleteOpenIDConnectProviderResponsePrivate;
+
+class QTAWS_EXPORT DeleteOpenIDConnectProviderResponse : public DeleteOpenIDConnectProviderResponse {
+    Q_OBJECT
+
+public:
+    DeleteOpenIDConnectProviderResponse(const DeleteOpenIDConnectProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteOpenIDConnectProviderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOpenIDConnectProviderResponse)
+    Q_DISABLE_COPY(DeleteOpenIDConnectProviderResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

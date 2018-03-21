@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEROLEFROMDBCLUSTERRESPONSE_H
 #define QTAWS_REMOVEROLEFROMDBCLUSTERRESPONSE_H
 
+#include "rdsresponse.h"
+#include "removerolefromdbclusterrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class RemoveRoleFromDBClusterResponsePrivate;
+
+class QTAWS_EXPORT RemoveRoleFromDBClusterResponse : public RemoveRoleFromDBClusterResponse {
+    Q_OBJECT
+
+public:
+    RemoveRoleFromDBClusterResponse(const RemoveRoleFromDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveRoleFromDBClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveRoleFromDBClusterResponse)
+    Q_DISABLE_COPY(RemoveRoleFromDBClusterResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

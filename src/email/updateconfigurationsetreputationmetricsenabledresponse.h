@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "updateconfigurationsetreputationmetricsenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateConfigurationSetReputationMetricsEnabledResponsePrivate;
+
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledResponse : public UpdateConfigurationSetReputationMetricsEnabledResponse {
+    Q_OBJECT
+
+public:
+    UpdateConfigurationSetReputationMetricsEnabledResponse(const UpdateConfigurationSetReputationMetricsEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConfigurationSetReputationMetricsEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationSetReputationMetricsEnabledResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetReputationMetricsEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

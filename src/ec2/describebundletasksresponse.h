@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBUNDLETASKSRESPONSE_H
 #define QTAWS_DESCRIBEBUNDLETASKSRESPONSE_H
 
+#include "ec2response.h"
+#include "describebundletasksrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeBundleTasksResponsePrivate;
+
+class QTAWS_EXPORT DescribeBundleTasksResponse : public DescribeBundleTasksResponse {
+    Q_OBJECT
+
+public:
+    DescribeBundleTasksResponse(const DescribeBundleTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBundleTasksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBundleTasksResponse)
+    Q_DISABLE_COPY(DescribeBundleTasksResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

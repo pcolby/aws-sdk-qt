@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBATCHPREDICTIONSRESPONSE_H
 #define QTAWS_DESCRIBEBATCHPREDICTIONSRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "describebatchpredictionsrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class DescribeBatchPredictionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeBatchPredictionsResponse : public DescribeBatchPredictionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeBatchPredictionsResponse(const DescribeBatchPredictionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBatchPredictionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBatchPredictionsResponse)
+    Q_DISABLE_COPY(DescribeBatchPredictionsResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

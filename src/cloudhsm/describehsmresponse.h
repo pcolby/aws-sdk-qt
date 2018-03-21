@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEHSMRESPONSE_H
 #define QTAWS_DESCRIBEHSMRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "describehsmrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class DescribeHsmResponsePrivate;
+
+class QTAWS_EXPORT DescribeHsmResponse : public DescribeHsmResponse {
+    Q_OBJECT
+
+public:
+    DescribeHsmResponse(const DescribeHsmRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeHsmRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHsmResponse)
+    Q_DISABLE_COPY(DescribeHsmResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

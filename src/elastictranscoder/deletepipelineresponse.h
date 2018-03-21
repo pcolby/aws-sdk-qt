@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPIPELINERESPONSE_H
 #define QTAWS_DELETEPIPELINERESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "deletepipelinerequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class DeletePipelineResponsePrivate;
+
+class QTAWS_EXPORT DeletePipelineResponse : public DeletePipelineResponse {
+    Q_OBJECT
+
+public:
+    DeletePipelineResponse(const DeletePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeletePipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeletePipelineResponse)
+    Q_DISABLE_COPY(DeletePipelineResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

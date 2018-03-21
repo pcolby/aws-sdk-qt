@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAPNSVOIPSANDBOXCHANNELRESPONSE_H
 #define QTAWS_GETAPNSVOIPSANDBOXCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getapnsvoipsandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetApnsVoipSandboxChannelResponsePrivate;
+
+class QTAWS_EXPORT GetApnsVoipSandboxChannelResponse : public GetApnsVoipSandboxChannelResponse {
+    Q_OBJECT
+
+public:
+    GetApnsVoipSandboxChannelResponse(const GetApnsVoipSandboxChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetApnsVoipSandboxChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetApnsVoipSandboxChannelResponse)
+    Q_DISABLE_COPY(GetApnsVoipSandboxChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

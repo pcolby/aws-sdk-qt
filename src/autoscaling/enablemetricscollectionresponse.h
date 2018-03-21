@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEMETRICSCOLLECTIONRESPONSE_H
 #define QTAWS_ENABLEMETRICSCOLLECTIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "enablemetricscollectionrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class EnableMetricsCollectionResponsePrivate;
+
+class QTAWS_EXPORT EnableMetricsCollectionResponse : public EnableMetricsCollectionResponse {
+    Q_OBJECT
+
+public:
+    EnableMetricsCollectionResponse(const EnableMetricsCollectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableMetricsCollectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableMetricsCollectionResponse)
+    Q_DISABLE_COPY(EnableMetricsCollectionResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

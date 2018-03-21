@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDETECTENTITIESRESPONSE_H
 #define QTAWS_BATCHDETECTENTITIESRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "batchdetectentitiesrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class BatchDetectEntitiesResponsePrivate;
+
+class QTAWS_EXPORT BatchDetectEntitiesResponse : public BatchDetectEntitiesResponse {
+    Q_OBJECT
+
+public:
+    BatchDetectEntitiesResponse(const BatchDetectEntitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDetectEntitiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectEntitiesResponse)
+    Q_DISABLE_COPY(BatchDetectEntitiesResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

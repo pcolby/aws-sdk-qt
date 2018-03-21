@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDTASKSUCCESSRESPONSE_H
 #define QTAWS_SENDTASKSUCCESSRESPONSE_H
 
+#include "statesresponse.h"
+#include "sendtasksuccessrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class SendTaskSuccessResponsePrivate;
+
+class QTAWS_EXPORT SendTaskSuccessResponse : public SendTaskSuccessResponse {
+    Q_OBJECT
+
+public:
+    SendTaskSuccessResponse(const SendTaskSuccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendTaskSuccessRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendTaskSuccessResponse)
+    Q_DISABLE_COPY(SendTaskSuccessResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_VERIFYEMAILADDRESSRESPONSE_H
 #define QTAWS_VERIFYEMAILADDRESSRESPONSE_H
 
+#include "emailresponse.h"
+#include "verifyemailaddressrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class VerifyEmailAddressResponsePrivate;
+
+class QTAWS_EXPORT VerifyEmailAddressResponse : public VerifyEmailAddressResponse {
+    Q_OBJECT
+
+public:
+    VerifyEmailAddressResponse(const VerifyEmailAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const VerifyEmailAddressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(VerifyEmailAddressResponse)
+    Q_DISABLE_COPY(VerifyEmailAddressResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

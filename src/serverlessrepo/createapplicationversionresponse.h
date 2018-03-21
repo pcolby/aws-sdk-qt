@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_H
 #define QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_H
 
+#include "serverlessreporesponse.h"
+#include "createapplicationversionrequest.h"
+
+namespace AWS {
+
+namespace serverlessrepo {
+
+class CreateApplicationVersionResponsePrivate;
+
+class QTAWS_EXPORT CreateApplicationVersionResponse : public CreateApplicationVersionResponse {
+    Q_OBJECT
+
+public:
+    CreateApplicationVersionResponse(const CreateApplicationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateApplicationVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateApplicationVersionResponse)
+    Q_DISABLE_COPY(CreateApplicationVersionResponse)
+
+};
+
+} // namespace serverlessrepo
+} // namespace AWS
+
 #endif

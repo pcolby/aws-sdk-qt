@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUBLISHSCHEMARESPONSE_H
 #define QTAWS_PUBLISHSCHEMARESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "publishschemarequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class PublishSchemaResponsePrivate;
+
+class QTAWS_EXPORT PublishSchemaResponse : public PublishSchemaResponse {
+    Q_OBJECT
+
+public:
+    PublishSchemaResponse(const PublishSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PublishSchemaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PublishSchemaResponse)
+    Q_DISABLE_COPY(PublishSchemaResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

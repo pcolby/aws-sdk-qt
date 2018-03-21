@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPRESPONSE_H
 #define QTAWS_MODIFYREPLICATIONGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "modifyreplicationgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class ModifyReplicationGroupResponsePrivate;
+
+class QTAWS_EXPORT ModifyReplicationGroupResponse : public ModifyReplicationGroupResponse {
+    Q_OBJECT
+
+public:
+    ModifyReplicationGroupResponse(const ModifyReplicationGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyReplicationGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyReplicationGroupResponse)
+    Q_DISABLE_COPY(ModifyReplicationGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

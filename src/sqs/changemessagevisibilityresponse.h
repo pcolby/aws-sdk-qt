@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYRESPONSE_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYRESPONSE_H
 
+#include "sqsresponse.h"
+#include "changemessagevisibilityrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class ChangeMessageVisibilityResponsePrivate;
+
+class QTAWS_EXPORT ChangeMessageVisibilityResponse : public ChangeMessageVisibilityResponse {
+    Q_OBJECT
+
+public:
+    ChangeMessageVisibilityResponse(const ChangeMessageVisibilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ChangeMessageVisibilityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ChangeMessageVisibilityResponse)
+    Q_DISABLE_COPY(ChangeMessageVisibilityResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

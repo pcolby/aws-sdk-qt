@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPATCHBASELINERESPONSE_H
 #define QTAWS_GETPATCHBASELINERESPONSE_H
 
+#include "ssmresponse.h"
+#include "getpatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetPatchBaselineResponsePrivate;
+
+class QTAWS_EXPORT GetPatchBaselineResponse : public GetPatchBaselineResponse {
+    Q_OBJECT
+
+public:
+    GetPatchBaselineResponse(const GetPatchBaselineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPatchBaselineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPatchBaselineResponse)
+    Q_DISABLE_COPY(GetPatchBaselineResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

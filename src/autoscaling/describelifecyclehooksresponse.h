@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELIFECYCLEHOOKSRESPONSE_H
 #define QTAWS_DESCRIBELIFECYCLEHOOKSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describelifecyclehooksrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeLifecycleHooksResponsePrivate;
+
+class QTAWS_EXPORT DescribeLifecycleHooksResponse : public DescribeLifecycleHooksResponse {
+    Q_OBJECT
+
+public:
+    DescribeLifecycleHooksResponse(const DescribeLifecycleHooksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLifecycleHooksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLifecycleHooksResponse)
+    Q_DISABLE_COPY(DescribeLifecycleHooksResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

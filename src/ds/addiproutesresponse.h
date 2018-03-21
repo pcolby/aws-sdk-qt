@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDIPROUTESRESPONSE_H
 #define QTAWS_ADDIPROUTESRESPONSE_H
 
+#include "dsresponse.h"
+#include "addiproutesrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class AddIpRoutesResponsePrivate;
+
+class QTAWS_EXPORT AddIpRoutesResponse : public AddIpRoutesResponse {
+    Q_OBJECT
+
+public:
+    AddIpRoutesResponse(const AddIpRoutesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddIpRoutesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddIpRoutesResponse)
+    Q_DISABLE_COPY(AddIpRoutesResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

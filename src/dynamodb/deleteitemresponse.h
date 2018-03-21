@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEITEMRESPONSE_H
 #define QTAWS_DELETEITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "deleteitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DeleteItemResponsePrivate;
+
+class QTAWS_EXPORT DeleteItemResponse : public DeleteItemResponse {
+    Q_OBJECT
+
+public:
+    DeleteItemResponse(const DeleteItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteItemResponse)
+    Q_DISABLE_COPY(DeleteItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ABORTVAULTLOCKRESPONSE_H
 #define QTAWS_ABORTVAULTLOCKRESPONSE_H
 
+#include "glacierresponse.h"
+#include "abortvaultlockrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class AbortVaultLockResponsePrivate;
+
+class QTAWS_EXPORT AbortVaultLockResponse : public AbortVaultLockResponse {
+    Q_OBJECT
+
+public:
+    AbortVaultLockResponse(const AbortVaultLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AbortVaultLockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AbortVaultLockResponse)
+    Q_DISABLE_COPY(AbortVaultLockResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

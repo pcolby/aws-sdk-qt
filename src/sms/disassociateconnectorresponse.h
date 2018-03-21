@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATECONNECTORRESPONSE_H
 #define QTAWS_DISASSOCIATECONNECTORRESPONSE_H
 
+#include "smsresponse.h"
+#include "disassociateconnectorrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class DisassociateConnectorResponsePrivate;
+
+class QTAWS_EXPORT DisassociateConnectorResponse : public DisassociateConnectorResponse {
+    Q_OBJECT
+
+public:
+    DisassociateConnectorResponse(const DisassociateConnectorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateConnectorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateConnectorResponse)
+    Q_DISABLE_COPY(DisassociateConnectorResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

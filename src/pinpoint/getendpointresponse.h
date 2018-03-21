@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETENDPOINTRESPONSE_H
 #define QTAWS_GETENDPOINTRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getendpointrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetEndpointResponsePrivate;
+
+class QTAWS_EXPORT GetEndpointResponse : public GetEndpointResponse {
+    Q_OBJECT
+
+public:
+    GetEndpointResponse(const GetEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetEndpointResponse)
+    Q_DISABLE_COPY(GetEndpointResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

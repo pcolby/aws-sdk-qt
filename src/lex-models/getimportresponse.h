@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIMPORTRESPONSE_H
 #define QTAWS_GETIMPORTRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getimportrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetImportResponsePrivate;
+
+class QTAWS_EXPORT GetImportResponse : public GetImportResponse {
+    Q_OBJECT
+
+public:
+    GetImportResponse(const GetImportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetImportRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetImportResponse)
+    Q_DISABLE_COPY(GetImportResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

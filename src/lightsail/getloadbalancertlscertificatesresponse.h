@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETLOADBALANCERTLSCERTIFICATESRESPONSE_H
 #define QTAWS_GETLOADBALANCERTLSCERTIFICATESRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getloadbalancertlscertificatesrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetLoadBalancerTlsCertificatesResponsePrivate;
+
+class QTAWS_EXPORT GetLoadBalancerTlsCertificatesResponse : public GetLoadBalancerTlsCertificatesResponse {
+    Q_OBJECT
+
+public:
+    GetLoadBalancerTlsCertificatesResponse(const GetLoadBalancerTlsCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetLoadBalancerTlsCertificatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetLoadBalancerTlsCertificatesResponse)
+    Q_DISABLE_COPY(GetLoadBalancerTlsCertificatesResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

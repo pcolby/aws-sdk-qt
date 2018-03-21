@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNARCHIVEFINDINGSRESPONSE_H
 #define QTAWS_UNARCHIVEFINDINGSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "unarchivefindingsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class UnarchiveFindingsResponsePrivate;
+
+class QTAWS_EXPORT UnarchiveFindingsResponse : public UnarchiveFindingsResponse {
+    Q_OBJECT
+
+public:
+    UnarchiveFindingsResponse(const UnarchiveFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnarchiveFindingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnarchiveFindingsResponse)
+    Q_DISABLE_COPY(UnarchiveFindingsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

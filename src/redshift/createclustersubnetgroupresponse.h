@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECLUSTERSUBNETGROUPRESPONSE_H
 #define QTAWS_CREATECLUSTERSUBNETGROUPRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "createclustersubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class CreateClusterSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateClusterSubnetGroupResponse : public CreateClusterSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateClusterSubnetGroupResponse(const CreateClusterSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateClusterSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateClusterSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateClusterSubnetGroupResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

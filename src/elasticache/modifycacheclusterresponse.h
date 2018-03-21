@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYCACHECLUSTERRESPONSE_H
 #define QTAWS_MODIFYCACHECLUSTERRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "modifycacheclusterrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class ModifyCacheClusterResponsePrivate;
+
+class QTAWS_EXPORT ModifyCacheClusterResponse : public ModifyCacheClusterResponse {
+    Q_OBJECT
+
+public:
+    ModifyCacheClusterResponse(const ModifyCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyCacheClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyCacheClusterResponse)
+    Q_DISABLE_COPY(ModifyCacheClusterResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

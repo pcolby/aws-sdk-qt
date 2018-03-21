@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUSERRESPONSE_H
 #define QTAWS_GETUSERRESPONSE_H
 
+#include "iamresponse.h"
+#include "getuserrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetUserResponsePrivate;
+
+class QTAWS_EXPORT GetUserResponse : public GetUserResponse {
+    Q_OBJECT
+
+public:
+    GetUserResponse(const GetUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUserResponse)
+    Q_DISABLE_COPY(GetUserResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

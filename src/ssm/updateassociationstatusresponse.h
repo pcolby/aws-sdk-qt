@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEASSOCIATIONSTATUSRESPONSE_H
 #define QTAWS_UPDATEASSOCIATIONSTATUSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "updateassociationstatusrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class UpdateAssociationStatusResponsePrivate;
+
+class QTAWS_EXPORT UpdateAssociationStatusResponse : public UpdateAssociationStatusResponse {
+    Q_OBJECT
+
+public:
+    UpdateAssociationStatusResponse(const UpdateAssociationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAssociationStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAssociationStatusResponse)
+    Q_DISABLE_COPY(UpdateAssociationStatusResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

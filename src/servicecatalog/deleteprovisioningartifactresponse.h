@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROVISIONINGARTIFACTRESPONSE_H
 #define QTAWS_DELETEPROVISIONINGARTIFACTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "deleteprovisioningartifactrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DeleteProvisioningArtifactResponsePrivate;
+
+class QTAWS_EXPORT DeleteProvisioningArtifactResponse : public DeleteProvisioningArtifactResponse {
+    Q_OBJECT
+
+public:
+    DeleteProvisioningArtifactResponse(const DeleteProvisioningArtifactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProvisioningArtifactRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProvisioningArtifactResponse)
+    Q_DISABLE_COPY(DeleteProvisioningArtifactResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

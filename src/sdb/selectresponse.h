@@ -20,4 +20,33 @@
 #ifndef QTAWS_SELECTRESPONSE_H
 #define QTAWS_SELECTRESPONSE_H
 
+#include "sdbresponse.h"
+#include "selectrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class SelectResponsePrivate;
+
+class QTAWS_EXPORT SelectResponse : public SelectResponse {
+    Q_OBJECT
+
+public:
+    SelectResponse(const SelectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SelectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SelectResponse)
+    Q_DISABLE_COPY(SelectResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

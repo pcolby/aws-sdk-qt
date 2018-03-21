@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINADDUSERTOGROUPRESPONSE_H
 #define QTAWS_ADMINADDUSERTOGROUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminaddusertogrouprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminAddUserToGroupResponsePrivate;
+
+class QTAWS_EXPORT AdminAddUserToGroupResponse : public AdminAddUserToGroupResponse {
+    Q_OBJECT
+
+public:
+    AdminAddUserToGroupResponse(const AdminAddUserToGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminAddUserToGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminAddUserToGroupResponse)
+    Q_DISABLE_COPY(AdminAddUserToGroupResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

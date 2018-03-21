@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTWORKFLOWEXECUTIONRESPONSE_H
 #define QTAWS_STARTWORKFLOWEXECUTIONRESPONSE_H
 
+#include "swfresponse.h"
+#include "startworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class StartWorkflowExecutionResponsePrivate;
+
+class QTAWS_EXPORT StartWorkflowExecutionResponse : public StartWorkflowExecutionResponse {
+    Q_OBJECT
+
+public:
+    StartWorkflowExecutionResponse(const StartWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartWorkflowExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartWorkflowExecutionResponse)
+    Q_DISABLE_COPY(StartWorkflowExecutionResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

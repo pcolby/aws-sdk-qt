@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCERECORDSETSRESPONSE_H
 #define QTAWS_LISTRESOURCERECORDSETSRESPONSE_H
 
+#include "route53response.h"
+#include "listresourcerecordsetsrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ListResourceRecordSetsResponsePrivate;
+
+class QTAWS_EXPORT ListResourceRecordSetsResponse : public ListResourceRecordSetsResponse {
+    Q_OBJECT
+
+public:
+    ListResourceRecordSetsResponse(const ListResourceRecordSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourceRecordSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceRecordSetsResponse)
+    Q_DISABLE_COPY(ListResourceRecordSetsResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

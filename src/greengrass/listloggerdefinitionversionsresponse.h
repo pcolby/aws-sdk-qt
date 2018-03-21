@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTLOGGERDEFINITIONVERSIONSRESPONSE_H
 #define QTAWS_LISTLOGGERDEFINITIONVERSIONSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listloggerdefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListLoggerDefinitionVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListLoggerDefinitionVersionsResponse : public ListLoggerDefinitionVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListLoggerDefinitionVersionsResponse(const ListLoggerDefinitionVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListLoggerDefinitionVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListLoggerDefinitionVersionsResponse)
+    Q_DISABLE_COPY(ListLoggerDefinitionVersionsResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

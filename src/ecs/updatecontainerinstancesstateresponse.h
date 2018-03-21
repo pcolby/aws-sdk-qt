@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_H
 #define QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_H
 
+#include "ecsresponse.h"
+#include "updatecontainerinstancesstaterequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class UpdateContainerInstancesStateResponsePrivate;
+
+class QTAWS_EXPORT UpdateContainerInstancesStateResponse : public UpdateContainerInstancesStateResponse {
+    Q_OBJECT
+
+public:
+    UpdateContainerInstancesStateResponse(const UpdateContainerInstancesStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateContainerInstancesStateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateContainerInstancesStateResponse)
+    Q_DISABLE_COPY(UpdateContainerInstancesStateResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

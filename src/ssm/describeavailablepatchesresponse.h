@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAVAILABLEPATCHESRESPONSE_H
 #define QTAWS_DESCRIBEAVAILABLEPATCHESRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeavailablepatchesrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeAvailablePatchesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAvailablePatchesResponse : public DescribeAvailablePatchesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAvailablePatchesResponse(const DescribeAvailablePatchesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAvailablePatchesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAvailablePatchesResponse)
+    Q_DISABLE_COPY(DescribeAvailablePatchesResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

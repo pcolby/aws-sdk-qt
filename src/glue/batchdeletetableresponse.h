@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHDELETETABLERESPONSE_H
 #define QTAWS_BATCHDELETETABLERESPONSE_H
 
+#include "glueresponse.h"
+#include "batchdeletetablerequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class BatchDeleteTableResponsePrivate;
+
+class QTAWS_EXPORT BatchDeleteTableResponse : public BatchDeleteTableResponse {
+    Q_OBJECT
+
+public:
+    BatchDeleteTableResponse(const BatchDeleteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchDeleteTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteTableResponse)
+    Q_DISABLE_COPY(BatchDeleteTableResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

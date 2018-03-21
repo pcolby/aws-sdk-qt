@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_H
 
+#include "rdsresponse.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class AddTagsToResourceResponsePrivate;
+
+class QTAWS_EXPORT AddTagsToResourceResponse : public AddTagsToResourceResponse {
+    Q_OBJECT
+
+public:
+    AddTagsToResourceResponse(const AddTagsToResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddTagsToResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToResourceResponse)
+    Q_DISABLE_COPY(AddTagsToResourceResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

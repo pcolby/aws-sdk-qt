@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPOLICYPRINCIPALSRESPONSE_H
 #define QTAWS_LISTPOLICYPRINCIPALSRESPONSE_H
 
+#include "iotresponse.h"
+#include "listpolicyprincipalsrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListPolicyPrincipalsResponsePrivate;
+
+class QTAWS_EXPORT ListPolicyPrincipalsResponse : public ListPolicyPrincipalsResponse {
+    Q_OBJECT
+
+public:
+    ListPolicyPrincipalsResponse(const ListPolicyPrincipalsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPolicyPrincipalsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPolicyPrincipalsResponse)
+    Q_DISABLE_COPY(ListPolicyPrincipalsResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

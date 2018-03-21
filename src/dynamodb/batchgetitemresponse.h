@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETITEMRESPONSE_H
 #define QTAWS_BATCHGETITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "batchgetitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class BatchGetItemResponsePrivate;
+
+class QTAWS_EXPORT BatchGetItemResponse : public BatchGetItemResponse {
+    Q_OBJECT
+
+public:
+    BatchGetItemResponse(const BatchGetItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetItemResponse)
+    Q_DISABLE_COPY(BatchGetItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

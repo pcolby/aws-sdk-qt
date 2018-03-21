@@ -20,4 +20,33 @@
 #ifndef QTAWS_COUNTPENDINGACTIVITYTASKSRESPONSE_H
 #define QTAWS_COUNTPENDINGACTIVITYTASKSRESPONSE_H
 
+#include "swfresponse.h"
+#include "countpendingactivitytasksrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class CountPendingActivityTasksResponsePrivate;
+
+class QTAWS_EXPORT CountPendingActivityTasksResponse : public CountPendingActivityTasksResponse {
+    Q_OBJECT
+
+public:
+    CountPendingActivityTasksResponse(const CountPendingActivityTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CountPendingActivityTasksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CountPendingActivityTasksResponse)
+    Q_DISABLE_COPY(CountPendingActivityTasksResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

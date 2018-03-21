@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_H
 #define QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_H
 
+#include "ec2response.h"
+#include "describeavailabilityzonesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeAvailabilityZonesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAvailabilityZonesResponse : public DescribeAvailabilityZonesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAvailabilityZonesResponse(const DescribeAvailabilityZonesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAvailabilityZonesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAvailabilityZonesResponse)
+    Q_DISABLE_COPY(DescribeAvailabilityZonesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

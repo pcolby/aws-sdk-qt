@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEIDENTITYPOOLRESPONSE_H
 #define QTAWS_CREATEIDENTITYPOOLRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "createidentitypoolrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class CreateIdentityPoolResponsePrivate;
+
+class QTAWS_EXPORT CreateIdentityPoolResponse : public CreateIdentityPoolResponse {
+    Q_OBJECT
+
+public:
+    CreateIdentityPoolResponse(const CreateIdentityPoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateIdentityPoolRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateIdentityPoolResponse)
+    Q_DISABLE_COPY(CreateIdentityPoolResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESNAPSHOTSCHEDULERESPONSE_H
 #define QTAWS_UPDATESNAPSHOTSCHEDULERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updatesnapshotschedulerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateSnapshotScheduleResponsePrivate;
+
+class QTAWS_EXPORT UpdateSnapshotScheduleResponse : public UpdateSnapshotScheduleResponse {
+    Q_OBJECT
+
+public:
+    UpdateSnapshotScheduleResponse(const UpdateSnapshotScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSnapshotScheduleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSnapshotScheduleResponse)
+    Q_DISABLE_COPY(UpdateSnapshotScheduleResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

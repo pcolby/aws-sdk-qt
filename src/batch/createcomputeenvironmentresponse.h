@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECOMPUTEENVIRONMENTRESPONSE_H
 #define QTAWS_CREATECOMPUTEENVIRONMENTRESPONSE_H
 
+#include "batchresponse.h"
+#include "createcomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class CreateComputeEnvironmentResponsePrivate;
+
+class QTAWS_EXPORT CreateComputeEnvironmentResponse : public CreateComputeEnvironmentResponse {
+    Q_OBJECT
+
+public:
+    CreateComputeEnvironmentResponse(const CreateComputeEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateComputeEnvironmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateComputeEnvironmentResponse)
+    Q_DISABLE_COPY(CreateComputeEnvironmentResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

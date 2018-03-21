@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_H
 #define QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "describestreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class DescribeStreamProcessorResponsePrivate;
+
+class QTAWS_EXPORT DescribeStreamProcessorResponse : public DescribeStreamProcessorResponse {
+    Q_OBJECT
+
+public:
+    DescribeStreamProcessorResponse(const DescribeStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStreamProcessorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamProcessorResponse)
+    Q_DISABLE_COPY(DescribeStreamProcessorResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETAPPLICATIONPOLICYRESPONSE_H
 #define QTAWS_GETAPPLICATIONPOLICYRESPONSE_H
 
+#include "serverlessreporesponse.h"
+#include "getapplicationpolicyrequest.h"
+
+namespace AWS {
+
+namespace serverlessrepo {
+
+class GetApplicationPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetApplicationPolicyResponse : public GetApplicationPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetApplicationPolicyResponse(const GetApplicationPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetApplicationPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetApplicationPolicyResponse)
+    Q_DISABLE_COPY(GetApplicationPolicyResponse)
+
+};
+
+} // namespace serverlessrepo
+} // namespace AWS
+
 #endif

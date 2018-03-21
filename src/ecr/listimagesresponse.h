@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTIMAGESRESPONSE_H
 #define QTAWS_LISTIMAGESRESPONSE_H
 
+#include "ecrresponse.h"
+#include "listimagesrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class ListImagesResponsePrivate;
+
+class QTAWS_EXPORT ListImagesResponse : public ListImagesResponse {
+    Q_OBJECT
+
+public:
+    ListImagesResponse(const ListImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListImagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListImagesResponse)
+    Q_DISABLE_COPY(ListImagesResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

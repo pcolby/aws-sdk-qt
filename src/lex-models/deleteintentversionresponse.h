@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINTENTVERSIONRESPONSE_H
 #define QTAWS_DELETEINTENTVERSIONRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "deleteintentversionrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class DeleteIntentVersionResponsePrivate;
+
+class QTAWS_EXPORT DeleteIntentVersionResponse : public DeleteIntentVersionResponse {
+    Q_OBJECT
+
+public:
+    DeleteIntentVersionResponse(const DeleteIntentVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteIntentVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIntentVersionResponse)
+    Q_DISABLE_COPY(DeleteIntentVersionResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

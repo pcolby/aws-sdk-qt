@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCERESPONSE_H
 #define QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCERESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "disassociatetagoptionfromresourcerequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DisassociateTagOptionFromResourceResponsePrivate;
+
+class QTAWS_EXPORT DisassociateTagOptionFromResourceResponse : public DisassociateTagOptionFromResourceResponse {
+    Q_OBJECT
+
+public:
+    DisassociateTagOptionFromResourceResponse(const DisassociateTagOptionFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateTagOptionFromResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateTagOptionFromResourceResponse)
+    Q_DISABLE_COPY(DisassociateTagOptionFromResourceResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

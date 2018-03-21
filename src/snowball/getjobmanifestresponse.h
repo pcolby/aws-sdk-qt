@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBMANIFESTRESPONSE_H
 #define QTAWS_GETJOBMANIFESTRESPONSE_H
 
+#include "snowballresponse.h"
+#include "getjobmanifestrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class GetJobManifestResponsePrivate;
+
+class QTAWS_EXPORT GetJobManifestResponse : public GetJobManifestResponse {
+    Q_OBJECT
+
+public:
+    GetJobManifestResponse(const GetJobManifestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobManifestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobManifestResponse)
+    Q_DISABLE_COPY(GetJobManifestResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

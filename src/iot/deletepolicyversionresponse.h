@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONRESPONSE_H
 #define QTAWS_DELETEPOLICYVERSIONRESPONSE_H
 
+#include "iotresponse.h"
+#include "deletepolicyversionrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeletePolicyVersionResponsePrivate;
+
+class QTAWS_EXPORT DeletePolicyVersionResponse : public DeletePolicyVersionResponse {
+    Q_OBJECT
+
+public:
+    DeletePolicyVersionResponse(const DeletePolicyVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeletePolicyVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeletePolicyVersionResponse)
+    Q_DISABLE_COPY(DeletePolicyVersionResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

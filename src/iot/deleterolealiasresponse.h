@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEROLEALIASRESPONSE_H
 #define QTAWS_DELETEROLEALIASRESPONSE_H
 
+#include "iotresponse.h"
+#include "deleterolealiasrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeleteRoleAliasResponsePrivate;
+
+class QTAWS_EXPORT DeleteRoleAliasResponse : public DeleteRoleAliasResponse {
+    Q_OBJECT
+
+public:
+    DeleteRoleAliasResponse(const DeleteRoleAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRoleAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRoleAliasResponse)
+    Q_DISABLE_COPY(DeleteRoleAliasResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

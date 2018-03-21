@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSEGMENTVERSIONRESPONSE_H
 #define QTAWS_GETSEGMENTVERSIONRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getsegmentversionrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetSegmentVersionResponsePrivate;
+
+class QTAWS_EXPORT GetSegmentVersionResponse : public GetSegmentVersionResponse {
+    Q_OBJECT
+
+public:
+    GetSegmentVersionResponse(const GetSegmentVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSegmentVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSegmentVersionResponse)
+    Q_DISABLE_COPY(GetSegmentVersionResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

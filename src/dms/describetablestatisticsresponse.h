@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETABLESTATISTICSRESPONSE_H
 #define QTAWS_DESCRIBETABLESTATISTICSRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describetablestatisticsrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeTableStatisticsResponsePrivate;
+
+class QTAWS_EXPORT DescribeTableStatisticsResponse : public DescribeTableStatisticsResponse {
+    Q_OBJECT
+
+public:
+    DescribeTableStatisticsResponse(const DescribeTableStatisticsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTableStatisticsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTableStatisticsResponse)
+    Q_DISABLE_COPY(DescribeTableStatisticsResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

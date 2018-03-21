@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENFSFILESHARESRESPONSE_H
 #define QTAWS_DESCRIBENFSFILESHARESRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describenfsfilesharesrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeNFSFileSharesResponsePrivate;
+
+class QTAWS_EXPORT DescribeNFSFileSharesResponse : public DescribeNFSFileSharesResponse {
+    Q_OBJECT
+
+public:
+    DescribeNFSFileSharesResponse(const DescribeNFSFileSharesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNFSFileSharesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNFSFileSharesResponse)
+    Q_DISABLE_COPY(DescribeNFSFileSharesResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

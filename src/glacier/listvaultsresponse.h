@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTVAULTSRESPONSE_H
 #define QTAWS_LISTVAULTSRESPONSE_H
 
+#include "glacierresponse.h"
+#include "listvaultsrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class ListVaultsResponsePrivate;
+
+class QTAWS_EXPORT ListVaultsResponse : public ListVaultsResponse {
+    Q_OBJECT
+
+public:
+    ListVaultsResponse(const ListVaultsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListVaultsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListVaultsResponse)
+    Q_DISABLE_COPY(ListVaultsResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

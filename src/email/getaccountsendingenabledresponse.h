@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_H
 #define QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "getaccountsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetAccountSendingEnabledResponsePrivate;
+
+class QTAWS_EXPORT GetAccountSendingEnabledResponse : public GetAccountSendingEnabledResponse {
+    Q_OBJECT
+
+public:
+    GetAccountSendingEnabledResponse(const GetAccountSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountSendingEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountSendingEnabledResponse)
+    Q_DISABLE_COPY(GetAccountSendingEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTSERVICEPERMISSIONSRESPONSE_H
 #define QTAWS_DESCRIBEVPCENDPOINTSERVICEPERMISSIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describevpcendpointservicepermissionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeVpcEndpointServicePermissionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeVpcEndpointServicePermissionsResponse : public DescribeVpcEndpointServicePermissionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeVpcEndpointServicePermissionsResponse(const DescribeVpcEndpointServicePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVpcEndpointServicePermissionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcEndpointServicePermissionsResponse)
+    Q_DISABLE_COPY(DescribeVpcEndpointServicePermissionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

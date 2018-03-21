@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMLMODELRESPONSE_H
 #define QTAWS_UPDATEMLMODELRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "updatemlmodelrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class UpdateMLModelResponsePrivate;
+
+class QTAWS_EXPORT UpdateMLModelResponse : public UpdateMLModelResponse {
+    Q_OBJECT
+
+public:
+    UpdateMLModelResponse(const UpdateMLModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateMLModelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMLModelResponse)
+    Q_DISABLE_COPY(UpdateMLModelResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

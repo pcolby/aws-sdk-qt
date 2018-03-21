@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETASKSRESPONSE_H
 #define QTAWS_DESCRIBETASKSRESPONSE_H
 
+#include "ecsresponse.h"
+#include "describetasksrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class DescribeTasksResponsePrivate;
+
+class QTAWS_EXPORT DescribeTasksResponse : public DescribeTasksResponse {
+    Q_OBJECT
+
+public:
+    DescribeTasksResponse(const DescribeTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTasksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTasksResponse)
+    Q_DISABLE_COPY(DescribeTasksResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

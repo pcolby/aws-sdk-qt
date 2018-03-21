@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEBUNDLESRESPONSE_H
 #define QTAWS_DESCRIBEWORKSPACEBUNDLESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "describeworkspacebundlesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class DescribeWorkspaceBundlesResponsePrivate;
+
+class QTAWS_EXPORT DescribeWorkspaceBundlesResponse : public DescribeWorkspaceBundlesResponse {
+    Q_OBJECT
+
+public:
+    DescribeWorkspaceBundlesResponse(const DescribeWorkspaceBundlesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeWorkspaceBundlesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkspaceBundlesResponse)
+    Q_DISABLE_COPY(DescribeWorkspaceBundlesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

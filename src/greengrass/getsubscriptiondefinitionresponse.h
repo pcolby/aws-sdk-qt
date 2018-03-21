@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSUBSCRIPTIONDEFINITIONRESPONSE_H
 #define QTAWS_GETSUBSCRIPTIONDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getsubscriptiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetSubscriptionDefinitionResponsePrivate;
+
+class QTAWS_EXPORT GetSubscriptionDefinitionResponse : public GetSubscriptionDefinitionResponse {
+    Q_OBJECT
+
+public:
+    GetSubscriptionDefinitionResponse(const GetSubscriptionDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSubscriptionDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSubscriptionDefinitionResponse)
+    Q_DISABLE_COPY(GetSubscriptionDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

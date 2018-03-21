@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSEGRESSRESPONSE_H
 #define QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSEGRESSRESPONSE_H
 
+#include "ec2response.h"
+#include "updatesecuritygroupruledescriptionsegressrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate;
+
+class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsEgressResponse : public UpdateSecurityGroupRuleDescriptionsEgressResponse {
+    Q_OBJECT
+
+public:
+    UpdateSecurityGroupRuleDescriptionsEgressResponse(const UpdateSecurityGroupRuleDescriptionsEgressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateSecurityGroupRuleDescriptionsEgressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSecurityGroupRuleDescriptionsEgressResponse)
+    Q_DISABLE_COPY(UpdateSecurityGroupRuleDescriptionsEgressResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEGCMCHANNELRESPONSE_H
 #define QTAWS_UPDATEGCMCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updategcmchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateGcmChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateGcmChannelResponse : public UpdateGcmChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateGcmChannelResponse(const UpdateGcmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateGcmChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGcmChannelResponse)
+    Q_DISABLE_COPY(UpdateGcmChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

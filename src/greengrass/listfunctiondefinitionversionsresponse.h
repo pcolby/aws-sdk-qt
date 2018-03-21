@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTFUNCTIONDEFINITIONVERSIONSRESPONSE_H
 #define QTAWS_LISTFUNCTIONDEFINITIONVERSIONSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listfunctiondefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListFunctionDefinitionVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListFunctionDefinitionVersionsResponse : public ListFunctionDefinitionVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListFunctionDefinitionVersionsResponse(const ListFunctionDefinitionVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListFunctionDefinitionVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListFunctionDefinitionVersionsResponse)
+    Q_DISABLE_COPY(ListFunctionDefinitionVersionsResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

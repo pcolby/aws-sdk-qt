@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETEAMMEMBERRESPONSE_H
 #define QTAWS_UPDATETEAMMEMBERRESPONSE_H
 
+#include "codestarresponse.h"
+#include "updateteammemberrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class UpdateTeamMemberResponsePrivate;
+
+class QTAWS_EXPORT UpdateTeamMemberResponse : public UpdateTeamMemberResponse {
+    Q_OBJECT
+
+public:
+    UpdateTeamMemberResponse(const UpdateTeamMemberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTeamMemberRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTeamMemberResponse)
+    Q_DISABLE_COPY(UpdateTeamMemberResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

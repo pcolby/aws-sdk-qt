@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEIPSETRESPONSE_H
 #define QTAWS_CREATEIPSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "createipsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class CreateIPSetResponsePrivate;
+
+class QTAWS_EXPORT CreateIPSetResponse : public CreateIPSetResponse {
+    Q_OBJECT
+
+public:
+    CreateIPSetResponse(const CreateIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateIPSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateIPSetResponse)
+    Q_DISABLE_COPY(CreateIPSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

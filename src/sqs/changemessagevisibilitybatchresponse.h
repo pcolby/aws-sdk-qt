@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYBATCHRESPONSE_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYBATCHRESPONSE_H
 
+#include "sqsresponse.h"
+#include "changemessagevisibilitybatchrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class ChangeMessageVisibilityBatchResponsePrivate;
+
+class QTAWS_EXPORT ChangeMessageVisibilityBatchResponse : public ChangeMessageVisibilityBatchResponse {
+    Q_OBJECT
+
+public:
+    ChangeMessageVisibilityBatchResponse(const ChangeMessageVisibilityBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ChangeMessageVisibilityBatchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ChangeMessageVisibilityBatchResponse)
+    Q_DISABLE_COPY(ChangeMessageVisibilityBatchResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

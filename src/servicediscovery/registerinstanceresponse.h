@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERINSTANCERESPONSE_H
 #define QTAWS_REGISTERINSTANCERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "registerinstancerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class RegisterInstanceResponsePrivate;
+
+class QTAWS_EXPORT RegisterInstanceResponse : public RegisterInstanceResponse {
+    Q_OBJECT
+
+public:
+    RegisterInstanceResponse(const RegisterInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterInstanceResponse)
+    Q_DISABLE_COPY(RegisterInstanceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

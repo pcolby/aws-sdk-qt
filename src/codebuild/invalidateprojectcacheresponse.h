@@ -20,4 +20,33 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHERESPONSE_H
 #define QTAWS_INVALIDATEPROJECTCACHERESPONSE_H
 
+#include "codebuildresponse.h"
+#include "invalidateprojectcacherequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class InvalidateProjectCacheResponsePrivate;
+
+class QTAWS_EXPORT InvalidateProjectCacheResponse : public InvalidateProjectCacheResponse {
+    Q_OBJECT
+
+public:
+    InvalidateProjectCacheResponse(const InvalidateProjectCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InvalidateProjectCacheRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InvalidateProjectCacheResponse)
+    Q_DISABLE_COPY(InvalidateProjectCacheResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

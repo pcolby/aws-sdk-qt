@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYRULERESPONSE_H
 #define QTAWS_MODIFYRULERESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "modifyrulerequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class ModifyRuleResponsePrivate;
+
+class QTAWS_EXPORT ModifyRuleResponse : public ModifyRuleResponse {
+    Q_OBJECT
+
+public:
+    ModifyRuleResponse(const ModifyRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyRuleResponse)
+    Q_DISABLE_COPY(ModifyRuleResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

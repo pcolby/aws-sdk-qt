@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTDASHBOARDRESPONSE_H
 #define QTAWS_PUTDASHBOARDRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "putdashboardrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class PutDashboardResponsePrivate;
+
+class QTAWS_EXPORT PutDashboardResponse : public PutDashboardResponse {
+    Q_OBJECT
+
+public:
+    PutDashboardResponse(const PutDashboardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutDashboardRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutDashboardResponse)
+    Q_DISABLE_COPY(PutDashboardResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

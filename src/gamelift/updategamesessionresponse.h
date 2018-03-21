@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEGAMESESSIONRESPONSE_H
 #define QTAWS_UPDATEGAMESESSIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "updategamesessionrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class UpdateGameSessionResponsePrivate;
+
+class QTAWS_EXPORT UpdateGameSessionResponse : public UpdateGameSessionResponse {
+    Q_OBJECT
+
+public:
+    UpdateGameSessionResponse(const UpdateGameSessionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateGameSessionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGameSessionResponse)
+    Q_DISABLE_COPY(UpdateGameSessionResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

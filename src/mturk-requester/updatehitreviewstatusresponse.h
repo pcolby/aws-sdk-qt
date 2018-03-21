@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_H
 #define QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "updatehitreviewstatusrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class UpdateHITReviewStatusResponsePrivate;
+
+class QTAWS_EXPORT UpdateHITReviewStatusResponse : public UpdateHITReviewStatusResponse {
+    Q_OBJECT
+
+public:
+    UpdateHITReviewStatusResponse(const UpdateHITReviewStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateHITReviewStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateHITReviewStatusResponse)
+    Q_DISABLE_COPY(UpdateHITReviewStatusResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

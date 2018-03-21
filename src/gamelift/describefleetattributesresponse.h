@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFLEETATTRIBUTESRESPONSE_H
 #define QTAWS_DESCRIBEFLEETATTRIBUTESRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describefleetattributesrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeFleetAttributesResponsePrivate;
+
+class QTAWS_EXPORT DescribeFleetAttributesResponse : public DescribeFleetAttributesResponse {
+    Q_OBJECT
+
+public:
+    DescribeFleetAttributesResponse(const DescribeFleetAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFleetAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFleetAttributesResponse)
+    Q_DISABLE_COPY(DescribeFleetAttributesResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

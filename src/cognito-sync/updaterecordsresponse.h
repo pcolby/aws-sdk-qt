@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERECORDSRESPONSE_H
 #define QTAWS_UPDATERECORDSRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "updaterecordsrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class UpdateRecordsResponsePrivate;
+
+class QTAWS_EXPORT UpdateRecordsResponse : public UpdateRecordsResponse {
+    Q_OBJECT
+
+public:
+    UpdateRecordsResponse(const UpdateRecordsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRecordsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRecordsResponse)
+    Q_DISABLE_COPY(UpdateRecordsResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

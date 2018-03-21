@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHVPNGATEWAYRESPONSE_H
 #define QTAWS_DETACHVPNGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "detachvpngatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DetachVpnGatewayResponsePrivate;
+
+class QTAWS_EXPORT DetachVpnGatewayResponse : public DetachVpnGatewayResponse {
+    Q_OBJECT
+
+public:
+    DetachVpnGatewayResponse(const DetachVpnGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachVpnGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachVpnGatewayResponse)
+    Q_DISABLE_COPY(DetachVpnGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

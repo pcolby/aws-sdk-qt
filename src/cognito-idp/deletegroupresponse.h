@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEGROUPRESPONSE_H
 #define QTAWS_DELETEGROUPRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "deletegrouprequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DeleteGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteGroupResponse : public DeleteGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteGroupResponse(const DeleteGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGroupResponse)
+    Q_DISABLE_COPY(DeleteGroupResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

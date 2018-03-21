@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTEMPLATESRESPONSE_H
 #define QTAWS_LISTTEMPLATESRESPONSE_H
 
+#include "emailresponse.h"
+#include "listtemplatesrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class ListTemplatesResponsePrivate;
+
+class QTAWS_EXPORT ListTemplatesResponse : public ListTemplatesResponse {
+    Q_OBJECT
+
+public:
+    ListTemplatesResponse(const ListTemplatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTemplatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTemplatesResponse)
+    Q_DISABLE_COPY(ListTemplatesResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

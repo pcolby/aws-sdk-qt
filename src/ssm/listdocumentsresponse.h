@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDOCUMENTSRESPONSE_H
 #define QTAWS_LISTDOCUMENTSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listdocumentsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListDocumentsResponsePrivate;
+
+class QTAWS_EXPORT ListDocumentsResponse : public ListDocumentsResponse {
+    Q_OBJECT
+
+public:
+    ListDocumentsResponse(const ListDocumentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDocumentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDocumentsResponse)
+    Q_DISABLE_COPY(ListDocumentsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

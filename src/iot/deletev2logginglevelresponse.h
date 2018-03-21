@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEV2LOGGINGLEVELRESPONSE_H
 #define QTAWS_DELETEV2LOGGINGLEVELRESPONSE_H
 
+#include "iotresponse.h"
+#include "deletev2logginglevelrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DeleteV2LoggingLevelResponsePrivate;
+
+class QTAWS_EXPORT DeleteV2LoggingLevelResponse : public DeleteV2LoggingLevelResponse {
+    Q_OBJECT
+
+public:
+    DeleteV2LoggingLevelResponse(const DeleteV2LoggingLevelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteV2LoggingLevelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteV2LoggingLevelResponse)
+    Q_DISABLE_COPY(DeleteV2LoggingLevelResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

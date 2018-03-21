@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTQUERYEXECUTIONRESPONSE_H
 #define QTAWS_STARTQUERYEXECUTIONRESPONSE_H
 
+#include "athenaresponse.h"
+#include "startqueryexecutionrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class StartQueryExecutionResponsePrivate;
+
+class QTAWS_EXPORT StartQueryExecutionResponse : public StartQueryExecutionResponse {
+    Q_OBJECT
+
+public:
+    StartQueryExecutionResponse(const StartQueryExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartQueryExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartQueryExecutionResponse)
+    Q_DISABLE_COPY(StartQueryExecutionResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

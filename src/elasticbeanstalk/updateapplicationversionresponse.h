@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEAPPLICATIONVERSIONRESPONSE_H
 #define QTAWS_UPDATEAPPLICATIONVERSIONRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "updateapplicationversionrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class UpdateApplicationVersionResponsePrivate;
+
+class QTAWS_EXPORT UpdateApplicationVersionResponse : public UpdateApplicationVersionResponse {
+    Q_OBJECT
+
+public:
+    UpdateApplicationVersionResponse(const UpdateApplicationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateApplicationVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationVersionResponse)
+    Q_DISABLE_COPY(UpdateApplicationVersionResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVPCRESPONSE_H
 #define QTAWS_DELETEVPCRESPONSE_H
 
+#include "ec2response.h"
+#include "deletevpcrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteVpcResponsePrivate;
+
+class QTAWS_EXPORT DeleteVpcResponse : public DeleteVpcResponse {
+    Q_OBJECT
+
+public:
+    DeleteVpcResponse(const DeleteVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVpcRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcResponse)
+    Q_DISABLE_COPY(DeleteVpcResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

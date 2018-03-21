@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEINSTANCECREDITSPECIFICATIONSRESPONSE_H
 #define QTAWS_DESCRIBEINSTANCECREDITSPECIFICATIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeinstancecreditspecificationsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeInstanceCreditSpecificationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeInstanceCreditSpecificationsResponse : public DescribeInstanceCreditSpecificationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeInstanceCreditSpecificationsResponse(const DescribeInstanceCreditSpecificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeInstanceCreditSpecificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstanceCreditSpecificationsResponse)
+    Q_DISABLE_COPY(DescribeInstanceCreditSpecificationsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

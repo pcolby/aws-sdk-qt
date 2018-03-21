@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBOTALIASESRESPONSE_H
 #define QTAWS_GETBOTALIASESRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "getbotaliasesrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class GetBotAliasesResponsePrivate;
+
+class QTAWS_EXPORT GetBotAliasesResponse : public GetBotAliasesResponse {
+    Q_OBJECT
+
+public:
+    GetBotAliasesResponse(const GetBotAliasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBotAliasesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBotAliasesResponse)
+    Q_DISABLE_COPY(GetBotAliasesResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

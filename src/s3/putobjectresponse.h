@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTOBJECTRESPONSE_H
 #define QTAWS_PUTOBJECTRESPONSE_H
 
+#include "s3response.h"
+#include "putobjectrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutObjectResponsePrivate;
+
+class QTAWS_EXPORT PutObjectResponse : public PutObjectResponse {
+    Q_OBJECT
+
+public:
+    PutObjectResponse(const PutObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutObjectResponse)
+    Q_DISABLE_COPY(PutObjectResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

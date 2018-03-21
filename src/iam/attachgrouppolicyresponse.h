@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHGROUPPOLICYRESPONSE_H
 #define QTAWS_ATTACHGROUPPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "attachgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class AttachGroupPolicyResponsePrivate;
+
+class QTAWS_EXPORT AttachGroupPolicyResponse : public AttachGroupPolicyResponse {
+    Q_OBJECT
+
+public:
+    AttachGroupPolicyResponse(const AttachGroupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachGroupPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachGroupPolicyResponse)
+    Q_DISABLE_COPY(AttachGroupPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

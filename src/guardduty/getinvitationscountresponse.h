@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINVITATIONSCOUNTRESPONSE_H
 #define QTAWS_GETINVITATIONSCOUNTRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "getinvitationscountrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class GetInvitationsCountResponsePrivate;
+
+class QTAWS_EXPORT GetInvitationsCountResponse : public GetInvitationsCountResponse {
+    Q_OBJECT
+
+public:
+    GetInvitationsCountResponse(const GetInvitationsCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetInvitationsCountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetInvitationsCountResponse)
+    Q_DISABLE_COPY(GetInvitationsCountResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

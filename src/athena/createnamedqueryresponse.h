@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENAMEDQUERYRESPONSE_H
 #define QTAWS_CREATENAMEDQUERYRESPONSE_H
 
+#include "athenaresponse.h"
+#include "createnamedqueryrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class CreateNamedQueryResponsePrivate;
+
+class QTAWS_EXPORT CreateNamedQueryResponse : public CreateNamedQueryResponse {
+    Q_OBJECT
+
+public:
+    CreateNamedQueryResponse(const CreateNamedQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNamedQueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNamedQueryResponse)
+    Q_DISABLE_COPY(CreateNamedQueryResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

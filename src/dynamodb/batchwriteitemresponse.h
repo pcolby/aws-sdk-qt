@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHWRITEITEMRESPONSE_H
 #define QTAWS_BATCHWRITEITEMRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "batchwriteitemrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class BatchWriteItemResponsePrivate;
+
+class QTAWS_EXPORT BatchWriteItemResponse : public BatchWriteItemResponse {
+    Q_OBJECT
+
+public:
+    BatchWriteItemResponse(const BatchWriteItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchWriteItemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchWriteItemResponse)
+    Q_DISABLE_COPY(BatchWriteItemResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

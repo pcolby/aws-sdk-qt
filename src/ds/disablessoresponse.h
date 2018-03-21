@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLESSORESPONSE_H
 #define QTAWS_DISABLESSORESPONSE_H
 
+#include "dsresponse.h"
+#include "disablessorequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DisableSsoResponsePrivate;
+
+class QTAWS_EXPORT DisableSsoResponse : public DisableSsoResponse {
+    Q_OBJECT
+
+public:
+    DisableSsoResponse(const DisableSsoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableSsoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableSsoResponse)
+    Q_DISABLE_COPY(DisableSsoResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

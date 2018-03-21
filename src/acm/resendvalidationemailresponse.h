@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESENDVALIDATIONEMAILRESPONSE_H
 #define QTAWS_RESENDVALIDATIONEMAILRESPONSE_H
 
+#include "acmresponse.h"
+#include "resendvalidationemailrequest.h"
+
+namespace AWS {
+
+namespace acm {
+
+class ResendValidationEmailResponsePrivate;
+
+class QTAWS_EXPORT ResendValidationEmailResponse : public ResendValidationEmailResponse {
+    Q_OBJECT
+
+public:
+    ResendValidationEmailResponse(const ResendValidationEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResendValidationEmailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResendValidationEmailResponse)
+    Q_DISABLE_COPY(ResendValidationEmailResponse)
+
+};
+
+} // namespace acm
+} // namespace AWS
+
 #endif

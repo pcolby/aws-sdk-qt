@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERCONTAINERINSTANCERESPONSE_H
 #define QTAWS_REGISTERCONTAINERINSTANCERESPONSE_H
 
+#include "ecsresponse.h"
+#include "registercontainerinstancerequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class RegisterContainerInstanceResponsePrivate;
+
+class QTAWS_EXPORT RegisterContainerInstanceResponse : public RegisterContainerInstanceResponse {
+    Q_OBJECT
+
+public:
+    RegisterContainerInstanceResponse(const RegisterContainerInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterContainerInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterContainerInstanceResponse)
+    Q_DISABLE_COPY(RegisterContainerInstanceResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

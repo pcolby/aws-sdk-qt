@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTUNIQUEPROBLEMSRESPONSE_H
 #define QTAWS_LISTUNIQUEPROBLEMSRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "listuniqueproblemsrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ListUniqueProblemsResponsePrivate;
+
+class QTAWS_EXPORT ListUniqueProblemsResponse : public ListUniqueProblemsResponse {
+    Q_OBJECT
+
+public:
+    ListUniqueProblemsResponse(const ListUniqueProblemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListUniqueProblemsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListUniqueProblemsResponse)
+    Q_DISABLE_COPY(ListUniqueProblemsResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 #define QTAWS_DELETEREPLICATIONINSTANCERESPONSE_H
 
+#include "dmsresponse.h"
+#include "deletereplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DeleteReplicationInstanceResponsePrivate;
+
+class QTAWS_EXPORT DeleteReplicationInstanceResponse : public DeleteReplicationInstanceResponse {
+    Q_OBJECT
+
+public:
+    DeleteReplicationInstanceResponse(const DeleteReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteReplicationInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationInstanceResponse)
+    Q_DISABLE_COPY(DeleteReplicationInstanceResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

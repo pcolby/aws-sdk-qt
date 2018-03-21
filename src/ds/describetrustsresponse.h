@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETRUSTSRESPONSE_H
 #define QTAWS_DESCRIBETRUSTSRESPONSE_H
 
+#include "dsresponse.h"
+#include "describetrustsrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DescribeTrustsResponsePrivate;
+
+class QTAWS_EXPORT DescribeTrustsResponse : public DescribeTrustsResponse {
+    Q_OBJECT
+
+public:
+    DescribeTrustsResponse(const DescribeTrustsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTrustsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTrustsResponse)
+    Q_DISABLE_COPY(DescribeTrustsResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_H
 #define QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describenotificationconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeNotificationConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeNotificationConfigurationsResponse : public DescribeNotificationConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeNotificationConfigurationsResponse(const DescribeNotificationConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeNotificationConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNotificationConfigurationsResponse)
+    Q_DISABLE_COPY(DescribeNotificationConfigurationsResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

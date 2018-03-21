@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTEAMMEMBERSRESPONSE_H
 #define QTAWS_LISTTEAMMEMBERSRESPONSE_H
 
+#include "codestarresponse.h"
+#include "listteammembersrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class ListTeamMembersResponsePrivate;
+
+class QTAWS_EXPORT ListTeamMembersResponse : public ListTeamMembersResponse {
+    Q_OBJECT
+
+public:
+    ListTeamMembersResponse(const ListTeamMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTeamMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTeamMembersResponse)
+    Q_DISABLE_COPY(ListTeamMembersResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

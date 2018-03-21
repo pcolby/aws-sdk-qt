@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSAMLPROVIDERRESPONSE_H
 #define QTAWS_GETSAMLPROVIDERRESPONSE_H
 
+#include "iamresponse.h"
+#include "getsamlproviderrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetSAMLProviderResponsePrivate;
+
+class QTAWS_EXPORT GetSAMLProviderResponse : public GetSAMLProviderResponse {
+    Q_OBJECT
+
+public:
+    GetSAMLProviderResponse(const GetSAMLProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSAMLProviderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSAMLProviderResponse)
+    Q_DISABLE_COPY(GetSAMLProviderResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

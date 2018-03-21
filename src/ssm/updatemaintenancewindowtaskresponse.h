@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMAINTENANCEWINDOWTASKRESPONSE_H
 #define QTAWS_UPDATEMAINTENANCEWINDOWTASKRESPONSE_H
 
+#include "ssmresponse.h"
+#include "updatemaintenancewindowtaskrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class UpdateMaintenanceWindowTaskResponsePrivate;
+
+class QTAWS_EXPORT UpdateMaintenanceWindowTaskResponse : public UpdateMaintenanceWindowTaskResponse {
+    Q_OBJECT
+
+public:
+    UpdateMaintenanceWindowTaskResponse(const UpdateMaintenanceWindowTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateMaintenanceWindowTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMaintenanceWindowTaskResponse)
+    Q_DISABLE_COPY(UpdateMaintenanceWindowTaskResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

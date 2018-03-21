@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELOGGROUPRESPONSE_H
 #define QTAWS_CREATELOGGROUPRESPONSE_H
 
+#include "logsresponse.h"
+#include "createloggrouprequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class CreateLogGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateLogGroupResponse : public CreateLogGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateLogGroupResponse(const CreateLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLogGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLogGroupResponse)
+    Q_DISABLE_COPY(CreateLogGroupResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETEMPLATERESPONSE_H
 #define QTAWS_UPDATETEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "updatetemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateTemplateResponsePrivate;
+
+class QTAWS_EXPORT UpdateTemplateResponse : public UpdateTemplateResponse {
+    Q_OBJECT
+
+public:
+    UpdateTemplateResponse(const UpdateTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTemplateResponse)
+    Q_DISABLE_COPY(UpdateTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

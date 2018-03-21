@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELSPOTINSTANCEREQUESTSRESPONSE_H
 #define QTAWS_CANCELSPOTINSTANCEREQUESTSRESPONSE_H
 
+#include "ec2response.h"
+#include "cancelspotinstancerequestsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CancelSpotInstanceRequestsResponsePrivate;
+
+class QTAWS_EXPORT CancelSpotInstanceRequestsResponse : public CancelSpotInstanceRequestsResponse {
+    Q_OBJECT
+
+public:
+    CancelSpotInstanceRequestsResponse(const CancelSpotInstanceRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelSpotInstanceRequestsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelSpotInstanceRequestsResponse)
+    Q_DISABLE_COPY(CancelSpotInstanceRequestsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_H
 #define QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describevaliddbinstancemodificationsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeValidDBInstanceModificationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsResponse : public DescribeValidDBInstanceModificationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeValidDBInstanceModificationsResponse(const DescribeValidDBInstanceModificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeValidDBInstanceModificationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeValidDBInstanceModificationsResponse)
+    Q_DISABLE_COPY(DescribeValidDBInstanceModificationsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

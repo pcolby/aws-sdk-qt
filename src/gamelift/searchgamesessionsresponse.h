@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHGAMESESSIONSRESPONSE_H
 #define QTAWS_SEARCHGAMESESSIONSRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "searchgamesessionsrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class SearchGameSessionsResponsePrivate;
+
+class QTAWS_EXPORT SearchGameSessionsResponse : public SearchGameSessionsResponse {
+    Q_OBJECT
+
+public:
+    SearchGameSessionsResponse(const SearchGameSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchGameSessionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchGameSessionsResponse)
+    Q_DISABLE_COPY(SearchGameSessionsResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

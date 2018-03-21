@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTBUCKETREQUESTPAYMENTRESPONSE_H
 #define QTAWS_PUTBUCKETREQUESTPAYMENTRESPONSE_H
 
+#include "s3response.h"
+#include "putbucketrequestpaymentrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutBucketRequestPaymentResponsePrivate;
+
+class QTAWS_EXPORT PutBucketRequestPaymentResponse : public PutBucketRequestPaymentResponse {
+    Q_OBJECT
+
+public:
+    PutBucketRequestPaymentResponse(const PutBucketRequestPaymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutBucketRequestPaymentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketRequestPaymentResponse)
+    Q_DISABLE_COPY(PutBucketRequestPaymentResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

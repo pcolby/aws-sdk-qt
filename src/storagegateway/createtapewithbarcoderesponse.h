@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETAPEWITHBARCODERESPONSE_H
 #define QTAWS_CREATETAPEWITHBARCODERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "createtapewithbarcoderequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class CreateTapeWithBarcodeResponsePrivate;
+
+class QTAWS_EXPORT CreateTapeWithBarcodeResponse : public CreateTapeWithBarcodeResponse {
+    Q_OBJECT
+
+public:
+    CreateTapeWithBarcodeResponse(const CreateTapeWithBarcodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTapeWithBarcodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTapeWithBarcodeResponse)
+    Q_DISABLE_COPY(CreateTapeWithBarcodeResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

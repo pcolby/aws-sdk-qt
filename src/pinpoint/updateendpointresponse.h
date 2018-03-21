@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEENDPOINTRESPONSE_H
 #define QTAWS_UPDATEENDPOINTRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updateendpointrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateEndpointResponsePrivate;
+
+class QTAWS_EXPORT UpdateEndpointResponse : public UpdateEndpointResponse {
+    Q_OBJECT
+
+public:
+    UpdateEndpointResponse(const UpdateEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEndpointResponse)
+    Q_DISABLE_COPY(UpdateEndpointResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

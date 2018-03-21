@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINDEXFIELDRESPONSE_H
 #define QTAWS_DELETEINDEXFIELDRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "deleteindexfieldrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DeleteIndexFieldResponsePrivate;
+
+class QTAWS_EXPORT DeleteIndexFieldResponse : public DeleteIndexFieldResponse {
+    Q_OBJECT
+
+public:
+    DeleteIndexFieldResponse(const DeleteIndexFieldRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteIndexFieldRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIndexFieldResponse)
+    Q_DISABLE_COPY(DeleteIndexFieldResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

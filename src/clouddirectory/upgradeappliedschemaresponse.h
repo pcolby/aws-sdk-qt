@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_H
 #define QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "upgradeappliedschemarequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class UpgradeAppliedSchemaResponsePrivate;
+
+class QTAWS_EXPORT UpgradeAppliedSchemaResponse : public UpgradeAppliedSchemaResponse {
+    Q_OBJECT
+
+public:
+    UpgradeAppliedSchemaResponse(const UpgradeAppliedSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpgradeAppliedSchemaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpgradeAppliedSchemaResponse)
+    Q_DISABLE_COPY(UpgradeAppliedSchemaResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

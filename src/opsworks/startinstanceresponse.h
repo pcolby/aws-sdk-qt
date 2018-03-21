@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTINSTANCERESPONSE_H
 #define QTAWS_STARTINSTANCERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "startinstancerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class StartInstanceResponsePrivate;
+
+class QTAWS_EXPORT StartInstanceResponse : public StartInstanceResponse {
+    Q_OBJECT
+
+public:
+    StartInstanceResponse(const StartInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartInstanceResponse)
+    Q_DISABLE_COPY(StartInstanceResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

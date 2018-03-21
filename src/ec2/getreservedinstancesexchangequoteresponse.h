@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTERESPONSE_H
 #define QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTERESPONSE_H
 
+#include "ec2response.h"
+#include "getreservedinstancesexchangequoterequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class GetReservedInstancesExchangeQuoteResponsePrivate;
+
+class QTAWS_EXPORT GetReservedInstancesExchangeQuoteResponse : public GetReservedInstancesExchangeQuoteResponse {
+    Q_OBJECT
+
+public:
+    GetReservedInstancesExchangeQuoteResponse(const GetReservedInstancesExchangeQuoteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReservedInstancesExchangeQuoteRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReservedInstancesExchangeQuoteResponse)
+    Q_DISABLE_COPY(GetReservedInstancesExchangeQuoteResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

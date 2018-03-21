@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTJOBSBYSTATUSRESPONSE_H
 #define QTAWS_LISTJOBSBYSTATUSRESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "listjobsbystatusrequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class ListJobsByStatusResponsePrivate;
+
+class QTAWS_EXPORT ListJobsByStatusResponse : public ListJobsByStatusResponse {
+    Q_OBJECT
+
+public:
+    ListJobsByStatusResponse(const ListJobsByStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListJobsByStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListJobsByStatusResponse)
+    Q_DISABLE_COPY(ListJobsByStatusResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

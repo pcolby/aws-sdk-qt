@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTBALANCERESPONSE_H
 #define QTAWS_GETACCOUNTBALANCERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "getaccountbalancerequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class GetAccountBalanceResponsePrivate;
+
+class QTAWS_EXPORT GetAccountBalanceResponse : public GetAccountBalanceResponse {
+    Q_OBJECT
+
+public:
+    GetAccountBalanceResponse(const GetAccountBalanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountBalanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountBalanceResponse)
+    Q_DISABLE_COPY(GetAccountBalanceResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

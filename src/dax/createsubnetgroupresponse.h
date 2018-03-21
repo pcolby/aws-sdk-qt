@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESUBNETGROUPRESPONSE_H
 #define QTAWS_CREATESUBNETGROUPRESPONSE_H
 
+#include "daxresponse.h"
+#include "createsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class CreateSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateSubnetGroupResponse : public CreateSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateSubnetGroupResponse(const CreateSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateSubnetGroupResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

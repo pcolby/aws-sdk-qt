@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCHANGERESPONSE_H
 #define QTAWS_GETCHANGERESPONSE_H
 
+#include "route53response.h"
+#include "getchangerequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetChangeResponsePrivate;
+
+class QTAWS_EXPORT GetChangeResponse : public GetChangeResponse {
+    Q_OBJECT
+
+public:
+    GetChangeResponse(const GetChangeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetChangeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetChangeResponse)
+    Q_DISABLE_COPY(GetChangeResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

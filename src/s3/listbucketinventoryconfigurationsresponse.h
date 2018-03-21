@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSRESPONSE_H
 #define QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSRESPONSE_H
 
+#include "s3response.h"
+#include "listbucketinventoryconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class ListBucketInventoryConfigurationsResponsePrivate;
+
+class QTAWS_EXPORT ListBucketInventoryConfigurationsResponse : public ListBucketInventoryConfigurationsResponse {
+    Q_OBJECT
+
+public:
+    ListBucketInventoryConfigurationsResponse(const ListBucketInventoryConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBucketInventoryConfigurationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBucketInventoryConfigurationsResponse)
+    Q_DISABLE_COPY(ListBucketInventoryConfigurationsResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

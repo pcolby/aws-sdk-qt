@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETEXPORTRESPONSE_H
 #define QTAWS_GETEXPORTRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getexportrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetExportResponsePrivate;
+
+class QTAWS_EXPORT GetExportResponse : public GetExportResponse {
+    Q_OBJECT
+
+public:
+    GetExportResponse(const GetExportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetExportRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetExportResponse)
+    Q_DISABLE_COPY(GetExportResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

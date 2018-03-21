@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_H
 #define QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describemetriccollectiontypesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeMetricCollectionTypesResponsePrivate;
+
+class QTAWS_EXPORT DescribeMetricCollectionTypesResponse : public DescribeMetricCollectionTypesResponse {
+    Q_OBJECT
+
+public:
+    DescribeMetricCollectionTypesResponse(const DescribeMetricCollectionTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeMetricCollectionTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMetricCollectionTypesResponse)
+    Q_DISABLE_COPY(DescribeMetricCollectionTypesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

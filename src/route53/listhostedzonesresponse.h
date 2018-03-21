@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTHOSTEDZONESRESPONSE_H
 #define QTAWS_LISTHOSTEDZONESRESPONSE_H
 
+#include "route53response.h"
+#include "listhostedzonesrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class ListHostedZonesResponsePrivate;
+
+class QTAWS_EXPORT ListHostedZonesResponse : public ListHostedZonesResponse {
+    Q_OBJECT
+
+public:
+    ListHostedZonesResponse(const ListHostedZonesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListHostedZonesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListHostedZonesResponse)
+    Q_DISABLE_COPY(ListHostedZonesResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

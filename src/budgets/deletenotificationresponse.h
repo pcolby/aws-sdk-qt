@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENOTIFICATIONRESPONSE_H
 #define QTAWS_DELETENOTIFICATIONRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "deletenotificationrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class DeleteNotificationResponsePrivate;
+
+class QTAWS_EXPORT DeleteNotificationResponse : public DeleteNotificationResponse {
+    Q_OBJECT
+
+public:
+    DeleteNotificationResponse(const DeleteNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationResponse)
+    Q_DISABLE_COPY(DeleteNotificationResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

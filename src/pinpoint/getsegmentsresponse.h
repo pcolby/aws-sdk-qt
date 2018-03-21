@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSEGMENTSRESPONSE_H
 #define QTAWS_GETSEGMENTSRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getsegmentsrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetSegmentsResponsePrivate;
+
+class QTAWS_EXPORT GetSegmentsResponse : public GetSegmentsResponse {
+    Q_OBJECT
+
+public:
+    GetSegmentsResponse(const GetSegmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSegmentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSegmentsResponse)
+    Q_DISABLE_COPY(GetSegmentsResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

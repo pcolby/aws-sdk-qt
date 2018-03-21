@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDASHBOARDSRESPONSE_H
 #define QTAWS_DELETEDASHBOARDSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "deletedashboardsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class DeleteDashboardsResponsePrivate;
+
+class QTAWS_EXPORT DeleteDashboardsResponse : public DeleteDashboardsResponse {
+    Q_OBJECT
+
+public:
+    DeleteDashboardsResponse(const DeleteDashboardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDashboardsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDashboardsResponse)
+    Q_DISABLE_COPY(DeleteDashboardsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

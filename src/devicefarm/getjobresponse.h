@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBRESPONSE_H
 #define QTAWS_GETJOBRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetJobResponsePrivate;
+
+class QTAWS_EXPORT GetJobResponse : public GetJobResponse {
+    Q_OBJECT
+
+public:
+    GetJobResponse(const GetJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobResponse)
+    Q_DISABLE_COPY(GetJobResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELBUNDLETASKRESPONSE_H
 #define QTAWS_CANCELBUNDLETASKRESPONSE_H
 
+#include "ec2response.h"
+#include "cancelbundletaskrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CancelBundleTaskResponsePrivate;
+
+class QTAWS_EXPORT CancelBundleTaskResponse : public CancelBundleTaskResponse {
+    Q_OBJECT
+
+public:
+    CancelBundleTaskResponse(const CancelBundleTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelBundleTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelBundleTaskResponse)
+    Q_DISABLE_COPY(CancelBundleTaskResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

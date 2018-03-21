@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERULEGROUPRESPONSE_H
 #define QTAWS_UPDATERULEGROUPRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "updaterulegrouprequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class UpdateRuleGroupResponsePrivate;
+
+class QTAWS_EXPORT UpdateRuleGroupResponse : public UpdateRuleGroupResponse {
+    Q_OBJECT
+
+public:
+    UpdateRuleGroupResponse(const UpdateRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRuleGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRuleGroupResponse)
+    Q_DISABLE_COPY(UpdateRuleGroupResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

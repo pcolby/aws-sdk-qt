@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTPIPELINEDEFINITIONRESPONSE_H
 #define QTAWS_PUTPIPELINEDEFINITIONRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "putpipelinedefinitionrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class PutPipelineDefinitionResponsePrivate;
+
+class QTAWS_EXPORT PutPipelineDefinitionResponse : public PutPipelineDefinitionResponse {
+    Q_OBJECT
+
+public:
+    PutPipelineDefinitionResponse(const PutPipelineDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutPipelineDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutPipelineDefinitionResponse)
+    Q_DISABLE_COPY(PutPipelineDefinitionResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

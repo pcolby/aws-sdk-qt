@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSRESPONSE_H
 #define QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSRESPONSE_H
 
+#include "ec2response.h"
+#include "describehostreservationofferingsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeHostReservationOfferingsResponsePrivate;
+
+class QTAWS_EXPORT DescribeHostReservationOfferingsResponse : public DescribeHostReservationOfferingsResponse {
+    Q_OBJECT
+
+public:
+    DescribeHostReservationOfferingsResponse(const DescribeHostReservationOfferingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeHostReservationOfferingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHostReservationOfferingsResponse)
+    Q_DISABLE_COPY(DescribeHostReservationOfferingsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOSTANDUSAGERESPONSE_H
 #define QTAWS_GETCOSTANDUSAGERESPONSE_H
 
+#include "ceresponse.h"
+#include "getcostandusagerequest.h"
+
+namespace AWS {
+
+namespace ce {
+
+class GetCostAndUsageResponsePrivate;
+
+class QTAWS_EXPORT GetCostAndUsageResponse : public GetCostAndUsageResponse {
+    Q_OBJECT
+
+public:
+    GetCostAndUsageResponse(const GetCostAndUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCostAndUsageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCostAndUsageResponse)
+    Q_DISABLE_COPY(GetCostAndUsageResponse)
+
+};
+
+} // namespace ce
+} // namespace AWS
+
 #endif

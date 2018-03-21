@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBONUSPAYMENTSRESPONSE_H
 #define QTAWS_LISTBONUSPAYMENTSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listbonuspaymentsrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListBonusPaymentsResponsePrivate;
+
+class QTAWS_EXPORT ListBonusPaymentsResponse : public ListBonusPaymentsResponse {
+    Q_OBJECT
+
+public:
+    ListBonusPaymentsResponse(const ListBonusPaymentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBonusPaymentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBonusPaymentsResponse)
+    Q_DISABLE_COPY(ListBonusPaymentsResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

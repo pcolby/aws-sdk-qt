@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINVITATIONSRESPONSE_H
 #define QTAWS_LISTINVITATIONSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "listinvitationsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class ListInvitationsResponsePrivate;
+
+class QTAWS_EXPORT ListInvitationsResponse : public ListInvitationsResponse {
+    Q_OBJECT
+
+public:
+    ListInvitationsResponse(const ListInvitationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListInvitationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListInvitationsResponse)
+    Q_DISABLE_COPY(ListInvitationsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_H
 #define QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "setidentityfeedbackforwardingenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SetIdentityFeedbackForwardingEnabledResponsePrivate;
+
+class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledResponse : public SetIdentityFeedbackForwardingEnabledResponse {
+    Q_OBJECT
+
+public:
+    SetIdentityFeedbackForwardingEnabledResponse(const SetIdentityFeedbackForwardingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetIdentityFeedbackForwardingEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityFeedbackForwardingEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityFeedbackForwardingEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

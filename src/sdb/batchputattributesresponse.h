@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHPUTATTRIBUTESRESPONSE_H
 #define QTAWS_BATCHPUTATTRIBUTESRESPONSE_H
 
+#include "sdbresponse.h"
+#include "batchputattributesrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class BatchPutAttributesResponsePrivate;
+
+class QTAWS_EXPORT BatchPutAttributesResponse : public BatchPutAttributesResponse {
+    Q_OBJECT
+
+public:
+    BatchPutAttributesResponse(const BatchPutAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchPutAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchPutAttributesResponse)
+    Q_DISABLE_COPY(BatchPutAttributesResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

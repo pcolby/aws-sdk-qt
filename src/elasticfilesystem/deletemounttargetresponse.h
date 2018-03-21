@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMOUNTTARGETRESPONSE_H
 #define QTAWS_DELETEMOUNTTARGETRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "deletemounttargetrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class DeleteMountTargetResponsePrivate;
+
+class QTAWS_EXPORT DeleteMountTargetResponse : public DeleteMountTargetResponse {
+    Q_OBJECT
+
+public:
+    DeleteMountTargetResponse(const DeleteMountTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMountTargetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMountTargetResponse)
+    Q_DISABLE_COPY(DeleteMountTargetResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNASSIGNIPV6ADDRESSESRESPONSE_H
 #define QTAWS_UNASSIGNIPV6ADDRESSESRESPONSE_H
 
+#include "ec2response.h"
+#include "unassignipv6addressesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class UnassignIpv6AddressesResponsePrivate;
+
+class QTAWS_EXPORT UnassignIpv6AddressesResponse : public UnassignIpv6AddressesResponse {
+    Q_OBJECT
+
+public:
+    UnassignIpv6AddressesResponse(const UnassignIpv6AddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnassignIpv6AddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnassignIpv6AddressesResponse)
+    Q_DISABLE_COPY(UnassignIpv6AddressesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

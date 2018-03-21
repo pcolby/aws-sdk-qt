@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLESTAGETRANSITIONRESPONSE_H
 #define QTAWS_DISABLESTAGETRANSITIONRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "disablestagetransitionrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class DisableStageTransitionResponsePrivate;
+
+class QTAWS_EXPORT DisableStageTransitionResponse : public DisableStageTransitionResponse {
+    Q_OBJECT
+
+public:
+    DisableStageTransitionResponse(const DisableStageTransitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableStageTransitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableStageTransitionResponse)
+    Q_DISABLE_COPY(DisableStageTransitionResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

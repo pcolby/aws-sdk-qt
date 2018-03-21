@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRESOURCETAGSRESPONSE_H
 #define QTAWS_LISTRESOURCETAGSRESPONSE_H
 
+#include "kmsresponse.h"
+#include "listresourcetagsrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ListResourceTagsResponsePrivate;
+
+class QTAWS_EXPORT ListResourceTagsResponse : public ListResourceTagsResponse {
+    Q_OBJECT
+
+public:
+    ListResourceTagsResponse(const ListResourceTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListResourceTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceTagsResponse)
+    Q_DISABLE_COPY(ListResourceTagsResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONRESPONSE_H
 #define QTAWS_DESCRIBEORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "describeorganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class DescribeOrganizationResponsePrivate;
+
+class QTAWS_EXPORT DescribeOrganizationResponse : public DescribeOrganizationResponse {
+    Q_OBJECT
+
+public:
+    DescribeOrganizationResponse(const DescribeOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrganizationResponse)
+    Q_DISABLE_COPY(DescribeOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

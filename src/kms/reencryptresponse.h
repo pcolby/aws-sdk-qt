@@ -20,4 +20,33 @@
 #ifndef QTAWS_REENCRYPTRESPONSE_H
 #define QTAWS_REENCRYPTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "reencryptrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ReEncryptResponsePrivate;
+
+class QTAWS_EXPORT ReEncryptResponse : public ReEncryptResponse {
+    Q_OBJECT
+
+public:
+    ReEncryptResponse(const ReEncryptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReEncryptRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReEncryptResponse)
+    Q_DISABLE_COPY(ReEncryptResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

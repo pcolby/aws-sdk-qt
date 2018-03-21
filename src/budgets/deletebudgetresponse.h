@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUDGETRESPONSE_H
 #define QTAWS_DELETEBUDGETRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "deletebudgetrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class DeleteBudgetResponsePrivate;
+
+class QTAWS_EXPORT DeleteBudgetResponse : public DeleteBudgetResponse {
+    Q_OBJECT
+
+public:
+    DeleteBudgetResponse(const DeleteBudgetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBudgetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBudgetResponse)
+    Q_DISABLE_COPY(DeleteBudgetResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

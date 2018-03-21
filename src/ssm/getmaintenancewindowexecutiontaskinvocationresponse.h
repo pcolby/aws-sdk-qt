@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMAINTENANCEWINDOWEXECUTIONTASKINVOCATIONRESPONSE_H
 #define QTAWS_GETMAINTENANCEWINDOWEXECUTIONTASKINVOCATIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "getmaintenancewindowexecutiontaskinvocationrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetMaintenanceWindowExecutionTaskInvocationResponsePrivate;
+
+class QTAWS_EXPORT GetMaintenanceWindowExecutionTaskInvocationResponse : public GetMaintenanceWindowExecutionTaskInvocationResponse {
+    Q_OBJECT
+
+public:
+    GetMaintenanceWindowExecutionTaskInvocationResponse(const GetMaintenanceWindowExecutionTaskInvocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMaintenanceWindowExecutionTaskInvocationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMaintenanceWindowExecutionTaskInvocationResponse)
+    Q_DISABLE_COPY(GetMaintenanceWindowExecutionTaskInvocationResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATESUBNETCIDRBLOCKRESPONSE_H
 #define QTAWS_ASSOCIATESUBNETCIDRBLOCKRESPONSE_H
 
+#include "ec2response.h"
+#include "associatesubnetcidrblockrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AssociateSubnetCidrBlockResponsePrivate;
+
+class QTAWS_EXPORT AssociateSubnetCidrBlockResponse : public AssociateSubnetCidrBlockResponse {
+    Q_OBJECT
+
+public:
+    AssociateSubnetCidrBlockResponse(const AssociateSubnetCidrBlockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateSubnetCidrBlockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateSubnetCidrBlockResponse)
+    Q_DISABLE_COPY(AssociateSubnetCidrBlockResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

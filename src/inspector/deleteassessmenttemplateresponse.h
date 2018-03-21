@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_H
 #define QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_H
 
+#include "inspectorresponse.h"
+#include "deleteassessmenttemplaterequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class DeleteAssessmentTemplateResponsePrivate;
+
+class QTAWS_EXPORT DeleteAssessmentTemplateResponse : public DeleteAssessmentTemplateResponse {
+    Q_OBJECT
+
+public:
+    DeleteAssessmentTemplateResponse(const DeleteAssessmentTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAssessmentTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAssessmentTemplateResponse)
+    Q_DISABLE_COPY(DeleteAssessmentTemplateResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

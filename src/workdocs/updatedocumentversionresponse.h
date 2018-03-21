@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOCUMENTVERSIONRESPONSE_H
 #define QTAWS_UPDATEDOCUMENTVERSIONRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "updatedocumentversionrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class UpdateDocumentVersionResponsePrivate;
+
+class QTAWS_EXPORT UpdateDocumentVersionResponse : public UpdateDocumentVersionResponse {
+    Q_OBJECT
+
+public:
+    UpdateDocumentVersionResponse(const UpdateDocumentVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDocumentVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDocumentVersionResponse)
+    Q_DISABLE_COPY(UpdateDocumentVersionResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

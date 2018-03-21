@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURGEQUEUERESPONSE_H
 #define QTAWS_PURGEQUEUERESPONSE_H
 
+#include "sqsresponse.h"
+#include "purgequeuerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class PurgeQueueResponsePrivate;
+
+class QTAWS_EXPORT PurgeQueueResponse : public PurgeQueueResponse {
+    Q_OBJECT
+
+public:
+    PurgeQueueResponse(const PurgeQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurgeQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurgeQueueResponse)
+    Q_DISABLE_COPY(PurgeQueueResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELBCOOKIESTICKINESSPOLICYRESPONSE_H
 #define QTAWS_CREATELBCOOKIESTICKINESSPOLICYRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "createlbcookiestickinesspolicyrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class CreateLBCookieStickinessPolicyResponsePrivate;
+
+class QTAWS_EXPORT CreateLBCookieStickinessPolicyResponse : public CreateLBCookieStickinessPolicyResponse {
+    Q_OBJECT
+
+public:
+    CreateLBCookieStickinessPolicyResponse(const CreateLBCookieStickinessPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLBCookieStickinessPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLBCookieStickinessPolicyResponse)
+    Q_DISABLE_COPY(CreateLBCookieStickinessPolicyResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

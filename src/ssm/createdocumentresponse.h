@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDOCUMENTRESPONSE_H
 #define QTAWS_CREATEDOCUMENTRESPONSE_H
 
+#include "ssmresponse.h"
+#include "createdocumentrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class CreateDocumentResponsePrivate;
+
+class QTAWS_EXPORT CreateDocumentResponse : public CreateDocumentResponse {
+    Q_OBJECT
+
+public:
+    CreateDocumentResponse(const CreateDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDocumentResponse)
+    Q_DISABLE_COPY(CreateDocumentResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

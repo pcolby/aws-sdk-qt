@@ -20,4 +20,33 @@
 #ifndef QTAWS_TERMINATEPROVISIONEDPRODUCTRESPONSE_H
 #define QTAWS_TERMINATEPROVISIONEDPRODUCTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "terminateprovisionedproductrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class TerminateProvisionedProductResponsePrivate;
+
+class QTAWS_EXPORT TerminateProvisionedProductResponse : public TerminateProvisionedProductResponse {
+    Q_OBJECT
+
+public:
+    TerminateProvisionedProductResponse(const TerminateProvisionedProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TerminateProvisionedProductRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TerminateProvisionedProductResponse)
+    Q_DISABLE_COPY(TerminateProvisionedProductResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

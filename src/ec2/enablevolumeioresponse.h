@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEVOLUMEIORESPONSE_H
 #define QTAWS_ENABLEVOLUMEIORESPONSE_H
 
+#include "ec2response.h"
+#include "enablevolumeiorequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class EnableVolumeIOResponsePrivate;
+
+class QTAWS_EXPORT EnableVolumeIOResponse : public EnableVolumeIOResponse {
+    Q_OBJECT
+
+public:
+    EnableVolumeIOResponse(const EnableVolumeIORequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableVolumeIORequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableVolumeIOResponse)
+    Q_DISABLE_COPY(EnableVolumeIOResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

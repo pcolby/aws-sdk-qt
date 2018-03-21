@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEHOSTEDZONERESPONSE_H
 #define QTAWS_DELETEHOSTEDZONERESPONSE_H
 
+#include "route53response.h"
+#include "deletehostedzonerequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class DeleteHostedZoneResponsePrivate;
+
+class QTAWS_EXPORT DeleteHostedZoneResponse : public DeleteHostedZoneResponse {
+    Q_OBJECT
+
+public:
+    DeleteHostedZoneResponse(const DeleteHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteHostedZoneRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHostedZoneResponse)
+    Q_DISABLE_COPY(DeleteHostedZoneResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

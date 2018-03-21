@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINRESETUSERPASSWORDRESPONSE_H
 #define QTAWS_ADMINRESETUSERPASSWORDRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminresetuserpasswordrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminResetUserPasswordResponsePrivate;
+
+class QTAWS_EXPORT AdminResetUserPasswordResponse : public AdminResetUserPasswordResponse {
+    Q_OBJECT
+
+public:
+    AdminResetUserPasswordResponse(const AdminResetUserPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminResetUserPasswordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminResetUserPasswordResponse)
+    Q_DISABLE_COPY(AdminResetUserPasswordResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

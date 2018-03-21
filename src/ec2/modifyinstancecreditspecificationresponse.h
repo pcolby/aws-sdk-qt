@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYINSTANCECREDITSPECIFICATIONRESPONSE_H
 #define QTAWS_MODIFYINSTANCECREDITSPECIFICATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyinstancecreditspecificationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyInstanceCreditSpecificationResponsePrivate;
+
+class QTAWS_EXPORT ModifyInstanceCreditSpecificationResponse : public ModifyInstanceCreditSpecificationResponse {
+    Q_OBJECT
+
+public:
+    ModifyInstanceCreditSpecificationResponse(const ModifyInstanceCreditSpecificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyInstanceCreditSpecificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyInstanceCreditSpecificationResponse)
+    Q_DISABLE_COPY(ModifyInstanceCreditSpecificationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETAPPLICATIONREVISIONSRESPONSE_H
 #define QTAWS_BATCHGETAPPLICATIONREVISIONSRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "batchgetapplicationrevisionsrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class BatchGetApplicationRevisionsResponsePrivate;
+
+class QTAWS_EXPORT BatchGetApplicationRevisionsResponse : public BatchGetApplicationRevisionsResponse {
+    Q_OBJECT
+
+public:
+    BatchGetApplicationRevisionsResponse(const BatchGetApplicationRevisionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetApplicationRevisionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetApplicationRevisionsResponse)
+    Q_DISABLE_COPY(BatchGetApplicationRevisionsResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

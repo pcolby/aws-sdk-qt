@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDISCOVEREDRESOURCECOUNTSRESPONSE_H
 #define QTAWS_GETDISCOVEREDRESOURCECOUNTSRESPONSE_H
 
+#include "configresponse.h"
+#include "getdiscoveredresourcecountsrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class GetDiscoveredResourceCountsResponsePrivate;
+
+class QTAWS_EXPORT GetDiscoveredResourceCountsResponse : public GetDiscoveredResourceCountsResponse {
+    Q_OBJECT
+
+public:
+    GetDiscoveredResourceCountsResponse(const GetDiscoveredResourceCountsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDiscoveredResourceCountsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDiscoveredResourceCountsResponse)
+    Q_DISABLE_COPY(GetDiscoveredResourceCountsResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

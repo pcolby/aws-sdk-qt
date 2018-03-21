@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERCERTIFICATERESPONSE_H
 #define QTAWS_REGISTERCERTIFICATERESPONSE_H
 
+#include "iotresponse.h"
+#include "registercertificaterequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class RegisterCertificateResponsePrivate;
+
+class QTAWS_EXPORT RegisterCertificateResponse : public RegisterCertificateResponse {
+    Q_OBJECT
+
+public:
+    RegisterCertificateResponse(const RegisterCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterCertificateResponse)
+    Q_DISABLE_COPY(RegisterCertificateResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHPOLICYRESPONSE_H
 #define QTAWS_ATTACHPOLICYRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "attachpolicyrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class AttachPolicyResponsePrivate;
+
+class QTAWS_EXPORT AttachPolicyResponse : public AttachPolicyResponse {
+    Q_OBJECT
+
+public:
+    AttachPolicyResponse(const AttachPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachPolicyResponse)
+    Q_DISABLE_COPY(AttachPolicyResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

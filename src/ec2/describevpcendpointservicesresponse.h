@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTSERVICESRESPONSE_H
 #define QTAWS_DESCRIBEVPCENDPOINTSERVICESRESPONSE_H
 
+#include "ec2response.h"
+#include "describevpcendpointservicesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeVpcEndpointServicesResponsePrivate;
+
+class QTAWS_EXPORT DescribeVpcEndpointServicesResponse : public DescribeVpcEndpointServicesResponse {
+    Q_OBJECT
+
+public:
+    DescribeVpcEndpointServicesResponse(const DescribeVpcEndpointServicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVpcEndpointServicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcEndpointServicesResponse)
+    Q_DISABLE_COPY(DescribeVpcEndpointServicesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

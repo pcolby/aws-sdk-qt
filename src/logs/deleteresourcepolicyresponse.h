@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYRESPONSE_H
 #define QTAWS_DELETERESOURCEPOLICYRESPONSE_H
 
+#include "logsresponse.h"
+#include "deleteresourcepolicyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteResourcePolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteResourcePolicyResponse : public DeleteResourcePolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteResourcePolicyResponse(const DeleteResourcePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResourcePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourcePolicyResponse)
+    Q_DISABLE_COPY(DeleteResourcePolicyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

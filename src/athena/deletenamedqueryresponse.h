@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENAMEDQUERYRESPONSE_H
 #define QTAWS_DELETENAMEDQUERYRESPONSE_H
 
+#include "athenaresponse.h"
+#include "deletenamedqueryrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class DeleteNamedQueryResponsePrivate;
+
+class QTAWS_EXPORT DeleteNamedQueryResponse : public DeleteNamedQueryResponse {
+    Q_OBJECT
+
+public:
+    DeleteNamedQueryResponse(const DeleteNamedQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNamedQueryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNamedQueryResponse)
+    Q_DISABLE_COPY(DeleteNamedQueryResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETJOBDETAILSRESPONSE_H
 #define QTAWS_GETJOBDETAILSRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "getjobdetailsrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class GetJobDetailsResponsePrivate;
+
+class QTAWS_EXPORT GetJobDetailsResponse : public GetJobDetailsResponse {
+    Q_OBJECT
+
+public:
+    GetJobDetailsResponse(const GetJobDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetJobDetailsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetJobDetailsResponse)
+    Q_DISABLE_COPY(GetJobDetailsResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

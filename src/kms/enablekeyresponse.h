@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEKEYRESPONSE_H
 #define QTAWS_ENABLEKEYRESPONSE_H
 
+#include "kmsresponse.h"
+#include "enablekeyrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class EnableKeyResponsePrivate;
+
+class QTAWS_EXPORT EnableKeyResponse : public EnableKeyResponse {
+    Q_OBJECT
+
+public:
+    EnableKeyResponse(const EnableKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableKeyResponse)
+    Q_DISABLE_COPY(EnableKeyResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

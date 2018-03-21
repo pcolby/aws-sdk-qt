@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEAPPLICATIONSETTINGSRESPONSE_H
 #define QTAWS_UPDATEAPPLICATIONSETTINGSRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "updateapplicationsettingsrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class UpdateApplicationSettingsResponsePrivate;
+
+class QTAWS_EXPORT UpdateApplicationSettingsResponse : public UpdateApplicationSettingsResponse {
+    Q_OBJECT
+
+public:
+    UpdateApplicationSettingsResponse(const UpdateApplicationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateApplicationSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationSettingsResponse)
+    Q_DISABLE_COPY(UpdateApplicationSettingsResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

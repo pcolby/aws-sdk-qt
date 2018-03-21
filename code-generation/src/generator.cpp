@@ -77,7 +77,7 @@ bool Generator::generate(const QString &serviceFileName,
     const QString projectDir = outputDir.absoluteFilePath(serviceFileName);
 
     const QJsonObject metaData = description.value(QLatin1String("metadata")).toObject();
-    const QString classNamePrefix = getClassNamePrefix(metaData);
+    const QString classNamePrefix = getClassNamePrefix(metaData); /// @todo Do we need this anymore?
     const QString className =
         ((classNamePrefix.contains(QRegularExpression(QSL("^[^a-z]+$"))))
         ? classNamePrefix.at(0) + classNamePrefix.mid(1).toLower() : classNamePrefix)
@@ -92,7 +92,7 @@ bool Generator::generate(const QString &serviceFileName,
 
     /// @todo Generate model classes.
     foreach (const QString &operationName, description.value(QLatin1String("operations")).toObject().keys()) {
-        generateModelClasses(projectDir, operationName, description);
+        generateModelClasses(projectDir, serviceFileName, operationName, description);
     }
 
     /// @todo Generate service client.
@@ -173,26 +173,29 @@ QStringList Generator::formatHtmlDocumentation(const QString &html)
     return lines;
 }
 
-bool Generator::generateModelClasses(const QString &projectDir, const QString &operationName,
-                                     const QJsonObject &description)
+bool Generator::generateModelClasses(const QString &projectDir, const QString &serviceName,
+                                     const QString &operationName, const QJsonObject &description)
 {
     qDebug() << "generating model for operation" << operationName;
     const QJsonObject operation = description.value(QLatin1String("operations"))
             .toObject().value(operationName).toObject();
     Grantlee::Context context(operation.toVariantHash());
+    context.insert(QLatin1String("OperationName"), operationName);
+    context.insert(QLatin1String("ServiceName"), serviceName);
 
     /// @todo Generate request class.
     if (operation.contains(QLatin1String("input"))) {
         context.push();
-        const QString requestClassName = operationName + QSL("Request");
+        const QString requestClassName = operationName + QSL("Request"); /// @todo drop this
         context.insert(QSL("ClassName"), requestClassName);
         renderClassFiles(QSL("request"), context, projectDir, requestClassName);
         context.pop();
     }
 
     /// @todo Generate response class.
+    /// @todo Generate the base response class.
     context.push();
-    const QString responseClassName = operationName + QSL("Response");
+    const QString responseClassName = operationName + QSL("Response"); /// @todo drop this
     context.insert(QSL("ClassName"), responseClassName);
     renderClassFiles(QSL("response"), context, projectDir, responseClassName);
     context.pop();

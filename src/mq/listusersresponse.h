@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTUSERSRESPONSE_H
 #define QTAWS_LISTUSERSRESPONSE_H
 
+#include "mqresponse.h"
+#include "listusersrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class ListUsersResponsePrivate;
+
+class QTAWS_EXPORT ListUsersResponse : public ListUsersResponse {
+    Q_OBJECT
+
+public:
+    ListUsersResponse(const ListUsersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListUsersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListUsersResponse)
+    Q_DISABLE_COPY(ListUsersResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

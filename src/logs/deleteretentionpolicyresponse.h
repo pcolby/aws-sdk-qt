@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYRESPONSE_H
 #define QTAWS_DELETERETENTIONPOLICYRESPONSE_H
 
+#include "logsresponse.h"
+#include "deleteretentionpolicyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteRetentionPolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteRetentionPolicyResponse : public DeleteRetentionPolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteRetentionPolicyResponse(const DeleteRetentionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRetentionPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRetentionPolicyResponse)
+    Q_DISABLE_COPY(DeleteRetentionPolicyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_H
 #define QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "deleteapplicationinputprocessingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class DeleteApplicationInputProcessingConfigurationResponsePrivate;
+
+class QTAWS_EXPORT DeleteApplicationInputProcessingConfigurationResponse : public DeleteApplicationInputProcessingConfigurationResponse {
+    Q_OBJECT
+
+public:
+    DeleteApplicationInputProcessingConfigurationResponse(const DeleteApplicationInputProcessingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteApplicationInputProcessingConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationInputProcessingConfigurationResponse)
+    Q_DISABLE_COPY(DeleteApplicationInputProcessingConfigurationResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

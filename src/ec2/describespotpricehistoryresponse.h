@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESPOTPRICEHISTORYRESPONSE_H
 #define QTAWS_DESCRIBESPOTPRICEHISTORYRESPONSE_H
 
+#include "ec2response.h"
+#include "describespotpricehistoryrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeSpotPriceHistoryResponsePrivate;
+
+class QTAWS_EXPORT DescribeSpotPriceHistoryResponse : public DescribeSpotPriceHistoryResponse {
+    Q_OBJECT
+
+public:
+    DescribeSpotPriceHistoryResponse(const DescribeSpotPriceHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSpotPriceHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotPriceHistoryResponse)
+    Q_DISABLE_COPY(DescribeSpotPriceHistoryResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

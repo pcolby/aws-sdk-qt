@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTESTSRESPONSE_H
 #define QTAWS_LISTTESTSRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "listtestsrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class ListTestsResponsePrivate;
+
+class QTAWS_EXPORT ListTestsResponse : public ListTestsResponse {
+    Q_OBJECT
+
+public:
+    ListTestsResponse(const ListTestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTestsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTestsResponse)
+    Q_DISABLE_COPY(ListTestsResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

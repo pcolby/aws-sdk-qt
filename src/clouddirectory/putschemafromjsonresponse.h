@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTSCHEMAFROMJSONRESPONSE_H
 #define QTAWS_PUTSCHEMAFROMJSONRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "putschemafromjsonrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class PutSchemaFromJsonResponsePrivate;
+
+class QTAWS_EXPORT PutSchemaFromJsonResponse : public PutSchemaFromJsonResponse {
+    Q_OBJECT
+
+public:
+    PutSchemaFromJsonResponse(const PutSchemaFromJsonRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutSchemaFromJsonRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutSchemaFromJsonResponse)
+    Q_DISABLE_COPY(PutSchemaFromJsonResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDINSTANCEAVAILABILITYRESPONSE_H
 #define QTAWS_DESCRIBESCHEDULEDINSTANCEAVAILABILITYRESPONSE_H
 
+#include "ec2response.h"
+#include "describescheduledinstanceavailabilityrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeScheduledInstanceAvailabilityResponsePrivate;
+
+class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityResponse : public DescribeScheduledInstanceAvailabilityResponse {
+    Q_OBJECT
+
+public:
+    DescribeScheduledInstanceAvailabilityResponse(const DescribeScheduledInstanceAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeScheduledInstanceAvailabilityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScheduledInstanceAvailabilityResponse)
+    Q_DISABLE_COPY(DescribeScheduledInstanceAvailabilityResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

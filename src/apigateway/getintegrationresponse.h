@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINTEGRATIONRESPONSE_H
 #define QTAWS_GETINTEGRATIONRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getintegrationrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetIntegrationResponsePrivate;
+
+class QTAWS_EXPORT GetIntegrationResponse : public GetIntegrationResponse {
+    Q_OBJECT
+
+public:
+    GetIntegrationResponse(const GetIntegrationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIntegrationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIntegrationResponse)
+    Q_DISABLE_COPY(GetIntegrationResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

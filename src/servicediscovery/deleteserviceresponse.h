@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESERVICERESPONSE_H
 #define QTAWS_DELETESERVICERESPONSE_H
 
+#include "servicediscoveryresponse.h"
+#include "deleteservicerequest.h"
+
+namespace AWS {
+
+namespace servicediscovery {
+
+class DeleteServiceResponsePrivate;
+
+class QTAWS_EXPORT DeleteServiceResponse : public DeleteServiceResponse {
+    Q_OBJECT
+
+public:
+    DeleteServiceResponse(const DeleteServiceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteServiceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceResponse)
+    Q_DISABLE_COPY(DeleteServiceResponse)
+
+};
+
+} // namespace servicediscovery
+} // namespace AWS
+
 #endif

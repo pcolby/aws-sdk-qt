@@ -20,4 +20,33 @@
 #ifndef QTAWS_NOTIFYWORKERSRESPONSE_H
 #define QTAWS_NOTIFYWORKERSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "notifyworkersrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class NotifyWorkersResponsePrivate;
+
+class QTAWS_EXPORT NotifyWorkersResponse : public NotifyWorkersResponse {
+    Q_OBJECT
+
+public:
+    NotifyWorkersResponse(const NotifyWorkersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const NotifyWorkersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(NotifyWorkersResponse)
+    Q_DISABLE_COPY(NotifyWorkersResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

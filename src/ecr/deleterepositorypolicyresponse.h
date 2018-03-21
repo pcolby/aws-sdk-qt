@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEREPOSITORYPOLICYRESPONSE_H
 #define QTAWS_DELETEREPOSITORYPOLICYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "deleterepositorypolicyrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class DeleteRepositoryPolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteRepositoryPolicyResponse : public DeleteRepositoryPolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteRepositoryPolicyResponse(const DeleteRepositoryPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRepositoryPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRepositoryPolicyResponse)
+    Q_DISABLE_COPY(DeleteRepositoryPolicyResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

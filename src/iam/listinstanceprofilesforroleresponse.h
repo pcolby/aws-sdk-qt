@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESFORROLERESPONSE_H
 #define QTAWS_LISTINSTANCEPROFILESFORROLERESPONSE_H
 
+#include "iamresponse.h"
+#include "listinstanceprofilesforrolerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListInstanceProfilesForRoleResponsePrivate;
+
+class QTAWS_EXPORT ListInstanceProfilesForRoleResponse : public ListInstanceProfilesForRoleResponse {
+    Q_OBJECT
+
+public:
+    ListInstanceProfilesForRoleResponse(const ListInstanceProfilesForRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListInstanceProfilesForRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListInstanceProfilesForRoleResponse)
+    Q_DISABLE_COPY(ListInstanceProfilesForRoleResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

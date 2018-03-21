@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTFACETATTRIBUTESRESPONSE_H
 #define QTAWS_LISTFACETATTRIBUTESRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listfacetattributesrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListFacetAttributesResponsePrivate;
+
+class QTAWS_EXPORT ListFacetAttributesResponse : public ListFacetAttributesResponse {
+    Q_OBJECT
+
+public:
+    ListFacetAttributesResponse(const ListFacetAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListFacetAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListFacetAttributesResponse)
+    Q_DISABLE_COPY(ListFacetAttributesResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

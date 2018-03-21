@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFILESYSTEMRESPONSE_H
 #define QTAWS_DELETEFILESYSTEMRESPONSE_H
 
+#include "elasticfilesystemresponse.h"
+#include "deletefilesystemrequest.h"
+
+namespace AWS {
+
+namespace elasticfilesystem {
+
+class DeleteFileSystemResponsePrivate;
+
+class QTAWS_EXPORT DeleteFileSystemResponse : public DeleteFileSystemResponse {
+    Q_OBJECT
+
+public:
+    DeleteFileSystemResponse(const DeleteFileSystemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFileSystemRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFileSystemResponse)
+    Q_DISABLE_COPY(DeleteFileSystemResponse)
+
+};
+
+} // namespace elasticfilesystem
+} // namespace AWS
+
 #endif

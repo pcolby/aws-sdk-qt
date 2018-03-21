@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPRODUCTASADMINRESPONSE_H
 #define QTAWS_DESCRIBEPRODUCTASADMINRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "describeproductasadminrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DescribeProductAsAdminResponsePrivate;
+
+class QTAWS_EXPORT DescribeProductAsAdminResponse : public DescribeProductAsAdminResponse {
+    Q_OBJECT
+
+public:
+    DescribeProductAsAdminResponse(const DescribeProductAsAdminRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeProductAsAdminRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeProductAsAdminResponse)
+    Q_DISABLE_COPY(DescribeProductAsAdminResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

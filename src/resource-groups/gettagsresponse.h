@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTAGSRESPONSE_H
 #define QTAWS_GETTAGSRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "gettagsrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class GetTagsResponsePrivate;
+
+class QTAWS_EXPORT GetTagsResponse : public GetTagsResponse {
+    Q_OBJECT
+
+public:
+    GetTagsResponse(const GetTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTagsResponse)
+    Q_DISABLE_COPY(GetTagsResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

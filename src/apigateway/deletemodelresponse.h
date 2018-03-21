@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMODELRESPONSE_H
 #define QTAWS_DELETEMODELRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deletemodelrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteModelResponsePrivate;
+
+class QTAWS_EXPORT DeleteModelResponse : public DeleteModelResponse {
+    Q_OBJECT
+
+public:
+    DeleteModelResponse(const DeleteModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteModelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteModelResponse)
+    Q_DISABLE_COPY(DeleteModelResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

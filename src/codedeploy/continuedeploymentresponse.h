@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONTINUEDEPLOYMENTRESPONSE_H
 #define QTAWS_CONTINUEDEPLOYMENTRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "continuedeploymentrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class ContinueDeploymentResponsePrivate;
+
+class QTAWS_EXPORT ContinueDeploymentResponse : public ContinueDeploymentResponse {
+    Q_OBJECT
+
+public:
+    ContinueDeploymentResponse(const ContinueDeploymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ContinueDeploymentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ContinueDeploymentResponse)
+    Q_DISABLE_COPY(ContinueDeploymentResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

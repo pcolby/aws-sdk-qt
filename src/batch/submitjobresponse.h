@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUBMITJOBRESPONSE_H
 #define QTAWS_SUBMITJOBRESPONSE_H
 
+#include "batchresponse.h"
+#include "submitjobrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class SubmitJobResponsePrivate;
+
+class QTAWS_EXPORT SubmitJobResponse : public SubmitJobResponse {
+    Q_OBJECT
+
+public:
+    SubmitJobResponse(const SubmitJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SubmitJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SubmitJobResponse)
+    Q_DISABLE_COPY(SubmitJobResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

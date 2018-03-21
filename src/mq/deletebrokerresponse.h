@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBROKERRESPONSE_H
 #define QTAWS_DELETEBROKERRESPONSE_H
 
+#include "mqresponse.h"
+#include "deletebrokerrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class DeleteBrokerResponsePrivate;
+
+class QTAWS_EXPORT DeleteBrokerResponse : public DeleteBrokerResponse {
+    Q_OBJECT
+
+public:
+    DeleteBrokerResponse(const DeleteBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBrokerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBrokerResponse)
+    Q_DISABLE_COPY(DeleteBrokerResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

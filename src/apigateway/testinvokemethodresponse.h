@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTINVOKEMETHODRESPONSE_H
 #define QTAWS_TESTINVOKEMETHODRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "testinvokemethodrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class TestInvokeMethodResponsePrivate;
+
+class QTAWS_EXPORT TestInvokeMethodResponse : public TestInvokeMethodResponse {
+    Q_OBJECT
+
+public:
+    TestInvokeMethodResponse(const TestInvokeMethodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestInvokeMethodRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestInvokeMethodResponse)
+    Q_DISABLE_COPY(TestInvokeMethodResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

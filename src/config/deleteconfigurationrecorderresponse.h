@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_H
 
+#include "configresponse.h"
+#include "deleteconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DeleteConfigurationRecorderResponsePrivate;
+
+class QTAWS_EXPORT DeleteConfigurationRecorderResponse : public DeleteConfigurationRecorderResponse {
+    Q_OBJECT
+
+public:
+    DeleteConfigurationRecorderResponse(const DeleteConfigurationRecorderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConfigurationRecorderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigurationRecorderResponse)
+    Q_DISABLE_COPY(DeleteConfigurationRecorderResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

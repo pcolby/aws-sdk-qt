@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETOPICSDETECTIONJOBRESPONSE_H
 #define QTAWS_DESCRIBETOPICSDETECTIONJOBRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "describetopicsdetectionjobrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class DescribeTopicsDetectionJobResponsePrivate;
+
+class QTAWS_EXPORT DescribeTopicsDetectionJobResponse : public DescribeTopicsDetectionJobResponse {
+    Q_OBJECT
+
+public:
+    DescribeTopicsDetectionJobResponse(const DescribeTopicsDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTopicsDetectionJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTopicsDetectionJobResponse)
+    Q_DISABLE_COPY(DescribeTopicsDetectionJobResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

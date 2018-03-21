@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHGROUPPOLICYRESPONSE_H
 #define QTAWS_DETACHGROUPPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "detachgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class DetachGroupPolicyResponsePrivate;
+
+class QTAWS_EXPORT DetachGroupPolicyResponse : public DetachGroupPolicyResponse {
+    Q_OBJECT
+
+public:
+    DetachGroupPolicyResponse(const DetachGroupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachGroupPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachGroupPolicyResponse)
+    Q_DISABLE_COPY(DetachGroupPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

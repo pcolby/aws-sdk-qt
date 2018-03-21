@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATELOADBALANCERATTRIBUTERESPONSE_H
 #define QTAWS_UPDATELOADBALANCERATTRIBUTERESPONSE_H
 
+#include "lightsailresponse.h"
+#include "updateloadbalancerattributerequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class UpdateLoadBalancerAttributeResponsePrivate;
+
+class QTAWS_EXPORT UpdateLoadBalancerAttributeResponse : public UpdateLoadBalancerAttributeResponse {
+    Q_OBJECT
+
+public:
+    UpdateLoadBalancerAttributeResponse(const UpdateLoadBalancerAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateLoadBalancerAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLoadBalancerAttributeResponse)
+    Q_DISABLE_COPY(UpdateLoadBalancerAttributeResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

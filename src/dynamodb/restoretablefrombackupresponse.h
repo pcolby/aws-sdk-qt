@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTORETABLEFROMBACKUPRESPONSE_H
 #define QTAWS_RESTORETABLEFROMBACKUPRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "restoretablefrombackuprequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class RestoreTableFromBackupResponsePrivate;
+
+class QTAWS_EXPORT RestoreTableFromBackupResponse : public RestoreTableFromBackupResponse {
+    Q_OBJECT
+
+public:
+    RestoreTableFromBackupResponse(const RestoreTableFromBackupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreTableFromBackupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreTableFromBackupResponse)
+    Q_DISABLE_COPY(RestoreTableFromBackupResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

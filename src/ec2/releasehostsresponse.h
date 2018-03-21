@@ -20,4 +20,33 @@
 #ifndef QTAWS_RELEASEHOSTSRESPONSE_H
 #define QTAWS_RELEASEHOSTSRESPONSE_H
 
+#include "ec2response.h"
+#include "releasehostsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReleaseHostsResponsePrivate;
+
+class QTAWS_EXPORT ReleaseHostsResponse : public ReleaseHostsResponse {
+    Q_OBJECT
+
+public:
+    ReleaseHostsResponse(const ReleaseHostsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReleaseHostsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReleaseHostsResponse)
+    Q_DISABLE_COPY(ReleaseHostsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDELIVERYSTREAMRESPONSE_H
 #define QTAWS_CREATEDELIVERYSTREAMRESPONSE_H
 
+#include "firehoseresponse.h"
+#include "createdeliverystreamrequest.h"
+
+namespace AWS {
+
+namespace firehose {
+
+class CreateDeliveryStreamResponsePrivate;
+
+class QTAWS_EXPORT CreateDeliveryStreamResponse : public CreateDeliveryStreamResponse {
+    Q_OBJECT
+
+public:
+    CreateDeliveryStreamResponse(const CreateDeliveryStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDeliveryStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeliveryStreamResponse)
+    Q_DISABLE_COPY(CreateDeliveryStreamResponse)
+
+};
+
+} // namespace firehose
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_H
 
+#include "iamresponse.h"
+#include "getaccountauthorizationdetailsrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetAccountAuthorizationDetailsResponsePrivate;
+
+class QTAWS_EXPORT GetAccountAuthorizationDetailsResponse : public GetAccountAuthorizationDetailsResponse {
+    Q_OBJECT
+
+public:
+    GetAccountAuthorizationDetailsResponse(const GetAccountAuthorizationDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccountAuthorizationDetailsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountAuthorizationDetailsResponse)
+    Q_DISABLE_COPY(GetAccountAuthorizationDetailsResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

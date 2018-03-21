@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMCONNECTIONRESPONSE_H
 #define QTAWS_CONFIRMCONNECTIONRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "confirmconnectionrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class ConfirmConnectionResponsePrivate;
+
+class QTAWS_EXPORT ConfirmConnectionResponse : public ConfirmConnectionResponse {
+    Q_OBJECT
+
+public:
+    ConfirmConnectionResponse(const ConfirmConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmConnectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmConnectionResponse)
+    Q_DISABLE_COPY(ConfirmConnectionResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

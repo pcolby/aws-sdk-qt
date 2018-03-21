@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFOLDERCONTENTSRESPONSE_H
 #define QTAWS_DESCRIBEFOLDERCONTENTSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describefoldercontentsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeFolderContentsResponsePrivate;
+
+class QTAWS_EXPORT DescribeFolderContentsResponse : public DescribeFolderContentsResponse {
+    Q_OBJECT
+
+public:
+    DescribeFolderContentsResponse(const DescribeFolderContentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFolderContentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFolderContentsResponse)
+    Q_DISABLE_COPY(DescribeFolderContentsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

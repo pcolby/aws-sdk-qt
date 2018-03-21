@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAFFECTEDENTITIESRESPONSE_H
 #define QTAWS_DESCRIBEAFFECTEDENTITIESRESPONSE_H
 
+#include "healthresponse.h"
+#include "describeaffectedentitiesrequest.h"
+
+namespace AWS {
+
+namespace health {
+
+class DescribeAffectedEntitiesResponsePrivate;
+
+class QTAWS_EXPORT DescribeAffectedEntitiesResponse : public DescribeAffectedEntitiesResponse {
+    Q_OBJECT
+
+public:
+    DescribeAffectedEntitiesResponse(const DescribeAffectedEntitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAffectedEntitiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAffectedEntitiesResponse)
+    Q_DISABLE_COPY(DescribeAffectedEntitiesResponse)
+
+};
+
+} // namespace health
+} // namespace AWS
+
 #endif

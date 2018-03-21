@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_H
 #define QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describeloggingstatusrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeLoggingStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeLoggingStatusResponse : public DescribeLoggingStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeLoggingStatusResponse(const DescribeLoggingStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLoggingStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLoggingStatusResponse)
+    Q_DISABLE_COPY(DescribeLoggingStatusResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDBPARAMETERGROUPRESPONSE_H
 #define QTAWS_CREATEDBPARAMETERGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "createdbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class CreateDBParameterGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateDBParameterGroupResponse : public CreateDBParameterGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateDBParameterGroupResponse(const CreateDBParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDBParameterGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBParameterGroupResponse)
+    Q_DISABLE_COPY(CreateDBParameterGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

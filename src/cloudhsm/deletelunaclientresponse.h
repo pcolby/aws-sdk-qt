@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELUNACLIENTRESPONSE_H
 #define QTAWS_DELETELUNACLIENTRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "deletelunaclientrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class DeleteLunaClientResponsePrivate;
+
+class QTAWS_EXPORT DeleteLunaClientResponse : public DeleteLunaClientResponse {
+    Q_OBJECT
+
+public:
+    DeleteLunaClientResponse(const DeleteLunaClientRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLunaClientRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLunaClientResponse)
+    Q_DISABLE_COPY(DeleteLunaClientResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

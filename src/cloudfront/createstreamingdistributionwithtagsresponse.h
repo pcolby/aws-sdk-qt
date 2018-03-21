@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "createstreamingdistributionwithtagsrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class CreateStreamingDistributionWithTagsResponsePrivate;
+
+class QTAWS_EXPORT CreateStreamingDistributionWithTagsResponse : public CreateStreamingDistributionWithTagsResponse {
+    Q_OBJECT
+
+public:
+    CreateStreamingDistributionWithTagsResponse(const CreateStreamingDistributionWithTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateStreamingDistributionWithTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamingDistributionWithTagsResponse)
+    Q_DISABLE_COPY(CreateStreamingDistributionWithTagsResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

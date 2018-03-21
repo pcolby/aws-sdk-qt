@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEKEYRESPONSE_H
 #define QTAWS_CREATEKEYRESPONSE_H
 
+#include "kmsresponse.h"
+#include "createkeyrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class CreateKeyResponsePrivate;
+
+class QTAWS_EXPORT CreateKeyResponse : public CreateKeyResponse {
+    Q_OBJECT
+
+public:
+    CreateKeyResponse(const CreateKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateKeyResponse)
+    Q_DISABLE_COPY(CreateKeyResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

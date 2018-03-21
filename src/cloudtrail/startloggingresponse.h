@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTLOGGINGRESPONSE_H
 #define QTAWS_STARTLOGGINGRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "startloggingrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class StartLoggingResponsePrivate;
+
+class QTAWS_EXPORT StartLoggingResponse : public StartLoggingResponse {
+    Q_OBJECT
+
+public:
+    StartLoggingResponse(const StartLoggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartLoggingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartLoggingResponse)
+    Q_DISABLE_COPY(StartLoggingResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETWORKFLOWEXECUTIONHISTORYRESPONSE_H
 #define QTAWS_GETWORKFLOWEXECUTIONHISTORYRESPONSE_H
 
+#include "swfresponse.h"
+#include "getworkflowexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class GetWorkflowExecutionHistoryResponsePrivate;
+
+class QTAWS_EXPORT GetWorkflowExecutionHistoryResponse : public GetWorkflowExecutionHistoryResponse {
+    Q_OBJECT
+
+public:
+    GetWorkflowExecutionHistoryResponse(const GetWorkflowExecutionHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetWorkflowExecutionHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetWorkflowExecutionHistoryResponse)
+    Q_DISABLE_COPY(GetWorkflowExecutionHistoryResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESETINSTANCEATTRIBUTERESPONSE_H
 #define QTAWS_RESETINSTANCEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "resetinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ResetInstanceAttributeResponsePrivate;
+
+class QTAWS_EXPORT ResetInstanceAttributeResponse : public ResetInstanceAttributeResponse {
+    Q_OBJECT
+
+public:
+    ResetInstanceAttributeResponse(const ResetInstanceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResetInstanceAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResetInstanceAttributeResponse)
+    Q_DISABLE_COPY(ResetInstanceAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

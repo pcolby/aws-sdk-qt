@@ -20,4 +20,33 @@
 #ifndef QTAWS_RELOADTABLESRESPONSE_H
 #define QTAWS_RELOADTABLESRESPONSE_H
 
+#include "dmsresponse.h"
+#include "reloadtablesrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class ReloadTablesResponsePrivate;
+
+class QTAWS_EXPORT ReloadTablesResponse : public ReloadTablesResponse {
+    Q_OBJECT
+
+public:
+    ReloadTablesResponse(const ReloadTablesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReloadTablesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReloadTablesResponse)
+    Q_DISABLE_COPY(ReloadTablesResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

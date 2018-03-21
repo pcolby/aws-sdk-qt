@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_H
 #define QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "listsizeconstraintsetsrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class ListSizeConstraintSetsResponsePrivate;
+
+class QTAWS_EXPORT ListSizeConstraintSetsResponse : public ListSizeConstraintSetsResponse {
+    Q_OBJECT
+
+public:
+    ListSizeConstraintSetsResponse(const ListSizeConstraintSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSizeConstraintSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSizeConstraintSetsResponse)
+    Q_DISABLE_COPY(ListSizeConstraintSetsResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

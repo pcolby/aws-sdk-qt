@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSOFRESOURCERESPONSE_H
 #define QTAWS_LISTTAGSOFRESOURCERESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "listtagsofresourcerequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class ListTagsOfResourceResponsePrivate;
+
+class QTAWS_EXPORT ListTagsOfResourceResponse : public ListTagsOfResourceResponse {
+    Q_OBJECT
+
+public:
+    ListTagsOfResourceResponse(const ListTagsOfResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsOfResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsOfResourceResponse)
+    Q_DISABLE_COPY(ListTagsOfResourceResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

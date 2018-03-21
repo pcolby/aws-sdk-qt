@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEUSERPOOLCLIENTRESPONSE_H
 #define QTAWS_DELETEUSERPOOLCLIENTRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "deleteuserpoolclientrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DeleteUserPoolClientResponsePrivate;
+
+class QTAWS_EXPORT DeleteUserPoolClientResponse : public DeleteUserPoolClientResponse {
+    Q_OBJECT
+
+public:
+    DeleteUserPoolClientResponse(const DeleteUserPoolClientRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteUserPoolClientRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserPoolClientResponse)
+    Q_DISABLE_COPY(DeleteUserPoolClientResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

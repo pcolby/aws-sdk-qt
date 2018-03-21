@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETINTROSPECTIONSCHEMARESPONSE_H
 #define QTAWS_GETINTROSPECTIONSCHEMARESPONSE_H
 
+#include "appsyncresponse.h"
+#include "getintrospectionschemarequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class GetIntrospectionSchemaResponsePrivate;
+
+class QTAWS_EXPORT GetIntrospectionSchemaResponse : public GetIntrospectionSchemaResponse {
+    Q_OBJECT
+
+public:
+    GetIntrospectionSchemaResponse(const GetIntrospectionSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIntrospectionSchemaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIntrospectionSchemaResponse)
+    Q_DISABLE_COPY(GetIntrospectionSchemaResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

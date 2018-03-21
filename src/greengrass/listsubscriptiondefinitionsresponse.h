@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONDEFINITIONSRESPONSE_H
 #define QTAWS_LISTSUBSCRIPTIONDEFINITIONSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listsubscriptiondefinitionsrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListSubscriptionDefinitionsResponsePrivate;
+
+class QTAWS_EXPORT ListSubscriptionDefinitionsResponse : public ListSubscriptionDefinitionsResponse {
+    Q_OBJECT
+
+public:
+    ListSubscriptionDefinitionsResponse(const ListSubscriptionDefinitionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSubscriptionDefinitionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSubscriptionDefinitionsResponse)
+    Q_DISABLE_COPY(ListSubscriptionDefinitionsResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_H
 #define QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_H
 
+#include "iamresponse.h"
+#include "removerolefrominstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class RemoveRoleFromInstanceProfileResponsePrivate;
+
+class QTAWS_EXPORT RemoveRoleFromInstanceProfileResponse : public RemoveRoleFromInstanceProfileResponse {
+    Q_OBJECT
+
+public:
+    RemoveRoleFromInstanceProfileResponse(const RemoveRoleFromInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveRoleFromInstanceProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveRoleFromInstanceProfileResponse)
+    Q_DISABLE_COPY(RemoveRoleFromInstanceProfileResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

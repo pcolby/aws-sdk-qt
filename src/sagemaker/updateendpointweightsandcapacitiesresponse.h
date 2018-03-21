@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_H
 #define QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "updateendpointweightsandcapacitiesrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class UpdateEndpointWeightsAndCapacitiesResponsePrivate;
+
+class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesResponse : public UpdateEndpointWeightsAndCapacitiesResponse {
+    Q_OBJECT
+
+public:
+    UpdateEndpointWeightsAndCapacitiesResponse(const UpdateEndpointWeightsAndCapacitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateEndpointWeightsAndCapacitiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEndpointWeightsAndCapacitiesResponse)
+    Q_DISABLE_COPY(UpdateEndpointWeightsAndCapacitiesResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

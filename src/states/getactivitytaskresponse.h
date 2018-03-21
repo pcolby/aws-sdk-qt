@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACTIVITYTASKRESPONSE_H
 #define QTAWS_GETACTIVITYTASKRESPONSE_H
 
+#include "statesresponse.h"
+#include "getactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class GetActivityTaskResponsePrivate;
+
+class QTAWS_EXPORT GetActivityTaskResponse : public GetActivityTaskResponse {
+    Q_OBJECT
+
+public:
+    GetActivityTaskResponse(const GetActivityTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetActivityTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetActivityTaskResponse)
+    Q_DISABLE_COPY(GetActivityTaskResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

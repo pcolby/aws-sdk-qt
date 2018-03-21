@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEVPCCIDRBLOCKRESPONSE_H
 #define QTAWS_DISASSOCIATEVPCCIDRBLOCKRESPONSE_H
 
+#include "ec2response.h"
+#include "disassociatevpccidrblockrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DisassociateVpcCidrBlockResponsePrivate;
+
+class QTAWS_EXPORT DisassociateVpcCidrBlockResponse : public DisassociateVpcCidrBlockResponse {
+    Q_OBJECT
+
+public:
+    DisassociateVpcCidrBlockResponse(const DisassociateVpcCidrBlockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateVpcCidrBlockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateVpcCidrBlockResponse)
+    Q_DISABLE_COPY(DisassociateVpcCidrBlockResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

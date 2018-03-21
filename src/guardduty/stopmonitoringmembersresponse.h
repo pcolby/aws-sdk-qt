@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPMONITORINGMEMBERSRESPONSE_H
 #define QTAWS_STOPMONITORINGMEMBERSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "stopmonitoringmembersrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class StopMonitoringMembersResponsePrivate;
+
+class QTAWS_EXPORT StopMonitoringMembersResponse : public StopMonitoringMembersResponse {
+    Q_OBJECT
+
+public:
+    StopMonitoringMembersResponse(const StopMonitoringMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopMonitoringMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopMonitoringMembersResponse)
+    Q_DISABLE_COPY(StopMonitoringMembersResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

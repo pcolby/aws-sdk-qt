@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describedocumentversionsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeDocumentVersionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDocumentVersionsResponse : public DescribeDocumentVersionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDocumentVersionsResponse(const DescribeDocumentVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDocumentVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDocumentVersionsResponse)
+    Q_DISABLE_COPY(DescribeDocumentVersionsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

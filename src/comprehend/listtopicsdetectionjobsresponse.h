@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTOPICSDETECTIONJOBSRESPONSE_H
 #define QTAWS_LISTTOPICSDETECTIONJOBSRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "listtopicsdetectionjobsrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class ListTopicsDetectionJobsResponsePrivate;
+
+class QTAWS_EXPORT ListTopicsDetectionJobsResponse : public ListTopicsDetectionJobsResponse {
+    Q_OBJECT
+
+public:
+    ListTopicsDetectionJobsResponse(const ListTopicsDetectionJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTopicsDetectionJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTopicsDetectionJobsResponse)
+    Q_DISABLE_COPY(ListTopicsDetectionJobsResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

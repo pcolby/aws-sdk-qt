@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEREPLICATIONJOBRESPONSE_H
 #define QTAWS_UPDATEREPLICATIONJOBRESPONSE_H
 
+#include "smsresponse.h"
+#include "updatereplicationjobrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class UpdateReplicationJobResponsePrivate;
+
+class QTAWS_EXPORT UpdateReplicationJobResponse : public UpdateReplicationJobResponse {
+    Q_OBJECT
+
+public:
+    UpdateReplicationJobResponse(const UpdateReplicationJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateReplicationJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateReplicationJobResponse)
+    Q_DISABLE_COPY(UpdateReplicationJobResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

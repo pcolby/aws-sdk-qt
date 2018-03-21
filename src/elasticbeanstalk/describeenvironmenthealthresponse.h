@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTHEALTHRESPONSE_H
 #define QTAWS_DESCRIBEENVIRONMENTHEALTHRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeenvironmenthealthrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DescribeEnvironmentHealthResponsePrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentHealthResponse : public DescribeEnvironmentHealthResponse {
+    Q_OBJECT
+
+public:
+    DescribeEnvironmentHealthResponse(const DescribeEnvironmentHealthRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEnvironmentHealthRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentHealthResponse)
+    Q_DISABLE_COPY(DescribeEnvironmentHealthResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

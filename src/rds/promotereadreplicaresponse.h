@@ -20,4 +20,33 @@
 #ifndef QTAWS_PROMOTEREADREPLICARESPONSE_H
 #define QTAWS_PROMOTEREADREPLICARESPONSE_H
 
+#include "rdsresponse.h"
+#include "promotereadreplicarequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class PromoteReadReplicaResponsePrivate;
+
+class QTAWS_EXPORT PromoteReadReplicaResponse : public PromoteReadReplicaResponse {
+    Q_OBJECT
+
+public:
+    PromoteReadReplicaResponse(const PromoteReadReplicaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PromoteReadReplicaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PromoteReadReplicaResponse)
+    Q_DISABLE_COPY(PromoteReadReplicaResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

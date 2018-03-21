@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECACHESECURITYGROUPRESPONSE_H
 #define QTAWS_DELETECACHESECURITYGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "deletecachesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DeleteCacheSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteCacheSecurityGroupResponse : public DeleteCacheSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteCacheSecurityGroupResponse(const DeleteCacheSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCacheSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCacheSecurityGroupResponse)
+    Q_DISABLE_COPY(DeleteCacheSecurityGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

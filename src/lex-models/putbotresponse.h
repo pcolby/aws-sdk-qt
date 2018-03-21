@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTBOTRESPONSE_H
 #define QTAWS_PUTBOTRESPONSE_H
 
+#include "lex-modelsresponse.h"
+#include "putbotrequest.h"
+
+namespace AWS {
+
+namespace lex-models {
+
+class PutBotResponsePrivate;
+
+class QTAWS_EXPORT PutBotResponse : public PutBotResponse {
+    Q_OBJECT
+
+public:
+    PutBotResponse(const PutBotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutBotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutBotResponse)
+    Q_DISABLE_COPY(PutBotResponse)
+
+};
+
+} // namespace lex-models
+} // namespace AWS
+
 #endif

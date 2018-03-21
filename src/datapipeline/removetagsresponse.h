@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_H
 #define QTAWS_REMOVETAGSRESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "removetagsrequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class RemoveTagsResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsResponse : public RemoveTagsResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsResponse(const RemoveTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsResponse)
+    Q_DISABLE_COPY(RemoveTagsResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLERESPONSE_H
 #define QTAWS_DELETESERVICELINKEDROLERESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "deleteservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class DeleteServiceLinkedRoleResponsePrivate;
+
+class QTAWS_EXPORT DeleteServiceLinkedRoleResponse : public DeleteServiceLinkedRoleResponse {
+    Q_OBJECT
+
+public:
+    DeleteServiceLinkedRoleResponse(const DeleteServiceLinkedRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteServiceLinkedRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceLinkedRoleResponse)
+    Q_DISABLE_COPY(DeleteServiceLinkedRoleResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

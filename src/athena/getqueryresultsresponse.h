@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETQUERYRESULTSRESPONSE_H
 #define QTAWS_GETQUERYRESULTSRESPONSE_H
 
+#include "athenaresponse.h"
+#include "getqueryresultsrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class GetQueryResultsResponsePrivate;
+
+class QTAWS_EXPORT GetQueryResultsResponse : public GetQueryResultsResponse {
+    Q_OBJECT
+
+public:
+    GetQueryResultsResponse(const GetQueryResultsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetQueryResultsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetQueryResultsResponse)
+    Q_DISABLE_COPY(GetQueryResultsResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

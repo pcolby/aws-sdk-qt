@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESRESPONSE_H
 #define QTAWS_DESCRIBECERTIFICATESRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describecertificatesrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeCertificatesResponsePrivate;
+
+class QTAWS_EXPORT DescribeCertificatesResponse : public DescribeCertificatesResponse {
+    Q_OBJECT
+
+public:
+    DescribeCertificatesResponse(const DescribeCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCertificatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCertificatesResponse)
+    Q_DISABLE_COPY(DescribeCertificatesResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

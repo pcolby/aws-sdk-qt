@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEMEMBERSRESPONSE_H
 #define QTAWS_DELETEMEMBERSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "deletemembersrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DeleteMembersResponsePrivate;
+
+class QTAWS_EXPORT DeleteMembersResponse : public DeleteMembersResponse {
+    Q_OBJECT
+
+public:
+    DeleteMembersResponse(const DeleteMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMembersResponse)
+    Q_DISABLE_COPY(DeleteMembersResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

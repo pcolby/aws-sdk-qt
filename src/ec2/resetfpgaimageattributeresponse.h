@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESETFPGAIMAGEATTRIBUTERESPONSE_H
 #define QTAWS_RESETFPGAIMAGEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "resetfpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ResetFpgaImageAttributeResponsePrivate;
+
+class QTAWS_EXPORT ResetFpgaImageAttributeResponse : public ResetFpgaImageAttributeResponse {
+    Q_OBJECT
+
+public:
+    ResetFpgaImageAttributeResponse(const ResetFpgaImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResetFpgaImageAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResetFpgaImageAttributeResponse)
+    Q_DISABLE_COPY(ResetFpgaImageAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

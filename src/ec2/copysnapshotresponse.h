@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYSNAPSHOTRESPONSE_H
 #define QTAWS_COPYSNAPSHOTRESPONSE_H
 
+#include "ec2response.h"
+#include "copysnapshotrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CopySnapshotResponsePrivate;
+
+class QTAWS_EXPORT CopySnapshotResponse : public CopySnapshotResponse {
+    Q_OBJECT
+
+public:
+    CopySnapshotResponse(const CopySnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopySnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopySnapshotResponse)
+    Q_DISABLE_COPY(CopySnapshotResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

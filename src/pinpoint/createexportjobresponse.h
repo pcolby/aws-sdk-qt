@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEEXPORTJOBRESPONSE_H
 #define QTAWS_CREATEEXPORTJOBRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "createexportjobrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class CreateExportJobResponsePrivate;
+
+class QTAWS_EXPORT CreateExportJobResponse : public CreateExportJobResponse {
+    Q_OBJECT
+
+public:
+    CreateExportJobResponse(const CreateExportJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateExportJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateExportJobResponse)
+    Q_DISABLE_COPY(CreateExportJobResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREGEXMATCHSETRESPONSE_H
 #define QTAWS_CREATEREGEXMATCHSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "createregexmatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class CreateRegexMatchSetResponsePrivate;
+
+class QTAWS_EXPORT CreateRegexMatchSetResponse : public CreateRegexMatchSetResponse {
+    Q_OBJECT
+
+public:
+    CreateRegexMatchSetResponse(const CreateRegexMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRegexMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRegexMatchSetResponse)
+    Q_DISABLE_COPY(CreateRegexMatchSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

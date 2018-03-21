@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDHCPOPTIONSRESPONSE_H
 #define QTAWS_DELETEDHCPOPTIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "deletedhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteDhcpOptionsResponsePrivate;
+
+class QTAWS_EXPORT DeleteDhcpOptionsResponse : public DeleteDhcpOptionsResponse {
+    Q_OBJECT
+
+public:
+    DeleteDhcpOptionsResponse(const DeleteDhcpOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDhcpOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDhcpOptionsResponse)
+    Q_DISABLE_COPY(DeleteDhcpOptionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

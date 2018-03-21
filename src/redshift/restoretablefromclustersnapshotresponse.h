@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_H
 #define QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "restoretablefromclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class RestoreTableFromClusterSnapshotResponsePrivate;
+
+class QTAWS_EXPORT RestoreTableFromClusterSnapshotResponse : public RestoreTableFromClusterSnapshotResponse {
+    Q_OBJECT
+
+public:
+    RestoreTableFromClusterSnapshotResponse(const RestoreTableFromClusterSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreTableFromClusterSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreTableFromClusterSnapshotResponse)
+    Q_DISABLE_COPY(RestoreTableFromClusterSnapshotResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

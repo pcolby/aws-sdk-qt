@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEVPCWITHHOSTEDZONERESPONSE_H
 #define QTAWS_ASSOCIATEVPCWITHHOSTEDZONERESPONSE_H
 
+#include "route53response.h"
+#include "associatevpcwithhostedzonerequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class AssociateVPCWithHostedZoneResponsePrivate;
+
+class QTAWS_EXPORT AssociateVPCWithHostedZoneResponse : public AssociateVPCWithHostedZoneResponse {
+    Q_OBJECT
+
+public:
+    AssociateVPCWithHostedZoneResponse(const AssociateVPCWithHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateVPCWithHostedZoneRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateVPCWithHostedZoneResponse)
+    Q_DISABLE_COPY(AssociateVPCWithHostedZoneResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

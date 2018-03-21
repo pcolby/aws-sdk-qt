@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETGEOMATCHSETRESPONSE_H
 #define QTAWS_GETGEOMATCHSETRESPONSE_H
 
+#include "wafresponse.h"
+#include "getgeomatchsetrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class GetGeoMatchSetResponsePrivate;
+
+class QTAWS_EXPORT GetGeoMatchSetResponse : public GetGeoMatchSetResponse {
+    Q_OBJECT
+
+public:
+    GetGeoMatchSetResponse(const GetGeoMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetGeoMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetGeoMatchSetResponse)
+    Q_DISABLE_COPY(GetGeoMatchSetResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

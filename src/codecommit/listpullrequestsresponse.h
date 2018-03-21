@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPULLREQUESTSRESPONSE_H
 #define QTAWS_LISTPULLREQUESTSRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "listpullrequestsrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class ListPullRequestsResponsePrivate;
+
+class QTAWS_EXPORT ListPullRequestsResponse : public ListPullRequestsResponse {
+    Q_OBJECT
+
+public:
+    ListPullRequestsResponse(const ListPullRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPullRequestsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPullRequestsResponse)
+    Q_DISABLE_COPY(ListPullRequestsResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

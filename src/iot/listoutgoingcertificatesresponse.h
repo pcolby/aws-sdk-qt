@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTOUTGOINGCERTIFICATESRESPONSE_H
 #define QTAWS_LISTOUTGOINGCERTIFICATESRESPONSE_H
 
+#include "iotresponse.h"
+#include "listoutgoingcertificatesrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListOutgoingCertificatesResponsePrivate;
+
+class QTAWS_EXPORT ListOutgoingCertificatesResponse : public ListOutgoingCertificatesResponse {
+    Q_OBJECT
+
+public:
+    ListOutgoingCertificatesResponse(const ListOutgoingCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListOutgoingCertificatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListOutgoingCertificatesResponse)
+    Q_DISABLE_COPY(ListOutgoingCertificatesResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

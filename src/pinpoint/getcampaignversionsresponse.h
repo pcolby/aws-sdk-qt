@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCAMPAIGNVERSIONSRESPONSE_H
 #define QTAWS_GETCAMPAIGNVERSIONSRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getcampaignversionsrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetCampaignVersionsResponsePrivate;
+
+class QTAWS_EXPORT GetCampaignVersionsResponse : public GetCampaignVersionsResponse {
+    Q_OBJECT
+
+public:
+    GetCampaignVersionsResponse(const GetCampaignVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCampaignVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCampaignVersionsResponse)
+    Q_DISABLE_COPY(GetCampaignVersionsResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

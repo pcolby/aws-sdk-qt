@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGRESPONSE_H
 #define QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "getstreamingdistributionconfigrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class GetStreamingDistributionConfigResponsePrivate;
+
+class QTAWS_EXPORT GetStreamingDistributionConfigResponse : public GetStreamingDistributionConfigResponse {
+    Q_OBJECT
+
+public:
+    GetStreamingDistributionConfigResponse(const GetStreamingDistributionConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetStreamingDistributionConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetStreamingDistributionConfigResponse)
+    Q_DISABLE_COPY(GetStreamingDistributionConfigResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

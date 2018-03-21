@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTMATCHBACKFILLRESPONSE_H
 #define QTAWS_STARTMATCHBACKFILLRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "startmatchbackfillrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class StartMatchBackfillResponsePrivate;
+
+class QTAWS_EXPORT StartMatchBackfillResponse : public StartMatchBackfillResponse {
+    Q_OBJECT
+
+public:
+    StartMatchBackfillResponse(const StartMatchBackfillRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartMatchBackfillRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartMatchBackfillResponse)
+    Q_DISABLE_COPY(StartMatchBackfillResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMDEVICERESPONSE_H
 #define QTAWS_CONFIRMDEVICERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "confirmdevicerequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ConfirmDeviceResponsePrivate;
+
+class QTAWS_EXPORT ConfirmDeviceResponse : public ConfirmDeviceResponse {
+    Q_OBJECT
+
+public:
+    ConfirmDeviceResponse(const ConfirmDeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmDeviceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmDeviceResponse)
+    Q_DISABLE_COPY(ConfirmDeviceResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

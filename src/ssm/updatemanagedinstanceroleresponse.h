@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_H
 #define QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_H
 
+#include "ssmresponse.h"
+#include "updatemanagedinstancerolerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class UpdateManagedInstanceRoleResponsePrivate;
+
+class QTAWS_EXPORT UpdateManagedInstanceRoleResponse : public UpdateManagedInstanceRoleResponse {
+    Q_OBJECT
+
+public:
+    UpdateManagedInstanceRoleResponse(const UpdateManagedInstanceRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateManagedInstanceRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateManagedInstanceRoleResponse)
+    Q_DISABLE_COPY(UpdateManagedInstanceRoleResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

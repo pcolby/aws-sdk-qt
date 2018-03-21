@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDOCUMENTRESPONSE_H
 #define QTAWS_DELETEDOCUMENTRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "deletedocumentrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DeleteDocumentResponsePrivate;
+
+class QTAWS_EXPORT DeleteDocumentResponse : public DeleteDocumentResponse {
+    Q_OBJECT
+
+public:
+    DeleteDocumentResponse(const DeleteDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDocumentResponse)
+    Q_DISABLE_COPY(DeleteDocumentResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

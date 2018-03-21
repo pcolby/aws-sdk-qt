@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINTEGRATIONRESPONSE_H
 #define QTAWS_DELETEINTEGRATIONRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deleteintegrationrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteIntegrationResponsePrivate;
+
+class QTAWS_EXPORT DeleteIntegrationResponse : public DeleteIntegrationResponse {
+    Q_OBJECT
+
+public:
+    DeleteIntegrationResponse(const DeleteIntegrationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteIntegrationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIntegrationResponse)
+    Q_DISABLE_COPY(DeleteIntegrationResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

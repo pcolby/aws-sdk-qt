@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVOLUMERESPONSE_H
 #define QTAWS_DELETEVOLUMERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "deletevolumerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DeleteVolumeResponsePrivate;
+
+class QTAWS_EXPORT DeleteVolumeResponse : public DeleteVolumeResponse {
+    Q_OBJECT
+
+public:
+    DeleteVolumeResponse(const DeleteVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVolumeResponse)
+    Q_DISABLE_COPY(DeleteVolumeResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

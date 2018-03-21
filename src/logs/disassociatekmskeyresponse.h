@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEKMSKEYRESPONSE_H
 #define QTAWS_DISASSOCIATEKMSKEYRESPONSE_H
 
+#include "logsresponse.h"
+#include "disassociatekmskeyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DisassociateKmsKeyResponsePrivate;
+
+class QTAWS_EXPORT DisassociateKmsKeyResponse : public DisassociateKmsKeyResponse {
+    Q_OBJECT
+
+public:
+    DisassociateKmsKeyResponse(const DisassociateKmsKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateKmsKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateKmsKeyResponse)
+    Q_DISABLE_COPY(DisassociateKmsKeyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

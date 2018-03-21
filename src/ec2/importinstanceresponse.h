@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTINSTANCERESPONSE_H
 #define QTAWS_IMPORTINSTANCERESPONSE_H
 
+#include "ec2response.h"
+#include "importinstancerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ImportInstanceResponsePrivate;
+
+class QTAWS_EXPORT ImportInstanceResponse : public ImportInstanceResponse {
+    Q_OBJECT
+
+public:
+    ImportInstanceResponse(const ImportInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportInstanceResponse)
+    Q_DISABLE_COPY(ImportInstanceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

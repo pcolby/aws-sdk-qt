@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVPNCONNECTIONSRESPONSE_H
 #define QTAWS_DESCRIBEVPNCONNECTIONSRESPONSE_H
 
+#include "ec2response.h"
+#include "describevpnconnectionsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeVpnConnectionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeVpnConnectionsResponse : public DescribeVpnConnectionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeVpnConnectionsResponse(const DescribeVpnConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVpnConnectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpnConnectionsResponse)
+    Q_DISABLE_COPY(DescribeVpnConnectionsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

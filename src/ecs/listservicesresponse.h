@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSERVICESRESPONSE_H
 #define QTAWS_LISTSERVICESRESPONSE_H
 
+#include "ecsresponse.h"
+#include "listservicesrequest.h"
+
+namespace AWS {
+
+namespace ecs {
+
+class ListServicesResponsePrivate;
+
+class QTAWS_EXPORT ListServicesResponse : public ListServicesResponse {
+    Q_OBJECT
+
+public:
+    ListServicesResponse(const ListServicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListServicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListServicesResponse)
+    Q_DISABLE_COPY(ListServicesResponse)
+
+};
+
+} // namespace ecs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSQLINJECTIONMATCHSETSRESPONSE_H
 #define QTAWS_LISTSQLINJECTIONMATCHSETSRESPONSE_H
 
+#include "wafresponse.h"
+#include "listsqlinjectionmatchsetsrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class ListSqlInjectionMatchSetsResponsePrivate;
+
+class QTAWS_EXPORT ListSqlInjectionMatchSetsResponse : public ListSqlInjectionMatchSetsResponse {
+    Q_OBJECT
+
+public:
+    ListSqlInjectionMatchSetsResponse(const ListSqlInjectionMatchSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSqlInjectionMatchSetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSqlInjectionMatchSetsResponse)
+    Q_DISABLE_COPY(ListSqlInjectionMatchSetsResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

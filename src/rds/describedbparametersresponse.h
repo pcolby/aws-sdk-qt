@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDBPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEDBPARAMETERSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describedbparametersrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeDBParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeDBParametersResponse : public DescribeDBParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeDBParametersResponse(const DescribeDBParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDBParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDBParametersResponse)
+    Q_DISABLE_COPY(DescribeDBParametersResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

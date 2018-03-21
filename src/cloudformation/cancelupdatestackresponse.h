@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELUPDATESTACKRESPONSE_H
 #define QTAWS_CANCELUPDATESTACKRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "cancelupdatestackrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class CancelUpdateStackResponsePrivate;
+
+class QTAWS_EXPORT CancelUpdateStackResponse : public CancelUpdateStackResponse {
+    Q_OBJECT
+
+public:
+    CancelUpdateStackResponse(const CancelUpdateStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelUpdateStackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelUpdateStackResponse)
+    Q_DISABLE_COPY(CancelUpdateStackResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

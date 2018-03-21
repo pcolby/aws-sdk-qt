@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTSUBSCRIPTIONFILTERRESPONSE_H
 #define QTAWS_PUTSUBSCRIPTIONFILTERRESPONSE_H
 
+#include "logsresponse.h"
+#include "putsubscriptionfilterrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutSubscriptionFilterResponsePrivate;
+
+class QTAWS_EXPORT PutSubscriptionFilterResponse : public PutSubscriptionFilterResponse {
+    Q_OBJECT
+
+public:
+    PutSubscriptionFilterResponse(const PutSubscriptionFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutSubscriptionFilterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutSubscriptionFilterResponse)
+    Q_DISABLE_COPY(PutSubscriptionFilterResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

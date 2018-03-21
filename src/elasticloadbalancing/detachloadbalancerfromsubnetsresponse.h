@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHLOADBALANCERFROMSUBNETSRESPONSE_H
 #define QTAWS_DETACHLOADBALANCERFROMSUBNETSRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "detachloadbalancerfromsubnetsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DetachLoadBalancerFromSubnetsResponsePrivate;
+
+class QTAWS_EXPORT DetachLoadBalancerFromSubnetsResponse : public DetachLoadBalancerFromSubnetsResponse {
+    Q_OBJECT
+
+public:
+    DetachLoadBalancerFromSubnetsResponse(const DetachLoadBalancerFromSubnetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachLoadBalancerFromSubnetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachLoadBalancerFromSubnetsResponse)
+    Q_DISABLE_COPY(DetachLoadBalancerFromSubnetsResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

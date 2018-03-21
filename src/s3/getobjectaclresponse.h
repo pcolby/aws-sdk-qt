@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOBJECTACLRESPONSE_H
 #define QTAWS_GETOBJECTACLRESPONSE_H
 
+#include "s3response.h"
+#include "getobjectaclrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetObjectAclResponsePrivate;
+
+class QTAWS_EXPORT GetObjectAclResponse : public GetObjectAclResponse {
+    Q_OBJECT
+
+public:
+    GetObjectAclResponse(const GetObjectAclRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetObjectAclRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetObjectAclResponse)
+    Q_DISABLE_COPY(GetObjectAclResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

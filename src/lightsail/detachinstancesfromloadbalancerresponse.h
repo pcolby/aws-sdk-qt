@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_H
 #define QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "detachinstancesfromloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class DetachInstancesFromLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT DetachInstancesFromLoadBalancerResponse : public DetachInstancesFromLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    DetachInstancesFromLoadBalancerResponse(const DetachInstancesFromLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachInstancesFromLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachInstancesFromLoadBalancerResponse)
+    Q_DISABLE_COPY(DetachInstancesFromLoadBalancerResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

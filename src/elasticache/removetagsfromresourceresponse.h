@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "removetagsfromresourcerequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class RemoveTagsFromResourceResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsFromResourceResponse : public RemoveTagsFromResourceResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsFromResourceResponse(const RemoveTagsFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsFromResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromResourceResponse)
+    Q_DISABLE_COPY(RemoveTagsFromResourceResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

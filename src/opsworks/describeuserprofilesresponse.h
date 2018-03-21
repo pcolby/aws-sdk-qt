@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEUSERPROFILESRESPONSE_H
 #define QTAWS_DESCRIBEUSERPROFILESRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describeuserprofilesrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeUserProfilesResponsePrivate;
+
+class QTAWS_EXPORT DescribeUserProfilesResponse : public DescribeUserProfilesResponse {
+    Q_OBJECT
+
+public:
+    DescribeUserProfilesResponse(const DescribeUserProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeUserProfilesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUserProfilesResponse)
+    Q_DISABLE_COPY(DescribeUserProfilesResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

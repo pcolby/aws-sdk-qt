@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEFINDINGSRESPONSE_H
 #define QTAWS_DESCRIBEFINDINGSRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "describefindingsrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class DescribeFindingsResponsePrivate;
+
+class QTAWS_EXPORT DescribeFindingsResponse : public DescribeFindingsResponse {
+    Q_OBJECT
+
+public:
+    DescribeFindingsResponse(const DescribeFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeFindingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFindingsResponse)
+    Q_DISABLE_COPY(DescribeFindingsResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

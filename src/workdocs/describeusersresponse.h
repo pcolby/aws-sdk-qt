@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEUSERSRESPONSE_H
 #define QTAWS_DESCRIBEUSERSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "describeusersrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class DescribeUsersResponsePrivate;
+
+class QTAWS_EXPORT DescribeUsersResponse : public DescribeUsersResponse {
+    Q_OBJECT
+
+public:
+    DescribeUsersResponse(const DescribeUsersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeUsersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUsersResponse)
+    Q_DISABLE_COPY(DescribeUsersResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

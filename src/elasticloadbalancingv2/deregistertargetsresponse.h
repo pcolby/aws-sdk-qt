@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERTARGETSRESPONSE_H
 #define QTAWS_DEREGISTERTARGETSRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "deregistertargetsrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DeregisterTargetsResponsePrivate;
+
+class QTAWS_EXPORT DeregisterTargetsResponse : public DeregisterTargetsResponse {
+    Q_OBJECT
+
+public:
+    DeregisterTargetsResponse(const DeregisterTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterTargetsResponse)
+    Q_DISABLE_COPY(DeregisterTargetsResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

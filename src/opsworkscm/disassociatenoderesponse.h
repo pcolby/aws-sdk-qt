@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATENODERESPONSE_H
 #define QTAWS_DISASSOCIATENODERESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "disassociatenoderequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class DisassociateNodeResponsePrivate;
+
+class QTAWS_EXPORT DisassociateNodeResponse : public DisassociateNodeResponse {
+    Q_OBJECT
+
+public:
+    DisassociateNodeResponse(const DisassociateNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateNodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateNodeResponse)
+    Q_DISABLE_COPY(DisassociateNodeResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

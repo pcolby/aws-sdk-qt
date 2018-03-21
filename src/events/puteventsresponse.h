@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTEVENTSRESPONSE_H
 #define QTAWS_PUTEVENTSRESPONSE_H
 
+#include "eventsresponse.h"
+#include "puteventsrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class PutEventsResponsePrivate;
+
+class QTAWS_EXPORT PutEventsResponse : public PutEventsResponse {
+    Q_OBJECT
+
+public:
+    PutEventsResponse(const PutEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutEventsResponse)
+    Q_DISABLE_COPY(PutEventsResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_H
 #define QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "confirmforgotpasswordrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class ConfirmForgotPasswordResponsePrivate;
+
+class QTAWS_EXPORT ConfirmForgotPasswordResponse : public ConfirmForgotPasswordResponse {
+    Q_OBJECT
+
+public:
+    ConfirmForgotPasswordResponse(const ConfirmForgotPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmForgotPasswordRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmForgotPasswordResponse)
+    Q_DISABLE_COPY(ConfirmForgotPasswordResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

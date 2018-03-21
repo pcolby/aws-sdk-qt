@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETRAILRESPONSE_H
 #define QTAWS_DELETETRAILRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "deletetrailrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class DeleteTrailResponsePrivate;
+
+class QTAWS_EXPORT DeleteTrailResponse : public DeleteTrailResponse {
+    Q_OBJECT
+
+public:
+    DeleteTrailResponse(const DeleteTrailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTrailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrailResponse)
+    Q_DISABLE_COPY(DeleteTrailResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

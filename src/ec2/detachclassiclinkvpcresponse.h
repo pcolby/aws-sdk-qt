@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHCLASSICLINKVPCRESPONSE_H
 #define QTAWS_DETACHCLASSICLINKVPCRESPONSE_H
 
+#include "ec2response.h"
+#include "detachclassiclinkvpcrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DetachClassicLinkVpcResponsePrivate;
+
+class QTAWS_EXPORT DetachClassicLinkVpcResponse : public DetachClassicLinkVpcResponse {
+    Q_OBJECT
+
+public:
+    DetachClassicLinkVpcResponse(const DetachClassicLinkVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachClassicLinkVpcRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachClassicLinkVpcResponse)
+    Q_DISABLE_COPY(DetachClassicLinkVpcResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

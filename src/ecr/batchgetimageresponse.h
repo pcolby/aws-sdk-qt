@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETIMAGERESPONSE_H
 #define QTAWS_BATCHGETIMAGERESPONSE_H
 
+#include "ecrresponse.h"
+#include "batchgetimagerequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class BatchGetImageResponsePrivate;
+
+class QTAWS_EXPORT BatchGetImageResponse : public BatchGetImageResponse {
+    Q_OBJECT
+
+public:
+    BatchGetImageResponse(const BatchGetImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetImageResponse)
+    Q_DISABLE_COPY(BatchGetImageResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

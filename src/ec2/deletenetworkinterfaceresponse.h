@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENETWORKINTERFACERESPONSE_H
 #define QTAWS_DELETENETWORKINTERFACERESPONSE_H
 
+#include "ec2response.h"
+#include "deletenetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteNetworkInterfaceResponsePrivate;
+
+class QTAWS_EXPORT DeleteNetworkInterfaceResponse : public DeleteNetworkInterfaceResponse {
+    Q_OBJECT
+
+public:
+    DeleteNetworkInterfaceResponse(const DeleteNetworkInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNetworkInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkInterfaceResponse)
+    Q_DISABLE_COPY(DeleteNetworkInterfaceResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

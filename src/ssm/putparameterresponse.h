@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTPARAMETERRESPONSE_H
 #define QTAWS_PUTPARAMETERRESPONSE_H
 
+#include "ssmresponse.h"
+#include "putparameterrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class PutParameterResponsePrivate;
+
+class QTAWS_EXPORT PutParameterResponse : public PutParameterResponse {
+    Q_OBJECT
+
+public:
+    PutParameterResponse(const PutParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutParameterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutParameterResponse)
+    Q_DISABLE_COPY(PutParameterResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

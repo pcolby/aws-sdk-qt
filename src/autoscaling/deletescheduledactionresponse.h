@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONRESPONSE_H
 #define QTAWS_DELETESCHEDULEDACTIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "deletescheduledactionrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DeleteScheduledActionResponsePrivate;
+
+class QTAWS_EXPORT DeleteScheduledActionResponse : public DeleteScheduledActionResponse {
+    Q_OBJECT
+
+public:
+    DeleteScheduledActionResponse(const DeleteScheduledActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteScheduledActionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteScheduledActionResponse)
+    Q_DISABLE_COPY(DeleteScheduledActionResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELOGGERDEFINITIONRESPONSE_H
 #define QTAWS_DELETELOGGERDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "deleteloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class DeleteLoggerDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeleteLoggerDefinitionResponse : public DeleteLoggerDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeleteLoggerDefinitionResponse(const DeleteLoggerDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLoggerDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLoggerDefinitionResponse)
+    Q_DISABLE_COPY(DeleteLoggerDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

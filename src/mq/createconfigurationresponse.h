@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECONFIGURATIONRESPONSE_H
 #define QTAWS_CREATECONFIGURATIONRESPONSE_H
 
+#include "mqresponse.h"
+#include "createconfigurationrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class CreateConfigurationResponsePrivate;
+
+class QTAWS_EXPORT CreateConfigurationResponse : public CreateConfigurationResponse {
+    Q_OBJECT
+
+public:
+    CreateConfigurationResponse(const CreateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationResponse)
+    Q_DISABLE_COPY(CreateConfigurationResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

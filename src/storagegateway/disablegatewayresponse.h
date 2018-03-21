@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEGATEWAYRESPONSE_H
 #define QTAWS_DISABLEGATEWAYRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "disablegatewayrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DisableGatewayResponsePrivate;
+
+class QTAWS_EXPORT DisableGatewayResponse : public DisableGatewayResponse {
+    Q_OBJECT
+
+public:
+    DisableGatewayResponse(const DisableGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableGatewayResponse)
+    Q_DISABLE_COPY(DisableGatewayResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

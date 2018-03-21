@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETHINGTYPERESPONSE_H
 #define QTAWS_DESCRIBETHINGTYPERESPONSE_H
 
+#include "iotresponse.h"
+#include "describethingtyperequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class DescribeThingTypeResponsePrivate;
+
+class QTAWS_EXPORT DescribeThingTypeResponse : public DescribeThingTypeResponse {
+    Q_OBJECT
+
+public:
+    DescribeThingTypeResponse(const DescribeThingTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeThingTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeThingTypeResponse)
+    Q_DISABLE_COPY(DescribeThingTypeResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

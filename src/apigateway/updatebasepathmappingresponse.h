@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEBASEPATHMAPPINGRESPONSE_H
 #define QTAWS_UPDATEBASEPATHMAPPINGRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updatebasepathmappingrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateBasePathMappingResponsePrivate;
+
+class QTAWS_EXPORT UpdateBasePathMappingResponse : public UpdateBasePathMappingResponse {
+    Q_OBJECT
+
+public:
+    UpdateBasePathMappingResponse(const UpdateBasePathMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateBasePathMappingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBasePathMappingResponse)
+    Q_DISABLE_COPY(UpdateBasePathMappingResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

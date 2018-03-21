@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEJOBEXECUTIONRESPONSE_H
 #define QTAWS_DESCRIBEJOBEXECUTIONRESPONSE_H
 
+#include "iot-jobs-dataresponse.h"
+#include "describejobexecutionrequest.h"
+
+namespace AWS {
+
+namespace iot-jobs-data {
+
+class DescribeJobExecutionResponsePrivate;
+
+class QTAWS_EXPORT DescribeJobExecutionResponse : public DescribeJobExecutionResponse {
+    Q_OBJECT
+
+public:
+    DescribeJobExecutionResponse(const DescribeJobExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeJobExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobExecutionResponse)
+    Q_DISABLE_COPY(DescribeJobExecutionResponse)
+
+};
+
+} // namespace iot-jobs-data
+} // namespace AWS
+
 #endif

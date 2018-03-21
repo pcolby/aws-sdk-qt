@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_H
 #define QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "listapplicationrevisionsrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class ListApplicationRevisionsResponsePrivate;
+
+class QTAWS_EXPORT ListApplicationRevisionsResponse : public ListApplicationRevisionsResponse {
+    Q_OBJECT
+
+public:
+    ListApplicationRevisionsResponse(const ListApplicationRevisionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListApplicationRevisionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListApplicationRevisionsResponse)
+    Q_DISABLE_COPY(ListApplicationRevisionsResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

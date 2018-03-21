@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESOURCEREGIONSRESPONSE_H
 #define QTAWS_DESCRIBESOURCEREGIONSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describesourceregionsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeSourceRegionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeSourceRegionsResponse : public DescribeSourceRegionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeSourceRegionsResponse(const DescribeSourceRegionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSourceRegionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSourceRegionsResponse)
+    Q_DISABLE_COPY(DescribeSourceRegionsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

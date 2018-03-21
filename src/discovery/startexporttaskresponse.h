@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTEXPORTTASKRESPONSE_H
 #define QTAWS_STARTEXPORTTASKRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "startexporttaskrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class StartExportTaskResponsePrivate;
+
+class QTAWS_EXPORT StartExportTaskResponse : public StartExportTaskResponse {
+    Q_OBJECT
+
+public:
+    StartExportTaskResponse(const StartExportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartExportTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartExportTaskResponse)
+    Q_DISABLE_COPY(StartExportTaskResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

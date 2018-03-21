@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEINDEXINGCONFIGURATIONRESPONSE_H
 #define QTAWS_UPDATEINDEXINGCONFIGURATIONRESPONSE_H
 
+#include "iotresponse.h"
+#include "updateindexingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class UpdateIndexingConfigurationResponsePrivate;
+
+class QTAWS_EXPORT UpdateIndexingConfigurationResponse : public UpdateIndexingConfigurationResponse {
+    Q_OBJECT
+
+public:
+    UpdateIndexingConfigurationResponse(const UpdateIndexingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateIndexingConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIndexingConfigurationResponse)
+    Q_DISABLE_COPY(UpdateIndexingConfigurationResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

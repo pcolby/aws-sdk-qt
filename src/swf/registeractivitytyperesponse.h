@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERACTIVITYTYPERESPONSE_H
 #define QTAWS_REGISTERACTIVITYTYPERESPONSE_H
 
+#include "swfresponse.h"
+#include "registeractivitytyperequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RegisterActivityTypeResponsePrivate;
+
+class QTAWS_EXPORT RegisterActivityTypeResponse : public RegisterActivityTypeResponse {
+    Q_OBJECT
+
+public:
+    RegisterActivityTypeResponse(const RegisterActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterActivityTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterActivityTypeResponse)
+    Q_DISABLE_COPY(RegisterActivityTypeResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

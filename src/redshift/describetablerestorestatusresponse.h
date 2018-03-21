@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETABLERESTORESTATUSRESPONSE_H
 #define QTAWS_DESCRIBETABLERESTORESTATUSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describetablerestorestatusrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeTableRestoreStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeTableRestoreStatusResponse : public DescribeTableRestoreStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeTableRestoreStatusResponse(const DescribeTableRestoreStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTableRestoreStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTableRestoreStatusResponse)
+    Q_DISABLE_COPY(DescribeTableRestoreStatusResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

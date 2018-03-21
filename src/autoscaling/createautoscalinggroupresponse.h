@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEAUTOSCALINGGROUPRESPONSE_H
 #define QTAWS_CREATEAUTOSCALINGGROUPRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "createautoscalinggrouprequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class CreateAutoScalingGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateAutoScalingGroupResponse : public CreateAutoScalingGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateAutoScalingGroupResponse(const CreateAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAutoScalingGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAutoScalingGroupResponse)
+    Q_DISABLE_COPY(CreateAutoScalingGroupResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

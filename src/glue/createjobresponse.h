@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_H
 #define QTAWS_CREATEJOBRESPONSE_H
 
+#include "glueresponse.h"
+#include "createjobrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class CreateJobResponsePrivate;
+
+class QTAWS_EXPORT CreateJobResponse : public CreateJobResponse {
+    Q_OBJECT
+
+public:
+    CreateJobResponse(const CreateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobResponse)
+    Q_DISABLE_COPY(CreateJobResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMMITRESPONSE_H
 #define QTAWS_GETCOMMITRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "getcommitrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class GetCommitResponsePrivate;
+
+class QTAWS_EXPORT GetCommitResponse : public GetCommitResponse {
+    Q_OBJECT
+
+public:
+    GetCommitResponse(const GetCommitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCommitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCommitResponse)
+    Q_DISABLE_COPY(GetCommitResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

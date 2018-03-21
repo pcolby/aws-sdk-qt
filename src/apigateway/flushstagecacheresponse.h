@@ -20,4 +20,33 @@
 #ifndef QTAWS_FLUSHSTAGECACHERESPONSE_H
 #define QTAWS_FLUSHSTAGECACHERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "flushstagecacherequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class FlushStageCacheResponsePrivate;
+
+class QTAWS_EXPORT FlushStageCacheResponse : public FlushStageCacheResponse {
+    Q_OBJECT
+
+public:
+    FlushStageCacheResponse(const FlushStageCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const FlushStageCacheRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(FlushStageCacheResponse)
+    Q_DISABLE_COPY(FlushStageCacheResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

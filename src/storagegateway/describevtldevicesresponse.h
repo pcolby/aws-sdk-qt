@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEVTLDEVICESRESPONSE_H
 #define QTAWS_DESCRIBEVTLDEVICESRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "describevtldevicesrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DescribeVTLDevicesResponsePrivate;
+
+class QTAWS_EXPORT DescribeVTLDevicesResponse : public DescribeVTLDevicesResponse {
+    Q_OBJECT
+
+public:
+    DescribeVTLDevicesResponse(const DescribeVTLDevicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeVTLDevicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVTLDevicesResponse)
+    Q_DISABLE_COPY(DescribeVTLDevicesResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

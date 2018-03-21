@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTBROKERRESPONSE_H
 #define QTAWS_REBOOTBROKERRESPONSE_H
 
+#include "mqresponse.h"
+#include "rebootbrokerrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class RebootBrokerResponsePrivate;
+
+class QTAWS_EXPORT RebootBrokerResponse : public RebootBrokerResponse {
+    Q_OBJECT
+
+public:
+    RebootBrokerResponse(const RebootBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootBrokerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootBrokerResponse)
+    Q_DISABLE_COPY(RebootBrokerResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

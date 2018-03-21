@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_H
 #define QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_H
 
+#include "ssmresponse.h"
+#include "getdeployablepatchsnapshotforinstancerequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetDeployablePatchSnapshotForInstanceResponsePrivate;
+
+class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceResponse : public GetDeployablePatchSnapshotForInstanceResponse {
+    Q_OBJECT
+
+public:
+    GetDeployablePatchSnapshotForInstanceResponse(const GetDeployablePatchSnapshotForInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDeployablePatchSnapshotForInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDeployablePatchSnapshotForInstanceResponse)
+    Q_DISABLE_COPY(GetDeployablePatchSnapshotForInstanceResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

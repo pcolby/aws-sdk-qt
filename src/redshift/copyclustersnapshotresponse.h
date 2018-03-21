@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYCLUSTERSNAPSHOTRESPONSE_H
 #define QTAWS_COPYCLUSTERSNAPSHOTRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "copyclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class CopyClusterSnapshotResponsePrivate;
+
+class QTAWS_EXPORT CopyClusterSnapshotResponse : public CopyClusterSnapshotResponse {
+    Q_OBJECT
+
+public:
+    CopyClusterSnapshotResponse(const CopyClusterSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopyClusterSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopyClusterSnapshotResponse)
+    Q_DISABLE_COPY(CopyClusterSnapshotResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

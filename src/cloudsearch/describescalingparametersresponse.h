@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESCALINGPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBESCALINGPARAMETERSRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "describescalingparametersrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DescribeScalingParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeScalingParametersResponse : public DescribeScalingParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeScalingParametersResponse(const DescribeScalingParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeScalingParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScalingParametersResponse)
+    Q_DISABLE_COPY(DescribeScalingParametersResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

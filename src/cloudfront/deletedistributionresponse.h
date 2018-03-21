@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDISTRIBUTIONRESPONSE_H
 #define QTAWS_DELETEDISTRIBUTIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "deletedistributionrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class DeleteDistributionResponsePrivate;
+
+class QTAWS_EXPORT DeleteDistributionResponse : public DeleteDistributionResponse {
+    Q_OBJECT
+
+public:
+    DeleteDistributionResponse(const DeleteDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDistributionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDistributionResponse)
+    Q_DISABLE_COPY(DeleteDistributionResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

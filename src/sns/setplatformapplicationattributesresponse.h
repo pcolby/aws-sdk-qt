@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_H
 #define QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_H
 
+#include "snsresponse.h"
+#include "setplatformapplicationattributesrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class SetPlatformApplicationAttributesResponsePrivate;
+
+class QTAWS_EXPORT SetPlatformApplicationAttributesResponse : public SetPlatformApplicationAttributesResponse {
+    Q_OBJECT
+
+public:
+    SetPlatformApplicationAttributesResponse(const SetPlatformApplicationAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetPlatformApplicationAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetPlatformApplicationAttributesResponse)
+    Q_DISABLE_COPY(SetPlatformApplicationAttributesResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

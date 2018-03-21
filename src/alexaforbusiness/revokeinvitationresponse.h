@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKEINVITATIONRESPONSE_H
 #define QTAWS_REVOKEINVITATIONRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "revokeinvitationrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class RevokeInvitationResponsePrivate;
+
+class QTAWS_EXPORT RevokeInvitationResponse : public RevokeInvitationResponse {
+    Q_OBJECT
+
+public:
+    RevokeInvitationResponse(const RevokeInvitationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeInvitationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeInvitationResponse)
+    Q_DISABLE_COPY(RevokeInvitationResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

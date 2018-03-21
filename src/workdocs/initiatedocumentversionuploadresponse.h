@@ -20,4 +20,33 @@
 #ifndef QTAWS_INITIATEDOCUMENTVERSIONUPLOADRESPONSE_H
 #define QTAWS_INITIATEDOCUMENTVERSIONUPLOADRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "initiatedocumentversionuploadrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class InitiateDocumentVersionUploadResponsePrivate;
+
+class QTAWS_EXPORT InitiateDocumentVersionUploadResponse : public InitiateDocumentVersionUploadResponse {
+    Q_OBJECT
+
+public:
+    InitiateDocumentVersionUploadResponse(const InitiateDocumentVersionUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InitiateDocumentVersionUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InitiateDocumentVersionUploadResponse)
+    Q_DISABLE_COPY(InitiateDocumentVersionUploadResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

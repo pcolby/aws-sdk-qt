@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEGCMCHANNELRESPONSE_H
 #define QTAWS_DELETEGCMCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "deletegcmchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class DeleteGcmChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteGcmChannelResponse : public DeleteGcmChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteGcmChannelResponse(const DeleteGcmChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteGcmChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGcmChannelResponse)
+    Q_DISABLE_COPY(DeleteGcmChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

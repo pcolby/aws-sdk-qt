@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEROOMSKILLPARAMETERRESPONSE_H
 #define QTAWS_DELETEROOMSKILLPARAMETERRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "deleteroomskillparameterrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class DeleteRoomSkillParameterResponsePrivate;
+
+class QTAWS_EXPORT DeleteRoomSkillParameterResponse : public DeleteRoomSkillParameterResponse {
+    Q_OBJECT
+
+public:
+    DeleteRoomSkillParameterResponse(const DeleteRoomSkillParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRoomSkillParameterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRoomSkillParameterResponse)
+    Q_DISABLE_COPY(DeleteRoomSkillParameterResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTCERTIFICATERESPONSE_H
 #define QTAWS_IMPORTCERTIFICATERESPONSE_H
 
+#include "dmsresponse.h"
+#include "importcertificaterequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class ImportCertificateResponsePrivate;
+
+class QTAWS_EXPORT ImportCertificateResponse : public ImportCertificateResponse {
+    Q_OBJECT
+
+public:
+    ImportCertificateResponse(const ImportCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportCertificateResponse)
+    Q_DISABLE_COPY(ImportCertificateResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

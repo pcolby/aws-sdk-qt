@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSAMLPROVIDERSRESPONSE_H
 #define QTAWS_LISTSAMLPROVIDERSRESPONSE_H
 
+#include "iamresponse.h"
+#include "listsamlprovidersrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListSAMLProvidersResponsePrivate;
+
+class QTAWS_EXPORT ListSAMLProvidersResponse : public ListSAMLProvidersResponse {
+    Q_OBJECT
+
+public:
+    ListSAMLProvidersResponse(const ListSAMLProvidersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSAMLProvidersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSAMLProvidersResponse)
+    Q_DISABLE_COPY(ListSAMLProvidersResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

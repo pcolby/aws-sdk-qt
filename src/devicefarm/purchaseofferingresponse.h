@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURCHASEOFFERINGRESPONSE_H
 #define QTAWS_PURCHASEOFFERINGRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "purchaseofferingrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class PurchaseOfferingResponsePrivate;
+
+class QTAWS_EXPORT PurchaseOfferingResponse : public PurchaseOfferingResponse {
+    Q_OBJECT
+
+public:
+    PurchaseOfferingResponse(const PurchaseOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurchaseOfferingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseOfferingResponse)
+    Q_DISABLE_COPY(PurchaseOfferingResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEHOSTEDCONNECTIONRESPONSE_H
 #define QTAWS_ASSOCIATEHOSTEDCONNECTIONRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "associatehostedconnectionrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class AssociateHostedConnectionResponsePrivate;
+
+class QTAWS_EXPORT AssociateHostedConnectionResponse : public AssociateHostedConnectionResponse {
+    Q_OBJECT
+
+public:
+    AssociateHostedConnectionResponse(const AssociateHostedConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateHostedConnectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateHostedConnectionResponse)
+    Q_DISABLE_COPY(AssociateHostedConnectionResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

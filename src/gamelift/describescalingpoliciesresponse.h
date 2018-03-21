@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESCALINGPOLICIESRESPONSE_H
 #define QTAWS_DESCRIBESCALINGPOLICIESRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "describescalingpoliciesrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DescribeScalingPoliciesResponsePrivate;
+
+class QTAWS_EXPORT DescribeScalingPoliciesResponse : public DescribeScalingPoliciesResponse {
+    Q_OBJECT
+
+public:
+    DescribeScalingPoliciesResponse(const DescribeScalingPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeScalingPoliciesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScalingPoliciesResponse)
+    Q_DISABLE_COPY(DescribeScalingPoliciesResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_H
 #define QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "setidentityheadersinnotificationsenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class SetIdentityHeadersInNotificationsEnabledResponsePrivate;
+
+class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledResponse : public SetIdentityHeadersInNotificationsEnabledResponse {
+    Q_OBJECT
+
+public:
+    SetIdentityHeadersInNotificationsEnabledResponse(const SetIdentityHeadersInNotificationsEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetIdentityHeadersInNotificationsEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityHeadersInNotificationsEnabledResponse)
+    Q_DISABLE_COPY(SetIdentityHeadersInNotificationsEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

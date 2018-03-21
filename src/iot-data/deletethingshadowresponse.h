@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETHINGSHADOWRESPONSE_H
 #define QTAWS_DELETETHINGSHADOWRESPONSE_H
 
+#include "iot-dataresponse.h"
+#include "deletethingshadowrequest.h"
+
+namespace AWS {
+
+namespace iot-data {
+
+class DeleteThingShadowResponsePrivate;
+
+class QTAWS_EXPORT DeleteThingShadowResponse : public DeleteThingShadowResponse {
+    Q_OBJECT
+
+public:
+    DeleteThingShadowResponse(const DeleteThingShadowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteThingShadowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteThingShadowResponse)
+    Q_DISABLE_COPY(DeleteThingShadowResponse)
+
+};
+
+} // namespace iot-data
+} // namespace AWS
+
 #endif

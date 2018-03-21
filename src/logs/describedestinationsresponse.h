@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDESTINATIONSRESPONSE_H
 #define QTAWS_DESCRIBEDESTINATIONSRESPONSE_H
 
+#include "logsresponse.h"
+#include "describedestinationsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DescribeDestinationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDestinationsResponse : public DescribeDestinationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDestinationsResponse(const DescribeDestinationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDestinationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDestinationsResponse)
+    Q_DISABLE_COPY(DescribeDestinationsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

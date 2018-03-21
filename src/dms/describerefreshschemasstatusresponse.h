@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_H
 #define QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describerefreshschemasstatusrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeRefreshSchemasStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeRefreshSchemasStatusResponse : public DescribeRefreshSchemasStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeRefreshSchemasStatusResponse(const DescribeRefreshSchemasStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRefreshSchemasStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRefreshSchemasStatusResponse)
+    Q_DISABLE_COPY(DescribeRefreshSchemasStatusResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

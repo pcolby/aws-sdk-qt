@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTAPPLICATIONRESPONSE_H
 #define QTAWS_STARTAPPLICATIONRESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "startapplicationrequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class StartApplicationResponsePrivate;
+
+class QTAWS_EXPORT StartApplicationResponse : public StartApplicationResponse {
+    Q_OBJECT
+
+public:
+    StartApplicationResponse(const StartApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartApplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartApplicationResponse)
+    Q_DISABLE_COPY(StartApplicationResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

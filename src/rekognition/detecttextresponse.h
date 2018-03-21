@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETECTTEXTRESPONSE_H
 #define QTAWS_DETECTTEXTRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "detecttextrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class DetectTextResponsePrivate;
+
+class QTAWS_EXPORT DetectTextResponse : public DetectTextResponse {
+    Q_OBJECT
+
+public:
+    DetectTextResponse(const DetectTextRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetectTextRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetectTextResponse)
+    Q_DISABLE_COPY(DetectTextResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

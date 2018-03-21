@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESERVERRESPONSE_H
 #define QTAWS_DELETESERVERRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "deleteserverrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class DeleteServerResponsePrivate;
+
+class QTAWS_EXPORT DeleteServerResponse : public DeleteServerResponse {
+    Q_OBJECT
+
+public:
+    DeleteServerResponse(const DeleteServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServerResponse)
+    Q_DISABLE_COPY(DeleteServerResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

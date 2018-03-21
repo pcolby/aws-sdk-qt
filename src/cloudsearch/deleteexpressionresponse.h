@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEEXPRESSIONRESPONSE_H
 #define QTAWS_DELETEEXPRESSIONRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "deleteexpressionrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class DeleteExpressionResponsePrivate;
+
+class QTAWS_EXPORT DeleteExpressionResponse : public DeleteExpressionResponse {
+    Q_OBJECT
+
+public:
+    DeleteExpressionResponse(const DeleteExpressionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteExpressionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteExpressionResponse)
+    Q_DISABLE_COPY(DeleteExpressionResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

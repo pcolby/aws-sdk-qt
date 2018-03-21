@@ -20,4 +20,33 @@
 #ifndef QTAWS_CLONERECEIPTRULESETRESPONSE_H
 #define QTAWS_CLONERECEIPTRULESETRESPONSE_H
 
+#include "emailresponse.h"
+#include "clonereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class CloneReceiptRuleSetResponsePrivate;
+
+class QTAWS_EXPORT CloneReceiptRuleSetResponse : public CloneReceiptRuleSetResponse {
+    Q_OBJECT
+
+public:
+    CloneReceiptRuleSetResponse(const CloneReceiptRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CloneReceiptRuleSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CloneReceiptRuleSetResponse)
+    Q_DISABLE_COPY(CloneReceiptRuleSetResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

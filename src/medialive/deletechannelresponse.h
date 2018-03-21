@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECHANNELRESPONSE_H
 #define QTAWS_DELETECHANNELRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "deletechannelrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class DeleteChannelResponsePrivate;
+
+class QTAWS_EXPORT DeleteChannelResponse : public DeleteChannelResponse {
+    Q_OBJECT
+
+public:
+    DeleteChannelResponse(const DeleteChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteChannelResponse)
+    Q_DISABLE_COPY(DeleteChannelResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

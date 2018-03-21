@@ -20,4 +20,33 @@
 #ifndef QTAWS_SPLITSHARDRESPONSE_H
 #define QTAWS_SPLITSHARDRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "splitshardrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class SplitShardResponsePrivate;
+
+class QTAWS_EXPORT SplitShardResponse : public SplitShardResponse {
+    Q_OBJECT
+
+public:
+    SplitShardResponse(const SplitShardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SplitShardRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SplitShardResponse)
+    Q_DISABLE_COPY(SplitShardResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

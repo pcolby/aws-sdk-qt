@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEENVIRONMENTMEMBERSHIPRESPONSE_H
 #define QTAWS_DELETEENVIRONMENTMEMBERSHIPRESPONSE_H
 
+#include "cloud9response.h"
+#include "deleteenvironmentmembershiprequest.h"
+
+namespace AWS {
+
+namespace cloud9 {
+
+class DeleteEnvironmentMembershipResponsePrivate;
+
+class QTAWS_EXPORT DeleteEnvironmentMembershipResponse : public DeleteEnvironmentMembershipResponse {
+    Q_OBJECT
+
+public:
+    DeleteEnvironmentMembershipResponse(const DeleteEnvironmentMembershipRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEnvironmentMembershipRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEnvironmentMembershipResponse)
+    Q_DISABLE_COPY(DeleteEnvironmentMembershipResponse)
+
+};
+
+} // namespace cloud9
+} // namespace AWS
+
 #endif

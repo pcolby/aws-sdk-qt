@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESHARDCOUNTRESPONSE_H
 #define QTAWS_UPDATESHARDCOUNTRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "updateshardcountrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class UpdateShardCountResponsePrivate;
+
+class QTAWS_EXPORT UpdateShardCountResponse : public UpdateShardCountResponse {
+    Q_OBJECT
+
+public:
+    UpdateShardCountResponse(const UpdateShardCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateShardCountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateShardCountResponse)
+    Q_DISABLE_COPY(UpdateShardCountResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

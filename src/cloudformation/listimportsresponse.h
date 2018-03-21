@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTIMPORTSRESPONSE_H
 #define QTAWS_LISTIMPORTSRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "listimportsrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class ListImportsResponsePrivate;
+
+class QTAWS_EXPORT ListImportsResponse : public ListImportsResponse {
+    Q_OBJECT
+
+public:
+    ListImportsResponse(const ListImportsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListImportsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListImportsResponse)
+    Q_DISABLE_COPY(ListImportsResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

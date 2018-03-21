@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUCKETREPLICATIONRESPONSE_H
 #define QTAWS_DELETEBUCKETREPLICATIONRESPONSE_H
 
+#include "s3response.h"
+#include "deletebucketreplicationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class DeleteBucketReplicationResponsePrivate;
+
+class QTAWS_EXPORT DeleteBucketReplicationResponse : public DeleteBucketReplicationResponse {
+    Q_OBJECT
+
+public:
+    DeleteBucketReplicationResponse(const DeleteBucketReplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBucketReplicationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketReplicationResponse)
+    Q_DISABLE_COPY(DeleteBucketReplicationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

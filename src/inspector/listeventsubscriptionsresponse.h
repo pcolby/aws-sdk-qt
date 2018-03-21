@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_H
 #define QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "listeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class ListEventSubscriptionsResponsePrivate;
+
+class QTAWS_EXPORT ListEventSubscriptionsResponse : public ListEventSubscriptionsResponse {
+    Q_OBJECT
+
+public:
+    ListEventSubscriptionsResponse(const ListEventSubscriptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListEventSubscriptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListEventSubscriptionsResponse)
+    Q_DISABLE_COPY(ListEventSubscriptionsResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

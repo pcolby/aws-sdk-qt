@@ -20,4 +20,33 @@
 #ifndef QTAWS_TERMINATEWORKFLOWEXECUTIONRESPONSE_H
 #define QTAWS_TERMINATEWORKFLOWEXECUTIONRESPONSE_H
 
+#include "swfresponse.h"
+#include "terminateworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class TerminateWorkflowExecutionResponsePrivate;
+
+class QTAWS_EXPORT TerminateWorkflowExecutionResponse : public TerminateWorkflowExecutionResponse {
+    Q_OBJECT
+
+public:
+    TerminateWorkflowExecutionResponse(const TerminateWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TerminateWorkflowExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TerminateWorkflowExecutionResponse)
+    Q_DISABLE_COPY(TerminateWorkflowExecutionResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

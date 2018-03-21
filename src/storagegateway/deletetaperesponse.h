@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETAPERESPONSE_H
 #define QTAWS_DELETETAPERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "deletetaperequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DeleteTapeResponsePrivate;
+
+class QTAWS_EXPORT DeleteTapeResponse : public DeleteTapeResponse {
+    Q_OBJECT
+
+public:
+    DeleteTapeResponse(const DeleteTapeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTapeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTapeResponse)
+    Q_DISABLE_COPY(DeleteTapeResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

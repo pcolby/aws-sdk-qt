@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEROUTETABLERESPONSE_H
 #define QTAWS_ASSOCIATEROUTETABLERESPONSE_H
 
+#include "ec2response.h"
+#include "associateroutetablerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AssociateRouteTableResponsePrivate;
+
+class QTAWS_EXPORT AssociateRouteTableResponse : public AssociateRouteTableResponse {
+    Q_OBJECT
+
+public:
+    AssociateRouteTableResponse(const AssociateRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateRouteTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateRouteTableResponse)
+    Q_DISABLE_COPY(AssociateRouteTableResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

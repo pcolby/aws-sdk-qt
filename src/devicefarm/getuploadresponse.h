@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETUPLOADRESPONSE_H
 #define QTAWS_GETUPLOADRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "getuploadrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class GetUploadResponsePrivate;
+
+class QTAWS_EXPORT GetUploadResponse : public GetUploadResponse {
+    Q_OBJECT
+
+public:
+    GetUploadResponse(const GetUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetUploadResponse)
+    Q_DISABLE_COPY(GetUploadResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

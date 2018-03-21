@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEASSUMEROLEPOLICYRESPONSE_H
 #define QTAWS_UPDATEASSUMEROLEPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "updateassumerolepolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateAssumeRolePolicyResponsePrivate;
+
+class QTAWS_EXPORT UpdateAssumeRolePolicyResponse : public UpdateAssumeRolePolicyResponse {
+    Q_OBJECT
+
+public:
+    UpdateAssumeRolePolicyResponse(const UpdateAssumeRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAssumeRolePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAssumeRolePolicyResponse)
+    Q_DISABLE_COPY(UpdateAssumeRolePolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "authorizedbsecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class AuthorizeDBSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressResponse : public AuthorizeDBSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    AuthorizeDBSecurityGroupIngressResponse(const AuthorizeDBSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AuthorizeDBSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeDBSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeDBSecurityGroupIngressResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

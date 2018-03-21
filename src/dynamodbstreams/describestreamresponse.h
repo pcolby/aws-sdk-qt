@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESTREAMRESPONSE_H
 #define QTAWS_DESCRIBESTREAMRESPONSE_H
 
+#include "dynamodbstreamsresponse.h"
+#include "describestreamrequest.h"
+
+namespace AWS {
+
+namespace dynamodbstreams {
+
+class DescribeStreamResponsePrivate;
+
+class QTAWS_EXPORT DescribeStreamResponse : public DescribeStreamResponse {
+    Q_OBJECT
+
+public:
+    DescribeStreamResponse(const DescribeStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamResponse)
+    Q_DISABLE_COPY(DescribeStreamResponse)
+
+};
+
+} // namespace dynamodbstreams
+} // namespace AWS
+
 #endif

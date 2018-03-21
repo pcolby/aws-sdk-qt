@@ -20,4 +20,33 @@
 #ifndef QTAWS_NOTIFYMIGRATIONTASKSTATERESPONSE_H
 #define QTAWS_NOTIFYMIGRATIONTASKSTATERESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "notifymigrationtaskstaterequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class NotifyMigrationTaskStateResponsePrivate;
+
+class QTAWS_EXPORT NotifyMigrationTaskStateResponse : public NotifyMigrationTaskStateResponse {
+    Q_OBJECT
+
+public:
+    NotifyMigrationTaskStateResponse(const NotifyMigrationTaskStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const NotifyMigrationTaskStateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(NotifyMigrationTaskStateResponse)
+    Q_DISABLE_COPY(NotifyMigrationTaskStateResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

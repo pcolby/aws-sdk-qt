@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETERMINATIONPROTECTIONRESPONSE_H
 #define QTAWS_UPDATETERMINATIONPROTECTIONRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "updateterminationprotectionrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class UpdateTerminationProtectionResponsePrivate;
+
+class QTAWS_EXPORT UpdateTerminationProtectionResponse : public UpdateTerminationProtectionResponse {
+    Q_OBJECT
+
+public:
+    UpdateTerminationProtectionResponse(const UpdateTerminationProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTerminationProtectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTerminationProtectionResponse)
+    Q_DISABLE_COPY(UpdateTerminationProtectionResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

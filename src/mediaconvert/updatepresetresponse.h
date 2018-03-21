@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPRESETRESPONSE_H
 #define QTAWS_UPDATEPRESETRESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "updatepresetrequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class UpdatePresetResponsePrivate;
+
+class QTAWS_EXPORT UpdatePresetResponse : public UpdatePresetResponse {
+    Q_OBJECT
+
+public:
+    UpdatePresetResponse(const UpdatePresetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePresetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePresetResponse)
+    Q_DISABLE_COPY(UpdatePresetResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

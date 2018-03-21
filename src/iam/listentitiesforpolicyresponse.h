@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTENTITIESFORPOLICYRESPONSE_H
 #define QTAWS_LISTENTITIESFORPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "listentitiesforpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListEntitiesForPolicyResponsePrivate;
+
+class QTAWS_EXPORT ListEntitiesForPolicyResponse : public ListEntitiesForPolicyResponse {
+    Q_OBJECT
+
+public:
+    ListEntitiesForPolicyResponse(const ListEntitiesForPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListEntitiesForPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListEntitiesForPolicyResponse)
+    Q_DISABLE_COPY(ListEntitiesForPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

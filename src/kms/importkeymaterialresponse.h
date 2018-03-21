@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTKEYMATERIALRESPONSE_H
 #define QTAWS_IMPORTKEYMATERIALRESPONSE_H
 
+#include "kmsresponse.h"
+#include "importkeymaterialrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class ImportKeyMaterialResponsePrivate;
+
+class QTAWS_EXPORT ImportKeyMaterialResponse : public ImportKeyMaterialResponse {
+    Q_OBJECT
+
+public:
+    ImportKeyMaterialResponse(const ImportKeyMaterialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportKeyMaterialRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportKeyMaterialResponse)
+    Q_DISABLE_COPY(ImportKeyMaterialResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

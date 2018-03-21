@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYIMAGERESPONSE_H
 #define QTAWS_COPYIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "copyimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CopyImageResponsePrivate;
+
+class QTAWS_EXPORT CopyImageResponse : public CopyImageResponse {
+    Q_OBJECT
+
+public:
+    CopyImageResponse(const CopyImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopyImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopyImageResponse)
+    Q_DISABLE_COPY(CopyImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

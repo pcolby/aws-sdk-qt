@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEJOBFLOWSRESPONSE_H
 #define QTAWS_DESCRIBEJOBFLOWSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "describejobflowsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class DescribeJobFlowsResponsePrivate;
+
+class QTAWS_EXPORT DescribeJobFlowsResponse : public DescribeJobFlowsResponse {
+    Q_OBJECT
+
+public:
+    DescribeJobFlowsResponse(const DescribeJobFlowsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeJobFlowsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobFlowsResponse)
+    Q_DISABLE_COPY(DescribeJobFlowsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

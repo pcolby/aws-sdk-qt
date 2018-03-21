@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEINVITATIONSRESPONSE_H
 #define QTAWS_DELETEINVITATIONSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "deleteinvitationsrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DeleteInvitationsResponsePrivate;
+
+class QTAWS_EXPORT DeleteInvitationsResponse : public DeleteInvitationsResponse {
+    Q_OBJECT
+
+public:
+    DeleteInvitationsResponse(const DeleteInvitationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteInvitationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInvitationsResponse)
+    Q_DISABLE_COPY(DeleteInvitationsResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

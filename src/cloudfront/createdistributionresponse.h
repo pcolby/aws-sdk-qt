@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDISTRIBUTIONRESPONSE_H
 #define QTAWS_CREATEDISTRIBUTIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "createdistributionrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class CreateDistributionResponsePrivate;
+
+class QTAWS_EXPORT CreateDistributionResponse : public CreateDistributionResponse {
+    Q_OBJECT
+
+public:
+    CreateDistributionResponse(const CreateDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDistributionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDistributionResponse)
+    Q_DISABLE_COPY(CreateDistributionResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

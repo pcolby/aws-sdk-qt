@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDIRECTORYCONFIGRESPONSE_H
 #define QTAWS_UPDATEDIRECTORYCONFIGRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "updatedirectoryconfigrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class UpdateDirectoryConfigResponsePrivate;
+
+class QTAWS_EXPORT UpdateDirectoryConfigResponse : public UpdateDirectoryConfigResponse {
+    Q_OBJECT
+
+public:
+    UpdateDirectoryConfigResponse(const UpdateDirectoryConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDirectoryConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDirectoryConfigResponse)
+    Q_DISABLE_COPY(UpdateDirectoryConfigResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

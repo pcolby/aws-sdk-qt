@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREPOSITORIESRESPONSE_H
 #define QTAWS_DESCRIBEREPOSITORIESRESPONSE_H
 
+#include "ecrresponse.h"
+#include "describerepositoriesrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class DescribeRepositoriesResponsePrivate;
+
+class QTAWS_EXPORT DescribeRepositoriesResponse : public DescribeRepositoriesResponse {
+    Q_OBJECT
+
+public:
+    DescribeRepositoriesResponse(const DescribeRepositoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeRepositoriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRepositoriesResponse)
+    Q_DISABLE_COPY(DescribeRepositoriesResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_H
 #define QTAWS_PUTRESOURCEATTRIBUTESRESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "putresourceattributesrequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class PutResourceAttributesResponsePrivate;
+
+class QTAWS_EXPORT PutResourceAttributesResponse : public PutResourceAttributesResponse {
+    Q_OBJECT
+
+public:
+    PutResourceAttributesResponse(const PutResourceAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutResourceAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutResourceAttributesResponse)
+    Q_DISABLE_COPY(PutResourceAttributesResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

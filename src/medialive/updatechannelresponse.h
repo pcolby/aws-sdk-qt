@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECHANNELRESPONSE_H
 #define QTAWS_UPDATECHANNELRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "updatechannelrequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class UpdateChannelResponsePrivate;
+
+class QTAWS_EXPORT UpdateChannelResponse : public UpdateChannelResponse {
+    Q_OBJECT
+
+public:
+    UpdateChannelResponse(const UpdateChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateChannelResponse)
+    Q_DISABLE_COPY(UpdateChannelResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

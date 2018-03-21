@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGOPTIONSRESPONSE_H
 #define QTAWS_LISTTAGOPTIONSRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "listtagoptionsrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class ListTagOptionsResponsePrivate;
+
+class QTAWS_EXPORT ListTagOptionsResponse : public ListTagOptionsResponse {
+    Q_OBJECT
+
+public:
+    ListTagOptionsResponse(const ListTagOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagOptionsResponse)
+    Q_DISABLE_COPY(ListTagOptionsResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

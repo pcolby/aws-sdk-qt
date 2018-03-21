@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEENDPOINTCONFIGRESPONSE_H
 #define QTAWS_DELETEENDPOINTCONFIGRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "deleteendpointconfigrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class DeleteEndpointConfigResponsePrivate;
+
+class QTAWS_EXPORT DeleteEndpointConfigResponse : public DeleteEndpointConfigResponse {
+    Q_OBJECT
+
+public:
+    DeleteEndpointConfigResponse(const DeleteEndpointConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEndpointConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEndpointConfigResponse)
+    Q_DISABLE_COPY(DeleteEndpointConfigResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

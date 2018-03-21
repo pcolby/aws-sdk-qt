@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBACKUPRESPONSE_H
 #define QTAWS_DESCRIBEBACKUPRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "describebackuprequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class DescribeBackupResponsePrivate;
+
+class QTAWS_EXPORT DescribeBackupResponse : public DescribeBackupResponse {
+    Q_OBJECT
+
+public:
+    DescribeBackupResponse(const DescribeBackupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBackupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBackupResponse)
+    Q_DISABLE_COPY(DescribeBackupResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

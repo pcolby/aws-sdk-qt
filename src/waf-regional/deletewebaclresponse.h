@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEWEBACLRESPONSE_H
 #define QTAWS_DELETEWEBACLRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "deletewebaclrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DeleteWebACLResponsePrivate;
+
+class QTAWS_EXPORT DeleteWebACLResponse : public DeleteWebACLResponse {
+    Q_OBJECT
+
+public:
+    DeleteWebACLResponse(const DeleteWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteWebACLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteWebACLResponse)
+    Q_DISABLE_COPY(DeleteWebACLResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

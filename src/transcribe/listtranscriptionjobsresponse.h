@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTRANSCRIPTIONJOBSRESPONSE_H
 #define QTAWS_LISTTRANSCRIPTIONJOBSRESPONSE_H
 
+#include "transcriberesponse.h"
+#include "listtranscriptionjobsrequest.h"
+
+namespace AWS {
+
+namespace transcribe {
+
+class ListTranscriptionJobsResponsePrivate;
+
+class QTAWS_EXPORT ListTranscriptionJobsResponse : public ListTranscriptionJobsResponse {
+    Q_OBJECT
+
+public:
+    ListTranscriptionJobsResponse(const ListTranscriptionJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTranscriptionJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTranscriptionJobsResponse)
+    Q_DISABLE_COPY(ListTranscriptionJobsResponse)
+
+};
+
+} // namespace transcribe
+} // namespace AWS
+
 #endif

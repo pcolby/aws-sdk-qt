@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEREPOSITORYDESCRIPTIONRESPONSE_H
 #define QTAWS_UPDATEREPOSITORYDESCRIPTIONRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updaterepositorydescriptionrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdateRepositoryDescriptionResponsePrivate;
+
+class QTAWS_EXPORT UpdateRepositoryDescriptionResponse : public UpdateRepositoryDescriptionResponse {
+    Q_OBJECT
+
+public:
+    UpdateRepositoryDescriptionResponse(const UpdateRepositoryDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRepositoryDescriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRepositoryDescriptionResponse)
+    Q_DISABLE_COPY(UpdateRepositoryDescriptionResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

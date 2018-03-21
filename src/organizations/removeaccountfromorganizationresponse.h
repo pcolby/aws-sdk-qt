@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVEACCOUNTFROMORGANIZATIONRESPONSE_H
 #define QTAWS_REMOVEACCOUNTFROMORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "removeaccountfromorganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class RemoveAccountFromOrganizationResponsePrivate;
+
+class QTAWS_EXPORT RemoveAccountFromOrganizationResponse : public RemoveAccountFromOrganizationResponse {
+    Q_OBJECT
+
+public:
+    RemoveAccountFromOrganizationResponse(const RemoveAccountFromOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveAccountFromOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAccountFromOrganizationResponse)
+    Q_DISABLE_COPY(RemoveAccountFromOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

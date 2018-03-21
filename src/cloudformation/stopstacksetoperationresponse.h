@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPSTACKSETOPERATIONRESPONSE_H
 #define QTAWS_STOPSTACKSETOPERATIONRESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "stopstacksetoperationrequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class StopStackSetOperationResponsePrivate;
+
+class QTAWS_EXPORT StopStackSetOperationResponse : public StopStackSetOperationResponse {
+    Q_OBJECT
+
+public:
+    StopStackSetOperationResponse(const StopStackSetOperationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopStackSetOperationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopStackSetOperationResponse)
+    Q_DISABLE_COPY(StopStackSetOperationResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

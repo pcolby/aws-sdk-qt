@@ -20,4 +20,33 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_H
 #define QTAWS_CANCELJOBRESPONSE_H
 
+#include "snowballresponse.h"
+#include "canceljobrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class CancelJobResponsePrivate;
+
+class QTAWS_EXPORT CancelJobResponse : public CancelJobResponse {
+    Q_OBJECT
+
+public:
+    CancelJobResponse(const CancelJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CancelJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CancelJobResponse)
+    Q_DISABLE_COPY(CancelJobResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

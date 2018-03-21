@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_H
 #define QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "disassociateconnectionfromlagrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class DisassociateConnectionFromLagResponsePrivate;
+
+class QTAWS_EXPORT DisassociateConnectionFromLagResponse : public DisassociateConnectionFromLagResponse {
+    Q_OBJECT
+
+public:
+    DisassociateConnectionFromLagResponse(const DisassociateConnectionFromLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateConnectionFromLagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateConnectionFromLagResponse)
+    Q_DISABLE_COPY(DisassociateConnectionFromLagResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

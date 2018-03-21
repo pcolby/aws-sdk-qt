@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCOREDEFINITIONSRESPONSE_H
 #define QTAWS_LISTCOREDEFINITIONSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listcoredefinitionsrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListCoreDefinitionsResponsePrivate;
+
+class QTAWS_EXPORT ListCoreDefinitionsResponse : public ListCoreDefinitionsResponse {
+    Q_OBJECT
+
+public:
+    ListCoreDefinitionsResponse(const ListCoreDefinitionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCoreDefinitionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCoreDefinitionsResponse)
+    Q_DISABLE_COPY(ListCoreDefinitionsResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

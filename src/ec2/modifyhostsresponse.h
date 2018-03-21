@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYHOSTSRESPONSE_H
 #define QTAWS_MODIFYHOSTSRESPONSE_H
 
+#include "ec2response.h"
+#include "modifyhostsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyHostsResponsePrivate;
+
+class QTAWS_EXPORT ModifyHostsResponse : public ModifyHostsResponse {
+    Q_OBJECT
+
+public:
+    ModifyHostsResponse(const ModifyHostsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyHostsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyHostsResponse)
+    Q_DISABLE_COPY(ModifyHostsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

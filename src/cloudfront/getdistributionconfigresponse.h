@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDISTRIBUTIONCONFIGRESPONSE_H
 #define QTAWS_GETDISTRIBUTIONCONFIGRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "getdistributionconfigrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class GetDistributionConfigResponsePrivate;
+
+class QTAWS_EXPORT GetDistributionConfigResponse : public GetDistributionConfigResponse {
+    Q_OBJECT
+
+public:
+    GetDistributionConfigResponse(const GetDistributionConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDistributionConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDistributionConfigResponse)
+    Q_DISABLE_COPY(GetDistributionConfigResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

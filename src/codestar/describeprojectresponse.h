@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPROJECTRESPONSE_H
 #define QTAWS_DESCRIBEPROJECTRESPONSE_H
 
+#include "codestarresponse.h"
+#include "describeprojectrequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class DescribeProjectResponsePrivate;
+
+class QTAWS_EXPORT DescribeProjectResponse : public DescribeProjectResponse {
+    Q_OBJECT
+
+public:
+    DescribeProjectResponse(const DescribeProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeProjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeProjectResponse)
+    Q_DISABLE_COPY(DescribeProjectResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

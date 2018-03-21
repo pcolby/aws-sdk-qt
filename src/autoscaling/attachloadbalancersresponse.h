@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHLOADBALANCERSRESPONSE_H
 #define QTAWS_ATTACHLOADBALANCERSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "attachloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class AttachLoadBalancersResponsePrivate;
+
+class QTAWS_EXPORT AttachLoadBalancersResponse : public AttachLoadBalancersResponse {
+    Q_OBJECT
+
+public:
+    AttachLoadBalancersResponse(const AttachLoadBalancersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachLoadBalancersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachLoadBalancersResponse)
+    Q_DISABLE_COPY(AttachLoadBalancersResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

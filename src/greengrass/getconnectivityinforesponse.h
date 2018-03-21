@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONNECTIVITYINFORESPONSE_H
 #define QTAWS_GETCONNECTIVITYINFORESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getconnectivityinforequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetConnectivityInfoResponsePrivate;
+
+class QTAWS_EXPORT GetConnectivityInfoResponse : public GetConnectivityInfoResponse {
+    Q_OBJECT
+
+public:
+    GetConnectivityInfoResponse(const GetConnectivityInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetConnectivityInfoRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetConnectivityInfoResponse)
+    Q_DISABLE_COPY(GetConnectivityInfoResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

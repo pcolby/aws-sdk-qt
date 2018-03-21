@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_H
 #define QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "listpipelineexecutionsrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class ListPipelineExecutionsResponsePrivate;
+
+class QTAWS_EXPORT ListPipelineExecutionsResponse : public ListPipelineExecutionsResponse {
+    Q_OBJECT
+
+public:
+    ListPipelineExecutionsResponse(const ListPipelineExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPipelineExecutionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPipelineExecutionsResponse)
+    Q_DISABLE_COPY(ListPipelineExecutionsResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

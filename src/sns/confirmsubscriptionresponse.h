@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMSUBSCRIPTIONRESPONSE_H
 #define QTAWS_CONFIRMSUBSCRIPTIONRESPONSE_H
 
+#include "snsresponse.h"
+#include "confirmsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class ConfirmSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT ConfirmSubscriptionResponse : public ConfirmSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    ConfirmSubscriptionResponse(const ConfirmSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmSubscriptionResponse)
+    Q_DISABLE_COPY(ConfirmSubscriptionResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

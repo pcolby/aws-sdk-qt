@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_H
 #define QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "listbootstrapactionsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class ListBootstrapActionsResponsePrivate;
+
+class QTAWS_EXPORT ListBootstrapActionsResponse : public ListBootstrapActionsResponse {
+    Q_OBJECT
+
+public:
+    ListBootstrapActionsResponse(const ListBootstrapActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListBootstrapActionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListBootstrapActionsResponse)
+    Q_DISABLE_COPY(ListBootstrapActionsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

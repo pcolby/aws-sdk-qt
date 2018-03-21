@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERPARAMETERGROUPSRESPONSE_H
 #define QTAWS_DESCRIBEDBCLUSTERPARAMETERGROUPSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describedbclusterparametergroupsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribeDBClusterParameterGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDBClusterParameterGroupsResponse : public DescribeDBClusterParameterGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDBClusterParameterGroupsResponse(const DescribeDBClusterParameterGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDBClusterParameterGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDBClusterParameterGroupsResponse)
+    Q_DISABLE_COPY(DescribeDBClusterParameterGroupsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

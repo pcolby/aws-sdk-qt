@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSRESPONSE_H
 #define QTAWS_DESCRIBEENDPOINTSRESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "describeendpointsrequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class DescribeEndpointsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEndpointsResponse : public DescribeEndpointsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEndpointsResponse(const DescribeEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEndpointsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEndpointsResponse)
+    Q_DISABLE_COPY(DescribeEndpointsResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREALTIMEENDPOINTRESPONSE_H
 #define QTAWS_CREATEREALTIMEENDPOINTRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createrealtimeendpointrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateRealtimeEndpointResponsePrivate;
+
+class QTAWS_EXPORT CreateRealtimeEndpointResponse : public CreateRealtimeEndpointResponse {
+    Q_OBJECT
+
+public:
+    CreateRealtimeEndpointResponse(const CreateRealtimeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRealtimeEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRealtimeEndpointResponse)
+    Q_DISABLE_COPY(CreateRealtimeEndpointResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

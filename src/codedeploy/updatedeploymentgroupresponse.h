@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDEPLOYMENTGROUPRESPONSE_H
 #define QTAWS_UPDATEDEPLOYMENTGROUPRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "updatedeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class UpdateDeploymentGroupResponsePrivate;
+
+class QTAWS_EXPORT UpdateDeploymentGroupResponse : public UpdateDeploymentGroupResponse {
+    Q_OBJECT
+
+public:
+    UpdateDeploymentGroupResponse(const UpdateDeploymentGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDeploymentGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDeploymentGroupResponse)
+    Q_DISABLE_COPY(UpdateDeploymentGroupResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

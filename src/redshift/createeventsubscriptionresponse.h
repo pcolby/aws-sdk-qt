@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEEVENTSUBSCRIPTIONRESPONSE_H
 #define QTAWS_CREATEEVENTSUBSCRIPTIONRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "createeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class CreateEventSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT CreateEventSubscriptionResponse : public CreateEventSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    CreateEventSubscriptionResponse(const CreateEventSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateEventSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateEventSubscriptionResponse)
+    Q_DISABLE_COPY(CreateEventSubscriptionResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

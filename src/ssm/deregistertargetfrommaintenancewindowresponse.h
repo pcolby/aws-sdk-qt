@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERTARGETFROMMAINTENANCEWINDOWRESPONSE_H
 #define QTAWS_DEREGISTERTARGETFROMMAINTENANCEWINDOWRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deregistertargetfrommaintenancewindowrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeregisterTargetFromMaintenanceWindowResponsePrivate;
+
+class QTAWS_EXPORT DeregisterTargetFromMaintenanceWindowResponse : public DeregisterTargetFromMaintenanceWindowResponse {
+    Q_OBJECT
+
+public:
+    DeregisterTargetFromMaintenanceWindowResponse(const DeregisterTargetFromMaintenanceWindowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterTargetFromMaintenanceWindowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterTargetFromMaintenanceWindowResponse)
+    Q_DISABLE_COPY(DeregisterTargetFromMaintenanceWindowResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

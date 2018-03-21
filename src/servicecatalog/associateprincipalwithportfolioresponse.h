@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEPRINCIPALWITHPORTFOLIORESPONSE_H
 #define QTAWS_ASSOCIATEPRINCIPALWITHPORTFOLIORESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "associateprincipalwithportfoliorequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class AssociatePrincipalWithPortfolioResponsePrivate;
+
+class QTAWS_EXPORT AssociatePrincipalWithPortfolioResponse : public AssociatePrincipalWithPortfolioResponse {
+    Q_OBJECT
+
+public:
+    AssociatePrincipalWithPortfolioResponse(const AssociatePrincipalWithPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociatePrincipalWithPortfolioRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociatePrincipalWithPortfolioResponse)
+    Q_DISABLE_COPY(AssociatePrincipalWithPortfolioResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "disassociatequalificationfromworkerrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class DisassociateQualificationFromWorkerResponsePrivate;
+
+class QTAWS_EXPORT DisassociateQualificationFromWorkerResponse : public DisassociateQualificationFromWorkerResponse {
+    Q_OBJECT
+
+public:
+    DisassociateQualificationFromWorkerResponse(const DisassociateQualificationFromWorkerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateQualificationFromWorkerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateQualificationFromWorkerResponse)
+    Q_DISABLE_COPY(DisassociateQualificationFromWorkerResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

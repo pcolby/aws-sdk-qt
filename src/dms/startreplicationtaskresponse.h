@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTREPLICATIONTASKRESPONSE_H
 #define QTAWS_STARTREPLICATIONTASKRESPONSE_H
 
+#include "dmsresponse.h"
+#include "startreplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class StartReplicationTaskResponsePrivate;
+
+class QTAWS_EXPORT StartReplicationTaskResponse : public StartReplicationTaskResponse {
+    Q_OBJECT
+
+public:
+    StartReplicationTaskResponse(const StartReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartReplicationTaskRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartReplicationTaskResponse)
+    Q_DISABLE_COPY(StartReplicationTaskResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

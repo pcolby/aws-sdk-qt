@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATENODERESPONSE_H
 #define QTAWS_ASSOCIATENODERESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "associatenoderequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class AssociateNodeResponsePrivate;
+
+class QTAWS_EXPORT AssociateNodeResponse : public AssociateNodeResponse {
+    Q_OBJECT
+
+public:
+    AssociateNodeResponse(const AssociateNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateNodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateNodeResponse)
+    Q_DISABLE_COPY(AssociateNodeResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

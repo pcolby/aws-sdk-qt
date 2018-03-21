@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELAYERRESPONSE_H
 #define QTAWS_CREATELAYERRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "createlayerrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class CreateLayerResponsePrivate;
+
+class QTAWS_EXPORT CreateLayerResponse : public CreateLayerResponse {
+    Q_OBJECT
+
+public:
+    CreateLayerResponse(const CreateLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLayerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLayerResponse)
+    Q_DISABLE_COPY(CreateLayerResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

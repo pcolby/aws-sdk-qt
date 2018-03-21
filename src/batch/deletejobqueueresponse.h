@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEJOBQUEUERESPONSE_H
 #define QTAWS_DELETEJOBQUEUERESPONSE_H
 
+#include "batchresponse.h"
+#include "deletejobqueuerequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class DeleteJobQueueResponsePrivate;
+
+class QTAWS_EXPORT DeleteJobQueueResponse : public DeleteJobQueueResponse {
+    Q_OBJECT
+
+public:
+    DeleteJobQueueResponse(const DeleteJobQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteJobQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteJobQueueResponse)
+    Q_DISABLE_COPY(DeleteJobQueueResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

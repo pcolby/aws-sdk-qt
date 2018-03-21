@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREVIEWABLEHITSRESPONSE_H
 #define QTAWS_LISTREVIEWABLEHITSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listreviewablehitsrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListReviewableHITsResponsePrivate;
+
+class QTAWS_EXPORT ListReviewableHITsResponse : public ListReviewableHITsResponse {
+    Q_OBJECT
+
+public:
+    ListReviewableHITsResponse(const ListReviewableHITsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListReviewableHITsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListReviewableHITsResponse)
+    Q_DISABLE_COPY(ListReviewableHITsResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

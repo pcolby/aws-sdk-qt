@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTTARGETSRESPONSE_H
 #define QTAWS_PUTTARGETSRESPONSE_H
 
+#include "eventsresponse.h"
+#include "puttargetsrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class PutTargetsResponsePrivate;
+
+class QTAWS_EXPORT PutTargetsResponse : public PutTargetsResponse {
+    Q_OBJECT
+
+public:
+    PutTargetsResponse(const PutTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutTargetsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutTargetsResponse)
+    Q_DISABLE_COPY(PutTargetsResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

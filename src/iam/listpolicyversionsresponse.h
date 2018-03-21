@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPOLICYVERSIONSRESPONSE_H
 #define QTAWS_LISTPOLICYVERSIONSRESPONSE_H
 
+#include "iamresponse.h"
+#include "listpolicyversionsrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListPolicyVersionsResponsePrivate;
+
+class QTAWS_EXPORT ListPolicyVersionsResponse : public ListPolicyVersionsResponse {
+    Q_OBJECT
+
+public:
+    ListPolicyVersionsResponse(const ListPolicyVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListPolicyVersionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListPolicyVersionsResponse)
+    Q_DISABLE_COPY(ListPolicyVersionsResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

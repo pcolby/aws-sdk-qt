@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPINSTANCERESPONSE_H
 #define QTAWS_STOPINSTANCERESPONSE_H
 
+#include "lightsailresponse.h"
+#include "stopinstancerequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class StopInstanceResponsePrivate;
+
+class QTAWS_EXPORT StopInstanceResponse : public StopInstanceResponse {
+    Q_OBJECT
+
+public:
+    StopInstanceResponse(const StopInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopInstanceResponse)
+    Q_DISABLE_COPY(StopInstanceResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

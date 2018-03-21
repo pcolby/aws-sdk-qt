@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "listcuratedenvironmentimagesrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class ListCuratedEnvironmentImagesResponsePrivate;
+
+class QTAWS_EXPORT ListCuratedEnvironmentImagesResponse : public ListCuratedEnvironmentImagesResponse {
+    Q_OBJECT
+
+public:
+    ListCuratedEnvironmentImagesResponse(const ListCuratedEnvironmentImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCuratedEnvironmentImagesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCuratedEnvironmentImagesResponse)
+    Q_DISABLE_COPY(ListCuratedEnvironmentImagesResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

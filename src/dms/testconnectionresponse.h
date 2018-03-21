@@ -20,4 +20,33 @@
 #ifndef QTAWS_TESTCONNECTIONRESPONSE_H
 #define QTAWS_TESTCONNECTIONRESPONSE_H
 
+#include "dmsresponse.h"
+#include "testconnectionrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class TestConnectionResponsePrivate;
+
+class QTAWS_EXPORT TestConnectionResponse : public TestConnectionResponse {
+    Q_OBJECT
+
+public:
+    TestConnectionResponse(const TestConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TestConnectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TestConnectionResponse)
+    Q_DISABLE_COPY(TestConnectionResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

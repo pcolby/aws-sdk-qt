@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEGRANTRESPONSE_H
 #define QTAWS_CREATEGRANTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "creategrantrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class CreateGrantResponsePrivate;
+
+class QTAWS_EXPORT CreateGrantResponse : public CreateGrantResponse {
+    Q_OBJECT
+
+public:
+    CreateGrantResponse(const CreateGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateGrantRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateGrantResponse)
+    Q_DISABLE_COPY(CreateGrantResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTEVENTSELECTORSRESPONSE_H
 #define QTAWS_PUTEVENTSELECTORSRESPONSE_H
 
+#include "cloudtrailresponse.h"
+#include "puteventselectorsrequest.h"
+
+namespace AWS {
+
+namespace cloudtrail {
+
+class PutEventSelectorsResponsePrivate;
+
+class QTAWS_EXPORT PutEventSelectorsResponse : public PutEventSelectorsResponse {
+    Q_OBJECT
+
+public:
+    PutEventSelectorsResponse(const PutEventSelectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutEventSelectorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutEventSelectorsResponse)
+    Q_DISABLE_COPY(PutEventSelectorsResponse)
+
+};
+
+} // namespace cloudtrail
+} // namespace AWS
+
 #endif

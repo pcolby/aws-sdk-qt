@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETLIMITRESPONSE_H
 #define QTAWS_GETREUSABLEDELEGATIONSETLIMITRESPONSE_H
 
+#include "route53response.h"
+#include "getreusabledelegationsetlimitrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetReusableDelegationSetLimitResponsePrivate;
+
+class QTAWS_EXPORT GetReusableDelegationSetLimitResponse : public GetReusableDelegationSetLimitResponse {
+    Q_OBJECT
+
+public:
+    GetReusableDelegationSetLimitResponse(const GetReusableDelegationSetLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReusableDelegationSetLimitRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReusableDelegationSetLimitResponse)
+    Q_DISABLE_COPY(GetReusableDelegationSetLimitResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

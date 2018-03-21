@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDISTRIBUTIONSRESPONSE_H
 #define QTAWS_LISTDISTRIBUTIONSRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "listdistributionsrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class ListDistributionsResponsePrivate;
+
+class QTAWS_EXPORT ListDistributionsResponse : public ListDistributionsResponse {
+    Q_OBJECT
+
+public:
+    ListDistributionsResponse(const ListDistributionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDistributionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDistributionsResponse)
+    Q_DISABLE_COPY(ListDistributionsResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

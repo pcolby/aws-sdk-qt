@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEFROMMASTERACCOUNTRESPONSE_H
 #define QTAWS_DISASSOCIATEFROMMASTERACCOUNTRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "disassociatefrommasteraccountrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class DisassociateFromMasterAccountResponsePrivate;
+
+class QTAWS_EXPORT DisassociateFromMasterAccountResponse : public DisassociateFromMasterAccountResponse {
+    Q_OBJECT
+
+public:
+    DisassociateFromMasterAccountResponse(const DisassociateFromMasterAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateFromMasterAccountRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateFromMasterAccountResponse)
+    Q_DISABLE_COPY(DisassociateFromMasterAccountResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

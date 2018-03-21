@@ -20,4 +20,33 @@
 #ifndef QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_H
 #define QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "simulateprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class SimulatePrincipalPolicyResponsePrivate;
+
+class QTAWS_EXPORT SimulatePrincipalPolicyResponse : public SimulatePrincipalPolicyResponse {
+    Q_OBJECT
+
+public:
+    SimulatePrincipalPolicyResponse(const SimulatePrincipalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SimulatePrincipalPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SimulatePrincipalPolicyResponse)
+    Q_DISABLE_COPY(SimulatePrincipalPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

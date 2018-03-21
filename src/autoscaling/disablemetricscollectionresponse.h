@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_H
 #define QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "disablemetricscollectionrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DisableMetricsCollectionResponsePrivate;
+
+class QTAWS_EXPORT DisableMetricsCollectionResponse : public DisableMetricsCollectionResponse {
+    Q_OBJECT
+
+public:
+    DisableMetricsCollectionResponse(const DisableMetricsCollectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisableMetricsCollectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisableMetricsCollectionResponse)
+    Q_DISABLE_COPY(DisableMetricsCollectionResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

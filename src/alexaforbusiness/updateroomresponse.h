@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEROOMRESPONSE_H
 #define QTAWS_UPDATEROOMRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "updateroomrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class UpdateRoomResponsePrivate;
+
+class QTAWS_EXPORT UpdateRoomResponse : public UpdateRoomResponse {
+    Q_OBJECT
+
+public:
+    UpdateRoomResponse(const UpdateRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRoomRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRoomResponse)
+    Q_DISABLE_COPY(UpdateRoomResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_H
 #define QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "updateruntimeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class UpdateRuntimeConfigurationResponsePrivate;
+
+class QTAWS_EXPORT UpdateRuntimeConfigurationResponse : public UpdateRuntimeConfigurationResponse {
+    Q_OBJECT
+
+public:
+    UpdateRuntimeConfigurationResponse(const UpdateRuntimeConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRuntimeConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRuntimeConfigurationResponse)
+    Q_DISABLE_COPY(UpdateRuntimeConfigurationResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

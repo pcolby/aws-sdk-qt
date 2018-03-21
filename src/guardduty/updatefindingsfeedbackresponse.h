@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEFINDINGSFEEDBACKRESPONSE_H
 #define QTAWS_UPDATEFINDINGSFEEDBACKRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "updatefindingsfeedbackrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class UpdateFindingsFeedbackResponsePrivate;
+
+class QTAWS_EXPORT UpdateFindingsFeedbackResponse : public UpdateFindingsFeedbackResponse {
+    Q_OBJECT
+
+public:
+    UpdateFindingsFeedbackResponse(const UpdateFindingsFeedbackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateFindingsFeedbackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFindingsFeedbackResponse)
+    Q_DISABLE_COPY(UpdateFindingsFeedbackResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

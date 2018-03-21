@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_H
 #define QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_H
 
+#include "ec2response.h"
+#include "describespotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeSpotDatafeedSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionResponse : public DescribeSpotDatafeedSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    DescribeSpotDatafeedSubscriptionResponse(const DescribeSpotDatafeedSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSpotDatafeedSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotDatafeedSubscriptionResponse)
+    Q_DISABLE_COPY(DescribeSpotDatafeedSubscriptionResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTBUILDRESPONSE_H
 #define QTAWS_STARTBUILDRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "startbuildrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class StartBuildResponsePrivate;
+
+class QTAWS_EXPORT StartBuildResponse : public StartBuildResponse {
+    Q_OBJECT
+
+public:
+    StartBuildResponse(const StartBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartBuildRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartBuildResponse)
+    Q_DISABLE_COPY(StartBuildResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

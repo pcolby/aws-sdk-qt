@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDOMAINNAMESERVERSRESPONSE_H
 #define QTAWS_UPDATEDOMAINNAMESERVERSRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "updatedomainnameserversrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class UpdateDomainNameserversResponsePrivate;
+
+class QTAWS_EXPORT UpdateDomainNameserversResponse : public UpdateDomainNameserversResponse {
+    Q_OBJECT
+
+public:
+    UpdateDomainNameserversResponse(const UpdateDomainNameserversRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDomainNameserversRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDomainNameserversResponse)
+    Q_DISABLE_COPY(UpdateDomainNameserversResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

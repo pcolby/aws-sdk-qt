@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTALIASESRESPONSE_H
 #define QTAWS_LISTALIASESRESPONSE_H
 
+#include "workmailresponse.h"
+#include "listaliasesrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class ListAliasesResponsePrivate;
+
+class QTAWS_EXPORT ListAliasesResponse : public ListAliasesResponse {
+    Q_OBJECT
+
+public:
+    ListAliasesResponse(const ListAliasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAliasesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAliasesResponse)
+    Q_DISABLE_COPY(ListAliasesResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_BATCHGETBUILDSRESPONSE_H
 #define QTAWS_BATCHGETBUILDSRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "batchgetbuildsrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class BatchGetBuildsResponsePrivate;
+
+class QTAWS_EXPORT BatchGetBuildsResponse : public BatchGetBuildsResponse {
+    Q_OBJECT
+
+public:
+    BatchGetBuildsResponse(const BatchGetBuildsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BatchGetBuildsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetBuildsResponse)
+    Q_DISABLE_COPY(BatchGetBuildsResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

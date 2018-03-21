@@ -20,4 +20,33 @@
 #ifndef QTAWS_COMPOSEENVIRONMENTSRESPONSE_H
 #define QTAWS_COMPOSEENVIRONMENTSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "composeenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class ComposeEnvironmentsResponsePrivate;
+
+class QTAWS_EXPORT ComposeEnvironmentsResponse : public ComposeEnvironmentsResponse {
+    Q_OBJECT
+
+public:
+    ComposeEnvironmentsResponse(const ComposeEnvironmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ComposeEnvironmentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ComposeEnvironmentsResponse)
+    Q_DISABLE_COPY(ComposeEnvironmentsResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

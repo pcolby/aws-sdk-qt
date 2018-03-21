@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTWORKERBLOCKSRESPONSE_H
 #define QTAWS_LISTWORKERBLOCKSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listworkerblocksrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListWorkerBlocksResponsePrivate;
+
+class QTAWS_EXPORT ListWorkerBlocksResponse : public ListWorkerBlocksResponse {
+    Q_OBJECT
+
+public:
+    ListWorkerBlocksResponse(const ListWorkerBlocksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListWorkerBlocksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListWorkerBlocksResponse)
+    Q_DISABLE_COPY(ListWorkerBlocksResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEHAPGRESPONSE_H
 #define QTAWS_DESCRIBEHAPGRESPONSE_H
 
+#include "cloudhsmresponse.h"
+#include "describehapgrequest.h"
+
+namespace AWS {
+
+namespace cloudhsm {
+
+class DescribeHapgResponsePrivate;
+
+class QTAWS_EXPORT DescribeHapgResponse : public DescribeHapgResponse {
+    Q_OBJECT
+
+public:
+    DescribeHapgResponse(const DescribeHapgRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeHapgRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHapgResponse)
+    Q_DISABLE_COPY(DescribeHapgResponse)
+
+};
+
+} // namespace cloudhsm
+} // namespace AWS
+
 #endif

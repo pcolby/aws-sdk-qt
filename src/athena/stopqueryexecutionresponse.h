@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPQUERYEXECUTIONRESPONSE_H
 #define QTAWS_STOPQUERYEXECUTIONRESPONSE_H
 
+#include "athenaresponse.h"
+#include "stopqueryexecutionrequest.h"
+
+namespace AWS {
+
+namespace athena {
+
+class StopQueryExecutionResponsePrivate;
+
+class QTAWS_EXPORT StopQueryExecutionResponse : public StopQueryExecutionResponse {
+    Q_OBJECT
+
+public:
+    StopQueryExecutionResponse(const StopQueryExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopQueryExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopQueryExecutionResponse)
+    Q_DISABLE_COPY(StopQueryExecutionResponse)
+
+};
+
+} // namespace athena
+} // namespace AWS
+
 #endif

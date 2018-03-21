@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCHILDRENRESPONSE_H
 #define QTAWS_LISTCHILDRENRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "listchildrenrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class ListChildrenResponsePrivate;
+
+class QTAWS_EXPORT ListChildrenResponse : public ListChildrenResponse {
+    Q_OBJECT
+
+public:
+    ListChildrenResponse(const ListChildrenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListChildrenRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListChildrenResponse)
+    Q_DISABLE_COPY(ListChildrenResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

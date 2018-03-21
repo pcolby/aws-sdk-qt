@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETASSESSMENTREPORTRESPONSE_H
 #define QTAWS_GETASSESSMENTREPORTRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "getassessmentreportrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class GetAssessmentReportResponsePrivate;
+
+class QTAWS_EXPORT GetAssessmentReportResponse : public GetAssessmentReportResponse {
+    Q_OBJECT
+
+public:
+    GetAssessmentReportResponse(const GetAssessmentReportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAssessmentReportRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAssessmentReportResponse)
+    Q_DISABLE_COPY(GetAssessmentReportResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

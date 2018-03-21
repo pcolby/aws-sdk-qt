@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENETWORKACLENTRYRESPONSE_H
 #define QTAWS_CREATENETWORKACLENTRYRESPONSE_H
 
+#include "ec2response.h"
+#include "createnetworkaclentryrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateNetworkAclEntryResponsePrivate;
+
+class QTAWS_EXPORT CreateNetworkAclEntryResponse : public CreateNetworkAclEntryResponse {
+    Q_OBJECT
+
+public:
+    CreateNetworkAclEntryResponse(const CreateNetworkAclEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNetworkAclEntryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNetworkAclEntryResponse)
+    Q_DISABLE_COPY(CreateNetworkAclEntryResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

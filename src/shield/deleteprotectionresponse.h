@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROTECTIONRESPONSE_H
 #define QTAWS_DELETEPROTECTIONRESPONSE_H
 
+#include "shieldresponse.h"
+#include "deleteprotectionrequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class DeleteProtectionResponsePrivate;
+
+class QTAWS_EXPORT DeleteProtectionResponse : public DeleteProtectionResponse {
+    Q_OBJECT
+
+public:
+    DeleteProtectionResponse(const DeleteProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProtectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProtectionResponse)
+    Q_DISABLE_COPY(DeleteProtectionResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

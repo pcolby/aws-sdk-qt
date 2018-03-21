@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDETECTORRESPONSE_H
 #define QTAWS_UPDATEDETECTORRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "updatedetectorrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class UpdateDetectorResponsePrivate;
+
+class QTAWS_EXPORT UpdateDetectorResponse : public UpdateDetectorResponse {
+    Q_OBJECT
+
+public:
+    UpdateDetectorResponse(const UpdateDetectorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDetectorRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDetectorResponse)
+    Q_DISABLE_COPY(UpdateDetectorResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

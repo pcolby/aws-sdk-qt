@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEVENTSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describeeventsrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeEventsResponsePrivate;
+
+class QTAWS_EXPORT DescribeEventsResponse : public DescribeEventsResponse {
+    Q_OBJECT
+
+public:
+    DescribeEventsResponse(const DescribeEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventsResponse)
+    Q_DISABLE_COPY(DescribeEventsResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

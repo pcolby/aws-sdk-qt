@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEVOLUMERESPONSE_H
 #define QTAWS_UPDATEVOLUMERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "updatevolumerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class UpdateVolumeResponsePrivate;
+
+class QTAWS_EXPORT UpdateVolumeResponse : public UpdateVolumeResponse {
+    Q_OBJECT
+
+public:
+    UpdateVolumeResponse(const UpdateVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateVolumeResponse)
+    Q_DISABLE_COPY(UpdateVolumeResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

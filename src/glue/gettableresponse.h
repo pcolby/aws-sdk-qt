@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTABLERESPONSE_H
 #define QTAWS_GETTABLERESPONSE_H
 
+#include "glueresponse.h"
+#include "gettablerequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetTableResponsePrivate;
+
+class QTAWS_EXPORT GetTableResponse : public GetTableResponse {
+    Q_OBJECT
+
+public:
+    GetTableResponse(const GetTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTableRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTableResponse)
+    Q_DISABLE_COPY(GetTableResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

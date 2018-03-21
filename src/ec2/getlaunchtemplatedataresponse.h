@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETLAUNCHTEMPLATEDATARESPONSE_H
 #define QTAWS_GETLAUNCHTEMPLATEDATARESPONSE_H
 
+#include "ec2response.h"
+#include "getlaunchtemplatedatarequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class GetLaunchTemplateDataResponsePrivate;
+
+class QTAWS_EXPORT GetLaunchTemplateDataResponse : public GetLaunchTemplateDataResponse {
+    Q_OBJECT
+
+public:
+    GetLaunchTemplateDataResponse(const GetLaunchTemplateDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetLaunchTemplateDataRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetLaunchTemplateDataResponse)
+    Q_DISABLE_COPY(GetLaunchTemplateDataResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

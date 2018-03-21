@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETPOLICYRESPONSE_H
 #define QTAWS_GETBUCKETPOLICYRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketpolicyrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetBucketPolicyResponse : public GetBucketPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetBucketPolicyResponse(const GetBucketPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketPolicyResponse)
+    Q_DISABLE_COPY(GetBucketPolicyResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

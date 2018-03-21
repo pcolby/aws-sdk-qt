@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDEVICEDEFINITIONRESPONSE_H
 #define QTAWS_GETDEVICEDEFINITIONRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "getdevicedefinitionrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class GetDeviceDefinitionResponsePrivate;
+
+class QTAWS_EXPORT GetDeviceDefinitionResponse : public GetDeviceDefinitionResponse {
+    Q_OBJECT
+
+public:
+    GetDeviceDefinitionResponse(const GetDeviceDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDeviceDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDeviceDefinitionResponse)
+    Q_DISABLE_COPY(GetDeviceDefinitionResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

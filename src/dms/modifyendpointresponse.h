@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYENDPOINTRESPONSE_H
 #define QTAWS_MODIFYENDPOINTRESPONSE_H
 
+#include "dmsresponse.h"
+#include "modifyendpointrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class ModifyEndpointResponsePrivate;
+
+class QTAWS_EXPORT ModifyEndpointResponse : public ModifyEndpointResponse {
+    Q_OBJECT
+
+public:
+    ModifyEndpointResponse(const ModifyEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyEndpointResponse)
+    Q_DISABLE_COPY(ModifyEndpointResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

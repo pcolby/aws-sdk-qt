@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDISTRIBUTIONRESPONSE_H
 #define QTAWS_UPDATEDISTRIBUTIONRESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "updatedistributionrequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class UpdateDistributionResponsePrivate;
+
+class QTAWS_EXPORT UpdateDistributionResponse : public UpdateDistributionResponse {
+    Q_OBJECT
+
+public:
+    UpdateDistributionResponse(const UpdateDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDistributionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDistributionResponse)
+    Q_DISABLE_COPY(UpdateDistributionResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

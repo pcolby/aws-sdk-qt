@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETHITRESPONSE_H
 #define QTAWS_GETHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "gethitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class GetHITResponsePrivate;
+
+class QTAWS_EXPORT GetHITResponse : public GetHITResponse {
+    Q_OBJECT
+
+public:
+    GetHITResponse(const GetHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetHITResponse)
+    Q_DISABLE_COPY(GetHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

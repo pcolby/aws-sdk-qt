@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECORSPOLICYRESPONSE_H
 #define QTAWS_DELETECORSPOLICYRESPONSE_H
 
+#include "mediastoreresponse.h"
+#include "deletecorspolicyrequest.h"
+
+namespace AWS {
+
+namespace mediastore {
+
+class DeleteCorsPolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteCorsPolicyResponse : public DeleteCorsPolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteCorsPolicyResponse(const DeleteCorsPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCorsPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCorsPolicyResponse)
+    Q_DISABLE_COPY(DeleteCorsPolicyResponse)
+
+};
+
+} // namespace mediastore
+} // namespace AWS
+
 #endif

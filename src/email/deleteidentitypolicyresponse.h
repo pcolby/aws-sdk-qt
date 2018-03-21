@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEIDENTITYPOLICYRESPONSE_H
 #define QTAWS_DELETEIDENTITYPOLICYRESPONSE_H
 
+#include "emailresponse.h"
+#include "deleteidentitypolicyrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteIdentityPolicyResponsePrivate;
+
+class QTAWS_EXPORT DeleteIdentityPolicyResponse : public DeleteIdentityPolicyResponse {
+    Q_OBJECT
+
+public:
+    DeleteIdentityPolicyResponse(const DeleteIdentityPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteIdentityPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIdentityPolicyResponse)
+    Q_DISABLE_COPY(DeleteIdentityPolicyResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

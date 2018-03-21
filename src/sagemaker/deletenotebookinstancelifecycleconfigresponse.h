@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_H
 #define QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "deletenotebookinstancelifecycleconfigrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class DeleteNotebookInstanceLifecycleConfigResponsePrivate;
+
+class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigResponse : public DeleteNotebookInstanceLifecycleConfigResponse {
+    Q_OBJECT
+
+public:
+    DeleteNotebookInstanceLifecycleConfigResponse(const DeleteNotebookInstanceLifecycleConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteNotebookInstanceLifecycleConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotebookInstanceLifecycleConfigResponse)
+    Q_DISABLE_COPY(DeleteNotebookInstanceLifecycleConfigResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTAPIKEYSRESPONSE_H
 #define QTAWS_LISTAPIKEYSRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "listapikeysrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class ListApiKeysResponsePrivate;
+
+class QTAWS_EXPORT ListApiKeysResponse : public ListApiKeysResponse {
+    Q_OBJECT
+
+public:
+    ListApiKeysResponse(const ListApiKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListApiKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListApiKeysResponse)
+    Q_DISABLE_COPY(ListApiKeysResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

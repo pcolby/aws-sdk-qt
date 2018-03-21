@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOGGROUPSRESPONSE_H
 #define QTAWS_DESCRIBELOGGROUPSRESPONSE_H
 
+#include "logsresponse.h"
+#include "describeloggroupsrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DescribeLogGroupsResponsePrivate;
+
+class QTAWS_EXPORT DescribeLogGroupsResponse : public DescribeLogGroupsResponse {
+    Q_OBJECT
+
+public:
+    DescribeLogGroupsResponse(const DescribeLogGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLogGroupsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLogGroupsResponse)
+    Q_DISABLE_COPY(DescribeLogGroupsResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

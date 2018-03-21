@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEENVIRONMENTRESPONSE_H
 #define QTAWS_DELETEENVIRONMENTRESPONSE_H
 
+#include "cloud9response.h"
+#include "deleteenvironmentrequest.h"
+
+namespace AWS {
+
+namespace cloud9 {
+
+class DeleteEnvironmentResponsePrivate;
+
+class QTAWS_EXPORT DeleteEnvironmentResponse : public DeleteEnvironmentResponse {
+    Q_OBJECT
+
+public:
+    DeleteEnvironmentResponse(const DeleteEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEnvironmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEnvironmentResponse)
+    Q_DISABLE_COPY(DeleteEnvironmentResponse)
+
+};
+
+} // namespace cloud9
+} // namespace AWS
+
 #endif

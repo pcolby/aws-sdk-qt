@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 #define QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 
+#include "emailresponse.h"
+#include "createconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class CreateConfigurationSetTrackingOptionsResponsePrivate;
+
+class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsResponse : public CreateConfigurationSetTrackingOptionsResponse {
+    Q_OBJECT
+
+public:
+    CreateConfigurationSetTrackingOptionsResponse(const CreateConfigurationSetTrackingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateConfigurationSetTrackingOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationSetTrackingOptionsResponse)
+    Q_DISABLE_COPY(CreateConfigurationSetTrackingOptionsResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

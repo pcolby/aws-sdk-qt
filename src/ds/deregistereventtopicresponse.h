@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTEREVENTTOPICRESPONSE_H
 #define QTAWS_DEREGISTEREVENTTOPICRESPONSE_H
 
+#include "dsresponse.h"
+#include "deregistereventtopicrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DeregisterEventTopicResponsePrivate;
+
+class QTAWS_EXPORT DeregisterEventTopicResponse : public DeregisterEventTopicResponse {
+    Q_OBJECT
+
+public:
+    DeregisterEventTopicResponse(const DeregisterEventTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterEventTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterEventTopicResponse)
+    Q_DISABLE_COPY(DeregisterEventTopicResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

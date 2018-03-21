@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINCOMINGTYPEDLINKSRESPONSE_H
 #define QTAWS_LISTINCOMINGTYPEDLINKSRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listincomingtypedlinksrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListIncomingTypedLinksResponsePrivate;
+
+class QTAWS_EXPORT ListIncomingTypedLinksResponse : public ListIncomingTypedLinksResponse {
+    Q_OBJECT
+
+public:
+    ListIncomingTypedLinksResponse(const ListIncomingTypedLinksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListIncomingTypedLinksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListIncomingTypedLinksResponse)
+    Q_DISABLE_COPY(ListIncomingTypedLinksResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

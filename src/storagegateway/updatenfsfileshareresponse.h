@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATENFSFILESHARERESPONSE_H
 #define QTAWS_UPDATENFSFILESHARERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "updatenfsfilesharerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class UpdateNFSFileShareResponsePrivate;
+
+class QTAWS_EXPORT UpdateNFSFileShareResponse : public UpdateNFSFileShareResponse {
+    Q_OBJECT
+
+public:
+    UpdateNFSFileShareResponse(const UpdateNFSFileShareRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateNFSFileShareRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNFSFileShareResponse)
+    Q_DISABLE_COPY(UpdateNFSFileShareResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSRESPONSE_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSRESPONSE_H
 
+#include "configresponse.h"
+#include "describeconfigurationrecordersrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DescribeConfigurationRecordersResponsePrivate;
+
+class QTAWS_EXPORT DescribeConfigurationRecordersResponse : public DescribeConfigurationRecordersResponse {
+    Q_OBJECT
+
+public:
+    DescribeConfigurationRecordersResponse(const DescribeConfigurationRecordersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeConfigurationRecordersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigurationRecordersResponse)
+    Q_DISABLE_COPY(DescribeConfigurationRecordersResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEACTIVATEPIPELINERESPONSE_H
 #define QTAWS_DEACTIVATEPIPELINERESPONSE_H
 
+#include "datapipelineresponse.h"
+#include "deactivatepipelinerequest.h"
+
+namespace AWS {
+
+namespace datapipeline {
+
+class DeactivatePipelineResponsePrivate;
+
+class QTAWS_EXPORT DeactivatePipelineResponse : public DeactivatePipelineResponse {
+    Q_OBJECT
+
+public:
+    DeactivatePipelineResponse(const DeactivatePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeactivatePipelineRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeactivatePipelineResponse)
+    Q_DISABLE_COPY(DeactivatePipelineResponse)
+
+};
+
+} // namespace datapipeline
+} // namespace AWS
+
 #endif

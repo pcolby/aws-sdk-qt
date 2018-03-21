@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECACHESUBNETGROUPRESPONSE_H
 #define QTAWS_DELETECACHESUBNETGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "deletecachesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DeleteCacheSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteCacheSubnetGroupResponse : public DeleteCacheSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteCacheSubnetGroupResponse(const DeleteCacheSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCacheSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCacheSubnetGroupResponse)
+    Q_DISABLE_COPY(DeleteCacheSubnetGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

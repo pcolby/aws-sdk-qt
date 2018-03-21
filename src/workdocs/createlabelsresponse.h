@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELABELSRESPONSE_H
 #define QTAWS_CREATELABELSRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "createlabelsrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class CreateLabelsResponsePrivate;
+
+class QTAWS_EXPORT CreateLabelsResponse : public CreateLabelsResponse {
+    Q_OBJECT
+
+public:
+    CreateLabelsResponse(const CreateLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLabelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLabelsResponse)
+    Q_DISABLE_COPY(CreateLabelsResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

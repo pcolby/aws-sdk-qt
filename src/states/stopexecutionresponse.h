@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPEXECUTIONRESPONSE_H
 #define QTAWS_STOPEXECUTIONRESPONSE_H
 
+#include "statesresponse.h"
+#include "stopexecutionrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class StopExecutionResponsePrivate;
+
+class QTAWS_EXPORT StopExecutionResponse : public StopExecutionResponse {
+    Q_OBJECT
+
+public:
+    StopExecutionResponse(const StopExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopExecutionResponse)
+    Q_DISABLE_COPY(StopExecutionResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

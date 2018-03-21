@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHUSERSRESPONSE_H
 #define QTAWS_SEARCHUSERSRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "searchusersrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class SearchUsersResponsePrivate;
+
+class QTAWS_EXPORT SearchUsersResponse : public SearchUsersResponse {
+    Q_OBJECT
+
+public:
+    SearchUsersResponse(const SearchUsersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchUsersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchUsersResponse)
+    Q_DISABLE_COPY(SearchUsersResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RECORDACTIVITYTASKHEARTBEATRESPONSE_H
 #define QTAWS_RECORDACTIVITYTASKHEARTBEATRESPONSE_H
 
+#include "swfresponse.h"
+#include "recordactivitytaskheartbeatrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RecordActivityTaskHeartbeatResponsePrivate;
+
+class QTAWS_EXPORT RecordActivityTaskHeartbeatResponse : public RecordActivityTaskHeartbeatResponse {
+    Q_OBJECT
+
+public:
+    RecordActivityTaskHeartbeatResponse(const RecordActivityTaskHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RecordActivityTaskHeartbeatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RecordActivityTaskHeartbeatResponse)
+    Q_DISABLE_COPY(RecordActivityTaskHeartbeatResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

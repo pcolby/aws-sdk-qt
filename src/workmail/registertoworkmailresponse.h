@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERTOWORKMAILRESPONSE_H
 #define QTAWS_REGISTERTOWORKMAILRESPONSE_H
 
+#include "workmailresponse.h"
+#include "registertoworkmailrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class RegisterToWorkMailResponsePrivate;
+
+class QTAWS_EXPORT RegisterToWorkMailResponse : public RegisterToWorkMailResponse {
+    Q_OBJECT
+
+public:
+    RegisterToWorkMailResponse(const RegisterToWorkMailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterToWorkMailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterToWorkMailResponse)
+    Q_DISABLE_COPY(RegisterToWorkMailResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

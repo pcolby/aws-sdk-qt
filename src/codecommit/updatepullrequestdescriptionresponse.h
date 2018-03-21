@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEPULLREQUESTDESCRIPTIONRESPONSE_H
 #define QTAWS_UPDATEPULLREQUESTDESCRIPTIONRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updatepullrequestdescriptionrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdatePullRequestDescriptionResponsePrivate;
+
+class QTAWS_EXPORT UpdatePullRequestDescriptionResponse : public UpdatePullRequestDescriptionResponse {
+    Q_OBJECT
+
+public:
+    UpdatePullRequestDescriptionResponse(const UpdatePullRequestDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdatePullRequestDescriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePullRequestDescriptionResponse)
+    Q_DISABLE_COPY(UpdatePullRequestDescriptionResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

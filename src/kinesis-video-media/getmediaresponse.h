@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMEDIARESPONSE_H
 #define QTAWS_GETMEDIARESPONSE_H
 
+#include "kinesis-video-mediaresponse.h"
+#include "getmediarequest.h"
+
+namespace AWS {
+
+namespace kinesis-video-media {
+
+class GetMediaResponsePrivate;
+
+class QTAWS_EXPORT GetMediaResponse : public GetMediaResponse {
+    Q_OBJECT
+
+public:
+    GetMediaResponse(const GetMediaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMediaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMediaResponse)
+    Q_DISABLE_COPY(GetMediaResponse)
+
+};
+
+} // namespace kinesis-video-media
+} // namespace AWS
+
 #endif

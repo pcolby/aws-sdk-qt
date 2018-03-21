@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETATTRIBUTESRESPONSE_H
 #define QTAWS_GETATTRIBUTESRESPONSE_H
 
+#include "sdbresponse.h"
+#include "getattributesrequest.h"
+
+namespace AWS {
+
+namespace sdb {
+
+class GetAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetAttributesResponse : public GetAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetAttributesResponse(const GetAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAttributesResponse)
+    Q_DISABLE_COPY(GetAttributesResponse)
+
+};
+
+} // namespace sdb
+} // namespace AWS
+
 #endif

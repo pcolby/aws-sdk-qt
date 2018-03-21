@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPDEPLOYMENTRESPONSE_H
 #define QTAWS_STOPDEPLOYMENTRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "stopdeploymentrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class StopDeploymentResponsePrivate;
+
+class QTAWS_EXPORT StopDeploymentResponse : public StopDeploymentResponse {
+    Q_OBJECT
+
+public:
+    StopDeploymentResponse(const StopDeploymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopDeploymentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopDeploymentResponse)
+    Q_DISABLE_COPY(StopDeploymentResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

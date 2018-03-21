@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHDEVICESRESPONSE_H
 #define QTAWS_SEARCHDEVICESRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "searchdevicesrequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class SearchDevicesResponsePrivate;
+
+class QTAWS_EXPORT SearchDevicesResponse : public SearchDevicesResponse {
+    Q_OBJECT
+
+public:
+    SearchDevicesResponse(const SearchDevicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchDevicesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchDevicesResponse)
+    Q_DISABLE_COPY(SearchDevicesResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

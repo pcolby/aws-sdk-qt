@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELISTENERRESPONSE_H
 #define QTAWS_DELETELISTENERRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "deletelistenerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class DeleteListenerResponsePrivate;
+
+class QTAWS_EXPORT DeleteListenerResponse : public DeleteListenerResponse {
+    Q_OBJECT
+
+public:
+    DeleteListenerResponse(const DeleteListenerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteListenerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteListenerResponse)
+    Q_DISABLE_COPY(DeleteListenerResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

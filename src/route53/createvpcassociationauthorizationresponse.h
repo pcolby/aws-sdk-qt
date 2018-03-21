@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEVPCASSOCIATIONAUTHORIZATIONRESPONSE_H
 #define QTAWS_CREATEVPCASSOCIATIONAUTHORIZATIONRESPONSE_H
 
+#include "route53response.h"
+#include "createvpcassociationauthorizationrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class CreateVPCAssociationAuthorizationResponsePrivate;
+
+class QTAWS_EXPORT CreateVPCAssociationAuthorizationResponse : public CreateVPCAssociationAuthorizationResponse {
+    Q_OBJECT
+
+public:
+    CreateVPCAssociationAuthorizationResponse(const CreateVPCAssociationAuthorizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateVPCAssociationAuthorizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateVPCAssociationAuthorizationResponse)
+    Q_DISABLE_COPY(CreateVPCAssociationAuthorizationResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

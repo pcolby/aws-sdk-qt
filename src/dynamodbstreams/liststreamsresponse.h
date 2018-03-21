@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSTREAMSRESPONSE_H
 #define QTAWS_LISTSTREAMSRESPONSE_H
 
+#include "dynamodbstreamsresponse.h"
+#include "liststreamsrequest.h"
+
+namespace AWS {
+
+namespace dynamodbstreams {
+
+class ListStreamsResponsePrivate;
+
+class QTAWS_EXPORT ListStreamsResponse : public ListStreamsResponse {
+    Q_OBJECT
+
+public:
+    ListStreamsResponse(const ListStreamsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListStreamsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListStreamsResponse)
+    Q_DISABLE_COPY(ListStreamsResponse)
+
+};
+
+} // namespace dynamodbstreams
+} // namespace AWS
+
 #endif

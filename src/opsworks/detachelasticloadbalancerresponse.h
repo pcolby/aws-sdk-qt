@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHELASTICLOADBALANCERRESPONSE_H
 #define QTAWS_DETACHELASTICLOADBALANCERRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "detachelasticloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DetachElasticLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT DetachElasticLoadBalancerResponse : public DetachElasticLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    DetachElasticLoadBalancerResponse(const DetachElasticLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachElasticLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachElasticLoadBalancerResponse)
+    Q_DISABLE_COPY(DetachElasticLoadBalancerResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

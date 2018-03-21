@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_H
 #define QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "createconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class CreateConfigurationTemplateResponsePrivate;
+
+class QTAWS_EXPORT CreateConfigurationTemplateResponse : public CreateConfigurationTemplateResponse {
+    Q_OBJECT
+
+public:
+    CreateConfigurationTemplateResponse(const CreateConfigurationTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateConfigurationTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationTemplateResponse)
+    Q_DISABLE_COPY(CreateConfigurationTemplateResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

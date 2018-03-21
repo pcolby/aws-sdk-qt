@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPINSTANCESRESPONSE_H
 #define QTAWS_STOPINSTANCESRESPONSE_H
 
+#include "ec2response.h"
+#include "stopinstancesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class StopInstancesResponsePrivate;
+
+class QTAWS_EXPORT StopInstancesResponse : public StopInstancesResponse {
+    Q_OBJECT
+
+public:
+    StopInstancesResponse(const StopInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopInstancesResponse)
+    Q_DISABLE_COPY(StopInstancesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

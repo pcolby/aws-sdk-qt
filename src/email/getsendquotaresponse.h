@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSENDQUOTARESPONSE_H
 #define QTAWS_GETSENDQUOTARESPONSE_H
 
+#include "emailresponse.h"
+#include "getsendquotarequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class GetSendQuotaResponsePrivate;
+
+class QTAWS_EXPORT GetSendQuotaResponse : public GetSendQuotaResponse {
+    Q_OBJECT
+
+public:
+    GetSendQuotaResponse(const GetSendQuotaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSendQuotaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSendQuotaResponse)
+    Q_DISABLE_COPY(GetSendQuotaResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

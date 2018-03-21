@@ -20,4 +20,33 @@
 #ifndef QTAWS_RETIREGRANTRESPONSE_H
 #define QTAWS_RETIREGRANTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "retiregrantrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class RetireGrantResponsePrivate;
+
+class QTAWS_EXPORT RetireGrantResponse : public RetireGrantResponse {
+    Q_OBJECT
+
+public:
+    RetireGrantResponse(const RetireGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RetireGrantRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RetireGrantResponse)
+    Q_DISABLE_COPY(RetireGrantResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

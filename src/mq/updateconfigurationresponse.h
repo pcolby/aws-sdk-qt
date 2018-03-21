@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONFIGURATIONRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONRESPONSE_H
 
+#include "mqresponse.h"
+#include "updateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class UpdateConfigurationResponsePrivate;
+
+class QTAWS_EXPORT UpdateConfigurationResponse : public UpdateConfigurationResponse {
+    Q_OBJECT
+
+public:
+    UpdateConfigurationResponse(const UpdateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationResponse)
+    Q_DISABLE_COPY(UpdateConfigurationResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

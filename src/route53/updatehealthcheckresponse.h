@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEHEALTHCHECKRESPONSE_H
 #define QTAWS_UPDATEHEALTHCHECKRESPONSE_H
 
+#include "route53response.h"
+#include "updatehealthcheckrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class UpdateHealthCheckResponsePrivate;
+
+class QTAWS_EXPORT UpdateHealthCheckResponse : public UpdateHealthCheckResponse {
+    Q_OBJECT
+
+public:
+    UpdateHealthCheckResponse(const UpdateHealthCheckRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateHealthCheckRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateHealthCheckResponse)
+    Q_DISABLE_COPY(UpdateHealthCheckResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

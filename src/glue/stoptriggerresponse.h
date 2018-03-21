@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPTRIGGERRESPONSE_H
 #define QTAWS_STOPTRIGGERRESPONSE_H
 
+#include "glueresponse.h"
+#include "stoptriggerrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class StopTriggerResponsePrivate;
+
+class QTAWS_EXPORT StopTriggerResponse : public StopTriggerResponse {
+    Q_OBJECT
+
+public:
+    StopTriggerResponse(const StopTriggerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopTriggerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopTriggerResponse)
+    Q_DISABLE_COPY(StopTriggerResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

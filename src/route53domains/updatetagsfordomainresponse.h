@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATETAGSFORDOMAINRESPONSE_H
 #define QTAWS_UPDATETAGSFORDOMAINRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "updatetagsfordomainrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class UpdateTagsForDomainResponsePrivate;
+
+class QTAWS_EXPORT UpdateTagsForDomainResponse : public UpdateTagsForDomainResponse {
+    Q_OBJECT
+
+public:
+    UpdateTagsForDomainResponse(const UpdateTagsForDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateTagsForDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagsForDomainResponse)
+    Q_DISABLE_COPY(UpdateTagsForDomainResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYDOCUMENTPERMISSIONRESPONSE_H
 #define QTAWS_MODIFYDOCUMENTPERMISSIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "modifydocumentpermissionrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ModifyDocumentPermissionResponsePrivate;
+
+class QTAWS_EXPORT ModifyDocumentPermissionResponse : public ModifyDocumentPermissionResponse {
+    Q_OBJECT
+
+public:
+    ModifyDocumentPermissionResponse(const ModifyDocumentPermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyDocumentPermissionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyDocumentPermissionResponse)
+    Q_DISABLE_COPY(ModifyDocumentPermissionResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

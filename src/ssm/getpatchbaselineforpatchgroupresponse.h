@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPATCHBASELINEFORPATCHGROUPRESPONSE_H
 #define QTAWS_GETPATCHBASELINEFORPATCHGROUPRESPONSE_H
 
+#include "ssmresponse.h"
+#include "getpatchbaselineforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class GetPatchBaselineForPatchGroupResponsePrivate;
+
+class QTAWS_EXPORT GetPatchBaselineForPatchGroupResponse : public GetPatchBaselineForPatchGroupResponse {
+    Q_OBJECT
+
+public:
+    GetPatchBaselineForPatchGroupResponse(const GetPatchBaselineForPatchGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPatchBaselineForPatchGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPatchBaselineForPatchGroupResponse)
+    Q_DISABLE_COPY(GetPatchBaselineForPatchGroupResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

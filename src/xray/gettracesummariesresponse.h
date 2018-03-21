@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTRACESUMMARIESRESPONSE_H
 #define QTAWS_GETTRACESUMMARIESRESPONSE_H
 
+#include "xrayresponse.h"
+#include "gettracesummariesrequest.h"
+
+namespace AWS {
+
+namespace xray {
+
+class GetTraceSummariesResponsePrivate;
+
+class QTAWS_EXPORT GetTraceSummariesResponse : public GetTraceSummariesResponse {
+    Q_OBJECT
+
+public:
+    GetTraceSummariesResponse(const GetTraceSummariesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTraceSummariesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTraceSummariesResponse)
+    Q_DISABLE_COPY(GetTraceSummariesResponse)
+
+};
+
+} // namespace xray
+} // namespace AWS
+
 #endif

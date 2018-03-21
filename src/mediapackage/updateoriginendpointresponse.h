@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEORIGINENDPOINTRESPONSE_H
 #define QTAWS_UPDATEORIGINENDPOINTRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "updateoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class UpdateOriginEndpointResponsePrivate;
+
+class QTAWS_EXPORT UpdateOriginEndpointResponse : public UpdateOriginEndpointResponse {
+    Q_OBJECT
+
+public:
+    UpdateOriginEndpointResponse(const UpdateOriginEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateOriginEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateOriginEndpointResponse)
+    Q_DISABLE_COPY(UpdateOriginEndpointResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

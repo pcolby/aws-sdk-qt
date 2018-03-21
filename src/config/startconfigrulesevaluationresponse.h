@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_H
 #define QTAWS_STARTCONFIGRULESEVALUATIONRESPONSE_H
 
+#include "configresponse.h"
+#include "startconfigrulesevaluationrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class StartConfigRulesEvaluationResponsePrivate;
+
+class QTAWS_EXPORT StartConfigRulesEvaluationResponse : public StartConfigRulesEvaluationResponse {
+    Q_OBJECT
+
+public:
+    StartConfigRulesEvaluationResponse(const StartConfigRulesEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartConfigRulesEvaluationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartConfigRulesEvaluationResponse)
+    Q_DISABLE_COPY(StartConfigRulesEvaluationResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

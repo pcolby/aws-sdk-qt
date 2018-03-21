@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_H
 #define QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "updateconfigurationsetsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateConfigurationSetSendingEnabledResponsePrivate;
+
+class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledResponse : public UpdateConfigurationSetSendingEnabledResponse {
+    Q_OBJECT
+
+public:
+    UpdateConfigurationSetSendingEnabledResponse(const UpdateConfigurationSetSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateConfigurationSetSendingEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationSetSendingEnabledResponse)
+    Q_DISABLE_COPY(UpdateConfigurationSetSendingEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

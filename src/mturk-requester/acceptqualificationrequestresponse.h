@@ -20,4 +20,33 @@
 #ifndef QTAWS_ACCEPTQUALIFICATIONREQUESTRESPONSE_H
 #define QTAWS_ACCEPTQUALIFICATIONREQUESTRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "acceptqualificationrequestrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class AcceptQualificationRequestResponsePrivate;
+
+class QTAWS_EXPORT AcceptQualificationRequestResponse : public AcceptQualificationRequestResponse {
+    Q_OBJECT
+
+public:
+    AcceptQualificationRequestResponse(const AcceptQualificationRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AcceptQualificationRequestRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AcceptQualificationRequestResponse)
+    Q_DISABLE_COPY(AcceptQualificationRequestResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

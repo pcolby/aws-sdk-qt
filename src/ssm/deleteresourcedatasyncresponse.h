@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESOURCEDATASYNCRESPONSE_H
 #define QTAWS_DELETERESOURCEDATASYNCRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deleteresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeleteResourceDataSyncResponsePrivate;
+
+class QTAWS_EXPORT DeleteResourceDataSyncResponse : public DeleteResourceDataSyncResponse {
+    Q_OBJECT
+
+public:
+    DeleteResourceDataSyncResponse(const DeleteResourceDataSyncRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteResourceDataSyncRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceDataSyncResponse)
+    Q_DISABLE_COPY(DeleteResourceDataSyncResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

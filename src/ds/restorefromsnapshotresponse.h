@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTOREFROMSNAPSHOTRESPONSE_H
 #define QTAWS_RESTOREFROMSNAPSHOTRESPONSE_H
 
+#include "dsresponse.h"
+#include "restorefromsnapshotrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class RestoreFromSnapshotResponsePrivate;
+
+class QTAWS_EXPORT RestoreFromSnapshotResponse : public RestoreFromSnapshotResponse {
+    Q_OBJECT
+
+public:
+    RestoreFromSnapshotResponse(const RestoreFromSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreFromSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreFromSnapshotResponse)
+    Q_DISABLE_COPY(RestoreFromSnapshotResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEORUPDATETAGSRESPONSE_H
 #define QTAWS_CREATEORUPDATETAGSRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "createorupdatetagsrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class CreateOrUpdateTagsResponsePrivate;
+
+class QTAWS_EXPORT CreateOrUpdateTagsResponse : public CreateOrUpdateTagsResponse {
+    Q_OBJECT
+
+public:
+    CreateOrUpdateTagsResponse(const CreateOrUpdateTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateOrUpdateTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateOrUpdateTagsResponse)
+    Q_DISABLE_COPY(CreateOrUpdateTagsResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

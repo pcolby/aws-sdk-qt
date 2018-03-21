@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETOPERATIONDETAILRESPONSE_H
 #define QTAWS_GETOPERATIONDETAILRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "getoperationdetailrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class GetOperationDetailResponsePrivate;
+
+class QTAWS_EXPORT GetOperationDetailResponse : public GetOperationDetailResponse {
+    Q_OBJECT
+
+public:
+    GetOperationDetailResponse(const GetOperationDetailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetOperationDetailRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationDetailResponse)
+    Q_DISABLE_COPY(GetOperationDetailResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

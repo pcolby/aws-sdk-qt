@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDIRECTORYCONFIGRESPONSE_H
 #define QTAWS_DELETEDIRECTORYCONFIGRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "deletedirectoryconfigrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DeleteDirectoryConfigResponsePrivate;
+
+class QTAWS_EXPORT DeleteDirectoryConfigResponse : public DeleteDirectoryConfigResponse {
+    Q_OBJECT
+
+public:
+    DeleteDirectoryConfigResponse(const DeleteDirectoryConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDirectoryConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDirectoryConfigResponse)
+    Q_DISABLE_COPY(DeleteDirectoryConfigResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

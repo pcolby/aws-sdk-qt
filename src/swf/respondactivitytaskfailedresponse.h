@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_H
 
+#include "swfresponse.h"
+#include "respondactivitytaskfailedrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class RespondActivityTaskFailedResponsePrivate;
+
+class QTAWS_EXPORT RespondActivityTaskFailedResponse : public RespondActivityTaskFailedResponse {
+    Q_OBJECT
+
+public:
+    RespondActivityTaskFailedResponse(const RespondActivityTaskFailedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RespondActivityTaskFailedRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RespondActivityTaskFailedResponse)
+    Q_DISABLE_COPY(RespondActivityTaskFailedResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

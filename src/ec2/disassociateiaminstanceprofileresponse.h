@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISASSOCIATEIAMINSTANCEPROFILERESPONSE_H
 #define QTAWS_DISASSOCIATEIAMINSTANCEPROFILERESPONSE_H
 
+#include "ec2response.h"
+#include "disassociateiaminstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DisassociateIamInstanceProfileResponsePrivate;
+
+class QTAWS_EXPORT DisassociateIamInstanceProfileResponse : public DisassociateIamInstanceProfileResponse {
+    Q_OBJECT
+
+public:
+    DisassociateIamInstanceProfileResponse(const DisassociateIamInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DisassociateIamInstanceProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateIamInstanceProfileResponse)
+    Q_DISABLE_COPY(DisassociateIamInstanceProfileResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

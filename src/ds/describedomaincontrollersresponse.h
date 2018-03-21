@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_H
 #define QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_H
 
+#include "dsresponse.h"
+#include "describedomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class DescribeDomainControllersResponsePrivate;
+
+class QTAWS_EXPORT DescribeDomainControllersResponse : public DescribeDomainControllersResponse {
+    Q_OBJECT
+
+public:
+    DescribeDomainControllersResponse(const DescribeDomainControllersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDomainControllersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDomainControllersResponse)
+    Q_DISABLE_COPY(DescribeDomainControllersResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

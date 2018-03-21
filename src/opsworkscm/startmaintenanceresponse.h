@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTMAINTENANCERESPONSE_H
 #define QTAWS_STARTMAINTENANCERESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "startmaintenancerequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class StartMaintenanceResponsePrivate;
+
+class QTAWS_EXPORT StartMaintenanceResponse : public StartMaintenanceResponse {
+    Q_OBJECT
+
+public:
+    StartMaintenanceResponse(const StartMaintenanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartMaintenanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartMaintenanceResponse)
+    Q_DISABLE_COPY(StartMaintenanceResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

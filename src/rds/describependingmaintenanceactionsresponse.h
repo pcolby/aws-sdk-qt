@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSRESPONSE_H
 #define QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "describependingmaintenanceactionsrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class DescribePendingMaintenanceActionsResponsePrivate;
+
+class QTAWS_EXPORT DescribePendingMaintenanceActionsResponse : public DescribePendingMaintenanceActionsResponse {
+    Q_OBJECT
+
+public:
+    DescribePendingMaintenanceActionsResponse(const DescribePendingMaintenanceActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePendingMaintenanceActionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePendingMaintenanceActionsResponse)
+    Q_DISABLE_COPY(DescribePendingMaintenanceActionsResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

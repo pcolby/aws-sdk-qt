@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDEVENDPOINTRESPONSE_H
 #define QTAWS_CREATEDEVENDPOINTRESPONSE_H
 
+#include "glueresponse.h"
+#include "createdevendpointrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class CreateDevEndpointResponsePrivate;
+
+class QTAWS_EXPORT CreateDevEndpointResponse : public CreateDevEndpointResponse {
+    Q_OBJECT
+
+public:
+    CreateDevEndpointResponse(const CreateDevEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDevEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDevEndpointResponse)
+    Q_DISABLE_COPY(CreateDevEndpointResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

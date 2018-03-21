@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTOREOBJECTRESPONSE_H
 #define QTAWS_RESTOREOBJECTRESPONSE_H
 
+#include "s3response.h"
+#include "restoreobjectrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class RestoreObjectResponsePrivate;
+
+class QTAWS_EXPORT RestoreObjectResponse : public RestoreObjectResponse {
+    Q_OBJECT
+
+public:
+    RestoreObjectResponse(const RestoreObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreObjectResponse)
+    Q_DISABLE_COPY(RestoreObjectResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

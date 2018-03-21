@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTEMPLATERESPONSE_H
 #define QTAWS_GETTEMPLATERESPONSE_H
 
+#include "cloudformationresponse.h"
+#include "gettemplaterequest.h"
+
+namespace AWS {
+
+namespace cloudformation {
+
+class GetTemplateResponsePrivate;
+
+class QTAWS_EXPORT GetTemplateResponse : public GetTemplateResponse {
+    Q_OBJECT
+
+public:
+    GetTemplateResponse(const GetTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTemplateResponse)
+    Q_DISABLE_COPY(GetTemplateResponse)
+
+};
+
+} // namespace cloudformation
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBETERMINATIONPOLICYTYPESRESPONSE_H
 #define QTAWS_DESCRIBETERMINATIONPOLICYTYPESRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "describeterminationpolicytypesrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DescribeTerminationPolicyTypesResponsePrivate;
+
+class QTAWS_EXPORT DescribeTerminationPolicyTypesResponse : public DescribeTerminationPolicyTypesResponse {
+    Q_OBJECT
+
+public:
+    DescribeTerminationPolicyTypesResponse(const DescribeTerminationPolicyTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeTerminationPolicyTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTerminationPolicyTypesResponse)
+    Q_DISABLE_COPY(DescribeTerminationPolicyTypesResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

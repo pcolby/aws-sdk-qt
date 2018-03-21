@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLCLIENTRESPONSE_H
 #define QTAWS_DESCRIBEUSERPOOLCLIENTRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "describeuserpoolclientrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DescribeUserPoolClientResponsePrivate;
+
+class QTAWS_EXPORT DescribeUserPoolClientResponse : public DescribeUserPoolClientResponse {
+    Q_OBJECT
+
+public:
+    DescribeUserPoolClientResponse(const DescribeUserPoolClientRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeUserPoolClientRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUserPoolClientResponse)
+    Q_DISABLE_COPY(DescribeUserPoolClientResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

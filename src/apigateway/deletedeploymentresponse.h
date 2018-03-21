@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDEPLOYMENTRESPONSE_H
 #define QTAWS_DELETEDEPLOYMENTRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deletedeploymentrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteDeploymentResponsePrivate;
+
+class QTAWS_EXPORT DeleteDeploymentResponse : public DeleteDeploymentResponse {
+    Q_OBJECT
+
+public:
+    DeleteDeploymentResponse(const DeleteDeploymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDeploymentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeploymentResponse)
+    Q_DISABLE_COPY(DeleteDeploymentResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

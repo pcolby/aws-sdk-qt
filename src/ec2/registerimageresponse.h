@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERIMAGERESPONSE_H
 #define QTAWS_REGISTERIMAGERESPONSE_H
 
+#include "ec2response.h"
+#include "registerimagerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class RegisterImageResponsePrivate;
+
+class QTAWS_EXPORT RegisterImageResponse : public RegisterImageResponse {
+    Q_OBJECT
+
+public:
+    RegisterImageResponse(const RegisterImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterImageResponse)
+    Q_DISABLE_COPY(RegisterImageResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

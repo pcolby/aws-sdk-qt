@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBACKUPRESPONSE_H
 #define QTAWS_DELETEBACKUPRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "deletebackuprequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class DeleteBackupResponsePrivate;
+
+class QTAWS_EXPORT DeleteBackupResponse : public DeleteBackupResponse {
+    Q_OBJECT
+
+public:
+    DeleteBackupResponse(const DeleteBackupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBackupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBackupResponse)
+    Q_DISABLE_COPY(DeleteBackupResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

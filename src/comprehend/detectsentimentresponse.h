@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETECTSENTIMENTRESPONSE_H
 #define QTAWS_DETECTSENTIMENTRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "detectsentimentrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class DetectSentimentResponsePrivate;
+
+class QTAWS_EXPORT DetectSentimentResponse : public DetectSentimentResponse {
+    Q_OBJECT
+
+public:
+    DetectSentimentResponse(const DetectSentimentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetectSentimentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetectSentimentResponse)
+    Q_DISABLE_COPY(DetectSentimentResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

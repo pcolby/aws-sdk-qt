@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTBUCKETACCELERATECONFIGURATIONRESPONSE_H
 #define QTAWS_PUTBUCKETACCELERATECONFIGURATIONRESPONSE_H
 
+#include "s3response.h"
+#include "putbucketaccelerateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class PutBucketAccelerateConfigurationResponsePrivate;
+
+class QTAWS_EXPORT PutBucketAccelerateConfigurationResponse : public PutBucketAccelerateConfigurationResponse {
+    Q_OBJECT
+
+public:
+    PutBucketAccelerateConfigurationResponse(const PutBucketAccelerateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutBucketAccelerateConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketAccelerateConfigurationResponse)
+    Q_DISABLE_COPY(PutBucketAccelerateConfigurationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

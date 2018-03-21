@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDOMAINNAMERESPONSE_H
 #define QTAWS_DELETEDOMAINNAMERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deletedomainnamerequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteDomainNameResponsePrivate;
+
+class QTAWS_EXPORT DeleteDomainNameResponse : public DeleteDomainNameResponse {
+    Q_OBJECT
+
+public:
+    DeleteDomainNameResponse(const DeleteDomainNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDomainNameRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDomainNameResponse)
+    Q_DISABLE_COPY(DeleteDomainNameResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

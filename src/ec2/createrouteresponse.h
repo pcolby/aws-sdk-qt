@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEROUTERESPONSE_H
 #define QTAWS_CREATEROUTERESPONSE_H
 
+#include "ec2response.h"
+#include "createrouterequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateRouteResponsePrivate;
+
+class QTAWS_EXPORT CreateRouteResponse : public CreateRouteResponse {
+    Q_OBJECT
+
+public:
+    CreateRouteResponse(const CreateRouteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRouteRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRouteResponse)
+    Q_DISABLE_COPY(CreateRouteResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

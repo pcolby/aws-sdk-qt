@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDROLETODBCLUSTERRESPONSE_H
 #define QTAWS_ADDROLETODBCLUSTERRESPONSE_H
 
+#include "rdsresponse.h"
+#include "addroletodbclusterrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class AddRoleToDBClusterResponsePrivate;
+
+class QTAWS_EXPORT AddRoleToDBClusterResponse : public AddRoleToDBClusterResponse {
+    Q_OBJECT
+
+public:
+    AddRoleToDBClusterResponse(const AddRoleToDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddRoleToDBClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddRoleToDBClusterResponse)
+    Q_DISABLE_COPY(AddRoleToDBClusterResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTAGSFORCERTIFICATERESPONSE_H
 #define QTAWS_LISTTAGSFORCERTIFICATERESPONSE_H
 
+#include "acmresponse.h"
+#include "listtagsforcertificaterequest.h"
+
+namespace AWS {
+
+namespace acm {
+
+class ListTagsForCertificateResponsePrivate;
+
+class QTAWS_EXPORT ListTagsForCertificateResponse : public ListTagsForCertificateResponse {
+    Q_OBJECT
+
+public:
+    ListTagsForCertificateResponse(const ListTagsForCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTagsForCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForCertificateResponse)
+    Q_DISABLE_COPY(ListTagsForCertificateResponse)
+
+};
+
+} // namespace acm
+} // namespace AWS
+
 #endif

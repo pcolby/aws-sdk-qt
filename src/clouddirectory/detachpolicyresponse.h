@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETACHPOLICYRESPONSE_H
 #define QTAWS_DETACHPOLICYRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "detachpolicyrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DetachPolicyResponsePrivate;
+
+class QTAWS_EXPORT DetachPolicyResponse : public DetachPolicyResponse {
+    Q_OBJECT
+
+public:
+    DetachPolicyResponse(const DetachPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetachPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetachPolicyResponse)
+    Q_DISABLE_COPY(DetachPolicyResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

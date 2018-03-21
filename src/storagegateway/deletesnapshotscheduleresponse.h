@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESNAPSHOTSCHEDULERESPONSE_H
 #define QTAWS_DELETESNAPSHOTSCHEDULERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "deletesnapshotschedulerequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class DeleteSnapshotScheduleResponsePrivate;
+
+class QTAWS_EXPORT DeleteSnapshotScheduleResponse : public DeleteSnapshotScheduleResponse {
+    Q_OBJECT
+
+public:
+    DeleteSnapshotScheduleResponse(const DeleteSnapshotScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSnapshotScheduleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotScheduleResponse)
+    Q_DISABLE_COPY(DeleteSnapshotScheduleResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

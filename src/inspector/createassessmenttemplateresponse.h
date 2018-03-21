@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEASSESSMENTTEMPLATERESPONSE_H
 #define QTAWS_CREATEASSESSMENTTEMPLATERESPONSE_H
 
+#include "inspectorresponse.h"
+#include "createassessmenttemplaterequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class CreateAssessmentTemplateResponsePrivate;
+
+class QTAWS_EXPORT CreateAssessmentTemplateResponse : public CreateAssessmentTemplateResponse {
+    Q_OBJECT
+
+public:
+    CreateAssessmentTemplateResponse(const CreateAssessmentTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAssessmentTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAssessmentTemplateResponse)
+    Q_DISABLE_COPY(CreateAssessmentTemplateResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

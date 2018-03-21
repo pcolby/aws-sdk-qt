@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINDEXRESPONSE_H
 #define QTAWS_CREATEINDEXRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "createindexrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class CreateIndexResponsePrivate;
+
+class QTAWS_EXPORT CreateIndexResponse : public CreateIndexResponse {
+    Q_OBJECT
+
+public:
+    CreateIndexResponse(const CreateIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateIndexRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateIndexResponse)
+    Q_DISABLE_COPY(CreateIndexResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

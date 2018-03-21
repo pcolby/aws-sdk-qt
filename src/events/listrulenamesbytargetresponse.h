@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTRULENAMESBYTARGETRESPONSE_H
 #define QTAWS_LISTRULENAMESBYTARGETRESPONSE_H
 
+#include "eventsresponse.h"
+#include "listrulenamesbytargetrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class ListRuleNamesByTargetResponsePrivate;
+
+class QTAWS_EXPORT ListRuleNamesByTargetResponse : public ListRuleNamesByTargetResponse {
+    Q_OBJECT
+
+public:
+    ListRuleNamesByTargetResponse(const ListRuleNamesByTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRuleNamesByTargetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRuleNamesByTargetResponse)
+    Q_DISABLE_COPY(ListRuleNamesByTargetResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

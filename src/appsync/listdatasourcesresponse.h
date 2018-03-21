@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDATASOURCESRESPONSE_H
 #define QTAWS_LISTDATASOURCESRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "listdatasourcesrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class ListDataSourcesResponsePrivate;
+
+class QTAWS_EXPORT ListDataSourcesResponse : public ListDataSourcesResponse {
+    Q_OBJECT
+
+public:
+    ListDataSourcesResponse(const ListDataSourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDataSourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDataSourcesResponse)
+    Q_DISABLE_COPY(ListDataSourcesResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

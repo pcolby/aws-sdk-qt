@@ -20,4 +20,33 @@
 #ifndef QTAWS_SYNTHESIZESPEECHRESPONSE_H
 #define QTAWS_SYNTHESIZESPEECHRESPONSE_H
 
+#include "pollyresponse.h"
+#include "synthesizespeechrequest.h"
+
+namespace AWS {
+
+namespace polly {
+
+class SynthesizeSpeechResponsePrivate;
+
+class QTAWS_EXPORT SynthesizeSpeechResponse : public SynthesizeSpeechResponse {
+    Q_OBJECT
+
+public:
+    SynthesizeSpeechResponse(const SynthesizeSpeechRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SynthesizeSpeechRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SynthesizeSpeechResponse)
+    Q_DISABLE_COPY(SynthesizeSpeechResponse)
+
+};
+
+} // namespace polly
+} // namespace AWS
+
 #endif

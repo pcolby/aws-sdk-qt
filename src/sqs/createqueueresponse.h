@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEQUEUERESPONSE_H
 #define QTAWS_CREATEQUEUERESPONSE_H
 
+#include "sqsresponse.h"
+#include "createqueuerequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class CreateQueueResponsePrivate;
+
+class QTAWS_EXPORT CreateQueueResponse : public CreateQueueResponse {
+    Q_OBJECT
+
+public:
+    CreateQueueResponse(const CreateQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateQueueResponse)
+    Q_DISABLE_COPY(CreateQueueResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

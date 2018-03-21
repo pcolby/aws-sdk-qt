@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCOLLECTIONSRESPONSE_H
 #define QTAWS_LISTCOLLECTIONSRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "listcollectionsrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class ListCollectionsResponsePrivate;
+
+class QTAWS_EXPORT ListCollectionsResponse : public ListCollectionsResponse {
+    Q_OBJECT
+
+public:
+    ListCollectionsResponse(const ListCollectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCollectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCollectionsResponse)
+    Q_DISABLE_COPY(ListCollectionsResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

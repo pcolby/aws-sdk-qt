@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPORTFOLIOSHARERESPONSE_H
 #define QTAWS_CREATEPORTFOLIOSHARERESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "createportfoliosharerequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class CreatePortfolioShareResponsePrivate;
+
+class QTAWS_EXPORT CreatePortfolioShareResponse : public CreatePortfolioShareResponse {
+    Q_OBJECT
+
+public:
+    CreatePortfolioShareResponse(const CreatePortfolioShareRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePortfolioShareRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePortfolioShareResponse)
+    Q_DISABLE_COPY(CreatePortfolioShareResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTNODERESPONSE_H
 #define QTAWS_REBOOTNODERESPONSE_H
 
+#include "daxresponse.h"
+#include "rebootnoderequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class RebootNodeResponsePrivate;
+
+class QTAWS_EXPORT RebootNodeResponse : public RebootNodeResponse {
+    Q_OBJECT
+
+public:
+    RebootNodeResponse(const RebootNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootNodeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootNodeResponse)
+    Q_DISABLE_COPY(RebootNodeResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

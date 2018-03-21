@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYLAUNCHTEMPLATERESPONSE_H
 #define QTAWS_MODIFYLAUNCHTEMPLATERESPONSE_H
 
+#include "ec2response.h"
+#include "modifylaunchtemplaterequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ModifyLaunchTemplateResponsePrivate;
+
+class QTAWS_EXPORT ModifyLaunchTemplateResponse : public ModifyLaunchTemplateResponse {
+    Q_OBJECT
+
+public:
+    ModifyLaunchTemplateResponse(const ModifyLaunchTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyLaunchTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyLaunchTemplateResponse)
+    Q_DISABLE_COPY(ModifyLaunchTemplateResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCRAWLERMETRICSRESPONSE_H
 #define QTAWS_GETCRAWLERMETRICSRESPONSE_H
 
+#include "glueresponse.h"
+#include "getcrawlermetricsrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetCrawlerMetricsResponsePrivate;
+
+class QTAWS_EXPORT GetCrawlerMetricsResponse : public GetCrawlerMetricsResponse {
+    Q_OBJECT
+
+public:
+    GetCrawlerMetricsResponse(const GetCrawlerMetricsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetCrawlerMetricsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetCrawlerMetricsResponse)
+    Q_DISABLE_COPY(GetCrawlerMetricsResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

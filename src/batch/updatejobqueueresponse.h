@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEJOBQUEUERESPONSE_H
 #define QTAWS_UPDATEJOBQUEUERESPONSE_H
 
+#include "batchresponse.h"
+#include "updatejobqueuerequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class UpdateJobQueueResponsePrivate;
+
+class QTAWS_EXPORT UpdateJobQueueResponse : public UpdateJobQueueResponse {
+    Q_OBJECT
+
+public:
+    UpdateJobQueueResponse(const UpdateJobQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateJobQueueRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateJobQueueResponse)
+    Q_DISABLE_COPY(UpdateJobQueueResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

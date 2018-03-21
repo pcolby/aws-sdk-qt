@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECONSTRAINTRESPONSE_H
 #define QTAWS_DESCRIBECONSTRAINTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "describeconstraintrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DescribeConstraintResponsePrivate;
+
+class QTAWS_EXPORT DescribeConstraintResponse : public DescribeConstraintResponse {
+    Q_OBJECT
+
+public:
+    DescribeConstraintResponse(const DescribeConstraintRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeConstraintRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConstraintResponse)
+    Q_DISABLE_COPY(DescribeConstraintResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNASSIGNVOLUMERESPONSE_H
 #define QTAWS_UNASSIGNVOLUMERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "unassignvolumerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class UnassignVolumeResponsePrivate;
+
+class QTAWS_EXPORT UnassignVolumeResponse : public UnassignVolumeResponse {
+    Q_OBJECT
+
+public:
+    UnassignVolumeResponse(const UnassignVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnassignVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnassignVolumeResponse)
+    Q_DISABLE_COPY(UnassignVolumeResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

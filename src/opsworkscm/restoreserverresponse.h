@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESTORESERVERRESPONSE_H
 #define QTAWS_RESTORESERVERRESPONSE_H
 
+#include "opsworkscmresponse.h"
+#include "restoreserverrequest.h"
+
+namespace AWS {
+
+namespace opsworkscm {
+
+class RestoreServerResponsePrivate;
+
+class QTAWS_EXPORT RestoreServerResponse : public RestoreServerResponse {
+    Q_OBJECT
+
+public:
+    RestoreServerResponse(const RestoreServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RestoreServerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RestoreServerResponse)
+    Q_DISABLE_COPY(RestoreServerResponse)
+
+};
+
+} // namespace opsworkscm
+} // namespace AWS
+
 #endif

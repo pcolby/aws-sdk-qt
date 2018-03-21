@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEQUALIFICATIONTYPERESPONSE_H
 #define QTAWS_CREATEQUALIFICATIONTYPERESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "createqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class CreateQualificationTypeResponsePrivate;
+
+class QTAWS_EXPORT CreateQualificationTypeResponse : public CreateQualificationTypeResponse {
+    Q_OBJECT
+
+public:
+    CreateQualificationTypeResponse(const CreateQualificationTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateQualificationTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateQualificationTypeResponse)
+    Q_DISABLE_COPY(CreateQualificationTypeResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

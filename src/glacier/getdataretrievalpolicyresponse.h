@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDATARETRIEVALPOLICYRESPONSE_H
 #define QTAWS_GETDATARETRIEVALPOLICYRESPONSE_H
 
+#include "glacierresponse.h"
+#include "getdataretrievalpolicyrequest.h"
+
+namespace AWS {
+
+namespace glacier {
+
+class GetDataRetrievalPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetDataRetrievalPolicyResponse : public GetDataRetrievalPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetDataRetrievalPolicyResponse(const GetDataRetrievalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDataRetrievalPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDataRetrievalPolicyResponse)
+    Q_DISABLE_COPY(GetDataRetrievalPolicyResponse)
+
+};
+
+} // namespace glacier
+} // namespace AWS
+
 #endif

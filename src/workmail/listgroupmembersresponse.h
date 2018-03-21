@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTGROUPMEMBERSRESPONSE_H
 #define QTAWS_LISTGROUPMEMBERSRESPONSE_H
 
+#include "workmailresponse.h"
+#include "listgroupmembersrequest.h"
+
+namespace AWS {
+
+namespace workmail {
+
+class ListGroupMembersResponsePrivate;
+
+class QTAWS_EXPORT ListGroupMembersResponse : public ListGroupMembersResponse {
+    Q_OBJECT
+
+public:
+    ListGroupMembersResponse(const ListGroupMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListGroupMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListGroupMembersResponse)
+    Q_DISABLE_COPY(ListGroupMembersResponse)
+
+};
+
+} // namespace workmail
+} // namespace AWS
+
 #endif

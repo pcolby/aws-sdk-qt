@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTINVENTORYENTRIESRESPONSE_H
 #define QTAWS_LISTINVENTORYENTRIESRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listinventoryentriesrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListInventoryEntriesResponsePrivate;
+
+class QTAWS_EXPORT ListInventoryEntriesResponse : public ListInventoryEntriesResponse {
+    Q_OBJECT
+
+public:
+    ListInventoryEntriesResponse(const ListInventoryEntriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListInventoryEntriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListInventoryEntriesResponse)
+    Q_DISABLE_COPY(ListInventoryEntriesResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

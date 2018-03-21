@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEDEVICEPOOLRESPONSE_H
 #define QTAWS_UPDATEDEVICEPOOLRESPONSE_H
 
+#include "devicefarmresponse.h"
+#include "updatedevicepoolrequest.h"
+
+namespace AWS {
+
+namespace devicefarm {
+
+class UpdateDevicePoolResponsePrivate;
+
+class QTAWS_EXPORT UpdateDevicePoolResponse : public UpdateDevicePoolResponse {
+    Q_OBJECT
+
+public:
+    UpdateDevicePoolResponse(const UpdateDevicePoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateDevicePoolRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDevicePoolResponse)
+    Q_DISABLE_COPY(UpdateDevicePoolResponse)
+
+};
+
+} // namespace devicefarm
+} // namespace AWS
+
 #endif

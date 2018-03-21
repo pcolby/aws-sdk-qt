@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACTIVENAMESRESPONSE_H
 #define QTAWS_GETACTIVENAMESRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getactivenamesrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetActiveNamesResponsePrivate;
+
+class QTAWS_EXPORT GetActiveNamesResponse : public GetActiveNamesResponse {
+    Q_OBJECT
+
+public:
+    GetActiveNamesResponse(const GetActiveNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetActiveNamesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetActiveNamesResponse)
+    Q_DISABLE_COPY(GetActiveNamesResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

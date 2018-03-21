@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEBUDGETRESPONSE_H
 #define QTAWS_DESCRIBEBUDGETRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "describebudgetrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class DescribeBudgetResponsePrivate;
+
+class QTAWS_EXPORT DescribeBudgetResponse : public DescribeBudgetResponse {
+    Q_OBJECT
+
+public:
+    DescribeBudgetResponse(const DescribeBudgetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeBudgetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBudgetResponse)
+    Q_DISABLE_COPY(DescribeBudgetResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

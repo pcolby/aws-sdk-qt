@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEORGANIZATIONRESPONSE_H
 #define QTAWS_DELETEORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "deleteorganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class DeleteOrganizationResponsePrivate;
+
+class QTAWS_EXPORT DeleteOrganizationResponse : public DeleteOrganizationResponse {
+    Q_OBJECT
+
+public:
+    DeleteOrganizationResponse(const DeleteOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOrganizationResponse)
+    Q_DISABLE_COPY(DeleteOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

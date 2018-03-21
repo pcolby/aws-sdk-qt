@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELAUNCHTEMPLATERESPONSE_H
 #define QTAWS_DELETELAUNCHTEMPLATERESPONSE_H
 
+#include "ec2response.h"
+#include "deletelaunchtemplaterequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteLaunchTemplateResponsePrivate;
+
+class QTAWS_EXPORT DeleteLaunchTemplateResponse : public DeleteLaunchTemplateResponse {
+    Q_OBJECT
+
+public:
+    DeleteLaunchTemplateResponse(const DeleteLaunchTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLaunchTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLaunchTemplateResponse)
+    Q_DISABLE_COPY(DeleteLaunchTemplateResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

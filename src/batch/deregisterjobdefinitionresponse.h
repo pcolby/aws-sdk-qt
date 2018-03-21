@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERJOBDEFINITIONRESPONSE_H
 #define QTAWS_DEREGISTERJOBDEFINITIONRESPONSE_H
 
+#include "batchresponse.h"
+#include "deregisterjobdefinitionrequest.h"
+
+namespace AWS {
+
+namespace batch {
+
+class DeregisterJobDefinitionResponsePrivate;
+
+class QTAWS_EXPORT DeregisterJobDefinitionResponse : public DeregisterJobDefinitionResponse {
+    Q_OBJECT
+
+public:
+    DeregisterJobDefinitionResponse(const DeregisterJobDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterJobDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterJobDefinitionResponse)
+    Q_DISABLE_COPY(DeregisterJobDefinitionResponse)
+
+};
+
+} // namespace batch
+} // namespace AWS
+
 #endif

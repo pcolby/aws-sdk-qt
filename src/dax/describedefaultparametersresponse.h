@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDEFAULTPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEDEFAULTPARAMETERSRESPONSE_H
 
+#include "daxresponse.h"
+#include "describedefaultparametersrequest.h"
+
+namespace AWS {
+
+namespace dax {
+
+class DescribeDefaultParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeDefaultParametersResponse : public DescribeDefaultParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeDefaultParametersResponse(const DescribeDefaultParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDefaultParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDefaultParametersResponse)
+    Q_DISABLE_COPY(DescribeDefaultParametersResponse)
+
+};
+
+} // namespace dax
+} // namespace AWS
+
 #endif

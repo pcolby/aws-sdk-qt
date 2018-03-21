@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPRODUCTRESPONSE_H
 #define QTAWS_DELETEPRODUCTRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "deleteproductrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DeleteProductResponsePrivate;
+
+class QTAWS_EXPORT DeleteProductResponse : public DeleteProductResponse {
+    Q_OBJECT
+
+public:
+    DeleteProductResponse(const DeleteProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProductRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProductResponse)
+    Q_DISABLE_COPY(DeleteProductResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

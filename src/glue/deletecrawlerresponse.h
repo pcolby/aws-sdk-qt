@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECRAWLERRESPONSE_H
 #define QTAWS_DELETECRAWLERRESPONSE_H
 
+#include "glueresponse.h"
+#include "deletecrawlerrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteCrawlerResponsePrivate;
+
+class QTAWS_EXPORT DeleteCrawlerResponse : public DeleteCrawlerResponse {
+    Q_OBJECT
+
+public:
+    DeleteCrawlerResponse(const DeleteCrawlerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCrawlerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCrawlerResponse)
+    Q_DISABLE_COPY(DeleteCrawlerResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

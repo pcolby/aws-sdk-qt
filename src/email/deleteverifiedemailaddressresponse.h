@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVERIFIEDEMAILADDRESSRESPONSE_H
 #define QTAWS_DELETEVERIFIEDEMAILADDRESSRESPONSE_H
 
+#include "emailresponse.h"
+#include "deleteverifiedemailaddressrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteVerifiedEmailAddressResponsePrivate;
+
+class QTAWS_EXPORT DeleteVerifiedEmailAddressResponse : public DeleteVerifiedEmailAddressResponse {
+    Q_OBJECT
+
+public:
+    DeleteVerifiedEmailAddressResponse(const DeleteVerifiedEmailAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVerifiedEmailAddressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVerifiedEmailAddressResponse)
+    Q_DISABLE_COPY(DeleteVerifiedEmailAddressResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

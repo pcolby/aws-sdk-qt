@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEMODELRESPONSE_H
 #define QTAWS_DESCRIBEMODELRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "describemodelrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class DescribeModelResponsePrivate;
+
+class QTAWS_EXPORT DescribeModelResponse : public DescribeModelResponse {
+    Q_OBJECT
+
+public:
+    DescribeModelResponse(const DescribeModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeModelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeModelResponse)
+    Q_DISABLE_COPY(DescribeModelResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

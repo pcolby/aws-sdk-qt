@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_H
 #define QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "updateaccountpasswordpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class UpdateAccountPasswordPolicyResponsePrivate;
+
+class QTAWS_EXPORT UpdateAccountPasswordPolicyResponse : public UpdateAccountPasswordPolicyResponse {
+    Q_OBJECT
+
+public:
+    UpdateAccountPasswordPolicyResponse(const UpdateAccountPasswordPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAccountPasswordPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAccountPasswordPolicyResponse)
+    Q_DISABLE_COPY(UpdateAccountPasswordPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

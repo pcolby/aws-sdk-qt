@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELISTENERRESPONSE_H
 #define QTAWS_CREATELISTENERRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "createlistenerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class CreateListenerResponsePrivate;
+
+class QTAWS_EXPORT CreateListenerResponse : public CreateListenerResponse {
+    Q_OBJECT
+
+public:
+    CreateListenerResponse(const CreateListenerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateListenerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateListenerResponse)
+    Q_DISABLE_COPY(CreateListenerResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

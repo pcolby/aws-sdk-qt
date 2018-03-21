@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETPERMISSIONPOLICYRESPONSE_H
 #define QTAWS_GETPERMISSIONPOLICYRESPONSE_H
 
+#include "wafresponse.h"
+#include "getpermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class GetPermissionPolicyResponsePrivate;
+
+class QTAWS_EXPORT GetPermissionPolicyResponse : public GetPermissionPolicyResponse {
+    Q_OBJECT
+
+public:
+    GetPermissionPolicyResponse(const GetPermissionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetPermissionPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetPermissionPolicyResponse)
+    Q_DISABLE_COPY(GetPermissionPolicyResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

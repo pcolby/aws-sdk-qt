@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEVENTBUSRESPONSE_H
 #define QTAWS_DESCRIBEEVENTBUSRESPONSE_H
 
+#include "eventsresponse.h"
+#include "describeeventbusrequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class DescribeEventBusResponsePrivate;
+
+class QTAWS_EXPORT DescribeEventBusResponse : public DescribeEventBusResponse {
+    Q_OBJECT
+
+public:
+    DescribeEventBusResponse(const DescribeEventBusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEventBusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventBusResponse)
+    Q_DISABLE_COPY(DescribeEventBusResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

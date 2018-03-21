@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPROFILERESPONSE_H
 #define QTAWS_CREATEPROFILERESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "createprofilerequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class CreateProfileResponsePrivate;
+
+class QTAWS_EXPORT CreateProfileResponse : public CreateProfileResponse {
+    Q_OBJECT
+
+public:
+    CreateProfileResponse(const CreateProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateProfileResponse)
+    Q_DISABLE_COPY(CreateProfileResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

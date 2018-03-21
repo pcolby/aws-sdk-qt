@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPLACEROUTETABLEASSOCIATIONRESPONSE_H
 #define QTAWS_REPLACEROUTETABLEASSOCIATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "replaceroutetableassociationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReplaceRouteTableAssociationResponsePrivate;
+
+class QTAWS_EXPORT ReplaceRouteTableAssociationResponse : public ReplaceRouteTableAssociationResponse {
+    Q_OBJECT
+
+public:
+    ReplaceRouteTableAssociationResponse(const ReplaceRouteTableAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReplaceRouteTableAssociationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceRouteTableAssociationResponse)
+    Q_DISABLE_COPY(ReplaceRouteTableAssociationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

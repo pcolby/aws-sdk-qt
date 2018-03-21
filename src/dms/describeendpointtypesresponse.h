@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_H
 #define QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_H
 
+#include "dmsresponse.h"
+#include "describeendpointtypesrequest.h"
+
+namespace AWS {
+
+namespace dms {
+
+class DescribeEndpointTypesResponsePrivate;
+
+class QTAWS_EXPORT DescribeEndpointTypesResponse : public DescribeEndpointTypesResponse {
+    Q_OBJECT
+
+public:
+    DescribeEndpointTypesResponse(const DescribeEndpointTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEndpointTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEndpointTypesResponse)
+    Q_DISABLE_COPY(DescribeEndpointTypesResponse)
+
+};
+
+} // namespace dms
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTPROTECTIONSRESPONSE_H
 #define QTAWS_LISTPROTECTIONSRESPONSE_H
 
+#include "shieldresponse.h"
+#include "listprotectionsrequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class ListProtectionsResponsePrivate;
+
+class QTAWS_EXPORT ListProtectionsResponse : public ListProtectionsResponse {
+    Q_OBJECT
+
+public:
+    ListProtectionsResponse(const ListProtectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListProtectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListProtectionsResponse)
+    Q_DISABLE_COPY(ListProtectionsResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

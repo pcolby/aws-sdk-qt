@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETOPICRESPONSE_H
 #define QTAWS_DELETETOPICRESPONSE_H
 
+#include "snsresponse.h"
+#include "deletetopicrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class DeleteTopicResponsePrivate;
+
+class QTAWS_EXPORT DeleteTopicResponse : public DeleteTopicResponse {
+    Q_OBJECT
+
+public:
+    DeleteTopicResponse(const DeleteTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTopicRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTopicResponse)
+    Q_DISABLE_COPY(DeleteTopicResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

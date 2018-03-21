@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETQUEUEATTRIBUTESRESPONSE_H
 #define QTAWS_GETQUEUEATTRIBUTESRESPONSE_H
 
+#include "sqsresponse.h"
+#include "getqueueattributesrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class GetQueueAttributesResponsePrivate;
+
+class QTAWS_EXPORT GetQueueAttributesResponse : public GetQueueAttributesResponse {
+    Q_OBJECT
+
+public:
+    GetQueueAttributesResponse(const GetQueueAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetQueueAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetQueueAttributesResponse)
+    Q_DISABLE_COPY(GetQueueAttributesResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBYTEMATCHSETRESPONSE_H
 #define QTAWS_DELETEBYTEMATCHSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "deletebytematchsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class DeleteByteMatchSetResponsePrivate;
+
+class QTAWS_EXPORT DeleteByteMatchSetResponse : public DeleteByteMatchSetResponse {
+    Q_OBJECT
+
+public:
+    DeleteByteMatchSetResponse(const DeleteByteMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteByteMatchSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteByteMatchSetResponse)
+    Q_DISABLE_COPY(DeleteByteMatchSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

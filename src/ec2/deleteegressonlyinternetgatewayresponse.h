@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEEGRESSONLYINTERNETGATEWAYRESPONSE_H
 #define QTAWS_DELETEEGRESSONLYINTERNETGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "deleteegressonlyinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteEgressOnlyInternetGatewayResponsePrivate;
+
+class QTAWS_EXPORT DeleteEgressOnlyInternetGatewayResponse : public DeleteEgressOnlyInternetGatewayResponse {
+    Q_OBJECT
+
+public:
+    DeleteEgressOnlyInternetGatewayResponse(const DeleteEgressOnlyInternetGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteEgressOnlyInternetGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEgressOnlyInternetGatewayResponse)
+    Q_DISABLE_COPY(DeleteEgressOnlyInternetGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

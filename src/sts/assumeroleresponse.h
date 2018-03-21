@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSUMEROLERESPONSE_H
 #define QTAWS_ASSUMEROLERESPONSE_H
 
+#include "stsresponse.h"
+#include "assumerolerequest.h"
+
+namespace AWS {
+
+namespace sts {
+
+class AssumeRoleResponsePrivate;
+
+class QTAWS_EXPORT AssumeRoleResponse : public AssumeRoleResponse {
+    Q_OBJECT
+
+public:
+    AssumeRoleResponse(const AssumeRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssumeRoleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssumeRoleResponse)
+    Q_DISABLE_COPY(AssumeRoleResponse)
+
+};
+
+} // namespace sts
+} // namespace AWS
+
 #endif

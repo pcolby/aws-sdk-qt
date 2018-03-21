@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATERULEGROUPRESPONSE_H
 #define QTAWS_CREATERULEGROUPRESPONSE_H
 
+#include "wafresponse.h"
+#include "createrulegrouprequest.h"
+
+namespace AWS {
+
+namespace waf {
+
+class CreateRuleGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateRuleGroupResponse : public CreateRuleGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateRuleGroupResponse(const CreateRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRuleGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRuleGroupResponse)
+    Q_DISABLE_COPY(CreateRuleGroupResponse)
+
+};
+
+} // namespace waf
+} // namespace AWS
+
 #endif

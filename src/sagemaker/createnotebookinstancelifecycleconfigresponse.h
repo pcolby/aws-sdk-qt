@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_H
 #define QTAWS_CREATENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "createnotebookinstancelifecycleconfigrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class CreateNotebookInstanceLifecycleConfigResponsePrivate;
+
+class QTAWS_EXPORT CreateNotebookInstanceLifecycleConfigResponse : public CreateNotebookInstanceLifecycleConfigResponse {
+    Q_OBJECT
+
+public:
+    CreateNotebookInstanceLifecycleConfigResponse(const CreateNotebookInstanceLifecycleConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNotebookInstanceLifecycleConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNotebookInstanceLifecycleConfigResponse)
+    Q_DISABLE_COPY(CreateNotebookInstanceLifecycleConfigResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

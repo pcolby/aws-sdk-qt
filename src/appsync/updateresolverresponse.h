@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERESOLVERRESPONSE_H
 #define QTAWS_UPDATERESOLVERRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "updateresolverrequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class UpdateResolverResponsePrivate;
+
+class QTAWS_EXPORT UpdateResolverResponse : public UpdateResolverResponse {
+    Q_OBJECT
+
+public:
+    UpdateResolverResponse(const UpdateResolverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateResolverRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResolverResponse)
+    Q_DISABLE_COPY(UpdateResolverResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

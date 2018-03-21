@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "updatenotificationsettingsrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class UpdateNotificationSettingsResponsePrivate;
+
+class QTAWS_EXPORT UpdateNotificationSettingsResponse : public UpdateNotificationSettingsResponse {
+    Q_OBJECT
+
+public:
+    UpdateNotificationSettingsResponse(const UpdateNotificationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateNotificationSettingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNotificationSettingsResponse)
+    Q_DISABLE_COPY(UpdateNotificationSettingsResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTORIGINENDPOINTSRESPONSE_H
 #define QTAWS_LISTORIGINENDPOINTSRESPONSE_H
 
+#include "mediapackageresponse.h"
+#include "listoriginendpointsrequest.h"
+
+namespace AWS {
+
+namespace mediapackage {
+
+class ListOriginEndpointsResponsePrivate;
+
+class QTAWS_EXPORT ListOriginEndpointsResponse : public ListOriginEndpointsResponse {
+    Q_OBJECT
+
+public:
+    ListOriginEndpointsResponse(const ListOriginEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListOriginEndpointsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListOriginEndpointsResponse)
+    Q_DISABLE_COPY(ListOriginEndpointsResponse)
+
+};
+
+} // namespace mediapackage
+} // namespace AWS
+
 #endif

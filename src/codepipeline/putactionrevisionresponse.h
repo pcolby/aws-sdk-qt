@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTACTIONREVISIONRESPONSE_H
 #define QTAWS_PUTACTIONREVISIONRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "putactionrevisionrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class PutActionRevisionResponsePrivate;
+
+class QTAWS_EXPORT PutActionRevisionResponse : public PutActionRevisionResponse {
+    Q_OBJECT
+
+public:
+    PutActionRevisionResponse(const PutActionRevisionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutActionRevisionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutActionRevisionResponse)
+    Q_DISABLE_COPY(PutActionRevisionResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

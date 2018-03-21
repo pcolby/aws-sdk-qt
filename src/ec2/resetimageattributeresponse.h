@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESETIMAGEATTRIBUTERESPONSE_H
 #define QTAWS_RESETIMAGEATTRIBUTERESPONSE_H
 
+#include "ec2response.h"
+#include "resetimageattributerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ResetImageAttributeResponsePrivate;
+
+class QTAWS_EXPORT ResetImageAttributeResponse : public ResetImageAttributeResponse {
+    Q_OBJECT
+
+public:
+    ResetImageAttributeResponse(const ResetImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResetImageAttributeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResetImageAttributeResponse)
+    Q_DISABLE_COPY(ResetImageAttributeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

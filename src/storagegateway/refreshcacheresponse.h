@@ -20,4 +20,33 @@
 #ifndef QTAWS_REFRESHCACHERESPONSE_H
 #define QTAWS_REFRESHCACHERESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "refreshcacherequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class RefreshCacheResponsePrivate;
+
+class QTAWS_EXPORT RefreshCacheResponse : public RefreshCacheResponse {
+    Q_OBJECT
+
+public:
+    RefreshCacheResponse(const RefreshCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RefreshCacheRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RefreshCacheResponse)
+    Q_DISABLE_COPY(RefreshCacheResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

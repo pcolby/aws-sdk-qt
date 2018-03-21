@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETLOCATIONRESPONSE_H
 #define QTAWS_GETBUCKETLOCATIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketlocationrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketLocationResponsePrivate;
+
+class QTAWS_EXPORT GetBucketLocationResponse : public GetBucketLocationResponse {
+    Q_OBJECT
+
+public:
+    GetBucketLocationResponse(const GetBucketLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketLocationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketLocationResponse)
+    Q_DISABLE_COPY(GetBucketLocationResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

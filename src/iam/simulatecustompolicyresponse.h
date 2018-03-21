@@ -20,4 +20,33 @@
 #ifndef QTAWS_SIMULATECUSTOMPOLICYRESPONSE_H
 #define QTAWS_SIMULATECUSTOMPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "simulatecustompolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class SimulateCustomPolicyResponsePrivate;
+
+class QTAWS_EXPORT SimulateCustomPolicyResponse : public SimulateCustomPolicyResponse {
+    Q_OBJECT
+
+public:
+    SimulateCustomPolicyResponse(const SimulateCustomPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SimulateCustomPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SimulateCustomPolicyResponse)
+    Q_DISABLE_COPY(SimulateCustomPolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

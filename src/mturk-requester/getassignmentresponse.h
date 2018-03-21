@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETASSIGNMENTRESPONSE_H
 #define QTAWS_GETASSIGNMENTRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "getassignmentrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class GetAssignmentResponsePrivate;
+
+class QTAWS_EXPORT GetAssignmentResponse : public GetAssignmentResponse {
+    Q_OBJECT
+
+public:
+    GetAssignmentResponse(const GetAssignmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAssignmentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAssignmentResponse)
+    Q_DISABLE_COPY(GetAssignmentResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

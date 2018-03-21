@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTINTEGRATIONRESPONSERESPONSE_H
 #define QTAWS_PUTINTEGRATIONRESPONSERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "putintegrationresponserequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class PutIntegrationResponseResponsePrivate;
+
+class QTAWS_EXPORT PutIntegrationResponseResponse : public PutIntegrationResponseResponse {
+    Q_OBJECT
+
+public:
+    PutIntegrationResponseResponse(const PutIntegrationResponseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutIntegrationResponseRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutIntegrationResponseResponse)
+    Q_DISABLE_COPY(PutIntegrationResponseResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

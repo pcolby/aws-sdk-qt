@@ -20,4 +20,33 @@
 #ifndef QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "authorizecachesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class AuthorizeCacheSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressResponse : public AuthorizeCacheSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    AuthorizeCacheSecurityGroupIngressResponse(const AuthorizeCacheSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AuthorizeCacheSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeCacheSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(AuthorizeCacheSecurityGroupIngressResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

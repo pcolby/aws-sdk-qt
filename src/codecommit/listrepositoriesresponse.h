@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREPOSITORIESRESPONSE_H
 #define QTAWS_LISTREPOSITORIESRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "listrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class ListRepositoriesResponsePrivate;
+
+class QTAWS_EXPORT ListRepositoriesResponse : public ListRepositoriesResponse {
+    Q_OBJECT
+
+public:
+    ListRepositoriesResponse(const ListRepositoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListRepositoriesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListRepositoriesResponse)
+    Q_DISABLE_COPY(ListRepositoriesResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

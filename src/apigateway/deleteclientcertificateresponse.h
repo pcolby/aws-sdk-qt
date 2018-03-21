@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECLIENTCERTIFICATERESPONSE_H
 #define QTAWS_DELETECLIENTCERTIFICATERESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deleteclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteClientCertificateResponsePrivate;
+
+class QTAWS_EXPORT DeleteClientCertificateResponse : public DeleteClientCertificateResponse {
+    Q_OBJECT
+
+public:
+    DeleteClientCertificateResponse(const DeleteClientCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteClientCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteClientCertificateResponse)
+    Q_DISABLE_COPY(DeleteClientCertificateResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNTAGSTREAMRESPONSE_H
 #define QTAWS_UNTAGSTREAMRESPONSE_H
 
+#include "kinesisvideoresponse.h"
+#include "untagstreamrequest.h"
+
+namespace AWS {
+
+namespace kinesisvideo {
+
+class UntagStreamResponsePrivate;
+
+class QTAWS_EXPORT UntagStreamResponse : public UntagStreamResponse {
+    Q_OBJECT
+
+public:
+    UntagStreamResponse(const UntagStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UntagStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UntagStreamResponse)
+    Q_DISABLE_COPY(UntagStreamResponse)
+
+};
+
+} // namespace kinesisvideo
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEJOBRESPONSE_H
 #define QTAWS_DESCRIBEJOBRESPONSE_H
 
+#include "snowballresponse.h"
+#include "describejobrequest.h"
+
+namespace AWS {
+
+namespace snowball {
+
+class DescribeJobResponsePrivate;
+
+class QTAWS_EXPORT DescribeJobResponse : public DescribeJobResponse {
+    Q_OBJECT
+
+public:
+    DescribeJobResponse(const DescribeJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobResponse)
+    Q_DISABLE_COPY(DescribeJobResponse)
+
+};
+
+} // namespace snowball
+} // namespace AWS
+
 #endif

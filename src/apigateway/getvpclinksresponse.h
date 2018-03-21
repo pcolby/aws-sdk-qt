@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETVPCLINKSRESPONSE_H
 #define QTAWS_GETVPCLINKSRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getvpclinksrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetVpcLinksResponsePrivate;
+
+class QTAWS_EXPORT GetVpcLinksResponse : public GetVpcLinksResponse {
+    Q_OBJECT
+
+public:
+    GetVpcLinksResponse(const GetVpcLinksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetVpcLinksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetVpcLinksResponse)
+    Q_DISABLE_COPY(GetVpcLinksResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

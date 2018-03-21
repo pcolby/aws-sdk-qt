@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_H
 #define QTAWS_DELETEALIASRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class DeleteAliasResponsePrivate;
+
+class QTAWS_EXPORT DeleteAliasResponse : public DeleteAliasResponse {
+    Q_OBJECT
+
+public:
+    DeleteAliasResponse(const DeleteAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAliasRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAliasResponse)
+    Q_DISABLE_COPY(DeleteAliasResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

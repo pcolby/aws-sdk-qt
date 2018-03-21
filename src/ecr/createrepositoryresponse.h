@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEREPOSITORYRESPONSE_H
 #define QTAWS_CREATEREPOSITORYRESPONSE_H
 
+#include "ecrresponse.h"
+#include "createrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class CreateRepositoryResponsePrivate;
+
+class QTAWS_EXPORT CreateRepositoryResponse : public CreateRepositoryResponse {
+    Q_OBJECT
+
+public:
+    CreateRepositoryResponse(const CreateRepositoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateRepositoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateRepositoryResponse)
+    Q_DISABLE_COPY(CreateRepositoryResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

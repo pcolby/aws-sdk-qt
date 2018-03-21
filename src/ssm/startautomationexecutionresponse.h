@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTAUTOMATIONEXECUTIONRESPONSE_H
 #define QTAWS_STARTAUTOMATIONEXECUTIONRESPONSE_H
 
+#include "ssmresponse.h"
+#include "startautomationexecutionrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class StartAutomationExecutionResponsePrivate;
+
+class QTAWS_EXPORT StartAutomationExecutionResponse : public StartAutomationExecutionResponse {
+    Q_OBJECT
+
+public:
+    StartAutomationExecutionResponse(const StartAutomationExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartAutomationExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartAutomationExecutionResponse)
+    Q_DISABLE_COPY(StartAutomationExecutionResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

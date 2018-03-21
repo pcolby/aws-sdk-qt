@@ -20,4 +20,33 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONRESPONSE_H
 #define QTAWS_RETRYSTAGEEXECUTIONRESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "retrystageexecutionrequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class RetryStageExecutionResponsePrivate;
+
+class QTAWS_EXPORT RetryStageExecutionResponse : public RetryStageExecutionResponse {
+    Q_OBJECT
+
+public:
+    RetryStageExecutionResponse(const RetryStageExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RetryStageExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RetryStageExecutionResponse)
+    Q_DISABLE_COPY(RetryStageExecutionResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

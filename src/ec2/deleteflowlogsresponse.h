@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEFLOWLOGSRESPONSE_H
 #define QTAWS_DELETEFLOWLOGSRESPONSE_H
 
+#include "ec2response.h"
+#include "deleteflowlogsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteFlowLogsResponsePrivate;
+
+class QTAWS_EXPORT DeleteFlowLogsResponse : public DeleteFlowLogsResponse {
+    Q_OBJECT
+
+public:
+    DeleteFlowLogsResponse(const DeleteFlowLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteFlowLogsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFlowLogsResponse)
+    Q_DISABLE_COPY(DeleteFlowLogsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

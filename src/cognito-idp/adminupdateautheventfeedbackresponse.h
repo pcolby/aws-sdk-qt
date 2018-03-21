@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKRESPONSE_H
 #define QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "adminupdateautheventfeedbackrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminUpdateAuthEventFeedbackResponsePrivate;
+
+class QTAWS_EXPORT AdminUpdateAuthEventFeedbackResponse : public AdminUpdateAuthEventFeedbackResponse {
+    Q_OBJECT
+
+public:
+    AdminUpdateAuthEventFeedbackResponse(const AdminUpdateAuthEventFeedbackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminUpdateAuthEventFeedbackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminUpdateAuthEventFeedbackResponse)
+    Q_DISABLE_COPY(AdminUpdateAuthEventFeedbackResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATERESTAPIRESPONSE_H
 #define QTAWS_UPDATERESTAPIRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "updaterestapirequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class UpdateRestApiResponsePrivate;
+
+class QTAWS_EXPORT UpdateRestApiResponse : public UpdateRestApiResponse {
+    Q_OBJECT
+
+public:
+    UpdateRestApiResponse(const UpdateRestApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRestApiRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRestApiResponse)
+    Q_DISABLE_COPY(UpdateRestApiResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

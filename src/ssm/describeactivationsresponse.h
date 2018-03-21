@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEACTIVATIONSRESPONSE_H
 #define QTAWS_DESCRIBEACTIVATIONSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "describeactivationsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DescribeActivationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeActivationsResponse : public DescribeActivationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeActivationsResponse(const DescribeActivationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeActivationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeActivationsResponse)
+    Q_DISABLE_COPY(DescribeActivationsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

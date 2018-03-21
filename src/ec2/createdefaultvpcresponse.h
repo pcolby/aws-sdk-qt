@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDEFAULTVPCRESPONSE_H
 #define QTAWS_CREATEDEFAULTVPCRESPONSE_H
 
+#include "ec2response.h"
+#include "createdefaultvpcrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateDefaultVpcResponsePrivate;
+
+class QTAWS_EXPORT CreateDefaultVpcResponse : public CreateDefaultVpcResponse {
+    Q_OBJECT
+
+public:
+    CreateDefaultVpcResponse(const CreateDefaultVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDefaultVpcRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDefaultVpcResponse)
+    Q_DISABLE_COPY(CreateDefaultVpcResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

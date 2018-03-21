@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTQUEUESRESPONSE_H
 #define QTAWS_LISTQUEUESRESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "listqueuesrequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class ListQueuesResponsePrivate;
+
+class QTAWS_EXPORT ListQueuesResponse : public ListQueuesResponse {
+    Q_OBJECT
+
+public:
+    ListQueuesResponse(const ListQueuesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListQueuesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListQueuesResponse)
+    Q_DISABLE_COPY(ListQueuesResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

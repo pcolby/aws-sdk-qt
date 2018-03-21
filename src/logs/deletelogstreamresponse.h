@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELOGSTREAMRESPONSE_H
 #define QTAWS_DELETELOGSTREAMRESPONSE_H
 
+#include "logsresponse.h"
+#include "deletelogstreamrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class DeleteLogStreamResponsePrivate;
+
+class QTAWS_EXPORT DeleteLogStreamResponse : public DeleteLogStreamResponse {
+    Q_OBJECT
+
+public:
+    DeleteLogStreamResponse(const DeleteLogStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLogStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLogStreamResponse)
+    Q_DISABLE_COPY(DeleteLogStreamResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

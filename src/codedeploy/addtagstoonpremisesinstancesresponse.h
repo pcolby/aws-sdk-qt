@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_H
 #define QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "addtagstoonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class AddTagsToOnPremisesInstancesResponsePrivate;
+
+class QTAWS_EXPORT AddTagsToOnPremisesInstancesResponse : public AddTagsToOnPremisesInstancesResponse {
+    Q_OBJECT
+
+public:
+    AddTagsToOnPremisesInstancesResponse(const AddTagsToOnPremisesInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddTagsToOnPremisesInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToOnPremisesInstancesResponse)
+    Q_DISABLE_COPY(AddTagsToOnPremisesInstancesResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

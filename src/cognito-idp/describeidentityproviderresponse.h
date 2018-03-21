@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEIDENTITYPROVIDERRESPONSE_H
 #define QTAWS_DESCRIBEIDENTITYPROVIDERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "describeidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class DescribeIdentityProviderResponsePrivate;
+
+class QTAWS_EXPORT DescribeIdentityProviderResponse : public DescribeIdentityProviderResponse {
+    Q_OBJECT
+
+public:
+    DescribeIdentityProviderResponse(const DescribeIdentityProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeIdentityProviderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdentityProviderResponse)
+    Q_DISABLE_COPY(DescribeIdentityProviderResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

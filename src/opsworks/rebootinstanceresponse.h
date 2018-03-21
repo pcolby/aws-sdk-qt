@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTINSTANCERESPONSE_H
 #define QTAWS_REBOOTINSTANCERESPONSE_H
 
+#include "opsworksresponse.h"
+#include "rebootinstancerequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class RebootInstanceResponsePrivate;
+
+class QTAWS_EXPORT RebootInstanceResponse : public RebootInstanceResponse {
+    Q_OBJECT
+
+public:
+    RebootInstanceResponse(const RebootInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootInstanceResponse)
+    Q_DISABLE_COPY(RebootInstanceResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

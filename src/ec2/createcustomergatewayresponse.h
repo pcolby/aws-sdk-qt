@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECUSTOMERGATEWAYRESPONSE_H
 #define QTAWS_CREATECUSTOMERGATEWAYRESPONSE_H
 
+#include "ec2response.h"
+#include "createcustomergatewayrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateCustomerGatewayResponsePrivate;
+
+class QTAWS_EXPORT CreateCustomerGatewayResponse : public CreateCustomerGatewayResponse {
+    Q_OBJECT
+
+public:
+    CreateCustomerGatewayResponse(const CreateCustomerGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCustomerGatewayRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomerGatewayResponse)
+    Q_DISABLE_COPY(CreateCustomerGatewayResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

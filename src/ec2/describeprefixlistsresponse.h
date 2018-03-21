@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPREFIXLISTSRESPONSE_H
 #define QTAWS_DESCRIBEPREFIXLISTSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeprefixlistsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribePrefixListsResponsePrivate;
+
+class QTAWS_EXPORT DescribePrefixListsResponse : public DescribePrefixListsResponse {
+    Q_OBJECT
+
+public:
+    DescribePrefixListsResponse(const DescribePrefixListsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribePrefixListsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribePrefixListsResponse)
+    Q_DISABLE_COPY(DescribePrefixListsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

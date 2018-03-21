@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINSTANCESRESPONSE_H
 #define QTAWS_CREATEINSTANCESRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "createinstancesrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class CreateInstancesResponsePrivate;
+
+class QTAWS_EXPORT CreateInstancesResponse : public CreateInstancesResponse {
+    Q_OBJECT
+
+public:
+    CreateInstancesResponse(const CreateInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInstancesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInstancesResponse)
+    Q_DISABLE_COPY(CreateInstancesResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_IMPORTDOCUMENTATIONPARTSRESPONSE_H
 #define QTAWS_IMPORTDOCUMENTATIONPARTSRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "importdocumentationpartsrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class ImportDocumentationPartsResponsePrivate;
+
+class QTAWS_EXPORT ImportDocumentationPartsResponse : public ImportDocumentationPartsResponse {
+    Q_OBJECT
+
+public:
+    ImportDocumentationPartsResponse(const ImportDocumentationPartsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ImportDocumentationPartsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ImportDocumentationPartsResponse)
+    Q_DISABLE_COPY(ImportDocumentationPartsResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

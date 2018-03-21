@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBASEPATHMAPPINGSRESPONSE_H
 #define QTAWS_GETBASEPATHMAPPINGSRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getbasepathmappingsrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetBasePathMappingsResponsePrivate;
+
+class QTAWS_EXPORT GetBasePathMappingsResponse : public GetBasePathMappingsResponse {
+    Q_OBJECT
+
+public:
+    GetBasePathMappingsResponse(const GetBasePathMappingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBasePathMappingsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBasePathMappingsResponse)
+    Q_DISABLE_COPY(GetBasePathMappingsResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

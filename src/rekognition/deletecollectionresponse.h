@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECOLLECTIONRESPONSE_H
 #define QTAWS_DELETECOLLECTIONRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "deletecollectionrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class DeleteCollectionResponsePrivate;
+
+class QTAWS_EXPORT DeleteCollectionResponse : public DeleteCollectionResponse {
+    Q_OBJECT
+
+public:
+    DeleteCollectionResponse(const DeleteCollectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCollectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCollectionResponse)
+    Q_DISABLE_COPY(DeleteCollectionResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

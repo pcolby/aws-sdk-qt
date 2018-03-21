@@ -20,4 +20,33 @@
 #ifndef QTAWS_DETECTKEYPHRASESRESPONSE_H
 #define QTAWS_DETECTKEYPHRASESRESPONSE_H
 
+#include "comprehendresponse.h"
+#include "detectkeyphrasesrequest.h"
+
+namespace AWS {
+
+namespace comprehend {
+
+class DetectKeyPhrasesResponsePrivate;
+
+class QTAWS_EXPORT DetectKeyPhrasesResponse : public DetectKeyPhrasesResponse {
+    Q_OBJECT
+
+public:
+    DetectKeyPhrasesResponse(const DetectKeyPhrasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DetectKeyPhrasesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DetectKeyPhrasesResponse)
+    Q_DISABLE_COPY(DetectKeyPhrasesResponse)
+
+};
+
+} // namespace comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDASHBOARDSRESPONSE_H
 #define QTAWS_LISTDASHBOARDSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "listdashboardsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class ListDashboardsResponsePrivate;
+
+class QTAWS_EXPORT ListDashboardsResponse : public ListDashboardsResponse {
+    Q_OBJECT
+
+public:
+    ListDashboardsResponse(const ListDashboardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDashboardsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDashboardsResponse)
+    Q_DISABLE_COPY(ListDashboardsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

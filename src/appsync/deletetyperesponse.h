@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETYPERESPONSE_H
 #define QTAWS_DELETETYPERESPONSE_H
 
+#include "appsyncresponse.h"
+#include "deletetyperequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class DeleteTypeResponsePrivate;
+
+class QTAWS_EXPORT DeleteTypeResponse : public DeleteTypeResponse {
+    Q_OBJECT
+
+public:
+    DeleteTypeResponse(const DeleteTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTypeResponse)
+    Q_DISABLE_COPY(DeleteTypeResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

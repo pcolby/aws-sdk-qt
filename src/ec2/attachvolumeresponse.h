@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHVOLUMERESPONSE_H
 #define QTAWS_ATTACHVOLUMERESPONSE_H
 
+#include "ec2response.h"
+#include "attachvolumerequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AttachVolumeResponsePrivate;
+
+class QTAWS_EXPORT AttachVolumeResponse : public AttachVolumeResponse {
+    Q_OBJECT
+
+public:
+    AttachVolumeResponse(const AttachVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachVolumeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachVolumeResponse)
+    Q_DISABLE_COPY(AttachVolumeResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

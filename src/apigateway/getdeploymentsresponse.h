@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDEPLOYMENTSRESPONSE_H
 #define QTAWS_GETDEPLOYMENTSRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "getdeploymentsrequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class GetDeploymentsResponsePrivate;
+
+class QTAWS_EXPORT GetDeploymentsResponse : public GetDeploymentsResponse {
+    Q_OBJECT
+
+public:
+    GetDeploymentsResponse(const GetDeploymentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDeploymentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDeploymentsResponse)
+    Q_DISABLE_COPY(GetDeploymentsResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

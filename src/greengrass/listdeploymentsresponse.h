@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTDEPLOYMENTSRESPONSE_H
 #define QTAWS_LISTDEPLOYMENTSRESPONSE_H
 
+#include "greengrassresponse.h"
+#include "listdeploymentsrequest.h"
+
+namespace AWS {
+
+namespace greengrass {
+
+class ListDeploymentsResponsePrivate;
+
+class QTAWS_EXPORT ListDeploymentsResponse : public ListDeploymentsResponse {
+    Q_OBJECT
+
+public:
+    ListDeploymentsResponse(const ListDeploymentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListDeploymentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListDeploymentsResponse)
+    Q_DISABLE_COPY(ListDeploymentsResponse)
+
+};
+
+} // namespace greengrass
+} // namespace AWS
+
 #endif

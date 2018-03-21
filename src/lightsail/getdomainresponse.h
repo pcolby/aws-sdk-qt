@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOMAINRESPONSE_H
 #define QTAWS_GETDOMAINRESPONSE_H
 
+#include "lightsailresponse.h"
+#include "getdomainrequest.h"
+
+namespace AWS {
+
+namespace lightsail {
+
+class GetDomainResponsePrivate;
+
+class QTAWS_EXPORT GetDomainResponse : public GetDomainResponse {
+    Q_OBJECT
+
+public:
+    GetDomainResponse(const GetDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainResponse)
+    Q_DISABLE_COPY(GetDomainResponse)
+
+};
+
+} // namespace lightsail
+} // namespace AWS
+
 #endif

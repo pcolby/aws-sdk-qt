@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPOLICYRESPONSE_H
 #define QTAWS_CREATEPOLICYRESPONSE_H
 
+#include "iamresponse.h"
+#include "createpolicyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class CreatePolicyResponsePrivate;
+
+class QTAWS_EXPORT CreatePolicyResponse : public CreatePolicyResponse {
+    Q_OBJECT
+
+public:
+    CreatePolicyResponse(const CreatePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePolicyResponse)
+    Q_DISABLE_COPY(CreatePolicyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

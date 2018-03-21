@@ -20,4 +20,33 @@
 #ifndef QTAWS_ALLOCATEADDRESSRESPONSE_H
 #define QTAWS_ALLOCATEADDRESSRESPONSE_H
 
+#include "ec2response.h"
+#include "allocateaddressrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class AllocateAddressResponsePrivate;
+
+class QTAWS_EXPORT AllocateAddressResponse : public AllocateAddressResponse {
+    Q_OBJECT
+
+public:
+    AllocateAddressResponse(const AllocateAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AllocateAddressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AllocateAddressResponse)
+    Q_DISABLE_COPY(AllocateAddressResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

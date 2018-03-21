@@ -20,4 +20,33 @@
 #ifndef QTAWS_INVOKEENDPOINTRESPONSE_H
 #define QTAWS_INVOKEENDPOINTRESPONSE_H
 
+#include "runtime.sagemakerresponse.h"
+#include "invokeendpointrequest.h"
+
+namespace AWS {
+
+namespace runtime.sagemaker {
+
+class InvokeEndpointResponsePrivate;
+
+class QTAWS_EXPORT InvokeEndpointResponse : public InvokeEndpointResponse {
+    Q_OBJECT
+
+public:
+    InvokeEndpointResponse(const InvokeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InvokeEndpointRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InvokeEndpointResponse)
+    Q_DISABLE_COPY(InvokeEndpointResponse)
+
+};
+
+} // namespace runtime.sagemaker
+} // namespace AWS
+
 #endif

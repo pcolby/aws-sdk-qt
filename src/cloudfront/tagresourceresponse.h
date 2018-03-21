@@ -20,4 +20,33 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_H
 #define QTAWS_TAGRESOURCERESPONSE_H
 
+#include "cloudfrontresponse.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace cloudfront {
+
+class TagResourceResponsePrivate;
+
+class QTAWS_EXPORT TagResourceResponse : public TagResourceResponse {
+    Q_OBJECT
+
+public:
+    TagResourceResponse(const TagResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const TagResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(TagResourceResponse)
+    Q_DISABLE_COPY(TagResourceResponse)
+
+};
+
+} // namespace cloudfront
+} // namespace AWS
+
 #endif

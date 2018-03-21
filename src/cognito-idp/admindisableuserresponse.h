@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADMINDISABLEUSERRESPONSE_H
 #define QTAWS_ADMINDISABLEUSERRESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "admindisableuserrequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class AdminDisableUserResponsePrivate;
+
+class QTAWS_EXPORT AdminDisableUserResponse : public AdminDisableUserResponse {
+    Q_OBJECT
+
+public:
+    AdminDisableUserResponse(const AdminDisableUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AdminDisableUserRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AdminDisableUserResponse)
+    Q_DISABLE_COPY(AdminDisableUserResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

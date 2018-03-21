@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEPROVISIONEDPRODUCTPLANRESPONSE_H
 #define QTAWS_DESCRIBEPROVISIONEDPRODUCTPLANRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "describeprovisionedproductplanrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DescribeProvisionedProductPlanResponsePrivate;
+
+class QTAWS_EXPORT DescribeProvisionedProductPlanResponse : public DescribeProvisionedProductPlanResponse {
+    Q_OBJECT
+
+public:
+    DescribeProvisionedProductPlanResponse(const DescribeProvisionedProductPlanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeProvisionedProductPlanRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeProvisionedProductPlanResponse)
+    Q_DISABLE_COPY(DescribeProvisionedProductPlanResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHRESOURCESRESPONSE_H
 #define QTAWS_SEARCHRESOURCESRESPONSE_H
 
+#include "resource-groupsresponse.h"
+#include "searchresourcesrequest.h"
+
+namespace AWS {
+
+namespace resource-groups {
+
+class SearchResourcesResponsePrivate;
+
+class QTAWS_EXPORT SearchResourcesResponse : public SearchResourcesResponse {
+    Q_OBJECT
+
+public:
+    SearchResourcesResponse(const SearchResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchResourcesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchResourcesResponse)
+    Q_DISABLE_COPY(SearchResourcesResponse)
+
+};
+
+} // namespace resource-groups
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETEMPLATERESPONSE_H
 #define QTAWS_CREATETEMPLATERESPONSE_H
 
+#include "emailresponse.h"
+#include "createtemplaterequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class CreateTemplateResponsePrivate;
+
+class QTAWS_EXPORT CreateTemplateResponse : public CreateTemplateResponse {
+    Q_OBJECT
+
+public:
+    CreateTemplateResponse(const CreateTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTemplateResponse)
+    Q_DISABLE_COPY(CreateTemplateResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

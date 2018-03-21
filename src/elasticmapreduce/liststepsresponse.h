@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSTEPSRESPONSE_H
 #define QTAWS_LISTSTEPSRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "liststepsrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class ListStepsResponsePrivate;
+
+class QTAWS_EXPORT ListStepsResponse : public ListStepsResponse {
+    Q_OBJECT
+
+public:
+    ListStepsResponse(const ListStepsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListStepsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListStepsResponse)
+    Q_DISABLE_COPY(ListStepsResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

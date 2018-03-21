@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDEFAULTCLUSTERPARAMETERSRESPONSE_H
 #define QTAWS_DESCRIBEDEFAULTCLUSTERPARAMETERSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describedefaultclusterparametersrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeDefaultClusterParametersResponsePrivate;
+
+class QTAWS_EXPORT DescribeDefaultClusterParametersResponse : public DescribeDefaultClusterParametersResponse {
+    Q_OBJECT
+
+public:
+    DescribeDefaultClusterParametersResponse(const DescribeDefaultClusterParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDefaultClusterParametersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDefaultClusterParametersResponse)
+    Q_DISABLE_COPY(DescribeDefaultClusterParametersResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEWORKERBLOCKRESPONSE_H
 #define QTAWS_CREATEWORKERBLOCKRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "createworkerblockrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class CreateWorkerBlockResponsePrivate;
+
+class QTAWS_EXPORT CreateWorkerBlockResponse : public CreateWorkerBlockResponse {
+    Q_OBJECT
+
+public:
+    CreateWorkerBlockResponse(const CreateWorkerBlockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateWorkerBlockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateWorkerBlockResponse)
+    Q_DISABLE_COPY(CreateWorkerBlockResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

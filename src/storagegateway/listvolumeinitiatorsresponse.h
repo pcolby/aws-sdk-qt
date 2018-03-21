@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTVOLUMEINITIATORSRESPONSE_H
 #define QTAWS_LISTVOLUMEINITIATORSRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "listvolumeinitiatorsrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class ListVolumeInitiatorsResponsePrivate;
+
+class QTAWS_EXPORT ListVolumeInitiatorsResponse : public ListVolumeInitiatorsResponse {
+    Q_OBJECT
+
+public:
+    ListVolumeInitiatorsResponse(const ListVolumeInitiatorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListVolumeInitiatorsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListVolumeInitiatorsResponse)
+    Q_DISABLE_COPY(ListVolumeInitiatorsResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

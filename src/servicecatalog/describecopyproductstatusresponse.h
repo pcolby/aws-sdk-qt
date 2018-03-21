@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBECOPYPRODUCTSTATUSRESPONSE_H
 #define QTAWS_DESCRIBECOPYPRODUCTSTATUSRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "describecopyproductstatusrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class DescribeCopyProductStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeCopyProductStatusResponse : public DescribeCopyProductStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeCopyProductStatusResponse(const DescribeCopyProductStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeCopyProductStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCopyProductStatusResponse)
+    Q_DISABLE_COPY(DescribeCopyProductStatusResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUBLISHRESPONSE_H
 #define QTAWS_PUBLISHRESPONSE_H
 
+#include "iot-dataresponse.h"
+#include "publishrequest.h"
+
+namespace AWS {
+
+namespace iot-data {
+
+class PublishResponsePrivate;
+
+class QTAWS_EXPORT PublishResponse : public PublishResponse {
+    Q_OBJECT
+
+public:
+    PublishResponse(const PublishRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PublishRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PublishResponse)
+    Q_DISABLE_COPY(PublishResponse)
+
+};
+
+} // namespace iot-data
+} // namespace AWS
+
 #endif

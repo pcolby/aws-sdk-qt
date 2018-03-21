@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_H
 #define QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_H
 
+#include "ec2response.h"
+#include "createlaunchtemplateversionrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateLaunchTemplateVersionResponsePrivate;
+
+class QTAWS_EXPORT CreateLaunchTemplateVersionResponse : public CreateLaunchTemplateVersionResponse {
+    Q_OBJECT
+
+public:
+    CreateLaunchTemplateVersionResponse(const CreateLaunchTemplateVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateLaunchTemplateVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateLaunchTemplateVersionResponse)
+    Q_DISABLE_COPY(CreateLaunchTemplateVersionResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

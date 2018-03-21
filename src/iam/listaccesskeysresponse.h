@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTACCESSKEYSRESPONSE_H
 #define QTAWS_LISTACCESSKEYSRESPONSE_H
 
+#include "iamresponse.h"
+#include "listaccesskeysrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListAccessKeysResponsePrivate;
+
+class QTAWS_EXPORT ListAccessKeysResponse : public ListAccessKeysResponse {
+    Q_OBJECT
+
+public:
+    ListAccessKeysResponse(const ListAccessKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAccessKeysRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAccessKeysResponse)
+    Q_DISABLE_COPY(ListAccessKeysResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

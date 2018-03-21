@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEBUILDRESPONSE_H
 #define QTAWS_DELETEBUILDRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "deletebuildrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class DeleteBuildResponsePrivate;
+
+class QTAWS_EXPORT DeleteBuildResponse : public DeleteBuildResponse {
+    Q_OBJECT
+
+public:
+    DeleteBuildResponse(const DeleteBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteBuildRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBuildResponse)
+    Q_DISABLE_COPY(DeleteBuildResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDTASKHEARTBEATRESPONSE_H
 #define QTAWS_SENDTASKHEARTBEATRESPONSE_H
 
+#include "statesresponse.h"
+#include "sendtaskheartbeatrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class SendTaskHeartbeatResponsePrivate;
+
+class QTAWS_EXPORT SendTaskHeartbeatResponse : public SendTaskHeartbeatResponse {
+    Q_OBJECT
+
+public:
+    SendTaskHeartbeatResponse(const SendTaskHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendTaskHeartbeatRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendTaskHeartbeatResponse)
+    Q_DISABLE_COPY(SendTaskHeartbeatResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

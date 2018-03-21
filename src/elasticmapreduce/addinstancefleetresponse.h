@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDINSTANCEFLEETRESPONSE_H
 #define QTAWS_ADDINSTANCEFLEETRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "addinstancefleetrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class AddInstanceFleetResponsePrivate;
+
+class QTAWS_EXPORT AddInstanceFleetResponse : public AddInstanceFleetResponse {
+    Q_OBJECT
+
+public:
+    AddInstanceFleetResponse(const AddInstanceFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddInstanceFleetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddInstanceFleetResponse)
+    Q_DISABLE_COPY(AddInstanceFleetResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

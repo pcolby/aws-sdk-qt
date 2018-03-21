@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEAUTOSCALINGGROUPRESPONSE_H
 #define QTAWS_DELETEAUTOSCALINGGROUPRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "deleteautoscalinggrouprequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class DeleteAutoScalingGroupResponsePrivate;
+
+class QTAWS_EXPORT DeleteAutoScalingGroupResponse : public DeleteAutoScalingGroupResponse {
+    Q_OBJECT
+
+public:
+    DeleteAutoScalingGroupResponse(const DeleteAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteAutoScalingGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAutoScalingGroupResponse)
+    Q_DISABLE_COPY(DeleteAutoScalingGroupResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

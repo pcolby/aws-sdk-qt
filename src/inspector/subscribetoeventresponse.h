@@ -20,4 +20,33 @@
 #ifndef QTAWS_SUBSCRIBETOEVENTRESPONSE_H
 #define QTAWS_SUBSCRIBETOEVENTRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "subscribetoeventrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class SubscribeToEventResponsePrivate;
+
+class QTAWS_EXPORT SubscribeToEventResponse : public SubscribeToEventResponse {
+    Q_OBJECT
+
+public:
+    SubscribeToEventResponse(const SubscribeToEventRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SubscribeToEventRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SubscribeToEventResponse)
+    Q_DISABLE_COPY(SubscribeToEventResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

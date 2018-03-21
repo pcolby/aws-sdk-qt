@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_H
 #define QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "modifyloadbalancerattributesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class ModifyLoadBalancerAttributesResponsePrivate;
+
+class QTAWS_EXPORT ModifyLoadBalancerAttributesResponse : public ModifyLoadBalancerAttributesResponse {
+    Q_OBJECT
+
+public:
+    ModifyLoadBalancerAttributesResponse(const ModifyLoadBalancerAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyLoadBalancerAttributesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyLoadBalancerAttributesResponse)
+    Q_DISABLE_COPY(ModifyLoadBalancerAttributesResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

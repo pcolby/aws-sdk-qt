@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTRACEGRAPHRESPONSE_H
 #define QTAWS_GETTRACEGRAPHRESPONSE_H
 
+#include "xrayresponse.h"
+#include "gettracegraphrequest.h"
+
+namespace AWS {
+
+namespace xray {
+
+class GetTraceGraphResponsePrivate;
+
+class QTAWS_EXPORT GetTraceGraphResponse : public GetTraceGraphResponse {
+    Q_OBJECT
+
+public:
+    GetTraceGraphResponse(const GetTraceGraphRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetTraceGraphRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetTraceGraphResponse)
+    Q_DISABLE_COPY(GetTraceGraphResponse)
+
+};
+
+} // namespace xray
+} // namespace AWS
+
 #endif

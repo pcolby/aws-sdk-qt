@@ -20,4 +20,33 @@
 #ifndef QTAWS_COPYOBJECTRESPONSE_H
 #define QTAWS_COPYOBJECTRESPONSE_H
 
+#include "s3response.h"
+#include "copyobjectrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class CopyObjectResponsePrivate;
+
+class QTAWS_EXPORT CopyObjectResponse : public CopyObjectResponse {
+    Q_OBJECT
+
+public:
+    CopyObjectResponse(const CopyObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CopyObjectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CopyObjectResponse)
+    Q_DISABLE_COPY(CopyObjectResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSIGNINGCERTIFICATESRESPONSE_H
 #define QTAWS_LISTSIGNINGCERTIFICATESRESPONSE_H
 
+#include "iamresponse.h"
+#include "listsigningcertificatesrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListSigningCertificatesResponsePrivate;
+
+class QTAWS_EXPORT ListSigningCertificatesResponse : public ListSigningCertificatesResponse {
+    Q_OBJECT
+
+public:
+    ListSigningCertificatesResponse(const ListSigningCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListSigningCertificatesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListSigningCertificatesResponse)
+    Q_DISABLE_COPY(ListSigningCertificatesResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

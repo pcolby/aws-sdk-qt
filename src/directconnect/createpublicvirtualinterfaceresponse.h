@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEPUBLICVIRTUALINTERFACERESPONSE_H
 #define QTAWS_CREATEPUBLICVIRTUALINTERFACERESPONSE_H
 
+#include "directconnectresponse.h"
+#include "createpublicvirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class CreatePublicVirtualInterfaceResponsePrivate;
+
+class QTAWS_EXPORT CreatePublicVirtualInterfaceResponse : public CreatePublicVirtualInterfaceResponse {
+    Q_OBJECT
+
+public:
+    CreatePublicVirtualInterfaceResponse(const CreatePublicVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreatePublicVirtualInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreatePublicVirtualInterfaceResponse)
+    Q_DISABLE_COPY(CreatePublicVirtualInterfaceResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

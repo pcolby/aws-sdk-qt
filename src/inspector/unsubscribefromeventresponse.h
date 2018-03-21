@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMEVENTRESPONSE_H
 #define QTAWS_UNSUBSCRIBEFROMEVENTRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "unsubscribefromeventrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class UnsubscribeFromEventResponsePrivate;
+
+class QTAWS_EXPORT UnsubscribeFromEventResponse : public UnsubscribeFromEventResponse {
+    Q_OBJECT
+
+public:
+    UnsubscribeFromEventResponse(const UnsubscribeFromEventRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnsubscribeFromEventRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnsubscribeFromEventResponse)
+    Q_DISABLE_COPY(UnsubscribeFromEventResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

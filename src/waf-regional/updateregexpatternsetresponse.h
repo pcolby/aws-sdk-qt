@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETRESPONSE_H
 #define QTAWS_UPDATEREGEXPATTERNSETRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "updateregexpatternsetrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class UpdateRegexPatternSetResponsePrivate;
+
+class QTAWS_EXPORT UpdateRegexPatternSetResponse : public UpdateRegexPatternSetResponse {
+    Q_OBJECT
+
+public:
+    UpdateRegexPatternSetResponse(const UpdateRegexPatternSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRegexPatternSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRegexPatternSetResponse)
+    Q_DISABLE_COPY(UpdateRegexPatternSetResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

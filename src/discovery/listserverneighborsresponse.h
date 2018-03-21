@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSRESPONSE_H
 #define QTAWS_LISTSERVERNEIGHBORSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "listserverneighborsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class ListServerNeighborsResponsePrivate;
+
+class QTAWS_EXPORT ListServerNeighborsResponse : public ListServerNeighborsResponse {
+    Q_OBJECT
+
+public:
+    ListServerNeighborsResponse(const ListServerNeighborsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListServerNeighborsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListServerNeighborsResponse)
+    Q_DISABLE_COPY(ListServerNeighborsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

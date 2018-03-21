@@ -20,4 +20,33 @@
 #ifndef QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONRESPONSE_H
 #define QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONRESPONSE_H
 
+#include "codedeployresponse.h"
+#include "skipwaittimeforinstanceterminationrequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class SkipWaitTimeForInstanceTerminationResponsePrivate;
+
+class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationResponse : public SkipWaitTimeForInstanceTerminationResponse {
+    Q_OBJECT
+
+public:
+    SkipWaitTimeForInstanceTerminationResponse(const SkipWaitTimeForInstanceTerminationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SkipWaitTimeForInstanceTerminationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SkipWaitTimeForInstanceTerminationResponse)
+    Q_DISABLE_COPY(SkipWaitTimeForInstanceTerminationResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

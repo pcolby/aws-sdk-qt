@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATETAGOPTIONRESPONSE_H
 #define QTAWS_CREATETAGOPTIONRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "createtagoptionrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class CreateTagOptionResponsePrivate;
+
+class QTAWS_EXPORT CreateTagOptionResponse : public CreateTagOptionResponse {
+    Q_OBJECT
+
+public:
+    CreateTagOptionResponse(const CreateTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateTagOptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateTagOptionResponse)
+    Q_DISABLE_COPY(CreateTagOptionResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

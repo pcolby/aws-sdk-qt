@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTDESTINATIONPOLICYRESPONSE_H
 #define QTAWS_PUTDESTINATIONPOLICYRESPONSE_H
 
+#include "logsresponse.h"
+#include "putdestinationpolicyrequest.h"
+
+namespace AWS {
+
+namespace logs {
+
+class PutDestinationPolicyResponsePrivate;
+
+class QTAWS_EXPORT PutDestinationPolicyResponse : public PutDestinationPolicyResponse {
+    Q_OBJECT
+
+public:
+    PutDestinationPolicyResponse(const PutDestinationPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutDestinationPolicyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutDestinationPolicyResponse)
+    Q_DISABLE_COPY(PutDestinationPolicyResponse)
+
+};
+
+} // namespace logs
+} // namespace AWS
+
 #endif

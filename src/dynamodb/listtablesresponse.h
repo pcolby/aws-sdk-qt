@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTTABLESRESPONSE_H
 #define QTAWS_LISTTABLESRESPONSE_H
 
+#include "dynamodbresponse.h"
+#include "listtablesrequest.h"
+
+namespace AWS {
+
+namespace dynamodb {
+
+class ListTablesResponsePrivate;
+
+class QTAWS_EXPORT ListTablesResponse : public ListTablesResponse {
+    Q_OBJECT
+
+public:
+    ListTablesResponse(const ListTablesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListTablesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListTablesResponse)
+    Q_DISABLE_COPY(ListTablesResponse)
+
+};
+
+} // namespace dynamodb
+} // namespace AWS
+
 #endif

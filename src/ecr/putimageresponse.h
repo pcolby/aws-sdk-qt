@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTIMAGERESPONSE_H
 #define QTAWS_PUTIMAGERESPONSE_H
 
+#include "ecrresponse.h"
+#include "putimagerequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class PutImageResponsePrivate;
+
+class QTAWS_EXPORT PutImageResponse : public PutImageResponse {
+    Q_OBJECT
+
+public:
+    PutImageResponse(const PutImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutImageRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutImageResponse)
+    Q_DISABLE_COPY(PutImageResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

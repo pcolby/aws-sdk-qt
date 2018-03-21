@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELIVERCONFIGSNAPSHOTRESPONSE_H
 #define QTAWS_DELIVERCONFIGSNAPSHOTRESPONSE_H
 
+#include "configresponse.h"
+#include "deliverconfigsnapshotrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class DeliverConfigSnapshotResponsePrivate;
+
+class QTAWS_EXPORT DeliverConfigSnapshotResponse : public DeliverConfigSnapshotResponse {
+    Q_OBJECT
+
+public:
+    DeliverConfigSnapshotResponse(const DeliverConfigSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeliverConfigSnapshotRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeliverConfigSnapshotResponse)
+    Q_DISABLE_COPY(DeliverConfigSnapshotResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

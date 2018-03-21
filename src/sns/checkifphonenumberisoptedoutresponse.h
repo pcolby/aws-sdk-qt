@@ -20,4 +20,33 @@
 #ifndef QTAWS_CHECKIFPHONENUMBERISOPTEDOUTRESPONSE_H
 #define QTAWS_CHECKIFPHONENUMBERISOPTEDOUTRESPONSE_H
 
+#include "snsresponse.h"
+#include "checkifphonenumberisoptedoutrequest.h"
+
+namespace AWS {
+
+namespace sns {
+
+class CheckIfPhoneNumberIsOptedOutResponsePrivate;
+
+class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutResponse : public CheckIfPhoneNumberIsOptedOutResponse {
+    Q_OBJECT
+
+public:
+    CheckIfPhoneNumberIsOptedOutResponse(const CheckIfPhoneNumberIsOptedOutRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CheckIfPhoneNumberIsOptedOutRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CheckIfPhoneNumberIsOptedOutResponse)
+    Q_DISABLE_COPY(CheckIfPhoneNumberIsOptedOutResponse)
+
+};
+
+} // namespace sns
+} // namespace AWS
+
 #endif

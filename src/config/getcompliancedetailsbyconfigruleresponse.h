@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYCONFIGRULERESPONSE_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYCONFIGRULERESPONSE_H
 
+#include "configresponse.h"
+#include "getcompliancedetailsbyconfigrulerequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class GetComplianceDetailsByConfigRuleResponsePrivate;
+
+class QTAWS_EXPORT GetComplianceDetailsByConfigRuleResponse : public GetComplianceDetailsByConfigRuleResponse {
+    Q_OBJECT
+
+public:
+    GetComplianceDetailsByConfigRuleResponse(const GetComplianceDetailsByConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetComplianceDetailsByConfigRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetComplianceDetailsByConfigRuleResponse)
+    Q_DISABLE_COPY(GetComplianceDetailsByConfigRuleResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

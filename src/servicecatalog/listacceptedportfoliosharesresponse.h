@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTACCEPTEDPORTFOLIOSHARESRESPONSE_H
 #define QTAWS_LISTACCEPTEDPORTFOLIOSHARESRESPONSE_H
 
+#include "servicecatalogresponse.h"
+#include "listacceptedportfoliosharesrequest.h"
+
+namespace AWS {
+
+namespace servicecatalog {
+
+class ListAcceptedPortfolioSharesResponsePrivate;
+
+class QTAWS_EXPORT ListAcceptedPortfolioSharesResponse : public ListAcceptedPortfolioSharesResponse {
+    Q_OBJECT
+
+public:
+    ListAcceptedPortfolioSharesResponse(const ListAcceptedPortfolioSharesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListAcceptedPortfolioSharesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListAcceptedPortfolioSharesResponse)
+    Q_DISABLE_COPY(ListAcceptedPortfolioSharesResponse)
+
+};
+
+} // namespace servicecatalog
+} // namespace AWS
+
 #endif

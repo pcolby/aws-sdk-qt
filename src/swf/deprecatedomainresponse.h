@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEPRECATEDOMAINRESPONSE_H
 #define QTAWS_DEPRECATEDOMAINRESPONSE_H
 
+#include "swfresponse.h"
+#include "deprecatedomainrequest.h"
+
+namespace AWS {
+
+namespace swf {
+
+class DeprecateDomainResponsePrivate;
+
+class QTAWS_EXPORT DeprecateDomainResponse : public DeprecateDomainResponse {
+    Q_OBJECT
+
+public:
+    DeprecateDomainResponse(const DeprecateDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeprecateDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateDomainResponse)
+    Q_DISABLE_COPY(DeprecateDomainResponse)
+
+};
+
+} // namespace swf
+} // namespace AWS
+
 #endif

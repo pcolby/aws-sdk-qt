@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTFLEETRESPONSE_H
 #define QTAWS_STARTFLEETRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "startfleetrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class StartFleetResponsePrivate;
+
+class QTAWS_EXPORT StartFleetResponse : public StartFleetResponse {
+    Q_OBJECT
+
+public:
+    StartFleetResponse(const StartFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartFleetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartFleetResponse)
+    Q_DISABLE_COPY(StartFleetResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

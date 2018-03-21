@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLERULERESPONSE_H
 #define QTAWS_ENABLERULERESPONSE_H
 
+#include "eventsresponse.h"
+#include "enablerulerequest.h"
+
+namespace AWS {
+
+namespace events {
+
+class EnableRuleResponsePrivate;
+
+class QTAWS_EXPORT EnableRuleResponse : public EnableRuleResponse {
+    Q_OBJECT
+
+public:
+    EnableRuleResponse(const EnableRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableRuleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableRuleResponse)
+    Q_DISABLE_COPY(EnableRuleResponse)
+
+};
+
+} // namespace events
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETINSTANCEHEALTHRESPONSE_H
 #define QTAWS_SETINSTANCEHEALTHRESPONSE_H
 
+#include "autoscalingresponse.h"
+#include "setinstancehealthrequest.h"
+
+namespace AWS {
+
+namespace autoscaling {
+
+class SetInstanceHealthResponsePrivate;
+
+class QTAWS_EXPORT SetInstanceHealthResponse : public SetInstanceHealthResponse {
+    Q_OBJECT
+
+public:
+    SetInstanceHealthResponse(const SetInstanceHealthRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetInstanceHealthRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetInstanceHealthResponse)
+    Q_DISABLE_COPY(SetInstanceHealthResponse)
+
+};
+
+} // namespace autoscaling
+} // namespace AWS
+
 #endif

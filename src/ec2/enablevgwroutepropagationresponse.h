@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEVGWROUTEPROPAGATIONRESPONSE_H
 #define QTAWS_ENABLEVGWROUTEPROPAGATIONRESPONSE_H
 
+#include "ec2response.h"
+#include "enablevgwroutepropagationrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class EnableVgwRoutePropagationResponsePrivate;
+
+class QTAWS_EXPORT EnableVgwRoutePropagationResponse : public EnableVgwRoutePropagationResponse {
+    Q_OBJECT
+
+public:
+    EnableVgwRoutePropagationResponse(const EnableVgwRoutePropagationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableVgwRoutePropagationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableVgwRoutePropagationResponse)
+    Q_DISABLE_COPY(EnableVgwRoutePropagationResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

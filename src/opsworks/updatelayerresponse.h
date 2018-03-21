@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATELAYERRESPONSE_H
 #define QTAWS_UPDATELAYERRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "updatelayerrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class UpdateLayerResponsePrivate;
+
+class QTAWS_EXPORT UpdateLayerResponse : public UpdateLayerResponse {
+    Q_OBJECT
+
+public:
+    UpdateLayerResponse(const UpdateLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateLayerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLayerResponse)
+    Q_DISABLE_COPY(UpdateLayerResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

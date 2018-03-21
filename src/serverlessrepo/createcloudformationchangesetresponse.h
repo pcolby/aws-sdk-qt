@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_H
 #define QTAWS_CREATECLOUDFORMATIONCHANGESETRESPONSE_H
 
+#include "serverlessreporesponse.h"
+#include "createcloudformationchangesetrequest.h"
+
+namespace AWS {
+
+namespace serverlessrepo {
+
+class CreateCloudFormationChangeSetResponsePrivate;
+
+class QTAWS_EXPORT CreateCloudFormationChangeSetResponse : public CreateCloudFormationChangeSetResponse {
+    Q_OBJECT
+
+public:
+    CreateCloudFormationChangeSetResponse(const CreateCloudFormationChangeSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCloudFormationChangeSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCloudFormationChangeSetResponse)
+    Q_DISABLE_COPY(CreateCloudFormationChangeSetResponse)
+
+};
+
+} // namespace serverlessrepo
+} // namespace AWS
+
 #endif

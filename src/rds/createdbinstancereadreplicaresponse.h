@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_H
 #define QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_H
 
+#include "rdsresponse.h"
+#include "createdbinstancereadreplicarequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class CreateDBInstanceReadReplicaResponsePrivate;
+
+class QTAWS_EXPORT CreateDBInstanceReadReplicaResponse : public CreateDBInstanceReadReplicaResponse {
+    Q_OBJECT
+
+public:
+    CreateDBInstanceReadReplicaResponse(const CreateDBInstanceReadReplicaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDBInstanceReadReplicaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBInstanceReadReplicaResponse)
+    Q_DISABLE_COPY(CreateDBInstanceReadReplicaResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

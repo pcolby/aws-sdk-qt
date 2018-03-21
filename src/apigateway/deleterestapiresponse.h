@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETERESTAPIRESPONSE_H
 #define QTAWS_DELETERESTAPIRESPONSE_H
 
+#include "apigatewayresponse.h"
+#include "deleterestapirequest.h"
+
+namespace AWS {
+
+namespace apigateway {
+
+class DeleteRestApiResponsePrivate;
+
+class QTAWS_EXPORT DeleteRestApiResponse : public DeleteRestApiResponse {
+    Q_OBJECT
+
+public:
+    DeleteRestApiResponse(const DeleteRestApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteRestApiRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRestApiResponse)
+    Q_DISABLE_COPY(DeleteRestApiResponse)
+
+};
+
+} // namespace apigateway
+} // namespace AWS
+
 #endif

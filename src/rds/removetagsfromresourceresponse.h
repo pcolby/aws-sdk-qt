@@ -20,4 +20,33 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_H
 
+#include "rdsresponse.h"
+#include "removetagsfromresourcerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class RemoveTagsFromResourceResponsePrivate;
+
+class QTAWS_EXPORT RemoveTagsFromResourceResponse : public RemoveTagsFromResourceResponse {
+    Q_OBJECT
+
+public:
+    RemoveTagsFromResourceResponse(const RemoveTagsFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RemoveTagsFromResourceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromResourceResponse)
+    Q_DISABLE_COPY(RemoveTagsFromResourceResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

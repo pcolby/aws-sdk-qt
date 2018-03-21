@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEPROGRESSUPDATESTREAMRESPONSE_H
 #define QTAWS_DELETEPROGRESSUPDATESTREAMRESPONSE_H
 
+#include "awsmigrationhubresponse.h"
+#include "deleteprogressupdatestreamrequest.h"
+
+namespace AWS {
+
+namespace AWSMigrationHub {
+
+class DeleteProgressUpdateStreamResponsePrivate;
+
+class QTAWS_EXPORT DeleteProgressUpdateStreamResponse : public DeleteProgressUpdateStreamResponse {
+    Q_OBJECT
+
+public:
+    DeleteProgressUpdateStreamResponse(const DeleteProgressUpdateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteProgressUpdateStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProgressUpdateStreamResponse)
+    Q_DISABLE_COPY(DeleteProgressUpdateStreamResponse)
+
+};
+
+} // namespace AWSMigrationHub
+} // namespace AWS
+
 #endif

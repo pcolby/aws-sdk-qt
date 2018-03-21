@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETIDENTITYPOOLROLESRESPONSE_H
 #define QTAWS_GETIDENTITYPOOLROLESRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "getidentitypoolrolesrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class GetIdentityPoolRolesResponsePrivate;
+
+class QTAWS_EXPORT GetIdentityPoolRolesResponse : public GetIdentityPoolRolesResponse {
+    Q_OBJECT
+
+public:
+    GetIdentityPoolRolesResponse(const GetIdentityPoolRolesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetIdentityPoolRolesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityPoolRolesResponse)
+    Q_DISABLE_COPY(GetIdentityPoolRolesResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

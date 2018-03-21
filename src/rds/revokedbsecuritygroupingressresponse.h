@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKEDBSECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_REVOKEDBSECURITYGROUPINGRESSRESPONSE_H
 
+#include "rdsresponse.h"
+#include "revokedbsecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class RevokeDBSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT RevokeDBSecurityGroupIngressResponse : public RevokeDBSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    RevokeDBSecurityGroupIngressResponse(const RevokeDBSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeDBSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeDBSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(RevokeDBSecurityGroupIngressResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

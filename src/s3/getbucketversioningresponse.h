@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETVERSIONINGRESPONSE_H
 #define QTAWS_GETBUCKETVERSIONINGRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketversioningrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketVersioningResponsePrivate;
+
+class QTAWS_EXPORT GetBucketVersioningResponse : public GetBucketVersioningResponse {
+    Q_OBJECT
+
+public:
+    GetBucketVersioningResponse(const GetBucketVersioningRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketVersioningRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketVersioningResponse)
+    Q_DISABLE_COPY(GetBucketVersioningResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

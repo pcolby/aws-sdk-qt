@@ -20,4 +20,33 @@
 #ifndef QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_H
 #define QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_H
 
+#include "organizationsresponse.h"
+#include "inviteaccounttoorganizationrequest.h"
+
+namespace AWS {
+
+namespace organizations {
+
+class InviteAccountToOrganizationResponsePrivate;
+
+class QTAWS_EXPORT InviteAccountToOrganizationResponse : public InviteAccountToOrganizationResponse {
+    Q_OBJECT
+
+public:
+    InviteAccountToOrganizationResponse(const InviteAccountToOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InviteAccountToOrganizationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InviteAccountToOrganizationResponse)
+    Q_DISABLE_COPY(InviteAccountToOrganizationResponse)
+
+};
+
+} // namespace organizations
+} // namespace AWS
+
 #endif

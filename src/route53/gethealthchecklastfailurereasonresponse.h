@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETHEALTHCHECKLASTFAILUREREASONRESPONSE_H
 #define QTAWS_GETHEALTHCHECKLASTFAILUREREASONRESPONSE_H
 
+#include "route53response.h"
+#include "gethealthchecklastfailurereasonrequest.h"
+
+namespace AWS {
+
+namespace route53 {
+
+class GetHealthCheckLastFailureReasonResponsePrivate;
+
+class QTAWS_EXPORT GetHealthCheckLastFailureReasonResponse : public GetHealthCheckLastFailureReasonResponse {
+    Q_OBJECT
+
+public:
+    GetHealthCheckLastFailureReasonResponse(const GetHealthCheckLastFailureReasonRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetHealthCheckLastFailureReasonRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetHealthCheckLastFailureReasonResponse)
+    Q_DISABLE_COPY(GetHealthCheckLastFailureReasonResponse)
+
+};
+
+} // namespace route53
+} // namespace AWS
+
 #endif

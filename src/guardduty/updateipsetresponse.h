@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEIPSETRESPONSE_H
 #define QTAWS_UPDATEIPSETRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "updateipsetrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class UpdateIPSetResponsePrivate;
+
+class QTAWS_EXPORT UpdateIPSetResponse : public UpdateIPSetResponse {
+    Q_OBJECT
+
+public:
+    UpdateIPSetResponse(const UpdateIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateIPSetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIPSetResponse)
+    Q_DISABLE_COPY(UpdateIPSetResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

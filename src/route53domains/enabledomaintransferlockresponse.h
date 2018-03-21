@@ -20,4 +20,33 @@
 #ifndef QTAWS_ENABLEDOMAINTRANSFERLOCKRESPONSE_H
 #define QTAWS_ENABLEDOMAINTRANSFERLOCKRESPONSE_H
 
+#include "route53domainsresponse.h"
+#include "enabledomaintransferlockrequest.h"
+
+namespace AWS {
+
+namespace route53domains {
+
+class EnableDomainTransferLockResponsePrivate;
+
+class QTAWS_EXPORT EnableDomainTransferLockResponse : public EnableDomainTransferLockResponse {
+    Q_OBJECT
+
+public:
+    EnableDomainTransferLockResponse(const EnableDomainTransferLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const EnableDomainTransferLockRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(EnableDomainTransferLockResponse)
+    Q_DISABLE_COPY(EnableDomainTransferLockResponse)
+
+};
+
+} // namespace route53domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETSSHPUBLICKEYRESPONSE_H
 #define QTAWS_GETSSHPUBLICKEYRESPONSE_H
 
+#include "iamresponse.h"
+#include "getsshpublickeyrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetSSHPublicKeyResponsePrivate;
+
+class QTAWS_EXPORT GetSSHPublicKeyResponse : public GetSSHPublicKeyResponse {
+    Q_OBJECT
+
+public:
+    GetSSHPublicKeyResponse(const GetSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetSSHPublicKeyRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetSSHPublicKeyResponse)
+    Q_DISABLE_COPY(GetSSHPublicKeyResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

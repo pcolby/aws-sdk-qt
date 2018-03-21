@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTSERVICESPECIFICCREDENTIALSRESPONSE_H
 #define QTAWS_LISTSERVICESPECIFICCREDENTIALSRESPONSE_H
 
+#include "iamresponse.h"
+#include "listservicespecificcredentialsrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class ListServiceSpecificCredentialsResponsePrivate;
+
+class QTAWS_EXPORT ListServiceSpecificCredentialsResponse : public ListServiceSpecificCredentialsResponse {
+    Q_OBJECT
+
+public:
+    ListServiceSpecificCredentialsResponse(const ListServiceSpecificCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListServiceSpecificCredentialsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListServiceSpecificCredentialsResponse)
+    Q_DISABLE_COPY(ListServiceSpecificCredentialsResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

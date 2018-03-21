@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCOMPLIANCESUMMARYBYRESOURCETYPERESPONSE_H
 #define QTAWS_GETCOMPLIANCESUMMARYBYRESOURCETYPERESPONSE_H
 
+#include "configresponse.h"
+#include "getcompliancesummarybyresourcetyperequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class GetComplianceSummaryByResourceTypeResponsePrivate;
+
+class QTAWS_EXPORT GetComplianceSummaryByResourceTypeResponse : public GetComplianceSummaryByResourceTypeResponse {
+    Q_OBJECT
+
+public:
+    GetComplianceSummaryByResourceTypeResponse(const GetComplianceSummaryByResourceTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetComplianceSummaryByResourceTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetComplianceSummaryByResourceTypeResponse)
+    Q_DISABLE_COPY(GetComplianceSummaryByResourceTypeResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

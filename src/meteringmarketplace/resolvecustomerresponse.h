@@ -20,4 +20,33 @@
 #ifndef QTAWS_RESOLVECUSTOMERRESPONSE_H
 #define QTAWS_RESOLVECUSTOMERRESPONSE_H
 
+#include "meteringmarketplaceresponse.h"
+#include "resolvecustomerrequest.h"
+
+namespace AWS {
+
+namespace meteringmarketplace {
+
+class ResolveCustomerResponsePrivate;
+
+class QTAWS_EXPORT ResolveCustomerResponse : public ResolveCustomerResponse {
+    Q_OBJECT
+
+public:
+    ResolveCustomerResponse(const ResolveCustomerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ResolveCustomerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ResolveCustomerResponse)
+    Q_DISABLE_COPY(ResolveCustomerResponse)
+
+};
+
+} // namespace meteringmarketplace
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_H
 #define QTAWS_DESCRIBEREPORTDEFINITIONSRESPONSE_H
 
+#include "curresponse.h"
+#include "describereportdefinitionsrequest.h"
+
+namespace AWS {
+
+namespace cur {
+
+class DescribeReportDefinitionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeReportDefinitionsResponse : public DescribeReportDefinitionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeReportDefinitionsResponse(const DescribeReportDefinitionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReportDefinitionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReportDefinitionsResponse)
+    Q_DISABLE_COPY(DescribeReportDefinitionsResponse)
+
+};
+
+} // namespace cur
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINTERCONNECTRESPONSE_H
 #define QTAWS_CREATEINTERCONNECTRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "createinterconnectrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class CreateInterconnectResponsePrivate;
+
+class QTAWS_EXPORT CreateInterconnectResponse : public CreateInterconnectResponse {
+    Q_OBJECT
+
+public:
+    CreateInterconnectResponse(const CreateInterconnectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInterconnectRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInterconnectResponse)
+    Q_DISABLE_COPY(CreateInterconnectResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

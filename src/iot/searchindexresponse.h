@@ -20,4 +20,33 @@
 #ifndef QTAWS_SEARCHINDEXRESPONSE_H
 #define QTAWS_SEARCHINDEXRESPONSE_H
 
+#include "iotresponse.h"
+#include "searchindexrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class SearchIndexResponsePrivate;
+
+class QTAWS_EXPORT SearchIndexResponse : public SearchIndexResponse {
+    Q_OBJECT
+
+public:
+    SearchIndexResponse(const SearchIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SearchIndexRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SearchIndexResponse)
+    Q_DISABLE_COPY(SearchIndexResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_H
 #define QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_H
 
+#include "esresponse.h"
+#include "deleteelasticsearchdomainrequest.h"
+
+namespace AWS {
+
+namespace es {
+
+class DeleteElasticsearchDomainResponsePrivate;
+
+class QTAWS_EXPORT DeleteElasticsearchDomainResponse : public DeleteElasticsearchDomainResponse {
+    Q_OBJECT
+
+public:
+    DeleteElasticsearchDomainResponse(const DeleteElasticsearchDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteElasticsearchDomainRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteElasticsearchDomainResponse)
+    Q_DISABLE_COPY(DeleteElasticsearchDomainResponse)
+
+};
+
+} // namespace es
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECUSTOMACTIONTYPERESPONSE_H
 #define QTAWS_CREATECUSTOMACTIONTYPERESPONSE_H
 
+#include "codepipelineresponse.h"
+#include "createcustomactiontyperequest.h"
+
+namespace AWS {
+
+namespace codepipeline {
+
+class CreateCustomActionTypeResponsePrivate;
+
+class QTAWS_EXPORT CreateCustomActionTypeResponse : public CreateCustomActionTypeResponse {
+    Q_OBJECT
+
+public:
+    CreateCustomActionTypeResponse(const CreateCustomActionTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCustomActionTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomActionTypeResponse)
+    Q_DISABLE_COPY(CreateCustomActionTypeResponse)
+
+};
+
+} // namespace codepipeline
+} // namespace AWS
+
 #endif

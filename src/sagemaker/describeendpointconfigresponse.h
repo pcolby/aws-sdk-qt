@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEENDPOINTCONFIGRESPONSE_H
 #define QTAWS_DESCRIBEENDPOINTCONFIGRESPONSE_H
 
+#include "sagemakerresponse.h"
+#include "describeendpointconfigrequest.h"
+
+namespace AWS {
+
+namespace sagemaker {
+
+class DescribeEndpointConfigResponsePrivate;
+
+class QTAWS_EXPORT DescribeEndpointConfigResponse : public DescribeEndpointConfigResponse {
+    Q_OBJECT
+
+public:
+    DescribeEndpointConfigResponse(const DescribeEndpointConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeEndpointConfigRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEndpointConfigResponse)
+    Q_DISABLE_COPY(DescribeEndpointConfigResponse)
+
+};
+
+} // namespace sagemaker
+} // namespace AWS
+
 #endif

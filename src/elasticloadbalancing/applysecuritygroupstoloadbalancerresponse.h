@@ -20,4 +20,33 @@
 #ifndef QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_H
 #define QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "applysecuritygroupstoloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class ApplySecurityGroupsToLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerResponse : public ApplySecurityGroupsToLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    ApplySecurityGroupsToLoadBalancerResponse(const ApplySecurityGroupsToLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ApplySecurityGroupsToLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ApplySecurityGroupsToLoadBalancerResponse)
+    Q_DISABLE_COPY(ApplySecurityGroupsToLoadBalancerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

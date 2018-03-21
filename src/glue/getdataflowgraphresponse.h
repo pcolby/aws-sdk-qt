@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDATAFLOWGRAPHRESPONSE_H
 #define QTAWS_GETDATAFLOWGRAPHRESPONSE_H
 
+#include "glueresponse.h"
+#include "getdataflowgraphrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetDataflowGraphResponsePrivate;
+
+class QTAWS_EXPORT GetDataflowGraphResponse : public GetDataflowGraphResponse {
+    Q_OBJECT
+
+public:
+    GetDataflowGraphResponse(const GetDataflowGraphRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDataflowGraphRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDataflowGraphResponse)
+    Q_DISABLE_COPY(GetDataflowGraphResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

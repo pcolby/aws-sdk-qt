@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_H
 #define QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_H
 
+#include "ecrresponse.h"
+#include "getdownloadurlforlayerrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class GetDownloadUrlForLayerResponsePrivate;
+
+class QTAWS_EXPORT GetDownloadUrlForLayerResponse : public GetDownloadUrlForLayerResponse {
+    Q_OBJECT
+
+public:
+    GetDownloadUrlForLayerResponse(const GetDownloadUrlForLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDownloadUrlForLayerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDownloadUrlForLayerResponse)
+    Q_DISABLE_COPY(GetDownloadUrlForLayerResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

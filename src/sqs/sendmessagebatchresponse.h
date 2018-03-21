@@ -20,4 +20,33 @@
 #ifndef QTAWS_SENDMESSAGEBATCHRESPONSE_H
 #define QTAWS_SENDMESSAGEBATCHRESPONSE_H
 
+#include "sqsresponse.h"
+#include "sendmessagebatchrequest.h"
+
+namespace AWS {
+
+namespace sqs {
+
+class SendMessageBatchResponsePrivate;
+
+class QTAWS_EXPORT SendMessageBatchResponse : public SendMessageBatchResponse {
+    Q_OBJECT
+
+public:
+    SendMessageBatchResponse(const SendMessageBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SendMessageBatchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SendMessageBatchResponse)
+    Q_DISABLE_COPY(SendMessageBatchResponse)
+
+};
+
+} // namespace sqs
+} // namespace AWS
+
 #endif

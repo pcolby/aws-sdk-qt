@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSRESPONSE_H
 #define QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "describeworkspacesconnectionstatusrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class DescribeWorkspacesConnectionStatusResponsePrivate;
+
+class QTAWS_EXPORT DescribeWorkspacesConnectionStatusResponse : public DescribeWorkspacesConnectionStatusResponse {
+    Q_OBJECT
+
+public:
+    DescribeWorkspacesConnectionStatusResponse(const DescribeWorkspacesConnectionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeWorkspacesConnectionStatusRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkspacesConnectionStatusResponse)
+    Q_DISABLE_COPY(DescribeWorkspacesConnectionStatusResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

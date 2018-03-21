@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETUSERMFAPREFERENCERESPONSE_H
 #define QTAWS_SETUSERMFAPREFERENCERESPONSE_H
 
+#include "cognito-idpresponse.h"
+#include "setusermfapreferencerequest.h"
+
+namespace AWS {
+
+namespace cognito-idp {
+
+class SetUserMFAPreferenceResponsePrivate;
+
+class QTAWS_EXPORT SetUserMFAPreferenceResponse : public SetUserMFAPreferenceResponse {
+    Q_OBJECT
+
+public:
+    SetUserMFAPreferenceResponse(const SetUserMFAPreferenceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetUserMFAPreferenceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetUserMFAPreferenceResponse)
+    Q_DISABLE_COPY(SetUserMFAPreferenceResponse)
+
+};
+
+} // namespace cognito-idp
+} // namespace AWS
+
 #endif

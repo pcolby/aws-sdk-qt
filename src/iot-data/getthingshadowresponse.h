@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETTHINGSHADOWRESPONSE_H
 #define QTAWS_GETTHINGSHADOWRESPONSE_H
 
+#include "iot-dataresponse.h"
+#include "getthingshadowrequest.h"
+
+namespace AWS {
+
+namespace iot-data {
+
+class GetThingShadowResponsePrivate;
+
+class QTAWS_EXPORT GetThingShadowResponse : public GetThingShadowResponse {
+    Q_OBJECT
+
+public:
+    GetThingShadowResponse(const GetThingShadowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetThingShadowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetThingShadowResponse)
+    Q_DISABLE_COPY(GetThingShadowResponse)
+
+};
+
+} // namespace iot-data
+} // namespace AWS
+
 #endif

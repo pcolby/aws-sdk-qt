@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATERESPONSE_H
 #define QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATERESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "setloadbalancerlistenersslcertificaterequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class SetLoadBalancerListenerSSLCertificateResponsePrivate;
+
+class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateResponse : public SetLoadBalancerListenerSSLCertificateResponse {
+    Q_OBJECT
+
+public:
+    SetLoadBalancerListenerSSLCertificateResponse(const SetLoadBalancerListenerSSLCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetLoadBalancerListenerSSLCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBalancerListenerSSLCertificateResponse)
+    Q_DISABLE_COPY(SetLoadBalancerListenerSSLCertificateResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

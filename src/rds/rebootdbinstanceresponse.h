@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTDBINSTANCERESPONSE_H
 #define QTAWS_REBOOTDBINSTANCERESPONSE_H
 
+#include "rdsresponse.h"
+#include "rebootdbinstancerequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class RebootDBInstanceResponsePrivate;
+
+class QTAWS_EXPORT RebootDBInstanceResponse : public RebootDBInstanceResponse {
+    Q_OBJECT
+
+public:
+    RebootDBInstanceResponse(const RebootDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootDBInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootDBInstanceResponse)
+    Q_DISABLE_COPY(RebootDBInstanceResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

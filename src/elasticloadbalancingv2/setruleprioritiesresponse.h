@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETRULEPRIORITIESRESPONSE_H
 #define QTAWS_SETRULEPRIORITIESRESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "setruleprioritiesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class SetRulePrioritiesResponsePrivate;
+
+class QTAWS_EXPORT SetRulePrioritiesResponse : public SetRulePrioritiesResponse {
+    Q_OBJECT
+
+public:
+    SetRulePrioritiesResponse(const SetRulePrioritiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetRulePrioritiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetRulePrioritiesResponse)
+    Q_DISABLE_COPY(SetRulePrioritiesResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

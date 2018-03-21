@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_H
 #define QTAWS_DELETETAGSRESPONSE_H
 
+#include "ec2response.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DeleteTagsResponsePrivate;
+
+class QTAWS_EXPORT DeleteTagsResponse : public DeleteTagsResponse {
+    Q_OBJECT
+
+public:
+    DeleteTagsResponse(const DeleteTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsResponse)
+    Q_DISABLE_COPY(DeleteTagsResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

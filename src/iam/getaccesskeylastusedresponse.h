@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETACCESSKEYLASTUSEDRESPONSE_H
 #define QTAWS_GETACCESSKEYLASTUSEDRESPONSE_H
 
+#include "iamresponse.h"
+#include "getaccesskeylastusedrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class GetAccessKeyLastUsedResponsePrivate;
+
+class QTAWS_EXPORT GetAccessKeyLastUsedResponse : public GetAccessKeyLastUsedResponse {
+    Q_OBJECT
+
+public:
+    GetAccessKeyLastUsedResponse(const GetAccessKeyLastUsedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetAccessKeyLastUsedRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetAccessKeyLastUsedResponse)
+    Q_DISABLE_COPY(GetAccessKeyLastUsedResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

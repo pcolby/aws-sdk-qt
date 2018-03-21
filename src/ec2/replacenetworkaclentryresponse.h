@@ -20,4 +20,33 @@
 #ifndef QTAWS_REPLACENETWORKACLENTRYRESPONSE_H
 #define QTAWS_REPLACENETWORKACLENTRYRESPONSE_H
 
+#include "ec2response.h"
+#include "replacenetworkaclentryrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class ReplaceNetworkAclEntryResponsePrivate;
+
+class QTAWS_EXPORT ReplaceNetworkAclEntryResponse : public ReplaceNetworkAclEntryResponse {
+    Q_OBJECT
+
+public:
+    ReplaceNetworkAclEntryResponse(const ReplaceNetworkAclEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReplaceNetworkAclEntryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceNetworkAclEntryResponse)
+    Q_DISABLE_COPY(ReplaceNetworkAclEntryResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

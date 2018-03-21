@@ -20,4 +20,33 @@
 #ifndef QTAWS_ACCEPTMATCHRESPONSE_H
 #define QTAWS_ACCEPTMATCHRESPONSE_H
 
+#include "gameliftresponse.h"
+#include "acceptmatchrequest.h"
+
+namespace AWS {
+
+namespace gamelift {
+
+class AcceptMatchResponsePrivate;
+
+class QTAWS_EXPORT AcceptMatchResponse : public AcceptMatchResponse {
+    Q_OBJECT
+
+public:
+    AcceptMatchResponse(const AcceptMatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AcceptMatchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AcceptMatchResponse)
+    Q_DISABLE_COPY(AcceptMatchResponse)
+
+};
+
+} // namespace gamelift
+} // namespace AWS
+
 #endif

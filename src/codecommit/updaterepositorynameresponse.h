@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEREPOSITORYNAMERESPONSE_H
 #define QTAWS_UPDATEREPOSITORYNAMERESPONSE_H
 
+#include "codecommitresponse.h"
+#include "updaterepositorynamerequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class UpdateRepositoryNameResponsePrivate;
+
+class QTAWS_EXPORT UpdateRepositoryNameResponse : public UpdateRepositoryNameResponse {
+    Q_OBJECT
+
+public:
+    UpdateRepositoryNameResponse(const UpdateRepositoryNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateRepositoryNameRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRepositoryNameResponse)
+    Q_DISABLE_COPY(UpdateRepositoryNameResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

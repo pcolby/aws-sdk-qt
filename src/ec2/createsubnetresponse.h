@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESUBNETRESPONSE_H
 #define QTAWS_CREATESUBNETRESPONSE_H
 
+#include "ec2response.h"
+#include "createsubnetrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class CreateSubnetResponsePrivate;
+
+class QTAWS_EXPORT CreateSubnetResponse : public CreateSubnetResponse {
+    Q_OBJECT
+
+public:
+    CreateSubnetResponse(const CreateSubnetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSubnetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubnetResponse)
+    Q_DISABLE_COPY(CreateSubnetResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSRESPONSE_H
 #define QTAWS_DESCRIBEAPPLICATIONSRESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "describeapplicationsrequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class DescribeApplicationsResponsePrivate;
+
+class QTAWS_EXPORT DescribeApplicationsResponse : public DescribeApplicationsResponse {
+    Q_OBJECT
+
+public:
+    DescribeApplicationsResponse(const DescribeApplicationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeApplicationsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeApplicationsResponse)
+    Q_DISABLE_COPY(DescribeApplicationsResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

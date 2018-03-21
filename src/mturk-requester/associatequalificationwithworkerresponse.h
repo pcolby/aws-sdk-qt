@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "associatequalificationwithworkerrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class AssociateQualificationWithWorkerResponsePrivate;
+
+class QTAWS_EXPORT AssociateQualificationWithWorkerResponse : public AssociateQualificationWithWorkerResponse {
+    Q_OBJECT
+
+public:
+    AssociateQualificationWithWorkerResponse(const AssociateQualificationWithWorkerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateQualificationWithWorkerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateQualificationWithWorkerResponse)
+    Q_DISABLE_COPY(AssociateQualificationWithWorkerResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

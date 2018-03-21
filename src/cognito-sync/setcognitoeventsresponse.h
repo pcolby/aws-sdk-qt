@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETCOGNITOEVENTSRESPONSE_H
 #define QTAWS_SETCOGNITOEVENTSRESPONSE_H
 
+#include "cognito-syncresponse.h"
+#include "setcognitoeventsrequest.h"
+
+namespace AWS {
+
+namespace cognito-sync {
+
+class SetCognitoEventsResponsePrivate;
+
+class QTAWS_EXPORT SetCognitoEventsResponse : public SetCognitoEventsResponse {
+    Q_OBJECT
+
+public:
+    SetCognitoEventsResponse(const SetCognitoEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetCognitoEventsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetCognitoEventsResponse)
+    Q_DISABLE_COPY(SetCognitoEventsResponse)
+
+};
+
+} // namespace cognito-sync
+} // namespace AWS
+
 #endif

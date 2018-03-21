@@ -20,4 +20,33 @@
 #ifndef QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTRESPONSE_H
 #define QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTRESPONSE_H
 
+#include "kmsresponse.h"
+#include "generatedatakeywithoutplaintextrequest.h"
+
+namespace AWS {
+
+namespace kms {
+
+class GenerateDataKeyWithoutPlaintextResponsePrivate;
+
+class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextResponse : public GenerateDataKeyWithoutPlaintextResponse {
+    Q_OBJECT
+
+public:
+    GenerateDataKeyWithoutPlaintextResponse(const GenerateDataKeyWithoutPlaintextRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GenerateDataKeyWithoutPlaintextRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GenerateDataKeyWithoutPlaintextResponse)
+    Q_DISABLE_COPY(GenerateDataKeyWithoutPlaintextResponse)
+
+};
+
+} // namespace kms
+} // namespace AWS
+
 #endif

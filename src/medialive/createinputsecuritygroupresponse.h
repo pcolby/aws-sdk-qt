@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEINPUTSECURITYGROUPRESPONSE_H
 #define QTAWS_CREATEINPUTSECURITYGROUPRESPONSE_H
 
+#include "medialiveresponse.h"
+#include "createinputsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace medialive {
+
+class CreateInputSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateInputSecurityGroupResponse : public CreateInputSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateInputSecurityGroupResponse(const CreateInputSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateInputSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateInputSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateInputSecurityGroupResponse)
+
+};
+
+} // namespace medialive
+} // namespace AWS
+
 #endif

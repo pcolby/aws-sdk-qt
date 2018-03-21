@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTSTREAMENCRYPTIONRESPONSE_H
 #define QTAWS_STARTSTREAMENCRYPTIONRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "startstreamencryptionrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class StartStreamEncryptionResponsePrivate;
+
+class QTAWS_EXPORT StartStreamEncryptionResponse : public StartStreamEncryptionResponse {
+    Q_OBJECT
+
+public:
+    StartStreamEncryptionResponse(const StartStreamEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartStreamEncryptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartStreamEncryptionResponse)
+    Q_DISABLE_COPY(StartStreamEncryptionResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif

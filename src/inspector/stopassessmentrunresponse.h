@@ -20,4 +20,33 @@
 #ifndef QTAWS_STOPASSESSMENTRUNRESPONSE_H
 #define QTAWS_STOPASSESSMENTRUNRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "stopassessmentrunrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class StopAssessmentRunResponsePrivate;
+
+class QTAWS_EXPORT StopAssessmentRunResponse : public StopAssessmentRunResponse {
+    Q_OBJECT
+
+public:
+    StopAssessmentRunResponse(const StopAssessmentRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StopAssessmentRunRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StopAssessmentRunResponse)
+    Q_DISABLE_COPY(StopAssessmentRunResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

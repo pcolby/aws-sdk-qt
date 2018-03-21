@@ -20,4 +20,33 @@
 #ifndef QTAWS_ATTACHTOINDEXRESPONSE_H
 #define QTAWS_ATTACHTOINDEXRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "attachtoindexrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class AttachToIndexResponsePrivate;
+
+class QTAWS_EXPORT AttachToIndexResponse : public AttachToIndexResponse {
+    Q_OBJECT
+
+public:
+    AttachToIndexResponse(const AttachToIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AttachToIndexRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AttachToIndexResponse)
+    Q_DISABLE_COPY(AttachToIndexResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

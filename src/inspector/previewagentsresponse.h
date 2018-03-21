@@ -20,4 +20,33 @@
 #ifndef QTAWS_PREVIEWAGENTSRESPONSE_H
 #define QTAWS_PREVIEWAGENTSRESPONSE_H
 
+#include "inspectorresponse.h"
+#include "previewagentsrequest.h"
+
+namespace AWS {
+
+namespace inspector {
+
+class PreviewAgentsResponsePrivate;
+
+class QTAWS_EXPORT PreviewAgentsResponse : public PreviewAgentsResponse {
+    Q_OBJECT
+
+public:
+    PreviewAgentsResponse(const PreviewAgentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PreviewAgentsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PreviewAgentsResponse)
+    Q_DISABLE_COPY(PreviewAgentsResponse)
+
+};
+
+} // namespace inspector
+} // namespace AWS
+
 #endif

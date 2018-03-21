@@ -20,4 +20,33 @@
 #ifndef QTAWS_INITIATELAYERUPLOADRESPONSE_H
 #define QTAWS_INITIATELAYERUPLOADRESPONSE_H
 
+#include "ecrresponse.h"
+#include "initiatelayeruploadrequest.h"
+
+namespace AWS {
+
+namespace ecr {
+
+class InitiateLayerUploadResponsePrivate;
+
+class QTAWS_EXPORT InitiateLayerUploadResponse : public InitiateLayerUploadResponse {
+    Q_OBJECT
+
+public:
+    InitiateLayerUploadResponse(const InitiateLayerUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const InitiateLayerUploadRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(InitiateLayerUploadResponse)
+    Q_DISABLE_COPY(InitiateLayerUploadResponse)
+
+};
+
+} // namespace ecr
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEJOBTEMPLATERESPONSE_H
 #define QTAWS_DELETEJOBTEMPLATERESPONSE_H
 
+#include "mediaconvertresponse.h"
+#include "deletejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace mediaconvert {
+
+class DeleteJobTemplateResponsePrivate;
+
+class QTAWS_EXPORT DeleteJobTemplateResponse : public DeleteJobTemplateResponse {
+    Q_OBJECT
+
+public:
+    DeleteJobTemplateResponse(const DeleteJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteJobTemplateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteJobTemplateResponse)
+    Q_DISABLE_COPY(DeleteJobTemplateResponse)
+
+};
+
+} // namespace mediaconvert
+} // namespace AWS
+
 #endif

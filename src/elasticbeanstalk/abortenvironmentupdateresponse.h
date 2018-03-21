@@ -20,4 +20,33 @@
 #ifndef QTAWS_ABORTENVIRONMENTUPDATERESPONSE_H
 #define QTAWS_ABORTENVIRONMENTUPDATERESPONSE_H
 
+#include "elasticbeanstalkresponse.h"
+#include "abortenvironmentupdaterequest.h"
+
+namespace AWS {
+
+namespace elasticbeanstalk {
+
+class AbortEnvironmentUpdateResponsePrivate;
+
+class QTAWS_EXPORT AbortEnvironmentUpdateResponse : public AbortEnvironmentUpdateResponse {
+    Q_OBJECT
+
+public:
+    AbortEnvironmentUpdateResponse(const AbortEnvironmentUpdateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AbortEnvironmentUpdateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AbortEnvironmentUpdateResponse)
+    Q_DISABLE_COPY(AbortEnvironmentUpdateResponse)
+
+};
+
+} // namespace elasticbeanstalk
+} // namespace AWS
+
 #endif

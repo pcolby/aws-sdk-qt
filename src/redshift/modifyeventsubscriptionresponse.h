@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "modifyeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class ModifyEventSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT ModifyEventSubscriptionResponse : public ModifyEventSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    ModifyEventSubscriptionResponse(const ModifyEventSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyEventSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyEventSubscriptionResponse)
+    Q_DISABLE_COPY(ModifyEventSubscriptionResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

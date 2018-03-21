@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEVIRTUALINTERFACERESPONSE_H
 #define QTAWS_DELETEVIRTUALINTERFACERESPONSE_H
 
+#include "directconnectresponse.h"
+#include "deletevirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class DeleteVirtualInterfaceResponsePrivate;
+
+class QTAWS_EXPORT DeleteVirtualInterfaceResponse : public DeleteVirtualInterfaceResponse {
+    Q_OBJECT
+
+public:
+    DeleteVirtualInterfaceResponse(const DeleteVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteVirtualInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVirtualInterfaceResponse)
+    Q_DISABLE_COPY(DeleteVirtualInterfaceResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

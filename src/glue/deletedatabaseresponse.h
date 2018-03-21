@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEDATABASERESPONSE_H
 #define QTAWS_DELETEDATABASERESPONSE_H
 
+#include "glueresponse.h"
+#include "deletedatabaserequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class DeleteDatabaseResponsePrivate;
+
+class QTAWS_EXPORT DeleteDatabaseResponse : public DeleteDatabaseResponse {
+    Q_OBJECT
+
+public:
+    DeleteDatabaseResponse(const DeleteDatabaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteDatabaseRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDatabaseResponse)
+    Q_DISABLE_COPY(DeleteDatabaseResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

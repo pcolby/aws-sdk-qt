@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMEMBERSRESPONSE_H
 #define QTAWS_CREATEMEMBERSRESPONSE_H
 
+#include "guarddutyresponse.h"
+#include "createmembersrequest.h"
+
+namespace AWS {
+
+namespace guardduty {
+
+class CreateMembersResponsePrivate;
+
+class QTAWS_EXPORT CreateMembersResponse : public CreateMembersResponse {
+    Q_OBJECT
+
+public:
+    CreateMembersResponse(const CreateMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateMembersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateMembersResponse)
+    Q_DISABLE_COPY(CreateMembersResponse)
+
+};
+
+} // namespace guardduty
+} // namespace AWS
+
 #endif

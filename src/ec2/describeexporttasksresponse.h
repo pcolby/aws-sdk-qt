@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 #define QTAWS_DESCRIBEEXPORTTASKSRESPONSE_H
 
+#include "ec2response.h"
+#include "describeexporttasksrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class DescribeExportTasksResponsePrivate;
+
+class QTAWS_EXPORT DescribeExportTasksResponse : public DescribeExportTasksResponse {
+    Q_OBJECT
+
+public:
+    DescribeExportTasksResponse(const DescribeExportTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeExportTasksRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeExportTasksResponse)
+    Q_DISABLE_COPY(DescribeExportTasksResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

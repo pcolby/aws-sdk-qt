@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELOADBALANCERPOLICYTYPESRESPONSE_H
 #define QTAWS_DESCRIBELOADBALANCERPOLICYTYPESRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "describeloadbalancerpolicytypesrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DescribeLoadBalancerPolicyTypesResponsePrivate;
+
+class QTAWS_EXPORT DescribeLoadBalancerPolicyTypesResponse : public DescribeLoadBalancerPolicyTypesResponse {
+    Q_OBJECT
+
+public:
+    DescribeLoadBalancerPolicyTypesResponse(const DescribeLoadBalancerPolicyTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLoadBalancerPolicyTypesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLoadBalancerPolicyTypesResponse)
+    Q_DISABLE_COPY(DescribeLoadBalancerPolicyTypesResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

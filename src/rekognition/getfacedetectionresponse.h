@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETFACEDETECTIONRESPONSE_H
 #define QTAWS_GETFACEDETECTIONRESPONSE_H
 
+#include "rekognitionresponse.h"
+#include "getfacedetectionrequest.h"
+
+namespace AWS {
+
+namespace rekognition {
+
+class GetFaceDetectionResponsePrivate;
+
+class QTAWS_EXPORT GetFaceDetectionResponse : public GetFaceDetectionResponse {
+    Q_OBJECT
+
+public:
+    GetFaceDetectionResponse(const GetFaceDetectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetFaceDetectionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetFaceDetectionResponse)
+    Q_DISABLE_COPY(GetFaceDetectionResponse)
+
+};
+
+} // namespace rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERSCALABLETARGETRESPONSE_H
 #define QTAWS_REGISTERSCALABLETARGETRESPONSE_H
 
+#include "application-autoscalingresponse.h"
+#include "registerscalabletargetrequest.h"
+
+namespace AWS {
+
+namespace application-autoscaling {
+
+class RegisterScalableTargetResponsePrivate;
+
+class QTAWS_EXPORT RegisterScalableTargetResponse : public RegisterScalableTargetResponse {
+    Q_OBJECT
+
+public:
+    RegisterScalableTargetResponse(const RegisterScalableTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterScalableTargetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterScalableTargetResponse)
+    Q_DISABLE_COPY(RegisterScalableTargetResponse)
+
+};
+
+} // namespace application-autoscaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_H
 #define QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_H
 
+#include "configresponse.h"
+#include "getresourceconfighistoryrequest.h"
+
+namespace AWS {
+
+namespace config {
+
+class GetResourceConfigHistoryResponsePrivate;
+
+class QTAWS_EXPORT GetResourceConfigHistoryResponse : public GetResourceConfigHistoryResponse {
+    Q_OBJECT
+
+public:
+    GetResourceConfigHistoryResponse(const GetResourceConfigHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetResourceConfigHistoryRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetResourceConfigHistoryResponse)
+    Q_DISABLE_COPY(GetResourceConfigHistoryResponse)
+
+};
+
+} // namespace config
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_READJOBRESPONSE_H
 #define QTAWS_READJOBRESPONSE_H
 
+#include "elastictranscoderresponse.h"
+#include "readjobrequest.h"
+
+namespace AWS {
+
+namespace elastictranscoder {
+
+class ReadJobResponsePrivate;
+
+class QTAWS_EXPORT ReadJobResponse : public ReadJobResponse {
+    Q_OBJECT
+
+public:
+    ReadJobResponse(const ReadJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ReadJobRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ReadJobResponse)
+    Q_DISABLE_COPY(ReadJobResponse)
+
+};
+
+} // namespace elastictranscoder
+} // namespace AWS
+
 #endif

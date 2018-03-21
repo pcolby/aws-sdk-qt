@@ -20,4 +20,33 @@
 #ifndef QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_H
 #define QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_H
 
+#include "cognito-identityresponse.h"
+#include "lookupdeveloperidentityrequest.h"
+
+namespace AWS {
+
+namespace cognito-identity {
+
+class LookupDeveloperIdentityResponsePrivate;
+
+class QTAWS_EXPORT LookupDeveloperIdentityResponse : public LookupDeveloperIdentityResponse {
+    Q_OBJECT
+
+public:
+    LookupDeveloperIdentityResponse(const LookupDeveloperIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const LookupDeveloperIdentityRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(LookupDeveloperIdentityResponse)
+    Q_DISABLE_COPY(LookupDeveloperIdentityResponse)
+
+};
+
+} // namespace cognito-identity
+} // namespace AWS
+
 #endif

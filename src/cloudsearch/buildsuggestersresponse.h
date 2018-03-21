@@ -20,4 +20,33 @@
 #ifndef QTAWS_BUILDSUGGESTERSRESPONSE_H
 #define QTAWS_BUILDSUGGESTERSRESPONSE_H
 
+#include "cloudsearchresponse.h"
+#include "buildsuggestersrequest.h"
+
+namespace AWS {
+
+namespace cloudsearch {
+
+class BuildSuggestersResponsePrivate;
+
+class QTAWS_EXPORT BuildSuggestersResponse : public BuildSuggestersResponse {
+    Q_OBJECT
+
+public:
+    BuildSuggestersResponse(const BuildSuggestersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const BuildSuggestersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(BuildSuggestersResponse)
+    Q_DISABLE_COPY(BuildSuggestersResponse)
+
+};
+
+} // namespace cloudsearch
+} // namespace AWS
+
 #endif

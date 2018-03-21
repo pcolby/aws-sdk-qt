@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_H
 
+#include "iamresponse.h"
+#include "setdefaultpolicyversionrequest.h"
+
+namespace AWS {
+
+namespace iam {
+
+class SetDefaultPolicyVersionResponsePrivate;
+
+class QTAWS_EXPORT SetDefaultPolicyVersionResponse : public SetDefaultPolicyVersionResponse {
+    Q_OBJECT
+
+public:
+    SetDefaultPolicyVersionResponse(const SetDefaultPolicyVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetDefaultPolicyVersionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetDefaultPolicyVersionResponse)
+    Q_DISABLE_COPY(SetDefaultPolicyVersionResponse)
+
+};
+
+} // namespace iam
+} // namespace AWS
+
 #endif

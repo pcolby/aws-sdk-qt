@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECACHESUBNETGROUPRESPONSE_H
 #define QTAWS_CREATECACHESUBNETGROUPRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "createcachesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class CreateCacheSubnetGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateCacheSubnetGroupResponse : public CreateCacheSubnetGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateCacheSubnetGroupResponse(const CreateCacheSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCacheSubnetGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCacheSubnetGroupResponse)
+    Q_DISABLE_COPY(CreateCacheSubnetGroupResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

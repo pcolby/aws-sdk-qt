@@ -20,4 +20,33 @@
 #ifndef QTAWS_CONFIRMPRIVATEVIRTUALINTERFACERESPONSE_H
 #define QTAWS_CONFIRMPRIVATEVIRTUALINTERFACERESPONSE_H
 
+#include "directconnectresponse.h"
+#include "confirmprivatevirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class ConfirmPrivateVirtualInterfaceResponsePrivate;
+
+class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceResponse : public ConfirmPrivateVirtualInterfaceResponse {
+    Q_OBJECT
+
+public:
+    ConfirmPrivateVirtualInterfaceResponse(const ConfirmPrivateVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ConfirmPrivateVirtualInterfaceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmPrivateVirtualInterfaceResponse)
+    Q_DISABLE_COPY(ConfirmPrivateVirtualInterfaceResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

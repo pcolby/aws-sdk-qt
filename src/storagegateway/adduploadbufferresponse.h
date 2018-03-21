@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDUPLOADBUFFERRESPONSE_H
 #define QTAWS_ADDUPLOADBUFFERRESPONSE_H
 
+#include "storagegatewayresponse.h"
+#include "adduploadbufferrequest.h"
+
+namespace AWS {
+
+namespace storagegateway {
+
+class AddUploadBufferResponsePrivate;
+
+class QTAWS_EXPORT AddUploadBufferResponse : public AddUploadBufferResponse {
+    Q_OBJECT
+
+public:
+    AddUploadBufferResponse(const AddUploadBufferRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddUploadBufferRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddUploadBufferResponse)
+    Q_DISABLE_COPY(AddUploadBufferResponse)
+
+};
+
+} // namespace storagegateway
+} // namespace AWS
+
 #endif

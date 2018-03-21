@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECERTIFICATERESPONSE_H
 #define QTAWS_UPDATECERTIFICATERESPONSE_H
 
+#include "iotresponse.h"
+#include "updatecertificaterequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class UpdateCertificateResponsePrivate;
+
+class QTAWS_EXPORT UpdateCertificateResponse : public UpdateCertificateResponse {
+    Q_OBJECT
+
+public:
+    UpdateCertificateResponse(const UpdateCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateCertificateRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCertificateResponse)
+    Q_DISABLE_COPY(UpdateCertificateResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKESECURITYGROUPEGRESSRESPONSE_H
 #define QTAWS_REVOKESECURITYGROUPEGRESSRESPONSE_H
 
+#include "ec2response.h"
+#include "revokesecuritygroupegressrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class RevokeSecurityGroupEgressResponsePrivate;
+
+class QTAWS_EXPORT RevokeSecurityGroupEgressResponse : public RevokeSecurityGroupEgressResponse {
+    Q_OBJECT
+
+public:
+    RevokeSecurityGroupEgressResponse(const RevokeSecurityGroupEgressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeSecurityGroupEgressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeSecurityGroupEgressResponse)
+    Q_DISABLE_COPY(RevokeSecurityGroupEgressResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

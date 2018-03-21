@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATEACCOUNTSENDINGENABLEDRESPONSE_H
 #define QTAWS_UPDATEACCOUNTSENDINGENABLEDRESPONSE_H
 
+#include "emailresponse.h"
+#include "updateaccountsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class UpdateAccountSendingEnabledResponsePrivate;
+
+class QTAWS_EXPORT UpdateAccountSendingEnabledResponse : public UpdateAccountSendingEnabledResponse {
+    Q_OBJECT
+
+public:
+    UpdateAccountSendingEnabledResponse(const UpdateAccountSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateAccountSendingEnabledRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAccountSendingEnabledResponse)
+    Q_DISABLE_COPY(UpdateAccountSendingEnabledResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

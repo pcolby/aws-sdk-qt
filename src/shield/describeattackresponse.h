@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEATTACKRESPONSE_H
 #define QTAWS_DESCRIBEATTACKRESPONSE_H
 
+#include "shieldresponse.h"
+#include "describeattackrequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class DescribeAttackResponsePrivate;
+
+class QTAWS_EXPORT DescribeAttackResponse : public DescribeAttackResponse {
+    Q_OBJECT
+
+public:
+    DescribeAttackResponse(const DescribeAttackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeAttackRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAttackResponse)
+    Q_DISABLE_COPY(DescribeAttackResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

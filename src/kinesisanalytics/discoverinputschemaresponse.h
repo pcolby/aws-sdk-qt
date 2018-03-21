@@ -20,4 +20,33 @@
 #ifndef QTAWS_DISCOVERINPUTSCHEMARESPONSE_H
 #define QTAWS_DISCOVERINPUTSCHEMARESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "discoverinputschemarequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class DiscoverInputSchemaResponsePrivate;
+
+class QTAWS_EXPORT DiscoverInputSchemaResponse : public DiscoverInputSchemaResponse {
+    Q_OBJECT
+
+public:
+    DiscoverInputSchemaResponse(const DiscoverInputSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DiscoverInputSchemaRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DiscoverInputSchemaResponse)
+    Q_DISABLE_COPY(DiscoverInputSchemaResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

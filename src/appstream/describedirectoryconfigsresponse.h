@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEDIRECTORYCONFIGSRESPONSE_H
 #define QTAWS_DESCRIBEDIRECTORYCONFIGSRESPONSE_H
 
+#include "appstreamresponse.h"
+#include "describedirectoryconfigsrequest.h"
+
+namespace AWS {
+
+namespace appstream {
+
+class DescribeDirectoryConfigsResponsePrivate;
+
+class QTAWS_EXPORT DescribeDirectoryConfigsResponse : public DescribeDirectoryConfigsResponse {
+    Q_OBJECT
+
+public:
+    DescribeDirectoryConfigsResponse(const DescribeDirectoryConfigsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeDirectoryConfigsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDirectoryConfigsResponse)
+    Q_DISABLE_COPY(DescribeDirectoryConfigsResponse)
+
+};
+
+} // namespace appstream
+} // namespace AWS
+
 #endif

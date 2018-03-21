@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMREDSHIFTRESPONSE_H
 #define QTAWS_CREATEDATASOURCEFROMREDSHIFTRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createdatasourcefromredshiftrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateDataSourceFromRedshiftResponsePrivate;
+
+class QTAWS_EXPORT CreateDataSourceFromRedshiftResponse : public CreateDataSourceFromRedshiftResponse {
+    Q_OBJECT
+
+public:
+    CreateDataSourceFromRedshiftResponse(const CreateDataSourceFromRedshiftRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDataSourceFromRedshiftRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceFromRedshiftResponse)
+    Q_DISABLE_COPY(CreateDataSourceFromRedshiftResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCONFIGURATIONREVISIONSRESPONSE_H
 #define QTAWS_LISTCONFIGURATIONREVISIONSRESPONSE_H
 
+#include "mqresponse.h"
+#include "listconfigurationrevisionsrequest.h"
+
+namespace AWS {
+
+namespace mq {
+
+class ListConfigurationRevisionsResponsePrivate;
+
+class QTAWS_EXPORT ListConfigurationRevisionsResponse : public ListConfigurationRevisionsResponse {
+    Q_OBJECT
+
+public:
+    ListConfigurationRevisionsResponse(const ListConfigurationRevisionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListConfigurationRevisionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListConfigurationRevisionsResponse)
+    Q_DISABLE_COPY(ListConfigurationRevisionsResponse)
+
+};
+
+} // namespace mq
+} // namespace AWS
+
 #endif

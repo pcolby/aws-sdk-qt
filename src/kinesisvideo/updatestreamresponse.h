@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESTREAMRESPONSE_H
 #define QTAWS_UPDATESTREAMRESPONSE_H
 
+#include "kinesisvideoresponse.h"
+#include "updatestreamrequest.h"
+
+namespace AWS {
+
+namespace kinesisvideo {
+
+class UpdateStreamResponsePrivate;
+
+class QTAWS_EXPORT UpdateStreamResponse : public UpdateStreamResponse {
+    Q_OBJECT
+
+public:
+    UpdateStreamResponse(const UpdateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStreamResponse)
+    Q_DISABLE_COPY(UpdateStreamResponse)
+
+};
+
+} // namespace kinesisvideo
+} // namespace AWS
+
 #endif

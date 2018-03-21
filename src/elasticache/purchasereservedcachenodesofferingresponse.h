@@ -20,4 +20,33 @@
 #ifndef QTAWS_PURCHASERESERVEDCACHENODESOFFERINGRESPONSE_H
 #define QTAWS_PURCHASERESERVEDCACHENODESOFFERINGRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "purchasereservedcachenodesofferingrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class PurchaseReservedCacheNodesOfferingResponsePrivate;
+
+class QTAWS_EXPORT PurchaseReservedCacheNodesOfferingResponse : public PurchaseReservedCacheNodesOfferingResponse {
+    Q_OBJECT
+
+public:
+    PurchaseReservedCacheNodesOfferingResponse(const PurchaseReservedCacheNodesOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PurchaseReservedCacheNodesOfferingRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseReservedCacheNodesOfferingResponse)
+    Q_DISABLE_COPY(PurchaseReservedCacheNodesOfferingResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

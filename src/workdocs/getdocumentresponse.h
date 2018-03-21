@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDOCUMENTRESPONSE_H
 #define QTAWS_GETDOCUMENTRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "getdocumentrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class GetDocumentResponsePrivate;
+
+class QTAWS_EXPORT GetDocumentResponse : public GetDocumentResponse {
+    Q_OBJECT
+
+public:
+    GetDocumentResponse(const GetDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDocumentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDocumentResponse)
+    Q_DISABLE_COPY(GetDocumentResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

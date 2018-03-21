@@ -20,4 +20,33 @@
 #ifndef QTAWS_REGISTERECSCLUSTERRESPONSE_H
 #define QTAWS_REGISTERECSCLUSTERRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "registerecsclusterrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class RegisterEcsClusterResponsePrivate;
+
+class QTAWS_EXPORT RegisterEcsClusterResponse : public RegisterEcsClusterResponse {
+    Q_OBJECT
+
+public:
+    RegisterEcsClusterResponse(const RegisterEcsClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RegisterEcsClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RegisterEcsClusterResponse)
+    Q_DISABLE_COPY(RegisterEcsClusterResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

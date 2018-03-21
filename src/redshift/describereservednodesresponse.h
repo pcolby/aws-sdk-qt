@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBERESERVEDNODESRESPONSE_H
 #define QTAWS_DESCRIBERESERVEDNODESRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describereservednodesrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeReservedNodesResponsePrivate;
+
+class QTAWS_EXPORT DescribeReservedNodesResponse : public DescribeReservedNodesResponse {
+    Q_OBJECT
+
+public:
+    DescribeReservedNodesResponse(const DescribeReservedNodesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeReservedNodesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReservedNodesResponse)
+    Q_DISABLE_COPY(DescribeReservedNodesResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

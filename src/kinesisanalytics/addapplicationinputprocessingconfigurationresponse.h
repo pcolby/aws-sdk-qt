@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_H
 #define QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_H
 
+#include "kinesisanalyticsresponse.h"
+#include "addapplicationinputprocessingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace kinesisanalytics {
+
+class AddApplicationInputProcessingConfigurationResponsePrivate;
+
+class QTAWS_EXPORT AddApplicationInputProcessingConfigurationResponse : public AddApplicationInputProcessingConfigurationResponse {
+    Q_OBJECT
+
+public:
+    AddApplicationInputProcessingConfigurationResponse(const AddApplicationInputProcessingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddApplicationInputProcessingConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddApplicationInputProcessingConfigurationResponse)
+    Q_DISABLE_COPY(AddApplicationInputProcessingConfigurationResponse)
+
+};
+
+} // namespace kinesisanalytics
+} // namespace AWS
+
 #endif

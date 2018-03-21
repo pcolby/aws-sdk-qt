@@ -20,4 +20,33 @@
 #ifndef QTAWS_SETIPADDRESSTYPERESPONSE_H
 #define QTAWS_SETIPADDRESSTYPERESPONSE_H
 
+#include "elasticloadbalancingv2response.h"
+#include "setipaddresstyperequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancingv2 {
+
+class SetIpAddressTypeResponsePrivate;
+
+class QTAWS_EXPORT SetIpAddressTypeResponse : public SetIpAddressTypeResponse {
+    Q_OBJECT
+
+public:
+    SetIpAddressTypeResponse(const SetIpAddressTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const SetIpAddressTypeRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(SetIpAddressTypeResponse)
+    Q_DISABLE_COPY(SetIpAddressTypeResponse)
+
+};
+
+} // namespace elasticloadbalancingv2
+} // namespace AWS
+
 #endif

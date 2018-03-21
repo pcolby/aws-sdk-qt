@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEAPPRESPONSE_H
 #define QTAWS_CREATEAPPRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "createapprequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class CreateAppResponsePrivate;
+
+class QTAWS_EXPORT CreateAppResponse : public CreateAppResponse {
+    Q_OBJECT
+
+public:
+    CreateAppResponse(const CreateAppRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateAppRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateAppResponse)
+    Q_DISABLE_COPY(CreateAppResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

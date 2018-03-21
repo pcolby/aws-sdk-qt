@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_H
 #define QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_H
 
+#include "lambdaresponse.h"
+#include "getfunctionconfigurationrequest.h"
+
+namespace AWS {
+
+namespace lambda {
+
+class GetFunctionConfigurationResponsePrivate;
+
+class QTAWS_EXPORT GetFunctionConfigurationResponse : public GetFunctionConfigurationResponse {
+    Q_OBJECT
+
+public:
+    GetFunctionConfigurationResponse(const GetFunctionConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetFunctionConfigurationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetFunctionConfigurationResponse)
+    Q_DISABLE_COPY(GetFunctionConfigurationResponse)
+
+};
+
+} // namespace lambda
+} // namespace AWS
+
 #endif

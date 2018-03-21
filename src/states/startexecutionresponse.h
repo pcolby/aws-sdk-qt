@@ -20,4 +20,33 @@
 #ifndef QTAWS_STARTEXECUTIONRESPONSE_H
 #define QTAWS_STARTEXECUTIONRESPONSE_H
 
+#include "statesresponse.h"
+#include "startexecutionrequest.h"
+
+namespace AWS {
+
+namespace states {
+
+class StartExecutionResponsePrivate;
+
+class QTAWS_EXPORT StartExecutionResponse : public StartExecutionResponse {
+    Q_OBJECT
+
+public:
+    StartExecutionResponse(const StartExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const StartExecutionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(StartExecutionResponse)
+    Q_DISABLE_COPY(StartExecutionResponse)
+
+};
+
+} // namespace states
+} // namespace AWS
+
 #endif

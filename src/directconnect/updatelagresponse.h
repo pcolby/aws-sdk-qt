@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATELAGRESPONSE_H
 #define QTAWS_UPDATELAGRESPONSE_H
 
+#include "directconnectresponse.h"
+#include "updatelagrequest.h"
+
+namespace AWS {
+
+namespace directconnect {
+
+class UpdateLagResponsePrivate;
+
+class QTAWS_EXPORT UpdateLagResponse : public UpdateLagResponse {
+    Q_OBJECT
+
+public:
+    UpdateLagResponse(const UpdateLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateLagRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLagResponse)
+    Q_DISABLE_COPY(UpdateLagResponse)
+
+};
+
+} // namespace directconnect
+} // namespace AWS
+
 #endif

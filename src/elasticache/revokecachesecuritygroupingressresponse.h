@@ -20,4 +20,33 @@
 #ifndef QTAWS_REVOKECACHESECURITYGROUPINGRESSRESPONSE_H
 #define QTAWS_REVOKECACHESECURITYGROUPINGRESSRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "revokecachesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class RevokeCacheSecurityGroupIngressResponsePrivate;
+
+class QTAWS_EXPORT RevokeCacheSecurityGroupIngressResponse : public RevokeCacheSecurityGroupIngressResponse {
+    Q_OBJECT
+
+public:
+    RevokeCacheSecurityGroupIngressResponse(const RevokeCacheSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RevokeCacheSecurityGroupIngressRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RevokeCacheSecurityGroupIngressResponse)
+    Q_DISABLE_COPY(RevokeCacheSecurityGroupIngressResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEGRAPHQLAPIRESPONSE_H
 #define QTAWS_CREATEGRAPHQLAPIRESPONSE_H
 
+#include "appsyncresponse.h"
+#include "creategraphqlapirequest.h"
+
+namespace AWS {
+
+namespace appsync {
+
+class CreateGraphqlApiResponsePrivate;
+
+class QTAWS_EXPORT CreateGraphqlApiResponse : public CreateGraphqlApiResponse {
+    Q_OBJECT
+
+public:
+    CreateGraphqlApiResponse(const CreateGraphqlApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateGraphqlApiRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateGraphqlApiResponse)
+    Q_DISABLE_COPY(CreateGraphqlApiResponse)
+
+};
+
+} // namespace appsync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_RUNJOBFLOWRESPONSE_H
 #define QTAWS_RUNJOBFLOWRESPONSE_H
 
+#include "elasticmapreduceresponse.h"
+#include "runjobflowrequest.h"
+
+namespace AWS {
+
+namespace elasticmapreduce {
+
+class RunJobFlowResponsePrivate;
+
+class QTAWS_EXPORT RunJobFlowResponse : public RunJobFlowResponse {
+    Q_OBJECT
+
+public:
+    RunJobFlowResponse(const RunJobFlowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RunJobFlowRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RunJobFlowResponse)
+    Q_DISABLE_COPY(RunJobFlowResponse)
+
+};
+
+} // namespace elasticmapreduce
+} // namespace AWS
+
 #endif

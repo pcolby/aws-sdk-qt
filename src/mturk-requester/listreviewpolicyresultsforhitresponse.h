@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_H
 
+#include "mturk-requesterresponse.h"
+#include "listreviewpolicyresultsforhitrequest.h"
+
+namespace AWS {
+
+namespace mturk-requester {
+
+class ListReviewPolicyResultsForHITResponsePrivate;
+
+class QTAWS_EXPORT ListReviewPolicyResultsForHITResponse : public ListReviewPolicyResultsForHITResponse {
+    Q_OBJECT
+
+public:
+    ListReviewPolicyResultsForHITResponse(const ListReviewPolicyResultsForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListReviewPolicyResultsForHITRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListReviewPolicyResultsForHITResponse)
+    Q_DISABLE_COPY(ListReviewPolicyResultsForHITResponse)
+
+};
+
+} // namespace mturk-requester
+} // namespace AWS
+
 #endif

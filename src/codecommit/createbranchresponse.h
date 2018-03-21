@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEBRANCHRESPONSE_H
 #define QTAWS_CREATEBRANCHRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "createbranchrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class CreateBranchResponsePrivate;
+
+class QTAWS_EXPORT CreateBranchResponse : public CreateBranchResponse {
+    Q_OBJECT
+
+public:
+    CreateBranchResponse(const CreateBranchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateBranchRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateBranchResponse)
+    Q_DISABLE_COPY(CreateBranchResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

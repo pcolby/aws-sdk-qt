@@ -20,4 +20,33 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "modifyworkspacepropertiesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class ModifyWorkspacePropertiesResponsePrivate;
+
+class QTAWS_EXPORT ModifyWorkspacePropertiesResponse : public ModifyWorkspacePropertiesResponse {
+    Q_OBJECT
+
+public:
+    ModifyWorkspacePropertiesResponse(const ModifyWorkspacePropertiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ModifyWorkspacePropertiesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ModifyWorkspacePropertiesResponse)
+    Q_DISABLE_COPY(ModifyWorkspacePropertiesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

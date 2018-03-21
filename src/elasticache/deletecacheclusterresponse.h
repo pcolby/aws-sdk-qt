@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECACHECLUSTERRESPONSE_H
 #define QTAWS_DELETECACHECLUSTERRESPONSE_H
 
+#include "elasticacheresponse.h"
+#include "deletecacheclusterrequest.h"
+
+namespace AWS {
+
+namespace elasticache {
+
+class DeleteCacheClusterResponsePrivate;
+
+class QTAWS_EXPORT DeleteCacheClusterResponse : public DeleteCacheClusterResponse {
+    Q_OBJECT
+
+public:
+    DeleteCacheClusterResponse(const DeleteCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteCacheClusterRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCacheClusterResponse)
+    Q_DISABLE_COPY(DeleteCacheClusterResponse)
+
+};
+
+} // namespace elasticache
+} // namespace AWS
+
 #endif

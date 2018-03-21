@@ -20,4 +20,33 @@
 #ifndef QTAWS_ASSOCIATEWEBACLRESPONSE_H
 #define QTAWS_ASSOCIATEWEBACLRESPONSE_H
 
+#include "waf-regionalresponse.h"
+#include "associatewebaclrequest.h"
+
+namespace AWS {
+
+namespace waf-regional {
+
+class AssociateWebACLResponsePrivate;
+
+class QTAWS_EXPORT AssociateWebACLResponse : public AssociateWebACLResponse {
+    Q_OBJECT
+
+public:
+    AssociateWebACLResponse(const AssociateWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AssociateWebACLRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AssociateWebACLResponse)
+    Q_DISABLE_COPY(AssociateWebACLResponse)
+
+};
+
+} // namespace waf-regional
+} // namespace AWS
+
 #endif

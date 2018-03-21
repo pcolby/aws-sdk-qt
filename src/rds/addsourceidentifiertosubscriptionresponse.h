@@ -20,4 +20,33 @@
 #ifndef QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_H
 #define QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_H
 
+#include "rdsresponse.h"
+#include "addsourceidentifiertosubscriptionrequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class AddSourceIdentifierToSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT AddSourceIdentifierToSubscriptionResponse : public AddSourceIdentifierToSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    AddSourceIdentifierToSubscriptionResponse(const AddSourceIdentifierToSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const AddSourceIdentifierToSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(AddSourceIdentifierToSubscriptionResponse)
+    Q_DISABLE_COPY(AddSourceIdentifierToSubscriptionResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

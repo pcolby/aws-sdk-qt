@@ -20,4 +20,33 @@
 #ifndef QTAWS_REBOOTWORKSPACESRESPONSE_H
 #define QTAWS_REBOOTWORKSPACESRESPONSE_H
 
+#include "workspacesresponse.h"
+#include "rebootworkspacesrequest.h"
+
+namespace AWS {
+
+namespace workspaces {
+
+class RebootWorkspacesResponsePrivate;
+
+class QTAWS_EXPORT RebootWorkspacesResponse : public RebootWorkspacesResponse {
+    Q_OBJECT
+
+public:
+    RebootWorkspacesResponse(const RebootWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const RebootWorkspacesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(RebootWorkspacesResponse)
+    Q_DISABLE_COPY(RebootWorkspacesResponse)
+
+};
+
+} // namespace workspaces
+} // namespace AWS
+
 #endif

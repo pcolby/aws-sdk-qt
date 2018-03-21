@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_H
 #define QTAWS_DELETETAGSRESPONSE_H
 
+#include "discoveryresponse.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace discovery {
+
+class DeleteTagsResponsePrivate;
+
+class QTAWS_EXPORT DeleteTagsResponse : public DeleteTagsResponse {
+    Q_OBJECT
+
+public:
+    DeleteTagsResponse(const DeleteTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTagsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsResponse)
+    Q_DISABLE_COPY(DeleteTagsResponse)
+
+};
+
+} // namespace discovery
+} // namespace AWS
+
 #endif

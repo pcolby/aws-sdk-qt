@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONRESPONSE_H
 #define QTAWS_PUTREPORTDEFINITIONRESPONSE_H
 
+#include "curresponse.h"
+#include "putreportdefinitionrequest.h"
+
+namespace AWS {
+
+namespace cur {
+
+class PutReportDefinitionResponsePrivate;
+
+class QTAWS_EXPORT PutReportDefinitionResponse : public PutReportDefinitionResponse {
+    Q_OBJECT
+
+public:
+    PutReportDefinitionResponse(const PutReportDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutReportDefinitionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutReportDefinitionResponse)
+    Q_DISABLE_COPY(PutReportDefinitionResponse)
+
+};
+
+} // namespace cur
+} // namespace AWS
+
 #endif

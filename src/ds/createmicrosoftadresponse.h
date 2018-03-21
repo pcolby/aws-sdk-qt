@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEMICROSOFTADRESPONSE_H
 #define QTAWS_CREATEMICROSOFTADRESPONSE_H
 
+#include "dsresponse.h"
+#include "createmicrosoftadrequest.h"
+
+namespace AWS {
+
+namespace ds {
+
+class CreateMicrosoftADResponsePrivate;
+
+class QTAWS_EXPORT CreateMicrosoftADResponse : public CreateMicrosoftADResponse {
+    Q_OBJECT
+
+public:
+    CreateMicrosoftADResponse(const CreateMicrosoftADRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateMicrosoftADRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateMicrosoftADResponse)
+    Q_DISABLE_COPY(CreateMicrosoftADResponse)
+
+};
+
+} // namespace ds
+} // namespace AWS
+
 #endif

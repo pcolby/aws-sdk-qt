@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATESKILLGROUPRESPONSE_H
 #define QTAWS_CREATESKILLGROUPRESPONSE_H
 
+#include "alexaforbusinessresponse.h"
+#include "createskillgrouprequest.h"
+
+namespace AWS {
+
+namespace alexaforbusiness {
+
+class CreateSkillGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateSkillGroupResponse : public CreateSkillGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateSkillGroupResponse(const CreateSkillGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateSkillGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateSkillGroupResponse)
+    Q_DISABLE_COPY(CreateSkillGroupResponse)
+
+};
+
+} // namespace alexaforbusiness
+} // namespace AWS
+
 #endif

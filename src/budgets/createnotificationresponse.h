@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATENOTIFICATIONRESPONSE_H
 #define QTAWS_CREATENOTIFICATIONRESPONSE_H
 
+#include "budgetsresponse.h"
+#include "createnotificationrequest.h"
+
+namespace AWS {
+
+namespace budgets {
+
+class CreateNotificationResponsePrivate;
+
+class QTAWS_EXPORT CreateNotificationResponse : public CreateNotificationResponse {
+    Q_OBJECT
+
+public:
+    CreateNotificationResponse(const CreateNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateNotificationRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateNotificationResponse)
+    Q_DISABLE_COPY(CreateNotificationResponse)
+
+};
+
+} // namespace budgets
+} // namespace AWS
+
 #endif

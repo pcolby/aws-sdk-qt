@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATESTREAMRESPONSE_H
 #define QTAWS_UPDATESTREAMRESPONSE_H
 
+#include "iotresponse.h"
+#include "updatestreamrequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class UpdateStreamResponsePrivate;
+
+class QTAWS_EXPORT UpdateStreamResponse : public UpdateStreamResponse {
+    Q_OBJECT
+
+public:
+    UpdateStreamResponse(const UpdateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateStreamRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStreamResponse)
+    Q_DISABLE_COPY(UpdateStreamResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

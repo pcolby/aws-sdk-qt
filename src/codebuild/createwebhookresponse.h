@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEWEBHOOKRESPONSE_H
 #define QTAWS_CREATEWEBHOOKRESPONSE_H
 
+#include "codebuildresponse.h"
+#include "createwebhookrequest.h"
+
+namespace AWS {
+
+namespace codebuild {
+
+class CreateWebhookResponsePrivate;
+
+class QTAWS_EXPORT CreateWebhookResponse : public CreateWebhookResponse {
+    Q_OBJECT
+
+public:
+    CreateWebhookResponse(const CreateWebhookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateWebhookRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateWebhookResponse)
+    Q_DISABLE_COPY(CreateWebhookResponse)
+
+};
+
+} // namespace codebuild
+} // namespace AWS
+
 #endif

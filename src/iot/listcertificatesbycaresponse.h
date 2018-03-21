@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCERTIFICATESBYCARESPONSE_H
 #define QTAWS_LISTCERTIFICATESBYCARESPONSE_H
 
+#include "iotresponse.h"
+#include "listcertificatesbycarequest.h"
+
+namespace AWS {
+
+namespace iot {
+
+class ListCertificatesByCAResponsePrivate;
+
+class QTAWS_EXPORT ListCertificatesByCAResponse : public ListCertificatesByCAResponse {
+    Q_OBJECT
+
+public:
+    ListCertificatesByCAResponse(const ListCertificatesByCARequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCertificatesByCARequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCertificatesByCAResponse)
+    Q_DISABLE_COPY(ListCertificatesByCAResponse)
+
+};
+
+} // namespace iot
+} // namespace AWS
+
 #endif

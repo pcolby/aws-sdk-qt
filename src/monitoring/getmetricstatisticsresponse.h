@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETMETRICSTATISTICSRESPONSE_H
 #define QTAWS_GETMETRICSTATISTICSRESPONSE_H
 
+#include "monitoringresponse.h"
+#include "getmetricstatisticsrequest.h"
+
+namespace AWS {
+
+namespace monitoring {
+
+class GetMetricStatisticsResponsePrivate;
+
+class QTAWS_EXPORT GetMetricStatisticsResponse : public GetMetricStatisticsResponse {
+    Q_OBJECT
+
+public:
+    GetMetricStatisticsResponse(const GetMetricStatisticsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetMetricStatisticsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetMetricStatisticsResponse)
+    Q_DISABLE_COPY(GetMetricStatisticsResponse)
+
+};
+
+} // namespace monitoring
+} // namespace AWS
+
 #endif

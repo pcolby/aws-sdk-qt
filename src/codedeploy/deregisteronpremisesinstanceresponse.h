@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_H
 #define QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_H
 
+#include "codedeployresponse.h"
+#include "deregisteronpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace codedeploy {
+
+class DeregisterOnPremisesInstanceResponsePrivate;
+
+class QTAWS_EXPORT DeregisterOnPremisesInstanceResponse : public DeregisterOnPremisesInstanceResponse {
+    Q_OBJECT
+
+public:
+    DeregisterOnPremisesInstanceResponse(const DeregisterOnPremisesInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterOnPremisesInstanceRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterOnPremisesInstanceResponse)
+    Q_DISABLE_COPY(DeregisterOnPremisesInstanceResponse)
+
+};
+
+} // namespace codedeploy
+} // namespace AWS
+
 #endif

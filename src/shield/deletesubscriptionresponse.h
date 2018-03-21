@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONRESPONSE_H
 #define QTAWS_DELETESUBSCRIPTIONRESPONSE_H
 
+#include "shieldresponse.h"
+#include "deletesubscriptionrequest.h"
+
+namespace AWS {
+
+namespace shield {
+
+class DeleteSubscriptionResponsePrivate;
+
+class QTAWS_EXPORT DeleteSubscriptionResponse : public DeleteSubscriptionResponse {
+    Q_OBJECT
+
+public:
+    DeleteSubscriptionResponse(const DeleteSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteSubscriptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriptionResponse)
+    Q_DISABLE_COPY(DeleteSubscriptionResponse)
+
+};
+
+} // namespace shield
+} // namespace AWS
+
 #endif

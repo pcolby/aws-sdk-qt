@@ -20,4 +20,33 @@
 #ifndef QTAWS_UPDATECRAWLERSCHEDULERESPONSE_H
 #define QTAWS_UPDATECRAWLERSCHEDULERESPONSE_H
 
+#include "glueresponse.h"
+#include "updatecrawlerschedulerequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class UpdateCrawlerScheduleResponsePrivate;
+
+class QTAWS_EXPORT UpdateCrawlerScheduleResponse : public UpdateCrawlerScheduleResponse {
+    Q_OBJECT
+
+public:
+    UpdateCrawlerScheduleResponse(const UpdateCrawlerScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UpdateCrawlerScheduleRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCrawlerScheduleResponse)
+    Q_DISABLE_COPY(UpdateCrawlerScheduleResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

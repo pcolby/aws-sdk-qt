@@ -20,4 +20,33 @@
 #ifndef QTAWS_PUTREPOSITORYTRIGGERSRESPONSE_H
 #define QTAWS_PUTREPOSITORYTRIGGERSRESPONSE_H
 
+#include "codecommitresponse.h"
+#include "putrepositorytriggersrequest.h"
+
+namespace AWS {
+
+namespace codecommit {
+
+class PutRepositoryTriggersResponsePrivate;
+
+class QTAWS_EXPORT PutRepositoryTriggersResponse : public PutRepositoryTriggersResponse {
+    Q_OBJECT
+
+public:
+    PutRepositoryTriggersResponse(const PutRepositoryTriggersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const PutRepositoryTriggersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(PutRepositoryTriggersResponse)
+    Q_DISABLE_COPY(PutRepositoryTriggersResponse)
+
+};
+
+} // namespace codecommit
+} // namespace AWS
+
 #endif

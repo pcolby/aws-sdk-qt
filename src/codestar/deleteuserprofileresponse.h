@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETEUSERPROFILERESPONSE_H
 #define QTAWS_DELETEUSERPROFILERESPONSE_H
 
+#include "codestarresponse.h"
+#include "deleteuserprofilerequest.h"
+
+namespace AWS {
+
+namespace codestar {
+
+class DeleteUserProfileResponsePrivate;
+
+class QTAWS_EXPORT DeleteUserProfileResponse : public DeleteUserProfileResponse {
+    Q_OBJECT
+
+public:
+    DeleteUserProfileResponse(const DeleteUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteUserProfileRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserProfileResponse)
+    Q_DISABLE_COPY(DeleteUserProfileResponse)
+
+};
+
+} // namespace codestar
+} // namespace AWS
+
 #endif

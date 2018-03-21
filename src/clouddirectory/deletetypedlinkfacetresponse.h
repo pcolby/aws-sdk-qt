@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETETYPEDLINKFACETRESPONSE_H
 #define QTAWS_DELETETYPEDLINKFACETRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "deletetypedlinkfacetrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class DeleteTypedLinkFacetResponsePrivate;
+
+class QTAWS_EXPORT DeleteTypedLinkFacetResponse : public DeleteTypedLinkFacetResponse {
+    Q_OBJECT
+
+public:
+    DeleteTypedLinkFacetResponse(const DeleteTypedLinkFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteTypedLinkFacetRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTypedLinkFacetResponse)
+    Q_DISABLE_COPY(DeleteTypedLinkFacetResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

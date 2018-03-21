@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_H
 
+#include "emailresponse.h"
+#include "deleteconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace email {
+
+class DeleteConfigurationSetTrackingOptionsResponsePrivate;
+
+class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsResponse : public DeleteConfigurationSetTrackingOptionsResponse {
+    Q_OBJECT
+
+public:
+    DeleteConfigurationSetTrackingOptionsResponse(const DeleteConfigurationSetTrackingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteConfigurationSetTrackingOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigurationSetTrackingOptionsResponse)
+    Q_DISABLE_COPY(DeleteConfigurationSetTrackingOptionsResponse)
+
+};
+
+} // namespace email
+} // namespace AWS
+
 #endif

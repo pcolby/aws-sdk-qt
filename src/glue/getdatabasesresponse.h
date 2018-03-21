@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETDATABASESRESPONSE_H
 #define QTAWS_GETDATABASESRESPONSE_H
 
+#include "glueresponse.h"
+#include "getdatabasesrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetDatabasesResponsePrivate;
+
+class QTAWS_EXPORT GetDatabasesResponse : public GetDatabasesResponse {
+    Q_OBJECT
+
+public:
+    GetDatabasesResponse(const GetDatabasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetDatabasesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetDatabasesResponse)
+    Q_DISABLE_COPY(GetDatabasesResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

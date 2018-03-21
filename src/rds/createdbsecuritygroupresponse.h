@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDBSECURITYGROUPRESPONSE_H
 #define QTAWS_CREATEDBSECURITYGROUPRESPONSE_H
 
+#include "rdsresponse.h"
+#include "createdbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace rds {
+
+class CreateDBSecurityGroupResponsePrivate;
+
+class QTAWS_EXPORT CreateDBSecurityGroupResponse : public CreateDBSecurityGroupResponse {
+    Q_OBJECT
+
+public:
+    CreateDBSecurityGroupResponse(const CreateDBSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDBSecurityGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBSecurityGroupResponse)
+    Q_DISABLE_COPY(CreateDBSecurityGroupResponse)
+
+};
+
+} // namespace rds
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELAYERSRESPONSE_H
 #define QTAWS_DESCRIBELAYERSRESPONSE_H
 
+#include "opsworksresponse.h"
+#include "describelayersrequest.h"
+
+namespace AWS {
+
+namespace opsworks {
+
+class DescribeLayersResponsePrivate;
+
+class QTAWS_EXPORT DescribeLayersResponse : public DescribeLayersResponse {
+    Q_OBJECT
+
+public:
+    DescribeLayersResponse(const DescribeLayersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLayersRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLayersResponse)
+    Q_DISABLE_COPY(DescribeLayersResponse)
+
+};
+
+} // namespace opsworks
+} // namespace AWS
+
 #endif

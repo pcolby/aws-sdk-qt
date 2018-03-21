@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETREPLICATIONJOBSRESPONSE_H
 #define QTAWS_GETREPLICATIONJOBSRESPONSE_H
 
+#include "smsresponse.h"
+#include "getreplicationjobsrequest.h"
+
+namespace AWS {
+
+namespace sms {
+
+class GetReplicationJobsResponsePrivate;
+
+class QTAWS_EXPORT GetReplicationJobsResponse : public GetReplicationJobsResponse {
+    Q_OBJECT
+
+public:
+    GetReplicationJobsResponse(const GetReplicationJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetReplicationJobsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetReplicationJobsResponse)
+    Q_DISABLE_COPY(GetReplicationJobsResponse)
+
+};
+
+} // namespace sms
+} // namespace AWS
+
 #endif

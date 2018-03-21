@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETCONNECTIONSRESPONSE_H
 #define QTAWS_GETCONNECTIONSRESPONSE_H
 
+#include "glueresponse.h"
+#include "getconnectionsrequest.h"
+
+namespace AWS {
+
+namespace glue {
+
+class GetConnectionsResponsePrivate;
+
+class QTAWS_EXPORT GetConnectionsResponse : public GetConnectionsResponse {
+    Q_OBJECT
+
+public:
+    GetConnectionsResponse(const GetConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetConnectionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetConnectionsResponse)
+    Q_DISABLE_COPY(GetConnectionsResponse)
+
+};
+
+} // namespace glue
+} // namespace AWS
+
 #endif

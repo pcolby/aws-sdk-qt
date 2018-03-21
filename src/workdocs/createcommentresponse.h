@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATECOMMENTRESPONSE_H
 #define QTAWS_CREATECOMMENTRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "createcommentrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class CreateCommentResponsePrivate;
+
+class QTAWS_EXPORT CreateCommentResponse : public CreateCommentResponse {
+    Q_OBJECT
+
+public:
+    CreateCommentResponse(const CreateCommentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateCommentRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateCommentResponse)
+    Q_DISABLE_COPY(CreateCommentResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

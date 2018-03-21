@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTOBJECTPARENTPATHSRESPONSE_H
 #define QTAWS_LISTOBJECTPARENTPATHSRESPONSE_H
 
+#include "clouddirectoryresponse.h"
+#include "listobjectparentpathsrequest.h"
+
+namespace AWS {
+
+namespace clouddirectory {
+
+class ListObjectParentPathsResponsePrivate;
+
+class QTAWS_EXPORT ListObjectParentPathsResponse : public ListObjectParentPathsResponse {
+    Q_OBJECT
+
+public:
+    ListObjectParentPathsResponse(const ListObjectParentPathsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListObjectParentPathsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectParentPathsResponse)
+    Q_DISABLE_COPY(ListObjectParentPathsResponse)
+
+};
+
+} // namespace clouddirectory
+} // namespace AWS
+
 #endif

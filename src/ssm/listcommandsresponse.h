@@ -20,4 +20,33 @@
 #ifndef QTAWS_LISTCOMMANDSRESPONSE_H
 #define QTAWS_LISTCOMMANDSRESPONSE_H
 
+#include "ssmresponse.h"
+#include "listcommandsrequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class ListCommandsResponsePrivate;
+
+class QTAWS_EXPORT ListCommandsResponse : public ListCommandsResponse {
+    Q_OBJECT
+
+public:
+    ListCommandsResponse(const ListCommandsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const ListCommandsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(ListCommandsResponse)
+    Q_DISABLE_COPY(ListCommandsResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

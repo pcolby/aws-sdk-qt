@@ -20,4 +20,33 @@
 #ifndef QTAWS_UNASSIGNPRIVATEIPADDRESSESRESPONSE_H
 #define QTAWS_UNASSIGNPRIVATEIPADDRESSESRESPONSE_H
 
+#include "ec2response.h"
+#include "unassignprivateipaddressesrequest.h"
+
+namespace AWS {
+
+namespace ec2 {
+
+class UnassignPrivateIpAddressesResponsePrivate;
+
+class QTAWS_EXPORT UnassignPrivateIpAddressesResponse : public UnassignPrivateIpAddressesResponse {
+    Q_OBJECT
+
+public:
+    UnassignPrivateIpAddressesResponse(const UnassignPrivateIpAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const UnassignPrivateIpAddressesRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(UnassignPrivateIpAddressesResponse)
+    Q_DISABLE_COPY(UnassignPrivateIpAddressesResponse)
+
+};
+
+} // namespace ec2
+} // namespace AWS
+
 #endif

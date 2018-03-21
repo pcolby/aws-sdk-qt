@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBAIDUCHANNELRESPONSE_H
 #define QTAWS_GETBAIDUCHANNELRESPONSE_H
 
+#include "pinpointresponse.h"
+#include "getbaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace pinpoint {
+
+class GetBaiduChannelResponsePrivate;
+
+class QTAWS_EXPORT GetBaiduChannelResponse : public GetBaiduChannelResponse {
+    Q_OBJECT
+
+public:
+    GetBaiduChannelResponse(const GetBaiduChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBaiduChannelRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBaiduChannelResponse)
+    Q_DISABLE_COPY(GetBaiduChannelResponse)
+
+};
+
+} // namespace pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEFOLDERRESPONSE_H
 #define QTAWS_CREATEFOLDERRESPONSE_H
 
+#include "workdocsresponse.h"
+#include "createfolderrequest.h"
+
+namespace AWS {
+
+namespace workdocs {
+
+class CreateFolderResponsePrivate;
+
+class QTAWS_EXPORT CreateFolderResponse : public CreateFolderResponse {
+    Q_OBJECT
+
+public:
+    CreateFolderResponse(const CreateFolderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateFolderRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateFolderResponse)
+    Q_DISABLE_COPY(CreateFolderResponse)
+
+};
+
+} // namespace workdocs
+} // namespace AWS
+
 #endif

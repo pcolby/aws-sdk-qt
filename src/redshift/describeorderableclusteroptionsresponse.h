@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_H
 
+#include "redshiftresponse.h"
+#include "describeorderableclusteroptionsrequest.h"
+
+namespace AWS {
+
+namespace redshift {
+
+class DescribeOrderableClusterOptionsResponsePrivate;
+
+class QTAWS_EXPORT DescribeOrderableClusterOptionsResponse : public DescribeOrderableClusterOptionsResponse {
+    Q_OBJECT
+
+public:
+    DescribeOrderableClusterOptionsResponse(const DescribeOrderableClusterOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeOrderableClusterOptionsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrderableClusterOptionsResponse)
+    Q_DISABLE_COPY(DescribeOrderableClusterOptionsResponse)
+
+};
+
+} // namespace redshift
+} // namespace AWS
+
 #endif

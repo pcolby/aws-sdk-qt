@@ -20,4 +20,33 @@
 #ifndef QTAWS_DELETELOADBALANCERRESPONSE_H
 #define QTAWS_DELETELOADBALANCERRESPONSE_H
 
+#include "elasticloadbalancingresponse.h"
+#include "deleteloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace elasticloadbalancing {
+
+class DeleteLoadBalancerResponsePrivate;
+
+class QTAWS_EXPORT DeleteLoadBalancerResponse : public DeleteLoadBalancerResponse {
+    Q_OBJECT
+
+public:
+    DeleteLoadBalancerResponse(const DeleteLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeleteLoadBalancerRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLoadBalancerResponse)
+    Q_DISABLE_COPY(DeleteLoadBalancerResponse)
+
+};
+
+} // namespace elasticloadbalancing
+} // namespace AWS
+
 #endif

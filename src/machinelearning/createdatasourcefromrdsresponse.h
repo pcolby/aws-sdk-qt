@@ -20,4 +20,33 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMRDSRESPONSE_H
 #define QTAWS_CREATEDATASOURCEFROMRDSRESPONSE_H
 
+#include "machinelearningresponse.h"
+#include "createdatasourcefromrdsrequest.h"
+
+namespace AWS {
+
+namespace machinelearning {
+
+class CreateDataSourceFromRDSResponsePrivate;
+
+class QTAWS_EXPORT CreateDataSourceFromRDSResponse : public CreateDataSourceFromRDSResponse {
+    Q_OBJECT
+
+public:
+    CreateDataSourceFromRDSResponse(const CreateDataSourceFromRDSRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const CreateDataSourceFromRDSRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceFromRDSResponse)
+    Q_DISABLE_COPY(CreateDataSourceFromRDSResponse)
+
+};
+
+} // namespace machinelearning
+} // namespace AWS
+
 #endif

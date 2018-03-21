@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBESEVERITYLEVELSRESPONSE_H
 #define QTAWS_DESCRIBESEVERITYLEVELSRESPONSE_H
 
+#include "supportresponse.h"
+#include "describeseveritylevelsrequest.h"
+
+namespace AWS {
+
+namespace support {
+
+class DescribeSeverityLevelsResponsePrivate;
+
+class QTAWS_EXPORT DescribeSeverityLevelsResponse : public DescribeSeverityLevelsResponse {
+    Q_OBJECT
+
+public:
+    DescribeSeverityLevelsResponse(const DescribeSeverityLevelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeSeverityLevelsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSeverityLevelsResponse)
+    Q_DISABLE_COPY(DescribeSeverityLevelsResponse)
+
+};
+
+} // namespace support
+} // namespace AWS
+
 #endif

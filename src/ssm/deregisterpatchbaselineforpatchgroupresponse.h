@@ -20,4 +20,33 @@
 #ifndef QTAWS_DEREGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_H
 #define QTAWS_DEREGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_H
 
+#include "ssmresponse.h"
+#include "deregisterpatchbaselineforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace ssm {
+
+class DeregisterPatchBaselineForPatchGroupResponsePrivate;
+
+class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupResponse : public DeregisterPatchBaselineForPatchGroupResponse {
+    Q_OBJECT
+
+public:
+    DeregisterPatchBaselineForPatchGroupResponse(const DeregisterPatchBaselineForPatchGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DeregisterPatchBaselineForPatchGroupRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterPatchBaselineForPatchGroupResponse)
+    Q_DISABLE_COPY(DeregisterPatchBaselineForPatchGroupResponse)
+
+};
+
+} // namespace ssm
+} // namespace AWS
+
 #endif

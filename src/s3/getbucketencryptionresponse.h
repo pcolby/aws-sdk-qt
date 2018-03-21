@@ -20,4 +20,33 @@
 #ifndef QTAWS_GETBUCKETENCRYPTIONRESPONSE_H
 #define QTAWS_GETBUCKETENCRYPTIONRESPONSE_H
 
+#include "s3response.h"
+#include "getbucketencryptionrequest.h"
+
+namespace AWS {
+
+namespace s3 {
+
+class GetBucketEncryptionResponsePrivate;
+
+class QTAWS_EXPORT GetBucketEncryptionResponse : public GetBucketEncryptionResponse {
+    Q_OBJECT
+
+public:
+    GetBucketEncryptionResponse(const GetBucketEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const GetBucketEncryptionRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketEncryptionResponse)
+    Q_DISABLE_COPY(GetBucketEncryptionResponse)
+
+};
+
+} // namespace s3
+} // namespace AWS
+
 #endif

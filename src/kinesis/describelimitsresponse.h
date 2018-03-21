@@ -20,4 +20,33 @@
 #ifndef QTAWS_DESCRIBELIMITSRESPONSE_H
 #define QTAWS_DESCRIBELIMITSRESPONSE_H
 
+#include "kinesisresponse.h"
+#include "describelimitsrequest.h"
+
+namespace AWS {
+
+namespace kinesis {
+
+class DescribeLimitsResponsePrivate;
+
+class QTAWS_EXPORT DescribeLimitsResponse : public DescribeLimitsResponse {
+    Q_OBJECT
+
+public:
+    DescribeLimitsResponse(const DescribeLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
+
+    virtual const DescribeLimitsRequest * request() const;
+
+protected slots:
+    virtual void parseSuccess(QIODevice &response);
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLimitsResponse)
+    Q_DISABLE_COPY(DescribeLimitsResponse)
+
+};
+
+} // namespace kinesis
+} // namespace AWS
+
 #endif
