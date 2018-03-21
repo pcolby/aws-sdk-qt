@@ -51,7 +51,7 @@ https://github.com/pcolby/libqtaws/blob/196b5cd5e571d6883d288705234770a5e606d1f0
 but outside the scope of this project.
 
 Note, the [code-generation](code-generation) sub-project requires Qt
-5.5+ and [Grantlee](https://github.com/steveire/grantlee), but this is
+5.10+ and [Grantlee](https://github.com/steveire/grantlee), but this is
 for development of Libqtaws itself, not for devlopers that use Libqtaws.
 
 ## Building

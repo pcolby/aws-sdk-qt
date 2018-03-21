@@ -49,6 +49,26 @@ Generator::Generator(const QDir &outputDir)
     }
 }
 
+bool Generator::generate(const QFileInfoList &descriptions)
+{
+    QStringList serviceFileNames;
+    foreach (const QFileInfo &entry, descriptions) {
+        QFile file(entry.absoluteFilePath());
+        file.open(QFile::ReadOnly);
+        // <servce-name>-yyyy-mm-dd.normal.json
+        Q_ASSERT(entry.fileName().endsWith(QLatin1String(".normal.json")));
+        const QString serviceFileName = entry.fileName().chopped(23);
+        generate(serviceFileName, QJsonDocument::fromJson(file.readAll()).object());
+        serviceFileNames.append(serviceFileName);
+    }
+    serviceFileNames.sort();
+
+    Grantlee::Context context;
+    context.insert(QSL("ServiceNames"), serviceFileNames);
+    render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")));
+    return true;
+}
+
 bool Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {

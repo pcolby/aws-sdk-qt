@@ -25,13 +25,6 @@
 
 #include "generator.h"
 
-QString getServiceNameFromFileName(const QString &fileName)
-{
-    // <servce-name>-yyyy-mm-dd.normal.json
-    Q_ASSERT(fileName.endsWith(QLatin1String(".normal.json")));
-    return fileName.left(fileName.size() - 23);
-}
-
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
@@ -51,16 +44,10 @@ int main(int argc, char *argv[])
     }
 
     Generator generator(outputDir.absoluteFilePath());
-    foreach (const QFileInfo &entry,
-             QDir(QLatin1String(":/api-descriptions"), QLatin1String("*.json"),
-                  QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList()) {
-        QFile file(entry.absoluteFilePath());
-        file.open(QFile::ReadOnly);
-        if (!generator.generate(
-                getServiceNameFromFileName(entry.fileName()),
-                QJsonDocument::fromJson(file.readAll()).object())) {
-            return 3;
-        }
+    if (!generator.generate(QDir(QLatin1String(":/api-descriptions"), QLatin1String("*.json"),
+                            QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList()))
+    {
+        return 3;
     }
     return 0;
 }

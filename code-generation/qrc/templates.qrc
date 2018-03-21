@@ -12,5 +12,6 @@
     <file>templates/response.h</file>
     <file>templates/response_p.h</file>
     <file>templates/service.pro</file>
+    <file>templates/src.pro</file>
   </qresource>
 </RCC>

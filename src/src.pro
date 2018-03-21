@@ -1,8 +1,7 @@
 TEMPLATE = subdirs
 
-# @todo Code-gen this file too.
-# Tip: find . -mindepth 2 -maxdepth 2 -name '*.pro' | sort | sed -re 's|\./(.*)|    \1 \\|' |
 SUBDIRS += \
+    AWSMigrationHub/AWSMigrationHub.pro \
     acm/acm.pro \
     alexaforbusiness/alexaforbusiness.pro \
     apigateway/apigateway.pro \
@@ -12,7 +11,6 @@ SUBDIRS += \
     athena/athena.pro \
     autoscaling/autoscaling.pro \
     autoscaling-plans/autoscaling-plans.pro \
-    AWSMigrationHub/AWSMigrationHub.pro \
     batch/batch.pro \
     budgets/budgets.pro \
     ce/ce.pro \
@@ -69,14 +67,14 @@ SUBDIRS += \
     iam/iam.pro \
     importexport/importexport.pro \
     inspector/inspector.pro \
-    iot-data/iot-data.pro \
     iot/iot.pro \
+    iot-data/iot-data.pro \
     iot-jobs-data/iot-jobs-data.pro \
-    kinesisanalytics/kinesisanalytics.pro \
     kinesis/kinesis.pro \
     kinesis-video-archived-media/kinesis-video-archived-media.pro \
-    kinesisvideo/kinesisvideo.pro \
     kinesis-video-media/kinesis-video-media.pro \
+    kinesisanalytics/kinesisanalytics.pro \
+    kinesisvideo/kinesisvideo.pro \
     kms/kms.pro \
     lambda/lambda.pro \
     lex-models/lex-models.pro \
@@ -87,16 +85,16 @@ SUBDIRS += \
     mediaconvert/mediaconvert.pro \
     medialive/medialive.pro \
     mediapackage/mediapackage.pro \
-    mediastore-data/mediastore-data.pro \
     mediastore/mediastore.pro \
+    mediastore-data/mediastore-data.pro \
     meteringmarketplace/meteringmarketplace.pro \
-    mobileanalytics/mobileanalytics.pro \
     mobile/mobile.pro \
+    mobileanalytics/mobileanalytics.pro \
     monitoring/monitoring.pro \
     mq/mq.pro \
     mturk-requester/mturk-requester.pro \
-    opsworkscm/opsworkscm.pro \
     opsworks/opsworks.pro \
+    opsworkscm/opsworkscm.pro \
     organizations/organizations.pro \
     pinpoint/pinpoint.pro \
     polly/polly.pro \
@@ -106,8 +104,8 @@ SUBDIRS += \
     rekognition/rekognition.pro \
     resource-groups/resource-groups.pro \
     resourcegroupstaggingapi/resourcegroupstaggingapi.pro \
-    route53domains/route53domains.pro \
     route53/route53.pro \
+    route53domains/route53domains.pro \
     runtime.lex/runtime.lex.pro \
     runtime.sagemaker/runtime.sagemaker.pro \
     s3/s3.pro \
@@ -120,7 +118,7 @@ SUBDIRS += \
     sms/sms.pro \
     snowball/snowball.pro \
     sns/sns.pro \
-    sqs2/sqs2.pro \
+    sqs/sqs.pro \
     ssm/ssm.pro \
     states/states.pro \
     storagegateway/storagegateway.pro \
@@ -129,10 +127,9 @@ SUBDIRS += \
     swf/swf.pro \
     transcribe/transcribe.pro \
     translate/translate.pro \
-    waf-regional/waf-regional.pro \
     waf/waf.pro \
+    waf-regional/waf-regional.pro \
     workdocs/workdocs.pro \
     workmail/workmail.pro \
     workspaces/workspaces.pro \
     xray/xray.pro \
-
