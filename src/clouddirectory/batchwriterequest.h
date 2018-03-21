@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHWRITEREQUEST_H
 #define QTAWS_BATCHWRITEREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class BatchWriteRequestPrivate;
+
+class QTAWS_EXPORT BatchWriteRequest : public CloudDirectoryRequest {
+
+public:
+    BatchWriteRequest(const BatchWriteRequest &other);
+    BatchWriteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchWriteRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

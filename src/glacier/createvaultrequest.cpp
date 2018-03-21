@@ -19,3 +19,107 @@
 
 #include "createvaultrequest.h"
 #include "createvaultrequest_p.h"
+#include "createvaultresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  CreateVaultRequest
+ *
+ * @brief  Implements Glacier CreateVault requests.
+ *
+ * @see    GlacierClient::createVault
+ */
+
+/**
+ * @brief  Constructs a new CreateVaultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVaultResponse::CreateVaultResponse(
+
+/**
+ * @brief  Constructs a new CreateVaultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateVaultRequest::CreateVaultRequest(const CreateVaultRequest &other)
+    : GlacierRequest(new CreateVaultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateVaultRequest object.
+ */
+CreateVaultRequest::CreateVaultRequest()
+    : GlacierRequest(new CreateVaultRequestPrivate(GlacierRequest::CreateVaultAction, this))
+{
+
+}
+
+bool CreateVaultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateVaultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateVaultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * CreateVaultRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateVaultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVaultRequestPrivate
+ *
+ * @brief  Private implementation for CreateVaultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVaultRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public CreateVaultRequest instance.
+ */
+CreateVaultRequestPrivate::CreateVaultRequestPrivate(
+    const GlacierRequest::Action action, CreateVaultRequest * const q)
+    : CreateVaultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVaultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateVaultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateVaultRequest instance.
+ */
+CreateVaultRequestPrivate::CreateVaultRequestPrivate(
+    const CreateVaultRequestPrivate &other, CreateVaultRequest * const q)
+    : CreateVaultPrivate(other, q)
+{
+
+}

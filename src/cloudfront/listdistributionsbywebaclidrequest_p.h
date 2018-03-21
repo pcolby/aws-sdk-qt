@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDISTRIBUTIONSBYWEBACLIDREQUEST_P_H
 #define QTAWS_LISTDISTRIBUTIONSBYWEBACLIDREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "listdistributionsbywebaclidrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListDistributionsByWebACLIdRequest;
+
+class QTAWS_EXPORT ListDistributionsByWebACLIdRequestPrivate : public CloudFrontPrivate {
+
+public:
+    ListDistributionsByWebACLIdRequestPrivate(const CloudFront::Action action,
+                                   ListDistributionsByWebACLIdRequest * const q);
+    ListDistributionsByWebACLIdRequestPrivate(const ListDistributionsByWebACLIdRequestPrivate &other,
+                                   ListDistributionsByWebACLIdRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDistributionsByWebACLIdRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

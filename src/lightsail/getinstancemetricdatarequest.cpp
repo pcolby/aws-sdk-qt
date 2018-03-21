@@ -19,3 +19,107 @@
 
 #include "getinstancemetricdatarequest.h"
 #include "getinstancemetricdatarequest_p.h"
+#include "getinstancemetricdataresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceMetricDataRequest
+ *
+ * @brief  Implements Lightsail GetInstanceMetricData requests.
+ *
+ * @see    LightsailClient::getInstanceMetricData
+ */
+
+/**
+ * @brief  Constructs a new GetInstanceMetricDataResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
+
+/**
+ * @brief  Constructs a new GetInstanceMetricDataRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInstanceMetricDataRequest::GetInstanceMetricDataRequest(const GetInstanceMetricDataRequest &other)
+    : LightsailRequest(new GetInstanceMetricDataRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInstanceMetricDataRequest object.
+ */
+GetInstanceMetricDataRequest::GetInstanceMetricDataRequest()
+    : LightsailRequest(new GetInstanceMetricDataRequestPrivate(LightsailRequest::GetInstanceMetricDataAction, this))
+{
+
+}
+
+bool GetInstanceMetricDataRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInstanceMetricDataResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInstanceMetricDataResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInstanceMetricDataResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceMetricDataRequestPrivate
+ *
+ * @brief  Private implementation for GetInstanceMetricDataRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceMetricDataRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetInstanceMetricDataRequest instance.
+ */
+GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
+    const LightsailRequest::Action action, GetInstanceMetricDataRequest * const q)
+    : GetInstanceMetricDataPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceMetricDataRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInstanceMetricDataRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInstanceMetricDataRequest instance.
+ */
+GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
+    const GetInstanceMetricDataRequestPrivate &other, GetInstanceMetricDataRequest * const q)
+    : GetInstanceMetricDataPrivate(other, q)
+{
+
+}

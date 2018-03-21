@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONFIGURATIONTEMPLATEREQUEST_H
 #define QTAWS_UPDATECONFIGURATIONTEMPLATEREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateConfigurationTemplateRequestPrivate;
+
+class QTAWS_EXPORT UpdateConfigurationTemplateRequest : public ElasticBeanstalkRequest {
+
+public:
+    UpdateConfigurationTemplateRequest(const UpdateConfigurationTemplateRequest &other);
+    UpdateConfigurationTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationTemplateRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

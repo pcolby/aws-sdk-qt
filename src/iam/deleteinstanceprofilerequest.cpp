@@ -19,3 +19,107 @@
 
 #include "deleteinstanceprofilerequest.h"
 #include "deleteinstanceprofilerequest_p.h"
+#include "deleteinstanceprofileresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteInstanceProfileRequest
+ *
+ * @brief  Implements IAM DeleteInstanceProfile requests.
+ *
+ * @see    IAMClient::deleteInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new DeleteInstanceProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
+
+/**
+ * @brief  Constructs a new DeleteInstanceProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteInstanceProfileRequest::DeleteInstanceProfileRequest(const DeleteInstanceProfileRequest &other)
+    : IAMRequest(new DeleteInstanceProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteInstanceProfileRequest object.
+ */
+DeleteInstanceProfileRequest::DeleteInstanceProfileRequest()
+    : IAMRequest(new DeleteInstanceProfileRequestPrivate(IAMRequest::DeleteInstanceProfileAction, this))
+{
+
+}
+
+bool DeleteInstanceProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteInstanceProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteInstanceProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteInstanceProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInstanceProfileRequestPrivate
+ *
+ * @brief  Private implementation for DeleteInstanceProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteInstanceProfileRequest instance.
+ */
+DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
+    const IAMRequest::Action action, DeleteInstanceProfileRequest * const q)
+    : DeleteInstanceProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteInstanceProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteInstanceProfileRequest instance.
+ */
+DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
+    const DeleteInstanceProfileRequestPrivate &other, DeleteInstanceProfileRequest * const q)
+    : DeleteInstanceProfilePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTCELEBRITYRECOGNITIONREQUEST_P_H
 #define QTAWS_STARTCELEBRITYRECOGNITIONREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "startcelebrityrecognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartCelebrityRecognitionRequest;
+
+class QTAWS_EXPORT StartCelebrityRecognitionRequestPrivate : public RekognitionPrivate {
+
+public:
+    StartCelebrityRecognitionRequestPrivate(const Rekognition::Action action,
+                                   StartCelebrityRecognitionRequest * const q);
+    StartCelebrityRecognitionRequestPrivate(const StartCelebrityRecognitionRequestPrivate &other,
+                                   StartCelebrityRecognitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartCelebrityRecognitionRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

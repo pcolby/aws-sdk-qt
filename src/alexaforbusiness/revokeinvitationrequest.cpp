@@ -19,3 +19,107 @@
 
 #include "revokeinvitationrequest.h"
 #include "revokeinvitationrequest_p.h"
+#include "revokeinvitationresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  RevokeInvitationRequest
+ *
+ * @brief  Implements AlexaForBusiness RevokeInvitation requests.
+ *
+ * @see    AlexaForBusinessClient::revokeInvitation
+ */
+
+/**
+ * @brief  Constructs a new RevokeInvitationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeInvitationResponse::RevokeInvitationResponse(
+
+/**
+ * @brief  Constructs a new RevokeInvitationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RevokeInvitationRequest::RevokeInvitationRequest(const RevokeInvitationRequest &other)
+    : AlexaForBusinessRequest(new RevokeInvitationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RevokeInvitationRequest object.
+ */
+RevokeInvitationRequest::RevokeInvitationRequest()
+    : AlexaForBusinessRequest(new RevokeInvitationRequestPrivate(AlexaForBusinessRequest::RevokeInvitationAction, this))
+{
+
+}
+
+bool RevokeInvitationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RevokeInvitationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RevokeInvitationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkReply * const reply) const
+{
+    return new RevokeInvitationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeInvitationRequestPrivate
+ *
+ * @brief  Private implementation for RevokeInvitationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeInvitationRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public RevokeInvitationRequest instance.
+ */
+RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
+    const AlexaForBusinessRequest::Action action, RevokeInvitationRequest * const q)
+    : RevokeInvitationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeInvitationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RevokeInvitationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RevokeInvitationRequest instance.
+ */
+RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
+    const RevokeInvitationRequestPrivate &other, RevokeInvitationRequest * const q)
+    : RevokeInvitationPrivate(other, q)
+{
+
+}

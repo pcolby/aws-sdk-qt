@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBNETREQUEST_H
 #define QTAWS_DELETESUBNETREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSubnetRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubnetRequest : public EC2Request {
+
+public:
+    DeleteSubnetRequest(const DeleteSubnetRequest &other);
+    DeleteSubnetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubnetRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

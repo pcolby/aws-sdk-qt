@@ -19,3 +19,107 @@
 
 #include "updaterepositorynamerequest.h"
 #include "updaterepositorynamerequest_p.h"
+#include "updaterepositorynameresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateRepositoryNameRequest
+ *
+ * @brief  Implements CodeCommit UpdateRepositoryName requests.
+ *
+ * @see    CodeCommitClient::updateRepositoryName
+ */
+
+/**
+ * @brief  Constructs a new UpdateRepositoryNameResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
+
+/**
+ * @brief  Constructs a new UpdateRepositoryNameRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRepositoryNameRequest::UpdateRepositoryNameRequest(const UpdateRepositoryNameRequest &other)
+    : CodeCommitRequest(new UpdateRepositoryNameRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRepositoryNameRequest object.
+ */
+UpdateRepositoryNameRequest::UpdateRepositoryNameRequest()
+    : CodeCommitRequest(new UpdateRepositoryNameRequestPrivate(CodeCommitRequest::UpdateRepositoryNameAction, this))
+{
+
+}
+
+bool UpdateRepositoryNameRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRepositoryNameResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRepositoryNameResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRepositoryNameResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRepositoryNameRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRepositoryNameRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRepositoryNameRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public UpdateRepositoryNameRequest instance.
+ */
+UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
+    const CodeCommitRequest::Action action, UpdateRepositoryNameRequest * const q)
+    : UpdateRepositoryNamePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRepositoryNameRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRepositoryNameRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRepositoryNameRequest instance.
+ */
+UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
+    const UpdateRepositoryNameRequestPrivate &other, UpdateRepositoryNameRequest * const q)
+    : UpdateRepositoryNamePrivate(other, q)
+{
+
+}

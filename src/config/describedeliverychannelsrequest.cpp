@@ -19,3 +19,107 @@
 
 #include "describedeliverychannelsrequest.h"
 #include "describedeliverychannelsrequest_p.h"
+#include "describedeliverychannelsresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeDeliveryChannelsRequest
+ *
+ * @brief  Implements ConfigService DescribeDeliveryChannels requests.
+ *
+ * @see    ConfigServiceClient::describeDeliveryChannels
+ */
+
+/**
+ * @brief  Constructs a new DescribeDeliveryChannelsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDeliveryChannelsResponse::DescribeDeliveryChannelsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDeliveryChannelsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDeliveryChannelsRequest::DescribeDeliveryChannelsRequest(const DescribeDeliveryChannelsRequest &other)
+    : ConfigServiceRequest(new DescribeDeliveryChannelsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDeliveryChannelsRequest object.
+ */
+DescribeDeliveryChannelsRequest::DescribeDeliveryChannelsRequest()
+    : ConfigServiceRequest(new DescribeDeliveryChannelsRequestPrivate(ConfigServiceRequest::DescribeDeliveryChannelsAction, this))
+{
+
+}
+
+bool DescribeDeliveryChannelsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDeliveryChannelsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDeliveryChannelsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * DescribeDeliveryChannelsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDeliveryChannelsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDeliveryChannelsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDeliveryChannelsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeliveryChannelsRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public DescribeDeliveryChannelsRequest instance.
+ */
+DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
+    const ConfigServiceRequest::Action action, DescribeDeliveryChannelsRequest * const q)
+    : DescribeDeliveryChannelsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeliveryChannelsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDeliveryChannelsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDeliveryChannelsRequest instance.
+ */
+DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
+    const DescribeDeliveryChannelsRequestPrivate &other, DescribeDeliveryChannelsRequest * const q)
+    : DescribeDeliveryChannelsPrivate(other, q)
+{
+
+}

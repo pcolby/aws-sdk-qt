@@ -19,3 +19,107 @@
 
 #include "revokegrantrequest.h"
 #include "revokegrantrequest_p.h"
+#include "revokegrantresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  RevokeGrantRequest
+ *
+ * @brief  Implements KMS RevokeGrant requests.
+ *
+ * @see    KMSClient::revokeGrant
+ */
+
+/**
+ * @brief  Constructs a new RevokeGrantResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeGrantResponse::RevokeGrantResponse(
+
+/**
+ * @brief  Constructs a new RevokeGrantRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RevokeGrantRequest::RevokeGrantRequest(const RevokeGrantRequest &other)
+    : KMSRequest(new RevokeGrantRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RevokeGrantRequest object.
+ */
+RevokeGrantRequest::RevokeGrantRequest()
+    : KMSRequest(new RevokeGrantRequestPrivate(KMSRequest::RevokeGrantAction, this))
+{
+
+}
+
+bool RevokeGrantRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RevokeGrantResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RevokeGrantResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * const reply) const
+{
+    return new RevokeGrantResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeGrantRequestPrivate
+ *
+ * @brief  Private implementation for RevokeGrantRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeGrantRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public RevokeGrantRequest instance.
+ */
+RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
+    const KMSRequest::Action action, RevokeGrantRequest * const q)
+    : RevokeGrantPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeGrantRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RevokeGrantRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RevokeGrantRequest instance.
+ */
+RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
+    const RevokeGrantRequestPrivate &other, RevokeGrantRequest * const q)
+    : RevokeGrantPrivate(other, q)
+{
+
+}

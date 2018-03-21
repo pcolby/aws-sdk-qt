@@ -19,3 +19,107 @@
 
 #include "enableallfeaturesrequest.h"
 #include "enableallfeaturesrequest_p.h"
+#include "enableallfeaturesresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  EnableAllFeaturesRequest
+ *
+ * @brief  Implements Organizations EnableAllFeatures requests.
+ *
+ * @see    OrganizationsClient::enableAllFeatures
+ */
+
+/**
+ * @brief  Constructs a new EnableAllFeaturesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableAllFeaturesResponse::EnableAllFeaturesResponse(
+
+/**
+ * @brief  Constructs a new EnableAllFeaturesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableAllFeaturesRequest::EnableAllFeaturesRequest(const EnableAllFeaturesRequest &other)
+    : OrganizationsRequest(new EnableAllFeaturesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableAllFeaturesRequest object.
+ */
+EnableAllFeaturesRequest::EnableAllFeaturesRequest()
+    : OrganizationsRequest(new EnableAllFeaturesRequestPrivate(OrganizationsRequest::EnableAllFeaturesAction, this))
+{
+
+}
+
+bool EnableAllFeaturesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableAllFeaturesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableAllFeaturesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableAllFeaturesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableAllFeaturesRequestPrivate
+ *
+ * @brief  Private implementation for EnableAllFeaturesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableAllFeaturesRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public EnableAllFeaturesRequest instance.
+ */
+EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
+    const OrganizationsRequest::Action action, EnableAllFeaturesRequest * const q)
+    : EnableAllFeaturesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableAllFeaturesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableAllFeaturesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableAllFeaturesRequest instance.
+ */
+EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
+    const EnableAllFeaturesRequestPrivate &other, EnableAllFeaturesRequest * const q)
+    : EnableAllFeaturesPrivate(other, q)
+{
+
+}

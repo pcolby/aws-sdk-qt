@@ -19,3 +19,107 @@
 
 #include "adminenableuserrequest.h"
 #include "adminenableuserrequest_p.h"
+#include "adminenableuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminEnableUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminEnableUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminEnableUser
+ */
+
+/**
+ * @brief  Constructs a new AdminEnableUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminEnableUserResponse::AdminEnableUserResponse(
+
+/**
+ * @brief  Constructs a new AdminEnableUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminEnableUserRequest::AdminEnableUserRequest(const AdminEnableUserRequest &other)
+    : CognitoIdentityProviderRequest(new AdminEnableUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminEnableUserRequest object.
+ */
+AdminEnableUserRequest::AdminEnableUserRequest()
+    : CognitoIdentityProviderRequest(new AdminEnableUserRequestPrivate(CognitoIdentityProviderRequest::AdminEnableUserAction, this))
+{
+
+}
+
+bool AdminEnableUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminEnableUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminEnableUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminEnableUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminEnableUserRequestPrivate
+ *
+ * @brief  Private implementation for AdminEnableUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminEnableUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminEnableUserRequest instance.
+ */
+AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminEnableUserRequest * const q)
+    : AdminEnableUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminEnableUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminEnableUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminEnableUserRequest instance.
+ */
+AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
+    const AdminEnableUserRequestPrivate &other, AdminEnableUserRequest * const q)
+    : AdminEnableUserPrivate(other, q)
+{
+
+}

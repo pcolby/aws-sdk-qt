@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETHINGFROMTHINGGROUPREQUEST_P_H
 #define QTAWS_REMOVETHINGFROMTHINGGROUPREQUEST_P_H
 
+#include "iot_p.h"
+#include "removethingfromthinggrouprequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class RemoveThingFromThingGroupRequest;
+
+class QTAWS_EXPORT RemoveThingFromThingGroupRequestPrivate : public IoTPrivate {
+
+public:
+    RemoveThingFromThingGroupRequestPrivate(const IoT::Action action,
+                                   RemoveThingFromThingGroupRequest * const q);
+    RemoveThingFromThingGroupRequestPrivate(const RemoveThingFromThingGroupRequestPrivate &other,
+                                   RemoveThingFromThingGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveThingFromThingGroupRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

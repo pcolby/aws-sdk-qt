@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERVOLUMEREQUEST_P_H
 #define QTAWS_DEREGISTERVOLUMEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "deregistervolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterVolumeRequest;
+
+class QTAWS_EXPORT DeregisterVolumeRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DeregisterVolumeRequestPrivate(const OpsWorks::Action action,
+                                   DeregisterVolumeRequest * const q);
+    DeregisterVolumeRequestPrivate(const DeregisterVolumeRequestPrivate &other,
+                                   DeregisterVolumeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterVolumeRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

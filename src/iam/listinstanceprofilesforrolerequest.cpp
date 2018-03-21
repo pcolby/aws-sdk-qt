@@ -19,3 +19,107 @@
 
 #include "listinstanceprofilesforrolerequest.h"
 #include "listinstanceprofilesforrolerequest_p.h"
+#include "listinstanceprofilesforroleresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListInstanceProfilesForRoleRequest
+ *
+ * @brief  Implements IAM ListInstanceProfilesForRole requests.
+ *
+ * @see    IAMClient::listInstanceProfilesForRole
+ */
+
+/**
+ * @brief  Constructs a new ListInstanceProfilesForRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
+
+/**
+ * @brief  Constructs a new ListInstanceProfilesForRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest(const ListInstanceProfilesForRoleRequest &other)
+    : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListInstanceProfilesForRoleRequest object.
+ */
+ListInstanceProfilesForRoleRequest::ListInstanceProfilesForRoleRequest()
+    : IAMRequest(new ListInstanceProfilesForRoleRequestPrivate(IAMRequest::ListInstanceProfilesForRoleAction, this))
+{
+
+}
+
+bool ListInstanceProfilesForRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListInstanceProfilesForRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListInstanceProfilesForRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new ListInstanceProfilesForRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceProfilesForRoleRequestPrivate
+ *
+ * @brief  Private implementation for ListInstanceProfilesForRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceProfilesForRoleRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListInstanceProfilesForRoleRequest instance.
+ */
+ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
+    const IAMRequest::Action action, ListInstanceProfilesForRoleRequest * const q)
+    : ListInstanceProfilesForRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceProfilesForRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListInstanceProfilesForRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListInstanceProfilesForRoleRequest instance.
+ */
+ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
+    const ListInstanceProfilesForRoleRequestPrivate &other, ListInstanceProfilesForRoleRequest * const q)
+    : ListInstanceProfilesForRolePrivate(other, q)
+{
+
+}

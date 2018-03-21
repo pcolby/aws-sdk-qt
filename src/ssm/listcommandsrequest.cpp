@@ -19,3 +19,107 @@
 
 #include "listcommandsrequest.h"
 #include "listcommandsrequest_p.h"
+#include "listcommandsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListCommandsRequest
+ *
+ * @brief  Implements SSM ListCommands requests.
+ *
+ * @see    SSMClient::listCommands
+ */
+
+/**
+ * @brief  Constructs a new ListCommandsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCommandsResponse::ListCommandsResponse(
+
+/**
+ * @brief  Constructs a new ListCommandsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListCommandsRequest::ListCommandsRequest(const ListCommandsRequest &other)
+    : SSMRequest(new ListCommandsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListCommandsRequest object.
+ */
+ListCommandsRequest::ListCommandsRequest()
+    : SSMRequest(new ListCommandsRequestPrivate(SSMRequest::ListCommandsAction, this))
+{
+
+}
+
+bool ListCommandsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListCommandsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListCommandsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListCommandsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCommandsRequestPrivate
+ *
+ * @brief  Private implementation for ListCommandsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCommandsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListCommandsRequest instance.
+ */
+ListCommandsRequestPrivate::ListCommandsRequestPrivate(
+    const SSMRequest::Action action, ListCommandsRequest * const q)
+    : ListCommandsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCommandsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListCommandsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListCommandsRequest instance.
+ */
+ListCommandsRequestPrivate::ListCommandsRequestPrivate(
+    const ListCommandsRequestPrivate &other, ListCommandsRequest * const q)
+    : ListCommandsPrivate(other, q)
+{
+
+}

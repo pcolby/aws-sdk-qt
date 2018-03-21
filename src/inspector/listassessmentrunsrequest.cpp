@@ -19,3 +19,107 @@
 
 #include "listassessmentrunsrequest.h"
 #include "listassessmentrunsrequest_p.h"
+#include "listassessmentrunsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListAssessmentRunsRequest
+ *
+ * @brief  Implements Inspector ListAssessmentRuns requests.
+ *
+ * @see    InspectorClient::listAssessmentRuns
+ */
+
+/**
+ * @brief  Constructs a new ListAssessmentRunsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssessmentRunsResponse::ListAssessmentRunsResponse(
+
+/**
+ * @brief  Constructs a new ListAssessmentRunsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAssessmentRunsRequest::ListAssessmentRunsRequest(const ListAssessmentRunsRequest &other)
+    : InspectorRequest(new ListAssessmentRunsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAssessmentRunsRequest object.
+ */
+ListAssessmentRunsRequest::ListAssessmentRunsRequest()
+    : InspectorRequest(new ListAssessmentRunsRequestPrivate(InspectorRequest::ListAssessmentRunsAction, this))
+{
+
+}
+
+bool ListAssessmentRunsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAssessmentRunsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAssessmentRunsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAssessmentRunsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssessmentRunsRequestPrivate
+ *
+ * @brief  Private implementation for ListAssessmentRunsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentRunsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public ListAssessmentRunsRequest instance.
+ */
+ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
+    const InspectorRequest::Action action, ListAssessmentRunsRequest * const q)
+    : ListAssessmentRunsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentRunsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAssessmentRunsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAssessmentRunsRequest instance.
+ */
+ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
+    const ListAssessmentRunsRequestPrivate &other, ListAssessmentRunsRequest * const q)
+    : ListAssessmentRunsPrivate(other, q)
+{
+
+}

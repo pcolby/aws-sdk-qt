@@ -19,3 +19,107 @@
 
 #include "updateemailchannelrequest.h"
 #include "updateemailchannelrequest_p.h"
+#include "updateemailchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateEmailChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateEmailChannel requests.
+ *
+ * @see    PinpointClient::updateEmailChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateEmailChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEmailChannelResponse::UpdateEmailChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateEmailChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEmailChannelRequest::UpdateEmailChannelRequest(const UpdateEmailChannelRequest &other)
+    : PinpointRequest(new UpdateEmailChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEmailChannelRequest object.
+ */
+UpdateEmailChannelRequest::UpdateEmailChannelRequest()
+    : PinpointRequest(new UpdateEmailChannelRequestPrivate(PinpointRequest::UpdateEmailChannelAction, this))
+{
+
+}
+
+bool UpdateEmailChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEmailChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEmailChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEmailChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEmailChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEmailChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEmailChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateEmailChannelRequest instance.
+ */
+UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateEmailChannelRequest * const q)
+    : UpdateEmailChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEmailChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEmailChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEmailChannelRequest instance.
+ */
+UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
+    const UpdateEmailChannelRequestPrivate &other, UpdateEmailChannelRequest * const q)
+    : UpdateEmailChannelPrivate(other, q)
+{
+
+}

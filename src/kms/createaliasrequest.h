@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEALIASREQUEST_H
 #define QTAWS_CREATEALIASREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class CreateAliasRequestPrivate;
+
+class QTAWS_EXPORT CreateAliasRequest : public KMSRequest {
+
+public:
+    CreateAliasRequest(const CreateAliasRequest &other);
+    CreateAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateAliasRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

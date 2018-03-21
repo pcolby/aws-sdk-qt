@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDEPLOYMENTGROUPREQUEST_H
 #define QTAWS_CREATEDEPLOYMENTGROUPREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class CreateDeploymentGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateDeploymentGroupRequest : public CodeDeployRequest {
+
+public:
+    CreateDeploymentGroupRequest(const CreateDeploymentGroupRequest &other);
+    CreateDeploymentGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeploymentGroupRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

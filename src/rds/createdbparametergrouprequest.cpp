@@ -19,3 +19,107 @@
 
 #include "createdbparametergrouprequest.h"
 #include "createdbparametergrouprequest_p.h"
+#include "createdbparametergroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBParameterGroupRequest
+ *
+ * @brief  Implements RDS CreateDBParameterGroup requests.
+ *
+ * @see    RDSClient::createDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateDBParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateDBParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBParameterGroupRequest::CreateDBParameterGroupRequest(const CreateDBParameterGroupRequest &other)
+    : RDSRequest(new CreateDBParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBParameterGroupRequest object.
+ */
+CreateDBParameterGroupRequest::CreateDBParameterGroupRequest()
+    : RDSRequest(new CreateDBParameterGroupRequestPrivate(RDSRequest::CreateDBParameterGroupAction, this))
+{
+
+}
+
+bool CreateDBParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBParameterGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBParameterGroupRequest instance.
+ */
+CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
+    const RDSRequest::Action action, CreateDBParameterGroupRequest * const q)
+    : CreateDBParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBParameterGroupRequest instance.
+ */
+CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
+    const CreateDBParameterGroupRequestPrivate &other, CreateDBParameterGroupRequest * const q)
+    : CreateDBParameterGroupPrivate(other, q)
+{
+
+}

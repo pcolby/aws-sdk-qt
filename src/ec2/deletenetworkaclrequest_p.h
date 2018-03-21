@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENETWORKACLREQUEST_P_H
 #define QTAWS_DELETENETWORKACLREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletenetworkaclrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteNetworkAclRequest;
+
+class QTAWS_EXPORT DeleteNetworkAclRequestPrivate : public EC2Private {
+
+public:
+    DeleteNetworkAclRequestPrivate(const EC2::Action action,
+                                   DeleteNetworkAclRequest * const q);
+    DeleteNetworkAclRequestPrivate(const DeleteNetworkAclRequestPrivate &other,
+                                   DeleteNetworkAclRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNetworkAclRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

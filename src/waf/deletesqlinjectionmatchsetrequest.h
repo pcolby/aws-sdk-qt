@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteSqlInjectionMatchSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequest : public WAFRequest {
+
+public:
+    DeleteSqlInjectionMatchSetRequest(const DeleteSqlInjectionMatchSetRequest &other);
+    DeleteSqlInjectionMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSqlInjectionMatchSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

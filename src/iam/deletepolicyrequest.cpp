@@ -19,3 +19,107 @@
 
 #include "deletepolicyrequest.h"
 #include "deletepolicyrequest_p.h"
+#include "deletepolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeletePolicyRequest
+ *
+ * @brief  Implements IAM DeletePolicy requests.
+ *
+ * @see    IAMClient::deletePolicy
+ */
+
+/**
+ * @brief  Constructs a new DeletePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePolicyResponse::DeletePolicyResponse(
+
+/**
+ * @brief  Constructs a new DeletePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeletePolicyRequest::DeletePolicyRequest(const DeletePolicyRequest &other)
+    : IAMRequest(new DeletePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeletePolicyRequest object.
+ */
+DeletePolicyRequest::DeletePolicyRequest()
+    : IAMRequest(new DeletePolicyRequestPrivate(IAMRequest::DeletePolicyAction, this))
+{
+
+}
+
+bool DeletePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeletePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeletePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeletePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeletePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeletePolicyRequest instance.
+ */
+DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
+    const IAMRequest::Action action, DeletePolicyRequest * const q)
+    : DeletePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeletePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeletePolicyRequest instance.
+ */
+DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
+    const DeletePolicyRequestPrivate &other, DeletePolicyRequest * const q)
+    : DeletePolicyPrivate(other, q)
+{
+
+}

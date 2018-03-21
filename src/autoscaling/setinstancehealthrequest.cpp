@@ -19,3 +19,107 @@
 
 #include "setinstancehealthrequest.h"
 #include "setinstancehealthrequest_p.h"
+#include "setinstancehealthresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  SetInstanceHealthRequest
+ *
+ * @brief  Implements AutoScaling SetInstanceHealth requests.
+ *
+ * @see    AutoScalingClient::setInstanceHealth
+ */
+
+/**
+ * @brief  Constructs a new SetInstanceHealthResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetInstanceHealthResponse::SetInstanceHealthResponse(
+
+/**
+ * @brief  Constructs a new SetInstanceHealthRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetInstanceHealthRequest::SetInstanceHealthRequest(const SetInstanceHealthRequest &other)
+    : AutoScalingRequest(new SetInstanceHealthRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetInstanceHealthRequest object.
+ */
+SetInstanceHealthRequest::SetInstanceHealthRequest()
+    : AutoScalingRequest(new SetInstanceHealthRequestPrivate(AutoScalingRequest::SetInstanceHealthAction, this))
+{
+
+}
+
+bool SetInstanceHealthRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetInstanceHealthResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetInstanceHealthResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkReply * const reply) const
+{
+    return new SetInstanceHealthResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetInstanceHealthRequestPrivate
+ *
+ * @brief  Private implementation for SetInstanceHealthRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetInstanceHealthRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public SetInstanceHealthRequest instance.
+ */
+SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
+    const AutoScalingRequest::Action action, SetInstanceHealthRequest * const q)
+    : SetInstanceHealthPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetInstanceHealthRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetInstanceHealthRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetInstanceHealthRequest instance.
+ */
+SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
+    const SetInstanceHealthRequestPrivate &other, SetInstanceHealthRequest * const q)
+    : SetInstanceHealthPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETLIFECYCLEPOLICYPREVIEWREQUEST_P_H
 #define QTAWS_GETLIFECYCLEPOLICYPREVIEWREQUEST_P_H
 
+#include "ecr_p.h"
+#include "getlifecyclepolicypreviewrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetLifecyclePolicyPreviewRequest;
+
+class QTAWS_EXPORT GetLifecyclePolicyPreviewRequestPrivate : public ECRPrivate {
+
+public:
+    GetLifecyclePolicyPreviewRequestPrivate(const ECR::Action action,
+                                   GetLifecyclePolicyPreviewRequest * const q);
+    GetLifecyclePolicyPreviewRequestPrivate(const GetLifecyclePolicyPreviewRequestPrivate &other,
+                                   GetLifecyclePolicyPreviewRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetLifecyclePolicyPreviewRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createbuildrequest.h"
 #include "createbuildrequest_p.h"
+#include "createbuildresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateBuildRequest
+ *
+ * @brief  Implements GameLift CreateBuild requests.
+ *
+ * @see    GameLiftClient::createBuild
+ */
+
+/**
+ * @brief  Constructs a new CreateBuildResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBuildResponse::CreateBuildResponse(
+
+/**
+ * @brief  Constructs a new CreateBuildRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateBuildRequest::CreateBuildRequest(const CreateBuildRequest &other)
+    : GameLiftRequest(new CreateBuildRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateBuildRequest object.
+ */
+CreateBuildRequest::CreateBuildRequest()
+    : GameLiftRequest(new CreateBuildRequestPrivate(GameLiftRequest::CreateBuildAction, this))
+{
+
+}
+
+bool CreateBuildRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateBuildResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateBuildResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateBuildResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBuildRequestPrivate
+ *
+ * @brief  Private implementation for CreateBuildRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBuildRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public CreateBuildRequest instance.
+ */
+CreateBuildRequestPrivate::CreateBuildRequestPrivate(
+    const GameLiftRequest::Action action, CreateBuildRequest * const q)
+    : CreateBuildPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBuildRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateBuildRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateBuildRequest instance.
+ */
+CreateBuildRequestPrivate::CreateBuildRequestPrivate(
+    const CreateBuildRequestPrivate &other, CreateBuildRequest * const q)
+    : CreateBuildPrivate(other, q)
+{
+
+}

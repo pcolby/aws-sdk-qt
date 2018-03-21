@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDOMAINREQUEST_H
 #define QTAWS_CREATEDOMAINREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class CreateDomainRequestPrivate;
+
+class QTAWS_EXPORT CreateDomainRequest : public SimpleDBRequest {
+
+public:
+    CreateDomainRequest(const CreateDomainRequest &other);
+    CreateDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDomainRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

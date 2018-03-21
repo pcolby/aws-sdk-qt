@@ -20,4 +20,29 @@
 #ifndef QTAWS_AUTHORIZESECURITYGROUPEGRESSREQUEST_P_H
 #define QTAWS_AUTHORIZESECURITYGROUPEGRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "authorizesecuritygroupegressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AuthorizeSecurityGroupEgressRequest;
+
+class QTAWS_EXPORT AuthorizeSecurityGroupEgressRequestPrivate : public EC2Private {
+
+public:
+    AuthorizeSecurityGroupEgressRequestPrivate(const EC2::Action action,
+                                   AuthorizeSecurityGroupEgressRequest * const q);
+    AuthorizeSecurityGroupEgressRequestPrivate(const AuthorizeSecurityGroupEgressRequestPrivate &other,
+                                   AuthorizeSecurityGroupEgressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeSecurityGroupEgressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

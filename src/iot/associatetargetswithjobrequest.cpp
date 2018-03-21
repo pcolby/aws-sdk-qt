@@ -19,3 +19,107 @@
 
 #include "associatetargetswithjobrequest.h"
 #include "associatetargetswithjobrequest_p.h"
+#include "associatetargetswithjobresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  AssociateTargetsWithJobRequest
+ *
+ * @brief  Implements IoT AssociateTargetsWithJob requests.
+ *
+ * @see    IoTClient::associateTargetsWithJob
+ */
+
+/**
+ * @brief  Constructs a new AssociateTargetsWithJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateTargetsWithJobResponse::AssociateTargetsWithJobResponse(
+
+/**
+ * @brief  Constructs a new AssociateTargetsWithJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest(const AssociateTargetsWithJobRequest &other)
+    : IoTRequest(new AssociateTargetsWithJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateTargetsWithJobRequest object.
+ */
+AssociateTargetsWithJobRequest::AssociateTargetsWithJobRequest()
+    : IoTRequest(new AssociateTargetsWithJobRequestPrivate(IoTRequest::AssociateTargetsWithJobAction, this))
+{
+
+}
+
+bool AssociateTargetsWithJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateTargetsWithJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateTargetsWithJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateTargetsWithJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateTargetsWithJobRequestPrivate
+ *
+ * @brief  Private implementation for AssociateTargetsWithJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public AssociateTargetsWithJobRequest instance.
+ */
+AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
+    const IoTRequest::Action action, AssociateTargetsWithJobRequest * const q)
+    : AssociateTargetsWithJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTargetsWithJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateTargetsWithJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateTargetsWithJobRequest instance.
+ */
+AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
+    const AssociateTargetsWithJobRequestPrivate &other, AssociateTargetsWithJobRequest * const q)
+    : AssociateTargetsWithJobPrivate(other, q)
+{
+
+}

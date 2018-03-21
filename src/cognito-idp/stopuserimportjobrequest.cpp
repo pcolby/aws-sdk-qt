@@ -19,3 +19,107 @@
 
 #include "stopuserimportjobrequest.h"
 #include "stopuserimportjobrequest_p.h"
+#include "stopuserimportjobresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  StopUserImportJobRequest
+ *
+ * @brief  Implements CognitoIdentityProvider StopUserImportJob requests.
+ *
+ * @see    CognitoIdentityProviderClient::stopUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new StopUserImportJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopUserImportJobResponse::StopUserImportJobResponse(
+
+/**
+ * @brief  Constructs a new StopUserImportJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopUserImportJobRequest::StopUserImportJobRequest(const StopUserImportJobRequest &other)
+    : CognitoIdentityProviderRequest(new StopUserImportJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopUserImportJobRequest object.
+ */
+StopUserImportJobRequest::StopUserImportJobRequest()
+    : CognitoIdentityProviderRequest(new StopUserImportJobRequestPrivate(CognitoIdentityProviderRequest::StopUserImportJobAction, this))
+{
+
+}
+
+bool StopUserImportJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopUserImportJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopUserImportJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkReply * const reply) const
+{
+    return new StopUserImportJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopUserImportJobRequestPrivate
+ *
+ * @brief  Private implementation for StopUserImportJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopUserImportJobRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public StopUserImportJobRequest instance.
+ */
+StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, StopUserImportJobRequest * const q)
+    : StopUserImportJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopUserImportJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopUserImportJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopUserImportJobRequest instance.
+ */
+StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
+    const StopUserImportJobRequestPrivate &other, StopUserImportJobRequest * const q)
+    : StopUserImportJobPrivate(other, q)
+{
+
+}

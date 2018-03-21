@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGEOMATCHSETREQUEST_H
 #define QTAWS_GETGEOMATCHSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetGeoMatchSetRequestPrivate;
+
+class QTAWS_EXPORT GetGeoMatchSetRequest : public WAFRequest {
+
+public:
+    GetGeoMatchSetRequest(const GetGeoMatchSetRequest &other);
+    GetGeoMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGeoMatchSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

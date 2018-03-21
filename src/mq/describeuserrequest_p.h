@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEUSERREQUEST_P_H
 #define QTAWS_DESCRIBEUSERREQUEST_P_H
 
+#include "mq_p.h"
+#include "describeuserrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeUserRequest;
+
+class QTAWS_EXPORT DescribeUserRequestPrivate : public MQPrivate {
+
+public:
+    DescribeUserRequestPrivate(const MQ::Action action,
+                                   DescribeUserRequest * const q);
+    DescribeUserRequestPrivate(const DescribeUserRequestPrivate &other,
+                                   DescribeUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

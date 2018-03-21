@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEECSCLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBEECSCLUSTERSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeecsclustersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeEcsClustersRequest;
+
+class QTAWS_EXPORT DescribeEcsClustersRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeEcsClustersRequestPrivate(const OpsWorks::Action action,
+                                   DescribeEcsClustersRequest * const q);
+    DescribeEcsClustersRequestPrivate(const DescribeEcsClustersRequestPrivate &other,
+                                   DescribeEcsClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEcsClustersRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

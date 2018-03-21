@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPRIVATEDNSNAMESPACEREQUEST_P_H
 #define QTAWS_CREATEPRIVATEDNSNAMESPACEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "createprivatednsnamespacerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class CreatePrivateDnsNamespaceRequest;
+
+class QTAWS_EXPORT CreatePrivateDnsNamespaceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    CreatePrivateDnsNamespaceRequestPrivate(const ServiceDiscovery::Action action,
+                                   CreatePrivateDnsNamespaceRequest * const q);
+    CreatePrivateDnsNamespaceRequestPrivate(const CreatePrivateDnsNamespaceRequestPrivate &other,
+                                   CreatePrivateDnsNamespaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePrivateDnsNamespaceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

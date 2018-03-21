@@ -20,4 +20,29 @@
 #ifndef QTAWS_ROTATEENCRYPTIONKEYREQUEST_P_H
 #define QTAWS_ROTATEENCRYPTIONKEYREQUEST_P_H
 
+#include "redshift_p.h"
+#include "rotateencryptionkeyrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RotateEncryptionKeyRequest;
+
+class QTAWS_EXPORT RotateEncryptionKeyRequestPrivate : public RedshiftPrivate {
+
+public:
+    RotateEncryptionKeyRequestPrivate(const Redshift::Action action,
+                                   RotateEncryptionKeyRequest * const q);
+    RotateEncryptionKeyRequestPrivate(const RotateEncryptionKeyRequestPrivate &other,
+                                   RotateEncryptionKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RotateEncryptionKeyRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

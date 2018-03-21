@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETABLERESTORESTATUSREQUEST_P_H
 #define QTAWS_DESCRIBETABLERESTORESTATUSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describetablerestorestatusrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeTableRestoreStatusRequest;
+
+class QTAWS_EXPORT DescribeTableRestoreStatusRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeTableRestoreStatusRequestPrivate(const Redshift::Action action,
+                                   DescribeTableRestoreStatusRequest * const q);
+    DescribeTableRestoreStatusRequestPrivate(const DescribeTableRestoreStatusRequestPrivate &other,
+                                   DescribeTableRestoreStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTableRestoreStatusRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

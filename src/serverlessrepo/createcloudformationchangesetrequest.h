@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECLOUDFORMATIONCHANGESETREQUEST_H
 #define QTAWS_CREATECLOUDFORMATIONCHANGESETREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class CreateCloudFormationChangeSetRequestPrivate;
+
+class QTAWS_EXPORT CreateCloudFormationChangeSetRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    CreateCloudFormationChangeSetRequest(const CreateCloudFormationChangeSetRequest &other);
+    CreateCloudFormationChangeSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCloudFormationChangeSetRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERESOURCEREQUEST_P_H
 #define QTAWS_UPDATERESOURCEREQUEST_P_H
 
+#include "workmail_p.h"
+#include "updateresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class UpdateResourceRequest;
+
+class QTAWS_EXPORT UpdateResourceRequestPrivate : public WorkMailPrivate {
+
+public:
+    UpdateResourceRequestPrivate(const WorkMail::Action action,
+                                   UpdateResourceRequest * const q);
+    UpdateResourceRequestPrivate(const UpdateResourceRequestPrivate &other,
+                                   UpdateResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResourceRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

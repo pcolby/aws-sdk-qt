@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAUTHORIZERSREQUEST_P_H
 #define QTAWS_GETAUTHORIZERSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getauthorizersrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetAuthorizersRequest;
+
+class QTAWS_EXPORT GetAuthorizersRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetAuthorizersRequestPrivate(const APIGateway::Action action,
+                                   GetAuthorizersRequest * const q);
+    GetAuthorizersRequestPrivate(const GetAuthorizersRequestPrivate &other,
+                                   GetAuthorizersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAuthorizersRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

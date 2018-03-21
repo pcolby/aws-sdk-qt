@@ -20,4 +20,32 @@
 #ifndef QTAWS_INVOKEENDPOINTREQUEST_H
 #define QTAWS_INVOKEENDPOINTREQUEST_H
 
+#include "sagemakerruntimerequest.h"
+
+namespace AWS {
+
+namespace SageMakerRuntime {
+
+class InvokeEndpointRequestPrivate;
+
+class QTAWS_EXPORT InvokeEndpointRequest : public SageMakerRuntimeRequest {
+
+public:
+    InvokeEndpointRequest(const InvokeEndpointRequest &other);
+    InvokeEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(InvokeEndpointRequest)
+
+}
+
+} // namespace SageMakerRuntime
+} // namespace AWS
+
 #endif

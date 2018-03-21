@@ -19,3 +19,107 @@
 
 #include "updatetimetoliverequest.h"
 #include "updatetimetoliverequest_p.h"
+#include "updatetimetoliveresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  UpdateTimeToLiveRequest
+ *
+ * @brief  Implements DynamoDB UpdateTimeToLive requests.
+ *
+ * @see    DynamoDBClient::updateTimeToLive
+ */
+
+/**
+ * @brief  Constructs a new UpdateTimeToLiveResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
+
+/**
+ * @brief  Constructs a new UpdateTimeToLiveRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTimeToLiveRequest::UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &other)
+    : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTimeToLiveRequest object.
+ */
+UpdateTimeToLiveRequest::UpdateTimeToLiveRequest()
+    : DynamoDBRequest(new UpdateTimeToLiveRequestPrivate(DynamoDBRequest::UpdateTimeToLiveAction, this))
+{
+
+}
+
+bool UpdateTimeToLiveRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTimeToLiveResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTimeToLiveResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTimeToLiveResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTimeToLiveRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTimeToLiveRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTimeToLiveRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public UpdateTimeToLiveRequest instance.
+ */
+UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
+    const DynamoDBRequest::Action action, UpdateTimeToLiveRequest * const q)
+    : UpdateTimeToLivePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTimeToLiveRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTimeToLiveRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTimeToLiveRequest instance.
+ */
+UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
+    const UpdateTimeToLiveRequestPrivate &other, UpdateTimeToLiveRequest * const q)
+    : UpdateTimeToLivePrivate(other, q)
+{
+
+}

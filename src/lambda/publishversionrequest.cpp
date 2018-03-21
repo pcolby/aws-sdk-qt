@@ -19,3 +19,107 @@
 
 #include "publishversionrequest.h"
 #include "publishversionrequest_p.h"
+#include "publishversionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  PublishVersionRequest
+ *
+ * @brief  Implements Lambda PublishVersion requests.
+ *
+ * @see    LambdaClient::publishVersion
+ */
+
+/**
+ * @brief  Constructs a new PublishVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PublishVersionResponse::PublishVersionResponse(
+
+/**
+ * @brief  Constructs a new PublishVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PublishVersionRequest::PublishVersionRequest(const PublishVersionRequest &other)
+    : LambdaRequest(new PublishVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PublishVersionRequest object.
+ */
+PublishVersionRequest::PublishVersionRequest()
+    : LambdaRequest(new PublishVersionRequestPrivate(LambdaRequest::PublishVersionAction, this))
+{
+
+}
+
+bool PublishVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PublishVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PublishVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new PublishVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PublishVersionRequestPrivate
+ *
+ * @brief  Private implementation for PublishVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PublishVersionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public PublishVersionRequest instance.
+ */
+PublishVersionRequestPrivate::PublishVersionRequestPrivate(
+    const LambdaRequest::Action action, PublishVersionRequest * const q)
+    : PublishVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PublishVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PublishVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PublishVersionRequest instance.
+ */
+PublishVersionRequestPrivate::PublishVersionRequestPrivate(
+    const PublishVersionRequestPrivate &other, PublishVersionRequest * const q)
+    : PublishVersionPrivate(other, q)
+{
+
+}

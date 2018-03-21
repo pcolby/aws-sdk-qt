@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTCLUSTERREQUEST_H
 #define QTAWS_REBOOTCLUSTERREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RebootClusterRequestPrivate;
+
+class QTAWS_EXPORT RebootClusterRequest : public RedshiftRequest {
+
+public:
+    RebootClusterRequest(const RebootClusterRequest &other);
+    RebootClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootClusterRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

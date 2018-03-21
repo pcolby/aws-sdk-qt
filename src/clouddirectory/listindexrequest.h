@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINDEXREQUEST_H
 #define QTAWS_LISTINDEXREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListIndexRequestPrivate;
+
+class QTAWS_EXPORT ListIndexRequest : public CloudDirectoryRequest {
+
+public:
+    ListIndexRequest(const ListIndexRequest &other);
+    ListIndexRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListIndexRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

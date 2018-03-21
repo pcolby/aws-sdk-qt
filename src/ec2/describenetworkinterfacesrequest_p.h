@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBENETWORKINTERFACESREQUEST_P_H
 #define QTAWS_DESCRIBENETWORKINTERFACESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describenetworkinterfacesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeNetworkInterfacesRequest;
+
+class QTAWS_EXPORT DescribeNetworkInterfacesRequestPrivate : public EC2Private {
+
+public:
+    DescribeNetworkInterfacesRequestPrivate(const EC2::Action action,
+                                   DescribeNetworkInterfacesRequest * const q);
+    DescribeNetworkInterfacesRequestPrivate(const DescribeNetworkInterfacesRequestPrivate &other,
+                                   DescribeNetworkInterfacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNetworkInterfacesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

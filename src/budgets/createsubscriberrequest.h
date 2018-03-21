@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESUBSCRIBERREQUEST_H
 #define QTAWS_CREATESUBSCRIBERREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class CreateSubscriberRequestPrivate;
+
+class QTAWS_EXPORT CreateSubscriberRequest : public BudgetsRequest {
+
+public:
+    CreateSubscriberRequest(const CreateSubscriberRequest &other);
+    CreateSubscriberRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubscriberRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

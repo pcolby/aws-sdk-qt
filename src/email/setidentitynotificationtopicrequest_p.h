@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETIDENTITYNOTIFICATIONTOPICREQUEST_P_H
 #define QTAWS_SETIDENTITYNOTIFICATIONTOPICREQUEST_P_H
 
+#include "ses_p.h"
+#include "setidentitynotificationtopicrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityNotificationTopicRequest;
+
+class QTAWS_EXPORT SetIdentityNotificationTopicRequestPrivate : public SESPrivate {
+
+public:
+    SetIdentityNotificationTopicRequestPrivate(const SES::Action action,
+                                   SetIdentityNotificationTopicRequest * const q);
+    SetIdentityNotificationTopicRequestPrivate(const SetIdentityNotificationTopicRequestPrivate &other,
+                                   SetIdentityNotificationTopicRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityNotificationTopicRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

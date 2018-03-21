@@ -19,3 +19,107 @@
 
 #include "updatestreamrequest.h"
 #include "updatestreamrequest_p.h"
+#include "updatestreamresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateStreamRequest
+ *
+ * @brief  Implements IoT UpdateStream requests.
+ *
+ * @see    IoTClient::updateStream
+ */
+
+/**
+ * @brief  Constructs a new UpdateStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStreamResponse::UpdateStreamResponse(
+
+/**
+ * @brief  Constructs a new UpdateStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateStreamRequest::UpdateStreamRequest(const UpdateStreamRequest &other)
+    : IoTRequest(new UpdateStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateStreamRequest object.
+ */
+UpdateStreamRequest::UpdateStreamRequest()
+    : IoTRequest(new UpdateStreamRequestPrivate(IoTRequest::UpdateStreamAction, this))
+{
+
+}
+
+bool UpdateStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStreamRequestPrivate
+ *
+ * @brief  Private implementation for UpdateStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStreamRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public UpdateStreamRequest instance.
+ */
+UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
+    const IoTRequest::Action action, UpdateStreamRequest * const q)
+    : UpdateStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateStreamRequest instance.
+ */
+UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
+    const UpdateStreamRequestPrivate &other, UpdateStreamRequest * const q)
+    : UpdateStreamPrivate(other, q)
+{
+
+}

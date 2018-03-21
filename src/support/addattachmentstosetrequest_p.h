@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDATTACHMENTSTOSETREQUEST_P_H
 #define QTAWS_ADDATTACHMENTSTOSETREQUEST_P_H
 
+#include "support_p.h"
+#include "addattachmentstosetrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddAttachmentsToSetRequest;
+
+class QTAWS_EXPORT AddAttachmentsToSetRequestPrivate : public SupportPrivate {
+
+public:
+    AddAttachmentsToSetRequestPrivate(const Support::Action action,
+                                   AddAttachmentsToSetRequest * const q);
+    AddAttachmentsToSetRequestPrivate(const AddAttachmentsToSetRequestPrivate &other,
+                                   AddAttachmentsToSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddAttachmentsToSetRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

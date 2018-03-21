@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERFROMWORKMAILREQUEST_P_H
 #define QTAWS_DEREGISTERFROMWORKMAILREQUEST_P_H
 
+#include "workmail_p.h"
+#include "deregisterfromworkmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeregisterFromWorkMailRequest;
+
+class QTAWS_EXPORT DeregisterFromWorkMailRequestPrivate : public WorkMailPrivate {
+
+public:
+    DeregisterFromWorkMailRequestPrivate(const WorkMail::Action action,
+                                   DeregisterFromWorkMailRequest * const q);
+    DeregisterFromWorkMailRequestPrivate(const DeregisterFromWorkMailRequestPrivate &other,
+                                   DeregisterFromWorkMailRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterFromWorkMailRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

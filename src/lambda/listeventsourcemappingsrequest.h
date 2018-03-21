@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTEVENTSOURCEMAPPINGSREQUEST_H
 #define QTAWS_LISTEVENTSOURCEMAPPINGSREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListEventSourceMappingsRequestPrivate;
+
+class QTAWS_EXPORT ListEventSourceMappingsRequest : public LambdaRequest {
+
+public:
+    ListEventSourceMappingsRequest(const ListEventSourceMappingsRequest &other);
+    ListEventSourceMappingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListEventSourceMappingsRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

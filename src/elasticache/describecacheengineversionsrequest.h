@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECACHEENGINEVERSIONSREQUEST_H
 #define QTAWS_DESCRIBECACHEENGINEVERSIONSREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheEngineVersionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeCacheEngineVersionsRequest : public ElastiCacheRequest {
+
+public:
+    DescribeCacheEngineVersionsRequest(const DescribeCacheEngineVersionsRequest &other);
+    DescribeCacheEngineVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCacheEngineVersionsRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

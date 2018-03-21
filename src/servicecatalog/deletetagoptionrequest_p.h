@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAGOPTIONREQUEST_P_H
 #define QTAWS_DELETETAGOPTIONREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "deletetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteTagOptionRequest;
+
+class QTAWS_EXPORT DeleteTagOptionRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    DeleteTagOptionRequestPrivate(const ServiceCatalog::Action action,
+                                   DeleteTagOptionRequest * const q);
+    DeleteTagOptionRequestPrivate(const DeleteTagOptionRequestPrivate &other,
+                                   DeleteTagOptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagOptionRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

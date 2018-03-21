@@ -19,3 +19,107 @@
 
 #include "listqueuetagsrequest.h"
 #include "listqueuetagsrequest_p.h"
+#include "listqueuetagsresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  ListQueueTagsRequest
+ *
+ * @brief  Implements SQS ListQueueTags requests.
+ *
+ * @see    SQSClient::listQueueTags
+ */
+
+/**
+ * @brief  Constructs a new ListQueueTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListQueueTagsResponse::ListQueueTagsResponse(
+
+/**
+ * @brief  Constructs a new ListQueueTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListQueueTagsRequest::ListQueueTagsRequest(const ListQueueTagsRequest &other)
+    : SQSRequest(new ListQueueTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListQueueTagsRequest object.
+ */
+ListQueueTagsRequest::ListQueueTagsRequest()
+    : SQSRequest(new ListQueueTagsRequestPrivate(SQSRequest::ListQueueTagsAction, this))
+{
+
+}
+
+bool ListQueueTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListQueueTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListQueueTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListQueueTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListQueueTagsRequestPrivate
+ *
+ * @brief  Private implementation for ListQueueTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueueTagsRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public ListQueueTagsRequest instance.
+ */
+ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
+    const SQSRequest::Action action, ListQueueTagsRequest * const q)
+    : ListQueueTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueueTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListQueueTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListQueueTagsRequest instance.
+ */
+ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
+    const ListQueueTagsRequestPrivate &other, ListQueueTagsRequest * const q)
+    : ListQueueTagsPrivate(other, q)
+{
+
+}

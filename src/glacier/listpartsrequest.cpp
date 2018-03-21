@@ -19,3 +19,107 @@
 
 #include "listpartsrequest.h"
 #include "listpartsrequest_p.h"
+#include "listpartsresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  ListPartsRequest
+ *
+ * @brief  Implements Glacier ListParts requests.
+ *
+ * @see    GlacierClient::listParts
+ */
+
+/**
+ * @brief  Constructs a new ListPartsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPartsResponse::ListPartsResponse(
+
+/**
+ * @brief  Constructs a new ListPartsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPartsRequest::ListPartsRequest(const ListPartsRequest &other)
+    : GlacierRequest(new ListPartsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPartsRequest object.
+ */
+ListPartsRequest::ListPartsRequest()
+    : GlacierRequest(new ListPartsRequestPrivate(GlacierRequest::ListPartsAction, this))
+{
+
+}
+
+bool ListPartsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPartsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPartsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPartsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPartsRequestPrivate
+ *
+ * @brief  Private implementation for ListPartsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPartsRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public ListPartsRequest instance.
+ */
+ListPartsRequestPrivate::ListPartsRequestPrivate(
+    const GlacierRequest::Action action, ListPartsRequest * const q)
+    : ListPartsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPartsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPartsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPartsRequest instance.
+ */
+ListPartsRequestPrivate::ListPartsRequestPrivate(
+    const ListPartsRequestPrivate &other, ListPartsRequest * const q)
+    : ListPartsPrivate(other, q)
+{
+
+}

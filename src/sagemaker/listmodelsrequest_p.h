@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTMODELSREQUEST_P_H
 #define QTAWS_LISTMODELSREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "listmodelsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class ListModelsRequest;
+
+class QTAWS_EXPORT ListModelsRequestPrivate : public SageMakerPrivate {
+
+public:
+    ListModelsRequestPrivate(const SageMaker::Action action,
+                                   ListModelsRequest * const q);
+    ListModelsRequestPrivate(const ListModelsRequestPrivate &other,
+                                   ListModelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListModelsRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

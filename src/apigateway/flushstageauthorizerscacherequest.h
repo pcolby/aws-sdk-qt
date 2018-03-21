@@ -20,4 +20,32 @@
 #ifndef QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_H
 #define QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class FlushStageAuthorizersCacheRequestPrivate;
+
+class QTAWS_EXPORT FlushStageAuthorizersCacheRequest : public APIGatewayRequest {
+
+public:
+    FlushStageAuthorizersCacheRequest(const FlushStageAuthorizersCacheRequest &other);
+    FlushStageAuthorizersCacheRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(FlushStageAuthorizersCacheRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

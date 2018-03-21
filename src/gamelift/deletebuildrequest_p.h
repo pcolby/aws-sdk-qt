@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBUILDREQUEST_P_H
 #define QTAWS_DELETEBUILDREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "deletebuildrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteBuildRequest;
+
+class QTAWS_EXPORT DeleteBuildRequestPrivate : public GameLiftPrivate {
+
+public:
+    DeleteBuildRequestPrivate(const GameLift::Action action,
+                                   DeleteBuildRequest * const q);
+    DeleteBuildRequestPrivate(const DeleteBuildRequestPrivate &other,
+                                   DeleteBuildRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBuildRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

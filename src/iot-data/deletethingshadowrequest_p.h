@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETHINGSHADOWREQUEST_P_H
 #define QTAWS_DELETETHINGSHADOWREQUEST_P_H
 
+#include "iotdataplane_p.h"
+#include "deletethingshadowrequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class DeleteThingShadowRequest;
+
+class QTAWS_EXPORT DeleteThingShadowRequestPrivate : public IoTDataPlanePrivate {
+
+public:
+    DeleteThingShadowRequestPrivate(const IoTDataPlane::Action action,
+                                   DeleteThingShadowRequest * const q);
+    DeleteThingShadowRequestPrivate(const DeleteThingShadowRequestPrivate &other,
+                                   DeleteThingShadowRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteThingShadowRequest)
+
+};
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

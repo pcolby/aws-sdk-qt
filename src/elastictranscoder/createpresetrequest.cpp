@@ -19,3 +19,107 @@
 
 #include "createpresetrequest.h"
 #include "createpresetrequest_p.h"
+#include "createpresetresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  CreatePresetRequest
+ *
+ * @brief  Implements ElasticTranscoder CreatePreset requests.
+ *
+ * @see    ElasticTranscoderClient::createPreset
+ */
+
+/**
+ * @brief  Constructs a new CreatePresetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePresetResponse::CreatePresetResponse(
+
+/**
+ * @brief  Constructs a new CreatePresetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePresetRequest::CreatePresetRequest(const CreatePresetRequest &other)
+    : ElasticTranscoderRequest(new CreatePresetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePresetRequest object.
+ */
+CreatePresetRequest::CreatePresetRequest()
+    : ElasticTranscoderRequest(new CreatePresetRequestPrivate(ElasticTranscoderRequest::CreatePresetAction, this))
+{
+
+}
+
+bool CreatePresetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePresetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePresetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePresetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePresetRequestPrivate
+ *
+ * @brief  Private implementation for CreatePresetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePresetRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public CreatePresetRequest instance.
+ */
+CreatePresetRequestPrivate::CreatePresetRequestPrivate(
+    const ElasticTranscoderRequest::Action action, CreatePresetRequest * const q)
+    : CreatePresetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePresetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePresetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePresetRequest instance.
+ */
+CreatePresetRequestPrivate::CreatePresetRequestPrivate(
+    const CreatePresetRequestPrivate &other, CreatePresetRequest * const q)
+    : CreatePresetPrivate(other, q)
+{
+
+}

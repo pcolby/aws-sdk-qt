@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELCONVERSIONTASKREQUEST_P_H
 #define QTAWS_CANCELCONVERSIONTASKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "cancelconversiontaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelConversionTaskRequest;
+
+class QTAWS_EXPORT CancelConversionTaskRequestPrivate : public EC2Private {
+
+public:
+    CancelConversionTaskRequestPrivate(const EC2::Action action,
+                                   CancelConversionTaskRequest * const q);
+    CancelConversionTaskRequestPrivate(const CancelConversionTaskRequestPrivate &other,
+                                   CancelConversionTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelConversionTaskRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

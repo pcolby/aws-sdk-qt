@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDACTIONSREQUEST_H
 #define QTAWS_DESCRIBESCHEDULEDACTIONSREQUEST_H
 
+#include "applicationautoscalingrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DescribeScheduledActionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeScheduledActionsRequest : public ApplicationAutoScalingRequest {
+
+public:
+    DescribeScheduledActionsRequest(const DescribeScheduledActionsRequest &other);
+    DescribeScheduledActionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScheduledActionsRequest)
+
+}
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

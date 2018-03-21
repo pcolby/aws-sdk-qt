@@ -19,3 +19,107 @@
 
 #include "updateidentityproviderrequest.h"
 #include "updateidentityproviderrequest_p.h"
+#include "updateidentityproviderresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateIdentityProviderRequest
+ *
+ * @brief  Implements CognitoIdentityProvider UpdateIdentityProvider requests.
+ *
+ * @see    CognitoIdentityProviderClient::updateIdentityProvider
+ */
+
+/**
+ * @brief  Constructs a new UpdateIdentityProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIdentityProviderResponse::UpdateIdentityProviderResponse(
+
+/**
+ * @brief  Constructs a new UpdateIdentityProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateIdentityProviderRequest::UpdateIdentityProviderRequest(const UpdateIdentityProviderRequest &other)
+    : CognitoIdentityProviderRequest(new UpdateIdentityProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateIdentityProviderRequest object.
+ */
+UpdateIdentityProviderRequest::UpdateIdentityProviderRequest()
+    : CognitoIdentityProviderRequest(new UpdateIdentityProviderRequestPrivate(CognitoIdentityProviderRequest::UpdateIdentityProviderAction, this))
+{
+
+}
+
+bool UpdateIdentityProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateIdentityProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateIdentityProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateIdentityProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIdentityProviderRequestPrivate
+ *
+ * @brief  Private implementation for UpdateIdentityProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIdentityProviderRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public UpdateIdentityProviderRequest instance.
+ */
+UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, UpdateIdentityProviderRequest * const q)
+    : UpdateIdentityProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIdentityProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateIdentityProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateIdentityProviderRequest instance.
+ */
+UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
+    const UpdateIdentityProviderRequestPrivate &other, UpdateIdentityProviderRequest * const q)
+    : UpdateIdentityProviderPrivate(other, q)
+{
+
+}

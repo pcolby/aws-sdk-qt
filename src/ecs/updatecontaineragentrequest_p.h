@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONTAINERAGENTREQUEST_P_H
 #define QTAWS_UPDATECONTAINERAGENTREQUEST_P_H
 
+#include "ecs_p.h"
+#include "updatecontaineragentrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateContainerAgentRequest;
+
+class QTAWS_EXPORT UpdateContainerAgentRequestPrivate : public ECSPrivate {
+
+public:
+    UpdateContainerAgentRequestPrivate(const ECS::Action action,
+                                   UpdateContainerAgentRequest * const q);
+    UpdateContainerAgentRequestPrivate(const UpdateContainerAgentRequestPrivate &other,
+                                   UpdateContainerAgentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateContainerAgentRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

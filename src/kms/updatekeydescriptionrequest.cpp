@@ -19,3 +19,107 @@
 
 #include "updatekeydescriptionrequest.h"
 #include "updatekeydescriptionrequest_p.h"
+#include "updatekeydescriptionresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  UpdateKeyDescriptionRequest
+ *
+ * @brief  Implements KMS UpdateKeyDescription requests.
+ *
+ * @see    KMSClient::updateKeyDescription
+ */
+
+/**
+ * @brief  Constructs a new UpdateKeyDescriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
+
+/**
+ * @brief  Constructs a new UpdateKeyDescriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest(const UpdateKeyDescriptionRequest &other)
+    : KMSRequest(new UpdateKeyDescriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateKeyDescriptionRequest object.
+ */
+UpdateKeyDescriptionRequest::UpdateKeyDescriptionRequest()
+    : KMSRequest(new UpdateKeyDescriptionRequestPrivate(KMSRequest::UpdateKeyDescriptionAction, this))
+{
+
+}
+
+bool UpdateKeyDescriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateKeyDescriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateKeyDescriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateKeyDescriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateKeyDescriptionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateKeyDescriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateKeyDescriptionRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public UpdateKeyDescriptionRequest instance.
+ */
+UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
+    const KMSRequest::Action action, UpdateKeyDescriptionRequest * const q)
+    : UpdateKeyDescriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateKeyDescriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateKeyDescriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateKeyDescriptionRequest instance.
+ */
+UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
+    const UpdateKeyDescriptionRequestPrivate &other, UpdateKeyDescriptionRequest * const q)
+    : UpdateKeyDescriptionPrivate(other, q)
+{
+
+}

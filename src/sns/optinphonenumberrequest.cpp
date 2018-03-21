@@ -19,3 +19,107 @@
 
 #include "optinphonenumberrequest.h"
 #include "optinphonenumberrequest_p.h"
+#include "optinphonenumberresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  OptInPhoneNumberRequest
+ *
+ * @brief  Implements SNS OptInPhoneNumber requests.
+ *
+ * @see    SNSClient::optInPhoneNumber
+ */
+
+/**
+ * @brief  Constructs a new OptInPhoneNumberResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+OptInPhoneNumberResponse::OptInPhoneNumberResponse(
+
+/**
+ * @brief  Constructs a new OptInPhoneNumberRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+OptInPhoneNumberRequest::OptInPhoneNumberRequest(const OptInPhoneNumberRequest &other)
+    : SNSRequest(new OptInPhoneNumberRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new OptInPhoneNumberRequest object.
+ */
+OptInPhoneNumberRequest::OptInPhoneNumberRequest()
+    : SNSRequest(new OptInPhoneNumberRequestPrivate(SNSRequest::OptInPhoneNumberAction, this))
+{
+
+}
+
+bool OptInPhoneNumberRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an OptInPhoneNumberResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An OptInPhoneNumberResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkReply * const reply) const
+{
+    return new OptInPhoneNumberResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  OptInPhoneNumberRequestPrivate
+ *
+ * @brief  Private implementation for OptInPhoneNumberRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new OptInPhoneNumberRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public OptInPhoneNumberRequest instance.
+ */
+OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
+    const SNSRequest::Action action, OptInPhoneNumberRequest * const q)
+    : OptInPhoneNumberPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new OptInPhoneNumberRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the OptInPhoneNumberRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public OptInPhoneNumberRequest instance.
+ */
+OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
+    const OptInPhoneNumberRequestPrivate &other, OptInPhoneNumberRequest * const q)
+    : OptInPhoneNumberPrivate(other, q)
+{
+
+}

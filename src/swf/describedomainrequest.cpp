@@ -19,3 +19,107 @@
 
 #include "describedomainrequest.h"
 #include "describedomainrequest_p.h"
+#include "describedomainresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DescribeDomainRequest
+ *
+ * @brief  Implements SWF DescribeDomain requests.
+ *
+ * @see    SWFClient::describeDomain
+ */
+
+/**
+ * @brief  Constructs a new DescribeDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDomainResponse::DescribeDomainResponse(
+
+/**
+ * @brief  Constructs a new DescribeDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDomainRequest::DescribeDomainRequest(const DescribeDomainRequest &other)
+    : SWFRequest(new DescribeDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDomainRequest object.
+ */
+DescribeDomainRequest::DescribeDomainRequest()
+    : SWFRequest(new DescribeDomainRequestPrivate(SWFRequest::DescribeDomainAction, this))
+{
+
+}
+
+bool DescribeDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDomainRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public DescribeDomainRequest instance.
+ */
+DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
+    const SWFRequest::Action action, DescribeDomainRequest * const q)
+    : DescribeDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDomainRequest instance.
+ */
+DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
+    const DescribeDomainRequestPrivate &other, DescribeDomainRequest * const q)
+    : DescribeDomainPrivate(other, q)
+{
+
+}

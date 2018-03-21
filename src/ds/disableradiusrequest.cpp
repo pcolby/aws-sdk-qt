@@ -19,3 +19,107 @@
 
 #include "disableradiusrequest.h"
 #include "disableradiusrequest_p.h"
+#include "disableradiusresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DisableRadiusRequest
+ *
+ * @brief  Implements DirectoryService DisableRadius requests.
+ *
+ * @see    DirectoryServiceClient::disableRadius
+ */
+
+/**
+ * @brief  Constructs a new DisableRadiusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableRadiusResponse::DisableRadiusResponse(
+
+/**
+ * @brief  Constructs a new DisableRadiusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableRadiusRequest::DisableRadiusRequest(const DisableRadiusRequest &other)
+    : DirectoryServiceRequest(new DisableRadiusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableRadiusRequest object.
+ */
+DisableRadiusRequest::DisableRadiusRequest()
+    : DirectoryServiceRequest(new DisableRadiusRequestPrivate(DirectoryServiceRequest::DisableRadiusAction, this))
+{
+
+}
+
+bool DisableRadiusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableRadiusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableRadiusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DisableRadiusRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableRadiusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableRadiusRequestPrivate
+ *
+ * @brief  Private implementation for DisableRadiusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableRadiusRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DisableRadiusRequest instance.
+ */
+DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
+    const DirectoryServiceRequest::Action action, DisableRadiusRequest * const q)
+    : DisableRadiusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableRadiusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableRadiusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableRadiusRequest instance.
+ */
+DisableRadiusRequestPrivate::DisableRadiusRequestPrivate(
+    const DisableRadiusRequestPrivate &other, DisableRadiusRequest * const q)
+    : DisableRadiusPrivate(other, q)
+{
+
+}

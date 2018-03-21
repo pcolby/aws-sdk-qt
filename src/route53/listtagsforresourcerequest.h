@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForResourceRequest : public Route53Request {
+
+public:
+    ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
+    ListTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourceRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

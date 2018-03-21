@@ -19,3 +19,107 @@
 
 #include "stopcrawlerrequest.h"
 #include "stopcrawlerrequest_p.h"
+#include "stopcrawlerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopCrawlerRequest
+ *
+ * @brief  Implements Glue StopCrawler requests.
+ *
+ * @see    GlueClient::stopCrawler
+ */
+
+/**
+ * @brief  Constructs a new StopCrawlerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopCrawlerResponse::StopCrawlerResponse(
+
+/**
+ * @brief  Constructs a new StopCrawlerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopCrawlerRequest::StopCrawlerRequest(const StopCrawlerRequest &other)
+    : GlueRequest(new StopCrawlerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopCrawlerRequest object.
+ */
+StopCrawlerRequest::StopCrawlerRequest()
+    : GlueRequest(new StopCrawlerRequestPrivate(GlueRequest::StopCrawlerAction, this))
+{
+
+}
+
+bool StopCrawlerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopCrawlerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopCrawlerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * const reply) const
+{
+    return new StopCrawlerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopCrawlerRequestPrivate
+ *
+ * @brief  Private implementation for StopCrawlerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StopCrawlerRequest instance.
+ */
+StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
+    const GlueRequest::Action action, StopCrawlerRequest * const q)
+    : StopCrawlerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopCrawlerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopCrawlerRequest instance.
+ */
+StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
+    const StopCrawlerRequestPrivate &other, StopCrawlerRequest * const q)
+    : StopCrawlerPrivate(other, q)
+{
+
+}

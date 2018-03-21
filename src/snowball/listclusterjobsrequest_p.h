@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCLUSTERJOBSREQUEST_P_H
 #define QTAWS_LISTCLUSTERJOBSREQUEST_P_H
 
+#include "snowball_p.h"
+#include "listclusterjobsrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class ListClusterJobsRequest;
+
+class QTAWS_EXPORT ListClusterJobsRequestPrivate : public SnowballPrivate {
+
+public:
+    ListClusterJobsRequestPrivate(const Snowball::Action action,
+                                   ListClusterJobsRequest * const q);
+    ListClusterJobsRequestPrivate(const ListClusterJobsRequestPrivate &other,
+                                   ListClusterJobsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListClusterJobsRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

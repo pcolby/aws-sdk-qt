@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMLMODELREQUEST_H
 #define QTAWS_DELETEMLMODELREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteMLModelRequestPrivate;
+
+class QTAWS_EXPORT DeleteMLModelRequest : public MachineLearningRequest {
+
+public:
+    DeleteMLModelRequest(const DeleteMLModelRequest &other);
+    DeleteMLModelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMLModelRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

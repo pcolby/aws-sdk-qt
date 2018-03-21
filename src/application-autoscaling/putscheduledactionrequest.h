@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTSCHEDULEDACTIONREQUEST_H
 #define QTAWS_PUTSCHEDULEDACTIONREQUEST_H
 
+#include "applicationautoscalingrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class PutScheduledActionRequestPrivate;
+
+class QTAWS_EXPORT PutScheduledActionRequest : public ApplicationAutoScalingRequest {
+
+public:
+    PutScheduledActionRequest(const PutScheduledActionRequest &other);
+    PutScheduledActionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutScheduledActionRequest)
+
+}
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

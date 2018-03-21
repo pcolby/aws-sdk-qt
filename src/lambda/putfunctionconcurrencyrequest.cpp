@@ -19,3 +19,107 @@
 
 #include "putfunctionconcurrencyrequest.h"
 #include "putfunctionconcurrencyrequest_p.h"
+#include "putfunctionconcurrencyresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  PutFunctionConcurrencyRequest
+ *
+ * @brief  Implements Lambda PutFunctionConcurrency requests.
+ *
+ * @see    LambdaClient::putFunctionConcurrency
+ */
+
+/**
+ * @brief  Constructs a new PutFunctionConcurrencyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutFunctionConcurrencyResponse::PutFunctionConcurrencyResponse(
+
+/**
+ * @brief  Constructs a new PutFunctionConcurrencyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutFunctionConcurrencyRequest::PutFunctionConcurrencyRequest(const PutFunctionConcurrencyRequest &other)
+    : LambdaRequest(new PutFunctionConcurrencyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutFunctionConcurrencyRequest object.
+ */
+PutFunctionConcurrencyRequest::PutFunctionConcurrencyRequest()
+    : LambdaRequest(new PutFunctionConcurrencyRequestPrivate(LambdaRequest::PutFunctionConcurrencyAction, this))
+{
+
+}
+
+bool PutFunctionConcurrencyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutFunctionConcurrencyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutFunctionConcurrencyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutFunctionConcurrencyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutFunctionConcurrencyRequestPrivate
+ *
+ * @brief  Private implementation for PutFunctionConcurrencyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFunctionConcurrencyRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public PutFunctionConcurrencyRequest instance.
+ */
+PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
+    const LambdaRequest::Action action, PutFunctionConcurrencyRequest * const q)
+    : PutFunctionConcurrencyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFunctionConcurrencyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutFunctionConcurrencyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutFunctionConcurrencyRequest instance.
+ */
+PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
+    const PutFunctionConcurrencyRequestPrivate &other, PutFunctionConcurrencyRequest * const q)
+    : PutFunctionConcurrencyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTRACEGRAPHREQUEST_P_H
 #define QTAWS_GETTRACEGRAPHREQUEST_P_H
 
+#include "xray_p.h"
+#include "gettracegraphrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetTraceGraphRequest;
+
+class QTAWS_EXPORT GetTraceGraphRequestPrivate : public XRayPrivate {
+
+public:
+    GetTraceGraphRequestPrivate(const XRay::Action action,
+                                   GetTraceGraphRequest * const q);
+    GetTraceGraphRequestPrivate(const GetTraceGraphRequestPrivate &other,
+                                   GetTraceGraphRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTraceGraphRequest)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

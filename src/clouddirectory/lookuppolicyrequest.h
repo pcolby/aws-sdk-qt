@@ -20,4 +20,32 @@
 #ifndef QTAWS_LOOKUPPOLICYREQUEST_H
 #define QTAWS_LOOKUPPOLICYREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class LookupPolicyRequestPrivate;
+
+class QTAWS_EXPORT LookupPolicyRequest : public CloudDirectoryRequest {
+
+public:
+    LookupPolicyRequest(const LookupPolicyRequest &other);
+    LookupPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(LookupPolicyRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

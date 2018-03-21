@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERJOBDEFINITIONREQUEST_P_H
 #define QTAWS_DEREGISTERJOBDEFINITIONREQUEST_P_H
 
+#include "batch_p.h"
+#include "deregisterjobdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DeregisterJobDefinitionRequest;
+
+class QTAWS_EXPORT DeregisterJobDefinitionRequestPrivate : public BatchPrivate {
+
+public:
+    DeregisterJobDefinitionRequestPrivate(const Batch::Action action,
+                                   DeregisterJobDefinitionRequest * const q);
+    DeregisterJobDefinitionRequestPrivate(const DeregisterJobDefinitionRequestPrivate &other,
+                                   DeregisterJobDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterJobDefinitionRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

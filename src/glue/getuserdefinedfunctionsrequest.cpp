@@ -19,3 +19,107 @@
 
 #include "getuserdefinedfunctionsrequest.h"
 #include "getuserdefinedfunctionsrequest_p.h"
+#include "getuserdefinedfunctionsresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetUserDefinedFunctionsRequest
+ *
+ * @brief  Implements Glue GetUserDefinedFunctions requests.
+ *
+ * @see    GlueClient::getUserDefinedFunctions
+ */
+
+/**
+ * @brief  Constructs a new GetUserDefinedFunctionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserDefinedFunctionsResponse::GetUserDefinedFunctionsResponse(
+
+/**
+ * @brief  Constructs a new GetUserDefinedFunctionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetUserDefinedFunctionsRequest::GetUserDefinedFunctionsRequest(const GetUserDefinedFunctionsRequest &other)
+    : GlueRequest(new GetUserDefinedFunctionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetUserDefinedFunctionsRequest object.
+ */
+GetUserDefinedFunctionsRequest::GetUserDefinedFunctionsRequest()
+    : GlueRequest(new GetUserDefinedFunctionsRequestPrivate(GlueRequest::GetUserDefinedFunctionsAction, this))
+{
+
+}
+
+bool GetUserDefinedFunctionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetUserDefinedFunctionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetUserDefinedFunctionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetUserDefinedFunctionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetUserDefinedFunctionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserDefinedFunctionsRequestPrivate
+ *
+ * @brief  Private implementation for GetUserDefinedFunctionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserDefinedFunctionsRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetUserDefinedFunctionsRequest instance.
+ */
+GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
+    const GlueRequest::Action action, GetUserDefinedFunctionsRequest * const q)
+    : GetUserDefinedFunctionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserDefinedFunctionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetUserDefinedFunctionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetUserDefinedFunctionsRequest instance.
+ */
+GetUserDefinedFunctionsRequestPrivate::GetUserDefinedFunctionsRequestPrivate(
+    const GetUserDefinedFunctionsRequestPrivate &other, GetUserDefinedFunctionsRequest * const q)
+    : GetUserDefinedFunctionsPrivate(other, q)
+{
+
+}

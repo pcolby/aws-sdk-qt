@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRULEGROUPREQUEST_H
 #define QTAWS_GETRULEGROUPREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRuleGroupRequestPrivate;
+
+class QTAWS_EXPORT GetRuleGroupRequest : public WAFRequest {
+
+public:
+    GetRuleGroupRequest(const GetRuleGroupRequest &other);
+    GetRuleGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRuleGroupRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

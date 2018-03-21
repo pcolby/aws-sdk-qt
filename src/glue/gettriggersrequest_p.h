@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTRIGGERSREQUEST_P_H
 #define QTAWS_GETTRIGGERSREQUEST_P_H
 
+#include "glue_p.h"
+#include "gettriggersrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetTriggersRequest;
+
+class QTAWS_EXPORT GetTriggersRequestPrivate : public GluePrivate {
+
+public:
+    GetTriggersRequestPrivate(const Glue::Action action,
+                                   GetTriggersRequest * const q);
+    GetTriggersRequestPrivate(const GetTriggersRequestPrivate &other,
+                                   GetTriggersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTriggersRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

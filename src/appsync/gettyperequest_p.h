@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTYPEREQUEST_P_H
 #define QTAWS_GETTYPEREQUEST_P_H
 
+#include "appsync_p.h"
+#include "gettyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetTypeRequest;
+
+class QTAWS_EXPORT GetTypeRequestPrivate : public AppSyncPrivate {
+
+public:
+    GetTypeRequestPrivate(const AppSync::Action action,
+                                   GetTypeRequest * const q);
+    GetTypeRequestPrivate(const GetTypeRequestPrivate &other,
+                                   GetTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTypeRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

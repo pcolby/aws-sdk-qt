@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESIZECONSTRAINTSETREQUEST_H
 #define QTAWS_UPDATESIZECONSTRAINTSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateSizeConstraintSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateSizeConstraintSetRequest : public WAFRequest {
+
+public:
+    UpdateSizeConstraintSetRequest(const UpdateSizeConstraintSetRequest &other);
+    UpdateSizeConstraintSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSizeConstraintSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

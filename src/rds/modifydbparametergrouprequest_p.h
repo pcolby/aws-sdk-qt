@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYDBPARAMETERGROUPREQUEST_P_H
 #define QTAWS_MODIFYDBPARAMETERGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "modifydbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBParameterGroupRequest;
+
+class QTAWS_EXPORT ModifyDBParameterGroupRequestPrivate : public RDSPrivate {
+
+public:
+    ModifyDBParameterGroupRequestPrivate(const RDS::Action action,
+                                   ModifyDBParameterGroupRequest * const q);
+    ModifyDBParameterGroupRequestPrivate(const ModifyDBParameterGroupRequestPrivate &other,
+                                   ModifyDBParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBParameterGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

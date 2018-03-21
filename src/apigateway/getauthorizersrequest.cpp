@@ -19,3 +19,107 @@
 
 #include "getauthorizersrequest.h"
 #include "getauthorizersrequest_p.h"
+#include "getauthorizersresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetAuthorizersRequest
+ *
+ * @brief  Implements APIGateway GetAuthorizers requests.
+ *
+ * @see    APIGatewayClient::getAuthorizers
+ */
+
+/**
+ * @brief  Constructs a new GetAuthorizersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAuthorizersResponse::GetAuthorizersResponse(
+
+/**
+ * @brief  Constructs a new GetAuthorizersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAuthorizersRequest::GetAuthorizersRequest(const GetAuthorizersRequest &other)
+    : APIGatewayRequest(new GetAuthorizersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAuthorizersRequest object.
+ */
+GetAuthorizersRequest::GetAuthorizersRequest()
+    : APIGatewayRequest(new GetAuthorizersRequestPrivate(APIGatewayRequest::GetAuthorizersAction, this))
+{
+
+}
+
+bool GetAuthorizersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAuthorizersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAuthorizersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetAuthorizersRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAuthorizersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAuthorizersRequestPrivate
+ *
+ * @brief  Private implementation for GetAuthorizersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizersRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetAuthorizersRequest instance.
+ */
+GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
+    const APIGatewayRequest::Action action, GetAuthorizersRequest * const q)
+    : GetAuthorizersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAuthorizersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAuthorizersRequest instance.
+ */
+GetAuthorizersRequestPrivate::GetAuthorizersRequestPrivate(
+    const GetAuthorizersRequestPrivate &other, GetAuthorizersRequest * const q)
+    : GetAuthorizersPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEACTIVATIONREQUEST_H
 #define QTAWS_CREATEACTIVATIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateActivationRequestPrivate;
+
+class QTAWS_EXPORT CreateActivationRequest : public SSMRequest {
+
+public:
+    CreateActivationRequest(const CreateActivationRequest &other);
+    CreateActivationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateActivationRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

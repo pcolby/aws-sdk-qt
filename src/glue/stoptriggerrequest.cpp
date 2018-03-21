@@ -19,3 +19,107 @@
 
 #include "stoptriggerrequest.h"
 #include "stoptriggerrequest_p.h"
+#include "stoptriggerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopTriggerRequest
+ *
+ * @brief  Implements Glue StopTrigger requests.
+ *
+ * @see    GlueClient::stopTrigger
+ */
+
+/**
+ * @brief  Constructs a new StopTriggerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopTriggerResponse::StopTriggerResponse(
+
+/**
+ * @brief  Constructs a new StopTriggerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopTriggerRequest::StopTriggerRequest(const StopTriggerRequest &other)
+    : GlueRequest(new StopTriggerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopTriggerRequest object.
+ */
+StopTriggerRequest::StopTriggerRequest()
+    : GlueRequest(new StopTriggerRequestPrivate(GlueRequest::StopTriggerAction, this))
+{
+
+}
+
+bool StopTriggerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopTriggerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopTriggerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * const reply) const
+{
+    return new StopTriggerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopTriggerRequestPrivate
+ *
+ * @brief  Private implementation for StopTriggerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTriggerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StopTriggerRequest instance.
+ */
+StopTriggerRequestPrivate::StopTriggerRequestPrivate(
+    const GlueRequest::Action action, StopTriggerRequest * const q)
+    : StopTriggerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTriggerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopTriggerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopTriggerRequest instance.
+ */
+StopTriggerRequestPrivate::StopTriggerRequestPrivate(
+    const StopTriggerRequestPrivate &other, StopTriggerRequest * const q)
+    : StopTriggerPrivate(other, q)
+{
+
+}

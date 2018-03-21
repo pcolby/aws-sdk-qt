@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELCOMMANDREQUEST_P_H
 #define QTAWS_CANCELCOMMANDREQUEST_P_H
 
+#include "ssm_p.h"
+#include "cancelcommandrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CancelCommandRequest;
+
+class QTAWS_EXPORT CancelCommandRequestPrivate : public SSMPrivate {
+
+public:
+    CancelCommandRequestPrivate(const SSM::Action action,
+                                   CancelCommandRequest * const q);
+    CancelCommandRequestPrivate(const CancelCommandRequestPrivate &other,
+                                   CancelCommandRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelCommandRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

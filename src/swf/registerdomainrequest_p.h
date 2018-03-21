@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERDOMAINREQUEST_P_H
 #define QTAWS_REGISTERDOMAINREQUEST_P_H
 
+#include "swf_p.h"
+#include "registerdomainrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterDomainRequest;
+
+class QTAWS_EXPORT RegisterDomainRequestPrivate : public SWFPrivate {
+
+public:
+    RegisterDomainRequestPrivate(const SWF::Action action,
+                                   RegisterDomainRequest * const q);
+    RegisterDomainRequestPrivate(const RegisterDomainRequestPrivate &other,
+                                   RegisterDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDomainRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

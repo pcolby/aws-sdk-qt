@@ -19,3 +19,107 @@
 
 #include "describedefaultparametersrequest.h"
 #include "describedefaultparametersrequest_p.h"
+#include "describedefaultparametersresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeDefaultParametersRequest
+ *
+ * @brief  Implements DAX DescribeDefaultParameters requests.
+ *
+ * @see    DAXClient::describeDefaultParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeDefaultParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDefaultParametersResponse::DescribeDefaultParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeDefaultParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDefaultParametersRequest::DescribeDefaultParametersRequest(const DescribeDefaultParametersRequest &other)
+    : DAXRequest(new DescribeDefaultParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDefaultParametersRequest object.
+ */
+DescribeDefaultParametersRequest::DescribeDefaultParametersRequest()
+    : DAXRequest(new DescribeDefaultParametersRequestPrivate(DAXRequest::DescribeDefaultParametersAction, this))
+{
+
+}
+
+bool DescribeDefaultParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDefaultParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDefaultParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * DescribeDefaultParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDefaultParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDefaultParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDefaultParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public DescribeDefaultParametersRequest instance.
+ */
+DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
+    const DAXRequest::Action action, DescribeDefaultParametersRequest * const q)
+    : DescribeDefaultParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDefaultParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDefaultParametersRequest instance.
+ */
+DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
+    const DescribeDefaultParametersRequestPrivate &other, DescribeDefaultParametersRequest * const q)
+    : DescribeDefaultParametersPrivate(other, q)
+{
+
+}

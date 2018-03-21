@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDATAFLOWGRAPHREQUEST_H
 #define QTAWS_GETDATAFLOWGRAPHREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDataflowGraphRequestPrivate;
+
+class QTAWS_EXPORT GetDataflowGraphRequest : public GlueRequest {
+
+public:
+    GetDataflowGraphRequest(const GetDataflowGraphRequest &other);
+    GetDataflowGraphRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDataflowGraphRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

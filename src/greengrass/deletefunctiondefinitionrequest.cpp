@@ -19,3 +19,107 @@
 
 #include "deletefunctiondefinitionrequest.h"
 #include "deletefunctiondefinitionrequest_p.h"
+#include "deletefunctiondefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteFunctionDefinitionRequest
+ *
+ * @brief  Implements Greengrass DeleteFunctionDefinition requests.
+ *
+ * @see    GreengrassClient::deleteFunctionDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeleteFunctionDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionDefinitionResponse::DeleteFunctionDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeleteFunctionDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFunctionDefinitionRequest::DeleteFunctionDefinitionRequest(const DeleteFunctionDefinitionRequest &other)
+    : GreengrassRequest(new DeleteFunctionDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFunctionDefinitionRequest object.
+ */
+DeleteFunctionDefinitionRequest::DeleteFunctionDefinitionRequest()
+    : GreengrassRequest(new DeleteFunctionDefinitionRequestPrivate(GreengrassRequest::DeleteFunctionDefinitionAction, this))
+{
+
+}
+
+bool DeleteFunctionDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFunctionDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFunctionDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DeleteFunctionDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFunctionDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFunctionDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DeleteFunctionDefinitionRequest instance.
+ */
+DeleteFunctionDefinitionRequestPrivate::DeleteFunctionDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, DeleteFunctionDefinitionRequest * const q)
+    : DeleteFunctionDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFunctionDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFunctionDefinitionRequest instance.
+ */
+DeleteFunctionDefinitionRequestPrivate::DeleteFunctionDefinitionRequestPrivate(
+    const DeleteFunctionDefinitionRequestPrivate &other, DeleteFunctionDefinitionRequest * const q)
+    : DeleteFunctionDefinitionPrivate(other, q)
+{
+
+}

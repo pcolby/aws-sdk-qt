@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFLEETPORTSETTINGSREQUEST_H
 #define QTAWS_DESCRIBEFLEETPORTSETTINGSREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetPortSettingsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFleetPortSettingsRequest : public GameLiftRequest {
+
+public:
+    DescribeFleetPortSettingsRequest(const DescribeFleetPortSettingsRequest &other);
+    DescribeFleetPortSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFleetPortSettingsRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

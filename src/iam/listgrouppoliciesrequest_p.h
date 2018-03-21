@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTGROUPPOLICIESREQUEST_P_H
 #define QTAWS_LISTGROUPPOLICIESREQUEST_P_H
 
+#include "iam_p.h"
+#include "listgrouppoliciesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListGroupPoliciesRequest;
+
+class QTAWS_EXPORT ListGroupPoliciesRequestPrivate : public IAMPrivate {
+
+public:
+    ListGroupPoliciesRequestPrivate(const IAM::Action action,
+                                   ListGroupPoliciesRequest * const q);
+    ListGroupPoliciesRequestPrivate(const ListGroupPoliciesRequestPrivate &other,
+                                   ListGroupPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupPoliciesRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getobjecttorrentrequest.h"
 #include "getobjecttorrentrequest_p.h"
+#include "getobjecttorrentresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetObjectTorrentRequest
+ *
+ * @brief  Implements S3 GetObjectTorrent requests.
+ *
+ * @see    S3Client::getObjectTorrent
+ */
+
+/**
+ * @brief  Constructs a new GetObjectTorrentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetObjectTorrentResponse::GetObjectTorrentResponse(
+
+/**
+ * @brief  Constructs a new GetObjectTorrentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetObjectTorrentRequest::GetObjectTorrentRequest(const GetObjectTorrentRequest &other)
+    : S3Request(new GetObjectTorrentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetObjectTorrentRequest object.
+ */
+GetObjectTorrentRequest::GetObjectTorrentRequest()
+    : S3Request(new GetObjectTorrentRequestPrivate(S3Request::GetObjectTorrentAction, this))
+{
+
+}
+
+bool GetObjectTorrentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetObjectTorrentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetObjectTorrentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * GetObjectTorrentRequest::response(QNetworkReply * const reply) const
+{
+    return new GetObjectTorrentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetObjectTorrentRequestPrivate
+ *
+ * @brief  Private implementation for GetObjectTorrentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetObjectTorrentRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public GetObjectTorrentRequest instance.
+ */
+GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
+    const S3Request::Action action, GetObjectTorrentRequest * const q)
+    : GetObjectTorrentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetObjectTorrentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetObjectTorrentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetObjectTorrentRequest instance.
+ */
+GetObjectTorrentRequestPrivate::GetObjectTorrentRequestPrivate(
+    const GetObjectTorrentRequestPrivate &other, GetObjectTorrentRequest * const q)
+    : GetObjectTorrentPrivate(other, q)
+{
+
+}

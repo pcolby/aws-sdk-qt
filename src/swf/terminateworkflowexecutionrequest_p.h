@@ -20,4 +20,29 @@
 #ifndef QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_P_H
 #define QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_P_H
 
+#include "swf_p.h"
+#include "terminateworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class TerminateWorkflowExecutionRequest;
+
+class QTAWS_EXPORT TerminateWorkflowExecutionRequestPrivate : public SWFPrivate {
+
+public:
+    TerminateWorkflowExecutionRequestPrivate(const SWF::Action action,
+                                   TerminateWorkflowExecutionRequest * const q);
+    TerminateWorkflowExecutionRequestPrivate(const TerminateWorkflowExecutionRequestPrivate &other,
+                                   TerminateWorkflowExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateWorkflowExecutionRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBSCRIBERREQUEST_H
 #define QTAWS_DELETESUBSCRIBERREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DeleteSubscriberRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubscriberRequest : public BudgetsRequest {
+
+public:
+    DeleteSubscriberRequest(const DeleteSubscriberRequest &other);
+    DeleteSubscriberRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriberRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEBROKERREQUEST_H
 #define QTAWS_UPDATEBROKERREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateBrokerRequestPrivate;
+
+class QTAWS_EXPORT UpdateBrokerRequest : public MQRequest {
+
+public:
+    UpdateBrokerRequest(const UpdateBrokerRequest &other);
+    UpdateBrokerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBrokerRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "promotereadreplicadbclusterrequest.h"
 #include "promotereadreplicadbclusterrequest_p.h"
+#include "promotereadreplicadbclusterresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  PromoteReadReplicaDBClusterRequest
+ *
+ * @brief  Implements RDS PromoteReadReplicaDBCluster requests.
+ *
+ * @see    RDSClient::promoteReadReplicaDBCluster
+ */
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaDBClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaDBClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest(const PromoteReadReplicaDBClusterRequest &other)
+    : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaDBClusterRequest object.
+ */
+PromoteReadReplicaDBClusterRequest::PromoteReadReplicaDBClusterRequest()
+    : RDSRequest(new PromoteReadReplicaDBClusterRequestPrivate(RDSRequest::PromoteReadReplicaDBClusterAction, this))
+{
+
+}
+
+bool PromoteReadReplicaDBClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PromoteReadReplicaDBClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PromoteReadReplicaDBClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new PromoteReadReplicaDBClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PromoteReadReplicaDBClusterRequestPrivate
+ *
+ * @brief  Private implementation for PromoteReadReplicaDBClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PromoteReadReplicaDBClusterRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public PromoteReadReplicaDBClusterRequest instance.
+ */
+PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
+    const RDSRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)
+    : PromoteReadReplicaDBClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PromoteReadReplicaDBClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PromoteReadReplicaDBClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PromoteReadReplicaDBClusterRequest instance.
+ */
+PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
+    const PromoteReadReplicaDBClusterRequestPrivate &other, PromoteReadReplicaDBClusterRequest * const q)
+    : PromoteReadReplicaDBClusterPrivate(other, q)
+{
+
+}

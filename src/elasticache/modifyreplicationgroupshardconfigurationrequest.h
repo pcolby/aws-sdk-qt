@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONREQUEST_H
 #define QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyReplicationGroupShardConfigurationRequestPrivate;
+
+class QTAWS_EXPORT ModifyReplicationGroupShardConfigurationRequest : public ElastiCacheRequest {
+
+public:
+    ModifyReplicationGroupShardConfigurationRequest(const ModifyReplicationGroupShardConfigurationRequest &other);
+    ModifyReplicationGroupShardConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyReplicationGroupShardConfigurationRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeclustersrequest.h"
 #include "describeclustersrequest_p.h"
+#include "describeclustersresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DescribeClustersRequest
+ *
+ * @brief  Implements ECS DescribeClusters requests.
+ *
+ * @see    ECSClient::describeClusters
+ */
+
+/**
+ * @brief  Constructs a new DescribeClustersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClustersResponse::DescribeClustersResponse(
+
+/**
+ * @brief  Constructs a new DescribeClustersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeClustersRequest::DescribeClustersRequest(const DescribeClustersRequest &other)
+    : ECSRequest(new DescribeClustersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeClustersRequest object.
+ */
+DescribeClustersRequest::DescribeClustersRequest()
+    : ECSRequest(new DescribeClustersRequestPrivate(ECSRequest::DescribeClustersAction, this))
+{
+
+}
+
+bool DescribeClustersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeClustersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeClustersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * DescribeClustersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeClustersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClustersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeClustersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClustersRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public DescribeClustersRequest instance.
+ */
+DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
+    const ECSRequest::Action action, DescribeClustersRequest * const q)
+    : DescribeClustersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClustersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeClustersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeClustersRequest instance.
+ */
+DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
+    const DescribeClustersRequestPrivate &other, DescribeClustersRequest * const q)
+    : DescribeClustersPrivate(other, q)
+{
+
+}

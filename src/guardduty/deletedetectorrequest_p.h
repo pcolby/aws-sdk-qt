@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDETECTORREQUEST_P_H
 #define QTAWS_DELETEDETECTORREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "deletedetectorrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteDetectorRequest;
+
+class QTAWS_EXPORT DeleteDetectorRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DeleteDetectorRequestPrivate(const GuardDuty::Action action,
+                                   DeleteDetectorRequest * const q);
+    DeleteDetectorRequestPrivate(const DeleteDetectorRequestPrivate &other,
+                                   DeleteDetectorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDetectorRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

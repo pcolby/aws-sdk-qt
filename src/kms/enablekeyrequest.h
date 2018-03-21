@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEKEYREQUEST_H
 #define QTAWS_ENABLEKEYREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class EnableKeyRequestPrivate;
+
+class QTAWS_EXPORT EnableKeyRequest : public KMSRequest {
+
+public:
+    EnableKeyRequest(const EnableKeyRequest &other);
+    EnableKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableKeyRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

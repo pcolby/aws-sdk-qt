@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMCERTIFICATEREQUEST_H
 #define QTAWS_REMOVETAGSFROMCERTIFICATEREQUEST_H
 
+#include "acmrequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class RemoveTagsFromCertificateRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromCertificateRequest : public ACMRequest {
+
+public:
+    RemoveTagsFromCertificateRequest(const RemoveTagsFromCertificateRequest &other);
+    RemoveTagsFromCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromCertificateRequest)
+
+}
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

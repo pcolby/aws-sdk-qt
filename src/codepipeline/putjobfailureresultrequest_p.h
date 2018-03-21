@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTJOBFAILURERESULTREQUEST_P_H
 #define QTAWS_PUTJOBFAILURERESULTREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "putjobfailureresultrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutJobFailureResultRequest;
+
+class QTAWS_EXPORT PutJobFailureResultRequestPrivate : public CodePipelinePrivate {
+
+public:
+    PutJobFailureResultRequestPrivate(const CodePipeline::Action action,
+                                   PutJobFailureResultRequest * const q);
+    PutJobFailureResultRequestPrivate(const PutJobFailureResultRequestPrivate &other,
+                                   PutJobFailureResultRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutJobFailureResultRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

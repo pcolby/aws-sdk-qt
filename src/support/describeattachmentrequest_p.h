@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEATTACHMENTREQUEST_P_H
 #define QTAWS_DESCRIBEATTACHMENTREQUEST_P_H
 
+#include "support_p.h"
+#include "describeattachmentrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeAttachmentRequest;
+
+class QTAWS_EXPORT DescribeAttachmentRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeAttachmentRequestPrivate(const Support::Action action,
+                                   DescribeAttachmentRequest * const q);
+    DescribeAttachmentRequestPrivate(const DescribeAttachmentRequestPrivate &other,
+                                   DescribeAttachmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAttachmentRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

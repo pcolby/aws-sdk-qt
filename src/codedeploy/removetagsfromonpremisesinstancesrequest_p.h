@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETAGSFROMONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMONPREMISESINSTANCESREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "removetagsfromonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RemoveTagsFromOnPremisesInstancesRequest;
+
+class QTAWS_EXPORT RemoveTagsFromOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+
+public:
+    RemoveTagsFromOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+                                   RemoveTagsFromOnPremisesInstancesRequest * const q);
+    RemoveTagsFromOnPremisesInstancesRequestPrivate(const RemoveTagsFromOnPremisesInstancesRequestPrivate &other,
+                                   RemoveTagsFromOnPremisesInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromOnPremisesInstancesRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

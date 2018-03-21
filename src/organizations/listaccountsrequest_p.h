@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTACCOUNTSREQUEST_P_H
 #define QTAWS_LISTACCOUNTSREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listaccountsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAccountsRequest;
+
+class QTAWS_EXPORT ListAccountsRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListAccountsRequestPrivate(const Organizations::Action action,
+                                   ListAccountsRequest * const q);
+    ListAccountsRequestPrivate(const ListAccountsRequestPrivate &other,
+                                   ListAccountsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccountsRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPOLICYREQUEST_P_H
 #define QTAWS_CREATEPOLICYREQUEST_P_H
 
+#include "iot_p.h"
+#include "createpolicyrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreatePolicyRequest;
+
+class QTAWS_EXPORT CreatePolicyRequestPrivate : public IoTPrivate {
+
+public:
+    CreatePolicyRequestPrivate(const IoT::Action action,
+                                   CreatePolicyRequest * const q);
+    CreatePolicyRequestPrivate(const CreatePolicyRequestPrivate &other,
+                                   CreatePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePolicyRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createtargetgrouprequest.h"
 #include "createtargetgrouprequest_p.h"
+#include "createtargetgroupresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  CreateTargetGroupRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 CreateTargetGroup requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::createTargetGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateTargetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTargetGroupResponse::CreateTargetGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateTargetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTargetGroupRequest::CreateTargetGroupRequest(const CreateTargetGroupRequest &other)
+    : ElasticLoadBalancingv2Request(new CreateTargetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTargetGroupRequest object.
+ */
+CreateTargetGroupRequest::CreateTargetGroupRequest()
+    : ElasticLoadBalancingv2Request(new CreateTargetGroupRequestPrivate(ElasticLoadBalancingv2Request::CreateTargetGroupAction, this))
+{
+
+}
+
+bool CreateTargetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTargetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTargetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * CreateTargetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTargetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTargetGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateTargetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTargetGroupRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public CreateTargetGroupRequest instance.
+ */
+CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, CreateTargetGroupRequest * const q)
+    : CreateTargetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTargetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTargetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTargetGroupRequest instance.
+ */
+CreateTargetGroupRequestPrivate::CreateTargetGroupRequestPrivate(
+    const CreateTargetGroupRequestPrivate &other, CreateTargetGroupRequest * const q)
+    : CreateTargetGroupPrivate(other, q)
+{
+
+}

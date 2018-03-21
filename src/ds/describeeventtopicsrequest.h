@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTTOPICSREQUEST_H
 #define QTAWS_DESCRIBEEVENTTOPICSREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeEventTopicsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventTopicsRequest : public DirectoryServiceRequest {
+
+public:
+    DescribeEventTopicsRequest(const DescribeEventTopicsRequest &other);
+    DescribeEventTopicsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventTopicsRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

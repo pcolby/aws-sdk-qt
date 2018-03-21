@@ -19,3 +19,107 @@
 
 #include "batchgetimagerequest.h"
 #include "batchgetimagerequest_p.h"
+#include "batchgetimageresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  BatchGetImageRequest
+ *
+ * @brief  Implements ECR BatchGetImage requests.
+ *
+ * @see    ECRClient::batchGetImage
+ */
+
+/**
+ * @brief  Constructs a new BatchGetImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetImageResponse::BatchGetImageResponse(
+
+/**
+ * @brief  Constructs a new BatchGetImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetImageRequest::BatchGetImageRequest(const BatchGetImageRequest &other)
+    : ECRRequest(new BatchGetImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetImageRequest object.
+ */
+BatchGetImageRequest::BatchGetImageRequest()
+    : ECRRequest(new BatchGetImageRequestPrivate(ECRRequest::BatchGetImageAction, this))
+{
+
+}
+
+bool BatchGetImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetImageRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetImageRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public BatchGetImageRequest instance.
+ */
+BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
+    const ECRRequest::Action action, BatchGetImageRequest * const q)
+    : BatchGetImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetImageRequest instance.
+ */
+BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
+    const BatchGetImageRequestPrivate &other, BatchGetImageRequest * const q)
+    : BatchGetImagePrivate(other, q)
+{
+
+}

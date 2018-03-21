@@ -19,3 +19,107 @@
 
 #include "defineindexfieldrequest.h"
 #include "defineindexfieldrequest_p.h"
+#include "defineindexfieldresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineIndexFieldRequest
+ *
+ * @brief  Implements CloudSearch DefineIndexField requests.
+ *
+ * @see    CloudSearchClient::defineIndexField
+ */
+
+/**
+ * @brief  Constructs a new DefineIndexFieldResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineIndexFieldResponse::DefineIndexFieldResponse(
+
+/**
+ * @brief  Constructs a new DefineIndexFieldRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DefineIndexFieldRequest::DefineIndexFieldRequest(const DefineIndexFieldRequest &other)
+    : CloudSearchRequest(new DefineIndexFieldRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DefineIndexFieldRequest object.
+ */
+DefineIndexFieldRequest::DefineIndexFieldRequest()
+    : CloudSearchRequest(new DefineIndexFieldRequestPrivate(CloudSearchRequest::DefineIndexFieldAction, this))
+{
+
+}
+
+bool DefineIndexFieldRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DefineIndexFieldResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DefineIndexFieldResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkReply * const reply) const
+{
+    return new DefineIndexFieldResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineIndexFieldRequestPrivate
+ *
+ * @brief  Private implementation for DefineIndexFieldRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineIndexFieldRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DefineIndexFieldRequest instance.
+ */
+DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
+    const CloudSearchRequest::Action action, DefineIndexFieldRequest * const q)
+    : DefineIndexFieldPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineIndexFieldRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DefineIndexFieldRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DefineIndexFieldRequest instance.
+ */
+DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
+    const DefineIndexFieldRequestPrivate &other, DefineIndexFieldRequest * const q)
+    : DefineIndexFieldPrivate(other, q)
+{
+
+}

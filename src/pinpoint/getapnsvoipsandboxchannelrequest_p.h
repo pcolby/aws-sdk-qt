@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPNSVOIPSANDBOXCHANNELREQUEST_P_H
 #define QTAWS_GETAPNSVOIPSANDBOXCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getapnsvoipsandboxchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetApnsVoipSandboxChannelRequest;
+
+class QTAWS_EXPORT GetApnsVoipSandboxChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    GetApnsVoipSandboxChannelRequestPrivate(const Pinpoint::Action action,
+                                   GetApnsVoipSandboxChannelRequest * const q);
+    GetApnsVoipSandboxChannelRequestPrivate(const GetApnsVoipSandboxChannelRequestPrivate &other,
+                                   GetApnsVoipSandboxChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApnsVoipSandboxChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

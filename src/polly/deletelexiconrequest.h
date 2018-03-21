@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELEXICONREQUEST_H
 #define QTAWS_DELETELEXICONREQUEST_H
 
+#include "pollyrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class DeleteLexiconRequestPrivate;
+
+class QTAWS_EXPORT DeleteLexiconRequest : public PollyRequest {
+
+public:
+    DeleteLexiconRequest(const DeleteLexiconRequest &other);
+    DeleteLexiconRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLexiconRequest)
+
+}
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEVALUATIONREQUEST_H
 #define QTAWS_DELETEEVALUATIONREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteEvaluationRequestPrivate;
+
+class QTAWS_EXPORT DeleteEvaluationRequest : public MachineLearningRequest {
+
+public:
+    DeleteEvaluationRequest(const DeleteEvaluationRequest &other);
+    DeleteEvaluationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEvaluationRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

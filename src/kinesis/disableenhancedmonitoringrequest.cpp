@@ -19,3 +19,107 @@
 
 #include "disableenhancedmonitoringrequest.h"
 #include "disableenhancedmonitoringrequest_p.h"
+#include "disableenhancedmonitoringresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  DisableEnhancedMonitoringRequest
+ *
+ * @brief  Implements Kinesis DisableEnhancedMonitoring requests.
+ *
+ * @see    KinesisClient::disableEnhancedMonitoring
+ */
+
+/**
+ * @brief  Constructs a new DisableEnhancedMonitoringResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableEnhancedMonitoringResponse::DisableEnhancedMonitoringResponse(
+
+/**
+ * @brief  Constructs a new DisableEnhancedMonitoringRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableEnhancedMonitoringRequest::DisableEnhancedMonitoringRequest(const DisableEnhancedMonitoringRequest &other)
+    : KinesisRequest(new DisableEnhancedMonitoringRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableEnhancedMonitoringRequest object.
+ */
+DisableEnhancedMonitoringRequest::DisableEnhancedMonitoringRequest()
+    : KinesisRequest(new DisableEnhancedMonitoringRequestPrivate(KinesisRequest::DisableEnhancedMonitoringAction, this))
+{
+
+}
+
+bool DisableEnhancedMonitoringRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableEnhancedMonitoringResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableEnhancedMonitoringResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * DisableEnhancedMonitoringRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableEnhancedMonitoringResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableEnhancedMonitoringRequestPrivate
+ *
+ * @brief  Private implementation for DisableEnhancedMonitoringRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableEnhancedMonitoringRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public DisableEnhancedMonitoringRequest instance.
+ */
+DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate(
+    const KinesisRequest::Action action, DisableEnhancedMonitoringRequest * const q)
+    : DisableEnhancedMonitoringPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableEnhancedMonitoringRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableEnhancedMonitoringRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableEnhancedMonitoringRequest instance.
+ */
+DisableEnhancedMonitoringRequestPrivate::DisableEnhancedMonitoringRequestPrivate(
+    const DisableEnhancedMonitoringRequestPrivate &other, DisableEnhancedMonitoringRequest * const q)
+    : DisableEnhancedMonitoringPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHSMCONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEHSMCONFIGURATIONSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describehsmconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeHsmConfigurationsRequest;
+
+class QTAWS_EXPORT DescribeHsmConfigurationsRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeHsmConfigurationsRequestPrivate(const Redshift::Action action,
+                                   DescribeHsmConfigurationsRequest * const q);
+    DescribeHsmConfigurationsRequestPrivate(const DescribeHsmConfigurationsRequestPrivate &other,
+                                   DescribeHsmConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHsmConfigurationsRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

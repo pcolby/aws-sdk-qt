@@ -20,4 +20,29 @@
 #ifndef QTAWS_INSTALLTOREMOTEACCESSSESSIONREQUEST_P_H
 #define QTAWS_INSTALLTOREMOTEACCESSSESSIONREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "installtoremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class InstallToRemoteAccessSessionRequest;
+
+class QTAWS_EXPORT InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    InstallToRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+                                   InstallToRemoteAccessSessionRequest * const q);
+    InstallToRemoteAccessSessionRequestPrivate(const InstallToRemoteAccessSessionRequestPrivate &other,
+                                   InstallToRemoteAccessSessionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InstallToRemoteAccessSessionRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

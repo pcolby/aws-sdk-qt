@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_H
 #define QTAWS_REMOVETAGSREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class RemoveTagsRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsRequest : public CloudTrailRequest {
+
+public:
+    RemoveTagsRequest(const RemoveTagsRequest &other);
+    RemoveTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

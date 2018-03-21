@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTRAFFICPOLICYINSTANCECOUNTREQUEST_P_H
 #define QTAWS_GETTRAFFICPOLICYINSTANCECOUNTREQUEST_P_H
 
+#include "route53_p.h"
+#include "gettrafficpolicyinstancecountrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetTrafficPolicyInstanceCountRequest;
+
+class QTAWS_EXPORT GetTrafficPolicyInstanceCountRequestPrivate : public Route53Private {
+
+public:
+    GetTrafficPolicyInstanceCountRequestPrivate(const Route53::Action action,
+                                   GetTrafficPolicyInstanceCountRequest * const q);
+    GetTrafficPolicyInstanceCountRequestPrivate(const GetTrafficPolicyInstanceCountRequestPrivate &other,
+                                   GetTrafficPolicyInstanceCountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTrafficPolicyInstanceCountRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

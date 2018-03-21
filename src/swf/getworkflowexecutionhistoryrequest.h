@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETWORKFLOWEXECUTIONHISTORYREQUEST_H
 #define QTAWS_GETWORKFLOWEXECUTIONHISTORYREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class GetWorkflowExecutionHistoryRequestPrivate;
+
+class QTAWS_EXPORT GetWorkflowExecutionHistoryRequest : public SWFRequest {
+
+public:
+    GetWorkflowExecutionHistoryRequest(const GetWorkflowExecutionHistoryRequest &other);
+    GetWorkflowExecutionHistoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetWorkflowExecutionHistoryRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

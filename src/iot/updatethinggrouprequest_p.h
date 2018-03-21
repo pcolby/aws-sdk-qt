@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETHINGGROUPREQUEST_P_H
 #define QTAWS_UPDATETHINGGROUPREQUEST_P_H
 
+#include "iot_p.h"
+#include "updatethinggrouprequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateThingGroupRequest;
+
+class QTAWS_EXPORT UpdateThingGroupRequestPrivate : public IoTPrivate {
+
+public:
+    UpdateThingGroupRequestPrivate(const IoT::Action action,
+                                   UpdateThingGroupRequest * const q);
+    UpdateThingGroupRequestPrivate(const UpdateThingGroupRequestPrivate &other,
+                                   UpdateThingGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateThingGroupRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

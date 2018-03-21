@@ -19,3 +19,107 @@
 
 #include "disablealarmactionsrequest.h"
 #include "disablealarmactionsrequest_p.h"
+#include "disablealarmactionsresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DisableAlarmActionsRequest
+ *
+ * @brief  Implements CloudWatch DisableAlarmActions requests.
+ *
+ * @see    CloudWatchClient::disableAlarmActions
+ */
+
+/**
+ * @brief  Constructs a new DisableAlarmActionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableAlarmActionsResponse::DisableAlarmActionsResponse(
+
+/**
+ * @brief  Constructs a new DisableAlarmActionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableAlarmActionsRequest::DisableAlarmActionsRequest(const DisableAlarmActionsRequest &other)
+    : CloudWatchRequest(new DisableAlarmActionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableAlarmActionsRequest object.
+ */
+DisableAlarmActionsRequest::DisableAlarmActionsRequest()
+    : CloudWatchRequest(new DisableAlarmActionsRequestPrivate(CloudWatchRequest::DisableAlarmActionsAction, this))
+{
+
+}
+
+bool DisableAlarmActionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableAlarmActionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableAlarmActionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * DisableAlarmActionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableAlarmActionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableAlarmActionsRequestPrivate
+ *
+ * @brief  Private implementation for DisableAlarmActionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableAlarmActionsRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public DisableAlarmActionsRequest instance.
+ */
+DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
+    const CloudWatchRequest::Action action, DisableAlarmActionsRequest * const q)
+    : DisableAlarmActionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableAlarmActionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableAlarmActionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableAlarmActionsRequest instance.
+ */
+DisableAlarmActionsRequestPrivate::DisableAlarmActionsRequestPrivate(
+    const DisableAlarmActionsRequestPrivate &other, DisableAlarmActionsRequest * const q)
+    : DisableAlarmActionsPrivate(other, q)
+{
+
+}

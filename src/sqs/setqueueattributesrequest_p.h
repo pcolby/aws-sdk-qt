@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETQUEUEATTRIBUTESREQUEST_P_H
 #define QTAWS_SETQUEUEATTRIBUTESREQUEST_P_H
 
+#include "sqs_p.h"
+#include "setqueueattributesrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SetQueueAttributesRequest;
+
+class QTAWS_EXPORT SetQueueAttributesRequestPrivate : public SQSPrivate {
+
+public:
+    SetQueueAttributesRequestPrivate(const SQS::Action action,
+                                   SetQueueAttributesRequest * const q);
+    SetQueueAttributesRequestPrivate(const SetQueueAttributesRequestPrivate &other,
+                                   SetQueueAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetQueueAttributesRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

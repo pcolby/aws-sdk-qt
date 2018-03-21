@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class AddTagsToResourceRequest;
+
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    AddTagsToResourceRequestPrivate(const DirectoryService::Action action,
+                                   AddTagsToResourceRequest * const q);
+    AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
+                                   AddTagsToResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToResourceRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

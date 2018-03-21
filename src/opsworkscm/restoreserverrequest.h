@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTORESERVERREQUEST_H
 #define QTAWS_RESTORESERVERREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class RestoreServerRequestPrivate;
+
+class QTAWS_EXPORT RestoreServerRequest : public OpsWorksCMRequest {
+
+public:
+    RestoreServerRequest(const RestoreServerRequest &other);
+    RestoreServerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreServerRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

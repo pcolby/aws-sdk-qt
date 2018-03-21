@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELOGSTREAMSREQUEST_P_H
 #define QTAWS_DESCRIBELOGSTREAMSREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "describelogstreamsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeLogStreamsRequest;
+
+class QTAWS_EXPORT DescribeLogStreamsRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    DescribeLogStreamsRequestPrivate(const CloudWatchLogs::Action action,
+                                   DescribeLogStreamsRequest * const q);
+    DescribeLogStreamsRequestPrivate(const DescribeLogStreamsRequestPrivate &other,
+                                   DescribeLogStreamsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLogStreamsRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

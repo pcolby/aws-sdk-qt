@@ -19,3 +19,107 @@
 
 #include "deleterulerequest.h"
 #include "deleterulerequest_p.h"
+#include "deleteruleresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  DeleteRuleRequest
+ *
+ * @brief  Implements CloudWatchEvents DeleteRule requests.
+ *
+ * @see    CloudWatchEventsClient::deleteRule
+ */
+
+/**
+ * @brief  Constructs a new DeleteRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRuleResponse::DeleteRuleResponse(
+
+/**
+ * @brief  Constructs a new DeleteRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRuleRequest::DeleteRuleRequest(const DeleteRuleRequest &other)
+    : CloudWatchEventsRequest(new DeleteRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRuleRequest object.
+ */
+DeleteRuleRequest::DeleteRuleRequest()
+    : CloudWatchEventsRequest(new DeleteRuleRequestPrivate(CloudWatchEventsRequest::DeleteRuleAction, this))
+{
+
+}
+
+bool DeleteRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRuleRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRuleRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public DeleteRuleRequest instance.
+ */
+DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
+    const CloudWatchEventsRequest::Action action, DeleteRuleRequest * const q)
+    : DeleteRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRuleRequest instance.
+ */
+DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
+    const DeleteRuleRequestPrivate &other, DeleteRuleRequest * const q)
+    : DeleteRulePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEFLOWLOGSREQUEST_H
 #define QTAWS_CREATEFLOWLOGSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateFlowLogsRequestPrivate;
+
+class QTAWS_EXPORT CreateFlowLogsRequest : public EC2Request {
+
+public:
+    CreateFlowLogsRequest(const CreateFlowLogsRequest &other);
+    CreateFlowLogsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateFlowLogsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

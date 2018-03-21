@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTMETHODRESPONSEREQUEST_H
 #define QTAWS_PUTMETHODRESPONSEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class PutMethodResponseRequestPrivate;
+
+class QTAWS_EXPORT PutMethodResponseRequest : public APIGatewayRequest {
+
+public:
+    PutMethodResponseRequest(const PutMethodResponseRequest &other);
+    PutMethodResponseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutMethodResponseRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

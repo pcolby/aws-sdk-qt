@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEWEBACLREQUEST_H
 #define QTAWS_UPDATEWEBACLREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateWebACLRequestPrivate;
+
+class QTAWS_EXPORT UpdateWebACLRequest : public WAFRegionalRequest {
+
+public:
+    UpdateWebACLRequest(const UpdateWebACLRequest &other);
+    UpdateWebACLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateWebACLRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

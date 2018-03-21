@@ -19,3 +19,107 @@
 
 #include "getdiscoverysummaryrequest.h"
 #include "getdiscoverysummaryrequest_p.h"
+#include "getdiscoverysummaryresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  GetDiscoverySummaryRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService GetDiscoverySummary requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::getDiscoverySummary
+ */
+
+/**
+ * @brief  Constructs a new GetDiscoverySummaryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
+
+/**
+ * @brief  Constructs a new GetDiscoverySummaryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDiscoverySummaryRequest::GetDiscoverySummaryRequest(const GetDiscoverySummaryRequest &other)
+    : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDiscoverySummaryRequest object.
+ */
+GetDiscoverySummaryRequest::GetDiscoverySummaryRequest()
+    : ApplicationDiscoveryServiceRequest(new GetDiscoverySummaryRequestPrivate(ApplicationDiscoveryServiceRequest::GetDiscoverySummaryAction, this))
+{
+
+}
+
+bool GetDiscoverySummaryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDiscoverySummaryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDiscoverySummaryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDiscoverySummaryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDiscoverySummaryRequestPrivate
+ *
+ * @brief  Private implementation for GetDiscoverySummaryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDiscoverySummaryRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public GetDiscoverySummaryRequest instance.
+ */
+GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, GetDiscoverySummaryRequest * const q)
+    : GetDiscoverySummaryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDiscoverySummaryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDiscoverySummaryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDiscoverySummaryRequest instance.
+ */
+GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
+    const GetDiscoverySummaryRequestPrivate &other, GetDiscoverySummaryRequest * const q)
+    : GetDiscoverySummaryPrivate(other, q)
+{
+
+}

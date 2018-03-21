@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATERESOLVERREQUEST_H
 #define QTAWS_UPDATERESOLVERREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateResolverRequestPrivate;
+
+class QTAWS_EXPORT UpdateResolverRequest : public AppSyncRequest {
+
+public:
+    UpdateResolverRequest(const UpdateResolverRequest &other);
+    UpdateResolverRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResolverRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeTagsRequest;
+
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    DescribeTagsRequestPrivate(const WorkSpaces::Action action,
+                                   DescribeTagsRequest * const q);
+    DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
+                                   DescribeTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

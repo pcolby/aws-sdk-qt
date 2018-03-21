@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESPOTFLEETREQUESTSREQUEST_P_H
 #define QTAWS_DESCRIBESPOTFLEETREQUESTSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describespotfleetrequestsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotFleetRequestsRequest;
+
+class QTAWS_EXPORT DescribeSpotFleetRequestsRequestPrivate : public EC2Private {
+
+public:
+    DescribeSpotFleetRequestsRequestPrivate(const EC2::Action action,
+                                   DescribeSpotFleetRequestsRequest * const q);
+    DescribeSpotFleetRequestsRequestPrivate(const DescribeSpotFleetRequestsRequestPrivate &other,
+                                   DescribeSpotFleetRequestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSpotFleetRequestsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

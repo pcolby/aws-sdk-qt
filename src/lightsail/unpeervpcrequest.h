@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNPEERVPCREQUEST_H
 #define QTAWS_UNPEERVPCREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UnpeerVpcRequestPrivate;
+
+class QTAWS_EXPORT UnpeerVpcRequest : public LightsailRequest {
+
+public:
+    UnpeerVpcRequest(const UnpeerVpcRequest &other);
+    UnpeerVpcRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UnpeerVpcRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

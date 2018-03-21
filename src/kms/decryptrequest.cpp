@@ -19,3 +19,107 @@
 
 #include "decryptrequest.h"
 #include "decryptrequest_p.h"
+#include "decryptresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DecryptRequest
+ *
+ * @brief  Implements KMS Decrypt requests.
+ *
+ * @see    KMSClient::decrypt
+ */
+
+/**
+ * @brief  Constructs a new DecryptResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DecryptResponse::DecryptResponse(
+
+/**
+ * @brief  Constructs a new DecryptRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DecryptRequest::DecryptRequest(const DecryptRequest &other)
+    : KMSRequest(new DecryptRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DecryptRequest object.
+ */
+DecryptRequest::DecryptRequest()
+    : KMSRequest(new DecryptRequestPrivate(KMSRequest::DecryptAction, this))
+{
+
+}
+
+bool DecryptRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DecryptResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DecryptResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * DecryptRequest::response(QNetworkReply * const reply) const
+{
+    return new DecryptResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DecryptRequestPrivate
+ *
+ * @brief  Private implementation for DecryptRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecryptRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public DecryptRequest instance.
+ */
+DecryptRequestPrivate::DecryptRequestPrivate(
+    const KMSRequest::Action action, DecryptRequest * const q)
+    : DecryptPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecryptRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DecryptRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DecryptRequest instance.
+ */
+DecryptRequestPrivate::DecryptRequestPrivate(
+    const DecryptRequestPrivate &other, DecryptRequest * const q)
+    : DecryptPrivate(other, q)
+{
+
+}

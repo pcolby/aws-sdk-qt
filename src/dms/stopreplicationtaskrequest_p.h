@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPREPLICATIONTASKREQUEST_P_H
 #define QTAWS_STOPREPLICATIONTASKREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "stopreplicationtaskrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class StopReplicationTaskRequest;
+
+class QTAWS_EXPORT StopReplicationTaskRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    StopReplicationTaskRequestPrivate(const DatabaseMigrationService::Action action,
+                                   StopReplicationTaskRequest * const q);
+    StopReplicationTaskRequestPrivate(const StopReplicationTaskRequestPrivate &other,
+                                   StopReplicationTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopReplicationTaskRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "associatetagoptionwithresourcerequest.h"
 #include "associatetagoptionwithresourcerequest_p.h"
+#include "associatetagoptionwithresourceresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  AssociateTagOptionWithResourceRequest
+ *
+ * @brief  Implements ServiceCatalog AssociateTagOptionWithResource requests.
+ *
+ * @see    ServiceCatalogClient::associateTagOptionWithResource
+ */
+
+/**
+ * @brief  Constructs a new AssociateTagOptionWithResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
+
+/**
+ * @brief  Constructs a new AssociateTagOptionWithResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateTagOptionWithResourceRequest::AssociateTagOptionWithResourceRequest(const AssociateTagOptionWithResourceRequest &other)
+    : ServiceCatalogRequest(new AssociateTagOptionWithResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateTagOptionWithResourceRequest object.
+ */
+AssociateTagOptionWithResourceRequest::AssociateTagOptionWithResourceRequest()
+    : ServiceCatalogRequest(new AssociateTagOptionWithResourceRequestPrivate(ServiceCatalogRequest::AssociateTagOptionWithResourceAction, this))
+{
+
+}
+
+bool AssociateTagOptionWithResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateTagOptionWithResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateTagOptionWithResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * AssociateTagOptionWithResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateTagOptionWithResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateTagOptionWithResourceRequestPrivate
+ *
+ * @brief  Private implementation for AssociateTagOptionWithResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTagOptionWithResourceRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public AssociateTagOptionWithResourceRequest instance.
+ */
+AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequestPrivate(
+    const ServiceCatalogRequest::Action action, AssociateTagOptionWithResourceRequest * const q)
+    : AssociateTagOptionWithResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTagOptionWithResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateTagOptionWithResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateTagOptionWithResourceRequest instance.
+ */
+AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequestPrivate(
+    const AssociateTagOptionWithResourceRequestPrivate &other, AssociateTagOptionWithResourceRequest * const q)
+    : AssociateTagOptionWithResourcePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class AddTagsToResourceRequest;
+
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    AddTagsToResourceRequestPrivate(const StorageGateway::Action action,
+                                   AddTagsToResourceRequest * const q);
+    AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
+                                   AddTagsToResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToResourceRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

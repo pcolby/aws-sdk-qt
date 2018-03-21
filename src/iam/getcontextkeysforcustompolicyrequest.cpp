@@ -19,3 +19,107 @@
 
 #include "getcontextkeysforcustompolicyrequest.h"
 #include "getcontextkeysforcustompolicyrequest_p.h"
+#include "getcontextkeysforcustompolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetContextKeysForCustomPolicyRequest
+ *
+ * @brief  Implements IAM GetContextKeysForCustomPolicy requests.
+ *
+ * @see    IAMClient::getContextKeysForCustomPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetContextKeysForCustomPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContextKeysForCustomPolicyResponse::GetContextKeysForCustomPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetContextKeysForCustomPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest(const GetContextKeysForCustomPolicyRequest &other)
+    : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetContextKeysForCustomPolicyRequest object.
+ */
+GetContextKeysForCustomPolicyRequest::GetContextKeysForCustomPolicyRequest()
+    : IAMRequest(new GetContextKeysForCustomPolicyRequestPrivate(IAMRequest::GetContextKeysForCustomPolicyAction, this))
+{
+
+}
+
+bool GetContextKeysForCustomPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetContextKeysForCustomPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetContextKeysForCustomPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetContextKeysForCustomPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetContextKeysForCustomPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContextKeysForCustomPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetContextKeysForCustomPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContextKeysForCustomPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetContextKeysForCustomPolicyRequest instance.
+ */
+GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
+    const IAMRequest::Action action, GetContextKeysForCustomPolicyRequest * const q)
+    : GetContextKeysForCustomPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContextKeysForCustomPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetContextKeysForCustomPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetContextKeysForCustomPolicyRequest instance.
+ */
+GetContextKeysForCustomPolicyRequestPrivate::GetContextKeysForCustomPolicyRequestPrivate(
+    const GetContextKeysForCustomPolicyRequestPrivate &other, GetContextKeysForCustomPolicyRequest * const q)
+    : GetContextKeysForCustomPolicyPrivate(other, q)
+{
+
+}

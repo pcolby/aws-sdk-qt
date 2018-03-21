@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELOGSTREAMREQUEST_P_H
 #define QTAWS_CREATELOGSTREAMREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "createlogstreamrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class CreateLogStreamRequest;
+
+class QTAWS_EXPORT CreateLogStreamRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    CreateLogStreamRequestPrivate(const CloudWatchLogs::Action action,
+                                   CreateLogStreamRequest * const q);
+    CreateLogStreamRequestPrivate(const CreateLogStreamRequestPrivate &other,
+                                   CreateLogStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLogStreamRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

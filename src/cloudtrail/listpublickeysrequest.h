@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPUBLICKEYSREQUEST_H
 #define QTAWS_LISTPUBLICKEYSREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class ListPublicKeysRequestPrivate;
+
+class QTAWS_EXPORT ListPublicKeysRequest : public CloudTrailRequest {
+
+public:
+    ListPublicKeysRequest(const ListPublicKeysRequest &other);
+    ListPublicKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPublicKeysRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

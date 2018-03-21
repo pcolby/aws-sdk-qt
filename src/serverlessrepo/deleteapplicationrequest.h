@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class DeleteApplicationRequestPrivate;
+
+class QTAWS_EXPORT DeleteApplicationRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    DeleteApplicationRequest(const DeleteApplicationRequest &other);
+    DeleteApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

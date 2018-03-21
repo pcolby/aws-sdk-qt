@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTRETENTIONPOLICYREQUEST_H
 #define QTAWS_PUTRETENTIONPOLICYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutRetentionPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutRetentionPolicyRequest : public CloudWatchLogsRequest {
+
+public:
+    PutRetentionPolicyRequest(const PutRetentionPolicyRequest &other);
+    PutRetentionPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutRetentionPolicyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

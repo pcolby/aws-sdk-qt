@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELIMPORTTASKREQUEST_P_H
 #define QTAWS_CANCELIMPORTTASKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "cancelimporttaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelImportTaskRequest;
+
+class QTAWS_EXPORT CancelImportTaskRequestPrivate : public EC2Private {
+
+public:
+    CancelImportTaskRequestPrivate(const EC2::Action action,
+                                   CancelImportTaskRequest * const q);
+    CancelImportTaskRequestPrivate(const CancelImportTaskRequestPrivate &other,
+                                   CancelImportTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelImportTaskRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

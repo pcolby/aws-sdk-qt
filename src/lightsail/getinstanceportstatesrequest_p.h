@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINSTANCEPORTSTATESREQUEST_P_H
 #define QTAWS_GETINSTANCEPORTSTATESREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getinstanceportstatesrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstancePortStatesRequest;
+
+class QTAWS_EXPORT GetInstancePortStatesRequestPrivate : public LightsailPrivate {
+
+public:
+    GetInstancePortStatesRequestPrivate(const Lightsail::Action action,
+                                   GetInstancePortStatesRequest * const q);
+    GetInstancePortStatesRequestPrivate(const GetInstancePortStatesRequestPrivate &other,
+                                   GetInstancePortStatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstancePortStatesRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

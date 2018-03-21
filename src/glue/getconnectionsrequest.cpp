@@ -19,3 +19,107 @@
 
 #include "getconnectionsrequest.h"
 #include "getconnectionsrequest_p.h"
+#include "getconnectionsresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetConnectionsRequest
+ *
+ * @brief  Implements Glue GetConnections requests.
+ *
+ * @see    GlueClient::getConnections
+ */
+
+/**
+ * @brief  Constructs a new GetConnectionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectionsResponse::GetConnectionsResponse(
+
+/**
+ * @brief  Constructs a new GetConnectionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetConnectionsRequest::GetConnectionsRequest(const GetConnectionsRequest &other)
+    : GlueRequest(new GetConnectionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetConnectionsRequest object.
+ */
+GetConnectionsRequest::GetConnectionsRequest()
+    : GlueRequest(new GetConnectionsRequestPrivate(GlueRequest::GetConnectionsAction, this))
+{
+
+}
+
+bool GetConnectionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetConnectionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetConnectionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetConnectionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetConnectionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectionsRequestPrivate
+ *
+ * @brief  Private implementation for GetConnectionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectionsRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetConnectionsRequest instance.
+ */
+GetConnectionsRequestPrivate::GetConnectionsRequestPrivate(
+    const GlueRequest::Action action, GetConnectionsRequest * const q)
+    : GetConnectionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetConnectionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetConnectionsRequest instance.
+ */
+GetConnectionsRequestPrivate::GetConnectionsRequestPrivate(
+    const GetConnectionsRequestPrivate &other, GetConnectionsRequest * const q)
+    : GetConnectionsPrivate(other, q)
+{
+
+}

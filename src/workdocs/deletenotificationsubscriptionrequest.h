@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENOTIFICATIONSUBSCRIPTIONREQUEST_H
 #define QTAWS_DELETENOTIFICATIONSUBSCRIPTIONREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteNotificationSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT DeleteNotificationSubscriptionRequest : public WorkDocsRequest {
+
+public:
+    DeleteNotificationSubscriptionRequest(const DeleteNotificationSubscriptionRequest &other);
+    DeleteNotificationSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationSubscriptionRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

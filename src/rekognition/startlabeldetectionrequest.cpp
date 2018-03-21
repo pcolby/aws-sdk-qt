@@ -19,3 +19,107 @@
 
 #include "startlabeldetectionrequest.h"
 #include "startlabeldetectionrequest_p.h"
+#include "startlabeldetectionresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartLabelDetectionRequest
+ *
+ * @brief  Implements Rekognition StartLabelDetection requests.
+ *
+ * @see    RekognitionClient::startLabelDetection
+ */
+
+/**
+ * @brief  Constructs a new StartLabelDetectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartLabelDetectionResponse::StartLabelDetectionResponse(
+
+/**
+ * @brief  Constructs a new StartLabelDetectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartLabelDetectionRequest::StartLabelDetectionRequest(const StartLabelDetectionRequest &other)
+    : RekognitionRequest(new StartLabelDetectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartLabelDetectionRequest object.
+ */
+StartLabelDetectionRequest::StartLabelDetectionRequest()
+    : RekognitionRequest(new StartLabelDetectionRequestPrivate(RekognitionRequest::StartLabelDetectionAction, this))
+{
+
+}
+
+bool StartLabelDetectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartLabelDetectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartLabelDetectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * StartLabelDetectionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartLabelDetectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartLabelDetectionRequestPrivate
+ *
+ * @brief  Private implementation for StartLabelDetectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartLabelDetectionRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public StartLabelDetectionRequest instance.
+ */
+StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
+    const RekognitionRequest::Action action, StartLabelDetectionRequest * const q)
+    : StartLabelDetectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartLabelDetectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartLabelDetectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartLabelDetectionRequest instance.
+ */
+StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
+    const StartLabelDetectionRequestPrivate &other, StartLabelDetectionRequest * const q)
+    : StartLabelDetectionPrivate(other, q)
+{
+
+}

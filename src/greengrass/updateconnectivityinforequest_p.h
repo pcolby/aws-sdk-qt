@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONNECTIVITYINFOREQUEST_P_H
 #define QTAWS_UPDATECONNECTIVITYINFOREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "updateconnectivityinforequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateConnectivityInfoRequest;
+
+class QTAWS_EXPORT UpdateConnectivityInfoRequestPrivate : public GreengrassPrivate {
+
+public:
+    UpdateConnectivityInfoRequestPrivate(const Greengrass::Action action,
+                                   UpdateConnectivityInfoRequest * const q);
+    UpdateConnectivityInfoRequestPrivate(const UpdateConnectivityInfoRequestPrivate &other,
+                                   UpdateConnectivityInfoRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConnectivityInfoRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

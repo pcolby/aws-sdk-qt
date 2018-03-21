@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 
+#include "rds_p.h"
+#include "deleteeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteEventSubscriptionRequest;
+
+class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteEventSubscriptionRequestPrivate(const RDS::Action action,
+                                   DeleteEventSubscriptionRequest * const q);
+    DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
+                                   DeleteEventSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventSubscriptionRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

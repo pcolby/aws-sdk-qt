@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_P_H
 #define QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describedirectoryconfigsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeDirectoryConfigsRequest;
+
+class QTAWS_EXPORT DescribeDirectoryConfigsRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeDirectoryConfigsRequestPrivate(const AppStream::Action action,
+                                   DescribeDirectoryConfigsRequest * const q);
+    DescribeDirectoryConfigsRequestPrivate(const DescribeDirectoryConfigsRequestPrivate &other,
+                                   DescribeDirectoryConfigsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDirectoryConfigsRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "batchdeleteattributesrequest.h"
 #include "batchdeleteattributesrequest_p.h"
+#include "batchdeleteattributesresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  BatchDeleteAttributesRequest
+ *
+ * @brief  Implements SimpleDB BatchDeleteAttributes requests.
+ *
+ * @see    SimpleDBClient::batchDeleteAttributes
+ */
+
+/**
+ * @brief  Constructs a new BatchDeleteAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeleteAttributesResponse::BatchDeleteAttributesResponse(
+
+/**
+ * @brief  Constructs a new BatchDeleteAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchDeleteAttributesRequest::BatchDeleteAttributesRequest(const BatchDeleteAttributesRequest &other)
+    : SimpleDBRequest(new BatchDeleteAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchDeleteAttributesRequest object.
+ */
+BatchDeleteAttributesRequest::BatchDeleteAttributesRequest()
+    : SimpleDBRequest(new BatchDeleteAttributesRequestPrivate(SimpleDBRequest::BatchDeleteAttributesAction, this))
+{
+
+}
+
+bool BatchDeleteAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchDeleteAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchDeleteAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * BatchDeleteAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchDeleteAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeleteAttributesRequestPrivate
+ *
+ * @brief  Private implementation for BatchDeleteAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public BatchDeleteAttributesRequest instance.
+ */
+BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
+    const SimpleDBRequest::Action action, BatchDeleteAttributesRequest * const q)
+    : BatchDeleteAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeleteAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchDeleteAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchDeleteAttributesRequest instance.
+ */
+BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
+    const BatchDeleteAttributesRequestPrivate &other, BatchDeleteAttributesRequest * const q)
+    : BatchDeleteAttributesPrivate(other, q)
+{
+
+}

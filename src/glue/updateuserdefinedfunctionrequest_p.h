@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSERDEFINEDFUNCTIONREQUEST_P_H
 #define QTAWS_UPDATEUSERDEFINEDFUNCTIONREQUEST_P_H
 
+#include "glue_p.h"
+#include "updateuserdefinedfunctionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateUserDefinedFunctionRequest;
+
+class QTAWS_EXPORT UpdateUserDefinedFunctionRequestPrivate : public GluePrivate {
+
+public:
+    UpdateUserDefinedFunctionRequestPrivate(const Glue::Action action,
+                                   UpdateUserDefinedFunctionRequest * const q);
+    UpdateUserDefinedFunctionRequestPrivate(const UpdateUserDefinedFunctionRequestPrivate &other,
+                                   UpdateUserDefinedFunctionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserDefinedFunctionRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

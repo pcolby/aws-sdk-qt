@@ -19,3 +19,107 @@
 
 #include "createtapewithbarcoderequest.h"
 #include "createtapewithbarcoderequest_p.h"
+#include "createtapewithbarcoderesponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateTapeWithBarcodeRequest
+ *
+ * @brief  Implements StorageGateway CreateTapeWithBarcode requests.
+ *
+ * @see    StorageGatewayClient::createTapeWithBarcode
+ */
+
+/**
+ * @brief  Constructs a new CreateTapeWithBarcodeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTapeWithBarcodeResponse::CreateTapeWithBarcodeResponse(
+
+/**
+ * @brief  Constructs a new CreateTapeWithBarcodeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTapeWithBarcodeRequest::CreateTapeWithBarcodeRequest(const CreateTapeWithBarcodeRequest &other)
+    : StorageGatewayRequest(new CreateTapeWithBarcodeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTapeWithBarcodeRequest object.
+ */
+CreateTapeWithBarcodeRequest::CreateTapeWithBarcodeRequest()
+    : StorageGatewayRequest(new CreateTapeWithBarcodeRequestPrivate(StorageGatewayRequest::CreateTapeWithBarcodeAction, this))
+{
+
+}
+
+bool CreateTapeWithBarcodeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTapeWithBarcodeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTapeWithBarcodeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTapeWithBarcodeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTapeWithBarcodeRequestPrivate
+ *
+ * @brief  Private implementation for CreateTapeWithBarcodeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTapeWithBarcodeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public CreateTapeWithBarcodeRequest instance.
+ */
+CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
+    const StorageGatewayRequest::Action action, CreateTapeWithBarcodeRequest * const q)
+    : CreateTapeWithBarcodePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTapeWithBarcodeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTapeWithBarcodeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTapeWithBarcodeRequest instance.
+ */
+CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
+    const CreateTapeWithBarcodeRequestPrivate &other, CreateTapeWithBarcodeRequest * const q)
+    : CreateTapeWithBarcodePrivate(other, q)
+{
+
+}

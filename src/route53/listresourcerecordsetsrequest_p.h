@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOURCERECORDSETSREQUEST_P_H
 #define QTAWS_LISTRESOURCERECORDSETSREQUEST_P_H
 
+#include "route53_p.h"
+#include "listresourcerecordsetsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListResourceRecordSetsRequest;
+
+class QTAWS_EXPORT ListResourceRecordSetsRequestPrivate : public Route53Private {
+
+public:
+    ListResourceRecordSetsRequestPrivate(const Route53::Action action,
+                                   ListResourceRecordSetsRequest * const q);
+    ListResourceRecordSetsRequestPrivate(const ListResourceRecordSetsRequestPrivate &other,
+                                   ListResourceRecordSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceRecordSetsRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

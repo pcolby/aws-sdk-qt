@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDEVENDPOINTREQUEST_H
 #define QTAWS_UPDATEDEVENDPOINTREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateDevEndpointRequestPrivate;
+
+class QTAWS_EXPORT UpdateDevEndpointRequest : public GlueRequest {
+
+public:
+    UpdateDevEndpointRequest(const UpdateDevEndpointRequest &other);
+    UpdateDevEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDevEndpointRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

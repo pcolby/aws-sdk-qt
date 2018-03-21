@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTGROUPRESOURCESREQUEST_P_H
 #define QTAWS_LISTGROUPRESOURCESREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "listgroupresourcesrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class ListGroupResourcesRequest;
+
+class QTAWS_EXPORT ListGroupResourcesRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    ListGroupResourcesRequestPrivate(const ResourceGroups::Action action,
+                                   ListGroupResourcesRequest * const q);
+    ListGroupResourcesRequestPrivate(const ListGroupResourcesRequestPrivate &other,
+                                   ListGroupResourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupResourcesRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

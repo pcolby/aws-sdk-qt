@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSREQUEST_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeConfigurationRecordersRequestPrivate;
+
+class QTAWS_EXPORT DescribeConfigurationRecordersRequest : public ConfigServiceRequest {
+
+public:
+    DescribeConfigurationRecordersRequest(const DescribeConfigurationRecordersRequest &other);
+    DescribeConfigurationRecordersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigurationRecordersRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

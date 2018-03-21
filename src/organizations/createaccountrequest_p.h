@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEACCOUNTREQUEST_P_H
 #define QTAWS_CREATEACCOUNTREQUEST_P_H
 
+#include "organizations_p.h"
+#include "createaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CreateAccountRequest;
+
+class QTAWS_EXPORT CreateAccountRequestPrivate : public OrganizationsPrivate {
+
+public:
+    CreateAccountRequestPrivate(const Organizations::Action action,
+                                   CreateAccountRequest * const q);
+    CreateAccountRequestPrivate(const CreateAccountRequestPrivate &other,
+                                   CreateAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAccountRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

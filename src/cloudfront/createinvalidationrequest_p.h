@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINVALIDATIONREQUEST_P_H
 #define QTAWS_CREATEINVALIDATIONREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "createinvalidationrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateInvalidationRequest;
+
+class QTAWS_EXPORT CreateInvalidationRequestPrivate : public CloudFrontPrivate {
+
+public:
+    CreateInvalidationRequestPrivate(const CloudFront::Action action,
+                                   CreateInvalidationRequest * const q);
+    CreateInvalidationRequestPrivate(const CreateInvalidationRequestPrivate &other,
+                                   CreateInvalidationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInvalidationRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

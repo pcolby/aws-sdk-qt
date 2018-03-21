@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSERVERCERTIFICATEREQUEST_P_H
 #define QTAWS_GETSERVERCERTIFICATEREQUEST_P_H
 
+#include "iam_p.h"
+#include "getservercertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetServerCertificateRequest;
+
+class QTAWS_EXPORT GetServerCertificateRequestPrivate : public IAMPrivate {
+
+public:
+    GetServerCertificateRequestPrivate(const IAM::Action action,
+                                   GetServerCertificateRequest * const q);
+    GetServerCertificateRequestPrivate(const GetServerCertificateRequestPrivate &other,
+                                   GetServerCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetServerCertificateRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_P_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "deletesqlinjectionmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteSqlInjectionMatchSetRequest;
+
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    DeleteSqlInjectionMatchSetRequestPrivate(const WAFRegional::Action action,
+                                   DeleteSqlInjectionMatchSetRequest * const q);
+    DeleteSqlInjectionMatchSetRequestPrivate(const DeleteSqlInjectionMatchSetRequestPrivate &other,
+                                   DeleteSqlInjectionMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSqlInjectionMatchSetRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTBUCKETREPLICATIONREQUEST_H
 #define QTAWS_PUTBUCKETREPLICATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketReplicationRequestPrivate;
+
+class QTAWS_EXPORT PutBucketReplicationRequest : public S3Request {
+
+public:
+    PutBucketReplicationRequest(const PutBucketReplicationRequest &other);
+    PutBucketReplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketReplicationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

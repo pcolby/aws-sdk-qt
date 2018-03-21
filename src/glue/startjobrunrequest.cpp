@@ -19,3 +19,107 @@
 
 #include "startjobrunrequest.h"
 #include "startjobrunrequest_p.h"
+#include "startjobrunresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StartJobRunRequest
+ *
+ * @brief  Implements Glue StartJobRun requests.
+ *
+ * @see    GlueClient::startJobRun
+ */
+
+/**
+ * @brief  Constructs a new StartJobRunResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartJobRunResponse::StartJobRunResponse(
+
+/**
+ * @brief  Constructs a new StartJobRunRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartJobRunRequest::StartJobRunRequest(const StartJobRunRequest &other)
+    : GlueRequest(new StartJobRunRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartJobRunRequest object.
+ */
+StartJobRunRequest::StartJobRunRequest()
+    : GlueRequest(new StartJobRunRequestPrivate(GlueRequest::StartJobRunAction, this))
+{
+
+}
+
+bool StartJobRunRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartJobRunResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartJobRunResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * const reply) const
+{
+    return new StartJobRunResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartJobRunRequestPrivate
+ *
+ * @brief  Private implementation for StartJobRunRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartJobRunRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StartJobRunRequest instance.
+ */
+StartJobRunRequestPrivate::StartJobRunRequestPrivate(
+    const GlueRequest::Action action, StartJobRunRequest * const q)
+    : StartJobRunPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartJobRunRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartJobRunRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartJobRunRequest instance.
+ */
+StartJobRunRequestPrivate::StartJobRunRequestPrivate(
+    const StartJobRunRequestPrivate &other, StartJobRunRequest * const q)
+    : StartJobRunPrivate(other, q)
+{
+
+}

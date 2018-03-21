@@ -19,3 +19,107 @@
 
 #include "swapenvironmentcnamesrequest.h"
 #include "swapenvironmentcnamesrequest_p.h"
+#include "swapenvironmentcnamesresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  SwapEnvironmentCNAMEsRequest
+ *
+ * @brief  Implements ElasticBeanstalk SwapEnvironmentCNAMEs requests.
+ *
+ * @see    ElasticBeanstalkClient::swapEnvironmentCNAMEs
+ */
+
+/**
+ * @brief  Constructs a new SwapEnvironmentCNAMEsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
+
+/**
+ * @brief  Constructs a new SwapEnvironmentCNAMEsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SwapEnvironmentCNAMEsRequest::SwapEnvironmentCNAMEsRequest(const SwapEnvironmentCNAMEsRequest &other)
+    : ElasticBeanstalkRequest(new SwapEnvironmentCNAMEsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SwapEnvironmentCNAMEsRequest object.
+ */
+SwapEnvironmentCNAMEsRequest::SwapEnvironmentCNAMEsRequest()
+    : ElasticBeanstalkRequest(new SwapEnvironmentCNAMEsRequestPrivate(ElasticBeanstalkRequest::SwapEnvironmentCNAMEsAction, this))
+{
+
+}
+
+bool SwapEnvironmentCNAMEsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SwapEnvironmentCNAMEsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SwapEnvironmentCNAMEsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetworkReply * const reply) const
+{
+    return new SwapEnvironmentCNAMEsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SwapEnvironmentCNAMEsRequestPrivate
+ *
+ * @brief  Private implementation for SwapEnvironmentCNAMEsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SwapEnvironmentCNAMEsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public SwapEnvironmentCNAMEsRequest instance.
+ */
+SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, SwapEnvironmentCNAMEsRequest * const q)
+    : SwapEnvironmentCNAMEsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SwapEnvironmentCNAMEsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SwapEnvironmentCNAMEsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SwapEnvironmentCNAMEsRequest instance.
+ */
+SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
+    const SwapEnvironmentCNAMEsRequestPrivate &other, SwapEnvironmentCNAMEsRequest * const q)
+    : SwapEnvironmentCNAMEsPrivate(other, q)
+{
+
+}

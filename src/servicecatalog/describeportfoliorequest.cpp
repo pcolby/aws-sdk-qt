@@ -19,3 +19,107 @@
 
 #include "describeportfoliorequest.h"
 #include "describeportfoliorequest_p.h"
+#include "describeportfolioresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribePortfolioRequest
+ *
+ * @brief  Implements ServiceCatalog DescribePortfolio requests.
+ *
+ * @see    ServiceCatalogClient::describePortfolio
+ */
+
+/**
+ * @brief  Constructs a new DescribePortfolioResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePortfolioResponse::DescribePortfolioResponse(
+
+/**
+ * @brief  Constructs a new DescribePortfolioRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePortfolioRequest::DescribePortfolioRequest(const DescribePortfolioRequest &other)
+    : ServiceCatalogRequest(new DescribePortfolioRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePortfolioRequest object.
+ */
+DescribePortfolioRequest::DescribePortfolioRequest()
+    : ServiceCatalogRequest(new DescribePortfolioRequestPrivate(ServiceCatalogRequest::DescribePortfolioAction, this))
+{
+
+}
+
+bool DescribePortfolioRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePortfolioResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePortfolioResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePortfolioResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePortfolioRequestPrivate
+ *
+ * @brief  Private implementation for DescribePortfolioRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePortfolioRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribePortfolioRequest instance.
+ */
+DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribePortfolioRequest * const q)
+    : DescribePortfolioPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePortfolioRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePortfolioRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePortfolioRequest instance.
+ */
+DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
+    const DescribePortfolioRequestPrivate &other, DescribePortfolioRequest * const q)
+    : DescribePortfolioPrivate(other, q)
+{
+
+}

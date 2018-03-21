@@ -19,3 +19,107 @@
 
 #include "flushstagecacherequest.h"
 #include "flushstagecacherequest_p.h"
+#include "flushstagecacheresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  FlushStageCacheRequest
+ *
+ * @brief  Implements APIGateway FlushStageCache requests.
+ *
+ * @see    APIGatewayClient::flushStageCache
+ */
+
+/**
+ * @brief  Constructs a new FlushStageCacheResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+FlushStageCacheResponse::FlushStageCacheResponse(
+
+/**
+ * @brief  Constructs a new FlushStageCacheRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+FlushStageCacheRequest::FlushStageCacheRequest(const FlushStageCacheRequest &other)
+    : APIGatewayRequest(new FlushStageCacheRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new FlushStageCacheRequest object.
+ */
+FlushStageCacheRequest::FlushStageCacheRequest()
+    : APIGatewayRequest(new FlushStageCacheRequestPrivate(APIGatewayRequest::FlushStageCacheAction, this))
+{
+
+}
+
+bool FlushStageCacheRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an FlushStageCacheResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An FlushStageCacheResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkReply * const reply) const
+{
+    return new FlushStageCacheResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  FlushStageCacheRequestPrivate
+ *
+ * @brief  Private implementation for FlushStageCacheRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FlushStageCacheRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public FlushStageCacheRequest instance.
+ */
+FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
+    const APIGatewayRequest::Action action, FlushStageCacheRequest * const q)
+    : FlushStageCachePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FlushStageCacheRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the FlushStageCacheRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public FlushStageCacheRequest instance.
+ */
+FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
+    const FlushStageCacheRequestPrivate &other, FlushStageCacheRequest * const q)
+    : FlushStageCachePrivate(other, q)
+{
+
+}

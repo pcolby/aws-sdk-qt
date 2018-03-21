@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACTIVENAMESREQUEST_P_H
 #define QTAWS_GETACTIVENAMESREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getactivenamesrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetActiveNamesRequest;
+
+class QTAWS_EXPORT GetActiveNamesRequestPrivate : public LightsailPrivate {
+
+public:
+    GetActiveNamesRequestPrivate(const Lightsail::Action action,
+                                   GetActiveNamesRequest * const q);
+    GetActiveNamesRequestPrivate(const GetActiveNamesRequestPrivate &other,
+                                   GetActiveNamesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetActiveNamesRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

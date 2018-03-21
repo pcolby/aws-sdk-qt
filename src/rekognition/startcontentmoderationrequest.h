@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTCONTENTMODERATIONREQUEST_H
 #define QTAWS_STARTCONTENTMODERATIONREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartContentModerationRequestPrivate;
+
+class QTAWS_EXPORT StartContentModerationRequest : public RekognitionRequest {
+
+public:
+    StartContentModerationRequest(const StartContentModerationRequest &other);
+    StartContentModerationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartContentModerationRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

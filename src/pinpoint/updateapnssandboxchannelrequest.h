@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPNSSANDBOXCHANNELREQUEST_H
 #define QTAWS_UPDATEAPNSSANDBOXCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApnsSandboxChannelRequestPrivate;
+
+class QTAWS_EXPORT UpdateApnsSandboxChannelRequest : public PinpointRequest {
+
+public:
+    UpdateApnsSandboxChannelRequest(const UpdateApnsSandboxChannelRequest &other);
+    UpdateApnsSandboxChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApnsSandboxChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

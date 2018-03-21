@@ -19,3 +19,107 @@
 
 #include "admininitiateauthrequest.h"
 #include "admininitiateauthrequest_p.h"
+#include "admininitiateauthresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminInitiateAuthRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminInitiateAuth requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminInitiateAuth
+ */
+
+/**
+ * @brief  Constructs a new AdminInitiateAuthResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminInitiateAuthResponse::AdminInitiateAuthResponse(
+
+/**
+ * @brief  Constructs a new AdminInitiateAuthRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminInitiateAuthRequest::AdminInitiateAuthRequest(const AdminInitiateAuthRequest &other)
+    : CognitoIdentityProviderRequest(new AdminInitiateAuthRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminInitiateAuthRequest object.
+ */
+AdminInitiateAuthRequest::AdminInitiateAuthRequest()
+    : CognitoIdentityProviderRequest(new AdminInitiateAuthRequestPrivate(CognitoIdentityProviderRequest::AdminInitiateAuthAction, this))
+{
+
+}
+
+bool AdminInitiateAuthRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminInitiateAuthResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminInitiateAuthResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminInitiateAuthRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminInitiateAuthResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminInitiateAuthRequestPrivate
+ *
+ * @brief  Private implementation for AdminInitiateAuthRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminInitiateAuthRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminInitiateAuthRequest instance.
+ */
+AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminInitiateAuthRequest * const q)
+    : AdminInitiateAuthPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminInitiateAuthRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminInitiateAuthRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminInitiateAuthRequest instance.
+ */
+AdminInitiateAuthRequestPrivate::AdminInitiateAuthRequestPrivate(
+    const AdminInitiateAuthRequestPrivate &other, AdminInitiateAuthRequest * const q)
+    : AdminInitiateAuthPrivate(other, q)
+{
+
+}

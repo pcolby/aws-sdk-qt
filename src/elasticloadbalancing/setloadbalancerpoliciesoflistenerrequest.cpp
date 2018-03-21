@@ -19,3 +19,107 @@
 
 #include "setloadbalancerpoliciesoflistenerrequest.h"
 #include "setloadbalancerpoliciesoflistenerrequest_p.h"
+#include "setloadbalancerpoliciesoflistenerresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  SetLoadBalancerPoliciesOfListenerRequest
+ *
+ * @brief  Implements ElasticLoadBalancing SetLoadBalancerPoliciesOfListener requests.
+ *
+ * @see    ElasticLoadBalancingClient::setLoadBalancerPoliciesOfListener
+ */
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBalancerPoliciesOfListenerResponse::SetLoadBalancerPoliciesOfListenerResponse(
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetLoadBalancerPoliciesOfListenerRequest::SetLoadBalancerPoliciesOfListenerRequest(const SetLoadBalancerPoliciesOfListenerRequest &other)
+    : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesOfListenerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequest object.
+ */
+SetLoadBalancerPoliciesOfListenerRequest::SetLoadBalancerPoliciesOfListenerRequest()
+    : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesOfListenerRequestPrivate(ElasticLoadBalancingRequest::SetLoadBalancerPoliciesOfListenerAction, this))
+{
+
+}
+
+bool SetLoadBalancerPoliciesOfListenerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetLoadBalancerPoliciesOfListenerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetLoadBalancerPoliciesOfListenerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * SetLoadBalancerPoliciesOfListenerRequest::response(QNetworkReply * const reply) const
+{
+    return new SetLoadBalancerPoliciesOfListenerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBalancerPoliciesOfListenerRequestPrivate
+ *
+ * @brief  Private implementation for SetLoadBalancerPoliciesOfListenerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public SetLoadBalancerPoliciesOfListenerRequest instance.
+ */
+SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesOfListenerRequest * const q)
+    : SetLoadBalancerPoliciesOfListenerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetLoadBalancerPoliciesOfListenerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetLoadBalancerPoliciesOfListenerRequest instance.
+ */
+SetLoadBalancerPoliciesOfListenerRequestPrivate::SetLoadBalancerPoliciesOfListenerRequestPrivate(
+    const SetLoadBalancerPoliciesOfListenerRequestPrivate &other, SetLoadBalancerPoliciesOfListenerRequest * const q)
+    : SetLoadBalancerPoliciesOfListenerPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATENETWORKINTERFACEPERMISSIONREQUEST_H
 #define QTAWS_CREATENETWORKINTERFACEPERMISSIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNetworkInterfacePermissionRequestPrivate;
+
+class QTAWS_EXPORT CreateNetworkInterfacePermissionRequest : public EC2Request {
+
+public:
+    CreateNetworkInterfacePermissionRequest(const CreateNetworkInterfacePermissionRequest &other);
+    CreateNetworkInterfacePermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateNetworkInterfacePermissionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

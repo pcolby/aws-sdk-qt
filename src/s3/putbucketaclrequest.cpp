@@ -19,3 +19,107 @@
 
 #include "putbucketaclrequest.h"
 #include "putbucketaclrequest_p.h"
+#include "putbucketaclresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketAclRequest
+ *
+ * @brief  Implements S3 PutBucketAcl requests.
+ *
+ * @see    S3Client::putBucketAcl
+ */
+
+/**
+ * @brief  Constructs a new PutBucketAclResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketAclResponse::PutBucketAclResponse(
+
+/**
+ * @brief  Constructs a new PutBucketAclRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketAclRequest::PutBucketAclRequest(const PutBucketAclRequest &other)
+    : S3Request(new PutBucketAclRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketAclRequest object.
+ */
+PutBucketAclRequest::PutBucketAclRequest()
+    : S3Request(new PutBucketAclRequestPrivate(S3Request::PutBucketAclAction, this))
+{
+
+}
+
+bool PutBucketAclRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketAclResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketAclResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketAclRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketAclResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketAclRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketAclRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketAclRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketAclRequest instance.
+ */
+PutBucketAclRequestPrivate::PutBucketAclRequestPrivate(
+    const S3Request::Action action, PutBucketAclRequest * const q)
+    : PutBucketAclPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketAclRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketAclRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketAclRequest instance.
+ */
+PutBucketAclRequestPrivate::PutBucketAclRequestPrivate(
+    const PutBucketAclRequestPrivate &other, PutBucketAclRequest * const q)
+    : PutBucketAclPrivate(other, q)
+{
+
+}

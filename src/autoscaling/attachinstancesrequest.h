@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHINSTANCESREQUEST_H
 #define QTAWS_ATTACHINSTANCESREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class AttachInstancesRequestPrivate;
+
+class QTAWS_EXPORT AttachInstancesRequest : public AutoScalingRequest {
+
+public:
+    AttachInstancesRequest(const AttachInstancesRequest &other);
+    AttachInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachInstancesRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

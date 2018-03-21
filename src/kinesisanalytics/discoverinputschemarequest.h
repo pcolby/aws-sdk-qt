@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISCOVERINPUTSCHEMAREQUEST_H
 #define QTAWS_DISCOVERINPUTSCHEMAREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DiscoverInputSchemaRequestPrivate;
+
+class QTAWS_EXPORT DiscoverInputSchemaRequest : public KinesisAnalyticsRequest {
+
+public:
+    DiscoverInputSchemaRequest(const DiscoverInputSchemaRequest &other);
+    DiscoverInputSchemaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DiscoverInputSchemaRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

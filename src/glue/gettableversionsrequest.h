@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTABLEVERSIONSREQUEST_H
 #define QTAWS_GETTABLEVERSIONSREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetTableVersionsRequestPrivate;
+
+class QTAWS_EXPORT GetTableVersionsRequest : public GlueRequest {
+
+public:
+    GetTableVersionsRequest(const GetTableVersionsRequest &other);
+    GetTableVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTableVersionsRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

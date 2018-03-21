@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETABLEREQUEST_P_H
 #define QTAWS_CREATETABLEREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "createtablerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class CreateTableRequest;
+
+class QTAWS_EXPORT CreateTableRequestPrivate : public DynamoDBPrivate {
+
+public:
+    CreateTableRequestPrivate(const DynamoDB::Action action,
+                                   CreateTableRequest * const q);
+    CreateTableRequestPrivate(const CreateTableRequestPrivate &other,
+                                   CreateTableRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTableRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

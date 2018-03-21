@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTAPPLICATIONSREQUEST_P_H
 #define QTAWS_LISTAPPLICATIONSREQUEST_P_H
 
+#include "kinesisanalytics_p.h"
+#include "listapplicationsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class ListApplicationsRequest;
+
+class QTAWS_EXPORT ListApplicationsRequestPrivate : public KinesisAnalyticsPrivate {
+
+public:
+    ListApplicationsRequestPrivate(const KinesisAnalytics::Action action,
+                                   ListApplicationsRequest * const q);
+    ListApplicationsRequestPrivate(const ListApplicationsRequestPrivate &other,
+                                   ListApplicationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListApplicationsRequest)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

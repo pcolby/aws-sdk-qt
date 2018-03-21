@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECHAPCREDENTIALSREQUEST_P_H
 #define QTAWS_DESCRIBECHAPCREDENTIALSREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "describechapcredentialsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeChapCredentialsRequest;
+
+class QTAWS_EXPORT DescribeChapCredentialsRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DescribeChapCredentialsRequestPrivate(const StorageGateway::Action action,
+                                   DescribeChapCredentialsRequest * const q);
+    DescribeChapCredentialsRequestPrivate(const DescribeChapCredentialsRequestPrivate &other,
+                                   DescribeChapCredentialsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeChapCredentialsRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

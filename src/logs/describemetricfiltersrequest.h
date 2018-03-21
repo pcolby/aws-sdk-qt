@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMETRICFILTERSREQUEST_H
 #define QTAWS_DESCRIBEMETRICFILTERSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeMetricFiltersRequestPrivate;
+
+class QTAWS_EXPORT DescribeMetricFiltersRequest : public CloudWatchLogsRequest {
+
+public:
+    DescribeMetricFiltersRequest(const DescribeMetricFiltersRequest &other);
+    DescribeMetricFiltersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMetricFiltersRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETPASSWORDREQUEST_H
 #define QTAWS_RESETPASSWORDREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ResetPasswordRequestPrivate;
+
+class QTAWS_EXPORT ResetPasswordRequest : public WorkMailRequest {
+
+public:
+    ResetPasswordRequest(const ResetPasswordRequest &other);
+    ResetPasswordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetPasswordRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

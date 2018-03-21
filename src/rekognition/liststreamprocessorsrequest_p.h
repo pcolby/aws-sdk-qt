@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTREAMPROCESSORSREQUEST_P_H
 #define QTAWS_LISTSTREAMPROCESSORSREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "liststreamprocessorsrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class ListStreamProcessorsRequest;
+
+class QTAWS_EXPORT ListStreamProcessorsRequestPrivate : public RekognitionPrivate {
+
+public:
+    ListStreamProcessorsRequestPrivate(const Rekognition::Action action,
+                                   ListStreamProcessorsRequest * const q);
+    ListStreamProcessorsRequestPrivate(const ListStreamProcessorsRequestPrivate &other,
+                                   ListStreamProcessorsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamProcessorsRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSREQUEST_H
 #define QTAWS_ADDTAGSREQUEST_H
 
+#include "elasticsearchservicerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class AddTagsRequestPrivate;
+
+class QTAWS_EXPORT AddTagsRequest : public ElasticsearchServiceRequest {
+
+public:
+    AddTagsRequest(const AddTagsRequest &other);
+    AddTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsRequest)
+
+}
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

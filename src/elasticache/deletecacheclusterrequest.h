@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECACHECLUSTERREQUEST_H
 #define QTAWS_DELETECACHECLUSTERREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteCacheClusterRequestPrivate;
+
+class QTAWS_EXPORT DeleteCacheClusterRequest : public ElastiCacheRequest {
+
+public:
+    DeleteCacheClusterRequest(const DeleteCacheClusterRequest &other);
+    DeleteCacheClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCacheClusterRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

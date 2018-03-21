@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYREQUEST_P_H
 #define QTAWS_PUTPERMISSIONPOLICYREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "putpermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class PutPermissionPolicyRequest;
+
+class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    PutPermissionPolicyRequestPrivate(const WAFRegional::Action action,
+                                   PutPermissionPolicyRequest * const q);
+    PutPermissionPolicyRequestPrivate(const PutPermissionPolicyRequestPrivate &other,
+                                   PutPermissionPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutPermissionPolicyRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

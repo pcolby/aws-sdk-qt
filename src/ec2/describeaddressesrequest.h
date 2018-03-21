@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEADDRESSESREQUEST_H
 #define QTAWS_DESCRIBEADDRESSESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAddressesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAddressesRequest : public EC2Request {
+
+public:
+    DescribeAddressesRequest(const DescribeAddressesRequest &other);
+    DescribeAddressesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAddressesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

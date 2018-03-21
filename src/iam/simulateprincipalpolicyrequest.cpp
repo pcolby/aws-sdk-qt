@@ -19,3 +19,107 @@
 
 #include "simulateprincipalpolicyrequest.h"
 #include "simulateprincipalpolicyrequest_p.h"
+#include "simulateprincipalpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  SimulatePrincipalPolicyRequest
+ *
+ * @brief  Implements IAM SimulatePrincipalPolicy requests.
+ *
+ * @see    IAMClient::simulatePrincipalPolicy
+ */
+
+/**
+ * @brief  Constructs a new SimulatePrincipalPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SimulatePrincipalPolicyResponse::SimulatePrincipalPolicyResponse(
+
+/**
+ * @brief  Constructs a new SimulatePrincipalPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest(const SimulatePrincipalPolicyRequest &other)
+    : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SimulatePrincipalPolicyRequest object.
+ */
+SimulatePrincipalPolicyRequest::SimulatePrincipalPolicyRequest()
+    : IAMRequest(new SimulatePrincipalPolicyRequestPrivate(IAMRequest::SimulatePrincipalPolicyAction, this))
+{
+
+}
+
+bool SimulatePrincipalPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SimulatePrincipalPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SimulatePrincipalPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new SimulatePrincipalPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SimulatePrincipalPolicyRequestPrivate
+ *
+ * @brief  Private implementation for SimulatePrincipalPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SimulatePrincipalPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public SimulatePrincipalPolicyRequest instance.
+ */
+SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
+    const IAMRequest::Action action, SimulatePrincipalPolicyRequest * const q)
+    : SimulatePrincipalPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SimulatePrincipalPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SimulatePrincipalPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SimulatePrincipalPolicyRequest instance.
+ */
+SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
+    const SimulatePrincipalPolicyRequestPrivate &other, SimulatePrincipalPolicyRequest * const q)
+    : SimulatePrincipalPolicyPrivate(other, q)
+{
+
+}

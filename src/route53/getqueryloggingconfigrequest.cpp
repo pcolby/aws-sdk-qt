@@ -19,3 +19,107 @@
 
 #include "getqueryloggingconfigrequest.h"
 #include "getqueryloggingconfigrequest_p.h"
+#include "getqueryloggingconfigresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetQueryLoggingConfigRequest
+ *
+ * @brief  Implements Route53 GetQueryLoggingConfig requests.
+ *
+ * @see    Route53Client::getQueryLoggingConfig
+ */
+
+/**
+ * @brief  Constructs a new GetQueryLoggingConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueryLoggingConfigResponse::GetQueryLoggingConfigResponse(
+
+/**
+ * @brief  Constructs a new GetQueryLoggingConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest(const GetQueryLoggingConfigRequest &other)
+    : Route53Request(new GetQueryLoggingConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetQueryLoggingConfigRequest object.
+ */
+GetQueryLoggingConfigRequest::GetQueryLoggingConfigRequest()
+    : Route53Request(new GetQueryLoggingConfigRequestPrivate(Route53Request::GetQueryLoggingConfigAction, this))
+{
+
+}
+
+bool GetQueryLoggingConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetQueryLoggingConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetQueryLoggingConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetQueryLoggingConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new GetQueryLoggingConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueryLoggingConfigRequestPrivate
+ *
+ * @brief  Private implementation for GetQueryLoggingConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetQueryLoggingConfigRequest instance.
+ */
+GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
+    const Route53Request::Action action, GetQueryLoggingConfigRequest * const q)
+    : GetQueryLoggingConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryLoggingConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetQueryLoggingConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetQueryLoggingConfigRequest instance.
+ */
+GetQueryLoggingConfigRequestPrivate::GetQueryLoggingConfigRequestPrivate(
+    const GetQueryLoggingConfigRequestPrivate &other, GetQueryLoggingConfigRequest * const q)
+    : GetQueryLoggingConfigPrivate(other, q)
+{
+
+}

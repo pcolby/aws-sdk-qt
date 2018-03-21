@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEINSTANCESREQUEST_H
 #define QTAWS_TERMINATEINSTANCESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class TerminateInstancesRequestPrivate;
+
+class QTAWS_EXPORT TerminateInstancesRequest : public EC2Request {
+
+public:
+    TerminateInstancesRequest(const TerminateInstancesRequest &other);
+    TerminateInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateInstancesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

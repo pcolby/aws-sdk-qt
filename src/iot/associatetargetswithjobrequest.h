@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATETARGETSWITHJOBREQUEST_H
 #define QTAWS_ASSOCIATETARGETSWITHJOBREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class AssociateTargetsWithJobRequestPrivate;
+
+class QTAWS_EXPORT AssociateTargetsWithJobRequest : public IoTRequest {
+
+public:
+    AssociateTargetsWithJobRequest(const AssociateTargetsWithJobRequest &other);
+    AssociateTargetsWithJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateTargetsWithJobRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESEGMENTREQUEST_H
 #define QTAWS_UPDATESEGMENTREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateSegmentRequestPrivate;
+
+class QTAWS_EXPORT UpdateSegmentRequest : public PinpointRequest {
+
+public:
+    UpdateSegmentRequest(const UpdateSegmentRequest &other);
+    UpdateSegmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSegmentRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

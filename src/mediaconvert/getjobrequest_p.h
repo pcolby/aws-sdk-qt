@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETJOBREQUEST_P_H
 #define QTAWS_GETJOBREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class GetJobRequest;
+
+class QTAWS_EXPORT GetJobRequestPrivate : public MediaConvertPrivate {
+
+public:
+    GetJobRequestPrivate(const MediaConvert::Action action,
+                                   GetJobRequest * const q);
+    GetJobRequestPrivate(const GetJobRequestPrivate &other,
+                                   GetJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

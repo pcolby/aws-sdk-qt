@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERTARGETSREQUEST_P_H
 #define QTAWS_DEREGISTERTARGETSREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "deregistertargetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DeregisterTargetsRequest;
+
+class QTAWS_EXPORT DeregisterTargetsRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DeregisterTargetsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DeregisterTargetsRequest * const q);
+    DeregisterTargetsRequestPrivate(const DeregisterTargetsRequestPrivate &other,
+                                   DeregisterTargetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterTargetsRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

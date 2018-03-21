@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETALARMSTATEREQUEST_H
 #define QTAWS_SETALARMSTATEREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class SetAlarmStateRequestPrivate;
+
+class QTAWS_EXPORT SetAlarmStateRequest : public CloudWatchRequest {
+
+public:
+    SetAlarmStateRequest(const SetAlarmStateRequest &other);
+    SetAlarmStateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetAlarmStateRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

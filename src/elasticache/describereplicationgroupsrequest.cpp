@@ -19,3 +19,107 @@
 
 #include "describereplicationgroupsrequest.h"
 #include "describereplicationgroupsrequest_p.h"
+#include "describereplicationgroupsresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeReplicationGroupsRequest
+ *
+ * @brief  Implements ElastiCache DescribeReplicationGroups requests.
+ *
+ * @see    ElastiCacheClient::describeReplicationGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeReplicationGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationGroupsResponse::DescribeReplicationGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeReplicationGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest(const DescribeReplicationGroupsRequest &other)
+    : ElastiCacheRequest(new DescribeReplicationGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReplicationGroupsRequest object.
+ */
+DescribeReplicationGroupsRequest::DescribeReplicationGroupsRequest()
+    : ElastiCacheRequest(new DescribeReplicationGroupsRequestPrivate(ElastiCacheRequest::DescribeReplicationGroupsAction, this))
+{
+
+}
+
+bool DescribeReplicationGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReplicationGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReplicationGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReplicationGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReplicationGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public DescribeReplicationGroupsRequest instance.
+ */
+DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
+    const ElastiCacheRequest::Action action, DescribeReplicationGroupsRequest * const q)
+    : DescribeReplicationGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReplicationGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReplicationGroupsRequest instance.
+ */
+DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
+    const DescribeReplicationGroupsRequestPrivate &other, DescribeReplicationGroupsRequest * const q)
+    : DescribeReplicationGroupsPrivate(other, q)
+{
+
+}

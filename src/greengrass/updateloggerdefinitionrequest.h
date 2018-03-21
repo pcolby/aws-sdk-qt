@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATELOGGERDEFINITIONREQUEST_H
 #define QTAWS_UPDATELOGGERDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateLoggerDefinitionRequestPrivate;
+
+class QTAWS_EXPORT UpdateLoggerDefinitionRequest : public GreengrassRequest {
+
+public:
+    UpdateLoggerDefinitionRequest(const UpdateLoggerDefinitionRequest &other);
+    UpdateLoggerDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLoggerDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

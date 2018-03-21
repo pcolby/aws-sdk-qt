@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETUSERATTRIBUTEVERIFICATIONCODEREQUEST_H
 #define QTAWS_GETUSERATTRIBUTEVERIFICATIONCODEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetUserAttributeVerificationCodeRequestPrivate;
+
+class QTAWS_EXPORT GetUserAttributeVerificationCodeRequest : public CognitoIdentityProviderRequest {
+
+public:
+    GetUserAttributeVerificationCodeRequest(const GetUserAttributeVerificationCodeRequest &other);
+    GetUserAttributeVerificationCodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetUserAttributeVerificationCodeRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_FAILOVERDBCLUSTERREQUEST_H
 #define QTAWS_FAILOVERDBCLUSTERREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class FailoverDBClusterRequestPrivate;
+
+class QTAWS_EXPORT FailoverDBClusterRequest : public RDSRequest {
+
+public:
+    FailoverDBClusterRequest(const FailoverDBClusterRequest &other);
+    FailoverDBClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(FailoverDBClusterRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

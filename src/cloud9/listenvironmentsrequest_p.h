@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTENVIRONMENTSREQUEST_P_H
 #define QTAWS_LISTENVIRONMENTSREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "listenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class ListEnvironmentsRequest;
+
+class QTAWS_EXPORT ListEnvironmentsRequestPrivate : public Cloud9Private {
+
+public:
+    ListEnvironmentsRequestPrivate(const Cloud9::Action action,
+                                   ListEnvironmentsRequest * const q);
+    ListEnvironmentsRequestPrivate(const ListEnvironmentsRequestPrivate &other,
+                                   ListEnvironmentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListEnvironmentsRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

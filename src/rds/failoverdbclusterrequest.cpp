@@ -19,3 +19,107 @@
 
 #include "failoverdbclusterrequest.h"
 #include "failoverdbclusterrequest_p.h"
+#include "failoverdbclusterresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  FailoverDBClusterRequest
+ *
+ * @brief  Implements RDS FailoverDBCluster requests.
+ *
+ * @see    RDSClient::failoverDBCluster
+ */
+
+/**
+ * @brief  Constructs a new FailoverDBClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+FailoverDBClusterResponse::FailoverDBClusterResponse(
+
+/**
+ * @brief  Constructs a new FailoverDBClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+FailoverDBClusterRequest::FailoverDBClusterRequest(const FailoverDBClusterRequest &other)
+    : RDSRequest(new FailoverDBClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new FailoverDBClusterRequest object.
+ */
+FailoverDBClusterRequest::FailoverDBClusterRequest()
+    : RDSRequest(new FailoverDBClusterRequestPrivate(RDSRequest::FailoverDBClusterAction, this))
+{
+
+}
+
+bool FailoverDBClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an FailoverDBClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An FailoverDBClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new FailoverDBClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  FailoverDBClusterRequestPrivate
+ *
+ * @brief  Private implementation for FailoverDBClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FailoverDBClusterRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public FailoverDBClusterRequest instance.
+ */
+FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
+    const RDSRequest::Action action, FailoverDBClusterRequest * const q)
+    : FailoverDBClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FailoverDBClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the FailoverDBClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public FailoverDBClusterRequest instance.
+ */
+FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
+    const FailoverDBClusterRequestPrivate &other, FailoverDBClusterRequest * const q)
+    : FailoverDBClusterPrivate(other, q)
+{
+
+}

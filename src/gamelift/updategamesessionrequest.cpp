@@ -19,3 +19,107 @@
 
 #include "updategamesessionrequest.h"
 #include "updategamesessionrequest_p.h"
+#include "updategamesessionresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateGameSessionRequest
+ *
+ * @brief  Implements GameLift UpdateGameSession requests.
+ *
+ * @see    GameLiftClient::updateGameSession
+ */
+
+/**
+ * @brief  Constructs a new UpdateGameSessionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateGameSessionResponse::UpdateGameSessionResponse(
+
+/**
+ * @brief  Constructs a new UpdateGameSessionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateGameSessionRequest::UpdateGameSessionRequest(const UpdateGameSessionRequest &other)
+    : GameLiftRequest(new UpdateGameSessionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateGameSessionRequest object.
+ */
+UpdateGameSessionRequest::UpdateGameSessionRequest()
+    : GameLiftRequest(new UpdateGameSessionRequestPrivate(GameLiftRequest::UpdateGameSessionAction, this))
+{
+
+}
+
+bool UpdateGameSessionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateGameSessionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateGameSessionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateGameSessionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateGameSessionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateGameSessionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateGameSessionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGameSessionRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateGameSessionRequest instance.
+ */
+UpdateGameSessionRequestPrivate::UpdateGameSessionRequestPrivate(
+    const GameLiftRequest::Action action, UpdateGameSessionRequest * const q)
+    : UpdateGameSessionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateGameSessionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateGameSessionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateGameSessionRequest instance.
+ */
+UpdateGameSessionRequestPrivate::UpdateGameSessionRequestPrivate(
+    const UpdateGameSessionRequestPrivate &other, UpdateGameSessionRequest * const q)
+    : UpdateGameSessionPrivate(other, q)
+{
+
+}

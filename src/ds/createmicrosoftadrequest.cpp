@@ -19,3 +19,107 @@
 
 #include "createmicrosoftadrequest.h"
 #include "createmicrosoftadrequest_p.h"
+#include "createmicrosoftadresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateMicrosoftADRequest
+ *
+ * @brief  Implements DirectoryService CreateMicrosoftAD requests.
+ *
+ * @see    DirectoryServiceClient::createMicrosoftAD
+ */
+
+/**
+ * @brief  Constructs a new CreateMicrosoftADResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMicrosoftADResponse::CreateMicrosoftADResponse(
+
+/**
+ * @brief  Constructs a new CreateMicrosoftADRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateMicrosoftADRequest::CreateMicrosoftADRequest(const CreateMicrosoftADRequest &other)
+    : DirectoryServiceRequest(new CreateMicrosoftADRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateMicrosoftADRequest object.
+ */
+CreateMicrosoftADRequest::CreateMicrosoftADRequest()
+    : DirectoryServiceRequest(new CreateMicrosoftADRequestPrivate(DirectoryServiceRequest::CreateMicrosoftADAction, this))
+{
+
+}
+
+bool CreateMicrosoftADRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateMicrosoftADResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateMicrosoftADResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateMicrosoftADResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMicrosoftADRequestPrivate
+ *
+ * @brief  Private implementation for CreateMicrosoftADRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMicrosoftADRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public CreateMicrosoftADRequest instance.
+ */
+CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
+    const DirectoryServiceRequest::Action action, CreateMicrosoftADRequest * const q)
+    : CreateMicrosoftADPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMicrosoftADRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateMicrosoftADRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateMicrosoftADRequest instance.
+ */
+CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
+    const CreateMicrosoftADRequestPrivate &other, CreateMicrosoftADRequest * const q)
+    : CreateMicrosoftADPrivate(other, q)
+{
+
+}

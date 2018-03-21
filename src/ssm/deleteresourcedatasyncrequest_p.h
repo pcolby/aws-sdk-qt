@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERESOURCEDATASYNCREQUEST_P_H
 #define QTAWS_DELETERESOURCEDATASYNCREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deleteresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteResourceDataSyncRequest;
+
+class QTAWS_EXPORT DeleteResourceDataSyncRequestPrivate : public SSMPrivate {
+
+public:
+    DeleteResourceDataSyncRequestPrivate(const SSM::Action action,
+                                   DeleteResourceDataSyncRequest * const q);
+    DeleteResourceDataSyncRequestPrivate(const DeleteResourceDataSyncRequestPrivate &other,
+                                   DeleteResourceDataSyncRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResourceDataSyncRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

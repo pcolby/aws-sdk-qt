@@ -19,3 +19,107 @@
 
 #include "describeidentityidformatrequest.h"
 #include "describeidentityidformatrequest_p.h"
+#include "describeidentityidformatresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeIdentityIdFormatRequest
+ *
+ * @brief  Implements EC2 DescribeIdentityIdFormat requests.
+ *
+ * @see    EC2Client::describeIdentityIdFormat
+ */
+
+/**
+ * @brief  Constructs a new DescribeIdentityIdFormatResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdentityIdFormatResponse::DescribeIdentityIdFormatResponse(
+
+/**
+ * @brief  Constructs a new DescribeIdentityIdFormatRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest(const DescribeIdentityIdFormatRequest &other)
+    : EC2Request(new DescribeIdentityIdFormatRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeIdentityIdFormatRequest object.
+ */
+DescribeIdentityIdFormatRequest::DescribeIdentityIdFormatRequest()
+    : EC2Request(new DescribeIdentityIdFormatRequestPrivate(EC2Request::DescribeIdentityIdFormatAction, this))
+{
+
+}
+
+bool DescribeIdentityIdFormatRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeIdentityIdFormatResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeIdentityIdFormatResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeIdentityIdFormatResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdentityIdFormatRequestPrivate
+ *
+ * @brief  Private implementation for DescribeIdentityIdFormatRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeIdentityIdFormatRequest instance.
+ */
+DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
+    const EC2Request::Action action, DescribeIdentityIdFormatRequest * const q)
+    : DescribeIdentityIdFormatPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityIdFormatRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeIdentityIdFormatRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeIdentityIdFormatRequest instance.
+ */
+DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
+    const DescribeIdentityIdFormatRequestPrivate &other, DescribeIdentityIdFormatRequest * const q)
+    : DescribeIdentityIdFormatPrivate(other, q)
+{
+
+}

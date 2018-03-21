@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describeeventcategoriesrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeEventCategoriesRequest;
+
+class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeEventCategoriesRequestPrivate(const Redshift::Action action,
+                                   DescribeEventCategoriesRequest * const q);
+    DescribeEventCategoriesRequestPrivate(const DescribeEventCategoriesRequestPrivate &other,
+                                   DescribeEventCategoriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventCategoriesRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

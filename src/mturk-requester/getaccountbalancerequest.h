@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETACCOUNTBALANCEREQUEST_H
 #define QTAWS_GETACCOUNTBALANCEREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetAccountBalanceRequestPrivate;
+
+class QTAWS_EXPORT GetAccountBalanceRequest : public MTurkRequest {
+
+public:
+    GetAccountBalanceRequest(const GetAccountBalanceRequest &other);
+    GetAccountBalanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountBalanceRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

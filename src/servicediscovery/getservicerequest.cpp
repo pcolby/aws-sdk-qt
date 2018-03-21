@@ -19,3 +19,107 @@
 
 #include "getservicerequest.h"
 #include "getservicerequest_p.h"
+#include "getserviceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetServiceRequest
+ *
+ * @brief  Implements ServiceDiscovery GetService requests.
+ *
+ * @see    ServiceDiscoveryClient::getService
+ */
+
+/**
+ * @brief  Constructs a new GetServiceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetServiceResponse::GetServiceResponse(
+
+/**
+ * @brief  Constructs a new GetServiceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetServiceRequest::GetServiceRequest(const GetServiceRequest &other)
+    : ServiceDiscoveryRequest(new GetServiceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetServiceRequest object.
+ */
+GetServiceRequest::GetServiceRequest()
+    : ServiceDiscoveryRequest(new GetServiceRequestPrivate(ServiceDiscoveryRequest::GetServiceAction, this))
+{
+
+}
+
+bool GetServiceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetServiceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetServiceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetServiceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetServiceRequestPrivate
+ *
+ * @brief  Private implementation for GetServiceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServiceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public GetServiceRequest instance.
+ */
+GetServiceRequestPrivate::GetServiceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, GetServiceRequest * const q)
+    : GetServicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServiceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetServiceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetServiceRequest instance.
+ */
+GetServiceRequestPrivate::GetServiceRequestPrivate(
+    const GetServiceRequestPrivate &other, GetServiceRequest * const q)
+    : GetServicePrivate(other, q)
+{
+
+}

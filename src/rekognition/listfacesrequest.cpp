@@ -19,3 +19,107 @@
 
 #include "listfacesrequest.h"
 #include "listfacesrequest_p.h"
+#include "listfacesresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  ListFacesRequest
+ *
+ * @brief  Implements Rekognition ListFaces requests.
+ *
+ * @see    RekognitionClient::listFaces
+ */
+
+/**
+ * @brief  Constructs a new ListFacesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFacesResponse::ListFacesResponse(
+
+/**
+ * @brief  Constructs a new ListFacesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListFacesRequest::ListFacesRequest(const ListFacesRequest &other)
+    : RekognitionRequest(new ListFacesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListFacesRequest object.
+ */
+ListFacesRequest::ListFacesRequest()
+    : RekognitionRequest(new ListFacesRequestPrivate(RekognitionRequest::ListFacesAction, this))
+{
+
+}
+
+bool ListFacesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListFacesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListFacesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * ListFacesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListFacesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFacesRequestPrivate
+ *
+ * @brief  Private implementation for ListFacesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFacesRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public ListFacesRequest instance.
+ */
+ListFacesRequestPrivate::ListFacesRequestPrivate(
+    const RekognitionRequest::Action action, ListFacesRequest * const q)
+    : ListFacesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFacesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListFacesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListFacesRequest instance.
+ */
+ListFacesRequestPrivate::ListFacesRequestPrivate(
+    const ListFacesRequestPrivate &other, ListFacesRequest * const q)
+    : ListFacesPrivate(other, q)
+{
+
+}

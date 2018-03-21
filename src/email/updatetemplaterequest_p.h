@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETEMPLATEREQUEST_P_H
 #define QTAWS_UPDATETEMPLATEREQUEST_P_H
 
+#include "ses_p.h"
+#include "updatetemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateTemplateRequest;
+
+class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SESPrivate {
+
+public:
+    UpdateTemplateRequestPrivate(const SES::Action action,
+                                   UpdateTemplateRequest * const q);
+    UpdateTemplateRequestPrivate(const UpdateTemplateRequestPrivate &other,
+                                   UpdateTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTemplateRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

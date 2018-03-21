@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPIPELINEEXECUTIONSREQUEST_H
 #define QTAWS_LISTPIPELINEEXECUTIONSREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class ListPipelineExecutionsRequestPrivate;
+
+class QTAWS_EXPORT ListPipelineExecutionsRequest : public CodePipelineRequest {
+
+public:
+    ListPipelineExecutionsRequest(const ListPipelineExecutionsRequest &other);
+    ListPipelineExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPipelineExecutionsRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

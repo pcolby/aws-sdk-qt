@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELEXPORTTASKREQUEST_P_H
 #define QTAWS_CANCELEXPORTTASKREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "cancelexporttaskrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class CancelExportTaskRequest;
+
+class QTAWS_EXPORT CancelExportTaskRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    CancelExportTaskRequestPrivate(const CloudWatchLogs::Action action,
+                                   CancelExportTaskRequest * const q);
+    CancelExportTaskRequestPrivate(const CancelExportTaskRequestPrivate &other,
+                                   CancelExportTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelExportTaskRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFLEETCAPACITYREQUEST_H
 #define QTAWS_DESCRIBEFLEETCAPACITYREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetCapacityRequestPrivate;
+
+class QTAWS_EXPORT DescribeFleetCapacityRequest : public GameLiftRequest {
+
+public:
+    DescribeFleetCapacityRequest(const DescribeFleetCapacityRequest &other);
+    DescribeFleetCapacityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFleetCapacityRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

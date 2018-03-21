@@ -19,3 +19,107 @@
 
 #include "setloadbalancerpoliciesforbackendserverrequest.h"
 #include "setloadbalancerpoliciesforbackendserverrequest_p.h"
+#include "setloadbalancerpoliciesforbackendserverresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  SetLoadBalancerPoliciesForBackendServerRequest
+ *
+ * @brief  Implements ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer requests.
+ *
+ * @see    ElasticLoadBalancingClient::setLoadBalancerPoliciesForBackendServer
+ */
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBalancerPoliciesForBackendServerResponse::SetLoadBalancerPoliciesForBackendServerResponse(
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetLoadBalancerPoliciesForBackendServerRequest::SetLoadBalancerPoliciesForBackendServerRequest(const SetLoadBalancerPoliciesForBackendServerRequest &other)
+    : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesForBackendServerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequest object.
+ */
+SetLoadBalancerPoliciesForBackendServerRequest::SetLoadBalancerPoliciesForBackendServerRequest()
+    : ElasticLoadBalancingRequest(new SetLoadBalancerPoliciesForBackendServerRequestPrivate(ElasticLoadBalancingRequest::SetLoadBalancerPoliciesForBackendServerAction, this))
+{
+
+}
+
+bool SetLoadBalancerPoliciesForBackendServerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetLoadBalancerPoliciesForBackendServerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetLoadBalancerPoliciesForBackendServerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerRequest::response(QNetworkReply * const reply) const
+{
+    return new SetLoadBalancerPoliciesForBackendServerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBalancerPoliciesForBackendServerRequestPrivate
+ *
+ * @brief  Private implementation for SetLoadBalancerPoliciesForBackendServerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public SetLoadBalancerPoliciesForBackendServerRequest instance.
+ */
+SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesForBackendServerRequest * const q)
+    : SetLoadBalancerPoliciesForBackendServerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetLoadBalancerPoliciesForBackendServerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetLoadBalancerPoliciesForBackendServerRequest instance.
+ */
+SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
+    const SetLoadBalancerPoliciesForBackendServerRequestPrivate &other, SetLoadBalancerPoliciesForBackendServerRequest * const q)
+    : SetLoadBalancerPoliciesForBackendServerPrivate(other, q)
+{
+
+}

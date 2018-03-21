@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPREQUEST_H
 #define QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class TerminateInstanceInAutoScalingGroupRequestPrivate;
+
+class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupRequest : public AutoScalingRequest {
+
+public:
+    TerminateInstanceInAutoScalingGroupRequest(const TerminateInstanceInAutoScalingGroupRequest &other);
+    TerminateInstanceInAutoScalingGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateInstanceInAutoScalingGroupRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

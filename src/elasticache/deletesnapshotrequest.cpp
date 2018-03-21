@@ -19,3 +19,107 @@
 
 #include "deletesnapshotrequest.h"
 #include "deletesnapshotrequest_p.h"
+#include "deletesnapshotresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteSnapshotRequest
+ *
+ * @brief  Implements ElastiCache DeleteSnapshot requests.
+ *
+ * @see    ElastiCacheClient::deleteSnapshot
+ */
+
+/**
+ * @brief  Constructs a new DeleteSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSnapshotResponse::DeleteSnapshotResponse(
+
+/**
+ * @brief  Constructs a new DeleteSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest &other)
+    : ElastiCacheRequest(new DeleteSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSnapshotRequest object.
+ */
+DeleteSnapshotRequest::DeleteSnapshotRequest()
+    : ElastiCacheRequest(new DeleteSnapshotRequestPrivate(ElastiCacheRequest::DeleteSnapshotAction, this))
+{
+
+}
+
+bool DeleteSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public DeleteSnapshotRequest instance.
+ */
+DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
+    const ElastiCacheRequest::Action action, DeleteSnapshotRequest * const q)
+    : DeleteSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSnapshotRequest instance.
+ */
+DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
+    const DeleteSnapshotRequestPrivate &other, DeleteSnapshotRequest * const q)
+    : DeleteSnapshotPrivate(other, q)
+{
+
+}

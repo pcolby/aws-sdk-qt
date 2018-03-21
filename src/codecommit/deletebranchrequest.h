@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBRANCHREQUEST_H
 #define QTAWS_DELETEBRANCHREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DeleteBranchRequestPrivate;
+
+class QTAWS_EXPORT DeleteBranchRequest : public CodeCommitRequest {
+
+public:
+    DeleteBranchRequest(const DeleteBranchRequest &other);
+    DeleteBranchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBranchRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

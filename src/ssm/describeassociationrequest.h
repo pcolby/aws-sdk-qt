@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEASSOCIATIONREQUEST_H
 #define QTAWS_DESCRIBEASSOCIATIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAssociationRequestPrivate;
+
+class QTAWS_EXPORT DescribeAssociationRequest : public SSMRequest {
+
+public:
+    DescribeAssociationRequest(const DescribeAssociationRequest &other);
+    DescribeAssociationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAssociationRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

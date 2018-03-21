@@ -19,3 +19,107 @@
 
 #include "describetrustedadvisorcheckresultrequest.h"
 #include "describetrustedadvisorcheckresultrequest_p.h"
+#include "describetrustedadvisorcheckresultresponse.h"
+#include "supportrequest_p.h"
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeTrustedAdvisorCheckResultRequest
+ *
+ * @brief  Implements Support DescribeTrustedAdvisorCheckResult requests.
+ *
+ * @see    SupportClient::describeTrustedAdvisorCheckResult
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckResultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustedAdvisorCheckResultResponse::DescribeTrustedAdvisorCheckResultResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckResultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrustedAdvisorCheckResultRequest::DescribeTrustedAdvisorCheckResultRequest(const DescribeTrustedAdvisorCheckResultRequest &other)
+    : SupportRequest(new DescribeTrustedAdvisorCheckResultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckResultRequest object.
+ */
+DescribeTrustedAdvisorCheckResultRequest::DescribeTrustedAdvisorCheckResultRequest()
+    : SupportRequest(new DescribeTrustedAdvisorCheckResultRequestPrivate(SupportRequest::DescribeTrustedAdvisorCheckResultAction, this))
+{
+
+}
+
+bool DescribeTrustedAdvisorCheckResultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrustedAdvisorCheckResultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrustedAdvisorCheckResultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SupportClient::send
+ */
+AwsAbstractResponse * DescribeTrustedAdvisorCheckResultRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrustedAdvisorCheckResultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustedAdvisorCheckResultRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrustedAdvisorCheckResultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckResultRequestPrivate object.
+ *
+ * @param  action  Support action being performed.
+ * @param  q       Pointer to this object's public DescribeTrustedAdvisorCheckResultRequest instance.
+ */
+DescribeTrustedAdvisorCheckResultRequestPrivate::DescribeTrustedAdvisorCheckResultRequestPrivate(
+    const SupportRequest::Action action, DescribeTrustedAdvisorCheckResultRequest * const q)
+    : DescribeTrustedAdvisorCheckResultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckResultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrustedAdvisorCheckResultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrustedAdvisorCheckResultRequest instance.
+ */
+DescribeTrustedAdvisorCheckResultRequestPrivate::DescribeTrustedAdvisorCheckResultRequestPrivate(
+    const DescribeTrustedAdvisorCheckResultRequestPrivate &other, DescribeTrustedAdvisorCheckResultRequest * const q)
+    : DescribeTrustedAdvisorCheckResultPrivate(other, q)
+{
+
+}

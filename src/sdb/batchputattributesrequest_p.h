@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHPUTATTRIBUTESREQUEST_P_H
 #define QTAWS_BATCHPUTATTRIBUTESREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "batchputattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class BatchPutAttributesRequest;
+
+class QTAWS_EXPORT BatchPutAttributesRequestPrivate : public SimpleDBPrivate {
+
+public:
+    BatchPutAttributesRequestPrivate(const SimpleDB::Action action,
+                                   BatchPutAttributesRequest * const q);
+    BatchPutAttributesRequestPrivate(const BatchPutAttributesRequestPrivate &other,
+                                   BatchPutAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchPutAttributesRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

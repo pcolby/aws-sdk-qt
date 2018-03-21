@@ -19,3 +19,107 @@
 
 #include "getcloudfrontoriginaccessidentityrequest.h"
 #include "getcloudfrontoriginaccessidentityrequest_p.h"
+#include "getcloudfrontoriginaccessidentityresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetCloudFrontOriginAccessIdentityRequest
+ *
+ * @brief  Implements CloudFront GetCloudFrontOriginAccessIdentity requests.
+ *
+ * @see    CloudFrontClient::getCloudFrontOriginAccessIdentity
+ */
+
+/**
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCloudFrontOriginAccessIdentityResponse::GetCloudFrontOriginAccessIdentityResponse(
+
+/**
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCloudFrontOriginAccessIdentityRequest::GetCloudFrontOriginAccessIdentityRequest(const GetCloudFrontOriginAccessIdentityRequest &other)
+    : CloudFrontRequest(new GetCloudFrontOriginAccessIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityRequest object.
+ */
+GetCloudFrontOriginAccessIdentityRequest::GetCloudFrontOriginAccessIdentityRequest()
+    : CloudFrontRequest(new GetCloudFrontOriginAccessIdentityRequestPrivate(CloudFrontRequest::GetCloudFrontOriginAccessIdentityAction, this))
+{
+
+}
+
+bool GetCloudFrontOriginAccessIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCloudFrontOriginAccessIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * GetCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCloudFrontOriginAccessIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCloudFrontOriginAccessIdentityRequestPrivate
+ *
+ * @brief  Private implementation for GetCloudFrontOriginAccessIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public GetCloudFrontOriginAccessIdentityRequest instance.
+ */
+GetCloudFrontOriginAccessIdentityRequestPrivate::GetCloudFrontOriginAccessIdentityRequestPrivate(
+    const CloudFrontRequest::Action action, GetCloudFrontOriginAccessIdentityRequest * const q)
+    : GetCloudFrontOriginAccessIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCloudFrontOriginAccessIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCloudFrontOriginAccessIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCloudFrontOriginAccessIdentityRequest instance.
+ */
+GetCloudFrontOriginAccessIdentityRequestPrivate::GetCloudFrontOriginAccessIdentityRequestPrivate(
+    const GetCloudFrontOriginAccessIdentityRequestPrivate &other, GetCloudFrontOriginAccessIdentityRequest * const q)
+    : GetCloudFrontOriginAccessIdentityPrivate(other, q)
+{
+
+}

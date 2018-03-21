@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERATEBASEDRULEREQUEST_P_H
 #define QTAWS_CREATERATEBASEDRULEREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "createratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRateBasedRuleRequest;
+
+class QTAWS_EXPORT CreateRateBasedRuleRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    CreateRateBasedRuleRequestPrivate(const WAFRegional::Action action,
+                                   CreateRateBasedRuleRequest * const q);
+    CreateRateBasedRuleRequestPrivate(const CreateRateBasedRuleRequestPrivate &other,
+                                   CreateRateBasedRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRateBasedRuleRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

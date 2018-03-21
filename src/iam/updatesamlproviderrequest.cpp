@@ -19,3 +19,107 @@
 
 #include "updatesamlproviderrequest.h"
 #include "updatesamlproviderrequest_p.h"
+#include "updatesamlproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateSAMLProviderRequest
+ *
+ * @brief  Implements IAM UpdateSAMLProvider requests.
+ *
+ * @see    IAMClient::updateSAMLProvider
+ */
+
+/**
+ * @brief  Constructs a new UpdateSAMLProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
+
+/**
+ * @brief  Constructs a new UpdateSAMLProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSAMLProviderRequest::UpdateSAMLProviderRequest(const UpdateSAMLProviderRequest &other)
+    : IAMRequest(new UpdateSAMLProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSAMLProviderRequest object.
+ */
+UpdateSAMLProviderRequest::UpdateSAMLProviderRequest()
+    : IAMRequest(new UpdateSAMLProviderRequestPrivate(IAMRequest::UpdateSAMLProviderAction, this))
+{
+
+}
+
+bool UpdateSAMLProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSAMLProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSAMLProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateSAMLProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSAMLProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSAMLProviderRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSAMLProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSAMLProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateSAMLProviderRequest instance.
+ */
+UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
+    const IAMRequest::Action action, UpdateSAMLProviderRequest * const q)
+    : UpdateSAMLProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSAMLProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSAMLProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSAMLProviderRequest instance.
+ */
+UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
+    const UpdateSAMLProviderRequestPrivate &other, UpdateSAMLProviderRequest * const q)
+    : UpdateSAMLProviderPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELOGGERDEFINITIONREQUEST_H
 #define QTAWS_DELETELOGGERDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteLoggerDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteLoggerDefinitionRequest : public GreengrassRequest {
+
+public:
+    DeleteLoggerDefinitionRequest(const DeleteLoggerDefinitionRequest &other);
+    DeleteLoggerDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLoggerDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

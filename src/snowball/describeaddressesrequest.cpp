@@ -19,3 +19,107 @@
 
 #include "describeaddressesrequest.h"
 #include "describeaddressesrequest_p.h"
+#include "describeaddressesresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  DescribeAddressesRequest
+ *
+ * @brief  Implements Snowball DescribeAddresses requests.
+ *
+ * @see    SnowballClient::describeAddresses
+ */
+
+/**
+ * @brief  Constructs a new DescribeAddressesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAddressesResponse::DescribeAddressesResponse(
+
+/**
+ * @brief  Constructs a new DescribeAddressesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAddressesRequest::DescribeAddressesRequest(const DescribeAddressesRequest &other)
+    : SnowballRequest(new DescribeAddressesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAddressesRequest object.
+ */
+DescribeAddressesRequest::DescribeAddressesRequest()
+    : SnowballRequest(new DescribeAddressesRequestPrivate(SnowballRequest::DescribeAddressesAction, this))
+{
+
+}
+
+bool DescribeAddressesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAddressesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAddressesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * DescribeAddressesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAddressesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAddressesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAddressesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAddressesRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public DescribeAddressesRequest instance.
+ */
+DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
+    const SnowballRequest::Action action, DescribeAddressesRequest * const q)
+    : DescribeAddressesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAddressesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAddressesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAddressesRequest instance.
+ */
+DescribeAddressesRequestPrivate::DescribeAddressesRequestPrivate(
+    const DescribeAddressesRequestPrivate &other, DescribeAddressesRequest * const q)
+    : DescribeAddressesPrivate(other, q)
+{
+
+}

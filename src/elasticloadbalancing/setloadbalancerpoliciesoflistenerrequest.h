@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESOFLISTENERREQUEST_H
 #define QTAWS_SETLOADBALANCERPOLICIESOFLISTENERREQUEST_H
 
+#include "elasticloadbalancingrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class SetLoadBalancerPoliciesOfListenerRequestPrivate;
+
+class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerRequest : public ElasticLoadBalancingRequest {
+
+public:
+    SetLoadBalancerPoliciesOfListenerRequest(const SetLoadBalancerPoliciesOfListenerRequest &other);
+    SetLoadBalancerPoliciesOfListenerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBalancerPoliciesOfListenerRequest)
+
+}
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

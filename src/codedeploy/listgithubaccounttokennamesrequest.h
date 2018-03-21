@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGITHUBACCOUNTTOKENNAMESREQUEST_H
 #define QTAWS_LISTGITHUBACCOUNTTOKENNAMESREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListGitHubAccountTokenNamesRequestPrivate;
+
+class QTAWS_EXPORT ListGitHubAccountTokenNamesRequest : public CodeDeployRequest {
+
+public:
+    ListGitHubAccountTokenNamesRequest(const ListGitHubAccountTokenNamesRequest &other);
+    ListGitHubAccountTokenNamesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGitHubAccountTokenNamesRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

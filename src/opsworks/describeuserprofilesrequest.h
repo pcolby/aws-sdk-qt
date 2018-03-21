@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEUSERPROFILESREQUEST_H
 #define QTAWS_DESCRIBEUSERPROFILESREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeUserProfilesRequestPrivate;
+
+class QTAWS_EXPORT DescribeUserProfilesRequest : public OpsWorksRequest {
+
+public:
+    DescribeUserProfilesRequest(const DescribeUserProfilesRequest &other);
+    DescribeUserProfilesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUserProfilesRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

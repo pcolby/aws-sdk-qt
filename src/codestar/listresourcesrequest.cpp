@@ -19,3 +19,107 @@
 
 #include "listresourcesrequest.h"
 #include "listresourcesrequest_p.h"
+#include "listresourcesresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  ListResourcesRequest
+ *
+ * @brief  Implements CodeStar ListResources requests.
+ *
+ * @see    CodeStarClient::listResources
+ */
+
+/**
+ * @brief  Constructs a new ListResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourcesResponse::ListResourcesResponse(
+
+/**
+ * @brief  Constructs a new ListResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourcesRequest::ListResourcesRequest(const ListResourcesRequest &other)
+    : CodeStarRequest(new ListResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourcesRequest object.
+ */
+ListResourcesRequest::ListResourcesRequest()
+    : CodeStarRequest(new ListResourcesRequestPrivate(CodeStarRequest::ListResourcesAction, this))
+{
+
+}
+
+bool ListResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourcesRequestPrivate
+ *
+ * @brief  Private implementation for ListResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourcesRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public ListResourcesRequest instance.
+ */
+ListResourcesRequestPrivate::ListResourcesRequestPrivate(
+    const CodeStarRequest::Action action, ListResourcesRequest * const q)
+    : ListResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourcesRequest instance.
+ */
+ListResourcesRequestPrivate::ListResourcesRequestPrivate(
+    const ListResourcesRequestPrivate &other, ListResourcesRequest * const q)
+    : ListResourcesPrivate(other, q)
+{
+
+}

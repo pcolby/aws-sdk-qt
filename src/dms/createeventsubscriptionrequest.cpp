@@ -19,3 +19,107 @@
 
 #include "createeventsubscriptionrequest.h"
 #include "createeventsubscriptionrequest_p.h"
+#include "createeventsubscriptionresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  CreateEventSubscriptionRequest
+ *
+ * @brief  Implements DatabaseMigrationService CreateEventSubscription requests.
+ *
+ * @see    DatabaseMigrationServiceClient::createEventSubscription
+ */
+
+/**
+ * @brief  Constructs a new CreateEventSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new CreateEventSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEventSubscriptionRequest::CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other)
+    : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEventSubscriptionRequest object.
+ */
+CreateEventSubscriptionRequest::CreateEventSubscriptionRequest()
+    : DatabaseMigrationServiceRequest(new CreateEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::CreateEventSubscriptionAction, this))
+{
+
+}
+
+bool CreateEventSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEventSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEventSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateEventSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEventSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for CreateEventSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public CreateEventSubscriptionRequest instance.
+ */
+CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, CreateEventSubscriptionRequest * const q)
+    : CreateEventSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEventSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEventSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEventSubscriptionRequest instance.
+ */
+CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
+    const CreateEventSubscriptionRequestPrivate &other, CreateEventSubscriptionRequest * const q)
+    : CreateEventSubscriptionPrivate(other, q)
+{
+
+}

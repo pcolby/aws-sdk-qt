@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPRINCIPALSFORPORTFOLIOREQUEST_H
 #define QTAWS_LISTPRINCIPALSFORPORTFOLIOREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListPrincipalsForPortfolioRequestPrivate;
+
+class QTAWS_EXPORT ListPrincipalsForPortfolioRequest : public ServiceCatalogRequest {
+
+public:
+    ListPrincipalsForPortfolioRequest(const ListPrincipalsForPortfolioRequest &other);
+    ListPrincipalsForPortfolioRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPrincipalsForPortfolioRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listclusterjobsrequest.h"
 #include "listclusterjobsrequest_p.h"
+#include "listclusterjobsresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  ListClusterJobsRequest
+ *
+ * @brief  Implements Snowball ListClusterJobs requests.
+ *
+ * @see    SnowballClient::listClusterJobs
+ */
+
+/**
+ * @brief  Constructs a new ListClusterJobsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListClusterJobsResponse::ListClusterJobsResponse(
+
+/**
+ * @brief  Constructs a new ListClusterJobsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListClusterJobsRequest::ListClusterJobsRequest(const ListClusterJobsRequest &other)
+    : SnowballRequest(new ListClusterJobsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListClusterJobsRequest object.
+ */
+ListClusterJobsRequest::ListClusterJobsRequest()
+    : SnowballRequest(new ListClusterJobsRequestPrivate(SnowballRequest::ListClusterJobsAction, this))
+{
+
+}
+
+bool ListClusterJobsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListClusterJobsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListClusterJobsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListClusterJobsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListClusterJobsRequestPrivate
+ *
+ * @brief  Private implementation for ListClusterJobsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClusterJobsRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public ListClusterJobsRequest instance.
+ */
+ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
+    const SnowballRequest::Action action, ListClusterJobsRequest * const q)
+    : ListClusterJobsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClusterJobsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListClusterJobsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListClusterJobsRequest instance.
+ */
+ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
+    const ListClusterJobsRequestPrivate &other, ListClusterJobsRequest * const q)
+    : ListClusterJobsPrivate(other, q)
+{
+
+}

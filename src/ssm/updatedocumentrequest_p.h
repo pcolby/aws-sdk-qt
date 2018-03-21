@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOCUMENTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTREQUEST_P_H
 
+#include "ssm_p.h"
+#include "updatedocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateDocumentRequest;
+
+class QTAWS_EXPORT UpdateDocumentRequestPrivate : public SSMPrivate {
+
+public:
+    UpdateDocumentRequestPrivate(const SSM::Action action,
+                                   UpdateDocumentRequest * const q);
+    UpdateDocumentRequestPrivate(const UpdateDocumentRequestPrivate &other,
+                                   UpdateDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

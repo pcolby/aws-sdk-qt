@@ -19,3 +19,107 @@
 
 #include "notifywhenuploadedrequest.h"
 #include "notifywhenuploadedrequest_p.h"
+#include "notifywhenuploadedresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  NotifyWhenUploadedRequest
+ *
+ * @brief  Implements StorageGateway NotifyWhenUploaded requests.
+ *
+ * @see    StorageGatewayClient::notifyWhenUploaded
+ */
+
+/**
+ * @brief  Constructs a new NotifyWhenUploadedResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
+
+/**
+ * @brief  Constructs a new NotifyWhenUploadedRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+NotifyWhenUploadedRequest::NotifyWhenUploadedRequest(const NotifyWhenUploadedRequest &other)
+    : StorageGatewayRequest(new NotifyWhenUploadedRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new NotifyWhenUploadedRequest object.
+ */
+NotifyWhenUploadedRequest::NotifyWhenUploadedRequest()
+    : StorageGatewayRequest(new NotifyWhenUploadedRequestPrivate(StorageGatewayRequest::NotifyWhenUploadedAction, this))
+{
+
+}
+
+bool NotifyWhenUploadedRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an NotifyWhenUploadedResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An NotifyWhenUploadedResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkReply * const reply) const
+{
+    return new NotifyWhenUploadedResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  NotifyWhenUploadedRequestPrivate
+ *
+ * @brief  Private implementation for NotifyWhenUploadedRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new NotifyWhenUploadedRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public NotifyWhenUploadedRequest instance.
+ */
+NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
+    const StorageGatewayRequest::Action action, NotifyWhenUploadedRequest * const q)
+    : NotifyWhenUploadedPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new NotifyWhenUploadedRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the NotifyWhenUploadedRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public NotifyWhenUploadedRequest instance.
+ */
+NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
+    const NotifyWhenUploadedRequestPrivate &other, NotifyWhenUploadedRequest * const q)
+    : NotifyWhenUploadedPrivate(other, q)
+{
+
+}

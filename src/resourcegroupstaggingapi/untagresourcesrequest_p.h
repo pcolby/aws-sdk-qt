@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGRESOURCESREQUEST_P_H
 #define QTAWS_UNTAGRESOURCESREQUEST_P_H
 
+#include "resourcegroupstaggingapi_p.h"
+#include "untagresourcesrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroupsTaggingAPI {
+
+class UntagResourcesRequest;
+
+class QTAWS_EXPORT UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIPrivate {
+
+public:
+    UntagResourcesRequestPrivate(const ResourceGroupsTaggingAPI::Action action,
+                                   UntagResourcesRequest * const q);
+    UntagResourcesRequestPrivate(const UntagResourcesRequestPrivate &other,
+                                   UntagResourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourcesRequest)
+
+};
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS
+
 #endif

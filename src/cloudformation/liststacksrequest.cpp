@@ -19,3 +19,107 @@
 
 #include "liststacksrequest.h"
 #include "liststacksrequest_p.h"
+#include "liststacksresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStacksRequest
+ *
+ * @brief  Implements CloudFormation ListStacks requests.
+ *
+ * @see    CloudFormationClient::listStacks
+ */
+
+/**
+ * @brief  Constructs a new ListStacksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStacksResponse::ListStacksResponse(
+
+/**
+ * @brief  Constructs a new ListStacksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListStacksRequest::ListStacksRequest(const ListStacksRequest &other)
+    : CloudFormationRequest(new ListStacksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListStacksRequest object.
+ */
+ListStacksRequest::ListStacksRequest()
+    : CloudFormationRequest(new ListStacksRequestPrivate(CloudFormationRequest::ListStacksAction, this))
+{
+
+}
+
+bool ListStacksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListStacksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListStacksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ListStacksRequest::response(QNetworkReply * const reply) const
+{
+    return new ListStacksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStacksRequestPrivate
+ *
+ * @brief  Private implementation for ListStacksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStacksRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ListStacksRequest instance.
+ */
+ListStacksRequestPrivate::ListStacksRequestPrivate(
+    const CloudFormationRequest::Action action, ListStacksRequest * const q)
+    : ListStacksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStacksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListStacksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListStacksRequest instance.
+ */
+ListStacksRequestPrivate::ListStacksRequestPrivate(
+    const ListStacksRequestPrivate &other, ListStacksRequest * const q)
+    : ListStacksPrivate(other, q)
+{
+
+}

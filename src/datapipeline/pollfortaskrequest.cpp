@@ -19,3 +19,107 @@
 
 #include "pollfortaskrequest.h"
 #include "pollfortaskrequest_p.h"
+#include "pollfortaskresponse.h"
+#include "datapipelinerequest_p.h"
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  PollForTaskRequest
+ *
+ * @brief  Implements DataPipeline PollForTask requests.
+ *
+ * @see    DataPipelineClient::pollForTask
+ */
+
+/**
+ * @brief  Constructs a new PollForTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForTaskResponse::PollForTaskResponse(
+
+/**
+ * @brief  Constructs a new PollForTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PollForTaskRequest::PollForTaskRequest(const PollForTaskRequest &other)
+    : DataPipelineRequest(new PollForTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PollForTaskRequest object.
+ */
+PollForTaskRequest::PollForTaskRequest()
+    : DataPipelineRequest(new PollForTaskRequestPrivate(DataPipelineRequest::PollForTaskAction, this))
+{
+
+}
+
+bool PollForTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PollForTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PollForTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DataPipelineClient::send
+ */
+AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new PollForTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForTaskRequestPrivate
+ *
+ * @brief  Private implementation for PollForTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForTaskRequestPrivate object.
+ *
+ * @param  action  DataPipeline action being performed.
+ * @param  q       Pointer to this object's public PollForTaskRequest instance.
+ */
+PollForTaskRequestPrivate::PollForTaskRequestPrivate(
+    const DataPipelineRequest::Action action, PollForTaskRequest * const q)
+    : PollForTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PollForTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PollForTaskRequest instance.
+ */
+PollForTaskRequestPrivate::PollForTaskRequestPrivate(
+    const PollForTaskRequestPrivate &other, PollForTaskRequest * const q)
+    : PollForTaskPrivate(other, q)
+{
+
+}

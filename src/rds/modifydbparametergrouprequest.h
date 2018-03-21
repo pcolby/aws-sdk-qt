@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYDBPARAMETERGROUPREQUEST_H
 #define QTAWS_MODIFYDBPARAMETERGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyDBParameterGroupRequest : public RDSRequest {
+
+public:
+    ModifyDBParameterGroupRequest(const ModifyDBParameterGroupRequest &other);
+    ModifyDBParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyDBParameterGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

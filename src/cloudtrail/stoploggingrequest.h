@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPLOGGINGREQUEST_H
 #define QTAWS_STOPLOGGINGREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class StopLoggingRequestPrivate;
+
+class QTAWS_EXPORT StopLoggingRequest : public CloudTrailRequest {
+
+public:
+    StopLoggingRequest(const StopLoggingRequest &other);
+    StopLoggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopLoggingRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

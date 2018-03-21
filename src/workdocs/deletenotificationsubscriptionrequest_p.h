@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENOTIFICATIONSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETENOTIFICATIONSUBSCRIPTIONREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deletenotificationsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteNotificationSubscriptionRequest;
+
+class QTAWS_EXPORT DeleteNotificationSubscriptionRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeleteNotificationSubscriptionRequestPrivate(const WorkDocs::Action action,
+                                   DeleteNotificationSubscriptionRequest * const q);
+    DeleteNotificationSubscriptionRequestPrivate(const DeleteNotificationSubscriptionRequestPrivate &other,
+                                   DeleteNotificationSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNotificationSubscriptionRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

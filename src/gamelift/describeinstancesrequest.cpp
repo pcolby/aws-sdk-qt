@@ -19,3 +19,107 @@
 
 #include "describeinstancesrequest.h"
 #include "describeinstancesrequest_p.h"
+#include "describeinstancesresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeInstancesRequest
+ *
+ * @brief  Implements GameLift DescribeInstances requests.
+ *
+ * @see    GameLiftClient::describeInstances
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancesResponse::DescribeInstancesResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstancesRequest::DescribeInstancesRequest(const DescribeInstancesRequest &other)
+    : GameLiftRequest(new DescribeInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstancesRequest object.
+ */
+DescribeInstancesRequest::DescribeInstancesRequest()
+    : GameLiftRequest(new DescribeInstancesRequestPrivate(GameLiftRequest::DescribeInstancesAction, this))
+{
+
+}
+
+bool DescribeInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancesRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribeInstancesRequest instance.
+ */
+DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
+    const GameLiftRequest::Action action, DescribeInstancesRequest * const q)
+    : DescribeInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstancesRequest instance.
+ */
+DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
+    const DescribeInstancesRequestPrivate &other, DescribeInstancesRequest * const q)
+    : DescribeInstancesPrivate(other, q)
+{
+
+}

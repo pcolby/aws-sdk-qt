@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTPARAMETERREQUEST_P_H
 #define QTAWS_PUTPARAMETERREQUEST_P_H
 
+#include "ssm_p.h"
+#include "putparameterrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutParameterRequest;
+
+class QTAWS_EXPORT PutParameterRequestPrivate : public SSMPrivate {
+
+public:
+    PutParameterRequestPrivate(const SSM::Action action,
+                                   PutParameterRequest * const q);
+    PutParameterRequestPrivate(const PutParameterRequestPrivate &other,
+                                   PutParameterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutParameterRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

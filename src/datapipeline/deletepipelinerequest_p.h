@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPIPELINEREQUEST_P_H
 #define QTAWS_DELETEPIPELINEREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "deletepipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class DeletePipelineRequest;
+
+class QTAWS_EXPORT DeletePipelineRequestPrivate : public DataPipelinePrivate {
+
+public:
+    DeletePipelineRequestPrivate(const DataPipeline::Action action,
+                                   DeletePipelineRequest * const q);
+    DeletePipelineRequestPrivate(const DeletePipelineRequestPrivate &other,
+                                   DeletePipelineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePipelineRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

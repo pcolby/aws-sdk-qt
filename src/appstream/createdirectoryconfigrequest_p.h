@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDIRECTORYCONFIGREQUEST_P_H
 #define QTAWS_CREATEDIRECTORYCONFIGREQUEST_P_H
 
+#include "appstream_p.h"
+#include "createdirectoryconfigrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateDirectoryConfigRequest;
+
+class QTAWS_EXPORT CreateDirectoryConfigRequestPrivate : public AppStreamPrivate {
+
+public:
+    CreateDirectoryConfigRequestPrivate(const AppStream::Action action,
+                                   CreateDirectoryConfigRequest * const q);
+    CreateDirectoryConfigRequestPrivate(const CreateDirectoryConfigRequestPrivate &other,
+                                   CreateDirectoryConfigRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDirectoryConfigRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

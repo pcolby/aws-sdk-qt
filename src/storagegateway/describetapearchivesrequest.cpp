@@ -19,3 +19,107 @@
 
 #include "describetapearchivesrequest.h"
 #include "describetapearchivesrequest_p.h"
+#include "describetapearchivesresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeTapeArchivesRequest
+ *
+ * @brief  Implements StorageGateway DescribeTapeArchives requests.
+ *
+ * @see    StorageGatewayClient::describeTapeArchives
+ */
+
+/**
+ * @brief  Constructs a new DescribeTapeArchivesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTapeArchivesResponse::DescribeTapeArchivesResponse(
+
+/**
+ * @brief  Constructs a new DescribeTapeArchivesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTapeArchivesRequest::DescribeTapeArchivesRequest(const DescribeTapeArchivesRequest &other)
+    : StorageGatewayRequest(new DescribeTapeArchivesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTapeArchivesRequest object.
+ */
+DescribeTapeArchivesRequest::DescribeTapeArchivesRequest()
+    : StorageGatewayRequest(new DescribeTapeArchivesRequestPrivate(StorageGatewayRequest::DescribeTapeArchivesAction, this))
+{
+
+}
+
+bool DescribeTapeArchivesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTapeArchivesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTapeArchivesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeTapeArchivesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTapeArchivesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTapeArchivesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTapeArchivesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTapeArchivesRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeTapeArchivesRequest instance.
+ */
+DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeTapeArchivesRequest * const q)
+    : DescribeTapeArchivesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTapeArchivesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTapeArchivesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTapeArchivesRequest instance.
+ */
+DescribeTapeArchivesRequestPrivate::DescribeTapeArchivesRequestPrivate(
+    const DescribeTapeArchivesRequestPrivate &other, DescribeTapeArchivesRequest * const q)
+    : DescribeTapeArchivesPrivate(other, q)
+{
+
+}

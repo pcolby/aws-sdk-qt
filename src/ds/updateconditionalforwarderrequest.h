@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONDITIONALFORWARDERREQUEST_H
 #define QTAWS_UPDATECONDITIONALFORWARDERREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateConditionalForwarderRequestPrivate;
+
+class QTAWS_EXPORT UpdateConditionalForwarderRequest : public DirectoryServiceRequest {
+
+public:
+    UpdateConditionalForwarderRequest(const UpdateConditionalForwarderRequest &other);
+    UpdateConditionalForwarderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConditionalForwarderRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

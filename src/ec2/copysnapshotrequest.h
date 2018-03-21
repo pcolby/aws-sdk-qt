@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYSNAPSHOTREQUEST_H
 #define QTAWS_COPYSNAPSHOTREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopySnapshotRequestPrivate;
+
+class QTAWS_EXPORT CopySnapshotRequest : public EC2Request {
+
+public:
+    CopySnapshotRequest(const CopySnapshotRequest &other);
+    CopySnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopySnapshotRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

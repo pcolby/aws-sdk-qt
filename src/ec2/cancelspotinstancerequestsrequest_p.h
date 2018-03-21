@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELSPOTINSTANCEREQUESTSREQUEST_P_H
 #define QTAWS_CANCELSPOTINSTANCEREQUESTSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "cancelspotinstancerequestsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelSpotInstanceRequestsRequest;
+
+class QTAWS_EXPORT CancelSpotInstanceRequestsRequestPrivate : public EC2Private {
+
+public:
+    CancelSpotInstanceRequestsRequestPrivate(const EC2::Action action,
+                                   CancelSpotInstanceRequestsRequest * const q);
+    CancelSpotInstanceRequestsRequestPrivate(const CancelSpotInstanceRequestsRequestPrivate &other,
+                                   CancelSpotInstanceRequestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelSpotInstanceRequestsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

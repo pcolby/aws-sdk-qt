@@ -19,3 +19,107 @@
 
 #include "listratebasedrulesrequest.h"
 #include "listratebasedrulesrequest_p.h"
+#include "listratebasedrulesresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListRateBasedRulesRequest
+ *
+ * @brief  Implements WAF ListRateBasedRules requests.
+ *
+ * @see    WAFClient::listRateBasedRules
+ */
+
+/**
+ * @brief  Constructs a new ListRateBasedRulesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRateBasedRulesResponse::ListRateBasedRulesResponse(
+
+/**
+ * @brief  Constructs a new ListRateBasedRulesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRateBasedRulesRequest::ListRateBasedRulesRequest(const ListRateBasedRulesRequest &other)
+    : WAFRequest(new ListRateBasedRulesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRateBasedRulesRequest object.
+ */
+ListRateBasedRulesRequest::ListRateBasedRulesRequest()
+    : WAFRequest(new ListRateBasedRulesRequestPrivate(WAFRequest::ListRateBasedRulesAction, this))
+{
+
+}
+
+bool ListRateBasedRulesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRateBasedRulesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRateBasedRulesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * ListRateBasedRulesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRateBasedRulesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRateBasedRulesRequestPrivate
+ *
+ * @brief  Private implementation for ListRateBasedRulesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRateBasedRulesRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public ListRateBasedRulesRequest instance.
+ */
+ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
+    const WAFRequest::Action action, ListRateBasedRulesRequest * const q)
+    : ListRateBasedRulesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRateBasedRulesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRateBasedRulesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRateBasedRulesRequest instance.
+ */
+ListRateBasedRulesRequestPrivate::ListRateBasedRulesRequestPrivate(
+    const ListRateBasedRulesRequestPrivate &other, ListRateBasedRulesRequest * const q)
+    : ListRateBasedRulesPrivate(other, q)
+{
+
+}

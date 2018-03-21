@@ -19,3 +19,107 @@
 
 #include "updatedocumentationpartrequest.h"
 #include "updatedocumentationpartrequest_p.h"
+#include "updatedocumentationpartresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateDocumentationPartRequest
+ *
+ * @brief  Implements APIGateway UpdateDocumentationPart requests.
+ *
+ * @see    APIGatewayClient::updateDocumentationPart
+ */
+
+/**
+ * @brief  Constructs a new UpdateDocumentationPartResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDocumentationPartResponse::UpdateDocumentationPartResponse(
+
+/**
+ * @brief  Constructs a new UpdateDocumentationPartRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDocumentationPartRequest::UpdateDocumentationPartRequest(const UpdateDocumentationPartRequest &other)
+    : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDocumentationPartRequest object.
+ */
+UpdateDocumentationPartRequest::UpdateDocumentationPartRequest()
+    : APIGatewayRequest(new UpdateDocumentationPartRequestPrivate(APIGatewayRequest::UpdateDocumentationPartAction, this))
+{
+
+}
+
+bool UpdateDocumentationPartRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDocumentationPartResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDocumentationPartResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDocumentationPartResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDocumentationPartRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDocumentationPartRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateDocumentationPartRequest instance.
+ */
+UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)
+    : UpdateDocumentationPartPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentationPartRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDocumentationPartRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDocumentationPartRequest instance.
+ */
+UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
+    const UpdateDocumentationPartRequestPrivate &other, UpdateDocumentationPartRequest * const q)
+    : UpdateDocumentationPartPrivate(other, q)
+{
+
+}

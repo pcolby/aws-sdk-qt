@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUSERPROFILEREQUEST_H
 #define QTAWS_DELETEUSERPROFILEREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DeleteUserProfileRequestPrivate;
+
+class QTAWS_EXPORT DeleteUserProfileRequest : public CodeStarRequest {
+
+public:
+    DeleteUserProfileRequest(const DeleteUserProfileRequest &other);
+    DeleteUserProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserProfileRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

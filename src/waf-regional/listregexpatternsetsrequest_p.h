@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 #define QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "listregexpatternsetsrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListRegexPatternSetsRequest;
+
+class QTAWS_EXPORT ListRegexPatternSetsRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    ListRegexPatternSetsRequestPrivate(const WAFRegional::Action action,
+                                   ListRegexPatternSetsRequest * const q);
+    ListRegexPatternSetsRequestPrivate(const ListRegexPatternSetsRequestPrivate &other,
+                                   ListRegexPatternSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRegexPatternSetsRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

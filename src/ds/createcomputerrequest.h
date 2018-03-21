@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECOMPUTERREQUEST_H
 #define QTAWS_CREATECOMPUTERREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateComputerRequestPrivate;
+
+class QTAWS_EXPORT CreateComputerRequest : public DirectoryServiceRequest {
+
+public:
+    CreateComputerRequest(const CreateComputerRequest &other);
+    CreateComputerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateComputerRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

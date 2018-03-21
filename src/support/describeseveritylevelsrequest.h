@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESEVERITYLEVELSREQUEST_H
 #define QTAWS_DESCRIBESEVERITYLEVELSREQUEST_H
 
+#include "supportrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeSeverityLevelsRequestPrivate;
+
+class QTAWS_EXPORT DescribeSeverityLevelsRequest : public SupportRequest {
+
+public:
+    DescribeSeverityLevelsRequest(const DescribeSeverityLevelsRequest &other);
+    DescribeSeverityLevelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSeverityLevelsRequest)
+
+}
+
+} // namespace Support
+} // namespace AWS
+
 #endif

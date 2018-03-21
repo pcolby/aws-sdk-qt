@@ -19,3 +19,107 @@
 
 #include "createstacksetrequest.h"
 #include "createstacksetrequest_p.h"
+#include "createstacksetresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CreateStackSetRequest
+ *
+ * @brief  Implements CloudFormation CreateStackSet requests.
+ *
+ * @see    CloudFormationClient::createStackSet
+ */
+
+/**
+ * @brief  Constructs a new CreateStackSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStackSetResponse::CreateStackSetResponse(
+
+/**
+ * @brief  Constructs a new CreateStackSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateStackSetRequest::CreateStackSetRequest(const CreateStackSetRequest &other)
+    : CloudFormationRequest(new CreateStackSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateStackSetRequest object.
+ */
+CreateStackSetRequest::CreateStackSetRequest()
+    : CloudFormationRequest(new CreateStackSetRequestPrivate(CloudFormationRequest::CreateStackSetAction, this))
+{
+
+}
+
+bool CreateStackSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateStackSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateStackSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * CreateStackSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateStackSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStackSetRequestPrivate
+ *
+ * @brief  Private implementation for CreateStackSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStackSetRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public CreateStackSetRequest instance.
+ */
+CreateStackSetRequestPrivate::CreateStackSetRequestPrivate(
+    const CloudFormationRequest::Action action, CreateStackSetRequest * const q)
+    : CreateStackSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStackSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateStackSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateStackSetRequest instance.
+ */
+CreateStackSetRequestPrivate::CreateStackSetRequestPrivate(
+    const CreateStackSetRequestPrivate &other, CreateStackSetRequest * const q)
+    : CreateStackSetPrivate(other, q)
+{
+
+}

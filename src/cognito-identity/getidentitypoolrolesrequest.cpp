@@ -19,3 +19,107 @@
 
 #include "getidentitypoolrolesrequest.h"
 #include "getidentitypoolrolesrequest_p.h"
+#include "getidentitypoolrolesresponse.h"
+#include "cognitoidentityrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  GetIdentityPoolRolesRequest
+ *
+ * @brief  Implements CognitoIdentity GetIdentityPoolRoles requests.
+ *
+ * @see    CognitoIdentityClient::getIdentityPoolRoles
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityPoolRolesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityPoolRolesResponse::GetIdentityPoolRolesResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityPoolRolesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityPoolRolesRequest::GetIdentityPoolRolesRequest(const GetIdentityPoolRolesRequest &other)
+    : CognitoIdentityRequest(new GetIdentityPoolRolesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityPoolRolesRequest object.
+ */
+GetIdentityPoolRolesRequest::GetIdentityPoolRolesRequest()
+    : CognitoIdentityRequest(new GetIdentityPoolRolesRequestPrivate(CognitoIdentityRequest::GetIdentityPoolRolesAction, this))
+{
+
+}
+
+bool GetIdentityPoolRolesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityPoolRolesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityPoolRolesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityClient::send
+ */
+AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityPoolRolesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityPoolRolesRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityPoolRolesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityPoolRolesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentity action being performed.
+ * @param  q       Pointer to this object's public GetIdentityPoolRolesRequest instance.
+ */
+GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
+    const CognitoIdentityRequest::Action action, GetIdentityPoolRolesRequest * const q)
+    : GetIdentityPoolRolesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityPoolRolesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityPoolRolesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityPoolRolesRequest instance.
+ */
+GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
+    const GetIdentityPoolRolesRequestPrivate &other, GetIdentityPoolRolesRequest * const q)
+    : GetIdentityPoolRolesPrivate(other, q)
+{
+
+}

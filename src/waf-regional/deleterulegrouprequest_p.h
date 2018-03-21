@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERULEGROUPREQUEST_P_H
 #define QTAWS_DELETERULEGROUPREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "deleterulegrouprequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteRuleGroupRequest;
+
+class QTAWS_EXPORT DeleteRuleGroupRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    DeleteRuleGroupRequestPrivate(const WAFRegional::Action action,
+                                   DeleteRuleGroupRequest * const q);
+    DeleteRuleGroupRequestPrivate(const DeleteRuleGroupRequestPrivate &other,
+                                   DeleteRuleGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRuleGroupRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

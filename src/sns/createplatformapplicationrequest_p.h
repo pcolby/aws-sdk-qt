@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPLATFORMAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEPLATFORMAPPLICATIONREQUEST_P_H
 
+#include "sns_p.h"
+#include "createplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreatePlatformApplicationRequest;
+
+class QTAWS_EXPORT CreatePlatformApplicationRequestPrivate : public SNSPrivate {
+
+public:
+    CreatePlatformApplicationRequestPrivate(const SNS::Action action,
+                                   CreatePlatformApplicationRequest * const q);
+    CreatePlatformApplicationRequestPrivate(const CreatePlatformApplicationRequestPrivate &other,
+                                   CreatePlatformApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePlatformApplicationRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

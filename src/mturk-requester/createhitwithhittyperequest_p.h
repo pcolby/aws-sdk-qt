@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEHITWITHHITTYPEREQUEST_P_H
 #define QTAWS_CREATEHITWITHHITTYPEREQUEST_P_H
 
+#include "mturk_p.h"
+#include "createhitwithhittyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateHITWithHITTypeRequest;
+
+class QTAWS_EXPORT CreateHITWithHITTypeRequestPrivate : public MTurkPrivate {
+
+public:
+    CreateHITWithHITTypeRequestPrivate(const MTurk::Action action,
+                                   CreateHITWithHITTypeRequest * const q);
+    CreateHITWithHITTypeRequestPrivate(const CreateHITWithHITTypeRequestPrivate &other,
+                                   CreateHITWithHITTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateHITWithHITTypeRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

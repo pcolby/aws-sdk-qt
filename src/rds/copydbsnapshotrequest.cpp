@@ -19,3 +19,107 @@
 
 #include "copydbsnapshotrequest.h"
 #include "copydbsnapshotrequest_p.h"
+#include "copydbsnapshotresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyDBSnapshotRequest
+ *
+ * @brief  Implements RDS CopyDBSnapshot requests.
+ *
+ * @see    RDSClient::copyDBSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CopyDBSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyDBSnapshotResponse::CopyDBSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CopyDBSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyDBSnapshotRequest::CopyDBSnapshotRequest(const CopyDBSnapshotRequest &other)
+    : RDSRequest(new CopyDBSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyDBSnapshotRequest object.
+ */
+CopyDBSnapshotRequest::CopyDBSnapshotRequest()
+    : RDSRequest(new CopyDBSnapshotRequestPrivate(RDSRequest::CopyDBSnapshotAction, this))
+{
+
+}
+
+bool CopyDBSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyDBSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyDBSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyDBSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyDBSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CopyDBSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBSnapshotRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CopyDBSnapshotRequest instance.
+ */
+CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
+    const RDSRequest::Action action, CopyDBSnapshotRequest * const q)
+    : CopyDBSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyDBSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyDBSnapshotRequest instance.
+ */
+CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
+    const CopyDBSnapshotRequestPrivate &other, CopyDBSnapshotRequest * const q)
+    : CopyDBSnapshotPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIDENTITYREQUEST_H
 #define QTAWS_DESCRIBEIDENTITYREQUEST_H
 
+#include "cognitoidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class DescribeIdentityRequestPrivate;
+
+class QTAWS_EXPORT DescribeIdentityRequest : public CognitoIdentityRequest {
+
+public:
+    DescribeIdentityRequest(const DescribeIdentityRequest &other);
+    DescribeIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdentityRequest)
+
+}
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

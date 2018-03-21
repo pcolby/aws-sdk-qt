@@ -19,3 +19,107 @@
 
 #include "getskillgrouprequest.h"
 #include "getskillgrouprequest_p.h"
+#include "getskillgroupresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetSkillGroupRequest
+ *
+ * @brief  Implements AlexaForBusiness GetSkillGroup requests.
+ *
+ * @see    AlexaForBusinessClient::getSkillGroup
+ */
+
+/**
+ * @brief  Constructs a new GetSkillGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSkillGroupResponse::GetSkillGroupResponse(
+
+/**
+ * @brief  Constructs a new GetSkillGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSkillGroupRequest::GetSkillGroupRequest(const GetSkillGroupRequest &other)
+    : AlexaForBusinessRequest(new GetSkillGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSkillGroupRequest object.
+ */
+GetSkillGroupRequest::GetSkillGroupRequest()
+    : AlexaForBusinessRequest(new GetSkillGroupRequestPrivate(AlexaForBusinessRequest::GetSkillGroupAction, this))
+{
+
+}
+
+bool GetSkillGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSkillGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSkillGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * GetSkillGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSkillGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSkillGroupRequestPrivate
+ *
+ * @brief  Private implementation for GetSkillGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSkillGroupRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public GetSkillGroupRequest instance.
+ */
+GetSkillGroupRequestPrivate::GetSkillGroupRequestPrivate(
+    const AlexaForBusinessRequest::Action action, GetSkillGroupRequest * const q)
+    : GetSkillGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSkillGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSkillGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSkillGroupRequest instance.
+ */
+GetSkillGroupRequestPrivate::GetSkillGroupRequestPrivate(
+    const GetSkillGroupRequestPrivate &other, GetSkillGroupRequest * const q)
+    : GetSkillGroupPrivate(other, q)
+{
+
+}

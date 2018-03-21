@@ -19,3 +19,107 @@
 
 #include "deleteintentversionrequest.h"
 #include "deleteintentversionrequest_p.h"
+#include "deleteintentversionresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteIntentVersionRequest
+ *
+ * @brief  Implements LexModelBuildingService DeleteIntentVersion requests.
+ *
+ * @see    LexModelBuildingServiceClient::deleteIntentVersion
+ */
+
+/**
+ * @brief  Constructs a new DeleteIntentVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIntentVersionResponse::DeleteIntentVersionResponse(
+
+/**
+ * @brief  Constructs a new DeleteIntentVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIntentVersionRequest::DeleteIntentVersionRequest(const DeleteIntentVersionRequest &other)
+    : LexModelBuildingServiceRequest(new DeleteIntentVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIntentVersionRequest object.
+ */
+DeleteIntentVersionRequest::DeleteIntentVersionRequest()
+    : LexModelBuildingServiceRequest(new DeleteIntentVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteIntentVersionAction, this))
+{
+
+}
+
+bool DeleteIntentVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIntentVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIntentVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * DeleteIntentVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIntentVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIntentVersionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIntentVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntentVersionRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public DeleteIntentVersionRequest instance.
+ */
+DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, DeleteIntentVersionRequest * const q)
+    : DeleteIntentVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntentVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIntentVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIntentVersionRequest instance.
+ */
+DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
+    const DeleteIntentVersionRequestPrivate &other, DeleteIntentVersionRequest * const q)
+    : DeleteIntentVersionPrivate(other, q)
+{
+
+}

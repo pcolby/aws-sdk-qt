@@ -19,3 +19,107 @@
 
 #include "listpresetsrequest.h"
 #include "listpresetsrequest_p.h"
+#include "listpresetsresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  ListPresetsRequest
+ *
+ * @brief  Implements MediaConvert ListPresets requests.
+ *
+ * @see    MediaConvertClient::listPresets
+ */
+
+/**
+ * @brief  Constructs a new ListPresetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPresetsResponse::ListPresetsResponse(
+
+/**
+ * @brief  Constructs a new ListPresetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPresetsRequest::ListPresetsRequest(const ListPresetsRequest &other)
+    : MediaConvertRequest(new ListPresetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPresetsRequest object.
+ */
+ListPresetsRequest::ListPresetsRequest()
+    : MediaConvertRequest(new ListPresetsRequestPrivate(MediaConvertRequest::ListPresetsAction, this))
+{
+
+}
+
+bool ListPresetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPresetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPresetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * ListPresetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPresetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPresetsRequestPrivate
+ *
+ * @brief  Private implementation for ListPresetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPresetsRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public ListPresetsRequest instance.
+ */
+ListPresetsRequestPrivate::ListPresetsRequestPrivate(
+    const MediaConvertRequest::Action action, ListPresetsRequest * const q)
+    : ListPresetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPresetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPresetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPresetsRequest instance.
+ */
+ListPresetsRequestPrivate::ListPresetsRequestPrivate(
+    const ListPresetsRequestPrivate &other, ListPresetsRequest * const q)
+    : ListPresetsPrivate(other, q)
+{
+
+}

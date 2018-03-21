@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECOMMUNICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBECOMMUNICATIONSREQUEST_P_H
 
+#include "support_p.h"
+#include "describecommunicationsrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeCommunicationsRequest;
+
+class QTAWS_EXPORT DescribeCommunicationsRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeCommunicationsRequestPrivate(const Support::Action action,
+                                   DescribeCommunicationsRequest * const q);
+    DescribeCommunicationsRequestPrivate(const DescribeCommunicationsRequestPrivate &other,
+                                   DescribeCommunicationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCommunicationsRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

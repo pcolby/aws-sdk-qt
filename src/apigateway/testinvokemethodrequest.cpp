@@ -19,3 +19,107 @@
 
 #include "testinvokemethodrequest.h"
 #include "testinvokemethodrequest_p.h"
+#include "testinvokemethodresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  TestInvokeMethodRequest
+ *
+ * @brief  Implements APIGateway TestInvokeMethod requests.
+ *
+ * @see    APIGatewayClient::testInvokeMethod
+ */
+
+/**
+ * @brief  Constructs a new TestInvokeMethodResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestInvokeMethodResponse::TestInvokeMethodResponse(
+
+/**
+ * @brief  Constructs a new TestInvokeMethodRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TestInvokeMethodRequest::TestInvokeMethodRequest(const TestInvokeMethodRequest &other)
+    : APIGatewayRequest(new TestInvokeMethodRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TestInvokeMethodRequest object.
+ */
+TestInvokeMethodRequest::TestInvokeMethodRequest()
+    : APIGatewayRequest(new TestInvokeMethodRequestPrivate(APIGatewayRequest::TestInvokeMethodAction, this))
+{
+
+}
+
+bool TestInvokeMethodRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TestInvokeMethodResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TestInvokeMethodResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkReply * const reply) const
+{
+    return new TestInvokeMethodResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TestInvokeMethodRequestPrivate
+ *
+ * @brief  Private implementation for TestInvokeMethodRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestInvokeMethodRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public TestInvokeMethodRequest instance.
+ */
+TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
+    const APIGatewayRequest::Action action, TestInvokeMethodRequest * const q)
+    : TestInvokeMethodPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestInvokeMethodRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TestInvokeMethodRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TestInvokeMethodRequest instance.
+ */
+TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
+    const TestInvokeMethodRequestPrivate &other, TestInvokeMethodRequest * const q)
+    : TestInvokeMethodPrivate(other, q)
+{
+
+}

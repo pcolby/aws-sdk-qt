@@ -19,3 +19,107 @@
 
 #include "getcrawlermetricsrequest.h"
 #include "getcrawlermetricsrequest_p.h"
+#include "getcrawlermetricsresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetCrawlerMetricsRequest
+ *
+ * @brief  Implements Glue GetCrawlerMetrics requests.
+ *
+ * @see    GlueClient::getCrawlerMetrics
+ */
+
+/**
+ * @brief  Constructs a new GetCrawlerMetricsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCrawlerMetricsResponse::GetCrawlerMetricsResponse(
+
+/**
+ * @brief  Constructs a new GetCrawlerMetricsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCrawlerMetricsRequest::GetCrawlerMetricsRequest(const GetCrawlerMetricsRequest &other)
+    : GlueRequest(new GetCrawlerMetricsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCrawlerMetricsRequest object.
+ */
+GetCrawlerMetricsRequest::GetCrawlerMetricsRequest()
+    : GlueRequest(new GetCrawlerMetricsRequestPrivate(GlueRequest::GetCrawlerMetricsAction, this))
+{
+
+}
+
+bool GetCrawlerMetricsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCrawlerMetricsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCrawlerMetricsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetCrawlerMetricsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCrawlerMetricsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCrawlerMetricsRequestPrivate
+ *
+ * @brief  Private implementation for GetCrawlerMetricsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCrawlerMetricsRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetCrawlerMetricsRequest instance.
+ */
+GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
+    const GlueRequest::Action action, GetCrawlerMetricsRequest * const q)
+    : GetCrawlerMetricsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCrawlerMetricsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCrawlerMetricsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCrawlerMetricsRequest instance.
+ */
+GetCrawlerMetricsRequestPrivate::GetCrawlerMetricsRequestPrivate(
+    const GetCrawlerMetricsRequestPrivate &other, GetCrawlerMetricsRequest * const q)
+    : GetCrawlerMetricsPrivate(other, q)
+{
+
+}

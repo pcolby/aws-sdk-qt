@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBROKERREQUEST_H
 #define QTAWS_DESCRIBEBROKERREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeBrokerRequestPrivate;
+
+class QTAWS_EXPORT DescribeBrokerRequest : public MQRequest {
+
+public:
+    DescribeBrokerRequest(const DescribeBrokerRequest &other);
+    DescribeBrokerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBrokerRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

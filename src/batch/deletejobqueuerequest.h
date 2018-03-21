@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEJOBQUEUEREQUEST_H
 #define QTAWS_DELETEJOBQUEUEREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DeleteJobQueueRequestPrivate;
+
+class QTAWS_EXPORT DeleteJobQueueRequest : public BatchRequest {
+
+public:
+    DeleteJobQueueRequest(const DeleteJobQueueRequest &other);
+    DeleteJobQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteJobQueueRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

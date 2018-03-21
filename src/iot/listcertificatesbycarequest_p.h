@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCERTIFICATESBYCAREQUEST_P_H
 #define QTAWS_LISTCERTIFICATESBYCAREQUEST_P_H
 
+#include "iot_p.h"
+#include "listcertificatesbycarequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListCertificatesByCARequest;
+
+class QTAWS_EXPORT ListCertificatesByCARequestPrivate : public IoTPrivate {
+
+public:
+    ListCertificatesByCARequestPrivate(const IoT::Action action,
+                                   ListCertificatesByCARequest * const q);
+    ListCertificatesByCARequestPrivate(const ListCertificatesByCARequestPrivate &other,
+                                   ListCertificatesByCARequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListCertificatesByCARequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

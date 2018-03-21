@@ -19,3 +19,107 @@
 
 #include "describelifecyclehooksrequest.h"
 #include "describelifecyclehooksrequest_p.h"
+#include "describelifecyclehooksresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeLifecycleHooksRequest
+ *
+ * @brief  Implements AutoScaling DescribeLifecycleHooks requests.
+ *
+ * @see    AutoScalingClient::describeLifecycleHooks
+ */
+
+/**
+ * @brief  Constructs a new DescribeLifecycleHooksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLifecycleHooksResponse::DescribeLifecycleHooksResponse(
+
+/**
+ * @brief  Constructs a new DescribeLifecycleHooksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest(const DescribeLifecycleHooksRequest &other)
+    : AutoScalingRequest(new DescribeLifecycleHooksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLifecycleHooksRequest object.
+ */
+DescribeLifecycleHooksRequest::DescribeLifecycleHooksRequest()
+    : AutoScalingRequest(new DescribeLifecycleHooksRequestPrivate(AutoScalingRequest::DescribeLifecycleHooksAction, this))
+{
+
+}
+
+bool DescribeLifecycleHooksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLifecycleHooksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLifecycleHooksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLifecycleHooksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLifecycleHooksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLifecycleHooksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DescribeLifecycleHooksRequest instance.
+ */
+DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
+    const AutoScalingRequest::Action action, DescribeLifecycleHooksRequest * const q)
+    : DescribeLifecycleHooksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLifecycleHooksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLifecycleHooksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLifecycleHooksRequest instance.
+ */
+DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
+    const DescribeLifecycleHooksRequestPrivate &other, DescribeLifecycleHooksRequest * const q)
+    : DescribeLifecycleHooksPrivate(other, q)
+{
+
+}

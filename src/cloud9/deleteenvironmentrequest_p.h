@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENVIRONMENTREQUEST_P_H
 #define QTAWS_DELETEENVIRONMENTREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "deleteenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DeleteEnvironmentRequest;
+
+class QTAWS_EXPORT DeleteEnvironmentRequestPrivate : public Cloud9Private {
+
+public:
+    DeleteEnvironmentRequestPrivate(const Cloud9::Action action,
+                                   DeleteEnvironmentRequest * const q);
+    DeleteEnvironmentRequestPrivate(const DeleteEnvironmentRequestPrivate &other,
+                                   DeleteEnvironmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEnvironmentRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

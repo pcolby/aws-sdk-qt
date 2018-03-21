@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELIFECYCLEPOLICYREQUEST_H
 #define QTAWS_DELETELIFECYCLEPOLICYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DeleteLifecyclePolicyRequestPrivate;
+
+class QTAWS_EXPORT DeleteLifecyclePolicyRequest : public ECRRequest {
+
+public:
+    DeleteLifecyclePolicyRequest(const DeleteLifecyclePolicyRequest &other);
+    DeleteLifecyclePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLifecyclePolicyRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

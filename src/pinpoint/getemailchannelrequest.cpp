@@ -19,3 +19,107 @@
 
 #include "getemailchannelrequest.h"
 #include "getemailchannelrequest_p.h"
+#include "getemailchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetEmailChannelRequest
+ *
+ * @brief  Implements Pinpoint GetEmailChannel requests.
+ *
+ * @see    PinpointClient::getEmailChannel
+ */
+
+/**
+ * @brief  Constructs a new GetEmailChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEmailChannelResponse::GetEmailChannelResponse(
+
+/**
+ * @brief  Constructs a new GetEmailChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetEmailChannelRequest::GetEmailChannelRequest(const GetEmailChannelRequest &other)
+    : PinpointRequest(new GetEmailChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetEmailChannelRequest object.
+ */
+GetEmailChannelRequest::GetEmailChannelRequest()
+    : PinpointRequest(new GetEmailChannelRequestPrivate(PinpointRequest::GetEmailChannelAction, this))
+{
+
+}
+
+bool GetEmailChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetEmailChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetEmailChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new GetEmailChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEmailChannelRequestPrivate
+ *
+ * @brief  Private implementation for GetEmailChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEmailChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetEmailChannelRequest instance.
+ */
+GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
+    const PinpointRequest::Action action, GetEmailChannelRequest * const q)
+    : GetEmailChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEmailChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetEmailChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetEmailChannelRequest instance.
+ */
+GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
+    const GetEmailChannelRequestPrivate &other, GetEmailChannelRequest * const q)
+    : GetEmailChannelPrivate(other, q)
+{
+
+}

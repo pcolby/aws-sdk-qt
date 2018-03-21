@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEALARMSREQUEST_H
 #define QTAWS_DESCRIBEALARMSREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DescribeAlarmsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAlarmsRequest : public CloudWatchRequest {
+
+public:
+    DescribeAlarmsRequest(const DescribeAlarmsRequest &other);
+    DescribeAlarmsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAlarmsRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

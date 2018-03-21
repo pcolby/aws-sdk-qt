@@ -20,4 +20,29 @@
 #ifndef QTAWS_DECLINEINVITATIONSREQUEST_P_H
 #define QTAWS_DECLINEINVITATIONSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "declineinvitationsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeclineInvitationsRequest;
+
+class QTAWS_EXPORT DeclineInvitationsRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DeclineInvitationsRequestPrivate(const GuardDuty::Action action,
+                                   DeclineInvitationsRequest * const q);
+    DeclineInvitationsRequestPrivate(const DeclineInvitationsRequestPrivate &other,
+                                   DeclineInvitationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeclineInvitationsRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

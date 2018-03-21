@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
+#include "rds_p.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ListTagsForResourceRequest;
+
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public RDSPrivate {
+
+public:
+    ListTagsForResourceRequestPrivate(const RDS::Action action,
+                                   ListTagsForResourceRequest * const q);
+    ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
+                                   ListTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

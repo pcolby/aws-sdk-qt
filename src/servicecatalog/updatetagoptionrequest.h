@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETAGOPTIONREQUEST_H
 #define QTAWS_UPDATETAGOPTIONREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateTagOptionRequestPrivate;
+
+class QTAWS_EXPORT UpdateTagOptionRequest : public ServiceCatalogRequest {
+
+public:
+    UpdateTagOptionRequest(const UpdateTagOptionRequest &other);
+    UpdateTagOptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagOptionRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PROMOTEREADREPLICAREQUEST_H
 #define QTAWS_PROMOTEREADREPLICAREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PromoteReadReplicaRequestPrivate;
+
+class QTAWS_EXPORT PromoteReadReplicaRequest : public RDSRequest {
+
+public:
+    PromoteReadReplicaRequest(const PromoteReadReplicaRequest &other);
+    PromoteReadReplicaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PromoteReadReplicaRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVIRTUALINTERFACEREQUEST_P_H
 #define QTAWS_DELETEVIRTUALINTERFACEREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "deletevirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteVirtualInterfaceRequest;
+
+class QTAWS_EXPORT DeleteVirtualInterfaceRequestPrivate : public DirectConnectPrivate {
+
+public:
+    DeleteVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+                                   DeleteVirtualInterfaceRequest * const q);
+    DeleteVirtualInterfaceRequestPrivate(const DeleteVirtualInterfaceRequestPrivate &other,
+                                   DeleteVirtualInterfaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVirtualInterfaceRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

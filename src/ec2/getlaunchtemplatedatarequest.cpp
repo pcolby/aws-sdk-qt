@@ -19,3 +19,107 @@
 
 #include "getlaunchtemplatedatarequest.h"
 #include "getlaunchtemplatedatarequest_p.h"
+#include "getlaunchtemplatedataresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  GetLaunchTemplateDataRequest
+ *
+ * @brief  Implements EC2 GetLaunchTemplateData requests.
+ *
+ * @see    EC2Client::getLaunchTemplateData
+ */
+
+/**
+ * @brief  Constructs a new GetLaunchTemplateDataResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
+
+/**
+ * @brief  Constructs a new GetLaunchTemplateDataRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest(const GetLaunchTemplateDataRequest &other)
+    : EC2Request(new GetLaunchTemplateDataRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLaunchTemplateDataRequest object.
+ */
+GetLaunchTemplateDataRequest::GetLaunchTemplateDataRequest()
+    : EC2Request(new GetLaunchTemplateDataRequestPrivate(EC2Request::GetLaunchTemplateDataAction, this))
+{
+
+}
+
+bool GetLaunchTemplateDataRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLaunchTemplateDataResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLaunchTemplateDataResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLaunchTemplateDataResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLaunchTemplateDataRequestPrivate
+ *
+ * @brief  Private implementation for GetLaunchTemplateDataRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public GetLaunchTemplateDataRequest instance.
+ */
+GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
+    const EC2Request::Action action, GetLaunchTemplateDataRequest * const q)
+    : GetLaunchTemplateDataPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLaunchTemplateDataRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLaunchTemplateDataRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLaunchTemplateDataRequest instance.
+ */
+GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
+    const GetLaunchTemplateDataRequestPrivate &other, GetLaunchTemplateDataRequest * const q)
+    : GetLaunchTemplateDataPrivate(other, q)
+{
+
+}

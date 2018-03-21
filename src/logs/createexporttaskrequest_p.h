@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEEXPORTTASKREQUEST_P_H
 #define QTAWS_CREATEEXPORTTASKREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "createexporttaskrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class CreateExportTaskRequest;
+
+class QTAWS_EXPORT CreateExportTaskRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    CreateExportTaskRequestPrivate(const CloudWatchLogs::Action action,
+                                   CreateExportTaskRequest * const q);
+    CreateExportTaskRequestPrivate(const CreateExportTaskRequestPrivate &other,
+                                   CreateExportTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateExportTaskRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

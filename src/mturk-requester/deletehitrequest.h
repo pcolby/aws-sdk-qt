@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEHITREQUEST_H
 #define QTAWS_DELETEHITREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteHITRequestPrivate;
+
+class QTAWS_EXPORT DeleteHITRequest : public MTurkRequest {
+
+public:
+    DeleteHITRequest(const DeleteHITRequest &other);
+    DeleteHITRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHITRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

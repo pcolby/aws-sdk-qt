@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETRUSTREQUEST_P_H
 #define QTAWS_CREATETRUSTREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "createtrustrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateTrustRequest;
+
+class QTAWS_EXPORT CreateTrustRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    CreateTrustRequestPrivate(const DirectoryService::Action action,
+                                   CreateTrustRequest * const q);
+    CreateTrustRequestPrivate(const CreateTrustRequestPrivate &other,
+                                   CreateTrustRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTrustRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

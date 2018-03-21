@@ -19,3 +19,107 @@
 
 #include "deprecateactivitytyperequest.h"
 #include "deprecateactivitytyperequest_p.h"
+#include "deprecateactivitytyperesponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DeprecateActivityTypeRequest
+ *
+ * @brief  Implements SWF DeprecateActivityType requests.
+ *
+ * @see    SWFClient::deprecateActivityType
+ */
+
+/**
+ * @brief  Constructs a new DeprecateActivityTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
+
+/**
+ * @brief  Constructs a new DeprecateActivityTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeprecateActivityTypeRequest::DeprecateActivityTypeRequest(const DeprecateActivityTypeRequest &other)
+    : SWFRequest(new DeprecateActivityTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeprecateActivityTypeRequest object.
+ */
+DeprecateActivityTypeRequest::DeprecateActivityTypeRequest()
+    : SWFRequest(new DeprecateActivityTypeRequestPrivate(SWFRequest::DeprecateActivityTypeAction, this))
+{
+
+}
+
+bool DeprecateActivityTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeprecateActivityTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeprecateActivityTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new DeprecateActivityTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeprecateActivityTypeRequestPrivate
+ *
+ * @brief  Private implementation for DeprecateActivityTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public DeprecateActivityTypeRequest instance.
+ */
+DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
+    const SWFRequest::Action action, DeprecateActivityTypeRequest * const q)
+    : DeprecateActivityTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateActivityTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeprecateActivityTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeprecateActivityTypeRequest instance.
+ */
+DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
+    const DeprecateActivityTypeRequestPrivate &other, DeprecateActivityTypeRequest * const q)
+    : DeprecateActivityTypePrivate(other, q)
+{
+
+}

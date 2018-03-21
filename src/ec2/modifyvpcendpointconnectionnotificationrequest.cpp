@@ -19,3 +19,107 @@
 
 #include "modifyvpcendpointconnectionnotificationrequest.h"
 #include "modifyvpcendpointconnectionnotificationrequest_p.h"
+#include "modifyvpcendpointconnectionnotificationresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcEndpointConnectionNotificationRequest
+ *
+ * @brief  Implements EC2 ModifyVpcEndpointConnectionNotification requests.
+ *
+ * @see    EC2Client::modifyVpcEndpointConnectionNotification
+ */
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNotificationResponse(
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotificationRequest(const ModifyVpcEndpointConnectionNotificationRequest &other)
+    : EC2Request(new ModifyVpcEndpointConnectionNotificationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequest object.
+ */
+ModifyVpcEndpointConnectionNotificationRequest::ModifyVpcEndpointConnectionNotificationRequest()
+    : EC2Request(new ModifyVpcEndpointConnectionNotificationRequestPrivate(EC2Request::ModifyVpcEndpointConnectionNotificationAction, this))
+{
+
+}
+
+bool ModifyVpcEndpointConnectionNotificationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyVpcEndpointConnectionNotificationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyVpcEndpointConnectionNotificationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyVpcEndpointConnectionNotificationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcEndpointConnectionNotificationRequestPrivate
+ *
+ * @brief  Private implementation for ModifyVpcEndpointConnectionNotificationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyVpcEndpointConnectionNotificationRequest instance.
+ */
+ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnectionNotificationRequestPrivate(
+    const EC2Request::Action action, ModifyVpcEndpointConnectionNotificationRequest * const q)
+    : ModifyVpcEndpointConnectionNotificationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyVpcEndpointConnectionNotificationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyVpcEndpointConnectionNotificationRequest instance.
+ */
+ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnectionNotificationRequestPrivate(
+    const ModifyVpcEndpointConnectionNotificationRequestPrivate &other, ModifyVpcEndpointConnectionNotificationRequest * const q)
+    : ModifyVpcEndpointConnectionNotificationPrivate(other, q)
+{
+
+}

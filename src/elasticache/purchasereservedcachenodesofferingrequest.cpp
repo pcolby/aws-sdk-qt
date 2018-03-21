@@ -19,3 +19,107 @@
 
 #include "purchasereservedcachenodesofferingrequest.h"
 #include "purchasereservedcachenodesofferingrequest_p.h"
+#include "purchasereservedcachenodesofferingresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  PurchaseReservedCacheNodesOfferingRequest
+ *
+ * @brief  Implements ElastiCache PurchaseReservedCacheNodesOffering requests.
+ *
+ * @see    ElastiCacheClient::purchaseReservedCacheNodesOffering
+ */
+
+/**
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingResponse(
+
+/**
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurchaseReservedCacheNodesOfferingRequest::PurchaseReservedCacheNodesOfferingRequest(const PurchaseReservedCacheNodesOfferingRequest &other)
+    : ElastiCacheRequest(new PurchaseReservedCacheNodesOfferingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequest object.
+ */
+PurchaseReservedCacheNodesOfferingRequest::PurchaseReservedCacheNodesOfferingRequest()
+    : ElastiCacheRequest(new PurchaseReservedCacheNodesOfferingRequestPrivate(ElastiCacheRequest::PurchaseReservedCacheNodesOfferingAction, this))
+{
+
+}
+
+bool PurchaseReservedCacheNodesOfferingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurchaseReservedCacheNodesOfferingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurchaseReservedCacheNodesOfferingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::response(QNetworkReply * const reply) const
+{
+    return new PurchaseReservedCacheNodesOfferingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseReservedCacheNodesOfferingRequestPrivate
+ *
+ * @brief  Private implementation for PurchaseReservedCacheNodesOfferingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public PurchaseReservedCacheNodesOfferingRequest instance.
+ */
+PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
+    const ElastiCacheRequest::Action action, PurchaseReservedCacheNodesOfferingRequest * const q)
+    : PurchaseReservedCacheNodesOfferingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedCacheNodesOfferingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurchaseReservedCacheNodesOfferingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurchaseReservedCacheNodesOfferingRequest instance.
+ */
+PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
+    const PurchaseReservedCacheNodesOfferingRequestPrivate &other, PurchaseReservedCacheNodesOfferingRequest * const q)
+    : PurchaseReservedCacheNodesOfferingPrivate(other, q)
+{
+
+}

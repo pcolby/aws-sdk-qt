@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTENDPOINTSREQUEST_H
 #define QTAWS_LISTENDPOINTSREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class ListEndpointsRequestPrivate;
+
+class QTAWS_EXPORT ListEndpointsRequest : public SageMakerRequest {
+
+public:
+    ListEndpointsRequest(const ListEndpointsRequest &other);
+    ListEndpointsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListEndpointsRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

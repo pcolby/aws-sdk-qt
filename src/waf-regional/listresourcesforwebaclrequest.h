@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCESFORWEBACLREQUEST_H
 #define QTAWS_LISTRESOURCESFORWEBACLREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListResourcesForWebACLRequestPrivate;
+
+class QTAWS_EXPORT ListResourcesForWebACLRequest : public WAFRegionalRequest {
+
+public:
+    ListResourcesForWebACLRequest(const ListResourcesForWebACLRequest &other);
+    ListResourcesForWebACLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourcesForWebACLRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

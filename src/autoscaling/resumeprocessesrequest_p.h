@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESUMEPROCESSESREQUEST_P_H
 #define QTAWS_RESUMEPROCESSESREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "resumeprocessesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class ResumeProcessesRequest;
+
+class QTAWS_EXPORT ResumeProcessesRequestPrivate : public AutoScalingPrivate {
+
+public:
+    ResumeProcessesRequestPrivate(const AutoScaling::Action action,
+                                   ResumeProcessesRequest * const q);
+    ResumeProcessesRequestPrivate(const ResumeProcessesRequestPrivate &other,
+                                   ResumeProcessesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResumeProcessesRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONREQUEST_H
 #define QTAWS_DELETESECURITYCONFIGURATIONREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DeleteSecurityConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteSecurityConfigurationRequest : public EMRRequest {
+
+public:
+    DeleteSecurityConfigurationRequest(const DeleteSecurityConfigurationRequest &other);
+    DeleteSecurityConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSecurityConfigurationRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

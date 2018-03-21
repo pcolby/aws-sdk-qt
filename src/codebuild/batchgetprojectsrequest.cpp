@@ -19,3 +19,107 @@
 
 #include "batchgetprojectsrequest.h"
 #include "batchgetprojectsrequest_p.h"
+#include "batchgetprojectsresponse.h"
+#include "codebuildrequest_p.h"
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  BatchGetProjectsRequest
+ *
+ * @brief  Implements CodeBuild BatchGetProjects requests.
+ *
+ * @see    CodeBuildClient::batchGetProjects
+ */
+
+/**
+ * @brief  Constructs a new BatchGetProjectsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetProjectsResponse::BatchGetProjectsResponse(
+
+/**
+ * @brief  Constructs a new BatchGetProjectsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetProjectsRequest::BatchGetProjectsRequest(const BatchGetProjectsRequest &other)
+    : CodeBuildRequest(new BatchGetProjectsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetProjectsRequest object.
+ */
+BatchGetProjectsRequest::BatchGetProjectsRequest()
+    : CodeBuildRequest(new BatchGetProjectsRequestPrivate(CodeBuildRequest::BatchGetProjectsAction, this))
+{
+
+}
+
+bool BatchGetProjectsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetProjectsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetProjectsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeBuildClient::send
+ */
+AwsAbstractResponse * BatchGetProjectsRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetProjectsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetProjectsRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetProjectsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetProjectsRequestPrivate object.
+ *
+ * @param  action  CodeBuild action being performed.
+ * @param  q       Pointer to this object's public BatchGetProjectsRequest instance.
+ */
+BatchGetProjectsRequestPrivate::BatchGetProjectsRequestPrivate(
+    const CodeBuildRequest::Action action, BatchGetProjectsRequest * const q)
+    : BatchGetProjectsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetProjectsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetProjectsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetProjectsRequest instance.
+ */
+BatchGetProjectsRequestPrivate::BatchGetProjectsRequestPrivate(
+    const BatchGetProjectsRequestPrivate &other, BatchGetProjectsRequest * const q)
+    : BatchGetProjectsPrivate(other, q)
+{
+
+}

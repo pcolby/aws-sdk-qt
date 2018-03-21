@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESEVERITYLEVELSREQUEST_P_H
 #define QTAWS_DESCRIBESEVERITYLEVELSREQUEST_P_H
 
+#include "support_p.h"
+#include "describeseveritylevelsrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeSeverityLevelsRequest;
+
+class QTAWS_EXPORT DescribeSeverityLevelsRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeSeverityLevelsRequestPrivate(const Support::Action action,
+                                   DescribeSeverityLevelsRequest * const q);
+    DescribeSeverityLevelsRequestPrivate(const DescribeSeverityLevelsRequestPrivate &other,
+                                   DescribeSeverityLevelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSeverityLevelsRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

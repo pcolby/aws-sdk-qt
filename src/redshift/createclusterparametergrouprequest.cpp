@@ -19,3 +19,107 @@
 
 #include "createclusterparametergrouprequest.h"
 #include "createclusterparametergrouprequest_p.h"
+#include "createclusterparametergroupresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateClusterParameterGroupRequest
+ *
+ * @brief  Implements Redshift CreateClusterParameterGroup requests.
+ *
+ * @see    RedshiftClient::createClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateClusterParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterParameterGroupResponse::CreateClusterParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateClusterParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateClusterParameterGroupRequest::CreateClusterParameterGroupRequest(const CreateClusterParameterGroupRequest &other)
+    : RedshiftRequest(new CreateClusterParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateClusterParameterGroupRequest object.
+ */
+CreateClusterParameterGroupRequest::CreateClusterParameterGroupRequest()
+    : RedshiftRequest(new CreateClusterParameterGroupRequestPrivate(RedshiftRequest::CreateClusterParameterGroupAction, this))
+{
+
+}
+
+bool CreateClusterParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateClusterParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateClusterParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateClusterParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateClusterParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterParameterGroupRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateClusterParameterGroupRequest instance.
+ */
+CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
+    const RedshiftRequest::Action action, CreateClusterParameterGroupRequest * const q)
+    : CreateClusterParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateClusterParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateClusterParameterGroupRequest instance.
+ */
+CreateClusterParameterGroupRequestPrivate::CreateClusterParameterGroupRequestPrivate(
+    const CreateClusterParameterGroupRequestPrivate &other, CreateClusterParameterGroupRequest * const q)
+    : CreateClusterParameterGroupPrivate(other, q)
+{
+
+}

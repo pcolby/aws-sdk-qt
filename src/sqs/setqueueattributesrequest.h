@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETQUEUEATTRIBUTESREQUEST_H
 #define QTAWS_SETQUEUEATTRIBUTESREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SetQueueAttributesRequestPrivate;
+
+class QTAWS_EXPORT SetQueueAttributesRequest : public SQSRequest {
+
+public:
+    SetQueueAttributesRequest(const SetQueueAttributesRequest &other);
+    SetQueueAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetQueueAttributesRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

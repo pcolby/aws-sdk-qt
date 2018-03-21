@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTEVENTSUBSCRIPTIONSREQUEST_H
 #define QTAWS_LISTEVENTSUBSCRIPTIONSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListEventSubscriptionsRequestPrivate;
+
+class QTAWS_EXPORT ListEventSubscriptionsRequest : public InspectorRequest {
+
+public:
+    ListEventSubscriptionsRequest(const ListEventSubscriptionsRequest &other);
+    ListEventSubscriptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListEventSubscriptionsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

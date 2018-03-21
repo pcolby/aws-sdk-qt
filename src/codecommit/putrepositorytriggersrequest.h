@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTREPOSITORYTRIGGERSREQUEST_H
 #define QTAWS_PUTREPOSITORYTRIGGERSREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PutRepositoryTriggersRequestPrivate;
+
+class QTAWS_EXPORT PutRepositoryTriggersRequest : public CodeCommitRequest {
+
+public:
+    PutRepositoryTriggersRequest(const PutRepositoryTriggersRequest &other);
+    PutRepositoryTriggersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutRepositoryTriggersRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

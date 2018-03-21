@@ -19,3 +19,107 @@
 
 #include "associateproductwithportfoliorequest.h"
 #include "associateproductwithportfoliorequest_p.h"
+#include "associateproductwithportfolioresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  AssociateProductWithPortfolioRequest
+ *
+ * @brief  Implements ServiceCatalog AssociateProductWithPortfolio requests.
+ *
+ * @see    ServiceCatalogClient::associateProductWithPortfolio
+ */
+
+/**
+ * @brief  Constructs a new AssociateProductWithPortfolioResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateProductWithPortfolioResponse::AssociateProductWithPortfolioResponse(
+
+/**
+ * @brief  Constructs a new AssociateProductWithPortfolioRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateProductWithPortfolioRequest::AssociateProductWithPortfolioRequest(const AssociateProductWithPortfolioRequest &other)
+    : ServiceCatalogRequest(new AssociateProductWithPortfolioRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateProductWithPortfolioRequest object.
+ */
+AssociateProductWithPortfolioRequest::AssociateProductWithPortfolioRequest()
+    : ServiceCatalogRequest(new AssociateProductWithPortfolioRequestPrivate(ServiceCatalogRequest::AssociateProductWithPortfolioAction, this))
+{
+
+}
+
+bool AssociateProductWithPortfolioRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateProductWithPortfolioResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateProductWithPortfolioResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * AssociateProductWithPortfolioRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateProductWithPortfolioResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateProductWithPortfolioRequestPrivate
+ *
+ * @brief  Private implementation for AssociateProductWithPortfolioRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateProductWithPortfolioRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public AssociateProductWithPortfolioRequest instance.
+ */
+AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
+    const ServiceCatalogRequest::Action action, AssociateProductWithPortfolioRequest * const q)
+    : AssociateProductWithPortfolioPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateProductWithPortfolioRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateProductWithPortfolioRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateProductWithPortfolioRequest instance.
+ */
+AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
+    const AssociateProductWithPortfolioRequestPrivate &other, AssociateProductWithPortfolioRequest * const q)
+    : AssociateProductWithPortfolioPrivate(other, q)
+{
+
+}

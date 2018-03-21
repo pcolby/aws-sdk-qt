@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETLOADBALANCERMETRICDATAREQUEST_H
 #define QTAWS_GETLOADBALANCERMETRICDATAREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetLoadBalancerMetricDataRequestPrivate;
+
+class QTAWS_EXPORT GetLoadBalancerMetricDataRequest : public LightsailRequest {
+
+public:
+    GetLoadBalancerMetricDataRequest(const GetLoadBalancerMetricDataRequest &other);
+    GetLoadBalancerMetricDataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetLoadBalancerMetricDataRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

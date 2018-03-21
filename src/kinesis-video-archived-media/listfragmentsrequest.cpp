@@ -19,3 +19,107 @@
 
 #include "listfragmentsrequest.h"
 #include "listfragmentsrequest_p.h"
+#include "listfragmentsresponse.h"
+#include "kinesisvideoarchivedmediarequest_p.h"
+
+namespace AWS {
+namespace KinesisVideoArchivedMedia {
+
+/**
+ * @class  ListFragmentsRequest
+ *
+ * @brief  Implements KinesisVideoArchivedMedia ListFragments requests.
+ *
+ * @see    KinesisVideoArchivedMediaClient::listFragments
+ */
+
+/**
+ * @brief  Constructs a new ListFragmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFragmentsResponse::ListFragmentsResponse(
+
+/**
+ * @brief  Constructs a new ListFragmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListFragmentsRequest::ListFragmentsRequest(const ListFragmentsRequest &other)
+    : KinesisVideoArchivedMediaRequest(new ListFragmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListFragmentsRequest object.
+ */
+ListFragmentsRequest::ListFragmentsRequest()
+    : KinesisVideoArchivedMediaRequest(new ListFragmentsRequestPrivate(KinesisVideoArchivedMediaRequest::ListFragmentsAction, this))
+{
+
+}
+
+bool ListFragmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListFragmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListFragmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisVideoArchivedMediaClient::send
+ */
+AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListFragmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFragmentsRequestPrivate
+ *
+ * @brief  Private implementation for ListFragmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFragmentsRequestPrivate object.
+ *
+ * @param  action  KinesisVideoArchivedMedia action being performed.
+ * @param  q       Pointer to this object's public ListFragmentsRequest instance.
+ */
+ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
+    const KinesisVideoArchivedMediaRequest::Action action, ListFragmentsRequest * const q)
+    : ListFragmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFragmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListFragmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListFragmentsRequest instance.
+ */
+ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
+    const ListFragmentsRequestPrivate &other, ListFragmentsRequest * const q)
+    : ListFragmentsPrivate(other, q)
+{
+
+}

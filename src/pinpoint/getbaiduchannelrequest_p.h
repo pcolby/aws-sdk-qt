@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBAIDUCHANNELREQUEST_P_H
 #define QTAWS_GETBAIDUCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getbaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetBaiduChannelRequest;
+
+class QTAWS_EXPORT GetBaiduChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    GetBaiduChannelRequestPrivate(const Pinpoint::Action action,
+                                   GetBaiduChannelRequest * const q);
+    GetBaiduChannelRequestPrivate(const GetBaiduChannelRequestPrivate &other,
+                                   GetBaiduChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBaiduChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

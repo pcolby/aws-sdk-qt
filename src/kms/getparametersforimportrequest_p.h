@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTREQUEST_P_H
 #define QTAWS_GETPARAMETERSFORIMPORTREQUEST_P_H
 
+#include "kms_p.h"
+#include "getparametersforimportrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetParametersForImportRequest;
+
+class QTAWS_EXPORT GetParametersForImportRequestPrivate : public KMSPrivate {
+
+public:
+    GetParametersForImportRequestPrivate(const KMS::Action action,
+                                   GetParametersForImportRequest * const q);
+    GetParametersForImportRequestPrivate(const GetParametersForImportRequestPrivate &other,
+                                   GetParametersForImportRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetParametersForImportRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

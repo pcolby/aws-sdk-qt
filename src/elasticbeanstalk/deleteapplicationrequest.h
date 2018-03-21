@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteApplicationRequestPrivate;
+
+class QTAWS_EXPORT DeleteApplicationRequest : public ElasticBeanstalkRequest {
+
+public:
+    DeleteApplicationRequest(const DeleteApplicationRequest &other);
+    DeleteApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

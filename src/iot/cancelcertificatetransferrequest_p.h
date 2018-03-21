@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELCERTIFICATETRANSFERREQUEST_P_H
 #define QTAWS_CANCELCERTIFICATETRANSFERREQUEST_P_H
 
+#include "iot_p.h"
+#include "cancelcertificatetransferrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CancelCertificateTransferRequest;
+
+class QTAWS_EXPORT CancelCertificateTransferRequestPrivate : public IoTPrivate {
+
+public:
+    CancelCertificateTransferRequestPrivate(const IoT::Action action,
+                                   CancelCertificateTransferRequest * const q);
+    CancelCertificateTransferRequestPrivate(const CancelCertificateTransferRequestPrivate &other,
+                                   CancelCertificateTransferRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelCertificateTransferRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

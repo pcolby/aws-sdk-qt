@@ -20,4 +20,29 @@
 #ifndef QTAWS_SEARCHSKILLGROUPSREQUEST_P_H
 #define QTAWS_SEARCHSKILLGROUPSREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "searchskillgroupsrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SearchSkillGroupsRequest;
+
+class QTAWS_EXPORT SearchSkillGroupsRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    SearchSkillGroupsRequestPrivate(const AlexaForBusiness::Action action,
+                                   SearchSkillGroupsRequest * const q);
+    SearchSkillGroupsRequestPrivate(const SearchSkillGroupsRequestPrivate &other,
+                                   SearchSkillGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SearchSkillGroupsRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

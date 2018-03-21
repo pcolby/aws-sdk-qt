@@ -19,3 +19,107 @@
 
 #include "describeagentversionsrequest.h"
 #include "describeagentversionsrequest_p.h"
+#include "describeagentversionsresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeAgentVersionsRequest
+ *
+ * @brief  Implements OpsWorks DescribeAgentVersions requests.
+ *
+ * @see    OpsWorksClient::describeAgentVersions
+ */
+
+/**
+ * @brief  Constructs a new DescribeAgentVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAgentVersionsResponse::DescribeAgentVersionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeAgentVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAgentVersionsRequest::DescribeAgentVersionsRequest(const DescribeAgentVersionsRequest &other)
+    : OpsWorksRequest(new DescribeAgentVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAgentVersionsRequest object.
+ */
+DescribeAgentVersionsRequest::DescribeAgentVersionsRequest()
+    : OpsWorksRequest(new DescribeAgentVersionsRequestPrivate(OpsWorksRequest::DescribeAgentVersionsAction, this))
+{
+
+}
+
+bool DescribeAgentVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAgentVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAgentVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAgentVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAgentVersionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAgentVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAgentVersionsRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeAgentVersionsRequest instance.
+ */
+DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeAgentVersionsRequest * const q)
+    : DescribeAgentVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAgentVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAgentVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAgentVersionsRequest instance.
+ */
+DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
+    const DescribeAgentVersionsRequestPrivate &other, DescribeAgentVersionsRequest * const q)
+    : DescribeAgentVersionsPrivate(other, q)
+{
+
+}

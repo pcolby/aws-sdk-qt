@@ -19,3 +19,107 @@
 
 #include "getsegmentexportjobsrequest.h"
 #include "getsegmentexportjobsrequest_p.h"
+#include "getsegmentexportjobsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentExportJobsRequest
+ *
+ * @brief  Implements Pinpoint GetSegmentExportJobs requests.
+ *
+ * @see    PinpointClient::getSegmentExportJobs
+ */
+
+/**
+ * @brief  Constructs a new GetSegmentExportJobsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentExportJobsResponse::GetSegmentExportJobsResponse(
+
+/**
+ * @brief  Constructs a new GetSegmentExportJobsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSegmentExportJobsRequest::GetSegmentExportJobsRequest(const GetSegmentExportJobsRequest &other)
+    : PinpointRequest(new GetSegmentExportJobsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSegmentExportJobsRequest object.
+ */
+GetSegmentExportJobsRequest::GetSegmentExportJobsRequest()
+    : PinpointRequest(new GetSegmentExportJobsRequestPrivate(PinpointRequest::GetSegmentExportJobsAction, this))
+{
+
+}
+
+bool GetSegmentExportJobsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSegmentExportJobsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSegmentExportJobsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetSegmentExportJobsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSegmentExportJobsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentExportJobsRequestPrivate
+ *
+ * @brief  Private implementation for GetSegmentExportJobsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentExportJobsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetSegmentExportJobsRequest instance.
+ */
+GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
+    const PinpointRequest::Action action, GetSegmentExportJobsRequest * const q)
+    : GetSegmentExportJobsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentExportJobsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSegmentExportJobsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSegmentExportJobsRequest instance.
+ */
+GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
+    const GetSegmentExportJobsRequestPrivate &other, GetSegmentExportJobsRequest * const q)
+    : GetSegmentExportJobsPrivate(other, q)
+{
+
+}

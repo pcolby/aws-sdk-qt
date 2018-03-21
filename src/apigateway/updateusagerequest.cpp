@@ -19,3 +19,107 @@
 
 #include "updateusagerequest.h"
 #include "updateusagerequest_p.h"
+#include "updateusageresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateUsageRequest
+ *
+ * @brief  Implements APIGateway UpdateUsage requests.
+ *
+ * @see    APIGatewayClient::updateUsage
+ */
+
+/**
+ * @brief  Constructs a new UpdateUsageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUsageResponse::UpdateUsageResponse(
+
+/**
+ * @brief  Constructs a new UpdateUsageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateUsageRequest::UpdateUsageRequest(const UpdateUsageRequest &other)
+    : APIGatewayRequest(new UpdateUsageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateUsageRequest object.
+ */
+UpdateUsageRequest::UpdateUsageRequest()
+    : APIGatewayRequest(new UpdateUsageRequestPrivate(APIGatewayRequest::UpdateUsageAction, this))
+{
+
+}
+
+bool UpdateUsageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateUsageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateUsageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateUsageRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateUsageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUsageRequestPrivate
+ *
+ * @brief  Private implementation for UpdateUsageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUsageRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateUsageRequest instance.
+ */
+UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateUsageRequest * const q)
+    : UpdateUsagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUsageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateUsageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateUsageRequest instance.
+ */
+UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
+    const UpdateUsageRequestPrivate &other, UpdateUsageRequest * const q)
+    : UpdateUsagePrivate(other, q)
+{
+
+}

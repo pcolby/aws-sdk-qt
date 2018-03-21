@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESOURCEGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEGROUPSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "describeresourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeResourceGroupsRequest;
+
+class QTAWS_EXPORT DescribeResourceGroupsRequestPrivate : public InspectorPrivate {
+
+public:
+    DescribeResourceGroupsRequestPrivate(const Inspector::Action action,
+                                   DescribeResourceGroupsRequest * const q);
+    DescribeResourceGroupsRequestPrivate(const DescribeResourceGroupsRequestPrivate &other,
+                                   DescribeResourceGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourceGroupsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletelifecyclehookrequest.h"
 #include "deletelifecyclehookrequest_p.h"
+#include "deletelifecyclehookresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteLifecycleHookRequest
+ *
+ * @brief  Implements AutoScaling DeleteLifecycleHook requests.
+ *
+ * @see    AutoScalingClient::deleteLifecycleHook
+ */
+
+/**
+ * @brief  Constructs a new DeleteLifecycleHookResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLifecycleHookResponse::DeleteLifecycleHookResponse(
+
+/**
+ * @brief  Constructs a new DeleteLifecycleHookRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLifecycleHookRequest::DeleteLifecycleHookRequest(const DeleteLifecycleHookRequest &other)
+    : AutoScalingRequest(new DeleteLifecycleHookRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLifecycleHookRequest object.
+ */
+DeleteLifecycleHookRequest::DeleteLifecycleHookRequest()
+    : AutoScalingRequest(new DeleteLifecycleHookRequestPrivate(AutoScalingRequest::DeleteLifecycleHookAction, this))
+{
+
+}
+
+bool DeleteLifecycleHookRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLifecycleHookResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLifecycleHookResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLifecycleHookResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLifecycleHookRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLifecycleHookRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DeleteLifecycleHookRequest instance.
+ */
+DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
+    const AutoScalingRequest::Action action, DeleteLifecycleHookRequest * const q)
+    : DeleteLifecycleHookPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLifecycleHookRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLifecycleHookRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLifecycleHookRequest instance.
+ */
+DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
+    const DeleteLifecycleHookRequestPrivate &other, DeleteLifecycleHookRequest * const q)
+    : DeleteLifecycleHookPrivate(other, q)
+{
+
+}

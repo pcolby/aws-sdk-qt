@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEVPCREQUEST_P_H
 #define QTAWS_CREATEVPCREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createvpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpcRequest;
+
+class QTAWS_EXPORT CreateVpcRequestPrivate : public EC2Private {
+
+public:
+    CreateVpcRequestPrivate(const EC2::Action action,
+                                   CreateVpcRequest * const q);
+    CreateVpcRequestPrivate(const CreateVpcRequestPrivate &other,
+                                   CreateVpcRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpcRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

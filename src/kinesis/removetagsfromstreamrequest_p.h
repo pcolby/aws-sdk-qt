@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETAGSFROMSTREAMREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMSTREAMREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "removetagsfromstreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class RemoveTagsFromStreamRequest;
+
+class QTAWS_EXPORT RemoveTagsFromStreamRequestPrivate : public KinesisPrivate {
+
+public:
+    RemoveTagsFromStreamRequestPrivate(const Kinesis::Action action,
+                                   RemoveTagsFromStreamRequest * const q);
+    RemoveTagsFromStreamRequestPrivate(const RemoveTagsFromStreamRequestPrivate &other,
+                                   RemoveTagsFromStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromStreamRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

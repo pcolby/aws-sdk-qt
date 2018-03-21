@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTDATACOLLECTIONBYAGENTIDSREQUEST_H
 #define QTAWS_STARTDATACOLLECTIONBYAGENTIDSREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class StartDataCollectionByAgentIdsRequestPrivate;
+
+class QTAWS_EXPORT StartDataCollectionByAgentIdsRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    StartDataCollectionByAgentIdsRequest(const StartDataCollectionByAgentIdsRequest &other);
+    StartDataCollectionByAgentIdsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartDataCollectionByAgentIdsRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

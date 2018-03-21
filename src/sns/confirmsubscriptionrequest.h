@@ -20,4 +20,32 @@
 #ifndef QTAWS_CONFIRMSUBSCRIPTIONREQUEST_H
 #define QTAWS_CONFIRMSUBSCRIPTIONREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ConfirmSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT ConfirmSubscriptionRequest : public SNSRequest {
+
+public:
+    ConfirmSubscriptionRequest(const ConfirmSubscriptionRequest &other);
+    ConfirmSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmSubscriptionRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

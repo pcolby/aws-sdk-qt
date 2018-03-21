@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPIPELINEREQUEST_P_H
 #define QTAWS_UPDATEPIPELINEREQUEST_P_H
 
+#include "elastictranscoder_p.h"
+#include "updatepipelinerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class UpdatePipelineRequest;
+
+class QTAWS_EXPORT UpdatePipelineRequestPrivate : public ElasticTranscoderPrivate {
+
+public:
+    UpdatePipelineRequestPrivate(const ElasticTranscoder::Action action,
+                                   UpdatePipelineRequest * const q);
+    UpdatePipelineRequestPrivate(const UpdatePipelineRequestPrivate &other,
+                                   UpdatePipelineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePipelineRequest)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

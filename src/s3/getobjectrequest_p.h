@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOBJECTREQUEST_P_H
 #define QTAWS_GETOBJECTREQUEST_P_H
 
+#include "s3_p.h"
+#include "getobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetObjectRequest;
+
+class QTAWS_EXPORT GetObjectRequestPrivate : public S3Private {
+
+public:
+    GetObjectRequestPrivate(const S3::Action action,
+                                   GetObjectRequest * const q);
+    GetObjectRequestPrivate(const GetObjectRequestPrivate &other,
+                                   GetObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetObjectRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

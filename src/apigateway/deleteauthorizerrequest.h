@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAUTHORIZERREQUEST_H
 #define QTAWS_DELETEAUTHORIZERREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT DeleteAuthorizerRequest : public APIGatewayRequest {
+
+public:
+    DeleteAuthorizerRequest(const DeleteAuthorizerRequest &other);
+    DeleteAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAuthorizerRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

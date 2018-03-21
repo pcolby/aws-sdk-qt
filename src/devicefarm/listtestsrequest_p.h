@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTESTSREQUEST_P_H
 #define QTAWS_LISTTESTSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listtestsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListTestsRequest;
+
+class QTAWS_EXPORT ListTestsRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListTestsRequestPrivate(const DeviceFarm::Action action,
+                                   ListTestsRequest * const q);
+    ListTestsRequestPrivate(const ListTestsRequestPrivate &other,
+                                   ListTestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTestsRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

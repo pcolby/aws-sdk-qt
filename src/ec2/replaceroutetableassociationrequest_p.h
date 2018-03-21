@@ -20,4 +20,29 @@
 #ifndef QTAWS_REPLACEROUTETABLEASSOCIATIONREQUEST_P_H
 #define QTAWS_REPLACEROUTETABLEASSOCIATIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "replaceroutetableassociationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReplaceRouteTableAssociationRequest;
+
+class QTAWS_EXPORT ReplaceRouteTableAssociationRequestPrivate : public EC2Private {
+
+public:
+    ReplaceRouteTableAssociationRequestPrivate(const EC2::Action action,
+                                   ReplaceRouteTableAssociationRequest * const q);
+    ReplaceRouteTableAssociationRequestPrivate(const ReplaceRouteTableAssociationRequestPrivate &other,
+                                   ReplaceRouteTableAssociationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReplaceRouteTableAssociationRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

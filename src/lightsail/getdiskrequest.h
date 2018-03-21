@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDISKREQUEST_H
 #define QTAWS_GETDISKREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetDiskRequestPrivate;
+
+class QTAWS_EXPORT GetDiskRequest : public LightsailRequest {
+
+public:
+    GetDiskRequest(const GetDiskRequest &other);
+    GetDiskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDiskRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

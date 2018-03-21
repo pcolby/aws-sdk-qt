@@ -19,3 +19,107 @@
 
 #include "pollforactivitytaskrequest.h"
 #include "pollforactivitytaskrequest_p.h"
+#include "pollforactivitytaskresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  PollForActivityTaskRequest
+ *
+ * @brief  Implements SWF PollForActivityTask requests.
+ *
+ * @see    SWFClient::pollForActivityTask
+ */
+
+/**
+ * @brief  Constructs a new PollForActivityTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForActivityTaskResponse::PollForActivityTaskResponse(
+
+/**
+ * @brief  Constructs a new PollForActivityTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PollForActivityTaskRequest::PollForActivityTaskRequest(const PollForActivityTaskRequest &other)
+    : SWFRequest(new PollForActivityTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PollForActivityTaskRequest object.
+ */
+PollForActivityTaskRequest::PollForActivityTaskRequest()
+    : SWFRequest(new PollForActivityTaskRequestPrivate(SWFRequest::PollForActivityTaskAction, this))
+{
+
+}
+
+bool PollForActivityTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PollForActivityTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PollForActivityTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * PollForActivityTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new PollForActivityTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForActivityTaskRequestPrivate
+ *
+ * @brief  Private implementation for PollForActivityTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForActivityTaskRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public PollForActivityTaskRequest instance.
+ */
+PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
+    const SWFRequest::Action action, PollForActivityTaskRequest * const q)
+    : PollForActivityTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForActivityTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PollForActivityTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PollForActivityTaskRequest instance.
+ */
+PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
+    const PollForActivityTaskRequestPrivate &other, PollForActivityTaskRequest * const q)
+    : PollForActivityTaskPrivate(other, q)
+{
+
+}

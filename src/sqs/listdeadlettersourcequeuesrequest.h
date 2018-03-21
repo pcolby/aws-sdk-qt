@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListDeadLetterSourceQueuesRequestPrivate;
+
+class QTAWS_EXPORT ListDeadLetterSourceQueuesRequest : public SQSRequest {
+
+public:
+    ListDeadLetterSourceQueuesRequest(const ListDeadLetterSourceQueuesRequest &other);
+    ListDeadLetterSourceQueuesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDeadLetterSourceQueuesRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

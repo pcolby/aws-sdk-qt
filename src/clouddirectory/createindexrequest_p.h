@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINDEXREQUEST_P_H
 #define QTAWS_CREATEINDEXREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "createindexrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateIndexRequest;
+
+class QTAWS_EXPORT CreateIndexRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    CreateIndexRequestPrivate(const CloudDirectory::Action action,
+                                   CreateIndexRequest * const q);
+    CreateIndexRequestPrivate(const CreateIndexRequestPrivate &other,
+                                   CreateIndexRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateIndexRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

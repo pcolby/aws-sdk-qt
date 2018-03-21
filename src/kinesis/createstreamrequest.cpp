@@ -19,3 +19,107 @@
 
 #include "createstreamrequest.h"
 #include "createstreamrequest_p.h"
+#include "createstreamresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  CreateStreamRequest
+ *
+ * @brief  Implements Kinesis CreateStream requests.
+ *
+ * @see    KinesisClient::createStream
+ */
+
+/**
+ * @brief  Constructs a new CreateStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStreamResponse::CreateStreamResponse(
+
+/**
+ * @brief  Constructs a new CreateStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateStreamRequest::CreateStreamRequest(const CreateStreamRequest &other)
+    : KinesisRequest(new CreateStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateStreamRequest object.
+ */
+CreateStreamRequest::CreateStreamRequest()
+    : KinesisRequest(new CreateStreamRequestPrivate(KinesisRequest::CreateStreamAction, this))
+{
+
+}
+
+bool CreateStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStreamRequestPrivate
+ *
+ * @brief  Private implementation for CreateStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public CreateStreamRequest instance.
+ */
+CreateStreamRequestPrivate::CreateStreamRequestPrivate(
+    const KinesisRequest::Action action, CreateStreamRequest * const q)
+    : CreateStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateStreamRequest instance.
+ */
+CreateStreamRequestPrivate::CreateStreamRequestPrivate(
+    const CreateStreamRequestPrivate &other, CreateStreamRequest * const q)
+    : CreateStreamPrivate(other, q)
+{
+
+}

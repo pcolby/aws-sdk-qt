@@ -19,3 +19,107 @@
 
 #include "detachgrouppolicyrequest.h"
 #include "detachgrouppolicyrequest_p.h"
+#include "detachgrouppolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DetachGroupPolicyRequest
+ *
+ * @brief  Implements IAM DetachGroupPolicy requests.
+ *
+ * @see    IAMClient::detachGroupPolicy
+ */
+
+/**
+ * @brief  Constructs a new DetachGroupPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachGroupPolicyResponse::DetachGroupPolicyResponse(
+
+/**
+ * @brief  Constructs a new DetachGroupPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachGroupPolicyRequest::DetachGroupPolicyRequest(const DetachGroupPolicyRequest &other)
+    : IAMRequest(new DetachGroupPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachGroupPolicyRequest object.
+ */
+DetachGroupPolicyRequest::DetachGroupPolicyRequest()
+    : IAMRequest(new DetachGroupPolicyRequestPrivate(IAMRequest::DetachGroupPolicyAction, this))
+{
+
+}
+
+bool DetachGroupPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachGroupPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachGroupPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DetachGroupPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachGroupPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachGroupPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DetachGroupPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachGroupPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DetachGroupPolicyRequest instance.
+ */
+DetachGroupPolicyRequestPrivate::DetachGroupPolicyRequestPrivate(
+    const IAMRequest::Action action, DetachGroupPolicyRequest * const q)
+    : DetachGroupPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachGroupPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachGroupPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachGroupPolicyRequest instance.
+ */
+DetachGroupPolicyRequestPrivate::DetachGroupPolicyRequestPrivate(
+    const DetachGroupPolicyRequestPrivate &other, DetachGroupPolicyRequest * const q)
+    : DetachGroupPolicyPrivate(other, q)
+{
+
+}

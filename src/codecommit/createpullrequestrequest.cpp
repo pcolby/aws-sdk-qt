@@ -19,3 +19,107 @@
 
 #include "createpullrequestrequest.h"
 #include "createpullrequestrequest_p.h"
+#include "createpullrequestresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  CreatePullRequestRequest
+ *
+ * @brief  Implements CodeCommit CreatePullRequest requests.
+ *
+ * @see    CodeCommitClient::createPullRequest
+ */
+
+/**
+ * @brief  Constructs a new CreatePullRequestResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePullRequestResponse::CreatePullRequestResponse(
+
+/**
+ * @brief  Constructs a new CreatePullRequestRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePullRequestRequest::CreatePullRequestRequest(const CreatePullRequestRequest &other)
+    : CodeCommitRequest(new CreatePullRequestRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePullRequestRequest object.
+ */
+CreatePullRequestRequest::CreatePullRequestRequest()
+    : CodeCommitRequest(new CreatePullRequestRequestPrivate(CodeCommitRequest::CreatePullRequestAction, this))
+{
+
+}
+
+bool CreatePullRequestRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePullRequestResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePullRequestResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * CreatePullRequestRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePullRequestResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePullRequestRequestPrivate
+ *
+ * @brief  Private implementation for CreatePullRequestRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePullRequestRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public CreatePullRequestRequest instance.
+ */
+CreatePullRequestRequestPrivate::CreatePullRequestRequestPrivate(
+    const CodeCommitRequest::Action action, CreatePullRequestRequest * const q)
+    : CreatePullRequestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePullRequestRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePullRequestRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePullRequestRequest instance.
+ */
+CreatePullRequestRequestPrivate::CreatePullRequestRequestPrivate(
+    const CreatePullRequestRequestPrivate &other, CreatePullRequestRequest * const q)
+    : CreatePullRequestPrivate(other, q)
+{
+
+}

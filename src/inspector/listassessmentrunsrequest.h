@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTASSESSMENTRUNSREQUEST_H
 #define QTAWS_LISTASSESSMENTRUNSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListAssessmentRunsRequestPrivate;
+
+class QTAWS_EXPORT ListAssessmentRunsRequest : public InspectorRequest {
+
+public:
+    ListAssessmentRunsRequest(const ListAssessmentRunsRequest &other);
+    ListAssessmentRunsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAssessmentRunsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

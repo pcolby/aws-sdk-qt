@@ -19,3 +19,107 @@
 
 #include "describeworkflowexecutionrequest.h"
 #include "describeworkflowexecutionrequest_p.h"
+#include "describeworkflowexecutionresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DescribeWorkflowExecutionRequest
+ *
+ * @brief  Implements SWF DescribeWorkflowExecution requests.
+ *
+ * @see    SWFClient::describeWorkflowExecution
+ */
+
+/**
+ * @brief  Constructs a new DescribeWorkflowExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkflowExecutionResponse::DescribeWorkflowExecutionResponse(
+
+/**
+ * @brief  Constructs a new DescribeWorkflowExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeWorkflowExecutionRequest::DescribeWorkflowExecutionRequest(const DescribeWorkflowExecutionRequest &other)
+    : SWFRequest(new DescribeWorkflowExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeWorkflowExecutionRequest object.
+ */
+DescribeWorkflowExecutionRequest::DescribeWorkflowExecutionRequest()
+    : SWFRequest(new DescribeWorkflowExecutionRequestPrivate(SWFRequest::DescribeWorkflowExecutionAction, this))
+{
+
+}
+
+bool DescribeWorkflowExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeWorkflowExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeWorkflowExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * DescribeWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeWorkflowExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkflowExecutionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeWorkflowExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkflowExecutionRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public DescribeWorkflowExecutionRequest instance.
+ */
+DescribeWorkflowExecutionRequestPrivate::DescribeWorkflowExecutionRequestPrivate(
+    const SWFRequest::Action action, DescribeWorkflowExecutionRequest * const q)
+    : DescribeWorkflowExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkflowExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeWorkflowExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeWorkflowExecutionRequest instance.
+ */
+DescribeWorkflowExecutionRequestPrivate::DescribeWorkflowExecutionRequestPrivate(
+    const DescribeWorkflowExecutionRequestPrivate &other, DescribeWorkflowExecutionRequest * const q)
+    : DescribeWorkflowExecutionPrivate(other, q)
+{
+
+}

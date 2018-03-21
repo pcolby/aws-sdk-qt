@@ -19,3 +19,107 @@
 
 #include "deletebatchpredictionrequest.h"
 #include "deletebatchpredictionrequest_p.h"
+#include "deletebatchpredictionresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DeleteBatchPredictionRequest
+ *
+ * @brief  Implements MachineLearning DeleteBatchPrediction requests.
+ *
+ * @see    MachineLearningClient::deleteBatchPrediction
+ */
+
+/**
+ * @brief  Constructs a new DeleteBatchPredictionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
+
+/**
+ * @brief  Constructs a new DeleteBatchPredictionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBatchPredictionRequest::DeleteBatchPredictionRequest(const DeleteBatchPredictionRequest &other)
+    : MachineLearningRequest(new DeleteBatchPredictionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBatchPredictionRequest object.
+ */
+DeleteBatchPredictionRequest::DeleteBatchPredictionRequest()
+    : MachineLearningRequest(new DeleteBatchPredictionRequestPrivate(MachineLearningRequest::DeleteBatchPredictionAction, this))
+{
+
+}
+
+bool DeleteBatchPredictionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBatchPredictionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBatchPredictionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBatchPredictionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBatchPredictionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBatchPredictionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public DeleteBatchPredictionRequest instance.
+ */
+DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
+    const MachineLearningRequest::Action action, DeleteBatchPredictionRequest * const q)
+    : DeleteBatchPredictionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBatchPredictionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBatchPredictionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBatchPredictionRequest instance.
+ */
+DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
+    const DeleteBatchPredictionRequestPrivate &other, DeleteBatchPredictionRequest * const q)
+    : DeleteBatchPredictionPrivate(other, q)
+{
+
+}

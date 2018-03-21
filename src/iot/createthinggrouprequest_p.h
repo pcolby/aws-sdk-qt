@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETHINGGROUPREQUEST_P_H
 #define QTAWS_CREATETHINGGROUPREQUEST_P_H
 
+#include "iot_p.h"
+#include "createthinggrouprequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateThingGroupRequest;
+
+class QTAWS_EXPORT CreateThingGroupRequestPrivate : public IoTPrivate {
+
+public:
+    CreateThingGroupRequestPrivate(const IoT::Action action,
+                                   CreateThingGroupRequest * const q);
+    CreateThingGroupRequestPrivate(const CreateThingGroupRequestPrivate &other,
+                                   CreateThingGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateThingGroupRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

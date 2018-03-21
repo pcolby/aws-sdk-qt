@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTLIFECYCLEHOOKREQUEST_H
 #define QTAWS_PUTLIFECYCLEHOOKREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class PutLifecycleHookRequestPrivate;
+
+class QTAWS_EXPORT PutLifecycleHookRequest : public AutoScalingRequest {
+
+public:
+    PutLifecycleHookRequest(const PutLifecycleHookRequest &other);
+    PutLifecycleHookRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecycleHookRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

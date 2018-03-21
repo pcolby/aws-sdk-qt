@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOMAINDETAILREQUEST_H
 #define QTAWS_GETDOMAINDETAILREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetDomainDetailRequestPrivate;
+
+class QTAWS_EXPORT GetDomainDetailRequest : public Route53DomainsRequest {
+
+public:
+    GetDomainDetailRequest(const GetDomainDetailRequest &other);
+    GetDomainDetailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainDetailRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

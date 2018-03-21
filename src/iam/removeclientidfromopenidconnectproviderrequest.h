@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVECLIENTIDFROMOPENIDCONNECTPROVIDERREQUEST_H
 #define QTAWS_REMOVECLIENTIDFROMOPENIDCONNECTPROVIDERREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class RemoveClientIDFromOpenIDConnectProviderRequestPrivate;
+
+class QTAWS_EXPORT RemoveClientIDFromOpenIDConnectProviderRequest : public IAMRequest {
+
+public:
+    RemoveClientIDFromOpenIDConnectProviderRequest(const RemoveClientIDFromOpenIDConnectProviderRequest &other);
+    RemoveClientIDFromOpenIDConnectProviderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveClientIDFromOpenIDConnectProviderRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

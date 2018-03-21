@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEHSMCLIENTCERTIFICATEREQUEST_P_H
 #define QTAWS_DELETEHSMCLIENTCERTIFICATEREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deletehsmclientcertificaterequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteHsmClientCertificateRequest;
+
+class QTAWS_EXPORT DeleteHsmClientCertificateRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteHsmClientCertificateRequestPrivate(const Redshift::Action action,
+                                   DeleteHsmClientCertificateRequest * const q);
+    DeleteHsmClientCertificateRequestPrivate(const DeleteHsmClientCertificateRequestPrivate &other,
+                                   DeleteHsmClientCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHsmClientCertificateRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

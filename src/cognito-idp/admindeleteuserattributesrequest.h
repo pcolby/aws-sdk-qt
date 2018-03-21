@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINDELETEUSERATTRIBUTESREQUEST_H
 #define QTAWS_ADMINDELETEUSERATTRIBUTESREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminDeleteUserAttributesRequestPrivate;
+
+class QTAWS_EXPORT AdminDeleteUserAttributesRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminDeleteUserAttributesRequest(const AdminDeleteUserAttributesRequest &other);
+    AdminDeleteUserAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminDeleteUserAttributesRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

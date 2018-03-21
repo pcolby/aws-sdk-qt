@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELREQUEST_H
 #define QTAWS_DELETEDELIVERYCHANNELREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteDeliveryChannelRequestPrivate;
+
+class QTAWS_EXPORT DeleteDeliveryChannelRequest : public ConfigServiceRequest {
+
+public:
+    DeleteDeliveryChannelRequest(const DeleteDeliveryChannelRequest &other);
+    DeleteDeliveryChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeliveryChannelRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

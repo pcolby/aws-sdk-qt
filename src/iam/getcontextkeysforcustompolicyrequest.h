@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_H
 #define QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetContextKeysForCustomPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetContextKeysForCustomPolicyRequest : public IAMRequest {
+
+public:
+    GetContextKeysForCustomPolicyRequest(const GetContextKeysForCustomPolicyRequest &other);
+    GetContextKeysForCustomPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetContextKeysForCustomPolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETARGETSREQUEST_H
 #define QTAWS_REMOVETARGETSREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class RemoveTargetsRequestPrivate;
+
+class QTAWS_EXPORT RemoveTargetsRequest : public CloudWatchEventsRequest {
+
+public:
+    RemoveTargetsRequest(const RemoveTargetsRequest &other);
+    RemoveTargetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTargetsRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

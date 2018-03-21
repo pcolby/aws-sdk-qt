@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBASEPATHMAPPINGREQUEST_H
 #define QTAWS_DELETEBASEPATHMAPPINGREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteBasePathMappingRequestPrivate;
+
+class QTAWS_EXPORT DeleteBasePathMappingRequest : public APIGatewayRequest {
+
+public:
+    DeleteBasePathMappingRequest(const DeleteBasePathMappingRequest &other);
+    DeleteBasePathMappingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBasePathMappingRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

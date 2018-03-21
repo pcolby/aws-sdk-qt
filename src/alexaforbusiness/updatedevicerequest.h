@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDEVICEREQUEST_H
 #define QTAWS_UPDATEDEVICEREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateDeviceRequestPrivate;
+
+class QTAWS_EXPORT UpdateDeviceRequest : public AlexaForBusinessRequest {
+
+public:
+    UpdateDeviceRequest(const UpdateDeviceRequest &other);
+    UpdateDeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDeviceRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

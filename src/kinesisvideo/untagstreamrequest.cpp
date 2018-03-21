@@ -19,3 +19,107 @@
 
 #include "untagstreamrequest.h"
 #include "untagstreamrequest_p.h"
+#include "untagstreamresponse.h"
+#include "kinesisvideorequest_p.h"
+
+namespace AWS {
+namespace KinesisVideo {
+
+/**
+ * @class  UntagStreamRequest
+ *
+ * @brief  Implements KinesisVideo UntagStream requests.
+ *
+ * @see    KinesisVideoClient::untagStream
+ */
+
+/**
+ * @brief  Constructs a new UntagStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagStreamResponse::UntagStreamResponse(
+
+/**
+ * @brief  Constructs a new UntagStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UntagStreamRequest::UntagStreamRequest(const UntagStreamRequest &other)
+    : KinesisVideoRequest(new UntagStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UntagStreamRequest object.
+ */
+UntagStreamRequest::UntagStreamRequest()
+    : KinesisVideoRequest(new UntagStreamRequestPrivate(KinesisVideoRequest::UntagStreamAction, this))
+{
+
+}
+
+bool UntagStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UntagStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UntagStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisVideoClient::send
+ */
+AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new UntagStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagStreamRequestPrivate
+ *
+ * @brief  Private implementation for UntagStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagStreamRequestPrivate object.
+ *
+ * @param  action  KinesisVideo action being performed.
+ * @param  q       Pointer to this object's public UntagStreamRequest instance.
+ */
+UntagStreamRequestPrivate::UntagStreamRequestPrivate(
+    const KinesisVideoRequest::Action action, UntagStreamRequest * const q)
+    : UntagStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UntagStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UntagStreamRequest instance.
+ */
+UntagStreamRequestPrivate::UntagStreamRequestPrivate(
+    const UntagStreamRequestPrivate &other, UntagStreamRequest * const q)
+    : UntagStreamPrivate(other, q)
+{
+
+}

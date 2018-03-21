@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELABELSREQUEST_H
 #define QTAWS_DELETELABELSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteLabelsRequestPrivate;
+
+class QTAWS_EXPORT DeleteLabelsRequest : public WorkDocsRequest {
+
+public:
+    DeleteLabelsRequest(const DeleteLabelsRequest &other);
+    DeleteLabelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLabelsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

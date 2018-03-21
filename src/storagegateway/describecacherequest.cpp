@@ -19,3 +19,107 @@
 
 #include "describecacherequest.h"
 #include "describecacherequest_p.h"
+#include "describecacheresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeCacheRequest
+ *
+ * @brief  Implements StorageGateway DescribeCache requests.
+ *
+ * @see    StorageGatewayClient::describeCache
+ */
+
+/**
+ * @brief  Constructs a new DescribeCacheResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCacheResponse::DescribeCacheResponse(
+
+/**
+ * @brief  Constructs a new DescribeCacheRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCacheRequest::DescribeCacheRequest(const DescribeCacheRequest &other)
+    : StorageGatewayRequest(new DescribeCacheRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCacheRequest object.
+ */
+DescribeCacheRequest::DescribeCacheRequest()
+    : StorageGatewayRequest(new DescribeCacheRequestPrivate(StorageGatewayRequest::DescribeCacheAction, this))
+{
+
+}
+
+bool DescribeCacheRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCacheResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCacheResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCacheResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCacheRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCacheRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeCacheRequest instance.
+ */
+DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeCacheRequest * const q)
+    : DescribeCachePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCacheRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCacheRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCacheRequest instance.
+ */
+DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
+    const DescribeCacheRequestPrivate &other, DescribeCacheRequest * const q)
+    : DescribeCachePrivate(other, q)
+{
+
+}

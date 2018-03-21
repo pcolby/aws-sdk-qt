@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSINGRESSREQUEST_P_H
 #define QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSINGRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "updatesecuritygroupruledescriptionsingressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UpdateSecurityGroupRuleDescriptionsIngressRequest;
+
+class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate : public EC2Private {
+
+public:
+    UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(const EC2::Action action,
+                                   UpdateSecurityGroupRuleDescriptionsIngressRequest * const q);
+    UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other,
+                                   UpdateSecurityGroupRuleDescriptionsIngressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSecurityGroupRuleDescriptionsIngressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

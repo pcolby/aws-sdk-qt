@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPDBINSTANCEREQUEST_P_H
 #define QTAWS_STOPDBINSTANCEREQUEST_P_H
 
+#include "rds_p.h"
+#include "stopdbinstancerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class StopDBInstanceRequest;
+
+class QTAWS_EXPORT StopDBInstanceRequestPrivate : public RDSPrivate {
+
+public:
+    StopDBInstanceRequestPrivate(const RDS::Action action,
+                                   StopDBInstanceRequest * const q);
+    StopDBInstanceRequestPrivate(const StopDBInstanceRequestPrivate &other,
+                                   StopDBInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopDBInstanceRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETRAFFICPOLICYINSTANCEREQUEST_H
 #define QTAWS_DELETETRAFFICPOLICYINSTANCEREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteTrafficPolicyInstanceRequestPrivate;
+
+class QTAWS_EXPORT DeleteTrafficPolicyInstanceRequest : public Route53Request {
+
+public:
+    DeleteTrafficPolicyInstanceRequest(const DeleteTrafficPolicyInstanceRequest &other);
+    DeleteTrafficPolicyInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrafficPolicyInstanceRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

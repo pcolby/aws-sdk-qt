@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSNOWBALLUSAGEREQUEST_H
 #define QTAWS_GETSNOWBALLUSAGEREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetSnowballUsageRequestPrivate;
+
+class QTAWS_EXPORT GetSnowballUsageRequest : public SnowballRequest {
+
+public:
+    GetSnowballUsageRequest(const GetSnowballUsageRequest &other);
+    GetSnowballUsageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSnowballUsageRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

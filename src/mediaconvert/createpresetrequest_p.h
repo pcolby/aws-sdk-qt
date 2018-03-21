@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPRESETREQUEST_P_H
 #define QTAWS_CREATEPRESETREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "createpresetrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreatePresetRequest;
+
+class QTAWS_EXPORT CreatePresetRequestPrivate : public MediaConvertPrivate {
+
+public:
+    CreatePresetRequestPrivate(const MediaConvert::Action action,
+                                   CreatePresetRequest * const q);
+    CreatePresetRequestPrivate(const CreatePresetRequestPrivate &other,
+                                   CreatePresetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePresetRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGEREQUEST_H
 #define QTAWS_GETRESERVATIONCOVERAGEREQUEST_H
 
+#include "costexplorerrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationCoverageRequestPrivate;
+
+class QTAWS_EXPORT GetReservationCoverageRequest : public CostExplorerRequest {
+
+public:
+    GetReservationCoverageRequest(const GetReservationCoverageRequest &other);
+    GetReservationCoverageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetReservationCoverageRequest)
+
+}
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

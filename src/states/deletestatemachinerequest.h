@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESTATEMACHINEREQUEST_H
 #define QTAWS_DELETESTATEMACHINEREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteStateMachineRequestPrivate;
+
+class QTAWS_EXPORT DeleteStateMachineRequest : public SFNRequest {
+
+public:
+    DeleteStateMachineRequest(const DeleteStateMachineRequest &other);
+    DeleteStateMachineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStateMachineRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

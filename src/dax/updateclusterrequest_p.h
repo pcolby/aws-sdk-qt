@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECLUSTERREQUEST_P_H
 #define QTAWS_UPDATECLUSTERREQUEST_P_H
 
+#include "dax_p.h"
+#include "updateclusterrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateClusterRequest;
+
+class QTAWS_EXPORT UpdateClusterRequestPrivate : public DAXPrivate {
+
+public:
+    UpdateClusterRequestPrivate(const DAX::Action action,
+                                   UpdateClusterRequest * const q);
+    UpdateClusterRequestPrivate(const UpdateClusterRequestPrivate &other,
+                                   UpdateClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateClusterRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

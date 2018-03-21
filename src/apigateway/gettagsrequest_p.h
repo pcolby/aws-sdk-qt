@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "gettagsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetTagsRequest;
+
+class QTAWS_EXPORT GetTagsRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetTagsRequestPrivate(const APIGateway::Action action,
+                                   GetTagsRequest * const q);
+    GetTagsRequestPrivate(const GetTagsRequestPrivate &other,
+                                   GetTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagsRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

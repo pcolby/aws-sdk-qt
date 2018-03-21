@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPOLICYREQUEST_H
 #define QTAWS_GETPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetPolicyRequest : public IAMRequest {
+
+public:
+    GetPolicyRequest(const GetPolicyRequest &other);
+    GetPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

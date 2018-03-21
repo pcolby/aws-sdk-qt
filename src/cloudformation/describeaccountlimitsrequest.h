@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSREQUEST_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DescribeAccountLimitsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAccountLimitsRequest : public CloudFormationRequest {
+
+public:
+    DescribeAccountLimitsRequest(const DescribeAccountLimitsRequest &other);
+    DescribeAccountLimitsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountLimitsRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

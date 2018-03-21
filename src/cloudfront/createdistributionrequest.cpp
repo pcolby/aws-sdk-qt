@@ -19,3 +19,107 @@
 
 #include "createdistributionrequest.h"
 #include "createdistributionrequest_p.h"
+#include "createdistributionresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  CreateDistributionRequest
+ *
+ * @brief  Implements CloudFront CreateDistribution requests.
+ *
+ * @see    CloudFrontClient::createDistribution
+ */
+
+/**
+ * @brief  Constructs a new CreateDistributionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDistributionResponse::CreateDistributionResponse(
+
+/**
+ * @brief  Constructs a new CreateDistributionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDistributionRequest::CreateDistributionRequest(const CreateDistributionRequest &other)
+    : CloudFrontRequest(new CreateDistributionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDistributionRequest object.
+ */
+CreateDistributionRequest::CreateDistributionRequest()
+    : CloudFrontRequest(new CreateDistributionRequestPrivate(CloudFrontRequest::CreateDistributionAction, this))
+{
+
+}
+
+bool CreateDistributionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDistributionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDistributionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * CreateDistributionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDistributionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDistributionRequestPrivate
+ *
+ * @brief  Private implementation for CreateDistributionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDistributionRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public CreateDistributionRequest instance.
+ */
+CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
+    const CloudFrontRequest::Action action, CreateDistributionRequest * const q)
+    : CreateDistributionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDistributionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDistributionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDistributionRequest instance.
+ */
+CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
+    const CreateDistributionRequestPrivate &other, CreateDistributionRequest * const q)
+    : CreateDistributionPrivate(other, q)
+{
+
+}

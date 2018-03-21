@@ -19,3 +19,107 @@
 
 #include "deleteclustersnapshotrequest.h"
 #include "deleteclustersnapshotrequest_p.h"
+#include "deleteclustersnapshotresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteClusterSnapshotRequest
+ *
+ * @brief  Implements Redshift DeleteClusterSnapshot requests.
+ *
+ * @see    RedshiftClient::deleteClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new DeleteClusterSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteClusterSnapshotResponse::DeleteClusterSnapshotResponse(
+
+/**
+ * @brief  Constructs a new DeleteClusterSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteClusterSnapshotRequest::DeleteClusterSnapshotRequest(const DeleteClusterSnapshotRequest &other)
+    : RedshiftRequest(new DeleteClusterSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteClusterSnapshotRequest object.
+ */
+DeleteClusterSnapshotRequest::DeleteClusterSnapshotRequest()
+    : RedshiftRequest(new DeleteClusterSnapshotRequestPrivate(RedshiftRequest::DeleteClusterSnapshotAction, this))
+{
+
+}
+
+bool DeleteClusterSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteClusterSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteClusterSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DeleteClusterSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteClusterSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteClusterSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for DeleteClusterSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClusterSnapshotRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DeleteClusterSnapshotRequest instance.
+ */
+DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
+    const RedshiftRequest::Action action, DeleteClusterSnapshotRequest * const q)
+    : DeleteClusterSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClusterSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteClusterSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteClusterSnapshotRequest instance.
+ */
+DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
+    const DeleteClusterSnapshotRequestPrivate &other, DeleteClusterSnapshotRequest * const q)
+    : DeleteClusterSnapshotPrivate(other, q)
+{
+
+}

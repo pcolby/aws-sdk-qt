@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATENAMEDQUERYREQUEST_H
 #define QTAWS_CREATENAMEDQUERYREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class CreateNamedQueryRequestPrivate;
+
+class QTAWS_EXPORT CreateNamedQueryRequest : public AthenaRequest {
+
+public:
+    CreateNamedQueryRequest(const CreateNamedQueryRequest &other);
+    CreateNamedQueryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateNamedQueryRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

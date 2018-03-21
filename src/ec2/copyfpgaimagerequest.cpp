@@ -19,3 +19,107 @@
 
 #include "copyfpgaimagerequest.h"
 #include "copyfpgaimagerequest_p.h"
+#include "copyfpgaimageresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CopyFpgaImageRequest
+ *
+ * @brief  Implements EC2 CopyFpgaImage requests.
+ *
+ * @see    EC2Client::copyFpgaImage
+ */
+
+/**
+ * @brief  Constructs a new CopyFpgaImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyFpgaImageResponse::CopyFpgaImageResponse(
+
+/**
+ * @brief  Constructs a new CopyFpgaImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyFpgaImageRequest::CopyFpgaImageRequest(const CopyFpgaImageRequest &other)
+    : EC2Request(new CopyFpgaImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyFpgaImageRequest object.
+ */
+CopyFpgaImageRequest::CopyFpgaImageRequest()
+    : EC2Request(new CopyFpgaImageRequestPrivate(EC2Request::CopyFpgaImageAction, this))
+{
+
+}
+
+bool CopyFpgaImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyFpgaImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyFpgaImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyFpgaImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyFpgaImageRequestPrivate
+ *
+ * @brief  Private implementation for CopyFpgaImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyFpgaImageRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CopyFpgaImageRequest instance.
+ */
+CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
+    const EC2Request::Action action, CopyFpgaImageRequest * const q)
+    : CopyFpgaImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyFpgaImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyFpgaImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyFpgaImageRequest instance.
+ */
+CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
+    const CopyFpgaImageRequestPrivate &other, CopyFpgaImageRequest * const q)
+    : CopyFpgaImagePrivate(other, q)
+{
+
+}

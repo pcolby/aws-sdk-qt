@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYCLUSTERPARAMETERGROUPREQUEST_H
 #define QTAWS_MODIFYCLUSTERPARAMETERGROUPREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyClusterParameterGroupRequest : public RedshiftRequest {
+
+public:
+    ModifyClusterParameterGroupRequest(const ModifyClusterParameterGroupRequest &other);
+    ModifyClusterParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyClusterParameterGroupRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

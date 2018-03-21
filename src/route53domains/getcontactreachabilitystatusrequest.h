@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONTACTREACHABILITYSTATUSREQUEST_H
 #define QTAWS_GETCONTACTREACHABILITYSTATUSREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetContactReachabilityStatusRequestPrivate;
+
+class QTAWS_EXPORT GetContactReachabilityStatusRequest : public Route53DomainsRequest {
+
+public:
+    GetContactReachabilityStatusRequest(const GetContactReachabilityStatusRequest &other);
+    GetContactReachabilityStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetContactReachabilityStatusRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

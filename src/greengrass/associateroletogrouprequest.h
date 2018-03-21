@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEROLETOGROUPREQUEST_H
 #define QTAWS_ASSOCIATEROLETOGROUPREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class AssociateRoleToGroupRequestPrivate;
+
+class QTAWS_EXPORT AssociateRoleToGroupRequest : public GreengrassRequest {
+
+public:
+    AssociateRoleToGroupRequest(const AssociateRoleToGroupRequest &other);
+    AssociateRoleToGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateRoleToGroupRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

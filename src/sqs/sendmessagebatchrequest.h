@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDMESSAGEBATCHREQUEST_H
 #define QTAWS_SENDMESSAGEBATCHREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SendMessageBatchRequestPrivate;
+
+class QTAWS_EXPORT SendMessageBatchRequest : public SQSRequest {
+
+public:
+    SendMessageBatchRequest(const SendMessageBatchRequest &other);
+    SendMessageBatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendMessageBatchRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

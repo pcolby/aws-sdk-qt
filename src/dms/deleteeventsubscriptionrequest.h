@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteEventSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT DeleteEventSubscriptionRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other);
+    DeleteEventSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEventSubscriptionRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

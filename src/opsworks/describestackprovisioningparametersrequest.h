@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStackProvisioningParametersRequestPrivate;
+
+class QTAWS_EXPORT DescribeStackProvisioningParametersRequest : public OpsWorksRequest {
+
+public:
+    DescribeStackProvisioningParametersRequest(const DescribeStackProvisioningParametersRequest &other);
+    DescribeStackProvisioningParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStackProvisioningParametersRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

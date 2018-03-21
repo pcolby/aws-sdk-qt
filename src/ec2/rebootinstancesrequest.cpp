@@ -19,3 +19,107 @@
 
 #include "rebootinstancesrequest.h"
 #include "rebootinstancesrequest_p.h"
+#include "rebootinstancesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RebootInstancesRequest
+ *
+ * @brief  Implements EC2 RebootInstances requests.
+ *
+ * @see    EC2Client::rebootInstances
+ */
+
+/**
+ * @brief  Constructs a new RebootInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootInstancesResponse::RebootInstancesResponse(
+
+/**
+ * @brief  Constructs a new RebootInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RebootInstancesRequest::RebootInstancesRequest(const RebootInstancesRequest &other)
+    : EC2Request(new RebootInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RebootInstancesRequest object.
+ */
+RebootInstancesRequest::RebootInstancesRequest()
+    : EC2Request(new RebootInstancesRequestPrivate(EC2Request::RebootInstancesAction, this))
+{
+
+}
+
+bool RebootInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RebootInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RebootInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * RebootInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new RebootInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootInstancesRequestPrivate
+ *
+ * @brief  Private implementation for RebootInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootInstancesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public RebootInstancesRequest instance.
+ */
+RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
+    const EC2Request::Action action, RebootInstancesRequest * const q)
+    : RebootInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RebootInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RebootInstancesRequest instance.
+ */
+RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
+    const RebootInstancesRequestPrivate &other, RebootInstancesRequest * const q)
+    : RebootInstancesPrivate(other, q)
+{
+
+}

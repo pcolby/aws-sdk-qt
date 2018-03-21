@@ -19,3 +19,107 @@
 
 #include "updatechannelrequest.h"
 #include "updatechannelrequest_p.h"
+#include "updatechannelresponse.h"
+#include "medialiverequest_p.h"
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  UpdateChannelRequest
+ *
+ * @brief  Implements MediaLive UpdateChannel requests.
+ *
+ * @see    MediaLiveClient::updateChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateChannelResponse::UpdateChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateChannelRequest::UpdateChannelRequest(const UpdateChannelRequest &other)
+    : MediaLiveRequest(new UpdateChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateChannelRequest object.
+ */
+UpdateChannelRequest::UpdateChannelRequest()
+    : MediaLiveRequest(new UpdateChannelRequestPrivate(MediaLiveRequest::UpdateChannelAction, this))
+{
+
+}
+
+bool UpdateChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaLiveClient::send
+ */
+AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateChannelRequestPrivate object.
+ *
+ * @param  action  MediaLive action being performed.
+ * @param  q       Pointer to this object's public UpdateChannelRequest instance.
+ */
+UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
+    const MediaLiveRequest::Action action, UpdateChannelRequest * const q)
+    : UpdateChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateChannelRequest instance.
+ */
+UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
+    const UpdateChannelRequestPrivate &other, UpdateChannelRequest * const q)
+    : UpdateChannelPrivate(other, q)
+{
+
+}

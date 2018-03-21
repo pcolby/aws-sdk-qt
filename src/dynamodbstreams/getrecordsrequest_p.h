@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRECORDSREQUEST_P_H
 #define QTAWS_GETRECORDSREQUEST_P_H
 
+#include "dynamodbstreams_p.h"
+#include "getrecordsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class GetRecordsRequest;
+
+class QTAWS_EXPORT GetRecordsRequestPrivate : public DynamoDBStreamsPrivate {
+
+public:
+    GetRecordsRequestPrivate(const DynamoDBStreams::Action action,
+                                   GetRecordsRequest * const q);
+    GetRecordsRequestPrivate(const GetRecordsRequestPrivate &other,
+                                   GetRecordsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRecordsRequest)
+
+};
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

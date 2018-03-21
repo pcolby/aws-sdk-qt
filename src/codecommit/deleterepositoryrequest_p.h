@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREPOSITORYREQUEST_P_H
 #define QTAWS_DELETEREPOSITORYREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "deleterepositoryrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DeleteRepositoryRequest;
+
+class QTAWS_EXPORT DeleteRepositoryRequestPrivate : public CodeCommitPrivate {
+
+public:
+    DeleteRepositoryRequestPrivate(const CodeCommit::Action action,
+                                   DeleteRepositoryRequest * const q);
+    DeleteRepositoryRequestPrivate(const DeleteRepositoryRequestPrivate &other,
+                                   DeleteRepositoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRepositoryRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

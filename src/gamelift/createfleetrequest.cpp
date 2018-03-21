@@ -19,3 +19,107 @@
 
 #include "createfleetrequest.h"
 #include "createfleetrequest_p.h"
+#include "createfleetresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateFleetRequest
+ *
+ * @brief  Implements GameLift CreateFleet requests.
+ *
+ * @see    GameLiftClient::createFleet
+ */
+
+/**
+ * @brief  Constructs a new CreateFleetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFleetResponse::CreateFleetResponse(
+
+/**
+ * @brief  Constructs a new CreateFleetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateFleetRequest::CreateFleetRequest(const CreateFleetRequest &other)
+    : GameLiftRequest(new CreateFleetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateFleetRequest object.
+ */
+CreateFleetRequest::CreateFleetRequest()
+    : GameLiftRequest(new CreateFleetRequestPrivate(GameLiftRequest::CreateFleetAction, this))
+{
+
+}
+
+bool CreateFleetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateFleetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateFleetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateFleetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFleetRequestPrivate
+ *
+ * @brief  Private implementation for CreateFleetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFleetRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public CreateFleetRequest instance.
+ */
+CreateFleetRequestPrivate::CreateFleetRequestPrivate(
+    const GameLiftRequest::Action action, CreateFleetRequest * const q)
+    : CreateFleetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFleetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateFleetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateFleetRequest instance.
+ */
+CreateFleetRequestPrivate::CreateFleetRequestPrivate(
+    const CreateFleetRequestPrivate &other, CreateFleetRequest * const q)
+    : CreateFleetPrivate(other, q)
+{
+
+}

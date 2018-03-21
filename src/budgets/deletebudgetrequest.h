@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBUDGETREQUEST_H
 #define QTAWS_DELETEBUDGETREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DeleteBudgetRequestPrivate;
+
+class QTAWS_EXPORT DeleteBudgetRequest : public BudgetsRequest {
+
+public:
+    DeleteBudgetRequest(const DeleteBudgetRequest &other);
+    DeleteBudgetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBudgetRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

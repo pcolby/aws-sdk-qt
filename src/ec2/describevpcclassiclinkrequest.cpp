@@ -19,3 +19,107 @@
 
 #include "describevpcclassiclinkrequest.h"
 #include "describevpcclassiclinkrequest_p.h"
+#include "describevpcclassiclinkresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcClassicLinkRequest
+ *
+ * @brief  Implements EC2 DescribeVpcClassicLink requests.
+ *
+ * @see    EC2Client::describeVpcClassicLink
+ */
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcClassicLinkResponse::DescribeVpcClassicLinkResponse(
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest(const DescribeVpcClassicLinkRequest &other)
+    : EC2Request(new DescribeVpcClassicLinkRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkRequest object.
+ */
+DescribeVpcClassicLinkRequest::DescribeVpcClassicLinkRequest()
+    : EC2Request(new DescribeVpcClassicLinkRequestPrivate(EC2Request::DescribeVpcClassicLinkAction, this))
+{
+
+}
+
+bool DescribeVpcClassicLinkRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVpcClassicLinkResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVpcClassicLinkResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVpcClassicLinkResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcClassicLinkRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVpcClassicLinkRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeVpcClassicLinkRequest instance.
+ */
+DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
+    const EC2Request::Action action, DescribeVpcClassicLinkRequest * const q)
+    : DescribeVpcClassicLinkPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcClassicLinkRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVpcClassicLinkRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVpcClassicLinkRequest instance.
+ */
+DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
+    const DescribeVpcClassicLinkRequestPrivate &other, DescribeVpcClassicLinkRequest * const q)
+    : DescribeVpcClassicLinkPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createkeysandcertificaterequest.h"
 #include "createkeysandcertificaterequest_p.h"
+#include "createkeysandcertificateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateKeysAndCertificateRequest
+ *
+ * @brief  Implements IoT CreateKeysAndCertificate requests.
+ *
+ * @see    IoTClient::createKeysAndCertificate
+ */
+
+/**
+ * @brief  Constructs a new CreateKeysAndCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateKeysAndCertificateResponse::CreateKeysAndCertificateResponse(
+
+/**
+ * @brief  Constructs a new CreateKeysAndCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest(const CreateKeysAndCertificateRequest &other)
+    : IoTRequest(new CreateKeysAndCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateKeysAndCertificateRequest object.
+ */
+CreateKeysAndCertificateRequest::CreateKeysAndCertificateRequest()
+    : IoTRequest(new CreateKeysAndCertificateRequestPrivate(IoTRequest::CreateKeysAndCertificateAction, this))
+{
+
+}
+
+bool CreateKeysAndCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateKeysAndCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateKeysAndCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateKeysAndCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateKeysAndCertificateRequestPrivate
+ *
+ * @brief  Private implementation for CreateKeysAndCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CreateKeysAndCertificateRequest instance.
+ */
+CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
+    const IoTRequest::Action action, CreateKeysAndCertificateRequest * const q)
+    : CreateKeysAndCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateKeysAndCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateKeysAndCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateKeysAndCertificateRequest instance.
+ */
+CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
+    const CreateKeysAndCertificateRequestPrivate &other, CreateKeysAndCertificateRequest * const q)
+    : CreateKeysAndCertificatePrivate(other, q)
+{
+
+}

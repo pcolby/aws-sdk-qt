@@ -19,3 +19,107 @@
 
 #include "putapprovalresultrequest.h"
 #include "putapprovalresultrequest_p.h"
+#include "putapprovalresultresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutApprovalResultRequest
+ *
+ * @brief  Implements CodePipeline PutApprovalResult requests.
+ *
+ * @see    CodePipelineClient::putApprovalResult
+ */
+
+/**
+ * @brief  Constructs a new PutApprovalResultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutApprovalResultResponse::PutApprovalResultResponse(
+
+/**
+ * @brief  Constructs a new PutApprovalResultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutApprovalResultRequest::PutApprovalResultRequest(const PutApprovalResultRequest &other)
+    : CodePipelineRequest(new PutApprovalResultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutApprovalResultRequest object.
+ */
+PutApprovalResultRequest::PutApprovalResultRequest()
+    : CodePipelineRequest(new PutApprovalResultRequestPrivate(CodePipelineRequest::PutApprovalResultAction, this))
+{
+
+}
+
+bool PutApprovalResultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutApprovalResultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutApprovalResultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkReply * const reply) const
+{
+    return new PutApprovalResultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutApprovalResultRequestPrivate
+ *
+ * @brief  Private implementation for PutApprovalResultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutApprovalResultRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public PutApprovalResultRequest instance.
+ */
+PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
+    const CodePipelineRequest::Action action, PutApprovalResultRequest * const q)
+    : PutApprovalResultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutApprovalResultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutApprovalResultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutApprovalResultRequest instance.
+ */
+PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
+    const PutApprovalResultRequestPrivate &other, PutApprovalResultRequest * const q)
+    : PutApprovalResultPrivate(other, q)
+{
+
+}

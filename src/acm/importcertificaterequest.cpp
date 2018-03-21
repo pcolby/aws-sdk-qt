@@ -19,3 +19,107 @@
 
 #include "importcertificaterequest.h"
 #include "importcertificaterequest_p.h"
+#include "importcertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  ImportCertificateRequest
+ *
+ * @brief  Implements ACM ImportCertificate requests.
+ *
+ * @see    ACMClient::importCertificate
+ */
+
+/**
+ * @brief  Constructs a new ImportCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportCertificateResponse::ImportCertificateResponse(
+
+/**
+ * @brief  Constructs a new ImportCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ImportCertificateRequest::ImportCertificateRequest(const ImportCertificateRequest &other)
+    : ACMRequest(new ImportCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ImportCertificateRequest object.
+ */
+ImportCertificateRequest::ImportCertificateRequest()
+    : ACMRequest(new ImportCertificateRequestPrivate(ACMRequest::ImportCertificateAction, this))
+{
+
+}
+
+bool ImportCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ImportCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ImportCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * ImportCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new ImportCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportCertificateRequestPrivate
+ *
+ * @brief  Private implementation for ImportCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public ImportCertificateRequest instance.
+ */
+ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
+    const ACMRequest::Action action, ImportCertificateRequest * const q)
+    : ImportCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ImportCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ImportCertificateRequest instance.
+ */
+ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
+    const ImportCertificateRequestPrivate &other, ImportCertificateRequest * const q)
+    : ImportCertificatePrivate(other, q)
+{
+
+}

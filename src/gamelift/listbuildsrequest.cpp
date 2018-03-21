@@ -19,3 +19,107 @@
 
 #include "listbuildsrequest.h"
 #include "listbuildsrequest_p.h"
+#include "listbuildsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  ListBuildsRequest
+ *
+ * @brief  Implements GameLift ListBuilds requests.
+ *
+ * @see    GameLiftClient::listBuilds
+ */
+
+/**
+ * @brief  Constructs a new ListBuildsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBuildsResponse::ListBuildsResponse(
+
+/**
+ * @brief  Constructs a new ListBuildsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListBuildsRequest::ListBuildsRequest(const ListBuildsRequest &other)
+    : GameLiftRequest(new ListBuildsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListBuildsRequest object.
+ */
+ListBuildsRequest::ListBuildsRequest()
+    : GameLiftRequest(new ListBuildsRequestPrivate(GameLiftRequest::ListBuildsAction, this))
+{
+
+}
+
+bool ListBuildsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListBuildsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListBuildsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * ListBuildsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListBuildsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBuildsRequestPrivate
+ *
+ * @brief  Private implementation for ListBuildsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBuildsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public ListBuildsRequest instance.
+ */
+ListBuildsRequestPrivate::ListBuildsRequestPrivate(
+    const GameLiftRequest::Action action, ListBuildsRequest * const q)
+    : ListBuildsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBuildsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListBuildsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListBuildsRequest instance.
+ */
+ListBuildsRequestPrivate::ListBuildsRequestPrivate(
+    const ListBuildsRequestPrivate &other, ListBuildsRequest * const q)
+    : ListBuildsPrivate(other, q)
+{
+
+}

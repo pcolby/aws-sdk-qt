@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECOMMENTREQUEST_P_H
 #define QTAWS_UPDATECOMMENTREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "updatecommentrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateCommentRequest;
+
+class QTAWS_EXPORT UpdateCommentRequestPrivate : public CodeCommitPrivate {
+
+public:
+    UpdateCommentRequestPrivate(const CodeCommit::Action action,
+                                   UpdateCommentRequest * const q);
+    UpdateCommentRequestPrivate(const UpdateCommentRequestPrivate &other,
+                                   UpdateCommentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateCommentRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

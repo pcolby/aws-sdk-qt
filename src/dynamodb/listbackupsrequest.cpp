@@ -19,3 +19,107 @@
 
 #include "listbackupsrequest.h"
 #include "listbackupsrequest_p.h"
+#include "listbackupsresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  ListBackupsRequest
+ *
+ * @brief  Implements DynamoDB ListBackups requests.
+ *
+ * @see    DynamoDBClient::listBackups
+ */
+
+/**
+ * @brief  Constructs a new ListBackupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBackupsResponse::ListBackupsResponse(
+
+/**
+ * @brief  Constructs a new ListBackupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListBackupsRequest::ListBackupsRequest(const ListBackupsRequest &other)
+    : DynamoDBRequest(new ListBackupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListBackupsRequest object.
+ */
+ListBackupsRequest::ListBackupsRequest()
+    : DynamoDBRequest(new ListBackupsRequestPrivate(DynamoDBRequest::ListBackupsAction, this))
+{
+
+}
+
+bool ListBackupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListBackupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListBackupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListBackupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBackupsRequestPrivate
+ *
+ * @brief  Private implementation for ListBackupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBackupsRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public ListBackupsRequest instance.
+ */
+ListBackupsRequestPrivate::ListBackupsRequestPrivate(
+    const DynamoDBRequest::Action action, ListBackupsRequest * const q)
+    : ListBackupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBackupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListBackupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListBackupsRequest instance.
+ */
+ListBackupsRequestPrivate::ListBackupsRequestPrivate(
+    const ListBackupsRequestPrivate &other, ListBackupsRequest * const q)
+    : ListBackupsPrivate(other, q)
+{
+
+}

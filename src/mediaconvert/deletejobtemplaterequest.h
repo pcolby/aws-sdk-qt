@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEJOBTEMPLATEREQUEST_H
 #define QTAWS_DELETEJOBTEMPLATEREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeleteJobTemplateRequestPrivate;
+
+class QTAWS_EXPORT DeleteJobTemplateRequest : public MediaConvertRequest {
+
+public:
+    DeleteJobTemplateRequest(const DeleteJobTemplateRequest &other);
+    DeleteJobTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteJobTemplateRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

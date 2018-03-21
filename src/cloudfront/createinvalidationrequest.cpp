@@ -19,3 +19,107 @@
 
 #include "createinvalidationrequest.h"
 #include "createinvalidationrequest_p.h"
+#include "createinvalidationresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  CreateInvalidationRequest
+ *
+ * @brief  Implements CloudFront CreateInvalidation requests.
+ *
+ * @see    CloudFrontClient::createInvalidation
+ */
+
+/**
+ * @brief  Constructs a new CreateInvalidationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInvalidationResponse::CreateInvalidationResponse(
+
+/**
+ * @brief  Constructs a new CreateInvalidationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInvalidationRequest::CreateInvalidationRequest(const CreateInvalidationRequest &other)
+    : CloudFrontRequest(new CreateInvalidationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInvalidationRequest object.
+ */
+CreateInvalidationRequest::CreateInvalidationRequest()
+    : CloudFrontRequest(new CreateInvalidationRequestPrivate(CloudFrontRequest::CreateInvalidationAction, this))
+{
+
+}
+
+bool CreateInvalidationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInvalidationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInvalidationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInvalidationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInvalidationRequestPrivate
+ *
+ * @brief  Private implementation for CreateInvalidationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInvalidationRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public CreateInvalidationRequest instance.
+ */
+CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
+    const CloudFrontRequest::Action action, CreateInvalidationRequest * const q)
+    : CreateInvalidationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInvalidationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInvalidationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInvalidationRequest instance.
+ */
+CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
+    const CreateInvalidationRequestPrivate &other, CreateInvalidationRequest * const q)
+    : CreateInvalidationPrivate(other, q)
+{
+
+}

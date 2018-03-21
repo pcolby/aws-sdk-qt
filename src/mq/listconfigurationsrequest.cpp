@@ -19,3 +19,107 @@
 
 #include "listconfigurationsrequest.h"
 #include "listconfigurationsrequest_p.h"
+#include "listconfigurationsresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  ListConfigurationsRequest
+ *
+ * @brief  Implements MQ ListConfigurations requests.
+ *
+ * @see    MQClient::listConfigurations
+ */
+
+/**
+ * @brief  Constructs a new ListConfigurationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListConfigurationsResponse::ListConfigurationsResponse(
+
+/**
+ * @brief  Constructs a new ListConfigurationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListConfigurationsRequest::ListConfigurationsRequest(const ListConfigurationsRequest &other)
+    : MQRequest(new ListConfigurationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListConfigurationsRequest object.
+ */
+ListConfigurationsRequest::ListConfigurationsRequest()
+    : MQRequest(new ListConfigurationsRequestPrivate(MQRequest::ListConfigurationsAction, this))
+{
+
+}
+
+bool ListConfigurationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListConfigurationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListConfigurationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListConfigurationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListConfigurationsRequestPrivate
+ *
+ * @brief  Private implementation for ListConfigurationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationsRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public ListConfigurationsRequest instance.
+ */
+ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
+    const MQRequest::Action action, ListConfigurationsRequest * const q)
+    : ListConfigurationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListConfigurationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListConfigurationsRequest instance.
+ */
+ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
+    const ListConfigurationsRequestPrivate &other, ListConfigurationsRequest * const q)
+    : ListConfigurationsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBELOGGROUPSREQUEST_H
 #define QTAWS_DESCRIBELOGGROUPSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeLogGroupsRequestPrivate;
+
+class QTAWS_EXPORT DescribeLogGroupsRequest : public CloudWatchLogsRequest {
+
+public:
+    DescribeLogGroupsRequest(const DescribeLogGroupsRequest &other);
+    DescribeLogGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLogGroupsRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

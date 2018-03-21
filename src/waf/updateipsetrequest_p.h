@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEIPSETREQUEST_P_H
 #define QTAWS_UPDATEIPSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updateipsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateIPSetRequest;
+
+class QTAWS_EXPORT UpdateIPSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateIPSetRequestPrivate(const WAF::Action action,
+                                   UpdateIPSetRequest * const q);
+    UpdateIPSetRequestPrivate(const UpdateIPSetRequestPrivate &other,
+                                   UpdateIPSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateIPSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

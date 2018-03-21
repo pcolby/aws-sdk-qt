@@ -19,3 +19,107 @@
 
 #include "getdeploymentgrouprequest.h"
 #include "getdeploymentgrouprequest_p.h"
+#include "getdeploymentgroupresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  GetDeploymentGroupRequest
+ *
+ * @brief  Implements CodeDeploy GetDeploymentGroup requests.
+ *
+ * @see    CodeDeployClient::getDeploymentGroup
+ */
+
+/**
+ * @brief  Constructs a new GetDeploymentGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeploymentGroupResponse::GetDeploymentGroupResponse(
+
+/**
+ * @brief  Constructs a new GetDeploymentGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDeploymentGroupRequest::GetDeploymentGroupRequest(const GetDeploymentGroupRequest &other)
+    : CodeDeployRequest(new GetDeploymentGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDeploymentGroupRequest object.
+ */
+GetDeploymentGroupRequest::GetDeploymentGroupRequest()
+    : CodeDeployRequest(new GetDeploymentGroupRequestPrivate(CodeDeployRequest::GetDeploymentGroupAction, this))
+{
+
+}
+
+bool GetDeploymentGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDeploymentGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDeploymentGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * GetDeploymentGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDeploymentGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeploymentGroupRequestPrivate
+ *
+ * @brief  Private implementation for GetDeploymentGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentGroupRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public GetDeploymentGroupRequest instance.
+ */
+GetDeploymentGroupRequestPrivate::GetDeploymentGroupRequestPrivate(
+    const CodeDeployRequest::Action action, GetDeploymentGroupRequest * const q)
+    : GetDeploymentGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDeploymentGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDeploymentGroupRequest instance.
+ */
+GetDeploymentGroupRequestPrivate::GetDeploymentGroupRequestPrivate(
+    const GetDeploymentGroupRequestPrivate &other, GetDeploymentGroupRequest * const q)
+    : GetDeploymentGroupPrivate(other, q)
+{
+
+}

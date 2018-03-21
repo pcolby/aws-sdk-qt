@@ -19,3 +19,107 @@
 
 #include "deletenamespacerequest.h"
 #include "deletenamespacerequest_p.h"
+#include "deletenamespaceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  DeleteNamespaceRequest
+ *
+ * @brief  Implements ServiceDiscovery DeleteNamespace requests.
+ *
+ * @see    ServiceDiscoveryClient::deleteNamespace
+ */
+
+/**
+ * @brief  Constructs a new DeleteNamespaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNamespaceResponse::DeleteNamespaceResponse(
+
+/**
+ * @brief  Constructs a new DeleteNamespaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNamespaceRequest::DeleteNamespaceRequest(const DeleteNamespaceRequest &other)
+    : ServiceDiscoveryRequest(new DeleteNamespaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNamespaceRequest object.
+ */
+DeleteNamespaceRequest::DeleteNamespaceRequest()
+    : ServiceDiscoveryRequest(new DeleteNamespaceRequestPrivate(ServiceDiscoveryRequest::DeleteNamespaceAction, this))
+{
+
+}
+
+bool DeleteNamespaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNamespaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNamespaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNamespaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNamespaceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNamespaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNamespaceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public DeleteNamespaceRequest instance.
+ */
+DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, DeleteNamespaceRequest * const q)
+    : DeleteNamespacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNamespaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNamespaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNamespaceRequest instance.
+ */
+DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
+    const DeleteNamespaceRequestPrivate &other, DeleteNamespaceRequest * const q)
+    : DeleteNamespacePrivate(other, q)
+{
+
+}

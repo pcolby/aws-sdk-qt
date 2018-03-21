@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEJOBREQUEST_H
 #define QTAWS_DESCRIBEJOBREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeJobRequestPrivate;
+
+class QTAWS_EXPORT DescribeJobRequest : public IoTRequest {
+
+public:
+    DescribeJobRequest(const DescribeJobRequest &other);
+    DescribeJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

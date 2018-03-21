@@ -20,4 +20,32 @@
 #ifndef QTAWS_RUNTASKREQUEST_H
 #define QTAWS_RUNTASKREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RunTaskRequestPrivate;
+
+class QTAWS_EXPORT RunTaskRequest : public ECSRequest {
+
+public:
+    RunTaskRequest(const RunTaskRequest &other);
+    RunTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RunTaskRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

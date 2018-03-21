@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVOLUMEREQUEST_H
 #define QTAWS_DELETEVOLUMEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteVolumeRequestPrivate;
+
+class QTAWS_EXPORT DeleteVolumeRequest : public StorageGatewayRequest {
+
+public:
+    DeleteVolumeRequest(const DeleteVolumeRequest &other);
+    DeleteVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVolumeRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

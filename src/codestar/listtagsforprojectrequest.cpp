@@ -19,3 +19,107 @@
 
 #include "listtagsforprojectrequest.h"
 #include "listtagsforprojectrequest_p.h"
+#include "listtagsforprojectresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  ListTagsForProjectRequest
+ *
+ * @brief  Implements CodeStar ListTagsForProject requests.
+ *
+ * @see    CodeStarClient::listTagsForProject
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForProjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForProjectResponse::ListTagsForProjectResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForProjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForProjectRequest::ListTagsForProjectRequest(const ListTagsForProjectRequest &other)
+    : CodeStarRequest(new ListTagsForProjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForProjectRequest object.
+ */
+ListTagsForProjectRequest::ListTagsForProjectRequest()
+    : CodeStarRequest(new ListTagsForProjectRequestPrivate(CodeStarRequest::ListTagsForProjectAction, this))
+{
+
+}
+
+bool ListTagsForProjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForProjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForProjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForProjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForProjectRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForProjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForProjectRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public ListTagsForProjectRequest instance.
+ */
+ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
+    const CodeStarRequest::Action action, ListTagsForProjectRequest * const q)
+    : ListTagsForProjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForProjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForProjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForProjectRequest instance.
+ */
+ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
+    const ListTagsForProjectRequestPrivate &other, ListTagsForProjectRequest * const q)
+    : ListTagsForProjectPrivate(other, q)
+{
+
+}

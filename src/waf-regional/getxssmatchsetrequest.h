@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETXSSMATCHSETREQUEST_H
 #define QTAWS_GETXSSMATCHSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetXssMatchSetRequestPrivate;
+
+class QTAWS_EXPORT GetXssMatchSetRequest : public WAFRegionalRequest {
+
+public:
+    GetXssMatchSetRequest(const GetXssMatchSetRequest &other);
+    GetXssMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetXssMatchSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

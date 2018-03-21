@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPATCHBASELINEREQUEST_H
 #define QTAWS_DELETEPATCHBASELINEREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeletePatchBaselineRequestPrivate;
+
+class QTAWS_EXPORT DeletePatchBaselineRequest : public SSMRequest {
+
+public:
+    DeletePatchBaselineRequest(const DeletePatchBaselineRequest &other);
+    DeletePatchBaselineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePatchBaselineRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

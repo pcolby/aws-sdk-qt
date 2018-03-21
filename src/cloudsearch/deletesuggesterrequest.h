@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUGGESTERREQUEST_H
 #define QTAWS_DELETESUGGESTERREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteSuggesterRequestPrivate;
+
+class QTAWS_EXPORT DeleteSuggesterRequest : public CloudSearchRequest {
+
+public:
+    DeleteSuggesterRequest(const DeleteSuggesterRequest &other);
+    DeleteSuggesterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSuggesterRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

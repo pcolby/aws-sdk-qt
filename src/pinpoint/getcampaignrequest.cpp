@@ -19,3 +19,107 @@
 
 #include "getcampaignrequest.h"
 #include "getcampaignrequest_p.h"
+#include "getcampaignresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetCampaignRequest
+ *
+ * @brief  Implements Pinpoint GetCampaign requests.
+ *
+ * @see    PinpointClient::getCampaign
+ */
+
+/**
+ * @brief  Constructs a new GetCampaignResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCampaignResponse::GetCampaignResponse(
+
+/**
+ * @brief  Constructs a new GetCampaignRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCampaignRequest::GetCampaignRequest(const GetCampaignRequest &other)
+    : PinpointRequest(new GetCampaignRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCampaignRequest object.
+ */
+GetCampaignRequest::GetCampaignRequest()
+    : PinpointRequest(new GetCampaignRequestPrivate(PinpointRequest::GetCampaignAction, this))
+{
+
+}
+
+bool GetCampaignRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCampaignResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCampaignResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetCampaignRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCampaignResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCampaignRequestPrivate
+ *
+ * @brief  Private implementation for GetCampaignRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCampaignRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetCampaignRequest instance.
+ */
+GetCampaignRequestPrivate::GetCampaignRequestPrivate(
+    const PinpointRequest::Action action, GetCampaignRequest * const q)
+    : GetCampaignPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCampaignRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCampaignRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCampaignRequest instance.
+ */
+GetCampaignRequestPrivate::GetCampaignRequestPrivate(
+    const GetCampaignRequestPrivate &other, GetCampaignRequest * const q)
+    : GetCampaignPrivate(other, q)
+{
+
+}

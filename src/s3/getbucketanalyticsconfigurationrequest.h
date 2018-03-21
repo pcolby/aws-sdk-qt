@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETANALYTICSCONFIGURATIONREQUEST_H
 #define QTAWS_GETBUCKETANALYTICSCONFIGURATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketAnalyticsConfigurationRequestPrivate;
+
+class QTAWS_EXPORT GetBucketAnalyticsConfigurationRequest : public S3Request {
+
+public:
+    GetBucketAnalyticsConfigurationRequest(const GetBucketAnalyticsConfigurationRequest &other);
+    GetBucketAnalyticsConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketAnalyticsConfigurationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

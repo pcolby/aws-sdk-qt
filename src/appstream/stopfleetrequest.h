@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPFLEETREQUEST_H
 #define QTAWS_STOPFLEETREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StopFleetRequestPrivate;
+
+class QTAWS_EXPORT StopFleetRequest : public AppStreamRequest {
+
+public:
+    StopFleetRequest(const StopFleetRequest &other);
+    StopFleetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopFleetRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

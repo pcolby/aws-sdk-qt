@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECLUSTERREQUEST_H
 #define QTAWS_UPDATECLUSTERREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class UpdateClusterRequestPrivate;
+
+class QTAWS_EXPORT UpdateClusterRequest : public SnowballRequest {
+
+public:
+    UpdateClusterRequest(const UpdateClusterRequest &other);
+    UpdateClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateClusterRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

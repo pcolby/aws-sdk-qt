@@ -19,3 +19,107 @@
 
 #include "testrolerequest.h"
 #include "testrolerequest_p.h"
+#include "testroleresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  TestRoleRequest
+ *
+ * @brief  Implements ElasticTranscoder TestRole requests.
+ *
+ * @see    ElasticTranscoderClient::testRole
+ */
+
+/**
+ * @brief  Constructs a new TestRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestRoleResponse::TestRoleResponse(
+
+/**
+ * @brief  Constructs a new TestRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TestRoleRequest::TestRoleRequest(const TestRoleRequest &other)
+    : ElasticTranscoderRequest(new TestRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TestRoleRequest object.
+ */
+TestRoleRequest::TestRoleRequest()
+    : ElasticTranscoderRequest(new TestRoleRequestPrivate(ElasticTranscoderRequest::TestRoleAction, this))
+{
+
+}
+
+bool TestRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TestRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TestRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new TestRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TestRoleRequestPrivate
+ *
+ * @brief  Private implementation for TestRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestRoleRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public TestRoleRequest instance.
+ */
+TestRoleRequestPrivate::TestRoleRequestPrivate(
+    const ElasticTranscoderRequest::Action action, TestRoleRequest * const q)
+    : TestRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TestRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TestRoleRequest instance.
+ */
+TestRoleRequestPrivate::TestRoleRequestPrivate(
+    const TestRoleRequestPrivate &other, TestRoleRequest * const q)
+    : TestRolePrivate(other, q)
+{
+
+}

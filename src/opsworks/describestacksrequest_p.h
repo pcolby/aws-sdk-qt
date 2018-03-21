@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESTACKSREQUEST_P_H
 #define QTAWS_DESCRIBESTACKSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describestacksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStacksRequest;
+
+class QTAWS_EXPORT DescribeStacksRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeStacksRequestPrivate(const OpsWorks::Action action,
+                                   DescribeStacksRequest * const q);
+    DescribeStacksRequestPrivate(const DescribeStacksRequestPrivate &other,
+                                   DescribeStacksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStacksRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

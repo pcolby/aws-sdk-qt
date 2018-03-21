@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELOGSTREAMREQUEST_H
 #define QTAWS_DELETELOGSTREAMREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteLogStreamRequestPrivate;
+
+class QTAWS_EXPORT DeleteLogStreamRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteLogStreamRequest(const DeleteLogStreamRequest &other);
+    DeleteLogStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLogStreamRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

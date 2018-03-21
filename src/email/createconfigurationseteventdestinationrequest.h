@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetEventDestinationRequestPrivate;
+
+class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequest : public SESRequest {
+
+public:
+    CreateConfigurationSetEventDestinationRequest(const CreateConfigurationSetEventDestinationRequest &other);
+    CreateConfigurationSetEventDestinationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationSetEventDestinationRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

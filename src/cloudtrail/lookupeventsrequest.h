@@ -20,4 +20,32 @@
 #ifndef QTAWS_LOOKUPEVENTSREQUEST_H
 #define QTAWS_LOOKUPEVENTSREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class LookupEventsRequestPrivate;
+
+class QTAWS_EXPORT LookupEventsRequest : public CloudTrailRequest {
+
+public:
+    LookupEventsRequest(const LookupEventsRequest &other);
+    LookupEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(LookupEventsRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

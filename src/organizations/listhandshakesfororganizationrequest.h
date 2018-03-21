@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTHANDSHAKESFORORGANIZATIONREQUEST_H
 #define QTAWS_LISTHANDSHAKESFORORGANIZATIONREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListHandshakesForOrganizationRequestPrivate;
+
+class QTAWS_EXPORT ListHandshakesForOrganizationRequest : public OrganizationsRequest {
+
+public:
+    ListHandshakesForOrganizationRequest(const ListHandshakesForOrganizationRequest &other);
+    ListHandshakesForOrganizationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListHandshakesForOrganizationRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

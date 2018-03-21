@@ -19,3 +19,107 @@
 
 #include "associateteammemberrequest.h"
 #include "associateteammemberrequest_p.h"
+#include "associateteammemberresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  AssociateTeamMemberRequest
+ *
+ * @brief  Implements CodeStar AssociateTeamMember requests.
+ *
+ * @see    CodeStarClient::associateTeamMember
+ */
+
+/**
+ * @brief  Constructs a new AssociateTeamMemberResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateTeamMemberResponse::AssociateTeamMemberResponse(
+
+/**
+ * @brief  Constructs a new AssociateTeamMemberRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateTeamMemberRequest::AssociateTeamMemberRequest(const AssociateTeamMemberRequest &other)
+    : CodeStarRequest(new AssociateTeamMemberRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateTeamMemberRequest object.
+ */
+AssociateTeamMemberRequest::AssociateTeamMemberRequest()
+    : CodeStarRequest(new AssociateTeamMemberRequestPrivate(CodeStarRequest::AssociateTeamMemberAction, this))
+{
+
+}
+
+bool AssociateTeamMemberRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateTeamMemberResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateTeamMemberResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * AssociateTeamMemberRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateTeamMemberResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateTeamMemberRequestPrivate
+ *
+ * @brief  Private implementation for AssociateTeamMemberRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTeamMemberRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public AssociateTeamMemberRequest instance.
+ */
+AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
+    const CodeStarRequest::Action action, AssociateTeamMemberRequest * const q)
+    : AssociateTeamMemberPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateTeamMemberRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateTeamMemberRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateTeamMemberRequest instance.
+ */
+AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
+    const AssociateTeamMemberRequestPrivate &other, AssociateTeamMemberRequest * const q)
+    : AssociateTeamMemberPrivate(other, q)
+{
+
+}

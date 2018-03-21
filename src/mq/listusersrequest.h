@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTUSERSREQUEST_H
 #define QTAWS_LISTUSERSREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListUsersRequestPrivate;
+
+class QTAWS_EXPORT ListUsersRequest : public MQRequest {
+
+public:
+    ListUsersRequest(const ListUsersRequest &other);
+    ListUsersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListUsersRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

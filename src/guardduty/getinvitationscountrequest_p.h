@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINVITATIONSCOUNTREQUEST_P_H
 #define QTAWS_GETINVITATIONSCOUNTREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "getinvitationscountrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetInvitationsCountRequest;
+
+class QTAWS_EXPORT GetInvitationsCountRequestPrivate : public GuardDutyPrivate {
+
+public:
+    GetInvitationsCountRequestPrivate(const GuardDuty::Action action,
+                                   GetInvitationsCountRequest * const q);
+    GetInvitationsCountRequestPrivate(const GetInvitationsCountRequestPrivate &other,
+                                   GetInvitationsCountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetInvitationsCountRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

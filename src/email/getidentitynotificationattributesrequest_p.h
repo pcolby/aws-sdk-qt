@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESREQUEST_P_H
 
+#include "ses_p.h"
+#include "getidentitynotificationattributesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityNotificationAttributesRequest;
+
+class QTAWS_EXPORT GetIdentityNotificationAttributesRequestPrivate : public SESPrivate {
+
+public:
+    GetIdentityNotificationAttributesRequestPrivate(const SES::Action action,
+                                   GetIdentityNotificationAttributesRequest * const q);
+    GetIdentityNotificationAttributesRequestPrivate(const GetIdentityNotificationAttributesRequestPrivate &other,
+                                   GetIdentityNotificationAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityNotificationAttributesRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

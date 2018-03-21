@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEROLEREQUEST_P_H
 #define QTAWS_CREATEROLEREQUEST_P_H
 
+#include "iam_p.h"
+#include "createrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateRoleRequest;
+
+class QTAWS_EXPORT CreateRoleRequestPrivate : public IAMPrivate {
+
+public:
+    CreateRoleRequestPrivate(const IAM::Action action,
+                                   CreateRoleRequest * const q);
+    CreateRoleRequestPrivate(const CreateRoleRequestPrivate &other,
+                                   CreateRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRoleRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

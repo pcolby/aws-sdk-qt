@@ -20,4 +20,32 @@
 #ifndef QTAWS_POLLFORTASKREQUEST_H
 #define QTAWS_POLLFORTASKREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class PollForTaskRequestPrivate;
+
+class QTAWS_EXPORT PollForTaskRequest : public DataPipelineRequest {
+
+public:
+    PollForTaskRequest(const PollForTaskRequest &other);
+    PollForTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PollForTaskRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

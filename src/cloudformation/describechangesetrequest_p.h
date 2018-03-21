@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECHANGESETREQUEST_P_H
 #define QTAWS_DESCRIBECHANGESETREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "describechangesetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DescribeChangeSetRequest;
+
+class QTAWS_EXPORT DescribeChangeSetRequestPrivate : public CloudFormationPrivate {
+
+public:
+    DescribeChangeSetRequestPrivate(const CloudFormation::Action action,
+                                   DescribeChangeSetRequest * const q);
+    DescribeChangeSetRequestPrivate(const DescribeChangeSetRequestPrivate &other,
+                                   DescribeChangeSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeChangeSetRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

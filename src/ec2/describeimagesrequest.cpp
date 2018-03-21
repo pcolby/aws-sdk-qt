@@ -19,3 +19,107 @@
 
 #include "describeimagesrequest.h"
 #include "describeimagesrequest_p.h"
+#include "describeimagesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeImagesRequest
+ *
+ * @brief  Implements EC2 DescribeImages requests.
+ *
+ * @see    EC2Client::describeImages
+ */
+
+/**
+ * @brief  Constructs a new DescribeImagesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeImagesResponse::DescribeImagesResponse(
+
+/**
+ * @brief  Constructs a new DescribeImagesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeImagesRequest::DescribeImagesRequest(const DescribeImagesRequest &other)
+    : EC2Request(new DescribeImagesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeImagesRequest object.
+ */
+DescribeImagesRequest::DescribeImagesRequest()
+    : EC2Request(new DescribeImagesRequestPrivate(EC2Request::DescribeImagesAction, this))
+{
+
+}
+
+bool DescribeImagesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeImagesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeImagesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeImagesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeImagesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeImagesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImagesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeImagesRequest instance.
+ */
+DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
+    const EC2Request::Action action, DescribeImagesRequest * const q)
+    : DescribeImagesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImagesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeImagesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeImagesRequest instance.
+ */
+DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
+    const DescribeImagesRequestPrivate &other, DescribeImagesRequest * const q)
+    : DescribeImagesPrivate(other, q)
+{
+
+}

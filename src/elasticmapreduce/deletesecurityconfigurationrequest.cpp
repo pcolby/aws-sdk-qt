@@ -19,3 +19,107 @@
 
 #include "deletesecurityconfigurationrequest.h"
 #include "deletesecurityconfigurationrequest_p.h"
+#include "deletesecurityconfigurationresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  DeleteSecurityConfigurationRequest
+ *
+ * @brief  Implements EMR DeleteSecurityConfiguration requests.
+ *
+ * @see    EMRClient::deleteSecurityConfiguration
+ */
+
+/**
+ * @brief  Constructs a new DeleteSecurityConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
+
+/**
+ * @brief  Constructs a new DeleteSecurityConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest(const DeleteSecurityConfigurationRequest &other)
+    : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSecurityConfigurationRequest object.
+ */
+DeleteSecurityConfigurationRequest::DeleteSecurityConfigurationRequest()
+    : EMRRequest(new DeleteSecurityConfigurationRequestPrivate(EMRRequest::DeleteSecurityConfigurationAction, this))
+{
+
+}
+
+bool DeleteSecurityConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSecurityConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSecurityConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSecurityConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSecurityConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSecurityConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public DeleteSecurityConfigurationRequest instance.
+ */
+DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
+    const EMRRequest::Action action, DeleteSecurityConfigurationRequest * const q)
+    : DeleteSecurityConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSecurityConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSecurityConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSecurityConfigurationRequest instance.
+ */
+DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
+    const DeleteSecurityConfigurationRequestPrivate &other, DeleteSecurityConfigurationRequest * const q)
+    : DeleteSecurityConfigurationPrivate(other, q)
+{
+
+}

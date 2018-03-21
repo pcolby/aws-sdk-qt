@@ -19,3 +19,107 @@
 
 #include "listvpcassociationauthorizationsrequest.h"
 #include "listvpcassociationauthorizationsrequest_p.h"
+#include "listvpcassociationauthorizationsresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListVPCAssociationAuthorizationsRequest
+ *
+ * @brief  Implements Route53 ListVPCAssociationAuthorizations requests.
+ *
+ * @see    Route53Client::listVPCAssociationAuthorizations
+ */
+
+/**
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsResponse(
+
+/**
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListVPCAssociationAuthorizationsRequest::ListVPCAssociationAuthorizationsRequest(const ListVPCAssociationAuthorizationsRequest &other)
+    : Route53Request(new ListVPCAssociationAuthorizationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsRequest object.
+ */
+ListVPCAssociationAuthorizationsRequest::ListVPCAssociationAuthorizationsRequest()
+    : Route53Request(new ListVPCAssociationAuthorizationsRequestPrivate(Route53Request::ListVPCAssociationAuthorizationsAction, this))
+{
+
+}
+
+bool ListVPCAssociationAuthorizationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListVPCAssociationAuthorizationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListVPCAssociationAuthorizationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListVPCAssociationAuthorizationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListVPCAssociationAuthorizationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVPCAssociationAuthorizationsRequestPrivate
+ *
+ * @brief  Private implementation for ListVPCAssociationAuthorizationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListVPCAssociationAuthorizationsRequest instance.
+ */
+ListVPCAssociationAuthorizationsRequestPrivate::ListVPCAssociationAuthorizationsRequestPrivate(
+    const Route53Request::Action action, ListVPCAssociationAuthorizationsRequest * const q)
+    : ListVPCAssociationAuthorizationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVPCAssociationAuthorizationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListVPCAssociationAuthorizationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListVPCAssociationAuthorizationsRequest instance.
+ */
+ListVPCAssociationAuthorizationsRequestPrivate::ListVPCAssociationAuthorizationsRequestPrivate(
+    const ListVPCAssociationAuthorizationsRequestPrivate &other, ListVPCAssociationAuthorizationsRequest * const q)
+    : ListVPCAssociationAuthorizationsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describemetricfiltersrequest.h"
 #include "describemetricfiltersrequest_p.h"
+#include "describemetricfiltersresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeMetricFiltersRequest
+ *
+ * @brief  Implements CloudWatchLogs DescribeMetricFilters requests.
+ *
+ * @see    CloudWatchLogsClient::describeMetricFilters
+ */
+
+/**
+ * @brief  Constructs a new DescribeMetricFiltersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMetricFiltersResponse::DescribeMetricFiltersResponse(
+
+/**
+ * @brief  Constructs a new DescribeMetricFiltersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMetricFiltersRequest::DescribeMetricFiltersRequest(const DescribeMetricFiltersRequest &other)
+    : CloudWatchLogsRequest(new DescribeMetricFiltersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMetricFiltersRequest object.
+ */
+DescribeMetricFiltersRequest::DescribeMetricFiltersRequest()
+    : CloudWatchLogsRequest(new DescribeMetricFiltersRequestPrivate(CloudWatchLogsRequest::DescribeMetricFiltersAction, this))
+{
+
+}
+
+bool DescribeMetricFiltersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMetricFiltersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMetricFiltersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMetricFiltersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMetricFiltersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMetricFiltersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMetricFiltersRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DescribeMetricFiltersRequest instance.
+ */
+DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DescribeMetricFiltersRequest * const q)
+    : DescribeMetricFiltersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMetricFiltersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMetricFiltersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMetricFiltersRequest instance.
+ */
+DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
+    const DescribeMetricFiltersRequestPrivate &other, DescribeMetricFiltersRequest * const q)
+    : DescribeMetricFiltersPrivate(other, q)
+{
+
+}

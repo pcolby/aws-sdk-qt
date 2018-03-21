@@ -19,3 +19,107 @@
 
 #include "modifyvpcpeeringconnectionoptionsrequest.h"
 #include "modifyvpcpeeringconnectionoptionsrequest_p.h"
+#include "modifyvpcpeeringconnectionoptionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcPeeringConnectionOptionsRequest
+ *
+ * @brief  Implements EC2 ModifyVpcPeeringConnectionOptions requests.
+ *
+ * @see    EC2Client::modifyVpcPeeringConnectionOptions
+ */
+
+/**
+ * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResponse(
+
+/**
+ * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest(const ModifyVpcPeeringConnectionOptionsRequest &other)
+    : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequest object.
+ */
+ModifyVpcPeeringConnectionOptionsRequest::ModifyVpcPeeringConnectionOptionsRequest()
+    : EC2Request(new ModifyVpcPeeringConnectionOptionsRequestPrivate(EC2Request::ModifyVpcPeeringConnectionOptionsAction, this))
+{
+
+}
+
+bool ModifyVpcPeeringConnectionOptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyVpcPeeringConnectionOptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyVpcPeeringConnectionOptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyVpcPeeringConnectionOptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcPeeringConnectionOptionsRequestPrivate
+ *
+ * @brief  Private implementation for ModifyVpcPeeringConnectionOptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyVpcPeeringConnectionOptionsRequest instance.
+ */
+ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
+    const EC2Request::Action action, ModifyVpcPeeringConnectionOptionsRequest * const q)
+    : ModifyVpcPeeringConnectionOptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyVpcPeeringConnectionOptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyVpcPeeringConnectionOptionsRequest instance.
+ */
+ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
+    const ModifyVpcPeeringConnectionOptionsRequestPrivate &other, ModifyVpcPeeringConnectionOptionsRequest * const q)
+    : ModifyVpcPeeringConnectionOptionsPrivate(other, q)
+{
+
+}

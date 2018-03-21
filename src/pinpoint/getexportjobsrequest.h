@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETEXPORTJOBSREQUEST_H
 #define QTAWS_GETEXPORTJOBSREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetExportJobsRequestPrivate;
+
+class QTAWS_EXPORT GetExportJobsRequest : public PinpointRequest {
+
+public:
+    GetExportJobsRequest(const GetExportJobsRequest &other);
+    GetExportJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetExportJobsRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

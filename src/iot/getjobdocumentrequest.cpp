@@ -19,3 +19,107 @@
 
 #include "getjobdocumentrequest.h"
 #include "getjobdocumentrequest_p.h"
+#include "getjobdocumentresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetJobDocumentRequest
+ *
+ * @brief  Implements IoT GetJobDocument requests.
+ *
+ * @see    IoTClient::getJobDocument
+ */
+
+/**
+ * @brief  Constructs a new GetJobDocumentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobDocumentResponse::GetJobDocumentResponse(
+
+/**
+ * @brief  Constructs a new GetJobDocumentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetJobDocumentRequest::GetJobDocumentRequest(const GetJobDocumentRequest &other)
+    : IoTRequest(new GetJobDocumentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetJobDocumentRequest object.
+ */
+GetJobDocumentRequest::GetJobDocumentRequest()
+    : IoTRequest(new GetJobDocumentRequestPrivate(IoTRequest::GetJobDocumentAction, this))
+{
+
+}
+
+bool GetJobDocumentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetJobDocumentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetJobDocumentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * GetJobDocumentRequest::response(QNetworkReply * const reply) const
+{
+    return new GetJobDocumentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobDocumentRequestPrivate
+ *
+ * @brief  Private implementation for GetJobDocumentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobDocumentRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public GetJobDocumentRequest instance.
+ */
+GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
+    const IoTRequest::Action action, GetJobDocumentRequest * const q)
+    : GetJobDocumentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobDocumentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetJobDocumentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetJobDocumentRequest instance.
+ */
+GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
+    const GetJobDocumentRequestPrivate &other, GetJobDocumentRequest * const q)
+    : GetJobDocumentPrivate(other, q)
+{
+
+}

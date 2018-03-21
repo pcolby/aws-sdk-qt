@@ -19,3 +19,107 @@
 
 #include "listnetworkprofilesrequest.h"
 #include "listnetworkprofilesrequest_p.h"
+#include "listnetworkprofilesresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListNetworkProfilesRequest
+ *
+ * @brief  Implements DeviceFarm ListNetworkProfiles requests.
+ *
+ * @see    DeviceFarmClient::listNetworkProfiles
+ */
+
+/**
+ * @brief  Constructs a new ListNetworkProfilesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListNetworkProfilesResponse::ListNetworkProfilesResponse(
+
+/**
+ * @brief  Constructs a new ListNetworkProfilesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListNetworkProfilesRequest::ListNetworkProfilesRequest(const ListNetworkProfilesRequest &other)
+    : DeviceFarmRequest(new ListNetworkProfilesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListNetworkProfilesRequest object.
+ */
+ListNetworkProfilesRequest::ListNetworkProfilesRequest()
+    : DeviceFarmRequest(new ListNetworkProfilesRequestPrivate(DeviceFarmRequest::ListNetworkProfilesAction, this))
+{
+
+}
+
+bool ListNetworkProfilesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListNetworkProfilesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListNetworkProfilesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListNetworkProfilesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListNetworkProfilesRequestPrivate
+ *
+ * @brief  Private implementation for ListNetworkProfilesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListNetworkProfilesRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListNetworkProfilesRequest instance.
+ */
+ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
+    const DeviceFarmRequest::Action action, ListNetworkProfilesRequest * const q)
+    : ListNetworkProfilesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListNetworkProfilesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListNetworkProfilesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListNetworkProfilesRequest instance.
+ */
+ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
+    const ListNetworkProfilesRequestPrivate &other, ListNetworkProfilesRequest * const q)
+    : ListNetworkProfilesPrivate(other, q)
+{
+
+}

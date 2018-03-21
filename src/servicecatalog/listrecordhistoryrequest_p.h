@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRECORDHISTORYREQUEST_P_H
 #define QTAWS_LISTRECORDHISTORYREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "listrecordhistoryrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListRecordHistoryRequest;
+
+class QTAWS_EXPORT ListRecordHistoryRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ListRecordHistoryRequestPrivate(const ServiceCatalog::Action action,
+                                   ListRecordHistoryRequest * const q);
+    ListRecordHistoryRequestPrivate(const ListRecordHistoryRequestPrivate &other,
+                                   ListRecordHistoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRecordHistoryRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

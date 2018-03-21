@@ -19,3 +19,107 @@
 
 #include "createmultipartuploadrequest.h"
 #include "createmultipartuploadrequest_p.h"
+#include "createmultipartuploadresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  CreateMultipartUploadRequest
+ *
+ * @brief  Implements S3 CreateMultipartUpload requests.
+ *
+ * @see    S3Client::createMultipartUpload
+ */
+
+/**
+ * @brief  Constructs a new CreateMultipartUploadResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMultipartUploadResponse::CreateMultipartUploadResponse(
+
+/**
+ * @brief  Constructs a new CreateMultipartUploadRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateMultipartUploadRequest::CreateMultipartUploadRequest(const CreateMultipartUploadRequest &other)
+    : S3Request(new CreateMultipartUploadRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateMultipartUploadRequest object.
+ */
+CreateMultipartUploadRequest::CreateMultipartUploadRequest()
+    : S3Request(new CreateMultipartUploadRequestPrivate(S3Request::CreateMultipartUploadAction, this))
+{
+
+}
+
+bool CreateMultipartUploadRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateMultipartUploadResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateMultipartUploadResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * CreateMultipartUploadRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateMultipartUploadResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMultipartUploadRequestPrivate
+ *
+ * @brief  Private implementation for CreateMultipartUploadRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMultipartUploadRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public CreateMultipartUploadRequest instance.
+ */
+CreateMultipartUploadRequestPrivate::CreateMultipartUploadRequestPrivate(
+    const S3Request::Action action, CreateMultipartUploadRequest * const q)
+    : CreateMultipartUploadPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMultipartUploadRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateMultipartUploadRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateMultipartUploadRequest instance.
+ */
+CreateMultipartUploadRequestPrivate::CreateMultipartUploadRequestPrivate(
+    const CreateMultipartUploadRequestPrivate &other, CreateMultipartUploadRequest * const q)
+    : CreateMultipartUploadPrivate(other, q)
+{
+
+}

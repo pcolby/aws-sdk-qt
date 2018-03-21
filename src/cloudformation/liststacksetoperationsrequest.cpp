@@ -19,3 +19,107 @@
 
 #include "liststacksetoperationsrequest.h"
 #include "liststacksetoperationsrequest_p.h"
+#include "liststacksetoperationsresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListStackSetOperationsRequest
+ *
+ * @brief  Implements CloudFormation ListStackSetOperations requests.
+ *
+ * @see    CloudFormationClient::listStackSetOperations
+ */
+
+/**
+ * @brief  Constructs a new ListStackSetOperationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStackSetOperationsResponse::ListStackSetOperationsResponse(
+
+/**
+ * @brief  Constructs a new ListStackSetOperationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListStackSetOperationsRequest::ListStackSetOperationsRequest(const ListStackSetOperationsRequest &other)
+    : CloudFormationRequest(new ListStackSetOperationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListStackSetOperationsRequest object.
+ */
+ListStackSetOperationsRequest::ListStackSetOperationsRequest()
+    : CloudFormationRequest(new ListStackSetOperationsRequestPrivate(CloudFormationRequest::ListStackSetOperationsAction, this))
+{
+
+}
+
+bool ListStackSetOperationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListStackSetOperationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListStackSetOperationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListStackSetOperationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStackSetOperationsRequestPrivate
+ *
+ * @brief  Private implementation for ListStackSetOperationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackSetOperationsRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ListStackSetOperationsRequest instance.
+ */
+ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
+    const CloudFormationRequest::Action action, ListStackSetOperationsRequest * const q)
+    : ListStackSetOperationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStackSetOperationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListStackSetOperationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListStackSetOperationsRequest instance.
+ */
+ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
+    const ListStackSetOperationsRequestPrivate &other, ListStackSetOperationsRequest * const q)
+    : ListStackSetOperationsPrivate(other, q)
+{
+
+}

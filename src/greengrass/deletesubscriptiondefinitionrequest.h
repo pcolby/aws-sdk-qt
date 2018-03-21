@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONDEFINITIONREQUEST_H
 #define QTAWS_DELETESUBSCRIPTIONDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteSubscriptionDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubscriptionDefinitionRequest : public GreengrassRequest {
+
+public:
+    DeleteSubscriptionDefinitionRequest(const DeleteSubscriptionDefinitionRequest &other);
+    DeleteSubscriptionDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriptionDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

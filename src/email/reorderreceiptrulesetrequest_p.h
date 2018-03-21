@@ -20,4 +20,29 @@
 #ifndef QTAWS_REORDERRECEIPTRULESETREQUEST_P_H
 #define QTAWS_REORDERRECEIPTRULESETREQUEST_P_H
 
+#include "ses_p.h"
+#include "reorderreceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ReorderReceiptRuleSetRequest;
+
+class QTAWS_EXPORT ReorderReceiptRuleSetRequestPrivate : public SESPrivate {
+
+public:
+    ReorderReceiptRuleSetRequestPrivate(const SES::Action action,
+                                   ReorderReceiptRuleSetRequest * const q);
+    ReorderReceiptRuleSetRequestPrivate(const ReorderReceiptRuleSetRequestPrivate &other,
+                                   ReorderReceiptRuleSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReorderReceiptRuleSetRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

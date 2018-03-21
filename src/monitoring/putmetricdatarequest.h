@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTMETRICDATAREQUEST_H
 #define QTAWS_PUTMETRICDATAREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutMetricDataRequestPrivate;
+
+class QTAWS_EXPORT PutMetricDataRequest : public CloudWatchRequest {
+
+public:
+    PutMetricDataRequest(const PutMetricDataRequest &other);
+    PutMetricDataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutMetricDataRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

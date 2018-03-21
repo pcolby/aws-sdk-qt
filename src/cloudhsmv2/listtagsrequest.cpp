@@ -19,3 +19,107 @@
 
 #include "listtagsrequest.h"
 #include "listtagsrequest_p.h"
+#include "listtagsresponse.h"
+#include "cloudhsmv2request_p.h"
+
+namespace AWS {
+namespace CloudHSMV2 {
+
+/**
+ * @class  ListTagsRequest
+ *
+ * @brief  Implements CloudHSMV2 ListTags requests.
+ *
+ * @see    CloudHSMV2Client::listTags
+ */
+
+/**
+ * @brief  Constructs a new ListTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsResponse::ListTagsResponse(
+
+/**
+ * @brief  Constructs a new ListTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
+    : CloudHSMV2Request(new ListTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsRequest object.
+ */
+ListTagsRequest::ListTagsRequest()
+    : CloudHSMV2Request(new ListTagsRequestPrivate(CloudHSMV2Request::ListTagsAction, this))
+{
+
+}
+
+bool ListTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMV2Client::send
+ */
+AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsRequestPrivate object.
+ *
+ * @param  action  CloudHSMV2 action being performed.
+ * @param  q       Pointer to this object's public ListTagsRequest instance.
+ */
+ListTagsRequestPrivate::ListTagsRequestPrivate(
+    const CloudHSMV2Request::Action action, ListTagsRequest * const q)
+    : ListTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsRequest instance.
+ */
+ListTagsRequestPrivate::ListTagsRequestPrivate(
+    const ListTagsRequestPrivate &other, ListTagsRequest * const q)
+    : ListTagsPrivate(other, q)
+{
+
+}

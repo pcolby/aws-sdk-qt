@@ -19,3 +19,107 @@
 
 #include "listtagsrequest.h"
 #include "listtagsrequest_p.h"
+#include "listtagsresponse.h"
+#include "elasticsearchservicerequest_p.h"
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  ListTagsRequest
+ *
+ * @brief  Implements ElasticsearchService ListTags requests.
+ *
+ * @see    ElasticsearchServiceClient::listTags
+ */
+
+/**
+ * @brief  Constructs a new ListTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsResponse::ListTagsResponse(
+
+/**
+ * @brief  Constructs a new ListTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsRequest::ListTagsRequest(const ListTagsRequest &other)
+    : ElasticsearchServiceRequest(new ListTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsRequest object.
+ */
+ListTagsRequest::ListTagsRequest()
+    : ElasticsearchServiceRequest(new ListTagsRequestPrivate(ElasticsearchServiceRequest::ListTagsAction, this))
+{
+
+}
+
+bool ListTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticsearchServiceClient::send
+ */
+AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsRequestPrivate object.
+ *
+ * @param  action  ElasticsearchService action being performed.
+ * @param  q       Pointer to this object's public ListTagsRequest instance.
+ */
+ListTagsRequestPrivate::ListTagsRequestPrivate(
+    const ElasticsearchServiceRequest::Action action, ListTagsRequest * const q)
+    : ListTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsRequest instance.
+ */
+ListTagsRequestPrivate::ListTagsRequestPrivate(
+    const ListTagsRequestPrivate &other, ListTagsRequest * const q)
+    : ListTagsPrivate(other, q)
+{
+
+}

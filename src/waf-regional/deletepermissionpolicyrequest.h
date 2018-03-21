@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPERMISSIONPOLICYREQUEST_H
 #define QTAWS_DELETEPERMISSIONPOLICYREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeletePermissionPolicyRequestPrivate;
+
+class QTAWS_EXPORT DeletePermissionPolicyRequest : public WAFRegionalRequest {
+
+public:
+    DeletePermissionPolicyRequest(const DeletePermissionPolicyRequest &other);
+    DeletePermissionPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePermissionPolicyRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

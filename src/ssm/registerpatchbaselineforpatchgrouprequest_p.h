@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 #define QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 
+#include "ssm_p.h"
+#include "registerpatchbaselineforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class RegisterPatchBaselineForPatchGroupRequest;
+
+class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupRequestPrivate : public SSMPrivate {
+
+public:
+    RegisterPatchBaselineForPatchGroupRequestPrivate(const SSM::Action action,
+                                   RegisterPatchBaselineForPatchGroupRequest * const q);
+    RegisterPatchBaselineForPatchGroupRequestPrivate(const RegisterPatchBaselineForPatchGroupRequestPrivate &other,
+                                   RegisterPatchBaselineForPatchGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterPatchBaselineForPatchGroupRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

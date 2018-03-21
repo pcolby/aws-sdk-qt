@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRULESPACKAGESREQUEST_H
 #define QTAWS_LISTRULESPACKAGESREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListRulesPackagesRequestPrivate;
+
+class QTAWS_EXPORT ListRulesPackagesRequest : public InspectorRequest {
+
+public:
+    ListRulesPackagesRequest(const ListRulesPackagesRequest &other);
+    ListRulesPackagesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRulesPackagesRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

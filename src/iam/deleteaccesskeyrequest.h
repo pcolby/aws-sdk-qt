@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEACCESSKEYREQUEST_H
 #define QTAWS_DELETEACCESSKEYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteAccessKeyRequestPrivate;
+
+class QTAWS_EXPORT DeleteAccessKeyRequest : public IAMRequest {
+
+public:
+    DeleteAccessKeyRequest(const DeleteAccessKeyRequest &other);
+    DeleteAccessKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAccessKeyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

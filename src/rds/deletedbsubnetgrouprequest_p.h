@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDBSUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETEDBSUBNETGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "deletedbsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBSubnetGroupRequest;
+
+class QTAWS_EXPORT DeleteDBSubnetGroupRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteDBSubnetGroupRequestPrivate(const RDS::Action action,
+                                   DeleteDBSubnetGroupRequest * const q);
+    DeleteDBSubnetGroupRequestPrivate(const DeleteDBSubnetGroupRequestPrivate &other,
+                                   DeleteDBSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBSubnetGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

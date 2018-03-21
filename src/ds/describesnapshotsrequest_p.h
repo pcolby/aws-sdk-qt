@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSREQUEST_P_H
 #define QTAWS_DESCRIBESNAPSHOTSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "describesnapshotsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeSnapshotsRequest;
+
+class QTAWS_EXPORT DescribeSnapshotsRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DescribeSnapshotsRequestPrivate(const DirectoryService::Action action,
+                                   DescribeSnapshotsRequest * const q);
+    DescribeSnapshotsRequestPrivate(const DescribeSnapshotsRequestPrivate &other,
+                                   DescribeSnapshotsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSnapshotsRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEWEBHOOKREQUEST_H
 #define QTAWS_DELETEWEBHOOKREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class DeleteWebhookRequestPrivate;
+
+class QTAWS_EXPORT DeleteWebhookRequest : public CodeBuildRequest {
+
+public:
+    DeleteWebhookRequest(const DeleteWebhookRequest &other);
+    DeleteWebhookRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteWebhookRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

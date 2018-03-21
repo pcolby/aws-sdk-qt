@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_H
 #define QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAvailablePatchesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAvailablePatchesRequest : public SSMRequest {
+
+public:
+    DescribeAvailablePatchesRequest(const DescribeAvailablePatchesRequest &other);
+    DescribeAvailablePatchesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAvailablePatchesRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

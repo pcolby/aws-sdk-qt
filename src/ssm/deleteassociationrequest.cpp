@@ -19,3 +19,107 @@
 
 #include "deleteassociationrequest.h"
 #include "deleteassociationrequest_p.h"
+#include "deleteassociationresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteAssociationRequest
+ *
+ * @brief  Implements SSM DeleteAssociation requests.
+ *
+ * @see    SSMClient::deleteAssociation
+ */
+
+/**
+ * @brief  Constructs a new DeleteAssociationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAssociationResponse::DeleteAssociationResponse(
+
+/**
+ * @brief  Constructs a new DeleteAssociationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteAssociationRequest::DeleteAssociationRequest(const DeleteAssociationRequest &other)
+    : SSMRequest(new DeleteAssociationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteAssociationRequest object.
+ */
+DeleteAssociationRequest::DeleteAssociationRequest()
+    : SSMRequest(new DeleteAssociationRequestPrivate(SSMRequest::DeleteAssociationAction, this))
+{
+
+}
+
+bool DeleteAssociationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteAssociationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteAssociationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteAssociationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAssociationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteAssociationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssociationRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeleteAssociationRequest instance.
+ */
+DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
+    const SSMRequest::Action action, DeleteAssociationRequest * const q)
+    : DeleteAssociationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssociationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteAssociationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteAssociationRequest instance.
+ */
+DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
+    const DeleteAssociationRequestPrivate &other, DeleteAssociationRequest * const q)
+    : DeleteAssociationPrivate(other, q)
+{
+
+}

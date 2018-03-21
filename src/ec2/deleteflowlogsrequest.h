@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEFLOWLOGSREQUEST_H
 #define QTAWS_DELETEFLOWLOGSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFlowLogsRequestPrivate;
+
+class QTAWS_EXPORT DeleteFlowLogsRequest : public EC2Request {
+
+public:
+    DeleteFlowLogsRequest(const DeleteFlowLogsRequest &other);
+    DeleteFlowLogsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFlowLogsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

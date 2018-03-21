@@ -19,3 +19,107 @@
 
 #include "createadditionalassignmentsforhitrequest.h"
 #include "createadditionalassignmentsforhitrequest_p.h"
+#include "createadditionalassignmentsforhitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateAdditionalAssignmentsForHITRequest
+ *
+ * @brief  Implements MTurk CreateAdditionalAssignmentsForHIT requests.
+ *
+ * @see    MTurkClient::createAdditionalAssignmentsForHIT
+ */
+
+/**
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAdditionalAssignmentsForHITResponse::CreateAdditionalAssignmentsForHITResponse(
+
+/**
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITRequest(const CreateAdditionalAssignmentsForHITRequest &other)
+    : MTurkRequest(new CreateAdditionalAssignmentsForHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequest object.
+ */
+CreateAdditionalAssignmentsForHITRequest::CreateAdditionalAssignmentsForHITRequest()
+    : MTurkRequest(new CreateAdditionalAssignmentsForHITRequestPrivate(MTurkRequest::CreateAdditionalAssignmentsForHITAction, this))
+{
+
+}
+
+bool CreateAdditionalAssignmentsForHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAdditionalAssignmentsForHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAdditionalAssignmentsForHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAdditionalAssignmentsForHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAdditionalAssignmentsForHITRequestPrivate
+ *
+ * @brief  Private implementation for CreateAdditionalAssignmentsForHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public CreateAdditionalAssignmentsForHITRequest instance.
+ */
+CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
+    const MTurkRequest::Action action, CreateAdditionalAssignmentsForHITRequest * const q)
+    : CreateAdditionalAssignmentsForHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAdditionalAssignmentsForHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAdditionalAssignmentsForHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAdditionalAssignmentsForHITRequest instance.
+ */
+CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
+    const CreateAdditionalAssignmentsForHITRequestPrivate &other, CreateAdditionalAssignmentsForHITRequest * const q)
+    : CreateAdditionalAssignmentsForHITPrivate(other, q)
+{
+
+}

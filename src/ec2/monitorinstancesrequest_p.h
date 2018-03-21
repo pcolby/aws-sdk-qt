@@ -20,4 +20,29 @@
 #ifndef QTAWS_MONITORINSTANCESREQUEST_P_H
 #define QTAWS_MONITORINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "monitorinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class MonitorInstancesRequest;
+
+class QTAWS_EXPORT MonitorInstancesRequestPrivate : public EC2Private {
+
+public:
+    MonitorInstancesRequestPrivate(const EC2::Action action,
+                                   MonitorInstancesRequest * const q);
+    MonitorInstancesRequestPrivate(const MonitorInstancesRequestPrivate &other,
+                                   MonitorInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(MonitorInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

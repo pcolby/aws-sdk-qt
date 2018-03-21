@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEKEYREQUEST_P_H
 #define QTAWS_DESCRIBEKEYREQUEST_P_H
 
+#include "kms_p.h"
+#include "describekeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DescribeKeyRequest;
+
+class QTAWS_EXPORT DescribeKeyRequestPrivate : public KMSPrivate {
+
+public:
+    DescribeKeyRequestPrivate(const KMS::Action action,
+                                   DescribeKeyRequest * const q);
+    DescribeKeyRequestPrivate(const DescribeKeyRequestPrivate &other,
+                                   DescribeKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeKeyRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

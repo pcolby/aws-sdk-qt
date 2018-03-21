@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEROOMSKILLPARAMETERREQUEST_H
 #define QTAWS_DELETEROOMSKILLPARAMETERREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DeleteRoomSkillParameterRequestPrivate;
+
+class QTAWS_EXPORT DeleteRoomSkillParameterRequest : public AlexaForBusinessRequest {
+
+public:
+    DeleteRoomSkillParameterRequest(const DeleteRoomSkillParameterRequest &other);
+    DeleteRoomSkillParameterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRoomSkillParameterRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

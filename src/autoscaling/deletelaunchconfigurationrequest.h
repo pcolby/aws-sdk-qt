@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELAUNCHCONFIGURATIONREQUEST_H
 #define QTAWS_DELETELAUNCHCONFIGURATIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteLaunchConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteLaunchConfigurationRequest : public AutoScalingRequest {
+
+public:
+    DeleteLaunchConfigurationRequest(const DeleteLaunchConfigurationRequest &other);
+    DeleteLaunchConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLaunchConfigurationRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

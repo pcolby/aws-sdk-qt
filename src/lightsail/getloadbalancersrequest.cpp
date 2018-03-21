@@ -19,3 +19,107 @@
 
 #include "getloadbalancersrequest.h"
 #include "getloadbalancersrequest_p.h"
+#include "getloadbalancersresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetLoadBalancersRequest
+ *
+ * @brief  Implements Lightsail GetLoadBalancers requests.
+ *
+ * @see    LightsailClient::getLoadBalancers
+ */
+
+/**
+ * @brief  Constructs a new GetLoadBalancersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoadBalancersResponse::GetLoadBalancersResponse(
+
+/**
+ * @brief  Constructs a new GetLoadBalancersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLoadBalancersRequest::GetLoadBalancersRequest(const GetLoadBalancersRequest &other)
+    : LightsailRequest(new GetLoadBalancersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLoadBalancersRequest object.
+ */
+GetLoadBalancersRequest::GetLoadBalancersRequest()
+    : LightsailRequest(new GetLoadBalancersRequestPrivate(LightsailRequest::GetLoadBalancersAction, this))
+{
+
+}
+
+bool GetLoadBalancersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLoadBalancersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLoadBalancersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetLoadBalancersRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLoadBalancersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoadBalancersRequestPrivate
+ *
+ * @brief  Private implementation for GetLoadBalancersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancersRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetLoadBalancersRequest instance.
+ */
+GetLoadBalancersRequestPrivate::GetLoadBalancersRequestPrivate(
+    const LightsailRequest::Action action, GetLoadBalancersRequest * const q)
+    : GetLoadBalancersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLoadBalancersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLoadBalancersRequest instance.
+ */
+GetLoadBalancersRequestPrivate::GetLoadBalancersRequestPrivate(
+    const GetLoadBalancersRequestPrivate &other, GetLoadBalancersRequest * const q)
+    : GetLoadBalancersPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "deletedistributionrequest.h"
 #include "deletedistributionrequest_p.h"
+#include "deletedistributionresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  DeleteDistributionRequest
+ *
+ * @brief  Implements CloudFront DeleteDistribution requests.
+ *
+ * @see    CloudFrontClient::deleteDistribution
+ */
+
+/**
+ * @brief  Constructs a new DeleteDistributionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDistributionResponse::DeleteDistributionResponse(
+
+/**
+ * @brief  Constructs a new DeleteDistributionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDistributionRequest::DeleteDistributionRequest(const DeleteDistributionRequest &other)
+    : CloudFrontRequest(new DeleteDistributionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDistributionRequest object.
+ */
+DeleteDistributionRequest::DeleteDistributionRequest()
+    : CloudFrontRequest(new DeleteDistributionRequestPrivate(CloudFrontRequest::DeleteDistributionAction, this))
+{
+
+}
+
+bool DeleteDistributionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDistributionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDistributionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDistributionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDistributionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDistributionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDistributionRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public DeleteDistributionRequest instance.
+ */
+DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
+    const CloudFrontRequest::Action action, DeleteDistributionRequest * const q)
+    : DeleteDistributionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDistributionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDistributionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDistributionRequest instance.
+ */
+DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
+    const DeleteDistributionRequestPrivate &other, DeleteDistributionRequest * const q)
+    : DeleteDistributionPrivate(other, q)
+{
+
+}

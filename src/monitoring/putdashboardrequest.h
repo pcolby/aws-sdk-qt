@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTDASHBOARDREQUEST_H
 #define QTAWS_PUTDASHBOARDREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutDashboardRequestPrivate;
+
+class QTAWS_EXPORT PutDashboardRequest : public CloudWatchRequest {
+
+public:
+    PutDashboardRequest(const PutDashboardRequest &other);
+    PutDashboardRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutDashboardRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

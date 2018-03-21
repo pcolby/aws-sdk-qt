@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_P_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "modifyworkspacepropertiesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class ModifyWorkspacePropertiesRequest;
+
+class QTAWS_EXPORT ModifyWorkspacePropertiesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    ModifyWorkspacePropertiesRequestPrivate(const WorkSpaces::Action action,
+                                   ModifyWorkspacePropertiesRequest * const q);
+    ModifyWorkspacePropertiesRequestPrivate(const ModifyWorkspacePropertiesRequestPrivate &other,
+                                   ModifyWorkspacePropertiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyWorkspacePropertiesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

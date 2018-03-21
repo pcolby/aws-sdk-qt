@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGCMCHANNELREQUEST_H
 #define QTAWS_GETGCMCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetGcmChannelRequestPrivate;
+
+class QTAWS_EXPORT GetGcmChannelRequest : public PinpointRequest {
+
+public:
+    GetGcmChannelRequest(const GetGcmChannelRequest &other);
+    GetGcmChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGcmChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

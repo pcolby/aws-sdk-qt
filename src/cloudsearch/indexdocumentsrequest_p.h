@@ -20,4 +20,29 @@
 #ifndef QTAWS_INDEXDOCUMENTSREQUEST_P_H
 #define QTAWS_INDEXDOCUMENTSREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "indexdocumentsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class IndexDocumentsRequest;
+
+class QTAWS_EXPORT IndexDocumentsRequestPrivate : public CloudSearchPrivate {
+
+public:
+    IndexDocumentsRequestPrivate(const CloudSearch::Action action,
+                                   IndexDocumentsRequest * const q);
+    IndexDocumentsRequestPrivate(const IndexDocumentsRequestPrivate &other,
+                                   IndexDocumentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(IndexDocumentsRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

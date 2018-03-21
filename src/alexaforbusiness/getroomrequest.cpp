@@ -19,3 +19,107 @@
 
 #include "getroomrequest.h"
 #include "getroomrequest_p.h"
+#include "getroomresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetRoomRequest
+ *
+ * @brief  Implements AlexaForBusiness GetRoom requests.
+ *
+ * @see    AlexaForBusinessClient::getRoom
+ */
+
+/**
+ * @brief  Constructs a new GetRoomResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoomResponse::GetRoomResponse(
+
+/**
+ * @brief  Constructs a new GetRoomRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRoomRequest::GetRoomRequest(const GetRoomRequest &other)
+    : AlexaForBusinessRequest(new GetRoomRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRoomRequest object.
+ */
+GetRoomRequest::GetRoomRequest()
+    : AlexaForBusinessRequest(new GetRoomRequestPrivate(AlexaForBusinessRequest::GetRoomAction, this))
+{
+
+}
+
+bool GetRoomRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRoomResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRoomResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * GetRoomRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRoomResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoomRequestPrivate
+ *
+ * @brief  Private implementation for GetRoomRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public GetRoomRequest instance.
+ */
+GetRoomRequestPrivate::GetRoomRequestPrivate(
+    const AlexaForBusinessRequest::Action action, GetRoomRequest * const q)
+    : GetRoomPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRoomRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRoomRequest instance.
+ */
+GetRoomRequestPrivate::GetRoomRequestPrivate(
+    const GetRoomRequestPrivate &other, GetRoomRequest * const q)
+    : GetRoomPrivate(other, q)
+{
+
+}

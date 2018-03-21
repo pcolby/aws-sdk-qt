@@ -19,3 +19,107 @@
 
 #include "describedbclusterparametersrequest.h"
 #include "describedbclusterparametersrequest_p.h"
+#include "describedbclusterparametersresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBClusterParametersRequest
+ *
+ * @brief  Implements RDS DescribeDBClusterParameters requests.
+ *
+ * @see    RDSClient::describeDBClusterParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBClusterParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBClusterParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBClusterParametersRequest::DescribeDBClusterParametersRequest(const DescribeDBClusterParametersRequest &other)
+    : RDSRequest(new DescribeDBClusterParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBClusterParametersRequest object.
+ */
+DescribeDBClusterParametersRequest::DescribeDBClusterParametersRequest()
+    : RDSRequest(new DescribeDBClusterParametersRequestPrivate(RDSRequest::DescribeDBClusterParametersAction, this))
+{
+
+}
+
+bool DescribeDBClusterParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBClusterParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBClusterParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBClusterParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBClusterParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBClusterParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBClusterParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBClusterParametersRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBClusterParametersRequest instance.
+ */
+DescribeDBClusterParametersRequestPrivate::DescribeDBClusterParametersRequestPrivate(
+    const RDSRequest::Action action, DescribeDBClusterParametersRequest * const q)
+    : DescribeDBClusterParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBClusterParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBClusterParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBClusterParametersRequest instance.
+ */
+DescribeDBClusterParametersRequestPrivate::DescribeDBClusterParametersRequestPrivate(
+    const DescribeDBClusterParametersRequestPrivate &other, DescribeDBClusterParametersRequest * const q)
+    : DescribeDBClusterParametersPrivate(other, q)
+{
+
+}

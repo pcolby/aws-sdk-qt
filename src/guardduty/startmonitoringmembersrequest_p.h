@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTMONITORINGMEMBERSREQUEST_P_H
 #define QTAWS_STARTMONITORINGMEMBERSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "startmonitoringmembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class StartMonitoringMembersRequest;
+
+class QTAWS_EXPORT StartMonitoringMembersRequestPrivate : public GuardDutyPrivate {
+
+public:
+    StartMonitoringMembersRequestPrivate(const GuardDuty::Action action,
+                                   StartMonitoringMembersRequest * const q);
+    StartMonitoringMembersRequestPrivate(const StartMonitoringMembersRequestPrivate &other,
+                                   StartMonitoringMembersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartMonitoringMembersRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

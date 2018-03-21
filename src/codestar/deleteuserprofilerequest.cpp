@@ -19,3 +19,107 @@
 
 #include "deleteuserprofilerequest.h"
 #include "deleteuserprofilerequest_p.h"
+#include "deleteuserprofileresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  DeleteUserProfileRequest
+ *
+ * @brief  Implements CodeStar DeleteUserProfile requests.
+ *
+ * @see    CodeStarClient::deleteUserProfile
+ */
+
+/**
+ * @brief  Constructs a new DeleteUserProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserProfileResponse::DeleteUserProfileResponse(
+
+/**
+ * @brief  Constructs a new DeleteUserProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteUserProfileRequest::DeleteUserProfileRequest(const DeleteUserProfileRequest &other)
+    : CodeStarRequest(new DeleteUserProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteUserProfileRequest object.
+ */
+DeleteUserProfileRequest::DeleteUserProfileRequest()
+    : CodeStarRequest(new DeleteUserProfileRequestPrivate(CodeStarRequest::DeleteUserProfileAction, this))
+{
+
+}
+
+bool DeleteUserProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteUserProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteUserProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteUserProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserProfileRequestPrivate
+ *
+ * @brief  Private implementation for DeleteUserProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserProfileRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public DeleteUserProfileRequest instance.
+ */
+DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
+    const CodeStarRequest::Action action, DeleteUserProfileRequest * const q)
+    : DeleteUserProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteUserProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteUserProfileRequest instance.
+ */
+DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
+    const DeleteUserProfileRequestPrivate &other, DeleteUserProfileRequest * const q)
+    : DeleteUserProfilePrivate(other, q)
+{
+
+}

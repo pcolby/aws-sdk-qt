@@ -19,3 +19,107 @@
 
 #include "getpipelineexecutionrequest.h"
 #include "getpipelineexecutionrequest_p.h"
+#include "getpipelineexecutionresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  GetPipelineExecutionRequest
+ *
+ * @brief  Implements CodePipeline GetPipelineExecution requests.
+ *
+ * @see    CodePipelineClient::getPipelineExecution
+ */
+
+/**
+ * @brief  Constructs a new GetPipelineExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPipelineExecutionResponse::GetPipelineExecutionResponse(
+
+/**
+ * @brief  Constructs a new GetPipelineExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPipelineExecutionRequest::GetPipelineExecutionRequest(const GetPipelineExecutionRequest &other)
+    : CodePipelineRequest(new GetPipelineExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPipelineExecutionRequest object.
+ */
+GetPipelineExecutionRequest::GetPipelineExecutionRequest()
+    : CodePipelineRequest(new GetPipelineExecutionRequestPrivate(CodePipelineRequest::GetPipelineExecutionAction, this))
+{
+
+}
+
+bool GetPipelineExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPipelineExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPipelineExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * GetPipelineExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPipelineExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPipelineExecutionRequestPrivate
+ *
+ * @brief  Private implementation for GetPipelineExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineExecutionRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public GetPipelineExecutionRequest instance.
+ */
+GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
+    const CodePipelineRequest::Action action, GetPipelineExecutionRequest * const q)
+    : GetPipelineExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPipelineExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPipelineExecutionRequest instance.
+ */
+GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
+    const GetPipelineExecutionRequestPrivate &other, GetPipelineExecutionRequest * const q)
+    : GetPipelineExecutionPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "batchgetapplicationsrequest.h"
 #include "batchgetapplicationsrequest_p.h"
+#include "batchgetapplicationsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetApplicationsRequest
+ *
+ * @brief  Implements CodeDeploy BatchGetApplications requests.
+ *
+ * @see    CodeDeployClient::batchGetApplications
+ */
+
+/**
+ * @brief  Constructs a new BatchGetApplicationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetApplicationsResponse::BatchGetApplicationsResponse(
+
+/**
+ * @brief  Constructs a new BatchGetApplicationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetApplicationsRequest::BatchGetApplicationsRequest(const BatchGetApplicationsRequest &other)
+    : CodeDeployRequest(new BatchGetApplicationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetApplicationsRequest object.
+ */
+BatchGetApplicationsRequest::BatchGetApplicationsRequest()
+    : CodeDeployRequest(new BatchGetApplicationsRequestPrivate(CodeDeployRequest::BatchGetApplicationsAction, this))
+{
+
+}
+
+bool BatchGetApplicationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetApplicationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetApplicationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * BatchGetApplicationsRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetApplicationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetApplicationsRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetApplicationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetApplicationsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public BatchGetApplicationsRequest instance.
+ */
+BatchGetApplicationsRequestPrivate::BatchGetApplicationsRequestPrivate(
+    const CodeDeployRequest::Action action, BatchGetApplicationsRequest * const q)
+    : BatchGetApplicationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetApplicationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetApplicationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetApplicationsRequest instance.
+ */
+BatchGetApplicationsRequestPrivate::BatchGetApplicationsRequestPrivate(
+    const BatchGetApplicationsRequestPrivate &other, BatchGetApplicationsRequest * const q)
+    : BatchGetApplicationsPrivate(other, q)
+{
+
+}

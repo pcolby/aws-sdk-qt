@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELSTEPSREQUEST_P_H
 #define QTAWS_CANCELSTEPSREQUEST_P_H
 
+#include "emr_p.h"
+#include "cancelstepsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class CancelStepsRequest;
+
+class QTAWS_EXPORT CancelStepsRequestPrivate : public EMRPrivate {
+
+public:
+    CancelStepsRequestPrivate(const EMR::Action action,
+                                   CancelStepsRequest * const q);
+    CancelStepsRequestPrivate(const CancelStepsRequestPrivate &other,
+                                   CancelStepsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelStepsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

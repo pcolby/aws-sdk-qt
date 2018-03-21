@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEREPOSITORYNAMEREQUEST_P_H
 #define QTAWS_UPDATEREPOSITORYNAMEREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "updaterepositorynamerequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateRepositoryNameRequest;
+
+class QTAWS_EXPORT UpdateRepositoryNameRequestPrivate : public CodeCommitPrivate {
+
+public:
+    UpdateRepositoryNameRequestPrivate(const CodeCommit::Action action,
+                                   UpdateRepositoryNameRequest * const q);
+    UpdateRepositoryNameRequestPrivate(const UpdateRepositoryNameRequestPrivate &other,
+                                   UpdateRepositoryNameRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRepositoryNameRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

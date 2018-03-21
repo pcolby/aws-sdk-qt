@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIPSETREQUEST_H
 #define QTAWS_DELETEIPSETREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteIPSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteIPSetRequest : public GuardDutyRequest {
+
+public:
+    DeleteIPSetRequest(const DeleteIPSetRequest &other);
+    DeleteIPSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIPSetRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

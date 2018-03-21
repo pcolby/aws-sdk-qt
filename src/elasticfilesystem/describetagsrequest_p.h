@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
+#include "efs_p.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeTagsRequest;
+
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public EFSPrivate {
+
+public:
+    DescribeTagsRequestPrivate(const EFS::Action action,
+                                   DescribeTagsRequest * const q);
+    DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
+                                   DescribeTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

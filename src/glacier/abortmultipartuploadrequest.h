@@ -20,4 +20,32 @@
 #ifndef QTAWS_ABORTMULTIPARTUPLOADREQUEST_H
 #define QTAWS_ABORTMULTIPARTUPLOADREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class AbortMultipartUploadRequestPrivate;
+
+class QTAWS_EXPORT AbortMultipartUploadRequest : public GlacierRequest {
+
+public:
+    AbortMultipartUploadRequest(const AbortMultipartUploadRequest &other);
+    AbortMultipartUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AbortMultipartUploadRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listdiscoveredresourcesrequest.h"
 #include "listdiscoveredresourcesrequest_p.h"
+#include "listdiscoveredresourcesresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  ListDiscoveredResourcesRequest
+ *
+ * @brief  Implements ConfigService ListDiscoveredResources requests.
+ *
+ * @see    ConfigServiceClient::listDiscoveredResources
+ */
+
+/**
+ * @brief  Constructs a new ListDiscoveredResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDiscoveredResourcesResponse::ListDiscoveredResourcesResponse(
+
+/**
+ * @brief  Constructs a new ListDiscoveredResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest(const ListDiscoveredResourcesRequest &other)
+    : ConfigServiceRequest(new ListDiscoveredResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDiscoveredResourcesRequest object.
+ */
+ListDiscoveredResourcesRequest::ListDiscoveredResourcesRequest()
+    : ConfigServiceRequest(new ListDiscoveredResourcesRequestPrivate(ConfigServiceRequest::ListDiscoveredResourcesAction, this))
+{
+
+}
+
+bool ListDiscoveredResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDiscoveredResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDiscoveredResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDiscoveredResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDiscoveredResourcesRequestPrivate
+ *
+ * @brief  Private implementation for ListDiscoveredResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public ListDiscoveredResourcesRequest instance.
+ */
+ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
+    const ConfigServiceRequest::Action action, ListDiscoveredResourcesRequest * const q)
+    : ListDiscoveredResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDiscoveredResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDiscoveredResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDiscoveredResourcesRequest instance.
+ */
+ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
+    const ListDiscoveredResourcesRequestPrivate &other, ListDiscoveredResourcesRequest * const q)
+    : ListDiscoveredResourcesPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "getchangetokenstatusrequest.h"
 #include "getchangetokenstatusrequest_p.h"
+#include "getchangetokenstatusresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetChangeTokenStatusRequest
+ *
+ * @brief  Implements WAF GetChangeTokenStatus requests.
+ *
+ * @see    WAFClient::getChangeTokenStatus
+ */
+
+/**
+ * @brief  Constructs a new GetChangeTokenStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetChangeTokenStatusResponse::GetChangeTokenStatusResponse(
+
+/**
+ * @brief  Constructs a new GetChangeTokenStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetChangeTokenStatusRequest::GetChangeTokenStatusRequest(const GetChangeTokenStatusRequest &other)
+    : WAFRequest(new GetChangeTokenStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetChangeTokenStatusRequest object.
+ */
+GetChangeTokenStatusRequest::GetChangeTokenStatusRequest()
+    : WAFRequest(new GetChangeTokenStatusRequestPrivate(WAFRequest::GetChangeTokenStatusAction, this))
+{
+
+}
+
+bool GetChangeTokenStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetChangeTokenStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetChangeTokenStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetChangeTokenStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetChangeTokenStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetChangeTokenStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeTokenStatusRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public GetChangeTokenStatusRequest instance.
+ */
+GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
+    const WAFRequest::Action action, GetChangeTokenStatusRequest * const q)
+    : GetChangeTokenStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeTokenStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetChangeTokenStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetChangeTokenStatusRequest instance.
+ */
+GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
+    const GetChangeTokenStatusRequestPrivate &other, GetChangeTokenStatusRequest * const q)
+    : GetChangeTokenStatusPrivate(other, q)
+{
+
+}

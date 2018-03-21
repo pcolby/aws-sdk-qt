@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERPARAMETERSREQUEST_H
 #define QTAWS_DESCRIBEDBCLUSTERPARAMETERSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBClusterParametersRequestPrivate;
+
+class QTAWS_EXPORT DescribeDBClusterParametersRequest : public RDSRequest {
+
+public:
+    DescribeDBClusterParametersRequest(const DescribeDBClusterParametersRequest &other);
+    DescribeDBClusterParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDBClusterParametersRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class UntagResourceRequest;
+
+class QTAWS_EXPORT UntagResourceRequestPrivate : public DirectConnectPrivate {
+
+public:
+    UntagResourceRequestPrivate(const DirectConnect::Action action,
+                                   UntagResourceRequest * const q);
+    UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
+                                   UntagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

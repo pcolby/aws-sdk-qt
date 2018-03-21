@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_H
 #define QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListJobExecutionsForJobRequestPrivate;
+
+class QTAWS_EXPORT ListJobExecutionsForJobRequest : public IoTRequest {
+
+public:
+    ListJobExecutionsForJobRequest(const ListJobExecutionsForJobRequest &other);
+    ListJobExecutionsForJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListJobExecutionsForJobRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

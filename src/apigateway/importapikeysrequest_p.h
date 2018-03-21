@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTAPIKEYSREQUEST_P_H
 #define QTAWS_IMPORTAPIKEYSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "importapikeysrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class ImportApiKeysRequest;
+
+class QTAWS_EXPORT ImportApiKeysRequestPrivate : public APIGatewayPrivate {
+
+public:
+    ImportApiKeysRequestPrivate(const APIGateway::Action action,
+                                   ImportApiKeysRequest * const q);
+    ImportApiKeysRequestPrivate(const ImportApiKeysRequestPrivate &other,
+                                   ImportApiKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportApiKeysRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

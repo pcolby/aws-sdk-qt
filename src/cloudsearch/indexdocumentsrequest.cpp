@@ -19,3 +19,107 @@
 
 #include "indexdocumentsrequest.h"
 #include "indexdocumentsrequest_p.h"
+#include "indexdocumentsresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  IndexDocumentsRequest
+ *
+ * @brief  Implements CloudSearch IndexDocuments requests.
+ *
+ * @see    CloudSearchClient::indexDocuments
+ */
+
+/**
+ * @brief  Constructs a new IndexDocumentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IndexDocumentsResponse::IndexDocumentsResponse(
+
+/**
+ * @brief  Constructs a new IndexDocumentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+IndexDocumentsRequest::IndexDocumentsRequest(const IndexDocumentsRequest &other)
+    : CloudSearchRequest(new IndexDocumentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new IndexDocumentsRequest object.
+ */
+IndexDocumentsRequest::IndexDocumentsRequest()
+    : CloudSearchRequest(new IndexDocumentsRequestPrivate(CloudSearchRequest::IndexDocumentsAction, this))
+{
+
+}
+
+bool IndexDocumentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an IndexDocumentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An IndexDocumentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply * const reply) const
+{
+    return new IndexDocumentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  IndexDocumentsRequestPrivate
+ *
+ * @brief  Private implementation for IndexDocumentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexDocumentsRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public IndexDocumentsRequest instance.
+ */
+IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
+    const CloudSearchRequest::Action action, IndexDocumentsRequest * const q)
+    : IndexDocumentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexDocumentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the IndexDocumentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public IndexDocumentsRequest instance.
+ */
+IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
+    const IndexDocumentsRequestPrivate &other, IndexDocumentsRequest * const q)
+    : IndexDocumentsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHANGEPASSWORDREQUEST_H
 #define QTAWS_CHANGEPASSWORDREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ChangePasswordRequestPrivate;
+
+class QTAWS_EXPORT ChangePasswordRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ChangePasswordRequest(const ChangePasswordRequest &other);
+    ChangePasswordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ChangePasswordRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

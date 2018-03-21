@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETWEBSITEREQUEST_H
 #define QTAWS_GETBUCKETWEBSITEREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketWebsiteRequestPrivate;
+
+class QTAWS_EXPORT GetBucketWebsiteRequest : public S3Request {
+
+public:
+    GetBucketWebsiteRequest(const GetBucketWebsiteRequest &other);
+    GetBucketWebsiteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketWebsiteRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

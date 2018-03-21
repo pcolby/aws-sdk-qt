@@ -20,4 +20,32 @@
 #ifndef QTAWS_RENEWOFFERINGREQUEST_H
 #define QTAWS_RENEWOFFERINGREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class RenewOfferingRequestPrivate;
+
+class QTAWS_EXPORT RenewOfferingRequest : public DeviceFarmRequest {
+
+public:
+    RenewOfferingRequest(const RenewOfferingRequest &other);
+    RenewOfferingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RenewOfferingRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

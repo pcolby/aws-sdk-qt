@@ -19,3 +19,107 @@
 
 #include "disabledirectoryrequest.h"
 #include "disabledirectoryrequest_p.h"
+#include "disabledirectoryresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DisableDirectoryRequest
+ *
+ * @brief  Implements CloudDirectory DisableDirectory requests.
+ *
+ * @see    CloudDirectoryClient::disableDirectory
+ */
+
+/**
+ * @brief  Constructs a new DisableDirectoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableDirectoryResponse::DisableDirectoryResponse(
+
+/**
+ * @brief  Constructs a new DisableDirectoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableDirectoryRequest::DisableDirectoryRequest(const DisableDirectoryRequest &other)
+    : CloudDirectoryRequest(new DisableDirectoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableDirectoryRequest object.
+ */
+DisableDirectoryRequest::DisableDirectoryRequest()
+    : CloudDirectoryRequest(new DisableDirectoryRequestPrivate(CloudDirectoryRequest::DisableDirectoryAction, this))
+{
+
+}
+
+bool DisableDirectoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableDirectoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableDirectoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableDirectoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableDirectoryRequestPrivate
+ *
+ * @brief  Private implementation for DisableDirectoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableDirectoryRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DisableDirectoryRequest instance.
+ */
+DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
+    const CloudDirectoryRequest::Action action, DisableDirectoryRequest * const q)
+    : DisableDirectoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableDirectoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableDirectoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableDirectoryRequest instance.
+ */
+DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
+    const DisableDirectoryRequestPrivate &other, DisableDirectoryRequest * const q)
+    : DisableDirectoryPrivate(other, q)
+{
+
+}

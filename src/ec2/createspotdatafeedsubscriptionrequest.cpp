@@ -19,3 +19,107 @@
 
 #include "createspotdatafeedsubscriptionrequest.h"
 #include "createspotdatafeedsubscriptionrequest_p.h"
+#include "createspotdatafeedsubscriptionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateSpotDatafeedSubscriptionRequest
+ *
+ * @brief  Implements EC2 CreateSpotDatafeedSubscription requests.
+ *
+ * @see    EC2Client::createSpotDatafeedSubscription
+ */
+
+/**
+ * @brief  Constructs a new CreateSpotDatafeedSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest(const CreateSpotDatafeedSubscriptionRequest &other)
+    : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequest object.
+ */
+CreateSpotDatafeedSubscriptionRequest::CreateSpotDatafeedSubscriptionRequest()
+    : EC2Request(new CreateSpotDatafeedSubscriptionRequestPrivate(EC2Request::CreateSpotDatafeedSubscriptionAction, this))
+{
+
+}
+
+bool CreateSpotDatafeedSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSpotDatafeedSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSpotDatafeedSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSpotDatafeedSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSpotDatafeedSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for CreateSpotDatafeedSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateSpotDatafeedSubscriptionRequest instance.
+ */
+CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
+    const EC2Request::Action action, CreateSpotDatafeedSubscriptionRequest * const q)
+    : CreateSpotDatafeedSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSpotDatafeedSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSpotDatafeedSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSpotDatafeedSubscriptionRequest instance.
+ */
+CreateSpotDatafeedSubscriptionRequestPrivate::CreateSpotDatafeedSubscriptionRequestPrivate(
+    const CreateSpotDatafeedSubscriptionRequestPrivate &other, CreateSpotDatafeedSubscriptionRequest * const q)
+    : CreateSpotDatafeedSubscriptionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPARTSREQUEST_P_H
 #define QTAWS_LISTPARTSREQUEST_P_H
 
+#include "s3_p.h"
+#include "listpartsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListPartsRequest;
+
+class QTAWS_EXPORT ListPartsRequestPrivate : public S3Private {
+
+public:
+    ListPartsRequestPrivate(const S3::Action action,
+                                   ListPartsRequest * const q);
+    ListPartsRequestPrivate(const ListPartsRequestPrivate &other,
+                                   ListPartsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPartsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

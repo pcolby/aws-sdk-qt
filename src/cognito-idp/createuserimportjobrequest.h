@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEUSERIMPORTJOBREQUEST_H
 #define QTAWS_CREATEUSERIMPORTJOBREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class CreateUserImportJobRequestPrivate;
+
+class QTAWS_EXPORT CreateUserImportJobRequest : public CognitoIdentityProviderRequest {
+
+public:
+    CreateUserImportJobRequest(const CreateUserImportJobRequest &other);
+    CreateUserImportJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserImportJobRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

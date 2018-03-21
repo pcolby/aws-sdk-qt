@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAUTOSCALINGGROUPREQUEST_H
 #define QTAWS_UPDATEAUTOSCALINGGROUPREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class UpdateAutoScalingGroupRequestPrivate;
+
+class QTAWS_EXPORT UpdateAutoScalingGroupRequest : public AutoScalingRequest {
+
+public:
+    UpdateAutoScalingGroupRequest(const UpdateAutoScalingGroupRequest &other);
+    UpdateAutoScalingGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAutoScalingGroupRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

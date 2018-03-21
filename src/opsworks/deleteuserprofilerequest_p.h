@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEUSERPROFILEREQUEST_P_H
 #define QTAWS_DELETEUSERPROFILEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "deleteuserprofilerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeleteUserProfileRequest;
+
+class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DeleteUserProfileRequestPrivate(const OpsWorks::Action action,
+                                   DeleteUserProfileRequest * const q);
+    DeleteUserProfileRequestPrivate(const DeleteUserProfileRequestPrivate &other,
+                                   DeleteUserProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserProfileRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

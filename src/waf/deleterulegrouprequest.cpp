@@ -19,3 +19,107 @@
 
 #include "deleterulegrouprequest.h"
 #include "deleterulegrouprequest_p.h"
+#include "deleterulegroupresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  DeleteRuleGroupRequest
+ *
+ * @brief  Implements WAF DeleteRuleGroup requests.
+ *
+ * @see    WAFClient::deleteRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteRuleGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRuleGroupResponse::DeleteRuleGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteRuleGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRuleGroupRequest::DeleteRuleGroupRequest(const DeleteRuleGroupRequest &other)
+    : WAFRequest(new DeleteRuleGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRuleGroupRequest object.
+ */
+DeleteRuleGroupRequest::DeleteRuleGroupRequest()
+    : WAFRequest(new DeleteRuleGroupRequestPrivate(WAFRequest::DeleteRuleGroupAction, this))
+{
+
+}
+
+bool DeleteRuleGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRuleGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRuleGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRuleGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRuleGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRuleGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRuleGroupRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public DeleteRuleGroupRequest instance.
+ */
+DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
+    const WAFRequest::Action action, DeleteRuleGroupRequest * const q)
+    : DeleteRuleGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRuleGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRuleGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRuleGroupRequest instance.
+ */
+DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
+    const DeleteRuleGroupRequestPrivate &other, DeleteRuleGroupRequest * const q)
+    : DeleteRuleGroupPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEACCOUNTALIASREQUEST_P_H
 #define QTAWS_DELETEACCOUNTALIASREQUEST_P_H
 
+#include "iam_p.h"
+#include "deleteaccountaliasrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteAccountAliasRequest;
+
+class QTAWS_EXPORT DeleteAccountAliasRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteAccountAliasRequestPrivate(const IAM::Action action,
+                                   DeleteAccountAliasRequest * const q);
+    DeleteAccountAliasRequestPrivate(const DeleteAccountAliasRequestPrivate &other,
+                                   DeleteAccountAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAccountAliasRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

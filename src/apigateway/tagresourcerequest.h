@@ -20,4 +20,32 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_H
 #define QTAWS_TAGRESOURCEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class TagResourceRequestPrivate;
+
+class QTAWS_EXPORT TagResourceRequest : public APIGatewayRequest {
+
+public:
+    TagResourceRequest(const TagResourceRequest &other);
+    TagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TagResourceRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

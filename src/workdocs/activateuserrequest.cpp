@@ -19,3 +19,107 @@
 
 #include "activateuserrequest.h"
 #include "activateuserrequest_p.h"
+#include "activateuserresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  ActivateUserRequest
+ *
+ * @brief  Implements WorkDocs ActivateUser requests.
+ *
+ * @see    WorkDocsClient::activateUser
+ */
+
+/**
+ * @brief  Constructs a new ActivateUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ActivateUserResponse::ActivateUserResponse(
+
+/**
+ * @brief  Constructs a new ActivateUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ActivateUserRequest::ActivateUserRequest(const ActivateUserRequest &other)
+    : WorkDocsRequest(new ActivateUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ActivateUserRequest object.
+ */
+ActivateUserRequest::ActivateUserRequest()
+    : WorkDocsRequest(new ActivateUserRequestPrivate(WorkDocsRequest::ActivateUserAction, this))
+{
+
+}
+
+bool ActivateUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ActivateUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ActivateUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * ActivateUserRequest::response(QNetworkReply * const reply) const
+{
+    return new ActivateUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ActivateUserRequestPrivate
+ *
+ * @brief  Private implementation for ActivateUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivateUserRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public ActivateUserRequest instance.
+ */
+ActivateUserRequestPrivate::ActivateUserRequestPrivate(
+    const WorkDocsRequest::Action action, ActivateUserRequest * const q)
+    : ActivateUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivateUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ActivateUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ActivateUserRequest instance.
+ */
+ActivateUserRequestPrivate::ActivateUserRequestPrivate(
+    const ActivateUserRequestPrivate &other, ActivateUserRequest * const q)
+    : ActivateUserPrivate(other, q)
+{
+
+}

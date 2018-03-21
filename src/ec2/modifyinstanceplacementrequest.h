@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYINSTANCEPLACEMENTREQUEST_H
 #define QTAWS_MODIFYINSTANCEPLACEMENTREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstancePlacementRequestPrivate;
+
+class QTAWS_EXPORT ModifyInstancePlacementRequest : public EC2Request {
+
+public:
+    ModifyInstancePlacementRequest(const ModifyInstancePlacementRequest &other);
+    ModifyInstancePlacementRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyInstancePlacementRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

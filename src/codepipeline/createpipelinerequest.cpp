@@ -19,3 +19,107 @@
 
 #include "createpipelinerequest.h"
 #include "createpipelinerequest_p.h"
+#include "createpipelineresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  CreatePipelineRequest
+ *
+ * @brief  Implements CodePipeline CreatePipeline requests.
+ *
+ * @see    CodePipelineClient::createPipeline
+ */
+
+/**
+ * @brief  Constructs a new CreatePipelineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePipelineResponse::CreatePipelineResponse(
+
+/**
+ * @brief  Constructs a new CreatePipelineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePipelineRequest::CreatePipelineRequest(const CreatePipelineRequest &other)
+    : CodePipelineRequest(new CreatePipelineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePipelineRequest object.
+ */
+CreatePipelineRequest::CreatePipelineRequest()
+    : CodePipelineRequest(new CreatePipelineRequestPrivate(CodePipelineRequest::CreatePipelineAction, this))
+{
+
+}
+
+bool CreatePipelineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePipelineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePipelineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePipelineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePipelineRequestPrivate
+ *
+ * @brief  Private implementation for CreatePipelineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePipelineRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public CreatePipelineRequest instance.
+ */
+CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
+    const CodePipelineRequest::Action action, CreatePipelineRequest * const q)
+    : CreatePipelinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePipelineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePipelineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePipelineRequest instance.
+ */
+CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
+    const CreatePipelineRequestPrivate &other, CreatePipelineRequest * const q)
+    : CreatePipelinePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAUTOSCALINGGROUPREQUEST_H
 #define QTAWS_DELETEAUTOSCALINGGROUPREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteAutoScalingGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteAutoScalingGroupRequest : public AutoScalingRequest {
+
+public:
+    DeleteAutoScalingGroupRequest(const DeleteAutoScalingGroupRequest &other);
+    DeleteAutoScalingGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAutoScalingGroupRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPREQUEST_H
 #define QTAWS_DELETEAPPREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteAppRequestPrivate;
+
+class QTAWS_EXPORT DeleteAppRequest : public PinpointRequest {
+
+public:
+    DeleteAppRequest(const DeleteAppRequest &other);
+    DeleteAppRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAppRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

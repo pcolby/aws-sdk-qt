@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATETAGOPTIONWITHRESOURCEREQUEST_H
 #define QTAWS_ASSOCIATETAGOPTIONWITHRESOURCEREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class AssociateTagOptionWithResourceRequestPrivate;
+
+class QTAWS_EXPORT AssociateTagOptionWithResourceRequest : public ServiceCatalogRequest {
+
+public:
+    AssociateTagOptionWithResourceRequest(const AssociateTagOptionWithResourceRequest &other);
+    AssociateTagOptionWithResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateTagOptionWithResourceRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPGRADEPUBLISHEDSCHEMAREQUEST_P_H
 #define QTAWS_UPGRADEPUBLISHEDSCHEMAREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "upgradepublishedschemarequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpgradePublishedSchemaRequest;
+
+class QTAWS_EXPORT UpgradePublishedSchemaRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    UpgradePublishedSchemaRequestPrivate(const CloudDirectory::Action action,
+                                   UpgradePublishedSchemaRequest * const q);
+    UpgradePublishedSchemaRequestPrivate(const UpgradePublishedSchemaRequestPrivate &other,
+                                   UpgradePublishedSchemaRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpgradePublishedSchemaRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

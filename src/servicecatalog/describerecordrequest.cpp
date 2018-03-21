@@ -19,3 +19,107 @@
 
 #include "describerecordrequest.h"
 #include "describerecordrequest_p.h"
+#include "describerecordresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeRecordRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeRecord requests.
+ *
+ * @see    ServiceCatalogClient::describeRecord
+ */
+
+/**
+ * @brief  Constructs a new DescribeRecordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRecordResponse::DescribeRecordResponse(
+
+/**
+ * @brief  Constructs a new DescribeRecordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRecordRequest::DescribeRecordRequest(const DescribeRecordRequest &other)
+    : ServiceCatalogRequest(new DescribeRecordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRecordRequest object.
+ */
+DescribeRecordRequest::DescribeRecordRequest()
+    : ServiceCatalogRequest(new DescribeRecordRequestPrivate(ServiceCatalogRequest::DescribeRecordAction, this))
+{
+
+}
+
+bool DescribeRecordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRecordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRecordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRecordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRecordRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRecordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRecordRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeRecordRequest instance.
+ */
+DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeRecordRequest * const q)
+    : DescribeRecordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRecordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRecordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRecordRequest instance.
+ */
+DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
+    const DescribeRecordRequestPrivate &other, DescribeRecordRequest * const q)
+    : DescribeRecordPrivate(other, q)
+{
+
+}

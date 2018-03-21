@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSERPROFILEREQUEST_P_H
 #define QTAWS_UPDATEUSERPROFILEREQUEST_P_H
 
+#include "codestar_p.h"
+#include "updateuserprofilerequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UpdateUserProfileRequest;
+
+class QTAWS_EXPORT UpdateUserProfileRequestPrivate : public CodeStarPrivate {
+
+public:
+    UpdateUserProfileRequestPrivate(const CodeStar::Action action,
+                                   UpdateUserProfileRequest * const q);
+    UpdateUserProfileRequestPrivate(const UpdateUserProfileRequestPrivate &other,
+                                   UpdateUserProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserProfileRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

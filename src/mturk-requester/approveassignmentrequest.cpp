@@ -19,3 +19,107 @@
 
 #include "approveassignmentrequest.h"
 #include "approveassignmentrequest_p.h"
+#include "approveassignmentresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ApproveAssignmentRequest
+ *
+ * @brief  Implements MTurk ApproveAssignment requests.
+ *
+ * @see    MTurkClient::approveAssignment
+ */
+
+/**
+ * @brief  Constructs a new ApproveAssignmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ApproveAssignmentResponse::ApproveAssignmentResponse(
+
+/**
+ * @brief  Constructs a new ApproveAssignmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ApproveAssignmentRequest::ApproveAssignmentRequest(const ApproveAssignmentRequest &other)
+    : MTurkRequest(new ApproveAssignmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ApproveAssignmentRequest object.
+ */
+ApproveAssignmentRequest::ApproveAssignmentRequest()
+    : MTurkRequest(new ApproveAssignmentRequestPrivate(MTurkRequest::ApproveAssignmentAction, this))
+{
+
+}
+
+bool ApproveAssignmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ApproveAssignmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ApproveAssignmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkReply * const reply) const
+{
+    return new ApproveAssignmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ApproveAssignmentRequestPrivate
+ *
+ * @brief  Private implementation for ApproveAssignmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApproveAssignmentRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public ApproveAssignmentRequest instance.
+ */
+ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
+    const MTurkRequest::Action action, ApproveAssignmentRequest * const q)
+    : ApproveAssignmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApproveAssignmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ApproveAssignmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ApproveAssignmentRequest instance.
+ */
+ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
+    const ApproveAssignmentRequestPrivate &other, ApproveAssignmentRequest * const q)
+    : ApproveAssignmentPrivate(other, q)
+{
+
+}

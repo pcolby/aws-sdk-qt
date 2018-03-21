@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_H
 #define QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeliverConfigSnapshotRequestPrivate;
+
+class QTAWS_EXPORT DeliverConfigSnapshotRequest : public ConfigServiceRequest {
+
+public:
+    DeliverConfigSnapshotRequest(const DeliverConfigSnapshotRequest &other);
+    DeliverConfigSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeliverConfigSnapshotRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

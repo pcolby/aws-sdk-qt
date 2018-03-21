@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class UntagResourceRequest;
+
+class QTAWS_EXPORT UntagResourceRequestPrivate : public DynamoDBPrivate {
+
+public:
+    UntagResourceRequestPrivate(const DynamoDB::Action action,
+                                   UntagResourceRequest * const q);
+    UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
+                                   UntagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

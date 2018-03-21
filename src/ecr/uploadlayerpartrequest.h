@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADLAYERPARTREQUEST_H
 #define QTAWS_UPLOADLAYERPARTREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class UploadLayerPartRequestPrivate;
+
+class QTAWS_EXPORT UploadLayerPartRequest : public ECRRequest {
+
+public:
+    UploadLayerPartRequest(const UploadLayerPartRequest &other);
+    UploadLayerPartRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadLayerPartRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

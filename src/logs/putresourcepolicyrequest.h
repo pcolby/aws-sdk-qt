@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYREQUEST_H
 #define QTAWS_PUTRESOURCEPOLICYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutResourcePolicyRequestPrivate;
+
+class QTAWS_EXPORT PutResourcePolicyRequest : public CloudWatchLogsRequest {
+
+public:
+    PutResourcePolicyRequest(const PutResourcePolicyRequest &other);
+    PutResourcePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutResourcePolicyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

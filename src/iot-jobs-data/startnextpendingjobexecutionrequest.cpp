@@ -19,3 +19,107 @@
 
 #include "startnextpendingjobexecutionrequest.h"
 #include "startnextpendingjobexecutionrequest_p.h"
+#include "startnextpendingjobexecutionresponse.h"
+#include "iotjobsdataplanerequest_p.h"
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  StartNextPendingJobExecutionRequest
+ *
+ * @brief  Implements IoTJobsDataPlane StartNextPendingJobExecution requests.
+ *
+ * @see    IoTJobsDataPlaneClient::startNextPendingJobExecution
+ */
+
+/**
+ * @brief  Constructs a new StartNextPendingJobExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartNextPendingJobExecutionResponse::StartNextPendingJobExecutionResponse(
+
+/**
+ * @brief  Constructs a new StartNextPendingJobExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest(const StartNextPendingJobExecutionRequest &other)
+    : IoTJobsDataPlaneRequest(new StartNextPendingJobExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartNextPendingJobExecutionRequest object.
+ */
+StartNextPendingJobExecutionRequest::StartNextPendingJobExecutionRequest()
+    : IoTJobsDataPlaneRequest(new StartNextPendingJobExecutionRequestPrivate(IoTJobsDataPlaneRequest::StartNextPendingJobExecutionAction, this))
+{
+
+}
+
+bool StartNextPendingJobExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartNextPendingJobExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartNextPendingJobExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTJobsDataPlaneClient::send
+ */
+AwsAbstractResponse * StartNextPendingJobExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartNextPendingJobExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartNextPendingJobExecutionRequestPrivate
+ *
+ * @brief  Private implementation for StartNextPendingJobExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object.
+ *
+ * @param  action  IoTJobsDataPlane action being performed.
+ * @param  q       Pointer to this object's public StartNextPendingJobExecutionRequest instance.
+ */
+StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestPrivate(
+    const IoTJobsDataPlaneRequest::Action action, StartNextPendingJobExecutionRequest * const q)
+    : StartNextPendingJobExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartNextPendingJobExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartNextPendingJobExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartNextPendingJobExecutionRequest instance.
+ */
+StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestPrivate(
+    const StartNextPendingJobExecutionRequestPrivate &other, StartNextPendingJobExecutionRequest * const q)
+    : StartNextPendingJobExecutionPrivate(other, q)
+{
+
+}

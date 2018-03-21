@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEGLOBALTABLEREQUEST_H
 #define QTAWS_CREATEGLOBALTABLEREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class CreateGlobalTableRequestPrivate;
+
+class QTAWS_EXPORT CreateGlobalTableRequest : public DynamoDBRequest {
+
+public:
+    CreateGlobalTableRequest(const CreateGlobalTableRequest &other);
+    CreateGlobalTableRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateGlobalTableRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

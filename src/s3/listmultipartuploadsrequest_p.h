@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTMULTIPARTUPLOADSREQUEST_P_H
 #define QTAWS_LISTMULTIPARTUPLOADSREQUEST_P_H
 
+#include "s3_p.h"
+#include "listmultipartuploadsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListMultipartUploadsRequest;
+
+class QTAWS_EXPORT ListMultipartUploadsRequestPrivate : public S3Private {
+
+public:
+    ListMultipartUploadsRequestPrivate(const S3::Action action,
+                                   ListMultipartUploadsRequest * const q);
+    ListMultipartUploadsRequestPrivate(const ListMultipartUploadsRequestPrivate &other,
+                                   ListMultipartUploadsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListMultipartUploadsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "associatevpccidrblockrequest.h"
 #include "associatevpccidrblockrequest_p.h"
+#include "associatevpccidrblockresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateVpcCidrBlockRequest
+ *
+ * @brief  Implements EC2 AssociateVpcCidrBlock requests.
+ *
+ * @see    EC2Client::associateVpcCidrBlock
+ */
+
+/**
+ * @brief  Constructs a new AssociateVpcCidrBlockResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateVpcCidrBlockResponse::AssociateVpcCidrBlockResponse(
+
+/**
+ * @brief  Constructs a new AssociateVpcCidrBlockRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest(const AssociateVpcCidrBlockRequest &other)
+    : EC2Request(new AssociateVpcCidrBlockRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateVpcCidrBlockRequest object.
+ */
+AssociateVpcCidrBlockRequest::AssociateVpcCidrBlockRequest()
+    : EC2Request(new AssociateVpcCidrBlockRequestPrivate(EC2Request::AssociateVpcCidrBlockAction, this))
+{
+
+}
+
+bool AssociateVpcCidrBlockRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateVpcCidrBlockResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateVpcCidrBlockResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateVpcCidrBlockResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateVpcCidrBlockRequestPrivate
+ *
+ * @brief  Private implementation for AssociateVpcCidrBlockRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AssociateVpcCidrBlockRequest instance.
+ */
+AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
+    const EC2Request::Action action, AssociateVpcCidrBlockRequest * const q)
+    : AssociateVpcCidrBlockPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVpcCidrBlockRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateVpcCidrBlockRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateVpcCidrBlockRequest instance.
+ */
+AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
+    const AssociateVpcCidrBlockRequestPrivate &other, AssociateVpcCidrBlockRequest * const q)
+    : AssociateVpcCidrBlockPrivate(other, q)
+{
+
+}

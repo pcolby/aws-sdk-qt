@@ -20,4 +20,32 @@
 #ifndef QTAWS_CONFIRMFORGOTPASSWORDREQUEST_H
 #define QTAWS_CONFIRMFORGOTPASSWORDREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ConfirmForgotPasswordRequestPrivate;
+
+class QTAWS_EXPORT ConfirmForgotPasswordRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ConfirmForgotPasswordRequest(const ConfirmForgotPasswordRequest &other);
+    ConfirmForgotPasswordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmForgotPasswordRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

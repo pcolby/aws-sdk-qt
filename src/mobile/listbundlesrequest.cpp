@@ -19,3 +19,107 @@
 
 #include "listbundlesrequest.h"
 #include "listbundlesrequest_p.h"
+#include "listbundlesresponse.h"
+#include "mobilerequest_p.h"
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  ListBundlesRequest
+ *
+ * @brief  Implements Mobile ListBundles requests.
+ *
+ * @see    MobileClient::listBundles
+ */
+
+/**
+ * @brief  Constructs a new ListBundlesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBundlesResponse::ListBundlesResponse(
+
+/**
+ * @brief  Constructs a new ListBundlesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListBundlesRequest::ListBundlesRequest(const ListBundlesRequest &other)
+    : MobileRequest(new ListBundlesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListBundlesRequest object.
+ */
+ListBundlesRequest::ListBundlesRequest()
+    : MobileRequest(new ListBundlesRequestPrivate(MobileRequest::ListBundlesAction, this))
+{
+
+}
+
+bool ListBundlesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListBundlesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListBundlesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MobileClient::send
+ */
+AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListBundlesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBundlesRequestPrivate
+ *
+ * @brief  Private implementation for ListBundlesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBundlesRequestPrivate object.
+ *
+ * @param  action  Mobile action being performed.
+ * @param  q       Pointer to this object's public ListBundlesRequest instance.
+ */
+ListBundlesRequestPrivate::ListBundlesRequestPrivate(
+    const MobileRequest::Action action, ListBundlesRequest * const q)
+    : ListBundlesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBundlesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListBundlesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListBundlesRequest instance.
+ */
+ListBundlesRequestPrivate::ListBundlesRequestPrivate(
+    const ListBundlesRequestPrivate &other, ListBundlesRequest * const q)
+    : ListBundlesPrivate(other, q)
+{
+
+}

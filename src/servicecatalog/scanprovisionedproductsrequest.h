@@ -20,4 +20,32 @@
 #ifndef QTAWS_SCANPROVISIONEDPRODUCTSREQUEST_H
 #define QTAWS_SCANPROVISIONEDPRODUCTSREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ScanProvisionedProductsRequestPrivate;
+
+class QTAWS_EXPORT ScanProvisionedProductsRequest : public ServiceCatalogRequest {
+
+public:
+    ScanProvisionedProductsRequest(const ScanProvisionedProductsRequest &other);
+    ScanProvisionedProductsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ScanProvisionedProductsRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

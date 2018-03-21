@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDHCPOPTIONSREQUEST_H
 #define QTAWS_DESCRIBEDHCPOPTIONSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeDhcpOptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeDhcpOptionsRequest : public EC2Request {
+
+public:
+    DescribeDhcpOptionsRequest(const DescribeDhcpOptionsRequest &other);
+    DescribeDhcpOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDhcpOptionsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

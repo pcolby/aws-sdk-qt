@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDINVITATIONREQUEST_H
 #define QTAWS_SENDINVITATIONREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SendInvitationRequestPrivate;
+
+class QTAWS_EXPORT SendInvitationRequest : public AlexaForBusinessRequest {
+
+public:
+    SendInvitationRequest(const SendInvitationRequest &other);
+    SendInvitationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendInvitationRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

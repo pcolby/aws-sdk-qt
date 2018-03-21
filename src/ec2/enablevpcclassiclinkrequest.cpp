@@ -19,3 +19,107 @@
 
 #include "enablevpcclassiclinkrequest.h"
 #include "enablevpcclassiclinkrequest_p.h"
+#include "enablevpcclassiclinkresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  EnableVpcClassicLinkRequest
+ *
+ * @brief  Implements EC2 EnableVpcClassicLink requests.
+ *
+ * @see    EC2Client::enableVpcClassicLink
+ */
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableVpcClassicLinkResponse::EnableVpcClassicLinkResponse(
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest(const EnableVpcClassicLinkRequest &other)
+    : EC2Request(new EnableVpcClassicLinkRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkRequest object.
+ */
+EnableVpcClassicLinkRequest::EnableVpcClassicLinkRequest()
+    : EC2Request(new EnableVpcClassicLinkRequestPrivate(EC2Request::EnableVpcClassicLinkAction, this))
+{
+
+}
+
+bool EnableVpcClassicLinkRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableVpcClassicLinkResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableVpcClassicLinkResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * EnableVpcClassicLinkRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableVpcClassicLinkResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableVpcClassicLinkRequestPrivate
+ *
+ * @brief  Private implementation for EnableVpcClassicLinkRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public EnableVpcClassicLinkRequest instance.
+ */
+EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
+    const EC2Request::Action action, EnableVpcClassicLinkRequest * const q)
+    : EnableVpcClassicLinkPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableVpcClassicLinkRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableVpcClassicLinkRequest instance.
+ */
+EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
+    const EnableVpcClassicLinkRequestPrivate &other, EnableVpcClassicLinkRequest * const q)
+    : EnableVpcClassicLinkPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTEXECUTIONSREQUEST_H
 #define QTAWS_LISTEXECUTIONSREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class ListExecutionsRequestPrivate;
+
+class QTAWS_EXPORT ListExecutionsRequest : public SFNRequest {
+
+public:
+    ListExecutionsRequest(const ListExecutionsRequest &other);
+    ListExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListExecutionsRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

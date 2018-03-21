@@ -20,4 +20,32 @@
 #ifndef QTAWS_SEARCHDEVICESREQUEST_H
 #define QTAWS_SEARCHDEVICESREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class SearchDevicesRequestPrivate;
+
+class QTAWS_EXPORT SearchDevicesRequest : public AlexaForBusinessRequest {
+
+public:
+    SearchDevicesRequest(const SearchDevicesRequest &other);
+    SearchDevicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SearchDevicesRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

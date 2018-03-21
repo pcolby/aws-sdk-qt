@@ -19,3 +19,107 @@
 
 #include "updatehitreviewstatusrequest.h"
 #include "updatehitreviewstatusrequest_p.h"
+#include "updatehitreviewstatusresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateHITReviewStatusRequest
+ *
+ * @brief  Implements MTurk UpdateHITReviewStatus requests.
+ *
+ * @see    MTurkClient::updateHITReviewStatus
+ */
+
+/**
+ * @brief  Constructs a new UpdateHITReviewStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateHITReviewStatusResponse::UpdateHITReviewStatusResponse(
+
+/**
+ * @brief  Constructs a new UpdateHITReviewStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest(const UpdateHITReviewStatusRequest &other)
+    : MTurkRequest(new UpdateHITReviewStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateHITReviewStatusRequest object.
+ */
+UpdateHITReviewStatusRequest::UpdateHITReviewStatusRequest()
+    : MTurkRequest(new UpdateHITReviewStatusRequestPrivate(MTurkRequest::UpdateHITReviewStatusAction, this))
+{
+
+}
+
+bool UpdateHITReviewStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateHITReviewStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateHITReviewStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateHITReviewStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateHITReviewStatusRequestPrivate
+ *
+ * @brief  Private implementation for UpdateHITReviewStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public UpdateHITReviewStatusRequest instance.
+ */
+UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
+    const MTurkRequest::Action action, UpdateHITReviewStatusRequest * const q)
+    : UpdateHITReviewStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHITReviewStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateHITReviewStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateHITReviewStatusRequest instance.
+ */
+UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
+    const UpdateHITReviewStatusRequestPrivate &other, UpdateHITReviewStatusRequest * const q)
+    : UpdateHITReviewStatusPrivate(other, q)
+{
+
+}

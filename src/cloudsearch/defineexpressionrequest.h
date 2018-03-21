@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEFINEEXPRESSIONREQUEST_H
 #define QTAWS_DEFINEEXPRESSIONREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DefineExpressionRequestPrivate;
+
+class QTAWS_EXPORT DefineExpressionRequest : public CloudSearchRequest {
+
+public:
+    DefineExpressionRequest(const DefineExpressionRequest &other);
+    DefineExpressionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DefineExpressionRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

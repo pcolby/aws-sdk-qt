@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDOCUMENTATIONPARTREQUEST_H
 #define QTAWS_CREATEDOCUMENTATIONPARTREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateDocumentationPartRequestPrivate;
+
+class QTAWS_EXPORT CreateDocumentationPartRequest : public APIGatewayRequest {
+
+public:
+    CreateDocumentationPartRequest(const CreateDocumentationPartRequest &other);
+    CreateDocumentationPartRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDocumentationPartRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

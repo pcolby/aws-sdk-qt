@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETUTTERANCESVIEWREQUEST_H
 #define QTAWS_GETUTTERANCESVIEWREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetUtterancesViewRequestPrivate;
+
+class QTAWS_EXPORT GetUtterancesViewRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetUtterancesViewRequest(const GetUtterancesViewRequest &other);
+    GetUtterancesViewRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetUtterancesViewRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

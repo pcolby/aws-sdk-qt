@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYREQUEST_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ChangeMessageVisibilityRequestPrivate;
+
+class QTAWS_EXPORT ChangeMessageVisibilityRequest : public SQSRequest {
+
+public:
+    ChangeMessageVisibilityRequest(const ChangeMessageVisibilityRequest &other);
+    ChangeMessageVisibilityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ChangeMessageVisibilityRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

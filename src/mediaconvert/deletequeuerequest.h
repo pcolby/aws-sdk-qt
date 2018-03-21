@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEQUEUEREQUEST_H
 #define QTAWS_DELETEQUEUEREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeleteQueueRequestPrivate;
+
+class QTAWS_EXPORT DeleteQueueRequest : public MediaConvertRequest {
+
+public:
+    DeleteQueueRequest(const DeleteQueueRequest &other);
+    DeleteQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteQueueRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

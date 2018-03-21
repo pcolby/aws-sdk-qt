@@ -19,3 +19,107 @@
 
 #include "listresourcesfortagoptionrequest.h"
 #include "listresourcesfortagoptionrequest_p.h"
+#include "listresourcesfortagoptionresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListResourcesForTagOptionRequest
+ *
+ * @brief  Implements ServiceCatalog ListResourcesForTagOption requests.
+ *
+ * @see    ServiceCatalogClient::listResourcesForTagOption
+ */
+
+/**
+ * @brief  Constructs a new ListResourcesForTagOptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
+
+/**
+ * @brief  Constructs a new ListResourcesForTagOptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest(const ListResourcesForTagOptionRequest &other)
+    : ServiceCatalogRequest(new ListResourcesForTagOptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourcesForTagOptionRequest object.
+ */
+ListResourcesForTagOptionRequest::ListResourcesForTagOptionRequest()
+    : ServiceCatalogRequest(new ListResourcesForTagOptionRequestPrivate(ServiceCatalogRequest::ListResourcesForTagOptionAction, this))
+{
+
+}
+
+bool ListResourcesForTagOptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourcesForTagOptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourcesForTagOptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourcesForTagOptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourcesForTagOptionRequestPrivate
+ *
+ * @brief  Private implementation for ListResourcesForTagOptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ListResourcesForTagOptionRequest instance.
+ */
+ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
+    const ServiceCatalogRequest::Action action, ListResourcesForTagOptionRequest * const q)
+    : ListResourcesForTagOptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourcesForTagOptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourcesForTagOptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourcesForTagOptionRequest instance.
+ */
+ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
+    const ListResourcesForTagOptionRequestPrivate &other, ListResourcesForTagOptionRequest * const q)
+    : ListResourcesForTagOptionPrivate(other, q)
+{
+
+}

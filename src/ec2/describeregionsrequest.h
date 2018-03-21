@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEREGIONSREQUEST_H
 #define QTAWS_DESCRIBEREGIONSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeRegionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeRegionsRequest : public EC2Request {
+
+public:
+    DescribeRegionsRequest(const DescribeRegionsRequest &other);
+    DescribeRegionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRegionsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

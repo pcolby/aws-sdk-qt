@@ -19,3 +19,107 @@
 
 #include "batchcreatepartitionrequest.h"
 #include "batchcreatepartitionrequest_p.h"
+#include "batchcreatepartitionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchCreatePartitionRequest
+ *
+ * @brief  Implements Glue BatchCreatePartition requests.
+ *
+ * @see    GlueClient::batchCreatePartition
+ */
+
+/**
+ * @brief  Constructs a new BatchCreatePartitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchCreatePartitionResponse::BatchCreatePartitionResponse(
+
+/**
+ * @brief  Constructs a new BatchCreatePartitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchCreatePartitionRequest::BatchCreatePartitionRequest(const BatchCreatePartitionRequest &other)
+    : GlueRequest(new BatchCreatePartitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchCreatePartitionRequest object.
+ */
+BatchCreatePartitionRequest::BatchCreatePartitionRequest()
+    : GlueRequest(new BatchCreatePartitionRequestPrivate(GlueRequest::BatchCreatePartitionAction, this))
+{
+
+}
+
+bool BatchCreatePartitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchCreatePartitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchCreatePartitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * BatchCreatePartitionRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchCreatePartitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchCreatePartitionRequestPrivate
+ *
+ * @brief  Private implementation for BatchCreatePartitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchCreatePartitionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public BatchCreatePartitionRequest instance.
+ */
+BatchCreatePartitionRequestPrivate::BatchCreatePartitionRequestPrivate(
+    const GlueRequest::Action action, BatchCreatePartitionRequest * const q)
+    : BatchCreatePartitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchCreatePartitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchCreatePartitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchCreatePartitionRequest instance.
+ */
+BatchCreatePartitionRequestPrivate::BatchCreatePartitionRequestPrivate(
+    const BatchCreatePartitionRequestPrivate &other, BatchCreatePartitionRequest * const q)
+    : BatchCreatePartitionPrivate(other, q)
+{
+
+}

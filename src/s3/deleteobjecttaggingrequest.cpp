@@ -19,3 +19,107 @@
 
 #include "deleteobjecttaggingrequest.h"
 #include "deleteobjecttaggingrequest_p.h"
+#include "deleteobjecttaggingresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteObjectTaggingRequest
+ *
+ * @brief  Implements S3 DeleteObjectTagging requests.
+ *
+ * @see    S3Client::deleteObjectTagging
+ */
+
+/**
+ * @brief  Constructs a new DeleteObjectTaggingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteObjectTaggingResponse::DeleteObjectTaggingResponse(
+
+/**
+ * @brief  Constructs a new DeleteObjectTaggingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteObjectTaggingRequest::DeleteObjectTaggingRequest(const DeleteObjectTaggingRequest &other)
+    : S3Request(new DeleteObjectTaggingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteObjectTaggingRequest object.
+ */
+DeleteObjectTaggingRequest::DeleteObjectTaggingRequest()
+    : S3Request(new DeleteObjectTaggingRequestPrivate(S3Request::DeleteObjectTaggingAction, this))
+{
+
+}
+
+bool DeleteObjectTaggingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteObjectTaggingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteObjectTaggingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * DeleteObjectTaggingRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteObjectTaggingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteObjectTaggingRequestPrivate
+ *
+ * @brief  Private implementation for DeleteObjectTaggingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteObjectTaggingRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public DeleteObjectTaggingRequest instance.
+ */
+DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
+    const S3Request::Action action, DeleteObjectTaggingRequest * const q)
+    : DeleteObjectTaggingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteObjectTaggingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteObjectTaggingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteObjectTaggingRequest instance.
+ */
+DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
+    const DeleteObjectTaggingRequestPrivate &other, DeleteObjectTaggingRequest * const q)
+    : DeleteObjectTaggingPrivate(other, q)
+{
+
+}

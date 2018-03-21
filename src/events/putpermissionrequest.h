@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTPERMISSIONREQUEST_H
 #define QTAWS_PUTPERMISSIONREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class PutPermissionRequestPrivate;
+
+class QTAWS_EXPORT PutPermissionRequest : public CloudWatchEventsRequest {
+
+public:
+    PutPermissionRequest(const PutPermissionRequest &other);
+    PutPermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutPermissionRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

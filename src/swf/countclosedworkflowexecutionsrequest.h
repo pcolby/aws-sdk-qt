@@ -20,4 +20,32 @@
 #ifndef QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSREQUEST_H
 #define QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class CountClosedWorkflowExecutionsRequestPrivate;
+
+class QTAWS_EXPORT CountClosedWorkflowExecutionsRequest : public SWFRequest {
+
+public:
+    CountClosedWorkflowExecutionsRequest(const CountClosedWorkflowExecutionsRequest &other);
+    CountClosedWorkflowExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CountClosedWorkflowExecutionsRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

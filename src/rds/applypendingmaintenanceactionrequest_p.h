@@ -20,4 +20,29 @@
 #ifndef QTAWS_APPLYPENDINGMAINTENANCEACTIONREQUEST_P_H
 #define QTAWS_APPLYPENDINGMAINTENANCEACTIONREQUEST_P_H
 
+#include "rds_p.h"
+#include "applypendingmaintenanceactionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ApplyPendingMaintenanceActionRequest;
+
+class QTAWS_EXPORT ApplyPendingMaintenanceActionRequestPrivate : public RDSPrivate {
+
+public:
+    ApplyPendingMaintenanceActionRequestPrivate(const RDS::Action action,
+                                   ApplyPendingMaintenanceActionRequest * const q);
+    ApplyPendingMaintenanceActionRequestPrivate(const ApplyPendingMaintenanceActionRequestPrivate &other,
+                                   ApplyPendingMaintenanceActionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ApplyPendingMaintenanceActionRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

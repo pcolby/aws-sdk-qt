@@ -19,3 +19,107 @@
 
 #include "updatemlmodelrequest.h"
 #include "updatemlmodelrequest_p.h"
+#include "updatemlmodelresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  UpdateMLModelRequest
+ *
+ * @brief  Implements MachineLearning UpdateMLModel requests.
+ *
+ * @see    MachineLearningClient::updateMLModel
+ */
+
+/**
+ * @brief  Constructs a new UpdateMLModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateMLModelResponse::UpdateMLModelResponse(
+
+/**
+ * @brief  Constructs a new UpdateMLModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateMLModelRequest::UpdateMLModelRequest(const UpdateMLModelRequest &other)
+    : MachineLearningRequest(new UpdateMLModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateMLModelRequest object.
+ */
+UpdateMLModelRequest::UpdateMLModelRequest()
+    : MachineLearningRequest(new UpdateMLModelRequestPrivate(MachineLearningRequest::UpdateMLModelAction, this))
+{
+
+}
+
+bool UpdateMLModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateMLModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateMLModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateMLModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateMLModelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateMLModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMLModelRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public UpdateMLModelRequest instance.
+ */
+UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
+    const MachineLearningRequest::Action action, UpdateMLModelRequest * const q)
+    : UpdateMLModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMLModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateMLModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateMLModelRequest instance.
+ */
+UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
+    const UpdateMLModelRequestPrivate &other, UpdateMLModelRequest * const q)
+    : UpdateMLModelPrivate(other, q)
+{
+
+}

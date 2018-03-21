@@ -19,3 +19,107 @@
 
 #include "createdefaultvpcrequest.h"
 #include "createdefaultvpcrequest_p.h"
+#include "createdefaultvpcresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateDefaultVpcRequest
+ *
+ * @brief  Implements EC2 CreateDefaultVpc requests.
+ *
+ * @see    EC2Client::createDefaultVpc
+ */
+
+/**
+ * @brief  Constructs a new CreateDefaultVpcResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDefaultVpcResponse::CreateDefaultVpcResponse(
+
+/**
+ * @brief  Constructs a new CreateDefaultVpcRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDefaultVpcRequest::CreateDefaultVpcRequest(const CreateDefaultVpcRequest &other)
+    : EC2Request(new CreateDefaultVpcRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDefaultVpcRequest object.
+ */
+CreateDefaultVpcRequest::CreateDefaultVpcRequest()
+    : EC2Request(new CreateDefaultVpcRequestPrivate(EC2Request::CreateDefaultVpcAction, this))
+{
+
+}
+
+bool CreateDefaultVpcRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDefaultVpcResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDefaultVpcResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDefaultVpcResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDefaultVpcRequestPrivate
+ *
+ * @brief  Private implementation for CreateDefaultVpcRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDefaultVpcRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateDefaultVpcRequest instance.
+ */
+CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
+    const EC2Request::Action action, CreateDefaultVpcRequest * const q)
+    : CreateDefaultVpcPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDefaultVpcRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDefaultVpcRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDefaultVpcRequest instance.
+ */
+CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
+    const CreateDefaultVpcRequestPrivate &other, CreateDefaultVpcRequest * const q)
+    : CreateDefaultVpcPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESLOTTYPEREQUEST_P_H
 #define QTAWS_DELETESLOTTYPEREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "deleteslottyperequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteSlotTypeRequest;
+
+class QTAWS_EXPORT DeleteSlotTypeRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    DeleteSlotTypeRequestPrivate(const LexModelBuildingService::Action action,
+                                   DeleteSlotTypeRequest * const q);
+    DeleteSlotTypeRequestPrivate(const DeleteSlotTypeRequestPrivate &other,
+                                   DeleteSlotTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSlotTypeRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATENOTIFICATIONREQUEST_H
 #define QTAWS_CREATENOTIFICATIONREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class CreateNotificationRequestPrivate;
+
+class QTAWS_EXPORT CreateNotificationRequest : public BudgetsRequest {
+
+public:
+    CreateNotificationRequest(const CreateNotificationRequest &other);
+    CreateNotificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateNotificationRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

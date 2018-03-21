@@ -19,3 +19,107 @@
 
 #include "deleteopenidconnectproviderrequest.h"
 #include "deleteopenidconnectproviderrequest_p.h"
+#include "deleteopenidconnectproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteOpenIDConnectProviderRequest
+ *
+ * @brief  Implements IAM DeleteOpenIDConnectProvider requests.
+ *
+ * @see    IAMClient::deleteOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new DeleteOpenIDConnectProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
+
+/**
+ * @brief  Constructs a new DeleteOpenIDConnectProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest(const DeleteOpenIDConnectProviderRequest &other)
+    : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteOpenIDConnectProviderRequest object.
+ */
+DeleteOpenIDConnectProviderRequest::DeleteOpenIDConnectProviderRequest()
+    : IAMRequest(new DeleteOpenIDConnectProviderRequestPrivate(IAMRequest::DeleteOpenIDConnectProviderAction, this))
+{
+
+}
+
+bool DeleteOpenIDConnectProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteOpenIDConnectProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteOpenIDConnectProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteOpenIDConnectProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOpenIDConnectProviderRequestPrivate
+ *
+ * @brief  Private implementation for DeleteOpenIDConnectProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOpenIDConnectProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteOpenIDConnectProviderRequest instance.
+ */
+DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
+    const IAMRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)
+    : DeleteOpenIDConnectProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOpenIDConnectProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteOpenIDConnectProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteOpenIDConnectProviderRequest instance.
+ */
+DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
+    const DeleteOpenIDConnectProviderRequestPrivate &other, DeleteOpenIDConnectProviderRequest * const q)
+    : DeleteOpenIDConnectProviderPrivate(other, q)
+{
+
+}

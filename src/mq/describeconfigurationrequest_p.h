@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONREQUEST_P_H
 
+#include "mq_p.h"
+#include "describeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeConfigurationRequest;
+
+class QTAWS_EXPORT DescribeConfigurationRequestPrivate : public MQPrivate {
+
+public:
+    DescribeConfigurationRequestPrivate(const MQ::Action action,
+                                   DescribeConfigurationRequest * const q);
+    DescribeConfigurationRequestPrivate(const DescribeConfigurationRequestPrivate &other,
+                                   DescribeConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

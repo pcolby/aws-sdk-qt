@@ -19,3 +19,107 @@
 
 #include "createdisksnapshotrequest.h"
 #include "createdisksnapshotrequest_p.h"
+#include "createdisksnapshotresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateDiskSnapshotRequest
+ *
+ * @brief  Implements Lightsail CreateDiskSnapshot requests.
+ *
+ * @see    LightsailClient::createDiskSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CreateDiskSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDiskSnapshotResponse::CreateDiskSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CreateDiskSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDiskSnapshotRequest::CreateDiskSnapshotRequest(const CreateDiskSnapshotRequest &other)
+    : LightsailRequest(new CreateDiskSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDiskSnapshotRequest object.
+ */
+CreateDiskSnapshotRequest::CreateDiskSnapshotRequest()
+    : LightsailRequest(new CreateDiskSnapshotRequestPrivate(LightsailRequest::CreateDiskSnapshotAction, this))
+{
+
+}
+
+bool CreateDiskSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDiskSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDiskSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * CreateDiskSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDiskSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDiskSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CreateDiskSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDiskSnapshotRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public CreateDiskSnapshotRequest instance.
+ */
+CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
+    const LightsailRequest::Action action, CreateDiskSnapshotRequest * const q)
+    : CreateDiskSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDiskSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDiskSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDiskSnapshotRequest instance.
+ */
+CreateDiskSnapshotRequestPrivate::CreateDiskSnapshotRequestPrivate(
+    const CreateDiskSnapshotRequestPrivate &other, CreateDiskSnapshotRequest * const q)
+    : CreateDiskSnapshotPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_P_H
 #define QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminupdateautheventfeedbackrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminUpdateAuthEventFeedbackRequest;
+
+class QTAWS_EXPORT AdminUpdateAuthEventFeedbackRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminUpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminUpdateAuthEventFeedbackRequest * const q);
+    AdminUpdateAuthEventFeedbackRequestPrivate(const AdminUpdateAuthEventFeedbackRequestPrivate &other,
+                                   AdminUpdateAuthEventFeedbackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminUpdateAuthEventFeedbackRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

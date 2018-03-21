@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESPOTPRICEHISTORYREQUEST_H
 #define QTAWS_DESCRIBESPOTPRICEHISTORYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotPriceHistoryRequestPrivate;
+
+class QTAWS_EXPORT DescribeSpotPriceHistoryRequest : public EC2Request {
+
+public:
+    DescribeSpotPriceHistoryRequest(const DescribeSpotPriceHistoryRequest &other);
+    DescribeSpotPriceHistoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotPriceHistoryRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

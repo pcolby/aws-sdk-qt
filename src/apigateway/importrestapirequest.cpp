@@ -19,3 +19,107 @@
 
 #include "importrestapirequest.h"
 #include "importrestapirequest_p.h"
+#include "importrestapiresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  ImportRestApiRequest
+ *
+ * @brief  Implements APIGateway ImportRestApi requests.
+ *
+ * @see    APIGatewayClient::importRestApi
+ */
+
+/**
+ * @brief  Constructs a new ImportRestApiResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportRestApiResponse::ImportRestApiResponse(
+
+/**
+ * @brief  Constructs a new ImportRestApiRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ImportRestApiRequest::ImportRestApiRequest(const ImportRestApiRequest &other)
+    : APIGatewayRequest(new ImportRestApiRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ImportRestApiRequest object.
+ */
+ImportRestApiRequest::ImportRestApiRequest()
+    : APIGatewayRequest(new ImportRestApiRequestPrivate(APIGatewayRequest::ImportRestApiAction, this))
+{
+
+}
+
+bool ImportRestApiRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ImportRestApiResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ImportRestApiResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply * const reply) const
+{
+    return new ImportRestApiResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportRestApiRequestPrivate
+ *
+ * @brief  Private implementation for ImportRestApiRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportRestApiRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public ImportRestApiRequest instance.
+ */
+ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
+    const APIGatewayRequest::Action action, ImportRestApiRequest * const q)
+    : ImportRestApiPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportRestApiRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ImportRestApiRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ImportRestApiRequest instance.
+ */
+ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
+    const ImportRestApiRequestPrivate &other, ImportRestApiRequest * const q)
+    : ImportRestApiPrivate(other, q)
+{
+
+}

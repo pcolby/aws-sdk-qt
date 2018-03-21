@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEVPNGATEWAYREQUEST_H
 #define QTAWS_CREATEVPNGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpnGatewayRequestPrivate;
+
+class QTAWS_EXPORT CreateVpnGatewayRequest : public EC2Request {
+
+public:
+    CreateVpnGatewayRequest(const CreateVpnGatewayRequest &other);
+    CreateVpnGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateVpnGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

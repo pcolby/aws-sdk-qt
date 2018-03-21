@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_P_H
 #define QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listorganizationalunitsforparentrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListOrganizationalUnitsForParentRequest;
+
+class QTAWS_EXPORT ListOrganizationalUnitsForParentRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListOrganizationalUnitsForParentRequestPrivate(const Organizations::Action action,
+                                   ListOrganizationalUnitsForParentRequest * const q);
+    ListOrganizationalUnitsForParentRequestPrivate(const ListOrganizationalUnitsForParentRequestPrivate &other,
+                                   ListOrganizationalUnitsForParentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOrganizationalUnitsForParentRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

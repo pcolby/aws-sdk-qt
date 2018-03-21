@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTMIGRATIONTASKREQUEST_P_H
 #define QTAWS_IMPORTMIGRATIONTASKREQUEST_P_H
 
+#include "migrationhub_p.h"
+#include "importmigrationtaskrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class ImportMigrationTaskRequest;
+
+class QTAWS_EXPORT ImportMigrationTaskRequestPrivate : public MigrationHubPrivate {
+
+public:
+    ImportMigrationTaskRequestPrivate(const MigrationHub::Action action,
+                                   ImportMigrationTaskRequest * const q);
+    ImportMigrationTaskRequestPrivate(const ImportMigrationTaskRequestPrivate &other,
+                                   ImportMigrationTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportMigrationTaskRequest)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

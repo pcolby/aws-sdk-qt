@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDCACHEREQUEST_H
 #define QTAWS_ADDCACHEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class AddCacheRequestPrivate;
+
+class QTAWS_EXPORT AddCacheRequest : public StorageGatewayRequest {
+
+public:
+    AddCacheRequest(const AddCacheRequest &other);
+    AddCacheRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddCacheRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

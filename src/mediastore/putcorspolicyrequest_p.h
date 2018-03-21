@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTCORSPOLICYREQUEST_P_H
 #define QTAWS_PUTCORSPOLICYREQUEST_P_H
 
+#include "mediastore_p.h"
+#include "putcorspolicyrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class PutCorsPolicyRequest;
+
+class QTAWS_EXPORT PutCorsPolicyRequestPrivate : public MediaStorePrivate {
+
+public:
+    PutCorsPolicyRequestPrivate(const MediaStore::Action action,
+                                   PutCorsPolicyRequest * const q);
+    PutCorsPolicyRequestPrivate(const PutCorsPolicyRequestPrivate &other,
+                                   PutCorsPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutCorsPolicyRequest)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

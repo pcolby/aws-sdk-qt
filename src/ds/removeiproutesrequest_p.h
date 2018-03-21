@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEIPROUTESREQUEST_P_H
 #define QTAWS_REMOVEIPROUTESREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "removeiproutesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RemoveIpRoutesRequest;
+
+class QTAWS_EXPORT RemoveIpRoutesRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    RemoveIpRoutesRequestPrivate(const DirectoryService::Action action,
+                                   RemoveIpRoutesRequest * const q);
+    RemoveIpRoutesRequestPrivate(const RemoveIpRoutesRequestPrivate &other,
+                                   RemoveIpRoutesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveIpRoutesRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

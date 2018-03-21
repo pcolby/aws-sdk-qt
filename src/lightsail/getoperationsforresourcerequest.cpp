@@ -19,3 +19,107 @@
 
 #include "getoperationsforresourcerequest.h"
 #include "getoperationsforresourcerequest_p.h"
+#include "getoperationsforresourceresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetOperationsForResourceRequest
+ *
+ * @brief  Implements Lightsail GetOperationsForResource requests.
+ *
+ * @see    LightsailClient::getOperationsForResource
+ */
+
+/**
+ * @brief  Constructs a new GetOperationsForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationsForResourceResponse::GetOperationsForResourceResponse(
+
+/**
+ * @brief  Constructs a new GetOperationsForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetOperationsForResourceRequest::GetOperationsForResourceRequest(const GetOperationsForResourceRequest &other)
+    : LightsailRequest(new GetOperationsForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetOperationsForResourceRequest object.
+ */
+GetOperationsForResourceRequest::GetOperationsForResourceRequest()
+    : LightsailRequest(new GetOperationsForResourceRequestPrivate(LightsailRequest::GetOperationsForResourceAction, this))
+{
+
+}
+
+bool GetOperationsForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetOperationsForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetOperationsForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetOperationsForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetOperationsForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationsForResourceRequestPrivate
+ *
+ * @brief  Private implementation for GetOperationsForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationsForResourceRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetOperationsForResourceRequest instance.
+ */
+GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
+    const LightsailRequest::Action action, GetOperationsForResourceRequest * const q)
+    : GetOperationsForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationsForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetOperationsForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetOperationsForResourceRequest instance.
+ */
+GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
+    const GetOperationsForResourceRequestPrivate &other, GetOperationsForResourceRequest * const q)
+    : GetOperationsForResourcePrivate(other, q)
+{
+
+}

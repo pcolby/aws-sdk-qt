@@ -19,3 +19,107 @@
 
 #include "applyschemarequest.h"
 #include "applyschemarequest_p.h"
+#include "applyschemaresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ApplySchemaRequest
+ *
+ * @brief  Implements CloudDirectory ApplySchema requests.
+ *
+ * @see    CloudDirectoryClient::applySchema
+ */
+
+/**
+ * @brief  Constructs a new ApplySchemaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ApplySchemaResponse::ApplySchemaResponse(
+
+/**
+ * @brief  Constructs a new ApplySchemaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ApplySchemaRequest::ApplySchemaRequest(const ApplySchemaRequest &other)
+    : CloudDirectoryRequest(new ApplySchemaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ApplySchemaRequest object.
+ */
+ApplySchemaRequest::ApplySchemaRequest()
+    : CloudDirectoryRequest(new ApplySchemaRequestPrivate(CloudDirectoryRequest::ApplySchemaAction, this))
+{
+
+}
+
+bool ApplySchemaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ApplySchemaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ApplySchemaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ApplySchemaRequest::response(QNetworkReply * const reply) const
+{
+    return new ApplySchemaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ApplySchemaRequestPrivate
+ *
+ * @brief  Private implementation for ApplySchemaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApplySchemaRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ApplySchemaRequest instance.
+ */
+ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
+    const CloudDirectoryRequest::Action action, ApplySchemaRequest * const q)
+    : ApplySchemaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApplySchemaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ApplySchemaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ApplySchemaRequest instance.
+ */
+ApplySchemaRequestPrivate::ApplySchemaRequestPrivate(
+    const ApplySchemaRequestPrivate &other, ApplySchemaRequest * const q)
+    : ApplySchemaPrivate(other, q)
+{
+
+}

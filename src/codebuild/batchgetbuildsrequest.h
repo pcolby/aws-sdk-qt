@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHGETBUILDSREQUEST_H
 #define QTAWS_BATCHGETBUILDSREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class BatchGetBuildsRequestPrivate;
+
+class QTAWS_EXPORT BatchGetBuildsRequest : public CodeBuildRequest {
+
+public:
+    BatchGetBuildsRequest(const BatchGetBuildsRequest &other);
+    BatchGetBuildsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetBuildsRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

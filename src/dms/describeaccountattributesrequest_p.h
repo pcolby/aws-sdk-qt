@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describeaccountattributesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeAccountAttributesRequest;
+
+class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeAccountAttributesRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeAccountAttributesRequest * const q);
+    DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
+                                   DescribeAccountAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountAttributesRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

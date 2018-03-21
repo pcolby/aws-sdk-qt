@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEDBINSTANCESREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedbinstancesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBInstancesRequest;
+
+class QTAWS_EXPORT DescribeDBInstancesRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBInstancesRequestPrivate(const RDS::Action action,
+                                   DescribeDBInstancesRequest * const q);
+    DescribeDBInstancesRequestPrivate(const DescribeDBInstancesRequestPrivate &other,
+                                   DescribeDBInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBInstancesRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

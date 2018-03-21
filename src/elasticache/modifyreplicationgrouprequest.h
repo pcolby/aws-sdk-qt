@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPREQUEST_H
 #define QTAWS_MODIFYREPLICATIONGROUPREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyReplicationGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyReplicationGroupRequest : public ElastiCacheRequest {
+
+public:
+    ModifyReplicationGroupRequest(const ModifyReplicationGroupRequest &other);
+    ModifyReplicationGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyReplicationGroupRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

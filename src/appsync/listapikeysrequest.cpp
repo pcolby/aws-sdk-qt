@@ -19,3 +19,107 @@
 
 #include "listapikeysrequest.h"
 #include "listapikeysrequest_p.h"
+#include "listapikeysresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListApiKeysRequest
+ *
+ * @brief  Implements AppSync ListApiKeys requests.
+ *
+ * @see    AppSyncClient::listApiKeys
+ */
+
+/**
+ * @brief  Constructs a new ListApiKeysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApiKeysResponse::ListApiKeysResponse(
+
+/**
+ * @brief  Constructs a new ListApiKeysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListApiKeysRequest::ListApiKeysRequest(const ListApiKeysRequest &other)
+    : AppSyncRequest(new ListApiKeysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListApiKeysRequest object.
+ */
+ListApiKeysRequest::ListApiKeysRequest()
+    : AppSyncRequest(new ListApiKeysRequestPrivate(AppSyncRequest::ListApiKeysAction, this))
+{
+
+}
+
+bool ListApiKeysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListApiKeysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListApiKeysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * ListApiKeysRequest::response(QNetworkReply * const reply) const
+{
+    return new ListApiKeysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApiKeysRequestPrivate
+ *
+ * @brief  Private implementation for ListApiKeysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApiKeysRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public ListApiKeysRequest instance.
+ */
+ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
+    const AppSyncRequest::Action action, ListApiKeysRequest * const q)
+    : ListApiKeysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApiKeysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListApiKeysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListApiKeysRequest instance.
+ */
+ListApiKeysRequestPrivate::ListApiKeysRequestPrivate(
+    const ListApiKeysRequestPrivate &other, ListApiKeysRequest * const q)
+    : ListApiKeysPrivate(other, q)
+{
+
+}

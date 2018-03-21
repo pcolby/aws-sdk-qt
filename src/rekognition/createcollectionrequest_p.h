@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECOLLECTIONREQUEST_P_H
 #define QTAWS_CREATECOLLECTIONREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "createcollectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class CreateCollectionRequest;
+
+class QTAWS_EXPORT CreateCollectionRequestPrivate : public RekognitionPrivate {
+
+public:
+    CreateCollectionRequestPrivate(const Rekognition::Action action,
+                                   CreateCollectionRequest * const q);
+    CreateCollectionRequestPrivate(const CreateCollectionRequestPrivate &other,
+                                   CreateCollectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCollectionRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createdomainrequest.h"
 #include "createdomainrequest_p.h"
+#include "createdomainresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  CreateDomainRequest
+ *
+ * @brief  Implements SimpleDB CreateDomain requests.
+ *
+ * @see    SimpleDBClient::createDomain
+ */
+
+/**
+ * @brief  Constructs a new CreateDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDomainResponse::CreateDomainResponse(
+
+/**
+ * @brief  Constructs a new CreateDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDomainRequest::CreateDomainRequest(const CreateDomainRequest &other)
+    : SimpleDBRequest(new CreateDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDomainRequest object.
+ */
+CreateDomainRequest::CreateDomainRequest()
+    : SimpleDBRequest(new CreateDomainRequestPrivate(SimpleDBRequest::CreateDomainAction, this))
+{
+
+}
+
+bool CreateDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDomainRequestPrivate
+ *
+ * @brief  Private implementation for CreateDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public CreateDomainRequest instance.
+ */
+CreateDomainRequestPrivate::CreateDomainRequestPrivate(
+    const SimpleDBRequest::Action action, CreateDomainRequest * const q)
+    : CreateDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDomainRequest instance.
+ */
+CreateDomainRequestPrivate::CreateDomainRequestPrivate(
+    const CreateDomainRequestPrivate &other, CreateDomainRequest * const q)
+    : CreateDomainPrivate(other, q)
+{
+
+}

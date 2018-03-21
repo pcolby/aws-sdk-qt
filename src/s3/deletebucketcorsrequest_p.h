@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBUCKETCORSREQUEST_P_H
 #define QTAWS_DELETEBUCKETCORSREQUEST_P_H
 
+#include "s3_p.h"
+#include "deletebucketcorsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketCorsRequest;
+
+class QTAWS_EXPORT DeleteBucketCorsRequestPrivate : public S3Private {
+
+public:
+    DeleteBucketCorsRequestPrivate(const S3::Action action,
+                                   DeleteBucketCorsRequest * const q);
+    DeleteBucketCorsRequestPrivate(const DeleteBucketCorsRequestPrivate &other,
+                                   DeleteBucketCorsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketCorsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

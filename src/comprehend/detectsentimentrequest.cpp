@@ -19,3 +19,107 @@
 
 #include "detectsentimentrequest.h"
 #include "detectsentimentrequest_p.h"
+#include "detectsentimentresponse.h"
+#include "comprehendrequest_p.h"
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectSentimentRequest
+ *
+ * @brief  Implements Comprehend DetectSentiment requests.
+ *
+ * @see    ComprehendClient::detectSentiment
+ */
+
+/**
+ * @brief  Constructs a new DetectSentimentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectSentimentResponse::DetectSentimentResponse(
+
+/**
+ * @brief  Constructs a new DetectSentimentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetectSentimentRequest::DetectSentimentRequest(const DetectSentimentRequest &other)
+    : ComprehendRequest(new DetectSentimentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetectSentimentRequest object.
+ */
+DetectSentimentRequest::DetectSentimentRequest()
+    : ComprehendRequest(new DetectSentimentRequestPrivate(ComprehendRequest::DetectSentimentAction, this))
+{
+
+}
+
+bool DetectSentimentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetectSentimentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetectSentimentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ComprehendClient::send
+ */
+AwsAbstractResponse * DetectSentimentRequest::response(QNetworkReply * const reply) const
+{
+    return new DetectSentimentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectSentimentRequestPrivate
+ *
+ * @brief  Private implementation for DetectSentimentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectSentimentRequestPrivate object.
+ *
+ * @param  action  Comprehend action being performed.
+ * @param  q       Pointer to this object's public DetectSentimentRequest instance.
+ */
+DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
+    const ComprehendRequest::Action action, DetectSentimentRequest * const q)
+    : DetectSentimentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectSentimentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetectSentimentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetectSentimentRequest instance.
+ */
+DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
+    const DetectSentimentRequestPrivate &other, DetectSentimentRequest * const q)
+    : DetectSentimentPrivate(other, q)
+{
+
+}

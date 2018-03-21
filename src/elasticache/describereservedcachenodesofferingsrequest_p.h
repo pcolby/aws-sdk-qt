@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESERVEDCACHENODESOFFERINGSREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDCACHENODESOFFERINGSREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "describereservedcachenodesofferingsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeReservedCacheNodesOfferingsRequest;
+
+class QTAWS_EXPORT DescribeReservedCacheNodesOfferingsRequestPrivate : public ElastiCachePrivate {
+
+public:
+    DescribeReservedCacheNodesOfferingsRequestPrivate(const ElastiCache::Action action,
+                                   DescribeReservedCacheNodesOfferingsRequest * const q);
+    DescribeReservedCacheNodesOfferingsRequestPrivate(const DescribeReservedCacheNodesOfferingsRequestPrivate &other,
+                                   DescribeReservedCacheNodesOfferingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedCacheNodesOfferingsRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

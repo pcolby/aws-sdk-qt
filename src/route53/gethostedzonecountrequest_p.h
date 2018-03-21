@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETHOSTEDZONECOUNTREQUEST_P_H
 #define QTAWS_GETHOSTEDZONECOUNTREQUEST_P_H
 
+#include "route53_p.h"
+#include "gethostedzonecountrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHostedZoneCountRequest;
+
+class QTAWS_EXPORT GetHostedZoneCountRequestPrivate : public Route53Private {
+
+public:
+    GetHostedZoneCountRequestPrivate(const Route53::Action action,
+                                   GetHostedZoneCountRequest * const q);
+    GetHostedZoneCountRequestPrivate(const GetHostedZoneCountRequestPrivate &other,
+                                   GetHostedZoneCountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetHostedZoneCountRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

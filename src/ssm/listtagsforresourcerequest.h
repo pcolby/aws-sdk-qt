@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForResourceRequest : public SSMRequest {
+
+public:
+    ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
+    ListTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourceRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

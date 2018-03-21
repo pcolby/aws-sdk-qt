@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEVPCCLASSICLINKDNSSUPPORTREQUEST_H
 #define QTAWS_ENABLEVPCCLASSICLINKDNSSUPPORTREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVpcClassicLinkDnsSupportRequestPrivate;
+
+class QTAWS_EXPORT EnableVpcClassicLinkDnsSupportRequest : public EC2Request {
+
+public:
+    EnableVpcClassicLinkDnsSupportRequest(const EnableVpcClassicLinkDnsSupportRequest &other);
+    EnableVpcClassicLinkDnsSupportRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableVpcClassicLinkDnsSupportRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

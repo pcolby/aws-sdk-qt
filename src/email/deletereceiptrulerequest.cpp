@@ -19,3 +19,107 @@
 
 #include "deletereceiptrulerequest.h"
 #include "deletereceiptrulerequest_p.h"
+#include "deletereceiptruleresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteReceiptRuleRequest
+ *
+ * @brief  Implements SES DeleteReceiptRule requests.
+ *
+ * @see    SESClient::deleteReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new DeleteReceiptRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReceiptRuleResponse::DeleteReceiptRuleResponse(
+
+/**
+ * @brief  Constructs a new DeleteReceiptRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReceiptRuleRequest::DeleteReceiptRuleRequest(const DeleteReceiptRuleRequest &other)
+    : SESRequest(new DeleteReceiptRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReceiptRuleRequest object.
+ */
+DeleteReceiptRuleRequest::DeleteReceiptRuleRequest()
+    : SESRequest(new DeleteReceiptRuleRequestPrivate(SESRequest::DeleteReceiptRuleAction, this))
+{
+
+}
+
+bool DeleteReceiptRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReceiptRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReceiptRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteReceiptRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReceiptRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReceiptRuleRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReceiptRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReceiptRuleRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteReceiptRuleRequest instance.
+ */
+DeleteReceiptRuleRequestPrivate::DeleteReceiptRuleRequestPrivate(
+    const SESRequest::Action action, DeleteReceiptRuleRequest * const q)
+    : DeleteReceiptRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReceiptRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReceiptRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReceiptRuleRequest instance.
+ */
+DeleteReceiptRuleRequestPrivate::DeleteReceiptRuleRequestPrivate(
+    const DeleteReceiptRuleRequestPrivate &other, DeleteReceiptRuleRequest * const q)
+    : DeleteReceiptRulePrivate(other, q)
+{
+
+}

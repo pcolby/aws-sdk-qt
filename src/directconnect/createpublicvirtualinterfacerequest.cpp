@@ -19,3 +19,107 @@
 
 #include "createpublicvirtualinterfacerequest.h"
 #include "createpublicvirtualinterfacerequest_p.h"
+#include "createpublicvirtualinterfaceresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreatePublicVirtualInterfaceRequest
+ *
+ * @brief  Implements DirectConnect CreatePublicVirtualInterface requests.
+ *
+ * @see    DirectConnectClient::createPublicVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new CreatePublicVirtualInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePublicVirtualInterfaceResponse::CreatePublicVirtualInterfaceResponse(
+
+/**
+ * @brief  Constructs a new CreatePublicVirtualInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePublicVirtualInterfaceRequest::CreatePublicVirtualInterfaceRequest(const CreatePublicVirtualInterfaceRequest &other)
+    : DirectConnectRequest(new CreatePublicVirtualInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePublicVirtualInterfaceRequest object.
+ */
+CreatePublicVirtualInterfaceRequest::CreatePublicVirtualInterfaceRequest()
+    : DirectConnectRequest(new CreatePublicVirtualInterfaceRequestPrivate(DirectConnectRequest::CreatePublicVirtualInterfaceAction, this))
+{
+
+}
+
+bool CreatePublicVirtualInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePublicVirtualInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePublicVirtualInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * CreatePublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePublicVirtualInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePublicVirtualInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for CreatePublicVirtualInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePublicVirtualInterfaceRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public CreatePublicVirtualInterfaceRequest instance.
+ */
+CreatePublicVirtualInterfaceRequestPrivate::CreatePublicVirtualInterfaceRequestPrivate(
+    const DirectConnectRequest::Action action, CreatePublicVirtualInterfaceRequest * const q)
+    : CreatePublicVirtualInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePublicVirtualInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePublicVirtualInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePublicVirtualInterfaceRequest instance.
+ */
+CreatePublicVirtualInterfaceRequestPrivate::CreatePublicVirtualInterfaceRequestPrivate(
+    const CreatePublicVirtualInterfaceRequestPrivate &other, CreatePublicVirtualInterfaceRequest * const q)
+    : CreatePublicVirtualInterfacePrivate(other, q)
+{
+
+}

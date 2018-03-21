@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEHSMCONFIGURATIONREQUEST_H
 #define QTAWS_CREATEHSMCONFIGURATIONREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateHsmConfigurationRequestPrivate;
+
+class QTAWS_EXPORT CreateHsmConfigurationRequest : public RedshiftRequest {
+
+public:
+    CreateHsmConfigurationRequest(const CreateHsmConfigurationRequest &other);
+    CreateHsmConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateHsmConfigurationRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

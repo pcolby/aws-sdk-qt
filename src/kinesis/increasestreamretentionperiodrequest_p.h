@@ -20,4 +20,29 @@
 #ifndef QTAWS_INCREASESTREAMRETENTIONPERIODREQUEST_P_H
 #define QTAWS_INCREASESTREAMRETENTIONPERIODREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "increasestreamretentionperiodrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class IncreaseStreamRetentionPeriodRequest;
+
+class QTAWS_EXPORT IncreaseStreamRetentionPeriodRequestPrivate : public KinesisPrivate {
+
+public:
+    IncreaseStreamRetentionPeriodRequestPrivate(const Kinesis::Action action,
+                                   IncreaseStreamRetentionPeriodRequest * const q);
+    IncreaseStreamRetentionPeriodRequestPrivate(const IncreaseStreamRetentionPeriodRequestPrivate &other,
+                                   IncreaseStreamRetentionPeriodRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(IncreaseStreamRetentionPeriodRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

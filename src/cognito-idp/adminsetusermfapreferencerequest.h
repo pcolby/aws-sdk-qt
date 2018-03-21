@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINSETUSERMFAPREFERENCEREQUEST_H
 #define QTAWS_ADMINSETUSERMFAPREFERENCEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminSetUserMFAPreferenceRequestPrivate;
+
+class QTAWS_EXPORT AdminSetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminSetUserMFAPreferenceRequest(const AdminSetUserMFAPreferenceRequest &other);
+    AdminSetUserMFAPreferenceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminSetUserMFAPreferenceRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

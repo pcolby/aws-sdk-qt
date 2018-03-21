@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDOCUMENTREQUEST_H
 #define QTAWS_CREATEDOCUMENTREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateDocumentRequestPrivate;
+
+class QTAWS_EXPORT CreateDocumentRequest : public SSMRequest {
+
+public:
+    CreateDocumentRequest(const CreateDocumentRequest &other);
+    CreateDocumentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDocumentRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

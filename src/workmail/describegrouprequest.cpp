@@ -19,3 +19,107 @@
 
 #include "describegrouprequest.h"
 #include "describegrouprequest_p.h"
+#include "describegroupresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DescribeGroupRequest
+ *
+ * @brief  Implements WorkMail DescribeGroup requests.
+ *
+ * @see    WorkMailClient::describeGroup
+ */
+
+/**
+ * @brief  Constructs a new DescribeGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeGroupResponse::DescribeGroupResponse(
+
+/**
+ * @brief  Constructs a new DescribeGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeGroupRequest::DescribeGroupRequest(const DescribeGroupRequest &other)
+    : WorkMailRequest(new DescribeGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeGroupRequest object.
+ */
+DescribeGroupRequest::DescribeGroupRequest()
+    : WorkMailRequest(new DescribeGroupRequestPrivate(WorkMailRequest::DescribeGroupAction, this))
+{
+
+}
+
+bool DescribeGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeGroupRequestPrivate
+ *
+ * @brief  Private implementation for DescribeGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeGroupRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public DescribeGroupRequest instance.
+ */
+DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
+    const WorkMailRequest::Action action, DescribeGroupRequest * const q)
+    : DescribeGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeGroupRequest instance.
+ */
+DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
+    const DescribeGroupRequestPrivate &other, DescribeGroupRequest * const q)
+    : DescribeGroupPrivate(other, q)
+{
+
+}

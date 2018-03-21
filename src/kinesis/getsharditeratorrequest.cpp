@@ -19,3 +19,107 @@
 
 #include "getsharditeratorrequest.h"
 #include "getsharditeratorrequest_p.h"
+#include "getsharditeratorresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  GetShardIteratorRequest
+ *
+ * @brief  Implements Kinesis GetShardIterator requests.
+ *
+ * @see    KinesisClient::getShardIterator
+ */
+
+/**
+ * @brief  Constructs a new GetShardIteratorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetShardIteratorResponse::GetShardIteratorResponse(
+
+/**
+ * @brief  Constructs a new GetShardIteratorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetShardIteratorRequest::GetShardIteratorRequest(const GetShardIteratorRequest &other)
+    : KinesisRequest(new GetShardIteratorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetShardIteratorRequest object.
+ */
+GetShardIteratorRequest::GetShardIteratorRequest()
+    : KinesisRequest(new GetShardIteratorRequestPrivate(KinesisRequest::GetShardIteratorAction, this))
+{
+
+}
+
+bool GetShardIteratorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetShardIteratorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetShardIteratorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkReply * const reply) const
+{
+    return new GetShardIteratorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetShardIteratorRequestPrivate
+ *
+ * @brief  Private implementation for GetShardIteratorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetShardIteratorRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public GetShardIteratorRequest instance.
+ */
+GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
+    const KinesisRequest::Action action, GetShardIteratorRequest * const q)
+    : GetShardIteratorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetShardIteratorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetShardIteratorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetShardIteratorRequest instance.
+ */
+GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
+    const GetShardIteratorRequestPrivate &other, GetShardIteratorRequest * const q)
+    : GetShardIteratorPrivate(other, q)
+{
+
+}

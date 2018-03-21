@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAUTHORIZERREQUEST_H
 #define QTAWS_UPDATEAUTHORIZERREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT UpdateAuthorizerRequest : public APIGatewayRequest {
+
+public:
+    UpdateAuthorizerRequest(const UpdateAuthorizerRequest &other);
+    UpdateAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAuthorizerRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_RECEIVEMESSAGEREQUEST_P_H
 #define QTAWS_RECEIVEMESSAGEREQUEST_P_H
 
+#include "sqs_p.h"
+#include "receivemessagerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ReceiveMessageRequest;
+
+class QTAWS_EXPORT ReceiveMessageRequestPrivate : public SQSPrivate {
+
+public:
+    ReceiveMessageRequestPrivate(const SQS::Action action,
+                                   ReceiveMessageRequest * const q);
+    ReceiveMessageRequestPrivate(const ReceiveMessageRequestPrivate &other,
+                                   ReceiveMessageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReceiveMessageRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

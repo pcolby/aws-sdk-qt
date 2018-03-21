@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTCONFIGURATIONSREQUEST_H
 #define QTAWS_DESCRIBEEVENTCONFIGURATIONSREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeEventConfigurationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventConfigurationsRequest : public IoTRequest {
+
+public:
+    DescribeEventConfigurationsRequest(const DescribeEventConfigurationsRequest &other);
+    DescribeEventConfigurationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventConfigurationsRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

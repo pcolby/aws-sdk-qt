@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTIDENTITIESREQUEST_H
 #define QTAWS_LISTIDENTITIESREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListIdentitiesRequestPrivate;
+
+class QTAWS_EXPORT ListIdentitiesRequest : public SESRequest {
+
+public:
+    ListIdentitiesRequest(const ListIdentitiesRequest &other);
+    ListIdentitiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListIdentitiesRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

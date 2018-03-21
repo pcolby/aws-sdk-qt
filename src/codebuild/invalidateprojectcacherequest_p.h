@@ -20,4 +20,29 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHEREQUEST_P_H
 #define QTAWS_INVALIDATEPROJECTCACHEREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "invalidateprojectcacherequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class InvalidateProjectCacheRequest;
+
+class QTAWS_EXPORT InvalidateProjectCacheRequestPrivate : public CodeBuildPrivate {
+
+public:
+    InvalidateProjectCacheRequestPrivate(const CodeBuild::Action action,
+                                   InvalidateProjectCacheRequest * const q);
+    InvalidateProjectCacheRequestPrivate(const InvalidateProjectCacheRequestPrivate &other,
+                                   InvalidateProjectCacheRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InvalidateProjectCacheRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

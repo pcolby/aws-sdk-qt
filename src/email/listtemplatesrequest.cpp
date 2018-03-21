@@ -19,3 +19,107 @@
 
 #include "listtemplatesrequest.h"
 #include "listtemplatesrequest_p.h"
+#include "listtemplatesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListTemplatesRequest
+ *
+ * @brief  Implements SES ListTemplates requests.
+ *
+ * @see    SESClient::listTemplates
+ */
+
+/**
+ * @brief  Constructs a new ListTemplatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTemplatesResponse::ListTemplatesResponse(
+
+/**
+ * @brief  Constructs a new ListTemplatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTemplatesRequest::ListTemplatesRequest(const ListTemplatesRequest &other)
+    : SESRequest(new ListTemplatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTemplatesRequest object.
+ */
+ListTemplatesRequest::ListTemplatesRequest()
+    : SESRequest(new ListTemplatesRequestPrivate(SESRequest::ListTemplatesAction, this))
+{
+
+}
+
+bool ListTemplatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTemplatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTemplatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTemplatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTemplatesRequestPrivate
+ *
+ * @brief  Private implementation for ListTemplatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTemplatesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public ListTemplatesRequest instance.
+ */
+ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
+    const SESRequest::Action action, ListTemplatesRequest * const q)
+    : ListTemplatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTemplatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTemplatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTemplatesRequest instance.
+ */
+ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
+    const ListTemplatesRequestPrivate &other, ListTemplatesRequest * const q)
+    : ListTemplatesPrivate(other, q)
+{
+
+}

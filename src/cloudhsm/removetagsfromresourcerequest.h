@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 
+#include "cloudhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class RemoveTagsFromResourceRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromResourceRequest : public CloudHSMRequest {
+
+public:
+    RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);
+    RemoveTagsFromResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromResourceRequest)
+
+}
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

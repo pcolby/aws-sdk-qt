@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDBULKTEMPLATEDEMAILREQUEST_H
 #define QTAWS_SENDBULKTEMPLATEDEMAILREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendBulkTemplatedEmailRequestPrivate;
+
+class QTAWS_EXPORT SendBulkTemplatedEmailRequest : public SESRequest {
+
+public:
+    SendBulkTemplatedEmailRequest(const SendBulkTemplatedEmailRequest &other);
+    SendBulkTemplatedEmailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendBulkTemplatedEmailRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

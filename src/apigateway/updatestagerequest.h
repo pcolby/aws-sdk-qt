@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESTAGEREQUEST_H
 #define QTAWS_UPDATESTAGEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateStageRequestPrivate;
+
+class QTAWS_EXPORT UpdateStageRequest : public APIGatewayRequest {
+
+public:
+    UpdateStageRequest(const UpdateStageRequest &other);
+    UpdateStageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStageRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

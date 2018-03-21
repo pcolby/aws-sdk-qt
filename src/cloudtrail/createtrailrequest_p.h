@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETRAILREQUEST_P_H
 #define QTAWS_CREATETRAILREQUEST_P_H
 
+#include "cloudtrail_p.h"
+#include "createtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class CreateTrailRequest;
+
+class QTAWS_EXPORT CreateTrailRequestPrivate : public CloudTrailPrivate {
+
+public:
+    CreateTrailRequestPrivate(const CloudTrail::Action action,
+                                   CreateTrailRequest * const q);
+    CreateTrailRequestPrivate(const CreateTrailRequestPrivate &other,
+                                   CreateTrailRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTrailRequest)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

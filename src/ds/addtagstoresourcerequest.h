@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class AddTagsToResourceRequestPrivate;
+
+class QTAWS_EXPORT AddTagsToResourceRequest : public DirectoryServiceRequest {
+
+public:
+    AddTagsToResourceRequest(const AddTagsToResourceRequest &other);
+    AddTagsToResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToResourceRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listgrantsrequest.h"
 #include "listgrantsrequest_p.h"
+#include "listgrantsresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ListGrantsRequest
+ *
+ * @brief  Implements KMS ListGrants requests.
+ *
+ * @see    KMSClient::listGrants
+ */
+
+/**
+ * @brief  Constructs a new ListGrantsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGrantsResponse::ListGrantsResponse(
+
+/**
+ * @brief  Constructs a new ListGrantsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGrantsRequest::ListGrantsRequest(const ListGrantsRequest &other)
+    : KMSRequest(new ListGrantsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGrantsRequest object.
+ */
+ListGrantsRequest::ListGrantsRequest()
+    : KMSRequest(new ListGrantsRequestPrivate(KMSRequest::ListGrantsAction, this))
+{
+
+}
+
+bool ListGrantsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGrantsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGrantsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGrantsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGrantsRequestPrivate
+ *
+ * @brief  Private implementation for ListGrantsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGrantsRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public ListGrantsRequest instance.
+ */
+ListGrantsRequestPrivate::ListGrantsRequestPrivate(
+    const KMSRequest::Action action, ListGrantsRequest * const q)
+    : ListGrantsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGrantsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGrantsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGrantsRequest instance.
+ */
+ListGrantsRequestPrivate::ListGrantsRequestPrivate(
+    const ListGrantsRequestPrivate &other, ListGrantsRequest * const q)
+    : ListGrantsPrivate(other, q)
+{
+
+}

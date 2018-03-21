@@ -19,3 +19,107 @@
 
 #include "getuserrequest.h"
 #include "getuserrequest_p.h"
+#include "getuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider GetUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::getUser
+ */
+
+/**
+ * @brief  Constructs a new GetUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserResponse::GetUserResponse(
+
+/**
+ * @brief  Constructs a new GetUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetUserRequest::GetUserRequest(const GetUserRequest &other)
+    : CognitoIdentityProviderRequest(new GetUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetUserRequest object.
+ */
+GetUserRequest::GetUserRequest()
+    : CognitoIdentityProviderRequest(new GetUserRequestPrivate(CognitoIdentityProviderRequest::GetUserAction, this))
+{
+
+}
+
+bool GetUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * GetUserRequest::response(QNetworkReply * const reply) const
+{
+    return new GetUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserRequestPrivate
+ *
+ * @brief  Private implementation for GetUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public GetUserRequest instance.
+ */
+GetUserRequestPrivate::GetUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, GetUserRequest * const q)
+    : GetUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetUserRequest instance.
+ */
+GetUserRequestPrivate::GetUserRequestPrivate(
+    const GetUserRequestPrivate &other, GetUserRequest * const q)
+    : GetUserPrivate(other, q)
+{
+
+}

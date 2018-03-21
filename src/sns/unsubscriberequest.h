@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNSUBSCRIBEREQUEST_H
 #define QTAWS_UNSUBSCRIBEREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class UnsubscribeRequestPrivate;
+
+class QTAWS_EXPORT UnsubscribeRequest : public SNSRequest {
+
+public:
+    UnsubscribeRequest(const UnsubscribeRequest &other);
+    UnsubscribeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UnsubscribeRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

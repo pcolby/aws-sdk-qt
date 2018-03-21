@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETFINDINGSREQUEST_H
 #define QTAWS_GETFINDINGSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetFindingsRequestPrivate;
+
+class QTAWS_EXPORT GetFindingsRequest : public GuardDutyRequest {
+
+public:
+    GetFindingsRequest(const GetFindingsRequest &other);
+    GetFindingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetFindingsRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

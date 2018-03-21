@@ -19,3 +19,107 @@
 
 #include "enableradiusrequest.h"
 #include "enableradiusrequest_p.h"
+#include "enableradiusresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  EnableRadiusRequest
+ *
+ * @brief  Implements DirectoryService EnableRadius requests.
+ *
+ * @see    DirectoryServiceClient::enableRadius
+ */
+
+/**
+ * @brief  Constructs a new EnableRadiusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableRadiusResponse::EnableRadiusResponse(
+
+/**
+ * @brief  Constructs a new EnableRadiusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableRadiusRequest::EnableRadiusRequest(const EnableRadiusRequest &other)
+    : DirectoryServiceRequest(new EnableRadiusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableRadiusRequest object.
+ */
+EnableRadiusRequest::EnableRadiusRequest()
+    : DirectoryServiceRequest(new EnableRadiusRequestPrivate(DirectoryServiceRequest::EnableRadiusAction, this))
+{
+
+}
+
+bool EnableRadiusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableRadiusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableRadiusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * EnableRadiusRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableRadiusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableRadiusRequestPrivate
+ *
+ * @brief  Private implementation for EnableRadiusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableRadiusRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public EnableRadiusRequest instance.
+ */
+EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
+    const DirectoryServiceRequest::Action action, EnableRadiusRequest * const q)
+    : EnableRadiusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableRadiusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableRadiusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableRadiusRequest instance.
+ */
+EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
+    const EnableRadiusRequestPrivate &other, EnableRadiusRequest * const q)
+    : EnableRadiusPrivate(other, q)
+{
+
+}

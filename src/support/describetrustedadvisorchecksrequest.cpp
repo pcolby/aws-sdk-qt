@@ -19,3 +19,107 @@
 
 #include "describetrustedadvisorchecksrequest.h"
 #include "describetrustedadvisorchecksrequest_p.h"
+#include "describetrustedadvisorchecksresponse.h"
+#include "supportrequest_p.h"
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeTrustedAdvisorChecksRequest
+ *
+ * @brief  Implements Support DescribeTrustedAdvisorChecks requests.
+ *
+ * @see    SupportClient::describeTrustedAdvisorChecks
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorChecksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustedAdvisorChecksResponse::DescribeTrustedAdvisorChecksResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorChecksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrustedAdvisorChecksRequest::DescribeTrustedAdvisorChecksRequest(const DescribeTrustedAdvisorChecksRequest &other)
+    : SupportRequest(new DescribeTrustedAdvisorChecksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorChecksRequest object.
+ */
+DescribeTrustedAdvisorChecksRequest::DescribeTrustedAdvisorChecksRequest()
+    : SupportRequest(new DescribeTrustedAdvisorChecksRequestPrivate(SupportRequest::DescribeTrustedAdvisorChecksAction, this))
+{
+
+}
+
+bool DescribeTrustedAdvisorChecksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrustedAdvisorChecksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrustedAdvisorChecksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SupportClient::send
+ */
+AwsAbstractResponse * DescribeTrustedAdvisorChecksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrustedAdvisorChecksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustedAdvisorChecksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrustedAdvisorChecksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorChecksRequestPrivate object.
+ *
+ * @param  action  Support action being performed.
+ * @param  q       Pointer to this object's public DescribeTrustedAdvisorChecksRequest instance.
+ */
+DescribeTrustedAdvisorChecksRequestPrivate::DescribeTrustedAdvisorChecksRequestPrivate(
+    const SupportRequest::Action action, DescribeTrustedAdvisorChecksRequest * const q)
+    : DescribeTrustedAdvisorChecksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorChecksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrustedAdvisorChecksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrustedAdvisorChecksRequest instance.
+ */
+DescribeTrustedAdvisorChecksRequestPrivate::DescribeTrustedAdvisorChecksRequestPrivate(
+    const DescribeTrustedAdvisorChecksRequestPrivate &other, DescribeTrustedAdvisorChecksRequest * const q)
+    : DescribeTrustedAdvisorChecksPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PURCHASESCHEDULEDINSTANCESREQUEST_H
 #define QTAWS_PURCHASESCHEDULEDINSTANCESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class PurchaseScheduledInstancesRequestPrivate;
+
+class QTAWS_EXPORT PurchaseScheduledInstancesRequest : public EC2Request {
+
+public:
+    PurchaseScheduledInstancesRequest(const PurchaseScheduledInstancesRequest &other);
+    PurchaseScheduledInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseScheduledInstancesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

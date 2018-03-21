@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "disassociateconfigurationitemsfromapplicationrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DisassociateConfigurationItemsFromApplicationRequest;
+
+class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   DisassociateConfigurationItemsFromApplicationRequest * const q);
+    DisassociateConfigurationItemsFromApplicationRequestPrivate(const DisassociateConfigurationItemsFromApplicationRequestPrivate &other,
+                                   DisassociateConfigurationItemsFromApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateConfigurationItemsFromApplicationRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

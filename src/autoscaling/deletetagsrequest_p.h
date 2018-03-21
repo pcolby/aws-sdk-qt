@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteTagsRequest;
+
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DeleteTagsRequestPrivate(const AutoScaling::Action action,
+                                   DeleteTagsRequest * const q);
+    DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
+                                   DeleteTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

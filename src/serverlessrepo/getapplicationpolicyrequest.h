@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAPPLICATIONPOLICYREQUEST_H
 #define QTAWS_GETAPPLICATIONPOLICYREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class GetApplicationPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetApplicationPolicyRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    GetApplicationPolicyRequest(const GetApplicationPolicyRequest &other);
+    GetApplicationPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetApplicationPolicyRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

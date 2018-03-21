@@ -19,3 +19,107 @@
 
 #include "deregistercontainerinstancerequest.h"
 #include "deregistercontainerinstancerequest_p.h"
+#include "deregistercontainerinstanceresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DeregisterContainerInstanceRequest
+ *
+ * @brief  Implements ECS DeregisterContainerInstance requests.
+ *
+ * @see    ECSClient::deregisterContainerInstance
+ */
+
+/**
+ * @brief  Constructs a new DeregisterContainerInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeregisterContainerInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest(const DeregisterContainerInstanceRequest &other)
+    : ECSRequest(new DeregisterContainerInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterContainerInstanceRequest object.
+ */
+DeregisterContainerInstanceRequest::DeregisterContainerInstanceRequest()
+    : ECSRequest(new DeregisterContainerInstanceRequestPrivate(ECSRequest::DeregisterContainerInstanceAction, this))
+{
+
+}
+
+bool DeregisterContainerInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterContainerInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterContainerInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * DeregisterContainerInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterContainerInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterContainerInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterContainerInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterContainerInstanceRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public DeregisterContainerInstanceRequest instance.
+ */
+DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
+    const ECSRequest::Action action, DeregisterContainerInstanceRequest * const q)
+    : DeregisterContainerInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterContainerInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterContainerInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterContainerInstanceRequest instance.
+ */
+DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
+    const DeregisterContainerInstanceRequestPrivate &other, DeregisterContainerInstanceRequest * const q)
+    : DeregisterContainerInstancePrivate(other, q)
+{
+
+}

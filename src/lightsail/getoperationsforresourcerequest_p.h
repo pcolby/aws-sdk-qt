@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOPERATIONSFORRESOURCEREQUEST_P_H
 #define QTAWS_GETOPERATIONSFORRESOURCEREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getoperationsforresourcerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetOperationsForResourceRequest;
+
+class QTAWS_EXPORT GetOperationsForResourceRequestPrivate : public LightsailPrivate {
+
+public:
+    GetOperationsForResourceRequestPrivate(const Lightsail::Action action,
+                                   GetOperationsForResourceRequest * const q);
+    GetOperationsForResourceRequestPrivate(const GetOperationsForResourceRequestPrivate &other,
+                                   GetOperationsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetOperationsForResourceRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

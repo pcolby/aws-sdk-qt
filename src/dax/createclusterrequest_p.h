@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_P_H
 #define QTAWS_CREATECLUSTERREQUEST_P_H
 
+#include "dax_p.h"
+#include "createclusterrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class CreateClusterRequest;
+
+class QTAWS_EXPORT CreateClusterRequestPrivate : public DAXPrivate {
+
+public:
+    CreateClusterRequestPrivate(const DAX::Action action,
+                                   CreateClusterRequest * const q);
+    CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
+                                   CreateClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

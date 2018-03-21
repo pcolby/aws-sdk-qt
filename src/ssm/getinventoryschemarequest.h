@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETINVENTORYSCHEMAREQUEST_H
 #define QTAWS_GETINVENTORYSCHEMAREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetInventorySchemaRequestPrivate;
+
+class QTAWS_EXPORT GetInventorySchemaRequest : public SSMRequest {
+
+public:
+    GetInventorySchemaRequest(const GetInventorySchemaRequest &other);
+    GetInventorySchemaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetInventorySchemaRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

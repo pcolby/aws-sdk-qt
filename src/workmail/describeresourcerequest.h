@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESOURCEREQUEST_H
 #define QTAWS_DESCRIBERESOURCEREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DescribeResourceRequestPrivate;
+
+class QTAWS_EXPORT DescribeResourceRequest : public WorkMailRequest {
+
+public:
+    DescribeResourceRequest(const DescribeResourceRequest &other);
+    DescribeResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeResourceRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

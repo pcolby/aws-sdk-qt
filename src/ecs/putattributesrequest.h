@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTATTRIBUTESREQUEST_H
 #define QTAWS_PUTATTRIBUTESREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class PutAttributesRequestPrivate;
+
+class QTAWS_EXPORT PutAttributesRequest : public ECSRequest {
+
+public:
+    PutAttributesRequest(const PutAttributesRequest &other);
+    PutAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutAttributesRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

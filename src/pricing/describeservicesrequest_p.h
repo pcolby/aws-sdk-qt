@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICESREQUEST_P_H
 
+#include "pricing_p.h"
+#include "describeservicesrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class DescribeServicesRequest;
+
+class QTAWS_EXPORT DescribeServicesRequestPrivate : public PricingPrivate {
+
+public:
+    DescribeServicesRequestPrivate(const Pricing::Action action,
+                                   DescribeServicesRequest * const q);
+    DescribeServicesRequestPrivate(const DescribeServicesRequestPrivate &other,
+                                   DescribeServicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServicesRequest)
+
+};
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

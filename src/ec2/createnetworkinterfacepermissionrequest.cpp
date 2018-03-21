@@ -19,3 +19,107 @@
 
 #include "createnetworkinterfacepermissionrequest.h"
 #include "createnetworkinterfacepermissionrequest_p.h"
+#include "createnetworkinterfacepermissionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateNetworkInterfacePermissionRequest
+ *
+ * @brief  Implements EC2 CreateNetworkInterfacePermission requests.
+ *
+ * @see    EC2Client::createNetworkInterfacePermission
+ */
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfacePermissionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNetworkInterfacePermissionResponse::CreateNetworkInterfacePermissionResponse(
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfacePermissionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest(const CreateNetworkInterfacePermissionRequest &other)
+    : EC2Request(new CreateNetworkInterfacePermissionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfacePermissionRequest object.
+ */
+CreateNetworkInterfacePermissionRequest::CreateNetworkInterfacePermissionRequest()
+    : EC2Request(new CreateNetworkInterfacePermissionRequestPrivate(EC2Request::CreateNetworkInterfacePermissionAction, this))
+{
+
+}
+
+bool CreateNetworkInterfacePermissionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateNetworkInterfacePermissionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateNetworkInterfacePermissionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateNetworkInterfacePermissionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateNetworkInterfacePermissionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNetworkInterfacePermissionRequestPrivate
+ *
+ * @brief  Private implementation for CreateNetworkInterfacePermissionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkInterfacePermissionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateNetworkInterfacePermissionRequest instance.
+ */
+CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermissionRequestPrivate(
+    const EC2Request::Action action, CreateNetworkInterfacePermissionRequest * const q)
+    : CreateNetworkInterfacePermissionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkInterfacePermissionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateNetworkInterfacePermissionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateNetworkInterfacePermissionRequest instance.
+ */
+CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermissionRequestPrivate(
+    const CreateNetworkInterfacePermissionRequestPrivate &other, CreateNetworkInterfacePermissionRequest * const q)
+    : CreateNetworkInterfacePermissionPrivate(other, q)
+{
+
+}

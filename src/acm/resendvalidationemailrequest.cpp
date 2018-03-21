@@ -19,3 +19,107 @@
 
 #include "resendvalidationemailrequest.h"
 #include "resendvalidationemailrequest_p.h"
+#include "resendvalidationemailresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  ResendValidationEmailRequest
+ *
+ * @brief  Implements ACM ResendValidationEmail requests.
+ *
+ * @see    ACMClient::resendValidationEmail
+ */
+
+/**
+ * @brief  Constructs a new ResendValidationEmailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResendValidationEmailResponse::ResendValidationEmailResponse(
+
+/**
+ * @brief  Constructs a new ResendValidationEmailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResendValidationEmailRequest::ResendValidationEmailRequest(const ResendValidationEmailRequest &other)
+    : ACMRequest(new ResendValidationEmailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResendValidationEmailRequest object.
+ */
+ResendValidationEmailRequest::ResendValidationEmailRequest()
+    : ACMRequest(new ResendValidationEmailRequestPrivate(ACMRequest::ResendValidationEmailAction, this))
+{
+
+}
+
+bool ResendValidationEmailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResendValidationEmailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResendValidationEmailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * ResendValidationEmailRequest::response(QNetworkReply * const reply) const
+{
+    return new ResendValidationEmailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResendValidationEmailRequestPrivate
+ *
+ * @brief  Private implementation for ResendValidationEmailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendValidationEmailRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public ResendValidationEmailRequest instance.
+ */
+ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
+    const ACMRequest::Action action, ResendValidationEmailRequest * const q)
+    : ResendValidationEmailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendValidationEmailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResendValidationEmailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResendValidationEmailRequest instance.
+ */
+ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
+    const ResendValidationEmailRequestPrivate &other, ResendValidationEmailRequest * const q)
+    : ResendValidationEmailPrivate(other, q)
+{
+
+}

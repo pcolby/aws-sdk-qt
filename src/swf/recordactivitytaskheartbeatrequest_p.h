@@ -20,4 +20,29 @@
 #ifndef QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_P_H
 #define QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_P_H
 
+#include "swf_p.h"
+#include "recordactivitytaskheartbeatrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RecordActivityTaskHeartbeatRequest;
+
+class QTAWS_EXPORT RecordActivityTaskHeartbeatRequestPrivate : public SWFPrivate {
+
+public:
+    RecordActivityTaskHeartbeatRequestPrivate(const SWF::Action action,
+                                   RecordActivityTaskHeartbeatRequest * const q);
+    RecordActivityTaskHeartbeatRequestPrivate(const RecordActivityTaskHeartbeatRequestPrivate &other,
+                                   RecordActivityTaskHeartbeatRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RecordActivityTaskHeartbeatRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

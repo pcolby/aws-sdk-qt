@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRULEREQUEST_H
 #define QTAWS_GETRULEREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRuleRequestPrivate;
+
+class QTAWS_EXPORT GetRuleRequest : public WAFRequest {
+
+public:
+    GetRuleRequest(const GetRuleRequest &other);
+    GetRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRuleRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

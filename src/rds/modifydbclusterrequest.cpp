@@ -19,3 +19,107 @@
 
 #include "modifydbclusterrequest.h"
 #include "modifydbclusterrequest_p.h"
+#include "modifydbclusterresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBClusterRequest
+ *
+ * @brief  Implements RDS ModifyDBCluster requests.
+ *
+ * @see    RDSClient::modifyDBCluster
+ */
+
+/**
+ * @brief  Constructs a new ModifyDBClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBClusterResponse::ModifyDBClusterResponse(
+
+/**
+ * @brief  Constructs a new ModifyDBClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyDBClusterRequest::ModifyDBClusterRequest(const ModifyDBClusterRequest &other)
+    : RDSRequest(new ModifyDBClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyDBClusterRequest object.
+ */
+ModifyDBClusterRequest::ModifyDBClusterRequest()
+    : RDSRequest(new ModifyDBClusterRequestPrivate(RDSRequest::ModifyDBClusterAction, this))
+{
+
+}
+
+bool ModifyDBClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyDBClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyDBClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyDBClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBClusterRequestPrivate
+ *
+ * @brief  Private implementation for ModifyDBClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBClusterRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ModifyDBClusterRequest instance.
+ */
+ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
+    const RDSRequest::Action action, ModifyDBClusterRequest * const q)
+    : ModifyDBClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyDBClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyDBClusterRequest instance.
+ */
+ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
+    const ModifyDBClusterRequestPrivate &other, ModifyDBClusterRequest * const q)
+    : ModifyDBClusterPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createlaunchtemplateversionrequest.h"
 #include "createlaunchtemplateversionrequest_p.h"
+#include "createlaunchtemplateversionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateLaunchTemplateVersionRequest
+ *
+ * @brief  Implements EC2 CreateLaunchTemplateVersion requests.
+ *
+ * @see    EC2Client::createLaunchTemplateVersion
+ */
+
+/**
+ * @brief  Constructs a new CreateLaunchTemplateVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLaunchTemplateVersionResponse::CreateLaunchTemplateVersionResponse(
+
+/**
+ * @brief  Constructs a new CreateLaunchTemplateVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest(const CreateLaunchTemplateVersionRequest &other)
+    : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLaunchTemplateVersionRequest object.
+ */
+CreateLaunchTemplateVersionRequest::CreateLaunchTemplateVersionRequest()
+    : EC2Request(new CreateLaunchTemplateVersionRequestPrivate(EC2Request::CreateLaunchTemplateVersionAction, this))
+{
+
+}
+
+bool CreateLaunchTemplateVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLaunchTemplateVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLaunchTemplateVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateLaunchTemplateVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLaunchTemplateVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLaunchTemplateVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreateLaunchTemplateVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateLaunchTemplateVersionRequest instance.
+ */
+CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
+    const EC2Request::Action action, CreateLaunchTemplateVersionRequest * const q)
+    : CreateLaunchTemplateVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchTemplateVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLaunchTemplateVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLaunchTemplateVersionRequest instance.
+ */
+CreateLaunchTemplateVersionRequestPrivate::CreateLaunchTemplateVersionRequestPrivate(
+    const CreateLaunchTemplateVersionRequestPrivate &other, CreateLaunchTemplateVersionRequest * const q)
+    : CreateLaunchTemplateVersionPrivate(other, q)
+{
+
+}

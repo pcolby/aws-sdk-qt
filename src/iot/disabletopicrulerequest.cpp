@@ -19,3 +19,107 @@
 
 #include "disabletopicrulerequest.h"
 #include "disabletopicrulerequest_p.h"
+#include "disabletopicruleresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DisableTopicRuleRequest
+ *
+ * @brief  Implements IoT DisableTopicRule requests.
+ *
+ * @see    IoTClient::disableTopicRule
+ */
+
+/**
+ * @brief  Constructs a new DisableTopicRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableTopicRuleResponse::DisableTopicRuleResponse(
+
+/**
+ * @brief  Constructs a new DisableTopicRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableTopicRuleRequest::DisableTopicRuleRequest(const DisableTopicRuleRequest &other)
+    : IoTRequest(new DisableTopicRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableTopicRuleRequest object.
+ */
+DisableTopicRuleRequest::DisableTopicRuleRequest()
+    : IoTRequest(new DisableTopicRuleRequestPrivate(IoTRequest::DisableTopicRuleAction, this))
+{
+
+}
+
+bool DisableTopicRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableTopicRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableTopicRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DisableTopicRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableTopicRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableTopicRuleRequestPrivate
+ *
+ * @brief  Private implementation for DisableTopicRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableTopicRuleRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DisableTopicRuleRequest instance.
+ */
+DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
+    const IoTRequest::Action action, DisableTopicRuleRequest * const q)
+    : DisableTopicRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableTopicRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableTopicRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableTopicRuleRequest instance.
+ */
+DisableTopicRuleRequestPrivate::DisableTopicRuleRequestPrivate(
+    const DisableTopicRuleRequestPrivate &other, DisableTopicRuleRequest * const q)
+    : DisableTopicRulePrivate(other, q)
+{
+
+}

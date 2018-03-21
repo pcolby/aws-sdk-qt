@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class UpdateApplicationRequestPrivate;
+
+class QTAWS_EXPORT UpdateApplicationRequest : public KinesisAnalyticsRequest {
+
+public:
+    UpdateApplicationRequest(const UpdateApplicationRequest &other);
+    UpdateApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

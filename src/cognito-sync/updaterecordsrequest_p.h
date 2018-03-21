@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERECORDSREQUEST_P_H
 #define QTAWS_UPDATERECORDSREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "updaterecordsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class UpdateRecordsRequest;
+
+class QTAWS_EXPORT UpdateRecordsRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    UpdateRecordsRequestPrivate(const CognitoSync::Action action,
+                                   UpdateRecordsRequest * const q);
+    UpdateRecordsRequestPrivate(const UpdateRecordsRequestPrivate &other,
+                                   UpdateRecordsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRecordsRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETCLUSTERPARAMETERGROUPREQUEST_H
 #define QTAWS_RESETCLUSTERPARAMETERGROUPREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ResetClusterParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT ResetClusterParameterGroupRequest : public RedshiftRequest {
+
+public:
+    ResetClusterParameterGroupRequest(const ResetClusterParameterGroupRequest &other);
+    ResetClusterParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetClusterParameterGroupRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

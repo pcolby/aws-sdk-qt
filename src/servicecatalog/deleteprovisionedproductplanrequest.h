@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPROVISIONEDPRODUCTPLANREQUEST_H
 #define QTAWS_DELETEPROVISIONEDPRODUCTPLANREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteProvisionedProductPlanRequestPrivate;
+
+class QTAWS_EXPORT DeleteProvisionedProductPlanRequest : public ServiceCatalogRequest {
+
+public:
+    DeleteProvisionedProductPlanRequest(const DeleteProvisionedProductPlanRequest &other);
+    DeleteProvisionedProductPlanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProvisionedProductPlanRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENETWORKPROFILEREQUEST_H
 #define QTAWS_DELETENETWORKPROFILEREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteNetworkProfileRequestPrivate;
+
+class QTAWS_EXPORT DeleteNetworkProfileRequest : public DeviceFarmRequest {
+
+public:
+    DeleteNetworkProfileRequest(const DeleteNetworkProfileRequest &other);
+    DeleteNetworkProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkProfileRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

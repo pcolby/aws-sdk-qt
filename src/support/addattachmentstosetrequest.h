@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDATTACHMENTSTOSETREQUEST_H
 #define QTAWS_ADDATTACHMENTSTOSETREQUEST_H
 
+#include "supportrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddAttachmentsToSetRequestPrivate;
+
+class QTAWS_EXPORT AddAttachmentsToSetRequest : public SupportRequest {
+
+public:
+    AddAttachmentsToSetRequest(const AddAttachmentsToSetRequest &other);
+    AddAttachmentsToSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddAttachmentsToSetRequest)
+
+}
+
+} // namespace Support
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
+#include "efs_p.h"
+#include "createtagsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateTagsRequest;
+
+class QTAWS_EXPORT CreateTagsRequestPrivate : public EFSPrivate {
+
+public:
+    CreateTagsRequestPrivate(const EFS::Action action,
+                                   CreateTagsRequest * const q);
+    CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
+                                   CreateTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTagsRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

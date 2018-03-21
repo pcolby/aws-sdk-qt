@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONFIGURATIONREQUEST_H
 #define QTAWS_UPDATECONFIGURATIONREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateConfigurationRequestPrivate;
+
+class QTAWS_EXPORT UpdateConfigurationRequest : public MQRequest {
+
+public:
+    UpdateConfigurationRequest(const UpdateConfigurationRequest &other);
+    UpdateConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESERVICEREQUEST_P_H
 #define QTAWS_CREATESERVICEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "createservicerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class CreateServiceRequest;
+
+class QTAWS_EXPORT CreateServiceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    CreateServiceRequestPrivate(const ServiceDiscovery::Action action,
+                                   CreateServiceRequest * const q);
+    CreateServiceRequestPrivate(const CreateServiceRequestPrivate &other,
+                                   CreateServiceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServiceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

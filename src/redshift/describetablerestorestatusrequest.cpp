@@ -19,3 +19,107 @@
 
 #include "describetablerestorestatusrequest.h"
 #include "describetablerestorestatusrequest_p.h"
+#include "describetablerestorestatusresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeTableRestoreStatusRequest
+ *
+ * @brief  Implements Redshift DescribeTableRestoreStatus requests.
+ *
+ * @see    RedshiftClient::describeTableRestoreStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeTableRestoreStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTableRestoreStatusResponse::DescribeTableRestoreStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeTableRestoreStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTableRestoreStatusRequest::DescribeTableRestoreStatusRequest(const DescribeTableRestoreStatusRequest &other)
+    : RedshiftRequest(new DescribeTableRestoreStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTableRestoreStatusRequest object.
+ */
+DescribeTableRestoreStatusRequest::DescribeTableRestoreStatusRequest()
+    : RedshiftRequest(new DescribeTableRestoreStatusRequestPrivate(RedshiftRequest::DescribeTableRestoreStatusAction, this))
+{
+
+}
+
+bool DescribeTableRestoreStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTableRestoreStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTableRestoreStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTableRestoreStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTableRestoreStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTableRestoreStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableRestoreStatusRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeTableRestoreStatusRequest instance.
+ */
+DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
+    const RedshiftRequest::Action action, DescribeTableRestoreStatusRequest * const q)
+    : DescribeTableRestoreStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableRestoreStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTableRestoreStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTableRestoreStatusRequest instance.
+ */
+DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
+    const DescribeTableRestoreStatusRequestPrivate &other, DescribeTableRestoreStatusRequest * const q)
+    : DescribeTableRestoreStatusPrivate(other, q)
+{
+
+}

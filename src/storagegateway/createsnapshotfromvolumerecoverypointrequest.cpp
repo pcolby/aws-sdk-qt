@@ -19,3 +19,107 @@
 
 #include "createsnapshotfromvolumerecoverypointrequest.h"
 #include "createsnapshotfromvolumerecoverypointrequest_p.h"
+#include "createsnapshotfromvolumerecoverypointresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateSnapshotFromVolumeRecoveryPointRequest
+ *
+ * @brief  Implements StorageGateway CreateSnapshotFromVolumeRecoveryPoint requests.
+ *
+ * @see    StorageGatewayClient::createSnapshotFromVolumeRecoveryPoint
+ */
+
+/**
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryPointResponse(
+
+/**
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSnapshotFromVolumeRecoveryPointRequest::CreateSnapshotFromVolumeRecoveryPointRequest(const CreateSnapshotFromVolumeRecoveryPointRequest &other)
+    : StorageGatewayRequest(new CreateSnapshotFromVolumeRecoveryPointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequest object.
+ */
+CreateSnapshotFromVolumeRecoveryPointRequest::CreateSnapshotFromVolumeRecoveryPointRequest()
+    : StorageGatewayRequest(new CreateSnapshotFromVolumeRecoveryPointRequestPrivate(StorageGatewayRequest::CreateSnapshotFromVolumeRecoveryPointAction, this))
+{
+
+}
+
+bool CreateSnapshotFromVolumeRecoveryPointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSnapshotFromVolumeRecoveryPointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSnapshotFromVolumeRecoveryPointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSnapshotFromVolumeRecoveryPointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotFromVolumeRecoveryPointRequestPrivate
+ *
+ * @brief  Private implementation for CreateSnapshotFromVolumeRecoveryPointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointRequest instance.
+ */
+CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
+    const StorageGatewayRequest::Action action, CreateSnapshotFromVolumeRecoveryPointRequest * const q)
+    : CreateSnapshotFromVolumeRecoveryPointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSnapshotFromVolumeRecoveryPointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointRequest instance.
+ */
+CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
+    const CreateSnapshotFromVolumeRecoveryPointRequestPrivate &other, CreateSnapshotFromVolumeRecoveryPointRequest * const q)
+    : CreateSnapshotFromVolumeRecoveryPointPrivate(other, q)
+{
+
+}

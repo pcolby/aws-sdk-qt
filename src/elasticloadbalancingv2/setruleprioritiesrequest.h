@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETRULEPRIORITIESREQUEST_H
 #define QTAWS_SETRULEPRIORITIESREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetRulePrioritiesRequestPrivate;
+
+class QTAWS_EXPORT SetRulePrioritiesRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    SetRulePrioritiesRequest(const SetRulePrioritiesRequest &other);
+    SetRulePrioritiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetRulePrioritiesRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

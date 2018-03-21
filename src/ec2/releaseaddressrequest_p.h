@@ -20,4 +20,29 @@
 #ifndef QTAWS_RELEASEADDRESSREQUEST_P_H
 #define QTAWS_RELEASEADDRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "releaseaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReleaseAddressRequest;
+
+class QTAWS_EXPORT ReleaseAddressRequestPrivate : public EC2Private {
+
+public:
+    ReleaseAddressRequestPrivate(const EC2::Action action,
+                                   ReleaseAddressRequest * const q);
+    ReleaseAddressRequestPrivate(const ReleaseAddressRequestPrivate &other,
+                                   ReleaseAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReleaseAddressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

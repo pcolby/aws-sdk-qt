@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEFLEETREQUEST_H
 #define QTAWS_UPDATEFLEETREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateFleetRequestPrivate;
+
+class QTAWS_EXPORT UpdateFleetRequest : public AppStreamRequest {
+
+public:
+    UpdateFleetRequest(const UpdateFleetRequest &other);
+    UpdateFleetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFleetRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

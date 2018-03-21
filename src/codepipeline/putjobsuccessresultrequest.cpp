@@ -19,3 +19,107 @@
 
 #include "putjobsuccessresultrequest.h"
 #include "putjobsuccessresultrequest_p.h"
+#include "putjobsuccessresultresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutJobSuccessResultRequest
+ *
+ * @brief  Implements CodePipeline PutJobSuccessResult requests.
+ *
+ * @see    CodePipelineClient::putJobSuccessResult
+ */
+
+/**
+ * @brief  Constructs a new PutJobSuccessResultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutJobSuccessResultResponse::PutJobSuccessResultResponse(
+
+/**
+ * @brief  Constructs a new PutJobSuccessResultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutJobSuccessResultRequest::PutJobSuccessResultRequest(const PutJobSuccessResultRequest &other)
+    : CodePipelineRequest(new PutJobSuccessResultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutJobSuccessResultRequest object.
+ */
+PutJobSuccessResultRequest::PutJobSuccessResultRequest()
+    : CodePipelineRequest(new PutJobSuccessResultRequestPrivate(CodePipelineRequest::PutJobSuccessResultAction, this))
+{
+
+}
+
+bool PutJobSuccessResultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutJobSuccessResultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutJobSuccessResultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * PutJobSuccessResultRequest::response(QNetworkReply * const reply) const
+{
+    return new PutJobSuccessResultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutJobSuccessResultRequestPrivate
+ *
+ * @brief  Private implementation for PutJobSuccessResultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutJobSuccessResultRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public PutJobSuccessResultRequest instance.
+ */
+PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
+    const CodePipelineRequest::Action action, PutJobSuccessResultRequest * const q)
+    : PutJobSuccessResultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutJobSuccessResultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutJobSuccessResultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutJobSuccessResultRequest instance.
+ */
+PutJobSuccessResultRequestPrivate::PutJobSuccessResultRequestPrivate(
+    const PutJobSuccessResultRequestPrivate &other, PutJobSuccessResultRequest * const q)
+    : PutJobSuccessResultPrivate(other, q)
+{
+
+}

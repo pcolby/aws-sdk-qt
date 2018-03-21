@@ -19,3 +19,107 @@
 
 #include "downloaddblogfileportionrequest.h"
 #include "downloaddblogfileportionrequest_p.h"
+#include "downloaddblogfileportionresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DownloadDBLogFilePortionRequest
+ *
+ * @brief  Implements RDS DownloadDBLogFilePortion requests.
+ *
+ * @see    RDSClient::downloadDBLogFilePortion
+ */
+
+/**
+ * @brief  Constructs a new DownloadDBLogFilePortionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
+
+/**
+ * @brief  Constructs a new DownloadDBLogFilePortionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest(const DownloadDBLogFilePortionRequest &other)
+    : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DownloadDBLogFilePortionRequest object.
+ */
+DownloadDBLogFilePortionRequest::DownloadDBLogFilePortionRequest()
+    : RDSRequest(new DownloadDBLogFilePortionRequestPrivate(RDSRequest::DownloadDBLogFilePortionAction, this))
+{
+
+}
+
+bool DownloadDBLogFilePortionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DownloadDBLogFilePortionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DownloadDBLogFilePortionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNetworkReply * const reply) const
+{
+    return new DownloadDBLogFilePortionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DownloadDBLogFilePortionRequestPrivate
+ *
+ * @brief  Private implementation for DownloadDBLogFilePortionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DownloadDBLogFilePortionRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DownloadDBLogFilePortionRequest instance.
+ */
+DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
+    const RDSRequest::Action action, DownloadDBLogFilePortionRequest * const q)
+    : DownloadDBLogFilePortionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DownloadDBLogFilePortionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DownloadDBLogFilePortionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DownloadDBLogFilePortionRequest instance.
+ */
+DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
+    const DownloadDBLogFilePortionRequestPrivate &other, DownloadDBLogFilePortionRequest * const q)
+    : DownloadDBLogFilePortionPrivate(other, q)
+{
+
+}

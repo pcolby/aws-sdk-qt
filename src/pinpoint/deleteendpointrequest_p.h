@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "deleteendpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteEndpointRequest;
+
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public PinpointPrivate {
+
+public:
+    DeleteEndpointRequestPrivate(const Pinpoint::Action action,
+                                   DeleteEndpointRequest * const q);
+    DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
+                                   DeleteEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

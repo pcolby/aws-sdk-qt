@@ -19,3 +19,107 @@
 
 #include "attachrolepolicyrequest.h"
 #include "attachrolepolicyrequest_p.h"
+#include "attachrolepolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AttachRolePolicyRequest
+ *
+ * @brief  Implements IAM AttachRolePolicy requests.
+ *
+ * @see    IAMClient::attachRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new AttachRolePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachRolePolicyResponse::AttachRolePolicyResponse(
+
+/**
+ * @brief  Constructs a new AttachRolePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachRolePolicyRequest::AttachRolePolicyRequest(const AttachRolePolicyRequest &other)
+    : IAMRequest(new AttachRolePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachRolePolicyRequest object.
+ */
+AttachRolePolicyRequest::AttachRolePolicyRequest()
+    : IAMRequest(new AttachRolePolicyRequestPrivate(IAMRequest::AttachRolePolicyAction, this))
+{
+
+}
+
+bool AttachRolePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachRolePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachRolePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * AttachRolePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachRolePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachRolePolicyRequestPrivate
+ *
+ * @brief  Private implementation for AttachRolePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachRolePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public AttachRolePolicyRequest instance.
+ */
+AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
+    const IAMRequest::Action action, AttachRolePolicyRequest * const q)
+    : AttachRolePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachRolePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachRolePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachRolePolicyRequest instance.
+ */
+AttachRolePolicyRequestPrivate::AttachRolePolicyRequestPrivate(
+    const AttachRolePolicyRequestPrivate &other, AttachRolePolicyRequest * const q)
+    : AttachRolePolicyPrivate(other, q)
+{
+
+}

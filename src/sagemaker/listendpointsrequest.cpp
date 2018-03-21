@@ -19,3 +19,107 @@
 
 #include "listendpointsrequest.h"
 #include "listendpointsrequest_p.h"
+#include "listendpointsresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListEndpointsRequest
+ *
+ * @brief  Implements SageMaker ListEndpoints requests.
+ *
+ * @see    SageMakerClient::listEndpoints
+ */
+
+/**
+ * @brief  Constructs a new ListEndpointsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEndpointsResponse::ListEndpointsResponse(
+
+/**
+ * @brief  Constructs a new ListEndpointsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEndpointsRequest::ListEndpointsRequest(const ListEndpointsRequest &other)
+    : SageMakerRequest(new ListEndpointsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEndpointsRequest object.
+ */
+ListEndpointsRequest::ListEndpointsRequest()
+    : SageMakerRequest(new ListEndpointsRequestPrivate(SageMakerRequest::ListEndpointsAction, this))
+{
+
+}
+
+bool ListEndpointsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEndpointsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEndpointsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * ListEndpointsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEndpointsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEndpointsRequestPrivate
+ *
+ * @brief  Private implementation for ListEndpointsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointsRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public ListEndpointsRequest instance.
+ */
+ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
+    const SageMakerRequest::Action action, ListEndpointsRequest * const q)
+    : ListEndpointsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEndpointsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEndpointsRequest instance.
+ */
+ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
+    const ListEndpointsRequestPrivate &other, ListEndpointsRequest * const q)
+    : ListEndpointsPrivate(other, q)
+{
+
+}

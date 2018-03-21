@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETNAMESPACEREQUEST_P_H
 #define QTAWS_GETNAMESPACEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "getnamespacerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class GetNamespaceRequest;
+
+class QTAWS_EXPORT GetNamespaceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    GetNamespaceRequestPrivate(const ServiceDiscovery::Action action,
+                                   GetNamespaceRequest * const q);
+    GetNamespaceRequestPrivate(const GetNamespaceRequestPrivate &other,
+                                   GetNamespaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetNamespaceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

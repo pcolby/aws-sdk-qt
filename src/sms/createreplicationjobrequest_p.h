@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEREPLICATIONJOBREQUEST_P_H
 #define QTAWS_CREATEREPLICATIONJOBREQUEST_P_H
 
+#include "sms_p.h"
+#include "createreplicationjobrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class CreateReplicationJobRequest;
+
+class QTAWS_EXPORT CreateReplicationJobRequestPrivate : public SMSPrivate {
+
+public:
+    CreateReplicationJobRequestPrivate(const SMS::Action action,
+                                   CreateReplicationJobRequest * const q);
+    CreateReplicationJobRequestPrivate(const CreateReplicationJobRequestPrivate &other,
+                                   CreateReplicationJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateReplicationJobRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

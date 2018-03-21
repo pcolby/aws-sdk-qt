@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEREPLICATIONGROUPSREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "describereplicationgroupsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeReplicationGroupsRequest;
+
+class QTAWS_EXPORT DescribeReplicationGroupsRequestPrivate : public ElastiCachePrivate {
+
+public:
+    DescribeReplicationGroupsRequestPrivate(const ElastiCache::Action action,
+                                   DescribeReplicationGroupsRequest * const q);
+    DescribeReplicationGroupsRequestPrivate(const DescribeReplicationGroupsRequestPrivate &other,
+                                   DescribeReplicationGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReplicationGroupsRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

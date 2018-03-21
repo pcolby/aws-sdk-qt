@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSREQUEST_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRateBasedRuleManagedKeysRequestPrivate;
+
+class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequest : public WAFRequest {
+
+public:
+    GetRateBasedRuleManagedKeysRequest(const GetRateBasedRuleManagedKeysRequest &other);
+    GetRateBasedRuleManagedKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRateBasedRuleManagedKeysRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

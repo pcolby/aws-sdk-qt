@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 
+#include "ses_p.h"
+#include "deleteconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteConfigurationSetEventDestinationRequest;
+
+class QTAWS_EXPORT DeleteConfigurationSetEventDestinationRequestPrivate : public SESPrivate {
+
+public:
+    DeleteConfigurationSetEventDestinationRequestPrivate(const SES::Action action,
+                                   DeleteConfigurationSetEventDestinationRequest * const q);
+    DeleteConfigurationSetEventDestinationRequestPrivate(const DeleteConfigurationSetEventDestinationRequestPrivate &other,
+                                   DeleteConfigurationSetEventDestinationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationSetEventDestinationRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

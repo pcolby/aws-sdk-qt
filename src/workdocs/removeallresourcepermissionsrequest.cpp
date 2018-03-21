@@ -19,3 +19,107 @@
 
 #include "removeallresourcepermissionsrequest.h"
 #include "removeallresourcepermissionsrequest_p.h"
+#include "removeallresourcepermissionsresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  RemoveAllResourcePermissionsRequest
+ *
+ * @brief  Implements WorkDocs RemoveAllResourcePermissions requests.
+ *
+ * @see    WorkDocsClient::removeAllResourcePermissions
+ */
+
+/**
+ * @brief  Constructs a new RemoveAllResourcePermissionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAllResourcePermissionsResponse::RemoveAllResourcePermissionsResponse(
+
+/**
+ * @brief  Constructs a new RemoveAllResourcePermissionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveAllResourcePermissionsRequest::RemoveAllResourcePermissionsRequest(const RemoveAllResourcePermissionsRequest &other)
+    : WorkDocsRequest(new RemoveAllResourcePermissionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveAllResourcePermissionsRequest object.
+ */
+RemoveAllResourcePermissionsRequest::RemoveAllResourcePermissionsRequest()
+    : WorkDocsRequest(new RemoveAllResourcePermissionsRequestPrivate(WorkDocsRequest::RemoveAllResourcePermissionsAction, this))
+{
+
+}
+
+bool RemoveAllResourcePermissionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveAllResourcePermissionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveAllResourcePermissionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveAllResourcePermissionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAllResourcePermissionsRequestPrivate
+ *
+ * @brief  Private implementation for RemoveAllResourcePermissionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAllResourcePermissionsRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public RemoveAllResourcePermissionsRequest instance.
+ */
+RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
+    const WorkDocsRequest::Action action, RemoveAllResourcePermissionsRequest * const q)
+    : RemoveAllResourcePermissionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAllResourcePermissionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveAllResourcePermissionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveAllResourcePermissionsRequest instance.
+ */
+RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
+    const RemoveAllResourcePermissionsRequestPrivate &other, RemoveAllResourcePermissionsRequest * const q)
+    : RemoveAllResourcePermissionsPrivate(other, q)
+{
+
+}

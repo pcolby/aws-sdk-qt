@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERCONTAINERINSTANCEREQUEST_H
 #define QTAWS_DEREGISTERCONTAINERINSTANCEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeregisterContainerInstanceRequestPrivate;
+
+class QTAWS_EXPORT DeregisterContainerInstanceRequest : public ECSRequest {
+
+public:
+    DeregisterContainerInstanceRequest(const DeregisterContainerInstanceRequest &other);
+    DeregisterContainerInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterContainerInstanceRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTVPCASSOCIATIONAUTHORIZATIONSREQUEST_P_H
 #define QTAWS_LISTVPCASSOCIATIONAUTHORIZATIONSREQUEST_P_H
 
+#include "route53_p.h"
+#include "listvpcassociationauthorizationsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListVPCAssociationAuthorizationsRequest;
+
+class QTAWS_EXPORT ListVPCAssociationAuthorizationsRequestPrivate : public Route53Private {
+
+public:
+    ListVPCAssociationAuthorizationsRequestPrivate(const Route53::Action action,
+                                   ListVPCAssociationAuthorizationsRequest * const q);
+    ListVPCAssociationAuthorizationsRequestPrivate(const ListVPCAssociationAuthorizationsRequestPrivate &other,
+                                   ListVPCAssociationAuthorizationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListVPCAssociationAuthorizationsRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

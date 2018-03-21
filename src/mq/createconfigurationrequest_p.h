@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONFIGURATIONREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONREQUEST_P_H
 
+#include "mq_p.h"
+#include "createconfigurationrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class CreateConfigurationRequest;
+
+class QTAWS_EXPORT CreateConfigurationRequestPrivate : public MQPrivate {
+
+public:
+    CreateConfigurationRequestPrivate(const MQ::Action action,
+                                   CreateConfigurationRequest * const q);
+    CreateConfigurationRequestPrivate(const CreateConfigurationRequestPrivate &other,
+                                   CreateConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

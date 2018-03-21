@@ -19,3 +19,107 @@
 
 #include "registercertificaterequest.h"
 #include "registercertificaterequest_p.h"
+#include "registercertificateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RegisterCertificateRequest
+ *
+ * @brief  Implements IoT RegisterCertificate requests.
+ *
+ * @see    IoTClient::registerCertificate
+ */
+
+/**
+ * @brief  Constructs a new RegisterCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterCertificateResponse::RegisterCertificateResponse(
+
+/**
+ * @brief  Constructs a new RegisterCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterCertificateRequest::RegisterCertificateRequest(const RegisterCertificateRequest &other)
+    : IoTRequest(new RegisterCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterCertificateRequest object.
+ */
+RegisterCertificateRequest::RegisterCertificateRequest()
+    : IoTRequest(new RegisterCertificateRequestPrivate(IoTRequest::RegisterCertificateAction, this))
+{
+
+}
+
+bool RegisterCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * RegisterCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterCertificateRequestPrivate
+ *
+ * @brief  Private implementation for RegisterCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCertificateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public RegisterCertificateRequest instance.
+ */
+RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
+    const IoTRequest::Action action, RegisterCertificateRequest * const q)
+    : RegisterCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterCertificateRequest instance.
+ */
+RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
+    const RegisterCertificateRequestPrivate &other, RegisterCertificateRequest * const q)
+    : RegisterCertificatePrivate(other, q)
+{
+
+}

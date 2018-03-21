@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETAPPLICATIONSREQUEST_P_H
 #define QTAWS_BATCHGETAPPLICATIONSREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "batchgetapplicationsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetApplicationsRequest;
+
+class QTAWS_EXPORT BatchGetApplicationsRequestPrivate : public CodeDeployPrivate {
+
+public:
+    BatchGetApplicationsRequestPrivate(const CodeDeploy::Action action,
+                                   BatchGetApplicationsRequest * const q);
+    BatchGetApplicationsRequestPrivate(const BatchGetApplicationsRequestPrivate &other,
+                                   BatchGetApplicationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetApplicationsRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

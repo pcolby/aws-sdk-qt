@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPPLICATIONREQUEST_P_H
 #define QTAWS_GETAPPLICATIONREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "getapplicationrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetApplicationRequest;
+
+class QTAWS_EXPORT GetApplicationRequestPrivate : public CodeDeployPrivate {
+
+public:
+    GetApplicationRequestPrivate(const CodeDeploy::Action action,
+                                   GetApplicationRequest * const q);
+    GetApplicationRequestPrivate(const GetApplicationRequestPrivate &other,
+                                   GetApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

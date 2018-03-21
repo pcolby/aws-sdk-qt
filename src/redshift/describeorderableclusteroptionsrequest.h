@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeOrderableClusterOptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeOrderableClusterOptionsRequest : public RedshiftRequest {
+
+public:
+    DescribeOrderableClusterOptionsRequest(const DescribeOrderableClusterOptionsRequest &other);
+    DescribeOrderableClusterOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrderableClusterOptionsRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

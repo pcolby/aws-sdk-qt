@@ -19,3 +19,107 @@
 
 #include "describeorderablereplicationinstancesrequest.h"
 #include "describeorderablereplicationinstancesrequest_p.h"
+#include "describeorderablereplicationinstancesresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeOrderableReplicationInstancesRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeOrderableReplicationInstances requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeOrderableReplicationInstances
+ */
+
+/**
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInstancesResponse(
+
+/**
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstancesRequest(const DescribeOrderableReplicationInstancesRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeOrderableReplicationInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesRequest object.
+ */
+DescribeOrderableReplicationInstancesRequest::DescribeOrderableReplicationInstancesRequest()
+    : DatabaseMigrationServiceRequest(new DescribeOrderableReplicationInstancesRequestPrivate(DatabaseMigrationServiceRequest::DescribeOrderableReplicationInstancesAction, this))
+{
+
+}
+
+bool DescribeOrderableReplicationInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeOrderableReplicationInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeOrderableReplicationInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeOrderableReplicationInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrderableReplicationInstancesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeOrderableReplicationInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeOrderableReplicationInstancesRequest instance.
+ */
+DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeOrderableReplicationInstancesRequest * const q)
+    : DescribeOrderableReplicationInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableReplicationInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeOrderableReplicationInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeOrderableReplicationInstancesRequest instance.
+ */
+DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
+    const DescribeOrderableReplicationInstancesRequestPrivate &other, DescribeOrderableReplicationInstancesRequest * const q)
+    : DescribeOrderableReplicationInstancesPrivate(other, q)
+{
+
+}

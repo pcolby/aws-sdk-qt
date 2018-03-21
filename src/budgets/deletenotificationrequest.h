@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENOTIFICATIONREQUEST_H
 #define QTAWS_DELETENOTIFICATIONREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DeleteNotificationRequestPrivate;
+
+class QTAWS_EXPORT DeleteNotificationRequest : public BudgetsRequest {
+
+public:
+    DeleteNotificationRequest(const DeleteNotificationRequest &other);
+    DeleteNotificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

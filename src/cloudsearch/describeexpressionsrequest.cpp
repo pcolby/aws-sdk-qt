@@ -19,3 +19,107 @@
 
 #include "describeexpressionsrequest.h"
 #include "describeexpressionsrequest_p.h"
+#include "describeexpressionsresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeExpressionsRequest
+ *
+ * @brief  Implements CloudSearch DescribeExpressions requests.
+ *
+ * @see    CloudSearchClient::describeExpressions
+ */
+
+/**
+ * @brief  Constructs a new DescribeExpressionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExpressionsResponse::DescribeExpressionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeExpressionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeExpressionsRequest::DescribeExpressionsRequest(const DescribeExpressionsRequest &other)
+    : CloudSearchRequest(new DescribeExpressionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeExpressionsRequest object.
+ */
+DescribeExpressionsRequest::DescribeExpressionsRequest()
+    : CloudSearchRequest(new DescribeExpressionsRequestPrivate(CloudSearchRequest::DescribeExpressionsAction, this))
+{
+
+}
+
+bool DescribeExpressionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeExpressionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeExpressionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DescribeExpressionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeExpressionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExpressionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeExpressionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExpressionsRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DescribeExpressionsRequest instance.
+ */
+DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
+    const CloudSearchRequest::Action action, DescribeExpressionsRequest * const q)
+    : DescribeExpressionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExpressionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeExpressionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeExpressionsRequest instance.
+ */
+DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
+    const DescribeExpressionsRequestPrivate &other, DescribeExpressionsRequest * const q)
+    : DescribeExpressionsPrivate(other, q)
+{
+
+}

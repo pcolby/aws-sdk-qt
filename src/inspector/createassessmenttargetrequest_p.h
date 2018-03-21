@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEASSESSMENTTARGETREQUEST_P_H
 #define QTAWS_CREATEASSESSMENTTARGETREQUEST_P_H
 
+#include "inspector_p.h"
+#include "createassessmenttargetrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class CreateAssessmentTargetRequest;
+
+class QTAWS_EXPORT CreateAssessmentTargetRequestPrivate : public InspectorPrivate {
+
+public:
+    CreateAssessmentTargetRequestPrivate(const Inspector::Action action,
+                                   CreateAssessmentTargetRequest * const q);
+    CreateAssessmentTargetRequestPrivate(const CreateAssessmentTargetRequestPrivate &other,
+                                   CreateAssessmentTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAssessmentTargetRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

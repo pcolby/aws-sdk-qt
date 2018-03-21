@@ -20,4 +20,32 @@
 #ifndef QTAWS_RUNJOBFLOWREQUEST_H
 #define QTAWS_RUNJOBFLOWREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class RunJobFlowRequestPrivate;
+
+class QTAWS_EXPORT RunJobFlowRequest : public EMRRequest {
+
+public:
+    RunJobFlowRequest(const RunJobFlowRequest &other);
+    RunJobFlowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RunJobFlowRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

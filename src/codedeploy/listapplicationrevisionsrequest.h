@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSREQUEST_H
 #define QTAWS_LISTAPPLICATIONREVISIONSREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListApplicationRevisionsRequestPrivate;
+
+class QTAWS_EXPORT ListApplicationRevisionsRequest : public CodeDeployRequest {
+
+public:
+    ListApplicationRevisionsRequest(const ListApplicationRevisionsRequest &other);
+    ListApplicationRevisionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListApplicationRevisionsRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

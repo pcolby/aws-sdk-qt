@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREGISTRATIONCODEREQUEST_P_H
 #define QTAWS_DELETEREGISTRATIONCODEREQUEST_P_H
 
+#include "iot_p.h"
+#include "deleteregistrationcoderequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteRegistrationCodeRequest;
+
+class QTAWS_EXPORT DeleteRegistrationCodeRequestPrivate : public IoTPrivate {
+
+public:
+    DeleteRegistrationCodeRequestPrivate(const IoT::Action action,
+                                   DeleteRegistrationCodeRequest * const q);
+    DeleteRegistrationCodeRequestPrivate(const DeleteRegistrationCodeRequestPrivate &other,
+                                   DeleteRegistrationCodeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRegistrationCodeRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

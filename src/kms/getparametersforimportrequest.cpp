@@ -19,3 +19,107 @@
 
 #include "getparametersforimportrequest.h"
 #include "getparametersforimportrequest_p.h"
+#include "getparametersforimportresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GetParametersForImportRequest
+ *
+ * @brief  Implements KMS GetParametersForImport requests.
+ *
+ * @see    KMSClient::getParametersForImport
+ */
+
+/**
+ * @brief  Constructs a new GetParametersForImportResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetParametersForImportResponse::GetParametersForImportResponse(
+
+/**
+ * @brief  Constructs a new GetParametersForImportRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetParametersForImportRequest::GetParametersForImportRequest(const GetParametersForImportRequest &other)
+    : KMSRequest(new GetParametersForImportRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetParametersForImportRequest object.
+ */
+GetParametersForImportRequest::GetParametersForImportRequest()
+    : KMSRequest(new GetParametersForImportRequestPrivate(KMSRequest::GetParametersForImportAction, this))
+{
+
+}
+
+bool GetParametersForImportRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetParametersForImportResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetParametersForImportResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * GetParametersForImportRequest::response(QNetworkReply * const reply) const
+{
+    return new GetParametersForImportResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetParametersForImportRequestPrivate
+ *
+ * @brief  Private implementation for GetParametersForImportRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersForImportRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public GetParametersForImportRequest instance.
+ */
+GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
+    const KMSRequest::Action action, GetParametersForImportRequest * const q)
+    : GetParametersForImportPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersForImportRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetParametersForImportRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetParametersForImportRequest instance.
+ */
+GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
+    const GetParametersForImportRequestPrivate &other, GetParametersForImportRequest * const q)
+    : GetParametersForImportPrivate(other, q)
+{
+
+}

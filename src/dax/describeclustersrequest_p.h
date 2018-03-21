@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 
+#include "dax_p.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DescribeClustersRequest;
+
+class QTAWS_EXPORT DescribeClustersRequestPrivate : public DAXPrivate {
+
+public:
+    DescribeClustersRequestPrivate(const DAX::Action action,
+                                   DescribeClustersRequest * const q);
+    DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
+                                   DescribeClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClustersRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

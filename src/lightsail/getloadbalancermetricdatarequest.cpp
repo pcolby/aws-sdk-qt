@@ -19,3 +19,107 @@
 
 #include "getloadbalancermetricdatarequest.h"
 #include "getloadbalancermetricdatarequest_p.h"
+#include "getloadbalancermetricdataresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetLoadBalancerMetricDataRequest
+ *
+ * @brief  Implements Lightsail GetLoadBalancerMetricData requests.
+ *
+ * @see    LightsailClient::getLoadBalancerMetricData
+ */
+
+/**
+ * @brief  Constructs a new GetLoadBalancerMetricDataResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoadBalancerMetricDataResponse::GetLoadBalancerMetricDataResponse(
+
+/**
+ * @brief  Constructs a new GetLoadBalancerMetricDataRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLoadBalancerMetricDataRequest::GetLoadBalancerMetricDataRequest(const GetLoadBalancerMetricDataRequest &other)
+    : LightsailRequest(new GetLoadBalancerMetricDataRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLoadBalancerMetricDataRequest object.
+ */
+GetLoadBalancerMetricDataRequest::GetLoadBalancerMetricDataRequest()
+    : LightsailRequest(new GetLoadBalancerMetricDataRequestPrivate(LightsailRequest::GetLoadBalancerMetricDataAction, this))
+{
+
+}
+
+bool GetLoadBalancerMetricDataRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLoadBalancerMetricDataResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLoadBalancerMetricDataResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLoadBalancerMetricDataResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoadBalancerMetricDataRequestPrivate
+ *
+ * @brief  Private implementation for GetLoadBalancerMetricDataRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancerMetricDataRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetLoadBalancerMetricDataRequest instance.
+ */
+GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
+    const LightsailRequest::Action action, GetLoadBalancerMetricDataRequest * const q)
+    : GetLoadBalancerMetricDataPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoadBalancerMetricDataRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLoadBalancerMetricDataRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLoadBalancerMetricDataRequest instance.
+ */
+GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
+    const GetLoadBalancerMetricDataRequestPrivate &other, GetLoadBalancerMetricDataRequest * const q)
+    : GetLoadBalancerMetricDataPrivate(other, q)
+{
+
+}

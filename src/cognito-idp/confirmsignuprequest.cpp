@@ -19,3 +19,107 @@
 
 #include "confirmsignuprequest.h"
 #include "confirmsignuprequest_p.h"
+#include "confirmsignupresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ConfirmSignUpRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ConfirmSignUp requests.
+ *
+ * @see    CognitoIdentityProviderClient::confirmSignUp
+ */
+
+/**
+ * @brief  Constructs a new ConfirmSignUpResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmSignUpResponse::ConfirmSignUpResponse(
+
+/**
+ * @brief  Constructs a new ConfirmSignUpRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ConfirmSignUpRequest::ConfirmSignUpRequest(const ConfirmSignUpRequest &other)
+    : CognitoIdentityProviderRequest(new ConfirmSignUpRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ConfirmSignUpRequest object.
+ */
+ConfirmSignUpRequest::ConfirmSignUpRequest()
+    : CognitoIdentityProviderRequest(new ConfirmSignUpRequestPrivate(CognitoIdentityProviderRequest::ConfirmSignUpAction, this))
+{
+
+}
+
+bool ConfirmSignUpRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ConfirmSignUpResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ConfirmSignUpResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ConfirmSignUpRequest::response(QNetworkReply * const reply) const
+{
+    return new ConfirmSignUpResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmSignUpRequestPrivate
+ *
+ * @brief  Private implementation for ConfirmSignUpRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmSignUpRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ConfirmSignUpRequest instance.
+ */
+ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ConfirmSignUpRequest * const q)
+    : ConfirmSignUpPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmSignUpRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ConfirmSignUpRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ConfirmSignUpRequest instance.
+ */
+ConfirmSignUpRequestPrivate::ConfirmSignUpRequestPrivate(
+    const ConfirmSignUpRequestPrivate &other, ConfirmSignUpRequest * const q)
+    : ConfirmSignUpPrivate(other, q)
+{
+
+}

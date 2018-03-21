@@ -19,3 +19,107 @@
 
 #include "describehsmclientcertificatesrequest.h"
 #include "describehsmclientcertificatesrequest_p.h"
+#include "describehsmclientcertificatesresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeHsmClientCertificatesRequest
+ *
+ * @brief  Implements Redshift DescribeHsmClientCertificates requests.
+ *
+ * @see    RedshiftClient::describeHsmClientCertificates
+ */
+
+/**
+ * @brief  Constructs a new DescribeHsmClientCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHsmClientCertificatesResponse::DescribeHsmClientCertificatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeHsmClientCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeHsmClientCertificatesRequest::DescribeHsmClientCertificatesRequest(const DescribeHsmClientCertificatesRequest &other)
+    : RedshiftRequest(new DescribeHsmClientCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeHsmClientCertificatesRequest object.
+ */
+DescribeHsmClientCertificatesRequest::DescribeHsmClientCertificatesRequest()
+    : RedshiftRequest(new DescribeHsmClientCertificatesRequestPrivate(RedshiftRequest::DescribeHsmClientCertificatesAction, this))
+{
+
+}
+
+bool DescribeHsmClientCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeHsmClientCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeHsmClientCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeHsmClientCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeHsmClientCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHsmClientCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeHsmClientCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmClientCertificatesRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeHsmClientCertificatesRequest instance.
+ */
+DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
+    const RedshiftRequest::Action action, DescribeHsmClientCertificatesRequest * const q)
+    : DescribeHsmClientCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmClientCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeHsmClientCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeHsmClientCertificatesRequest instance.
+ */
+DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
+    const DescribeHsmClientCertificatesRequestPrivate &other, DescribeHsmClientCertificatesRequest * const q)
+    : DescribeHsmClientCertificatesPrivate(other, q)
+{
+
+}

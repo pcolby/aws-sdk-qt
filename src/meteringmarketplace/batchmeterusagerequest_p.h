@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHMETERUSAGEREQUEST_P_H
 #define QTAWS_BATCHMETERUSAGEREQUEST_P_H
 
+#include "marketplacemetering_p.h"
+#include "batchmeterusagerequest.h"
+
+namespace AWS {
+
+namespace MarketplaceMetering {
+
+class BatchMeterUsageRequest;
+
+class QTAWS_EXPORT BatchMeterUsageRequestPrivate : public MarketplaceMeteringPrivate {
+
+public:
+    BatchMeterUsageRequestPrivate(const MarketplaceMetering::Action action,
+                                   BatchMeterUsageRequest * const q);
+    BatchMeterUsageRequestPrivate(const BatchMeterUsageRequestPrivate &other,
+                                   BatchMeterUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchMeterUsageRequest)
+
+};
+
+} // namespace MarketplaceMetering
+} // namespace AWS
+
 #endif

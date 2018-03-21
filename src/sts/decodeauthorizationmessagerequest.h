@@ -20,4 +20,32 @@
 #ifndef QTAWS_DECODEAUTHORIZATIONMESSAGEREQUEST_H
 #define QTAWS_DECODEAUTHORIZATIONMESSAGEREQUEST_H
 
+#include "stsrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class DecodeAuthorizationMessageRequestPrivate;
+
+class QTAWS_EXPORT DecodeAuthorizationMessageRequest : public STSRequest {
+
+public:
+    DecodeAuthorizationMessageRequest(const DecodeAuthorizationMessageRequest &other);
+    DecodeAuthorizationMessageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DecodeAuthorizationMessageRequest)
+
+}
+
+} // namespace STS
+} // namespace AWS
+
 #endif

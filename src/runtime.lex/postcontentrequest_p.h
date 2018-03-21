@@ -20,4 +20,29 @@
 #ifndef QTAWS_POSTCONTENTREQUEST_P_H
 #define QTAWS_POSTCONTENTREQUEST_P_H
 
+#include "lexruntimeservice_p.h"
+#include "postcontentrequest.h"
+
+namespace AWS {
+
+namespace LexRuntimeService {
+
+class PostContentRequest;
+
+class QTAWS_EXPORT PostContentRequestPrivate : public LexRuntimeServicePrivate {
+
+public:
+    PostContentRequestPrivate(const LexRuntimeService::Action action,
+                                   PostContentRequest * const q);
+    PostContentRequestPrivate(const PostContentRequestPrivate &other,
+                                   PostContentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PostContentRequest)
+
+};
+
+} // namespace LexRuntimeService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteoriginendpointrequest.h"
 #include "deleteoriginendpointrequest_p.h"
+#include "deleteoriginendpointresponse.h"
+#include "mediapackagerequest_p.h"
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  DeleteOriginEndpointRequest
+ *
+ * @brief  Implements MediaPackage DeleteOriginEndpoint requests.
+ *
+ * @see    MediaPackageClient::deleteOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new DeleteOriginEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
+
+/**
+ * @brief  Constructs a new DeleteOriginEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteOriginEndpointRequest::DeleteOriginEndpointRequest(const DeleteOriginEndpointRequest &other)
+    : MediaPackageRequest(new DeleteOriginEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteOriginEndpointRequest object.
+ */
+DeleteOriginEndpointRequest::DeleteOriginEndpointRequest()
+    : MediaPackageRequest(new DeleteOriginEndpointRequestPrivate(MediaPackageRequest::DeleteOriginEndpointAction, this))
+{
+
+}
+
+bool DeleteOriginEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteOriginEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteOriginEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaPackageClient::send
+ */
+AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteOriginEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOriginEndpointRequestPrivate
+ *
+ * @brief  Private implementation for DeleteOriginEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOriginEndpointRequestPrivate object.
+ *
+ * @param  action  MediaPackage action being performed.
+ * @param  q       Pointer to this object's public DeleteOriginEndpointRequest instance.
+ */
+DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
+    const MediaPackageRequest::Action action, DeleteOriginEndpointRequest * const q)
+    : DeleteOriginEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOriginEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteOriginEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteOriginEndpointRequest instance.
+ */
+DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
+    const DeleteOriginEndpointRequestPrivate &other, DeleteOriginEndpointRequest * const q)
+    : DeleteOriginEndpointPrivate(other, q)
+{
+
+}

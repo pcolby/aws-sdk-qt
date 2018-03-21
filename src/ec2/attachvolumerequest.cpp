@@ -19,3 +19,107 @@
 
 #include "attachvolumerequest.h"
 #include "attachvolumerequest_p.h"
+#include "attachvolumeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AttachVolumeRequest
+ *
+ * @brief  Implements EC2 AttachVolume requests.
+ *
+ * @see    EC2Client::attachVolume
+ */
+
+/**
+ * @brief  Constructs a new AttachVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachVolumeResponse::AttachVolumeResponse(
+
+/**
+ * @brief  Constructs a new AttachVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachVolumeRequest::AttachVolumeRequest(const AttachVolumeRequest &other)
+    : EC2Request(new AttachVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachVolumeRequest object.
+ */
+AttachVolumeRequest::AttachVolumeRequest()
+    : EC2Request(new AttachVolumeRequestPrivate(EC2Request::AttachVolumeAction, this))
+{
+
+}
+
+bool AttachVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachVolumeRequestPrivate
+ *
+ * @brief  Private implementation for AttachVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachVolumeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AttachVolumeRequest instance.
+ */
+AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
+    const EC2Request::Action action, AttachVolumeRequest * const q)
+    : AttachVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachVolumeRequest instance.
+ */
+AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
+    const AttachVolumeRequestPrivate &other, AttachVolumeRequest * const q)
+    : AttachVolumePrivate(other, q)
+{
+
+}

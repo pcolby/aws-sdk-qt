@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETKEYROTATIONSTATUSREQUEST_P_H
 #define QTAWS_GETKEYROTATIONSTATUSREQUEST_P_H
 
+#include "kms_p.h"
+#include "getkeyrotationstatusrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetKeyRotationStatusRequest;
+
+class QTAWS_EXPORT GetKeyRotationStatusRequestPrivate : public KMSPrivate {
+
+public:
+    GetKeyRotationStatusRequestPrivate(const KMS::Action action,
+                                   GetKeyRotationStatusRequest * const q);
+    GetKeyRotationStatusRequestPrivate(const GetKeyRotationStatusRequestPrivate &other,
+                                   GetKeyRotationStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetKeyRotationStatusRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

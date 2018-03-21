@@ -19,3 +19,107 @@
 
 #include "listartifactsrequest.h"
 #include "listartifactsrequest_p.h"
+#include "listartifactsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListArtifactsRequest
+ *
+ * @brief  Implements DeviceFarm ListArtifacts requests.
+ *
+ * @see    DeviceFarmClient::listArtifacts
+ */
+
+/**
+ * @brief  Constructs a new ListArtifactsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListArtifactsResponse::ListArtifactsResponse(
+
+/**
+ * @brief  Constructs a new ListArtifactsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListArtifactsRequest::ListArtifactsRequest(const ListArtifactsRequest &other)
+    : DeviceFarmRequest(new ListArtifactsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListArtifactsRequest object.
+ */
+ListArtifactsRequest::ListArtifactsRequest()
+    : DeviceFarmRequest(new ListArtifactsRequestPrivate(DeviceFarmRequest::ListArtifactsAction, this))
+{
+
+}
+
+bool ListArtifactsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListArtifactsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListArtifactsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListArtifactsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListArtifactsRequestPrivate
+ *
+ * @brief  Private implementation for ListArtifactsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListArtifactsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListArtifactsRequest instance.
+ */
+ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListArtifactsRequest * const q)
+    : ListArtifactsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListArtifactsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListArtifactsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListArtifactsRequest instance.
+ */
+ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
+    const ListArtifactsRequestPrivate &other, ListArtifactsRequest * const q)
+    : ListArtifactsPrivate(other, q)
+{
+
+}

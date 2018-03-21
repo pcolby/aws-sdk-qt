@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENAMESPACEREQUEST_P_H
 #define QTAWS_DELETENAMESPACEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "deletenamespacerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class DeleteNamespaceRequest;
+
+class QTAWS_EXPORT DeleteNamespaceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    DeleteNamespaceRequestPrivate(const ServiceDiscovery::Action action,
+                                   DeleteNamespaceRequest * const q);
+    DeleteNamespaceRequestPrivate(const DeleteNamespaceRequestPrivate &other,
+                                   DeleteNamespaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNamespaceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

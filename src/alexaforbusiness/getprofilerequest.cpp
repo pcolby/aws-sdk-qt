@@ -19,3 +19,107 @@
 
 #include "getprofilerequest.h"
 #include "getprofilerequest_p.h"
+#include "getprofileresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetProfileRequest
+ *
+ * @brief  Implements AlexaForBusiness GetProfile requests.
+ *
+ * @see    AlexaForBusinessClient::getProfile
+ */
+
+/**
+ * @brief  Constructs a new GetProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetProfileResponse::GetProfileResponse(
+
+/**
+ * @brief  Constructs a new GetProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetProfileRequest::GetProfileRequest(const GetProfileRequest &other)
+    : AlexaForBusinessRequest(new GetProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetProfileRequest object.
+ */
+GetProfileRequest::GetProfileRequest()
+    : AlexaForBusinessRequest(new GetProfileRequestPrivate(AlexaForBusinessRequest::GetProfileAction, this))
+{
+
+}
+
+bool GetProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new GetProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetProfileRequestPrivate
+ *
+ * @brief  Private implementation for GetProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProfileRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public GetProfileRequest instance.
+ */
+GetProfileRequestPrivate::GetProfileRequestPrivate(
+    const AlexaForBusinessRequest::Action action, GetProfileRequest * const q)
+    : GetProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetProfileRequest instance.
+ */
+GetProfileRequestPrivate::GetProfileRequestPrivate(
+    const GetProfileRequestPrivate &other, GetProfileRequest * const q)
+    : GetProfilePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCONFIGURATIONREVISIONSREQUEST_H
 #define QTAWS_LISTCONFIGURATIONREVISIONSREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListConfigurationRevisionsRequestPrivate;
+
+class QTAWS_EXPORT ListConfigurationRevisionsRequest : public MQRequest {
+
+public:
+    ListConfigurationRevisionsRequest(const ListConfigurationRevisionsRequest &other);
+    ListConfigurationRevisionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListConfigurationRevisionsRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

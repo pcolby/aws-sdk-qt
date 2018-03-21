@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGROUPREQUEST_P_H
 #define QTAWS_UPDATEGROUPREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "updategrouprequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateGroupRequest;
+
+class QTAWS_EXPORT UpdateGroupRequestPrivate : public GreengrassPrivate {
+
+public:
+    UpdateGroupRequestPrivate(const Greengrass::Action action,
+                                   UpdateGroupRequest * const q);
+    UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
+                                   UpdateGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

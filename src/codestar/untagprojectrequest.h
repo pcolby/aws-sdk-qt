@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGPROJECTREQUEST_H
 #define QTAWS_UNTAGPROJECTREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UntagProjectRequestPrivate;
+
+class QTAWS_EXPORT UntagProjectRequest : public CodeStarRequest {
+
+public:
+    UntagProjectRequest(const UntagProjectRequest &other);
+    UntagProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagProjectRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_P_H
 #define QTAWS_DELETEGROUPREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "deletegrouprequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteGroupRequest;
+
+class QTAWS_EXPORT DeleteGroupRequestPrivate : public GreengrassPrivate {
+
+public:
+    DeleteGroupRequestPrivate(const Greengrass::Action action,
+                                   DeleteGroupRequest * const q);
+    DeleteGroupRequestPrivate(const DeleteGroupRequestPrivate &other,
+                                   DeleteGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGroupRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getendpointrequest.h"
 #include "getendpointrequest_p.h"
+#include "getendpointresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetEndpointRequest
+ *
+ * @brief  Implements Pinpoint GetEndpoint requests.
+ *
+ * @see    PinpointClient::getEndpoint
+ */
+
+/**
+ * @brief  Constructs a new GetEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEndpointResponse::GetEndpointResponse(
+
+/**
+ * @brief  Constructs a new GetEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetEndpointRequest::GetEndpointRequest(const GetEndpointRequest &other)
+    : PinpointRequest(new GetEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetEndpointRequest object.
+ */
+GetEndpointRequest::GetEndpointRequest()
+    : PinpointRequest(new GetEndpointRequestPrivate(PinpointRequest::GetEndpointAction, this))
+{
+
+}
+
+bool GetEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new GetEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEndpointRequestPrivate
+ *
+ * @brief  Private implementation for GetEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEndpointRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetEndpointRequest instance.
+ */
+GetEndpointRequestPrivate::GetEndpointRequestPrivate(
+    const PinpointRequest::Action action, GetEndpointRequest * const q)
+    : GetEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetEndpointRequest instance.
+ */
+GetEndpointRequestPrivate::GetEndpointRequestPrivate(
+    const GetEndpointRequestPrivate &other, GetEndpointRequest * const q)
+    : GetEndpointPrivate(other, q)
+{
+
+}

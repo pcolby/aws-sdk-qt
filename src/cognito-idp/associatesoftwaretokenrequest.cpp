@@ -19,3 +19,107 @@
 
 #include "associatesoftwaretokenrequest.h"
 #include "associatesoftwaretokenrequest_p.h"
+#include "associatesoftwaretokenresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AssociateSoftwareTokenRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AssociateSoftwareToken requests.
+ *
+ * @see    CognitoIdentityProviderClient::associateSoftwareToken
+ */
+
+/**
+ * @brief  Constructs a new AssociateSoftwareTokenResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateSoftwareTokenResponse::AssociateSoftwareTokenResponse(
+
+/**
+ * @brief  Constructs a new AssociateSoftwareTokenRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest(const AssociateSoftwareTokenRequest &other)
+    : CognitoIdentityProviderRequest(new AssociateSoftwareTokenRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateSoftwareTokenRequest object.
+ */
+AssociateSoftwareTokenRequest::AssociateSoftwareTokenRequest()
+    : CognitoIdentityProviderRequest(new AssociateSoftwareTokenRequestPrivate(CognitoIdentityProviderRequest::AssociateSoftwareTokenAction, this))
+{
+
+}
+
+bool AssociateSoftwareTokenRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateSoftwareTokenResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateSoftwareTokenResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateSoftwareTokenResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateSoftwareTokenRequestPrivate
+ *
+ * @brief  Private implementation for AssociateSoftwareTokenRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AssociateSoftwareTokenRequest instance.
+ */
+AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AssociateSoftwareTokenRequest * const q)
+    : AssociateSoftwareTokenPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSoftwareTokenRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateSoftwareTokenRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateSoftwareTokenRequest instance.
+ */
+AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
+    const AssociateSoftwareTokenRequestPrivate &other, AssociateSoftwareTokenRequest * const q)
+    : AssociateSoftwareTokenPrivate(other, q)
+{
+
+}

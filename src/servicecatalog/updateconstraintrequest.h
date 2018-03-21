@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONSTRAINTREQUEST_H
 #define QTAWS_UPDATECONSTRAINTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateConstraintRequestPrivate;
+
+class QTAWS_EXPORT UpdateConstraintRequest : public ServiceCatalogRequest {
+
+public:
+    UpdateConstraintRequest(const UpdateConstraintRequest &other);
+    UpdateConstraintRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConstraintRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

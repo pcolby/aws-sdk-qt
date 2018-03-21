@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEALLFEATURESREQUEST_H
 #define QTAWS_ENABLEALLFEATURESREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class EnableAllFeaturesRequestPrivate;
+
+class QTAWS_EXPORT EnableAllFeaturesRequest : public OrganizationsRequest {
+
+public:
+    EnableAllFeaturesRequest(const EnableAllFeaturesRequest &other);
+    EnableAllFeaturesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableAllFeaturesRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "gettablesrequest.h"
 #include "gettablesrequest_p.h"
+#include "gettablesresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTablesRequest
+ *
+ * @brief  Implements Glue GetTables requests.
+ *
+ * @see    GlueClient::getTables
+ */
+
+/**
+ * @brief  Constructs a new GetTablesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTablesResponse::GetTablesResponse(
+
+/**
+ * @brief  Constructs a new GetTablesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTablesRequest::GetTablesRequest(const GetTablesRequest &other)
+    : GlueRequest(new GetTablesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTablesRequest object.
+ */
+GetTablesRequest::GetTablesRequest()
+    : GlueRequest(new GetTablesRequestPrivate(GlueRequest::GetTablesAction, this))
+{
+
+}
+
+bool GetTablesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTablesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTablesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetTablesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTablesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTablesRequestPrivate
+ *
+ * @brief  Private implementation for GetTablesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTablesRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetTablesRequest instance.
+ */
+GetTablesRequestPrivate::GetTablesRequestPrivate(
+    const GlueRequest::Action action, GetTablesRequest * const q)
+    : GetTablesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTablesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTablesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTablesRequest instance.
+ */
+GetTablesRequestPrivate::GetTablesRequestPrivate(
+    const GetTablesRequestPrivate &other, GetTablesRequest * const q)
+    : GetTablesPrivate(other, q)
+{
+
+}

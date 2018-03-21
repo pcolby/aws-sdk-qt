@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEJOBREQUEST_H
 #define QTAWS_TERMINATEJOBREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class TerminateJobRequestPrivate;
+
+class QTAWS_EXPORT TerminateJobRequest : public BatchRequest {
+
+public:
+    TerminateJobRequest(const TerminateJobRequest &other);
+    TerminateJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateJobRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

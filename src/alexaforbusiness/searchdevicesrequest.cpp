@@ -19,3 +19,107 @@
 
 #include "searchdevicesrequest.h"
 #include "searchdevicesrequest_p.h"
+#include "searchdevicesresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchDevicesRequest
+ *
+ * @brief  Implements AlexaForBusiness SearchDevices requests.
+ *
+ * @see    AlexaForBusinessClient::searchDevices
+ */
+
+/**
+ * @brief  Constructs a new SearchDevicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchDevicesResponse::SearchDevicesResponse(
+
+/**
+ * @brief  Constructs a new SearchDevicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SearchDevicesRequest::SearchDevicesRequest(const SearchDevicesRequest &other)
+    : AlexaForBusinessRequest(new SearchDevicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SearchDevicesRequest object.
+ */
+SearchDevicesRequest::SearchDevicesRequest()
+    : AlexaForBusinessRequest(new SearchDevicesRequestPrivate(AlexaForBusinessRequest::SearchDevicesAction, this))
+{
+
+}
+
+bool SearchDevicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SearchDevicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SearchDevicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply * const reply) const
+{
+    return new SearchDevicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchDevicesRequestPrivate
+ *
+ * @brief  Private implementation for SearchDevicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchDevicesRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public SearchDevicesRequest instance.
+ */
+SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
+    const AlexaForBusinessRequest::Action action, SearchDevicesRequest * const q)
+    : SearchDevicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchDevicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SearchDevicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SearchDevicesRequest instance.
+ */
+SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
+    const SearchDevicesRequestPrivate &other, SearchDevicesRequest * const q)
+    : SearchDevicesPrivate(other, q)
+{
+
+}

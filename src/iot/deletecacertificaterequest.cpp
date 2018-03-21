@@ -19,3 +19,107 @@
 
 #include "deletecacertificaterequest.h"
 #include "deletecacertificaterequest_p.h"
+#include "deletecacertificateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteCACertificateRequest
+ *
+ * @brief  Implements IoT DeleteCACertificate requests.
+ *
+ * @see    IoTClient::deleteCACertificate
+ */
+
+/**
+ * @brief  Constructs a new DeleteCACertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCACertificateResponse::DeleteCACertificateResponse(
+
+/**
+ * @brief  Constructs a new DeleteCACertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteCACertificateRequest::DeleteCACertificateRequest(const DeleteCACertificateRequest &other)
+    : IoTRequest(new DeleteCACertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteCACertificateRequest object.
+ */
+DeleteCACertificateRequest::DeleteCACertificateRequest()
+    : IoTRequest(new DeleteCACertificateRequestPrivate(IoTRequest::DeleteCACertificateAction, this))
+{
+
+}
+
+bool DeleteCACertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteCACertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteCACertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DeleteCACertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteCACertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCACertificateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteCACertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCACertificateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DeleteCACertificateRequest instance.
+ */
+DeleteCACertificateRequestPrivate::DeleteCACertificateRequestPrivate(
+    const IoTRequest::Action action, DeleteCACertificateRequest * const q)
+    : DeleteCACertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCACertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteCACertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteCACertificateRequest instance.
+ */
+DeleteCACertificateRequestPrivate::DeleteCACertificateRequestPrivate(
+    const DeleteCACertificateRequestPrivate &other, DeleteCACertificateRequest * const q)
+    : DeleteCACertificatePrivate(other, q)
+{
+
+}

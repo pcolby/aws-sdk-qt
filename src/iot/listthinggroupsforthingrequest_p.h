@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTHINGGROUPSFORTHINGREQUEST_P_H
 #define QTAWS_LISTTHINGGROUPSFORTHINGREQUEST_P_H
 
+#include "iot_p.h"
+#include "listthinggroupsforthingrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListThingGroupsForThingRequest;
+
+class QTAWS_EXPORT ListThingGroupsForThingRequestPrivate : public IoTPrivate {
+
+public:
+    ListThingGroupsForThingRequestPrivate(const IoT::Action action,
+                                   ListThingGroupsForThingRequest * const q);
+    ListThingGroupsForThingRequestPrivate(const ListThingGroupsForThingRequestPrivate &other,
+                                   ListThingGroupsForThingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListThingGroupsForThingRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

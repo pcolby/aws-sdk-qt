@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTEXECUTIONREQUEST_P_H
 #define QTAWS_STARTEXECUTIONREQUEST_P_H
 
+#include "sfn_p.h"
+#include "startexecutionrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StartExecutionRequest;
+
+class QTAWS_EXPORT StartExecutionRequestPrivate : public SFNPrivate {
+
+public:
+    StartExecutionRequestPrivate(const SFN::Action action,
+                                   StartExecutionRequest * const q);
+    StartExecutionRequestPrivate(const StartExecutionRequestPrivate &other,
+                                   StartExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartExecutionRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEENDPOINTREQUEST_H
 #define QTAWS_UPDATEENDPOINTREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEndpointRequestPrivate;
+
+class QTAWS_EXPORT UpdateEndpointRequest : public PinpointRequest {
+
+public:
+    UpdateEndpointRequest(const UpdateEndpointRequest &other);
+    UpdateEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEndpointRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

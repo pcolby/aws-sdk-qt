@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDOMAINSREQUEST_P_H
 #define QTAWS_LISTDOMAINSREQUEST_P_H
 
+#include "swf_p.h"
+#include "listdomainsrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListDomainsRequest;
+
+class QTAWS_EXPORT ListDomainsRequestPrivate : public SWFPrivate {
+
+public:
+    ListDomainsRequestPrivate(const SWF::Action action,
+                                   ListDomainsRequest * const q);
+    ListDomainsRequestPrivate(const ListDomainsRequestPrivate &other,
+                                   ListDomainsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDomainsRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

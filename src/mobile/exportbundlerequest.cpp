@@ -19,3 +19,107 @@
 
 #include "exportbundlerequest.h"
 #include "exportbundlerequest_p.h"
+#include "exportbundleresponse.h"
+#include "mobilerequest_p.h"
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  ExportBundleRequest
+ *
+ * @brief  Implements Mobile ExportBundle requests.
+ *
+ * @see    MobileClient::exportBundle
+ */
+
+/**
+ * @brief  Constructs a new ExportBundleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExportBundleResponse::ExportBundleResponse(
+
+/**
+ * @brief  Constructs a new ExportBundleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ExportBundleRequest::ExportBundleRequest(const ExportBundleRequest &other)
+    : MobileRequest(new ExportBundleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ExportBundleRequest object.
+ */
+ExportBundleRequest::ExportBundleRequest()
+    : MobileRequest(new ExportBundleRequestPrivate(MobileRequest::ExportBundleAction, this))
+{
+
+}
+
+bool ExportBundleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ExportBundleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ExportBundleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MobileClient::send
+ */
+AwsAbstractResponse * ExportBundleRequest::response(QNetworkReply * const reply) const
+{
+    return new ExportBundleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ExportBundleRequestPrivate
+ *
+ * @brief  Private implementation for ExportBundleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExportBundleRequestPrivate object.
+ *
+ * @param  action  Mobile action being performed.
+ * @param  q       Pointer to this object's public ExportBundleRequest instance.
+ */
+ExportBundleRequestPrivate::ExportBundleRequestPrivate(
+    const MobileRequest::Action action, ExportBundleRequest * const q)
+    : ExportBundlePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExportBundleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ExportBundleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ExportBundleRequest instance.
+ */
+ExportBundleRequestPrivate::ExportBundleRequestPrivate(
+    const ExportBundleRequestPrivate &other, ExportBundleRequest * const q)
+    : ExportBundlePrivate(other, q)
+{
+
+}

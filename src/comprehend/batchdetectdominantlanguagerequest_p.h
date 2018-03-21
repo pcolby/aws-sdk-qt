@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHDETECTDOMINANTLANGUAGEREQUEST_P_H
 #define QTAWS_BATCHDETECTDOMINANTLANGUAGEREQUEST_P_H
 
+#include "comprehend_p.h"
+#include "batchdetectdominantlanguagerequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectDominantLanguageRequest;
+
+class QTAWS_EXPORT BatchDetectDominantLanguageRequestPrivate : public ComprehendPrivate {
+
+public:
+    BatchDetectDominantLanguageRequestPrivate(const Comprehend::Action action,
+                                   BatchDetectDominantLanguageRequest * const q);
+    BatchDetectDominantLanguageRequestPrivate(const BatchDetectDominantLanguageRequestPrivate &other,
+                                   BatchDetectDominantLanguageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDetectDominantLanguageRequest)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

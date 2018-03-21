@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDINSTANCEAVAILABILITYREQUEST_P_H
 #define QTAWS_DESCRIBESCHEDULEDINSTANCEAVAILABILITYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describescheduledinstanceavailabilityrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeScheduledInstanceAvailabilityRequest;
+
+class QTAWS_EXPORT DescribeScheduledInstanceAvailabilityRequestPrivate : public EC2Private {
+
+public:
+    DescribeScheduledInstanceAvailabilityRequestPrivate(const EC2::Action action,
+                                   DescribeScheduledInstanceAvailabilityRequest * const q);
+    DescribeScheduledInstanceAvailabilityRequestPrivate(const DescribeScheduledInstanceAvailabilityRequestPrivate &other,
+                                   DescribeScheduledInstanceAvailabilityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScheduledInstanceAvailabilityRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

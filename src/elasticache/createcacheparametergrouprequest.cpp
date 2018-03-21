@@ -19,3 +19,107 @@
 
 #include "createcacheparametergrouprequest.h"
 #include "createcacheparametergrouprequest_p.h"
+#include "createcacheparametergroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateCacheParameterGroupRequest
+ *
+ * @brief  Implements ElastiCache CreateCacheParameterGroup requests.
+ *
+ * @see    ElastiCacheClient::createCacheParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateCacheParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCacheParameterGroupResponse::CreateCacheParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateCacheParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCacheParameterGroupRequest::CreateCacheParameterGroupRequest(const CreateCacheParameterGroupRequest &other)
+    : ElastiCacheRequest(new CreateCacheParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCacheParameterGroupRequest object.
+ */
+CreateCacheParameterGroupRequest::CreateCacheParameterGroupRequest()
+    : ElastiCacheRequest(new CreateCacheParameterGroupRequestPrivate(ElastiCacheRequest::CreateCacheParameterGroupAction, this))
+{
+
+}
+
+bool CreateCacheParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCacheParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCacheParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCacheParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCacheParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateCacheParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheParameterGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public CreateCacheParameterGroupRequest instance.
+ */
+CreateCacheParameterGroupRequestPrivate::CreateCacheParameterGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, CreateCacheParameterGroupRequest * const q)
+    : CreateCacheParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCacheParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCacheParameterGroupRequest instance.
+ */
+CreateCacheParameterGroupRequestPrivate::CreateCacheParameterGroupRequestPrivate(
+    const CreateCacheParameterGroupRequestPrivate &other, CreateCacheParameterGroupRequest * const q)
+    : CreateCacheParameterGroupPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTHAPGSREQUEST_P_H
 #define QTAWS_LISTHAPGSREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "listhapgsrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class ListHapgsRequest;
+
+class QTAWS_EXPORT ListHapgsRequestPrivate : public CloudHSMPrivate {
+
+public:
+    ListHapgsRequestPrivate(const CloudHSM::Action action,
+                                   ListHapgsRequest * const q);
+    ListHapgsRequestPrivate(const ListHapgsRequestPrivate &other,
+                                   ListHapgsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListHapgsRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

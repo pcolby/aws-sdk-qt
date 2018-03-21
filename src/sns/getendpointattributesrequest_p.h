@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETENDPOINTATTRIBUTESREQUEST_P_H
 #define QTAWS_GETENDPOINTATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "getendpointattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetEndpointAttributesRequest;
+
+class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    GetEndpointAttributesRequestPrivate(const SNS::Action action,
+                                   GetEndpointAttributesRequest * const q);
+    GetEndpointAttributesRequestPrivate(const GetEndpointAttributesRequestPrivate &other,
+                                   GetEndpointAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetEndpointAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

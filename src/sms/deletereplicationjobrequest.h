@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBREQUEST_H
 #define QTAWS_DELETEREPLICATIONJOBREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class DeleteReplicationJobRequestPrivate;
+
+class QTAWS_EXPORT DeleteReplicationJobRequest : public SMSRequest {
+
+public:
+    DeleteReplicationJobRequest(const DeleteReplicationJobRequest &other);
+    DeleteReplicationJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationJobRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

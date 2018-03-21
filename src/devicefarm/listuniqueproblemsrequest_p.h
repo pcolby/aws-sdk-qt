@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTUNIQUEPROBLEMSREQUEST_P_H
 #define QTAWS_LISTUNIQUEPROBLEMSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listuniqueproblemsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListUniqueProblemsRequest;
+
+class QTAWS_EXPORT ListUniqueProblemsRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListUniqueProblemsRequestPrivate(const DeviceFarm::Action action,
+                                   ListUniqueProblemsRequest * const q);
+    ListUniqueProblemsRequestPrivate(const ListUniqueProblemsRequestPrivate &other,
+                                   ListUniqueProblemsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListUniqueProblemsRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

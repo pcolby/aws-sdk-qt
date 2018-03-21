@@ -19,3 +19,107 @@
 
 #include "createdbclustersnapshotrequest.h"
 #include "createdbclustersnapshotrequest_p.h"
+#include "createdbclustersnapshotresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBClusterSnapshotRequest
+ *
+ * @brief  Implements RDS CreateDBClusterSnapshot requests.
+ *
+ * @see    RDSClient::createDBClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CreateDBClusterSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBClusterSnapshotResponse::CreateDBClusterSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CreateDBClusterSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBClusterSnapshotRequest::CreateDBClusterSnapshotRequest(const CreateDBClusterSnapshotRequest &other)
+    : RDSRequest(new CreateDBClusterSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBClusterSnapshotRequest object.
+ */
+CreateDBClusterSnapshotRequest::CreateDBClusterSnapshotRequest()
+    : RDSRequest(new CreateDBClusterSnapshotRequestPrivate(RDSRequest::CreateDBClusterSnapshotAction, this))
+{
+
+}
+
+bool CreateDBClusterSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBClusterSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBClusterSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBClusterSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBClusterSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBClusterSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterSnapshotRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBClusterSnapshotRequest instance.
+ */
+CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
+    const RDSRequest::Action action, CreateDBClusterSnapshotRequest * const q)
+    : CreateDBClusterSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBClusterSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBClusterSnapshotRequest instance.
+ */
+CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
+    const CreateDBClusterSnapshotRequestPrivate &other, CreateDBClusterSnapshotRequest * const q)
+    : CreateDBClusterSnapshotPrivate(other, q)
+{
+
+}

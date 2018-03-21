@@ -19,3 +19,107 @@
 
 #include "getslottyperequest.h"
 #include "getslottyperequest_p.h"
+#include "getslottyperesponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetSlotTypeRequest
+ *
+ * @brief  Implements LexModelBuildingService GetSlotType requests.
+ *
+ * @see    LexModelBuildingServiceClient::getSlotType
+ */
+
+/**
+ * @brief  Constructs a new GetSlotTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSlotTypeResponse::GetSlotTypeResponse(
+
+/**
+ * @brief  Constructs a new GetSlotTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSlotTypeRequest::GetSlotTypeRequest(const GetSlotTypeRequest &other)
+    : LexModelBuildingServiceRequest(new GetSlotTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSlotTypeRequest object.
+ */
+GetSlotTypeRequest::GetSlotTypeRequest()
+    : LexModelBuildingServiceRequest(new GetSlotTypeRequestPrivate(LexModelBuildingServiceRequest::GetSlotTypeAction, this))
+{
+
+}
+
+bool GetSlotTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSlotTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSlotTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetSlotTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSlotTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSlotTypeRequestPrivate
+ *
+ * @brief  Private implementation for GetSlotTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSlotTypeRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetSlotTypeRequest instance.
+ */
+GetSlotTypeRequestPrivate::GetSlotTypeRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetSlotTypeRequest * const q)
+    : GetSlotTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSlotTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSlotTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSlotTypeRequest instance.
+ */
+GetSlotTypeRequestPrivate::GetSlotTypeRequestPrivate(
+    const GetSlotTypeRequestPrivate &other, GetSlotTypeRequest * const q)
+    : GetSlotTypePrivate(other, q)
+{
+
+}

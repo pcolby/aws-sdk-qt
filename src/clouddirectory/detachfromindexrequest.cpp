@@ -19,3 +19,107 @@
 
 #include "detachfromindexrequest.h"
 #include "detachfromindexrequest_p.h"
+#include "detachfromindexresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DetachFromIndexRequest
+ *
+ * @brief  Implements CloudDirectory DetachFromIndex requests.
+ *
+ * @see    CloudDirectoryClient::detachFromIndex
+ */
+
+/**
+ * @brief  Constructs a new DetachFromIndexResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachFromIndexResponse::DetachFromIndexResponse(
+
+/**
+ * @brief  Constructs a new DetachFromIndexRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachFromIndexRequest::DetachFromIndexRequest(const DetachFromIndexRequest &other)
+    : CloudDirectoryRequest(new DetachFromIndexRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachFromIndexRequest object.
+ */
+DetachFromIndexRequest::DetachFromIndexRequest()
+    : CloudDirectoryRequest(new DetachFromIndexRequestPrivate(CloudDirectoryRequest::DetachFromIndexAction, this))
+{
+
+}
+
+bool DetachFromIndexRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachFromIndexResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachFromIndexResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachFromIndexResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachFromIndexRequestPrivate
+ *
+ * @brief  Private implementation for DetachFromIndexRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachFromIndexRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DetachFromIndexRequest instance.
+ */
+DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
+    const CloudDirectoryRequest::Action action, DetachFromIndexRequest * const q)
+    : DetachFromIndexPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachFromIndexRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachFromIndexRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachFromIndexRequest instance.
+ */
+DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
+    const DetachFromIndexRequestPrivate &other, DetachFromIndexRequest * const q)
+    : DetachFromIndexPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describehostreservationsrequest.h"
 #include "describehostreservationsrequest_p.h"
+#include "describehostreservationsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeHostReservationsRequest
+ *
+ * @brief  Implements EC2 DescribeHostReservations requests.
+ *
+ * @see    EC2Client::describeHostReservations
+ */
+
+/**
+ * @brief  Constructs a new DescribeHostReservationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHostReservationsResponse::DescribeHostReservationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeHostReservationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeHostReservationsRequest::DescribeHostReservationsRequest(const DescribeHostReservationsRequest &other)
+    : EC2Request(new DescribeHostReservationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeHostReservationsRequest object.
+ */
+DescribeHostReservationsRequest::DescribeHostReservationsRequest()
+    : EC2Request(new DescribeHostReservationsRequestPrivate(EC2Request::DescribeHostReservationsAction, this))
+{
+
+}
+
+bool DescribeHostReservationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeHostReservationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeHostReservationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeHostReservationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeHostReservationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHostReservationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeHostReservationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostReservationsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeHostReservationsRequest instance.
+ */
+DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
+    const EC2Request::Action action, DescribeHostReservationsRequest * const q)
+    : DescribeHostReservationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostReservationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeHostReservationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeHostReservationsRequest instance.
+ */
+DescribeHostReservationsRequestPrivate::DescribeHostReservationsRequestPrivate(
+    const DescribeHostReservationsRequestPrivate &other, DescribeHostReservationsRequest * const q)
+    : DescribeHostReservationsPrivate(other, q)
+{
+
+}

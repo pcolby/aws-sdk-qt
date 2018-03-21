@@ -19,3 +19,107 @@
 
 #include "sendtemplatedemailrequest.h"
 #include "sendtemplatedemailrequest_p.h"
+#include "sendtemplatedemailresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendTemplatedEmailRequest
+ *
+ * @brief  Implements SES SendTemplatedEmail requests.
+ *
+ * @see    SESClient::sendTemplatedEmail
+ */
+
+/**
+ * @brief  Constructs a new SendTemplatedEmailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendTemplatedEmailResponse::SendTemplatedEmailResponse(
+
+/**
+ * @brief  Constructs a new SendTemplatedEmailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendTemplatedEmailRequest::SendTemplatedEmailRequest(const SendTemplatedEmailRequest &other)
+    : SESRequest(new SendTemplatedEmailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendTemplatedEmailRequest object.
+ */
+SendTemplatedEmailRequest::SendTemplatedEmailRequest()
+    : SESRequest(new SendTemplatedEmailRequestPrivate(SESRequest::SendTemplatedEmailAction, this))
+{
+
+}
+
+bool SendTemplatedEmailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendTemplatedEmailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendTemplatedEmailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkReply * const reply) const
+{
+    return new SendTemplatedEmailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendTemplatedEmailRequestPrivate
+ *
+ * @brief  Private implementation for SendTemplatedEmailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTemplatedEmailRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SendTemplatedEmailRequest instance.
+ */
+SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
+    const SESRequest::Action action, SendTemplatedEmailRequest * const q)
+    : SendTemplatedEmailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTemplatedEmailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendTemplatedEmailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendTemplatedEmailRequest instance.
+ */
+SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
+    const SendTemplatedEmailRequestPrivate &other, SendTemplatedEmailRequest * const q)
+    : SendTemplatedEmailPrivate(other, q)
+{
+
+}

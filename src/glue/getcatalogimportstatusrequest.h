@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCATALOGIMPORTSTATUSREQUEST_H
 #define QTAWS_GETCATALOGIMPORTSTATUSREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetCatalogImportStatusRequestPrivate;
+
+class QTAWS_EXPORT GetCatalogImportStatusRequest : public GlueRequest {
+
+public:
+    GetCatalogImportStatusRequest(const GetCatalogImportStatusRequest &other);
+    GetCatalogImportStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCatalogImportStatusRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

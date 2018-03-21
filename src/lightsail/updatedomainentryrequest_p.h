@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOMAINENTRYREQUEST_P_H
 #define QTAWS_UPDATEDOMAINENTRYREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "updatedomainentryrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UpdateDomainEntryRequest;
+
+class QTAWS_EXPORT UpdateDomainEntryRequestPrivate : public LightsailPrivate {
+
+public:
+    UpdateDomainEntryRequestPrivate(const Lightsail::Action action,
+                                   UpdateDomainEntryRequest * const q);
+    UpdateDomainEntryRequestPrivate(const UpdateDomainEntryRequestPrivate &other,
+                                   UpdateDomainEntryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainEntryRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPSTACKSETOPERATIONREQUEST_H
 #define QTAWS_STOPSTACKSETOPERATIONREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class StopStackSetOperationRequestPrivate;
+
+class QTAWS_EXPORT StopStackSetOperationRequest : public CloudFormationRequest {
+
+public:
+    StopStackSetOperationRequest(const StopStackSetOperationRequest &other);
+    StopStackSetOperationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopStackSetOperationRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

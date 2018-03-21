@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETHOSTNAMESUGGESTIONREQUEST_H
 #define QTAWS_GETHOSTNAMESUGGESTIONREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class GetHostnameSuggestionRequestPrivate;
+
+class QTAWS_EXPORT GetHostnameSuggestionRequest : public OpsWorksRequest {
+
+public:
+    GetHostnameSuggestionRequest(const GetHostnameSuggestionRequest &other);
+    GetHostnameSuggestionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetHostnameSuggestionRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

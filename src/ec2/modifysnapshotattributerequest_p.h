@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYSNAPSHOTATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYSNAPSHOTATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifysnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifySnapshotAttributeRequest;
+
+class QTAWS_EXPORT ModifySnapshotAttributeRequestPrivate : public EC2Private {
+
+public:
+    ModifySnapshotAttributeRequestPrivate(const EC2::Action action,
+                                   ModifySnapshotAttributeRequest * const q);
+    ModifySnapshotAttributeRequestPrivate(const ModifySnapshotAttributeRequestPrivate &other,
+                                   ModifySnapshotAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifySnapshotAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

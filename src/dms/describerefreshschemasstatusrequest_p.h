@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEREFRESHSCHEMASSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEREFRESHSCHEMASSTATUSREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describerefreshschemasstatusrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeRefreshSchemasStatusRequest;
+
+class QTAWS_EXPORT DescribeRefreshSchemasStatusRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeRefreshSchemasStatusRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeRefreshSchemasStatusRequest * const q);
+    DescribeRefreshSchemasStatusRequestPrivate(const DescribeRefreshSchemasStatusRequestPrivate &other,
+                                   DescribeRefreshSchemasStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRefreshSchemasStatusRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

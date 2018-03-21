@@ -19,3 +19,107 @@
 
 #include "startdatacollectionbyagentidsrequest.h"
 #include "startdatacollectionbyagentidsrequest_p.h"
+#include "startdatacollectionbyagentidsresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  StartDataCollectionByAgentIdsRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService StartDataCollectionByAgentIds requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::startDataCollectionByAgentIds
+ */
+
+/**
+ * @brief  Constructs a new StartDataCollectionByAgentIdsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
+
+/**
+ * @brief  Constructs a new StartDataCollectionByAgentIdsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartDataCollectionByAgentIdsRequest::StartDataCollectionByAgentIdsRequest(const StartDataCollectionByAgentIdsRequest &other)
+    : ApplicationDiscoveryServiceRequest(new StartDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartDataCollectionByAgentIdsRequest object.
+ */
+StartDataCollectionByAgentIdsRequest::StartDataCollectionByAgentIdsRequest()
+    : ApplicationDiscoveryServiceRequest(new StartDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryServiceRequest::StartDataCollectionByAgentIdsAction, this))
+{
+
+}
+
+bool StartDataCollectionByAgentIdsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartDataCollectionByAgentIdsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartDataCollectionByAgentIdsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
+{
+    return new StartDataCollectionByAgentIdsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartDataCollectionByAgentIdsRequestPrivate
+ *
+ * @brief  Private implementation for StartDataCollectionByAgentIdsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartDataCollectionByAgentIdsRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public StartDataCollectionByAgentIdsRequest instance.
+ */
+StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, StartDataCollectionByAgentIdsRequest * const q)
+    : StartDataCollectionByAgentIdsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartDataCollectionByAgentIdsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartDataCollectionByAgentIdsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartDataCollectionByAgentIdsRequest instance.
+ */
+StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsRequestPrivate(
+    const StartDataCollectionByAgentIdsRequestPrivate &other, StartDataCollectionByAgentIdsRequest * const q)
+    : StartDataCollectionByAgentIdsPrivate(other, q)
+{
+
+}

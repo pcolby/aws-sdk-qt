@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERREQUEST_H
 #define QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AddClientIDToOpenIDConnectProviderRequestPrivate;
+
+class QTAWS_EXPORT AddClientIDToOpenIDConnectProviderRequest : public IAMRequest {
+
+public:
+    AddClientIDToOpenIDConnectProviderRequest(const AddClientIDToOpenIDConnectProviderRequest &other);
+    AddClientIDToOpenIDConnectProviderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddClientIDToOpenIDConnectProviderRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

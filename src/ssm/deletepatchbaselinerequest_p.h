@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPATCHBASELINEREQUEST_P_H
 #define QTAWS_DELETEPATCHBASELINEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deletepatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeletePatchBaselineRequest;
+
+class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SSMPrivate {
+
+public:
+    DeletePatchBaselineRequestPrivate(const SSM::Action action,
+                                   DeletePatchBaselineRequest * const q);
+    DeletePatchBaselineRequestPrivate(const DeletePatchBaselineRequestPrivate &other,
+                                   DeletePatchBaselineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePatchBaselineRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

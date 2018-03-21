@@ -19,3 +19,107 @@
 
 #include "cancelupdatestackrequest.h"
 #include "cancelupdatestackrequest_p.h"
+#include "cancelupdatestackresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CancelUpdateStackRequest
+ *
+ * @brief  Implements CloudFormation CancelUpdateStack requests.
+ *
+ * @see    CloudFormationClient::cancelUpdateStack
+ */
+
+/**
+ * @brief  Constructs a new CancelUpdateStackResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelUpdateStackResponse::CancelUpdateStackResponse(
+
+/**
+ * @brief  Constructs a new CancelUpdateStackRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelUpdateStackRequest::CancelUpdateStackRequest(const CancelUpdateStackRequest &other)
+    : CloudFormationRequest(new CancelUpdateStackRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelUpdateStackRequest object.
+ */
+CancelUpdateStackRequest::CancelUpdateStackRequest()
+    : CloudFormationRequest(new CancelUpdateStackRequestPrivate(CloudFormationRequest::CancelUpdateStackAction, this))
+{
+
+}
+
+bool CancelUpdateStackRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelUpdateStackResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelUpdateStackResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * CancelUpdateStackRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelUpdateStackResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelUpdateStackRequestPrivate
+ *
+ * @brief  Private implementation for CancelUpdateStackRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelUpdateStackRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public CancelUpdateStackRequest instance.
+ */
+CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
+    const CloudFormationRequest::Action action, CancelUpdateStackRequest * const q)
+    : CancelUpdateStackPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelUpdateStackRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelUpdateStackRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelUpdateStackRequest instance.
+ */
+CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
+    const CancelUpdateStackRequestPrivate &other, CancelUpdateStackRequest * const q)
+    : CancelUpdateStackPrivate(other, q)
+{
+
+}

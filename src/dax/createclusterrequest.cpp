@@ -19,3 +19,107 @@
 
 #include "createclusterrequest.h"
 #include "createclusterrequest_p.h"
+#include "createclusterresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  CreateClusterRequest
+ *
+ * @brief  Implements DAX CreateCluster requests.
+ *
+ * @see    DAXClient::createCluster
+ */
+
+/**
+ * @brief  Constructs a new CreateClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterResponse::CreateClusterResponse(
+
+/**
+ * @brief  Constructs a new CreateClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateClusterRequest::CreateClusterRequest(const CreateClusterRequest &other)
+    : DAXRequest(new CreateClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateClusterRequest object.
+ */
+CreateClusterRequest::CreateClusterRequest()
+    : DAXRequest(new CreateClusterRequestPrivate(DAXRequest::CreateClusterAction, this))
+{
+
+}
+
+bool CreateClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterRequestPrivate
+ *
+ * @brief  Private implementation for CreateClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public CreateClusterRequest instance.
+ */
+CreateClusterRequestPrivate::CreateClusterRequestPrivate(
+    const DAXRequest::Action action, CreateClusterRequest * const q)
+    : CreateClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateClusterRequest instance.
+ */
+CreateClusterRequestPrivate::CreateClusterRequestPrivate(
+    const CreateClusterRequestPrivate &other, CreateClusterRequest * const q)
+    : CreateClusterPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_P_H
 
+#include "ses_p.h"
+#include "updateconfigurationsetreputationmetricsenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetReputationMetricsEnabledRequest;
+
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SESPrivate {
+
+public:
+    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SES::Action action,
+                                   UpdateConfigurationSetReputationMetricsEnabledRequest * const q);
+    UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other,
+                                   UpdateConfigurationSetReputationMetricsEnabledRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetReputationMetricsEnabledRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

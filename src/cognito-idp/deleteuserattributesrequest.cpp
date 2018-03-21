@@ -19,3 +19,107 @@
 
 #include "deleteuserattributesrequest.h"
 #include "deleteuserattributesrequest_p.h"
+#include "deleteuserattributesresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteUserAttributesRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DeleteUserAttributes requests.
+ *
+ * @see    CognitoIdentityProviderClient::deleteUserAttributes
+ */
+
+/**
+ * @brief  Constructs a new DeleteUserAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserAttributesResponse::DeleteUserAttributesResponse(
+
+/**
+ * @brief  Constructs a new DeleteUserAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteUserAttributesRequest::DeleteUserAttributesRequest(const DeleteUserAttributesRequest &other)
+    : CognitoIdentityProviderRequest(new DeleteUserAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteUserAttributesRequest object.
+ */
+DeleteUserAttributesRequest::DeleteUserAttributesRequest()
+    : CognitoIdentityProviderRequest(new DeleteUserAttributesRequestPrivate(CognitoIdentityProviderRequest::DeleteUserAttributesAction, this))
+{
+
+}
+
+bool DeleteUserAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteUserAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteUserAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DeleteUserAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteUserAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserAttributesRequestPrivate
+ *
+ * @brief  Private implementation for DeleteUserAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserAttributesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DeleteUserAttributesRequest instance.
+ */
+DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DeleteUserAttributesRequest * const q)
+    : DeleteUserAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteUserAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteUserAttributesRequest instance.
+ */
+DeleteUserAttributesRequestPrivate::DeleteUserAttributesRequestPrivate(
+    const DeleteUserAttributesRequestPrivate &other, DeleteUserAttributesRequest * const q)
+    : DeleteUserAttributesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTEXECUTIONSREQUEST_P_H
 
+#include "sfn_p.h"
+#include "listexecutionsrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class ListExecutionsRequest;
+
+class QTAWS_EXPORT ListExecutionsRequestPrivate : public SFNPrivate {
+
+public:
+    ListExecutionsRequestPrivate(const SFN::Action action,
+                                   ListExecutionsRequest * const q);
+    ListExecutionsRequestPrivate(const ListExecutionsRequestPrivate &other,
+                                   ListExecutionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListExecutionsRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

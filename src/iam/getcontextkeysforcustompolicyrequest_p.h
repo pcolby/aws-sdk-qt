@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_P_H
 #define QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "getcontextkeysforcustompolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetContextKeysForCustomPolicyRequest;
+
+class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    GetContextKeysForCustomPolicyRequestPrivate(const IAM::Action action,
+                                   GetContextKeysForCustomPolicyRequest * const q);
+    GetContextKeysForCustomPolicyRequestPrivate(const GetContextKeysForCustomPolicyRequestPrivate &other,
+                                   GetContextKeysForCustomPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetContextKeysForCustomPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

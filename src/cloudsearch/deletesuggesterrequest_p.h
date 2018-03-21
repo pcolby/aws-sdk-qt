@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESUGGESTERREQUEST_P_H
 #define QTAWS_DELETESUGGESTERREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "deletesuggesterrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteSuggesterRequest;
+
+class QTAWS_EXPORT DeleteSuggesterRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DeleteSuggesterRequestPrivate(const CloudSearch::Action action,
+                                   DeleteSuggesterRequest * const q);
+    DeleteSuggesterRequestPrivate(const DeleteSuggesterRequestPrivate &other,
+                                   DeleteSuggesterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSuggesterRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

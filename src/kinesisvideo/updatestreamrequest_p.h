@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESTREAMREQUEST_P_H
 #define QTAWS_UPDATESTREAMREQUEST_P_H
 
+#include "kinesisvideo_p.h"
+#include "updatestreamrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class UpdateStreamRequest;
+
+class QTAWS_EXPORT UpdateStreamRequestPrivate : public KinesisVideoPrivate {
+
+public:
+    UpdateStreamRequestPrivate(const KinesisVideo::Action action,
+                                   UpdateStreamRequest * const q);
+    UpdateStreamRequestPrivate(const UpdateStreamRequestPrivate &other,
+                                   UpdateStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStreamRequest)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBUILDWORKSPACESREQUEST_P_H
 #define QTAWS_REBUILDWORKSPACESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "rebuildworkspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class RebuildWorkspacesRequest;
+
+class QTAWS_EXPORT RebuildWorkspacesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    RebuildWorkspacesRequestPrivate(const WorkSpaces::Action action,
+                                   RebuildWorkspacesRequest * const q);
+    RebuildWorkspacesRequestPrivate(const RebuildWorkspacesRequestPrivate &other,
+                                   RebuildWorkspacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebuildWorkspacesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

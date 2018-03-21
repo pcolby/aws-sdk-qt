@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLOUDFORMATIONCHANGESETREQUEST_P_H
 #define QTAWS_CREATECLOUDFORMATIONCHANGESETREQUEST_P_H
 
+#include "serverlessapplicationrepository_p.h"
+#include "createcloudformationchangesetrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class CreateCloudFormationChangeSetRequest;
+
+class QTAWS_EXPORT CreateCloudFormationChangeSetRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+
+public:
+    CreateCloudFormationChangeSetRequestPrivate(const ServerlessApplicationRepository::Action action,
+                                   CreateCloudFormationChangeSetRequest * const q);
+    CreateCloudFormationChangeSetRequestPrivate(const CreateCloudFormationChangeSetRequestPrivate &other,
+                                   CreateCloudFormationChangeSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCloudFormationChangeSetRequest)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

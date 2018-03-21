@@ -19,3 +19,107 @@
 
 #include "getrepositorypolicyrequest.h"
 #include "getrepositorypolicyrequest_p.h"
+#include "getrepositorypolicyresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetRepositoryPolicyRequest
+ *
+ * @brief  Implements ECR GetRepositoryPolicy requests.
+ *
+ * @see    ECRClient::getRepositoryPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetRepositoryPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRepositoryPolicyResponse::GetRepositoryPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetRepositoryPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRepositoryPolicyRequest::GetRepositoryPolicyRequest(const GetRepositoryPolicyRequest &other)
+    : ECRRequest(new GetRepositoryPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRepositoryPolicyRequest object.
+ */
+GetRepositoryPolicyRequest::GetRepositoryPolicyRequest()
+    : ECRRequest(new GetRepositoryPolicyRequestPrivate(ECRRequest::GetRepositoryPolicyAction, this))
+{
+
+}
+
+bool GetRepositoryPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRepositoryPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRepositoryPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * GetRepositoryPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRepositoryPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRepositoryPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetRepositoryPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public GetRepositoryPolicyRequest instance.
+ */
+GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
+    const ECRRequest::Action action, GetRepositoryPolicyRequest * const q)
+    : GetRepositoryPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRepositoryPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRepositoryPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRepositoryPolicyRequest instance.
+ */
+GetRepositoryPolicyRequestPrivate::GetRepositoryPolicyRequestPrivate(
+    const GetRepositoryPolicyRequestPrivate &other, GetRepositoryPolicyRequest * const q)
+    : GetRepositoryPolicyPrivate(other, q)
+{
+
+}

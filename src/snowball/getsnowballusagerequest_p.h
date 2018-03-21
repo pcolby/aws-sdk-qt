@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSNOWBALLUSAGEREQUEST_P_H
 #define QTAWS_GETSNOWBALLUSAGEREQUEST_P_H
 
+#include "snowball_p.h"
+#include "getsnowballusagerequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetSnowballUsageRequest;
+
+class QTAWS_EXPORT GetSnowballUsageRequestPrivate : public SnowballPrivate {
+
+public:
+    GetSnowballUsageRequestPrivate(const Snowball::Action action,
+                                   GetSnowballUsageRequest * const q);
+    GetSnowballUsageRequestPrivate(const GetSnowballUsageRequestPrivate &other,
+                                   GetSnowballUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSnowballUsageRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createinstanceprofilerequest.h"
 #include "createinstanceprofilerequest_p.h"
+#include "createinstanceprofileresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateInstanceProfileRequest
+ *
+ * @brief  Implements IAM CreateInstanceProfile requests.
+ *
+ * @see    IAMClient::createInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new CreateInstanceProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceProfileResponse::CreateInstanceProfileResponse(
+
+/**
+ * @brief  Constructs a new CreateInstanceProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInstanceProfileRequest::CreateInstanceProfileRequest(const CreateInstanceProfileRequest &other)
+    : IAMRequest(new CreateInstanceProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInstanceProfileRequest object.
+ */
+CreateInstanceProfileRequest::CreateInstanceProfileRequest()
+    : IAMRequest(new CreateInstanceProfileRequestPrivate(IAMRequest::CreateInstanceProfileAction, this))
+{
+
+}
+
+bool CreateInstanceProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInstanceProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInstanceProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInstanceProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceProfileRequestPrivate
+ *
+ * @brief  Private implementation for CreateInstanceProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceProfileRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public CreateInstanceProfileRequest instance.
+ */
+CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
+    const IAMRequest::Action action, CreateInstanceProfileRequest * const q)
+    : CreateInstanceProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInstanceProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInstanceProfileRequest instance.
+ */
+CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
+    const CreateInstanceProfileRequestPrivate &other, CreateInstanceProfileRequest * const q)
+    : CreateInstanceProfilePrivate(other, q)
+{
+
+}

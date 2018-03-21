@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEORIGINENDPOINTREQUEST_P_H
 #define QTAWS_CREATEORIGINENDPOINTREQUEST_P_H
 
+#include "mediapackage_p.h"
+#include "createoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class CreateOriginEndpointRequest;
+
+class QTAWS_EXPORT CreateOriginEndpointRequestPrivate : public MediaPackagePrivate {
+
+public:
+    CreateOriginEndpointRequestPrivate(const MediaPackage::Action action,
+                                   CreateOriginEndpointRequest * const q);
+    CreateOriginEndpointRequestPrivate(const CreateOriginEndpointRequestPrivate &other,
+                                   CreateOriginEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOriginEndpointRequest)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

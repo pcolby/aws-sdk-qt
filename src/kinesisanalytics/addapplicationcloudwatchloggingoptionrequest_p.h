@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 #define QTAWS_ADDAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 
+#include "kinesisanalytics_p.h"
+#include "addapplicationcloudwatchloggingoptionrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationCloudWatchLoggingOptionRequest;
+
+class QTAWS_EXPORT AddApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsPrivate {
+
+public:
+    AddApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalytics::Action action,
+                                   AddApplicationCloudWatchLoggingOptionRequest * const q);
+    AddApplicationCloudWatchLoggingOptionRequestPrivate(const AddApplicationCloudWatchLoggingOptionRequestPrivate &other,
+                                   AddApplicationCloudWatchLoggingOptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddApplicationCloudWatchLoggingOptionRequest)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

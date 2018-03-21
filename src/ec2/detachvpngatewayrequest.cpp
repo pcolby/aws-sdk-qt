@@ -19,3 +19,107 @@
 
 #include "detachvpngatewayrequest.h"
 #include "detachvpngatewayrequest_p.h"
+#include "detachvpngatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DetachVpnGatewayRequest
+ *
+ * @brief  Implements EC2 DetachVpnGateway requests.
+ *
+ * @see    EC2Client::detachVpnGateway
+ */
+
+/**
+ * @brief  Constructs a new DetachVpnGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachVpnGatewayResponse::DetachVpnGatewayResponse(
+
+/**
+ * @brief  Constructs a new DetachVpnGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachVpnGatewayRequest::DetachVpnGatewayRequest(const DetachVpnGatewayRequest &other)
+    : EC2Request(new DetachVpnGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachVpnGatewayRequest object.
+ */
+DetachVpnGatewayRequest::DetachVpnGatewayRequest()
+    : EC2Request(new DetachVpnGatewayRequestPrivate(EC2Request::DetachVpnGatewayAction, this))
+{
+
+}
+
+bool DetachVpnGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachVpnGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachVpnGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DetachVpnGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachVpnGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachVpnGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DetachVpnGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachVpnGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DetachVpnGatewayRequest instance.
+ */
+DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
+    const EC2Request::Action action, DetachVpnGatewayRequest * const q)
+    : DetachVpnGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachVpnGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachVpnGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachVpnGatewayRequest instance.
+ */
+DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
+    const DetachVpnGatewayRequestPrivate &other, DetachVpnGatewayRequest * const q)
+    : DetachVpnGatewayPrivate(other, q)
+{
+
+}

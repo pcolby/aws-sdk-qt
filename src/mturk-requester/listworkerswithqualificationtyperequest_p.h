@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTWORKERSWITHQUALIFICATIONTYPEREQUEST_P_H
 #define QTAWS_LISTWORKERSWITHQUALIFICATIONTYPEREQUEST_P_H
 
+#include "mturk_p.h"
+#include "listworkerswithqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListWorkersWithQualificationTypeRequest;
+
+class QTAWS_EXPORT ListWorkersWithQualificationTypeRequestPrivate : public MTurkPrivate {
+
+public:
+    ListWorkersWithQualificationTypeRequestPrivate(const MTurk::Action action,
+                                   ListWorkersWithQualificationTypeRequest * const q);
+    ListWorkersWithQualificationTypeRequestPrivate(const ListWorkersWithQualificationTypeRequestPrivate &other,
+                                   ListWorkersWithQualificationTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListWorkersWithQualificationTypeRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

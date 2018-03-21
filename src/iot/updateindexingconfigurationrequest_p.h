@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEINDEXINGCONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATEINDEXINGCONFIGURATIONREQUEST_P_H
 
+#include "iot_p.h"
+#include "updateindexingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateIndexingConfigurationRequest;
+
+class QTAWS_EXPORT UpdateIndexingConfigurationRequestPrivate : public IoTPrivate {
+
+public:
+    UpdateIndexingConfigurationRequestPrivate(const IoT::Action action,
+                                   UpdateIndexingConfigurationRequest * const q);
+    UpdateIndexingConfigurationRequestPrivate(const UpdateIndexingConfigurationRequestPrivate &other,
+                                   UpdateIndexingConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateIndexingConfigurationRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTRECORDREQUEST_P_H
 #define QTAWS_PUTRECORDREQUEST_P_H
 
+#include "firehose_p.h"
+#include "putrecordrequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class PutRecordRequest;
+
+class QTAWS_EXPORT PutRecordRequestPrivate : public FirehosePrivate {
+
+public:
+    PutRecordRequestPrivate(const Firehose::Action action,
+                                   PutRecordRequest * const q);
+    PutRecordRequestPrivate(const PutRecordRequestPrivate &other,
+                                   PutRecordRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutRecordRequest)
+
+};
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

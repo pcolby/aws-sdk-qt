@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMEDIAREQUEST_P_H
 #define QTAWS_GETMEDIAREQUEST_P_H
 
+#include "kinesisvideomedia_p.h"
+#include "getmediarequest.h"
+
+namespace AWS {
+
+namespace KinesisVideoMedia {
+
+class GetMediaRequest;
+
+class QTAWS_EXPORT GetMediaRequestPrivate : public KinesisVideoMediaPrivate {
+
+public:
+    GetMediaRequestPrivate(const KinesisVideoMedia::Action action,
+                                   GetMediaRequest * const q);
+    GetMediaRequestPrivate(const GetMediaRequestPrivate &other,
+                                   GetMediaRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMediaRequest)
+
+};
+
+} // namespace KinesisVideoMedia
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSREQUEST_H
 #define QTAWS_ADDTAGSREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class AddTagsRequestPrivate;
+
+class QTAWS_EXPORT AddTagsRequest : public SageMakerRequest {
+
+public:
+    AddTagsRequest(const AddTagsRequest &other);
+    AddTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

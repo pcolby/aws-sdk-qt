@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETHINGTYPEREQUEST_H
 #define QTAWS_DELETETHINGTYPEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteThingTypeRequestPrivate;
+
+class QTAWS_EXPORT DeleteThingTypeRequest : public IoTRequest {
+
+public:
+    DeleteThingTypeRequest(const DeleteThingTypeRequest &other);
+    DeleteThingTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteThingTypeRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

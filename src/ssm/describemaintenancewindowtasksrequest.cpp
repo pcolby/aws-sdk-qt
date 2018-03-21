@@ -19,3 +19,107 @@
 
 #include "describemaintenancewindowtasksrequest.h"
 #include "describemaintenancewindowtasksrequest_p.h"
+#include "describemaintenancewindowtasksresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeMaintenanceWindowTasksRequest
+ *
+ * @brief  Implements SSM DescribeMaintenanceWindowTasks requests.
+ *
+ * @see    SSMClient::describeMaintenanceWindowTasks
+ */
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceWindowTasksResponse::DescribeMaintenanceWindowTasksResponse(
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMaintenanceWindowTasksRequest::DescribeMaintenanceWindowTasksRequest(const DescribeMaintenanceWindowTasksRequest &other)
+    : SSMRequest(new DescribeMaintenanceWindowTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowTasksRequest object.
+ */
+DescribeMaintenanceWindowTasksRequest::DescribeMaintenanceWindowTasksRequest()
+    : SSMRequest(new DescribeMaintenanceWindowTasksRequestPrivate(SSMRequest::DescribeMaintenanceWindowTasksAction, this))
+{
+
+}
+
+bool DescribeMaintenanceWindowTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMaintenanceWindowTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMaintenanceWindowTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeMaintenanceWindowTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMaintenanceWindowTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceWindowTasksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceWindowTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowTasksRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeMaintenanceWindowTasksRequest instance.
+ */
+DescribeMaintenanceWindowTasksRequestPrivate::DescribeMaintenanceWindowTasksRequestPrivate(
+    const SSMRequest::Action action, DescribeMaintenanceWindowTasksRequest * const q)
+    : DescribeMaintenanceWindowTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMaintenanceWindowTasksRequest instance.
+ */
+DescribeMaintenanceWindowTasksRequestPrivate::DescribeMaintenanceWindowTasksRequestPrivate(
+    const DescribeMaintenanceWindowTasksRequestPrivate &other, DescribeMaintenanceWindowTasksRequest * const q)
+    : DescribeMaintenanceWindowTasksPrivate(other, q)
+{
+
+}

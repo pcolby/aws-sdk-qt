@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETSTATUSREQUEST_H
 #define QTAWS_SETSTATUSREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class SetStatusRequestPrivate;
+
+class QTAWS_EXPORT SetStatusRequest : public DataPipelineRequest {
+
+public:
+    SetStatusRequest(const SetStatusRequest &other);
+    SetStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetStatusRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

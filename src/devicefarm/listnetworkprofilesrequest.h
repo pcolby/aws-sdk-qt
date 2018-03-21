@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTNETWORKPROFILESREQUEST_H
 #define QTAWS_LISTNETWORKPROFILESREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListNetworkProfilesRequestPrivate;
+
+class QTAWS_EXPORT ListNetworkProfilesRequest : public DeviceFarmRequest {
+
+public:
+    ListNetworkProfilesRequest(const ListNetworkProfilesRequest &other);
+    ListNetworkProfilesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListNetworkProfilesRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

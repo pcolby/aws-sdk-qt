@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETITEMREQUEST_P_H
 #define QTAWS_GETITEMREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "getitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class GetItemRequest;
+
+class QTAWS_EXPORT GetItemRequestPrivate : public DynamoDBPrivate {
+
+public:
+    GetItemRequestPrivate(const DynamoDB::Action action,
+                                   GetItemRequest * const q);
+    GetItemRequestPrivate(const GetItemRequestPrivate &other,
+                                   GetItemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetItemRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

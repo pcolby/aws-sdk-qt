@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEUSERPROFILEREQUEST_P_H
 #define QTAWS_DELETEUSERPROFILEREQUEST_P_H
 
+#include "codestar_p.h"
+#include "deleteuserprofilerequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DeleteUserProfileRequest;
+
+class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public CodeStarPrivate {
+
+public:
+    DeleteUserProfileRequestPrivate(const CodeStar::Action action,
+                                   DeleteUserProfileRequest * const q);
+    DeleteUserProfileRequestPrivate(const DeleteUserProfileRequestPrivate &other,
+                                   DeleteUserProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserProfileRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

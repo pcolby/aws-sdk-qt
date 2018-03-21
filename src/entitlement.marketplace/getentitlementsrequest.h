@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETENTITLEMENTSREQUEST_H
 #define QTAWS_GETENTITLEMENTSREQUEST_H
 
+#include "marketplaceentitlementservicerequest.h"
+
+namespace AWS {
+
+namespace MarketplaceEntitlementService {
+
+class GetEntitlementsRequestPrivate;
+
+class QTAWS_EXPORT GetEntitlementsRequest : public MarketplaceEntitlementServiceRequest {
+
+public:
+    GetEntitlementsRequest(const GetEntitlementsRequest &other);
+    GetEntitlementsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetEntitlementsRequest)
+
+}
+
+} // namespace MarketplaceEntitlementService
+} // namespace AWS
+
 #endif

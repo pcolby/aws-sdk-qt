@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITREQUEST_H
 #define QTAWS_UPDATEEXPIRATIONFORHITREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateExpirationForHITRequestPrivate;
+
+class QTAWS_EXPORT UpdateExpirationForHITRequest : public MTurkRequest {
+
+public:
+    UpdateExpirationForHITRequest(const UpdateExpirationForHITRequest &other);
+    UpdateExpirationForHITRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateExpirationForHITRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

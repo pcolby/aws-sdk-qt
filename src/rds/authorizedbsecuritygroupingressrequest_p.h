@@ -20,4 +20,29 @@
 #ifndef QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSREQUEST_P_H
 #define QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSREQUEST_P_H
 
+#include "rds_p.h"
+#include "authorizedbsecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AuthorizeDBSecurityGroupIngressRequest;
+
+class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressRequestPrivate : public RDSPrivate {
+
+public:
+    AuthorizeDBSecurityGroupIngressRequestPrivate(const RDS::Action action,
+                                   AuthorizeDBSecurityGroupIngressRequest * const q);
+    AuthorizeDBSecurityGroupIngressRequestPrivate(const AuthorizeDBSecurityGroupIngressRequestPrivate &other,
+                                   AuthorizeDBSecurityGroupIngressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeDBSecurityGroupIngressRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

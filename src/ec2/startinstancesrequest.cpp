@@ -19,3 +19,107 @@
 
 #include "startinstancesrequest.h"
 #include "startinstancesrequest_p.h"
+#include "startinstancesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  StartInstancesRequest
+ *
+ * @brief  Implements EC2 StartInstances requests.
+ *
+ * @see    EC2Client::startInstances
+ */
+
+/**
+ * @brief  Constructs a new StartInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartInstancesResponse::StartInstancesResponse(
+
+/**
+ * @brief  Constructs a new StartInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartInstancesRequest::StartInstancesRequest(const StartInstancesRequest &other)
+    : EC2Request(new StartInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartInstancesRequest object.
+ */
+StartInstancesRequest::StartInstancesRequest()
+    : EC2Request(new StartInstancesRequestPrivate(EC2Request::StartInstancesAction, this))
+{
+
+}
+
+bool StartInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new StartInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartInstancesRequestPrivate
+ *
+ * @brief  Private implementation for StartInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartInstancesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public StartInstancesRequest instance.
+ */
+StartInstancesRequestPrivate::StartInstancesRequestPrivate(
+    const EC2Request::Action action, StartInstancesRequest * const q)
+    : StartInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartInstancesRequest instance.
+ */
+StartInstancesRequestPrivate::StartInstancesRequestPrivate(
+    const StartInstancesRequestPrivate &other, StartInstancesRequest * const q)
+    : StartInstancesPrivate(other, q)
+{
+
+}

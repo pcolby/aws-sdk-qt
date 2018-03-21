@@ -19,3 +19,107 @@
 
 #include "listinputsrequest.h"
 #include "listinputsrequest_p.h"
+#include "listinputsresponse.h"
+#include "medialiverequest_p.h"
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  ListInputsRequest
+ *
+ * @brief  Implements MediaLive ListInputs requests.
+ *
+ * @see    MediaLiveClient::listInputs
+ */
+
+/**
+ * @brief  Constructs a new ListInputsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInputsResponse::ListInputsResponse(
+
+/**
+ * @brief  Constructs a new ListInputsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListInputsRequest::ListInputsRequest(const ListInputsRequest &other)
+    : MediaLiveRequest(new ListInputsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListInputsRequest object.
+ */
+ListInputsRequest::ListInputsRequest()
+    : MediaLiveRequest(new ListInputsRequestPrivate(MediaLiveRequest::ListInputsAction, this))
+{
+
+}
+
+bool ListInputsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListInputsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListInputsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaLiveClient::send
+ */
+AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListInputsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInputsRequestPrivate
+ *
+ * @brief  Private implementation for ListInputsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInputsRequestPrivate object.
+ *
+ * @param  action  MediaLive action being performed.
+ * @param  q       Pointer to this object's public ListInputsRequest instance.
+ */
+ListInputsRequestPrivate::ListInputsRequestPrivate(
+    const MediaLiveRequest::Action action, ListInputsRequest * const q)
+    : ListInputsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInputsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListInputsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListInputsRequest instance.
+ */
+ListInputsRequestPrivate::ListInputsRequestPrivate(
+    const ListInputsRequestPrivate &other, ListInputsRequest * const q)
+    : ListInputsPrivate(other, q)
+{
+
+}

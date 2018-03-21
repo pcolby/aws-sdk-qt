@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVPCENDPOINTCONNECTIONNOTIFICATIONSREQUEST_P_H
 #define QTAWS_DELETEVPCENDPOINTCONNECTIONNOTIFICATIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletevpcendpointconnectionnotificationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcEndpointConnectionNotificationsRequest;
+
+class QTAWS_EXPORT DeleteVpcEndpointConnectionNotificationsRequestPrivate : public EC2Private {
+
+public:
+    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const EC2::Action action,
+                                   DeleteVpcEndpointConnectionNotificationsRequest * const q);
+    DeleteVpcEndpointConnectionNotificationsRequestPrivate(const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other,
+                                   DeleteVpcEndpointConnectionNotificationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcEndpointConnectionNotificationsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

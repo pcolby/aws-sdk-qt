@@ -19,3 +19,107 @@
 
 #include "describedomaincontrollersrequest.h"
 #include "describedomaincontrollersrequest_p.h"
+#include "describedomaincontrollersresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeDomainControllersRequest
+ *
+ * @brief  Implements DirectoryService DescribeDomainControllers requests.
+ *
+ * @see    DirectoryServiceClient::describeDomainControllers
+ */
+
+/**
+ * @brief  Constructs a new DescribeDomainControllersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDomainControllersResponse::DescribeDomainControllersResponse(
+
+/**
+ * @brief  Constructs a new DescribeDomainControllersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDomainControllersRequest::DescribeDomainControllersRequest(const DescribeDomainControllersRequest &other)
+    : DirectoryServiceRequest(new DescribeDomainControllersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDomainControllersRequest object.
+ */
+DescribeDomainControllersRequest::DescribeDomainControllersRequest()
+    : DirectoryServiceRequest(new DescribeDomainControllersRequestPrivate(DirectoryServiceRequest::DescribeDomainControllersAction, this))
+{
+
+}
+
+bool DescribeDomainControllersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDomainControllersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDomainControllersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeDomainControllersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDomainControllersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDomainControllersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDomainControllersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainControllersRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeDomainControllersRequest instance.
+ */
+DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeDomainControllersRequest * const q)
+    : DescribeDomainControllersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDomainControllersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDomainControllersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDomainControllersRequest instance.
+ */
+DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
+    const DescribeDomainControllersRequestPrivate &other, DescribeDomainControllersRequest * const q)
+    : DescribeDomainControllersPrivate(other, q)
+{
+
+}

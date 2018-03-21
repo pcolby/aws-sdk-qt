@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEJOBDEFINITIONSREQUEST_P_H
 #define QTAWS_DESCRIBEJOBDEFINITIONSREQUEST_P_H
 
+#include "batch_p.h"
+#include "describejobdefinitionsrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DescribeJobDefinitionsRequest;
+
+class QTAWS_EXPORT DescribeJobDefinitionsRequestPrivate : public BatchPrivate {
+
+public:
+    DescribeJobDefinitionsRequestPrivate(const Batch::Action action,
+                                   DescribeJobDefinitionsRequest * const q);
+    DescribeJobDefinitionsRequestPrivate(const DescribeJobDefinitionsRequestPrivate &other,
+                                   DescribeJobDefinitionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobDefinitionsRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

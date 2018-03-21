@@ -20,4 +20,29 @@
 #ifndef QTAWS_COMPLETEVAULTLOCKREQUEST_P_H
 #define QTAWS_COMPLETEVAULTLOCKREQUEST_P_H
 
+#include "glacier_p.h"
+#include "completevaultlockrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class CompleteVaultLockRequest;
+
+class QTAWS_EXPORT CompleteVaultLockRequestPrivate : public GlacierPrivate {
+
+public:
+    CompleteVaultLockRequestPrivate(const Glacier::Action action,
+                                   CompleteVaultLockRequest * const q);
+    CompleteVaultLockRequestPrivate(const CompleteVaultLockRequestPrivate &other,
+                                   CompleteVaultLockRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteVaultLockRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

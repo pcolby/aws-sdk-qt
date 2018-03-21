@@ -19,3 +19,107 @@
 
 #include "postcommentforcomparedcommitrequest.h"
 #include "postcommentforcomparedcommitrequest_p.h"
+#include "postcommentforcomparedcommitresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PostCommentForComparedCommitRequest
+ *
+ * @brief  Implements CodeCommit PostCommentForComparedCommit requests.
+ *
+ * @see    CodeCommitClient::postCommentForComparedCommit
+ */
+
+/**
+ * @brief  Constructs a new PostCommentForComparedCommitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostCommentForComparedCommitResponse::PostCommentForComparedCommitResponse(
+
+/**
+ * @brief  Constructs a new PostCommentForComparedCommitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PostCommentForComparedCommitRequest::PostCommentForComparedCommitRequest(const PostCommentForComparedCommitRequest &other)
+    : CodeCommitRequest(new PostCommentForComparedCommitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PostCommentForComparedCommitRequest object.
+ */
+PostCommentForComparedCommitRequest::PostCommentForComparedCommitRequest()
+    : CodeCommitRequest(new PostCommentForComparedCommitRequestPrivate(CodeCommitRequest::PostCommentForComparedCommitAction, this))
+{
+
+}
+
+bool PostCommentForComparedCommitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PostCommentForComparedCommitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PostCommentForComparedCommitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * PostCommentForComparedCommitRequest::response(QNetworkReply * const reply) const
+{
+    return new PostCommentForComparedCommitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PostCommentForComparedCommitRequestPrivate
+ *
+ * @brief  Private implementation for PostCommentForComparedCommitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentForComparedCommitRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public PostCommentForComparedCommitRequest instance.
+ */
+PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
+    const CodeCommitRequest::Action action, PostCommentForComparedCommitRequest * const q)
+    : PostCommentForComparedCommitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentForComparedCommitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PostCommentForComparedCommitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PostCommentForComparedCommitRequest instance.
+ */
+PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
+    const PostCommentForComparedCommitRequestPrivate &other, PostCommentForComparedCommitRequest * const q)
+    : PostCommentForComparedCommitPrivate(other, q)
+{
+
+}

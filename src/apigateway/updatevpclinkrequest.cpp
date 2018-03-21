@@ -19,3 +19,107 @@
 
 #include "updatevpclinkrequest.h"
 #include "updatevpclinkrequest_p.h"
+#include "updatevpclinkresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateVpcLinkRequest
+ *
+ * @brief  Implements APIGateway UpdateVpcLink requests.
+ *
+ * @see    APIGatewayClient::updateVpcLink
+ */
+
+/**
+ * @brief  Constructs a new UpdateVpcLinkResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateVpcLinkResponse::UpdateVpcLinkResponse(
+
+/**
+ * @brief  Constructs a new UpdateVpcLinkRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateVpcLinkRequest::UpdateVpcLinkRequest(const UpdateVpcLinkRequest &other)
+    : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateVpcLinkRequest object.
+ */
+UpdateVpcLinkRequest::UpdateVpcLinkRequest()
+    : APIGatewayRequest(new UpdateVpcLinkRequestPrivate(APIGatewayRequest::UpdateVpcLinkAction, this))
+{
+
+}
+
+bool UpdateVpcLinkRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateVpcLinkResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateVpcLinkResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateVpcLinkResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateVpcLinkRequestPrivate
+ *
+ * @brief  Private implementation for UpdateVpcLinkRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateVpcLinkRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateVpcLinkRequest instance.
+ */
+UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateVpcLinkRequest * const q)
+    : UpdateVpcLinkPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateVpcLinkRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateVpcLinkRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateVpcLinkRequest instance.
+ */
+UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
+    const UpdateVpcLinkRequestPrivate &other, UpdateVpcLinkRequest * const q)
+    : UpdateVpcLinkPrivate(other, q)
+{
+
+}

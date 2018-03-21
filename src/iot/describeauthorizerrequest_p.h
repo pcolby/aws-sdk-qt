@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAUTHORIZERREQUEST_P_H
 #define QTAWS_DESCRIBEAUTHORIZERREQUEST_P_H
 
+#include "iot_p.h"
+#include "describeauthorizerrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeAuthorizerRequest;
+
+class QTAWS_EXPORT DescribeAuthorizerRequestPrivate : public IoTPrivate {
+
+public:
+    DescribeAuthorizerRequestPrivate(const IoT::Action action,
+                                   DescribeAuthorizerRequest * const q);
+    DescribeAuthorizerRequestPrivate(const DescribeAuthorizerRequestPrivate &other,
+                                   DescribeAuthorizerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAuthorizerRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

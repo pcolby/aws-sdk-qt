@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYCLUSTERSUBNETGROUPREQUEST_H
 #define QTAWS_MODIFYCLUSTERSUBNETGROUPREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyClusterSubnetGroupRequest : public RedshiftRequest {
+
+public:
+    ModifyClusterSubnetGroupRequest(const ModifyClusterSubnetGroupRequest &other);
+    ModifyClusterSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyClusterSubnetGroupRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

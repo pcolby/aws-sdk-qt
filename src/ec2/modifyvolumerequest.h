@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYVOLUMEREQUEST_H
 #define QTAWS_MODIFYVOLUMEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVolumeRequestPrivate;
+
+class QTAWS_EXPORT ModifyVolumeRequest : public EC2Request {
+
+public:
+    ModifyVolumeRequest(const ModifyVolumeRequest &other);
+    ModifyVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVolumeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

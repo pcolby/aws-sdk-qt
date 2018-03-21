@@ -19,3 +19,107 @@
 
 #include "listtagsforcertificaterequest.h"
 #include "listtagsforcertificaterequest_p.h"
+#include "listtagsforcertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  ListTagsForCertificateRequest
+ *
+ * @brief  Implements ACM ListTagsForCertificate requests.
+ *
+ * @see    ACMClient::listTagsForCertificate
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForCertificateResponse::ListTagsForCertificateResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForCertificateRequest::ListTagsForCertificateRequest(const ListTagsForCertificateRequest &other)
+    : ACMRequest(new ListTagsForCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForCertificateRequest object.
+ */
+ListTagsForCertificateRequest::ListTagsForCertificateRequest()
+    : ACMRequest(new ListTagsForCertificateRequestPrivate(ACMRequest::ListTagsForCertificateAction, this))
+{
+
+}
+
+bool ListTagsForCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForCertificateRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public ListTagsForCertificateRequest instance.
+ */
+ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
+    const ACMRequest::Action action, ListTagsForCertificateRequest * const q)
+    : ListTagsForCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForCertificateRequest instance.
+ */
+ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
+    const ListTagsForCertificateRequestPrivate &other, ListTagsForCertificateRequest * const q)
+    : ListTagsForCertificatePrivate(other, q)
+{
+
+}

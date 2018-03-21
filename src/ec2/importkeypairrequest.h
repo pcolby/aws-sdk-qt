@@ -20,4 +20,32 @@
 #ifndef QTAWS_IMPORTKEYPAIRREQUEST_H
 #define QTAWS_IMPORTKEYPAIRREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportKeyPairRequestPrivate;
+
+class QTAWS_EXPORT ImportKeyPairRequest : public EC2Request {
+
+public:
+    ImportKeyPairRequest(const ImportKeyPairRequest &other);
+    ImportKeyPairRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ImportKeyPairRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

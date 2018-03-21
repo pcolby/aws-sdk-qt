@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESTOREFROMCLUSTERSNAPSHOTREQUEST_P_H
 #define QTAWS_RESTOREFROMCLUSTERSNAPSHOTREQUEST_P_H
 
+#include "redshift_p.h"
+#include "restorefromclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RestoreFromClusterSnapshotRequest;
+
+class QTAWS_EXPORT RestoreFromClusterSnapshotRequestPrivate : public RedshiftPrivate {
+
+public:
+    RestoreFromClusterSnapshotRequestPrivate(const Redshift::Action action,
+                                   RestoreFromClusterSnapshotRequest * const q);
+    RestoreFromClusterSnapshotRequestPrivate(const RestoreFromClusterSnapshotRequestPrivate &other,
+                                   RestoreFromClusterSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreFromClusterSnapshotRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

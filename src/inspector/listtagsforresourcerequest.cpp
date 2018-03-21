@@ -19,3 +19,107 @@
 
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourcerequest_p.h"
+#include "listtagsforresourceresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListTagsForResourceRequest
+ *
+ * @brief  Implements Inspector ListTagsForResource requests.
+ *
+ * @see    InspectorClient::listTagsForResource
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForResourceResponse::ListTagsForResourceResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
+    : InspectorRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForResourceRequest object.
+ */
+ListTagsForResourceRequest::ListTagsForResourceRequest()
+    : InspectorRequest(new ListTagsForResourceRequestPrivate(InspectorRequest::ListTagsForResourceAction, this))
+{
+
+}
+
+bool ListTagsForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForResourceRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ */
+ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
+    const InspectorRequest::Action action, ListTagsForResourceRequest * const q)
+    : ListTagsForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
+ */
+ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
+    const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
+    : ListTagsForResourcePrivate(other, q)
+{
+
+}

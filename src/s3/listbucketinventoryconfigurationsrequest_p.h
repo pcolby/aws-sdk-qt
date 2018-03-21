@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTBUCKETINVENTORYCONFIGURATIONSREQUEST_P_H
 
+#include "s3_p.h"
+#include "listbucketinventoryconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListBucketInventoryConfigurationsRequest;
+
+class QTAWS_EXPORT ListBucketInventoryConfigurationsRequestPrivate : public S3Private {
+
+public:
+    ListBucketInventoryConfigurationsRequestPrivate(const S3::Action action,
+                                   ListBucketInventoryConfigurationsRequest * const q);
+    ListBucketInventoryConfigurationsRequestPrivate(const ListBucketInventoryConfigurationsRequestPrivate &other,
+                                   ListBucketInventoryConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBucketInventoryConfigurationsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_POLLFORACTIVITYTASKREQUEST_P_H
 #define QTAWS_POLLFORACTIVITYTASKREQUEST_P_H
 
+#include "swf_p.h"
+#include "pollforactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class PollForActivityTaskRequest;
+
+class QTAWS_EXPORT PollForActivityTaskRequestPrivate : public SWFPrivate {
+
+public:
+    PollForActivityTaskRequestPrivate(const SWF::Action action,
+                                   PollForActivityTaskRequest * const q);
+    PollForActivityTaskRequestPrivate(const PollForActivityTaskRequestPrivate &other,
+                                   PollForActivityTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PollForActivityTaskRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

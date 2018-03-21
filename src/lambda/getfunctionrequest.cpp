@@ -19,3 +19,107 @@
 
 #include "getfunctionrequest.h"
 #include "getfunctionrequest_p.h"
+#include "getfunctionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetFunctionRequest
+ *
+ * @brief  Implements Lambda GetFunction requests.
+ *
+ * @see    LambdaClient::getFunction
+ */
+
+/**
+ * @brief  Constructs a new GetFunctionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionResponse::GetFunctionResponse(
+
+/**
+ * @brief  Constructs a new GetFunctionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetFunctionRequest::GetFunctionRequest(const GetFunctionRequest &other)
+    : LambdaRequest(new GetFunctionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetFunctionRequest object.
+ */
+GetFunctionRequest::GetFunctionRequest()
+    : LambdaRequest(new GetFunctionRequestPrivate(LambdaRequest::GetFunctionAction, this))
+{
+
+}
+
+bool GetFunctionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetFunctionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetFunctionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * GetFunctionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetFunctionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionRequestPrivate
+ *
+ * @brief  Private implementation for GetFunctionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public GetFunctionRequest instance.
+ */
+GetFunctionRequestPrivate::GetFunctionRequestPrivate(
+    const LambdaRequest::Action action, GetFunctionRequest * const q)
+    : GetFunctionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetFunctionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetFunctionRequest instance.
+ */
+GetFunctionRequestPrivate::GetFunctionRequestPrivate(
+    const GetFunctionRequestPrivate &other, GetFunctionRequest * const q)
+    : GetFunctionPrivate(other, q)
+{
+
+}

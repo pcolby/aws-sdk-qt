@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEUSERREQUEST_P_H
 #define QTAWS_DELETEUSERREQUEST_P_H
 
+#include "iam_p.h"
+#include "deleteuserrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteUserRequest;
+
+class QTAWS_EXPORT DeleteUserRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteUserRequestPrivate(const IAM::Action action,
+                                   DeleteUserRequest * const q);
+    DeleteUserRequestPrivate(const DeleteUserRequestPrivate &other,
+                                   DeleteUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

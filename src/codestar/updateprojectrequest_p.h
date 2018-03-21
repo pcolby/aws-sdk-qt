@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
+#include "codestar_p.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UpdateProjectRequest;
+
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public CodeStarPrivate {
+
+public:
+    UpdateProjectRequestPrivate(const CodeStar::Action action,
+                                   UpdateProjectRequest * const q);
+    UpdateProjectRequestPrivate(const UpdateProjectRequestPrivate &other,
+                                   UpdateProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATENETWORKPROFILEREQUEST_H
 #define QTAWS_UPDATENETWORKPROFILEREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class UpdateNetworkProfileRequestPrivate;
+
+class QTAWS_EXPORT UpdateNetworkProfileRequest : public DeviceFarmRequest {
+
+public:
+    UpdateNetworkProfileRequest(const UpdateNetworkProfileRequest &other);
+    UpdateNetworkProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNetworkProfileRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

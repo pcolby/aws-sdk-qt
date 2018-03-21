@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSUMEROLEWITHWEBIDENTITYREQUEST_P_H
 #define QTAWS_ASSUMEROLEWITHWEBIDENTITYREQUEST_P_H
 
+#include "sts_p.h"
+#include "assumerolewithwebidentityrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleWithWebIdentityRequest;
+
+class QTAWS_EXPORT AssumeRoleWithWebIdentityRequestPrivate : public STSPrivate {
+
+public:
+    AssumeRoleWithWebIdentityRequestPrivate(const STS::Action action,
+                                   AssumeRoleWithWebIdentityRequest * const q);
+    AssumeRoleWithWebIdentityRequestPrivate(const AssumeRoleWithWebIdentityRequestPrivate &other,
+                                   AssumeRoleWithWebIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssumeRoleWithWebIdentityRequest)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

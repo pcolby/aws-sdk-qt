@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPIPELINEREQUEST_H
 #define QTAWS_DELETEPIPELINEREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class DeletePipelineRequestPrivate;
+
+class QTAWS_EXPORT DeletePipelineRequest : public DataPipelineRequest {
+
+public:
+    DeletePipelineRequest(const DeletePipelineRequest &other);
+    DeletePipelineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePipelineRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

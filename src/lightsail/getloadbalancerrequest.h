@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETLOADBALANCERREQUEST_H
 #define QTAWS_GETLOADBALANCERREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetLoadBalancerRequestPrivate;
+
+class QTAWS_EXPORT GetLoadBalancerRequest : public LightsailRequest {
+
+public:
+    GetLoadBalancerRequest(const GetLoadBalancerRequest &other);
+    GetLoadBalancerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetLoadBalancerRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "testauthorizationrequest.h"
 #include "testauthorizationrequest_p.h"
+#include "testauthorizationresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  TestAuthorizationRequest
+ *
+ * @brief  Implements IoT TestAuthorization requests.
+ *
+ * @see    IoTClient::testAuthorization
+ */
+
+/**
+ * @brief  Constructs a new TestAuthorizationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestAuthorizationResponse::TestAuthorizationResponse(
+
+/**
+ * @brief  Constructs a new TestAuthorizationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TestAuthorizationRequest::TestAuthorizationRequest(const TestAuthorizationRequest &other)
+    : IoTRequest(new TestAuthorizationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TestAuthorizationRequest object.
+ */
+TestAuthorizationRequest::TestAuthorizationRequest()
+    : IoTRequest(new TestAuthorizationRequestPrivate(IoTRequest::TestAuthorizationAction, this))
+{
+
+}
+
+bool TestAuthorizationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TestAuthorizationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TestAuthorizationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkReply * const reply) const
+{
+    return new TestAuthorizationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TestAuthorizationRequestPrivate
+ *
+ * @brief  Private implementation for TestAuthorizationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestAuthorizationRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public TestAuthorizationRequest instance.
+ */
+TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
+    const IoTRequest::Action action, TestAuthorizationRequest * const q)
+    : TestAuthorizationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestAuthorizationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TestAuthorizationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TestAuthorizationRequest instance.
+ */
+TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
+    const TestAuthorizationRequestPrivate &other, TestAuthorizationRequest * const q)
+    : TestAuthorizationPrivate(other, q)
+{
+
+}

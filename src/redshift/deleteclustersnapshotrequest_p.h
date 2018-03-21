@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECLUSTERSNAPSHOTREQUEST_P_H
 #define QTAWS_DELETECLUSTERSNAPSHOTREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deleteclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterSnapshotRequest;
+
+class QTAWS_EXPORT DeleteClusterSnapshotRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteClusterSnapshotRequestPrivate(const Redshift::Action action,
+                                   DeleteClusterSnapshotRequest * const q);
+    DeleteClusterSnapshotRequestPrivate(const DeleteClusterSnapshotRequestPrivate &other,
+                                   DeleteClusterSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterSnapshotRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTINTENTREQUEST_P_H
 #define QTAWS_PUTINTENTREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "putintentrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class PutIntentRequest;
+
+class QTAWS_EXPORT PutIntentRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    PutIntentRequestPrivate(const LexModelBuildingService::Action action,
+                                   PutIntentRequest * const q);
+    PutIntentRequestPrivate(const PutIntentRequestPrivate &other,
+                                   PutIntentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutIntentRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

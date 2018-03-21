@@ -19,3 +19,107 @@
 
 #include "updatedomaincontactrequest.h"
 #include "updatedomaincontactrequest_p.h"
+#include "updatedomaincontactresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  UpdateDomainContactRequest
+ *
+ * @brief  Implements Route53Domains UpdateDomainContact requests.
+ *
+ * @see    Route53DomainsClient::updateDomainContact
+ */
+
+/**
+ * @brief  Constructs a new UpdateDomainContactResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDomainContactResponse::UpdateDomainContactResponse(
+
+/**
+ * @brief  Constructs a new UpdateDomainContactRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDomainContactRequest::UpdateDomainContactRequest(const UpdateDomainContactRequest &other)
+    : Route53DomainsRequest(new UpdateDomainContactRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDomainContactRequest object.
+ */
+UpdateDomainContactRequest::UpdateDomainContactRequest()
+    : Route53DomainsRequest(new UpdateDomainContactRequestPrivate(Route53DomainsRequest::UpdateDomainContactAction, this))
+{
+
+}
+
+bool UpdateDomainContactRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDomainContactResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDomainContactResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * UpdateDomainContactRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDomainContactResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDomainContactRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDomainContactRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainContactRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public UpdateDomainContactRequest instance.
+ */
+UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
+    const Route53DomainsRequest::Action action, UpdateDomainContactRequest * const q)
+    : UpdateDomainContactPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDomainContactRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDomainContactRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDomainContactRequest instance.
+ */
+UpdateDomainContactRequestPrivate::UpdateDomainContactRequestPrivate(
+    const UpdateDomainContactRequestPrivate &other, UpdateDomainContactRequest * const q)
+    : UpdateDomainContactPrivate(other, q)
+{
+
+}

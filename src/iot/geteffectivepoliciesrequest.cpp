@@ -19,3 +19,107 @@
 
 #include "geteffectivepoliciesrequest.h"
 #include "geteffectivepoliciesrequest_p.h"
+#include "geteffectivepoliciesresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetEffectivePoliciesRequest
+ *
+ * @brief  Implements IoT GetEffectivePolicies requests.
+ *
+ * @see    IoTClient::getEffectivePolicies
+ */
+
+/**
+ * @brief  Constructs a new GetEffectivePoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEffectivePoliciesResponse::GetEffectivePoliciesResponse(
+
+/**
+ * @brief  Constructs a new GetEffectivePoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetEffectivePoliciesRequest::GetEffectivePoliciesRequest(const GetEffectivePoliciesRequest &other)
+    : IoTRequest(new GetEffectivePoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetEffectivePoliciesRequest object.
+ */
+GetEffectivePoliciesRequest::GetEffectivePoliciesRequest()
+    : IoTRequest(new GetEffectivePoliciesRequestPrivate(IoTRequest::GetEffectivePoliciesAction, this))
+{
+
+}
+
+bool GetEffectivePoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetEffectivePoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetEffectivePoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * GetEffectivePoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetEffectivePoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEffectivePoliciesRequestPrivate
+ *
+ * @brief  Private implementation for GetEffectivePoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEffectivePoliciesRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public GetEffectivePoliciesRequest instance.
+ */
+GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
+    const IoTRequest::Action action, GetEffectivePoliciesRequest * const q)
+    : GetEffectivePoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEffectivePoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetEffectivePoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetEffectivePoliciesRequest instance.
+ */
+GetEffectivePoliciesRequestPrivate::GetEffectivePoliciesRequestPrivate(
+    const GetEffectivePoliciesRequestPrivate &other, GetEffectivePoliciesRequest * const q)
+    : GetEffectivePoliciesPrivate(other, q)
+{
+
+}

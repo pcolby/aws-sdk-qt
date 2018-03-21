@@ -19,3 +19,107 @@
 
 #include "gettemplaterequest.h"
 #include "gettemplaterequest_p.h"
+#include "gettemplateresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetTemplateRequest
+ *
+ * @brief  Implements SES GetTemplate requests.
+ *
+ * @see    SESClient::getTemplate
+ */
+
+/**
+ * @brief  Constructs a new GetTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTemplateResponse::GetTemplateResponse(
+
+/**
+ * @brief  Constructs a new GetTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTemplateRequest::GetTemplateRequest(const GetTemplateRequest &other)
+    : SESRequest(new GetTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTemplateRequest object.
+ */
+GetTemplateRequest::GetTemplateRequest()
+    : SESRequest(new GetTemplateRequestPrivate(SESRequest::GetTemplateAction, this))
+{
+
+}
+
+bool GetTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTemplateRequestPrivate
+ *
+ * @brief  Private implementation for GetTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTemplateRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetTemplateRequest instance.
+ */
+GetTemplateRequestPrivate::GetTemplateRequestPrivate(
+    const SESRequest::Action action, GetTemplateRequest * const q)
+    : GetTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTemplateRequest instance.
+ */
+GetTemplateRequestPrivate::GetTemplateRequestPrivate(
+    const GetTemplateRequestPrivate &other, GetTemplateRequest * const q)
+    : GetTemplatePrivate(other, q)
+{
+
+}

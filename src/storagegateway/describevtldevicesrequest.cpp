@@ -19,3 +19,107 @@
 
 #include "describevtldevicesrequest.h"
 #include "describevtldevicesrequest_p.h"
+#include "describevtldevicesresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeVTLDevicesRequest
+ *
+ * @brief  Implements StorageGateway DescribeVTLDevices requests.
+ *
+ * @see    StorageGatewayClient::describeVTLDevices
+ */
+
+/**
+ * @brief  Constructs a new DescribeVTLDevicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
+
+/**
+ * @brief  Constructs a new DescribeVTLDevicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVTLDevicesRequest::DescribeVTLDevicesRequest(const DescribeVTLDevicesRequest &other)
+    : StorageGatewayRequest(new DescribeVTLDevicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVTLDevicesRequest object.
+ */
+DescribeVTLDevicesRequest::DescribeVTLDevicesRequest()
+    : StorageGatewayRequest(new DescribeVTLDevicesRequestPrivate(StorageGatewayRequest::DescribeVTLDevicesAction, this))
+{
+
+}
+
+bool DescribeVTLDevicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVTLDevicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVTLDevicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVTLDevicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVTLDevicesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVTLDevicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVTLDevicesRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeVTLDevicesRequest instance.
+ */
+DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeVTLDevicesRequest * const q)
+    : DescribeVTLDevicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVTLDevicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVTLDevicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVTLDevicesRequest instance.
+ */
+DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
+    const DescribeVTLDevicesRequestPrivate &other, DescribeVTLDevicesRequest * const q)
+    : DescribeVTLDevicesPrivate(other, q)
+{
+
+}

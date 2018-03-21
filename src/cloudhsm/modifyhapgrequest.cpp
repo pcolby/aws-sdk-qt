@@ -19,3 +19,107 @@
 
 #include "modifyhapgrequest.h"
 #include "modifyhapgrequest_p.h"
+#include "modifyhapgresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  ModifyHapgRequest
+ *
+ * @brief  Implements CloudHSM ModifyHapg requests.
+ *
+ * @see    CloudHSMClient::modifyHapg
+ */
+
+/**
+ * @brief  Constructs a new ModifyHapgResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyHapgResponse::ModifyHapgResponse(
+
+/**
+ * @brief  Constructs a new ModifyHapgRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyHapgRequest::ModifyHapgRequest(const ModifyHapgRequest &other)
+    : CloudHSMRequest(new ModifyHapgRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyHapgRequest object.
+ */
+ModifyHapgRequest::ModifyHapgRequest()
+    : CloudHSMRequest(new ModifyHapgRequestPrivate(CloudHSMRequest::ModifyHapgAction, this))
+{
+
+}
+
+bool ModifyHapgRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyHapgResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyHapgResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyHapgResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyHapgRequestPrivate
+ *
+ * @brief  Private implementation for ModifyHapgRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyHapgRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public ModifyHapgRequest instance.
+ */
+ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
+    const CloudHSMRequest::Action action, ModifyHapgRequest * const q)
+    : ModifyHapgPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyHapgRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyHapgRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyHapgRequest instance.
+ */
+ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
+    const ModifyHapgRequestPrivate &other, ModifyHapgRequest * const q)
+    : ModifyHapgPrivate(other, q)
+{
+
+}

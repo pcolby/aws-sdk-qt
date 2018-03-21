@@ -19,3 +19,107 @@
 
 #include "createplatformapplicationrequest.h"
 #include "createplatformapplicationrequest_p.h"
+#include "createplatformapplicationresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CreatePlatformApplicationRequest
+ *
+ * @brief  Implements SNS CreatePlatformApplication requests.
+ *
+ * @see    SNSClient::createPlatformApplication
+ */
+
+/**
+ * @brief  Constructs a new CreatePlatformApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlatformApplicationResponse::CreatePlatformApplicationResponse(
+
+/**
+ * @brief  Constructs a new CreatePlatformApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePlatformApplicationRequest::CreatePlatformApplicationRequest(const CreatePlatformApplicationRequest &other)
+    : SNSRequest(new CreatePlatformApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePlatformApplicationRequest object.
+ */
+CreatePlatformApplicationRequest::CreatePlatformApplicationRequest()
+    : SNSRequest(new CreatePlatformApplicationRequestPrivate(SNSRequest::CreatePlatformApplicationAction, this))
+{
+
+}
+
+bool CreatePlatformApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePlatformApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePlatformApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * CreatePlatformApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePlatformApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlatformApplicationRequestPrivate
+ *
+ * @brief  Private implementation for CreatePlatformApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformApplicationRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public CreatePlatformApplicationRequest instance.
+ */
+CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
+    const SNSRequest::Action action, CreatePlatformApplicationRequest * const q)
+    : CreatePlatformApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePlatformApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePlatformApplicationRequest instance.
+ */
+CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
+    const CreatePlatformApplicationRequestPrivate &other, CreatePlatformApplicationRequest * const q)
+    : CreatePlatformApplicationPrivate(other, q)
+{
+
+}

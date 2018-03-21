@@ -19,3 +19,107 @@
 
 #include "respondactivitytaskfailedrequest.h"
 #include "respondactivitytaskfailedrequest_p.h"
+#include "respondactivitytaskfailedresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskFailedRequest
+ *
+ * @brief  Implements SWF RespondActivityTaskFailed requests.
+ *
+ * @see    SWFClient::respondActivityTaskFailed
+ */
+
+/**
+ * @brief  Constructs a new RespondActivityTaskFailedResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
+
+/**
+ * @brief  Constructs a new RespondActivityTaskFailedRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest(const RespondActivityTaskFailedRequest &other)
+    : SWFRequest(new RespondActivityTaskFailedRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RespondActivityTaskFailedRequest object.
+ */
+RespondActivityTaskFailedRequest::RespondActivityTaskFailedRequest()
+    : SWFRequest(new RespondActivityTaskFailedRequestPrivate(SWFRequest::RespondActivityTaskFailedAction, this))
+{
+
+}
+
+bool RespondActivityTaskFailedRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RespondActivityTaskFailedResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RespondActivityTaskFailedResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QNetworkReply * const reply) const
+{
+    return new RespondActivityTaskFailedResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskFailedRequestPrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskFailedRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskFailedRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public RespondActivityTaskFailedRequest instance.
+ */
+RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
+    const SWFRequest::Action action, RespondActivityTaskFailedRequest * const q)
+    : RespondActivityTaskFailedPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskFailedRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RespondActivityTaskFailedRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RespondActivityTaskFailedRequest instance.
+ */
+RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
+    const RespondActivityTaskFailedRequestPrivate &other, RespondActivityTaskFailedRequest * const q)
+    : RespondActivityTaskFailedPrivate(other, q)
+{
+
+}

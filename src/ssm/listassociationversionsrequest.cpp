@@ -19,3 +19,107 @@
 
 #include "listassociationversionsrequest.h"
 #include "listassociationversionsrequest_p.h"
+#include "listassociationversionsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListAssociationVersionsRequest
+ *
+ * @brief  Implements SSM ListAssociationVersions requests.
+ *
+ * @see    SSMClient::listAssociationVersions
+ */
+
+/**
+ * @brief  Constructs a new ListAssociationVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssociationVersionsResponse::ListAssociationVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListAssociationVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAssociationVersionsRequest::ListAssociationVersionsRequest(const ListAssociationVersionsRequest &other)
+    : SSMRequest(new ListAssociationVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAssociationVersionsRequest object.
+ */
+ListAssociationVersionsRequest::ListAssociationVersionsRequest()
+    : SSMRequest(new ListAssociationVersionsRequestPrivate(SSMRequest::ListAssociationVersionsAction, this))
+{
+
+}
+
+bool ListAssociationVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAssociationVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAssociationVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListAssociationVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAssociationVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssociationVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListAssociationVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssociationVersionsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListAssociationVersionsRequest instance.
+ */
+ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
+    const SSMRequest::Action action, ListAssociationVersionsRequest * const q)
+    : ListAssociationVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssociationVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAssociationVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAssociationVersionsRequest instance.
+ */
+ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
+    const ListAssociationVersionsRequestPrivate &other, ListAssociationVersionsRequest * const q)
+    : ListAssociationVersionsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 
+#include "ecs_p.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeClustersRequest;
+
+class QTAWS_EXPORT DescribeClustersRequestPrivate : public ECSPrivate {
+
+public:
+    DescribeClustersRequestPrivate(const ECS::Action action,
+                                   DescribeClustersRequest * const q);
+    DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
+                                   DescribeClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClustersRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "modifyeventsubscriptionrequest.h"
 #include "modifyeventsubscriptionrequest_p.h"
+#include "modifyeventsubscriptionresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ModifyEventSubscriptionRequest
+ *
+ * @brief  Implements DatabaseMigrationService ModifyEventSubscription requests.
+ *
+ * @see    DatabaseMigrationServiceClient::modifyEventSubscription
+ */
+
+/**
+ * @brief  Constructs a new ModifyEventSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new ModifyEventSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest(const ModifyEventSubscriptionRequest &other)
+    : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyEventSubscriptionRequest object.
+ */
+ModifyEventSubscriptionRequest::ModifyEventSubscriptionRequest()
+    : DatabaseMigrationServiceRequest(new ModifyEventSubscriptionRequestPrivate(DatabaseMigrationServiceRequest::ModifyEventSubscriptionAction, this))
+{
+
+}
+
+bool ModifyEventSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyEventSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyEventSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * ModifyEventSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyEventSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyEventSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for ModifyEventSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public ModifyEventSubscriptionRequest instance.
+ */
+ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, ModifyEventSubscriptionRequest * const q)
+    : ModifyEventSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyEventSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyEventSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyEventSubscriptionRequest instance.
+ */
+ModifyEventSubscriptionRequestPrivate::ModifyEventSubscriptionRequestPrivate(
+    const ModifyEventSubscriptionRequestPrivate &other, ModifyEventSubscriptionRequest * const q)
+    : ModifyEventSubscriptionPrivate(other, q)
+{
+
+}

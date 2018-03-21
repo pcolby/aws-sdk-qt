@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_P_H
 #define QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_P_H
 
+#include "mturk_p.h"
+#include "createadditionalassignmentsforhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateAdditionalAssignmentsForHITRequest;
+
+class QTAWS_EXPORT CreateAdditionalAssignmentsForHITRequestPrivate : public MTurkPrivate {
+
+public:
+    CreateAdditionalAssignmentsForHITRequestPrivate(const MTurk::Action action,
+                                   CreateAdditionalAssignmentsForHITRequest * const q);
+    CreateAdditionalAssignmentsForHITRequestPrivate(const CreateAdditionalAssignmentsForHITRequestPrivate &other,
+                                   CreateAdditionalAssignmentsForHITRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAdditionalAssignmentsForHITRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

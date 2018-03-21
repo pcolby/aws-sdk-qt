@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESAMLPROVIDERREQUEST_H
 #define QTAWS_CREATESAMLPROVIDERREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateSAMLProviderRequestPrivate;
+
+class QTAWS_EXPORT CreateSAMLProviderRequest : public IAMRequest {
+
+public:
+    CreateSAMLProviderRequest(const CreateSAMLProviderRequest &other);
+    CreateSAMLProviderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSAMLProviderRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

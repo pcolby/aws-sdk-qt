@@ -19,3 +19,107 @@
 
 #include "createdeploymentrequest.h"
 #include "createdeploymentrequest_p.h"
+#include "createdeploymentresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateDeploymentRequest
+ *
+ * @brief  Implements APIGateway CreateDeployment requests.
+ *
+ * @see    APIGatewayClient::createDeployment
+ */
+
+/**
+ * @brief  Constructs a new CreateDeploymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeploymentResponse::CreateDeploymentResponse(
+
+/**
+ * @brief  Constructs a new CreateDeploymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDeploymentRequest::CreateDeploymentRequest(const CreateDeploymentRequest &other)
+    : APIGatewayRequest(new CreateDeploymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDeploymentRequest object.
+ */
+CreateDeploymentRequest::CreateDeploymentRequest()
+    : APIGatewayRequest(new CreateDeploymentRequestPrivate(APIGatewayRequest::CreateDeploymentAction, this))
+{
+
+}
+
+bool CreateDeploymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDeploymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDeploymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDeploymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeploymentRequestPrivate
+ *
+ * @brief  Private implementation for CreateDeploymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public CreateDeploymentRequest instance.
+ */
+CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
+    const APIGatewayRequest::Action action, CreateDeploymentRequest * const q)
+    : CreateDeploymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDeploymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDeploymentRequest instance.
+ */
+CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
+    const CreateDeploymentRequestPrivate &other, CreateDeploymentRequest * const q)
+    : CreateDeploymentPrivate(other, q)
+{
+
+}

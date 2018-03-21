@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDOMAINREQUEST_P_H
 #define QTAWS_CREATEDOMAINREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "createdomainrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class CreateDomainRequest;
+
+class QTAWS_EXPORT CreateDomainRequestPrivate : public SimpleDBPrivate {
+
+public:
+    CreateDomainRequestPrivate(const SimpleDB::Action action,
+                                   CreateDomainRequest * const q);
+    CreateDomainRequestPrivate(const CreateDomainRequestPrivate &other,
+                                   CreateDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDomainRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

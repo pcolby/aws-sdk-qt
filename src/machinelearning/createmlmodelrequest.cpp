@@ -19,3 +19,107 @@
 
 #include "createmlmodelrequest.h"
 #include "createmlmodelrequest_p.h"
+#include "createmlmodelresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateMLModelRequest
+ *
+ * @brief  Implements MachineLearning CreateMLModel requests.
+ *
+ * @see    MachineLearningClient::createMLModel
+ */
+
+/**
+ * @brief  Constructs a new CreateMLModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMLModelResponse::CreateMLModelResponse(
+
+/**
+ * @brief  Constructs a new CreateMLModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateMLModelRequest::CreateMLModelRequest(const CreateMLModelRequest &other)
+    : MachineLearningRequest(new CreateMLModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateMLModelRequest object.
+ */
+CreateMLModelRequest::CreateMLModelRequest()
+    : MachineLearningRequest(new CreateMLModelRequestPrivate(MachineLearningRequest::CreateMLModelAction, this))
+{
+
+}
+
+bool CreateMLModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateMLModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateMLModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * CreateMLModelRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateMLModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMLModelRequestPrivate
+ *
+ * @brief  Private implementation for CreateMLModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMLModelRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public CreateMLModelRequest instance.
+ */
+CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
+    const MachineLearningRequest::Action action, CreateMLModelRequest * const q)
+    : CreateMLModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMLModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateMLModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateMLModelRequest instance.
+ */
+CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
+    const CreateMLModelRequestPrivate &other, CreateMLModelRequest * const q)
+    : CreateMLModelPrivate(other, q)
+{
+
+}

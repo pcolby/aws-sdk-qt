@@ -19,3 +19,107 @@
 
 #include "getapplicationrequest.h"
 #include "getapplicationrequest_p.h"
+#include "getapplicationresponse.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  GetApplicationRequest
+ *
+ * @brief  Implements ServerlessApplicationRepository GetApplication requests.
+ *
+ * @see    ServerlessApplicationRepositoryClient::getApplication
+ */
+
+/**
+ * @brief  Constructs a new GetApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationResponse::GetApplicationResponse(
+
+/**
+ * @brief  Constructs a new GetApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
+    : ServerlessApplicationRepositoryRequest(new GetApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetApplicationRequest object.
+ */
+GetApplicationRequest::GetApplicationRequest()
+    : ServerlessApplicationRepositoryRequest(new GetApplicationRequestPrivate(ServerlessApplicationRepositoryRequest::GetApplicationAction, this))
+{
+
+}
+
+bool GetApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServerlessApplicationRepositoryClient::send
+ */
+AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationRequestPrivate
+ *
+ * @brief  Private implementation for GetApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationRequestPrivate object.
+ *
+ * @param  action  ServerlessApplicationRepository action being performed.
+ * @param  q       Pointer to this object's public GetApplicationRequest instance.
+ */
+GetApplicationRequestPrivate::GetApplicationRequestPrivate(
+    const ServerlessApplicationRepositoryRequest::Action action, GetApplicationRequest * const q)
+    : GetApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetApplicationRequest instance.
+ */
+GetApplicationRequestPrivate::GetApplicationRequestPrivate(
+    const GetApplicationRequestPrivate &other, GetApplicationRequest * const q)
+    : GetApplicationPrivate(other, q)
+{
+
+}

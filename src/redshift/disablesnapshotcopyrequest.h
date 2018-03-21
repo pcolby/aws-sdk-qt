@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLESNAPSHOTCOPYREQUEST_H
 #define QTAWS_DISABLESNAPSHOTCOPYREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DisableSnapshotCopyRequestPrivate;
+
+class QTAWS_EXPORT DisableSnapshotCopyRequest : public RedshiftRequest {
+
+public:
+    DisableSnapshotCopyRequest(const DisableSnapshotCopyRequest &other);
+    DisableSnapshotCopyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableSnapshotCopyRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

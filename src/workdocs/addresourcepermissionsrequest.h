@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDRESOURCEPERMISSIONSREQUEST_H
 #define QTAWS_ADDRESOURCEPERMISSIONSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class AddResourcePermissionsRequestPrivate;
+
+class QTAWS_EXPORT AddResourcePermissionsRequest : public WorkDocsRequest {
+
+public:
+    AddResourcePermissionsRequest(const AddResourcePermissionsRequest &other);
+    AddResourcePermissionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddResourcePermissionsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

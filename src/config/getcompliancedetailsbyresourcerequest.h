@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYRESOURCEREQUEST_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYRESOURCEREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetComplianceDetailsByResourceRequestPrivate;
+
+class QTAWS_EXPORT GetComplianceDetailsByResourceRequest : public ConfigServiceRequest {
+
+public:
+    GetComplianceDetailsByResourceRequest(const GetComplianceDetailsByResourceRequest &other);
+    GetComplianceDetailsByResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetComplianceDetailsByResourceRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

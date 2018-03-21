@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeTagsRequest;
+
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public DirectConnectPrivate {
+
+public:
+    DescribeTagsRequestPrivate(const DirectConnect::Action action,
+                                   DescribeTagsRequest * const q);
+    DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
+                                   DescribeTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

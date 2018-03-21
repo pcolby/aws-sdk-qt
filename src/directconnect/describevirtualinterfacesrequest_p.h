@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVIRTUALINTERFACESREQUEST_P_H
 #define QTAWS_DESCRIBEVIRTUALINTERFACESREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "describevirtualinterfacesrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeVirtualInterfacesRequest;
+
+class QTAWS_EXPORT DescribeVirtualInterfacesRequestPrivate : public DirectConnectPrivate {
+
+public:
+    DescribeVirtualInterfacesRequestPrivate(const DirectConnect::Action action,
+                                   DescribeVirtualInterfacesRequest * const q);
+    DescribeVirtualInterfacesRequestPrivate(const DescribeVirtualInterfacesRequestPrivate &other,
+                                   DescribeVirtualInterfacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVirtualInterfacesRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

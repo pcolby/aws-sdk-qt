@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGLOGGROUPREQUEST_H
 #define QTAWS_UNTAGLOGGROUPREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class UntagLogGroupRequestPrivate;
+
+class QTAWS_EXPORT UntagLogGroupRequest : public CloudWatchLogsRequest {
+
+public:
+    UntagLogGroupRequest(const UntagLogGroupRequest &other);
+    UntagLogGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagLogGroupRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

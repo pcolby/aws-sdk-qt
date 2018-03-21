@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREPLICATIONTASKREQUEST_H
 #define QTAWS_DELETEREPLICATIONTASKREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteReplicationTaskRequestPrivate;
+
+class QTAWS_EXPORT DeleteReplicationTaskRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    DeleteReplicationTaskRequest(const DeleteReplicationTaskRequest &other);
+    DeleteReplicationTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationTaskRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

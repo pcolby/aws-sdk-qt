@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHSTOPJOBRUNREQUEST_H
 #define QTAWS_BATCHSTOPJOBRUNREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchStopJobRunRequestPrivate;
+
+class QTAWS_EXPORT BatchStopJobRunRequest : public GlueRequest {
+
+public:
+    BatchStopJobRunRequest(const BatchStopJobRunRequest &other);
+    BatchStopJobRunRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchStopJobRunRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

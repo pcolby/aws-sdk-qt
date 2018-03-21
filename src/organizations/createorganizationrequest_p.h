@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEORGANIZATIONREQUEST_P_H
 #define QTAWS_CREATEORGANIZATIONREQUEST_P_H
 
+#include "organizations_p.h"
+#include "createorganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CreateOrganizationRequest;
+
+class QTAWS_EXPORT CreateOrganizationRequestPrivate : public OrganizationsPrivate {
+
+public:
+    CreateOrganizationRequestPrivate(const Organizations::Action action,
+                                   CreateOrganizationRequest * const q);
+    CreateOrganizationRequestPrivate(const CreateOrganizationRequestPrivate &other,
+                                   CreateOrganizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOrganizationRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

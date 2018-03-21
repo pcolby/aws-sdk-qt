@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETESPOTDATAFEEDSUBSCRIPTIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletespotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSpotDatafeedSubscriptionRequest;
+
+class QTAWS_EXPORT DeleteSpotDatafeedSubscriptionRequestPrivate : public EC2Private {
+
+public:
+    DeleteSpotDatafeedSubscriptionRequestPrivate(const EC2::Action action,
+                                   DeleteSpotDatafeedSubscriptionRequest * const q);
+    DeleteSpotDatafeedSubscriptionRequestPrivate(const DeleteSpotDatafeedSubscriptionRequestPrivate &other,
+                                   DeleteSpotDatafeedSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSpotDatafeedSubscriptionRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describehsmrequest.h"
 #include "describehsmrequest_p.h"
+#include "describehsmresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DescribeHsmRequest
+ *
+ * @brief  Implements CloudHSM DescribeHsm requests.
+ *
+ * @see    CloudHSMClient::describeHsm
+ */
+
+/**
+ * @brief  Constructs a new DescribeHsmResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHsmResponse::DescribeHsmResponse(
+
+/**
+ * @brief  Constructs a new DescribeHsmRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeHsmRequest::DescribeHsmRequest(const DescribeHsmRequest &other)
+    : CloudHSMRequest(new DescribeHsmRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeHsmRequest object.
+ */
+DescribeHsmRequest::DescribeHsmRequest()
+    : CloudHSMRequest(new DescribeHsmRequestPrivate(CloudHSMRequest::DescribeHsmAction, this))
+{
+
+}
+
+bool DescribeHsmRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeHsmResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeHsmResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * DescribeHsmRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeHsmResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHsmRequestPrivate
+ *
+ * @brief  Private implementation for DescribeHsmRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public DescribeHsmRequest instance.
+ */
+DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
+    const CloudHSMRequest::Action action, DescribeHsmRequest * const q)
+    : DescribeHsmPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHsmRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeHsmRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeHsmRequest instance.
+ */
+DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
+    const DescribeHsmRequestPrivate &other, DescribeHsmRequest * const q)
+    : DescribeHsmPrivate(other, q)
+{
+
+}

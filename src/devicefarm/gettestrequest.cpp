@@ -19,3 +19,107 @@
 
 #include "gettestrequest.h"
 #include "gettestrequest_p.h"
+#include "gettestresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetTestRequest
+ *
+ * @brief  Implements DeviceFarm GetTest requests.
+ *
+ * @see    DeviceFarmClient::getTest
+ */
+
+/**
+ * @brief  Constructs a new GetTestResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTestResponse::GetTestResponse(
+
+/**
+ * @brief  Constructs a new GetTestRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTestRequest::GetTestRequest(const GetTestRequest &other)
+    : DeviceFarmRequest(new GetTestRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTestRequest object.
+ */
+GetTestRequest::GetTestRequest()
+    : DeviceFarmRequest(new GetTestRequestPrivate(DeviceFarmRequest::GetTestAction, this))
+{
+
+}
+
+bool GetTestRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTestResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTestResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * GetTestRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTestResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTestRequestPrivate
+ *
+ * @brief  Private implementation for GetTestRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTestRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public GetTestRequest instance.
+ */
+GetTestRequestPrivate::GetTestRequestPrivate(
+    const DeviceFarmRequest::Action action, GetTestRequest * const q)
+    : GetTestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTestRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTestRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTestRequest instance.
+ */
+GetTestRequestPrivate::GetTestRequestPrivate(
+    const GetTestRequestPrivate &other, GetTestRequest * const q)
+    : GetTestPrivate(other, q)
+{
+
+}

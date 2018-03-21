@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTTRACESEGMENTSREQUEST_H
 #define QTAWS_PUTTRACESEGMENTSREQUEST_H
 
+#include "xrayrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class PutTraceSegmentsRequestPrivate;
+
+class QTAWS_EXPORT PutTraceSegmentsRequest : public XRayRequest {
+
+public:
+    PutTraceSegmentsRequest(const PutTraceSegmentsRequest &other);
+    PutTraceSegmentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutTraceSegmentsRequest)
+
+}
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

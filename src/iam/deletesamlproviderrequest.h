@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESAMLPROVIDERREQUEST_H
 #define QTAWS_DELETESAMLPROVIDERREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteSAMLProviderRequestPrivate;
+
+class QTAWS_EXPORT DeleteSAMLProviderRequest : public IAMRequest {
+
+public:
+    DeleteSAMLProviderRequest(const DeleteSAMLProviderRequest &other);
+    DeleteSAMLProviderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSAMLProviderRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

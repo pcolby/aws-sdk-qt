@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEJOBQUEUEREQUEST_H
 #define QTAWS_CREATEJOBQUEUEREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CreateJobQueueRequestPrivate;
+
+class QTAWS_EXPORT CreateJobQueueRequest : public BatchRequest {
+
+public:
+    CreateJobQueueRequest(const CreateJobQueueRequest &other);
+    CreateJobQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobQueueRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

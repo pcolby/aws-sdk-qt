@@ -19,3 +19,107 @@
 
 #include "listexportsrequest.h"
 #include "listexportsrequest_p.h"
+#include "listexportsresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ListExportsRequest
+ *
+ * @brief  Implements CloudFormation ListExports requests.
+ *
+ * @see    CloudFormationClient::listExports
+ */
+
+/**
+ * @brief  Constructs a new ListExportsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListExportsResponse::ListExportsResponse(
+
+/**
+ * @brief  Constructs a new ListExportsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListExportsRequest::ListExportsRequest(const ListExportsRequest &other)
+    : CloudFormationRequest(new ListExportsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListExportsRequest object.
+ */
+ListExportsRequest::ListExportsRequest()
+    : CloudFormationRequest(new ListExportsRequestPrivate(CloudFormationRequest::ListExportsAction, this))
+{
+
+}
+
+bool ListExportsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListExportsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListExportsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListExportsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListExportsRequestPrivate
+ *
+ * @brief  Private implementation for ListExportsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListExportsRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ListExportsRequest instance.
+ */
+ListExportsRequestPrivate::ListExportsRequestPrivate(
+    const CloudFormationRequest::Action action, ListExportsRequest * const q)
+    : ListExportsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListExportsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListExportsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListExportsRequest instance.
+ */
+ListExportsRequestPrivate::ListExportsRequestPrivate(
+    const ListExportsRequestPrivate &other, ListExportsRequest * const q)
+    : ListExportsPrivate(other, q)
+{
+
+}

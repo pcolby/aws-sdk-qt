@@ -19,3 +19,107 @@
 
 #include "deleteloggrouprequest.h"
 #include "deleteloggrouprequest_p.h"
+#include "deleteloggroupresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteLogGroupRequest
+ *
+ * @brief  Implements CloudWatchLogs DeleteLogGroup requests.
+ *
+ * @see    CloudWatchLogsClient::deleteLogGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteLogGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLogGroupResponse::DeleteLogGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteLogGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLogGroupRequest::DeleteLogGroupRequest(const DeleteLogGroupRequest &other)
+    : CloudWatchLogsRequest(new DeleteLogGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLogGroupRequest object.
+ */
+DeleteLogGroupRequest::DeleteLogGroupRequest()
+    : CloudWatchLogsRequest(new DeleteLogGroupRequestPrivate(CloudWatchLogsRequest::DeleteLogGroupAction, this))
+{
+
+}
+
+bool DeleteLogGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLogGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLogGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLogGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLogGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLogGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLogGroupRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DeleteLogGroupRequest instance.
+ */
+DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DeleteLogGroupRequest * const q)
+    : DeleteLogGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLogGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLogGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLogGroupRequest instance.
+ */
+DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
+    const DeleteLogGroupRequestPrivate &other, DeleteLogGroupRequest * const q)
+    : DeleteLogGroupPrivate(other, q)
+{
+
+}

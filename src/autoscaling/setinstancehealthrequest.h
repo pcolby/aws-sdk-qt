@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETINSTANCEHEALTHREQUEST_H
 #define QTAWS_SETINSTANCEHEALTHREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SetInstanceHealthRequestPrivate;
+
+class QTAWS_EXPORT SetInstanceHealthRequest : public AutoScalingRequest {
+
+public:
+    SetInstanceHealthRequest(const SetInstanceHealthRequest &other);
+    SetInstanceHealthRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetInstanceHealthRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

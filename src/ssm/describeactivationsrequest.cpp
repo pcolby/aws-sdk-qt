@@ -19,3 +19,107 @@
 
 #include "describeactivationsrequest.h"
 #include "describeactivationsrequest_p.h"
+#include "describeactivationsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeActivationsRequest
+ *
+ * @brief  Implements SSM DescribeActivations requests.
+ *
+ * @see    SSMClient::describeActivations
+ */
+
+/**
+ * @brief  Constructs a new DescribeActivationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActivationsResponse::DescribeActivationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeActivationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeActivationsRequest::DescribeActivationsRequest(const DescribeActivationsRequest &other)
+    : SSMRequest(new DescribeActivationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeActivationsRequest object.
+ */
+DescribeActivationsRequest::DescribeActivationsRequest()
+    : SSMRequest(new DescribeActivationsRequestPrivate(SSMRequest::DescribeActivationsAction, this))
+{
+
+}
+
+bool DescribeActivationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeActivationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeActivationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeActivationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeActivationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActivationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeActivationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivationsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeActivationsRequest instance.
+ */
+DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
+    const SSMRequest::Action action, DescribeActivationsRequest * const q)
+    : DescribeActivationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeActivationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeActivationsRequest instance.
+ */
+DescribeActivationsRequestPrivate::DescribeActivationsRequestPrivate(
+    const DescribeActivationsRequestPrivate &other, DescribeActivationsRequest * const q)
+    : DescribeActivationsPrivate(other, q)
+{
+
+}

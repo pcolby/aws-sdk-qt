@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSREQUEST_H
 #define QTAWS_LISTTAGSREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class ListTagsRequestPrivate;
+
+class QTAWS_EXPORT ListTagsRequest : public DAXRequest {
+
+public:
+    ListTagsRequest(const ListTagsRequest &other);
+    ListTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

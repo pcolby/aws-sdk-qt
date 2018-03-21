@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREDBCLUSTERTOPOINTINTIMEREQUEST_H
 #define QTAWS_RESTOREDBCLUSTERTOPOINTINTIMEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterToPointInTimeRequestPrivate;
+
+class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequest : public RDSRequest {
+
+public:
+    RestoreDBClusterToPointInTimeRequest(const RestoreDBClusterToPointInTimeRequest &other);
+    RestoreDBClusterToPointInTimeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreDBClusterToPointInTimeRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

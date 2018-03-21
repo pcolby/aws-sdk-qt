@@ -19,3 +19,107 @@
 
 #include "deleterolepolicyrequest.h"
 #include "deleterolepolicyrequest_p.h"
+#include "deleterolepolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteRolePolicyRequest
+ *
+ * @brief  Implements IAM DeleteRolePolicy requests.
+ *
+ * @see    IAMClient::deleteRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteRolePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRolePolicyResponse::DeleteRolePolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteRolePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRolePolicyRequest::DeleteRolePolicyRequest(const DeleteRolePolicyRequest &other)
+    : IAMRequest(new DeleteRolePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRolePolicyRequest object.
+ */
+DeleteRolePolicyRequest::DeleteRolePolicyRequest()
+    : IAMRequest(new DeleteRolePolicyRequestPrivate(IAMRequest::DeleteRolePolicyAction, this))
+{
+
+}
+
+bool DeleteRolePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRolePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRolePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteRolePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRolePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRolePolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRolePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRolePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteRolePolicyRequest instance.
+ */
+DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
+    const IAMRequest::Action action, DeleteRolePolicyRequest * const q)
+    : DeleteRolePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRolePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRolePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRolePolicyRequest instance.
+ */
+DeleteRolePolicyRequestPrivate::DeleteRolePolicyRequestPrivate(
+    const DeleteRolePolicyRequestPrivate &other, DeleteRolePolicyRequest * const q)
+    : DeleteRolePolicyPrivate(other, q)
+{
+
+}

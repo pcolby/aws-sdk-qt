@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETHEALTHCHECKLASTFAILUREREASONREQUEST_P_H
 #define QTAWS_GETHEALTHCHECKLASTFAILUREREASONREQUEST_P_H
 
+#include "route53_p.h"
+#include "gethealthchecklastfailurereasonrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHealthCheckLastFailureReasonRequest;
+
+class QTAWS_EXPORT GetHealthCheckLastFailureReasonRequestPrivate : public Route53Private {
+
+public:
+    GetHealthCheckLastFailureReasonRequestPrivate(const Route53::Action action,
+                                   GetHealthCheckLastFailureReasonRequest * const q);
+    GetHealthCheckLastFailureReasonRequestPrivate(const GetHealthCheckLastFailureReasonRequestPrivate &other,
+                                   GetHealthCheckLastFailureReasonRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetHealthCheckLastFailureReasonRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

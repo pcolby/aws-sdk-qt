@@ -20,4 +20,32 @@
 #ifndef QTAWS_NOTIFYWHENUPLOADEDREQUEST_H
 #define QTAWS_NOTIFYWHENUPLOADEDREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class NotifyWhenUploadedRequestPrivate;
+
+class QTAWS_EXPORT NotifyWhenUploadedRequest : public StorageGatewayRequest {
+
+public:
+    NotifyWhenUploadedRequest(const NotifyWhenUploadedRequest &other);
+    NotifyWhenUploadedRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(NotifyWhenUploadedRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

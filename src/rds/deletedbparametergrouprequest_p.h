@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDBPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETEDBPARAMETERGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "deletedbparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBParameterGroupRequest;
+
+class QTAWS_EXPORT DeleteDBParameterGroupRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteDBParameterGroupRequestPrivate(const RDS::Action action,
+                                   DeleteDBParameterGroupRequest * const q);
+    DeleteDBParameterGroupRequestPrivate(const DeleteDBParameterGroupRequestPrivate &other,
+                                   DeleteDBParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBParameterGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

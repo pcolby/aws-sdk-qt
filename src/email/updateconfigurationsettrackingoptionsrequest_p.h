@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 
+#include "ses_p.h"
+#include "updateconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetTrackingOptionsRequest;
+
+class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsRequestPrivate : public SESPrivate {
+
+public:
+    UpdateConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,
+                                   UpdateConfigurationSetTrackingOptionsRequest * const q);
+    UpdateConfigurationSetTrackingOptionsRequestPrivate(const UpdateConfigurationSetTrackingOptionsRequestPrivate &other,
+                                   UpdateConfigurationSetTrackingOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetTrackingOptionsRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTNEXTPENDINGJOBEXECUTIONREQUEST_P_H
 #define QTAWS_STARTNEXTPENDINGJOBEXECUTIONREQUEST_P_H
 
+#include "iotjobsdataplane_p.h"
+#include "startnextpendingjobexecutionrequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class StartNextPendingJobExecutionRequest;
+
+class QTAWS_EXPORT StartNextPendingJobExecutionRequestPrivate : public IoTJobsDataPlanePrivate {
+
+public:
+    StartNextPendingJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,
+                                   StartNextPendingJobExecutionRequest * const q);
+    StartNextPendingJobExecutionRequestPrivate(const StartNextPendingJobExecutionRequestPrivate &other,
+                                   StartNextPendingJobExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartNextPendingJobExecutionRequest)
+
+};
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

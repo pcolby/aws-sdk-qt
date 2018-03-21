@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_H
 #define QTAWS_DESCRIBETAGSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeTagsRequestPrivate;
+
+class QTAWS_EXPORT DescribeTagsRequest : public RedshiftRequest {
+
+public:
+    DescribeTagsRequest(const DescribeTagsRequest &other);
+    DescribeTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTagsRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

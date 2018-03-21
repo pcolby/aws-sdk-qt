@@ -19,3 +19,107 @@
 
 #include "createproductrequest.h"
 #include "createproductrequest_p.h"
+#include "createproductresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreateProductRequest
+ *
+ * @brief  Implements ServiceCatalog CreateProduct requests.
+ *
+ * @see    ServiceCatalogClient::createProduct
+ */
+
+/**
+ * @brief  Constructs a new CreateProductResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProductResponse::CreateProductResponse(
+
+/**
+ * @brief  Constructs a new CreateProductRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateProductRequest::CreateProductRequest(const CreateProductRequest &other)
+    : ServiceCatalogRequest(new CreateProductRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateProductRequest object.
+ */
+CreateProductRequest::CreateProductRequest()
+    : ServiceCatalogRequest(new CreateProductRequestPrivate(ServiceCatalogRequest::CreateProductAction, this))
+{
+
+}
+
+bool CreateProductRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateProductResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateProductResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * CreateProductRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateProductResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProductRequestPrivate
+ *
+ * @brief  Private implementation for CreateProductRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProductRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public CreateProductRequest instance.
+ */
+CreateProductRequestPrivate::CreateProductRequestPrivate(
+    const ServiceCatalogRequest::Action action, CreateProductRequest * const q)
+    : CreateProductPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProductRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateProductRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateProductRequest instance.
+ */
+CreateProductRequestPrivate::CreateProductRequestPrivate(
+    const CreateProductRequestPrivate &other, CreateProductRequest * const q)
+    : CreateProductPrivate(other, q)
+{
+
+}

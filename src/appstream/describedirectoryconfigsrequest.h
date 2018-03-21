@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_H
 #define QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeDirectoryConfigsRequestPrivate;
+
+class QTAWS_EXPORT DescribeDirectoryConfigsRequest : public AppStreamRequest {
+
+public:
+    DescribeDirectoryConfigsRequest(const DescribeDirectoryConfigsRequest &other);
+    DescribeDirectoryConfigsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDirectoryConfigsRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVICEACCESSPOLICIESREQUEST_H
 #define QTAWS_UPDATESERVICEACCESSPOLICIESREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class UpdateServiceAccessPoliciesRequestPrivate;
+
+class QTAWS_EXPORT UpdateServiceAccessPoliciesRequest : public CloudSearchRequest {
+
+public:
+    UpdateServiceAccessPoliciesRequest(const UpdateServiceAccessPoliciesRequest &other);
+    UpdateServiceAccessPoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceAccessPoliciesRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

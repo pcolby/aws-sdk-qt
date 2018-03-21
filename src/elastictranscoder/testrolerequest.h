@@ -20,4 +20,32 @@
 #ifndef QTAWS_TESTROLEREQUEST_H
 #define QTAWS_TESTROLEREQUEST_H
 
+#include "elastictranscoderrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class TestRoleRequestPrivate;
+
+class QTAWS_EXPORT TestRoleRequest : public ElasticTranscoderRequest {
+
+public:
+    TestRoleRequest(const TestRoleRequest &other);
+    TestRoleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TestRoleRequest)
+
+}
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

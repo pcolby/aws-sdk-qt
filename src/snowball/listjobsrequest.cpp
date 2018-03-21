@@ -19,3 +19,107 @@
 
 #include "listjobsrequest.h"
 #include "listjobsrequest_p.h"
+#include "listjobsresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  ListJobsRequest
+ *
+ * @brief  Implements Snowball ListJobs requests.
+ *
+ * @see    SnowballClient::listJobs
+ */
+
+/**
+ * @brief  Constructs a new ListJobsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobsResponse::ListJobsResponse(
+
+/**
+ * @brief  Constructs a new ListJobsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListJobsRequest::ListJobsRequest(const ListJobsRequest &other)
+    : SnowballRequest(new ListJobsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListJobsRequest object.
+ */
+ListJobsRequest::ListJobsRequest()
+    : SnowballRequest(new ListJobsRequestPrivate(SnowballRequest::ListJobsAction, this))
+{
+
+}
+
+bool ListJobsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListJobsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListJobsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListJobsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobsRequestPrivate
+ *
+ * @brief  Private implementation for ListJobsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public ListJobsRequest instance.
+ */
+ListJobsRequestPrivate::ListJobsRequestPrivate(
+    const SnowballRequest::Action action, ListJobsRequest * const q)
+    : ListJobsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListJobsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListJobsRequest instance.
+ */
+ListJobsRequestPrivate::ListJobsRequestPrivate(
+    const ListJobsRequestPrivate &other, ListJobsRequest * const q)
+    : ListJobsPrivate(other, q)
+{
+
+}

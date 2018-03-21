@@ -20,4 +20,32 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHEREQUEST_H
 #define QTAWS_INVALIDATEPROJECTCACHEREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class InvalidateProjectCacheRequestPrivate;
+
+class QTAWS_EXPORT InvalidateProjectCacheRequest : public CodeBuildRequest {
+
+public:
+    InvalidateProjectCacheRequest(const InvalidateProjectCacheRequest &other);
+    InvalidateProjectCacheRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(InvalidateProjectCacheRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

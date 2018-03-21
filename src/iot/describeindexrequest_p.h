@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINDEXREQUEST_P_H
 #define QTAWS_DESCRIBEINDEXREQUEST_P_H
 
+#include "iot_p.h"
+#include "describeindexrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeIndexRequest;
+
+class QTAWS_EXPORT DescribeIndexRequestPrivate : public IoTPrivate {
+
+public:
+    DescribeIndexRequestPrivate(const IoT::Action action,
+                                   DescribeIndexRequest * const q);
+    DescribeIndexRequestPrivate(const DescribeIndexRequestPrivate &other,
+                                   DescribeIndexRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIndexRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEINSTANCEREQUEST_P_H
 #define QTAWS_UPDATEINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "updateinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateInstanceRequest;
+
+class QTAWS_EXPORT UpdateInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    UpdateInstanceRequestPrivate(const OpsWorks::Action action,
+                                   UpdateInstanceRequest * const q);
+    UpdateInstanceRequestPrivate(const UpdateInstanceRequestPrivate &other,
+                                   UpdateInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

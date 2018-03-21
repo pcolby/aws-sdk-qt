@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "updateendpointweightsandcapacitiesrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class UpdateEndpointWeightsAndCapacitiesRequest;
+
+class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesRequestPrivate : public SageMakerPrivate {
+
+public:
+    UpdateEndpointWeightsAndCapacitiesRequestPrivate(const SageMaker::Action action,
+                                   UpdateEndpointWeightsAndCapacitiesRequest * const q);
+    UpdateEndpointWeightsAndCapacitiesRequestPrivate(const UpdateEndpointWeightsAndCapacitiesRequestPrivate &other,
+                                   UpdateEndpointWeightsAndCapacitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointWeightsAndCapacitiesRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

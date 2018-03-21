@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDCOMMANDREQUEST_H
 #define QTAWS_SENDCOMMANDREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class SendCommandRequestPrivate;
+
+class QTAWS_EXPORT SendCommandRequest : public SSMRequest {
+
+public:
+    SendCommandRequest(const SendCommandRequest &other);
+    SendCommandRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendCommandRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

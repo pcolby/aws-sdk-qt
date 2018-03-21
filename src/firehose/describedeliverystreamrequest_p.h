@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDELIVERYSTREAMREQUEST_P_H
 #define QTAWS_DESCRIBEDELIVERYSTREAMREQUEST_P_H
 
+#include "firehose_p.h"
+#include "describedeliverystreamrequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class DescribeDeliveryStreamRequest;
+
+class QTAWS_EXPORT DescribeDeliveryStreamRequestPrivate : public FirehosePrivate {
+
+public:
+    DescribeDeliveryStreamRequestPrivate(const Firehose::Action action,
+                                   DescribeDeliveryStreamRequest * const q);
+    DescribeDeliveryStreamRequestPrivate(const DescribeDeliveryStreamRequestPrivate &other,
+                                   DescribeDeliveryStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDeliveryStreamRequest)
+
+};
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

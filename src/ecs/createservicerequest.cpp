@@ -19,3 +19,107 @@
 
 #include "createservicerequest.h"
 #include "createservicerequest_p.h"
+#include "createserviceresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  CreateServiceRequest
+ *
+ * @brief  Implements ECS CreateService requests.
+ *
+ * @see    ECSClient::createService
+ */
+
+/**
+ * @brief  Constructs a new CreateServiceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateServiceResponse::CreateServiceResponse(
+
+/**
+ * @brief  Constructs a new CreateServiceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
+    : ECSRequest(new CreateServiceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateServiceRequest object.
+ */
+CreateServiceRequest::CreateServiceRequest()
+    : ECSRequest(new CreateServiceRequestPrivate(ECSRequest::CreateServiceAction, this))
+{
+
+}
+
+bool CreateServiceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateServiceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateServiceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateServiceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateServiceRequestPrivate
+ *
+ * @brief  Private implementation for CreateServiceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public CreateServiceRequest instance.
+ */
+CreateServiceRequestPrivate::CreateServiceRequestPrivate(
+    const ECSRequest::Action action, CreateServiceRequest * const q)
+    : CreateServicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateServiceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateServiceRequest instance.
+ */
+CreateServiceRequestPrivate::CreateServiceRequestPrivate(
+    const CreateServiceRequestPrivate &other, CreateServiceRequest * const q)
+    : CreateServicePrivate(other, q)
+{
+
+}

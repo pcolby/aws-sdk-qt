@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYPRODUCTREQUEST_P_H
 #define QTAWS_COPYPRODUCTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "copyproductrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CopyProductRequest;
+
+class QTAWS_EXPORT CopyProductRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    CopyProductRequestPrivate(const ServiceCatalog::Action action,
+                                   CopyProductRequest * const q);
+    CopyProductRequestPrivate(const CopyProductRequestPrivate &other,
+                                   CopyProductRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopyProductRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

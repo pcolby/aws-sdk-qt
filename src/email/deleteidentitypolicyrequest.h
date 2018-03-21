@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIDENTITYPOLICYREQUEST_H
 #define QTAWS_DELETEIDENTITYPOLICYREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteIdentityPolicyRequestPrivate;
+
+class QTAWS_EXPORT DeleteIdentityPolicyRequest : public SESRequest {
+
+public:
+    DeleteIdentityPolicyRequest(const DeleteIdentityPolicyRequest &other);
+    DeleteIdentityPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIdentityPolicyRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

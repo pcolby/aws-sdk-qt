@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeSubscribersForNotificationRequestPrivate;
+
+class QTAWS_EXPORT DescribeSubscribersForNotificationRequest : public BudgetsRequest {
+
+public:
+    DescribeSubscribersForNotificationRequest(const DescribeSubscribersForNotificationRequest &other);
+    DescribeSubscribersForNotificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSubscribersForNotificationRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

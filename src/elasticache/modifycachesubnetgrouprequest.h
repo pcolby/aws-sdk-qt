@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYCACHESUBNETGROUPREQUEST_H
 #define QTAWS_MODIFYCACHESUBNETGROUPREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyCacheSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyCacheSubnetGroupRequest : public ElastiCacheRequest {
+
+public:
+    ModifyCacheSubnetGroupRequest(const ModifyCacheSubnetGroupRequest &other);
+    ModifyCacheSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyCacheSubnetGroupRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

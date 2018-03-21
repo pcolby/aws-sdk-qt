@@ -19,3 +19,107 @@
 
 #include "getloggerdefinitionversionrequest.h"
 #include "getloggerdefinitionversionrequest_p.h"
+#include "getloggerdefinitionversionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetLoggerDefinitionVersionRequest
+ *
+ * @brief  Implements Greengrass GetLoggerDefinitionVersion requests.
+ *
+ * @see    GreengrassClient::getLoggerDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new GetLoggerDefinitionVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLoggerDefinitionVersionResponse::GetLoggerDefinitionVersionResponse(
+
+/**
+ * @brief  Constructs a new GetLoggerDefinitionVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest(const GetLoggerDefinitionVersionRequest &other)
+    : GreengrassRequest(new GetLoggerDefinitionVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLoggerDefinitionVersionRequest object.
+ */
+GetLoggerDefinitionVersionRequest::GetLoggerDefinitionVersionRequest()
+    : GreengrassRequest(new GetLoggerDefinitionVersionRequestPrivate(GreengrassRequest::GetLoggerDefinitionVersionAction, this))
+{
+
+}
+
+bool GetLoggerDefinitionVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLoggerDefinitionVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLoggerDefinitionVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetLoggerDefinitionVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLoggerDefinitionVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLoggerDefinitionVersionRequestPrivate
+ *
+ * @brief  Private implementation for GetLoggerDefinitionVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetLoggerDefinitionVersionRequest instance.
+ */
+GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPrivate(
+    const GreengrassRequest::Action action, GetLoggerDefinitionVersionRequest * const q)
+    : GetLoggerDefinitionVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLoggerDefinitionVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLoggerDefinitionVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLoggerDefinitionVersionRequest instance.
+ */
+GetLoggerDefinitionVersionRequestPrivate::GetLoggerDefinitionVersionRequestPrivate(
+    const GetLoggerDefinitionVersionRequestPrivate &other, GetLoggerDefinitionVersionRequest * const q)
+    : GetLoggerDefinitionVersionPrivate(other, q)
+{
+
+}

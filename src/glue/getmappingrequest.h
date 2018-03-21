@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETMAPPINGREQUEST_H
 #define QTAWS_GETMAPPINGREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetMappingRequestPrivate;
+
+class QTAWS_EXPORT GetMappingRequest : public GlueRequest {
+
+public:
+    GetMappingRequest(const GetMappingRequest &other);
+    GetMappingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetMappingRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

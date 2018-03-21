@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSERREQUEST_P_H
 #define QTAWS_UPDATEUSERREQUEST_P_H
 
+#include "mq_p.h"
+#include "updateuserrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateUserRequest;
+
+class QTAWS_EXPORT UpdateUserRequestPrivate : public MQPrivate {
+
+public:
+    UpdateUserRequestPrivate(const MQ::Action action,
+                                   UpdateUserRequest * const q);
+    UpdateUserRequestPrivate(const UpdateUserRequestPrivate &other,
+                                   UpdateUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

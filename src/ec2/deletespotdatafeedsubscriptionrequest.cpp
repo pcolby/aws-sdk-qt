@@ -19,3 +19,107 @@
 
 #include "deletespotdatafeedsubscriptionrequest.h"
 #include "deletespotdatafeedsubscriptionrequest_p.h"
+#include "deletespotdatafeedsubscriptionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteSpotDatafeedSubscriptionRequest
+ *
+ * @brief  Implements EC2 DeleteSpotDatafeedSubscription requests.
+ *
+ * @see    EC2Client::deleteSpotDatafeedSubscription
+ */
+
+/**
+ * @brief  Constructs a new DeleteSpotDatafeedSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest(const DeleteSpotDatafeedSubscriptionRequest &other)
+    : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequest object.
+ */
+DeleteSpotDatafeedSubscriptionRequest::DeleteSpotDatafeedSubscriptionRequest()
+    : EC2Request(new DeleteSpotDatafeedSubscriptionRequestPrivate(EC2Request::DeleteSpotDatafeedSubscriptionAction, this))
+{
+
+}
+
+bool DeleteSpotDatafeedSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSpotDatafeedSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSpotDatafeedSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSpotDatafeedSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSpotDatafeedSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSpotDatafeedSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteSpotDatafeedSubscriptionRequest instance.
+ */
+DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
+    const EC2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)
+    : DeleteSpotDatafeedSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSpotDatafeedSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSpotDatafeedSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSpotDatafeedSubscriptionRequest instance.
+ */
+DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
+    const DeleteSpotDatafeedSubscriptionRequestPrivate &other, DeleteSpotDatafeedSubscriptionRequest * const q)
+    : DeleteSpotDatafeedSubscriptionPrivate(other, q)
+{
+
+}

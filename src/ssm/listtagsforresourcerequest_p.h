@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListTagsForResourceRequest;
+
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMPrivate {
+
+public:
+    ListTagsForResourceRequestPrivate(const SSM::Action action,
+                                   ListTagsForResourceRequest * const q);
+    ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
+                                   ListTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createorupdatetagsrequest.h"
 #include "createorupdatetagsrequest_p.h"
+#include "createorupdatetagsresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CreateOrUpdateTagsRequest
+ *
+ * @brief  Implements AutoScaling CreateOrUpdateTags requests.
+ *
+ * @see    AutoScalingClient::createOrUpdateTags
+ */
+
+/**
+ * @brief  Constructs a new CreateOrUpdateTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOrUpdateTagsResponse::CreateOrUpdateTagsResponse(
+
+/**
+ * @brief  Constructs a new CreateOrUpdateTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateOrUpdateTagsRequest::CreateOrUpdateTagsRequest(const CreateOrUpdateTagsRequest &other)
+    : AutoScalingRequest(new CreateOrUpdateTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateOrUpdateTagsRequest object.
+ */
+CreateOrUpdateTagsRequest::CreateOrUpdateTagsRequest()
+    : AutoScalingRequest(new CreateOrUpdateTagsRequestPrivate(AutoScalingRequest::CreateOrUpdateTagsAction, this))
+{
+
+}
+
+bool CreateOrUpdateTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateOrUpdateTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateOrUpdateTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * CreateOrUpdateTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateOrUpdateTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOrUpdateTagsRequestPrivate
+ *
+ * @brief  Private implementation for CreateOrUpdateTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOrUpdateTagsRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public CreateOrUpdateTagsRequest instance.
+ */
+CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
+    const AutoScalingRequest::Action action, CreateOrUpdateTagsRequest * const q)
+    : CreateOrUpdateTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOrUpdateTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateOrUpdateTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateOrUpdateTagsRequest instance.
+ */
+CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
+    const CreateOrUpdateTagsRequestPrivate &other, CreateOrUpdateTagsRequest * const q)
+    : CreateOrUpdateTagsPrivate(other, q)
+{
+
+}

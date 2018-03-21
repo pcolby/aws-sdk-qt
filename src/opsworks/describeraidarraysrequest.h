@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERAIDARRAYSREQUEST_H
 #define QTAWS_DESCRIBERAIDARRAYSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRaidArraysRequestPrivate;
+
+class QTAWS_EXPORT DescribeRaidArraysRequest : public OpsWorksRequest {
+
+public:
+    DescribeRaidArraysRequest(const DescribeRaidArraysRequest &other);
+    DescribeRaidArraysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRaidArraysRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

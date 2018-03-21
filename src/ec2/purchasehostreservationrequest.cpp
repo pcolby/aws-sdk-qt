@@ -19,3 +19,107 @@
 
 #include "purchasehostreservationrequest.h"
 #include "purchasehostreservationrequest_p.h"
+#include "purchasehostreservationresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  PurchaseHostReservationRequest
+ *
+ * @brief  Implements EC2 PurchaseHostReservation requests.
+ *
+ * @see    EC2Client::purchaseHostReservation
+ */
+
+/**
+ * @brief  Constructs a new PurchaseHostReservationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseHostReservationResponse::PurchaseHostReservationResponse(
+
+/**
+ * @brief  Constructs a new PurchaseHostReservationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurchaseHostReservationRequest::PurchaseHostReservationRequest(const PurchaseHostReservationRequest &other)
+    : EC2Request(new PurchaseHostReservationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurchaseHostReservationRequest object.
+ */
+PurchaseHostReservationRequest::PurchaseHostReservationRequest()
+    : EC2Request(new PurchaseHostReservationRequestPrivate(EC2Request::PurchaseHostReservationAction, this))
+{
+
+}
+
+bool PurchaseHostReservationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurchaseHostReservationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurchaseHostReservationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * PurchaseHostReservationRequest::response(QNetworkReply * const reply) const
+{
+    return new PurchaseHostReservationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseHostReservationRequestPrivate
+ *
+ * @brief  Private implementation for PurchaseHostReservationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseHostReservationRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public PurchaseHostReservationRequest instance.
+ */
+PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
+    const EC2Request::Action action, PurchaseHostReservationRequest * const q)
+    : PurchaseHostReservationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseHostReservationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurchaseHostReservationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurchaseHostReservationRequest instance.
+ */
+PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
+    const PurchaseHostReservationRequestPrivate &other, PurchaseHostReservationRequest * const q)
+    : PurchaseHostReservationPrivate(other, q)
+{
+
+}

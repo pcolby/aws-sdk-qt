@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGROUPREQUEST_H
 #define QTAWS_GETGROUPREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetGroupRequestPrivate;
+
+class QTAWS_EXPORT GetGroupRequest : public GreengrassRequest {
+
+public:
+    GetGroupRequest(const GetGroupRequest &other);
+    GetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

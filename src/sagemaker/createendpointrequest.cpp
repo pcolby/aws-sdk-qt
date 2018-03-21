@@ -19,3 +19,107 @@
 
 #include "createendpointrequest.h"
 #include "createendpointrequest_p.h"
+#include "createendpointresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  CreateEndpointRequest
+ *
+ * @brief  Implements SageMaker CreateEndpoint requests.
+ *
+ * @see    SageMakerClient::createEndpoint
+ */
+
+/**
+ * @brief  Constructs a new CreateEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEndpointResponse::CreateEndpointResponse(
+
+/**
+ * @brief  Constructs a new CreateEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEndpointRequest::CreateEndpointRequest(const CreateEndpointRequest &other)
+    : SageMakerRequest(new CreateEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEndpointRequest object.
+ */
+CreateEndpointRequest::CreateEndpointRequest()
+    : SageMakerRequest(new CreateEndpointRequestPrivate(SageMakerRequest::CreateEndpointAction, this))
+{
+
+}
+
+bool CreateEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEndpointRequestPrivate
+ *
+ * @brief  Private implementation for CreateEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEndpointRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public CreateEndpointRequest instance.
+ */
+CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
+    const SageMakerRequest::Action action, CreateEndpointRequest * const q)
+    : CreateEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEndpointRequest instance.
+ */
+CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
+    const CreateEndpointRequestPrivate &other, CreateEndpointRequest * const q)
+    : CreateEndpointPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "putinventoryrequest.h"
 #include "putinventoryrequest_p.h"
+#include "putinventoryresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  PutInventoryRequest
+ *
+ * @brief  Implements SSM PutInventory requests.
+ *
+ * @see    SSMClient::putInventory
+ */
+
+/**
+ * @brief  Constructs a new PutInventoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutInventoryResponse::PutInventoryResponse(
+
+/**
+ * @brief  Constructs a new PutInventoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutInventoryRequest::PutInventoryRequest(const PutInventoryRequest &other)
+    : SSMRequest(new PutInventoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutInventoryRequest object.
+ */
+PutInventoryRequest::PutInventoryRequest()
+    : SSMRequest(new PutInventoryRequestPrivate(SSMRequest::PutInventoryAction, this))
+{
+
+}
+
+bool PutInventoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutInventoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutInventoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * PutInventoryRequest::response(QNetworkReply * const reply) const
+{
+    return new PutInventoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutInventoryRequestPrivate
+ *
+ * @brief  Private implementation for PutInventoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutInventoryRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public PutInventoryRequest instance.
+ */
+PutInventoryRequestPrivate::PutInventoryRequestPrivate(
+    const SSMRequest::Action action, PutInventoryRequest * const q)
+    : PutInventoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutInventoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutInventoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutInventoryRequest instance.
+ */
+PutInventoryRequestPrivate::PutInventoryRequestPrivate(
+    const PutInventoryRequestPrivate &other, PutInventoryRequest * const q)
+    : PutInventoryPrivate(other, q)
+{
+
+}

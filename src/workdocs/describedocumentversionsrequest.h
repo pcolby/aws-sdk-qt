@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeDocumentVersionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeDocumentVersionsRequest : public WorkDocsRequest {
+
+public:
+    DescribeDocumentVersionsRequest(const DescribeDocumentVersionsRequest &other);
+    DescribeDocumentVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDocumentVersionsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

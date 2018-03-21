@@ -19,3 +19,107 @@
 
 #include "listresolversrequest.h"
 #include "listresolversrequest_p.h"
+#include "listresolversresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListResolversRequest
+ *
+ * @brief  Implements AppSync ListResolvers requests.
+ *
+ * @see    AppSyncClient::listResolvers
+ */
+
+/**
+ * @brief  Constructs a new ListResolversResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResolversResponse::ListResolversResponse(
+
+/**
+ * @brief  Constructs a new ListResolversRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResolversRequest::ListResolversRequest(const ListResolversRequest &other)
+    : AppSyncRequest(new ListResolversRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResolversRequest object.
+ */
+ListResolversRequest::ListResolversRequest()
+    : AppSyncRequest(new ListResolversRequestPrivate(AppSyncRequest::ListResolversAction, this))
+{
+
+}
+
+bool ListResolversRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResolversResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResolversResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * ListResolversRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResolversResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResolversRequestPrivate
+ *
+ * @brief  Private implementation for ListResolversRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResolversRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public ListResolversRequest instance.
+ */
+ListResolversRequestPrivate::ListResolversRequestPrivate(
+    const AppSyncRequest::Action action, ListResolversRequest * const q)
+    : ListResolversPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResolversRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResolversRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResolversRequest instance.
+ */
+ListResolversRequestPrivate::ListResolversRequestPrivate(
+    const ListResolversRequestPrivate &other, ListResolversRequest * const q)
+    : ListResolversPrivate(other, q)
+{
+
+}

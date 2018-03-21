@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHROLEPOLICYREQUEST_P_H
 #define QTAWS_ATTACHROLEPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "attachrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AttachRolePolicyRequest;
+
+class QTAWS_EXPORT AttachRolePolicyRequestPrivate : public IAMPrivate {
+
+public:
+    AttachRolePolicyRequestPrivate(const IAM::Action action,
+                                   AttachRolePolicyRequest * const q);
+    AttachRolePolicyRequestPrivate(const AttachRolePolicyRequestPrivate &other,
+                                   AttachRolePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachRolePolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

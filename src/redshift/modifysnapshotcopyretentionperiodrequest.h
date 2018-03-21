@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODREQUEST_H
 #define QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifySnapshotCopyRetentionPeriodRequestPrivate;
+
+class QTAWS_EXPORT ModifySnapshotCopyRetentionPeriodRequest : public RedshiftRequest {
+
+public:
+    ModifySnapshotCopyRetentionPeriodRequest(const ModifySnapshotCopyRetentionPeriodRequest &other);
+    ModifySnapshotCopyRetentionPeriodRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifySnapshotCopyRetentionPeriodRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

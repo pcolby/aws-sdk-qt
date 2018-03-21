@@ -19,3 +19,107 @@
 
 #include "describelogstreamsrequest.h"
 #include "describelogstreamsrequest_p.h"
+#include "describelogstreamsresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeLogStreamsRequest
+ *
+ * @brief  Implements CloudWatchLogs DescribeLogStreams requests.
+ *
+ * @see    CloudWatchLogsClient::describeLogStreams
+ */
+
+/**
+ * @brief  Constructs a new DescribeLogStreamsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLogStreamsResponse::DescribeLogStreamsResponse(
+
+/**
+ * @brief  Constructs a new DescribeLogStreamsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLogStreamsRequest::DescribeLogStreamsRequest(const DescribeLogStreamsRequest &other)
+    : CloudWatchLogsRequest(new DescribeLogStreamsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLogStreamsRequest object.
+ */
+DescribeLogStreamsRequest::DescribeLogStreamsRequest()
+    : CloudWatchLogsRequest(new DescribeLogStreamsRequestPrivate(CloudWatchLogsRequest::DescribeLogStreamsAction, this))
+{
+
+}
+
+bool DescribeLogStreamsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLogStreamsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLogStreamsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DescribeLogStreamsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLogStreamsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLogStreamsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLogStreamsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLogStreamsRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DescribeLogStreamsRequest instance.
+ */
+DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DescribeLogStreamsRequest * const q)
+    : DescribeLogStreamsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLogStreamsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLogStreamsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLogStreamsRequest instance.
+ */
+DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
+    const DescribeLogStreamsRequestPrivate &other, DescribeLogStreamsRequest * const q)
+    : DescribeLogStreamsPrivate(other, q)
+{
+
+}

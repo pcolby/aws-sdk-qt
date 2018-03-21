@@ -19,3 +19,107 @@
 
 #include "getfolderpathrequest.h"
 #include "getfolderpathrequest_p.h"
+#include "getfolderpathresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  GetFolderPathRequest
+ *
+ * @brief  Implements WorkDocs GetFolderPath requests.
+ *
+ * @see    WorkDocsClient::getFolderPath
+ */
+
+/**
+ * @brief  Constructs a new GetFolderPathResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFolderPathResponse::GetFolderPathResponse(
+
+/**
+ * @brief  Constructs a new GetFolderPathRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetFolderPathRequest::GetFolderPathRequest(const GetFolderPathRequest &other)
+    : WorkDocsRequest(new GetFolderPathRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetFolderPathRequest object.
+ */
+GetFolderPathRequest::GetFolderPathRequest()
+    : WorkDocsRequest(new GetFolderPathRequestPrivate(WorkDocsRequest::GetFolderPathAction, this))
+{
+
+}
+
+bool GetFolderPathRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetFolderPathResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetFolderPathResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * GetFolderPathRequest::response(QNetworkReply * const reply) const
+{
+    return new GetFolderPathResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFolderPathRequestPrivate
+ *
+ * @brief  Private implementation for GetFolderPathRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFolderPathRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public GetFolderPathRequest instance.
+ */
+GetFolderPathRequestPrivate::GetFolderPathRequestPrivate(
+    const WorkDocsRequest::Action action, GetFolderPathRequest * const q)
+    : GetFolderPathPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFolderPathRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetFolderPathRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetFolderPathRequest instance.
+ */
+GetFolderPathRequestPrivate::GetFolderPathRequestPrivate(
+    const GetFolderPathRequestPrivate &other, GetFolderPathRequest * const q)
+    : GetFolderPathPrivate(other, q)
+{
+
+}

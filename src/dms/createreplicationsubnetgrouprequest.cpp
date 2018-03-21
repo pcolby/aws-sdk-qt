@@ -19,3 +19,107 @@
 
 #include "createreplicationsubnetgrouprequest.h"
 #include "createreplicationsubnetgrouprequest_p.h"
+#include "createreplicationsubnetgroupresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  CreateReplicationSubnetGroupRequest
+ *
+ * @brief  Implements DatabaseMigrationService CreateReplicationSubnetGroup requests.
+ *
+ * @see    DatabaseMigrationServiceClient::createReplicationSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateReplicationSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationSubnetGroupResponse::CreateReplicationSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateReplicationSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest(const CreateReplicationSubnetGroupRequest &other)
+    : DatabaseMigrationServiceRequest(new CreateReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateReplicationSubnetGroupRequest object.
+ */
+CreateReplicationSubnetGroupRequest::CreateReplicationSubnetGroupRequest()
+    : DatabaseMigrationServiceRequest(new CreateReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::CreateReplicationSubnetGroupAction, this))
+{
+
+}
+
+bool CreateReplicationSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateReplicationSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateReplicationSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * CreateReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateReplicationSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateReplicationSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public CreateReplicationSubnetGroupRequest instance.
+ */
+CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, CreateReplicationSubnetGroupRequest * const q)
+    : CreateReplicationSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateReplicationSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateReplicationSubnetGroupRequest instance.
+ */
+CreateReplicationSubnetGroupRequestPrivate::CreateReplicationSubnetGroupRequestPrivate(
+    const CreateReplicationSubnetGroupRequestPrivate &other, CreateReplicationSubnetGroupRequest * const q)
+    : CreateReplicationSubnetGroupPrivate(other, q)
+{
+
+}

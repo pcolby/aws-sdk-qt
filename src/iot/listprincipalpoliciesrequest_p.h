@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPRINCIPALPOLICIESREQUEST_P_H
 #define QTAWS_LISTPRINCIPALPOLICIESREQUEST_P_H
 
+#include "iot_p.h"
+#include "listprincipalpoliciesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListPrincipalPoliciesRequest;
+
+class QTAWS_EXPORT ListPrincipalPoliciesRequestPrivate : public IoTPrivate {
+
+public:
+    ListPrincipalPoliciesRequestPrivate(const IoT::Action action,
+                                   ListPrincipalPoliciesRequest * const q);
+    ListPrincipalPoliciesRequestPrivate(const ListPrincipalPoliciesRequestPrivate &other,
+                                   ListPrincipalPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPrincipalPoliciesRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

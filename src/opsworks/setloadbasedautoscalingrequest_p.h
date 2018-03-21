@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETLOADBASEDAUTOSCALINGREQUEST_P_H
 #define QTAWS_SETLOADBASEDAUTOSCALINGREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "setloadbasedautoscalingrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetLoadBasedAutoScalingRequest;
+
+class QTAWS_EXPORT SetLoadBasedAutoScalingRequestPrivate : public OpsWorksPrivate {
+
+public:
+    SetLoadBasedAutoScalingRequestPrivate(const OpsWorks::Action action,
+                                   SetLoadBasedAutoScalingRequest * const q);
+    SetLoadBasedAutoScalingRequestPrivate(const SetLoadBasedAutoScalingRequestPrivate &other,
+                                   SetLoadBasedAutoScalingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetLoadBasedAutoScalingRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

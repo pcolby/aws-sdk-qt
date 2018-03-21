@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHPOLICYREQUEST_H
 #define QTAWS_DETACHPOLICYREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DetachPolicyRequestPrivate;
+
+class QTAWS_EXPORT DetachPolicyRequest : public OrganizationsRequest {
+
+public:
+    DetachPolicyRequest(const DetachPolicyRequest &other);
+    DetachPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachPolicyRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

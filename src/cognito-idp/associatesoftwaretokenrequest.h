@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATESOFTWARETOKENREQUEST_H
 #define QTAWS_ASSOCIATESOFTWARETOKENREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AssociateSoftwareTokenRequestPrivate;
+
+class QTAWS_EXPORT AssociateSoftwareTokenRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AssociateSoftwareTokenRequest(const AssociateSoftwareTokenRequest &other);
+    AssociateSoftwareTokenRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateSoftwareTokenRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

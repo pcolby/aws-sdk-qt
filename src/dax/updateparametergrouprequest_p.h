@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_UPDATEPARAMETERGROUPREQUEST_P_H
 
+#include "dax_p.h"
+#include "updateparametergrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateParameterGroupRequest;
+
+class QTAWS_EXPORT UpdateParameterGroupRequestPrivate : public DAXPrivate {
+
+public:
+    UpdateParameterGroupRequestPrivate(const DAX::Action action,
+                                   UpdateParameterGroupRequest * const q);
+    UpdateParameterGroupRequestPrivate(const UpdateParameterGroupRequestPrivate &other,
+                                   UpdateParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateParameterGroupRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

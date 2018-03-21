@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELOADBALANCERLISTENERSREQUEST_P_H
 #define QTAWS_CREATELOADBALANCERLISTENERSREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "createloadbalancerlistenersrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class CreateLoadBalancerListenersRequest;
+
+class QTAWS_EXPORT CreateLoadBalancerListenersRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    CreateLoadBalancerListenersRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   CreateLoadBalancerListenersRequest * const q);
+    CreateLoadBalancerListenersRequestPrivate(const CreateLoadBalancerListenersRequestPrivate &other,
+                                   CreateLoadBalancerListenersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLoadBalancerListenersRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

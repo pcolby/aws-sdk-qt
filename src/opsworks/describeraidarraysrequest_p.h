@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERAIDARRAYSREQUEST_P_H
 #define QTAWS_DESCRIBERAIDARRAYSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeraidarraysrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRaidArraysRequest;
+
+class QTAWS_EXPORT DescribeRaidArraysRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeRaidArraysRequestPrivate(const OpsWorks::Action action,
+                                   DescribeRaidArraysRequest * const q);
+    DescribeRaidArraysRequestPrivate(const DescribeRaidArraysRequestPrivate &other,
+                                   DescribeRaidArraysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRaidArraysRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletebandwidthratelimitrequest.h"
 #include "deletebandwidthratelimitrequest_p.h"
+#include "deletebandwidthratelimitresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteBandwidthRateLimitRequest
+ *
+ * @brief  Implements StorageGateway DeleteBandwidthRateLimit requests.
+ *
+ * @see    StorageGatewayClient::deleteBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new DeleteBandwidthRateLimitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
+
+/**
+ * @brief  Constructs a new DeleteBandwidthRateLimitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBandwidthRateLimitRequest::DeleteBandwidthRateLimitRequest(const DeleteBandwidthRateLimitRequest &other)
+    : StorageGatewayRequest(new DeleteBandwidthRateLimitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBandwidthRateLimitRequest object.
+ */
+DeleteBandwidthRateLimitRequest::DeleteBandwidthRateLimitRequest()
+    : StorageGatewayRequest(new DeleteBandwidthRateLimitRequestPrivate(StorageGatewayRequest::DeleteBandwidthRateLimitAction, this))
+{
+
+}
+
+bool DeleteBandwidthRateLimitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBandwidthRateLimitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBandwidthRateLimitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBandwidthRateLimitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBandwidthRateLimitRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBandwidthRateLimitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBandwidthRateLimitRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteBandwidthRateLimitRequest instance.
+ */
+DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteBandwidthRateLimitRequest * const q)
+    : DeleteBandwidthRateLimitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBandwidthRateLimitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBandwidthRateLimitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBandwidthRateLimitRequest instance.
+ */
+DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
+    const DeleteBandwidthRateLimitRequestPrivate &other, DeleteBandwidthRateLimitRequest * const q)
+    : DeleteBandwidthRateLimitPrivate(other, q)
+{
+
+}

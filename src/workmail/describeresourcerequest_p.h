@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESOURCEREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEREQUEST_P_H
 
+#include "workmail_p.h"
+#include "describeresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DescribeResourceRequest;
+
+class QTAWS_EXPORT DescribeResourceRequestPrivate : public WorkMailPrivate {
+
+public:
+    DescribeResourceRequestPrivate(const WorkMail::Action action,
+                                   DescribeResourceRequest * const q);
+    DescribeResourceRequestPrivate(const DescribeResourceRequestPrivate &other,
+                                   DescribeResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourceRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

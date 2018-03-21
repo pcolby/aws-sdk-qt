@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTREPOSITORIESREQUEST_P_H
 #define QTAWS_LISTREPOSITORIESREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "listrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListRepositoriesRequest;
+
+class QTAWS_EXPORT ListRepositoriesRequestPrivate : public CodeCommitPrivate {
+
+public:
+    ListRepositoriesRequestPrivate(const CodeCommit::Action action,
+                                   ListRepositoriesRequest * const q);
+    ListRepositoriesRequestPrivate(const ListRepositoriesRequestPrivate &other,
+                                   ListRepositoriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRepositoriesRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

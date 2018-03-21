@@ -19,3 +19,107 @@
 
 #include "describeendpointrequest.h"
 #include "describeendpointrequest_p.h"
+#include "describeendpointresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeEndpointRequest
+ *
+ * @brief  Implements IoT DescribeEndpoint requests.
+ *
+ * @see    IoTClient::describeEndpoint
+ */
+
+/**
+ * @brief  Constructs a new DescribeEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEndpointResponse::DescribeEndpointResponse(
+
+/**
+ * @brief  Constructs a new DescribeEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEndpointRequest::DescribeEndpointRequest(const DescribeEndpointRequest &other)
+    : IoTRequest(new DescribeEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEndpointRequest object.
+ */
+DescribeEndpointRequest::DescribeEndpointRequest()
+    : IoTRequest(new DescribeEndpointRequestPrivate(IoTRequest::DescribeEndpointAction, this))
+{
+
+}
+
+bool DescribeEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEndpointRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeEndpointRequest instance.
+ */
+DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
+    const IoTRequest::Action action, DescribeEndpointRequest * const q)
+    : DescribeEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEndpointRequest instance.
+ */
+DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
+    const DescribeEndpointRequestPrivate &other, DescribeEndpointRequest * const q)
+    : DescribeEndpointPrivate(other, q)
+{
+
+}

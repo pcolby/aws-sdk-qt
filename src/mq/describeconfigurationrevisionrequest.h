@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_H
 #define QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_H
 
+#include "mqrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeConfigurationRevisionRequestPrivate;
+
+class QTAWS_EXPORT DescribeConfigurationRevisionRequest : public MQRequest {
+
+public:
+    DescribeConfigurationRevisionRequest(const DescribeConfigurationRevisionRequest &other);
+    DescribeConfigurationRevisionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigurationRevisionRequest)
+
+}
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

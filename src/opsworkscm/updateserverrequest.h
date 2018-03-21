@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVERREQUEST_H
 #define QTAWS_UPDATESERVERREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class UpdateServerRequestPrivate;
+
+class QTAWS_EXPORT UpdateServerRequest : public OpsWorksCMRequest {
+
+public:
+    UpdateServerRequest(const UpdateServerRequest &other);
+    UpdateServerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServerRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

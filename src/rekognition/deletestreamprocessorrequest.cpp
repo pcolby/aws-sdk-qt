@@ -19,3 +19,107 @@
 
 #include "deletestreamprocessorrequest.h"
 #include "deletestreamprocessorrequest_p.h"
+#include "deletestreamprocessorresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DeleteStreamProcessorRequest
+ *
+ * @brief  Implements Rekognition DeleteStreamProcessor requests.
+ *
+ * @see    RekognitionClient::deleteStreamProcessor
+ */
+
+/**
+ * @brief  Constructs a new DeleteStreamProcessorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
+
+/**
+ * @brief  Constructs a new DeleteStreamProcessorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteStreamProcessorRequest::DeleteStreamProcessorRequest(const DeleteStreamProcessorRequest &other)
+    : RekognitionRequest(new DeleteStreamProcessorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteStreamProcessorRequest object.
+ */
+DeleteStreamProcessorRequest::DeleteStreamProcessorRequest()
+    : RekognitionRequest(new DeleteStreamProcessorRequestPrivate(RekognitionRequest::DeleteStreamProcessorAction, this))
+{
+
+}
+
+bool DeleteStreamProcessorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteStreamProcessorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteStreamProcessorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteStreamProcessorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStreamProcessorRequestPrivate
+ *
+ * @brief  Private implementation for DeleteStreamProcessorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public DeleteStreamProcessorRequest instance.
+ */
+DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
+    const RekognitionRequest::Action action, DeleteStreamProcessorRequest * const q)
+    : DeleteStreamProcessorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStreamProcessorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteStreamProcessorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteStreamProcessorRequest instance.
+ */
+DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
+    const DeleteStreamProcessorRequestPrivate &other, DeleteStreamProcessorRequest * const q)
+    : DeleteStreamProcessorPrivate(other, q)
+{
+
+}

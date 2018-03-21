@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEGRAPHQLAPIREQUEST_H
 #define QTAWS_CREATEGRAPHQLAPIREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateGraphqlApiRequestPrivate;
+
+class QTAWS_EXPORT CreateGraphqlApiRequest : public AppSyncRequest {
+
+public:
+    CreateGraphqlApiRequest(const CreateGraphqlApiRequest &other);
+    CreateGraphqlApiRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateGraphqlApiRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRECORDSREQUEST_H
 #define QTAWS_LISTRECORDSREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class ListRecordsRequestPrivate;
+
+class QTAWS_EXPORT ListRecordsRequest : public CognitoSyncRequest {
+
+public:
+    ListRecordsRequest(const ListRecordsRequest &other);
+    ListRecordsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRecordsRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

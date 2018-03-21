@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOPENWORKFLOWEXECUTIONSREQUEST_H
 #define QTAWS_LISTOPENWORKFLOWEXECUTIONSREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListOpenWorkflowExecutionsRequestPrivate;
+
+class QTAWS_EXPORT ListOpenWorkflowExecutionsRequest : public SWFRequest {
+
+public:
+    ListOpenWorkflowExecutionsRequest(const ListOpenWorkflowExecutionsRequest &other);
+    ListOpenWorkflowExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOpenWorkflowExecutionsRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLESSOREQUEST_H
 #define QTAWS_DISABLESSOREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DisableSsoRequestPrivate;
+
+class QTAWS_EXPORT DisableSsoRequest : public DirectoryServiceRequest {
+
+public:
+    DisableSsoRequest(const DisableSsoRequest &other);
+    DisableSsoRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableSsoRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteloginprofilerequest.h"
 #include "deleteloginprofilerequest_p.h"
+#include "deleteloginprofileresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteLoginProfileRequest
+ *
+ * @brief  Implements IAM DeleteLoginProfile requests.
+ *
+ * @see    IAMClient::deleteLoginProfile
+ */
+
+/**
+ * @brief  Constructs a new DeleteLoginProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoginProfileResponse::DeleteLoginProfileResponse(
+
+/**
+ * @brief  Constructs a new DeleteLoginProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLoginProfileRequest::DeleteLoginProfileRequest(const DeleteLoginProfileRequest &other)
+    : IAMRequest(new DeleteLoginProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLoginProfileRequest object.
+ */
+DeleteLoginProfileRequest::DeleteLoginProfileRequest()
+    : IAMRequest(new DeleteLoginProfileRequestPrivate(IAMRequest::DeleteLoginProfileAction, this))
+{
+
+}
+
+bool DeleteLoginProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLoginProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLoginProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteLoginProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLoginProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoginProfileRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLoginProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoginProfileRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteLoginProfileRequest instance.
+ */
+DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
+    const IAMRequest::Action action, DeleteLoginProfileRequest * const q)
+    : DeleteLoginProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoginProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLoginProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLoginProfileRequest instance.
+ */
+DeleteLoginProfileRequestPrivate::DeleteLoginProfileRequestPrivate(
+    const DeleteLoginProfileRequestPrivate &other, DeleteLoginProfileRequest * const q)
+    : DeleteLoginProfilePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "allocateaddressrequest.h"
 #include "allocateaddressrequest_p.h"
+#include "allocateaddressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AllocateAddressRequest
+ *
+ * @brief  Implements EC2 AllocateAddress requests.
+ *
+ * @see    EC2Client::allocateAddress
+ */
+
+/**
+ * @brief  Constructs a new AllocateAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AllocateAddressResponse::AllocateAddressResponse(
+
+/**
+ * @brief  Constructs a new AllocateAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AllocateAddressRequest::AllocateAddressRequest(const AllocateAddressRequest &other)
+    : EC2Request(new AllocateAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AllocateAddressRequest object.
+ */
+AllocateAddressRequest::AllocateAddressRequest()
+    : EC2Request(new AllocateAddressRequestPrivate(EC2Request::AllocateAddressAction, this))
+{
+
+}
+
+bool AllocateAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AllocateAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AllocateAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AllocateAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new AllocateAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AllocateAddressRequestPrivate
+ *
+ * @brief  Private implementation for AllocateAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateAddressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AllocateAddressRequest instance.
+ */
+AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
+    const EC2Request::Action action, AllocateAddressRequest * const q)
+    : AllocateAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AllocateAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AllocateAddressRequest instance.
+ */
+AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
+    const AllocateAddressRequestPrivate &other, AllocateAddressRequest * const q)
+    : AllocateAddressPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUSAGEPLANREQUEST_H
 #define QTAWS_DELETEUSAGEPLANREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteUsagePlanRequestPrivate;
+
+class QTAWS_EXPORT DeleteUsagePlanRequest : public APIGatewayRequest {
+
+public:
+    DeleteUsagePlanRequest(const DeleteUsagePlanRequest &other);
+    DeleteUsagePlanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUsagePlanRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEHEALTHCHECKREQUEST_H
 #define QTAWS_CREATEHEALTHCHECKREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class CreateHealthCheckRequestPrivate;
+
+class QTAWS_EXPORT CreateHealthCheckRequest : public Route53Request {
+
+public:
+    CreateHealthCheckRequest(const CreateHealthCheckRequest &other);
+    CreateHealthCheckRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateHealthCheckRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

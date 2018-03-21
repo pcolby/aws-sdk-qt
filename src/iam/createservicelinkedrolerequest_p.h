@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESERVICELINKEDROLEREQUEST_P_H
 #define QTAWS_CREATESERVICELINKEDROLEREQUEST_P_H
 
+#include "iam_p.h"
+#include "createservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateServiceLinkedRoleRequest;
+
+class QTAWS_EXPORT CreateServiceLinkedRoleRequestPrivate : public IAMPrivate {
+
+public:
+    CreateServiceLinkedRoleRequestPrivate(const IAM::Action action,
+                                   CreateServiceLinkedRoleRequest * const q);
+    CreateServiceLinkedRoleRequestPrivate(const CreateServiceLinkedRoleRequestPrivate &other,
+                                   CreateServiceLinkedRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServiceLinkedRoleRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

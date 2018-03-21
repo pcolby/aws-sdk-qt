@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEJOBREQUEST_H
 #define QTAWS_CREATEJOBREQUEST_H
 
+#include "importexportrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class CreateJobRequestPrivate;
+
+class QTAWS_EXPORT CreateJobRequest : public ImportExportRequest {
+
+public:
+    CreateJobRequest(const CreateJobRequest &other);
+    CreateJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobRequest)
+
+}
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

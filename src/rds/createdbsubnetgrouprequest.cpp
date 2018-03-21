@@ -19,3 +19,107 @@
 
 #include "createdbsubnetgrouprequest.h"
 #include "createdbsubnetgrouprequest_p.h"
+#include "createdbsubnetgroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBSubnetGroupRequest
+ *
+ * @brief  Implements RDS CreateDBSubnetGroup requests.
+ *
+ * @see    RDSClient::createDBSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateDBSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateDBSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest(const CreateDBSubnetGroupRequest &other)
+    : RDSRequest(new CreateDBSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBSubnetGroupRequest object.
+ */
+CreateDBSubnetGroupRequest::CreateDBSubnetGroupRequest()
+    : RDSRequest(new CreateDBSubnetGroupRequestPrivate(RDSRequest::CreateDBSubnetGroupAction, this))
+{
+
+}
+
+bool CreateDBSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSubnetGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBSubnetGroupRequest instance.
+ */
+CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
+    const RDSRequest::Action action, CreateDBSubnetGroupRequest * const q)
+    : CreateDBSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBSubnetGroupRequest instance.
+ */
+CreateDBSubnetGroupRequestPrivate::CreateDBSubnetGroupRequestPrivate(
+    const CreateDBSubnetGroupRequestPrivate &other, CreateDBSubnetGroupRequest * const q)
+    : CreateDBSubnetGroupPrivate(other, q)
+{
+
+}

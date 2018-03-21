@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDELIVERYSTREAMREQUEST_H
 #define QTAWS_DELETEDELIVERYSTREAMREQUEST_H
 
+#include "firehoserequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class DeleteDeliveryStreamRequestPrivate;
+
+class QTAWS_EXPORT DeleteDeliveryStreamRequest : public FirehoseRequest {
+
+public:
+    DeleteDeliveryStreamRequest(const DeleteDeliveryStreamRequest &other);
+    DeleteDeliveryStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeliveryStreamRequest)
+
+}
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

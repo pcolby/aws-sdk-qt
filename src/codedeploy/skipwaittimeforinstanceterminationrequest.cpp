@@ -19,3 +19,107 @@
 
 #include "skipwaittimeforinstanceterminationrequest.h"
 #include "skipwaittimeforinstanceterminationrequest_p.h"
+#include "skipwaittimeforinstanceterminationresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  SkipWaitTimeForInstanceTerminationRequest
+ *
+ * @brief  Implements CodeDeploy SkipWaitTimeForInstanceTermination requests.
+ *
+ * @see    CodeDeployClient::skipWaitTimeForInstanceTermination
+ */
+
+/**
+ * @brief  Constructs a new SkipWaitTimeForInstanceTerminationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SkipWaitTimeForInstanceTerminationResponse::SkipWaitTimeForInstanceTerminationResponse(
+
+/**
+ * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SkipWaitTimeForInstanceTerminationRequest::SkipWaitTimeForInstanceTerminationRequest(const SkipWaitTimeForInstanceTerminationRequest &other)
+    : CodeDeployRequest(new SkipWaitTimeForInstanceTerminationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequest object.
+ */
+SkipWaitTimeForInstanceTerminationRequest::SkipWaitTimeForInstanceTerminationRequest()
+    : CodeDeployRequest(new SkipWaitTimeForInstanceTerminationRequestPrivate(CodeDeployRequest::SkipWaitTimeForInstanceTerminationAction, this))
+{
+
+}
+
+bool SkipWaitTimeForInstanceTerminationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SkipWaitTimeForInstanceTerminationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SkipWaitTimeForInstanceTerminationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * SkipWaitTimeForInstanceTerminationRequest::response(QNetworkReply * const reply) const
+{
+    return new SkipWaitTimeForInstanceTerminationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SkipWaitTimeForInstanceTerminationRequestPrivate
+ *
+ * @brief  Private implementation for SkipWaitTimeForInstanceTerminationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public SkipWaitTimeForInstanceTerminationRequest instance.
+ */
+SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
+    const CodeDeployRequest::Action action, SkipWaitTimeForInstanceTerminationRequest * const q)
+    : SkipWaitTimeForInstanceTerminationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SkipWaitTimeForInstanceTerminationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SkipWaitTimeForInstanceTerminationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SkipWaitTimeForInstanceTerminationRequest instance.
+ */
+SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
+    const SkipWaitTimeForInstanceTerminationRequestPrivate &other, SkipWaitTimeForInstanceTerminationRequest * const q)
+    : SkipWaitTimeForInstanceTerminationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDATABASEREQUEST_H
 #define QTAWS_GETDATABASEREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDatabaseRequestPrivate;
+
+class QTAWS_EXPORT GetDatabaseRequest : public GlueRequest {
+
+public:
+    GetDatabaseRequest(const GetDatabaseRequest &other);
+    GetDatabaseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDatabaseRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

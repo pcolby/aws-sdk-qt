@@ -19,3 +19,107 @@
 
 #include "gethostnamesuggestionrequest.h"
 #include "gethostnamesuggestionrequest_p.h"
+#include "gethostnamesuggestionresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  GetHostnameSuggestionRequest
+ *
+ * @brief  Implements OpsWorks GetHostnameSuggestion requests.
+ *
+ * @see    OpsWorksClient::getHostnameSuggestion
+ */
+
+/**
+ * @brief  Constructs a new GetHostnameSuggestionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostnameSuggestionResponse::GetHostnameSuggestionResponse(
+
+/**
+ * @brief  Constructs a new GetHostnameSuggestionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetHostnameSuggestionRequest::GetHostnameSuggestionRequest(const GetHostnameSuggestionRequest &other)
+    : OpsWorksRequest(new GetHostnameSuggestionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetHostnameSuggestionRequest object.
+ */
+GetHostnameSuggestionRequest::GetHostnameSuggestionRequest()
+    : OpsWorksRequest(new GetHostnameSuggestionRequestPrivate(OpsWorksRequest::GetHostnameSuggestionAction, this))
+{
+
+}
+
+bool GetHostnameSuggestionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetHostnameSuggestionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetHostnameSuggestionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetHostnameSuggestionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostnameSuggestionRequestPrivate
+ *
+ * @brief  Private implementation for GetHostnameSuggestionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostnameSuggestionRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public GetHostnameSuggestionRequest instance.
+ */
+GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
+    const OpsWorksRequest::Action action, GetHostnameSuggestionRequest * const q)
+    : GetHostnameSuggestionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostnameSuggestionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetHostnameSuggestionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetHostnameSuggestionRequest instance.
+ */
+GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
+    const GetHostnameSuggestionRequestPrivate &other, GetHostnameSuggestionRequest * const q)
+    : GetHostnameSuggestionPrivate(other, q)
+{
+
+}

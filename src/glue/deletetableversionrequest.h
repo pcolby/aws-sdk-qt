@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETABLEVERSIONREQUEST_H
 #define QTAWS_DELETETABLEVERSIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTableVersionRequestPrivate;
+
+class QTAWS_EXPORT DeleteTableVersionRequest : public GlueRequest {
+
+public:
+    DeleteTableVersionRequest(const DeleteTableVersionRequest &other);
+    DeleteTableVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTableVersionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

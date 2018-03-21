@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDOMAINREQUEST_H
 #define QTAWS_DESCRIBEDOMAINREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeDomainRequestPrivate;
+
+class QTAWS_EXPORT DescribeDomainRequest : public SWFRequest {
+
+public:
+    DescribeDomainRequest(const DescribeDomainRequest &other);
+    DescribeDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDomainRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYREQUEST_P_H
 #define QTAWS_GETDISCOVERYSUMMARYREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "getdiscoverysummaryrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class GetDiscoverySummaryRequest;
+
+class QTAWS_EXPORT GetDiscoverySummaryRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    GetDiscoverySummaryRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   GetDiscoverySummaryRequest * const q);
+    GetDiscoverySummaryRequestPrivate(const GetDiscoverySummaryRequestPrivate &other,
+                                   GetDiscoverySummaryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDiscoverySummaryRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updateapnschannelrequest.h"
 #include "updateapnschannelrequest_p.h"
+#include "updateapnschannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApnsChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateApnsChannel requests.
+ *
+ * @see    PinpointClient::updateApnsChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateApnsChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApnsChannelResponse::UpdateApnsChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateApnsChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateApnsChannelRequest::UpdateApnsChannelRequest(const UpdateApnsChannelRequest &other)
+    : PinpointRequest(new UpdateApnsChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateApnsChannelRequest object.
+ */
+UpdateApnsChannelRequest::UpdateApnsChannelRequest()
+    : PinpointRequest(new UpdateApnsChannelRequestPrivate(PinpointRequest::UpdateApnsChannelAction, this))
+{
+
+}
+
+bool UpdateApnsChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateApnsChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateApnsChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateApnsChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateApnsChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApnsChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateApnsChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateApnsChannelRequest instance.
+ */
+UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateApnsChannelRequest * const q)
+    : UpdateApnsChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateApnsChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateApnsChannelRequest instance.
+ */
+UpdateApnsChannelRequestPrivate::UpdateApnsChannelRequestPrivate(
+    const UpdateApnsChannelRequestPrivate &other, UpdateApnsChannelRequest * const q)
+    : UpdateApnsChannelPrivate(other, q)
+{
+
+}

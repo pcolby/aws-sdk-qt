@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_H
 #define QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListOfferingTransactionsRequestPrivate;
+
+class QTAWS_EXPORT ListOfferingTransactionsRequest : public DeviceFarmRequest {
+
+public:
+    ListOfferingTransactionsRequest(const ListOfferingTransactionsRequest &other);
+    ListOfferingTransactionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOfferingTransactionsRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

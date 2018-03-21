@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTASSOCIATIONVERSIONSREQUEST_H
 #define QTAWS_LISTASSOCIATIONVERSIONSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListAssociationVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListAssociationVersionsRequest : public SSMRequest {
+
+public:
+    ListAssociationVersionsRequest(const ListAssociationVersionsRequest &other);
+    ListAssociationVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAssociationVersionsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

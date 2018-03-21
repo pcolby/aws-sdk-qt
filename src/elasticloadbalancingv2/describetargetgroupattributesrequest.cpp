@@ -19,3 +19,107 @@
 
 #include "describetargetgroupattributesrequest.h"
 #include "describetargetgroupattributesrequest_p.h"
+#include "describetargetgroupattributesresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeTargetGroupAttributesRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 DescribeTargetGroupAttributes requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeTargetGroupAttributes
+ */
+
+/**
+ * @brief  Constructs a new DescribeTargetGroupAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTargetGroupAttributesResponse::DescribeTargetGroupAttributesResponse(
+
+/**
+ * @brief  Constructs a new DescribeTargetGroupAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTargetGroupAttributesRequest::DescribeTargetGroupAttributesRequest(const DescribeTargetGroupAttributesRequest &other)
+    : ElasticLoadBalancingv2Request(new DescribeTargetGroupAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTargetGroupAttributesRequest object.
+ */
+DescribeTargetGroupAttributesRequest::DescribeTargetGroupAttributesRequest()
+    : ElasticLoadBalancingv2Request(new DescribeTargetGroupAttributesRequestPrivate(ElasticLoadBalancingv2Request::DescribeTargetGroupAttributesAction, this))
+{
+
+}
+
+bool DescribeTargetGroupAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTargetGroupAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTargetGroupAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * DescribeTargetGroupAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTargetGroupAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTargetGroupAttributesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTargetGroupAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTargetGroupAttributesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public DescribeTargetGroupAttributesRequest instance.
+ */
+DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, DescribeTargetGroupAttributesRequest * const q)
+    : DescribeTargetGroupAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTargetGroupAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTargetGroupAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTargetGroupAttributesRequest instance.
+ */
+DescribeTargetGroupAttributesRequestPrivate::DescribeTargetGroupAttributesRequestPrivate(
+    const DescribeTargetGroupAttributesRequestPrivate &other, DescribeTargetGroupAttributesRequest * const q)
+    : DescribeTargetGroupAttributesPrivate(other, q)
+{
+
+}

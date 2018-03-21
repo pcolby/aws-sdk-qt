@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEEVALUATIONREQUEST_P_H
 #define QTAWS_DELETEEVALUATIONREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "deleteevaluationrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteEvaluationRequest;
+
+class QTAWS_EXPORT DeleteEvaluationRequestPrivate : public MachineLearningPrivate {
+
+public:
+    DeleteEvaluationRequestPrivate(const MachineLearning::Action action,
+                                   DeleteEvaluationRequest * const q);
+    DeleteEvaluationRequestPrivate(const DeleteEvaluationRequestPrivate &other,
+                                   DeleteEvaluationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEvaluationRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

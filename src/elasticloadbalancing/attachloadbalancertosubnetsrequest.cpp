@@ -19,3 +19,107 @@
 
 #include "attachloadbalancertosubnetsrequest.h"
 #include "attachloadbalancertosubnetsrequest_p.h"
+#include "attachloadbalancertosubnetsresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  AttachLoadBalancerToSubnetsRequest
+ *
+ * @brief  Implements ElasticLoadBalancing AttachLoadBalancerToSubnets requests.
+ *
+ * @see    ElasticLoadBalancingClient::attachLoadBalancerToSubnets
+ */
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachLoadBalancerToSubnetsResponse::AttachLoadBalancerToSubnetsResponse(
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachLoadBalancerToSubnetsRequest::AttachLoadBalancerToSubnetsRequest(const AttachLoadBalancerToSubnetsRequest &other)
+    : ElasticLoadBalancingRequest(new AttachLoadBalancerToSubnetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsRequest object.
+ */
+AttachLoadBalancerToSubnetsRequest::AttachLoadBalancerToSubnetsRequest()
+    : ElasticLoadBalancingRequest(new AttachLoadBalancerToSubnetsRequestPrivate(ElasticLoadBalancingRequest::AttachLoadBalancerToSubnetsAction, this))
+{
+
+}
+
+bool AttachLoadBalancerToSubnetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachLoadBalancerToSubnetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachLoadBalancerToSubnetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachLoadBalancerToSubnetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachLoadBalancerToSubnetsRequestPrivate
+ *
+ * @brief  Private implementation for AttachLoadBalancerToSubnetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public AttachLoadBalancerToSubnetsRequest instance.
+ */
+AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, AttachLoadBalancerToSubnetsRequest * const q)
+    : AttachLoadBalancerToSubnetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancerToSubnetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachLoadBalancerToSubnetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachLoadBalancerToSubnetsRequest instance.
+ */
+AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
+    const AttachLoadBalancerToSubnetsRequestPrivate &other, AttachLoadBalancerToSubnetsRequest * const q)
+    : AttachLoadBalancerToSubnetsPrivate(other, q)
+{
+
+}

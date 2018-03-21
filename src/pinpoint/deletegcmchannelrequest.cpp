@@ -19,3 +19,107 @@
 
 #include "deletegcmchannelrequest.h"
 #include "deletegcmchannelrequest_p.h"
+#include "deletegcmchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteGcmChannelRequest
+ *
+ * @brief  Implements Pinpoint DeleteGcmChannel requests.
+ *
+ * @see    PinpointClient::deleteGcmChannel
+ */
+
+/**
+ * @brief  Constructs a new DeleteGcmChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGcmChannelResponse::DeleteGcmChannelResponse(
+
+/**
+ * @brief  Constructs a new DeleteGcmChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGcmChannelRequest::DeleteGcmChannelRequest(const DeleteGcmChannelRequest &other)
+    : PinpointRequest(new DeleteGcmChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGcmChannelRequest object.
+ */
+DeleteGcmChannelRequest::DeleteGcmChannelRequest()
+    : PinpointRequest(new DeleteGcmChannelRequestPrivate(PinpointRequest::DeleteGcmChannelAction, this))
+{
+
+}
+
+bool DeleteGcmChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGcmChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGcmChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGcmChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGcmChannelRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGcmChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGcmChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public DeleteGcmChannelRequest instance.
+ */
+DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
+    const PinpointRequest::Action action, DeleteGcmChannelRequest * const q)
+    : DeleteGcmChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGcmChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGcmChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGcmChannelRequest instance.
+ */
+DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
+    const DeleteGcmChannelRequestPrivate &other, DeleteGcmChannelRequest * const q)
+    : DeleteGcmChannelPrivate(other, q)
+{
+
+}

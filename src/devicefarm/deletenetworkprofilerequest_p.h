@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENETWORKPROFILEREQUEST_P_H
 #define QTAWS_DELETENETWORKPROFILEREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "deletenetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteNetworkProfileRequest;
+
+class QTAWS_EXPORT DeleteNetworkProfileRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    DeleteNetworkProfileRequestPrivate(const DeviceFarm::Action action,
+                                   DeleteNetworkProfileRequest * const q);
+    DeleteNetworkProfileRequestPrivate(const DeleteNetworkProfileRequestPrivate &other,
+                                   DeleteNetworkProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNetworkProfileRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

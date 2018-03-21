@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIMAGEBUILDERSREQUEST_H
 #define QTAWS_DESCRIBEIMAGEBUILDERSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeImageBuildersRequestPrivate;
+
+class QTAWS_EXPORT DescribeImageBuildersRequest : public AppStreamRequest {
+
+public:
+    DescribeImageBuildersRequest(const DescribeImageBuildersRequest &other);
+    DescribeImageBuildersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImageBuildersRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

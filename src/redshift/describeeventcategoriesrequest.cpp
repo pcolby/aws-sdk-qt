@@ -19,3 +19,107 @@
 
 #include "describeeventcategoriesrequest.h"
 #include "describeeventcategoriesrequest_p.h"
+#include "describeeventcategoriesresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeEventCategoriesRequest
+ *
+ * @brief  Implements Redshift DescribeEventCategories requests.
+ *
+ * @see    RedshiftClient::describeEventCategories
+ */
+
+/**
+ * @brief  Constructs a new DescribeEventCategoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
+
+/**
+ * @brief  Constructs a new DescribeEventCategoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEventCategoriesRequest::DescribeEventCategoriesRequest(const DescribeEventCategoriesRequest &other)
+    : RedshiftRequest(new DescribeEventCategoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEventCategoriesRequest object.
+ */
+DescribeEventCategoriesRequest::DescribeEventCategoriesRequest()
+    : RedshiftRequest(new DescribeEventCategoriesRequestPrivate(RedshiftRequest::DescribeEventCategoriesAction, this))
+{
+
+}
+
+bool DescribeEventCategoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEventCategoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEventCategoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEventCategoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventCategoriesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEventCategoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeEventCategoriesRequest instance.
+ */
+DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
+    const RedshiftRequest::Action action, DescribeEventCategoriesRequest * const q)
+    : DescribeEventCategoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventCategoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEventCategoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEventCategoriesRequest instance.
+ */
+DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
+    const DescribeEventCategoriesRequestPrivate &other, DescribeEventCategoriesRequest * const q)
+    : DescribeEventCategoriesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTIMAGEREQUEST_H
 #define QTAWS_PUTIMAGEREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class PutImageRequestPrivate;
+
+class QTAWS_EXPORT PutImageRequest : public ECRRequest {
+
+public:
+    PutImageRequest(const PutImageRequest &other);
+    PutImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutImageRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

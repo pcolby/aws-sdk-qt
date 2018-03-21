@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTKEYMATERIALREQUEST_P_H
 #define QTAWS_IMPORTKEYMATERIALREQUEST_P_H
 
+#include "kms_p.h"
+#include "importkeymaterialrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ImportKeyMaterialRequest;
+
+class QTAWS_EXPORT ImportKeyMaterialRequestPrivate : public KMSPrivate {
+
+public:
+    ImportKeyMaterialRequestPrivate(const KMS::Action action,
+                                   ImportKeyMaterialRequest * const q);
+    ImportKeyMaterialRequestPrivate(const ImportKeyMaterialRequestPrivate &other,
+                                   ImportKeyMaterialRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportKeyMaterialRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

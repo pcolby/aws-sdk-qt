@@ -19,3 +19,107 @@
 
 #include "terminatejobflowsrequest.h"
 #include "terminatejobflowsrequest_p.h"
+#include "terminatejobflowsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  TerminateJobFlowsRequest
+ *
+ * @brief  Implements EMR TerminateJobFlows requests.
+ *
+ * @see    EMRClient::terminateJobFlows
+ */
+
+/**
+ * @brief  Constructs a new TerminateJobFlowsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateJobFlowsResponse::TerminateJobFlowsResponse(
+
+/**
+ * @brief  Constructs a new TerminateJobFlowsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TerminateJobFlowsRequest::TerminateJobFlowsRequest(const TerminateJobFlowsRequest &other)
+    : EMRRequest(new TerminateJobFlowsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TerminateJobFlowsRequest object.
+ */
+TerminateJobFlowsRequest::TerminateJobFlowsRequest()
+    : EMRRequest(new TerminateJobFlowsRequestPrivate(EMRRequest::TerminateJobFlowsAction, this))
+{
+
+}
+
+bool TerminateJobFlowsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TerminateJobFlowsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TerminateJobFlowsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkReply * const reply) const
+{
+    return new TerminateJobFlowsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateJobFlowsRequestPrivate
+ *
+ * @brief  Private implementation for TerminateJobFlowsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateJobFlowsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public TerminateJobFlowsRequest instance.
+ */
+TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
+    const EMRRequest::Action action, TerminateJobFlowsRequest * const q)
+    : TerminateJobFlowsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateJobFlowsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TerminateJobFlowsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TerminateJobFlowsRequest instance.
+ */
+TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
+    const TerminateJobFlowsRequestPrivate &other, TerminateJobFlowsRequest * const q)
+    : TerminateJobFlowsPrivate(other, q)
+{
+
+}

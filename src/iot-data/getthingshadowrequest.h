@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTHINGSHADOWREQUEST_H
 #define QTAWS_GETTHINGSHADOWREQUEST_H
 
+#include "iotdataplanerequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class GetThingShadowRequestPrivate;
+
+class QTAWS_EXPORT GetThingShadowRequest : public IoTDataPlaneRequest {
+
+public:
+    GetThingShadowRequest(const GetThingShadowRequest &other);
+    GetThingShadowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetThingShadowRequest)
+
+}
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

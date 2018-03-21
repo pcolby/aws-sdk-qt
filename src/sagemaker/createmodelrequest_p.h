@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEMODELREQUEST_P_H
 #define QTAWS_CREATEMODELREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "createmodelrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreateModelRequest;
+
+class QTAWS_EXPORT CreateModelRequestPrivate : public SageMakerPrivate {
+
+public:
+    CreateModelRequestPrivate(const SageMaker::Action action,
+                                   CreateModelRequest * const q);
+    CreateModelRequestPrivate(const CreateModelRequestPrivate &other,
+                                   CreateModelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateModelRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

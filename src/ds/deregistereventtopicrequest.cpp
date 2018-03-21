@@ -19,3 +19,107 @@
 
 #include "deregistereventtopicrequest.h"
 #include "deregistereventtopicrequest_p.h"
+#include "deregistereventtopicresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DeregisterEventTopicRequest
+ *
+ * @brief  Implements DirectoryService DeregisterEventTopic requests.
+ *
+ * @see    DirectoryServiceClient::deregisterEventTopic
+ */
+
+/**
+ * @brief  Constructs a new DeregisterEventTopicResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterEventTopicResponse::DeregisterEventTopicResponse(
+
+/**
+ * @brief  Constructs a new DeregisterEventTopicRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterEventTopicRequest::DeregisterEventTopicRequest(const DeregisterEventTopicRequest &other)
+    : DirectoryServiceRequest(new DeregisterEventTopicRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterEventTopicRequest object.
+ */
+DeregisterEventTopicRequest::DeregisterEventTopicRequest()
+    : DirectoryServiceRequest(new DeregisterEventTopicRequestPrivate(DirectoryServiceRequest::DeregisterEventTopicAction, this))
+{
+
+}
+
+bool DeregisterEventTopicRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterEventTopicResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterEventTopicResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterEventTopicResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterEventTopicRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterEventTopicRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterEventTopicRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DeregisterEventTopicRequest instance.
+ */
+DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
+    const DirectoryServiceRequest::Action action, DeregisterEventTopicRequest * const q)
+    : DeregisterEventTopicPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterEventTopicRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterEventTopicRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterEventTopicRequest instance.
+ */
+DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
+    const DeregisterEventTopicRequestPrivate &other, DeregisterEventTopicRequest * const q)
+    : DeregisterEventTopicPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGEOMATCHSETSREQUEST_H
 #define QTAWS_LISTGEOMATCHSETSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListGeoMatchSetsRequestPrivate;
+
+class QTAWS_EXPORT ListGeoMatchSetsRequest : public WAFRequest {
+
+public:
+    ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other);
+    ListGeoMatchSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGeoMatchSetsRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

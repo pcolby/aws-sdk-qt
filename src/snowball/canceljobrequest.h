@@ -20,4 +20,32 @@
 #ifndef QTAWS_CANCELJOBREQUEST_H
 #define QTAWS_CANCELJOBREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CancelJobRequestPrivate;
+
+class QTAWS_EXPORT CancelJobRequest : public SnowballRequest {
+
+public:
+    CancelJobRequest(const CancelJobRequest &other);
+    CancelJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CancelJobRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describestackinstancerequest.h"
 #include "describestackinstancerequest_p.h"
+#include "describestackinstanceresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackInstanceRequest
+ *
+ * @brief  Implements CloudFormation DescribeStackInstance requests.
+ *
+ * @see    CloudFormationClient::describeStackInstance
+ */
+
+/**
+ * @brief  Constructs a new DescribeStackInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackInstanceResponse::DescribeStackInstanceResponse(
+
+/**
+ * @brief  Constructs a new DescribeStackInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStackInstanceRequest::DescribeStackInstanceRequest(const DescribeStackInstanceRequest &other)
+    : CloudFormationRequest(new DescribeStackInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStackInstanceRequest object.
+ */
+DescribeStackInstanceRequest::DescribeStackInstanceRequest()
+    : CloudFormationRequest(new DescribeStackInstanceRequestPrivate(CloudFormationRequest::DescribeStackInstanceAction, this))
+{
+
+}
+
+bool DescribeStackInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStackInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStackInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * DescribeStackInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStackInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStackInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackInstanceRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public DescribeStackInstanceRequest instance.
+ */
+DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
+    const CloudFormationRequest::Action action, DescribeStackInstanceRequest * const q)
+    : DescribeStackInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStackInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStackInstanceRequest instance.
+ */
+DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
+    const DescribeStackInstanceRequestPrivate &other, DescribeStackInstanceRequest * const q)
+    : DescribeStackInstancePrivate(other, q)
+{
+
+}

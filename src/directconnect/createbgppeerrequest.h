@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEBGPPEERREQUEST_H
 #define QTAWS_CREATEBGPPEERREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateBGPPeerRequestPrivate;
+
+class QTAWS_EXPORT CreateBGPPeerRequest : public DirectConnectRequest {
+
+public:
+    CreateBGPPeerRequest(const CreateBGPPeerRequest &other);
+    CreateBGPPeerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateBGPPeerRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

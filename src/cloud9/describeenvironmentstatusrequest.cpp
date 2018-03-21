@@ -19,3 +19,107 @@
 
 #include "describeenvironmentstatusrequest.h"
 #include "describeenvironmentstatusrequest_p.h"
+#include "describeenvironmentstatusresponse.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  DescribeEnvironmentStatusRequest
+ *
+ * @brief  Implements Cloud9 DescribeEnvironmentStatus requests.
+ *
+ * @see    Cloud9Client::describeEnvironmentStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEnvironmentStatusRequest::DescribeEnvironmentStatusRequest(const DescribeEnvironmentStatusRequest &other)
+    : Cloud9Request(new DescribeEnvironmentStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentStatusRequest object.
+ */
+DescribeEnvironmentStatusRequest::DescribeEnvironmentStatusRequest()
+    : Cloud9Request(new DescribeEnvironmentStatusRequestPrivate(Cloud9Request::DescribeEnvironmentStatusAction, this))
+{
+
+}
+
+bool DescribeEnvironmentStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEnvironmentStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEnvironmentStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEnvironmentStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentStatusRequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public DescribeEnvironmentStatusRequest instance.
+ */
+DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
+    const Cloud9Request::Action action, DescribeEnvironmentStatusRequest * const q)
+    : DescribeEnvironmentStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEnvironmentStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEnvironmentStatusRequest instance.
+ */
+DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
+    const DescribeEnvironmentStatusRequestPrivate &other, DescribeEnvironmentStatusRequest * const q)
+    : DescribeEnvironmentStatusPrivate(other, q)
+{
+
+}

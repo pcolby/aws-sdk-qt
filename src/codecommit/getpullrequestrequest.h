@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPULLREQUESTREQUEST_H
 #define QTAWS_GETPULLREQUESTREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetPullRequestRequestPrivate;
+
+class QTAWS_EXPORT GetPullRequestRequest : public CodeCommitRequest {
+
+public:
+    GetPullRequestRequest(const GetPullRequestRequest &other);
+    GetPullRequestRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPullRequestRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

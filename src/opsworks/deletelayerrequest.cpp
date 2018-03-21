@@ -19,3 +19,107 @@
 
 #include "deletelayerrequest.h"
 #include "deletelayerrequest_p.h"
+#include "deletelayerresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeleteLayerRequest
+ *
+ * @brief  Implements OpsWorks DeleteLayer requests.
+ *
+ * @see    OpsWorksClient::deleteLayer
+ */
+
+/**
+ * @brief  Constructs a new DeleteLayerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLayerResponse::DeleteLayerResponse(
+
+/**
+ * @brief  Constructs a new DeleteLayerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLayerRequest::DeleteLayerRequest(const DeleteLayerRequest &other)
+    : OpsWorksRequest(new DeleteLayerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLayerRequest object.
+ */
+DeleteLayerRequest::DeleteLayerRequest()
+    : OpsWorksRequest(new DeleteLayerRequestPrivate(OpsWorksRequest::DeleteLayerAction, this))
+{
+
+}
+
+bool DeleteLayerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLayerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLayerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeleteLayerRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLayerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLayerRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLayerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLayerRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeleteLayerRequest instance.
+ */
+DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
+    const OpsWorksRequest::Action action, DeleteLayerRequest * const q)
+    : DeleteLayerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLayerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLayerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLayerRequest instance.
+ */
+DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
+    const DeleteLayerRequestPrivate &other, DeleteLayerRequest * const q)
+    : DeleteLayerPrivate(other, q)
+{
+
+}

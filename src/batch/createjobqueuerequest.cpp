@@ -19,3 +19,107 @@
 
 #include "createjobqueuerequest.h"
 #include "createjobqueuerequest_p.h"
+#include "createjobqueueresponse.h"
+#include "batchrequest_p.h"
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  CreateJobQueueRequest
+ *
+ * @brief  Implements Batch CreateJobQueue requests.
+ *
+ * @see    BatchClient::createJobQueue
+ */
+
+/**
+ * @brief  Constructs a new CreateJobQueueResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateJobQueueResponse::CreateJobQueueResponse(
+
+/**
+ * @brief  Constructs a new CreateJobQueueRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateJobQueueRequest::CreateJobQueueRequest(const CreateJobQueueRequest &other)
+    : BatchRequest(new CreateJobQueueRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateJobQueueRequest object.
+ */
+CreateJobQueueRequest::CreateJobQueueRequest()
+    : BatchRequest(new CreateJobQueueRequestPrivate(BatchRequest::CreateJobQueueAction, this))
+{
+
+}
+
+bool CreateJobQueueRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateJobQueueResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateJobQueueResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BatchClient::send
+ */
+AwsAbstractResponse * CreateJobQueueRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateJobQueueResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateJobQueueRequestPrivate
+ *
+ * @brief  Private implementation for CreateJobQueueRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateJobQueueRequestPrivate object.
+ *
+ * @param  action  Batch action being performed.
+ * @param  q       Pointer to this object's public CreateJobQueueRequest instance.
+ */
+CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
+    const BatchRequest::Action action, CreateJobQueueRequest * const q)
+    : CreateJobQueuePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateJobQueueRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateJobQueueRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateJobQueueRequest instance.
+ */
+CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
+    const CreateJobQueueRequestPrivate &other, CreateJobQueueRequest * const q)
+    : CreateJobQueuePrivate(other, q)
+{
+
+}

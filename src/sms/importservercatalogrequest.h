@@ -20,4 +20,32 @@
 #ifndef QTAWS_IMPORTSERVERCATALOGREQUEST_H
 #define QTAWS_IMPORTSERVERCATALOGREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class ImportServerCatalogRequestPrivate;
+
+class QTAWS_EXPORT ImportServerCatalogRequest : public SMSRequest {
+
+public:
+    ImportServerCatalogRequest(const ImportServerCatalogRequest &other);
+    ImportServerCatalogRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ImportServerCatalogRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

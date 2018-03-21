@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTACCOUNTSFORPARENTREQUEST_P_H
 #define QTAWS_LISTACCOUNTSFORPARENTREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listaccountsforparentrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAccountsForParentRequest;
+
+class QTAWS_EXPORT ListAccountsForParentRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListAccountsForParentRequestPrivate(const Organizations::Action action,
+                                   ListAccountsForParentRequest * const q);
+    ListAccountsForParentRequestPrivate(const ListAccountsForParentRequestPrivate &other,
+                                   ListAccountsForParentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccountsForParentRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

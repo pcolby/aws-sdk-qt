@@ -19,3 +19,107 @@
 
 #include "createsoftwareupdatejobrequest.h"
 #include "createsoftwareupdatejobrequest_p.h"
+#include "createsoftwareupdatejobresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateSoftwareUpdateJobRequest
+ *
+ * @brief  Implements Greengrass CreateSoftwareUpdateJob requests.
+ *
+ * @see    GreengrassClient::createSoftwareUpdateJob
+ */
+
+/**
+ * @brief  Constructs a new CreateSoftwareUpdateJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
+
+/**
+ * @brief  Constructs a new CreateSoftwareUpdateJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest(const CreateSoftwareUpdateJobRequest &other)
+    : GreengrassRequest(new CreateSoftwareUpdateJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSoftwareUpdateJobRequest object.
+ */
+CreateSoftwareUpdateJobRequest::CreateSoftwareUpdateJobRequest()
+    : GreengrassRequest(new CreateSoftwareUpdateJobRequestPrivate(GreengrassRequest::CreateSoftwareUpdateJobAction, this))
+{
+
+}
+
+bool CreateSoftwareUpdateJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSoftwareUpdateJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSoftwareUpdateJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSoftwareUpdateJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSoftwareUpdateJobRequestPrivate
+ *
+ * @brief  Private implementation for CreateSoftwareUpdateJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public CreateSoftwareUpdateJobRequest instance.
+ */
+CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
+    const GreengrassRequest::Action action, CreateSoftwareUpdateJobRequest * const q)
+    : CreateSoftwareUpdateJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSoftwareUpdateJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSoftwareUpdateJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSoftwareUpdateJobRequest instance.
+ */
+CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
+    const CreateSoftwareUpdateJobRequestPrivate &other, CreateSoftwareUpdateJobRequest * const q)
+    : CreateSoftwareUpdateJobPrivate(other, q)
+{
+
+}

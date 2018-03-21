@@ -20,4 +20,29 @@
 #ifndef QTAWS_SEARCHPRODUCTSREQUEST_P_H
 #define QTAWS_SEARCHPRODUCTSREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "searchproductsrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class SearchProductsRequest;
+
+class QTAWS_EXPORT SearchProductsRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    SearchProductsRequestPrivate(const ServiceCatalog::Action action,
+                                   SearchProductsRequest * const q);
+    SearchProductsRequestPrivate(const SearchProductsRequestPrivate &other,
+                                   SearchProductsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SearchProductsRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "modifyimageattributerequest.h"
 #include "modifyimageattributerequest_p.h"
+#include "modifyimageattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyImageAttributeRequest
+ *
+ * @brief  Implements EC2 ModifyImageAttribute requests.
+ *
+ * @see    EC2Client::modifyImageAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifyImageAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyImageAttributeResponse::ModifyImageAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifyImageAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyImageAttributeRequest::ModifyImageAttributeRequest(const ModifyImageAttributeRequest &other)
+    : EC2Request(new ModifyImageAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyImageAttributeRequest object.
+ */
+ModifyImageAttributeRequest::ModifyImageAttributeRequest()
+    : EC2Request(new ModifyImageAttributeRequestPrivate(EC2Request::ModifyImageAttributeAction, this))
+{
+
+}
+
+bool ModifyImageAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyImageAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyImageAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyImageAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyImageAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifyImageAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyImageAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyImageAttributeRequest instance.
+ */
+ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
+    const EC2Request::Action action, ModifyImageAttributeRequest * const q)
+    : ModifyImageAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyImageAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyImageAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyImageAttributeRequest instance.
+ */
+ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
+    const ModifyImageAttributeRequestPrivate &other, ModifyImageAttributeRequest * const q)
+    : ModifyImageAttributePrivate(other, q)
+{
+
+}

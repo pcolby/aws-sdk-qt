@@ -19,3 +19,107 @@
 
 #include "deleteidentityrequest.h"
 #include "deleteidentityrequest_p.h"
+#include "deleteidentityresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteIdentityRequest
+ *
+ * @brief  Implements SES DeleteIdentity requests.
+ *
+ * @see    SESClient::deleteIdentity
+ */
+
+/**
+ * @brief  Constructs a new DeleteIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIdentityResponse::DeleteIdentityResponse(
+
+/**
+ * @brief  Constructs a new DeleteIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIdentityRequest::DeleteIdentityRequest(const DeleteIdentityRequest &other)
+    : SESRequest(new DeleteIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIdentityRequest object.
+ */
+DeleteIdentityRequest::DeleteIdentityRequest()
+    : SESRequest(new DeleteIdentityRequestPrivate(SESRequest::DeleteIdentityAction, this))
+{
+
+}
+
+bool DeleteIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIdentityRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteIdentityRequest instance.
+ */
+DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
+    const SESRequest::Action action, DeleteIdentityRequest * const q)
+    : DeleteIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIdentityRequest instance.
+ */
+DeleteIdentityRequestPrivate::DeleteIdentityRequestPrivate(
+    const DeleteIdentityRequestPrivate &other, DeleteIdentityRequest * const q)
+    : DeleteIdentityPrivate(other, q)
+{
+
+}

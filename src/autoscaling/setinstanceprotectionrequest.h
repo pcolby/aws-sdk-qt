@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETINSTANCEPROTECTIONREQUEST_H
 #define QTAWS_SETINSTANCEPROTECTIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SetInstanceProtectionRequestPrivate;
+
+class QTAWS_EXPORT SetInstanceProtectionRequest : public AutoScalingRequest {
+
+public:
+    SetInstanceProtectionRequest(const SetInstanceProtectionRequest &other);
+    SetInstanceProtectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetInstanceProtectionRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

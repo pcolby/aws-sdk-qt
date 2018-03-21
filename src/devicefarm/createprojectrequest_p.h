@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPROJECTREQUEST_P_H
 #define QTAWS_CREATEPROJECTREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "createprojectrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateProjectRequest;
+
+class QTAWS_EXPORT CreateProjectRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    CreateProjectRequestPrivate(const DeviceFarm::Action action,
+                                   CreateProjectRequest * const q);
+    CreateProjectRequestPrivate(const CreateProjectRequestPrivate &other,
+                                   CreateProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProjectRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

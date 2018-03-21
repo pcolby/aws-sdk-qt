@@ -19,3 +19,107 @@
 
 #include "changepasswordrequest.h"
 #include "changepasswordrequest_p.h"
+#include "changepasswordresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ChangePasswordRequest
+ *
+ * @brief  Implements IAM ChangePassword requests.
+ *
+ * @see    IAMClient::changePassword
+ */
+
+/**
+ * @brief  Constructs a new ChangePasswordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ChangePasswordResponse::ChangePasswordResponse(
+
+/**
+ * @brief  Constructs a new ChangePasswordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ChangePasswordRequest::ChangePasswordRequest(const ChangePasswordRequest &other)
+    : IAMRequest(new ChangePasswordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ChangePasswordRequest object.
+ */
+ChangePasswordRequest::ChangePasswordRequest()
+    : IAMRequest(new ChangePasswordRequestPrivate(IAMRequest::ChangePasswordAction, this))
+{
+
+}
+
+bool ChangePasswordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ChangePasswordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ChangePasswordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply * const reply) const
+{
+    return new ChangePasswordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ChangePasswordRequestPrivate
+ *
+ * @brief  Private implementation for ChangePasswordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangePasswordRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ChangePasswordRequest instance.
+ */
+ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
+    const IAMRequest::Action action, ChangePasswordRequest * const q)
+    : ChangePasswordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangePasswordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ChangePasswordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ChangePasswordRequest instance.
+ */
+ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
+    const ChangePasswordRequestPrivate &other, ChangePasswordRequest * const q)
+    : ChangePasswordPrivate(other, q)
+{
+
+}

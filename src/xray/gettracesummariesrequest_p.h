@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTRACESUMMARIESREQUEST_P_H
 #define QTAWS_GETTRACESUMMARIESREQUEST_P_H
 
+#include "xray_p.h"
+#include "gettracesummariesrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetTraceSummariesRequest;
+
+class QTAWS_EXPORT GetTraceSummariesRequestPrivate : public XRayPrivate {
+
+public:
+    GetTraceSummariesRequestPrivate(const XRay::Action action,
+                                   GetTraceSummariesRequest * const q);
+    GetTraceSummariesRequestPrivate(const GetTraceSummariesRequestPrivate &other,
+                                   GetTraceSummariesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTraceSummariesRequest)
+
+};
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

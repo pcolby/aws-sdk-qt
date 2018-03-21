@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPNSVOIPSANDBOXCHANNELREQUEST_H
 #define QTAWS_UPDATEAPNSVOIPSANDBOXCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApnsVoipSandboxChannelRequestPrivate;
+
+class QTAWS_EXPORT UpdateApnsVoipSandboxChannelRequest : public PinpointRequest {
+
+public:
+    UpdateApnsVoipSandboxChannelRequest(const UpdateApnsVoipSandboxChannelRequest &other);
+    UpdateApnsVoipSandboxChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApnsVoipSandboxChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

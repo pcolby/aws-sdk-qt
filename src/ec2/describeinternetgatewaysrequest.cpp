@@ -19,3 +19,107 @@
 
 #include "describeinternetgatewaysrequest.h"
 #include "describeinternetgatewaysrequest_p.h"
+#include "describeinternetgatewaysresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeInternetGatewaysRequest
+ *
+ * @brief  Implements EC2 DescribeInternetGateways requests.
+ *
+ * @see    EC2Client::describeInternetGateways
+ */
+
+/**
+ * @brief  Constructs a new DescribeInternetGatewaysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInternetGatewaysResponse::DescribeInternetGatewaysResponse(
+
+/**
+ * @brief  Constructs a new DescribeInternetGatewaysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest(const DescribeInternetGatewaysRequest &other)
+    : EC2Request(new DescribeInternetGatewaysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInternetGatewaysRequest object.
+ */
+DescribeInternetGatewaysRequest::DescribeInternetGatewaysRequest()
+    : EC2Request(new DescribeInternetGatewaysRequestPrivate(EC2Request::DescribeInternetGatewaysAction, this))
+{
+
+}
+
+bool DescribeInternetGatewaysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInternetGatewaysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInternetGatewaysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeInternetGatewaysRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInternetGatewaysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInternetGatewaysRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInternetGatewaysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeInternetGatewaysRequest instance.
+ */
+DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
+    const EC2Request::Action action, DescribeInternetGatewaysRequest * const q)
+    : DescribeInternetGatewaysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInternetGatewaysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInternetGatewaysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInternetGatewaysRequest instance.
+ */
+DescribeInternetGatewaysRequestPrivate::DescribeInternetGatewaysRequestPrivate(
+    const DescribeInternetGatewaysRequestPrivate &other, DescribeInternetGatewaysRequest * const q)
+    : DescribeInternetGatewaysPrivate(other, q)
+{
+
+}

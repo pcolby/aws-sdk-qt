@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEROLEFROMINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_REMOVEROLEFROMINSTANCEPROFILEREQUEST_P_H
 
+#include "iam_p.h"
+#include "removerolefrominstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class RemoveRoleFromInstanceProfileRequest;
+
+class QTAWS_EXPORT RemoveRoleFromInstanceProfileRequestPrivate : public IAMPrivate {
+
+public:
+    RemoveRoleFromInstanceProfileRequestPrivate(const IAM::Action action,
+                                   RemoveRoleFromInstanceProfileRequest * const q);
+    RemoveRoleFromInstanceProfileRequestPrivate(const RemoveRoleFromInstanceProfileRequestPrivate &other,
+                                   RemoveRoleFromInstanceProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveRoleFromInstanceProfileRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

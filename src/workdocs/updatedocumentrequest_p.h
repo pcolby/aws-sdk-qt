@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOCUMENTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "updatedocumentrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class UpdateDocumentRequest;
+
+class QTAWS_EXPORT UpdateDocumentRequestPrivate : public WorkDocsPrivate {
+
+public:
+    UpdateDocumentRequestPrivate(const WorkDocs::Action action,
+                                   UpdateDocumentRequest * const q);
+    UpdateDocumentRequestPrivate(const UpdateDocumentRequestPrivate &other,
+                                   UpdateDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

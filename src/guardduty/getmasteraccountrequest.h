@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETMASTERACCOUNTREQUEST_H
 #define QTAWS_GETMASTERACCOUNTREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetMasterAccountRequestPrivate;
+
+class QTAWS_EXPORT GetMasterAccountRequest : public GuardDutyRequest {
+
+public:
+    GetMasterAccountRequest(const GetMasterAccountRequest &other);
+    GetMasterAccountRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetMasterAccountRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

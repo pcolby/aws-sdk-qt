@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYZONESREQUEST_H
 #define QTAWS_DESCRIBEAVAILABILITYZONESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAvailabilityZonesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAvailabilityZonesRequest : public EC2Request {
+
+public:
+    DescribeAvailabilityZonesRequest(const DescribeAvailabilityZonesRequest &other);
+    DescribeAvailabilityZonesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAvailabilityZonesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

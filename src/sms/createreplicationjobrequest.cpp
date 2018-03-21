@@ -19,3 +19,107 @@
 
 #include "createreplicationjobrequest.h"
 #include "createreplicationjobrequest_p.h"
+#include "createreplicationjobresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  CreateReplicationJobRequest
+ *
+ * @brief  Implements SMS CreateReplicationJob requests.
+ *
+ * @see    SMSClient::createReplicationJob
+ */
+
+/**
+ * @brief  Constructs a new CreateReplicationJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationJobResponse::CreateReplicationJobResponse(
+
+/**
+ * @brief  Constructs a new CreateReplicationJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateReplicationJobRequest::CreateReplicationJobRequest(const CreateReplicationJobRequest &other)
+    : SMSRequest(new CreateReplicationJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateReplicationJobRequest object.
+ */
+CreateReplicationJobRequest::CreateReplicationJobRequest()
+    : SMSRequest(new CreateReplicationJobRequestPrivate(SMSRequest::CreateReplicationJobAction, this))
+{
+
+}
+
+bool CreateReplicationJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateReplicationJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateReplicationJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * CreateReplicationJobRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateReplicationJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationJobRequestPrivate
+ *
+ * @brief  Private implementation for CreateReplicationJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationJobRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public CreateReplicationJobRequest instance.
+ */
+CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
+    const SMSRequest::Action action, CreateReplicationJobRequest * const q)
+    : CreateReplicationJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateReplicationJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateReplicationJobRequest instance.
+ */
+CreateReplicationJobRequestPrivate::CreateReplicationJobRequestPrivate(
+    const CreateReplicationJobRequestPrivate &other, CreateReplicationJobRequest * const q)
+    : CreateReplicationJobPrivate(other, q)
+{
+
+}

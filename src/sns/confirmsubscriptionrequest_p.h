@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONFIRMSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_CONFIRMSUBSCRIPTIONREQUEST_P_H
 
+#include "sns_p.h"
+#include "confirmsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ConfirmSubscriptionRequest;
+
+class QTAWS_EXPORT ConfirmSubscriptionRequestPrivate : public SNSPrivate {
+
+public:
+    ConfirmSubscriptionRequestPrivate(const SNS::Action action,
+                                   ConfirmSubscriptionRequest * const q);
+    ConfirmSubscriptionRequestPrivate(const ConfirmSubscriptionRequestPrivate &other,
+                                   ConfirmSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmSubscriptionRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

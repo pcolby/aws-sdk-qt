@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_H
 #define QTAWS_UNTAGRESOURCEREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UntagResourceRequestPrivate;
+
+class QTAWS_EXPORT UntagResourceRequest : public CloudDirectoryRequest {
+
+public:
+    UntagResourceRequest(const UntagResourceRequest &other);
+    UntagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourceRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

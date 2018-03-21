@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESPOTDATAFEEDSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_CREATESPOTDATAFEEDSUBSCRIPTIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createspotdatafeedsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateSpotDatafeedSubscriptionRequest;
+
+class QTAWS_EXPORT CreateSpotDatafeedSubscriptionRequestPrivate : public EC2Private {
+
+public:
+    CreateSpotDatafeedSubscriptionRequestPrivate(const EC2::Action action,
+                                   CreateSpotDatafeedSubscriptionRequest * const q);
+    CreateSpotDatafeedSubscriptionRequestPrivate(const CreateSpotDatafeedSubscriptionRequestPrivate &other,
+                                   CreateSpotDatafeedSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSpotDatafeedSubscriptionRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

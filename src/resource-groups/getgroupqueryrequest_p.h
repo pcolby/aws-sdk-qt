@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGROUPQUERYREQUEST_P_H
 #define QTAWS_GETGROUPQUERYREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "getgroupqueryrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class GetGroupQueryRequest;
+
+class QTAWS_EXPORT GetGroupQueryRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    GetGroupQueryRequestPrivate(const ResourceGroups::Action action,
+                                   GetGroupQueryRequest * const q);
+    GetGroupQueryRequestPrivate(const GetGroupQueryRequestPrivate &other,
+                                   GetGroupQueryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupQueryRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

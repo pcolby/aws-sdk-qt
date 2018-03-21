@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEWEBACLREQUEST_H
 #define QTAWS_DELETEWEBACLREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteWebACLRequestPrivate;
+
+class QTAWS_EXPORT DeleteWebACLRequest : public WAFRegionalRequest {
+
+public:
+    DeleteWebACLRequest(const DeleteWebACLRequest &other);
+    DeleteWebACLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteWebACLRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

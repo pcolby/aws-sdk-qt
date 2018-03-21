@@ -19,3 +19,107 @@
 
 #include "deletedashboardsrequest.h"
 #include "deletedashboardsrequest_p.h"
+#include "deletedashboardsresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DeleteDashboardsRequest
+ *
+ * @brief  Implements CloudWatch DeleteDashboards requests.
+ *
+ * @see    CloudWatchClient::deleteDashboards
+ */
+
+/**
+ * @brief  Constructs a new DeleteDashboardsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDashboardsResponse::DeleteDashboardsResponse(
+
+/**
+ * @brief  Constructs a new DeleteDashboardsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDashboardsRequest::DeleteDashboardsRequest(const DeleteDashboardsRequest &other)
+    : CloudWatchRequest(new DeleteDashboardsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDashboardsRequest object.
+ */
+DeleteDashboardsRequest::DeleteDashboardsRequest()
+    : CloudWatchRequest(new DeleteDashboardsRequestPrivate(CloudWatchRequest::DeleteDashboardsAction, this))
+{
+
+}
+
+bool DeleteDashboardsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDashboardsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDashboardsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDashboardsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDashboardsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDashboardsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDashboardsRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public DeleteDashboardsRequest instance.
+ */
+DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
+    const CloudWatchRequest::Action action, DeleteDashboardsRequest * const q)
+    : DeleteDashboardsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDashboardsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDashboardsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDashboardsRequest instance.
+ */
+DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
+    const DeleteDashboardsRequestPrivate &other, DeleteDashboardsRequest * const q)
+    : DeleteDashboardsPrivate(other, q)
+{
+
+}

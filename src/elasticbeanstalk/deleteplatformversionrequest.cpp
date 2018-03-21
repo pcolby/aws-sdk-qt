@@ -19,3 +19,107 @@
 
 #include "deleteplatformversionrequest.h"
 #include "deleteplatformversionrequest_p.h"
+#include "deleteplatformversionresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DeletePlatformVersionRequest
+ *
+ * @brief  Implements ElasticBeanstalk DeletePlatformVersion requests.
+ *
+ * @see    ElasticBeanstalkClient::deletePlatformVersion
+ */
+
+/**
+ * @brief  Constructs a new DeletePlatformVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePlatformVersionResponse::DeletePlatformVersionResponse(
+
+/**
+ * @brief  Constructs a new DeletePlatformVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeletePlatformVersionRequest::DeletePlatformVersionRequest(const DeletePlatformVersionRequest &other)
+    : ElasticBeanstalkRequest(new DeletePlatformVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeletePlatformVersionRequest object.
+ */
+DeletePlatformVersionRequest::DeletePlatformVersionRequest()
+    : ElasticBeanstalkRequest(new DeletePlatformVersionRequestPrivate(ElasticBeanstalkRequest::DeletePlatformVersionAction, this))
+{
+
+}
+
+bool DeletePlatformVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeletePlatformVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeletePlatformVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeletePlatformVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePlatformVersionRequestPrivate
+ *
+ * @brief  Private implementation for DeletePlatformVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePlatformVersionRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DeletePlatformVersionRequest instance.
+ */
+DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DeletePlatformVersionRequest * const q)
+    : DeletePlatformVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePlatformVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeletePlatformVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeletePlatformVersionRequest instance.
+ */
+DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
+    const DeletePlatformVersionRequestPrivate &other, DeletePlatformVersionRequest * const q)
+    : DeletePlatformVersionPrivate(other, q)
+{
+
+}

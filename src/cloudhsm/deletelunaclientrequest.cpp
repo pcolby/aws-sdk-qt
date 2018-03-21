@@ -19,3 +19,107 @@
 
 #include "deletelunaclientrequest.h"
 #include "deletelunaclientrequest_p.h"
+#include "deletelunaclientresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DeleteLunaClientRequest
+ *
+ * @brief  Implements CloudHSM DeleteLunaClient requests.
+ *
+ * @see    CloudHSMClient::deleteLunaClient
+ */
+
+/**
+ * @brief  Constructs a new DeleteLunaClientResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLunaClientResponse::DeleteLunaClientResponse(
+
+/**
+ * @brief  Constructs a new DeleteLunaClientRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLunaClientRequest::DeleteLunaClientRequest(const DeleteLunaClientRequest &other)
+    : CloudHSMRequest(new DeleteLunaClientRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLunaClientRequest object.
+ */
+DeleteLunaClientRequest::DeleteLunaClientRequest()
+    : CloudHSMRequest(new DeleteLunaClientRequestPrivate(CloudHSMRequest::DeleteLunaClientAction, this))
+{
+
+}
+
+bool DeleteLunaClientRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLunaClientResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLunaClientResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLunaClientResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLunaClientRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLunaClientRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLunaClientRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public DeleteLunaClientRequest instance.
+ */
+DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
+    const CloudHSMRequest::Action action, DeleteLunaClientRequest * const q)
+    : DeleteLunaClientPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLunaClientRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLunaClientRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLunaClientRequest instance.
+ */
+DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
+    const DeleteLunaClientRequestPrivate &other, DeleteLunaClientRequest * const q)
+    : DeleteLunaClientPrivate(other, q)
+{
+
+}

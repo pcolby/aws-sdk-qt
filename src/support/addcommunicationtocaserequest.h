@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_H
 #define QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_H
 
+#include "supportrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddCommunicationToCaseRequestPrivate;
+
+class QTAWS_EXPORT AddCommunicationToCaseRequest : public SupportRequest {
+
+public:
+    AddCommunicationToCaseRequest(const AddCommunicationToCaseRequest &other);
+    AddCommunicationToCaseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddCommunicationToCaseRequest)
+
+}
+
+} // namespace Support
+} // namespace AWS
+
 #endif

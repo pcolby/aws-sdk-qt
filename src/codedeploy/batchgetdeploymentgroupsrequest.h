@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHGETDEPLOYMENTGROUPSREQUEST_H
 #define QTAWS_BATCHGETDEPLOYMENTGROUPSREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetDeploymentGroupsRequestPrivate;
+
+class QTAWS_EXPORT BatchGetDeploymentGroupsRequest : public CodeDeployRequest {
+
+public:
+    BatchGetDeploymentGroupsRequest(const BatchGetDeploymentGroupsRequest &other);
+    BatchGetDeploymentGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetDeploymentGroupsRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listreviewablehitsrequest.h"
 #include "listreviewablehitsrequest_p.h"
+#include "listreviewablehitsresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListReviewableHITsRequest
+ *
+ * @brief  Implements MTurk ListReviewableHITs requests.
+ *
+ * @see    MTurkClient::listReviewableHITs
+ */
+
+/**
+ * @brief  Constructs a new ListReviewableHITsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReviewableHITsResponse::ListReviewableHITsResponse(
+
+/**
+ * @brief  Constructs a new ListReviewableHITsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListReviewableHITsRequest::ListReviewableHITsRequest(const ListReviewableHITsRequest &other)
+    : MTurkRequest(new ListReviewableHITsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListReviewableHITsRequest object.
+ */
+ListReviewableHITsRequest::ListReviewableHITsRequest()
+    : MTurkRequest(new ListReviewableHITsRequestPrivate(MTurkRequest::ListReviewableHITsAction, this))
+{
+
+}
+
+bool ListReviewableHITsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListReviewableHITsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListReviewableHITsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListReviewableHITsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReviewableHITsRequestPrivate
+ *
+ * @brief  Private implementation for ListReviewableHITsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewableHITsRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public ListReviewableHITsRequest instance.
+ */
+ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
+    const MTurkRequest::Action action, ListReviewableHITsRequest * const q)
+    : ListReviewableHITsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewableHITsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListReviewableHITsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListReviewableHITsRequest instance.
+ */
+ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
+    const ListReviewableHITsRequestPrivate &other, ListReviewableHITsRequest * const q)
+    : ListReviewableHITsPrivate(other, q)
+{
+
+}

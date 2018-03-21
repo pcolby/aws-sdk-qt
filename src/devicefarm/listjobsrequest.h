@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTJOBSREQUEST_H
 #define QTAWS_LISTJOBSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListJobsRequestPrivate;
+
+class QTAWS_EXPORT ListJobsRequest : public DeviceFarmRequest {
+
+public:
+    ListJobsRequest(const ListJobsRequest &other);
+    ListJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListJobsRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

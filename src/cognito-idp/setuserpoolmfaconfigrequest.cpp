@@ -19,3 +19,107 @@
 
 #include "setuserpoolmfaconfigrequest.h"
 #include "setuserpoolmfaconfigrequest_p.h"
+#include "setuserpoolmfaconfigresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SetUserPoolMfaConfigRequest
+ *
+ * @brief  Implements CognitoIdentityProvider SetUserPoolMfaConfig requests.
+ *
+ * @see    CognitoIdentityProviderClient::setUserPoolMfaConfig
+ */
+
+/**
+ * @brief  Constructs a new SetUserPoolMfaConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetUserPoolMfaConfigResponse::SetUserPoolMfaConfigResponse(
+
+/**
+ * @brief  Constructs a new SetUserPoolMfaConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetUserPoolMfaConfigRequest::SetUserPoolMfaConfigRequest(const SetUserPoolMfaConfigRequest &other)
+    : CognitoIdentityProviderRequest(new SetUserPoolMfaConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetUserPoolMfaConfigRequest object.
+ */
+SetUserPoolMfaConfigRequest::SetUserPoolMfaConfigRequest()
+    : CognitoIdentityProviderRequest(new SetUserPoolMfaConfigRequestPrivate(CognitoIdentityProviderRequest::SetUserPoolMfaConfigAction, this))
+{
+
+}
+
+bool SetUserPoolMfaConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetUserPoolMfaConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetUserPoolMfaConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new SetUserPoolMfaConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetUserPoolMfaConfigRequestPrivate
+ *
+ * @brief  Private implementation for SetUserPoolMfaConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserPoolMfaConfigRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public SetUserPoolMfaConfigRequest instance.
+ */
+SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, SetUserPoolMfaConfigRequest * const q)
+    : SetUserPoolMfaConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserPoolMfaConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetUserPoolMfaConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetUserPoolMfaConfigRequest instance.
+ */
+SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
+    const SetUserPoolMfaConfigRequestPrivate &other, SetUserPoolMfaConfigRequest * const q)
+    : SetUserPoolMfaConfigPrivate(other, q)
+{
+
+}

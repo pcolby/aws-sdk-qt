@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBOTSREQUEST_H
 #define QTAWS_GETBOTSREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBotsRequestPrivate;
+
+class QTAWS_EXPORT GetBotsRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetBotsRequest(const GetBotsRequest &other);
+    GetBotsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBotsRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SYNTHESIZESPEECHREQUEST_H
 #define QTAWS_SYNTHESIZESPEECHREQUEST_H
 
+#include "pollyrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class SynthesizeSpeechRequestPrivate;
+
+class QTAWS_EXPORT SynthesizeSpeechRequest : public PollyRequest {
+
+public:
+    SynthesizeSpeechRequest(const SynthesizeSpeechRequest &other);
+    SynthesizeSpeechRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SynthesizeSpeechRequest)
+
+}
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_IMPORTINSTANCEREQUEST_H
 #define QTAWS_IMPORTINSTANCEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportInstanceRequestPrivate;
+
+class QTAWS_EXPORT ImportInstanceRequest : public EC2Request {
+
+public:
+    ImportInstanceRequest(const ImportInstanceRequest &other);
+    ImportInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ImportInstanceRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

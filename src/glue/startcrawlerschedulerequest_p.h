@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTCRAWLERSCHEDULEREQUEST_P_H
 #define QTAWS_STARTCRAWLERSCHEDULEREQUEST_P_H
 
+#include "glue_p.h"
+#include "startcrawlerschedulerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StartCrawlerScheduleRequest;
+
+class QTAWS_EXPORT StartCrawlerScheduleRequestPrivate : public GluePrivate {
+
+public:
+    StartCrawlerScheduleRequestPrivate(const Glue::Action action,
+                                   StartCrawlerScheduleRequest * const q);
+    StartCrawlerScheduleRequestPrivate(const StartCrawlerScheduleRequestPrivate &other,
+                                   StartCrawlerScheduleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartCrawlerScheduleRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

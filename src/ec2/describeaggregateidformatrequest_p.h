@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAGGREGATEIDFORMATREQUEST_P_H
 #define QTAWS_DESCRIBEAGGREGATEIDFORMATREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeaggregateidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAggregateIdFormatRequest;
+
+class QTAWS_EXPORT DescribeAggregateIdFormatRequestPrivate : public EC2Private {
+
+public:
+    DescribeAggregateIdFormatRequestPrivate(const EC2::Action action,
+                                   DescribeAggregateIdFormatRequest * const q);
+    DescribeAggregateIdFormatRequestPrivate(const DescribeAggregateIdFormatRequestPrivate &other,
+                                   DescribeAggregateIdFormatRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAggregateIdFormatRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

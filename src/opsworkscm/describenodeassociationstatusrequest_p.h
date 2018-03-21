@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "describenodeassociationstatusrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeNodeAssociationStatusRequest;
+
+class QTAWS_EXPORT DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCM::Action action,
+                                   DescribeNodeAssociationStatusRequest * const q);
+    DescribeNodeAssociationStatusRequestPrivate(const DescribeNodeAssociationStatusRequestPrivate &other,
+                                   DescribeNodeAssociationStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNodeAssociationStatusRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

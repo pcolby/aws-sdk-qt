@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEHEALTHCHECKREQUEST_P_H
 #define QTAWS_DELETEHEALTHCHECKREQUEST_P_H
 
+#include "route53_p.h"
+#include "deletehealthcheckrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteHealthCheckRequest;
+
+class QTAWS_EXPORT DeleteHealthCheckRequestPrivate : public Route53Private {
+
+public:
+    DeleteHealthCheckRequestPrivate(const Route53::Action action,
+                                   DeleteHealthCheckRequest * const q);
+    DeleteHealthCheckRequestPrivate(const DeleteHealthCheckRequestPrivate &other,
+                                   DeleteHealthCheckRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHealthCheckRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

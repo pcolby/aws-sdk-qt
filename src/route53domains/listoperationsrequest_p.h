@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOPERATIONSREQUEST_P_H
 #define QTAWS_LISTOPERATIONSREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "listoperationsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ListOperationsRequest;
+
+class QTAWS_EXPORT ListOperationsRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    ListOperationsRequestPrivate(const Route53Domains::Action action,
+                                   ListOperationsRequest * const q);
+    ListOperationsRequestPrivate(const ListOperationsRequestPrivate &other,
+                                   ListOperationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOperationsRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDOCUMENTVERSIONSREQUEST_P_H
 #define QTAWS_LISTDOCUMENTVERSIONSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listdocumentversionsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListDocumentVersionsRequest;
+
+class QTAWS_EXPORT ListDocumentVersionsRequestPrivate : public SSMPrivate {
+
+public:
+    ListDocumentVersionsRequestPrivate(const SSM::Action action,
+                                   ListDocumentVersionsRequest * const q);
+    ListDocumentVersionsRequestPrivate(const ListDocumentVersionsRequestPrivate &other,
+                                   ListDocumentVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDocumentVersionsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETAGSREQUEST_H
 #define QTAWS_CREATETAGSREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateTagsRequestPrivate;
+
+class QTAWS_EXPORT CreateTagsRequest : public EFSRequest {
+
+public:
+    CreateTagsRequest(const CreateTagsRequest &other);
+    CreateTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTagsRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

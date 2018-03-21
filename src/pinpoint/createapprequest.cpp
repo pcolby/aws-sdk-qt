@@ -19,3 +19,107 @@
 
 #include "createapprequest.h"
 #include "createapprequest_p.h"
+#include "createappresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  CreateAppRequest
+ *
+ * @brief  Implements Pinpoint CreateApp requests.
+ *
+ * @see    PinpointClient::createApp
+ */
+
+/**
+ * @brief  Constructs a new CreateAppResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAppResponse::CreateAppResponse(
+
+/**
+ * @brief  Constructs a new CreateAppRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAppRequest::CreateAppRequest(const CreateAppRequest &other)
+    : PinpointRequest(new CreateAppRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAppRequest object.
+ */
+CreateAppRequest::CreateAppRequest()
+    : PinpointRequest(new CreateAppRequestPrivate(PinpointRequest::CreateAppAction, this))
+{
+
+}
+
+bool CreateAppRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAppResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAppResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAppResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAppRequestPrivate
+ *
+ * @brief  Private implementation for CreateAppRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAppRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public CreateAppRequest instance.
+ */
+CreateAppRequestPrivate::CreateAppRequestPrivate(
+    const PinpointRequest::Action action, CreateAppRequest * const q)
+    : CreateAppPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAppRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAppRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAppRequest instance.
+ */
+CreateAppRequestPrivate::CreateAppRequestPrivate(
+    const CreateAppRequestPrivate &other, CreateAppRequest * const q)
+    : CreateAppPrivate(other, q)
+{
+
+}

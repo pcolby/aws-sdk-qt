@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETAGSREQUEST_H
 #define QTAWS_CREATETAGSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateTagsRequestPrivate;
+
+class QTAWS_EXPORT CreateTagsRequest : public EC2Request {
+
+public:
+    CreateTagsRequest(const CreateTagsRequest &other);
+    CreateTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTagsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

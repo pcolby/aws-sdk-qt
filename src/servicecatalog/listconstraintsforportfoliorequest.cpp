@@ -19,3 +19,107 @@
 
 #include "listconstraintsforportfoliorequest.h"
 #include "listconstraintsforportfoliorequest_p.h"
+#include "listconstraintsforportfolioresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListConstraintsForPortfolioRequest
+ *
+ * @brief  Implements ServiceCatalog ListConstraintsForPortfolio requests.
+ *
+ * @see    ServiceCatalogClient::listConstraintsForPortfolio
+ */
+
+/**
+ * @brief  Constructs a new ListConstraintsForPortfolioResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
+
+/**
+ * @brief  Constructs a new ListConstraintsForPortfolioRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest(const ListConstraintsForPortfolioRequest &other)
+    : ServiceCatalogRequest(new ListConstraintsForPortfolioRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListConstraintsForPortfolioRequest object.
+ */
+ListConstraintsForPortfolioRequest::ListConstraintsForPortfolioRequest()
+    : ServiceCatalogRequest(new ListConstraintsForPortfolioRequestPrivate(ServiceCatalogRequest::ListConstraintsForPortfolioAction, this))
+{
+
+}
+
+bool ListConstraintsForPortfolioRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListConstraintsForPortfolioResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListConstraintsForPortfolioResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(QNetworkReply * const reply) const
+{
+    return new ListConstraintsForPortfolioResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListConstraintsForPortfolioRequestPrivate
+ *
+ * @brief  Private implementation for ListConstraintsForPortfolioRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ListConstraintsForPortfolioRequest instance.
+ */
+ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
+    const ServiceCatalogRequest::Action action, ListConstraintsForPortfolioRequest * const q)
+    : ListConstraintsForPortfolioPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConstraintsForPortfolioRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListConstraintsForPortfolioRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListConstraintsForPortfolioRequest instance.
+ */
+ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
+    const ListConstraintsForPortfolioRequestPrivate &other, ListConstraintsForPortfolioRequest * const q)
+    : ListConstraintsForPortfolioPrivate(other, q)
+{
+
+}

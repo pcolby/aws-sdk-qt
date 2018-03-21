@@ -20,4 +20,32 @@
 #ifndef QTAWS_VALIDATETEMPLATEREQUEST_H
 #define QTAWS_VALIDATETEMPLATEREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ValidateTemplateRequestPrivate;
+
+class QTAWS_EXPORT ValidateTemplateRequest : public CloudFormationRequest {
+
+public:
+    ValidateTemplateRequest(const ValidateTemplateRequest &other);
+    ValidateTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ValidateTemplateRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

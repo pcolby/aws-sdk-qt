@@ -19,3 +19,107 @@
 
 #include "detachpolicyrequest.h"
 #include "detachpolicyrequest_p.h"
+#include "detachpolicyresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DetachPolicyRequest
+ *
+ * @brief  Implements CloudDirectory DetachPolicy requests.
+ *
+ * @see    CloudDirectoryClient::detachPolicy
+ */
+
+/**
+ * @brief  Constructs a new DetachPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachPolicyResponse::DetachPolicyResponse(
+
+/**
+ * @brief  Constructs a new DetachPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
+    : CloudDirectoryRequest(new DetachPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachPolicyRequest object.
+ */
+DetachPolicyRequest::DetachPolicyRequest()
+    : CloudDirectoryRequest(new DetachPolicyRequestPrivate(CloudDirectoryRequest::DetachPolicyAction, this))
+{
+
+}
+
+bool DetachPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DetachPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPolicyRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DetachPolicyRequest instance.
+ */
+DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
+    const CloudDirectoryRequest::Action action, DetachPolicyRequest * const q)
+    : DetachPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachPolicyRequest instance.
+ */
+DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
+    const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)
+    : DetachPolicyPrivate(other, q)
+{
+
+}

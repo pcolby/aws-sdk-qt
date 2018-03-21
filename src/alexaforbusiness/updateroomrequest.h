@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEROOMREQUEST_H
 #define QTAWS_UPDATEROOMREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateRoomRequestPrivate;
+
+class QTAWS_EXPORT UpdateRoomRequest : public AlexaForBusinessRequest {
+
+public:
+    UpdateRoomRequest(const UpdateRoomRequest &other);
+    UpdateRoomRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRoomRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

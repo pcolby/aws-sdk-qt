@@ -19,3 +19,107 @@
 
 #include "listobjectsv2request.h"
 #include "listobjectsv2request_p.h"
+#include "listobjectsv2response.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListObjectsV2Request
+ *
+ * @brief  Implements S3 ListObjectsV2 requests.
+ *
+ * @see    S3Client::listObjectsV2
+ */
+
+/**
+ * @brief  Constructs a new ListObjectsV2Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectsV2Response::ListObjectsV2Response(
+
+/**
+ * @brief  Constructs a new ListObjectsV2Request object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectsV2Request::ListObjectsV2Request(const ListObjectsV2Request &other)
+    : S3Request(new ListObjectsV2RequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectsV2Request object.
+ */
+ListObjectsV2Request::ListObjectsV2Request()
+    : S3Request(new ListObjectsV2RequestPrivate(S3Request::ListObjectsV2Action, this))
+{
+
+}
+
+bool ListObjectsV2Request::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectsV2Response object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectsV2Response instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply * const reply) const
+{
+    return new ListObjectsV2Response(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectsV2RequestPrivate
+ *
+ * @brief  Private implementation for ListObjectsV2Request.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectsV2RequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public ListObjectsV2Request instance.
+ */
+ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
+    const S3Request::Action action, ListObjectsV2Request * const q)
+    : ListObjectsV2Private(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectsV2RequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectsV2Request
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectsV2Request instance.
+ */
+ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
+    const ListObjectsV2RequestPrivate &other, ListObjectsV2Request * const q)
+    : ListObjectsV2Private(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETSMSATTRIBUTESREQUEST_H
 #define QTAWS_SETSMSATTRIBUTESREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetSMSAttributesRequestPrivate;
+
+class QTAWS_EXPORT SetSMSAttributesRequest : public SNSRequest {
+
+public:
+    SetSMSAttributesRequest(const SetSMSAttributesRequest &other);
+    SetSMSAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetSMSAttributesRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

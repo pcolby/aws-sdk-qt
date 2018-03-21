@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHOBJECTREQUEST_H
 #define QTAWS_ATTACHOBJECTREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachObjectRequestPrivate;
+
+class QTAWS_EXPORT AttachObjectRequest : public CloudDirectoryRequest {
+
+public:
+    AttachObjectRequest(const AttachObjectRequest &other);
+    AttachObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachObjectRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

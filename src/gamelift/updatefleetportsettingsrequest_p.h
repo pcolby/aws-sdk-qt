@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEFLEETPORTSETTINGSREQUEST_P_H
 #define QTAWS_UPDATEFLEETPORTSETTINGSREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "updatefleetportsettingsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateFleetPortSettingsRequest;
+
+class QTAWS_EXPORT UpdateFleetPortSettingsRequestPrivate : public GameLiftPrivate {
+
+public:
+    UpdateFleetPortSettingsRequestPrivate(const GameLift::Action action,
+                                   UpdateFleetPortSettingsRequest * const q);
+    UpdateFleetPortSettingsRequestPrivate(const UpdateFleetPortSettingsRequestPrivate &other,
+                                   UpdateFleetPortSettingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFleetPortSettingsRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

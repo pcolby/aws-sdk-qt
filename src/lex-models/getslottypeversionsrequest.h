@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSLOTTYPEVERSIONSREQUEST_H
 #define QTAWS_GETSLOTTYPEVERSIONSREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetSlotTypeVersionsRequestPrivate;
+
+class QTAWS_EXPORT GetSlotTypeVersionsRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetSlotTypeVersionsRequest(const GetSlotTypeVersionsRequest &other);
+    GetSlotTypeVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSlotTypeVersionsRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

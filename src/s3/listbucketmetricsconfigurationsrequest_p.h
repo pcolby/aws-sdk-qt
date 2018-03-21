@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBUCKETMETRICSCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTBUCKETMETRICSCONFIGURATIONSREQUEST_P_H
 
+#include "s3_p.h"
+#include "listbucketmetricsconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListBucketMetricsConfigurationsRequest;
+
+class QTAWS_EXPORT ListBucketMetricsConfigurationsRequestPrivate : public S3Private {
+
+public:
+    ListBucketMetricsConfigurationsRequestPrivate(const S3::Action action,
+                                   ListBucketMetricsConfigurationsRequest * const q);
+    ListBucketMetricsConfigurationsRequestPrivate(const ListBucketMetricsConfigurationsRequestPrivate &other,
+                                   ListBucketMetricsConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBucketMetricsConfigurationsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

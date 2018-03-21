@@ -19,3 +19,107 @@
 
 #include "describeelasticipsrequest.h"
 #include "describeelasticipsrequest_p.h"
+#include "describeelasticipsresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeElasticIpsRequest
+ *
+ * @brief  Implements OpsWorks DescribeElasticIps requests.
+ *
+ * @see    OpsWorksClient::describeElasticIps
+ */
+
+/**
+ * @brief  Constructs a new DescribeElasticIpsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticIpsResponse::DescribeElasticIpsResponse(
+
+/**
+ * @brief  Constructs a new DescribeElasticIpsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeElasticIpsRequest::DescribeElasticIpsRequest(const DescribeElasticIpsRequest &other)
+    : OpsWorksRequest(new DescribeElasticIpsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeElasticIpsRequest object.
+ */
+DescribeElasticIpsRequest::DescribeElasticIpsRequest()
+    : OpsWorksRequest(new DescribeElasticIpsRequestPrivate(OpsWorksRequest::DescribeElasticIpsAction, this))
+{
+
+}
+
+bool DescribeElasticIpsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeElasticIpsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeElasticIpsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeElasticIpsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticIpsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeElasticIpsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticIpsRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeElasticIpsRequest instance.
+ */
+DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeElasticIpsRequest * const q)
+    : DescribeElasticIpsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticIpsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeElasticIpsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeElasticIpsRequest instance.
+ */
+DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
+    const DescribeElasticIpsRequestPrivate &other, DescribeElasticIpsRequest * const q)
+    : DescribeElasticIpsPrivate(other, q)
+{
+
+}

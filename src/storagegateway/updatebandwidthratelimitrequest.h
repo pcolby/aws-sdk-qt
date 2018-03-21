@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEBANDWIDTHRATELIMITREQUEST_H
 #define QTAWS_UPDATEBANDWIDTHRATELIMITREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateBandwidthRateLimitRequestPrivate;
+
+class QTAWS_EXPORT UpdateBandwidthRateLimitRequest : public StorageGatewayRequest {
+
+public:
+    UpdateBandwidthRateLimitRequest(const UpdateBandwidthRateLimitRequest &other);
+    UpdateBandwidthRateLimitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBandwidthRateLimitRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

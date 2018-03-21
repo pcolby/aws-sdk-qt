@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHSMCLIENTCERTIFICATESREQUEST_P_H
 #define QTAWS_DESCRIBEHSMCLIENTCERTIFICATESREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describehsmclientcertificatesrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeHsmClientCertificatesRequest;
+
+class QTAWS_EXPORT DescribeHsmClientCertificatesRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeHsmClientCertificatesRequestPrivate(const Redshift::Action action,
+                                   DescribeHsmClientCertificatesRequest * const q);
+    DescribeHsmClientCertificatesRequestPrivate(const DescribeHsmClientCertificatesRequestPrivate &other,
+                                   DescribeHsmClientCertificatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHsmClientCertificatesRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

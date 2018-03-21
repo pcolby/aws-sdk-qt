@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETKEYPAIRSREQUEST_P_H
 #define QTAWS_GETKEYPAIRSREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getkeypairsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetKeyPairsRequest;
+
+class QTAWS_EXPORT GetKeyPairsRequestPrivate : public LightsailPrivate {
+
+public:
+    GetKeyPairsRequestPrivate(const Lightsail::Action action,
+                                   GetKeyPairsRequest * const q);
+    GetKeyPairsRequestPrivate(const GetKeyPairsRequestPrivate &other,
+                                   GetKeyPairsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetKeyPairsRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

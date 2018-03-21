@@ -19,3 +19,107 @@
 
 #include "associatesubnetcidrblockrequest.h"
 #include "associatesubnetcidrblockrequest_p.h"
+#include "associatesubnetcidrblockresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateSubnetCidrBlockRequest
+ *
+ * @brief  Implements EC2 AssociateSubnetCidrBlock requests.
+ *
+ * @see    EC2Client::associateSubnetCidrBlock
+ */
+
+/**
+ * @brief  Constructs a new AssociateSubnetCidrBlockResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
+
+/**
+ * @brief  Constructs a new AssociateSubnetCidrBlockRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest(const AssociateSubnetCidrBlockRequest &other)
+    : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateSubnetCidrBlockRequest object.
+ */
+AssociateSubnetCidrBlockRequest::AssociateSubnetCidrBlockRequest()
+    : EC2Request(new AssociateSubnetCidrBlockRequestPrivate(EC2Request::AssociateSubnetCidrBlockAction, this))
+{
+
+}
+
+bool AssociateSubnetCidrBlockRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateSubnetCidrBlockResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateSubnetCidrBlockResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateSubnetCidrBlockResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateSubnetCidrBlockRequestPrivate
+ *
+ * @brief  Private implementation for AssociateSubnetCidrBlockRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AssociateSubnetCidrBlockRequest instance.
+ */
+AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
+    const EC2Request::Action action, AssociateSubnetCidrBlockRequest * const q)
+    : AssociateSubnetCidrBlockPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateSubnetCidrBlockRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateSubnetCidrBlockRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateSubnetCidrBlockRequest instance.
+ */
+AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
+    const AssociateSubnetCidrBlockRequestPrivate &other, AssociateSubnetCidrBlockRequest * const q)
+    : AssociateSubnetCidrBlockPrivate(other, q)
+{
+
+}

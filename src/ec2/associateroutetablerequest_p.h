@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEROUTETABLEREQUEST_P_H
 #define QTAWS_ASSOCIATEROUTETABLEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "associateroutetablerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateRouteTableRequest;
+
+class QTAWS_EXPORT AssociateRouteTableRequestPrivate : public EC2Private {
+
+public:
+    AssociateRouteTableRequestPrivate(const EC2::Action action,
+                                   AssociateRouteTableRequest * const q);
+    AssociateRouteTableRequestPrivate(const AssociateRouteTableRequestPrivate &other,
+                                   AssociateRouteTableRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateRouteTableRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

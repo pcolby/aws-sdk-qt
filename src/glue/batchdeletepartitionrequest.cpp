@@ -19,3 +19,107 @@
 
 #include "batchdeletepartitionrequest.h"
 #include "batchdeletepartitionrequest_p.h"
+#include "batchdeletepartitionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  BatchDeletePartitionRequest
+ *
+ * @brief  Implements Glue BatchDeletePartition requests.
+ *
+ * @see    GlueClient::batchDeletePartition
+ */
+
+/**
+ * @brief  Constructs a new BatchDeletePartitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchDeletePartitionResponse::BatchDeletePartitionResponse(
+
+/**
+ * @brief  Constructs a new BatchDeletePartitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchDeletePartitionRequest::BatchDeletePartitionRequest(const BatchDeletePartitionRequest &other)
+    : GlueRequest(new BatchDeletePartitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchDeletePartitionRequest object.
+ */
+BatchDeletePartitionRequest::BatchDeletePartitionRequest()
+    : GlueRequest(new BatchDeletePartitionRequestPrivate(GlueRequest::BatchDeletePartitionAction, this))
+{
+
+}
+
+bool BatchDeletePartitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchDeletePartitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchDeletePartitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchDeletePartitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchDeletePartitionRequestPrivate
+ *
+ * @brief  Private implementation for BatchDeletePartitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeletePartitionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public BatchDeletePartitionRequest instance.
+ */
+BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
+    const GlueRequest::Action action, BatchDeletePartitionRequest * const q)
+    : BatchDeletePartitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchDeletePartitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchDeletePartitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchDeletePartitionRequest instance.
+ */
+BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
+    const BatchDeletePartitionRequestPrivate &other, BatchDeletePartitionRequest * const q)
+    : BatchDeletePartitionPrivate(other, q)
+{
+
+}

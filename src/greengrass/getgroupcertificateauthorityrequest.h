@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGROUPCERTIFICATEAUTHORITYREQUEST_H
 #define QTAWS_GETGROUPCERTIFICATEAUTHORITYREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetGroupCertificateAuthorityRequestPrivate;
+
+class QTAWS_EXPORT GetGroupCertificateAuthorityRequest : public GreengrassRequest {
+
+public:
+    GetGroupCertificateAuthorityRequest(const GetGroupCertificateAuthorityRequest &other);
+    GetGroupCertificateAuthorityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupCertificateAuthorityRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

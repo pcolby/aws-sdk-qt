@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSUBSCRIPTIONDEFINITIONREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "getsubscriptiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetSubscriptionDefinitionRequest;
+
+class QTAWS_EXPORT GetSubscriptionDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    GetSubscriptionDefinitionRequestPrivate(const Greengrass::Action action,
+                                   GetSubscriptionDefinitionRequest * const q);
+    GetSubscriptionDefinitionRequestPrivate(const GetSubscriptionDefinitionRequestPrivate &other,
+                                   GetSubscriptionDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSubscriptionDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "composeenvironmentsrequest.h"
 #include "composeenvironmentsrequest_p.h"
+#include "composeenvironmentsresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ComposeEnvironmentsRequest
+ *
+ * @brief  Implements ElasticBeanstalk ComposeEnvironments requests.
+ *
+ * @see    ElasticBeanstalkClient::composeEnvironments
+ */
+
+/**
+ * @brief  Constructs a new ComposeEnvironmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ComposeEnvironmentsResponse::ComposeEnvironmentsResponse(
+
+/**
+ * @brief  Constructs a new ComposeEnvironmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ComposeEnvironmentsRequest::ComposeEnvironmentsRequest(const ComposeEnvironmentsRequest &other)
+    : ElasticBeanstalkRequest(new ComposeEnvironmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ComposeEnvironmentsRequest object.
+ */
+ComposeEnvironmentsRequest::ComposeEnvironmentsRequest()
+    : ElasticBeanstalkRequest(new ComposeEnvironmentsRequestPrivate(ElasticBeanstalkRequest::ComposeEnvironmentsAction, this))
+{
+
+}
+
+bool ComposeEnvironmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ComposeEnvironmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ComposeEnvironmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ComposeEnvironmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ComposeEnvironmentsRequestPrivate
+ *
+ * @brief  Private implementation for ComposeEnvironmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ComposeEnvironmentsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public ComposeEnvironmentsRequest instance.
+ */
+ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, ComposeEnvironmentsRequest * const q)
+    : ComposeEnvironmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ComposeEnvironmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ComposeEnvironmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ComposeEnvironmentsRequest instance.
+ */
+ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
+    const ComposeEnvironmentsRequestPrivate &other, ComposeEnvironmentsRequest * const q)
+    : ComposeEnvironmentsPrivate(other, q)
+{
+
+}

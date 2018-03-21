@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCLUSTERSREQUEST_H
 #define QTAWS_LISTCLUSTERSREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListClustersRequestPrivate;
+
+class QTAWS_EXPORT ListClustersRequest : public ECSRequest {
+
+public:
+    ListClustersRequest(const ListClustersRequest &other);
+    ListClustersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListClustersRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

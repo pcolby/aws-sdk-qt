@@ -19,3 +19,107 @@
 
 #include "attachgrouppolicyrequest.h"
 #include "attachgrouppolicyrequest_p.h"
+#include "attachgrouppolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AttachGroupPolicyRequest
+ *
+ * @brief  Implements IAM AttachGroupPolicy requests.
+ *
+ * @see    IAMClient::attachGroupPolicy
+ */
+
+/**
+ * @brief  Constructs a new AttachGroupPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachGroupPolicyResponse::AttachGroupPolicyResponse(
+
+/**
+ * @brief  Constructs a new AttachGroupPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachGroupPolicyRequest::AttachGroupPolicyRequest(const AttachGroupPolicyRequest &other)
+    : IAMRequest(new AttachGroupPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachGroupPolicyRequest object.
+ */
+AttachGroupPolicyRequest::AttachGroupPolicyRequest()
+    : IAMRequest(new AttachGroupPolicyRequestPrivate(IAMRequest::AttachGroupPolicyAction, this))
+{
+
+}
+
+bool AttachGroupPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachGroupPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachGroupPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * AttachGroupPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachGroupPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachGroupPolicyRequestPrivate
+ *
+ * @brief  Private implementation for AttachGroupPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachGroupPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public AttachGroupPolicyRequest instance.
+ */
+AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
+    const IAMRequest::Action action, AttachGroupPolicyRequest * const q)
+    : AttachGroupPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachGroupPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachGroupPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachGroupPolicyRequest instance.
+ */
+AttachGroupPolicyRequestPrivate::AttachGroupPolicyRequestPrivate(
+    const AttachGroupPolicyRequestPrivate &other, AttachGroupPolicyRequest * const q)
+    : AttachGroupPolicyPrivate(other, q)
+{
+
+}

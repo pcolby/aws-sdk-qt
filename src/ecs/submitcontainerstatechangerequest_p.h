@@ -20,4 +20,29 @@
 #ifndef QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_P_H
 #define QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_P_H
 
+#include "ecs_p.h"
+#include "submitcontainerstatechangerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class SubmitContainerStateChangeRequest;
+
+class QTAWS_EXPORT SubmitContainerStateChangeRequestPrivate : public ECSPrivate {
+
+public:
+    SubmitContainerStateChangeRequestPrivate(const ECS::Action action,
+                                   SubmitContainerStateChangeRequest * const q);
+    SubmitContainerStateChangeRequestPrivate(const SubmitContainerStateChangeRequestPrivate &other,
+                                   SubmitContainerStateChangeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SubmitContainerStateChangeRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

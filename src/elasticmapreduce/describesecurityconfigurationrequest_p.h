@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESECURITYCONFIGURATIONREQUEST_P_H
 #define QTAWS_DESCRIBESECURITYCONFIGURATIONREQUEST_P_H
 
+#include "emr_p.h"
+#include "describesecurityconfigurationrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeSecurityConfigurationRequest;
+
+class QTAWS_EXPORT DescribeSecurityConfigurationRequestPrivate : public EMRPrivate {
+
+public:
+    DescribeSecurityConfigurationRequestPrivate(const EMR::Action action,
+                                   DescribeSecurityConfigurationRequest * const q);
+    DescribeSecurityConfigurationRequestPrivate(const DescribeSecurityConfigurationRequestPrivate &other,
+                                   DescribeSecurityConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSecurityConfigurationRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

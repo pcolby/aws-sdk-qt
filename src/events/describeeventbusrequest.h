@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTBUSREQUEST_H
 #define QTAWS_DESCRIBEEVENTBUSREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DescribeEventBusRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventBusRequest : public CloudWatchEventsRequest {
+
+public:
+    DescribeEventBusRequest(const DescribeEventBusRequest &other);
+    DescribeEventBusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventBusRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

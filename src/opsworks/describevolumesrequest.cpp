@@ -19,3 +19,107 @@
 
 #include "describevolumesrequest.h"
 #include "describevolumesrequest_p.h"
+#include "describevolumesresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeVolumesRequest
+ *
+ * @brief  Implements OpsWorks DescribeVolumes requests.
+ *
+ * @see    OpsWorksClient::describeVolumes
+ */
+
+/**
+ * @brief  Constructs a new DescribeVolumesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVolumesResponse::DescribeVolumesResponse(
+
+/**
+ * @brief  Constructs a new DescribeVolumesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVolumesRequest::DescribeVolumesRequest(const DescribeVolumesRequest &other)
+    : OpsWorksRequest(new DescribeVolumesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVolumesRequest object.
+ */
+DescribeVolumesRequest::DescribeVolumesRequest()
+    : OpsWorksRequest(new DescribeVolumesRequestPrivate(OpsWorksRequest::DescribeVolumesAction, this))
+{
+
+}
+
+bool DescribeVolumesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVolumesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVolumesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVolumesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVolumesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVolumesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumesRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeVolumesRequest instance.
+ */
+DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeVolumesRequest * const q)
+    : DescribeVolumesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVolumesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVolumesRequest instance.
+ */
+DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
+    const DescribeVolumesRequestPrivate &other, DescribeVolumesRequest * const q)
+    : DescribeVolumesPrivate(other, q)
+{
+
+}

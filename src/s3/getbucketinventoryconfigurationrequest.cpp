@@ -19,3 +19,107 @@
 
 #include "getbucketinventoryconfigurationrequest.h"
 #include "getbucketinventoryconfigurationrequest_p.h"
+#include "getbucketinventoryconfigurationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketInventoryConfigurationRequest
+ *
+ * @brief  Implements S3 GetBucketInventoryConfiguration requests.
+ *
+ * @see    S3Client::getBucketInventoryConfiguration
+ */
+
+/**
+ * @brief  Constructs a new GetBucketInventoryConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketInventoryConfigurationResponse::GetBucketInventoryConfigurationResponse(
+
+/**
+ * @brief  Constructs a new GetBucketInventoryConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBucketInventoryConfigurationRequest::GetBucketInventoryConfigurationRequest(const GetBucketInventoryConfigurationRequest &other)
+    : S3Request(new GetBucketInventoryConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBucketInventoryConfigurationRequest object.
+ */
+GetBucketInventoryConfigurationRequest::GetBucketInventoryConfigurationRequest()
+    : S3Request(new GetBucketInventoryConfigurationRequestPrivate(S3Request::GetBucketInventoryConfigurationAction, this))
+{
+
+}
+
+bool GetBucketInventoryConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBucketInventoryConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBucketInventoryConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * GetBucketInventoryConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBucketInventoryConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketInventoryConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for GetBucketInventoryConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketInventoryConfigurationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public GetBucketInventoryConfigurationRequest instance.
+ */
+GetBucketInventoryConfigurationRequestPrivate::GetBucketInventoryConfigurationRequestPrivate(
+    const S3Request::Action action, GetBucketInventoryConfigurationRequest * const q)
+    : GetBucketInventoryConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketInventoryConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBucketInventoryConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBucketInventoryConfigurationRequest instance.
+ */
+GetBucketInventoryConfigurationRequestPrivate::GetBucketInventoryConfigurationRequestPrivate(
+    const GetBucketInventoryConfigurationRequestPrivate &other, GetBucketInventoryConfigurationRequest * const q)
+    : GetBucketInventoryConfigurationPrivate(other, q)
+{
+
+}

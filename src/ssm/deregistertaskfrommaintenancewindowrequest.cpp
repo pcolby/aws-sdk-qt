@@ -19,3 +19,107 @@
 
 #include "deregistertaskfrommaintenancewindowrequest.h"
 #include "deregistertaskfrommaintenancewindowrequest_p.h"
+#include "deregistertaskfrommaintenancewindowresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeregisterTaskFromMaintenanceWindowRequest
+ *
+ * @brief  Implements SSM DeregisterTaskFromMaintenanceWindow requests.
+ *
+ * @see    SSMClient::deregisterTaskFromMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new DeregisterTaskFromMaintenanceWindowResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterTaskFromMaintenanceWindowResponse::DeregisterTaskFromMaintenanceWindowResponse(
+
+/**
+ * @brief  Constructs a new DeregisterTaskFromMaintenanceWindowRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterTaskFromMaintenanceWindowRequest::DeregisterTaskFromMaintenanceWindowRequest(const DeregisterTaskFromMaintenanceWindowRequest &other)
+    : SSMRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterTaskFromMaintenanceWindowRequest object.
+ */
+DeregisterTaskFromMaintenanceWindowRequest::DeregisterTaskFromMaintenanceWindowRequest()
+    : SSMRequest(new DeregisterTaskFromMaintenanceWindowRequestPrivate(SSMRequest::DeregisterTaskFromMaintenanceWindowAction, this))
+{
+
+}
+
+bool DeregisterTaskFromMaintenanceWindowRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterTaskFromMaintenanceWindowResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterTaskFromMaintenanceWindowResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeregisterTaskFromMaintenanceWindowRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterTaskFromMaintenanceWindowResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterTaskFromMaintenanceWindowRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterTaskFromMaintenanceWindowRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTaskFromMaintenanceWindowRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeregisterTaskFromMaintenanceWindowRequest instance.
+ */
+DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
+    const SSMRequest::Action action, DeregisterTaskFromMaintenanceWindowRequest * const q)
+    : DeregisterTaskFromMaintenanceWindowPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTaskFromMaintenanceWindowRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterTaskFromMaintenanceWindowRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterTaskFromMaintenanceWindowRequest instance.
+ */
+DeregisterTaskFromMaintenanceWindowRequestPrivate::DeregisterTaskFromMaintenanceWindowRequestPrivate(
+    const DeregisterTaskFromMaintenanceWindowRequestPrivate &other, DeregisterTaskFromMaintenanceWindowRequest * const q)
+    : DeregisterTaskFromMaintenanceWindowPrivate(other, q)
+{
+
+}

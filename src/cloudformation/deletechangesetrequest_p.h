@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECHANGESETREQUEST_P_H
 #define QTAWS_DELETECHANGESETREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "deletechangesetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DeleteChangeSetRequest;
+
+class QTAWS_EXPORT DeleteChangeSetRequestPrivate : public CloudFormationPrivate {
+
+public:
+    DeleteChangeSetRequestPrivate(const CloudFormation::Action action,
+                                   DeleteChangeSetRequest * const q);
+    DeleteChangeSetRequestPrivate(const DeleteChangeSetRequestPrivate &other,
+                                   DeleteChangeSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteChangeSetRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

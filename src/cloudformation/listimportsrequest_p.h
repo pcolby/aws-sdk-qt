@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIMPORTSREQUEST_P_H
 #define QTAWS_LISTIMPORTSREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "listimportsrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ListImportsRequest;
+
+class QTAWS_EXPORT ListImportsRequestPrivate : public CloudFormationPrivate {
+
+public:
+    ListImportsRequestPrivate(const CloudFormation::Action action,
+                                   ListImportsRequest * const q);
+    ListImportsRequestPrivate(const ListImportsRequestPrivate &other,
+                                   ListImportsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListImportsRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

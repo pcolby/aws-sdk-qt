@@ -19,3 +19,107 @@
 
 #include "retrievetaperecoverypointrequest.h"
 #include "retrievetaperecoverypointrequest_p.h"
+#include "retrievetaperecoverypointresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  RetrieveTapeRecoveryPointRequest
+ *
+ * @brief  Implements StorageGateway RetrieveTapeRecoveryPoint requests.
+ *
+ * @see    StorageGatewayClient::retrieveTapeRecoveryPoint
+ */
+
+/**
+ * @brief  Constructs a new RetrieveTapeRecoveryPointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetrieveTapeRecoveryPointResponse::RetrieveTapeRecoveryPointResponse(
+
+/**
+ * @brief  Constructs a new RetrieveTapeRecoveryPointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RetrieveTapeRecoveryPointRequest::RetrieveTapeRecoveryPointRequest(const RetrieveTapeRecoveryPointRequest &other)
+    : StorageGatewayRequest(new RetrieveTapeRecoveryPointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RetrieveTapeRecoveryPointRequest object.
+ */
+RetrieveTapeRecoveryPointRequest::RetrieveTapeRecoveryPointRequest()
+    : StorageGatewayRequest(new RetrieveTapeRecoveryPointRequestPrivate(StorageGatewayRequest::RetrieveTapeRecoveryPointAction, this))
+{
+
+}
+
+bool RetrieveTapeRecoveryPointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RetrieveTapeRecoveryPointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RetrieveTapeRecoveryPointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * RetrieveTapeRecoveryPointRequest::response(QNetworkReply * const reply) const
+{
+    return new RetrieveTapeRecoveryPointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RetrieveTapeRecoveryPointRequestPrivate
+ *
+ * @brief  Private implementation for RetrieveTapeRecoveryPointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveTapeRecoveryPointRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public RetrieveTapeRecoveryPointRequest instance.
+ */
+RetrieveTapeRecoveryPointRequestPrivate::RetrieveTapeRecoveryPointRequestPrivate(
+    const StorageGatewayRequest::Action action, RetrieveTapeRecoveryPointRequest * const q)
+    : RetrieveTapeRecoveryPointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveTapeRecoveryPointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RetrieveTapeRecoveryPointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RetrieveTapeRecoveryPointRequest instance.
+ */
+RetrieveTapeRecoveryPointRequestPrivate::RetrieveTapeRecoveryPointRequestPrivate(
+    const RetrieveTapeRecoveryPointRequestPrivate &other, RetrieveTapeRecoveryPointRequest * const q)
+    : RetrieveTapeRecoveryPointPrivate(other, q)
+{
+
+}

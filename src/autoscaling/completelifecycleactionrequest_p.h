@@ -20,4 +20,29 @@
 #ifndef QTAWS_COMPLETELIFECYCLEACTIONREQUEST_P_H
 #define QTAWS_COMPLETELIFECYCLEACTIONREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "completelifecycleactionrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CompleteLifecycleActionRequest;
+
+class QTAWS_EXPORT CompleteLifecycleActionRequestPrivate : public AutoScalingPrivate {
+
+public:
+    CompleteLifecycleActionRequestPrivate(const AutoScaling::Action action,
+                                   CompleteLifecycleActionRequest * const q);
+    CompleteLifecycleActionRequestPrivate(const CompleteLifecycleActionRequestPrivate &other,
+                                   CompleteLifecycleActionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteLifecycleActionRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMAINTENANCEWINDOWREQUEST_H
 #define QTAWS_DELETEMAINTENANCEWINDOWREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteMaintenanceWindowRequestPrivate;
+
+class QTAWS_EXPORT DeleteMaintenanceWindowRequest : public SSMRequest {
+
+public:
+    DeleteMaintenanceWindowRequest(const DeleteMaintenanceWindowRequest &other);
+    DeleteMaintenanceWindowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMaintenanceWindowRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

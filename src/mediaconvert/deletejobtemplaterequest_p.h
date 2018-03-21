@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEJOBTEMPLATEREQUEST_P_H
 #define QTAWS_DELETEJOBTEMPLATEREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "deletejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeleteJobTemplateRequest;
+
+class QTAWS_EXPORT DeleteJobTemplateRequestPrivate : public MediaConvertPrivate {
+
+public:
+    DeleteJobTemplateRequestPrivate(const MediaConvert::Action action,
+                                   DeleteJobTemplateRequest * const q);
+    DeleteJobTemplateRequestPrivate(const DeleteJobTemplateRequestPrivate &other,
+                                   DeleteJobTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteJobTemplateRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeImagesRequestPrivate;
+
+class QTAWS_EXPORT DescribeImagesRequest : public EC2Request {
+
+public:
+    DescribeImagesRequest(const DescribeImagesRequest &other);
+    DescribeImagesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImagesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

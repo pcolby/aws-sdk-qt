@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINUPDATEDEVICESTATUSREQUEST_P_H
 #define QTAWS_ADMINUPDATEDEVICESTATUSREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminupdatedevicestatusrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminUpdateDeviceStatusRequest;
+
+class QTAWS_EXPORT AdminUpdateDeviceStatusRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminUpdateDeviceStatusRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminUpdateDeviceStatusRequest * const q);
+    AdminUpdateDeviceStatusRequestPrivate(const AdminUpdateDeviceStatusRequestPrivate &other,
+                                   AdminUpdateDeviceStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminUpdateDeviceStatusRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

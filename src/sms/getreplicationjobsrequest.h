@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETREPLICATIONJOBSREQUEST_H
 #define QTAWS_GETREPLICATIONJOBSREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class GetReplicationJobsRequestPrivate;
+
+class QTAWS_EXPORT GetReplicationJobsRequest : public SMSRequest {
+
+public:
+    GetReplicationJobsRequest(const GetReplicationJobsRequest &other);
+    GetReplicationJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetReplicationJobsRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGCMCHANNELREQUEST_H
 #define QTAWS_DELETEGCMCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteGcmChannelRequestPrivate;
+
+class QTAWS_EXPORT DeleteGcmChannelRequest : public PinpointRequest {
+
+public:
+    DeleteGcmChannelRequest(const DeleteGcmChannelRequest &other);
+    DeleteGcmChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGcmChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

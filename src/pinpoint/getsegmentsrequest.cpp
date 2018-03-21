@@ -19,3 +19,107 @@
 
 #include "getsegmentsrequest.h"
 #include "getsegmentsrequest_p.h"
+#include "getsegmentsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentsRequest
+ *
+ * @brief  Implements Pinpoint GetSegments requests.
+ *
+ * @see    PinpointClient::getSegments
+ */
+
+/**
+ * @brief  Constructs a new GetSegmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentsResponse::GetSegmentsResponse(
+
+/**
+ * @brief  Constructs a new GetSegmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSegmentsRequest::GetSegmentsRequest(const GetSegmentsRequest &other)
+    : PinpointRequest(new GetSegmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSegmentsRequest object.
+ */
+GetSegmentsRequest::GetSegmentsRequest()
+    : PinpointRequest(new GetSegmentsRequestPrivate(PinpointRequest::GetSegmentsAction, this))
+{
+
+}
+
+bool GetSegmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSegmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSegmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSegmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentsRequestPrivate
+ *
+ * @brief  Private implementation for GetSegmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetSegmentsRequest instance.
+ */
+GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
+    const PinpointRequest::Action action, GetSegmentsRequest * const q)
+    : GetSegmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSegmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSegmentsRequest instance.
+ */
+GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
+    const GetSegmentsRequestPrivate &other, GetSegmentsRequest * const q)
+    : GetSegmentsPrivate(other, q)
+{
+
+}

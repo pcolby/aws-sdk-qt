@@ -19,3 +19,107 @@
 
 #include "unassignprivateipaddressesrequest.h"
 #include "unassignprivateipaddressesrequest_p.h"
+#include "unassignprivateipaddressesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  UnassignPrivateIpAddressesRequest
+ *
+ * @brief  Implements EC2 UnassignPrivateIpAddresses requests.
+ *
+ * @see    EC2Client::unassignPrivateIpAddresses
+ */
+
+/**
+ * @brief  Constructs a new UnassignPrivateIpAddressesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnassignPrivateIpAddressesResponse::UnassignPrivateIpAddressesResponse(
+
+/**
+ * @brief  Constructs a new UnassignPrivateIpAddressesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest(const UnassignPrivateIpAddressesRequest &other)
+    : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UnassignPrivateIpAddressesRequest object.
+ */
+UnassignPrivateIpAddressesRequest::UnassignPrivateIpAddressesRequest()
+    : EC2Request(new UnassignPrivateIpAddressesRequestPrivate(EC2Request::UnassignPrivateIpAddressesAction, this))
+{
+
+}
+
+bool UnassignPrivateIpAddressesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UnassignPrivateIpAddressesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UnassignPrivateIpAddressesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(QNetworkReply * const reply) const
+{
+    return new UnassignPrivateIpAddressesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UnassignPrivateIpAddressesRequestPrivate
+ *
+ * @brief  Private implementation for UnassignPrivateIpAddressesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public UnassignPrivateIpAddressesRequest instance.
+ */
+UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
+    const EC2Request::Action action, UnassignPrivateIpAddressesRequest * const q)
+    : UnassignPrivateIpAddressesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignPrivateIpAddressesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UnassignPrivateIpAddressesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UnassignPrivateIpAddressesRequest instance.
+ */
+UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
+    const UnassignPrivateIpAddressesRequestPrivate &other, UnassignPrivateIpAddressesRequest * const q)
+    : UnassignPrivateIpAddressesPrivate(other, q)
+{
+
+}

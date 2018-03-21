@@ -19,3 +19,107 @@
 
 #include "describeenvironmentmembershipsrequest.h"
 #include "describeenvironmentmembershipsrequest_p.h"
+#include "describeenvironmentmembershipsresponse.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  DescribeEnvironmentMembershipsRequest
+ *
+ * @brief  Implements Cloud9 DescribeEnvironmentMemberships requests.
+ *
+ * @see    Cloud9Client::describeEnvironmentMemberships
+ */
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentMembershipsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentMembershipsResponse::DescribeEnvironmentMembershipsResponse(
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentMembershipsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEnvironmentMembershipsRequest::DescribeEnvironmentMembershipsRequest(const DescribeEnvironmentMembershipsRequest &other)
+    : Cloud9Request(new DescribeEnvironmentMembershipsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentMembershipsRequest object.
+ */
+DescribeEnvironmentMembershipsRequest::DescribeEnvironmentMembershipsRequest()
+    : Cloud9Request(new DescribeEnvironmentMembershipsRequestPrivate(Cloud9Request::DescribeEnvironmentMembershipsAction, this))
+{
+
+}
+
+bool DescribeEnvironmentMembershipsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEnvironmentMembershipsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEnvironmentMembershipsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEnvironmentMembershipsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentMembershipsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentMembershipsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentMembershipsRequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public DescribeEnvironmentMembershipsRequest instance.
+ */
+DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequestPrivate(
+    const Cloud9Request::Action action, DescribeEnvironmentMembershipsRequest * const q)
+    : DescribeEnvironmentMembershipsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentMembershipsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEnvironmentMembershipsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEnvironmentMembershipsRequest instance.
+ */
+DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequestPrivate(
+    const DescribeEnvironmentMembershipsRequestPrivate &other, DescribeEnvironmentMembershipsRequest * const q)
+    : DescribeEnvironmentMembershipsPrivate(other, q)
+{
+
+}

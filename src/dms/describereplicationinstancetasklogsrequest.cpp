@@ -19,3 +19,107 @@
 
 #include "describereplicationinstancetasklogsrequest.h"
 #include "describereplicationinstancetasklogsrequest_p.h"
+#include "describereplicationinstancetasklogsresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationInstanceTaskLogsRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeReplicationInstanceTaskLogs requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationInstanceTaskLogs
+ */
+
+/**
+ * @brief  Constructs a new DescribeReplicationInstanceTaskLogsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationInstanceTaskLogsResponse::DescribeReplicationInstanceTaskLogsResponse(
+
+/**
+ * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest(const DescribeReplicationInstanceTaskLogsRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequest object.
+ */
+DescribeReplicationInstanceTaskLogsRequest::DescribeReplicationInstanceTaskLogsRequest()
+    : DatabaseMigrationServiceRequest(new DescribeReplicationInstanceTaskLogsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationInstanceTaskLogsAction, this))
+{
+
+}
+
+bool DescribeReplicationInstanceTaskLogsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReplicationInstanceTaskLogsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReplicationInstanceTaskLogsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReplicationInstanceTaskLogsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationInstanceTaskLogsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReplicationInstanceTaskLogsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeReplicationInstanceTaskLogsRequest instance.
+ */
+DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationInstanceTaskLogsRequest * const q)
+    : DescribeReplicationInstanceTaskLogsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationInstanceTaskLogsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReplicationInstanceTaskLogsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReplicationInstanceTaskLogsRequest instance.
+ */
+DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
+    const DescribeReplicationInstanceTaskLogsRequestPrivate &other, DescribeReplicationInstanceTaskLogsRequest * const q)
+    : DescribeReplicationInstanceTaskLogsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELAUNCHTEMPLATEREQUEST_P_H
 #define QTAWS_CREATELAUNCHTEMPLATEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createlaunchtemplaterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateLaunchTemplateRequest;
+
+class QTAWS_EXPORT CreateLaunchTemplateRequestPrivate : public EC2Private {
+
+public:
+    CreateLaunchTemplateRequestPrivate(const EC2::Action action,
+                                   CreateLaunchTemplateRequest * const q);
+    CreateLaunchTemplateRequestPrivate(const CreateLaunchTemplateRequestPrivate &other,
+                                   CreateLaunchTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLaunchTemplateRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

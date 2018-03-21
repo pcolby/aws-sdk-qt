@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPROVISIONINGARTIFACTREQUEST_H
 #define QTAWS_DELETEPROVISIONINGARTIFACTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteProvisioningArtifactRequestPrivate;
+
+class QTAWS_EXPORT DeleteProvisioningArtifactRequest : public ServiceCatalogRequest {
+
+public:
+    DeleteProvisioningArtifactRequest(const DeleteProvisioningArtifactRequest &other);
+    DeleteProvisioningArtifactRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProvisioningArtifactRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

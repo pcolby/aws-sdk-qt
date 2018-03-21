@@ -19,3 +19,107 @@
 
 #include "getdomaindetailrequest.h"
 #include "getdomaindetailrequest_p.h"
+#include "getdomaindetailresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  GetDomainDetailRequest
+ *
+ * @brief  Implements Route53Domains GetDomainDetail requests.
+ *
+ * @see    Route53DomainsClient::getDomainDetail
+ */
+
+/**
+ * @brief  Constructs a new GetDomainDetailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainDetailResponse::GetDomainDetailResponse(
+
+/**
+ * @brief  Constructs a new GetDomainDetailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDomainDetailRequest::GetDomainDetailRequest(const GetDomainDetailRequest &other)
+    : Route53DomainsRequest(new GetDomainDetailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDomainDetailRequest object.
+ */
+GetDomainDetailRequest::GetDomainDetailRequest()
+    : Route53DomainsRequest(new GetDomainDetailRequestPrivate(Route53DomainsRequest::GetDomainDetailAction, this))
+{
+
+}
+
+bool GetDomainDetailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDomainDetailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDomainDetailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDomainDetailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainDetailRequestPrivate
+ *
+ * @brief  Private implementation for GetDomainDetailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainDetailRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public GetDomainDetailRequest instance.
+ */
+GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
+    const Route53DomainsRequest::Action action, GetDomainDetailRequest * const q)
+    : GetDomainDetailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainDetailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDomainDetailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDomainDetailRequest instance.
+ */
+GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
+    const GetDomainDetailRequestPrivate &other, GetDomainDetailRequest * const q)
+    : GetDomainDetailPrivate(other, q)
+{
+
+}

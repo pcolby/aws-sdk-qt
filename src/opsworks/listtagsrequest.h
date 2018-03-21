@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSREQUEST_H
 #define QTAWS_LISTTAGSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class ListTagsRequestPrivate;
+
+class QTAWS_EXPORT ListTagsRequest : public OpsWorksRequest {
+
+public:
+    ListTagsRequest(const ListTagsRequest &other);
+    ListTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "gettriggerrequest.h"
 #include "gettriggerrequest_p.h"
+#include "gettriggerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTriggerRequest
+ *
+ * @brief  Implements Glue GetTrigger requests.
+ *
+ * @see    GlueClient::getTrigger
+ */
+
+/**
+ * @brief  Constructs a new GetTriggerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTriggerResponse::GetTriggerResponse(
+
+/**
+ * @brief  Constructs a new GetTriggerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTriggerRequest::GetTriggerRequest(const GetTriggerRequest &other)
+    : GlueRequest(new GetTriggerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTriggerRequest object.
+ */
+GetTriggerRequest::GetTriggerRequest()
+    : GlueRequest(new GetTriggerRequestPrivate(GlueRequest::GetTriggerAction, this))
+{
+
+}
+
+bool GetTriggerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTriggerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTriggerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetTriggerRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTriggerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTriggerRequestPrivate
+ *
+ * @brief  Private implementation for GetTriggerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTriggerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetTriggerRequest instance.
+ */
+GetTriggerRequestPrivate::GetTriggerRequestPrivate(
+    const GlueRequest::Action action, GetTriggerRequest * const q)
+    : GetTriggerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTriggerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTriggerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTriggerRequest instance.
+ */
+GetTriggerRequestPrivate::GetTriggerRequestPrivate(
+    const GetTriggerRequestPrivate &other, GetTriggerRequest * const q)
+    : GetTriggerPrivate(other, q)
+{
+
+}

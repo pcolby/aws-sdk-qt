@@ -19,3 +19,107 @@
 
 #include "getpendingjobexecutionsrequest.h"
 #include "getpendingjobexecutionsrequest_p.h"
+#include "getpendingjobexecutionsresponse.h"
+#include "iotjobsdataplanerequest_p.h"
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  GetPendingJobExecutionsRequest
+ *
+ * @brief  Implements IoTJobsDataPlane GetPendingJobExecutions requests.
+ *
+ * @see    IoTJobsDataPlaneClient::getPendingJobExecutions
+ */
+
+/**
+ * @brief  Constructs a new GetPendingJobExecutionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPendingJobExecutionsResponse::GetPendingJobExecutionsResponse(
+
+/**
+ * @brief  Constructs a new GetPendingJobExecutionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest(const GetPendingJobExecutionsRequest &other)
+    : IoTJobsDataPlaneRequest(new GetPendingJobExecutionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPendingJobExecutionsRequest object.
+ */
+GetPendingJobExecutionsRequest::GetPendingJobExecutionsRequest()
+    : IoTJobsDataPlaneRequest(new GetPendingJobExecutionsRequestPrivate(IoTJobsDataPlaneRequest::GetPendingJobExecutionsAction, this))
+{
+
+}
+
+bool GetPendingJobExecutionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPendingJobExecutionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPendingJobExecutionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTJobsDataPlaneClient::send
+ */
+AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPendingJobExecutionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPendingJobExecutionsRequestPrivate
+ *
+ * @brief  Private implementation for GetPendingJobExecutionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object.
+ *
+ * @param  action  IoTJobsDataPlane action being performed.
+ * @param  q       Pointer to this object's public GetPendingJobExecutionsRequest instance.
+ */
+GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
+    const IoTJobsDataPlaneRequest::Action action, GetPendingJobExecutionsRequest * const q)
+    : GetPendingJobExecutionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPendingJobExecutionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPendingJobExecutionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPendingJobExecutionsRequest instance.
+ */
+GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
+    const GetPendingJobExecutionsRequestPrivate &other, GetPendingJobExecutionsRequest * const q)
+    : GetPendingJobExecutionsPrivate(other, q)
+{
+
+}

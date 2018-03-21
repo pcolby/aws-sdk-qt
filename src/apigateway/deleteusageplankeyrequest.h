@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUSAGEPLANKEYREQUEST_H
 #define QTAWS_DELETEUSAGEPLANKEYREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteUsagePlanKeyRequestPrivate;
+
+class QTAWS_EXPORT DeleteUsagePlanKeyRequest : public APIGatewayRequest {
+
+public:
+    DeleteUsagePlanKeyRequest(const DeleteUsagePlanKeyRequest &other);
+    DeleteUsagePlanKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUsagePlanKeyRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

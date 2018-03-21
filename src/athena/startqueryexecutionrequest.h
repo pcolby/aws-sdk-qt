@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTQUERYEXECUTIONREQUEST_H
 #define QTAWS_STARTQUERYEXECUTIONREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class StartQueryExecutionRequestPrivate;
+
+class QTAWS_EXPORT StartQueryExecutionRequest : public AthenaRequest {
+
+public:
+    StartQueryExecutionRequest(const StartQueryExecutionRequest &other);
+    StartQueryExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartQueryExecutionRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

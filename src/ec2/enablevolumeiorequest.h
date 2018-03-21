@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEVOLUMEIOREQUEST_H
 #define QTAWS_ENABLEVOLUMEIOREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVolumeIORequestPrivate;
+
+class QTAWS_EXPORT EnableVolumeIORequest : public EC2Request {
+
+public:
+    EnableVolumeIORequest(const EnableVolumeIORequest &other);
+    EnableVolumeIORequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableVolumeIORequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

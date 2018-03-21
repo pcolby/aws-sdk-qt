@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBATCHPREDICTIONREQUEST_H
 #define QTAWS_DELETEBATCHPREDICTIONREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteBatchPredictionRequestPrivate;
+
+class QTAWS_EXPORT DeleteBatchPredictionRequest : public MachineLearningRequest {
+
+public:
+    DeleteBatchPredictionRequest(const DeleteBatchPredictionRequest &other);
+    DeleteBatchPredictionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBatchPredictionRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatebudgetrequest.h"
 #include "updatebudgetrequest_p.h"
+#include "updatebudgetresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  UpdateBudgetRequest
+ *
+ * @brief  Implements Budgets UpdateBudget requests.
+ *
+ * @see    BudgetsClient::updateBudget
+ */
+
+/**
+ * @brief  Constructs a new UpdateBudgetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBudgetResponse::UpdateBudgetResponse(
+
+/**
+ * @brief  Constructs a new UpdateBudgetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBudgetRequest::UpdateBudgetRequest(const UpdateBudgetRequest &other)
+    : BudgetsRequest(new UpdateBudgetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBudgetRequest object.
+ */
+UpdateBudgetRequest::UpdateBudgetRequest()
+    : BudgetsRequest(new UpdateBudgetRequestPrivate(BudgetsRequest::UpdateBudgetAction, this))
+{
+
+}
+
+bool UpdateBudgetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBudgetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBudgetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * UpdateBudgetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBudgetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBudgetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBudgetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBudgetRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public UpdateBudgetRequest instance.
+ */
+UpdateBudgetRequestPrivate::UpdateBudgetRequestPrivate(
+    const BudgetsRequest::Action action, UpdateBudgetRequest * const q)
+    : UpdateBudgetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBudgetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBudgetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBudgetRequest instance.
+ */
+UpdateBudgetRequestPrivate::UpdateBudgetRequestPrivate(
+    const UpdateBudgetRequestPrivate &other, UpdateBudgetRequest * const q)
+    : UpdateBudgetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEKEYPAIRSREQUEST_H
 #define QTAWS_DESCRIBEKEYPAIRSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeKeyPairsRequestPrivate;
+
+class QTAWS_EXPORT DescribeKeyPairsRequest : public EC2Request {
+
+public:
+    DescribeKeyPairsRequest(const DescribeKeyPairsRequest &other);
+    DescribeKeyPairsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeKeyPairsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

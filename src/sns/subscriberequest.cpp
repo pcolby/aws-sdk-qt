@@ -19,3 +19,107 @@
 
 #include "subscriberequest.h"
 #include "subscriberequest_p.h"
+#include "subscriberesponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SubscribeRequest
+ *
+ * @brief  Implements SNS Subscribe requests.
+ *
+ * @see    SNSClient::subscribe
+ */
+
+/**
+ * @brief  Constructs a new SubscribeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubscribeResponse::SubscribeResponse(
+
+/**
+ * @brief  Constructs a new SubscribeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SubscribeRequest::SubscribeRequest(const SubscribeRequest &other)
+    : SNSRequest(new SubscribeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SubscribeRequest object.
+ */
+SubscribeRequest::SubscribeRequest()
+    : SNSRequest(new SubscribeRequestPrivate(SNSRequest::SubscribeAction, this))
+{
+
+}
+
+bool SubscribeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SubscribeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SubscribeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * SubscribeRequest::response(QNetworkReply * const reply) const
+{
+    return new SubscribeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SubscribeRequestPrivate
+ *
+ * @brief  Private implementation for SubscribeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubscribeRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public SubscribeRequest instance.
+ */
+SubscribeRequestPrivate::SubscribeRequestPrivate(
+    const SNSRequest::Action action, SubscribeRequest * const q)
+    : SubscribePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubscribeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SubscribeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SubscribeRequest instance.
+ */
+SubscribeRequestPrivate::SubscribeRequestPrivate(
+    const SubscribeRequestPrivate &other, SubscribeRequest * const q)
+    : SubscribePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEEGRESSONLYINTERNETGATEWAYREQUEST_P_H
 #define QTAWS_CREATEEGRESSONLYINTERNETGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createegressonlyinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateEgressOnlyInternetGatewayRequest;
+
+class QTAWS_EXPORT CreateEgressOnlyInternetGatewayRequestPrivate : public EC2Private {
+
+public:
+    CreateEgressOnlyInternetGatewayRequestPrivate(const EC2::Action action,
+                                   CreateEgressOnlyInternetGatewayRequest * const q);
+    CreateEgressOnlyInternetGatewayRequestPrivate(const CreateEgressOnlyInternetGatewayRequestPrivate &other,
+                                   CreateEgressOnlyInternetGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEgressOnlyInternetGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

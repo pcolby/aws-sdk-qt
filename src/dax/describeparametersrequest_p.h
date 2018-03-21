@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBEPARAMETERSREQUEST_P_H
 
+#include "dax_p.h"
+#include "describeparametersrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DescribeParametersRequest;
+
+class QTAWS_EXPORT DescribeParametersRequestPrivate : public DAXPrivate {
+
+public:
+    DescribeParametersRequestPrivate(const DAX::Action action,
+                                   DescribeParametersRequest * const q);
+    DescribeParametersRequestPrivate(const DescribeParametersRequestPrivate &other,
+                                   DescribeParametersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeParametersRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

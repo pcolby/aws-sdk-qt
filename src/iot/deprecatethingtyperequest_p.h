@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEPRECATETHINGTYPEREQUEST_P_H
 #define QTAWS_DEPRECATETHINGTYPEREQUEST_P_H
 
+#include "iot_p.h"
+#include "deprecatethingtyperequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeprecateThingTypeRequest;
+
+class QTAWS_EXPORT DeprecateThingTypeRequestPrivate : public IoTPrivate {
+
+public:
+    DeprecateThingTypeRequestPrivate(const IoT::Action action,
+                                   DeprecateThingTypeRequest * const q);
+    DeprecateThingTypeRequestPrivate(const DeprecateThingTypeRequestPrivate &other,
+                                   DeprecateThingTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeprecateThingTypeRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

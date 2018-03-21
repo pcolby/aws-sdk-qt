@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEAPPLICATIONVERSIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONVERSIONREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "deleteapplicationversionrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteApplicationVersionRequest;
+
+class QTAWS_EXPORT DeleteApplicationVersionRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DeleteApplicationVersionRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DeleteApplicationVersionRequest * const q);
+    DeleteApplicationVersionRequestPrivate(const DeleteApplicationVersionRequestPrivate &other,
+                                   DeleteApplicationVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationVersionRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

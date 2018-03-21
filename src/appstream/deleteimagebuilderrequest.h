@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIMAGEBUILDERREQUEST_H
 #define QTAWS_DELETEIMAGEBUILDERREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteImageBuilderRequestPrivate;
+
+class QTAWS_EXPORT DeleteImageBuilderRequest : public AppStreamRequest {
+
+public:
+    DeleteImageBuilderRequest(const DeleteImageBuilderRequest &other);
+    DeleteImageBuilderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteImageBuilderRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

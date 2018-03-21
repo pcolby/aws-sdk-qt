@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMERGECONFLICTSREQUEST_P_H
 #define QTAWS_GETMERGECONFLICTSREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "getmergeconflictsrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetMergeConflictsRequest;
+
+class QTAWS_EXPORT GetMergeConflictsRequestPrivate : public CodeCommitPrivate {
+
+public:
+    GetMergeConflictsRequestPrivate(const CodeCommit::Action action,
+                                   GetMergeConflictsRequest * const q);
+    GetMergeConflictsRequestPrivate(const GetMergeConflictsRequestPrivate &other,
+                                   GetMergeConflictsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMergeConflictsRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

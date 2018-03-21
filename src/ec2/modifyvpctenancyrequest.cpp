@@ -19,3 +19,107 @@
 
 #include "modifyvpctenancyrequest.h"
 #include "modifyvpctenancyrequest_p.h"
+#include "modifyvpctenancyresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcTenancyRequest
+ *
+ * @brief  Implements EC2 ModifyVpcTenancy requests.
+ *
+ * @see    EC2Client::modifyVpcTenancy
+ */
+
+/**
+ * @brief  Constructs a new ModifyVpcTenancyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
+
+/**
+ * @brief  Constructs a new ModifyVpcTenancyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyVpcTenancyRequest::ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &other)
+    : EC2Request(new ModifyVpcTenancyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyVpcTenancyRequest object.
+ */
+ModifyVpcTenancyRequest::ModifyVpcTenancyRequest()
+    : EC2Request(new ModifyVpcTenancyRequestPrivate(EC2Request::ModifyVpcTenancyAction, this))
+{
+
+}
+
+bool ModifyVpcTenancyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyVpcTenancyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyVpcTenancyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyVpcTenancyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcTenancyRequestPrivate
+ *
+ * @brief  Private implementation for ModifyVpcTenancyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyVpcTenancyRequest instance.
+ */
+ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
+    const EC2Request::Action action, ModifyVpcTenancyRequest * const q)
+    : ModifyVpcTenancyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcTenancyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyVpcTenancyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyVpcTenancyRequest instance.
+ */
+ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
+    const ModifyVpcTenancyRequestPrivate &other, ModifyVpcTenancyRequest * const q)
+    : ModifyVpcTenancyPrivate(other, q)
+{
+
+}

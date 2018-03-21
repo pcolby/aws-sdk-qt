@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVICESPECIFICCREDENTIALREQUEST_H
 #define QTAWS_UPDATESERVICESPECIFICCREDENTIALREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateServiceSpecificCredentialRequestPrivate;
+
+class QTAWS_EXPORT UpdateServiceSpecificCredentialRequest : public IAMRequest {
+
+public:
+    UpdateServiceSpecificCredentialRequest(const UpdateServiceSpecificCredentialRequest &other);
+    UpdateServiceSpecificCredentialRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceSpecificCredentialRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

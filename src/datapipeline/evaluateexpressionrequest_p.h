@@ -20,4 +20,29 @@
 #ifndef QTAWS_EVALUATEEXPRESSIONREQUEST_P_H
 #define QTAWS_EVALUATEEXPRESSIONREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "evaluateexpressionrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class EvaluateExpressionRequest;
+
+class QTAWS_EXPORT EvaluateExpressionRequestPrivate : public DataPipelinePrivate {
+
+public:
+    EvaluateExpressionRequestPrivate(const DataPipeline::Action action,
+                                   EvaluateExpressionRequest * const q);
+    EvaluateExpressionRequestPrivate(const EvaluateExpressionRequestPrivate &other,
+                                   EvaluateExpressionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(EvaluateExpressionRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

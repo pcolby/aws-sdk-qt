@@ -19,3 +19,107 @@
 
 #include "updatejobrequest.h"
 #include "updatejobrequest_p.h"
+#include "updatejobresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateJobRequest
+ *
+ * @brief  Implements Glue UpdateJob requests.
+ *
+ * @see    GlueClient::updateJob
+ */
+
+/**
+ * @brief  Constructs a new UpdateJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateJobResponse::UpdateJobResponse(
+
+/**
+ * @brief  Constructs a new UpdateJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateJobRequest::UpdateJobRequest(const UpdateJobRequest &other)
+    : GlueRequest(new UpdateJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateJobRequest object.
+ */
+UpdateJobRequest::UpdateJobRequest()
+    : GlueRequest(new UpdateJobRequestPrivate(GlueRequest::UpdateJobAction, this))
+{
+
+}
+
+bool UpdateJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateJobRequestPrivate
+ *
+ * @brief  Private implementation for UpdateJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public UpdateJobRequest instance.
+ */
+UpdateJobRequestPrivate::UpdateJobRequestPrivate(
+    const GlueRequest::Action action, UpdateJobRequest * const q)
+    : UpdateJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateJobRequest instance.
+ */
+UpdateJobRequestPrivate::UpdateJobRequestPrivate(
+    const UpdateJobRequestPrivate &other, UpdateJobRequest * const q)
+    : UpdateJobPrivate(other, q)
+{
+
+}

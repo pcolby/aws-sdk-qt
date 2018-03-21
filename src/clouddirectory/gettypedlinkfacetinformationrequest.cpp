@@ -19,3 +19,107 @@
 
 #include "gettypedlinkfacetinformationrequest.h"
 #include "gettypedlinkfacetinformationrequest_p.h"
+#include "gettypedlinkfacetinformationresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  GetTypedLinkFacetInformationRequest
+ *
+ * @brief  Implements CloudDirectory GetTypedLinkFacetInformation requests.
+ *
+ * @see    CloudDirectoryClient::getTypedLinkFacetInformation
+ */
+
+/**
+ * @brief  Constructs a new GetTypedLinkFacetInformationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTypedLinkFacetInformationResponse::GetTypedLinkFacetInformationResponse(
+
+/**
+ * @brief  Constructs a new GetTypedLinkFacetInformationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTypedLinkFacetInformationRequest::GetTypedLinkFacetInformationRequest(const GetTypedLinkFacetInformationRequest &other)
+    : CloudDirectoryRequest(new GetTypedLinkFacetInformationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTypedLinkFacetInformationRequest object.
+ */
+GetTypedLinkFacetInformationRequest::GetTypedLinkFacetInformationRequest()
+    : CloudDirectoryRequest(new GetTypedLinkFacetInformationRequestPrivate(CloudDirectoryRequest::GetTypedLinkFacetInformationAction, this))
+{
+
+}
+
+bool GetTypedLinkFacetInformationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTypedLinkFacetInformationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTypedLinkFacetInformationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTypedLinkFacetInformationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTypedLinkFacetInformationRequestPrivate
+ *
+ * @brief  Private implementation for GetTypedLinkFacetInformationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTypedLinkFacetInformationRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public GetTypedLinkFacetInformationRequest instance.
+ */
+GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
+    const CloudDirectoryRequest::Action action, GetTypedLinkFacetInformationRequest * const q)
+    : GetTypedLinkFacetInformationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTypedLinkFacetInformationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTypedLinkFacetInformationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTypedLinkFacetInformationRequest instance.
+ */
+GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
+    const GetTypedLinkFacetInformationRequestPrivate &other, GetTypedLinkFacetInformationRequest * const q)
+    : GetTypedLinkFacetInformationPrivate(other, q)
+{
+
+}

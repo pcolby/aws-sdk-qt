@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCREQUEST_P_H
 #define QTAWS_LISTRESOURCEDATASYNCREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListResourceDataSyncRequest;
+
+class QTAWS_EXPORT ListResourceDataSyncRequestPrivate : public SSMPrivate {
+
+public:
+    ListResourceDataSyncRequestPrivate(const SSM::Action action,
+                                   ListResourceDataSyncRequest * const q);
+    ListResourceDataSyncRequestPrivate(const ListResourceDataSyncRequestPrivate &other,
+                                   ListResourceDataSyncRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceDataSyncRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECACHESUBNETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBECACHESUBNETGROUPSREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "describecachesubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheSubnetGroupsRequest;
+
+class QTAWS_EXPORT DescribeCacheSubnetGroupsRequestPrivate : public ElastiCachePrivate {
+
+public:
+    DescribeCacheSubnetGroupsRequestPrivate(const ElastiCache::Action action,
+                                   DescribeCacheSubnetGroupsRequest * const q);
+    DescribeCacheSubnetGroupsRequestPrivate(const DescribeCacheSubnetGroupsRequestPrivate &other,
+                                   DescribeCacheSubnetGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCacheSubnetGroupsRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

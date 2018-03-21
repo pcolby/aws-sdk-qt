@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETFUNCTIONDEFINITIONVERSIONREQUEST_P_H
 #define QTAWS_GETFUNCTIONDEFINITIONVERSIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "getfunctiondefinitionversionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetFunctionDefinitionVersionRequest;
+
+class QTAWS_EXPORT GetFunctionDefinitionVersionRequestPrivate : public GreengrassPrivate {
+
+public:
+    GetFunctionDefinitionVersionRequestPrivate(const Greengrass::Action action,
+                                   GetFunctionDefinitionVersionRequest * const q);
+    GetFunctionDefinitionVersionRequestPrivate(const GetFunctionDefinitionVersionRequestPrivate &other,
+                                   GetFunctionDefinitionVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetFunctionDefinitionVersionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

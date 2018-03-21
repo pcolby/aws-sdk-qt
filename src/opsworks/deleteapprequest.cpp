@@ -19,3 +19,107 @@
 
 #include "deleteapprequest.h"
 #include "deleteapprequest_p.h"
+#include "deleteappresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeleteAppRequest
+ *
+ * @brief  Implements OpsWorks DeleteApp requests.
+ *
+ * @see    OpsWorksClient::deleteApp
+ */
+
+/**
+ * @brief  Constructs a new DeleteAppResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAppResponse::DeleteAppResponse(
+
+/**
+ * @brief  Constructs a new DeleteAppRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteAppRequest::DeleteAppRequest(const DeleteAppRequest &other)
+    : OpsWorksRequest(new DeleteAppRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteAppRequest object.
+ */
+DeleteAppRequest::DeleteAppRequest()
+    : OpsWorksRequest(new DeleteAppRequestPrivate(OpsWorksRequest::DeleteAppAction, this))
+{
+
+}
+
+bool DeleteAppRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteAppResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteAppResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteAppResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAppRequestPrivate
+ *
+ * @brief  Private implementation for DeleteAppRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAppRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeleteAppRequest instance.
+ */
+DeleteAppRequestPrivate::DeleteAppRequestPrivate(
+    const OpsWorksRequest::Action action, DeleteAppRequest * const q)
+    : DeleteAppPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAppRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteAppRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteAppRequest instance.
+ */
+DeleteAppRequestPrivate::DeleteAppRequestPrivate(
+    const DeleteAppRequestPrivate &other, DeleteAppRequest * const q)
+    : DeleteAppPrivate(other, q)
+{
+
+}

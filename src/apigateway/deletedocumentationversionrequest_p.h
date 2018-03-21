@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONVERSIONREQUEST_P_H
 #define QTAWS_DELETEDOCUMENTATIONVERSIONREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deletedocumentationversionrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteDocumentationVersionRequest;
+
+class QTAWS_EXPORT DeleteDocumentationVersionRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteDocumentationVersionRequestPrivate(const APIGateway::Action action,
+                                   DeleteDocumentationVersionRequest * const q);
+    DeleteDocumentationVersionRequestPrivate(const DeleteDocumentationVersionRequestPrivate &other,
+                                   DeleteDocumentationVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDocumentationVersionRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAGENTSREQUEST_H
 #define QTAWS_DESCRIBEAGENTSREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DescribeAgentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAgentsRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    DescribeAgentsRequest(const DescribeAgentsRequest &other);
+    DescribeAgentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAgentsRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeInstancesRequest;
+
+class QTAWS_EXPORT DescribeInstancesRequestPrivate : public EC2Private {
+
+public:
+    DescribeInstancesRequestPrivate(const EC2::Action action,
+                                   DescribeInstancesRequest * const q);
+    DescribeInstancesRequestPrivate(const DescribeInstancesRequestPrivate &other,
+                                   DescribeInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

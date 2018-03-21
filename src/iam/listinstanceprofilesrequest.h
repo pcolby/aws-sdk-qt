@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESREQUEST_H
 #define QTAWS_LISTINSTANCEPROFILESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListInstanceProfilesRequestPrivate;
+
+class QTAWS_EXPORT ListInstanceProfilesRequest : public IAMRequest {
+
+public:
+    ListInstanceProfilesRequest(const ListInstanceProfilesRequest &other);
+    ListInstanceProfilesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInstanceProfilesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

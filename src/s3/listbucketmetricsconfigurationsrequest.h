@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTBUCKETMETRICSCONFIGURATIONSREQUEST_H
 #define QTAWS_LISTBUCKETMETRICSCONFIGURATIONSREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListBucketMetricsConfigurationsRequestPrivate;
+
+class QTAWS_EXPORT ListBucketMetricsConfigurationsRequest : public S3Request {
+
+public:
+    ListBucketMetricsConfigurationsRequest(const ListBucketMetricsConfigurationsRequest &other);
+    ListBucketMetricsConfigurationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListBucketMetricsConfigurationsRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

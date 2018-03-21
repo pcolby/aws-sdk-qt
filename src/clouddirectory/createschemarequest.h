@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESCHEMAREQUEST_H
 #define QTAWS_CREATESCHEMAREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateSchemaRequestPrivate;
+
+class QTAWS_EXPORT CreateSchemaRequest : public CloudDirectoryRequest {
+
+public:
+    CreateSchemaRequest(const CreateSchemaRequest &other);
+    CreateSchemaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSchemaRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

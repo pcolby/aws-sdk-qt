@@ -19,3 +19,107 @@
 
 #include "updatetablerequest.h"
 #include "updatetablerequest_p.h"
+#include "updatetableresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  UpdateTableRequest
+ *
+ * @brief  Implements DynamoDB UpdateTable requests.
+ *
+ * @see    DynamoDBClient::updateTable
+ */
+
+/**
+ * @brief  Constructs a new UpdateTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTableResponse::UpdateTableResponse(
+
+/**
+ * @brief  Constructs a new UpdateTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTableRequest::UpdateTableRequest(const UpdateTableRequest &other)
+    : DynamoDBRequest(new UpdateTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTableRequest object.
+ */
+UpdateTableRequest::UpdateTableRequest()
+    : DynamoDBRequest(new UpdateTableRequestPrivate(DynamoDBRequest::UpdateTableAction, this))
+{
+
+}
+
+bool UpdateTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * UpdateTableRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTableRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTableRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public UpdateTableRequest instance.
+ */
+UpdateTableRequestPrivate::UpdateTableRequestPrivate(
+    const DynamoDBRequest::Action action, UpdateTableRequest * const q)
+    : UpdateTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTableRequest instance.
+ */
+UpdateTableRequestPrivate::UpdateTableRequestPrivate(
+    const UpdateTableRequestPrivate &other, UpdateTableRequest * const q)
+    : UpdateTablePrivate(other, q)
+{
+
+}

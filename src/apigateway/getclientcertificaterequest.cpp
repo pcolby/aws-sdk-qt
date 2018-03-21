@@ -19,3 +19,107 @@
 
 #include "getclientcertificaterequest.h"
 #include "getclientcertificaterequest_p.h"
+#include "getclientcertificateresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetClientCertificateRequest
+ *
+ * @brief  Implements APIGateway GetClientCertificate requests.
+ *
+ * @see    APIGatewayClient::getClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new GetClientCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetClientCertificateResponse::GetClientCertificateResponse(
+
+/**
+ * @brief  Constructs a new GetClientCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetClientCertificateRequest::GetClientCertificateRequest(const GetClientCertificateRequest &other)
+    : APIGatewayRequest(new GetClientCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetClientCertificateRequest object.
+ */
+GetClientCertificateRequest::GetClientCertificateRequest()
+    : APIGatewayRequest(new GetClientCertificateRequestPrivate(APIGatewayRequest::GetClientCertificateAction, this))
+{
+
+}
+
+bool GetClientCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetClientCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetClientCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetClientCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new GetClientCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetClientCertificateRequestPrivate
+ *
+ * @brief  Private implementation for GetClientCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetClientCertificateRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetClientCertificateRequest instance.
+ */
+GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
+    const APIGatewayRequest::Action action, GetClientCertificateRequest * const q)
+    : GetClientCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetClientCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetClientCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetClientCertificateRequest instance.
+ */
+GetClientCertificateRequestPrivate::GetClientCertificateRequestPrivate(
+    const GetClientCertificateRequestPrivate &other, GetClientCertificateRequest * const q)
+    : GetClientCertificatePrivate(other, q)
+{
+
+}

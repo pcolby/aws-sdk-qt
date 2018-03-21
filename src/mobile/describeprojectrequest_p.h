@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPROJECTREQUEST_P_H
 #define QTAWS_DESCRIBEPROJECTREQUEST_P_H
 
+#include "mobile_p.h"
+#include "describeprojectrequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class DescribeProjectRequest;
+
+class QTAWS_EXPORT DescribeProjectRequestPrivate : public MobilePrivate {
+
+public:
+    DescribeProjectRequestPrivate(const Mobile::Action action,
+                                   DescribeProjectRequest * const q);
+    DescribeProjectRequestPrivate(const DescribeProjectRequestPrivate &other,
+                                   DescribeProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProjectRequest)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getexecutionhistoryrequest.h"
 #include "getexecutionhistoryrequest_p.h"
+#include "getexecutionhistoryresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  GetExecutionHistoryRequest
+ *
+ * @brief  Implements SFN GetExecutionHistory requests.
+ *
+ * @see    SFNClient::getExecutionHistory
+ */
+
+/**
+ * @brief  Constructs a new GetExecutionHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetExecutionHistoryResponse::GetExecutionHistoryResponse(
+
+/**
+ * @brief  Constructs a new GetExecutionHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetExecutionHistoryRequest::GetExecutionHistoryRequest(const GetExecutionHistoryRequest &other)
+    : SFNRequest(new GetExecutionHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetExecutionHistoryRequest object.
+ */
+GetExecutionHistoryRequest::GetExecutionHistoryRequest()
+    : SFNRequest(new GetExecutionHistoryRequestPrivate(SFNRequest::GetExecutionHistoryAction, this))
+{
+
+}
+
+bool GetExecutionHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetExecutionHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetExecutionHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetExecutionHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetExecutionHistoryRequestPrivate
+ *
+ * @brief  Private implementation for GetExecutionHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExecutionHistoryRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public GetExecutionHistoryRequest instance.
+ */
+GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
+    const SFNRequest::Action action, GetExecutionHistoryRequest * const q)
+    : GetExecutionHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExecutionHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetExecutionHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetExecutionHistoryRequest instance.
+ */
+GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
+    const GetExecutionHistoryRequestPrivate &other, GetExecutionHistoryRequest * const q)
+    : GetExecutionHistoryPrivate(other, q)
+{
+
+}

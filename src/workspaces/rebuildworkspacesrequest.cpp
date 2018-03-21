@@ -19,3 +19,107 @@
 
 #include "rebuildworkspacesrequest.h"
 #include "rebuildworkspacesrequest_p.h"
+#include "rebuildworkspacesresponse.h"
+#include "workspacesrequest_p.h"
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  RebuildWorkspacesRequest
+ *
+ * @brief  Implements WorkSpaces RebuildWorkspaces requests.
+ *
+ * @see    WorkSpacesClient::rebuildWorkspaces
+ */
+
+/**
+ * @brief  Constructs a new RebuildWorkspacesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebuildWorkspacesResponse::RebuildWorkspacesResponse(
+
+/**
+ * @brief  Constructs a new RebuildWorkspacesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RebuildWorkspacesRequest::RebuildWorkspacesRequest(const RebuildWorkspacesRequest &other)
+    : WorkSpacesRequest(new RebuildWorkspacesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RebuildWorkspacesRequest object.
+ */
+RebuildWorkspacesRequest::RebuildWorkspacesRequest()
+    : WorkSpacesRequest(new RebuildWorkspacesRequestPrivate(WorkSpacesRequest::RebuildWorkspacesAction, this))
+{
+
+}
+
+bool RebuildWorkspacesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RebuildWorkspacesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RebuildWorkspacesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkSpacesClient::send
+ */
+AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkReply * const reply) const
+{
+    return new RebuildWorkspacesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RebuildWorkspacesRequestPrivate
+ *
+ * @brief  Private implementation for RebuildWorkspacesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebuildWorkspacesRequestPrivate object.
+ *
+ * @param  action  WorkSpaces action being performed.
+ * @param  q       Pointer to this object's public RebuildWorkspacesRequest instance.
+ */
+RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
+    const WorkSpacesRequest::Action action, RebuildWorkspacesRequest * const q)
+    : RebuildWorkspacesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebuildWorkspacesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RebuildWorkspacesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RebuildWorkspacesRequest instance.
+ */
+RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
+    const RebuildWorkspacesRequestPrivate &other, RebuildWorkspacesRequest * const q)
+    : RebuildWorkspacesPrivate(other, q)
+{
+
+}

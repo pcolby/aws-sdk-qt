@@ -19,3 +19,107 @@
 
 #include "attachelasticloadbalancerrequest.h"
 #include "attachelasticloadbalancerrequest_p.h"
+#include "attachelasticloadbalancerresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  AttachElasticLoadBalancerRequest
+ *
+ * @brief  Implements OpsWorks AttachElasticLoadBalancer requests.
+ *
+ * @see    OpsWorksClient::attachElasticLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new AttachElasticLoadBalancerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachElasticLoadBalancerResponse::AttachElasticLoadBalancerResponse(
+
+/**
+ * @brief  Constructs a new AttachElasticLoadBalancerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachElasticLoadBalancerRequest::AttachElasticLoadBalancerRequest(const AttachElasticLoadBalancerRequest &other)
+    : OpsWorksRequest(new AttachElasticLoadBalancerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachElasticLoadBalancerRequest object.
+ */
+AttachElasticLoadBalancerRequest::AttachElasticLoadBalancerRequest()
+    : OpsWorksRequest(new AttachElasticLoadBalancerRequestPrivate(OpsWorksRequest::AttachElasticLoadBalancerAction, this))
+{
+
+}
+
+bool AttachElasticLoadBalancerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachElasticLoadBalancerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachElasticLoadBalancerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachElasticLoadBalancerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachElasticLoadBalancerRequestPrivate
+ *
+ * @brief  Private implementation for AttachElasticLoadBalancerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachElasticLoadBalancerRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public AttachElasticLoadBalancerRequest instance.
+ */
+AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate(
+    const OpsWorksRequest::Action action, AttachElasticLoadBalancerRequest * const q)
+    : AttachElasticLoadBalancerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachElasticLoadBalancerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachElasticLoadBalancerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachElasticLoadBalancerRequest instance.
+ */
+AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate(
+    const AttachElasticLoadBalancerRequestPrivate &other, AttachElasticLoadBalancerRequest * const q)
+    : AttachElasticLoadBalancerPrivate(other, q)
+{
+
+}

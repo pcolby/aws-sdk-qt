@@ -19,3 +19,107 @@
 
 #include "adminlinkproviderforuserrequest.h"
 #include "adminlinkproviderforuserrequest_p.h"
+#include "adminlinkproviderforuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminLinkProviderForUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminLinkProviderForUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminLinkProviderForUser
+ */
+
+/**
+ * @brief  Constructs a new AdminLinkProviderForUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminLinkProviderForUserResponse::AdminLinkProviderForUserResponse(
+
+/**
+ * @brief  Constructs a new AdminLinkProviderForUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest(const AdminLinkProviderForUserRequest &other)
+    : CognitoIdentityProviderRequest(new AdminLinkProviderForUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminLinkProviderForUserRequest object.
+ */
+AdminLinkProviderForUserRequest::AdminLinkProviderForUserRequest()
+    : CognitoIdentityProviderRequest(new AdminLinkProviderForUserRequestPrivate(CognitoIdentityProviderRequest::AdminLinkProviderForUserAction, this))
+{
+
+}
+
+bool AdminLinkProviderForUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminLinkProviderForUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminLinkProviderForUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminLinkProviderForUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminLinkProviderForUserRequestPrivate
+ *
+ * @brief  Private implementation for AdminLinkProviderForUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminLinkProviderForUserRequest instance.
+ */
+AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminLinkProviderForUserRequest * const q)
+    : AdminLinkProviderForUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminLinkProviderForUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminLinkProviderForUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminLinkProviderForUserRequest instance.
+ */
+AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
+    const AdminLinkProviderForUserRequestPrivate &other, AdminLinkProviderForUserRequest * const q)
+    : AdminLinkProviderForUserPrivate(other, q)
+{
+
+}

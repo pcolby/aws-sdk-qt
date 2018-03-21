@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEGATEWAYINFORMATIONREQUEST_H
 #define QTAWS_DESCRIBEGATEWAYINFORMATIONREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeGatewayInformationRequestPrivate;
+
+class QTAWS_EXPORT DescribeGatewayInformationRequest : public StorageGatewayRequest {
+
+public:
+    DescribeGatewayInformationRequest(const DescribeGatewayInformationRequest &other);
+    DescribeGatewayInformationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeGatewayInformationRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

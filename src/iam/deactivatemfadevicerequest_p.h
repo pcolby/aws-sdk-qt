@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEACTIVATEMFADEVICEREQUEST_P_H
 #define QTAWS_DEACTIVATEMFADEVICEREQUEST_P_H
 
+#include "iam_p.h"
+#include "deactivatemfadevicerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeactivateMFADeviceRequest;
+
+class QTAWS_EXPORT DeactivateMFADeviceRequestPrivate : public IAMPrivate {
+
+public:
+    DeactivateMFADeviceRequestPrivate(const IAM::Action action,
+                                   DeactivateMFADeviceRequest * const q);
+    DeactivateMFADeviceRequestPrivate(const DeactivateMFADeviceRequestPrivate &other,
+                                   DeactivateMFADeviceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeactivateMFADeviceRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

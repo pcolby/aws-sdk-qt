@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBONUSPAYMENTSREQUEST_P_H
 #define QTAWS_LISTBONUSPAYMENTSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "listbonuspaymentsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListBonusPaymentsRequest;
+
+class QTAWS_EXPORT ListBonusPaymentsRequestPrivate : public MTurkPrivate {
+
+public:
+    ListBonusPaymentsRequestPrivate(const MTurk::Action action,
+                                   ListBonusPaymentsRequest * const q);
+    ListBonusPaymentsRequestPrivate(const ListBonusPaymentsRequestPrivate &other,
+                                   ListBonusPaymentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBonusPaymentsRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

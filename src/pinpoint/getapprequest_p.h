@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPPREQUEST_P_H
 #define QTAWS_GETAPPREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getapprequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetAppRequest;
+
+class QTAWS_EXPORT GetAppRequestPrivate : public PinpointPrivate {
+
+public:
+    GetAppRequestPrivate(const Pinpoint::Action action,
+                                   GetAppRequest * const q);
+    GetAppRequestPrivate(const GetAppRequestPrivate &other,
+                                   GetAppRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAppRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

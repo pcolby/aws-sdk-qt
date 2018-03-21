@@ -19,3 +19,107 @@
 
 #include "listprovisioningartifactsrequest.h"
 #include "listprovisioningartifactsrequest_p.h"
+#include "listprovisioningartifactsresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListProvisioningArtifactsRequest
+ *
+ * @brief  Implements ServiceCatalog ListProvisioningArtifacts requests.
+ *
+ * @see    ServiceCatalogClient::listProvisioningArtifacts
+ */
+
+/**
+ * @brief  Constructs a new ListProvisioningArtifactsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListProvisioningArtifactsResponse::ListProvisioningArtifactsResponse(
+
+/**
+ * @brief  Constructs a new ListProvisioningArtifactsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListProvisioningArtifactsRequest::ListProvisioningArtifactsRequest(const ListProvisioningArtifactsRequest &other)
+    : ServiceCatalogRequest(new ListProvisioningArtifactsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListProvisioningArtifactsRequest object.
+ */
+ListProvisioningArtifactsRequest::ListProvisioningArtifactsRequest()
+    : ServiceCatalogRequest(new ListProvisioningArtifactsRequestPrivate(ServiceCatalogRequest::ListProvisioningArtifactsAction, this))
+{
+
+}
+
+bool ListProvisioningArtifactsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListProvisioningArtifactsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListProvisioningArtifactsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ListProvisioningArtifactsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListProvisioningArtifactsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListProvisioningArtifactsRequestPrivate
+ *
+ * @brief  Private implementation for ListProvisioningArtifactsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProvisioningArtifactsRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ListProvisioningArtifactsRequest instance.
+ */
+ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
+    const ServiceCatalogRequest::Action action, ListProvisioningArtifactsRequest * const q)
+    : ListProvisioningArtifactsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProvisioningArtifactsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListProvisioningArtifactsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListProvisioningArtifactsRequest instance.
+ */
+ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
+    const ListProvisioningArtifactsRequestPrivate &other, ListProvisioningArtifactsRequest * const q)
+    : ListProvisioningArtifactsPrivate(other, q)
+{
+
+}

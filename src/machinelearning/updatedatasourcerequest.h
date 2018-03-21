@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDATASOURCEREQUEST_H
 #define QTAWS_UPDATEDATASOURCEREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class UpdateDataSourceRequestPrivate;
+
+class QTAWS_EXPORT UpdateDataSourceRequest : public MachineLearningRequest {
+
+public:
+    UpdateDataSourceRequest(const UpdateDataSourceRequest &other);
+    UpdateDataSourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDataSourceRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

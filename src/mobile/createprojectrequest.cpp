@@ -19,3 +19,107 @@
 
 #include "createprojectrequest.h"
 #include "createprojectrequest_p.h"
+#include "createprojectresponse.h"
+#include "mobilerequest_p.h"
+
+namespace AWS {
+namespace Mobile {
+
+/**
+ * @class  CreateProjectRequest
+ *
+ * @brief  Implements Mobile CreateProject requests.
+ *
+ * @see    MobileClient::createProject
+ */
+
+/**
+ * @brief  Constructs a new CreateProjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateProjectResponse::CreateProjectResponse(
+
+/**
+ * @brief  Constructs a new CreateProjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateProjectRequest::CreateProjectRequest(const CreateProjectRequest &other)
+    : MobileRequest(new CreateProjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateProjectRequest object.
+ */
+CreateProjectRequest::CreateProjectRequest()
+    : MobileRequest(new CreateProjectRequestPrivate(MobileRequest::CreateProjectAction, this))
+{
+
+}
+
+bool CreateProjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateProjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateProjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MobileClient::send
+ */
+AwsAbstractResponse * CreateProjectRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateProjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateProjectRequestPrivate
+ *
+ * @brief  Private implementation for CreateProjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProjectRequestPrivate object.
+ *
+ * @param  action  Mobile action being performed.
+ * @param  q       Pointer to this object's public CreateProjectRequest instance.
+ */
+CreateProjectRequestPrivate::CreateProjectRequestPrivate(
+    const MobileRequest::Action action, CreateProjectRequest * const q)
+    : CreateProjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateProjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateProjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateProjectRequest instance.
+ */
+CreateProjectRequestPrivate::CreateProjectRequestPrivate(
+    const CreateProjectRequestPrivate &other, CreateProjectRequest * const q)
+    : CreateProjectPrivate(other, q)
+{
+
+}

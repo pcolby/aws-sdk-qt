@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETKEYPOLICYREQUEST_P_H
 #define QTAWS_GETKEYPOLICYREQUEST_P_H
 
+#include "kms_p.h"
+#include "getkeypolicyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetKeyPolicyRequest;
+
+class QTAWS_EXPORT GetKeyPolicyRequestPrivate : public KMSPrivate {
+
+public:
+    GetKeyPolicyRequestPrivate(const KMS::Action action,
+                                   GetKeyPolicyRequest * const q);
+    GetKeyPolicyRequestPrivate(const GetKeyPolicyRequestPrivate &other,
+                                   GetKeyPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetKeyPolicyRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

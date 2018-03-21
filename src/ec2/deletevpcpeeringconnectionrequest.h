@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVPCPEERINGCONNECTIONREQUEST_H
 #define QTAWS_DELETEVPCPEERINGCONNECTIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcPeeringConnectionRequestPrivate;
+
+class QTAWS_EXPORT DeleteVpcPeeringConnectionRequest : public EC2Request {
+
+public:
+    DeleteVpcPeeringConnectionRequest(const DeleteVpcPeeringConnectionRequest &other);
+    DeleteVpcPeeringConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcPeeringConnectionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

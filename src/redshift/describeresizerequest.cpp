@@ -19,3 +19,107 @@
 
 #include "describeresizerequest.h"
 #include "describeresizerequest_p.h"
+#include "describeresizeresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeResizeRequest
+ *
+ * @brief  Implements Redshift DescribeResize requests.
+ *
+ * @see    RedshiftClient::describeResize
+ */
+
+/**
+ * @brief  Constructs a new DescribeResizeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeResizeResponse::DescribeResizeResponse(
+
+/**
+ * @brief  Constructs a new DescribeResizeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeResizeRequest::DescribeResizeRequest(const DescribeResizeRequest &other)
+    : RedshiftRequest(new DescribeResizeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeResizeRequest object.
+ */
+DescribeResizeRequest::DescribeResizeRequest()
+    : RedshiftRequest(new DescribeResizeRequestPrivate(RedshiftRequest::DescribeResizeAction, this))
+{
+
+}
+
+bool DescribeResizeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeResizeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeResizeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeResizeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeResizeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeResizeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResizeRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeResizeRequest instance.
+ */
+DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
+    const RedshiftRequest::Action action, DescribeResizeRequest * const q)
+    : DescribeResizePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResizeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeResizeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeResizeRequest instance.
+ */
+DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
+    const DescribeResizeRequestPrivate &other, DescribeResizeRequest * const q)
+    : DescribeResizePrivate(other, q)
+{
+
+}

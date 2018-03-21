@@ -19,3 +19,107 @@
 
 #include "describeavailablepatchesrequest.h"
 #include "describeavailablepatchesrequest_p.h"
+#include "describeavailablepatchesresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeAvailablePatchesRequest
+ *
+ * @brief  Implements SSM DescribeAvailablePatches requests.
+ *
+ * @see    SSMClient::describeAvailablePatches
+ */
+
+/**
+ * @brief  Constructs a new DescribeAvailablePatchesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
+
+/**
+ * @brief  Constructs a new DescribeAvailablePatchesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAvailablePatchesRequest::DescribeAvailablePatchesRequest(const DescribeAvailablePatchesRequest &other)
+    : SSMRequest(new DescribeAvailablePatchesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAvailablePatchesRequest object.
+ */
+DescribeAvailablePatchesRequest::DescribeAvailablePatchesRequest()
+    : SSMRequest(new DescribeAvailablePatchesRequestPrivate(SSMRequest::DescribeAvailablePatchesAction, this))
+{
+
+}
+
+bool DescribeAvailablePatchesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAvailablePatchesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAvailablePatchesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAvailablePatchesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAvailablePatchesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAvailablePatchesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAvailablePatchesRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeAvailablePatchesRequest instance.
+ */
+DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
+    const SSMRequest::Action action, DescribeAvailablePatchesRequest * const q)
+    : DescribeAvailablePatchesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAvailablePatchesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAvailablePatchesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAvailablePatchesRequest instance.
+ */
+DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
+    const DescribeAvailablePatchesRequestPrivate &other, DescribeAvailablePatchesRequest * const q)
+    : DescribeAvailablePatchesPrivate(other, q)
+{
+
+}

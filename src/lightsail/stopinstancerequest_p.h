@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPINSTANCEREQUEST_P_H
 #define QTAWS_STOPINSTANCEREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "stopinstancerequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class StopInstanceRequest;
+
+class QTAWS_EXPORT StopInstanceRequestPrivate : public LightsailPrivate {
+
+public:
+    StopInstanceRequestPrivate(const Lightsail::Action action,
+                                   StopInstanceRequest * const q);
+    StopInstanceRequestPrivate(const StopInstanceRequestPrivate &other,
+                                   StopInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopInstanceRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

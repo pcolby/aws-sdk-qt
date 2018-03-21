@@ -19,3 +19,107 @@
 
 #include "describedblogfilesrequest.h"
 #include "describedblogfilesrequest_p.h"
+#include "describedblogfilesresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBLogFilesRequest
+ *
+ * @brief  Implements RDS DescribeDBLogFiles requests.
+ *
+ * @see    RDSClient::describeDBLogFiles
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBLogFilesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBLogFilesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBLogFilesRequest::DescribeDBLogFilesRequest(const DescribeDBLogFilesRequest &other)
+    : RDSRequest(new DescribeDBLogFilesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBLogFilesRequest object.
+ */
+DescribeDBLogFilesRequest::DescribeDBLogFilesRequest()
+    : RDSRequest(new DescribeDBLogFilesRequestPrivate(RDSRequest::DescribeDBLogFilesAction, this))
+{
+
+}
+
+bool DescribeDBLogFilesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBLogFilesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBLogFilesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBLogFilesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBLogFilesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBLogFilesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBLogFilesRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBLogFilesRequest instance.
+ */
+DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
+    const RDSRequest::Action action, DescribeDBLogFilesRequest * const q)
+    : DescribeDBLogFilesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBLogFilesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBLogFilesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBLogFilesRequest instance.
+ */
+DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
+    const DescribeDBLogFilesRequestPrivate &other, DescribeDBLogFilesRequest * const q)
+    : DescribeDBLogFilesPrivate(other, q)
+{
+
+}

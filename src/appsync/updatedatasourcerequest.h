@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDATASOURCEREQUEST_H
 #define QTAWS_UPDATEDATASOURCEREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateDataSourceRequestPrivate;
+
+class QTAWS_EXPORT UpdateDataSourceRequest : public AppSyncRequest {
+
+public:
+    UpdateDataSourceRequest(const UpdateDataSourceRequest &other);
+    UpdateDataSourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDataSourceRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERESOURCEDATASYNCREQUEST_P_H
 #define QTAWS_CREATERESOURCEDATASYNCREQUEST_P_H
 
+#include "ssm_p.h"
+#include "createresourcedatasyncrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateResourceDataSyncRequest;
+
+class QTAWS_EXPORT CreateResourceDataSyncRequestPrivate : public SSMPrivate {
+
+public:
+    CreateResourceDataSyncRequestPrivate(const SSM::Action action,
+                                   CreateResourceDataSyncRequest * const q);
+    CreateResourceDataSyncRequestPrivate(const CreateResourceDataSyncRequestPrivate &other,
+                                   CreateResourceDataSyncRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResourceDataSyncRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

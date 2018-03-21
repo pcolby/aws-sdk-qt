@@ -19,3 +19,107 @@
 
 #include "resetdbclusterparametergrouprequest.h"
 #include "resetdbclusterparametergrouprequest_p.h"
+#include "resetdbclusterparametergroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ResetDBClusterParameterGroupRequest
+ *
+ * @brief  Implements RDS ResetDBClusterParameterGroup requests.
+ *
+ * @see    RDSClient::resetDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new ResetDBClusterParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new ResetDBClusterParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest(const ResetDBClusterParameterGroupRequest &other)
+    : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetDBClusterParameterGroupRequest object.
+ */
+ResetDBClusterParameterGroupRequest::ResetDBClusterParameterGroupRequest()
+    : RDSRequest(new ResetDBClusterParameterGroupRequestPrivate(RDSRequest::ResetDBClusterParameterGroupAction, this))
+{
+
+}
+
+bool ResetDBClusterParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetDBClusterParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetDBClusterParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetDBClusterParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetDBClusterParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for ResetDBClusterParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDBClusterParameterGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ResetDBClusterParameterGroupRequest instance.
+ */
+ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
+    const RDSRequest::Action action, ResetDBClusterParameterGroupRequest * const q)
+    : ResetDBClusterParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDBClusterParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetDBClusterParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetDBClusterParameterGroupRequest instance.
+ */
+ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
+    const ResetDBClusterParameterGroupRequestPrivate &other, ResetDBClusterParameterGroupRequest * const q)
+    : ResetDBClusterParameterGroupPrivate(other, q)
+{
+
+}

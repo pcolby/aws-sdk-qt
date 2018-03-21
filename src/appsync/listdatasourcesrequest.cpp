@@ -19,3 +19,107 @@
 
 #include "listdatasourcesrequest.h"
 #include "listdatasourcesrequest_p.h"
+#include "listdatasourcesresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListDataSourcesRequest
+ *
+ * @brief  Implements AppSync ListDataSources requests.
+ *
+ * @see    AppSyncClient::listDataSources
+ */
+
+/**
+ * @brief  Constructs a new ListDataSourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDataSourcesResponse::ListDataSourcesResponse(
+
+/**
+ * @brief  Constructs a new ListDataSourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDataSourcesRequest::ListDataSourcesRequest(const ListDataSourcesRequest &other)
+    : AppSyncRequest(new ListDataSourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDataSourcesRequest object.
+ */
+ListDataSourcesRequest::ListDataSourcesRequest()
+    : AppSyncRequest(new ListDataSourcesRequestPrivate(AppSyncRequest::ListDataSourcesAction, this))
+{
+
+}
+
+bool ListDataSourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDataSourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDataSourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * ListDataSourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDataSourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDataSourcesRequestPrivate
+ *
+ * @brief  Private implementation for ListDataSourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDataSourcesRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public ListDataSourcesRequest instance.
+ */
+ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
+    const AppSyncRequest::Action action, ListDataSourcesRequest * const q)
+    : ListDataSourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDataSourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDataSourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDataSourcesRequest instance.
+ */
+ListDataSourcesRequestPrivate::ListDataSourcesRequestPrivate(
+    const ListDataSourcesRequestPrivate &other, ListDataSourcesRequest * const q)
+    : ListDataSourcesPrivate(other, q)
+{
+
+}

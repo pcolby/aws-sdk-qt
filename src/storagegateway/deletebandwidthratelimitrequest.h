@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBANDWIDTHRATELIMITREQUEST_H
 #define QTAWS_DELETEBANDWIDTHRATELIMITREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteBandwidthRateLimitRequestPrivate;
+
+class QTAWS_EXPORT DeleteBandwidthRateLimitRequest : public StorageGatewayRequest {
+
+public:
+    DeleteBandwidthRateLimitRequest(const DeleteBandwidthRateLimitRequest &other);
+    DeleteBandwidthRateLimitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBandwidthRateLimitRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "addtagstocertificaterequest.h"
 #include "addtagstocertificaterequest_p.h"
+#include "addtagstocertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  AddTagsToCertificateRequest
+ *
+ * @brief  Implements ACM AddTagsToCertificate requests.
+ *
+ * @see    ACMClient::addTagsToCertificate
+ */
+
+/**
+ * @brief  Constructs a new AddTagsToCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToCertificateResponse::AddTagsToCertificateResponse(
+
+/**
+ * @brief  Constructs a new AddTagsToCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddTagsToCertificateRequest::AddTagsToCertificateRequest(const AddTagsToCertificateRequest &other)
+    : ACMRequest(new AddTagsToCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddTagsToCertificateRequest object.
+ */
+AddTagsToCertificateRequest::AddTagsToCertificateRequest()
+    : ACMRequest(new AddTagsToCertificateRequestPrivate(ACMRequest::AddTagsToCertificateAction, this))
+{
+
+}
+
+bool AddTagsToCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddTagsToCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddTagsToCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new AddTagsToCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToCertificateRequestPrivate
+ *
+ * @brief  Private implementation for AddTagsToCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public AddTagsToCertificateRequest instance.
+ */
+AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
+    const ACMRequest::Action action, AddTagsToCertificateRequest * const q)
+    : AddTagsToCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddTagsToCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddTagsToCertificateRequest instance.
+ */
+AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
+    const AddTagsToCertificateRequestPrivate &other, AddTagsToCertificateRequest * const q)
+    : AddTagsToCertificatePrivate(other, q)
+{
+
+}

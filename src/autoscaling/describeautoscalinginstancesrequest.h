@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAUTOSCALINGINSTANCESREQUEST_H
 #define QTAWS_DESCRIBEAUTOSCALINGINSTANCESREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeAutoScalingInstancesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAutoScalingInstancesRequest : public AutoScalingRequest {
+
+public:
+    DescribeAutoScalingInstancesRequest(const DescribeAutoScalingInstancesRequest &other);
+    DescribeAutoScalingInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAutoScalingInstancesRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

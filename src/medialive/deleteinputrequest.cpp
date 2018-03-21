@@ -19,3 +19,107 @@
 
 #include "deleteinputrequest.h"
 #include "deleteinputrequest_p.h"
+#include "deleteinputresponse.h"
+#include "medialiverequest_p.h"
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DeleteInputRequest
+ *
+ * @brief  Implements MediaLive DeleteInput requests.
+ *
+ * @see    MediaLiveClient::deleteInput
+ */
+
+/**
+ * @brief  Constructs a new DeleteInputResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInputResponse::DeleteInputResponse(
+
+/**
+ * @brief  Constructs a new DeleteInputRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteInputRequest::DeleteInputRequest(const DeleteInputRequest &other)
+    : MediaLiveRequest(new DeleteInputRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteInputRequest object.
+ */
+DeleteInputRequest::DeleteInputRequest()
+    : MediaLiveRequest(new DeleteInputRequestPrivate(MediaLiveRequest::DeleteInputAction, this))
+{
+
+}
+
+bool DeleteInputRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteInputResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteInputResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaLiveClient::send
+ */
+AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteInputResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInputRequestPrivate
+ *
+ * @brief  Private implementation for DeleteInputRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInputRequestPrivate object.
+ *
+ * @param  action  MediaLive action being performed.
+ * @param  q       Pointer to this object's public DeleteInputRequest instance.
+ */
+DeleteInputRequestPrivate::DeleteInputRequestPrivate(
+    const MediaLiveRequest::Action action, DeleteInputRequest * const q)
+    : DeleteInputPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInputRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteInputRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteInputRequest instance.
+ */
+DeleteInputRequestPrivate::DeleteInputRequestPrivate(
+    const DeleteInputRequestPrivate &other, DeleteInputRequest * const q)
+    : DeleteInputPrivate(other, q)
+{
+
+}

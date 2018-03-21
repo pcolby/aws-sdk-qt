@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHFROMINDEXREQUEST_H
 #define QTAWS_DETACHFROMINDEXREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachFromIndexRequestPrivate;
+
+class QTAWS_EXPORT DetachFromIndexRequest : public CloudDirectoryRequest {
+
+public:
+    DetachFromIndexRequest(const DetachFromIndexRequest &other);
+    DetachFromIndexRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachFromIndexRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

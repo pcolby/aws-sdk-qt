@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONREQUEST_H
 #define QTAWS_SETTERMINATIONPROTECTIONREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class SetTerminationProtectionRequestPrivate;
+
+class QTAWS_EXPORT SetTerminationProtectionRequest : public EMRRequest {
+
+public:
+    SetTerminationProtectionRequest(const SetTerminationProtectionRequest &other);
+    SetTerminationProtectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetTerminationProtectionRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

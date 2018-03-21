@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEWORKSPACESREQUEST_H
 #define QTAWS_TERMINATEWORKSPACESREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class TerminateWorkspacesRequestPrivate;
+
+class QTAWS_EXPORT TerminateWorkspacesRequest : public WorkSpacesRequest {
+
+public:
+    TerminateWorkspacesRequest(const TerminateWorkspacesRequest &other);
+    TerminateWorkspacesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateWorkspacesRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

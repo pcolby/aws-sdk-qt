@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECLUSTERREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERREQUEST_P_H
 
+#include "emr_p.h"
+#include "describeclusterrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeClusterRequest;
+
+class QTAWS_EXPORT DescribeClusterRequestPrivate : public EMRPrivate {
+
+public:
+    DescribeClusterRequestPrivate(const EMR::Action action,
+                                   DescribeClusterRequest * const q);
+    DescribeClusterRequestPrivate(const DescribeClusterRequestPrivate &other,
+                                   DescribeClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

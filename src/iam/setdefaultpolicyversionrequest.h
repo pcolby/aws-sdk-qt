@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class SetDefaultPolicyVersionRequestPrivate;
+
+class QTAWS_EXPORT SetDefaultPolicyVersionRequest : public IAMRequest {
+
+public:
+    SetDefaultPolicyVersionRequest(const SetDefaultPolicyVersionRequest &other);
+    SetDefaultPolicyVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetDefaultPolicyVersionRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

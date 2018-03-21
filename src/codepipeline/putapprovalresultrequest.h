@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTAPPROVALRESULTREQUEST_H
 #define QTAWS_PUTAPPROVALRESULTREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutApprovalResultRequestPrivate;
+
+class QTAWS_EXPORT PutApprovalResultRequest : public CodePipelineRequest {
+
+public:
+    PutApprovalResultRequest(const PutApprovalResultRequest &other);
+    PutApprovalResultRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutApprovalResultRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

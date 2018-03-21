@@ -20,4 +20,32 @@
 #ifndef QTAWS_TESTMETRICFILTERREQUEST_H
 #define QTAWS_TESTMETRICFILTERREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class TestMetricFilterRequestPrivate;
+
+class QTAWS_EXPORT TestMetricFilterRequest : public CloudWatchLogsRequest {
+
+public:
+    TestMetricFilterRequest(const TestMetricFilterRequest &other);
+    TestMetricFilterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TestMetricFilterRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

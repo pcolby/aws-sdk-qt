@@ -19,3 +19,107 @@
 
 #include "createdistributionwithtagsrequest.h"
 #include "createdistributionwithtagsrequest_p.h"
+#include "createdistributionwithtagsresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  CreateDistributionWithTagsRequest
+ *
+ * @brief  Implements CloudFront CreateDistributionWithTags requests.
+ *
+ * @see    CloudFrontClient::createDistributionWithTags
+ */
+
+/**
+ * @brief  Constructs a new CreateDistributionWithTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
+
+/**
+ * @brief  Constructs a new CreateDistributionWithTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest(const CreateDistributionWithTagsRequest &other)
+    : CloudFrontRequest(new CreateDistributionWithTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDistributionWithTagsRequest object.
+ */
+CreateDistributionWithTagsRequest::CreateDistributionWithTagsRequest()
+    : CloudFrontRequest(new CreateDistributionWithTagsRequestPrivate(CloudFrontRequest::CreateDistributionWithTagsAction, this))
+{
+
+}
+
+bool CreateDistributionWithTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDistributionWithTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDistributionWithTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * CreateDistributionWithTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDistributionWithTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDistributionWithTagsRequestPrivate
+ *
+ * @brief  Private implementation for CreateDistributionWithTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public CreateDistributionWithTagsRequest instance.
+ */
+CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
+    const CloudFrontRequest::Action action, CreateDistributionWithTagsRequest * const q)
+    : CreateDistributionWithTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDistributionWithTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDistributionWithTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDistributionWithTagsRequest instance.
+ */
+CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
+    const CreateDistributionWithTagsRequestPrivate &other, CreateDistributionWithTagsRequest * const q)
+    : CreateDistributionWithTagsPrivate(other, q)
+{
+
+}

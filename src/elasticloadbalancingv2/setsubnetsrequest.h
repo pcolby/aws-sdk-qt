@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETSUBNETSREQUEST_H
 #define QTAWS_SETSUBNETSREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetSubnetsRequestPrivate;
+
+class QTAWS_EXPORT SetSubnetsRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    SetSubnetsRequest(const SetSubnetsRequest &other);
+    SetSubnetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetSubnetsRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

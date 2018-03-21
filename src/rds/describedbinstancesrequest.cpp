@@ -19,3 +19,107 @@
 
 #include "describedbinstancesrequest.h"
 #include "describedbinstancesrequest_p.h"
+#include "describedbinstancesresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBInstancesRequest
+ *
+ * @brief  Implements RDS DescribeDBInstances requests.
+ *
+ * @see    RDSClient::describeDBInstances
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBInstancesResponse::DescribeDBInstancesResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBInstancesRequest::DescribeDBInstancesRequest(const DescribeDBInstancesRequest &other)
+    : RDSRequest(new DescribeDBInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBInstancesRequest object.
+ */
+DescribeDBInstancesRequest::DescribeDBInstancesRequest()
+    : RDSRequest(new DescribeDBInstancesRequestPrivate(RDSRequest::DescribeDBInstancesAction, this))
+{
+
+}
+
+bool DescribeDBInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBInstancesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBInstancesRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBInstancesRequest instance.
+ */
+DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
+    const RDSRequest::Action action, DescribeDBInstancesRequest * const q)
+    : DescribeDBInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBInstancesRequest instance.
+ */
+DescribeDBInstancesRequestPrivate::DescribeDBInstancesRequestPrivate(
+    const DescribeDBInstancesRequestPrivate &other, DescribeDBInstancesRequest * const q)
+    : DescribeDBInstancesPrivate(other, q)
+{
+
+}

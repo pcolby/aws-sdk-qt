@@ -19,3 +19,107 @@
 
 #include "detachinternetgatewayrequest.h"
 #include "detachinternetgatewayrequest_p.h"
+#include "detachinternetgatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DetachInternetGatewayRequest
+ *
+ * @brief  Implements EC2 DetachInternetGateway requests.
+ *
+ * @see    EC2Client::detachInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new DetachInternetGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachInternetGatewayResponse::DetachInternetGatewayResponse(
+
+/**
+ * @brief  Constructs a new DetachInternetGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachInternetGatewayRequest::DetachInternetGatewayRequest(const DetachInternetGatewayRequest &other)
+    : EC2Request(new DetachInternetGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachInternetGatewayRequest object.
+ */
+DetachInternetGatewayRequest::DetachInternetGatewayRequest()
+    : EC2Request(new DetachInternetGatewayRequestPrivate(EC2Request::DetachInternetGatewayAction, this))
+{
+
+}
+
+bool DetachInternetGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachInternetGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachInternetGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachInternetGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachInternetGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DetachInternetGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInternetGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DetachInternetGatewayRequest instance.
+ */
+DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
+    const EC2Request::Action action, DetachInternetGatewayRequest * const q)
+    : DetachInternetGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInternetGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachInternetGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachInternetGatewayRequest instance.
+ */
+DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
+    const DetachInternetGatewayRequestPrivate &other, DetachInternetGatewayRequest * const q)
+    : DetachInternetGatewayPrivate(other, q)
+{
+
+}

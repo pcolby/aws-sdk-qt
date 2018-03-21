@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTDESTINATIONPOLICYREQUEST_H
 #define QTAWS_PUTDESTINATIONPOLICYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutDestinationPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutDestinationPolicyRequest : public CloudWatchLogsRequest {
+
+public:
+    PutDestinationPolicyRequest(const PutDestinationPolicyRequest &other);
+    PutDestinationPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutDestinationPolicyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

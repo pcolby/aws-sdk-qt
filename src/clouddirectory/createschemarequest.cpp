@@ -19,3 +19,107 @@
 
 #include "createschemarequest.h"
 #include "createschemarequest_p.h"
+#include "createschemaresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateSchemaRequest
+ *
+ * @brief  Implements CloudDirectory CreateSchema requests.
+ *
+ * @see    CloudDirectoryClient::createSchema
+ */
+
+/**
+ * @brief  Constructs a new CreateSchemaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSchemaResponse::CreateSchemaResponse(
+
+/**
+ * @brief  Constructs a new CreateSchemaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSchemaRequest::CreateSchemaRequest(const CreateSchemaRequest &other)
+    : CloudDirectoryRequest(new CreateSchemaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSchemaRequest object.
+ */
+CreateSchemaRequest::CreateSchemaRequest()
+    : CloudDirectoryRequest(new CreateSchemaRequestPrivate(CloudDirectoryRequest::CreateSchemaAction, this))
+{
+
+}
+
+bool CreateSchemaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSchemaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSchemaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSchemaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSchemaRequestPrivate
+ *
+ * @brief  Private implementation for CreateSchemaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSchemaRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public CreateSchemaRequest instance.
+ */
+CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
+    const CloudDirectoryRequest::Action action, CreateSchemaRequest * const q)
+    : CreateSchemaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSchemaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSchemaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSchemaRequest instance.
+ */
+CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
+    const CreateSchemaRequestPrivate &other, CreateSchemaRequest * const q)
+    : CreateSchemaPrivate(other, q)
+{
+
+}

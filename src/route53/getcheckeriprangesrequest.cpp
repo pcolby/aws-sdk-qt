@@ -19,3 +19,107 @@
 
 #include "getcheckeriprangesrequest.h"
 #include "getcheckeriprangesrequest_p.h"
+#include "getcheckeriprangesresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetCheckerIpRangesRequest
+ *
+ * @brief  Implements Route53 GetCheckerIpRanges requests.
+ *
+ * @see    Route53Client::getCheckerIpRanges
+ */
+
+/**
+ * @brief  Constructs a new GetCheckerIpRangesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCheckerIpRangesResponse::GetCheckerIpRangesResponse(
+
+/**
+ * @brief  Constructs a new GetCheckerIpRangesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCheckerIpRangesRequest::GetCheckerIpRangesRequest(const GetCheckerIpRangesRequest &other)
+    : Route53Request(new GetCheckerIpRangesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCheckerIpRangesRequest object.
+ */
+GetCheckerIpRangesRequest::GetCheckerIpRangesRequest()
+    : Route53Request(new GetCheckerIpRangesRequestPrivate(Route53Request::GetCheckerIpRangesAction, this))
+{
+
+}
+
+bool GetCheckerIpRangesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCheckerIpRangesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCheckerIpRangesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetCheckerIpRangesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCheckerIpRangesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCheckerIpRangesRequestPrivate
+ *
+ * @brief  Private implementation for GetCheckerIpRangesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCheckerIpRangesRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetCheckerIpRangesRequest instance.
+ */
+GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
+    const Route53Request::Action action, GetCheckerIpRangesRequest * const q)
+    : GetCheckerIpRangesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCheckerIpRangesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCheckerIpRangesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCheckerIpRangesRequest instance.
+ */
+GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
+    const GetCheckerIpRangesRequestPrivate &other, GetCheckerIpRangesRequest * const q)
+    : GetCheckerIpRangesPrivate(other, q)
+{
+
+}

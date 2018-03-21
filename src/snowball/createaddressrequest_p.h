@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEADDRESSREQUEST_P_H
 #define QTAWS_CREATEADDRESSREQUEST_P_H
 
+#include "snowball_p.h"
+#include "createaddressrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CreateAddressRequest;
+
+class QTAWS_EXPORT CreateAddressRequestPrivate : public SnowballPrivate {
+
+public:
+    CreateAddressRequestPrivate(const Snowball::Action action,
+                                   CreateAddressRequest * const q);
+    CreateAddressRequestPrivate(const CreateAddressRequestPrivate &other,
+                                   CreateAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAddressRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

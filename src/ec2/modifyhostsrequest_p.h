@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYHOSTSREQUEST_P_H
 #define QTAWS_MODIFYHOSTSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyhostsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyHostsRequest;
+
+class QTAWS_EXPORT ModifyHostsRequestPrivate : public EC2Private {
+
+public:
+    ModifyHostsRequestPrivate(const EC2::Action action,
+                                   ModifyHostsRequest * const q);
+    ModifyHostsRequestPrivate(const ModifyHostsRequestPrivate &other,
+                                   ModifyHostsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyHostsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

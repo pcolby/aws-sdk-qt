@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELAYERSREQUEST_P_H
 #define QTAWS_DESCRIBELAYERSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describelayersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeLayersRequest;
+
+class QTAWS_EXPORT DescribeLayersRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeLayersRequestPrivate(const OpsWorks::Action action,
+                                   DescribeLayersRequest * const q);
+    DescribeLayersRequestPrivate(const DescribeLayersRequestPrivate &other,
+                                   DescribeLayersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLayersRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

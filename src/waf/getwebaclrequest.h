@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETWEBACLREQUEST_H
 #define QTAWS_GETWEBACLREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetWebACLRequestPrivate;
+
+class QTAWS_EXPORT GetWebACLRequest : public WAFRequest {
+
+public:
+    GetWebACLRequest(const GetWebACLRequest &other);
+    GetWebACLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetWebACLRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

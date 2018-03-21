@@ -19,3 +19,107 @@
 
 #include "sendmessagebatchrequest.h"
 #include "sendmessagebatchrequest_p.h"
+#include "sendmessagebatchresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  SendMessageBatchRequest
+ *
+ * @brief  Implements SQS SendMessageBatch requests.
+ *
+ * @see    SQSClient::sendMessageBatch
+ */
+
+/**
+ * @brief  Constructs a new SendMessageBatchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendMessageBatchResponse::SendMessageBatchResponse(
+
+/**
+ * @brief  Constructs a new SendMessageBatchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendMessageBatchRequest::SendMessageBatchRequest(const SendMessageBatchRequest &other)
+    : SQSRequest(new SendMessageBatchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendMessageBatchRequest object.
+ */
+SendMessageBatchRequest::SendMessageBatchRequest()
+    : SQSRequest(new SendMessageBatchRequestPrivate(SQSRequest::SendMessageBatchAction, this))
+{
+
+}
+
+bool SendMessageBatchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendMessageBatchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendMessageBatchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkReply * const reply) const
+{
+    return new SendMessageBatchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendMessageBatchRequestPrivate
+ *
+ * @brief  Private implementation for SendMessageBatchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessageBatchRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public SendMessageBatchRequest instance.
+ */
+SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
+    const SQSRequest::Action action, SendMessageBatchRequest * const q)
+    : SendMessageBatchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessageBatchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendMessageBatchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendMessageBatchRequest instance.
+ */
+SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
+    const SendMessageBatchRequestPrivate &other, SendMessageBatchRequest * const q)
+    : SendMessageBatchPrivate(other, q)
+{
+
+}

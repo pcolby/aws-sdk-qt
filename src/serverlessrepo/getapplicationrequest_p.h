@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPPLICATIONREQUEST_P_H
 #define QTAWS_GETAPPLICATIONREQUEST_P_H
 
+#include "serverlessapplicationrepository_p.h"
+#include "getapplicationrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class GetApplicationRequest;
+
+class QTAWS_EXPORT GetApplicationRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+
+public:
+    GetApplicationRequestPrivate(const ServerlessApplicationRepository::Action action,
+                                   GetApplicationRequest * const q);
+    GetApplicationRequestPrivate(const GetApplicationRequestPrivate &other,
+                                   GetApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationRequest)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

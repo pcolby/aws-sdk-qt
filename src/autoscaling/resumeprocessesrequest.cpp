@@ -19,3 +19,107 @@
 
 #include "resumeprocessesrequest.h"
 #include "resumeprocessesrequest_p.h"
+#include "resumeprocessesresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ResumeProcessesRequest
+ *
+ * @brief  Implements AutoScaling ResumeProcesses requests.
+ *
+ * @see    AutoScalingClient::resumeProcesses
+ */
+
+/**
+ * @brief  Constructs a new ResumeProcessesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResumeProcessesResponse::ResumeProcessesResponse(
+
+/**
+ * @brief  Constructs a new ResumeProcessesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResumeProcessesRequest::ResumeProcessesRequest(const ResumeProcessesRequest &other)
+    : AutoScalingRequest(new ResumeProcessesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResumeProcessesRequest object.
+ */
+ResumeProcessesRequest::ResumeProcessesRequest()
+    : AutoScalingRequest(new ResumeProcessesRequestPrivate(AutoScalingRequest::ResumeProcessesAction, this))
+{
+
+}
+
+bool ResumeProcessesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResumeProcessesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResumeProcessesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkReply * const reply) const
+{
+    return new ResumeProcessesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResumeProcessesRequestPrivate
+ *
+ * @brief  Private implementation for ResumeProcessesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResumeProcessesRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public ResumeProcessesRequest instance.
+ */
+ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
+    const AutoScalingRequest::Action action, ResumeProcessesRequest * const q)
+    : ResumeProcessesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResumeProcessesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResumeProcessesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResumeProcessesRequest instance.
+ */
+ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
+    const ResumeProcessesRequestPrivate &other, ResumeProcessesRequest * const q)
+    : ResumeProcessesPrivate(other, q)
+{
+
+}

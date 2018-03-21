@@ -19,3 +19,107 @@
 
 #include "listrunsrequest.h"
 #include "listrunsrequest_p.h"
+#include "listrunsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListRunsRequest
+ *
+ * @brief  Implements DeviceFarm ListRuns requests.
+ *
+ * @see    DeviceFarmClient::listRuns
+ */
+
+/**
+ * @brief  Constructs a new ListRunsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRunsResponse::ListRunsResponse(
+
+/**
+ * @brief  Constructs a new ListRunsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRunsRequest::ListRunsRequest(const ListRunsRequest &other)
+    : DeviceFarmRequest(new ListRunsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRunsRequest object.
+ */
+ListRunsRequest::ListRunsRequest()
+    : DeviceFarmRequest(new ListRunsRequestPrivate(DeviceFarmRequest::ListRunsAction, this))
+{
+
+}
+
+bool ListRunsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRunsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRunsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRunsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRunsRequestPrivate
+ *
+ * @brief  Private implementation for ListRunsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRunsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListRunsRequest instance.
+ */
+ListRunsRequestPrivate::ListRunsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListRunsRequest * const q)
+    : ListRunsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRunsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRunsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRunsRequest instance.
+ */
+ListRunsRequestPrivate::ListRunsRequestPrivate(
+    const ListRunsRequestPrivate &other, ListRunsRequest * const q)
+    : ListRunsPrivate(other, q)
+{
+
+}

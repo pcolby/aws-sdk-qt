@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_H
 #define QTAWS_DESCRIBESERVICESREQUEST_H
 
+#include "pricingrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class DescribeServicesRequestPrivate;
+
+class QTAWS_EXPORT DescribeServicesRequest : public PricingRequest {
+
+public:
+    DescribeServicesRequest(const DescribeServicesRequest &other);
+    DescribeServicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeServicesRequest)
+
+}
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

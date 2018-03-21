@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESAMPLEFINDINGSREQUEST_H
 #define QTAWS_CREATESAMPLEFINDINGSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateSampleFindingsRequestPrivate;
+
+class QTAWS_EXPORT CreateSampleFindingsRequest : public GuardDutyRequest {
+
+public:
+    CreateSampleFindingsRequest(const CreateSampleFindingsRequest &other);
+    CreateSampleFindingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSampleFindingsRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

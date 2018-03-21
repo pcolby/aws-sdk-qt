@@ -19,3 +19,107 @@
 
 #include "updatepipelinerequest.h"
 #include "updatepipelinerequest_p.h"
+#include "updatepipelineresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  UpdatePipelineRequest
+ *
+ * @brief  Implements ElasticTranscoder UpdatePipeline requests.
+ *
+ * @see    ElasticTranscoderClient::updatePipeline
+ */
+
+/**
+ * @brief  Constructs a new UpdatePipelineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePipelineResponse::UpdatePipelineResponse(
+
+/**
+ * @brief  Constructs a new UpdatePipelineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdatePipelineRequest::UpdatePipelineRequest(const UpdatePipelineRequest &other)
+    : ElasticTranscoderRequest(new UpdatePipelineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdatePipelineRequest object.
+ */
+UpdatePipelineRequest::UpdatePipelineRequest()
+    : ElasticTranscoderRequest(new UpdatePipelineRequestPrivate(ElasticTranscoderRequest::UpdatePipelineAction, this))
+{
+
+}
+
+bool UpdatePipelineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdatePipelineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdatePipelineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdatePipelineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePipelineRequestPrivate
+ *
+ * @brief  Private implementation for UpdatePipelineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePipelineRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public UpdatePipelineRequest instance.
+ */
+UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
+    const ElasticTranscoderRequest::Action action, UpdatePipelineRequest * const q)
+    : UpdatePipelinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePipelineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdatePipelineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdatePipelineRequest instance.
+ */
+UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
+    const UpdatePipelineRequestPrivate &other, UpdatePipelineRequest * const q)
+    : UpdatePipelinePrivate(other, q)
+{
+
+}

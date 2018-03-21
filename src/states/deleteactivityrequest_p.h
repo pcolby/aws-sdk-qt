@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEACTIVITYREQUEST_P_H
 #define QTAWS_DELETEACTIVITYREQUEST_P_H
 
+#include "sfn_p.h"
+#include "deleteactivityrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteActivityRequest;
+
+class QTAWS_EXPORT DeleteActivityRequestPrivate : public SFNPrivate {
+
+public:
+    DeleteActivityRequestPrivate(const SFN::Action action,
+                                   DeleteActivityRequest * const q);
+    DeleteActivityRequestPrivate(const DeleteActivityRequestPrivate &other,
+                                   DeleteActivityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteActivityRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

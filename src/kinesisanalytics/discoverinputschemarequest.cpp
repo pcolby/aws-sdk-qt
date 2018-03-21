@@ -19,3 +19,107 @@
 
 #include "discoverinputschemarequest.h"
 #include "discoverinputschemarequest_p.h"
+#include "discoverinputschemaresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DiscoverInputSchemaRequest
+ *
+ * @brief  Implements KinesisAnalytics DiscoverInputSchema requests.
+ *
+ * @see    KinesisAnalyticsClient::discoverInputSchema
+ */
+
+/**
+ * @brief  Constructs a new DiscoverInputSchemaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
+
+/**
+ * @brief  Constructs a new DiscoverInputSchemaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DiscoverInputSchemaRequest::DiscoverInputSchemaRequest(const DiscoverInputSchemaRequest &other)
+    : KinesisAnalyticsRequest(new DiscoverInputSchemaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DiscoverInputSchemaRequest object.
+ */
+DiscoverInputSchemaRequest::DiscoverInputSchemaRequest()
+    : KinesisAnalyticsRequest(new DiscoverInputSchemaRequestPrivate(KinesisAnalyticsRequest::DiscoverInputSchemaAction, this))
+{
+
+}
+
+bool DiscoverInputSchemaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DiscoverInputSchemaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DiscoverInputSchemaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * DiscoverInputSchemaRequest::response(QNetworkReply * const reply) const
+{
+    return new DiscoverInputSchemaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DiscoverInputSchemaRequestPrivate
+ *
+ * @brief  Private implementation for DiscoverInputSchemaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverInputSchemaRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public DiscoverInputSchemaRequest instance.
+ */
+DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, DiscoverInputSchemaRequest * const q)
+    : DiscoverInputSchemaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverInputSchemaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DiscoverInputSchemaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DiscoverInputSchemaRequest instance.
+ */
+DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
+    const DiscoverInputSchemaRequestPrivate &other, DiscoverInputSchemaRequest * const q)
+    : DiscoverInputSchemaPrivate(other, q)
+{
+
+}

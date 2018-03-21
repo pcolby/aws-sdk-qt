@@ -19,3 +19,107 @@
 
 #include "deletemounttargetrequest.h"
 #include "deletemounttargetrequest_p.h"
+#include "deletemounttargetresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DeleteMountTargetRequest
+ *
+ * @brief  Implements EFS DeleteMountTarget requests.
+ *
+ * @see    EFSClient::deleteMountTarget
+ */
+
+/**
+ * @brief  Constructs a new DeleteMountTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMountTargetResponse::DeleteMountTargetResponse(
+
+/**
+ * @brief  Constructs a new DeleteMountTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteMountTargetRequest::DeleteMountTargetRequest(const DeleteMountTargetRequest &other)
+    : EFSRequest(new DeleteMountTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteMountTargetRequest object.
+ */
+DeleteMountTargetRequest::DeleteMountTargetRequest()
+    : EFSRequest(new DeleteMountTargetRequestPrivate(EFSRequest::DeleteMountTargetAction, this))
+{
+
+}
+
+bool DeleteMountTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteMountTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteMountTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteMountTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMountTargetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteMountTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMountTargetRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public DeleteMountTargetRequest instance.
+ */
+DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
+    const EFSRequest::Action action, DeleteMountTargetRequest * const q)
+    : DeleteMountTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMountTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteMountTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteMountTargetRequest instance.
+ */
+DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
+    const DeleteMountTargetRequestPrivate &other, DeleteMountTargetRequest * const q)
+    : DeleteMountTargetPrivate(other, q)
+{
+
+}

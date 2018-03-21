@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_H
 #define QTAWS_DELETEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteDirectConnectGatewayAssociationRequestPrivate;
+
+class QTAWS_EXPORT DeleteDirectConnectGatewayAssociationRequest : public DirectConnectRequest {
+
+public:
+    DeleteDirectConnectGatewayAssociationRequest(const DeleteDirectConnectGatewayAssociationRequest &other);
+    DeleteDirectConnectGatewayAssociationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDirectConnectGatewayAssociationRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

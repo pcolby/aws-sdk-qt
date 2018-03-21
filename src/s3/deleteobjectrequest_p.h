@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEOBJECTREQUEST_P_H
 #define QTAWS_DELETEOBJECTREQUEST_P_H
 
+#include "s3_p.h"
+#include "deleteobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteObjectRequest;
+
+class QTAWS_EXPORT DeleteObjectRequestPrivate : public S3Private {
+
+public:
+    DeleteObjectRequestPrivate(const S3::Action action,
+                                   DeleteObjectRequest * const q);
+    DeleteObjectRequestPrivate(const DeleteObjectRequestPrivate &other,
+                                   DeleteObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteObjectRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

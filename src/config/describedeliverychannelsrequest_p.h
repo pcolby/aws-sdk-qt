@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSREQUEST_P_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSREQUEST_P_H
 
+#include "configservice_p.h"
+#include "describedeliverychannelsrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeDeliveryChannelsRequest;
+
+class QTAWS_EXPORT DescribeDeliveryChannelsRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DescribeDeliveryChannelsRequestPrivate(const ConfigService::Action action,
+                                   DescribeDeliveryChannelsRequest * const q);
+    DescribeDeliveryChannelsRequestPrivate(const DescribeDeliveryChannelsRequestPrivate &other,
+                                   DescribeDeliveryChannelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDeliveryChannelsRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

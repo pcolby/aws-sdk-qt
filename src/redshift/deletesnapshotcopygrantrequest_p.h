@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESNAPSHOTCOPYGRANTREQUEST_P_H
 #define QTAWS_DELETESNAPSHOTCOPYGRANTREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deletesnapshotcopygrantrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteSnapshotCopyGrantRequest;
+
+class QTAWS_EXPORT DeleteSnapshotCopyGrantRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteSnapshotCopyGrantRequestPrivate(const Redshift::Action action,
+                                   DeleteSnapshotCopyGrantRequest * const q);
+    DeleteSnapshotCopyGrantRequestPrivate(const DeleteSnapshotCopyGrantRequestPrivate &other,
+                                   DeleteSnapshotCopyGrantRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSnapshotCopyGrantRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

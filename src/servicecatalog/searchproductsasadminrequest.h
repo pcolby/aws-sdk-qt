@@ -20,4 +20,32 @@
 #ifndef QTAWS_SEARCHPRODUCTSASADMINREQUEST_H
 #define QTAWS_SEARCHPRODUCTSASADMINREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class SearchProductsAsAdminRequestPrivate;
+
+class QTAWS_EXPORT SearchProductsAsAdminRequest : public ServiceCatalogRequest {
+
+public:
+    SearchProductsAsAdminRequest(const SearchProductsAsAdminRequest &other);
+    SearchProductsAsAdminRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SearchProductsAsAdminRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

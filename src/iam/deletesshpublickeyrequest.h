@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESSHPUBLICKEYREQUEST_H
 #define QTAWS_DELETESSHPUBLICKEYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteSSHPublicKeyRequestPrivate;
+
+class QTAWS_EXPORT DeleteSSHPublicKeyRequest : public IAMRequest {
+
+public:
+    DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyRequest &other);
+    DeleteSSHPublicKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSSHPublicKeyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

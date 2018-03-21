@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTSCALINGPOLICYREQUEST_P_H
 #define QTAWS_PUTSCALINGPOLICYREQUEST_P_H
 
+#include "applicationautoscaling_p.h"
+#include "putscalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class PutScalingPolicyRequest;
+
+class QTAWS_EXPORT PutScalingPolicyRequestPrivate : public ApplicationAutoScalingPrivate {
+
+public:
+    PutScalingPolicyRequestPrivate(const ApplicationAutoScaling::Action action,
+                                   PutScalingPolicyRequest * const q);
+    PutScalingPolicyRequestPrivate(const PutScalingPolicyRequestPrivate &other,
+                                   PutScalingPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutScalingPolicyRequest)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

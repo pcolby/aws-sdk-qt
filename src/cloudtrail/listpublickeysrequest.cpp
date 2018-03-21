@@ -19,3 +19,107 @@
 
 #include "listpublickeysrequest.h"
 #include "listpublickeysrequest_p.h"
+#include "listpublickeysresponse.h"
+#include "cloudtrailrequest_p.h"
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  ListPublicKeysRequest
+ *
+ * @brief  Implements CloudTrail ListPublicKeys requests.
+ *
+ * @see    CloudTrailClient::listPublicKeys
+ */
+
+/**
+ * @brief  Constructs a new ListPublicKeysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPublicKeysResponse::ListPublicKeysResponse(
+
+/**
+ * @brief  Constructs a new ListPublicKeysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPublicKeysRequest::ListPublicKeysRequest(const ListPublicKeysRequest &other)
+    : CloudTrailRequest(new ListPublicKeysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPublicKeysRequest object.
+ */
+ListPublicKeysRequest::ListPublicKeysRequest()
+    : CloudTrailRequest(new ListPublicKeysRequestPrivate(CloudTrailRequest::ListPublicKeysAction, this))
+{
+
+}
+
+bool ListPublicKeysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPublicKeysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPublicKeysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudTrailClient::send
+ */
+AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPublicKeysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPublicKeysRequestPrivate
+ *
+ * @brief  Private implementation for ListPublicKeysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPublicKeysRequestPrivate object.
+ *
+ * @param  action  CloudTrail action being performed.
+ * @param  q       Pointer to this object's public ListPublicKeysRequest instance.
+ */
+ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
+    const CloudTrailRequest::Action action, ListPublicKeysRequest * const q)
+    : ListPublicKeysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPublicKeysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPublicKeysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPublicKeysRequest instance.
+ */
+ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
+    const ListPublicKeysRequestPrivate &other, ListPublicKeysRequest * const q)
+    : ListPublicKeysPrivate(other, q)
+{
+
+}

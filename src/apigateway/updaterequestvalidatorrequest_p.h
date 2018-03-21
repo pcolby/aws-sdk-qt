@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEREQUESTVALIDATORREQUEST_P_H
 #define QTAWS_UPDATEREQUESTVALIDATORREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updaterequestvalidatorrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateRequestValidatorRequest;
+
+class QTAWS_EXPORT UpdateRequestValidatorRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateRequestValidatorRequestPrivate(const APIGateway::Action action,
+                                   UpdateRequestValidatorRequest * const q);
+    UpdateRequestValidatorRequestPrivate(const UpdateRequestValidatorRequestPrivate &other,
+                                   UpdateRequestValidatorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRequestValidatorRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

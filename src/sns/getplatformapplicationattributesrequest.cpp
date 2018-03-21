@@ -19,3 +19,107 @@
 
 #include "getplatformapplicationattributesrequest.h"
 #include "getplatformapplicationattributesrequest_p.h"
+#include "getplatformapplicationattributesresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  GetPlatformApplicationAttributesRequest
+ *
+ * @brief  Implements SNS GetPlatformApplicationAttributes requests.
+ *
+ * @see    SNSClient::getPlatformApplicationAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetPlatformApplicationAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPlatformApplicationAttributesResponse::GetPlatformApplicationAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetPlatformApplicationAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest(const GetPlatformApplicationAttributesRequest &other)
+    : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPlatformApplicationAttributesRequest object.
+ */
+GetPlatformApplicationAttributesRequest::GetPlatformApplicationAttributesRequest()
+    : SNSRequest(new GetPlatformApplicationAttributesRequestPrivate(SNSRequest::GetPlatformApplicationAttributesAction, this))
+{
+
+}
+
+bool GetPlatformApplicationAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPlatformApplicationAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPlatformApplicationAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * GetPlatformApplicationAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPlatformApplicationAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPlatformApplicationAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetPlatformApplicationAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPlatformApplicationAttributesRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public GetPlatformApplicationAttributesRequest instance.
+ */
+GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
+    const SNSRequest::Action action, GetPlatformApplicationAttributesRequest * const q)
+    : GetPlatformApplicationAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPlatformApplicationAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPlatformApplicationAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPlatformApplicationAttributesRequest instance.
+ */
+GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
+    const GetPlatformApplicationAttributesRequestPrivate &other, GetPlatformApplicationAttributesRequest * const q)
+    : GetPlatformApplicationAttributesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ALLOCATEADDRESSREQUEST_H
 #define QTAWS_ALLOCATEADDRESSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AllocateAddressRequestPrivate;
+
+class QTAWS_EXPORT AllocateAddressRequest : public EC2Request {
+
+public:
+    AllocateAddressRequest(const AllocateAddressRequest &other);
+    AllocateAddressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AllocateAddressRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

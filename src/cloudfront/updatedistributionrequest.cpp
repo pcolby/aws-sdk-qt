@@ -19,3 +19,107 @@
 
 #include "updatedistributionrequest.h"
 #include "updatedistributionrequest_p.h"
+#include "updatedistributionresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  UpdateDistributionRequest
+ *
+ * @brief  Implements CloudFront UpdateDistribution requests.
+ *
+ * @see    CloudFrontClient::updateDistribution
+ */
+
+/**
+ * @brief  Constructs a new UpdateDistributionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDistributionResponse::UpdateDistributionResponse(
+
+/**
+ * @brief  Constructs a new UpdateDistributionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDistributionRequest::UpdateDistributionRequest(const UpdateDistributionRequest &other)
+    : CloudFrontRequest(new UpdateDistributionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDistributionRequest object.
+ */
+UpdateDistributionRequest::UpdateDistributionRequest()
+    : CloudFrontRequest(new UpdateDistributionRequestPrivate(CloudFrontRequest::UpdateDistributionAction, this))
+{
+
+}
+
+bool UpdateDistributionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDistributionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDistributionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDistributionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDistributionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDistributionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDistributionRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public UpdateDistributionRequest instance.
+ */
+UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
+    const CloudFrontRequest::Action action, UpdateDistributionRequest * const q)
+    : UpdateDistributionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDistributionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDistributionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDistributionRequest instance.
+ */
+UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
+    const UpdateDistributionRequestPrivate &other, UpdateDistributionRequest * const q)
+    : UpdateDistributionPrivate(other, q)
+{
+
+}

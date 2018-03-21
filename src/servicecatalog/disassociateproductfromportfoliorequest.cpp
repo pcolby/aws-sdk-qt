@@ -19,3 +19,107 @@
 
 #include "disassociateproductfromportfoliorequest.h"
 #include "disassociateproductfromportfoliorequest_p.h"
+#include "disassociateproductfromportfolioresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DisassociateProductFromPortfolioRequest
+ *
+ * @brief  Implements ServiceCatalog DisassociateProductFromPortfolio requests.
+ *
+ * @see    ServiceCatalogClient::disassociateProductFromPortfolio
+ */
+
+/**
+ * @brief  Constructs a new DisassociateProductFromPortfolioResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateProductFromPortfolioResponse::DisassociateProductFromPortfolioResponse(
+
+/**
+ * @brief  Constructs a new DisassociateProductFromPortfolioRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest(const DisassociateProductFromPortfolioRequest &other)
+    : ServiceCatalogRequest(new DisassociateProductFromPortfolioRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateProductFromPortfolioRequest object.
+ */
+DisassociateProductFromPortfolioRequest::DisassociateProductFromPortfolioRequest()
+    : ServiceCatalogRequest(new DisassociateProductFromPortfolioRequestPrivate(ServiceCatalogRequest::DisassociateProductFromPortfolioAction, this))
+{
+
+}
+
+bool DisassociateProductFromPortfolioRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateProductFromPortfolioResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateProductFromPortfolioResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DisassociateProductFromPortfolioRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateProductFromPortfolioResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateProductFromPortfolioRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateProductFromPortfolioRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DisassociateProductFromPortfolioRequest instance.
+ */
+DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
+    const ServiceCatalogRequest::Action action, DisassociateProductFromPortfolioRequest * const q)
+    : DisassociateProductFromPortfolioPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateProductFromPortfolioRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateProductFromPortfolioRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateProductFromPortfolioRequest instance.
+ */
+DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
+    const DisassociateProductFromPortfolioRequestPrivate &other, DisassociateProductFromPortfolioRequest * const q)
+    : DisassociateProductFromPortfolioPrivate(other, q)
+{
+
+}

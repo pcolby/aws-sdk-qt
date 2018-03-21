@@ -19,3 +19,107 @@
 
 #include "createassessmenttargetrequest.h"
 #include "createassessmenttargetrequest_p.h"
+#include "createassessmenttargetresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  CreateAssessmentTargetRequest
+ *
+ * @brief  Implements Inspector CreateAssessmentTarget requests.
+ *
+ * @see    InspectorClient::createAssessmentTarget
+ */
+
+/**
+ * @brief  Constructs a new CreateAssessmentTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAssessmentTargetResponse::CreateAssessmentTargetResponse(
+
+/**
+ * @brief  Constructs a new CreateAssessmentTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAssessmentTargetRequest::CreateAssessmentTargetRequest(const CreateAssessmentTargetRequest &other)
+    : InspectorRequest(new CreateAssessmentTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAssessmentTargetRequest object.
+ */
+CreateAssessmentTargetRequest::CreateAssessmentTargetRequest()
+    : InspectorRequest(new CreateAssessmentTargetRequestPrivate(InspectorRequest::CreateAssessmentTargetAction, this))
+{
+
+}
+
+bool CreateAssessmentTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAssessmentTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAssessmentTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * CreateAssessmentTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAssessmentTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAssessmentTargetRequestPrivate
+ *
+ * @brief  Private implementation for CreateAssessmentTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public CreateAssessmentTargetRequest instance.
+ */
+CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
+    const InspectorRequest::Action action, CreateAssessmentTargetRequest * const q)
+    : CreateAssessmentTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAssessmentTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAssessmentTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAssessmentTargetRequest instance.
+ */
+CreateAssessmentTargetRequestPrivate::CreateAssessmentTargetRequestPrivate(
+    const CreateAssessmentTargetRequestPrivate &other, CreateAssessmentTargetRequest * const q)
+    : CreateAssessmentTargetPrivate(other, q)
+{
+
+}

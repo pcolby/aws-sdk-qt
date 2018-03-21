@@ -20,4 +20,29 @@
 #ifndef QTAWS_CLONERECEIPTRULESETREQUEST_P_H
 #define QTAWS_CLONERECEIPTRULESETREQUEST_P_H
 
+#include "ses_p.h"
+#include "clonereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CloneReceiptRuleSetRequest;
+
+class QTAWS_EXPORT CloneReceiptRuleSetRequestPrivate : public SESPrivate {
+
+public:
+    CloneReceiptRuleSetRequestPrivate(const SES::Action action,
+                                   CloneReceiptRuleSetRequest * const q);
+    CloneReceiptRuleSetRequestPrivate(const CloneReceiptRuleSetRequestPrivate &other,
+                                   CloneReceiptRuleSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CloneReceiptRuleSetRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

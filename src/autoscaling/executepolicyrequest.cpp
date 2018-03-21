@@ -19,3 +19,107 @@
 
 #include "executepolicyrequest.h"
 #include "executepolicyrequest_p.h"
+#include "executepolicyresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ExecutePolicyRequest
+ *
+ * @brief  Implements AutoScaling ExecutePolicy requests.
+ *
+ * @see    AutoScalingClient::executePolicy
+ */
+
+/**
+ * @brief  Constructs a new ExecutePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExecutePolicyResponse::ExecutePolicyResponse(
+
+/**
+ * @brief  Constructs a new ExecutePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ExecutePolicyRequest::ExecutePolicyRequest(const ExecutePolicyRequest &other)
+    : AutoScalingRequest(new ExecutePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ExecutePolicyRequest object.
+ */
+ExecutePolicyRequest::ExecutePolicyRequest()
+    : AutoScalingRequest(new ExecutePolicyRequestPrivate(AutoScalingRequest::ExecutePolicyAction, this))
+{
+
+}
+
+bool ExecutePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ExecutePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ExecutePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new ExecutePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ExecutePolicyRequestPrivate
+ *
+ * @brief  Private implementation for ExecutePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecutePolicyRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public ExecutePolicyRequest instance.
+ */
+ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
+    const AutoScalingRequest::Action action, ExecutePolicyRequest * const q)
+    : ExecutePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecutePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ExecutePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ExecutePolicyRequest instance.
+ */
+ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
+    const ExecutePolicyRequestPrivate &other, ExecutePolicyRequest * const q)
+    : ExecutePolicyPrivate(other, q)
+{
+
+}

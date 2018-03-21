@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPTASKREQUEST_H
 #define QTAWS_STOPTASKREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StopTaskRequestPrivate;
+
+class QTAWS_EXPORT StopTaskRequest : public ECSRequest {
+
+public:
+    StopTaskRequest(const StopTaskRequest &other);
+    StopTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopTaskRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

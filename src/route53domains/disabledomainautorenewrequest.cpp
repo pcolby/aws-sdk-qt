@@ -19,3 +19,107 @@
 
 #include "disabledomainautorenewrequest.h"
 #include "disabledomainautorenewrequest_p.h"
+#include "disabledomainautorenewresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  DisableDomainAutoRenewRequest
+ *
+ * @brief  Implements Route53Domains DisableDomainAutoRenew requests.
+ *
+ * @see    Route53DomainsClient::disableDomainAutoRenew
+ */
+
+/**
+ * @brief  Constructs a new DisableDomainAutoRenewResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableDomainAutoRenewResponse::DisableDomainAutoRenewResponse(
+
+/**
+ * @brief  Constructs a new DisableDomainAutoRenewRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableDomainAutoRenewRequest::DisableDomainAutoRenewRequest(const DisableDomainAutoRenewRequest &other)
+    : Route53DomainsRequest(new DisableDomainAutoRenewRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableDomainAutoRenewRequest object.
+ */
+DisableDomainAutoRenewRequest::DisableDomainAutoRenewRequest()
+    : Route53DomainsRequest(new DisableDomainAutoRenewRequestPrivate(Route53DomainsRequest::DisableDomainAutoRenewAction, this))
+{
+
+}
+
+bool DisableDomainAutoRenewRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableDomainAutoRenewResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableDomainAutoRenewResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * DisableDomainAutoRenewRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableDomainAutoRenewResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableDomainAutoRenewRequestPrivate
+ *
+ * @brief  Private implementation for DisableDomainAutoRenewRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableDomainAutoRenewRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public DisableDomainAutoRenewRequest instance.
+ */
+DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
+    const Route53DomainsRequest::Action action, DisableDomainAutoRenewRequest * const q)
+    : DisableDomainAutoRenewPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableDomainAutoRenewRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableDomainAutoRenewRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableDomainAutoRenewRequest instance.
+ */
+DisableDomainAutoRenewRequestPrivate::DisableDomainAutoRenewRequestPrivate(
+    const DisableDomainAutoRenewRequestPrivate &other, DisableDomainAutoRenewRequest * const q)
+    : DisableDomainAutoRenewPrivate(other, q)
+{
+
+}

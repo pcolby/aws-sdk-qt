@@ -19,3 +19,107 @@
 
 #include "updateuserpoolclientrequest.h"
 #include "updateuserpoolclientrequest_p.h"
+#include "updateuserpoolclientresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateUserPoolClientRequest
+ *
+ * @brief  Implements CognitoIdentityProvider UpdateUserPoolClient requests.
+ *
+ * @see    CognitoIdentityProviderClient::updateUserPoolClient
+ */
+
+/**
+ * @brief  Constructs a new UpdateUserPoolClientResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserPoolClientResponse::UpdateUserPoolClientResponse(
+
+/**
+ * @brief  Constructs a new UpdateUserPoolClientRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateUserPoolClientRequest::UpdateUserPoolClientRequest(const UpdateUserPoolClientRequest &other)
+    : CognitoIdentityProviderRequest(new UpdateUserPoolClientRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateUserPoolClientRequest object.
+ */
+UpdateUserPoolClientRequest::UpdateUserPoolClientRequest()
+    : CognitoIdentityProviderRequest(new UpdateUserPoolClientRequestPrivate(CognitoIdentityProviderRequest::UpdateUserPoolClientAction, this))
+{
+
+}
+
+bool UpdateUserPoolClientRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateUserPoolClientResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateUserPoolClientResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateUserPoolClientResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserPoolClientRequestPrivate
+ *
+ * @brief  Private implementation for UpdateUserPoolClientRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public UpdateUserPoolClientRequest instance.
+ */
+UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, UpdateUserPoolClientRequest * const q)
+    : UpdateUserPoolClientPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserPoolClientRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateUserPoolClientRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateUserPoolClientRequest instance.
+ */
+UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
+    const UpdateUserPoolClientRequestPrivate &other, UpdateUserPoolClientRequest * const q)
+    : UpdateUserPoolClientPrivate(other, q)
+{
+
+}

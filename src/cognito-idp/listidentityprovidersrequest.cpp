@@ -19,3 +19,107 @@
 
 #include "listidentityprovidersrequest.h"
 #include "listidentityprovidersrequest_p.h"
+#include "listidentityprovidersresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListIdentityProvidersRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ListIdentityProviders requests.
+ *
+ * @see    CognitoIdentityProviderClient::listIdentityProviders
+ */
+
+/**
+ * @brief  Constructs a new ListIdentityProvidersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListIdentityProvidersResponse::ListIdentityProvidersResponse(
+
+/**
+ * @brief  Constructs a new ListIdentityProvidersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListIdentityProvidersRequest::ListIdentityProvidersRequest(const ListIdentityProvidersRequest &other)
+    : CognitoIdentityProviderRequest(new ListIdentityProvidersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListIdentityProvidersRequest object.
+ */
+ListIdentityProvidersRequest::ListIdentityProvidersRequest()
+    : CognitoIdentityProviderRequest(new ListIdentityProvidersRequestPrivate(CognitoIdentityProviderRequest::ListIdentityProvidersAction, this))
+{
+
+}
+
+bool ListIdentityProvidersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListIdentityProvidersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListIdentityProvidersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ListIdentityProvidersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListIdentityProvidersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListIdentityProvidersRequestPrivate
+ *
+ * @brief  Private implementation for ListIdentityProvidersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIdentityProvidersRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ListIdentityProvidersRequest instance.
+ */
+ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ListIdentityProvidersRequest * const q)
+    : ListIdentityProvidersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIdentityProvidersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListIdentityProvidersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListIdentityProvidersRequest instance.
+ */
+ListIdentityProvidersRequestPrivate::ListIdentityProvidersRequestPrivate(
+    const ListIdentityProvidersRequestPrivate &other, ListIdentityProvidersRequest * const q)
+    : ListIdentityProvidersPrivate(other, q)
+{
+
+}

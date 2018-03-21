@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECRAWLERREQUEST_H
 #define QTAWS_UPDATECRAWLERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateCrawlerRequestPrivate;
+
+class QTAWS_EXPORT UpdateCrawlerRequest : public GlueRequest {
+
+public:
+    UpdateCrawlerRequest(const UpdateCrawlerRequest &other);
+    UpdateCrawlerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCrawlerRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

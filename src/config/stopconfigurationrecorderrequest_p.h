@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPCONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_STOPCONFIGURATIONRECORDERREQUEST_P_H
 
+#include "configservice_p.h"
+#include "stopconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class StopConfigurationRecorderRequest;
+
+class QTAWS_EXPORT StopConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+
+public:
+    StopConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+                                   StopConfigurationRecorderRequest * const q);
+    StopConfigurationRecorderRequestPrivate(const StopConfigurationRecorderRequestPrivate &other,
+                                   StopConfigurationRecorderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopConfigurationRecorderRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

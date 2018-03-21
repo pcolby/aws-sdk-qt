@@ -20,4 +20,32 @@
 #ifndef QTAWS_RECEIVEMESSAGEREQUEST_H
 #define QTAWS_RECEIVEMESSAGEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ReceiveMessageRequestPrivate;
+
+class QTAWS_EXPORT ReceiveMessageRequest : public SQSRequest {
+
+public:
+    ReceiveMessageRequest(const ReceiveMessageRequest &other);
+    ReceiveMessageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReceiveMessageRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

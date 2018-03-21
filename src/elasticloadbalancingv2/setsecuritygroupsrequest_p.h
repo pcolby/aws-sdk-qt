@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETSECURITYGROUPSREQUEST_P_H
 #define QTAWS_SETSECURITYGROUPSREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "setsecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetSecurityGroupsRequest;
+
+class QTAWS_EXPORT SetSecurityGroupsRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    SetSecurityGroupsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   SetSecurityGroupsRequest * const q);
+    SetSecurityGroupsRequestPrivate(const SetSecurityGroupsRequestPrivate &other,
+                                   SetSecurityGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetSecurityGroupsRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

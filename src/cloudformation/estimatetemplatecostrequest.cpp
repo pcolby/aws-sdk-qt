@@ -19,3 +19,107 @@
 
 #include "estimatetemplatecostrequest.h"
 #include "estimatetemplatecostrequest_p.h"
+#include "estimatetemplatecostresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  EstimateTemplateCostRequest
+ *
+ * @brief  Implements CloudFormation EstimateTemplateCost requests.
+ *
+ * @see    CloudFormationClient::estimateTemplateCost
+ */
+
+/**
+ * @brief  Constructs a new EstimateTemplateCostResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EstimateTemplateCostResponse::EstimateTemplateCostResponse(
+
+/**
+ * @brief  Constructs a new EstimateTemplateCostRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EstimateTemplateCostRequest::EstimateTemplateCostRequest(const EstimateTemplateCostRequest &other)
+    : CloudFormationRequest(new EstimateTemplateCostRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EstimateTemplateCostRequest object.
+ */
+EstimateTemplateCostRequest::EstimateTemplateCostRequest()
+    : CloudFormationRequest(new EstimateTemplateCostRequestPrivate(CloudFormationRequest::EstimateTemplateCostAction, this))
+{
+
+}
+
+bool EstimateTemplateCostRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EstimateTemplateCostResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EstimateTemplateCostResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetworkReply * const reply) const
+{
+    return new EstimateTemplateCostResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EstimateTemplateCostRequestPrivate
+ *
+ * @brief  Private implementation for EstimateTemplateCostRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EstimateTemplateCostRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public EstimateTemplateCostRequest instance.
+ */
+EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
+    const CloudFormationRequest::Action action, EstimateTemplateCostRequest * const q)
+    : EstimateTemplateCostPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EstimateTemplateCostRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EstimateTemplateCostRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EstimateTemplateCostRequest instance.
+ */
+EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
+    const EstimateTemplateCostRequestPrivate &other, EstimateTemplateCostRequest * const q)
+    : EstimateTemplateCostPrivate(other, q)
+{
+
+}

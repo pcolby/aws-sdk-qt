@@ -19,3 +19,107 @@
 
 #include "getrecordsrequest.h"
 #include "getrecordsrequest_p.h"
+#include "getrecordsresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  GetRecordsRequest
+ *
+ * @brief  Implements Kinesis GetRecords requests.
+ *
+ * @see    KinesisClient::getRecords
+ */
+
+/**
+ * @brief  Constructs a new GetRecordsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRecordsResponse::GetRecordsResponse(
+
+/**
+ * @brief  Constructs a new GetRecordsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRecordsRequest::GetRecordsRequest(const GetRecordsRequest &other)
+    : KinesisRequest(new GetRecordsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRecordsRequest object.
+ */
+GetRecordsRequest::GetRecordsRequest()
+    : KinesisRequest(new GetRecordsRequestPrivate(KinesisRequest::GetRecordsAction, this))
+{
+
+}
+
+bool GetRecordsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRecordsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRecordsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRecordsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRecordsRequestPrivate
+ *
+ * @brief  Private implementation for GetRecordsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRecordsRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public GetRecordsRequest instance.
+ */
+GetRecordsRequestPrivate::GetRecordsRequestPrivate(
+    const KinesisRequest::Action action, GetRecordsRequest * const q)
+    : GetRecordsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRecordsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRecordsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRecordsRequest instance.
+ */
+GetRecordsRequestPrivate::GetRecordsRequestPrivate(
+    const GetRecordsRequestPrivate &other, GetRecordsRequest * const q)
+    : GetRecordsPrivate(other, q)
+{
+
+}

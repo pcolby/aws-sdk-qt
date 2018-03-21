@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESUBSCRIBERREQUEST_P_H
 #define QTAWS_UPDATESUBSCRIBERREQUEST_P_H
 
+#include "budgets_p.h"
+#include "updatesubscriberrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class UpdateSubscriberRequest;
+
+class QTAWS_EXPORT UpdateSubscriberRequestPrivate : public BudgetsPrivate {
+
+public:
+    UpdateSubscriberRequestPrivate(const Budgets::Action action,
+                                   UpdateSubscriberRequest * const q);
+    UpdateSubscriberRequestPrivate(const UpdateSubscriberRequestPrivate &other,
+                                   UpdateSubscriberRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSubscriberRequest)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

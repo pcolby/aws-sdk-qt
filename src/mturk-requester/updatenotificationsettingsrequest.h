@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateNotificationSettingsRequestPrivate;
+
+class QTAWS_EXPORT UpdateNotificationSettingsRequest : public MTurkRequest {
+
+public:
+    UpdateNotificationSettingsRequest(const UpdateNotificationSettingsRequest &other);
+    UpdateNotificationSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNotificationSettingsRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

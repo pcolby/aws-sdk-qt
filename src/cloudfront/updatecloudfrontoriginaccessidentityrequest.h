@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_H
 #define QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class UpdateCloudFrontOriginAccessIdentityRequestPrivate;
+
+class QTAWS_EXPORT UpdateCloudFrontOriginAccessIdentityRequest : public CloudFrontRequest {
+
+public:
+    UpdateCloudFrontOriginAccessIdentityRequest(const UpdateCloudFrontOriginAccessIdentityRequest &other);
+    UpdateCloudFrontOriginAccessIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCloudFrontOriginAccessIdentityRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

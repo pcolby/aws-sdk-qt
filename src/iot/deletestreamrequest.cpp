@@ -19,3 +19,107 @@
 
 #include "deletestreamrequest.h"
 #include "deletestreamrequest_p.h"
+#include "deletestreamresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteStreamRequest
+ *
+ * @brief  Implements IoT DeleteStream requests.
+ *
+ * @see    IoTClient::deleteStream
+ */
+
+/**
+ * @brief  Constructs a new DeleteStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStreamResponse::DeleteStreamResponse(
+
+/**
+ * @brief  Constructs a new DeleteStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteStreamRequest::DeleteStreamRequest(const DeleteStreamRequest &other)
+    : IoTRequest(new DeleteStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteStreamRequest object.
+ */
+DeleteStreamRequest::DeleteStreamRequest()
+    : IoTRequest(new DeleteStreamRequestPrivate(IoTRequest::DeleteStreamAction, this))
+{
+
+}
+
+bool DeleteStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStreamRequestPrivate
+ *
+ * @brief  Private implementation for DeleteStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStreamRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DeleteStreamRequest instance.
+ */
+DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
+    const IoTRequest::Action action, DeleteStreamRequest * const q)
+    : DeleteStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteStreamRequest instance.
+ */
+DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
+    const DeleteStreamRequestPrivate &other, DeleteStreamRequest * const q)
+    : DeleteStreamPrivate(other, q)
+{
+
+}

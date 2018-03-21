@@ -20,4 +20,32 @@
 #ifndef QTAWS_ABORTMULTIPARTUPLOADREQUEST_H
 #define QTAWS_ABORTMULTIPARTUPLOADREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class AbortMultipartUploadRequestPrivate;
+
+class QTAWS_EXPORT AbortMultipartUploadRequest : public S3Request {
+
+public:
+    AbortMultipartUploadRequest(const AbortMultipartUploadRequest &other);
+    AbortMultipartUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AbortMultipartUploadRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

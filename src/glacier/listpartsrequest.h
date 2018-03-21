@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPARTSREQUEST_H
 #define QTAWS_LISTPARTSREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListPartsRequestPrivate;
+
+class QTAWS_EXPORT ListPartsRequest : public GlacierRequest {
+
+public:
+    ListPartsRequest(const ListPartsRequest &other);
+    ListPartsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPartsRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

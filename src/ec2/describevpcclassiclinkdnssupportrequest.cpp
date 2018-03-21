@@ -19,3 +19,107 @@
 
 #include "describevpcclassiclinkdnssupportrequest.h"
 #include "describevpcclassiclinkdnssupportrequest_p.h"
+#include "describevpcclassiclinkdnssupportresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcClassicLinkDnsSupportRequest
+ *
+ * @brief  Implements EC2 DescribeVpcClassicLinkDnsSupport requests.
+ *
+ * @see    EC2Client::describeVpcClassicLinkDnsSupport
+ */
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportResponse(
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest(const DescribeVpcClassicLinkDnsSupportRequest &other)
+    : EC2Request(new DescribeVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequest object.
+ */
+DescribeVpcClassicLinkDnsSupportRequest::DescribeVpcClassicLinkDnsSupportRequest()
+    : EC2Request(new DescribeVpcClassicLinkDnsSupportRequestPrivate(EC2Request::DescribeVpcClassicLinkDnsSupportAction, this))
+{
+
+}
+
+bool DescribeVpcClassicLinkDnsSupportRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVpcClassicLinkDnsSupportResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVpcClassicLinkDnsSupportResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVpcClassicLinkDnsSupportResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcClassicLinkDnsSupportRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVpcClassicLinkDnsSupportRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeVpcClassicLinkDnsSupportRequest instance.
+ */
+DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupportRequestPrivate(
+    const EC2Request::Action action, DescribeVpcClassicLinkDnsSupportRequest * const q)
+    : DescribeVpcClassicLinkDnsSupportPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVpcClassicLinkDnsSupportRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVpcClassicLinkDnsSupportRequest instance.
+ */
+DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupportRequestPrivate(
+    const DescribeVpcClassicLinkDnsSupportRequestPrivate &other, DescribeVpcClassicLinkDnsSupportRequest * const q)
+    : DescribeVpcClassicLinkDnsSupportPrivate(other, q)
+{
+
+}

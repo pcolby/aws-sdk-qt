@@ -19,3 +19,107 @@
 
 #include "getfindingsstatisticsrequest.h"
 #include "getfindingsstatisticsrequest_p.h"
+#include "getfindingsstatisticsresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetFindingsStatisticsRequest
+ *
+ * @brief  Implements GuardDuty GetFindingsStatistics requests.
+ *
+ * @see    GuardDutyClient::getFindingsStatistics
+ */
+
+/**
+ * @brief  Constructs a new GetFindingsStatisticsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
+
+/**
+ * @brief  Constructs a new GetFindingsStatisticsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetFindingsStatisticsRequest::GetFindingsStatisticsRequest(const GetFindingsStatisticsRequest &other)
+    : GuardDutyRequest(new GetFindingsStatisticsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetFindingsStatisticsRequest object.
+ */
+GetFindingsStatisticsRequest::GetFindingsStatisticsRequest()
+    : GuardDutyRequest(new GetFindingsStatisticsRequestPrivate(GuardDutyRequest::GetFindingsStatisticsAction, this))
+{
+
+}
+
+bool GetFindingsStatisticsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetFindingsStatisticsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetFindingsStatisticsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * GetFindingsStatisticsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetFindingsStatisticsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFindingsStatisticsRequestPrivate
+ *
+ * @brief  Private implementation for GetFindingsStatisticsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public GetFindingsStatisticsRequest instance.
+ */
+GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
+    const GuardDutyRequest::Action action, GetFindingsStatisticsRequest * const q)
+    : GetFindingsStatisticsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFindingsStatisticsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetFindingsStatisticsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetFindingsStatisticsRequest instance.
+ */
+GetFindingsStatisticsRequestPrivate::GetFindingsStatisticsRequestPrivate(
+    const GetFindingsStatisticsRequestPrivate &other, GetFindingsStatisticsRequest * const q)
+    : GetFindingsStatisticsPrivate(other, q)
+{
+
+}

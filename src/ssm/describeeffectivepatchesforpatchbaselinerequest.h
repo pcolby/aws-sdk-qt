@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_H
 #define QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeEffectivePatchesForPatchBaselineRequestPrivate;
+
+class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequest : public SSMRequest {
+
+public:
+    DescribeEffectivePatchesForPatchBaselineRequest(const DescribeEffectivePatchesForPatchBaselineRequest &other);
+    DescribeEffectivePatchesForPatchBaselineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEffectivePatchesForPatchBaselineRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

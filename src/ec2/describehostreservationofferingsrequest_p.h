@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSREQUEST_P_H
 #define QTAWS_DESCRIBEHOSTRESERVATIONOFFERINGSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describehostreservationofferingsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeHostReservationOfferingsRequest;
+
+class QTAWS_EXPORT DescribeHostReservationOfferingsRequestPrivate : public EC2Private {
+
+public:
+    DescribeHostReservationOfferingsRequestPrivate(const EC2::Action action,
+                                   DescribeHostReservationOfferingsRequest * const q);
+    DescribeHostReservationOfferingsRequestPrivate(const DescribeHostReservationOfferingsRequestPrivate &other,
+                                   DescribeHostReservationOfferingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHostReservationOfferingsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

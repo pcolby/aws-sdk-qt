@@ -19,3 +19,107 @@
 
 #include "attachobjectrequest.h"
 #include "attachobjectrequest_p.h"
+#include "attachobjectresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachObjectRequest
+ *
+ * @brief  Implements CloudDirectory AttachObject requests.
+ *
+ * @see    CloudDirectoryClient::attachObject
+ */
+
+/**
+ * @brief  Constructs a new AttachObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachObjectResponse::AttachObjectResponse(
+
+/**
+ * @brief  Constructs a new AttachObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachObjectRequest::AttachObjectRequest(const AttachObjectRequest &other)
+    : CloudDirectoryRequest(new AttachObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachObjectRequest object.
+ */
+AttachObjectRequest::AttachObjectRequest()
+    : CloudDirectoryRequest(new AttachObjectRequestPrivate(CloudDirectoryRequest::AttachObjectAction, this))
+{
+
+}
+
+bool AttachObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * AttachObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachObjectRequestPrivate
+ *
+ * @brief  Private implementation for AttachObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachObjectRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public AttachObjectRequest instance.
+ */
+AttachObjectRequestPrivate::AttachObjectRequestPrivate(
+    const CloudDirectoryRequest::Action action, AttachObjectRequest * const q)
+    : AttachObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachObjectRequest instance.
+ */
+AttachObjectRequestPrivate::AttachObjectRequestPrivate(
+    const AttachObjectRequestPrivate &other, AttachObjectRequest * const q)
+    : AttachObjectPrivate(other, q)
+{
+
+}

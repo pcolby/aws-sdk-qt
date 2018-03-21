@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class UpdateApplicationRequestPrivate;
+
+class QTAWS_EXPORT UpdateApplicationRequest : public CodeDeployRequest {
+
+public:
+    UpdateApplicationRequest(const UpdateApplicationRequest &other);
+    UpdateApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

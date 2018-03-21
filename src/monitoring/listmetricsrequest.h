@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTMETRICSREQUEST_H
 #define QTAWS_LISTMETRICSREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class ListMetricsRequestPrivate;
+
+class QTAWS_EXPORT ListMetricsRequest : public CloudWatchRequest {
+
+public:
+    ListMetricsRequest(const ListMetricsRequest &other);
+    ListMetricsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListMetricsRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

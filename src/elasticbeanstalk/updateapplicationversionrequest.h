@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPPLICATIONVERSIONREQUEST_H
 #define QTAWS_UPDATEAPPLICATIONVERSIONREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateApplicationVersionRequestPrivate;
+
+class QTAWS_EXPORT UpdateApplicationVersionRequest : public ElasticBeanstalkRequest {
+
+public:
+    UpdateApplicationVersionRequest(const UpdateApplicationVersionRequest &other);
+    UpdateApplicationVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationVersionRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

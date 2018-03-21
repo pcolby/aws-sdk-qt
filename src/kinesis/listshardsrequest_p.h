@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSHARDSREQUEST_P_H
 #define QTAWS_LISTSHARDSREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "listshardsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListShardsRequest;
+
+class QTAWS_EXPORT ListShardsRequestPrivate : public KinesisPrivate {
+
+public:
+    ListShardsRequestPrivate(const Kinesis::Action action,
+                                   ListShardsRequest * const q);
+    ListShardsRequestPrivate(const ListShardsRequestPrivate &other,
+                                   ListShardsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListShardsRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

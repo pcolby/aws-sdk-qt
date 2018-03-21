@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEROUTEREQUEST_H
 #define QTAWS_DELETEROUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteRouteRequestPrivate;
+
+class QTAWS_EXPORT DeleteRouteRequest : public EC2Request {
+
+public:
+    DeleteRouteRequest(const DeleteRouteRequest &other);
+    DeleteRouteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRouteRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

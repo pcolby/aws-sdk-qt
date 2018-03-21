@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBENGINEVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEDBENGINEVERSIONSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedbengineversionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBEngineVersionsRequest;
+
+class QTAWS_EXPORT DescribeDBEngineVersionsRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBEngineVersionsRequestPrivate(const RDS::Action action,
+                                   DescribeDBEngineVersionsRequest * const q);
+    DescribeDBEngineVersionsRequestPrivate(const DescribeDBEngineVersionsRequestPrivate &other,
+                                   DescribeDBEngineVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBEngineVersionsRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

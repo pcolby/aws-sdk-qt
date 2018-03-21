@@ -19,3 +19,107 @@
 
 #include "disablestagetransitionrequest.h"
 #include "disablestagetransitionrequest_p.h"
+#include "disablestagetransitionresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  DisableStageTransitionRequest
+ *
+ * @brief  Implements CodePipeline DisableStageTransition requests.
+ *
+ * @see    CodePipelineClient::disableStageTransition
+ */
+
+/**
+ * @brief  Constructs a new DisableStageTransitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableStageTransitionResponse::DisableStageTransitionResponse(
+
+/**
+ * @brief  Constructs a new DisableStageTransitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableStageTransitionRequest::DisableStageTransitionRequest(const DisableStageTransitionRequest &other)
+    : CodePipelineRequest(new DisableStageTransitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableStageTransitionRequest object.
+ */
+DisableStageTransitionRequest::DisableStageTransitionRequest()
+    : CodePipelineRequest(new DisableStageTransitionRequestPrivate(CodePipelineRequest::DisableStageTransitionAction, this))
+{
+
+}
+
+bool DisableStageTransitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableStageTransitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableStageTransitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * DisableStageTransitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableStageTransitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableStageTransitionRequestPrivate
+ *
+ * @brief  Private implementation for DisableStageTransitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableStageTransitionRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public DisableStageTransitionRequest instance.
+ */
+DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
+    const CodePipelineRequest::Action action, DisableStageTransitionRequest * const q)
+    : DisableStageTransitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableStageTransitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableStageTransitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableStageTransitionRequest instance.
+ */
+DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
+    const DisableStageTransitionRequestPrivate &other, DisableStageTransitionRequest * const q)
+    : DisableStageTransitionPrivate(other, q)
+{
+
+}

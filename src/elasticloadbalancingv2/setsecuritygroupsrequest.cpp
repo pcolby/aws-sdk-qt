@@ -19,3 +19,107 @@
 
 #include "setsecuritygroupsrequest.h"
 #include "setsecuritygroupsrequest_p.h"
+#include "setsecuritygroupsresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  SetSecurityGroupsRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 SetSecurityGroups requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::setSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new SetSecurityGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetSecurityGroupsResponse::SetSecurityGroupsResponse(
+
+/**
+ * @brief  Constructs a new SetSecurityGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetSecurityGroupsRequest::SetSecurityGroupsRequest(const SetSecurityGroupsRequest &other)
+    : ElasticLoadBalancingv2Request(new SetSecurityGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetSecurityGroupsRequest object.
+ */
+SetSecurityGroupsRequest::SetSecurityGroupsRequest()
+    : ElasticLoadBalancingv2Request(new SetSecurityGroupsRequestPrivate(ElasticLoadBalancingv2Request::SetSecurityGroupsAction, this))
+{
+
+}
+
+bool SetSecurityGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetSecurityGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetSecurityGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * SetSecurityGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new SetSecurityGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetSecurityGroupsRequestPrivate
+ *
+ * @brief  Private implementation for SetSecurityGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSecurityGroupsRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public SetSecurityGroupsRequest instance.
+ */
+SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, SetSecurityGroupsRequest * const q)
+    : SetSecurityGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSecurityGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetSecurityGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetSecurityGroupsRequest instance.
+ */
+SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
+    const SetSecurityGroupsRequestPrivate &other, SetSecurityGroupsRequest * const q)
+    : SetSecurityGroupsPrivate(other, q)
+{
+
+}

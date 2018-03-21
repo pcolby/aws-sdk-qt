@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEROLEPOLICYREQUEST_P_H
 #define QTAWS_DELETEROLEPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "deleterolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteRolePolicyRequest;
+
+class QTAWS_EXPORT DeleteRolePolicyRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteRolePolicyRequestPrivate(const IAM::Action action,
+                                   DeleteRolePolicyRequest * const q);
+    DeleteRolePolicyRequestPrivate(const DeleteRolePolicyRequestPrivate &other,
+                                   DeleteRolePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRolePolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

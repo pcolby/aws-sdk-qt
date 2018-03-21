@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTREQUEST_H
 #define QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterFromSnapshotRequestPrivate;
+
+class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequest : public RDSRequest {
+
+public:
+    RestoreDBClusterFromSnapshotRequest(const RestoreDBClusterFromSnapshotRequest &other);
+    RestoreDBClusterFromSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreDBClusterFromSnapshotRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPRESETREQUEST_P_H
 #define QTAWS_DELETEPRESETREQUEST_P_H
 
+#include "elastictranscoder_p.h"
+#include "deletepresetrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class DeletePresetRequest;
+
+class QTAWS_EXPORT DeletePresetRequestPrivate : public ElasticTranscoderPrivate {
+
+public:
+    DeletePresetRequestPrivate(const ElasticTranscoder::Action action,
+                                   DeletePresetRequest * const q);
+    DeletePresetRequestPrivate(const DeletePresetRequestPrivate &other,
+                                   DeletePresetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePresetRequest)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

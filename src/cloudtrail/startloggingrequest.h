@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTLOGGINGREQUEST_H
 #define QTAWS_STARTLOGGINGREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class StartLoggingRequestPrivate;
+
+class QTAWS_EXPORT StartLoggingRequest : public CloudTrailRequest {
+
+public:
+    StartLoggingRequest(const StartLoggingRequest &other);
+    StartLoggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartLoggingRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getbucketnotificationconfigurationrequest.h"
 #include "getbucketnotificationconfigurationrequest_p.h"
+#include "getbucketnotificationconfigurationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketNotificationConfigurationRequest
+ *
+ * @brief  Implements S3 GetBucketNotificationConfiguration requests.
+ *
+ * @see    S3Client::getBucketNotificationConfiguration
+ */
+
+/**
+ * @brief  Constructs a new GetBucketNotificationConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketNotificationConfigurationResponse::GetBucketNotificationConfigurationResponse(
+
+/**
+ * @brief  Constructs a new GetBucketNotificationConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBucketNotificationConfigurationRequest::GetBucketNotificationConfigurationRequest(const GetBucketNotificationConfigurationRequest &other)
+    : S3Request(new GetBucketNotificationConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBucketNotificationConfigurationRequest object.
+ */
+GetBucketNotificationConfigurationRequest::GetBucketNotificationConfigurationRequest()
+    : S3Request(new GetBucketNotificationConfigurationRequestPrivate(S3Request::GetBucketNotificationConfigurationAction, this))
+{
+
+}
+
+bool GetBucketNotificationConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBucketNotificationConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBucketNotificationConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * GetBucketNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBucketNotificationConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketNotificationConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for GetBucketNotificationConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketNotificationConfigurationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public GetBucketNotificationConfigurationRequest instance.
+ */
+GetBucketNotificationConfigurationRequestPrivate::GetBucketNotificationConfigurationRequestPrivate(
+    const S3Request::Action action, GetBucketNotificationConfigurationRequest * const q)
+    : GetBucketNotificationConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketNotificationConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBucketNotificationConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBucketNotificationConfigurationRequest instance.
+ */
+GetBucketNotificationConfigurationRequestPrivate::GetBucketNotificationConfigurationRequestPrivate(
+    const GetBucketNotificationConfigurationRequestPrivate &other, GetBucketNotificationConfigurationRequest * const q)
+    : GetBucketNotificationConfigurationPrivate(other, q)
+{
+
+}

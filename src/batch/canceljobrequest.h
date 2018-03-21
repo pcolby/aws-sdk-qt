@@ -20,4 +20,32 @@
 #ifndef QTAWS_CANCELJOBREQUEST_H
 #define QTAWS_CANCELJOBREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CancelJobRequestPrivate;
+
+class QTAWS_EXPORT CancelJobRequest : public BatchRequest {
+
+public:
+    CancelJobRequest(const CancelJobRequest &other);
+    CancelJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CancelJobRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

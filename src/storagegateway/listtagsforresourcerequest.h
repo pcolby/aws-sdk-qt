@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForResourceRequest : public StorageGatewayRequest {
+
+public:
+    ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
+    ListTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourceRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

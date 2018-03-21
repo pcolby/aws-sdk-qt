@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELOGGROUPREQUEST_P_H
 #define QTAWS_CREATELOGGROUPREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "createloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class CreateLogGroupRequest;
+
+class QTAWS_EXPORT CreateLogGroupRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    CreateLogGroupRequestPrivate(const CloudWatchLogs::Action action,
+                                   CreateLogGroupRequest * const q);
+    CreateLogGroupRequestPrivate(const CreateLogGroupRequestPrivate &other,
+                                   CreateLogGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLogGroupRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONREQUEST_H
 #define QTAWS_CREATEAPPLICATIONVERSIONREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class CreateApplicationVersionRequestPrivate;
+
+class QTAWS_EXPORT CreateApplicationVersionRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    CreateApplicationVersionRequest(const CreateApplicationVersionRequest &other);
+    CreateApplicationVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateApplicationVersionRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

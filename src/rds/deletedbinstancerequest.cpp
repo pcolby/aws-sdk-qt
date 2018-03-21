@@ -19,3 +19,107 @@
 
 #include "deletedbinstancerequest.h"
 #include "deletedbinstancerequest_p.h"
+#include "deletedbinstanceresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBInstanceRequest
+ *
+ * @brief  Implements RDS DeleteDBInstance requests.
+ *
+ * @see    RDSClient::deleteDBInstance
+ */
+
+/**
+ * @brief  Constructs a new DeleteDBInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBInstanceResponse::DeleteDBInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeleteDBInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDBInstanceRequest::DeleteDBInstanceRequest(const DeleteDBInstanceRequest &other)
+    : RDSRequest(new DeleteDBInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDBInstanceRequest object.
+ */
+DeleteDBInstanceRequest::DeleteDBInstanceRequest()
+    : RDSRequest(new DeleteDBInstanceRequestPrivate(RDSRequest::DeleteDBInstanceAction, this))
+{
+
+}
+
+bool DeleteDBInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDBInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDBInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDBInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDBInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBInstanceRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DeleteDBInstanceRequest instance.
+ */
+DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
+    const RDSRequest::Action action, DeleteDBInstanceRequest * const q)
+    : DeleteDBInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDBInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDBInstanceRequest instance.
+ */
+DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
+    const DeleteDBInstanceRequestPrivate &other, DeleteDBInstanceRequest * const q)
+    : DeleteDBInstancePrivate(other, q)
+{
+
+}

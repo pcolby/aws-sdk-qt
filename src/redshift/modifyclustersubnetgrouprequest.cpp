@@ -19,3 +19,107 @@
 
 #include "modifyclustersubnetgrouprequest.h"
 #include "modifyclustersubnetgrouprequest_p.h"
+#include "modifyclustersubnetgroupresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ModifyClusterSubnetGroupRequest
+ *
+ * @brief  Implements Redshift ModifyClusterSubnetGroup requests.
+ *
+ * @see    RedshiftClient::modifyClusterSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new ModifyClusterSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyClusterSubnetGroupResponse::ModifyClusterSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new ModifyClusterSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyClusterSubnetGroupRequest::ModifyClusterSubnetGroupRequest(const ModifyClusterSubnetGroupRequest &other)
+    : RedshiftRequest(new ModifyClusterSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyClusterSubnetGroupRequest object.
+ */
+ModifyClusterSubnetGroupRequest::ModifyClusterSubnetGroupRequest()
+    : RedshiftRequest(new ModifyClusterSubnetGroupRequestPrivate(RedshiftRequest::ModifyClusterSubnetGroupAction, this))
+{
+
+}
+
+bool ModifyClusterSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyClusterSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyClusterSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * ModifyClusterSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyClusterSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyClusterSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for ModifyClusterSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterSubnetGroupRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public ModifyClusterSubnetGroupRequest instance.
+ */
+ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
+    const RedshiftRequest::Action action, ModifyClusterSubnetGroupRequest * const q)
+    : ModifyClusterSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyClusterSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyClusterSubnetGroupRequest instance.
+ */
+ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
+    const ModifyClusterSubnetGroupRequestPrivate &other, ModifyClusterSubnetGroupRequest * const q)
+    : ModifyClusterSubnetGroupPrivate(other, q)
+{
+
+}

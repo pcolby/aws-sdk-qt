@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERSCALABLETARGETREQUEST_P_H
 #define QTAWS_REGISTERSCALABLETARGETREQUEST_P_H
 
+#include "applicationautoscaling_p.h"
+#include "registerscalabletargetrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class RegisterScalableTargetRequest;
+
+class QTAWS_EXPORT RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingPrivate {
+
+public:
+    RegisterScalableTargetRequestPrivate(const ApplicationAutoScaling::Action action,
+                                   RegisterScalableTargetRequest * const q);
+    RegisterScalableTargetRequestPrivate(const RegisterScalableTargetRequestPrivate &other,
+                                   RegisterScalableTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterScalableTargetRequest)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

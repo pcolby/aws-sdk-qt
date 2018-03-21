@@ -19,3 +19,107 @@
 
 #include "describeendpointsrequest.h"
 #include "describeendpointsrequest_p.h"
+#include "describeendpointsresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  DescribeEndpointsRequest
+ *
+ * @brief  Implements MediaConvert DescribeEndpoints requests.
+ *
+ * @see    MediaConvertClient::describeEndpoints
+ */
+
+/**
+ * @brief  Constructs a new DescribeEndpointsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEndpointsResponse::DescribeEndpointsResponse(
+
+/**
+ * @brief  Constructs a new DescribeEndpointsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEndpointsRequest::DescribeEndpointsRequest(const DescribeEndpointsRequest &other)
+    : MediaConvertRequest(new DescribeEndpointsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEndpointsRequest object.
+ */
+DescribeEndpointsRequest::DescribeEndpointsRequest()
+    : MediaConvertRequest(new DescribeEndpointsRequestPrivate(MediaConvertRequest::DescribeEndpointsAction, this))
+{
+
+}
+
+bool DescribeEndpointsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEndpointsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEndpointsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEndpointsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEndpointsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEndpointsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointsRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public DescribeEndpointsRequest instance.
+ */
+DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
+    const MediaConvertRequest::Action action, DescribeEndpointsRequest * const q)
+    : DescribeEndpointsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEndpointsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEndpointsRequest instance.
+ */
+DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
+    const DescribeEndpointsRequestPrivate &other, DescribeEndpointsRequest * const q)
+    : DescribeEndpointsPrivate(other, q)
+{
+
+}

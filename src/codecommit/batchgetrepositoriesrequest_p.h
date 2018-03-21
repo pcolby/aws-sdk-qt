@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETREPOSITORIESREQUEST_P_H
 #define QTAWS_BATCHGETREPOSITORIESREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "batchgetrepositoriesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class BatchGetRepositoriesRequest;
+
+class QTAWS_EXPORT BatchGetRepositoriesRequestPrivate : public CodeCommitPrivate {
+
+public:
+    BatchGetRepositoriesRequestPrivate(const CodeCommit::Action action,
+                                   BatchGetRepositoriesRequest * const q);
+    BatchGetRepositoriesRequestPrivate(const BatchGetRepositoriesRequestPrivate &other,
+                                   BatchGetRepositoriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetRepositoriesRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

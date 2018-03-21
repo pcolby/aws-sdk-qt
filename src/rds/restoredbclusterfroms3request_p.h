@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESTOREDBCLUSTERFROMS3REQUEST_P_H
 #define QTAWS_RESTOREDBCLUSTERFROMS3REQUEST_P_H
 
+#include "rds_p.h"
+#include "restoredbclusterfroms3request.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterFromS3Request;
+
+class QTAWS_EXPORT RestoreDBClusterFromS3RequestPrivate : public RDSPrivate {
+
+public:
+    RestoreDBClusterFromS3RequestPrivate(const RDS::Action action,
+                                   RestoreDBClusterFromS3Request * const q);
+    RestoreDBClusterFromS3RequestPrivate(const RestoreDBClusterFromS3RequestPrivate &other,
+                                   RestoreDBClusterFromS3Request * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBClusterFromS3Request)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPROTECTIONSREQUEST_P_H
 #define QTAWS_LISTPROTECTIONSREQUEST_P_H
 
+#include "shield_p.h"
+#include "listprotectionsrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class ListProtectionsRequest;
+
+class QTAWS_EXPORT ListProtectionsRequestPrivate : public ShieldPrivate {
+
+public:
+    ListProtectionsRequestPrivate(const Shield::Action action,
+                                   ListProtectionsRequest * const q);
+    ListProtectionsRequestPrivate(const ListProtectionsRequestPrivate &other,
+                                   ListProtectionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListProtectionsRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

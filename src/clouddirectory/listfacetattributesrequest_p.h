@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTFACETATTRIBUTESREQUEST_P_H
 #define QTAWS_LISTFACETATTRIBUTESREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listfacetattributesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListFacetAttributesRequest;
+
+class QTAWS_EXPORT ListFacetAttributesRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListFacetAttributesRequestPrivate(const CloudDirectory::Action action,
+                                   ListFacetAttributesRequest * const q);
+    ListFacetAttributesRequestPrivate(const ListFacetAttributesRequestPrivate &other,
+                                   ListFacetAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListFacetAttributesRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

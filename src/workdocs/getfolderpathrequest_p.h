@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETFOLDERPATHREQUEST_P_H
 #define QTAWS_GETFOLDERPATHREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "getfolderpathrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetFolderPathRequest;
+
+class QTAWS_EXPORT GetFolderPathRequestPrivate : public WorkDocsPrivate {
+
+public:
+    GetFolderPathRequestPrivate(const WorkDocs::Action action,
+                                   GetFolderPathRequest * const q);
+    GetFolderPathRequestPrivate(const GetFolderPathRequestPrivate &other,
+                                   GetFolderPathRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetFolderPathRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

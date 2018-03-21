@@ -19,3 +19,107 @@
 
 #include "describeinstanceattributerequest.h"
 #include "describeinstanceattributerequest_p.h"
+#include "describeinstanceattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeInstanceAttributeRequest
+ *
+ * @brief  Implements EC2 DescribeInstanceAttribute requests.
+ *
+ * @see    EC2Client::describeInstanceAttribute
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstanceAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceAttributeResponse::DescribeInstanceAttributeResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstanceAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest(const DescribeInstanceAttributeRequest &other)
+    : EC2Request(new DescribeInstanceAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstanceAttributeRequest object.
+ */
+DescribeInstanceAttributeRequest::DescribeInstanceAttributeRequest()
+    : EC2Request(new DescribeInstanceAttributeRequestPrivate(EC2Request::DescribeInstanceAttributeAction, this))
+{
+
+}
+
+bool DescribeInstanceAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstanceAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstanceAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstanceAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceAttributeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstanceAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeInstanceAttributeRequest instance.
+ */
+DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
+    const EC2Request::Action action, DescribeInstanceAttributeRequest * const q)
+    : DescribeInstanceAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstanceAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstanceAttributeRequest instance.
+ */
+DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
+    const DescribeInstanceAttributeRequestPrivate &other, DescribeInstanceAttributeRequest * const q)
+    : DescribeInstanceAttributePrivate(other, q)
+{
+
+}

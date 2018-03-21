@@ -19,3 +19,107 @@
 
 #include "createratebasedrulerequest.h"
 #include "createratebasedrulerequest_p.h"
+#include "createratebasedruleresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateRateBasedRuleRequest
+ *
+ * @brief  Implements WAF CreateRateBasedRule requests.
+ *
+ * @see    WAFClient::createRateBasedRule
+ */
+
+/**
+ * @brief  Constructs a new CreateRateBasedRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
+
+/**
+ * @brief  Constructs a new CreateRateBasedRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRateBasedRuleRequest::CreateRateBasedRuleRequest(const CreateRateBasedRuleRequest &other)
+    : WAFRequest(new CreateRateBasedRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRateBasedRuleRequest object.
+ */
+CreateRateBasedRuleRequest::CreateRateBasedRuleRequest()
+    : WAFRequest(new CreateRateBasedRuleRequestPrivate(WAFRequest::CreateRateBasedRuleAction, this))
+{
+
+}
+
+bool CreateRateBasedRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRateBasedRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRateBasedRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * CreateRateBasedRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRateBasedRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRateBasedRuleRequestPrivate
+ *
+ * @brief  Private implementation for CreateRateBasedRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public CreateRateBasedRuleRequest instance.
+ */
+CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
+    const WAFRequest::Action action, CreateRateBasedRuleRequest * const q)
+    : CreateRateBasedRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRateBasedRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRateBasedRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRateBasedRuleRequest instance.
+ */
+CreateRateBasedRuleRequestPrivate::CreateRateBasedRuleRequestPrivate(
+    const CreateRateBasedRuleRequestPrivate &other, CreateRateBasedRuleRequest * const q)
+    : CreateRateBasedRulePrivate(other, q)
+{
+
+}

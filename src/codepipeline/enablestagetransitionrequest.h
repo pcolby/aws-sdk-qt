@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLESTAGETRANSITIONREQUEST_H
 #define QTAWS_ENABLESTAGETRANSITIONREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class EnableStageTransitionRequestPrivate;
+
+class QTAWS_EXPORT EnableStageTransitionRequest : public CodePipelineRequest {
+
+public:
+    EnableStageTransitionRequest(const EnableStageTransitionRequest &other);
+    EnableStageTransitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableStageTransitionRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteimagerequest.h"
 #include "deleteimagerequest_p.h"
+#include "deleteimageresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DeleteImageRequest
+ *
+ * @brief  Implements AppStream DeleteImage requests.
+ *
+ * @see    AppStreamClient::deleteImage
+ */
+
+/**
+ * @brief  Constructs a new DeleteImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteImageResponse::DeleteImageResponse(
+
+/**
+ * @brief  Constructs a new DeleteImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteImageRequest::DeleteImageRequest(const DeleteImageRequest &other)
+    : AppStreamRequest(new DeleteImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteImageRequest object.
+ */
+DeleteImageRequest::DeleteImageRequest()
+    : AppStreamRequest(new DeleteImageRequestPrivate(AppStreamRequest::DeleteImageAction, this))
+{
+
+}
+
+bool DeleteImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * DeleteImageRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteImageRequestPrivate
+ *
+ * @brief  Private implementation for DeleteImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteImageRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public DeleteImageRequest instance.
+ */
+DeleteImageRequestPrivate::DeleteImageRequestPrivate(
+    const AppStreamRequest::Action action, DeleteImageRequest * const q)
+    : DeleteImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteImageRequest instance.
+ */
+DeleteImageRequestPrivate::DeleteImageRequestPrivate(
+    const DeleteImageRequestPrivate &other, DeleteImageRequest * const q)
+    : DeleteImagePrivate(other, q)
+{
+
+}

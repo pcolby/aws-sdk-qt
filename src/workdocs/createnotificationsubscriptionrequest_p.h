@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATENOTIFICATIONSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_CREATENOTIFICATIONSUBSCRIPTIONREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "createnotificationsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateNotificationSubscriptionRequest;
+
+class QTAWS_EXPORT CreateNotificationSubscriptionRequestPrivate : public WorkDocsPrivate {
+
+public:
+    CreateNotificationSubscriptionRequestPrivate(const WorkDocs::Action action,
+                                   CreateNotificationSubscriptionRequest * const q);
+    CreateNotificationSubscriptionRequestPrivate(const CreateNotificationSubscriptionRequestPrivate &other,
+                                   CreateNotificationSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNotificationSubscriptionRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "enabledomainautorenewrequest.h"
 #include "enabledomainautorenewrequest_p.h"
+#include "enabledomainautorenewresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  EnableDomainAutoRenewRequest
+ *
+ * @brief  Implements Route53Domains EnableDomainAutoRenew requests.
+ *
+ * @see    Route53DomainsClient::enableDomainAutoRenew
+ */
+
+/**
+ * @brief  Constructs a new EnableDomainAutoRenewResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableDomainAutoRenewResponse::EnableDomainAutoRenewResponse(
+
+/**
+ * @brief  Constructs a new EnableDomainAutoRenewRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest(const EnableDomainAutoRenewRequest &other)
+    : Route53DomainsRequest(new EnableDomainAutoRenewRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableDomainAutoRenewRequest object.
+ */
+EnableDomainAutoRenewRequest::EnableDomainAutoRenewRequest()
+    : Route53DomainsRequest(new EnableDomainAutoRenewRequestPrivate(Route53DomainsRequest::EnableDomainAutoRenewAction, this))
+{
+
+}
+
+bool EnableDomainAutoRenewRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableDomainAutoRenewResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableDomainAutoRenewResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableDomainAutoRenewResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableDomainAutoRenewRequestPrivate
+ *
+ * @brief  Private implementation for EnableDomainAutoRenewRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public EnableDomainAutoRenewRequest instance.
+ */
+EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
+    const Route53DomainsRequest::Action action, EnableDomainAutoRenewRequest * const q)
+    : EnableDomainAutoRenewPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableDomainAutoRenewRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableDomainAutoRenewRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableDomainAutoRenewRequest instance.
+ */
+EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
+    const EnableDomainAutoRenewRequestPrivate &other, EnableDomainAutoRenewRequest * const q)
+    : EnableDomainAutoRenewPrivate(other, q)
+{
+
+}

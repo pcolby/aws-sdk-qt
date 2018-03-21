@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETINVENTORYCONFIGURATIONREQUEST_P_H
 #define QTAWS_PUTBUCKETINVENTORYCONFIGURATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketinventoryconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketInventoryConfigurationRequest;
+
+class QTAWS_EXPORT PutBucketInventoryConfigurationRequestPrivate : public S3Private {
+
+public:
+    PutBucketInventoryConfigurationRequestPrivate(const S3::Action action,
+                                   PutBucketInventoryConfigurationRequest * const q);
+    PutBucketInventoryConfigurationRequestPrivate(const PutBucketInventoryConfigurationRequestPrivate &other,
+                                   PutBucketInventoryConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketInventoryConfigurationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

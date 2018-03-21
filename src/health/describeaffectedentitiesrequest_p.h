@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_P_H
 #define QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_P_H
 
+#include "health_p.h"
+#include "describeaffectedentitiesrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeAffectedEntitiesRequest;
+
+class QTAWS_EXPORT DescribeAffectedEntitiesRequestPrivate : public HealthPrivate {
+
+public:
+    DescribeAffectedEntitiesRequestPrivate(const Health::Action action,
+                                   DescribeAffectedEntitiesRequest * const q);
+    DescribeAffectedEntitiesRequestPrivate(const DescribeAffectedEntitiesRequestPrivate &other,
+                                   DescribeAffectedEntitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAffectedEntitiesRequest)
+
+};
+
+} // namespace Health
+} // namespace AWS
+
 #endif

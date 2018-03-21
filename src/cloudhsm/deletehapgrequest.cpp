@@ -19,3 +19,107 @@
 
 #include "deletehapgrequest.h"
 #include "deletehapgrequest_p.h"
+#include "deletehapgresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DeleteHapgRequest
+ *
+ * @brief  Implements CloudHSM DeleteHapg requests.
+ *
+ * @see    CloudHSMClient::deleteHapg
+ */
+
+/**
+ * @brief  Constructs a new DeleteHapgResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHapgResponse::DeleteHapgResponse(
+
+/**
+ * @brief  Constructs a new DeleteHapgRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteHapgRequest::DeleteHapgRequest(const DeleteHapgRequest &other)
+    : CloudHSMRequest(new DeleteHapgRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteHapgRequest object.
+ */
+DeleteHapgRequest::DeleteHapgRequest()
+    : CloudHSMRequest(new DeleteHapgRequestPrivate(CloudHSMRequest::DeleteHapgAction, this))
+{
+
+}
+
+bool DeleteHapgRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteHapgResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteHapgResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteHapgResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHapgRequestPrivate
+ *
+ * @brief  Private implementation for DeleteHapgRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHapgRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public DeleteHapgRequest instance.
+ */
+DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
+    const CloudHSMRequest::Action action, DeleteHapgRequest * const q)
+    : DeleteHapgPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHapgRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteHapgRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteHapgRequest instance.
+ */
+DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
+    const DeleteHapgRequestPrivate &other, DeleteHapgRequest * const q)
+    : DeleteHapgPrivate(other, q)
+{
+
+}

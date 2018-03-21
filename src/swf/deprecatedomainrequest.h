@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEPRECATEDOMAINREQUEST_H
 #define QTAWS_DEPRECATEDOMAINREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DeprecateDomainRequestPrivate;
+
+class QTAWS_EXPORT DeprecateDomainRequest : public SWFRequest {
+
+public:
+    DeprecateDomainRequest(const DeprecateDomainRequest &other);
+    DeprecateDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateDomainRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

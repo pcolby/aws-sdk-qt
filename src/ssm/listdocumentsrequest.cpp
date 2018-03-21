@@ -19,3 +19,107 @@
 
 #include "listdocumentsrequest.h"
 #include "listdocumentsrequest_p.h"
+#include "listdocumentsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListDocumentsRequest
+ *
+ * @brief  Implements SSM ListDocuments requests.
+ *
+ * @see    SSMClient::listDocuments
+ */
+
+/**
+ * @brief  Constructs a new ListDocumentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDocumentsResponse::ListDocumentsResponse(
+
+/**
+ * @brief  Constructs a new ListDocumentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDocumentsRequest::ListDocumentsRequest(const ListDocumentsRequest &other)
+    : SSMRequest(new ListDocumentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDocumentsRequest object.
+ */
+ListDocumentsRequest::ListDocumentsRequest()
+    : SSMRequest(new ListDocumentsRequestPrivate(SSMRequest::ListDocumentsAction, this))
+{
+
+}
+
+bool ListDocumentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDocumentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDocumentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDocumentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDocumentsRequestPrivate
+ *
+ * @brief  Private implementation for ListDocumentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDocumentsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListDocumentsRequest instance.
+ */
+ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
+    const SSMRequest::Action action, ListDocumentsRequest * const q)
+    : ListDocumentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDocumentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDocumentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDocumentsRequest instance.
+ */
+ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
+    const ListDocumentsRequestPrivate &other, ListDocumentsRequest * const q)
+    : ListDocumentsPrivate(other, q)
+{
+
+}

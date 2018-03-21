@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOTAUPDATEREQUEST_H
 #define QTAWS_GETOTAUPDATEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetOTAUpdateRequestPrivate;
+
+class QTAWS_EXPORT GetOTAUpdateRequest : public IoTRequest {
+
+public:
+    GetOTAUpdateRequest(const GetOTAUpdateRequest &other);
+    GetOTAUpdateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOTAUpdateRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

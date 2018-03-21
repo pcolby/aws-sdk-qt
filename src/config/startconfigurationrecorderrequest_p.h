@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTCONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_STARTCONFIGURATIONRECORDERREQUEST_P_H
 
+#include "configservice_p.h"
+#include "startconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class StartConfigurationRecorderRequest;
+
+class QTAWS_EXPORT StartConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+
+public:
+    StartConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+                                   StartConfigurationRecorderRequest * const q);
+    StartConfigurationRecorderRequestPrivate(const StartConfigurationRecorderRequestPrivate &other,
+                                   StartConfigurationRecorderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartConfigurationRecorderRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

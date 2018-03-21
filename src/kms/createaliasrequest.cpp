@@ -19,3 +19,107 @@
 
 #include "createaliasrequest.h"
 #include "createaliasrequest_p.h"
+#include "createaliasresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  CreateAliasRequest
+ *
+ * @brief  Implements KMS CreateAlias requests.
+ *
+ * @see    KMSClient::createAlias
+ */
+
+/**
+ * @brief  Constructs a new CreateAliasResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAliasResponse::CreateAliasResponse(
+
+/**
+ * @brief  Constructs a new CreateAliasRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAliasRequest::CreateAliasRequest(const CreateAliasRequest &other)
+    : KMSRequest(new CreateAliasRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAliasRequest object.
+ */
+CreateAliasRequest::CreateAliasRequest()
+    : KMSRequest(new CreateAliasRequestPrivate(KMSRequest::CreateAliasAction, this))
+{
+
+}
+
+bool CreateAliasRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAliasResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAliasResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAliasResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAliasRequestPrivate
+ *
+ * @brief  Private implementation for CreateAliasRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAliasRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public CreateAliasRequest instance.
+ */
+CreateAliasRequestPrivate::CreateAliasRequestPrivate(
+    const KMSRequest::Action action, CreateAliasRequest * const q)
+    : CreateAliasPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAliasRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAliasRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAliasRequest instance.
+ */
+CreateAliasRequestPrivate::CreateAliasRequestPrivate(
+    const CreateAliasRequestPrivate &other, CreateAliasRequest * const q)
+    : CreateAliasPrivate(other, q)
+{
+
+}

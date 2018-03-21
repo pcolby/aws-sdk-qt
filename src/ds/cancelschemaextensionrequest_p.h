@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONREQUEST_P_H
 #define QTAWS_CANCELSCHEMAEXTENSIONREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "cancelschemaextensionrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CancelSchemaExtensionRequest;
+
+class QTAWS_EXPORT CancelSchemaExtensionRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    CancelSchemaExtensionRequestPrivate(const DirectoryService::Action action,
+                                   CancelSchemaExtensionRequest * const q);
+    CancelSchemaExtensionRequestPrivate(const CancelSchemaExtensionRequestPrivate &other,
+                                   CancelSchemaExtensionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelSchemaExtensionRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

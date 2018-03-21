@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPINSTANCEREQUEST_H
 #define QTAWS_STOPINSTANCEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class StopInstanceRequestPrivate;
+
+class QTAWS_EXPORT StopInstanceRequest : public LightsailRequest {
+
+public:
+    StopInstanceRequest(const StopInstanceRequest &other);
+    StopInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopInstanceRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

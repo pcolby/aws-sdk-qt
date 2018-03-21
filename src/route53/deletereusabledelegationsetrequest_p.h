@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREUSABLEDELEGATIONSETREQUEST_P_H
 #define QTAWS_DELETEREUSABLEDELEGATIONSETREQUEST_P_H
 
+#include "route53_p.h"
+#include "deletereusabledelegationsetrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteReusableDelegationSetRequest;
+
+class QTAWS_EXPORT DeleteReusableDelegationSetRequestPrivate : public Route53Private {
+
+public:
+    DeleteReusableDelegationSetRequestPrivate(const Route53::Action action,
+                                   DeleteReusableDelegationSetRequest * const q);
+    DeleteReusableDelegationSetRequestPrivate(const DeleteReusableDelegationSetRequestPrivate &other,
+                                   DeleteReusableDelegationSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReusableDelegationSetRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

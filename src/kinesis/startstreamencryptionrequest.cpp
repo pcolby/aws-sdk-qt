@@ -19,3 +19,107 @@
 
 #include "startstreamencryptionrequest.h"
 #include "startstreamencryptionrequest_p.h"
+#include "startstreamencryptionresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  StartStreamEncryptionRequest
+ *
+ * @brief  Implements Kinesis StartStreamEncryption requests.
+ *
+ * @see    KinesisClient::startStreamEncryption
+ */
+
+/**
+ * @brief  Constructs a new StartStreamEncryptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartStreamEncryptionResponse::StartStreamEncryptionResponse(
+
+/**
+ * @brief  Constructs a new StartStreamEncryptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartStreamEncryptionRequest::StartStreamEncryptionRequest(const StartStreamEncryptionRequest &other)
+    : KinesisRequest(new StartStreamEncryptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartStreamEncryptionRequest object.
+ */
+StartStreamEncryptionRequest::StartStreamEncryptionRequest()
+    : KinesisRequest(new StartStreamEncryptionRequestPrivate(KinesisRequest::StartStreamEncryptionAction, this))
+{
+
+}
+
+bool StartStreamEncryptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartStreamEncryptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartStreamEncryptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartStreamEncryptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartStreamEncryptionRequestPrivate
+ *
+ * @brief  Private implementation for StartStreamEncryptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartStreamEncryptionRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public StartStreamEncryptionRequest instance.
+ */
+StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
+    const KinesisRequest::Action action, StartStreamEncryptionRequest * const q)
+    : StartStreamEncryptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartStreamEncryptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartStreamEncryptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartStreamEncryptionRequest instance.
+ */
+StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
+    const StartStreamEncryptionRequestPrivate &other, StartStreamEncryptionRequest * const q)
+    : StartStreamEncryptionPrivate(other, q)
+{
+
+}

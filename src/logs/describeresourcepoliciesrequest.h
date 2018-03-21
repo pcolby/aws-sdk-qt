@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESOURCEPOLICIESREQUEST_H
 #define QTAWS_DESCRIBERESOURCEPOLICIESREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeResourcePoliciesRequestPrivate;
+
+class QTAWS_EXPORT DescribeResourcePoliciesRequest : public CloudWatchLogsRequest {
+
+public:
+    DescribeResourcePoliciesRequest(const DescribeResourcePoliciesRequest &other);
+    DescribeResourcePoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeResourcePoliciesRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

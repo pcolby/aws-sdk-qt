@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class TagResourceRequest;
+
+class QTAWS_EXPORT TagResourceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    TagResourceRequestPrivate(const OpsWorks::Action action,
+                                   TagResourceRequest * const q);
+    TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
+                                   TagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPROJECTREQUEST_H
 #define QTAWS_CREATEPROJECTREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateProjectRequestPrivate;
+
+class QTAWS_EXPORT CreateProjectRequest : public DeviceFarmRequest {
+
+public:
+    CreateProjectRequest(const CreateProjectRequest &other);
+    CreateProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProjectRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

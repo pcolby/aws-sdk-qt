@@ -20,4 +20,29 @@
 #ifndef QTAWS_REENCRYPTREQUEST_P_H
 #define QTAWS_REENCRYPTREQUEST_P_H
 
+#include "kms_p.h"
+#include "reencryptrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ReEncryptRequest;
+
+class QTAWS_EXPORT ReEncryptRequestPrivate : public KMSPrivate {
+
+public:
+    ReEncryptRequestPrivate(const KMS::Action action,
+                                   ReEncryptRequest * const q);
+    ReEncryptRequestPrivate(const ReEncryptRequestPrivate &other,
+                                   ReEncryptRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReEncryptRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updateapplicationsettingsrequest.h"
 #include "updateapplicationsettingsrequest_p.h"
+#include "updateapplicationsettingsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApplicationSettingsRequest
+ *
+ * @brief  Implements Pinpoint UpdateApplicationSettings requests.
+ *
+ * @see    PinpointClient::updateApplicationSettings
+ */
+
+/**
+ * @brief  Constructs a new UpdateApplicationSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
+
+/**
+ * @brief  Constructs a new UpdateApplicationSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest(const UpdateApplicationSettingsRequest &other)
+    : PinpointRequest(new UpdateApplicationSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateApplicationSettingsRequest object.
+ */
+UpdateApplicationSettingsRequest::UpdateApplicationSettingsRequest()
+    : PinpointRequest(new UpdateApplicationSettingsRequestPrivate(PinpointRequest::UpdateApplicationSettingsAction, this))
+{
+
+}
+
+bool UpdateApplicationSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateApplicationSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateApplicationSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateApplicationSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApplicationSettingsRequestPrivate
+ *
+ * @brief  Private implementation for UpdateApplicationSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateApplicationSettingsRequest instance.
+ */
+UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
+    const PinpointRequest::Action action, UpdateApplicationSettingsRequest * const q)
+    : UpdateApplicationSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApplicationSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateApplicationSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateApplicationSettingsRequest instance.
+ */
+UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
+    const UpdateApplicationSettingsRequestPrivate &other, UpdateApplicationSettingsRequest * const q)
+    : UpdateApplicationSettingsPrivate(other, q)
+{
+
+}

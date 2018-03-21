@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSTOCERTIFICATEREQUEST_H
 #define QTAWS_ADDTAGSTOCERTIFICATEREQUEST_H
 
+#include "acmrequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class AddTagsToCertificateRequestPrivate;
+
+class QTAWS_EXPORT AddTagsToCertificateRequest : public ACMRequest {
+
+public:
+    AddTagsToCertificateRequest(const AddTagsToCertificateRequest &other);
+    AddTagsToCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToCertificateRequest)
+
+}
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

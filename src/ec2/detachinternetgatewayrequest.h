@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHINTERNETGATEWAYREQUEST_H
 #define QTAWS_DETACHINTERNETGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachInternetGatewayRequestPrivate;
+
+class QTAWS_EXPORT DetachInternetGatewayRequest : public EC2Request {
+
+public:
+    DetachInternetGatewayRequest(const DetachInternetGatewayRequest &other);
+    DetachInternetGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachInternetGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTAPIKEYSREQUEST_P_H
 #define QTAWS_LISTAPIKEYSREQUEST_P_H
 
+#include "appsync_p.h"
+#include "listapikeysrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListApiKeysRequest;
+
+class QTAWS_EXPORT ListApiKeysRequestPrivate : public AppSyncPrivate {
+
+public:
+    ListApiKeysRequestPrivate(const AppSync::Action action,
+                                   ListApiKeysRequest * const q);
+    ListApiKeysRequestPrivate(const ListApiKeysRequestPrivate &other,
+                                   ListApiKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListApiKeysRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "unlinkidentityrequest.h"
 #include "unlinkidentityrequest_p.h"
+#include "unlinkidentityresponse.h"
+#include "cognitoidentityrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  UnlinkIdentityRequest
+ *
+ * @brief  Implements CognitoIdentity UnlinkIdentity requests.
+ *
+ * @see    CognitoIdentityClient::unlinkIdentity
+ */
+
+/**
+ * @brief  Constructs a new UnlinkIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnlinkIdentityResponse::UnlinkIdentityResponse(
+
+/**
+ * @brief  Constructs a new UnlinkIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UnlinkIdentityRequest::UnlinkIdentityRequest(const UnlinkIdentityRequest &other)
+    : CognitoIdentityRequest(new UnlinkIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UnlinkIdentityRequest object.
+ */
+UnlinkIdentityRequest::UnlinkIdentityRequest()
+    : CognitoIdentityRequest(new UnlinkIdentityRequestPrivate(CognitoIdentityRequest::UnlinkIdentityAction, this))
+{
+
+}
+
+bool UnlinkIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UnlinkIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UnlinkIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityClient::send
+ */
+AwsAbstractResponse * UnlinkIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new UnlinkIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UnlinkIdentityRequestPrivate
+ *
+ * @brief  Private implementation for UnlinkIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnlinkIdentityRequestPrivate object.
+ *
+ * @param  action  CognitoIdentity action being performed.
+ * @param  q       Pointer to this object's public UnlinkIdentityRequest instance.
+ */
+UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
+    const CognitoIdentityRequest::Action action, UnlinkIdentityRequest * const q)
+    : UnlinkIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnlinkIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UnlinkIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UnlinkIdentityRequest instance.
+ */
+UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
+    const UnlinkIdentityRequestPrivate &other, UnlinkIdentityRequest * const q)
+    : UnlinkIdentityPrivate(other, q)
+{
+
+}

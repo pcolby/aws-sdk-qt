@@ -19,3 +19,107 @@
 
 #include "listopenworkflowexecutionsrequest.h"
 #include "listopenworkflowexecutionsrequest_p.h"
+#include "listopenworkflowexecutionsresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  ListOpenWorkflowExecutionsRequest
+ *
+ * @brief  Implements SWF ListOpenWorkflowExecutions requests.
+ *
+ * @see    SWFClient::listOpenWorkflowExecutions
+ */
+
+/**
+ * @brief  Constructs a new ListOpenWorkflowExecutionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
+
+/**
+ * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest(const ListOpenWorkflowExecutionsRequest &other)
+    : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOpenWorkflowExecutionsRequest object.
+ */
+ListOpenWorkflowExecutionsRequest::ListOpenWorkflowExecutionsRequest()
+    : SWFRequest(new ListOpenWorkflowExecutionsRequestPrivate(SWFRequest::ListOpenWorkflowExecutionsAction, this))
+{
+
+}
+
+bool ListOpenWorkflowExecutionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOpenWorkflowExecutionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOpenWorkflowExecutionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOpenWorkflowExecutionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOpenWorkflowExecutionsRequestPrivate
+ *
+ * @brief  Private implementation for ListOpenWorkflowExecutionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public ListOpenWorkflowExecutionsRequest instance.
+ */
+ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
+    const SWFRequest::Action action, ListOpenWorkflowExecutionsRequest * const q)
+    : ListOpenWorkflowExecutionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenWorkflowExecutionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOpenWorkflowExecutionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOpenWorkflowExecutionsRequest instance.
+ */
+ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
+    const ListOpenWorkflowExecutionsRequestPrivate &other, ListOpenWorkflowExecutionsRequest * const q)
+    : ListOpenWorkflowExecutionsPrivate(other, q)
+{
+
+}

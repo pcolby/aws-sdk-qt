@@ -19,3 +19,107 @@
 
 #include "creatematchmakingconfigurationrequest.h"
 #include "creatematchmakingconfigurationrequest_p.h"
+#include "creatematchmakingconfigurationresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateMatchmakingConfigurationRequest
+ *
+ * @brief  Implements GameLift CreateMatchmakingConfiguration requests.
+ *
+ * @see    GameLiftClient::createMatchmakingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new CreateMatchmakingConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMatchmakingConfigurationResponse::CreateMatchmakingConfigurationResponse(
+
+/**
+ * @brief  Constructs a new CreateMatchmakingConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateMatchmakingConfigurationRequest::CreateMatchmakingConfigurationRequest(const CreateMatchmakingConfigurationRequest &other)
+    : GameLiftRequest(new CreateMatchmakingConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateMatchmakingConfigurationRequest object.
+ */
+CreateMatchmakingConfigurationRequest::CreateMatchmakingConfigurationRequest()
+    : GameLiftRequest(new CreateMatchmakingConfigurationRequestPrivate(GameLiftRequest::CreateMatchmakingConfigurationAction, this))
+{
+
+}
+
+bool CreateMatchmakingConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateMatchmakingConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateMatchmakingConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * CreateMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateMatchmakingConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMatchmakingConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for CreateMatchmakingConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMatchmakingConfigurationRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public CreateMatchmakingConfigurationRequest instance.
+ */
+CreateMatchmakingConfigurationRequestPrivate::CreateMatchmakingConfigurationRequestPrivate(
+    const GameLiftRequest::Action action, CreateMatchmakingConfigurationRequest * const q)
+    : CreateMatchmakingConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMatchmakingConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateMatchmakingConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateMatchmakingConfigurationRequest instance.
+ */
+CreateMatchmakingConfigurationRequestPrivate::CreateMatchmakingConfigurationRequestPrivate(
+    const CreateMatchmakingConfigurationRequestPrivate &other, CreateMatchmakingConfigurationRequest * const q)
+    : CreateMatchmakingConfigurationPrivate(other, q)
+{
+
+}

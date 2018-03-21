@@ -19,3 +19,107 @@
 
 #include "listpolicyversionsrequest.h"
 #include "listpolicyversionsrequest_p.h"
+#include "listpolicyversionsresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListPolicyVersionsRequest
+ *
+ * @brief  Implements IAM ListPolicyVersions requests.
+ *
+ * @see    IAMClient::listPolicyVersions
+ */
+
+/**
+ * @brief  Constructs a new ListPolicyVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPolicyVersionsResponse::ListPolicyVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListPolicyVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPolicyVersionsRequest::ListPolicyVersionsRequest(const ListPolicyVersionsRequest &other)
+    : IAMRequest(new ListPolicyVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPolicyVersionsRequest object.
+ */
+ListPolicyVersionsRequest::ListPolicyVersionsRequest()
+    : IAMRequest(new ListPolicyVersionsRequestPrivate(IAMRequest::ListPolicyVersionsAction, this))
+{
+
+}
+
+bool ListPolicyVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPolicyVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPolicyVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPolicyVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPolicyVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListPolicyVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyVersionsRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListPolicyVersionsRequest instance.
+ */
+ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
+    const IAMRequest::Action action, ListPolicyVersionsRequest * const q)
+    : ListPolicyVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPolicyVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPolicyVersionsRequest instance.
+ */
+ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
+    const ListPolicyVersionsRequestPrivate &other, ListPolicyVersionsRequest * const q)
+    : ListPolicyVersionsPrivate(other, q)
+{
+
+}

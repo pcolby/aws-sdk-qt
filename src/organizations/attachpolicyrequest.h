@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHPOLICYREQUEST_H
 #define QTAWS_ATTACHPOLICYREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class AttachPolicyRequestPrivate;
+
+class QTAWS_EXPORT AttachPolicyRequest : public OrganizationsRequest {
+
+public:
+    AttachPolicyRequest(const AttachPolicyRequest &other);
+    AttachPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachPolicyRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

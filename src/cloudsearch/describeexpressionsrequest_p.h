@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEXPRESSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEEXPRESSIONSREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "describeexpressionsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeExpressionsRequest;
+
+class QTAWS_EXPORT DescribeExpressionsRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DescribeExpressionsRequestPrivate(const CloudSearch::Action action,
+                                   DescribeExpressionsRequest * const q);
+    DescribeExpressionsRequestPrivate(const DescribeExpressionsRequestPrivate &other,
+                                   DescribeExpressionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeExpressionsRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

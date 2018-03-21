@@ -19,3 +19,107 @@
 
 #include "describeinstanceinformationrequest.h"
 #include "describeinstanceinformationrequest_p.h"
+#include "describeinstanceinformationresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeInstanceInformationRequest
+ *
+ * @brief  Implements SSM DescribeInstanceInformation requests.
+ *
+ * @see    SSMClient::describeInstanceInformation
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstanceInformationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstanceInformationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstanceInformationRequest::DescribeInstanceInformationRequest(const DescribeInstanceInformationRequest &other)
+    : SSMRequest(new DescribeInstanceInformationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstanceInformationRequest object.
+ */
+DescribeInstanceInformationRequest::DescribeInstanceInformationRequest()
+    : SSMRequest(new DescribeInstanceInformationRequestPrivate(SSMRequest::DescribeInstanceInformationAction, this))
+{
+
+}
+
+bool DescribeInstanceInformationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstanceInformationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstanceInformationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeInstanceInformationRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstanceInformationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceInformationRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstanceInformationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceInformationRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeInstanceInformationRequest instance.
+ */
+DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
+    const SSMRequest::Action action, DescribeInstanceInformationRequest * const q)
+    : DescribeInstanceInformationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceInformationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstanceInformationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstanceInformationRequest instance.
+ */
+DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
+    const DescribeInstanceInformationRequestPrivate &other, DescribeInstanceInformationRequest * const q)
+    : DescribeInstanceInformationPrivate(other, q)
+{
+
+}

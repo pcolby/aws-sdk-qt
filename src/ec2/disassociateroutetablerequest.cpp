@@ -19,3 +19,107 @@
 
 #include "disassociateroutetablerequest.h"
 #include "disassociateroutetablerequest_p.h"
+#include "disassociateroutetableresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateRouteTableRequest
+ *
+ * @brief  Implements EC2 DisassociateRouteTable requests.
+ *
+ * @see    EC2Client::disassociateRouteTable
+ */
+
+/**
+ * @brief  Constructs a new DisassociateRouteTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateRouteTableResponse::DisassociateRouteTableResponse(
+
+/**
+ * @brief  Constructs a new DisassociateRouteTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateRouteTableRequest::DisassociateRouteTableRequest(const DisassociateRouteTableRequest &other)
+    : EC2Request(new DisassociateRouteTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateRouteTableRequest object.
+ */
+DisassociateRouteTableRequest::DisassociateRouteTableRequest()
+    : EC2Request(new DisassociateRouteTableRequestPrivate(EC2Request::DisassociateRouteTableAction, this))
+{
+
+}
+
+bool DisassociateRouteTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateRouteTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateRouteTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateRouteTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateRouteTableRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateRouteTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateRouteTableRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DisassociateRouteTableRequest instance.
+ */
+DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
+    const EC2Request::Action action, DisassociateRouteTableRequest * const q)
+    : DisassociateRouteTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateRouteTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateRouteTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateRouteTableRequest instance.
+ */
+DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
+    const DisassociateRouteTableRequestPrivate &other, DisassociateRouteTableRequest * const q)
+    : DisassociateRouteTablePrivate(other, q)
+{
+
+}

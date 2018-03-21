@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEFACETFROMOBJECTREQUEST_H
 #define QTAWS_REMOVEFACETFROMOBJECTREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class RemoveFacetFromObjectRequestPrivate;
+
+class QTAWS_EXPORT RemoveFacetFromObjectRequest : public CloudDirectoryRequest {
+
+public:
+    RemoveFacetFromObjectRequest(const RemoveFacetFromObjectRequest &other);
+    RemoveFacetFromObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveFacetFromObjectRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

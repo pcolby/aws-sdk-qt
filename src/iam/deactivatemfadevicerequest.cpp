@@ -19,3 +19,107 @@
 
 #include "deactivatemfadevicerequest.h"
 #include "deactivatemfadevicerequest_p.h"
+#include "deactivatemfadeviceresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeactivateMFADeviceRequest
+ *
+ * @brief  Implements IAM DeactivateMFADevice requests.
+ *
+ * @see    IAMClient::deactivateMFADevice
+ */
+
+/**
+ * @brief  Constructs a new DeactivateMFADeviceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
+
+/**
+ * @brief  Constructs a new DeactivateMFADeviceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeactivateMFADeviceRequest::DeactivateMFADeviceRequest(const DeactivateMFADeviceRequest &other)
+    : IAMRequest(new DeactivateMFADeviceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeactivateMFADeviceRequest object.
+ */
+DeactivateMFADeviceRequest::DeactivateMFADeviceRequest()
+    : IAMRequest(new DeactivateMFADeviceRequestPrivate(IAMRequest::DeactivateMFADeviceAction, this))
+{
+
+}
+
+bool DeactivateMFADeviceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeactivateMFADeviceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeactivateMFADeviceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeactivateMFADeviceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeactivateMFADeviceRequestPrivate
+ *
+ * @brief  Private implementation for DeactivateMFADeviceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeactivateMFADeviceRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeactivateMFADeviceRequest instance.
+ */
+DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
+    const IAMRequest::Action action, DeactivateMFADeviceRequest * const q)
+    : DeactivateMFADevicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeactivateMFADeviceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeactivateMFADeviceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeactivateMFADeviceRequest instance.
+ */
+DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
+    const DeactivateMFADeviceRequestPrivate &other, DeactivateMFADeviceRequest * const q)
+    : DeactivateMFADevicePrivate(other, q)
+{
+
+}

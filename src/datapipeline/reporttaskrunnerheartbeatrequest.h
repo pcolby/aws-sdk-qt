@@ -20,4 +20,32 @@
 #ifndef QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_H
 #define QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ReportTaskRunnerHeartbeatRequestPrivate;
+
+class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequest : public DataPipelineRequest {
+
+public:
+    ReportTaskRunnerHeartbeatRequest(const ReportTaskRunnerHeartbeatRequest &other);
+    ReportTaskRunnerHeartbeatRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReportTaskRunnerHeartbeatRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

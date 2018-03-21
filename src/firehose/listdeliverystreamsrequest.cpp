@@ -19,3 +19,107 @@
 
 #include "listdeliverystreamsrequest.h"
 #include "listdeliverystreamsrequest_p.h"
+#include "listdeliverystreamsresponse.h"
+#include "firehoserequest_p.h"
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  ListDeliveryStreamsRequest
+ *
+ * @brief  Implements Firehose ListDeliveryStreams requests.
+ *
+ * @see    FirehoseClient::listDeliveryStreams
+ */
+
+/**
+ * @brief  Constructs a new ListDeliveryStreamsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeliveryStreamsResponse::ListDeliveryStreamsResponse(
+
+/**
+ * @brief  Constructs a new ListDeliveryStreamsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDeliveryStreamsRequest::ListDeliveryStreamsRequest(const ListDeliveryStreamsRequest &other)
+    : FirehoseRequest(new ListDeliveryStreamsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDeliveryStreamsRequest object.
+ */
+ListDeliveryStreamsRequest::ListDeliveryStreamsRequest()
+    : FirehoseRequest(new ListDeliveryStreamsRequestPrivate(FirehoseRequest::ListDeliveryStreamsAction, this))
+{
+
+}
+
+bool ListDeliveryStreamsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDeliveryStreamsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDeliveryStreamsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  FirehoseClient::send
+ */
+AwsAbstractResponse * ListDeliveryStreamsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDeliveryStreamsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeliveryStreamsRequestPrivate
+ *
+ * @brief  Private implementation for ListDeliveryStreamsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object.
+ *
+ * @param  action  Firehose action being performed.
+ * @param  q       Pointer to this object's public ListDeliveryStreamsRequest instance.
+ */
+ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
+    const FirehoseRequest::Action action, ListDeliveryStreamsRequest * const q)
+    : ListDeliveryStreamsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeliveryStreamsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDeliveryStreamsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDeliveryStreamsRequest instance.
+ */
+ListDeliveryStreamsRequestPrivate::ListDeliveryStreamsRequestPrivate(
+    const ListDeliveryStreamsRequestPrivate &other, ListDeliveryStreamsRequest * const q)
+    : ListDeliveryStreamsPrivate(other, q)
+{
+
+}

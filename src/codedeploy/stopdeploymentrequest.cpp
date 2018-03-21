@@ -19,3 +19,107 @@
 
 #include "stopdeploymentrequest.h"
 #include "stopdeploymentrequest_p.h"
+#include "stopdeploymentresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  StopDeploymentRequest
+ *
+ * @brief  Implements CodeDeploy StopDeployment requests.
+ *
+ * @see    CodeDeployClient::stopDeployment
+ */
+
+/**
+ * @brief  Constructs a new StopDeploymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopDeploymentResponse::StopDeploymentResponse(
+
+/**
+ * @brief  Constructs a new StopDeploymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopDeploymentRequest::StopDeploymentRequest(const StopDeploymentRequest &other)
+    : CodeDeployRequest(new StopDeploymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopDeploymentRequest object.
+ */
+StopDeploymentRequest::StopDeploymentRequest()
+    : CodeDeployRequest(new StopDeploymentRequestPrivate(CodeDeployRequest::StopDeploymentAction, this))
+{
+
+}
+
+bool StopDeploymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopDeploymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopDeploymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply * const reply) const
+{
+    return new StopDeploymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopDeploymentRequestPrivate
+ *
+ * @brief  Private implementation for StopDeploymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDeploymentRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public StopDeploymentRequest instance.
+ */
+StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
+    const CodeDeployRequest::Action action, StopDeploymentRequest * const q)
+    : StopDeploymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDeploymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopDeploymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopDeploymentRequest instance.
+ */
+StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
+    const StopDeploymentRequestPrivate &other, StopDeploymentRequest * const q)
+    : StopDeploymentPrivate(other, q)
+{
+
+}

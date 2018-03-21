@@ -19,3 +19,107 @@
 
 #include "adminlistdevicesrequest.h"
 #include "adminlistdevicesrequest_p.h"
+#include "adminlistdevicesresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminListDevicesRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminListDevices requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminListDevices
+ */
+
+/**
+ * @brief  Constructs a new AdminListDevicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminListDevicesResponse::AdminListDevicesResponse(
+
+/**
+ * @brief  Constructs a new AdminListDevicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminListDevicesRequest::AdminListDevicesRequest(const AdminListDevicesRequest &other)
+    : CognitoIdentityProviderRequest(new AdminListDevicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminListDevicesRequest object.
+ */
+AdminListDevicesRequest::AdminListDevicesRequest()
+    : CognitoIdentityProviderRequest(new AdminListDevicesRequestPrivate(CognitoIdentityProviderRequest::AdminListDevicesAction, this))
+{
+
+}
+
+bool AdminListDevicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminListDevicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminListDevicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminListDevicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminListDevicesRequestPrivate
+ *
+ * @brief  Private implementation for AdminListDevicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListDevicesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminListDevicesRequest instance.
+ */
+AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminListDevicesRequest * const q)
+    : AdminListDevicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListDevicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminListDevicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminListDevicesRequest instance.
+ */
+AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
+    const AdminListDevicesRequestPrivate &other, AdminListDevicesRequest * const q)
+    : AdminListDevicesPrivate(other, q)
+{
+
+}

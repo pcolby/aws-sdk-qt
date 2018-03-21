@@ -19,3 +19,107 @@
 
 #include "executeprovisionedproductplanrequest.h"
 #include "executeprovisionedproductplanrequest_p.h"
+#include "executeprovisionedproductplanresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ExecuteProvisionedProductPlanRequest
+ *
+ * @brief  Implements ServiceCatalog ExecuteProvisionedProductPlan requests.
+ *
+ * @see    ServiceCatalogClient::executeProvisionedProductPlan
+ */
+
+/**
+ * @brief  Constructs a new ExecuteProvisionedProductPlanResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExecuteProvisionedProductPlanResponse::ExecuteProvisionedProductPlanResponse(
+
+/**
+ * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest(const ExecuteProvisionedProductPlanRequest &other)
+    : ServiceCatalogRequest(new ExecuteProvisionedProductPlanRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ExecuteProvisionedProductPlanRequest object.
+ */
+ExecuteProvisionedProductPlanRequest::ExecuteProvisionedProductPlanRequest()
+    : ServiceCatalogRequest(new ExecuteProvisionedProductPlanRequestPrivate(ServiceCatalogRequest::ExecuteProvisionedProductPlanAction, this))
+{
+
+}
+
+bool ExecuteProvisionedProductPlanRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ExecuteProvisionedProductPlanResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ExecuteProvisionedProductPlanResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
+{
+    return new ExecuteProvisionedProductPlanResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ExecuteProvisionedProductPlanRequestPrivate
+ *
+ * @brief  Private implementation for ExecuteProvisionedProductPlanRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ExecuteProvisionedProductPlanRequest instance.
+ */
+ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanRequestPrivate(
+    const ServiceCatalogRequest::Action action, ExecuteProvisionedProductPlanRequest * const q)
+    : ExecuteProvisionedProductPlanPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecuteProvisionedProductPlanRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ExecuteProvisionedProductPlanRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ExecuteProvisionedProductPlanRequest instance.
+ */
+ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanRequestPrivate(
+    const ExecuteProvisionedProductPlanRequestPrivate &other, ExecuteProvisionedProductPlanRequest * const q)
+    : ExecuteProvisionedProductPlanPrivate(other, q)
+{
+
+}

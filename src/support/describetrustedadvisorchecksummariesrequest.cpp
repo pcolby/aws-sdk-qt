@@ -19,3 +19,107 @@
 
 #include "describetrustedadvisorchecksummariesrequest.h"
 #include "describetrustedadvisorchecksummariesrequest_p.h"
+#include "describetrustedadvisorchecksummariesresponse.h"
+#include "supportrequest_p.h"
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  DescribeTrustedAdvisorCheckSummariesRequest
+ *
+ * @brief  Implements Support DescribeTrustedAdvisorCheckSummaries requests.
+ *
+ * @see    SupportClient::describeTrustedAdvisorCheckSummaries
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustedAdvisorCheckSummariesResponse::DescribeTrustedAdvisorCheckSummariesResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrustedAdvisorCheckSummariesRequest::DescribeTrustedAdvisorCheckSummariesRequest(const DescribeTrustedAdvisorCheckSummariesRequest &other)
+    : SupportRequest(new DescribeTrustedAdvisorCheckSummariesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequest object.
+ */
+DescribeTrustedAdvisorCheckSummariesRequest::DescribeTrustedAdvisorCheckSummariesRequest()
+    : SupportRequest(new DescribeTrustedAdvisorCheckSummariesRequestPrivate(SupportRequest::DescribeTrustedAdvisorCheckSummariesAction, this))
+{
+
+}
+
+bool DescribeTrustedAdvisorCheckSummariesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrustedAdvisorCheckSummariesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrustedAdvisorCheckSummariesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SupportClient::send
+ */
+AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrustedAdvisorCheckSummariesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustedAdvisorCheckSummariesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrustedAdvisorCheckSummariesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequestPrivate object.
+ *
+ * @param  action  Support action being performed.
+ * @param  q       Pointer to this object's public DescribeTrustedAdvisorCheckSummariesRequest instance.
+ */
+DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
+    const SupportRequest::Action action, DescribeTrustedAdvisorCheckSummariesRequest * const q)
+    : DescribeTrustedAdvisorCheckSummariesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrustedAdvisorCheckSummariesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrustedAdvisorCheckSummariesRequest instance.
+ */
+DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
+    const DescribeTrustedAdvisorCheckSummariesRequestPrivate &other, DescribeTrustedAdvisorCheckSummariesRequest * const q)
+    : DescribeTrustedAdvisorCheckSummariesPrivate(other, q)
+{
+
+}

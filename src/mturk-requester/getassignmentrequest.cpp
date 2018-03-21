@@ -19,3 +19,107 @@
 
 #include "getassignmentrequest.h"
 #include "getassignmentrequest_p.h"
+#include "getassignmentresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetAssignmentRequest
+ *
+ * @brief  Implements MTurk GetAssignment requests.
+ *
+ * @see    MTurkClient::getAssignment
+ */
+
+/**
+ * @brief  Constructs a new GetAssignmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAssignmentResponse::GetAssignmentResponse(
+
+/**
+ * @brief  Constructs a new GetAssignmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAssignmentRequest::GetAssignmentRequest(const GetAssignmentRequest &other)
+    : MTurkRequest(new GetAssignmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAssignmentRequest object.
+ */
+GetAssignmentRequest::GetAssignmentRequest()
+    : MTurkRequest(new GetAssignmentRequestPrivate(MTurkRequest::GetAssignmentAction, this))
+{
+
+}
+
+bool GetAssignmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAssignmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAssignmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAssignmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAssignmentRequestPrivate
+ *
+ * @brief  Private implementation for GetAssignmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAssignmentRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public GetAssignmentRequest instance.
+ */
+GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
+    const MTurkRequest::Action action, GetAssignmentRequest * const q)
+    : GetAssignmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAssignmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAssignmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAssignmentRequest instance.
+ */
+GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
+    const GetAssignmentRequestPrivate &other, GetAssignmentRequest * const q)
+    : GetAssignmentPrivate(other, q)
+{
+
+}

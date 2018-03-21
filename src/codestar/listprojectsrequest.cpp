@@ -19,3 +19,107 @@
 
 #include "listprojectsrequest.h"
 #include "listprojectsrequest_p.h"
+#include "listprojectsresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  ListProjectsRequest
+ *
+ * @brief  Implements CodeStar ListProjects requests.
+ *
+ * @see    CodeStarClient::listProjects
+ */
+
+/**
+ * @brief  Constructs a new ListProjectsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListProjectsResponse::ListProjectsResponse(
+
+/**
+ * @brief  Constructs a new ListProjectsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListProjectsRequest::ListProjectsRequest(const ListProjectsRequest &other)
+    : CodeStarRequest(new ListProjectsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListProjectsRequest object.
+ */
+ListProjectsRequest::ListProjectsRequest()
+    : CodeStarRequest(new ListProjectsRequestPrivate(CodeStarRequest::ListProjectsAction, this))
+{
+
+}
+
+bool ListProjectsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListProjectsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListProjectsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListProjectsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListProjectsRequestPrivate
+ *
+ * @brief  Private implementation for ListProjectsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProjectsRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public ListProjectsRequest instance.
+ */
+ListProjectsRequestPrivate::ListProjectsRequestPrivate(
+    const CodeStarRequest::Action action, ListProjectsRequest * const q)
+    : ListProjectsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProjectsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListProjectsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListProjectsRequest instance.
+ */
+ListProjectsRequestPrivate::ListProjectsRequestPrivate(
+    const ListProjectsRequestPrivate &other, ListProjectsRequest * const q)
+    : ListProjectsPrivate(other, q)
+{
+
+}

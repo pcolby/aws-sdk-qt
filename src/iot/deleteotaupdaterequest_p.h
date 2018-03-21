@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEOTAUPDATEREQUEST_P_H
 #define QTAWS_DELETEOTAUPDATEREQUEST_P_H
 
+#include "iot_p.h"
+#include "deleteotaupdaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteOTAUpdateRequest;
+
+class QTAWS_EXPORT DeleteOTAUpdateRequestPrivate : public IoTPrivate {
+
+public:
+    DeleteOTAUpdateRequestPrivate(const IoT::Action action,
+                                   DeleteOTAUpdateRequest * const q);
+    DeleteOTAUpdateRequestPrivate(const DeleteOTAUpdateRequestPrivate &other,
+                                   DeleteOTAUpdateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOTAUpdateRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYIMAGEATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYIMAGEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyImageAttributeRequest;
+
+class QTAWS_EXPORT ModifyImageAttributeRequestPrivate : public EC2Private {
+
+public:
+    ModifyImageAttributeRequestPrivate(const EC2::Action action,
+                                   ModifyImageAttributeRequest * const q);
+    ModifyImageAttributeRequestPrivate(const ModifyImageAttributeRequestPrivate &other,
+                                   ModifyImageAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyImageAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTTASKREQUEST_P_H
 #define QTAWS_STARTTASKREQUEST_P_H
 
+#include "ecs_p.h"
+#include "starttaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StartTaskRequest;
+
+class QTAWS_EXPORT StartTaskRequestPrivate : public ECSPrivate {
+
+public:
+    StartTaskRequestPrivate(const ECS::Action action,
+                                   StartTaskRequest * const q);
+    StartTaskRequestPrivate(const StartTaskRequestPrivate &other,
+                                   StartTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartTaskRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

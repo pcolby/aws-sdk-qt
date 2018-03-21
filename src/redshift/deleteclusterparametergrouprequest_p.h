@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETECLUSTERPARAMETERGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deleteclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterParameterGroupRequest;
+
+class QTAWS_EXPORT DeleteClusterParameterGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteClusterParameterGroupRequestPrivate(const Redshift::Action action,
+                                   DeleteClusterParameterGroupRequest * const q);
+    DeleteClusterParameterGroupRequestPrivate(const DeleteClusterParameterGroupRequestPrivate &other,
+                                   DeleteClusterParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterParameterGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

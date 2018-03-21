@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPLACEMENTGROUPREQUEST_P_H
 #define QTAWS_CREATEPLACEMENTGROUPREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createplacementgrouprequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreatePlacementGroupRequest;
+
+class QTAWS_EXPORT CreatePlacementGroupRequestPrivate : public EC2Private {
+
+public:
+    CreatePlacementGroupRequestPrivate(const EC2::Action action,
+                                   CreatePlacementGroupRequest * const q);
+    CreatePlacementGroupRequestPrivate(const CreatePlacementGroupRequestPrivate &other,
+                                   CreatePlacementGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePlacementGroupRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

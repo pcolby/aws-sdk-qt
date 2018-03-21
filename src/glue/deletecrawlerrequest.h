@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECRAWLERREQUEST_H
 #define QTAWS_DELETECRAWLERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteCrawlerRequestPrivate;
+
+class QTAWS_EXPORT DeleteCrawlerRequest : public GlueRequest {
+
+public:
+    DeleteCrawlerRequest(const DeleteCrawlerRequest &other);
+    DeleteCrawlerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCrawlerRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

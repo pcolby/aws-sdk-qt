@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONFIGUREHEALTHCHECKREQUEST_P_H
 #define QTAWS_CONFIGUREHEALTHCHECKREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "configurehealthcheckrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class ConfigureHealthCheckRequest;
+
+class QTAWS_EXPORT ConfigureHealthCheckRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    ConfigureHealthCheckRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   ConfigureHealthCheckRequest * const q);
+    ConfigureHealthCheckRequestPrivate(const ConfigureHealthCheckRequestPrivate &other,
+                                   ConfigureHealthCheckRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ConfigureHealthCheckRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

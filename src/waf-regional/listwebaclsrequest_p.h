@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTWEBACLSREQUEST_P_H
 #define QTAWS_LISTWEBACLSREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "listwebaclsrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListWebACLsRequest;
+
+class QTAWS_EXPORT ListWebACLsRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    ListWebACLsRequestPrivate(const WAFRegional::Action action,
+                                   ListWebACLsRequest * const q);
+    ListWebACLsRequestPrivate(const ListWebACLsRequestPrivate &other,
+                                   ListWebACLsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListWebACLsRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

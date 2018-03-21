@@ -20,4 +20,29 @@
 #ifndef QTAWS_SIMULATEPRINCIPALPOLICYREQUEST_P_H
 #define QTAWS_SIMULATEPRINCIPALPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "simulateprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class SimulatePrincipalPolicyRequest;
+
+class QTAWS_EXPORT SimulatePrincipalPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    SimulatePrincipalPolicyRequestPrivate(const IAM::Action action,
+                                   SimulatePrincipalPolicyRequest * const q);
+    SimulatePrincipalPolicyRequestPrivate(const SimulatePrincipalPolicyRequestPrivate &other,
+                                   SimulatePrincipalPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SimulatePrincipalPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

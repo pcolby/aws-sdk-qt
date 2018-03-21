@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
+#include "inspector_p.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListTagsForResourceRequest;
+
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public InspectorPrivate {
+
+public:
+    ListTagsForResourceRequestPrivate(const Inspector::Action action,
+                                   ListTagsForResourceRequest * const q);
+    ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
+                                   ListTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

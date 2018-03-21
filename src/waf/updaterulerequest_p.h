@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERULEREQUEST_P_H
 #define QTAWS_UPDATERULEREQUEST_P_H
 
+#include "waf_p.h"
+#include "updaterulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateRuleRequest;
+
+class QTAWS_EXPORT UpdateRuleRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateRuleRequestPrivate(const WAF::Action action,
+                                   UpdateRuleRequest * const q);
+    UpdateRuleRequestPrivate(const UpdateRuleRequestPrivate &other,
+                                   UpdateRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRuleRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

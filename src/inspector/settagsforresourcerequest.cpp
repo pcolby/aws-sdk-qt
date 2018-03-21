@@ -19,3 +19,107 @@
 
 #include "settagsforresourcerequest.h"
 #include "settagsforresourcerequest_p.h"
+#include "settagsforresourceresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  SetTagsForResourceRequest
+ *
+ * @brief  Implements Inspector SetTagsForResource requests.
+ *
+ * @see    InspectorClient::setTagsForResource
+ */
+
+/**
+ * @brief  Constructs a new SetTagsForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetTagsForResourceResponse::SetTagsForResourceResponse(
+
+/**
+ * @brief  Constructs a new SetTagsForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetTagsForResourceRequest::SetTagsForResourceRequest(const SetTagsForResourceRequest &other)
+    : InspectorRequest(new SetTagsForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetTagsForResourceRequest object.
+ */
+SetTagsForResourceRequest::SetTagsForResourceRequest()
+    : InspectorRequest(new SetTagsForResourceRequestPrivate(InspectorRequest::SetTagsForResourceAction, this))
+{
+
+}
+
+bool SetTagsForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetTagsForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetTagsForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new SetTagsForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetTagsForResourceRequestPrivate
+ *
+ * @brief  Private implementation for SetTagsForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTagsForResourceRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public SetTagsForResourceRequest instance.
+ */
+SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
+    const InspectorRequest::Action action, SetTagsForResourceRequest * const q)
+    : SetTagsForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTagsForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetTagsForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetTagsForResourceRequest instance.
+ */
+SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
+    const SetTagsForResourceRequestPrivate &other, SetTagsForResourceRequest * const q)
+    : SetTagsForResourcePrivate(other, q)
+{
+
+}

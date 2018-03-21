@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSREQUEST_H
 #define QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSREQUEST_H
 
+#include "elasticsearchservicerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DescribeElasticsearchInstanceTypeLimitsRequestPrivate;
+
+class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsRequest : public ElasticsearchServiceRequest {
+
+public:
+    DescribeElasticsearchInstanceTypeLimitsRequest(const DescribeElasticsearchInstanceTypeLimitsRequest &other);
+    DescribeElasticsearchInstanceTypeLimitsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticsearchInstanceTypeLimitsRequest)
+
+}
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

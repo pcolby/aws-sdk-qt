@@ -19,3 +19,107 @@
 
 #include "createsnapshotrequest.h"
 #include "createsnapshotrequest_p.h"
+#include "createsnapshotresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateSnapshotRequest
+ *
+ * @brief  Implements StorageGateway CreateSnapshot requests.
+ *
+ * @see    StorageGatewayClient::createSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CreateSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotResponse::CreateSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CreateSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
+    : StorageGatewayRequest(new CreateSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSnapshotRequest object.
+ */
+CreateSnapshotRequest::CreateSnapshotRequest()
+    : StorageGatewayRequest(new CreateSnapshotRequestPrivate(StorageGatewayRequest::CreateSnapshotAction, this))
+{
+
+}
+
+bool CreateSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CreateSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public CreateSnapshotRequest instance.
+ */
+CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
+    const StorageGatewayRequest::Action action, CreateSnapshotRequest * const q)
+    : CreateSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSnapshotRequest instance.
+ */
+CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
+    const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)
+    : CreateSnapshotPrivate(other, q)
+{
+
+}

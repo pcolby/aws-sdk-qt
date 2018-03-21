@@ -19,3 +19,107 @@
 
 #include "describehapgrequest.h"
 #include "describehapgrequest_p.h"
+#include "describehapgresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DescribeHapgRequest
+ *
+ * @brief  Implements CloudHSM DescribeHapg requests.
+ *
+ * @see    CloudHSMClient::describeHapg
+ */
+
+/**
+ * @brief  Constructs a new DescribeHapgResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHapgResponse::DescribeHapgResponse(
+
+/**
+ * @brief  Constructs a new DescribeHapgRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeHapgRequest::DescribeHapgRequest(const DescribeHapgRequest &other)
+    : CloudHSMRequest(new DescribeHapgRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeHapgRequest object.
+ */
+DescribeHapgRequest::DescribeHapgRequest()
+    : CloudHSMRequest(new DescribeHapgRequestPrivate(CloudHSMRequest::DescribeHapgAction, this))
+{
+
+}
+
+bool DescribeHapgRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeHapgResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeHapgResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeHapgResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHapgRequestPrivate
+ *
+ * @brief  Private implementation for DescribeHapgRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHapgRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public DescribeHapgRequest instance.
+ */
+DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
+    const CloudHSMRequest::Action action, DescribeHapgRequest * const q)
+    : DescribeHapgPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHapgRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeHapgRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeHapgRequest instance.
+ */
+DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
+    const DescribeHapgRequestPrivate &other, DescribeHapgRequest * const q)
+    : DescribeHapgPrivate(other, q)
+{
+
+}

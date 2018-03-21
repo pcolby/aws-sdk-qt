@@ -20,4 +20,29 @@
 #ifndef QTAWS_OPTINPHONENUMBERREQUEST_P_H
 #define QTAWS_OPTINPHONENUMBERREQUEST_P_H
 
+#include "sns_p.h"
+#include "optinphonenumberrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class OptInPhoneNumberRequest;
+
+class QTAWS_EXPORT OptInPhoneNumberRequestPrivate : public SNSPrivate {
+
+public:
+    OptInPhoneNumberRequestPrivate(const SNS::Action action,
+                                   OptInPhoneNumberRequest * const q);
+    OptInPhoneNumberRequestPrivate(const OptInPhoneNumberRequestPrivate &other,
+                                   OptInPhoneNumberRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(OptInPhoneNumberRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

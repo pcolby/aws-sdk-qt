@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECERTIFICATEREQUEST_P_H
 #define QTAWS_DESCRIBECERTIFICATEREQUEST_P_H
 
+#include "iot_p.h"
+#include "describecertificaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeCertificateRequest;
+
+class QTAWS_EXPORT DescribeCertificateRequestPrivate : public IoTPrivate {
+
+public:
+    DescribeCertificateRequestPrivate(const IoT::Action action,
+                                   DescribeCertificateRequest * const q);
+    DescribeCertificateRequestPrivate(const DescribeCertificateRequestPrivate &other,
+                                   DescribeCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCertificateRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

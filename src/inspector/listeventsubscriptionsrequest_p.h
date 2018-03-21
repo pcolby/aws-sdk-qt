@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTEVENTSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_LISTEVENTSUBSCRIPTIONSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "listeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListEventSubscriptionsRequest;
+
+class QTAWS_EXPORT ListEventSubscriptionsRequestPrivate : public InspectorPrivate {
+
+public:
+    ListEventSubscriptionsRequestPrivate(const Inspector::Action action,
+                                   ListEventSubscriptionsRequest * const q);
+    ListEventSubscriptionsRequestPrivate(const ListEventSubscriptionsRequestPrivate &other,
+                                   ListEventSubscriptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListEventSubscriptionsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

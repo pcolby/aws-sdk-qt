@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYDBCLUSTERSNAPSHOTATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYDBCLUSTERSNAPSHOTATTRIBUTEREQUEST_P_H
 
+#include "rds_p.h"
+#include "modifydbclustersnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBClusterSnapshotAttributeRequest;
+
+class QTAWS_EXPORT ModifyDBClusterSnapshotAttributeRequestPrivate : public RDSPrivate {
+
+public:
+    ModifyDBClusterSnapshotAttributeRequestPrivate(const RDS::Action action,
+                                   ModifyDBClusterSnapshotAttributeRequest * const q);
+    ModifyDBClusterSnapshotAttributeRequestPrivate(const ModifyDBClusterSnapshotAttributeRequestPrivate &other,
+                                   ModifyDBClusterSnapshotAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBClusterSnapshotAttributeRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

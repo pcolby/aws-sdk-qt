@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBOTCHANNELASSOCIATIONSREQUEST_P_H
 #define QTAWS_GETBOTCHANNELASSOCIATIONSREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "getbotchannelassociationsrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBotChannelAssociationsRequest;
+
+class QTAWS_EXPORT GetBotChannelAssociationsRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    GetBotChannelAssociationsRequestPrivate(const LexModelBuildingService::Action action,
+                                   GetBotChannelAssociationsRequest * const q);
+    GetBotChannelAssociationsRequestPrivate(const GetBotChannelAssociationsRequestPrivate &other,
+                                   GetBotChannelAssociationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBotChannelAssociationsRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

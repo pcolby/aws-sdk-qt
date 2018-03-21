@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREGIONSREQUEST_P_H
 #define QTAWS_GETREGIONSREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getregionsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetRegionsRequest;
+
+class QTAWS_EXPORT GetRegionsRequestPrivate : public LightsailPrivate {
+
+public:
+    GetRegionsRequestPrivate(const Lightsail::Action action,
+                                   GetRegionsRequest * const q);
+    GetRegionsRequestPrivate(const GetRegionsRequestPrivate &other,
+                                   GetRegionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRegionsRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

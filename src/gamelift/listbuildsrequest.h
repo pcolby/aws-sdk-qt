@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTBUILDSREQUEST_H
 #define QTAWS_LISTBUILDSREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ListBuildsRequestPrivate;
+
+class QTAWS_EXPORT ListBuildsRequest : public GameLiftRequest {
+
+public:
+    ListBuildsRequest(const ListBuildsRequest &other);
+    ListBuildsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListBuildsRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

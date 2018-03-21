@@ -20,4 +20,29 @@
 #ifndef QTAWS_FORGOTPASSWORDREQUEST_P_H
 #define QTAWS_FORGOTPASSWORDREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "forgotpasswordrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ForgotPasswordRequest;
+
+class QTAWS_EXPORT ForgotPasswordRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    ForgotPasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   ForgotPasswordRequest * const q);
+    ForgotPasswordRequestPrivate(const ForgotPasswordRequestPrivate &other,
+                                   ForgotPasswordRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ForgotPasswordRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

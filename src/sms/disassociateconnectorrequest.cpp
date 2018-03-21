@@ -19,3 +19,107 @@
 
 #include "disassociateconnectorrequest.h"
 #include "disassociateconnectorrequest_p.h"
+#include "disassociateconnectorresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  DisassociateConnectorRequest
+ *
+ * @brief  Implements SMS DisassociateConnector requests.
+ *
+ * @see    SMSClient::disassociateConnector
+ */
+
+/**
+ * @brief  Constructs a new DisassociateConnectorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateConnectorResponse::DisassociateConnectorResponse(
+
+/**
+ * @brief  Constructs a new DisassociateConnectorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateConnectorRequest::DisassociateConnectorRequest(const DisassociateConnectorRequest &other)
+    : SMSRequest(new DisassociateConnectorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateConnectorRequest object.
+ */
+DisassociateConnectorRequest::DisassociateConnectorRequest()
+    : SMSRequest(new DisassociateConnectorRequestPrivate(SMSRequest::DisassociateConnectorAction, this))
+{
+
+}
+
+bool DisassociateConnectorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateConnectorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateConnectorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * DisassociateConnectorRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateConnectorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateConnectorRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateConnectorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateConnectorRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public DisassociateConnectorRequest instance.
+ */
+DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
+    const SMSRequest::Action action, DisassociateConnectorRequest * const q)
+    : DisassociateConnectorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateConnectorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateConnectorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateConnectorRequest instance.
+ */
+DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
+    const DisassociateConnectorRequestPrivate &other, DisassociateConnectorRequest * const q)
+    : DisassociateConnectorPrivate(other, q)
+{
+
+}

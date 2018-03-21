@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEROOMREQUEST_P_H
 #define QTAWS_DELETEROOMREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "deleteroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DeleteRoomRequest;
+
+class QTAWS_EXPORT DeleteRoomRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    DeleteRoomRequestPrivate(const AlexaForBusiness::Action action,
+                                   DeleteRoomRequest * const q);
+    DeleteRoomRequestPrivate(const DeleteRoomRequestPrivate &other,
+                                   DeleteRoomRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRoomRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTMEMBERSREQUEST_P_H
 #define QTAWS_LISTMEMBERSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "listmembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ListMembersRequest;
+
+class QTAWS_EXPORT ListMembersRequestPrivate : public GuardDutyPrivate {
+
+public:
+    ListMembersRequestPrivate(const GuardDuty::Action action,
+                                   ListMembersRequest * const q);
+    ListMembersRequestPrivate(const ListMembersRequestPrivate &other,
+                                   ListMembersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListMembersRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

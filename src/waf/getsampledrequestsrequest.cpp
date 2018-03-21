@@ -19,3 +19,107 @@
 
 #include "getsampledrequestsrequest.h"
 #include "getsampledrequestsrequest_p.h"
+#include "getsampledrequestsresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetSampledRequestsRequest
+ *
+ * @brief  Implements WAF GetSampledRequests requests.
+ *
+ * @see    WAFClient::getSampledRequests
+ */
+
+/**
+ * @brief  Constructs a new GetSampledRequestsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSampledRequestsResponse::GetSampledRequestsResponse(
+
+/**
+ * @brief  Constructs a new GetSampledRequestsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsRequest &other)
+    : WAFRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSampledRequestsRequest object.
+ */
+GetSampledRequestsRequest::GetSampledRequestsRequest()
+    : WAFRequest(new GetSampledRequestsRequestPrivate(WAFRequest::GetSampledRequestsAction, this))
+{
+
+}
+
+bool GetSampledRequestsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSampledRequestsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSampledRequestsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSampledRequestsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSampledRequestsRequestPrivate
+ *
+ * @brief  Private implementation for GetSampledRequestsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSampledRequestsRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public GetSampledRequestsRequest instance.
+ */
+GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
+    const WAFRequest::Action action, GetSampledRequestsRequest * const q)
+    : GetSampledRequestsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSampledRequestsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSampledRequestsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSampledRequestsRequest instance.
+ */
+GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
+    const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)
+    : GetSampledRequestsPrivate(other, q)
+{
+
+}

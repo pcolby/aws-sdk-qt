@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECERTIFICATEFROMCSRREQUEST_H
 #define QTAWS_CREATECERTIFICATEFROMCSRREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateCertificateFromCsrRequestPrivate;
+
+class QTAWS_EXPORT CreateCertificateFromCsrRequest : public IoTRequest {
+
+public:
+    CreateCertificateFromCsrRequest(const CreateCertificateFromCsrRequest &other);
+    CreateCertificateFromCsrRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCertificateFromCsrRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

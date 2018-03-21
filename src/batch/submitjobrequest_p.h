@@ -20,4 +20,29 @@
 #ifndef QTAWS_SUBMITJOBREQUEST_P_H
 #define QTAWS_SUBMITJOBREQUEST_P_H
 
+#include "batch_p.h"
+#include "submitjobrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class SubmitJobRequest;
+
+class QTAWS_EXPORT SubmitJobRequestPrivate : public BatchPrivate {
+
+public:
+    SubmitJobRequestPrivate(const Batch::Action action,
+                                   SubmitJobRequest * const q);
+    SubmitJobRequestPrivate(const SubmitJobRequestPrivate &other,
+                                   SubmitJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SubmitJobRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

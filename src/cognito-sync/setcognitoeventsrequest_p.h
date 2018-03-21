@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETCOGNITOEVENTSREQUEST_P_H
 #define QTAWS_SETCOGNITOEVENTSREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "setcognitoeventsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class SetCognitoEventsRequest;
+
+class QTAWS_EXPORT SetCognitoEventsRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    SetCognitoEventsRequestPrivate(const CognitoSync::Action action,
+                                   SetCognitoEventsRequest * const q);
+    SetCognitoEventsRequestPrivate(const SetCognitoEventsRequestPrivate &other,
+                                   SetCognitoEventsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetCognitoEventsRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

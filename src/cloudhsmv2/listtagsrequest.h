@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSREQUEST_H
 #define QTAWS_LISTTAGSREQUEST_H
 
+#include "cloudhsmv2request.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class ListTagsRequestPrivate;
+
+class QTAWS_EXPORT ListTagsRequest : public CloudHSMV2Request {
+
+public:
+    ListTagsRequest(const ListTagsRequest &other);
+    ListTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsRequest)
+
+}
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

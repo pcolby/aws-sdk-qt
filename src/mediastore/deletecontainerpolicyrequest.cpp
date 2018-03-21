@@ -19,3 +19,107 @@
 
 #include "deletecontainerpolicyrequest.h"
 #include "deletecontainerpolicyrequest_p.h"
+#include "deletecontainerpolicyresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DeleteContainerPolicyRequest
+ *
+ * @brief  Implements MediaStore DeleteContainerPolicy requests.
+ *
+ * @see    MediaStoreClient::deleteContainerPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteContainerPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteContainerPolicyResponse::DeleteContainerPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteContainerPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteContainerPolicyRequest::DeleteContainerPolicyRequest(const DeleteContainerPolicyRequest &other)
+    : MediaStoreRequest(new DeleteContainerPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteContainerPolicyRequest object.
+ */
+DeleteContainerPolicyRequest::DeleteContainerPolicyRequest()
+    : MediaStoreRequest(new DeleteContainerPolicyRequestPrivate(MediaStoreRequest::DeleteContainerPolicyAction, this))
+{
+
+}
+
+bool DeleteContainerPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteContainerPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteContainerPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteContainerPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteContainerPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteContainerPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public DeleteContainerPolicyRequest instance.
+ */
+DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
+    const MediaStoreRequest::Action action, DeleteContainerPolicyRequest * const q)
+    : DeleteContainerPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteContainerPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteContainerPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteContainerPolicyRequest instance.
+ */
+DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
+    const DeleteContainerPolicyRequestPrivate &other, DeleteContainerPolicyRequest * const q)
+    : DeleteContainerPolicyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETERMINATIONPROTECTIONREQUEST_H
 #define QTAWS_UPDATETERMINATIONPROTECTIONREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class UpdateTerminationProtectionRequestPrivate;
+
+class QTAWS_EXPORT UpdateTerminationProtectionRequest : public CloudFormationRequest {
+
+public:
+    UpdateTerminationProtectionRequest(const UpdateTerminationProtectionRequest &other);
+    UpdateTerminationProtectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTerminationProtectionRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

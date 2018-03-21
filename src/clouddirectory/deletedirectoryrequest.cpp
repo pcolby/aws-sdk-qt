@@ -19,3 +19,107 @@
 
 #include "deletedirectoryrequest.h"
 #include "deletedirectoryrequest_p.h"
+#include "deletedirectoryresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DeleteDirectoryRequest
+ *
+ * @brief  Implements CloudDirectory DeleteDirectory requests.
+ *
+ * @see    CloudDirectoryClient::deleteDirectory
+ */
+
+/**
+ * @brief  Constructs a new DeleteDirectoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectoryResponse::DeleteDirectoryResponse(
+
+/**
+ * @brief  Constructs a new DeleteDirectoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDirectoryRequest::DeleteDirectoryRequest(const DeleteDirectoryRequest &other)
+    : CloudDirectoryRequest(new DeleteDirectoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDirectoryRequest object.
+ */
+DeleteDirectoryRequest::DeleteDirectoryRequest()
+    : CloudDirectoryRequest(new DeleteDirectoryRequestPrivate(CloudDirectoryRequest::DeleteDirectoryAction, this))
+{
+
+}
+
+bool DeleteDirectoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDirectoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDirectoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDirectoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectoryRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDirectoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DeleteDirectoryRequest instance.
+ */
+DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
+    const CloudDirectoryRequest::Action action, DeleteDirectoryRequest * const q)
+    : DeleteDirectoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDirectoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDirectoryRequest instance.
+ */
+DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
+    const DeleteDirectoryRequestPrivate &other, DeleteDirectoryRequest * const q)
+    : DeleteDirectoryPrivate(other, q)
+{
+
+}

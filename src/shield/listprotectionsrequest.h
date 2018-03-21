@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPROTECTIONSREQUEST_H
 #define QTAWS_LISTPROTECTIONSREQUEST_H
 
+#include "shieldrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class ListProtectionsRequestPrivate;
+
+class QTAWS_EXPORT ListProtectionsRequest : public ShieldRequest {
+
+public:
+    ListProtectionsRequest(const ListProtectionsRequest &other);
+    ListProtectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListProtectionsRequest)
+
+}
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

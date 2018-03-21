@@ -19,3 +19,107 @@
 
 #include "createjobtemplaterequest.h"
 #include "createjobtemplaterequest_p.h"
+#include "createjobtemplateresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  CreateJobTemplateRequest
+ *
+ * @brief  Implements MediaConvert CreateJobTemplate requests.
+ *
+ * @see    MediaConvertClient::createJobTemplate
+ */
+
+/**
+ * @brief  Constructs a new CreateJobTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateJobTemplateResponse::CreateJobTemplateResponse(
+
+/**
+ * @brief  Constructs a new CreateJobTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateJobTemplateRequest::CreateJobTemplateRequest(const CreateJobTemplateRequest &other)
+    : MediaConvertRequest(new CreateJobTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateJobTemplateRequest object.
+ */
+CreateJobTemplateRequest::CreateJobTemplateRequest()
+    : MediaConvertRequest(new CreateJobTemplateRequestPrivate(MediaConvertRequest::CreateJobTemplateAction, this))
+{
+
+}
+
+bool CreateJobTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateJobTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateJobTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateJobTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateJobTemplateRequestPrivate
+ *
+ * @brief  Private implementation for CreateJobTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateJobTemplateRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public CreateJobTemplateRequest instance.
+ */
+CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
+    const MediaConvertRequest::Action action, CreateJobTemplateRequest * const q)
+    : CreateJobTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateJobTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateJobTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateJobTemplateRequest instance.
+ */
+CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
+    const CreateJobTemplateRequestPrivate &other, CreateJobTemplateRequest * const q)
+    : CreateJobTemplatePrivate(other, q)
+{
+
+}

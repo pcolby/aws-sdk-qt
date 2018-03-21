@@ -19,3 +19,107 @@
 
 #include "getstagerequest.h"
 #include "getstagerequest_p.h"
+#include "getstageresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetStageRequest
+ *
+ * @brief  Implements APIGateway GetStage requests.
+ *
+ * @see    APIGatewayClient::getStage
+ */
+
+/**
+ * @brief  Constructs a new GetStageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStageResponse::GetStageResponse(
+
+/**
+ * @brief  Constructs a new GetStageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetStageRequest::GetStageRequest(const GetStageRequest &other)
+    : APIGatewayRequest(new GetStageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetStageRequest object.
+ */
+GetStageRequest::GetStageRequest()
+    : APIGatewayRequest(new GetStageRequestPrivate(APIGatewayRequest::GetStageAction, this))
+{
+
+}
+
+bool GetStageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetStageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetStageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetStageRequest::response(QNetworkReply * const reply) const
+{
+    return new GetStageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStageRequestPrivate
+ *
+ * @brief  Private implementation for GetStageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStageRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetStageRequest instance.
+ */
+GetStageRequestPrivate::GetStageRequestPrivate(
+    const APIGatewayRequest::Action action, GetStageRequest * const q)
+    : GetStagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetStageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetStageRequest instance.
+ */
+GetStageRequestPrivate::GetStageRequestPrivate(
+    const GetStageRequestPrivate &other, GetStageRequest * const q)
+    : GetStagePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESREQUEST_P_H
 #define QTAWS_DESCRIBECERTIFICATESREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describecertificatesrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeCertificatesRequest;
+
+class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeCertificatesRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeCertificatesRequest * const q);
+    DescribeCertificatesRequestPrivate(const DescribeCertificatesRequestPrivate &other,
+                                   DescribeCertificatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCertificatesRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

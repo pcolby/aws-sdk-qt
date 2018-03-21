@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESECURITYCONFIGURATIONREQUEST_H
 #define QTAWS_CREATESECURITYCONFIGURATIONREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class CreateSecurityConfigurationRequestPrivate;
+
+class QTAWS_EXPORT CreateSecurityConfigurationRequest : public EMRRequest {
+
+public:
+    CreateSecurityConfigurationRequest(const CreateSecurityConfigurationRequest &other);
+    CreateSecurityConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSecurityConfigurationRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

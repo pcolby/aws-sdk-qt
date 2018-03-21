@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEPRODUCTFROMPORTFOLIOREQUEST_H
 #define QTAWS_DISASSOCIATEPRODUCTFROMPORTFOLIOREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DisassociateProductFromPortfolioRequestPrivate;
+
+class QTAWS_EXPORT DisassociateProductFromPortfolioRequest : public ServiceCatalogRequest {
+
+public:
+    DisassociateProductFromPortfolioRequest(const DisassociateProductFromPortfolioRequest &other);
+    DisassociateProductFromPortfolioRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateProductFromPortfolioRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

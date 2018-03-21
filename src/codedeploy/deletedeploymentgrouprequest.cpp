@@ -19,3 +19,107 @@
 
 #include "deletedeploymentgrouprequest.h"
 #include "deletedeploymentgrouprequest_p.h"
+#include "deletedeploymentgroupresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeleteDeploymentGroupRequest
+ *
+ * @brief  Implements CodeDeploy DeleteDeploymentGroup requests.
+ *
+ * @see    CodeDeployClient::deleteDeploymentGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteDeploymentGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDeploymentGroupResponse::DeleteDeploymentGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteDeploymentGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDeploymentGroupRequest::DeleteDeploymentGroupRequest(const DeleteDeploymentGroupRequest &other)
+    : CodeDeployRequest(new DeleteDeploymentGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDeploymentGroupRequest object.
+ */
+DeleteDeploymentGroupRequest::DeleteDeploymentGroupRequest()
+    : CodeDeployRequest(new DeleteDeploymentGroupRequestPrivate(CodeDeployRequest::DeleteDeploymentGroupAction, this))
+{
+
+}
+
+bool DeleteDeploymentGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDeploymentGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDeploymentGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * DeleteDeploymentGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDeploymentGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDeploymentGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDeploymentGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeploymentGroupRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public DeleteDeploymentGroupRequest instance.
+ */
+DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
+    const CodeDeployRequest::Action action, DeleteDeploymentGroupRequest * const q)
+    : DeleteDeploymentGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDeploymentGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDeploymentGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDeploymentGroupRequest instance.
+ */
+DeleteDeploymentGroupRequestPrivate::DeleteDeploymentGroupRequestPrivate(
+    const DeleteDeploymentGroupRequestPrivate &other, DeleteDeploymentGroupRequest * const q)
+    : DeleteDeploymentGroupPrivate(other, q)
+{
+
+}

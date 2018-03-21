@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSERVERCERTIFICATESREQUEST_P_H
 #define QTAWS_LISTSERVERCERTIFICATESREQUEST_P_H
 
+#include "iam_p.h"
+#include "listservercertificatesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListServerCertificatesRequest;
+
+class QTAWS_EXPORT ListServerCertificatesRequestPrivate : public IAMPrivate {
+
+public:
+    ListServerCertificatesRequestPrivate(const IAM::Action action,
+                                   ListServerCertificatesRequest * const q);
+    ListServerCertificatesRequestPrivate(const ListServerCertificatesRequestPrivate &other,
+                                   ListServerCertificatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListServerCertificatesRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

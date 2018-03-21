@@ -19,3 +19,107 @@
 
 #include "getresourcesrequest.h"
 #include "getresourcesrequest_p.h"
+#include "getresourcesresponse.h"
+#include "resourcegroupstaggingapirequest_p.h"
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  GetResourcesRequest
+ *
+ * @brief  Implements ResourceGroupsTaggingAPI GetResources requests.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::getResources
+ */
+
+/**
+ * @brief  Constructs a new GetResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourcesResponse::GetResourcesResponse(
+
+/**
+ * @brief  Constructs a new GetResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetResourcesRequest::GetResourcesRequest(const GetResourcesRequest &other)
+    : ResourceGroupsTaggingAPIRequest(new GetResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetResourcesRequest object.
+ */
+GetResourcesRequest::GetResourcesRequest()
+    : ResourceGroupsTaggingAPIRequest(new GetResourcesRequestPrivate(ResourceGroupsTaggingAPIRequest::GetResourcesAction, this))
+{
+
+}
+
+bool GetResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ResourceGroupsTaggingAPIClient::send
+ */
+AwsAbstractResponse * GetResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourcesRequestPrivate
+ *
+ * @brief  Private implementation for GetResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourcesRequestPrivate object.
+ *
+ * @param  action  ResourceGroupsTaggingAPI action being performed.
+ * @param  q       Pointer to this object's public GetResourcesRequest instance.
+ */
+GetResourcesRequestPrivate::GetResourcesRequestPrivate(
+    const ResourceGroupsTaggingAPIRequest::Action action, GetResourcesRequest * const q)
+    : GetResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetResourcesRequest instance.
+ */
+GetResourcesRequestPrivate::GetResourcesRequestPrivate(
+    const GetResourcesRequestPrivate &other, GetResourcesRequest * const q)
+    : GetResourcesPrivate(other, q)
+{
+
+}

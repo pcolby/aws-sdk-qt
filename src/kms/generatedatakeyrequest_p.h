@@ -20,4 +20,29 @@
 #ifndef QTAWS_GENERATEDATAKEYREQUEST_P_H
 #define QTAWS_GENERATEDATAKEYREQUEST_P_H
 
+#include "kms_p.h"
+#include "generatedatakeyrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GenerateDataKeyRequest;
+
+class QTAWS_EXPORT GenerateDataKeyRequestPrivate : public KMSPrivate {
+
+public:
+    GenerateDataKeyRequestPrivate(const KMS::Action action,
+                                   GenerateDataKeyRequest * const q);
+    GenerateDataKeyRequestPrivate(const GenerateDataKeyRequestPrivate &other,
+                                   GenerateDataKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GenerateDataKeyRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

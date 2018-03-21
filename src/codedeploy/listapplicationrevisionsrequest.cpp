@@ -19,3 +19,107 @@
 
 #include "listapplicationrevisionsrequest.h"
 #include "listapplicationrevisionsrequest_p.h"
+#include "listapplicationrevisionsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListApplicationRevisionsRequest
+ *
+ * @brief  Implements CodeDeploy ListApplicationRevisions requests.
+ *
+ * @see    CodeDeployClient::listApplicationRevisions
+ */
+
+/**
+ * @brief  Constructs a new ListApplicationRevisionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationRevisionsResponse::ListApplicationRevisionsResponse(
+
+/**
+ * @brief  Constructs a new ListApplicationRevisionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListApplicationRevisionsRequest::ListApplicationRevisionsRequest(const ListApplicationRevisionsRequest &other)
+    : CodeDeployRequest(new ListApplicationRevisionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListApplicationRevisionsRequest object.
+ */
+ListApplicationRevisionsRequest::ListApplicationRevisionsRequest()
+    : CodeDeployRequest(new ListApplicationRevisionsRequestPrivate(CodeDeployRequest::ListApplicationRevisionsAction, this))
+{
+
+}
+
+bool ListApplicationRevisionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListApplicationRevisionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListApplicationRevisionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ListApplicationRevisionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListApplicationRevisionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationRevisionsRequestPrivate
+ *
+ * @brief  Private implementation for ListApplicationRevisionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationRevisionsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ListApplicationRevisionsRequest instance.
+ */
+ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
+    const CodeDeployRequest::Action action, ListApplicationRevisionsRequest * const q)
+    : ListApplicationRevisionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationRevisionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListApplicationRevisionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListApplicationRevisionsRequest instance.
+ */
+ListApplicationRevisionsRequestPrivate::ListApplicationRevisionsRequestPrivate(
+    const ListApplicationRevisionsRequestPrivate &other, ListApplicationRevisionsRequest * const q)
+    : ListApplicationRevisionsPrivate(other, q)
+{
+
+}

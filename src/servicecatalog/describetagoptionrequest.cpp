@@ -19,3 +19,107 @@
 
 #include "describetagoptionrequest.h"
 #include "describetagoptionrequest_p.h"
+#include "describetagoptionresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeTagOptionRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeTagOption requests.
+ *
+ * @see    ServiceCatalogClient::describeTagOption
+ */
+
+/**
+ * @brief  Constructs a new DescribeTagOptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTagOptionResponse::DescribeTagOptionResponse(
+
+/**
+ * @brief  Constructs a new DescribeTagOptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTagOptionRequest::DescribeTagOptionRequest(const DescribeTagOptionRequest &other)
+    : ServiceCatalogRequest(new DescribeTagOptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTagOptionRequest object.
+ */
+DescribeTagOptionRequest::DescribeTagOptionRequest()
+    : ServiceCatalogRequest(new DescribeTagOptionRequestPrivate(ServiceCatalogRequest::DescribeTagOptionAction, this))
+{
+
+}
+
+bool DescribeTagOptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTagOptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTagOptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTagOptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTagOptionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTagOptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTagOptionRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeTagOptionRequest instance.
+ */
+DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeTagOptionRequest * const q)
+    : DescribeTagOptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTagOptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTagOptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTagOptionRequest instance.
+ */
+DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
+    const DescribeTagOptionRequestPrivate &other, DescribeTagOptionRequest * const q)
+    : DescribeTagOptionPrivate(other, q)
+{
+
+}

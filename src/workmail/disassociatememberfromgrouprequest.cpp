@@ -19,3 +19,107 @@
 
 #include "disassociatememberfromgrouprequest.h"
 #include "disassociatememberfromgrouprequest_p.h"
+#include "disassociatememberfromgroupresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DisassociateMemberFromGroupRequest
+ *
+ * @brief  Implements WorkMail DisassociateMemberFromGroup requests.
+ *
+ * @see    WorkMailClient::disassociateMemberFromGroup
+ */
+
+/**
+ * @brief  Constructs a new DisassociateMemberFromGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
+
+/**
+ * @brief  Constructs a new DisassociateMemberFromGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateMemberFromGroupRequest::DisassociateMemberFromGroupRequest(const DisassociateMemberFromGroupRequest &other)
+    : WorkMailRequest(new DisassociateMemberFromGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateMemberFromGroupRequest object.
+ */
+DisassociateMemberFromGroupRequest::DisassociateMemberFromGroupRequest()
+    : WorkMailRequest(new DisassociateMemberFromGroupRequestPrivate(WorkMailRequest::DisassociateMemberFromGroupAction, this))
+{
+
+}
+
+bool DisassociateMemberFromGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateMemberFromGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateMemberFromGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateMemberFromGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateMemberFromGroupRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateMemberFromGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateMemberFromGroupRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public DisassociateMemberFromGroupRequest instance.
+ */
+DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
+    const WorkMailRequest::Action action, DisassociateMemberFromGroupRequest * const q)
+    : DisassociateMemberFromGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateMemberFromGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateMemberFromGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateMemberFromGroupRequest instance.
+ */
+DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
+    const DisassociateMemberFromGroupRequestPrivate &other, DisassociateMemberFromGroupRequest * const q)
+    : DisassociateMemberFromGroupPrivate(other, q)
+{
+
+}

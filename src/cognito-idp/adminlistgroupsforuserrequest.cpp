@@ -19,3 +19,107 @@
 
 #include "adminlistgroupsforuserrequest.h"
 #include "adminlistgroupsforuserrequest_p.h"
+#include "adminlistgroupsforuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminListGroupsForUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminListGroupsForUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminListGroupsForUser
+ */
+
+/**
+ * @brief  Constructs a new AdminListGroupsForUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminListGroupsForUserResponse::AdminListGroupsForUserResponse(
+
+/**
+ * @brief  Constructs a new AdminListGroupsForUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminListGroupsForUserRequest::AdminListGroupsForUserRequest(const AdminListGroupsForUserRequest &other)
+    : CognitoIdentityProviderRequest(new AdminListGroupsForUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminListGroupsForUserRequest object.
+ */
+AdminListGroupsForUserRequest::AdminListGroupsForUserRequest()
+    : CognitoIdentityProviderRequest(new AdminListGroupsForUserRequestPrivate(CognitoIdentityProviderRequest::AdminListGroupsForUserAction, this))
+{
+
+}
+
+bool AdminListGroupsForUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminListGroupsForUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminListGroupsForUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminListGroupsForUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminListGroupsForUserRequestPrivate
+ *
+ * @brief  Private implementation for AdminListGroupsForUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminListGroupsForUserRequest instance.
+ */
+AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminListGroupsForUserRequest * const q)
+    : AdminListGroupsForUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListGroupsForUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminListGroupsForUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminListGroupsForUserRequest instance.
+ */
+AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
+    const AdminListGroupsForUserRequestPrivate &other, AdminListGroupsForUserRequest * const q)
+    : AdminListGroupsForUserPrivate(other, q)
+{
+
+}

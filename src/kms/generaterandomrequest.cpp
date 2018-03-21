@@ -19,3 +19,107 @@
 
 #include "generaterandomrequest.h"
 #include "generaterandomrequest_p.h"
+#include "generaterandomresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GenerateRandomRequest
+ *
+ * @brief  Implements KMS GenerateRandom requests.
+ *
+ * @see    KMSClient::generateRandom
+ */
+
+/**
+ * @brief  Constructs a new GenerateRandomResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GenerateRandomResponse::GenerateRandomResponse(
+
+/**
+ * @brief  Constructs a new GenerateRandomRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GenerateRandomRequest::GenerateRandomRequest(const GenerateRandomRequest &other)
+    : KMSRequest(new GenerateRandomRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GenerateRandomRequest object.
+ */
+GenerateRandomRequest::GenerateRandomRequest()
+    : KMSRequest(new GenerateRandomRequestPrivate(KMSRequest::GenerateRandomAction, this))
+{
+
+}
+
+bool GenerateRandomRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GenerateRandomResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GenerateRandomResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply * const reply) const
+{
+    return new GenerateRandomResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GenerateRandomRequestPrivate
+ *
+ * @brief  Private implementation for GenerateRandomRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateRandomRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public GenerateRandomRequest instance.
+ */
+GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
+    const KMSRequest::Action action, GenerateRandomRequest * const q)
+    : GenerateRandomPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateRandomRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GenerateRandomRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GenerateRandomRequest instance.
+ */
+GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
+    const GenerateRandomRequestPrivate &other, GenerateRandomRequest * const q)
+    : GenerateRandomPrivate(other, q)
+{
+
+}

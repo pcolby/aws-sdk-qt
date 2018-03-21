@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEWORKFLOWEXECUTIONREQUEST_P_H
 #define QTAWS_DESCRIBEWORKFLOWEXECUTIONREQUEST_P_H
 
+#include "swf_p.h"
+#include "describeworkflowexecutionrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeWorkflowExecutionRequest;
+
+class QTAWS_EXPORT DescribeWorkflowExecutionRequestPrivate : public SWFPrivate {
+
+public:
+    DescribeWorkflowExecutionRequestPrivate(const SWF::Action action,
+                                   DescribeWorkflowExecutionRequest * const q);
+    DescribeWorkflowExecutionRequestPrivate(const DescribeWorkflowExecutionRequestPrivate &other,
+                                   DescribeWorkflowExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkflowExecutionRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTLOGGINGREQUEST_P_H
 #define QTAWS_STARTLOGGINGREQUEST_P_H
 
+#include "cloudtrail_p.h"
+#include "startloggingrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class StartLoggingRequest;
+
+class QTAWS_EXPORT StartLoggingRequestPrivate : public CloudTrailPrivate {
+
+public:
+    StartLoggingRequestPrivate(const CloudTrail::Action action,
+                                   StartLoggingRequest * const q);
+    StartLoggingRequestPrivate(const StartLoggingRequestPrivate &other,
+                                   StartLoggingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartLoggingRequest)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

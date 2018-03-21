@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEOPTIONGROUPSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describeoptiongroupsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOptionGroupsRequest;
+
+class QTAWS_EXPORT DescribeOptionGroupsRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeOptionGroupsRequestPrivate(const RDS::Action action,
+                                   DescribeOptionGroupsRequest * const q);
+    DescribeOptionGroupsRequestPrivate(const DescribeOptionGroupsRequestPrivate &other,
+                                   DescribeOptionGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOptionGroupsRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

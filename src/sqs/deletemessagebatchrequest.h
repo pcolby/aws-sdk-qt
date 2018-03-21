@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMESSAGEBATCHREQUEST_H
 #define QTAWS_DELETEMESSAGEBATCHREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class DeleteMessageBatchRequestPrivate;
+
+class QTAWS_EXPORT DeleteMessageBatchRequest : public SQSRequest {
+
+public:
+    DeleteMessageBatchRequest(const DeleteMessageBatchRequest &other);
+    DeleteMessageBatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMessageBatchRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

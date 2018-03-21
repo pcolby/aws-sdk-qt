@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETECTTEXTREQUEST_P_H
 #define QTAWS_DETECTTEXTREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "detecttextrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DetectTextRequest;
+
+class QTAWS_EXPORT DetectTextRequestPrivate : public RekognitionPrivate {
+
+public:
+    DetectTextRequestPrivate(const Rekognition::Action action,
+                                   DetectTextRequest * const q);
+    DetectTextRequestPrivate(const DetectTextRequestPrivate &other,
+                                   DetectTextRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetectTextRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

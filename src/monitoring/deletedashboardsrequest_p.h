@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDASHBOARDSREQUEST_P_H
 #define QTAWS_DELETEDASHBOARDSREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "deletedashboardsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DeleteDashboardsRequest;
+
+class QTAWS_EXPORT DeleteDashboardsRequestPrivate : public CloudWatchPrivate {
+
+public:
+    DeleteDashboardsRequestPrivate(const CloudWatch::Action action,
+                                   DeleteDashboardsRequest * const q);
+    DeleteDashboardsRequestPrivate(const DeleteDashboardsRequestPrivate &other,
+                                   DeleteDashboardsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDashboardsRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

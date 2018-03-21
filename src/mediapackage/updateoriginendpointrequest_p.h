@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEORIGINENDPOINTREQUEST_P_H
 #define QTAWS_UPDATEORIGINENDPOINTREQUEST_P_H
 
+#include "mediapackage_p.h"
+#include "updateoriginendpointrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class UpdateOriginEndpointRequest;
+
+class QTAWS_EXPORT UpdateOriginEndpointRequestPrivate : public MediaPackagePrivate {
+
+public:
+    UpdateOriginEndpointRequestPrivate(const MediaPackage::Action action,
+                                   UpdateOriginEndpointRequest * const q);
+    UpdateOriginEndpointRequestPrivate(const UpdateOriginEndpointRequestPrivate &other,
+                                   UpdateOriginEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateOriginEndpointRequest)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

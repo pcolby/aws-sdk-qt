@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
+#include "cloudhsmv2_p.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class TagResourceRequest;
+
+class QTAWS_EXPORT TagResourceRequestPrivate : public CloudHSMV2Private {
+
+public:
+    TagResourceRequestPrivate(const CloudHSMV2::Action action,
+                                   TagResourceRequest * const q);
+    TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
+                                   TagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceRequest)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

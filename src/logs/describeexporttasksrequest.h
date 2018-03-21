@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEXPORTTASKSREQUEST_H
 #define QTAWS_DESCRIBEEXPORTTASKSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeExportTasksRequestPrivate;
+
+class QTAWS_EXPORT DescribeExportTasksRequest : public CloudWatchLogsRequest {
+
+public:
+    DescribeExportTasksRequest(const DescribeExportTasksRequest &other);
+    DescribeExportTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeExportTasksRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESOLVEROOMREQUEST_H
 #define QTAWS_RESOLVEROOMREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class ResolveRoomRequestPrivate;
+
+class QTAWS_EXPORT ResolveRoomRequest : public AlexaForBusinessRequest {
+
+public:
+    ResolveRoomRequest(const ResolveRoomRequest &other);
+    ResolveRoomRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResolveRoomRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

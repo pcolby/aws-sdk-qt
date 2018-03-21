@@ -19,3 +19,107 @@
 
 #include "removethingfromthinggrouprequest.h"
 #include "removethingfromthinggrouprequest_p.h"
+#include "removethingfromthinggroupresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RemoveThingFromThingGroupRequest
+ *
+ * @brief  Implements IoT RemoveThingFromThingGroup requests.
+ *
+ * @see    IoTClient::removeThingFromThingGroup
+ */
+
+/**
+ * @brief  Constructs a new RemoveThingFromThingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
+
+/**
+ * @brief  Constructs a new RemoveThingFromThingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest(const RemoveThingFromThingGroupRequest &other)
+    : IoTRequest(new RemoveThingFromThingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveThingFromThingGroupRequest object.
+ */
+RemoveThingFromThingGroupRequest::RemoveThingFromThingGroupRequest()
+    : IoTRequest(new RemoveThingFromThingGroupRequestPrivate(IoTRequest::RemoveThingFromThingGroupAction, this))
+{
+
+}
+
+bool RemoveThingFromThingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveThingFromThingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveThingFromThingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveThingFromThingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveThingFromThingGroupRequestPrivate
+ *
+ * @brief  Private implementation for RemoveThingFromThingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public RemoveThingFromThingGroupRequest instance.
+ */
+RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
+    const IoTRequest::Action action, RemoveThingFromThingGroupRequest * const q)
+    : RemoveThingFromThingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveThingFromThingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveThingFromThingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveThingFromThingGroupRequest instance.
+ */
+RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
+    const RemoveThingFromThingGroupRequestPrivate &other, RemoveThingFromThingGroupRequest * const q)
+    : RemoveThingFromThingGroupPrivate(other, q)
+{
+
+}

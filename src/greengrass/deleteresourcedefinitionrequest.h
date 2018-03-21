@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERESOURCEDEFINITIONREQUEST_H
 #define QTAWS_DELETERESOURCEDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteResourceDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteResourceDefinitionRequest : public GreengrassRequest {
+
+public:
+    DeleteResourceDefinitionRequest(const DeleteResourceDefinitionRequest &other);
+    DeleteResourceDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONREQUEST_H
 #define QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class PutScheduledUpdateGroupActionRequestPrivate;
+
+class QTAWS_EXPORT PutScheduledUpdateGroupActionRequest : public AutoScalingRequest {
+
+public:
+    PutScheduledUpdateGroupActionRequest(const PutScheduledUpdateGroupActionRequest &other);
+    PutScheduledUpdateGroupActionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutScheduledUpdateGroupActionRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

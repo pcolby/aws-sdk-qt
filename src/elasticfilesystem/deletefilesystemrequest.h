@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEFILESYSTEMREQUEST_H
 #define QTAWS_DELETEFILESYSTEMREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteFileSystemRequestPrivate;
+
+class QTAWS_EXPORT DeleteFileSystemRequest : public EFSRequest {
+
+public:
+    DeleteFileSystemRequest(const DeleteFileSystemRequest &other);
+    DeleteFileSystemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFileSystemRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

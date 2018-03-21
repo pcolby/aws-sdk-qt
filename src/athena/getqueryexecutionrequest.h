@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETQUERYEXECUTIONREQUEST_H
 #define QTAWS_GETQUERYEXECUTIONREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class GetQueryExecutionRequestPrivate;
+
+class QTAWS_EXPORT GetQueryExecutionRequest : public AthenaRequest {
+
+public:
+    GetQueryExecutionRequest(const GetQueryExecutionRequest &other);
+    GetQueryExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetQueryExecutionRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAUTOSCALINGINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEAUTOSCALINGINSTANCESREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "describeautoscalinginstancesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeAutoScalingInstancesRequest;
+
+class QTAWS_EXPORT DescribeAutoScalingInstancesRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DescribeAutoScalingInstancesRequestPrivate(const AutoScaling::Action action,
+                                   DescribeAutoScalingInstancesRequest * const q);
+    DescribeAutoScalingInstancesRequestPrivate(const DescribeAutoScalingInstancesRequestPrivate &other,
+                                   DescribeAutoScalingInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAutoScalingInstancesRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

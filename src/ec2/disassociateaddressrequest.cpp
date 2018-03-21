@@ -19,3 +19,107 @@
 
 #include "disassociateaddressrequest.h"
 #include "disassociateaddressrequest_p.h"
+#include "disassociateaddressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateAddressRequest
+ *
+ * @brief  Implements EC2 DisassociateAddress requests.
+ *
+ * @see    EC2Client::disassociateAddress
+ */
+
+/**
+ * @brief  Constructs a new DisassociateAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateAddressResponse::DisassociateAddressResponse(
+
+/**
+ * @brief  Constructs a new DisassociateAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateAddressRequest::DisassociateAddressRequest(const DisassociateAddressRequest &other)
+    : EC2Request(new DisassociateAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateAddressRequest object.
+ */
+DisassociateAddressRequest::DisassociateAddressRequest()
+    : EC2Request(new DisassociateAddressRequestPrivate(EC2Request::DisassociateAddressAction, this))
+{
+
+}
+
+bool DisassociateAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DisassociateAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateAddressRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateAddressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DisassociateAddressRequest instance.
+ */
+DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
+    const EC2Request::Action action, DisassociateAddressRequest * const q)
+    : DisassociateAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateAddressRequest instance.
+ */
+DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
+    const DisassociateAddressRequestPrivate &other, DisassociateAddressRequest * const q)
+    : DisassociateAddressPrivate(other, q)
+{
+
+}

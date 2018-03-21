@@ -19,3 +19,107 @@
 
 #include "describereservedcachenodesrequest.h"
 #include "describereservedcachenodesrequest_p.h"
+#include "describereservedcachenodesresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeReservedCacheNodesRequest
+ *
+ * @brief  Implements ElastiCache DescribeReservedCacheNodes requests.
+ *
+ * @see    ElastiCacheClient::describeReservedCacheNodes
+ */
+
+/**
+ * @brief  Constructs a new DescribeReservedCacheNodesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedCacheNodesResponse::DescribeReservedCacheNodesResponse(
+
+/**
+ * @brief  Constructs a new DescribeReservedCacheNodesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest(const DescribeReservedCacheNodesRequest &other)
+    : ElastiCacheRequest(new DescribeReservedCacheNodesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReservedCacheNodesRequest object.
+ */
+DescribeReservedCacheNodesRequest::DescribeReservedCacheNodesRequest()
+    : ElastiCacheRequest(new DescribeReservedCacheNodesRequestPrivate(ElastiCacheRequest::DescribeReservedCacheNodesAction, this))
+{
+
+}
+
+bool DescribeReservedCacheNodesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReservedCacheNodesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReservedCacheNodesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * DescribeReservedCacheNodesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReservedCacheNodesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedCacheNodesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReservedCacheNodesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public DescribeReservedCacheNodesRequest instance.
+ */
+DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
+    const ElastiCacheRequest::Action action, DescribeReservedCacheNodesRequest * const q)
+    : DescribeReservedCacheNodesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedCacheNodesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReservedCacheNodesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReservedCacheNodesRequest instance.
+ */
+DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPrivate(
+    const DescribeReservedCacheNodesRequestPrivate &other, DescribeReservedCacheNodesRequest * const q)
+    : DescribeReservedCacheNodesPrivate(other, q)
+{
+
+}

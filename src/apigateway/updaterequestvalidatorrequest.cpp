@@ -19,3 +19,107 @@
 
 #include "updaterequestvalidatorrequest.h"
 #include "updaterequestvalidatorrequest_p.h"
+#include "updaterequestvalidatorresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateRequestValidatorRequest
+ *
+ * @brief  Implements APIGateway UpdateRequestValidator requests.
+ *
+ * @see    APIGatewayClient::updateRequestValidator
+ */
+
+/**
+ * @brief  Constructs a new UpdateRequestValidatorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
+
+/**
+ * @brief  Constructs a new UpdateRequestValidatorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRequestValidatorRequest::UpdateRequestValidatorRequest(const UpdateRequestValidatorRequest &other)
+    : APIGatewayRequest(new UpdateRequestValidatorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRequestValidatorRequest object.
+ */
+UpdateRequestValidatorRequest::UpdateRequestValidatorRequest()
+    : APIGatewayRequest(new UpdateRequestValidatorRequestPrivate(APIGatewayRequest::UpdateRequestValidatorAction, this))
+{
+
+}
+
+bool UpdateRequestValidatorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRequestValidatorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRequestValidatorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateRequestValidatorRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRequestValidatorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRequestValidatorRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRequestValidatorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateRequestValidatorRequest instance.
+ */
+UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateRequestValidatorRequest * const q)
+    : UpdateRequestValidatorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRequestValidatorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRequestValidatorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRequestValidatorRequest instance.
+ */
+UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
+    const UpdateRequestValidatorRequestPrivate &other, UpdateRequestValidatorRequest * const q)
+    : UpdateRequestValidatorPrivate(other, q)
+{
+
+}

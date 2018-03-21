@@ -19,3 +19,107 @@
 
 #include "confirmforgotpasswordrequest.h"
 #include "confirmforgotpasswordrequest_p.h"
+#include "confirmforgotpasswordresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ConfirmForgotPasswordRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ConfirmForgotPassword requests.
+ *
+ * @see    CognitoIdentityProviderClient::confirmForgotPassword
+ */
+
+/**
+ * @brief  Constructs a new ConfirmForgotPasswordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmForgotPasswordResponse::ConfirmForgotPasswordResponse(
+
+/**
+ * @brief  Constructs a new ConfirmForgotPasswordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest(const ConfirmForgotPasswordRequest &other)
+    : CognitoIdentityProviderRequest(new ConfirmForgotPasswordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ConfirmForgotPasswordRequest object.
+ */
+ConfirmForgotPasswordRequest::ConfirmForgotPasswordRequest()
+    : CognitoIdentityProviderRequest(new ConfirmForgotPasswordRequestPrivate(CognitoIdentityProviderRequest::ConfirmForgotPasswordAction, this))
+{
+
+}
+
+bool ConfirmForgotPasswordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ConfirmForgotPasswordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ConfirmForgotPasswordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ConfirmForgotPasswordRequest::response(QNetworkReply * const reply) const
+{
+    return new ConfirmForgotPasswordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmForgotPasswordRequestPrivate
+ *
+ * @brief  Private implementation for ConfirmForgotPasswordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ConfirmForgotPasswordRequest instance.
+ */
+ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ConfirmForgotPasswordRequest * const q)
+    : ConfirmForgotPasswordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmForgotPasswordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ConfirmForgotPasswordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ConfirmForgotPasswordRequest instance.
+ */
+ConfirmForgotPasswordRequestPrivate::ConfirmForgotPasswordRequestPrivate(
+    const ConfirmForgotPasswordRequestPrivate &other, ConfirmForgotPasswordRequest * const q)
+    : ConfirmForgotPasswordPrivate(other, q)
+{
+
+}

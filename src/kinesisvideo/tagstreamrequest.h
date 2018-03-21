@@ -20,4 +20,32 @@
 #ifndef QTAWS_TAGSTREAMREQUEST_H
 #define QTAWS_TAGSTREAMREQUEST_H
 
+#include "kinesisvideorequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class TagStreamRequestPrivate;
+
+class QTAWS_EXPORT TagStreamRequest : public KinesisVideoRequest {
+
+public:
+    TagStreamRequest(const TagStreamRequest &other);
+    TagStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TagStreamRequest)
+
+}
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

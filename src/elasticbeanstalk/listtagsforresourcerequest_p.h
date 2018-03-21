@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ListTagsForResourceRequest;
+
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    ListTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,
+                                   ListTagsForResourceRequest * const q);
+    ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
+                                   ListTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

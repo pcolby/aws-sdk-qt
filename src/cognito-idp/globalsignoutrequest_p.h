@@ -20,4 +20,29 @@
 #ifndef QTAWS_GLOBALSIGNOUTREQUEST_P_H
 #define QTAWS_GLOBALSIGNOUTREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "globalsignoutrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GlobalSignOutRequest;
+
+class QTAWS_EXPORT GlobalSignOutRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    GlobalSignOutRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   GlobalSignOutRequest * const q);
+    GlobalSignOutRequestPrivate(const GlobalSignOutRequestPrivate &other,
+                                   GlobalSignOutRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GlobalSignOutRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletevpnconnectionrequest.h"
 #include "deletevpnconnectionrequest_p.h"
+#include "deletevpnconnectionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpnConnectionRequest
+ *
+ * @brief  Implements EC2 DeleteVpnConnection requests.
+ *
+ * @see    EC2Client::deleteVpnConnection
+ */
+
+/**
+ * @brief  Constructs a new DeleteVpnConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpnConnectionResponse::DeleteVpnConnectionResponse(
+
+/**
+ * @brief  Constructs a new DeleteVpnConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVpnConnectionRequest::DeleteVpnConnectionRequest(const DeleteVpnConnectionRequest &other)
+    : EC2Request(new DeleteVpnConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVpnConnectionRequest object.
+ */
+DeleteVpnConnectionRequest::DeleteVpnConnectionRequest()
+    : EC2Request(new DeleteVpnConnectionRequestPrivate(EC2Request::DeleteVpnConnectionAction, this))
+{
+
+}
+
+bool DeleteVpnConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVpnConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVpnConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVpnConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpnConnectionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVpnConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpnConnectionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteVpnConnectionRequest instance.
+ */
+DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
+    const EC2Request::Action action, DeleteVpnConnectionRequest * const q)
+    : DeleteVpnConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpnConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVpnConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVpnConnectionRequest instance.
+ */
+DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
+    const DeleteVpnConnectionRequestPrivate &other, DeleteVpnConnectionRequest * const q)
+    : DeleteVpnConnectionPrivate(other, q)
+{
+
+}

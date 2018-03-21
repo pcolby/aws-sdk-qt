@@ -19,3 +19,107 @@
 
 #include "uploadservercertificaterequest.h"
 #include "uploadservercertificaterequest_p.h"
+#include "uploadservercertificateresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UploadServerCertificateRequest
+ *
+ * @brief  Implements IAM UploadServerCertificate requests.
+ *
+ * @see    IAMClient::uploadServerCertificate
+ */
+
+/**
+ * @brief  Constructs a new UploadServerCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadServerCertificateResponse::UploadServerCertificateResponse(
+
+/**
+ * @brief  Constructs a new UploadServerCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UploadServerCertificateRequest::UploadServerCertificateRequest(const UploadServerCertificateRequest &other)
+    : IAMRequest(new UploadServerCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UploadServerCertificateRequest object.
+ */
+UploadServerCertificateRequest::UploadServerCertificateRequest()
+    : IAMRequest(new UploadServerCertificateRequestPrivate(IAMRequest::UploadServerCertificateAction, this))
+{
+
+}
+
+bool UploadServerCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UploadServerCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UploadServerCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UploadServerCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new UploadServerCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadServerCertificateRequestPrivate
+ *
+ * @brief  Private implementation for UploadServerCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadServerCertificateRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UploadServerCertificateRequest instance.
+ */
+UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
+    const IAMRequest::Action action, UploadServerCertificateRequest * const q)
+    : UploadServerCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadServerCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UploadServerCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UploadServerCertificateRequest instance.
+ */
+UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
+    const UploadServerCertificateRequestPrivate &other, UploadServerCertificateRequest * const q)
+    : UploadServerCertificatePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "startmatchbackfillrequest.h"
 #include "startmatchbackfillrequest_p.h"
+#include "startmatchbackfillresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StartMatchBackfillRequest
+ *
+ * @brief  Implements GameLift StartMatchBackfill requests.
+ *
+ * @see    GameLiftClient::startMatchBackfill
+ */
+
+/**
+ * @brief  Constructs a new StartMatchBackfillResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartMatchBackfillResponse::StartMatchBackfillResponse(
+
+/**
+ * @brief  Constructs a new StartMatchBackfillRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartMatchBackfillRequest::StartMatchBackfillRequest(const StartMatchBackfillRequest &other)
+    : GameLiftRequest(new StartMatchBackfillRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartMatchBackfillRequest object.
+ */
+StartMatchBackfillRequest::StartMatchBackfillRequest()
+    : GameLiftRequest(new StartMatchBackfillRequestPrivate(GameLiftRequest::StartMatchBackfillAction, this))
+{
+
+}
+
+bool StartMatchBackfillRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartMatchBackfillResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartMatchBackfillResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkReply * const reply) const
+{
+    return new StartMatchBackfillResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartMatchBackfillRequestPrivate
+ *
+ * @brief  Private implementation for StartMatchBackfillRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMatchBackfillRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public StartMatchBackfillRequest instance.
+ */
+StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
+    const GameLiftRequest::Action action, StartMatchBackfillRequest * const q)
+    : StartMatchBackfillPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMatchBackfillRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartMatchBackfillRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartMatchBackfillRequest instance.
+ */
+StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
+    const StartMatchBackfillRequestPrivate &other, StartMatchBackfillRequest * const q)
+    : StartMatchBackfillPrivate(other, q)
+{
+
+}

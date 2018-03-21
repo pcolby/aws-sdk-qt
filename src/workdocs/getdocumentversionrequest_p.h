@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDOCUMENTVERSIONREQUEST_P_H
 #define QTAWS_GETDOCUMENTVERSIONREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "getdocumentversionrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetDocumentVersionRequest;
+
+class QTAWS_EXPORT GetDocumentVersionRequestPrivate : public WorkDocsPrivate {
+
+public:
+    GetDocumentVersionRequestPrivate(const WorkDocs::Action action,
+                                   GetDocumentVersionRequest * const q);
+    GetDocumentVersionRequestPrivate(const GetDocumentVersionRequestPrivate &other,
+                                   GetDocumentVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDocumentVersionRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

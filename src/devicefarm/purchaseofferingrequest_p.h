@@ -20,4 +20,29 @@
 #ifndef QTAWS_PURCHASEOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASEOFFERINGREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "purchaseofferingrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class PurchaseOfferingRequest;
+
+class QTAWS_EXPORT PurchaseOfferingRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    PurchaseOfferingRequestPrivate(const DeviceFarm::Action action,
+                                   PurchaseOfferingRequest * const q);
+    PurchaseOfferingRequestPrivate(const PurchaseOfferingRequestPrivate &other,
+                                   PurchaseOfferingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseOfferingRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

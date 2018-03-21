@@ -19,3 +19,107 @@
 
 #include "stopdatacollectionbyagentidsrequest.h"
 #include "stopdatacollectionbyagentidsrequest_p.h"
+#include "stopdatacollectionbyagentidsresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  StopDataCollectionByAgentIdsRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService StopDataCollectionByAgentIds requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::stopDataCollectionByAgentIds
+ */
+
+/**
+ * @brief  Constructs a new StopDataCollectionByAgentIdsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
+
+/**
+ * @brief  Constructs a new StopDataCollectionByAgentIdsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest(const StopDataCollectionByAgentIdsRequest &other)
+    : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopDataCollectionByAgentIdsRequest object.
+ */
+StopDataCollectionByAgentIdsRequest::StopDataCollectionByAgentIdsRequest()
+    : ApplicationDiscoveryServiceRequest(new StopDataCollectionByAgentIdsRequestPrivate(ApplicationDiscoveryServiceRequest::StopDataCollectionByAgentIdsAction, this))
+{
+
+}
+
+bool StopDataCollectionByAgentIdsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopDataCollectionByAgentIdsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopDataCollectionByAgentIdsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response(QNetworkReply * const reply) const
+{
+    return new StopDataCollectionByAgentIdsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopDataCollectionByAgentIdsRequestPrivate
+ *
+ * @brief  Private implementation for StopDataCollectionByAgentIdsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDataCollectionByAgentIdsRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public StopDataCollectionByAgentIdsRequest instance.
+ */
+StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)
+    : StopDataCollectionByAgentIdsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopDataCollectionByAgentIdsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopDataCollectionByAgentIdsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopDataCollectionByAgentIdsRequest instance.
+ */
+StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
+    const StopDataCollectionByAgentIdsRequestPrivate &other, StopDataCollectionByAgentIdsRequest * const q)
+    : StopDataCollectionByAgentIdsPrivate(other, q)
+{
+
+}

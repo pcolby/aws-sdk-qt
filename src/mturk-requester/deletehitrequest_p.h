@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEHITREQUEST_P_H
 #define QTAWS_DELETEHITREQUEST_P_H
 
+#include "mturk_p.h"
+#include "deletehitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteHITRequest;
+
+class QTAWS_EXPORT DeleteHITRequestPrivate : public MTurkPrivate {
+
+public:
+    DeleteHITRequestPrivate(const MTurk::Action action,
+                                   DeleteHITRequest * const q);
+    DeleteHITRequestPrivate(const DeleteHITRequestPrivate &other,
+                                   DeleteHITRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHITRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

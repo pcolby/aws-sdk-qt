@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONNECTIONREQUEST_H
 #define QTAWS_GETCONNECTIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetConnectionRequestPrivate;
+
+class QTAWS_EXPORT GetConnectionRequest : public GlueRequest {
+
+public:
+    GetConnectionRequest(const GetConnectionRequest &other);
+    GetConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetConnectionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

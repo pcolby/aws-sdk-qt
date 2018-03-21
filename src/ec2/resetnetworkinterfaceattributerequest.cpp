@@ -19,3 +19,107 @@
 
 #include "resetnetworkinterfaceattributerequest.h"
 #include "resetnetworkinterfaceattributerequest_p.h"
+#include "resetnetworkinterfaceattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ResetNetworkInterfaceAttributeRequest
+ *
+ * @brief  Implements EC2 ResetNetworkInterfaceAttribute requests.
+ *
+ * @see    EC2Client::resetNetworkInterfaceAttribute
+ */
+
+/**
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
+
+/**
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest(const ResetNetworkInterfaceAttributeRequest &other)
+    : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeRequest object.
+ */
+ResetNetworkInterfaceAttributeRequest::ResetNetworkInterfaceAttributeRequest()
+    : EC2Request(new ResetNetworkInterfaceAttributeRequestPrivate(EC2Request::ResetNetworkInterfaceAttributeAction, this))
+{
+
+}
+
+bool ResetNetworkInterfaceAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetNetworkInterfaceAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetNetworkInterfaceAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetNetworkInterfaceAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetNetworkInterfaceAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ResetNetworkInterfaceAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ResetNetworkInterfaceAttributeRequest instance.
+ */
+ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
+    const EC2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)
+    : ResetNetworkInterfaceAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetNetworkInterfaceAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetNetworkInterfaceAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetNetworkInterfaceAttributeRequest instance.
+ */
+ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
+    const ResetNetworkInterfaceAttributeRequestPrivate &other, ResetNetworkInterfaceAttributeRequest * const q)
+    : ResetNetworkInterfaceAttributePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBOTVERSIONSREQUEST_P_H
 #define QTAWS_GETBOTVERSIONSREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "getbotversionsrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBotVersionsRequest;
+
+class QTAWS_EXPORT GetBotVersionsRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    GetBotVersionsRequestPrivate(const LexModelBuildingService::Action action,
+                                   GetBotVersionsRequest * const q);
+    GetBotVersionsRequestPrivate(const GetBotVersionsRequestPrivate &other,
+                                   GetBotVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBotVersionsRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

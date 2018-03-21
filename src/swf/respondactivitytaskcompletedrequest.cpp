@@ -19,3 +19,107 @@
 
 #include "respondactivitytaskcompletedrequest.h"
 #include "respondactivitytaskcompletedrequest_p.h"
+#include "respondactivitytaskcompletedresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskCompletedRequest
+ *
+ * @brief  Implements SWF RespondActivityTaskCompleted requests.
+ *
+ * @see    SWFClient::respondActivityTaskCompleted
+ */
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCompletedResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCompletedRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RespondActivityTaskCompletedRequest::RespondActivityTaskCompletedRequest(const RespondActivityTaskCompletedRequest &other)
+    : SWFRequest(new RespondActivityTaskCompletedRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCompletedRequest object.
+ */
+RespondActivityTaskCompletedRequest::RespondActivityTaskCompletedRequest()
+    : SWFRequest(new RespondActivityTaskCompletedRequestPrivate(SWFRequest::RespondActivityTaskCompletedAction, this))
+{
+
+}
+
+bool RespondActivityTaskCompletedRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RespondActivityTaskCompletedResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RespondActivityTaskCompletedResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * RespondActivityTaskCompletedRequest::response(QNetworkReply * const reply) const
+{
+    return new RespondActivityTaskCompletedResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskCompletedRequestPrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskCompletedRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCompletedRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public RespondActivityTaskCompletedRequest instance.
+ */
+RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestPrivate(
+    const SWFRequest::Action action, RespondActivityTaskCompletedRequest * const q)
+    : RespondActivityTaskCompletedPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCompletedRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RespondActivityTaskCompletedRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RespondActivityTaskCompletedRequest instance.
+ */
+RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestPrivate(
+    const RespondActivityTaskCompletedRequestPrivate &other, RespondActivityTaskCompletedRequest * const q)
+    : RespondActivityTaskCompletedPrivate(other, q)
+{
+
+}

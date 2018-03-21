@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYRESOURCEREQUEST_P_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYRESOURCEREQUEST_P_H
 
+#include "configservice_p.h"
+#include "getcompliancedetailsbyresourcerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetComplianceDetailsByResourceRequest;
+
+class QTAWS_EXPORT GetComplianceDetailsByResourceRequestPrivate : public ConfigServicePrivate {
+
+public:
+    GetComplianceDetailsByResourceRequestPrivate(const ConfigService::Action action,
+                                   GetComplianceDetailsByResourceRequest * const q);
+    GetComplianceDetailsByResourceRequestPrivate(const GetComplianceDetailsByResourceRequestPrivate &other,
+                                   GetComplianceDetailsByResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetComplianceDetailsByResourceRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETEPARAMETERGROUPREQUEST_P_H
 
+#include "dax_p.h"
+#include "deleteparametergrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DeleteParameterGroupRequest;
+
+class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DAXPrivate {
+
+public:
+    DeleteParameterGroupRequestPrivate(const DAX::Action action,
+                                   DeleteParameterGroupRequest * const q);
+    DeleteParameterGroupRequestPrivate(const DeleteParameterGroupRequestPrivate &other,
+                                   DeleteParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteParameterGroupRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

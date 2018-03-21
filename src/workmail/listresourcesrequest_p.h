@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOURCESREQUEST_P_H
 #define QTAWS_LISTRESOURCESREQUEST_P_H
 
+#include "workmail_p.h"
+#include "listresourcesrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListResourcesRequest;
+
+class QTAWS_EXPORT ListResourcesRequestPrivate : public WorkMailPrivate {
+
+public:
+    ListResourcesRequestPrivate(const WorkMail::Action action,
+                                   ListResourcesRequest * const q);
+    ListResourcesRequestPrivate(const ListResourcesRequestPrivate &other,
+                                   ListResourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourcesRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createplatformendpointrequest.h"
 #include "createplatformendpointrequest_p.h"
+#include "createplatformendpointresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CreatePlatformEndpointRequest
+ *
+ * @brief  Implements SNS CreatePlatformEndpoint requests.
+ *
+ * @see    SNSClient::createPlatformEndpoint
+ */
+
+/**
+ * @brief  Constructs a new CreatePlatformEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
+
+/**
+ * @brief  Constructs a new CreatePlatformEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePlatformEndpointRequest::CreatePlatformEndpointRequest(const CreatePlatformEndpointRequest &other)
+    : SNSRequest(new CreatePlatformEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePlatformEndpointRequest object.
+ */
+CreatePlatformEndpointRequest::CreatePlatformEndpointRequest()
+    : SNSRequest(new CreatePlatformEndpointRequestPrivate(SNSRequest::CreatePlatformEndpointAction, this))
+{
+
+}
+
+bool CreatePlatformEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePlatformEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePlatformEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePlatformEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlatformEndpointRequestPrivate
+ *
+ * @brief  Private implementation for CreatePlatformEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformEndpointRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public CreatePlatformEndpointRequest instance.
+ */
+CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
+    const SNSRequest::Action action, CreatePlatformEndpointRequest * const q)
+    : CreatePlatformEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePlatformEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePlatformEndpointRequest instance.
+ */
+CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
+    const CreatePlatformEndpointRequestPrivate &other, CreatePlatformEndpointRequest * const q)
+    : CreatePlatformEndpointPrivate(other, q)
+{
+
+}

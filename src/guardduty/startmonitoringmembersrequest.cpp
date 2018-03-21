@@ -19,3 +19,107 @@
 
 #include "startmonitoringmembersrequest.h"
 #include "startmonitoringmembersrequest_p.h"
+#include "startmonitoringmembersresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  StartMonitoringMembersRequest
+ *
+ * @brief  Implements GuardDuty StartMonitoringMembers requests.
+ *
+ * @see    GuardDutyClient::startMonitoringMembers
+ */
+
+/**
+ * @brief  Constructs a new StartMonitoringMembersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartMonitoringMembersResponse::StartMonitoringMembersResponse(
+
+/**
+ * @brief  Constructs a new StartMonitoringMembersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartMonitoringMembersRequest::StartMonitoringMembersRequest(const StartMonitoringMembersRequest &other)
+    : GuardDutyRequest(new StartMonitoringMembersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartMonitoringMembersRequest object.
+ */
+StartMonitoringMembersRequest::StartMonitoringMembersRequest()
+    : GuardDutyRequest(new StartMonitoringMembersRequestPrivate(GuardDutyRequest::StartMonitoringMembersAction, this))
+{
+
+}
+
+bool StartMonitoringMembersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartMonitoringMembersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartMonitoringMembersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * StartMonitoringMembersRequest::response(QNetworkReply * const reply) const
+{
+    return new StartMonitoringMembersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartMonitoringMembersRequestPrivate
+ *
+ * @brief  Private implementation for StartMonitoringMembersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMonitoringMembersRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public StartMonitoringMembersRequest instance.
+ */
+StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
+    const GuardDutyRequest::Action action, StartMonitoringMembersRequest * const q)
+    : StartMonitoringMembersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMonitoringMembersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartMonitoringMembersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartMonitoringMembersRequest instance.
+ */
+StartMonitoringMembersRequestPrivate::StartMonitoringMembersRequestPrivate(
+    const StartMonitoringMembersRequestPrivate &other, StartMonitoringMembersRequest * const q)
+    : StartMonitoringMembersPrivate(other, q)
+{
+
+}

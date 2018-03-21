@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEOBJECTREQUEST_P_H
 #define QTAWS_CREATEOBJECTREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "createobjectrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateObjectRequest;
+
+class QTAWS_EXPORT CreateObjectRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    CreateObjectRequestPrivate(const CloudDirectory::Action action,
+                                   CreateObjectRequest * const q);
+    CreateObjectRequestPrivate(const CreateObjectRequestPrivate &other,
+                                   CreateObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateObjectRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETRAFFICPOLICYINSTANCEREQUEST_H
 #define QTAWS_CREATETRAFFICPOLICYINSTANCEREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class CreateTrafficPolicyInstanceRequestPrivate;
+
+class QTAWS_EXPORT CreateTrafficPolicyInstanceRequest : public Route53Request {
+
+public:
+    CreateTrafficPolicyInstanceRequest(const CreateTrafficPolicyInstanceRequest &other);
+    CreateTrafficPolicyInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTrafficPolicyInstanceRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

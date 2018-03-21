@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHOSTEDCONNECTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEHOSTEDCONNECTIONSREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "describehostedconnectionsrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeHostedConnectionsRequest;
+
+class QTAWS_EXPORT DescribeHostedConnectionsRequestPrivate : public DirectConnectPrivate {
+
+public:
+    DescribeHostedConnectionsRequestPrivate(const DirectConnect::Action action,
+                                   DescribeHostedConnectionsRequest * const q);
+    DescribeHostedConnectionsRequestPrivate(const DescribeHostedConnectionsRequestPrivate &other,
+                                   DescribeHostedConnectionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHostedConnectionsRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

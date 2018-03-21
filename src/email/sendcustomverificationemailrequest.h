@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDCUSTOMVERIFICATIONEMAILREQUEST_H
 #define QTAWS_SENDCUSTOMVERIFICATIONEMAILREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendCustomVerificationEmailRequestPrivate;
+
+class QTAWS_EXPORT SendCustomVerificationEmailRequest : public SESRequest {
+
+public:
+    SendCustomVerificationEmailRequest(const SendCustomVerificationEmailRequest &other);
+    SendCustomVerificationEmailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendCustomVerificationEmailRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

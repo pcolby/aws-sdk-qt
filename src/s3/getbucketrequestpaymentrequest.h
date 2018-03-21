@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETREQUESTPAYMENTREQUEST_H
 #define QTAWS_GETBUCKETREQUESTPAYMENTREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketRequestPaymentRequestPrivate;
+
+class QTAWS_EXPORT GetBucketRequestPaymentRequest : public S3Request {
+
+public:
+    GetBucketRequestPaymentRequest(const GetBucketRequestPaymentRequest &other);
+    GetBucketRequestPaymentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketRequestPaymentRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

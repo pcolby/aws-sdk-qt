@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_H
 #define QTAWS_ACCEPTRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AcceptReservedInstancesExchangeQuoteRequestPrivate;
+
+class QTAWS_EXPORT AcceptReservedInstancesExchangeQuoteRequest : public EC2Request {
+
+public:
+    AcceptReservedInstancesExchangeQuoteRequest(const AcceptReservedInstancesExchangeQuoteRequest &other);
+    AcceptReservedInstancesExchangeQuoteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptReservedInstancesExchangeQuoteRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "initiatevaultlockrequest.h"
 #include "initiatevaultlockrequest_p.h"
+#include "initiatevaultlockresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  InitiateVaultLockRequest
+ *
+ * @brief  Implements Glacier InitiateVaultLock requests.
+ *
+ * @see    GlacierClient::initiateVaultLock
+ */
+
+/**
+ * @brief  Constructs a new InitiateVaultLockResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateVaultLockResponse::InitiateVaultLockResponse(
+
+/**
+ * @brief  Constructs a new InitiateVaultLockRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitiateVaultLockRequest::InitiateVaultLockRequest(const InitiateVaultLockRequest &other)
+    : GlacierRequest(new InitiateVaultLockRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitiateVaultLockRequest object.
+ */
+InitiateVaultLockRequest::InitiateVaultLockRequest()
+    : GlacierRequest(new InitiateVaultLockRequestPrivate(GlacierRequest::InitiateVaultLockAction, this))
+{
+
+}
+
+bool InitiateVaultLockRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitiateVaultLockResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitiateVaultLockResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * InitiateVaultLockRequest::response(QNetworkReply * const reply) const
+{
+    return new InitiateVaultLockResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateVaultLockRequestPrivate
+ *
+ * @brief  Private implementation for InitiateVaultLockRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateVaultLockRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public InitiateVaultLockRequest instance.
+ */
+InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
+    const GlacierRequest::Action action, InitiateVaultLockRequest * const q)
+    : InitiateVaultLockPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateVaultLockRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitiateVaultLockRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitiateVaultLockRequest instance.
+ */
+InitiateVaultLockRequestPrivate::InitiateVaultLockRequestPrivate(
+    const InitiateVaultLockRequestPrivate &other, InitiateVaultLockRequest * const q)
+    : InitiateVaultLockPrivate(other, q)
+{
+
+}

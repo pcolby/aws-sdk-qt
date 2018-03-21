@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEHSMCONFIGURATIONREQUEST_H
 #define QTAWS_DELETEHSMCONFIGURATIONREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteHsmConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteHsmConfigurationRequest : public RedshiftRequest {
+
+public:
+    DeleteHsmConfigurationRequest(const DeleteHsmConfigurationRequest &other);
+    DeleteHsmConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHsmConfigurationRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describedbsecuritygroupsrequest.h"
 #include "describedbsecuritygroupsrequest_p.h"
+#include "describedbsecuritygroupsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBSecurityGroupsRequest
+ *
+ * @brief  Implements RDS DescribeDBSecurityGroups requests.
+ *
+ * @see    RDSClient::describeDBSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBSecurityGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBSecurityGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest(const DescribeDBSecurityGroupsRequest &other)
+    : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBSecurityGroupsRequest object.
+ */
+DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest()
+    : RDSRequest(new DescribeDBSecurityGroupsRequestPrivate(RDSRequest::DescribeDBSecurityGroupsAction, this))
+{
+
+}
+
+bool DescribeDBSecurityGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBSecurityGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBSecurityGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBSecurityGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBSecurityGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBSecurityGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSecurityGroupsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBSecurityGroupsRequest instance.
+ */
+DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
+    const RDSRequest::Action action, DescribeDBSecurityGroupsRequest * const q)
+    : DescribeDBSecurityGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSecurityGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBSecurityGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBSecurityGroupsRequest instance.
+ */
+DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
+    const DescribeDBSecurityGroupsRequestPrivate &other, DescribeDBSecurityGroupsRequest * const q)
+    : DescribeDBSecurityGroupsPrivate(other, q)
+{
+
+}

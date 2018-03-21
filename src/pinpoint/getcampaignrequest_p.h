@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCAMPAIGNREQUEST_P_H
 #define QTAWS_GETCAMPAIGNREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getcampaignrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetCampaignRequest;
+
+class QTAWS_EXPORT GetCampaignRequestPrivate : public PinpointPrivate {
+
+public:
+    GetCampaignRequestPrivate(const Pinpoint::Action action,
+                                   GetCampaignRequest * const q);
+    GetCampaignRequestPrivate(const GetCampaignRequestPrivate &other,
+                                   GetCampaignRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCampaignRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

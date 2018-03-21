@@ -19,3 +19,107 @@
 
 #include "validateconfigurationsettingsrequest.h"
 #include "validateconfigurationsettingsrequest_p.h"
+#include "validateconfigurationsettingsresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ValidateConfigurationSettingsRequest
+ *
+ * @brief  Implements ElasticBeanstalk ValidateConfigurationSettings requests.
+ *
+ * @see    ElasticBeanstalkClient::validateConfigurationSettings
+ */
+
+/**
+ * @brief  Constructs a new ValidateConfigurationSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
+
+/**
+ * @brief  Constructs a new ValidateConfigurationSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ValidateConfigurationSettingsRequest::ValidateConfigurationSettingsRequest(const ValidateConfigurationSettingsRequest &other)
+    : ElasticBeanstalkRequest(new ValidateConfigurationSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ValidateConfigurationSettingsRequest object.
+ */
+ValidateConfigurationSettingsRequest::ValidateConfigurationSettingsRequest()
+    : ElasticBeanstalkRequest(new ValidateConfigurationSettingsRequestPrivate(ElasticBeanstalkRequest::ValidateConfigurationSettingsAction, this))
+{
+
+}
+
+bool ValidateConfigurationSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ValidateConfigurationSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ValidateConfigurationSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * ValidateConfigurationSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new ValidateConfigurationSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ValidateConfigurationSettingsRequestPrivate
+ *
+ * @brief  Private implementation for ValidateConfigurationSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateConfigurationSettingsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public ValidateConfigurationSettingsRequest instance.
+ */
+ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, ValidateConfigurationSettingsRequest * const q)
+    : ValidateConfigurationSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateConfigurationSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ValidateConfigurationSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ValidateConfigurationSettingsRequest instance.
+ */
+ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
+    const ValidateConfigurationSettingsRequestPrivate &other, ValidateConfigurationSettingsRequest * const q)
+    : ValidateConfigurationSettingsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "increasereplicationfactorrequest.h"
 #include "increasereplicationfactorrequest_p.h"
+#include "increasereplicationfactorresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  IncreaseReplicationFactorRequest
+ *
+ * @brief  Implements DAX IncreaseReplicationFactor requests.
+ *
+ * @see    DAXClient::increaseReplicationFactor
+ */
+
+/**
+ * @brief  Constructs a new IncreaseReplicationFactorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
+
+/**
+ * @brief  Constructs a new IncreaseReplicationFactorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest(const IncreaseReplicationFactorRequest &other)
+    : DAXRequest(new IncreaseReplicationFactorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new IncreaseReplicationFactorRequest object.
+ */
+IncreaseReplicationFactorRequest::IncreaseReplicationFactorRequest()
+    : DAXRequest(new IncreaseReplicationFactorRequestPrivate(DAXRequest::IncreaseReplicationFactorAction, this))
+{
+
+}
+
+bool IncreaseReplicationFactorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an IncreaseReplicationFactorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An IncreaseReplicationFactorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
+{
+    return new IncreaseReplicationFactorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  IncreaseReplicationFactorRequestPrivate
+ *
+ * @brief  Private implementation for IncreaseReplicationFactorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public IncreaseReplicationFactorRequest instance.
+ */
+IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
+    const DAXRequest::Action action, IncreaseReplicationFactorRequest * const q)
+    : IncreaseReplicationFactorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseReplicationFactorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the IncreaseReplicationFactorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public IncreaseReplicationFactorRequest instance.
+ */
+IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
+    const IncreaseReplicationFactorRequestPrivate &other, IncreaseReplicationFactorRequest * const q)
+    : IncreaseReplicationFactorPrivate(other, q)
+{
+
+}

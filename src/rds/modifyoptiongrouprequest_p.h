@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYOPTIONGROUPREQUEST_P_H
 #define QTAWS_MODIFYOPTIONGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "modifyoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyOptionGroupRequest;
+
+class QTAWS_EXPORT ModifyOptionGroupRequestPrivate : public RDSPrivate {
+
+public:
+    ModifyOptionGroupRequestPrivate(const RDS::Action action,
+                                   ModifyOptionGroupRequest * const q);
+    ModifyOptionGroupRequestPrivate(const ModifyOptionGroupRequestPrivate &other,
+                                   ModifyOptionGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyOptionGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

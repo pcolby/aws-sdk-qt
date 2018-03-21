@@ -19,3 +19,107 @@
 
 #include "describeindexrequest.h"
 #include "describeindexrequest_p.h"
+#include "describeindexresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeIndexRequest
+ *
+ * @brief  Implements IoT DescribeIndex requests.
+ *
+ * @see    IoTClient::describeIndex
+ */
+
+/**
+ * @brief  Constructs a new DescribeIndexResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIndexResponse::DescribeIndexResponse(
+
+/**
+ * @brief  Constructs a new DescribeIndexRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeIndexRequest::DescribeIndexRequest(const DescribeIndexRequest &other)
+    : IoTRequest(new DescribeIndexRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeIndexRequest object.
+ */
+DescribeIndexRequest::DescribeIndexRequest()
+    : IoTRequest(new DescribeIndexRequestPrivate(IoTRequest::DescribeIndexAction, this))
+{
+
+}
+
+bool DescribeIndexRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeIndexResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeIndexResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeIndexResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIndexRequestPrivate
+ *
+ * @brief  Private implementation for DescribeIndexRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIndexRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeIndexRequest instance.
+ */
+DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
+    const IoTRequest::Action action, DescribeIndexRequest * const q)
+    : DescribeIndexPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIndexRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeIndexRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeIndexRequest instance.
+ */
+DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
+    const DescribeIndexRequestPrivate &other, DescribeIndexRequest * const q)
+    : DescribeIndexPrivate(other, q)
+{
+
+}

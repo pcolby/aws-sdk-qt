@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEENVIRONMENTMEMBERSHIPREQUEST_P_H
 #define QTAWS_UPDATEENVIRONMENTMEMBERSHIPREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "updateenvironmentmembershiprequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class UpdateEnvironmentMembershipRequest;
+
+class QTAWS_EXPORT UpdateEnvironmentMembershipRequestPrivate : public Cloud9Private {
+
+public:
+    UpdateEnvironmentMembershipRequestPrivate(const Cloud9::Action action,
+                                   UpdateEnvironmentMembershipRequest * const q);
+    UpdateEnvironmentMembershipRequestPrivate(const UpdateEnvironmentMembershipRequestPrivate &other,
+                                   UpdateEnvironmentMembershipRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEnvironmentMembershipRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

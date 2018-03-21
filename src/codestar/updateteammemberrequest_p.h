@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETEAMMEMBERREQUEST_P_H
 #define QTAWS_UPDATETEAMMEMBERREQUEST_P_H
 
+#include "codestar_p.h"
+#include "updateteammemberrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class UpdateTeamMemberRequest;
+
+class QTAWS_EXPORT UpdateTeamMemberRequestPrivate : public CodeStarPrivate {
+
+public:
+    UpdateTeamMemberRequestPrivate(const CodeStar::Action action,
+                                   UpdateTeamMemberRequest * const q);
+    UpdateTeamMemberRequestPrivate(const UpdateTeamMemberRequestPrivate &other,
+                                   UpdateTeamMemberRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTeamMemberRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

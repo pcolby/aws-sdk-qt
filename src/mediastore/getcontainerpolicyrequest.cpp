@@ -19,3 +19,107 @@
 
 #include "getcontainerpolicyrequest.h"
 #include "getcontainerpolicyrequest_p.h"
+#include "getcontainerpolicyresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  GetContainerPolicyRequest
+ *
+ * @brief  Implements MediaStore GetContainerPolicy requests.
+ *
+ * @see    MediaStoreClient::getContainerPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetContainerPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContainerPolicyResponse::GetContainerPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetContainerPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetContainerPolicyRequest::GetContainerPolicyRequest(const GetContainerPolicyRequest &other)
+    : MediaStoreRequest(new GetContainerPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetContainerPolicyRequest object.
+ */
+GetContainerPolicyRequest::GetContainerPolicyRequest()
+    : MediaStoreRequest(new GetContainerPolicyRequestPrivate(MediaStoreRequest::GetContainerPolicyAction, this))
+{
+
+}
+
+bool GetContainerPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetContainerPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetContainerPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * GetContainerPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetContainerPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContainerPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetContainerPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContainerPolicyRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public GetContainerPolicyRequest instance.
+ */
+GetContainerPolicyRequestPrivate::GetContainerPolicyRequestPrivate(
+    const MediaStoreRequest::Action action, GetContainerPolicyRequest * const q)
+    : GetContainerPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContainerPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetContainerPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetContainerPolicyRequest instance.
+ */
+GetContainerPolicyRequestPrivate::GetContainerPolicyRequestPrivate(
+    const GetContainerPolicyRequestPrivate &other, GetContainerPolicyRequest * const q)
+    : GetContainerPolicyPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "updateipsetrequest.h"
 #include "updateipsetrequest_p.h"
+#include "updateipsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  UpdateIPSetRequest
+ *
+ * @brief  Implements WAFRegional UpdateIPSet requests.
+ *
+ * @see    WAFRegionalClient::updateIPSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateIPSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIPSetResponse::UpdateIPSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateIPSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateIPSetRequest::UpdateIPSetRequest(const UpdateIPSetRequest &other)
+    : WAFRegionalRequest(new UpdateIPSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateIPSetRequest object.
+ */
+UpdateIPSetRequest::UpdateIPSetRequest()
+    : WAFRegionalRequest(new UpdateIPSetRequestPrivate(WAFRegionalRequest::UpdateIPSetAction, this))
+{
+
+}
+
+bool UpdateIPSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateIPSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateIPSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateIPSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIPSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateIPSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIPSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public UpdateIPSetRequest instance.
+ */
+UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
+    const WAFRegionalRequest::Action action, UpdateIPSetRequest * const q)
+    : UpdateIPSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIPSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateIPSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateIPSetRequest instance.
+ */
+UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
+    const UpdateIPSetRequestPrivate &other, UpdateIPSetRequest * const q)
+    : UpdateIPSetPrivate(other, q)
+{
+
+}

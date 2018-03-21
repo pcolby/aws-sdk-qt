@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEENVIRONMENTMEMBERSHIPREQUEST_H
 #define QTAWS_CREATEENVIRONMENTMEMBERSHIPREQUEST_H
 
+#include "cloud9request.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class CreateEnvironmentMembershipRequestPrivate;
+
+class QTAWS_EXPORT CreateEnvironmentMembershipRequest : public Cloud9Request {
+
+public:
+    CreateEnvironmentMembershipRequest(const CreateEnvironmentMembershipRequest &other);
+    CreateEnvironmentMembershipRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateEnvironmentMembershipRequest)
+
+}
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

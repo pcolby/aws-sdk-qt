@@ -19,3 +19,107 @@
 
 #include "describedocumentversionsrequest.h"
 #include "describedocumentversionsrequest_p.h"
+#include "describedocumentversionsresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeDocumentVersionsRequest
+ *
+ * @brief  Implements WorkDocs DescribeDocumentVersions requests.
+ *
+ * @see    WorkDocsClient::describeDocumentVersions
+ */
+
+/**
+ * @brief  Constructs a new DescribeDocumentVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDocumentVersionsResponse::DescribeDocumentVersionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDocumentVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDocumentVersionsRequest::DescribeDocumentVersionsRequest(const DescribeDocumentVersionsRequest &other)
+    : WorkDocsRequest(new DescribeDocumentVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDocumentVersionsRequest object.
+ */
+DescribeDocumentVersionsRequest::DescribeDocumentVersionsRequest()
+    : WorkDocsRequest(new DescribeDocumentVersionsRequestPrivate(WorkDocsRequest::DescribeDocumentVersionsAction, this))
+{
+
+}
+
+bool DescribeDocumentVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDocumentVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDocumentVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDocumentVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDocumentVersionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDocumentVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDocumentVersionsRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DescribeDocumentVersionsRequest instance.
+ */
+DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
+    const WorkDocsRequest::Action action, DescribeDocumentVersionsRequest * const q)
+    : DescribeDocumentVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDocumentVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDocumentVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDocumentVersionsRequest instance.
+ */
+DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
+    const DescribeDocumentVersionsRequestPrivate &other, DescribeDocumentVersionsRequest * const q)
+    : DescribeDocumentVersionsPrivate(other, q)
+{
+
+}

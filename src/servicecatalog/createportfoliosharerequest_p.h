@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPORTFOLIOSHAREREQUEST_P_H
 #define QTAWS_CREATEPORTFOLIOSHAREREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "createportfoliosharerequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreatePortfolioShareRequest;
+
+class QTAWS_EXPORT CreatePortfolioShareRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    CreatePortfolioShareRequestPrivate(const ServiceCatalog::Action action,
+                                   CreatePortfolioShareRequest * const q);
+    CreatePortfolioShareRequestPrivate(const CreatePortfolioShareRequestPrivate &other,
+                                   CreatePortfolioShareRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePortfolioShareRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

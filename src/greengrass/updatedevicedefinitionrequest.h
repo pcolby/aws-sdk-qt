@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDEVICEDEFINITIONREQUEST_H
 #define QTAWS_UPDATEDEVICEDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateDeviceDefinitionRequestPrivate;
+
+class QTAWS_EXPORT UpdateDeviceDefinitionRequest : public GreengrassRequest {
+
+public:
+    UpdateDeviceDefinitionRequest(const UpdateDeviceDefinitionRequest &other);
+    UpdateDeviceDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDeviceDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

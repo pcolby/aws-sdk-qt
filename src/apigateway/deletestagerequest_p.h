@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTAGEREQUEST_P_H
 #define QTAWS_DELETESTAGEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deletestagerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteStageRequest;
+
+class QTAWS_EXPORT DeleteStageRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteStageRequestPrivate(const APIGateway::Action action,
+                                   DeleteStageRequest * const q);
+    DeleteStageRequestPrivate(const DeleteStageRequestPrivate &other,
+                                   DeleteStageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStageRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describefleetcapacityrequest.h"
 #include "describefleetcapacityrequest_p.h"
+#include "describefleetcapacityresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetCapacityRequest
+ *
+ * @brief  Implements GameLift DescribeFleetCapacity requests.
+ *
+ * @see    GameLiftClient::describeFleetCapacity
+ */
+
+/**
+ * @brief  Constructs a new DescribeFleetCapacityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetCapacityResponse::DescribeFleetCapacityResponse(
+
+/**
+ * @brief  Constructs a new DescribeFleetCapacityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFleetCapacityRequest::DescribeFleetCapacityRequest(const DescribeFleetCapacityRequest &other)
+    : GameLiftRequest(new DescribeFleetCapacityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFleetCapacityRequest object.
+ */
+DescribeFleetCapacityRequest::DescribeFleetCapacityRequest()
+    : GameLiftRequest(new DescribeFleetCapacityRequestPrivate(GameLiftRequest::DescribeFleetCapacityAction, this))
+{
+
+}
+
+bool DescribeFleetCapacityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFleetCapacityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFleetCapacityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribeFleetCapacityRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFleetCapacityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetCapacityRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFleetCapacityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetCapacityRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribeFleetCapacityRequest instance.
+ */
+DescribeFleetCapacityRequestPrivate::DescribeFleetCapacityRequestPrivate(
+    const GameLiftRequest::Action action, DescribeFleetCapacityRequest * const q)
+    : DescribeFleetCapacityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetCapacityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFleetCapacityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFleetCapacityRequest instance.
+ */
+DescribeFleetCapacityRequestPrivate::DescribeFleetCapacityRequestPrivate(
+    const DescribeFleetCapacityRequestPrivate &other, DescribeFleetCapacityRequest * const q)
+    : DescribeFleetCapacityPrivate(other, q)
+{
+
+}

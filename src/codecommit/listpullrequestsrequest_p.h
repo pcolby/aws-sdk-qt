@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPULLREQUESTSREQUEST_P_H
 #define QTAWS_LISTPULLREQUESTSREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "listpullrequestsrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListPullRequestsRequest;
+
+class QTAWS_EXPORT ListPullRequestsRequestPrivate : public CodeCommitPrivate {
+
+public:
+    ListPullRequestsRequestPrivate(const CodeCommit::Action action,
+                                   ListPullRequestsRequest * const q);
+    ListPullRequestsRequestPrivate(const ListPullRequestsRequestPrivate &other,
+                                   ListPullRequestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPullRequestsRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

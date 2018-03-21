@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPROJECTREQUEST_H
 #define QTAWS_CREATEPROJECTREQUEST_H
 
+#include "mobilerequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class CreateProjectRequestPrivate;
+
+class QTAWS_EXPORT CreateProjectRequest : public MobileRequest {
+
+public:
+    CreateProjectRequest(const CreateProjectRequest &other);
+    CreateProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProjectRequest)
+
+}
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

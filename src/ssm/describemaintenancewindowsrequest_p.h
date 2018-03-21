@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCEWINDOWSREQUEST_P_H
 #define QTAWS_DESCRIBEMAINTENANCEWINDOWSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describemaintenancewindowsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeMaintenanceWindowsRequest;
+
+class QTAWS_EXPORT DescribeMaintenanceWindowsRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeMaintenanceWindowsRequestPrivate(const SSM::Action action,
+                                   DescribeMaintenanceWindowsRequest * const q);
+    DescribeMaintenanceWindowsRequestPrivate(const DescribeMaintenanceWindowsRequestPrivate &other,
+                                   DescribeMaintenanceWindowsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMaintenanceWindowsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

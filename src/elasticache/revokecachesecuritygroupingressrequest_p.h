@@ -20,4 +20,29 @@
 #ifndef QTAWS_REVOKECACHESECURITYGROUPINGRESSREQUEST_P_H
 #define QTAWS_REVOKECACHESECURITYGROUPINGRESSREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "revokecachesecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class RevokeCacheSecurityGroupIngressRequest;
+
+class QTAWS_EXPORT RevokeCacheSecurityGroupIngressRequestPrivate : public ElastiCachePrivate {
+
+public:
+    RevokeCacheSecurityGroupIngressRequestPrivate(const ElastiCache::Action action,
+                                   RevokeCacheSecurityGroupIngressRequest * const q);
+    RevokeCacheSecurityGroupIngressRequestPrivate(const RevokeCacheSecurityGroupIngressRequestPrivate &other,
+                                   RevokeCacheSecurityGroupIngressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeCacheSecurityGroupIngressRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

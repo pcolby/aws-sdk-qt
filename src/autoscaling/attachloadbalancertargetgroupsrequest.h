@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTARGETGROUPSREQUEST_H
 #define QTAWS_ATTACHLOADBALANCERTARGETGROUPSREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class AttachLoadBalancerTargetGroupsRequestPrivate;
+
+class QTAWS_EXPORT AttachLoadBalancerTargetGroupsRequest : public AutoScalingRequest {
+
+public:
+    AttachLoadBalancerTargetGroupsRequest(const AttachLoadBalancerTargetGroupsRequest &other);
+    AttachLoadBalancerTargetGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachLoadBalancerTargetGroupsRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

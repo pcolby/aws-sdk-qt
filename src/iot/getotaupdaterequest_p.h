@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOTAUPDATEREQUEST_P_H
 #define QTAWS_GETOTAUPDATEREQUEST_P_H
 
+#include "iot_p.h"
+#include "getotaupdaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetOTAUpdateRequest;
+
+class QTAWS_EXPORT GetOTAUpdateRequestPrivate : public IoTPrivate {
+
+public:
+    GetOTAUpdateRequestPrivate(const IoT::Action action,
+                                   GetOTAUpdateRequest * const q);
+    GetOTAUpdateRequestPrivate(const GetOTAUpdateRequestPrivate &other,
+                                   GetOTAUpdateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetOTAUpdateRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

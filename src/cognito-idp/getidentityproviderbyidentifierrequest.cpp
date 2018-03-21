@@ -19,3 +19,107 @@
 
 #include "getidentityproviderbyidentifierrequest.h"
 #include "getidentityproviderbyidentifierrequest_p.h"
+#include "getidentityproviderbyidentifierresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetIdentityProviderByIdentifierRequest
+ *
+ * @brief  Implements CognitoIdentityProvider GetIdentityProviderByIdentifier requests.
+ *
+ * @see    CognitoIdentityProviderClient::getIdentityProviderByIdentifier
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityProviderByIdentifierResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityProviderByIdentifierResponse::GetIdentityProviderByIdentifierResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityProviderByIdentifierRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityProviderByIdentifierRequest::GetIdentityProviderByIdentifierRequest(const GetIdentityProviderByIdentifierRequest &other)
+    : CognitoIdentityProviderRequest(new GetIdentityProviderByIdentifierRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityProviderByIdentifierRequest object.
+ */
+GetIdentityProviderByIdentifierRequest::GetIdentityProviderByIdentifierRequest()
+    : CognitoIdentityProviderRequest(new GetIdentityProviderByIdentifierRequestPrivate(CognitoIdentityProviderRequest::GetIdentityProviderByIdentifierAction, this))
+{
+
+}
+
+bool GetIdentityProviderByIdentifierRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityProviderByIdentifierResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityProviderByIdentifierResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * GetIdentityProviderByIdentifierRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityProviderByIdentifierResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityProviderByIdentifierRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityProviderByIdentifierRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityProviderByIdentifierRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public GetIdentityProviderByIdentifierRequest instance.
+ */
+GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, GetIdentityProviderByIdentifierRequest * const q)
+    : GetIdentityProviderByIdentifierPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityProviderByIdentifierRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityProviderByIdentifierRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityProviderByIdentifierRequest instance.
+ */
+GetIdentityProviderByIdentifierRequestPrivate::GetIdentityProviderByIdentifierRequestPrivate(
+    const GetIdentityProviderByIdentifierRequestPrivate &other, GetIdentityProviderByIdentifierRequest * const q)
+    : GetIdentityProviderByIdentifierPrivate(other, q)
+{
+
+}

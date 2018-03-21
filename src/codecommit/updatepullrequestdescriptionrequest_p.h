@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPULLREQUESTDESCRIPTIONREQUEST_P_H
 #define QTAWS_UPDATEPULLREQUESTDESCRIPTIONREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "updatepullrequestdescriptionrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdatePullRequestDescriptionRequest;
+
+class QTAWS_EXPORT UpdatePullRequestDescriptionRequestPrivate : public CodeCommitPrivate {
+
+public:
+    UpdatePullRequestDescriptionRequestPrivate(const CodeCommit::Action action,
+                                   UpdatePullRequestDescriptionRequest * const q);
+    UpdatePullRequestDescriptionRequestPrivate(const UpdatePullRequestDescriptionRequestPrivate &other,
+                                   UpdatePullRequestDescriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePullRequestDescriptionRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

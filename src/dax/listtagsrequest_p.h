@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
+#include "dax_p.h"
+#include "listtagsrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class ListTagsRequest;
+
+class QTAWS_EXPORT ListTagsRequestPrivate : public DAXPrivate {
+
+public:
+    ListTagsRequestPrivate(const DAX::Action action,
+                                   ListTagsRequest * const q);
+    ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
+                                   ListTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

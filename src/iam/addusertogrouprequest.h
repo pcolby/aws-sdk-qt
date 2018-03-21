@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDUSERTOGROUPREQUEST_H
 #define QTAWS_ADDUSERTOGROUPREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AddUserToGroupRequestPrivate;
+
+class QTAWS_EXPORT AddUserToGroupRequest : public IAMRequest {
+
+public:
+    AddUserToGroupRequest(const AddUserToGroupRequest &other);
+    AddUserToGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddUserToGroupRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

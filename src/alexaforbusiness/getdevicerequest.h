@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDEVICEREQUEST_H
 #define QTAWS_GETDEVICEREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetDeviceRequestPrivate;
+
+class QTAWS_EXPORT GetDeviceRequest : public AlexaForBusinessRequest {
+
+public:
+    GetDeviceRequest(const GetDeviceRequest &other);
+    GetDeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDeviceRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

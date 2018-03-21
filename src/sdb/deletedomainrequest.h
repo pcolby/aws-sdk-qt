@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDOMAINREQUEST_H
 #define QTAWS_DELETEDOMAINREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DeleteDomainRequestPrivate;
+
+class QTAWS_EXPORT DeleteDomainRequest : public SimpleDBRequest {
+
+public:
+    DeleteDomainRequest(const DeleteDomainRequest &other);
+    DeleteDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDomainRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACTIVITYREQUEST_H
 #define QTAWS_DESCRIBEACTIVITYREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DescribeActivityRequestPrivate;
+
+class QTAWS_EXPORT DescribeActivityRequest : public SFNRequest {
+
+public:
+    DescribeActivityRequest(const DescribeActivityRequest &other);
+    DescribeActivityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeActivityRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

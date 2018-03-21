@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIDENTITYREQUEST_P_H
 #define QTAWS_DESCRIBEIDENTITYREQUEST_P_H
 
+#include "cognitoidentity_p.h"
+#include "describeidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class DescribeIdentityRequest;
+
+class QTAWS_EXPORT DescribeIdentityRequestPrivate : public CognitoIdentityPrivate {
+
+public:
+    DescribeIdentityRequestPrivate(const CognitoIdentity::Action action,
+                                   DescribeIdentityRequest * const q);
+    DescribeIdentityRequestPrivate(const DescribeIdentityRequestPrivate &other,
+                                   DescribeIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIdentityRequest)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

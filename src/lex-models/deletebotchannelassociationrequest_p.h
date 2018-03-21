@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBOTCHANNELASSOCIATIONREQUEST_P_H
 #define QTAWS_DELETEBOTCHANNELASSOCIATIONREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "deletebotchannelassociationrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteBotChannelAssociationRequest;
+
+class QTAWS_EXPORT DeleteBotChannelAssociationRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    DeleteBotChannelAssociationRequestPrivate(const LexModelBuildingService::Action action,
+                                   DeleteBotChannelAssociationRequest * const q);
+    DeleteBotChannelAssociationRequestPrivate(const DeleteBotChannelAssociationRequestPrivate &other,
+                                   DeleteBotChannelAssociationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBotChannelAssociationRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

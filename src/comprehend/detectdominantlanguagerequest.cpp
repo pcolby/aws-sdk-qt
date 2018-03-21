@@ -19,3 +19,107 @@
 
 #include "detectdominantlanguagerequest.h"
 #include "detectdominantlanguagerequest_p.h"
+#include "detectdominantlanguageresponse.h"
+#include "comprehendrequest_p.h"
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectDominantLanguageRequest
+ *
+ * @brief  Implements Comprehend DetectDominantLanguage requests.
+ *
+ * @see    ComprehendClient::detectDominantLanguage
+ */
+
+/**
+ * @brief  Constructs a new DetectDominantLanguageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectDominantLanguageResponse::DetectDominantLanguageResponse(
+
+/**
+ * @brief  Constructs a new DetectDominantLanguageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetectDominantLanguageRequest::DetectDominantLanguageRequest(const DetectDominantLanguageRequest &other)
+    : ComprehendRequest(new DetectDominantLanguageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetectDominantLanguageRequest object.
+ */
+DetectDominantLanguageRequest::DetectDominantLanguageRequest()
+    : ComprehendRequest(new DetectDominantLanguageRequestPrivate(ComprehendRequest::DetectDominantLanguageAction, this))
+{
+
+}
+
+bool DetectDominantLanguageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetectDominantLanguageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetectDominantLanguageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ComprehendClient::send
+ */
+AwsAbstractResponse * DetectDominantLanguageRequest::response(QNetworkReply * const reply) const
+{
+    return new DetectDominantLanguageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectDominantLanguageRequestPrivate
+ *
+ * @brief  Private implementation for DetectDominantLanguageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectDominantLanguageRequestPrivate object.
+ *
+ * @param  action  Comprehend action being performed.
+ * @param  q       Pointer to this object's public DetectDominantLanguageRequest instance.
+ */
+DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
+    const ComprehendRequest::Action action, DetectDominantLanguageRequest * const q)
+    : DetectDominantLanguagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectDominantLanguageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetectDominantLanguageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetectDominantLanguageRequest instance.
+ */
+DetectDominantLanguageRequestPrivate::DetectDominantLanguageRequestPrivate(
+    const DetectDominantLanguageRequestPrivate &other, DetectDominantLanguageRequest * const q)
+    : DetectDominantLanguagePrivate(other, q)
+{
+
+}

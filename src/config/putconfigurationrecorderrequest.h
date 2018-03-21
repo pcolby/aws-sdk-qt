@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTCONFIGURATIONRECORDERREQUEST_H
 #define QTAWS_PUTCONFIGURATIONRECORDERREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutConfigurationRecorderRequestPrivate;
+
+class QTAWS_EXPORT PutConfigurationRecorderRequest : public ConfigServiceRequest {
+
+public:
+    PutConfigurationRecorderRequest(const PutConfigurationRecorderRequest &other);
+    PutConfigurationRecorderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutConfigurationRecorderRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACTIVITYTYPEREQUEST_H
 #define QTAWS_DESCRIBEACTIVITYTYPEREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeActivityTypeRequestPrivate;
+
+class QTAWS_EXPORT DescribeActivityTypeRequest : public SWFRequest {
+
+public:
+    DescribeActivityTypeRequest(const DescribeActivityTypeRequest &other);
+    DescribeActivityTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeActivityTypeRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

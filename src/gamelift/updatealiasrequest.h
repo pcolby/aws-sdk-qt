@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_H
 #define QTAWS_UPDATEALIASREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateAliasRequestPrivate;
+
+class QTAWS_EXPORT UpdateAliasRequest : public GameLiftRequest {
+
+public:
+    UpdateAliasRequest(const UpdateAliasRequest &other);
+    UpdateAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAliasRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

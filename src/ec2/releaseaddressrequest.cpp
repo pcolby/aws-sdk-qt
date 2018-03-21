@@ -19,3 +19,107 @@
 
 #include "releaseaddressrequest.h"
 #include "releaseaddressrequest_p.h"
+#include "releaseaddressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReleaseAddressRequest
+ *
+ * @brief  Implements EC2 ReleaseAddress requests.
+ *
+ * @see    EC2Client::releaseAddress
+ */
+
+/**
+ * @brief  Constructs a new ReleaseAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReleaseAddressResponse::ReleaseAddressResponse(
+
+/**
+ * @brief  Constructs a new ReleaseAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReleaseAddressRequest::ReleaseAddressRequest(const ReleaseAddressRequest &other)
+    : EC2Request(new ReleaseAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReleaseAddressRequest object.
+ */
+ReleaseAddressRequest::ReleaseAddressRequest()
+    : EC2Request(new ReleaseAddressRequestPrivate(EC2Request::ReleaseAddressAction, this))
+{
+
+}
+
+bool ReleaseAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReleaseAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReleaseAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new ReleaseAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReleaseAddressRequestPrivate
+ *
+ * @brief  Private implementation for ReleaseAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReleaseAddressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ReleaseAddressRequest instance.
+ */
+ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
+    const EC2Request::Action action, ReleaseAddressRequest * const q)
+    : ReleaseAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReleaseAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReleaseAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReleaseAddressRequest instance.
+ */
+ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
+    const ReleaseAddressRequestPrivate &other, ReleaseAddressRequest * const q)
+    : ReleaseAddressPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTASKSREQUEST_H
 #define QTAWS_LISTTASKSREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListTasksRequestPrivate;
+
+class QTAWS_EXPORT ListTasksRequest : public ECSRequest {
+
+public:
+    ListTasksRequest(const ListTasksRequest &other);
+    ListTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTasksRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

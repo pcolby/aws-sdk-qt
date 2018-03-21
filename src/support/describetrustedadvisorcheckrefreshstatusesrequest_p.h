@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKREFRESHSTATUSESREQUEST_P_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKREFRESHSTATUSESREQUEST_P_H
 
+#include "support_p.h"
+#include "describetrustedadvisorcheckrefreshstatusesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeTrustedAdvisorCheckRefreshStatusesRequest;
+
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const Support::Action action,
+                                   DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q);
+    DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate &other,
+                                   DescribeTrustedAdvisorCheckRefreshStatusesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTrustedAdvisorCheckRefreshStatusesRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

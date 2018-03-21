@@ -20,4 +20,32 @@
 #ifndef QTAWS_ESTIMATETEMPLATECOSTREQUEST_H
 #define QTAWS_ESTIMATETEMPLATECOSTREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class EstimateTemplateCostRequestPrivate;
+
+class QTAWS_EXPORT EstimateTemplateCostRequest : public CloudFormationRequest {
+
+public:
+    EstimateTemplateCostRequest(const EstimateTemplateCostRequest &other);
+    EstimateTemplateCostRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EstimateTemplateCostRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

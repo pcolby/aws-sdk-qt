@@ -19,3 +19,107 @@
 
 #include "gettagsrequest.h"
 #include "gettagsrequest_p.h"
+#include "gettagsresponse.h"
+#include "costexplorerrequest_p.h"
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetTagsRequest
+ *
+ * @brief  Implements CostExplorer GetTags requests.
+ *
+ * @see    CostExplorerClient::getTags
+ */
+
+/**
+ * @brief  Constructs a new GetTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTagsResponse::GetTagsResponse(
+
+/**
+ * @brief  Constructs a new GetTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTagsRequest::GetTagsRequest(const GetTagsRequest &other)
+    : CostExplorerRequest(new GetTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTagsRequest object.
+ */
+GetTagsRequest::GetTagsRequest()
+    : CostExplorerRequest(new GetTagsRequestPrivate(CostExplorerRequest::GetTagsAction, this))
+{
+
+}
+
+bool GetTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CostExplorerClient::send
+ */
+AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTagsRequestPrivate
+ *
+ * @brief  Private implementation for GetTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTagsRequestPrivate object.
+ *
+ * @param  action  CostExplorer action being performed.
+ * @param  q       Pointer to this object's public GetTagsRequest instance.
+ */
+GetTagsRequestPrivate::GetTagsRequestPrivate(
+    const CostExplorerRequest::Action action, GetTagsRequest * const q)
+    : GetTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTagsRequest instance.
+ */
+GetTagsRequestPrivate::GetTagsRequestPrivate(
+    const GetTagsRequestPrivate &other, GetTagsRequest * const q)
+    : GetTagsPrivate(other, q)
+{
+
+}

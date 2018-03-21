@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTOBJECTREQUEST_H
 #define QTAWS_PUTOBJECTREQUEST_H
 
+#include "mediastoredatarequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class PutObjectRequestPrivate;
+
+class QTAWS_EXPORT PutObjectRequest : public MediaStoreDataRequest {
+
+public:
+    PutObjectRequest(const PutObjectRequest &other);
+    PutObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutObjectRequest)
+
+}
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

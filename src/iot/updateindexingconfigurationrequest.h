@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEINDEXINGCONFIGURATIONREQUEST_H
 #define QTAWS_UPDATEINDEXINGCONFIGURATIONREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateIndexingConfigurationRequestPrivate;
+
+class QTAWS_EXPORT UpdateIndexingConfigurationRequest : public IoTRequest {
+
+public:
+    UpdateIndexingConfigurationRequest(const UpdateIndexingConfigurationRequest &other);
+    UpdateIndexingConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIndexingConfigurationRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

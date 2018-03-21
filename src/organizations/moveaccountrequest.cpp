@@ -19,3 +19,107 @@
 
 #include "moveaccountrequest.h"
 #include "moveaccountrequest_p.h"
+#include "moveaccountresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  MoveAccountRequest
+ *
+ * @brief  Implements Organizations MoveAccount requests.
+ *
+ * @see    OrganizationsClient::moveAccount
+ */
+
+/**
+ * @brief  Constructs a new MoveAccountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MoveAccountResponse::MoveAccountResponse(
+
+/**
+ * @brief  Constructs a new MoveAccountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+MoveAccountRequest::MoveAccountRequest(const MoveAccountRequest &other)
+    : OrganizationsRequest(new MoveAccountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new MoveAccountRequest object.
+ */
+MoveAccountRequest::MoveAccountRequest()
+    : OrganizationsRequest(new MoveAccountRequestPrivate(OrganizationsRequest::MoveAccountAction, this))
+{
+
+}
+
+bool MoveAccountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an MoveAccountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An MoveAccountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * MoveAccountRequest::response(QNetworkReply * const reply) const
+{
+    return new MoveAccountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  MoveAccountRequestPrivate
+ *
+ * @brief  Private implementation for MoveAccountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MoveAccountRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public MoveAccountRequest instance.
+ */
+MoveAccountRequestPrivate::MoveAccountRequestPrivate(
+    const OrganizationsRequest::Action action, MoveAccountRequest * const q)
+    : MoveAccountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MoveAccountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the MoveAccountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public MoveAccountRequest instance.
+ */
+MoveAccountRequestPrivate::MoveAccountRequestPrivate(
+    const MoveAccountRequestPrivate &other, MoveAccountRequest * const q)
+    : MoveAccountPrivate(other, q)
+{
+
+}

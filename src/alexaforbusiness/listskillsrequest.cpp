@@ -19,3 +19,107 @@
 
 #include "listskillsrequest.h"
 #include "listskillsrequest_p.h"
+#include "listskillsresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  ListSkillsRequest
+ *
+ * @brief  Implements AlexaForBusiness ListSkills requests.
+ *
+ * @see    AlexaForBusinessClient::listSkills
+ */
+
+/**
+ * @brief  Constructs a new ListSkillsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSkillsResponse::ListSkillsResponse(
+
+/**
+ * @brief  Constructs a new ListSkillsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSkillsRequest::ListSkillsRequest(const ListSkillsRequest &other)
+    : AlexaForBusinessRequest(new ListSkillsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSkillsRequest object.
+ */
+ListSkillsRequest::ListSkillsRequest()
+    : AlexaForBusinessRequest(new ListSkillsRequestPrivate(AlexaForBusinessRequest::ListSkillsAction, this))
+{
+
+}
+
+bool ListSkillsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSkillsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSkillsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSkillsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSkillsRequestPrivate
+ *
+ * @brief  Private implementation for ListSkillsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSkillsRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public ListSkillsRequest instance.
+ */
+ListSkillsRequestPrivate::ListSkillsRequestPrivate(
+    const AlexaForBusinessRequest::Action action, ListSkillsRequest * const q)
+    : ListSkillsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSkillsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSkillsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSkillsRequest instance.
+ */
+ListSkillsRequestPrivate::ListSkillsRequestPrivate(
+    const ListSkillsRequestPrivate &other, ListSkillsRequest * const q)
+    : ListSkillsPrivate(other, q)
+{
+
+}

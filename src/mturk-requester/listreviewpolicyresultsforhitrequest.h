@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITREQUEST_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListReviewPolicyResultsForHITRequestPrivate;
+
+class QTAWS_EXPORT ListReviewPolicyResultsForHITRequest : public MTurkRequest {
+
+public:
+    ListReviewPolicyResultsForHITRequest(const ListReviewPolicyResultsForHITRequest &other);
+    ListReviewPolicyResultsForHITRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListReviewPolicyResultsForHITRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

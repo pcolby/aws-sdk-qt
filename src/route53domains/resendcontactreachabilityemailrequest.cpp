@@ -19,3 +19,107 @@
 
 #include "resendcontactreachabilityemailrequest.h"
 #include "resendcontactreachabilityemailrequest_p.h"
+#include "resendcontactreachabilityemailresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  ResendContactReachabilityEmailRequest
+ *
+ * @brief  Implements Route53Domains ResendContactReachabilityEmail requests.
+ *
+ * @see    Route53DomainsClient::resendContactReachabilityEmail
+ */
+
+/**
+ * @brief  Constructs a new ResendContactReachabilityEmailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResendContactReachabilityEmailResponse::ResendContactReachabilityEmailResponse(
+
+/**
+ * @brief  Constructs a new ResendContactReachabilityEmailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest(const ResendContactReachabilityEmailRequest &other)
+    : Route53DomainsRequest(new ResendContactReachabilityEmailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResendContactReachabilityEmailRequest object.
+ */
+ResendContactReachabilityEmailRequest::ResendContactReachabilityEmailRequest()
+    : Route53DomainsRequest(new ResendContactReachabilityEmailRequestPrivate(Route53DomainsRequest::ResendContactReachabilityEmailAction, this))
+{
+
+}
+
+bool ResendContactReachabilityEmailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResendContactReachabilityEmailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResendContactReachabilityEmailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * ResendContactReachabilityEmailRequest::response(QNetworkReply * const reply) const
+{
+    return new ResendContactReachabilityEmailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResendContactReachabilityEmailRequestPrivate
+ *
+ * @brief  Private implementation for ResendContactReachabilityEmailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public ResendContactReachabilityEmailRequest instance.
+ */
+ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
+    const Route53DomainsRequest::Action action, ResendContactReachabilityEmailRequest * const q)
+    : ResendContactReachabilityEmailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResendContactReachabilityEmailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResendContactReachabilityEmailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResendContactReachabilityEmailRequest instance.
+ */
+ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
+    const ResendContactReachabilityEmailRequestPrivate &other, ResendContactReachabilityEmailRequest * const q)
+    : ResendContactReachabilityEmailPrivate(other, q)
+{
+
+}

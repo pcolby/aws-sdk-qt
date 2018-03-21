@@ -19,3 +19,107 @@
 
 #include "putslottyperequest.h"
 #include "putslottyperequest_p.h"
+#include "putslottyperesponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  PutSlotTypeRequest
+ *
+ * @brief  Implements LexModelBuildingService PutSlotType requests.
+ *
+ * @see    LexModelBuildingServiceClient::putSlotType
+ */
+
+/**
+ * @brief  Constructs a new PutSlotTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutSlotTypeResponse::PutSlotTypeResponse(
+
+/**
+ * @brief  Constructs a new PutSlotTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutSlotTypeRequest::PutSlotTypeRequest(const PutSlotTypeRequest &other)
+    : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutSlotTypeRequest object.
+ */
+PutSlotTypeRequest::PutSlotTypeRequest()
+    : LexModelBuildingServiceRequest(new PutSlotTypeRequestPrivate(LexModelBuildingServiceRequest::PutSlotTypeAction, this))
+{
+
+}
+
+bool PutSlotTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutSlotTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutSlotTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new PutSlotTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutSlotTypeRequestPrivate
+ *
+ * @brief  Private implementation for PutSlotTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutSlotTypeRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public PutSlotTypeRequest instance.
+ */
+PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, PutSlotTypeRequest * const q)
+    : PutSlotTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutSlotTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutSlotTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutSlotTypeRequest instance.
+ */
+PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
+    const PutSlotTypeRequestPrivate &other, PutSlotTypeRequest * const q)
+    : PutSlotTypePrivate(other, q)
+{
+
+}

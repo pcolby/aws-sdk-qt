@@ -20,4 +20,29 @@
 #ifndef QTAWS_SEARCHPRODUCTSASADMINREQUEST_P_H
 #define QTAWS_SEARCHPRODUCTSASADMINREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "searchproductsasadminrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class SearchProductsAsAdminRequest;
+
+class QTAWS_EXPORT SearchProductsAsAdminRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    SearchProductsAsAdminRequestPrivate(const ServiceCatalog::Action action,
+                                   SearchProductsAsAdminRequest * const q);
+    SearchProductsAsAdminRequestPrivate(const SearchProductsAsAdminRequestPrivate &other,
+                                   SearchProductsAsAdminRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SearchProductsAsAdminRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

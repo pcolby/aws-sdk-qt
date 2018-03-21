@@ -19,3 +19,107 @@
 
 #include "deletescalingplanrequest.h"
 #include "deletescalingplanrequest_p.h"
+#include "deletescalingplanresponse.h"
+#include "autoscalingplansrequest_p.h"
+
+namespace AWS {
+namespace AutoScalingPlans {
+
+/**
+ * @class  DeleteScalingPlanRequest
+ *
+ * @brief  Implements AutoScalingPlans DeleteScalingPlan requests.
+ *
+ * @see    AutoScalingPlansClient::deleteScalingPlan
+ */
+
+/**
+ * @brief  Constructs a new DeleteScalingPlanResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteScalingPlanResponse::DeleteScalingPlanResponse(
+
+/**
+ * @brief  Constructs a new DeleteScalingPlanRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteScalingPlanRequest::DeleteScalingPlanRequest(const DeleteScalingPlanRequest &other)
+    : AutoScalingPlansRequest(new DeleteScalingPlanRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteScalingPlanRequest object.
+ */
+DeleteScalingPlanRequest::DeleteScalingPlanRequest()
+    : AutoScalingPlansRequest(new DeleteScalingPlanRequestPrivate(AutoScalingPlansRequest::DeleteScalingPlanAction, this))
+{
+
+}
+
+bool DeleteScalingPlanRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteScalingPlanResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteScalingPlanResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingPlansClient::send
+ */
+AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteScalingPlanResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteScalingPlanRequestPrivate
+ *
+ * @brief  Private implementation for DeleteScalingPlanRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPlanRequestPrivate object.
+ *
+ * @param  action  AutoScalingPlans action being performed.
+ * @param  q       Pointer to this object's public DeleteScalingPlanRequest instance.
+ */
+DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
+    const AutoScalingPlansRequest::Action action, DeleteScalingPlanRequest * const q)
+    : DeleteScalingPlanPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPlanRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteScalingPlanRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteScalingPlanRequest instance.
+ */
+DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
+    const DeleteScalingPlanRequestPrivate &other, DeleteScalingPlanRequest * const q)
+    : DeleteScalingPlanPrivate(other, q)
+{
+
+}

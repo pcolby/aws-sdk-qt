@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTFAILOVERREQUEST_P_H
 #define QTAWS_TESTFAILOVERREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "testfailoverrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class TestFailoverRequest;
+
+class QTAWS_EXPORT TestFailoverRequestPrivate : public ElastiCachePrivate {
+
+public:
+    TestFailoverRequestPrivate(const ElastiCache::Action action,
+                                   TestFailoverRequest * const q);
+    TestFailoverRequestPrivate(const TestFailoverRequestPrivate &other,
+                                   TestFailoverRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestFailoverRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

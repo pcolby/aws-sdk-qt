@@ -19,3 +19,107 @@
 
 #include "disablevgwroutepropagationrequest.h"
 #include "disablevgwroutepropagationrequest_p.h"
+#include "disablevgwroutepropagationresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisableVgwRoutePropagationRequest
+ *
+ * @brief  Implements EC2 DisableVgwRoutePropagation requests.
+ *
+ * @see    EC2Client::disableVgwRoutePropagation
+ */
+
+/**
+ * @brief  Constructs a new DisableVgwRoutePropagationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
+
+/**
+ * @brief  Constructs a new DisableVgwRoutePropagationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest(const DisableVgwRoutePropagationRequest &other)
+    : EC2Request(new DisableVgwRoutePropagationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableVgwRoutePropagationRequest object.
+ */
+DisableVgwRoutePropagationRequest::DisableVgwRoutePropagationRequest()
+    : EC2Request(new DisableVgwRoutePropagationRequestPrivate(EC2Request::DisableVgwRoutePropagationAction, this))
+{
+
+}
+
+bool DisableVgwRoutePropagationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableVgwRoutePropagationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableVgwRoutePropagationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableVgwRoutePropagationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableVgwRoutePropagationRequestPrivate
+ *
+ * @brief  Private implementation for DisableVgwRoutePropagationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DisableVgwRoutePropagationRequest instance.
+ */
+DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
+    const EC2Request::Action action, DisableVgwRoutePropagationRequest * const q)
+    : DisableVgwRoutePropagationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableVgwRoutePropagationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableVgwRoutePropagationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableVgwRoutePropagationRequest instance.
+ */
+DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
+    const DisableVgwRoutePropagationRequestPrivate &other, DisableVgwRoutePropagationRequest * const q)
+    : DisableVgwRoutePropagationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADARCHIVEREQUEST_H
 #define QTAWS_UPLOADARCHIVEREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class UploadArchiveRequestPrivate;
+
+class QTAWS_EXPORT UploadArchiveRequest : public GlacierRequest {
+
+public:
+    UploadArchiveRequest(const UploadArchiveRequest &other);
+    UploadArchiveRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadArchiveRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RELOADTABLESREQUEST_H
 #define QTAWS_RELOADTABLESREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ReloadTablesRequestPrivate;
+
+class QTAWS_EXPORT ReloadTablesRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    ReloadTablesRequest(const ReloadTablesRequest &other);
+    ReloadTablesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReloadTablesRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVAULTNOTIFICATIONSREQUEST_H
 #define QTAWS_DELETEVAULTNOTIFICATIONSREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DeleteVaultNotificationsRequestPrivate;
+
+class QTAWS_EXPORT DeleteVaultNotificationsRequest : public GlacierRequest {
+
+public:
+    DeleteVaultNotificationsRequest(const DeleteVaultNotificationsRequest &other);
+    DeleteVaultNotificationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVaultNotificationsRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

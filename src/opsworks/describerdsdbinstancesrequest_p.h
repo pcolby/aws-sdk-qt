@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERDSDBINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBERDSDBINSTANCESREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describerdsdbinstancesrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRdsDbInstancesRequest;
+
+class QTAWS_EXPORT DescribeRdsDbInstancesRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeRdsDbInstancesRequestPrivate(const OpsWorks::Action action,
+                                   DescribeRdsDbInstancesRequest * const q);
+    DescribeRdsDbInstancesRequestPrivate(const DescribeRdsDbInstancesRequestPrivate &other,
+                                   DescribeRdsDbInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRdsDbInstancesRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

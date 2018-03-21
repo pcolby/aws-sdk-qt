@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETPERMISSIONREQUEST_P_H
 #define QTAWS_SETPERMISSIONREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "setpermissionrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetPermissionRequest;
+
+class QTAWS_EXPORT SetPermissionRequestPrivate : public OpsWorksPrivate {
+
+public:
+    SetPermissionRequestPrivate(const OpsWorks::Action action,
+                                   SetPermissionRequest * const q);
+    SetPermissionRequestPrivate(const SetPermissionRequestPrivate &other,
+                                   SetPermissionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetPermissionRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

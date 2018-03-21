@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETREQUESTVALIDATORSREQUEST_H
 #define QTAWS_GETREQUESTVALIDATORSREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetRequestValidatorsRequestPrivate;
+
+class QTAWS_EXPORT GetRequestValidatorsRequest : public APIGatewayRequest {
+
+public:
+    GetRequestValidatorsRequest(const GetRequestValidatorsRequest &other);
+    GetRequestValidatorsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRequestValidatorsRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

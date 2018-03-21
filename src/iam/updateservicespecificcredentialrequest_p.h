@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESERVICESPECIFICCREDENTIALREQUEST_P_H
 #define QTAWS_UPDATESERVICESPECIFICCREDENTIALREQUEST_P_H
 
+#include "iam_p.h"
+#include "updateservicespecificcredentialrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateServiceSpecificCredentialRequest;
+
+class QTAWS_EXPORT UpdateServiceSpecificCredentialRequestPrivate : public IAMPrivate {
+
+public:
+    UpdateServiceSpecificCredentialRequestPrivate(const IAM::Action action,
+                                   UpdateServiceSpecificCredentialRequest * const q);
+    UpdateServiceSpecificCredentialRequestPrivate(const UpdateServiceSpecificCredentialRequestPrivate &other,
+                                   UpdateServiceSpecificCredentialRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceSpecificCredentialRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

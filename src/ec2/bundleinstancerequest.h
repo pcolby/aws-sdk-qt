@@ -20,4 +20,32 @@
 #ifndef QTAWS_BUNDLEINSTANCEREQUEST_H
 #define QTAWS_BUNDLEINSTANCEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class BundleInstanceRequestPrivate;
+
+class QTAWS_EXPORT BundleInstanceRequest : public EC2Request {
+
+public:
+    BundleInstanceRequest(const BundleInstanceRequest &other);
+    BundleInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BundleInstanceRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

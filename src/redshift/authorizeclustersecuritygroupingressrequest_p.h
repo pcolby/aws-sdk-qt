@@ -20,4 +20,29 @@
 #ifndef QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSREQUEST_P_H
 #define QTAWS_AUTHORIZECLUSTERSECURITYGROUPINGRESSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "authorizeclustersecuritygroupingressrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class AuthorizeClusterSecurityGroupIngressRequest;
+
+class QTAWS_EXPORT AuthorizeClusterSecurityGroupIngressRequestPrivate : public RedshiftPrivate {
+
+public:
+    AuthorizeClusterSecurityGroupIngressRequestPrivate(const Redshift::Action action,
+                                   AuthorizeClusterSecurityGroupIngressRequest * const q);
+    AuthorizeClusterSecurityGroupIngressRequestPrivate(const AuthorizeClusterSecurityGroupIngressRequestPrivate &other,
+                                   AuthorizeClusterSecurityGroupIngressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeClusterSecurityGroupIngressRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

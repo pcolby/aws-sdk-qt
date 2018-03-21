@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTREAMSREQUEST_P_H
 #define QTAWS_LISTSTREAMSREQUEST_P_H
 
+#include "kinesisvideo_p.h"
+#include "liststreamsrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class ListStreamsRequest;
+
+class QTAWS_EXPORT ListStreamsRequestPrivate : public KinesisVideoPrivate {
+
+public:
+    ListStreamsRequestPrivate(const KinesisVideo::Action action,
+                                   ListStreamsRequest * const q);
+    ListStreamsRequestPrivate(const ListStreamsRequestPrivate &other,
+                                   ListStreamsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamsRequest)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

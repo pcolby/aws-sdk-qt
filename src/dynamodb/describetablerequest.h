@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETABLEREQUEST_H
 #define QTAWS_DESCRIBETABLEREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeTableRequestPrivate;
+
+class QTAWS_EXPORT DescribeTableRequest : public DynamoDBRequest {
+
+public:
+    DescribeTableRequest(const DescribeTableRequest &other);
+    DescribeTableRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTableRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

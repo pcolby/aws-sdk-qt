@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEIMAGEREQUEST_P_H
 #define QTAWS_DELETEIMAGEREQUEST_P_H
 
+#include "appstream_p.h"
+#include "deleteimagerequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteImageRequest;
+
+class QTAWS_EXPORT DeleteImageRequestPrivate : public AppStreamPrivate {
+
+public:
+    DeleteImageRequestPrivate(const AppStream::Action action,
+                                   DeleteImageRequest * const q);
+    DeleteImageRequestPrivate(const DeleteImageRequestPrivate &other,
+                                   DeleteImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteImageRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

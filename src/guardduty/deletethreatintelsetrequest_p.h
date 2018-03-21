@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETHREATINTELSETREQUEST_P_H
 #define QTAWS_DELETETHREATINTELSETREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "deletethreatintelsetrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteThreatIntelSetRequest;
+
+class QTAWS_EXPORT DeleteThreatIntelSetRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DeleteThreatIntelSetRequestPrivate(const GuardDuty::Action action,
+                                   DeleteThreatIntelSetRequest * const q);
+    DeleteThreatIntelSetRequestPrivate(const DeleteThreatIntelSetRequestPrivate &other,
+                                   DeleteThreatIntelSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteThreatIntelSetRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

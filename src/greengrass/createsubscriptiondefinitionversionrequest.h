@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESUBSCRIPTIONDEFINITIONVERSIONREQUEST_H
 #define QTAWS_CREATESUBSCRIPTIONDEFINITIONVERSIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateSubscriptionDefinitionVersionRequestPrivate;
+
+class QTAWS_EXPORT CreateSubscriptionDefinitionVersionRequest : public GreengrassRequest {
+
+public:
+    CreateSubscriptionDefinitionVersionRequest(const CreateSubscriptionDefinitionVersionRequest &other);
+    CreateSubscriptionDefinitionVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubscriptionDefinitionVersionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

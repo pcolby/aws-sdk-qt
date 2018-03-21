@@ -19,3 +19,107 @@
 
 #include "createdocumentationpartrequest.h"
 #include "createdocumentationpartrequest_p.h"
+#include "createdocumentationpartresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateDocumentationPartRequest
+ *
+ * @brief  Implements APIGateway CreateDocumentationPart requests.
+ *
+ * @see    APIGatewayClient::createDocumentationPart
+ */
+
+/**
+ * @brief  Constructs a new CreateDocumentationPartResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDocumentationPartResponse::CreateDocumentationPartResponse(
+
+/**
+ * @brief  Constructs a new CreateDocumentationPartRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDocumentationPartRequest::CreateDocumentationPartRequest(const CreateDocumentationPartRequest &other)
+    : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDocumentationPartRequest object.
+ */
+CreateDocumentationPartRequest::CreateDocumentationPartRequest()
+    : APIGatewayRequest(new CreateDocumentationPartRequestPrivate(APIGatewayRequest::CreateDocumentationPartAction, this))
+{
+
+}
+
+bool CreateDocumentationPartRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDocumentationPartResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDocumentationPartResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * CreateDocumentationPartRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDocumentationPartResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDocumentationPartRequestPrivate
+ *
+ * @brief  Private implementation for CreateDocumentationPartRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDocumentationPartRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public CreateDocumentationPartRequest instance.
+ */
+CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
+    const APIGatewayRequest::Action action, CreateDocumentationPartRequest * const q)
+    : CreateDocumentationPartPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDocumentationPartRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDocumentationPartRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDocumentationPartRequest instance.
+ */
+CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
+    const CreateDocumentationPartRequestPrivate &other, CreateDocumentationPartRequest * const q)
+    : CreateDocumentationPartPrivate(other, q)
+{
+
+}

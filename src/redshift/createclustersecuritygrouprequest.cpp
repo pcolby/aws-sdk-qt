@@ -19,3 +19,107 @@
 
 #include "createclustersecuritygrouprequest.h"
 #include "createclustersecuritygrouprequest_p.h"
+#include "createclustersecuritygroupresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateClusterSecurityGroupRequest
+ *
+ * @brief  Implements Redshift CreateClusterSecurityGroup requests.
+ *
+ * @see    RedshiftClient::createClusterSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateClusterSecurityGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterSecurityGroupResponse::CreateClusterSecurityGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateClusterSecurityGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateClusterSecurityGroupRequest::CreateClusterSecurityGroupRequest(const CreateClusterSecurityGroupRequest &other)
+    : RedshiftRequest(new CreateClusterSecurityGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateClusterSecurityGroupRequest object.
+ */
+CreateClusterSecurityGroupRequest::CreateClusterSecurityGroupRequest()
+    : RedshiftRequest(new CreateClusterSecurityGroupRequestPrivate(RedshiftRequest::CreateClusterSecurityGroupAction, this))
+{
+
+}
+
+bool CreateClusterSecurityGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateClusterSecurityGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateClusterSecurityGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateClusterSecurityGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateClusterSecurityGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterSecurityGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateClusterSecurityGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterSecurityGroupRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateClusterSecurityGroupRequest instance.
+ */
+CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPrivate(
+    const RedshiftRequest::Action action, CreateClusterSecurityGroupRequest * const q)
+    : CreateClusterSecurityGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterSecurityGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateClusterSecurityGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateClusterSecurityGroupRequest instance.
+ */
+CreateClusterSecurityGroupRequestPrivate::CreateClusterSecurityGroupRequestPrivate(
+    const CreateClusterSecurityGroupRequestPrivate &other, CreateClusterSecurityGroupRequest * const q)
+    : CreateClusterSecurityGroupPrivate(other, q)
+{
+
+}

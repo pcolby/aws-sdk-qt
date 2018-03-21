@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEGRANTREQUEST_H
 #define QTAWS_CREATEGRANTREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class CreateGrantRequestPrivate;
+
+class QTAWS_EXPORT CreateGrantRequest : public KMSRequest {
+
+public:
+    CreateGrantRequest(const CreateGrantRequest &other);
+    CreateGrantRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateGrantRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

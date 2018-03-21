@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDISCOVEREDRESOURCECOUNTSREQUEST_H
 #define QTAWS_GETDISCOVEREDRESOURCECOUNTSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetDiscoveredResourceCountsRequestPrivate;
+
+class QTAWS_EXPORT GetDiscoveredResourceCountsRequest : public ConfigServiceRequest {
+
+public:
+    GetDiscoveredResourceCountsRequest(const GetDiscoveredResourceCountsRequest &other);
+    GetDiscoveredResourceCountsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDiscoveredResourceCountsRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

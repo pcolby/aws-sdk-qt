@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETIMPORTREQUEST_H
 #define QTAWS_GETIMPORTREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetImportRequestPrivate;
+
+class QTAWS_EXPORT GetImportRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetImportRequest(const GetImportRequest &other);
+    GetImportRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetImportRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

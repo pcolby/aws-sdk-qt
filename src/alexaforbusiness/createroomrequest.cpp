@@ -19,3 +19,107 @@
 
 #include "createroomrequest.h"
 #include "createroomrequest_p.h"
+#include "createroomresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  CreateRoomRequest
+ *
+ * @brief  Implements AlexaForBusiness CreateRoom requests.
+ *
+ * @see    AlexaForBusinessClient::createRoom
+ */
+
+/**
+ * @brief  Constructs a new CreateRoomResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRoomResponse::CreateRoomResponse(
+
+/**
+ * @brief  Constructs a new CreateRoomRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRoomRequest::CreateRoomRequest(const CreateRoomRequest &other)
+    : AlexaForBusinessRequest(new CreateRoomRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRoomRequest object.
+ */
+CreateRoomRequest::CreateRoomRequest()
+    : AlexaForBusinessRequest(new CreateRoomRequestPrivate(AlexaForBusinessRequest::CreateRoomAction, this))
+{
+
+}
+
+bool CreateRoomRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRoomResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRoomResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRoomResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRoomRequestPrivate
+ *
+ * @brief  Private implementation for CreateRoomRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRoomRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public CreateRoomRequest instance.
+ */
+CreateRoomRequestPrivate::CreateRoomRequestPrivate(
+    const AlexaForBusinessRequest::Action action, CreateRoomRequest * const q)
+    : CreateRoomPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRoomRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRoomRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRoomRequest instance.
+ */
+CreateRoomRequestPrivate::CreateRoomRequestPrivate(
+    const CreateRoomRequestPrivate &other, CreateRoomRequest * const q)
+    : CreateRoomPrivate(other, q)
+{
+
+}

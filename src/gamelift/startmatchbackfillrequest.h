@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTMATCHBACKFILLREQUEST_H
 #define QTAWS_STARTMATCHBACKFILLREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StartMatchBackfillRequestPrivate;
+
+class QTAWS_EXPORT StartMatchBackfillRequest : public GameLiftRequest {
+
+public:
+    StartMatchBackfillRequest(const StartMatchBackfillRequest &other);
+    StartMatchBackfillRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartMatchBackfillRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

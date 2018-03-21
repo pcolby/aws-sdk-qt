@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETOPICRULEREQUEST_H
 #define QTAWS_DELETETOPICRULEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteTopicRuleRequestPrivate;
+
+class QTAWS_EXPORT DeleteTopicRuleRequest : public IoTRequest {
+
+public:
+    DeleteTopicRuleRequest(const DeleteTopicRuleRequest &other);
+    DeleteTopicRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTopicRuleRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

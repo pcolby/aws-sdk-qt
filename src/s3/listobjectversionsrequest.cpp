@@ -19,3 +19,107 @@
 
 #include "listobjectversionsrequest.h"
 #include "listobjectversionsrequest_p.h"
+#include "listobjectversionsresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListObjectVersionsRequest
+ *
+ * @brief  Implements S3 ListObjectVersions requests.
+ *
+ * @see    S3Client::listObjectVersions
+ */
+
+/**
+ * @brief  Constructs a new ListObjectVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectVersionsResponse::ListObjectVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListObjectVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectVersionsRequest::ListObjectVersionsRequest(const ListObjectVersionsRequest &other)
+    : S3Request(new ListObjectVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectVersionsRequest object.
+ */
+ListObjectVersionsRequest::ListObjectVersionsRequest()
+    : S3Request(new ListObjectVersionsRequestPrivate(S3Request::ListObjectVersionsAction, this))
+{
+
+}
+
+bool ListObjectVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * ListObjectVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListObjectVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListObjectVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectVersionsRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public ListObjectVersionsRequest instance.
+ */
+ListObjectVersionsRequestPrivate::ListObjectVersionsRequestPrivate(
+    const S3Request::Action action, ListObjectVersionsRequest * const q)
+    : ListObjectVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectVersionsRequest instance.
+ */
+ListObjectVersionsRequestPrivate::ListObjectVersionsRequestPrivate(
+    const ListObjectVersionsRequestPrivate &other, ListObjectVersionsRequest * const q)
+    : ListObjectVersionsPrivate(other, q)
+{
+
+}

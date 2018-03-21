@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETLOGEVENTSREQUEST_P_H
 #define QTAWS_GETLOGEVENTSREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "getlogeventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class GetLogEventsRequest;
+
+class QTAWS_EXPORT GetLogEventsRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    GetLogEventsRequestPrivate(const CloudWatchLogs::Action action,
+                                   GetLogEventsRequest * const q);
+    GetLogEventsRequestPrivate(const GetLogEventsRequestPrivate &other,
+                                   GetLogEventsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetLogEventsRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

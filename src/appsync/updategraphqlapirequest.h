@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEGRAPHQLAPIREQUEST_H
 #define QTAWS_UPDATEGRAPHQLAPIREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateGraphqlApiRequestPrivate;
+
+class QTAWS_EXPORT UpdateGraphqlApiRequest : public AppSyncRequest {
+
+public:
+    UpdateGraphqlApiRequest(const UpdateGraphqlApiRequest &other);
+    UpdateGraphqlApiRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGraphqlApiRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

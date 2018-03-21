@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECACERTIFICATEREQUEST_H
 #define QTAWS_UPDATECACERTIFICATEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateCACertificateRequestPrivate;
+
+class QTAWS_EXPORT UpdateCACertificateRequest : public IoTRequest {
+
+public:
+    UpdateCACertificateRequest(const UpdateCACertificateRequest &other);
+    UpdateCACertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCACertificateRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

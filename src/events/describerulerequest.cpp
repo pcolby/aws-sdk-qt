@@ -19,3 +19,107 @@
 
 #include "describerulerequest.h"
 #include "describerulerequest_p.h"
+#include "describeruleresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  DescribeRuleRequest
+ *
+ * @brief  Implements CloudWatchEvents DescribeRule requests.
+ *
+ * @see    CloudWatchEventsClient::describeRule
+ */
+
+/**
+ * @brief  Constructs a new DescribeRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRuleResponse::DescribeRuleResponse(
+
+/**
+ * @brief  Constructs a new DescribeRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRuleRequest::DescribeRuleRequest(const DescribeRuleRequest &other)
+    : CloudWatchEventsRequest(new DescribeRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRuleRequest object.
+ */
+DescribeRuleRequest::DescribeRuleRequest()
+    : CloudWatchEventsRequest(new DescribeRuleRequestPrivate(CloudWatchEventsRequest::DescribeRuleAction, this))
+{
+
+}
+
+bool DescribeRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * DescribeRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRuleRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRuleRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public DescribeRuleRequest instance.
+ */
+DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
+    const CloudWatchEventsRequest::Action action, DescribeRuleRequest * const q)
+    : DescribeRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRuleRequest instance.
+ */
+DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
+    const DescribeRuleRequestPrivate &other, DescribeRuleRequest * const q)
+    : DescribeRulePrivate(other, q)
+{
+
+}

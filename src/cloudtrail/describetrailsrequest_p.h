@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETRAILSREQUEST_P_H
 #define QTAWS_DESCRIBETRAILSREQUEST_P_H
 
+#include "cloudtrail_p.h"
+#include "describetrailsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class DescribeTrailsRequest;
+
+class QTAWS_EXPORT DescribeTrailsRequestPrivate : public CloudTrailPrivate {
+
+public:
+    DescribeTrailsRequestPrivate(const CloudTrail::Action action,
+                                   DescribeTrailsRequest * const q);
+    DescribeTrailsRequestPrivate(const DescribeTrailsRequestPrivate &other,
+                                   DescribeTrailsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTrailsRequest)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

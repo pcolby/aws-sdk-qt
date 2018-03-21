@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHUSERPOLICYREQUEST_H
 #define QTAWS_DETACHUSERPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DetachUserPolicyRequestPrivate;
+
+class QTAWS_EXPORT DetachUserPolicyRequest : public IAMRequest {
+
+public:
+    DetachUserPolicyRequest(const DetachUserPolicyRequest &other);
+    DetachUserPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachUserPolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

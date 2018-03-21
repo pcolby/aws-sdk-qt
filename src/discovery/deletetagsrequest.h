@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETAGSREQUEST_H
 #define QTAWS_DELETETAGSREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DeleteTagsRequestPrivate;
+
+class QTAWS_EXPORT DeleteTagsRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    DeleteTagsRequest(const DeleteTagsRequest &other);
+    DeleteTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

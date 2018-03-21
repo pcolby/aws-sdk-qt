@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEBUILDREQUEST_P_H
 #define QTAWS_CREATEBUILDREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "createbuildrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateBuildRequest;
+
+class QTAWS_EXPORT CreateBuildRequestPrivate : public GameLiftPrivate {
+
+public:
+    CreateBuildRequestPrivate(const GameLift::Action action,
+                                   CreateBuildRequest * const q);
+    CreateBuildRequestPrivate(const CreateBuildRequestPrivate &other,
+                                   CreateBuildRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateBuildRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

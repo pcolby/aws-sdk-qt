@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECOMPUTEENVIRONMENTREQUEST_H
 #define QTAWS_DELETECOMPUTEENVIRONMENTREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DeleteComputeEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT DeleteComputeEnvironmentRequest : public BatchRequest {
+
+public:
+    DeleteComputeEnvironmentRequest(const DeleteComputeEnvironmentRequest &other);
+    DeleteComputeEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteComputeEnvironmentRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

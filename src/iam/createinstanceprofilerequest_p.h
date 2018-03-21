@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_CREATEINSTANCEPROFILEREQUEST_P_H
 
+#include "iam_p.h"
+#include "createinstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateInstanceProfileRequest;
+
+class QTAWS_EXPORT CreateInstanceProfileRequestPrivate : public IAMPrivate {
+
+public:
+    CreateInstanceProfileRequestPrivate(const IAM::Action action,
+                                   CreateInstanceProfileRequest * const q);
+    CreateInstanceProfileRequestPrivate(const CreateInstanceProfileRequestPrivate &other,
+                                   CreateInstanceProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstanceProfileRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

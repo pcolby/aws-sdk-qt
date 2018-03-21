@@ -19,3 +19,107 @@
 
 #include "setdefaultauthorizerrequest.h"
 #include "setdefaultauthorizerrequest_p.h"
+#include "setdefaultauthorizerresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  SetDefaultAuthorizerRequest
+ *
+ * @brief  Implements IoT SetDefaultAuthorizer requests.
+ *
+ * @see    IoTClient::setDefaultAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new SetDefaultAuthorizerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDefaultAuthorizerResponse::SetDefaultAuthorizerResponse(
+
+/**
+ * @brief  Constructs a new SetDefaultAuthorizerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetDefaultAuthorizerRequest::SetDefaultAuthorizerRequest(const SetDefaultAuthorizerRequest &other)
+    : IoTRequest(new SetDefaultAuthorizerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetDefaultAuthorizerRequest object.
+ */
+SetDefaultAuthorizerRequest::SetDefaultAuthorizerRequest()
+    : IoTRequest(new SetDefaultAuthorizerRequestPrivate(IoTRequest::SetDefaultAuthorizerAction, this))
+{
+
+}
+
+bool SetDefaultAuthorizerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetDefaultAuthorizerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetDefaultAuthorizerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * SetDefaultAuthorizerRequest::response(QNetworkReply * const reply) const
+{
+    return new SetDefaultAuthorizerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDefaultAuthorizerRequestPrivate
+ *
+ * @brief  Private implementation for SetDefaultAuthorizerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDefaultAuthorizerRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public SetDefaultAuthorizerRequest instance.
+ */
+SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
+    const IoTRequest::Action action, SetDefaultAuthorizerRequest * const q)
+    : SetDefaultAuthorizerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDefaultAuthorizerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetDefaultAuthorizerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetDefaultAuthorizerRequest instance.
+ */
+SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
+    const SetDefaultAuthorizerRequestPrivate &other, SetDefaultAuthorizerRequest * const q)
+    : SetDefaultAuthorizerPrivate(other, q)
+{
+
+}

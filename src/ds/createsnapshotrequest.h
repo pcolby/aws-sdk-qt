@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESNAPSHOTREQUEST_H
 #define QTAWS_CREATESNAPSHOTREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateSnapshotRequestPrivate;
+
+class QTAWS_EXPORT CreateSnapshotRequest : public DirectoryServiceRequest {
+
+public:
+    CreateSnapshotRequest(const CreateSnapshotRequest &other);
+    CreateSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSnapshotRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

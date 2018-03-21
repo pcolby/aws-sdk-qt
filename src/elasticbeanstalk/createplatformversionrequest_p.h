@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPLATFORMVERSIONREQUEST_P_H
 #define QTAWS_CREATEPLATFORMVERSIONREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "createplatformversionrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreatePlatformVersionRequest;
+
+class QTAWS_EXPORT CreatePlatformVersionRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    CreatePlatformVersionRequestPrivate(const ElasticBeanstalk::Action action,
+                                   CreatePlatformVersionRequest * const q);
+    CreatePlatformVersionRequestPrivate(const CreatePlatformVersionRequestPrivate &other,
+                                   CreatePlatformVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePlatformVersionRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

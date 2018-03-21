@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETACTIVERECEIPTRULESETREQUEST_H
 #define QTAWS_SETACTIVERECEIPTRULESETREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetActiveReceiptRuleSetRequestPrivate;
+
+class QTAWS_EXPORT SetActiveReceiptRuleSetRequest : public SESRequest {
+
+public:
+    SetActiveReceiptRuleSetRequest(const SetActiveReceiptRuleSetRequest &other);
+    SetActiveReceiptRuleSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetActiveReceiptRuleSetRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

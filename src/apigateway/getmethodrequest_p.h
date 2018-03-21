@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMETHODREQUEST_P_H
 #define QTAWS_GETMETHODREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getmethodrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetMethodRequest;
+
+class QTAWS_EXPORT GetMethodRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetMethodRequestPrivate(const APIGateway::Action action,
+                                   GetMethodRequest * const q);
+    GetMethodRequestPrivate(const GetMethodRequestPrivate &other,
+                                   GetMethodRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMethodRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

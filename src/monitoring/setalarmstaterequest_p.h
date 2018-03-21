@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETALARMSTATEREQUEST_P_H
 #define QTAWS_SETALARMSTATEREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "setalarmstaterequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class SetAlarmStateRequest;
+
+class QTAWS_EXPORT SetAlarmStateRequestPrivate : public CloudWatchPrivate {
+
+public:
+    SetAlarmStateRequestPrivate(const CloudWatch::Action action,
+                                   SetAlarmStateRequest * const q);
+    SetAlarmStateRequestPrivate(const SetAlarmStateRequestPrivate &other,
+                                   SetAlarmStateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetAlarmStateRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

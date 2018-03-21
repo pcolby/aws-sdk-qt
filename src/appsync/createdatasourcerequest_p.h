@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDATASOURCEREQUEST_P_H
 #define QTAWS_CREATEDATASOURCEREQUEST_P_H
 
+#include "appsync_p.h"
+#include "createdatasourcerequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateDataSourceRequest;
+
+class QTAWS_EXPORT CreateDataSourceRequestPrivate : public AppSyncPrivate {
+
+public:
+    CreateDataSourceRequestPrivate(const AppSync::Action action,
+                                   CreateDataSourceRequest * const q);
+    CreateDataSourceRequestPrivate(const CreateDataSourceRequestPrivate &other,
+                                   CreateDataSourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDataSourceRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETLOGINPROFILEREQUEST_P_H
 #define QTAWS_GETLOGINPROFILEREQUEST_P_H
 
+#include "iam_p.h"
+#include "getloginprofilerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetLoginProfileRequest;
+
+class QTAWS_EXPORT GetLoginProfileRequestPrivate : public IAMPrivate {
+
+public:
+    GetLoginProfileRequestPrivate(const IAM::Action action,
+                                   GetLoginProfileRequest * const q);
+    GetLoginProfileRequestPrivate(const GetLoginProfileRequestPrivate &other,
+                                   GetLoginProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetLoginProfileRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

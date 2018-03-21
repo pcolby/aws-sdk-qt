@@ -19,3 +19,107 @@
 
 #include "confirmprivatevirtualinterfacerequest.h"
 #include "confirmprivatevirtualinterfacerequest_p.h"
+#include "confirmprivatevirtualinterfaceresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  ConfirmPrivateVirtualInterfaceRequest
+ *
+ * @brief  Implements DirectConnect ConfirmPrivateVirtualInterface requests.
+ *
+ * @see    DirectConnectClient::confirmPrivateVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ConfirmPrivateVirtualInterfaceResponse::ConfirmPrivateVirtualInterfaceResponse(
+
+/**
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ConfirmPrivateVirtualInterfaceRequest::ConfirmPrivateVirtualInterfaceRequest(const ConfirmPrivateVirtualInterfaceRequest &other)
+    : DirectConnectRequest(new ConfirmPrivateVirtualInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequest object.
+ */
+ConfirmPrivateVirtualInterfaceRequest::ConfirmPrivateVirtualInterfaceRequest()
+    : DirectConnectRequest(new ConfirmPrivateVirtualInterfaceRequestPrivate(DirectConnectRequest::ConfirmPrivateVirtualInterfaceAction, this))
+{
+
+}
+
+bool ConfirmPrivateVirtualInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ConfirmPrivateVirtualInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ConfirmPrivateVirtualInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * ConfirmPrivateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new ConfirmPrivateVirtualInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ConfirmPrivateVirtualInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for ConfirmPrivateVirtualInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public ConfirmPrivateVirtualInterfaceRequest instance.
+ */
+ConfirmPrivateVirtualInterfaceRequestPrivate::ConfirmPrivateVirtualInterfaceRequestPrivate(
+    const DirectConnectRequest::Action action, ConfirmPrivateVirtualInterfaceRequest * const q)
+    : ConfirmPrivateVirtualInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ConfirmPrivateVirtualInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ConfirmPrivateVirtualInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ConfirmPrivateVirtualInterfaceRequest instance.
+ */
+ConfirmPrivateVirtualInterfaceRequestPrivate::ConfirmPrivateVirtualInterfaceRequestPrivate(
+    const ConfirmPrivateVirtualInterfaceRequestPrivate &other, ConfirmPrivateVirtualInterfaceRequest * const q)
+    : ConfirmPrivateVirtualInterfacePrivate(other, q)
+{
+
+}

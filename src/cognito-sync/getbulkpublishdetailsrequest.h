@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBULKPUBLISHDETAILSREQUEST_H
 #define QTAWS_GETBULKPUBLISHDETAILSREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class GetBulkPublishDetailsRequestPrivate;
+
+class QTAWS_EXPORT GetBulkPublishDetailsRequest : public CognitoSyncRequest {
+
+public:
+    GetBulkPublishDetailsRequest(const GetBulkPublishDetailsRequest &other);
+    GetBulkPublishDetailsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBulkPublishDetailsRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

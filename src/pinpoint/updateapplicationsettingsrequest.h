@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPPLICATIONSETTINGSREQUEST_H
 #define QTAWS_UPDATEAPPLICATIONSETTINGSREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApplicationSettingsRequestPrivate;
+
+class QTAWS_EXPORT UpdateApplicationSettingsRequest : public PinpointRequest {
+
+public:
+    UpdateApplicationSettingsRequest(const UpdateApplicationSettingsRequest &other);
+    UpdateApplicationSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationSettingsRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

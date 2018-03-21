@@ -19,3 +19,107 @@
 
 #include "getdocumentversionrequest.h"
 #include "getdocumentversionrequest_p.h"
+#include "getdocumentversionresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  GetDocumentVersionRequest
+ *
+ * @brief  Implements WorkDocs GetDocumentVersion requests.
+ *
+ * @see    WorkDocsClient::getDocumentVersion
+ */
+
+/**
+ * @brief  Constructs a new GetDocumentVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDocumentVersionResponse::GetDocumentVersionResponse(
+
+/**
+ * @brief  Constructs a new GetDocumentVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDocumentVersionRequest::GetDocumentVersionRequest(const GetDocumentVersionRequest &other)
+    : WorkDocsRequest(new GetDocumentVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDocumentVersionRequest object.
+ */
+GetDocumentVersionRequest::GetDocumentVersionRequest()
+    : WorkDocsRequest(new GetDocumentVersionRequestPrivate(WorkDocsRequest::GetDocumentVersionAction, this))
+{
+
+}
+
+bool GetDocumentVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDocumentVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDocumentVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * GetDocumentVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDocumentVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDocumentVersionRequestPrivate
+ *
+ * @brief  Private implementation for GetDocumentVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentVersionRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public GetDocumentVersionRequest instance.
+ */
+GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
+    const WorkDocsRequest::Action action, GetDocumentVersionRequest * const q)
+    : GetDocumentVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDocumentVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDocumentVersionRequest instance.
+ */
+GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
+    const GetDocumentVersionRequestPrivate &other, GetDocumentVersionRequest * const q)
+    : GetDocumentVersionPrivate(other, q)
+{
+
+}

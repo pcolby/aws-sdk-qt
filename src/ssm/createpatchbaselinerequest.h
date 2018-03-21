@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPATCHBASELINEREQUEST_H
 #define QTAWS_CREATEPATCHBASELINEREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreatePatchBaselineRequestPrivate;
+
+class QTAWS_EXPORT CreatePatchBaselineRequest : public SSMRequest {
+
+public:
+    CreatePatchBaselineRequest(const CreatePatchBaselineRequest &other);
+    CreatePatchBaselineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePatchBaselineRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

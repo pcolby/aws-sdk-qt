@@ -19,3 +19,107 @@
 
 #include "listlaunchpathsrequest.h"
 #include "listlaunchpathsrequest_p.h"
+#include "listlaunchpathsresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListLaunchPathsRequest
+ *
+ * @brief  Implements ServiceCatalog ListLaunchPaths requests.
+ *
+ * @see    ServiceCatalogClient::listLaunchPaths
+ */
+
+/**
+ * @brief  Constructs a new ListLaunchPathsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLaunchPathsResponse::ListLaunchPathsResponse(
+
+/**
+ * @brief  Constructs a new ListLaunchPathsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListLaunchPathsRequest::ListLaunchPathsRequest(const ListLaunchPathsRequest &other)
+    : ServiceCatalogRequest(new ListLaunchPathsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListLaunchPathsRequest object.
+ */
+ListLaunchPathsRequest::ListLaunchPathsRequest()
+    : ServiceCatalogRequest(new ListLaunchPathsRequestPrivate(ServiceCatalogRequest::ListLaunchPathsAction, this))
+{
+
+}
+
+bool ListLaunchPathsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListLaunchPathsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListLaunchPathsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListLaunchPathsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLaunchPathsRequestPrivate
+ *
+ * @brief  Private implementation for ListLaunchPathsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLaunchPathsRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ListLaunchPathsRequest instance.
+ */
+ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
+    const ServiceCatalogRequest::Action action, ListLaunchPathsRequest * const q)
+    : ListLaunchPathsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLaunchPathsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListLaunchPathsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListLaunchPathsRequest instance.
+ */
+ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
+    const ListLaunchPathsRequestPrivate &other, ListLaunchPathsRequest * const q)
+    : ListLaunchPathsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEAPPLICATIONSREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "describeapplicationsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeApplicationsRequest;
+
+class QTAWS_EXPORT DescribeApplicationsRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DescribeApplicationsRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DescribeApplicationsRequest * const q);
+    DescribeApplicationsRequestPrivate(const DescribeApplicationsRequestPrivate &other,
+                                   DescribeApplicationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeApplicationsRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

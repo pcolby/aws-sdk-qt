@@ -19,3 +19,107 @@
 
 #include "describeplayersessionsrequest.h"
 #include "describeplayersessionsrequest_p.h"
+#include "describeplayersessionsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribePlayerSessionsRequest
+ *
+ * @brief  Implements GameLift DescribePlayerSessions requests.
+ *
+ * @see    GameLiftClient::describePlayerSessions
+ */
+
+/**
+ * @brief  Constructs a new DescribePlayerSessionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePlayerSessionsResponse::DescribePlayerSessionsResponse(
+
+/**
+ * @brief  Constructs a new DescribePlayerSessionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePlayerSessionsRequest::DescribePlayerSessionsRequest(const DescribePlayerSessionsRequest &other)
+    : GameLiftRequest(new DescribePlayerSessionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePlayerSessionsRequest object.
+ */
+DescribePlayerSessionsRequest::DescribePlayerSessionsRequest()
+    : GameLiftRequest(new DescribePlayerSessionsRequestPrivate(GameLiftRequest::DescribePlayerSessionsAction, this))
+{
+
+}
+
+bool DescribePlayerSessionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePlayerSessionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePlayerSessionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribePlayerSessionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePlayerSessionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePlayerSessionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribePlayerSessionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePlayerSessionsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribePlayerSessionsRequest instance.
+ */
+DescribePlayerSessionsRequestPrivate::DescribePlayerSessionsRequestPrivate(
+    const GameLiftRequest::Action action, DescribePlayerSessionsRequest * const q)
+    : DescribePlayerSessionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePlayerSessionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePlayerSessionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePlayerSessionsRequest instance.
+ */
+DescribePlayerSessionsRequestPrivate::DescribePlayerSessionsRequestPrivate(
+    const DescribePlayerSessionsRequestPrivate &other, DescribePlayerSessionsRequest * const q)
+    : DescribePlayerSessionsPrivate(other, q)
+{
+
+}

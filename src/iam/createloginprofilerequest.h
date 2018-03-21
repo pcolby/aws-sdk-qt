@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATELOGINPROFILEREQUEST_H
 #define QTAWS_CREATELOGINPROFILEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateLoginProfileRequestPrivate;
+
+class QTAWS_EXPORT CreateLoginProfileRequest : public IAMRequest {
+
+public:
+    CreateLoginProfileRequest(const CreateLoginProfileRequest &other);
+    CreateLoginProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateLoginProfileRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERDEFAULTPATCHBASELINEREQUEST_P_H
 #define QTAWS_REGISTERDEFAULTPATCHBASELINEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "registerdefaultpatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class RegisterDefaultPatchBaselineRequest;
+
+class QTAWS_EXPORT RegisterDefaultPatchBaselineRequestPrivate : public SSMPrivate {
+
+public:
+    RegisterDefaultPatchBaselineRequestPrivate(const SSM::Action action,
+                                   RegisterDefaultPatchBaselineRequest * const q);
+    RegisterDefaultPatchBaselineRequestPrivate(const RegisterDefaultPatchBaselineRequestPrivate &other,
+                                   RegisterDefaultPatchBaselineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDefaultPatchBaselineRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletedbclustersnapshotrequest.h"
 #include "deletedbclustersnapshotrequest_p.h"
+#include "deletedbclustersnapshotresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteDBClusterSnapshotRequest
+ *
+ * @brief  Implements RDS DeleteDBClusterSnapshot requests.
+ *
+ * @see    RDSClient::deleteDBClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new DeleteDBClusterSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
+
+/**
+ * @brief  Constructs a new DeleteDBClusterSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest(const DeleteDBClusterSnapshotRequest &other)
+    : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDBClusterSnapshotRequest object.
+ */
+DeleteDBClusterSnapshotRequest::DeleteDBClusterSnapshotRequest()
+    : RDSRequest(new DeleteDBClusterSnapshotRequestPrivate(RDSRequest::DeleteDBClusterSnapshotAction, this))
+{
+
+}
+
+bool DeleteDBClusterSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDBClusterSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDBClusterSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DeleteDBClusterSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDBClusterSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDBClusterSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDBClusterSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBClusterSnapshotRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DeleteDBClusterSnapshotRequest instance.
+ */
+DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
+    const RDSRequest::Action action, DeleteDBClusterSnapshotRequest * const q)
+    : DeleteDBClusterSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDBClusterSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDBClusterSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDBClusterSnapshotRequest instance.
+ */
+DeleteDBClusterSnapshotRequestPrivate::DeleteDBClusterSnapshotRequestPrivate(
+    const DeleteDBClusterSnapshotRequestPrivate &other, DeleteDBClusterSnapshotRequest * const q)
+    : DeleteDBClusterSnapshotPrivate(other, q)
+{
+
+}

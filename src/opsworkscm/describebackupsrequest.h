@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBACKUPSREQUEST_H
 #define QTAWS_DESCRIBEBACKUPSREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeBackupsRequestPrivate;
+
+class QTAWS_EXPORT DescribeBackupsRequest : public OpsWorksCMRequest {
+
+public:
+    DescribeBackupsRequest(const DescribeBackupsRequest &other);
+    DescribeBackupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBackupsRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

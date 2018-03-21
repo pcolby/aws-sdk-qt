@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "describeconfigurationoptionsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeConfigurationOptionsRequest;
+
+class QTAWS_EXPORT DescribeConfigurationOptionsRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DescribeConfigurationOptionsRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DescribeConfigurationOptionsRequest * const q);
+    DescribeConfigurationOptionsRequestPrivate(const DescribeConfigurationOptionsRequestPrivate &other,
+                                   DescribeConfigurationOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationOptionsRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

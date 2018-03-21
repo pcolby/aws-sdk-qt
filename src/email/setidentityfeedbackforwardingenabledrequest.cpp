@@ -19,3 +19,107 @@
 
 #include "setidentityfeedbackforwardingenabledrequest.h"
 #include "setidentityfeedbackforwardingenabledrequest_p.h"
+#include "setidentityfeedbackforwardingenabledresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SetIdentityFeedbackForwardingEnabledRequest
+ *
+ * @brief  Implements SES SetIdentityFeedbackForwardingEnabled requests.
+ *
+ * @see    SESClient::setIdentityFeedbackForwardingEnabled
+ */
+
+/**
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabledResponse(
+
+/**
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnabledRequest(const SetIdentityFeedbackForwardingEnabledRequest &other)
+    : SESRequest(new SetIdentityFeedbackForwardingEnabledRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequest object.
+ */
+SetIdentityFeedbackForwardingEnabledRequest::SetIdentityFeedbackForwardingEnabledRequest()
+    : SESRequest(new SetIdentityFeedbackForwardingEnabledRequestPrivate(SESRequest::SetIdentityFeedbackForwardingEnabledAction, this))
+{
+
+}
+
+bool SetIdentityFeedbackForwardingEnabledRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetIdentityFeedbackForwardingEnabledResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetIdentityFeedbackForwardingEnabledResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::response(QNetworkReply * const reply) const
+{
+    return new SetIdentityFeedbackForwardingEnabledResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetIdentityFeedbackForwardingEnabledRequestPrivate
+ *
+ * @brief  Private implementation for SetIdentityFeedbackForwardingEnabledRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SetIdentityFeedbackForwardingEnabledRequest instance.
+ */
+SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
+    const SESRequest::Action action, SetIdentityFeedbackForwardingEnabledRequest * const q)
+    : SetIdentityFeedbackForwardingEnabledPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetIdentityFeedbackForwardingEnabledRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetIdentityFeedbackForwardingEnabledRequest instance.
+ */
+SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
+    const SetIdentityFeedbackForwardingEnabledRequestPrivate &other, SetIdentityFeedbackForwardingEnabledRequest * const q)
+    : SetIdentityFeedbackForwardingEnabledPrivate(other, q)
+{
+
+}

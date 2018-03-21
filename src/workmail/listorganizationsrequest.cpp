@@ -19,3 +19,107 @@
 
 #include "listorganizationsrequest.h"
 #include "listorganizationsrequest_p.h"
+#include "listorganizationsresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ListOrganizationsRequest
+ *
+ * @brief  Implements WorkMail ListOrganizations requests.
+ *
+ * @see    WorkMailClient::listOrganizations
+ */
+
+/**
+ * @brief  Constructs a new ListOrganizationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOrganizationsResponse::ListOrganizationsResponse(
+
+/**
+ * @brief  Constructs a new ListOrganizationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOrganizationsRequest::ListOrganizationsRequest(const ListOrganizationsRequest &other)
+    : WorkMailRequest(new ListOrganizationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOrganizationsRequest object.
+ */
+ListOrganizationsRequest::ListOrganizationsRequest()
+    : WorkMailRequest(new ListOrganizationsRequestPrivate(WorkMailRequest::ListOrganizationsAction, this))
+{
+
+}
+
+bool ListOrganizationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOrganizationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOrganizationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * ListOrganizationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOrganizationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOrganizationsRequestPrivate
+ *
+ * @brief  Private implementation for ListOrganizationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationsRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public ListOrganizationsRequest instance.
+ */
+ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
+    const WorkMailRequest::Action action, ListOrganizationsRequest * const q)
+    : ListOrganizationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOrganizationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOrganizationsRequest instance.
+ */
+ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
+    const ListOrganizationsRequestPrivate &other, ListOrganizationsRequest * const q)
+    : ListOrganizationsPrivate(other, q)
+{
+
+}

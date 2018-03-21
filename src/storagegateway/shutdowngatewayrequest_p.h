@@ -20,4 +20,29 @@
 #ifndef QTAWS_SHUTDOWNGATEWAYREQUEST_P_H
 #define QTAWS_SHUTDOWNGATEWAYREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "shutdowngatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ShutdownGatewayRequest;
+
+class QTAWS_EXPORT ShutdownGatewayRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    ShutdownGatewayRequestPrivate(const StorageGateway::Action action,
+                                   ShutdownGatewayRequest * const q);
+    ShutdownGatewayRequestPrivate(const ShutdownGatewayRequestPrivate &other,
+                                   ShutdownGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ShutdownGatewayRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

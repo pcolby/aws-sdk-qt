@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDOMAINNAMEREQUEST_H
 #define QTAWS_UPDATEDOMAINNAMEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateDomainNameRequestPrivate;
+
+class QTAWS_EXPORT UpdateDomainNameRequest : public APIGatewayRequest {
+
+public:
+    UpdateDomainNameRequest(const UpdateDomainNameRequest &other);
+    UpdateDomainNameRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDomainNameRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

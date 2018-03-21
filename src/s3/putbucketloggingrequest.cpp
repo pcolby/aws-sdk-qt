@@ -19,3 +19,107 @@
 
 #include "putbucketloggingrequest.h"
 #include "putbucketloggingrequest_p.h"
+#include "putbucketloggingresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketLoggingRequest
+ *
+ * @brief  Implements S3 PutBucketLogging requests.
+ *
+ * @see    S3Client::putBucketLogging
+ */
+
+/**
+ * @brief  Constructs a new PutBucketLoggingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketLoggingResponse::PutBucketLoggingResponse(
+
+/**
+ * @brief  Constructs a new PutBucketLoggingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketLoggingRequest::PutBucketLoggingRequest(const PutBucketLoggingRequest &other)
+    : S3Request(new PutBucketLoggingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketLoggingRequest object.
+ */
+PutBucketLoggingRequest::PutBucketLoggingRequest()
+    : S3Request(new PutBucketLoggingRequestPrivate(S3Request::PutBucketLoggingAction, this))
+{
+
+}
+
+bool PutBucketLoggingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketLoggingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketLoggingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketLoggingRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketLoggingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketLoggingRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketLoggingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLoggingRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketLoggingRequest instance.
+ */
+PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
+    const S3Request::Action action, PutBucketLoggingRequest * const q)
+    : PutBucketLoggingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLoggingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketLoggingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketLoggingRequest instance.
+ */
+PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
+    const PutBucketLoggingRequestPrivate &other, PutBucketLoggingRequest * const q)
+    : PutBucketLoggingPrivate(other, q)
+{
+
+}

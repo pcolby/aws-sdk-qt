@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONPARTREQUEST_P_H
 #define QTAWS_DELETEDOCUMENTATIONPARTREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deletedocumentationpartrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteDocumentationPartRequest;
+
+class QTAWS_EXPORT DeleteDocumentationPartRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteDocumentationPartRequestPrivate(const APIGateway::Action action,
+                                   DeleteDocumentationPartRequest * const q);
+    DeleteDocumentationPartRequestPrivate(const DeleteDocumentationPartRequestPrivate &other,
+                                   DeleteDocumentationPartRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDocumentationPartRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCOREDEFINITIONREQUEST_H
 #define QTAWS_GETCOREDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetCoreDefinitionRequestPrivate;
+
+class QTAWS_EXPORT GetCoreDefinitionRequest : public GreengrassRequest {
+
+public:
+    GetCoreDefinitionRequest(const GetCoreDefinitionRequest &other);
+    GetCoreDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCoreDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

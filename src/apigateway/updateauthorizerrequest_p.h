@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEAUTHORIZERREQUEST_P_H
 #define QTAWS_UPDATEAUTHORIZERREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updateauthorizerrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateAuthorizerRequest;
+
+class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateAuthorizerRequestPrivate(const APIGateway::Action action,
+                                   UpdateAuthorizerRequest * const q);
+    UpdateAuthorizerRequestPrivate(const UpdateAuthorizerRequestPrivate &other,
+                                   UpdateAuthorizerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAuthorizerRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

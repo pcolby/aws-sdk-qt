@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSLOGGROUPREQUEST_H
 #define QTAWS_LISTTAGSLOGGROUPREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class ListTagsLogGroupRequestPrivate;
+
+class QTAWS_EXPORT ListTagsLogGroupRequest : public CloudWatchLogsRequest {
+
+public:
+    ListTagsLogGroupRequest(const ListTagsLogGroupRequest &other);
+    ListTagsLogGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsLogGroupRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

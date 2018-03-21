@@ -19,3 +19,107 @@
 
 #include "listsamplesrequest.h"
 #include "listsamplesrequest_p.h"
+#include "listsamplesresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListSamplesRequest
+ *
+ * @brief  Implements DeviceFarm ListSamples requests.
+ *
+ * @see    DeviceFarmClient::listSamples
+ */
+
+/**
+ * @brief  Constructs a new ListSamplesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSamplesResponse::ListSamplesResponse(
+
+/**
+ * @brief  Constructs a new ListSamplesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSamplesRequest::ListSamplesRequest(const ListSamplesRequest &other)
+    : DeviceFarmRequest(new ListSamplesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSamplesRequest object.
+ */
+ListSamplesRequest::ListSamplesRequest()
+    : DeviceFarmRequest(new ListSamplesRequestPrivate(DeviceFarmRequest::ListSamplesAction, this))
+{
+
+}
+
+bool ListSamplesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSamplesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSamplesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListSamplesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSamplesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSamplesRequestPrivate
+ *
+ * @brief  Private implementation for ListSamplesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSamplesRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListSamplesRequest instance.
+ */
+ListSamplesRequestPrivate::ListSamplesRequestPrivate(
+    const DeviceFarmRequest::Action action, ListSamplesRequest * const q)
+    : ListSamplesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSamplesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSamplesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSamplesRequest instance.
+ */
+ListSamplesRequestPrivate::ListSamplesRequestPrivate(
+    const ListSamplesRequestPrivate &other, ListSamplesRequest * const q)
+    : ListSamplesPrivate(other, q)
+{
+
+}

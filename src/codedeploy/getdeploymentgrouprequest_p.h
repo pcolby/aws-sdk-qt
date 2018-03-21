@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEPLOYMENTGROUPREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTGROUPREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "getdeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetDeploymentGroupRequest;
+
+class QTAWS_EXPORT GetDeploymentGroupRequestPrivate : public CodeDeployPrivate {
+
+public:
+    GetDeploymentGroupRequestPrivate(const CodeDeploy::Action action,
+                                   GetDeploymentGroupRequest * const q);
+    GetDeploymentGroupRequestPrivate(const GetDeploymentGroupRequestPrivate &other,
+                                   GetDeploymentGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeploymentGroupRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteportfoliosharerequest.h"
 #include "deleteportfoliosharerequest_p.h"
+#include "deleteportfolioshareresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeletePortfolioShareRequest
+ *
+ * @brief  Implements ServiceCatalog DeletePortfolioShare requests.
+ *
+ * @see    ServiceCatalogClient::deletePortfolioShare
+ */
+
+/**
+ * @brief  Constructs a new DeletePortfolioShareResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePortfolioShareResponse::DeletePortfolioShareResponse(
+
+/**
+ * @brief  Constructs a new DeletePortfolioShareRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeletePortfolioShareRequest::DeletePortfolioShareRequest(const DeletePortfolioShareRequest &other)
+    : ServiceCatalogRequest(new DeletePortfolioShareRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeletePortfolioShareRequest object.
+ */
+DeletePortfolioShareRequest::DeletePortfolioShareRequest()
+    : ServiceCatalogRequest(new DeletePortfolioShareRequestPrivate(ServiceCatalogRequest::DeletePortfolioShareAction, this))
+{
+
+}
+
+bool DeletePortfolioShareRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeletePortfolioShareResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeletePortfolioShareResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DeletePortfolioShareRequest::response(QNetworkReply * const reply) const
+{
+    return new DeletePortfolioShareResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePortfolioShareRequestPrivate
+ *
+ * @brief  Private implementation for DeletePortfolioShareRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePortfolioShareRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DeletePortfolioShareRequest instance.
+ */
+DeletePortfolioShareRequestPrivate::DeletePortfolioShareRequestPrivate(
+    const ServiceCatalogRequest::Action action, DeletePortfolioShareRequest * const q)
+    : DeletePortfolioSharePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePortfolioShareRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeletePortfolioShareRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeletePortfolioShareRequest instance.
+ */
+DeletePortfolioShareRequestPrivate::DeletePortfolioShareRequestPrivate(
+    const DeletePortfolioShareRequestPrivate &other, DeletePortfolioShareRequest * const q)
+    : DeletePortfolioSharePrivate(other, q)
+{
+
+}

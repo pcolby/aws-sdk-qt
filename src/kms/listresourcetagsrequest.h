@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCETAGSREQUEST_H
 #define QTAWS_LISTRESOURCETAGSREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListResourceTagsRequestPrivate;
+
+class QTAWS_EXPORT ListResourceTagsRequest : public KMSRequest {
+
+public:
+    ListResourceTagsRequest(const ListResourceTagsRequest &other);
+    ListResourceTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceTagsRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

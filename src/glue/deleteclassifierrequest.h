@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECLASSIFIERREQUEST_H
 #define QTAWS_DELETECLASSIFIERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteClassifierRequestPrivate;
+
+class QTAWS_EXPORT DeleteClassifierRequest : public GlueRequest {
+
+public:
+    DeleteClassifierRequest(const DeleteClassifierRequest &other);
+    DeleteClassifierRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteClassifierRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

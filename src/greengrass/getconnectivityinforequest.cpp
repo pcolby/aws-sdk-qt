@@ -19,3 +19,107 @@
 
 #include "getconnectivityinforequest.h"
 #include "getconnectivityinforequest_p.h"
+#include "getconnectivityinforesponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetConnectivityInfoRequest
+ *
+ * @brief  Implements Greengrass GetConnectivityInfo requests.
+ *
+ * @see    GreengrassClient::getConnectivityInfo
+ */
+
+/**
+ * @brief  Constructs a new GetConnectivityInfoResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectivityInfoResponse::GetConnectivityInfoResponse(
+
+/**
+ * @brief  Constructs a new GetConnectivityInfoRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetConnectivityInfoRequest::GetConnectivityInfoRequest(const GetConnectivityInfoRequest &other)
+    : GreengrassRequest(new GetConnectivityInfoRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetConnectivityInfoRequest object.
+ */
+GetConnectivityInfoRequest::GetConnectivityInfoRequest()
+    : GreengrassRequest(new GetConnectivityInfoRequestPrivate(GreengrassRequest::GetConnectivityInfoAction, this))
+{
+
+}
+
+bool GetConnectivityInfoRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetConnectivityInfoResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetConnectivityInfoResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetConnectivityInfoRequest::response(QNetworkReply * const reply) const
+{
+    return new GetConnectivityInfoResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectivityInfoRequestPrivate
+ *
+ * @brief  Private implementation for GetConnectivityInfoRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectivityInfoRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetConnectivityInfoRequest instance.
+ */
+GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
+    const GreengrassRequest::Action action, GetConnectivityInfoRequest * const q)
+    : GetConnectivityInfoPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectivityInfoRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetConnectivityInfoRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetConnectivityInfoRequest instance.
+ */
+GetConnectivityInfoRequestPrivate::GetConnectivityInfoRequestPrivate(
+    const GetConnectivityInfoRequestPrivate &other, GetConnectivityInfoRequest * const q)
+    : GetConnectivityInfoPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "getconfigrequest.h"
 #include "getconfigrequest_p.h"
+#include "getconfigresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  GetConfigRequest
+ *
+ * @brief  Implements CloudHSM GetConfig requests.
+ *
+ * @see    CloudHSMClient::getConfig
+ */
+
+/**
+ * @brief  Constructs a new GetConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConfigResponse::GetConfigResponse(
+
+/**
+ * @brief  Constructs a new GetConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetConfigRequest::GetConfigRequest(const GetConfigRequest &other)
+    : CloudHSMRequest(new GetConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetConfigRequest object.
+ */
+GetConfigRequest::GetConfigRequest()
+    : CloudHSMRequest(new GetConfigRequestPrivate(CloudHSMRequest::GetConfigAction, this))
+{
+
+}
+
+bool GetConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new GetConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConfigRequestPrivate
+ *
+ * @brief  Private implementation for GetConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConfigRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public GetConfigRequest instance.
+ */
+GetConfigRequestPrivate::GetConfigRequestPrivate(
+    const CloudHSMRequest::Action action, GetConfigRequest * const q)
+    : GetConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetConfigRequest instance.
+ */
+GetConfigRequestPrivate::GetConfigRequestPrivate(
+    const GetConfigRequestPrivate &other, GetConfigRequest * const q)
+    : GetConfigPrivate(other, q)
+{
+
+}

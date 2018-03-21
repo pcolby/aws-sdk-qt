@@ -19,3 +19,107 @@
 
 #include "encryptrequest.h"
 #include "encryptrequest_p.h"
+#include "encryptresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  EncryptRequest
+ *
+ * @brief  Implements KMS Encrypt requests.
+ *
+ * @see    KMSClient::encrypt
+ */
+
+/**
+ * @brief  Constructs a new EncryptResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EncryptResponse::EncryptResponse(
+
+/**
+ * @brief  Constructs a new EncryptRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EncryptRequest::EncryptRequest(const EncryptRequest &other)
+    : KMSRequest(new EncryptRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EncryptRequest object.
+ */
+EncryptRequest::EncryptRequest()
+    : KMSRequest(new EncryptRequestPrivate(KMSRequest::EncryptAction, this))
+{
+
+}
+
+bool EncryptRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EncryptResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EncryptResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * EncryptRequest::response(QNetworkReply * const reply) const
+{
+    return new EncryptResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EncryptRequestPrivate
+ *
+ * @brief  Private implementation for EncryptRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EncryptRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public EncryptRequest instance.
+ */
+EncryptRequestPrivate::EncryptRequestPrivate(
+    const KMSRequest::Action action, EncryptRequest * const q)
+    : EncryptPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EncryptRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EncryptRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EncryptRequest instance.
+ */
+EncryptRequestPrivate::EncryptRequestPrivate(
+    const EncryptRequestPrivate &other, EncryptRequest * const q)
+    : EncryptPrivate(other, q)
+{
+
+}

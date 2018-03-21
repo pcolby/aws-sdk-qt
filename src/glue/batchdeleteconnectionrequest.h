@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDELETECONNECTIONREQUEST_H
 #define QTAWS_BATCHDELETECONNECTIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchDeleteConnectionRequestPrivate;
+
+class QTAWS_EXPORT BatchDeleteConnectionRequest : public GlueRequest {
+
+public:
+    BatchDeleteConnectionRequest(const BatchDeleteConnectionRequest &other);
+    BatchDeleteConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteConnectionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

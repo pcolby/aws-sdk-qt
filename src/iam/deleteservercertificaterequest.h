@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESERVERCERTIFICATEREQUEST_H
 #define QTAWS_DELETESERVERCERTIFICATEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteServerCertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteServerCertificateRequest : public IAMRequest {
+
+public:
+    DeleteServerCertificateRequest(const DeleteServerCertificateRequest &other);
+    DeleteServerCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServerCertificateRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

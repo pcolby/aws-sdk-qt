@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCOLLECTIONSREQUEST_H
 #define QTAWS_LISTCOLLECTIONSREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class ListCollectionsRequestPrivate;
+
+class QTAWS_EXPORT ListCollectionsRequest : public RekognitionRequest {
+
+public:
+    ListCollectionsRequest(const ListCollectionsRequest &other);
+    ListCollectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListCollectionsRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

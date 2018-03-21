@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCORSPOLICYREQUEST_H
 #define QTAWS_GETCORSPOLICYREQUEST_H
 
+#include "mediastorerequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class GetCorsPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetCorsPolicyRequest : public MediaStoreRequest {
+
+public:
+    GetCorsPolicyRequest(const GetCorsPolicyRequest &other);
+    GetCorsPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCorsPolicyRequest)
+
+}
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

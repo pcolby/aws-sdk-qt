@@ -19,3 +19,107 @@
 
 #include "listdevicepoolsrequest.h"
 #include "listdevicepoolsrequest_p.h"
+#include "listdevicepoolsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListDevicePoolsRequest
+ *
+ * @brief  Implements DeviceFarm ListDevicePools requests.
+ *
+ * @see    DeviceFarmClient::listDevicePools
+ */
+
+/**
+ * @brief  Constructs a new ListDevicePoolsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDevicePoolsResponse::ListDevicePoolsResponse(
+
+/**
+ * @brief  Constructs a new ListDevicePoolsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDevicePoolsRequest::ListDevicePoolsRequest(const ListDevicePoolsRequest &other)
+    : DeviceFarmRequest(new ListDevicePoolsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDevicePoolsRequest object.
+ */
+ListDevicePoolsRequest::ListDevicePoolsRequest()
+    : DeviceFarmRequest(new ListDevicePoolsRequestPrivate(DeviceFarmRequest::ListDevicePoolsAction, this))
+{
+
+}
+
+bool ListDevicePoolsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDevicePoolsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDevicePoolsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListDevicePoolsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDevicePoolsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDevicePoolsRequestPrivate
+ *
+ * @brief  Private implementation for ListDevicePoolsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevicePoolsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListDevicePoolsRequest instance.
+ */
+ListDevicePoolsRequestPrivate::ListDevicePoolsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListDevicePoolsRequest * const q)
+    : ListDevicePoolsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevicePoolsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDevicePoolsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDevicePoolsRequest instance.
+ */
+ListDevicePoolsRequestPrivate::ListDevicePoolsRequestPrivate(
+    const ListDevicePoolsRequestPrivate &other, ListDevicePoolsRequest * const q)
+    : ListDevicePoolsPrivate(other, q)
+{
+
+}

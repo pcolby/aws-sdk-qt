@@ -19,3 +19,107 @@
 
 #include "describeenvironmentmanagedactionhistoryrequest.h"
 #include "describeenvironmentmanagedactionhistoryrequest_p.h"
+#include "describeenvironmentmanagedactionhistoryresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentManagedActionHistoryRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeEnvironmentManagedActionHistory requests.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentManagedActionHistory
+ */
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentManagedActionHistoryResponse::DescribeEnvironmentManagedActionHistoryResponse(
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEnvironmentManagedActionHistoryRequest::DescribeEnvironmentManagedActionHistoryRequest(const DescribeEnvironmentManagedActionHistoryRequest &other)
+    : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequest object.
+ */
+DescribeEnvironmentManagedActionHistoryRequest::DescribeEnvironmentManagedActionHistoryRequest()
+    : ElasticBeanstalkRequest(new DescribeEnvironmentManagedActionHistoryRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentManagedActionHistoryAction, this))
+{
+
+}
+
+bool DescribeEnvironmentManagedActionHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEnvironmentManagedActionHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEnvironmentManagedActionHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeEnvironmentManagedActionHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEnvironmentManagedActionHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentManagedActionHistoryRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentManagedActionHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeEnvironmentManagedActionHistoryRequest instance.
+ */
+DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManagedActionHistoryRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeEnvironmentManagedActionHistoryRequest * const q)
+    : DescribeEnvironmentManagedActionHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEnvironmentManagedActionHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEnvironmentManagedActionHistoryRequest instance.
+ */
+DescribeEnvironmentManagedActionHistoryRequestPrivate::DescribeEnvironmentManagedActionHistoryRequestPrivate(
+    const DescribeEnvironmentManagedActionHistoryRequestPrivate &other, DescribeEnvironmentManagedActionHistoryRequest * const q)
+    : DescribeEnvironmentManagedActionHistoryPrivate(other, q)
+{
+
+}

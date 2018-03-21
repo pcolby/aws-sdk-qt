@@ -19,3 +19,107 @@
 
 #include "setdataretrievalpolicyrequest.h"
 #include "setdataretrievalpolicyrequest_p.h"
+#include "setdataretrievalpolicyresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  SetDataRetrievalPolicyRequest
+ *
+ * @brief  Implements Glacier SetDataRetrievalPolicy requests.
+ *
+ * @see    GlacierClient::setDataRetrievalPolicy
+ */
+
+/**
+ * @brief  Constructs a new SetDataRetrievalPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetDataRetrievalPolicyResponse::SetDataRetrievalPolicyResponse(
+
+/**
+ * @brief  Constructs a new SetDataRetrievalPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetDataRetrievalPolicyRequest::SetDataRetrievalPolicyRequest(const SetDataRetrievalPolicyRequest &other)
+    : GlacierRequest(new SetDataRetrievalPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetDataRetrievalPolicyRequest object.
+ */
+SetDataRetrievalPolicyRequest::SetDataRetrievalPolicyRequest()
+    : GlacierRequest(new SetDataRetrievalPolicyRequestPrivate(GlacierRequest::SetDataRetrievalPolicyAction, this))
+{
+
+}
+
+bool SetDataRetrievalPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetDataRetrievalPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetDataRetrievalPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * SetDataRetrievalPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new SetDataRetrievalPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetDataRetrievalPolicyRequestPrivate
+ *
+ * @brief  Private implementation for SetDataRetrievalPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDataRetrievalPolicyRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public SetDataRetrievalPolicyRequest instance.
+ */
+SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
+    const GlacierRequest::Action action, SetDataRetrievalPolicyRequest * const q)
+    : SetDataRetrievalPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetDataRetrievalPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetDataRetrievalPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetDataRetrievalPolicyRequest instance.
+ */
+SetDataRetrievalPolicyRequestPrivate::SetDataRetrievalPolicyRequestPrivate(
+    const SetDataRetrievalPolicyRequestPrivate &other, SetDataRetrievalPolicyRequest * const q)
+    : SetDataRetrievalPolicyPrivate(other, q)
+{
+
+}

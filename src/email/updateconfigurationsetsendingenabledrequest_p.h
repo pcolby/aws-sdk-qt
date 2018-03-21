@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDREQUEST_P_H
 
+#include "ses_p.h"
+#include "updateconfigurationsetsendingenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetSendingEnabledRequest;
+
+class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledRequestPrivate : public SESPrivate {
+
+public:
+    UpdateConfigurationSetSendingEnabledRequestPrivate(const SES::Action action,
+                                   UpdateConfigurationSetSendingEnabledRequest * const q);
+    UpdateConfigurationSetSendingEnabledRequestPrivate(const UpdateConfigurationSetSendingEnabledRequestPrivate &other,
+                                   UpdateConfigurationSetSendingEnabledRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationSetSendingEnabledRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBOOTWORKSPACESREQUEST_P_H
 #define QTAWS_REBOOTWORKSPACESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "rebootworkspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class RebootWorkspacesRequest;
+
+class QTAWS_EXPORT RebootWorkspacesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    RebootWorkspacesRequestPrivate(const WorkSpaces::Action action,
+                                   RebootWorkspacesRequest * const q);
+    RebootWorkspacesRequestPrivate(const RebootWorkspacesRequestPrivate &other,
+                                   RebootWorkspacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebootWorkspacesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeactivereceiptrulesetrequest.h"
 #include "describeactivereceiptrulesetrequest_p.h"
+#include "describeactivereceiptrulesetresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DescribeActiveReceiptRuleSetRequest
+ *
+ * @brief  Implements SES DescribeActiveReceiptRuleSet requests.
+ *
+ * @see    SESClient::describeActiveReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActiveReceiptRuleSetResponse::DescribeActiveReceiptRuleSetResponse(
+
+/**
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeActiveReceiptRuleSetRequest::DescribeActiveReceiptRuleSetRequest(const DescribeActiveReceiptRuleSetRequest &other)
+    : SESRequest(new DescribeActiveReceiptRuleSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetRequest object.
+ */
+DescribeActiveReceiptRuleSetRequest::DescribeActiveReceiptRuleSetRequest()
+    : SESRequest(new DescribeActiveReceiptRuleSetRequestPrivate(SESRequest::DescribeActiveReceiptRuleSetAction, this))
+{
+
+}
+
+bool DescribeActiveReceiptRuleSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeActiveReceiptRuleSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeActiveReceiptRuleSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DescribeActiveReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeActiveReceiptRuleSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActiveReceiptRuleSetRequestPrivate
+ *
+ * @brief  Private implementation for DescribeActiveReceiptRuleSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DescribeActiveReceiptRuleSetRequest instance.
+ */
+DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestPrivate(
+    const SESRequest::Action action, DescribeActiveReceiptRuleSetRequest * const q)
+    : DescribeActiveReceiptRuleSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActiveReceiptRuleSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeActiveReceiptRuleSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeActiveReceiptRuleSetRequest instance.
+ */
+DescribeActiveReceiptRuleSetRequestPrivate::DescribeActiveReceiptRuleSetRequestPrivate(
+    const DescribeActiveReceiptRuleSetRequestPrivate &other, DescribeActiveReceiptRuleSetRequest * const q)
+    : DescribeActiveReceiptRuleSetPrivate(other, q)
+{
+
+}

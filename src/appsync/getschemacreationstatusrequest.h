@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSCHEMACREATIONSTATUSREQUEST_H
 #define QTAWS_GETSCHEMACREATIONSTATUSREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetSchemaCreationStatusRequestPrivate;
+
+class QTAWS_EXPORT GetSchemaCreationStatusRequest : public AppSyncRequest {
+
+public:
+    GetSchemaCreationStatusRequest(const GetSchemaCreationStatusRequest &other);
+    GetSchemaCreationStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSchemaCreationStatusRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

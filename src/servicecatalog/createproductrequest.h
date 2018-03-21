@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPRODUCTREQUEST_H
 #define QTAWS_CREATEPRODUCTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreateProductRequestPrivate;
+
+class QTAWS_EXPORT CreateProductRequest : public ServiceCatalogRequest {
+
+public:
+    CreateProductRequest(const CreateProductRequest &other);
+    CreateProductRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProductRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENETWORKINTERFACEREQUEST_P_H
 #define QTAWS_DELETENETWORKINTERFACEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletenetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteNetworkInterfaceRequest;
+
+class QTAWS_EXPORT DeleteNetworkInterfaceRequestPrivate : public EC2Private {
+
+public:
+    DeleteNetworkInterfaceRequestPrivate(const EC2::Action action,
+                                   DeleteNetworkInterfaceRequest * const q);
+    DeleteNetworkInterfaceRequestPrivate(const DeleteNetworkInterfaceRequestPrivate &other,
+                                   DeleteNetworkInterfaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNetworkInterfaceRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSERPROFILEREQUEST_P_H
 #define QTAWS_CREATEUSERPROFILEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "createuserprofilerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateUserProfileRequest;
+
+class QTAWS_EXPORT CreateUserProfileRequestPrivate : public OpsWorksPrivate {
+
+public:
+    CreateUserProfileRequestPrivate(const OpsWorks::Action action,
+                                   CreateUserProfileRequest * const q);
+    CreateUserProfileRequestPrivate(const CreateUserProfileRequestPrivate &other,
+                                   CreateUserProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserProfileRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

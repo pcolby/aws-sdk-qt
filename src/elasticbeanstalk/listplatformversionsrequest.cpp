@@ -19,3 +19,107 @@
 
 #include "listplatformversionsrequest.h"
 #include "listplatformversionsrequest_p.h"
+#include "listplatformversionsresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ListPlatformVersionsRequest
+ *
+ * @brief  Implements ElasticBeanstalk ListPlatformVersions requests.
+ *
+ * @see    ElasticBeanstalkClient::listPlatformVersions
+ */
+
+/**
+ * @brief  Constructs a new ListPlatformVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPlatformVersionsResponse::ListPlatformVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListPlatformVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPlatformVersionsRequest::ListPlatformVersionsRequest(const ListPlatformVersionsRequest &other)
+    : ElasticBeanstalkRequest(new ListPlatformVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPlatformVersionsRequest object.
+ */
+ListPlatformVersionsRequest::ListPlatformVersionsRequest()
+    : ElasticBeanstalkRequest(new ListPlatformVersionsRequestPrivate(ElasticBeanstalkRequest::ListPlatformVersionsAction, this))
+{
+
+}
+
+bool ListPlatformVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPlatformVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPlatformVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * ListPlatformVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPlatformVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPlatformVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListPlatformVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPlatformVersionsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public ListPlatformVersionsRequest instance.
+ */
+ListPlatformVersionsRequestPrivate::ListPlatformVersionsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, ListPlatformVersionsRequest * const q)
+    : ListPlatformVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPlatformVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPlatformVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPlatformVersionsRequest instance.
+ */
+ListPlatformVersionsRequestPrivate::ListPlatformVersionsRequestPrivate(
+    const ListPlatformVersionsRequestPrivate &other, ListPlatformVersionsRequest * const q)
+    : ListPlatformVersionsPrivate(other, q)
+{
+
+}

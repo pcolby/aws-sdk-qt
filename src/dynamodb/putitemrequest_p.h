@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTITEMREQUEST_P_H
 #define QTAWS_PUTITEMREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "putitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class PutItemRequest;
+
+class QTAWS_EXPORT PutItemRequestPrivate : public DynamoDBPrivate {
+
+public:
+    PutItemRequestPrivate(const DynamoDB::Action action,
+                                   PutItemRequest * const q);
+    PutItemRequestPrivate(const PutItemRequestPrivate &other,
+                                   PutItemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutItemRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

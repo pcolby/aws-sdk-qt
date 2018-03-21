@@ -19,3 +19,107 @@
 
 #include "getlogeventsrequest.h"
 #include "getlogeventsrequest_p.h"
+#include "getlogeventsresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  GetLogEventsRequest
+ *
+ * @brief  Implements CloudWatchLogs GetLogEvents requests.
+ *
+ * @see    CloudWatchLogsClient::getLogEvents
+ */
+
+/**
+ * @brief  Constructs a new GetLogEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLogEventsResponse::GetLogEventsResponse(
+
+/**
+ * @brief  Constructs a new GetLogEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLogEventsRequest::GetLogEventsRequest(const GetLogEventsRequest &other)
+    : CloudWatchLogsRequest(new GetLogEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLogEventsRequest object.
+ */
+GetLogEventsRequest::GetLogEventsRequest()
+    : CloudWatchLogsRequest(new GetLogEventsRequestPrivate(CloudWatchLogsRequest::GetLogEventsAction, this))
+{
+
+}
+
+bool GetLogEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLogEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLogEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * GetLogEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLogEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLogEventsRequestPrivate
+ *
+ * @brief  Private implementation for GetLogEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLogEventsRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public GetLogEventsRequest instance.
+ */
+GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
+    const CloudWatchLogsRequest::Action action, GetLogEventsRequest * const q)
+    : GetLogEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLogEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLogEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLogEventsRequest instance.
+ */
+GetLogEventsRequestPrivate::GetLogEventsRequestPrivate(
+    const GetLogEventsRequestPrivate &other, GetLogEventsRequest * const q)
+    : GetLogEventsPrivate(other, q)
+{
+
+}

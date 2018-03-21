@@ -19,3 +19,107 @@
 
 #include "disassociatewebaclrequest.h"
 #include "disassociatewebaclrequest_p.h"
+#include "disassociatewebaclresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DisassociateWebACLRequest
+ *
+ * @brief  Implements WAFRegional DisassociateWebACL requests.
+ *
+ * @see    WAFRegionalClient::disassociateWebACL
+ */
+
+/**
+ * @brief  Constructs a new DisassociateWebACLResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateWebACLResponse::DisassociateWebACLResponse(
+
+/**
+ * @brief  Constructs a new DisassociateWebACLRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateWebACLRequest::DisassociateWebACLRequest(const DisassociateWebACLRequest &other)
+    : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateWebACLRequest object.
+ */
+DisassociateWebACLRequest::DisassociateWebACLRequest()
+    : WAFRegionalRequest(new DisassociateWebACLRequestPrivate(WAFRegionalRequest::DisassociateWebACLAction, this))
+{
+
+}
+
+bool DisassociateWebACLRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateWebACLResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateWebACLResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateWebACLResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateWebACLRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateWebACLRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateWebACLRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public DisassociateWebACLRequest instance.
+ */
+DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
+    const WAFRegionalRequest::Action action, DisassociateWebACLRequest * const q)
+    : DisassociateWebACLPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateWebACLRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateWebACLRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateWebACLRequest instance.
+ */
+DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
+    const DisassociateWebACLRequestPrivate &other, DisassociateWebACLRequest * const q)
+    : DisassociateWebACLPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDISTRIBUTIONREQUEST_P_H
 #define QTAWS_CREATEDISTRIBUTIONREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "createdistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateDistributionRequest;
+
+class QTAWS_EXPORT CreateDistributionRequestPrivate : public CloudFrontPrivate {
+
+public:
+    CreateDistributionRequestPrivate(const CloudFront::Action action,
+                                   CreateDistributionRequest * const q);
+    CreateDistributionRequestPrivate(const CreateDistributionRequestPrivate &other,
+                                   CreateDistributionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDistributionRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

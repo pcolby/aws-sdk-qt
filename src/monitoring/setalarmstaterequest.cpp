@@ -19,3 +19,107 @@
 
 #include "setalarmstaterequest.h"
 #include "setalarmstaterequest_p.h"
+#include "setalarmstateresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  SetAlarmStateRequest
+ *
+ * @brief  Implements CloudWatch SetAlarmState requests.
+ *
+ * @see    CloudWatchClient::setAlarmState
+ */
+
+/**
+ * @brief  Constructs a new SetAlarmStateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetAlarmStateResponse::SetAlarmStateResponse(
+
+/**
+ * @brief  Constructs a new SetAlarmStateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetAlarmStateRequest::SetAlarmStateRequest(const SetAlarmStateRequest &other)
+    : CloudWatchRequest(new SetAlarmStateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetAlarmStateRequest object.
+ */
+SetAlarmStateRequest::SetAlarmStateRequest()
+    : CloudWatchRequest(new SetAlarmStateRequestPrivate(CloudWatchRequest::SetAlarmStateAction, this))
+{
+
+}
+
+bool SetAlarmStateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetAlarmStateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetAlarmStateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply * const reply) const
+{
+    return new SetAlarmStateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetAlarmStateRequestPrivate
+ *
+ * @brief  Private implementation for SetAlarmStateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetAlarmStateRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public SetAlarmStateRequest instance.
+ */
+SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
+    const CloudWatchRequest::Action action, SetAlarmStateRequest * const q)
+    : SetAlarmStatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetAlarmStateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetAlarmStateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetAlarmStateRequest instance.
+ */
+SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
+    const SetAlarmStateRequestPrivate &other, SetAlarmStateRequest * const q)
+    : SetAlarmStatePrivate(other, q)
+{
+
+}

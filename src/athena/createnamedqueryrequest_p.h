@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATENAMEDQUERYREQUEST_P_H
 #define QTAWS_CREATENAMEDQUERYREQUEST_P_H
 
+#include "athena_p.h"
+#include "createnamedqueryrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class CreateNamedQueryRequest;
+
+class QTAWS_EXPORT CreateNamedQueryRequestPrivate : public AthenaPrivate {
+
+public:
+    CreateNamedQueryRequestPrivate(const Athena::Action action,
+                                   CreateNamedQueryRequest * const q);
+    CreateNamedQueryRequestPrivate(const CreateNamedQueryRequestPrivate &other,
+                                   CreateNamedQueryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNamedQueryRequest)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

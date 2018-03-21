@@ -19,3 +19,107 @@
 
 #include "getcompliancesummarybyresourcetyperequest.h"
 #include "getcompliancesummarybyresourcetyperequest_p.h"
+#include "getcompliancesummarybyresourcetyperesponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetComplianceSummaryByResourceTypeRequest
+ *
+ * @brief  Implements ConfigService GetComplianceSummaryByResourceType requests.
+ *
+ * @see    ConfigServiceClient::getComplianceSummaryByResourceType
+ */
+
+/**
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetComplianceSummaryByResourceTypeResponse::GetComplianceSummaryByResourceTypeResponse(
+
+/**
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetComplianceSummaryByResourceTypeRequest::GetComplianceSummaryByResourceTypeRequest(const GetComplianceSummaryByResourceTypeRequest &other)
+    : ConfigServiceRequest(new GetComplianceSummaryByResourceTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequest object.
+ */
+GetComplianceSummaryByResourceTypeRequest::GetComplianceSummaryByResourceTypeRequest()
+    : ConfigServiceRequest(new GetComplianceSummaryByResourceTypeRequestPrivate(ConfigServiceRequest::GetComplianceSummaryByResourceTypeAction, this))
+{
+
+}
+
+bool GetComplianceSummaryByResourceTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetComplianceSummaryByResourceTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetComplianceSummaryByResourceTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new GetComplianceSummaryByResourceTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetComplianceSummaryByResourceTypeRequestPrivate
+ *
+ * @brief  Private implementation for GetComplianceSummaryByResourceTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public GetComplianceSummaryByResourceTypeRequest instance.
+ */
+GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResourceTypeRequestPrivate(
+    const ConfigServiceRequest::Action action, GetComplianceSummaryByResourceTypeRequest * const q)
+    : GetComplianceSummaryByResourceTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetComplianceSummaryByResourceTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetComplianceSummaryByResourceTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetComplianceSummaryByResourceTypeRequest instance.
+ */
+GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResourceTypeRequestPrivate(
+    const GetComplianceSummaryByResourceTypeRequestPrivate &other, GetComplianceSummaryByResourceTypeRequest * const q)
+    : GetComplianceSummaryByResourceTypePrivate(other, q)
+{
+
+}

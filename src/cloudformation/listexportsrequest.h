@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTEXPORTSREQUEST_H
 #define QTAWS_LISTEXPORTSREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ListExportsRequestPrivate;
+
+class QTAWS_EXPORT ListExportsRequest : public CloudFormationRequest {
+
+public:
+    ListExportsRequest(const ListExportsRequest &other);
+    ListExportsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListExportsRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

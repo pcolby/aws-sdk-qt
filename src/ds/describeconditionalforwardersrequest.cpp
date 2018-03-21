@@ -19,3 +19,107 @@
 
 #include "describeconditionalforwardersrequest.h"
 #include "describeconditionalforwardersrequest_p.h"
+#include "describeconditionalforwardersresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeConditionalForwardersRequest
+ *
+ * @brief  Implements DirectoryService DescribeConditionalForwarders requests.
+ *
+ * @see    DirectoryServiceClient::describeConditionalForwarders
+ */
+
+/**
+ * @brief  Constructs a new DescribeConditionalForwardersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
+
+/**
+ * @brief  Constructs a new DescribeConditionalForwardersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConditionalForwardersRequest::DescribeConditionalForwardersRequest(const DescribeConditionalForwardersRequest &other)
+    : DirectoryServiceRequest(new DescribeConditionalForwardersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConditionalForwardersRequest object.
+ */
+DescribeConditionalForwardersRequest::DescribeConditionalForwardersRequest()
+    : DirectoryServiceRequest(new DescribeConditionalForwardersRequestPrivate(DirectoryServiceRequest::DescribeConditionalForwardersAction, this))
+{
+
+}
+
+bool DescribeConditionalForwardersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConditionalForwardersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConditionalForwardersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeConditionalForwardersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConditionalForwardersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConditionalForwardersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConditionalForwardersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConditionalForwardersRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeConditionalForwardersRequest instance.
+ */
+DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeConditionalForwardersRequest * const q)
+    : DescribeConditionalForwardersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConditionalForwardersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConditionalForwardersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConditionalForwardersRequest instance.
+ */
+DescribeConditionalForwardersRequestPrivate::DescribeConditionalForwardersRequestPrivate(
+    const DescribeConditionalForwardersRequestPrivate &other, DescribeConditionalForwardersRequest * const q)
+    : DescribeConditionalForwardersPrivate(other, q)
+{
+
+}

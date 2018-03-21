@@ -19,3 +19,107 @@
 
 #include "deleteresourcerequest.h"
 #include "deleteresourcerequest_p.h"
+#include "deleteresourceresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DeleteResourceRequest
+ *
+ * @brief  Implements WorkMail DeleteResource requests.
+ *
+ * @see    WorkMailClient::deleteResource
+ */
+
+/**
+ * @brief  Constructs a new DeleteResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourceResponse::DeleteResourceResponse(
+
+/**
+ * @brief  Constructs a new DeleteResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteResourceRequest::DeleteResourceRequest(const DeleteResourceRequest &other)
+    : WorkMailRequest(new DeleteResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteResourceRequest object.
+ */
+DeleteResourceRequest::DeleteResourceRequest()
+    : WorkMailRequest(new DeleteResourceRequestPrivate(WorkMailRequest::DeleteResourceAction, this))
+{
+
+}
+
+bool DeleteResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public DeleteResourceRequest instance.
+ */
+DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
+    const WorkMailRequest::Action action, DeleteResourceRequest * const q)
+    : DeleteResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteResourceRequest instance.
+ */
+DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
+    const DeleteResourceRequestPrivate &other, DeleteResourceRequest * const q)
+    : DeleteResourcePrivate(other, q)
+{
+
+}

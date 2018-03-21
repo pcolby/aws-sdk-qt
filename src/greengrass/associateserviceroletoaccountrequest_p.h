@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATESERVICEROLETOACCOUNTREQUEST_P_H
 #define QTAWS_ASSOCIATESERVICEROLETOACCOUNTREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "associateserviceroletoaccountrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class AssociateServiceRoleToAccountRequest;
+
+class QTAWS_EXPORT AssociateServiceRoleToAccountRequestPrivate : public GreengrassPrivate {
+
+public:
+    AssociateServiceRoleToAccountRequestPrivate(const Greengrass::Action action,
+                                   AssociateServiceRoleToAccountRequest * const q);
+    AssociateServiceRoleToAccountRequestPrivate(const AssociateServiceRoleToAccountRequestPrivate &other,
+                                   AssociateServiceRoleToAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateServiceRoleToAccountRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

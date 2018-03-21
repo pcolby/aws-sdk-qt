@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELIFECYCLEHOOKREQUEST_P_H
 #define QTAWS_DELETELIFECYCLEHOOKREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "deletelifecyclehookrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteLifecycleHookRequest;
+
+class QTAWS_EXPORT DeleteLifecycleHookRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DeleteLifecycleHookRequestPrivate(const AutoScaling::Action action,
+                                   DeleteLifecycleHookRequest * const q);
+    DeleteLifecycleHookRequestPrivate(const DeleteLifecycleHookRequestPrivate &other,
+                                   DeleteLifecycleHookRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLifecycleHookRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

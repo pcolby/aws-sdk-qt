@@ -19,3 +19,107 @@
 
 #include "createhsmclientcertificaterequest.h"
 #include "createhsmclientcertificaterequest_p.h"
+#include "createhsmclientcertificateresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateHsmClientCertificateRequest
+ *
+ * @brief  Implements Redshift CreateHsmClientCertificate requests.
+ *
+ * @see    RedshiftClient::createHsmClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new CreateHsmClientCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHsmClientCertificateResponse::CreateHsmClientCertificateResponse(
+
+/**
+ * @brief  Constructs a new CreateHsmClientCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHsmClientCertificateRequest::CreateHsmClientCertificateRequest(const CreateHsmClientCertificateRequest &other)
+    : RedshiftRequest(new CreateHsmClientCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHsmClientCertificateRequest object.
+ */
+CreateHsmClientCertificateRequest::CreateHsmClientCertificateRequest()
+    : RedshiftRequest(new CreateHsmClientCertificateRequestPrivate(RedshiftRequest::CreateHsmClientCertificateAction, this))
+{
+
+}
+
+bool CreateHsmClientCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHsmClientCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHsmClientCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateHsmClientCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHsmClientCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHsmClientCertificateRequestPrivate
+ *
+ * @brief  Private implementation for CreateHsmClientCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmClientCertificateRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateHsmClientCertificateRequest instance.
+ */
+CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPrivate(
+    const RedshiftRequest::Action action, CreateHsmClientCertificateRequest * const q)
+    : CreateHsmClientCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmClientCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHsmClientCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHsmClientCertificateRequest instance.
+ */
+CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPrivate(
+    const CreateHsmClientCertificateRequestPrivate &other, CreateHsmClientCertificateRequest * const q)
+    : CreateHsmClientCertificatePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "updateadmchannelrequest.h"
 #include "updateadmchannelrequest_p.h"
+#include "updateadmchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateAdmChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateAdmChannel requests.
+ *
+ * @see    PinpointClient::updateAdmChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateAdmChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAdmChannelResponse::UpdateAdmChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateAdmChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateAdmChannelRequest::UpdateAdmChannelRequest(const UpdateAdmChannelRequest &other)
+    : PinpointRequest(new UpdateAdmChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateAdmChannelRequest object.
+ */
+UpdateAdmChannelRequest::UpdateAdmChannelRequest()
+    : PinpointRequest(new UpdateAdmChannelRequestPrivate(PinpointRequest::UpdateAdmChannelAction, this))
+{
+
+}
+
+bool UpdateAdmChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateAdmChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateAdmChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateAdmChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAdmChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateAdmChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAdmChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateAdmChannelRequest instance.
+ */
+UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateAdmChannelRequest * const q)
+    : UpdateAdmChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAdmChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateAdmChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateAdmChannelRequest instance.
+ */
+UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
+    const UpdateAdmChannelRequestPrivate &other, UpdateAdmChannelRequest * const q)
+    : UpdateAdmChannelPrivate(other, q)
+{
+
+}

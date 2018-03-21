@@ -19,3 +19,107 @@
 
 #include "addcustomattributesrequest.h"
 #include "addcustomattributesrequest_p.h"
+#include "addcustomattributesresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AddCustomAttributesRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AddCustomAttributes requests.
+ *
+ * @see    CognitoIdentityProviderClient::addCustomAttributes
+ */
+
+/**
+ * @brief  Constructs a new AddCustomAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddCustomAttributesResponse::AddCustomAttributesResponse(
+
+/**
+ * @brief  Constructs a new AddCustomAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddCustomAttributesRequest::AddCustomAttributesRequest(const AddCustomAttributesRequest &other)
+    : CognitoIdentityProviderRequest(new AddCustomAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddCustomAttributesRequest object.
+ */
+AddCustomAttributesRequest::AddCustomAttributesRequest()
+    : CognitoIdentityProviderRequest(new AddCustomAttributesRequestPrivate(CognitoIdentityProviderRequest::AddCustomAttributesAction, this))
+{
+
+}
+
+bool AddCustomAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddCustomAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddCustomAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AddCustomAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new AddCustomAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddCustomAttributesRequestPrivate
+ *
+ * @brief  Private implementation for AddCustomAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddCustomAttributesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AddCustomAttributesRequest instance.
+ */
+AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AddCustomAttributesRequest * const q)
+    : AddCustomAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddCustomAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddCustomAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddCustomAttributesRequest instance.
+ */
+AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
+    const AddCustomAttributesRequestPrivate &other, AddCustomAttributesRequest * const q)
+    : AddCustomAttributesPrivate(other, q)
+{
+
+}

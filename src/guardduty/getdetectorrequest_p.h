@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDETECTORREQUEST_P_H
 #define QTAWS_GETDETECTORREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "getdetectorrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetDetectorRequest;
+
+class QTAWS_EXPORT GetDetectorRequestPrivate : public GuardDutyPrivate {
+
+public:
+    GetDetectorRequestPrivate(const GuardDuty::Action action,
+                                   GetDetectorRequest * const q);
+    GetDetectorRequestPrivate(const GetDetectorRequestPrivate &other,
+                                   GetDetectorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDetectorRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

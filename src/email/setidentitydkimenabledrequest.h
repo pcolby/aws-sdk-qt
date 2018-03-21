@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETIDENTITYDKIMENABLEDREQUEST_H
 #define QTAWS_SETIDENTITYDKIMENABLEDREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityDkimEnabledRequestPrivate;
+
+class QTAWS_EXPORT SetIdentityDkimEnabledRequest : public SESRequest {
+
+public:
+    SetIdentityDkimEnabledRequest(const SetIdentityDkimEnabledRequest &other);
+    SetIdentityDkimEnabledRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityDkimEnabledRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERATEBASEDRULEREQUEST_H
 #define QTAWS_CREATERATEBASEDRULEREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRateBasedRuleRequestPrivate;
+
+class QTAWS_EXPORT CreateRateBasedRuleRequest : public WAFRegionalRequest {
+
+public:
+    CreateRateBasedRuleRequest(const CreateRateBasedRuleRequest &other);
+    CreateRateBasedRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateRateBasedRuleRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

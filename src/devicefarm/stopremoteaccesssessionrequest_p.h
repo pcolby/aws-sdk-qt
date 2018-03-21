@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPREMOTEACCESSSESSIONREQUEST_P_H
 #define QTAWS_STOPREMOTEACCESSSESSIONREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "stopremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class StopRemoteAccessSessionRequest;
+
+class QTAWS_EXPORT StopRemoteAccessSessionRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    StopRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+                                   StopRemoteAccessSessionRequest * const q);
+    StopRemoteAccessSessionRequestPrivate(const StopRemoteAccessSessionRequestPrivate &other,
+                                   StopRemoteAccessSessionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopRemoteAccessSessionRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

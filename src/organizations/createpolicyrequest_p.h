@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPOLICYREQUEST_P_H
 #define QTAWS_CREATEPOLICYREQUEST_P_H
 
+#include "organizations_p.h"
+#include "createpolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CreatePolicyRequest;
+
+class QTAWS_EXPORT CreatePolicyRequestPrivate : public OrganizationsPrivate {
+
+public:
+    CreatePolicyRequestPrivate(const Organizations::Action action,
+                                   CreatePolicyRequest * const q);
+    CreatePolicyRequestPrivate(const CreatePolicyRequestPrivate &other,
+                                   CreatePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePolicyRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

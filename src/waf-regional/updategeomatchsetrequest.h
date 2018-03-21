@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEGEOMATCHSETREQUEST_H
 #define QTAWS_UPDATEGEOMATCHSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateGeoMatchSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateGeoMatchSetRequest : public WAFRegionalRequest {
+
+public:
+    UpdateGeoMatchSetRequest(const UpdateGeoMatchSetRequest &other);
+    UpdateGeoMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGeoMatchSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

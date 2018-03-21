@@ -20,4 +20,32 @@
 #ifndef QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_H
 #define QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class SubmitContainerStateChangeRequestPrivate;
+
+class QTAWS_EXPORT SubmitContainerStateChangeRequest : public ECSRequest {
+
+public:
+    SubmitContainerStateChangeRequest(const SubmitContainerStateChangeRequest &other);
+    SubmitContainerStateChangeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SubmitContainerStateChangeRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

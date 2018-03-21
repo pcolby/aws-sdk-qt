@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGRANTSREQUEST_H
 #define QTAWS_LISTGRANTSREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListGrantsRequestPrivate;
+
+class QTAWS_EXPORT ListGrantsRequest : public KMSRequest {
+
+public:
+    ListGrantsRequest(const ListGrantsRequest &other);
+    ListGrantsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGrantsRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

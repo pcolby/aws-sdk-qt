@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETIDENTITYMAILFROMDOMAINREQUEST_H
 #define QTAWS_SETIDENTITYMAILFROMDOMAINREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityMailFromDomainRequestPrivate;
+
+class QTAWS_EXPORT SetIdentityMailFromDomainRequest : public SESRequest {
+
+public:
+    SetIdentityMailFromDomainRequest(const SetIdentityMailFromDomainRequest &other);
+    SetIdentityMailFromDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityMailFromDomainRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELUNACLIENTREQUEST_P_H
 #define QTAWS_DESCRIBELUNACLIENTREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "describelunaclientrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DescribeLunaClientRequest;
+
+class QTAWS_EXPORT DescribeLunaClientRequestPrivate : public CloudHSMPrivate {
+
+public:
+    DescribeLunaClientRequestPrivate(const CloudHSM::Action action,
+                                   DescribeLunaClientRequest * const q);
+    DescribeLunaClientRequestPrivate(const DescribeLunaClientRequestPrivate &other,
+                                   DescribeLunaClientRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLunaClientRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

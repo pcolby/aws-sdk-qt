@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESTOREDBINSTANCEFROMDBSNAPSHOTREQUEST_P_H
 #define QTAWS_RESTOREDBINSTANCEFROMDBSNAPSHOTREQUEST_P_H
 
+#include "rds_p.h"
+#include "restoredbinstancefromdbsnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBInstanceFromDBSnapshotRequest;
+
+class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotRequestPrivate : public RDSPrivate {
+
+public:
+    RestoreDBInstanceFromDBSnapshotRequestPrivate(const RDS::Action action,
+                                   RestoreDBInstanceFromDBSnapshotRequest * const q);
+    RestoreDBInstanceFromDBSnapshotRequestPrivate(const RestoreDBInstanceFromDBSnapshotRequestPrivate &other,
+                                   RestoreDBInstanceFromDBSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBInstanceFromDBSnapshotRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

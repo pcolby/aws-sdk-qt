@@ -19,3 +19,107 @@
 
 #include "describeidentitypoolrequest.h"
 #include "describeidentitypoolrequest_p.h"
+#include "describeidentitypoolresponse.h"
+#include "cognitoidentityrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentity {
+
+/**
+ * @class  DescribeIdentityPoolRequest
+ *
+ * @brief  Implements CognitoIdentity DescribeIdentityPool requests.
+ *
+ * @see    CognitoIdentityClient::describeIdentityPool
+ */
+
+/**
+ * @brief  Constructs a new DescribeIdentityPoolResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeIdentityPoolResponse::DescribeIdentityPoolResponse(
+
+/**
+ * @brief  Constructs a new DescribeIdentityPoolRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeIdentityPoolRequest::DescribeIdentityPoolRequest(const DescribeIdentityPoolRequest &other)
+    : CognitoIdentityRequest(new DescribeIdentityPoolRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeIdentityPoolRequest object.
+ */
+DescribeIdentityPoolRequest::DescribeIdentityPoolRequest()
+    : CognitoIdentityRequest(new DescribeIdentityPoolRequestPrivate(CognitoIdentityRequest::DescribeIdentityPoolAction, this))
+{
+
+}
+
+bool DescribeIdentityPoolRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeIdentityPoolResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeIdentityPoolResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityClient::send
+ */
+AwsAbstractResponse * DescribeIdentityPoolRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeIdentityPoolResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeIdentityPoolRequestPrivate
+ *
+ * @brief  Private implementation for DescribeIdentityPoolRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityPoolRequestPrivate object.
+ *
+ * @param  action  CognitoIdentity action being performed.
+ * @param  q       Pointer to this object's public DescribeIdentityPoolRequest instance.
+ */
+DescribeIdentityPoolRequestPrivate::DescribeIdentityPoolRequestPrivate(
+    const CognitoIdentityRequest::Action action, DescribeIdentityPoolRequest * const q)
+    : DescribeIdentityPoolPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeIdentityPoolRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeIdentityPoolRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeIdentityPoolRequest instance.
+ */
+DescribeIdentityPoolRequestPrivate::DescribeIdentityPoolRequestPrivate(
+    const DescribeIdentityPoolRequestPrivate &other, DescribeIdentityPoolRequest * const q)
+    : DescribeIdentityPoolPrivate(other, q)
+{
+
+}

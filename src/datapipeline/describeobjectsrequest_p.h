@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEOBJECTSREQUEST_P_H
 #define QTAWS_DESCRIBEOBJECTSREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "describeobjectsrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class DescribeObjectsRequest;
+
+class QTAWS_EXPORT DescribeObjectsRequestPrivate : public DataPipelinePrivate {
+
+public:
+    DescribeObjectsRequestPrivate(const DataPipeline::Action action,
+                                   DescribeObjectsRequest * const q);
+    DescribeObjectsRequestPrivate(const DescribeObjectsRequestPrivate &other,
+                                   DescribeObjectsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeObjectsRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

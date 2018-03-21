@@ -19,3 +19,107 @@
 
 #include "gettemplatesummaryrequest.h"
 #include "gettemplatesummaryrequest_p.h"
+#include "gettemplatesummaryresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  GetTemplateSummaryRequest
+ *
+ * @brief  Implements CloudFormation GetTemplateSummary requests.
+ *
+ * @see    CloudFormationClient::getTemplateSummary
+ */
+
+/**
+ * @brief  Constructs a new GetTemplateSummaryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTemplateSummaryResponse::GetTemplateSummaryResponse(
+
+/**
+ * @brief  Constructs a new GetTemplateSummaryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTemplateSummaryRequest::GetTemplateSummaryRequest(const GetTemplateSummaryRequest &other)
+    : CloudFormationRequest(new GetTemplateSummaryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTemplateSummaryRequest object.
+ */
+GetTemplateSummaryRequest::GetTemplateSummaryRequest()
+    : CloudFormationRequest(new GetTemplateSummaryRequestPrivate(CloudFormationRequest::GetTemplateSummaryAction, this))
+{
+
+}
+
+bool GetTemplateSummaryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTemplateSummaryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTemplateSummaryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * GetTemplateSummaryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTemplateSummaryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTemplateSummaryRequestPrivate
+ *
+ * @brief  Private implementation for GetTemplateSummaryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTemplateSummaryRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public GetTemplateSummaryRequest instance.
+ */
+GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
+    const CloudFormationRequest::Action action, GetTemplateSummaryRequest * const q)
+    : GetTemplateSummaryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTemplateSummaryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTemplateSummaryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTemplateSummaryRequest instance.
+ */
+GetTemplateSummaryRequestPrivate::GetTemplateSummaryRequestPrivate(
+    const GetTemplateSummaryRequestPrivate &other, GetTemplateSummaryRequest * const q)
+    : GetTemplateSummaryPrivate(other, q)
+{
+
+}

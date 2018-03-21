@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELUNACLIENTREQUEST_P_H
 #define QTAWS_CREATELUNACLIENTREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "createlunaclientrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class CreateLunaClientRequest;
+
+class QTAWS_EXPORT CreateLunaClientRequestPrivate : public CloudHSMPrivate {
+
+public:
+    CreateLunaClientRequestPrivate(const CloudHSM::Action action,
+                                   CreateLunaClientRequest * const q);
+    CreateLunaClientRequestPrivate(const CreateLunaClientRequestPrivate &other,
+                                   CreateLunaClientRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLunaClientRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

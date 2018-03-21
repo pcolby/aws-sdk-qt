@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTMATCHREQUEST_H
 #define QTAWS_ACCEPTMATCHREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class AcceptMatchRequestPrivate;
+
+class QTAWS_EXPORT AcceptMatchRequest : public GameLiftRequest {
+
+public:
+    AcceptMatchRequest(const AcceptMatchRequest &other);
+    AcceptMatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptMatchRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

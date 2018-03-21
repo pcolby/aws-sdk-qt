@@ -19,3 +19,107 @@
 
 #include "getdataendpointrequest.h"
 #include "getdataendpointrequest_p.h"
+#include "getdataendpointresponse.h"
+#include "kinesisvideorequest_p.h"
+
+namespace AWS {
+namespace KinesisVideo {
+
+/**
+ * @class  GetDataEndpointRequest
+ *
+ * @brief  Implements KinesisVideo GetDataEndpoint requests.
+ *
+ * @see    KinesisVideoClient::getDataEndpoint
+ */
+
+/**
+ * @brief  Constructs a new GetDataEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDataEndpointResponse::GetDataEndpointResponse(
+
+/**
+ * @brief  Constructs a new GetDataEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDataEndpointRequest::GetDataEndpointRequest(const GetDataEndpointRequest &other)
+    : KinesisVideoRequest(new GetDataEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDataEndpointRequest object.
+ */
+GetDataEndpointRequest::GetDataEndpointRequest()
+    : KinesisVideoRequest(new GetDataEndpointRequestPrivate(KinesisVideoRequest::GetDataEndpointAction, this))
+{
+
+}
+
+bool GetDataEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDataEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDataEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisVideoClient::send
+ */
+AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDataEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDataEndpointRequestPrivate
+ *
+ * @brief  Private implementation for GetDataEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataEndpointRequestPrivate object.
+ *
+ * @param  action  KinesisVideo action being performed.
+ * @param  q       Pointer to this object's public GetDataEndpointRequest instance.
+ */
+GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
+    const KinesisVideoRequest::Action action, GetDataEndpointRequest * const q)
+    : GetDataEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDataEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDataEndpointRequest instance.
+ */
+GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
+    const GetDataEndpointRequestPrivate &other, GetDataEndpointRequest * const q)
+    : GetDataEndpointPrivate(other, q)
+{
+
+}

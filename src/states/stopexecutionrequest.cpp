@@ -19,3 +19,107 @@
 
 #include "stopexecutionrequest.h"
 #include "stopexecutionrequest_p.h"
+#include "stopexecutionresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  StopExecutionRequest
+ *
+ * @brief  Implements SFN StopExecution requests.
+ *
+ * @see    SFNClient::stopExecution
+ */
+
+/**
+ * @brief  Constructs a new StopExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopExecutionResponse::StopExecutionResponse(
+
+/**
+ * @brief  Constructs a new StopExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopExecutionRequest::StopExecutionRequest(const StopExecutionRequest &other)
+    : SFNRequest(new StopExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopExecutionRequest object.
+ */
+StopExecutionRequest::StopExecutionRequest()
+    : SFNRequest(new StopExecutionRequestPrivate(SFNRequest::StopExecutionAction, this))
+{
+
+}
+
+bool StopExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * StopExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new StopExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopExecutionRequestPrivate
+ *
+ * @brief  Private implementation for StopExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopExecutionRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public StopExecutionRequest instance.
+ */
+StopExecutionRequestPrivate::StopExecutionRequestPrivate(
+    const SFNRequest::Action action, StopExecutionRequest * const q)
+    : StopExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopExecutionRequest instance.
+ */
+StopExecutionRequestPrivate::StopExecutionRequestPrivate(
+    const StopExecutionRequestPrivate &other, StopExecutionRequest * const q)
+    : StopExecutionPrivate(other, q)
+{
+
+}

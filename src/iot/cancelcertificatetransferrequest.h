@@ -20,4 +20,32 @@
 #ifndef QTAWS_CANCELCERTIFICATETRANSFERREQUEST_H
 #define QTAWS_CANCELCERTIFICATETRANSFERREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CancelCertificateTransferRequestPrivate;
+
+class QTAWS_EXPORT CancelCertificateTransferRequest : public IoTRequest {
+
+public:
+    CancelCertificateTransferRequest(const CancelCertificateTransferRequest &other);
+    CancelCertificateTransferRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CancelCertificateTransferRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATELAGREQUEST_H
 #define QTAWS_CREATELAGREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateLagRequestPrivate;
+
+class QTAWS_EXPORT CreateLagRequest : public DirectConnectRequest {
+
+public:
+    CreateLagRequest(const CreateLagRequest &other);
+    CreateLagRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateLagRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

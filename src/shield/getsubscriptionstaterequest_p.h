@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSUBSCRIPTIONSTATEREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONSTATEREQUEST_P_H
 
+#include "shield_p.h"
+#include "getsubscriptionstaterequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class GetSubscriptionStateRequest;
+
+class QTAWS_EXPORT GetSubscriptionStateRequestPrivate : public ShieldPrivate {
+
+public:
+    GetSubscriptionStateRequestPrivate(const Shield::Action action,
+                                   GetSubscriptionStateRequest * const q);
+    GetSubscriptionStateRequestPrivate(const GetSubscriptionStateRequestPrivate &other,
+                                   GetSubscriptionStateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSubscriptionStateRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

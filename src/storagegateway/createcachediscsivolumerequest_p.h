@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECACHEDISCSIVOLUMEREQUEST_P_H
 #define QTAWS_CREATECACHEDISCSIVOLUMEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "createcachediscsivolumerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateCachediSCSIVolumeRequest;
+
+class QTAWS_EXPORT CreateCachediSCSIVolumeRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    CreateCachediSCSIVolumeRequestPrivate(const StorageGateway::Action action,
+                                   CreateCachediSCSIVolumeRequest * const q);
+    CreateCachediSCSIVolumeRequestPrivate(const CreateCachediSCSIVolumeRequestPrivate &other,
+                                   CreateCachediSCSIVolumeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCachediSCSIVolumeRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

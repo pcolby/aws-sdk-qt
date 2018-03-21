@@ -20,4 +20,29 @@
 #ifndef QTAWS_ALLOCATEPUBLICVIRTUALINTERFACEREQUEST_P_H
 #define QTAWS_ALLOCATEPUBLICVIRTUALINTERFACEREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "allocatepublicvirtualinterfacerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AllocatePublicVirtualInterfaceRequest;
+
+class QTAWS_EXPORT AllocatePublicVirtualInterfaceRequestPrivate : public DirectConnectPrivate {
+
+public:
+    AllocatePublicVirtualInterfaceRequestPrivate(const DirectConnect::Action action,
+                                   AllocatePublicVirtualInterfaceRequest * const q);
+    AllocatePublicVirtualInterfaceRequestPrivate(const AllocatePublicVirtualInterfaceRequestPrivate &other,
+                                   AllocatePublicVirtualInterfaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AllocatePublicVirtualInterfaceRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

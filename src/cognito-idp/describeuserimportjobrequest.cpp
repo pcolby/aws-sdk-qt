@@ -19,3 +19,107 @@
 
 #include "describeuserimportjobrequest.h"
 #include "describeuserimportjobrequest_p.h"
+#include "describeuserimportjobresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeUserImportJobRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DescribeUserImportJob requests.
+ *
+ * @see    CognitoIdentityProviderClient::describeUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new DescribeUserImportJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserImportJobResponse::DescribeUserImportJobResponse(
+
+/**
+ * @brief  Constructs a new DescribeUserImportJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeUserImportJobRequest::DescribeUserImportJobRequest(const DescribeUserImportJobRequest &other)
+    : CognitoIdentityProviderRequest(new DescribeUserImportJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeUserImportJobRequest object.
+ */
+DescribeUserImportJobRequest::DescribeUserImportJobRequest()
+    : CognitoIdentityProviderRequest(new DescribeUserImportJobRequestPrivate(CognitoIdentityProviderRequest::DescribeUserImportJobAction, this))
+{
+
+}
+
+bool DescribeUserImportJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeUserImportJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeUserImportJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DescribeUserImportJobRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeUserImportJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserImportJobRequestPrivate
+ *
+ * @brief  Private implementation for DescribeUserImportJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserImportJobRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DescribeUserImportJobRequest instance.
+ */
+DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DescribeUserImportJobRequest * const q)
+    : DescribeUserImportJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserImportJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeUserImportJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeUserImportJobRequest instance.
+ */
+DescribeUserImportJobRequestPrivate::DescribeUserImportJobRequestPrivate(
+    const DescribeUserImportJobRequestPrivate &other, DescribeUserImportJobRequest * const q)
+    : DescribeUserImportJobPrivate(other, q)
+{
+
+}

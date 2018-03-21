@@ -19,3 +19,107 @@
 
 #include "describeprovisionedproductrequest.h"
 #include "describeprovisionedproductrequest_p.h"
+#include "describeprovisionedproductresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProvisionedProductRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeProvisionedProduct requests.
+ *
+ * @see    ServiceCatalogClient::describeProvisionedProduct
+ */
+
+/**
+ * @brief  Constructs a new DescribeProvisionedProductResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProvisionedProductResponse::DescribeProvisionedProductResponse(
+
+/**
+ * @brief  Constructs a new DescribeProvisionedProductRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeProvisionedProductRequest::DescribeProvisionedProductRequest(const DescribeProvisionedProductRequest &other)
+    : ServiceCatalogRequest(new DescribeProvisionedProductRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeProvisionedProductRequest object.
+ */
+DescribeProvisionedProductRequest::DescribeProvisionedProductRequest()
+    : ServiceCatalogRequest(new DescribeProvisionedProductRequestPrivate(ServiceCatalogRequest::DescribeProvisionedProductAction, this))
+{
+
+}
+
+bool DescribeProvisionedProductRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeProvisionedProductResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeProvisionedProductResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeProvisionedProductRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeProvisionedProductResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProvisionedProductRequestPrivate
+ *
+ * @brief  Private implementation for DescribeProvisionedProductRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeProvisionedProductRequest instance.
+ */
+DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeProvisionedProductRequest * const q)
+    : DescribeProvisionedProductPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisionedProductRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeProvisionedProductRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeProvisionedProductRequest instance.
+ */
+DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPrivate(
+    const DescribeProvisionedProductRequestPrivate &other, DescribeProvisionedProductRequest * const q)
+    : DescribeProvisionedProductPrivate(other, q)
+{
+
+}

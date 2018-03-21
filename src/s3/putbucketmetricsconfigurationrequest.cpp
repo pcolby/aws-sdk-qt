@@ -19,3 +19,107 @@
 
 #include "putbucketmetricsconfigurationrequest.h"
 #include "putbucketmetricsconfigurationrequest_p.h"
+#include "putbucketmetricsconfigurationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketMetricsConfigurationRequest
+ *
+ * @brief  Implements S3 PutBucketMetricsConfiguration requests.
+ *
+ * @see    S3Client::putBucketMetricsConfiguration
+ */
+
+/**
+ * @brief  Constructs a new PutBucketMetricsConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketMetricsConfigurationResponse::PutBucketMetricsConfigurationResponse(
+
+/**
+ * @brief  Constructs a new PutBucketMetricsConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketMetricsConfigurationRequest::PutBucketMetricsConfigurationRequest(const PutBucketMetricsConfigurationRequest &other)
+    : S3Request(new PutBucketMetricsConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketMetricsConfigurationRequest object.
+ */
+PutBucketMetricsConfigurationRequest::PutBucketMetricsConfigurationRequest()
+    : S3Request(new PutBucketMetricsConfigurationRequestPrivate(S3Request::PutBucketMetricsConfigurationAction, this))
+{
+
+}
+
+bool PutBucketMetricsConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketMetricsConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketMetricsConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketMetricsConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketMetricsConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketMetricsConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketMetricsConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketMetricsConfigurationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketMetricsConfigurationRequest instance.
+ */
+PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
+    const S3Request::Action action, PutBucketMetricsConfigurationRequest * const q)
+    : PutBucketMetricsConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketMetricsConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketMetricsConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketMetricsConfigurationRequest instance.
+ */
+PutBucketMetricsConfigurationRequestPrivate::PutBucketMetricsConfigurationRequestPrivate(
+    const PutBucketMetricsConfigurationRequestPrivate &other, PutBucketMetricsConfigurationRequest * const q)
+    : PutBucketMetricsConfigurationPrivate(other, q)
+{
+
+}

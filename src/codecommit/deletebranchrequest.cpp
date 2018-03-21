@@ -19,3 +19,107 @@
 
 #include "deletebranchrequest.h"
 #include "deletebranchrequest_p.h"
+#include "deletebranchresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  DeleteBranchRequest
+ *
+ * @brief  Implements CodeCommit DeleteBranch requests.
+ *
+ * @see    CodeCommitClient::deleteBranch
+ */
+
+/**
+ * @brief  Constructs a new DeleteBranchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBranchResponse::DeleteBranchResponse(
+
+/**
+ * @brief  Constructs a new DeleteBranchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBranchRequest::DeleteBranchRequest(const DeleteBranchRequest &other)
+    : CodeCommitRequest(new DeleteBranchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBranchRequest object.
+ */
+DeleteBranchRequest::DeleteBranchRequest()
+    : CodeCommitRequest(new DeleteBranchRequestPrivate(CodeCommitRequest::DeleteBranchAction, this))
+{
+
+}
+
+bool DeleteBranchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBranchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBranchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * DeleteBranchRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBranchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBranchRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBranchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBranchRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public DeleteBranchRequest instance.
+ */
+DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
+    const CodeCommitRequest::Action action, DeleteBranchRequest * const q)
+    : DeleteBranchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBranchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBranchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBranchRequest instance.
+ */
+DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
+    const DeleteBranchRequestPrivate &other, DeleteBranchRequest * const q)
+    : DeleteBranchPrivate(other, q)
+{
+
+}

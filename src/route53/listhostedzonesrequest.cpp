@@ -19,3 +19,107 @@
 
 #include "listhostedzonesrequest.h"
 #include "listhostedzonesrequest_p.h"
+#include "listhostedzonesresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListHostedZonesRequest
+ *
+ * @brief  Implements Route53 ListHostedZones requests.
+ *
+ * @see    Route53Client::listHostedZones
+ */
+
+/**
+ * @brief  Constructs a new ListHostedZonesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHostedZonesResponse::ListHostedZonesResponse(
+
+/**
+ * @brief  Constructs a new ListHostedZonesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListHostedZonesRequest::ListHostedZonesRequest(const ListHostedZonesRequest &other)
+    : Route53Request(new ListHostedZonesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListHostedZonesRequest object.
+ */
+ListHostedZonesRequest::ListHostedZonesRequest()
+    : Route53Request(new ListHostedZonesRequestPrivate(Route53Request::ListHostedZonesAction, this))
+{
+
+}
+
+bool ListHostedZonesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListHostedZonesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListHostedZonesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListHostedZonesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListHostedZonesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHostedZonesRequestPrivate
+ *
+ * @brief  Private implementation for ListHostedZonesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHostedZonesRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListHostedZonesRequest instance.
+ */
+ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
+    const Route53Request::Action action, ListHostedZonesRequest * const q)
+    : ListHostedZonesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHostedZonesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListHostedZonesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListHostedZonesRequest instance.
+ */
+ListHostedZonesRequestPrivate::ListHostedZonesRequestPrivate(
+    const ListHostedZonesRequestPrivate &other, ListHostedZonesRequest * const q)
+    : ListHostedZonesPrivate(other, q)
+{
+
+}

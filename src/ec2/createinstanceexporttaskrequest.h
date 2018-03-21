@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEINSTANCEEXPORTTASKREQUEST_H
 #define QTAWS_CREATEINSTANCEEXPORTTASKREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateInstanceExportTaskRequestPrivate;
+
+class QTAWS_EXPORT CreateInstanceExportTaskRequest : public EC2Request {
+
+public:
+    CreateInstanceExportTaskRequest(const CreateInstanceExportTaskRequest &other);
+    CreateInstanceExportTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateInstanceExportTaskRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

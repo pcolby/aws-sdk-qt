@@ -19,3 +19,107 @@
 
 #include "putimagerequest.h"
 #include "putimagerequest_p.h"
+#include "putimageresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  PutImageRequest
+ *
+ * @brief  Implements ECR PutImage requests.
+ *
+ * @see    ECRClient::putImage
+ */
+
+/**
+ * @brief  Constructs a new PutImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutImageResponse::PutImageResponse(
+
+/**
+ * @brief  Constructs a new PutImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutImageRequest::PutImageRequest(const PutImageRequest &other)
+    : ECRRequest(new PutImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutImageRequest object.
+ */
+PutImageRequest::PutImageRequest()
+    : ECRRequest(new PutImageRequestPrivate(ECRRequest::PutImageAction, this))
+{
+
+}
+
+bool PutImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * PutImageRequest::response(QNetworkReply * const reply) const
+{
+    return new PutImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutImageRequestPrivate
+ *
+ * @brief  Private implementation for PutImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutImageRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public PutImageRequest instance.
+ */
+PutImageRequestPrivate::PutImageRequestPrivate(
+    const ECRRequest::Action action, PutImageRequest * const q)
+    : PutImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutImageRequest instance.
+ */
+PutImageRequestPrivate::PutImageRequestPrivate(
+    const PutImageRequestPrivate &other, PutImageRequest * const q)
+    : PutImagePrivate(other, q)
+{
+
+}

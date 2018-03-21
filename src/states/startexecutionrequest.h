@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTEXECUTIONREQUEST_H
 #define QTAWS_STARTEXECUTIONREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StartExecutionRequestPrivate;
+
+class QTAWS_EXPORT StartExecutionRequest : public SFNRequest {
+
+public:
+    StartExecutionRequest(const StartExecutionRequest &other);
+    StartExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartExecutionRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

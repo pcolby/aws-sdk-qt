@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSEGMENTSREQUEST_P_H
 #define QTAWS_GETSEGMENTSREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getsegmentsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetSegmentsRequest;
+
+class QTAWS_EXPORT GetSegmentsRequestPrivate : public PinpointPrivate {
+
+public:
+    GetSegmentsRequestPrivate(const Pinpoint::Action action,
+                                   GetSegmentsRequest * const q);
+    GetSegmentsRequestPrivate(const GetSegmentsRequestPrivate &other,
+                                   GetSegmentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSegmentsRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RETRIEVETAPEARCHIVEREQUEST_H
 #define QTAWS_RETRIEVETAPEARCHIVEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class RetrieveTapeArchiveRequestPrivate;
+
+class QTAWS_EXPORT RetrieveTapeArchiveRequest : public StorageGatewayRequest {
+
+public:
+    RetrieveTapeArchiveRequest(const RetrieveTapeArchiveRequest &other);
+    RetrieveTapeArchiveRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RetrieveTapeArchiveRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

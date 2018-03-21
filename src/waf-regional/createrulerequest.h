@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERULEREQUEST_H
 #define QTAWS_CREATERULEREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRuleRequestPrivate;
+
+class QTAWS_EXPORT CreateRuleRequest : public WAFRegionalRequest {
+
+public:
+    CreateRuleRequest(const CreateRuleRequest &other);
+    CreateRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateRuleRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

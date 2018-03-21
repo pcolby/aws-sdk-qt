@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_P_H
 #define QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "getreservedinstancesexchangequoterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetReservedInstancesExchangeQuoteRequest;
+
+class QTAWS_EXPORT GetReservedInstancesExchangeQuoteRequestPrivate : public EC2Private {
+
+public:
+    GetReservedInstancesExchangeQuoteRequestPrivate(const EC2::Action action,
+                                   GetReservedInstancesExchangeQuoteRequest * const q);
+    GetReservedInstancesExchangeQuoteRequestPrivate(const GetReservedInstancesExchangeQuoteRequestPrivate &other,
+                                   GetReservedInstancesExchangeQuoteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservedInstancesExchangeQuoteRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

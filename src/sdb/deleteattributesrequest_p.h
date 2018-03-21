@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEATTRIBUTESREQUEST_P_H
 #define QTAWS_DELETEATTRIBUTESREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "deleteattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DeleteAttributesRequest;
+
+class QTAWS_EXPORT DeleteAttributesRequestPrivate : public SimpleDBPrivate {
+
+public:
+    DeleteAttributesRequestPrivate(const SimpleDB::Action action,
+                                   DeleteAttributesRequest * const q);
+    DeleteAttributesRequestPrivate(const DeleteAttributesRequestPrivate &other,
+                                   DeleteAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAttributesRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

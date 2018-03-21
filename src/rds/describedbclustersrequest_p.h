@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBEDBCLUSTERSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedbclustersrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBClustersRequest;
+
+class QTAWS_EXPORT DescribeDBClustersRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBClustersRequestPrivate(const RDS::Action action,
+                                   DescribeDBClustersRequest * const q);
+    DescribeDBClustersRequestPrivate(const DescribeDBClustersRequestPrivate &other,
+                                   DescribeDBClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBClustersRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

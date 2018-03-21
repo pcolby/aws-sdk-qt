@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTASKDEFINITIONFAMILIESREQUEST_H
 #define QTAWS_LISTTASKDEFINITIONFAMILIESREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListTaskDefinitionFamiliesRequestPrivate;
+
+class QTAWS_EXPORT ListTaskDefinitionFamiliesRequest : public ECSRequest {
+
+public:
+    ListTaskDefinitionFamiliesRequest(const ListTaskDefinitionFamiliesRequest &other);
+    ListTaskDefinitionFamiliesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTaskDefinitionFamiliesRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEADDRESSREQUEST_P_H
 #define QTAWS_ASSOCIATEADDRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "associateaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateAddressRequest;
+
+class QTAWS_EXPORT AssociateAddressRequestPrivate : public EC2Private {
+
+public:
+    AssociateAddressRequestPrivate(const EC2::Action action,
+                                   AssociateAddressRequest * const q);
+    AssociateAddressRequestPrivate(const AssociateAddressRequestPrivate &other,
+                                   AssociateAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateAddressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

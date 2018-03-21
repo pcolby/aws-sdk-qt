@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDBPARAMETERGROUPREQUEST_H
 #define QTAWS_CREATEDBPARAMETERGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateDBParameterGroupRequest : public RDSRequest {
+
+public:
+    CreateDBParameterGroupRequest(const CreateDBParameterGroupRequest &other);
+    CreateDBParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBParameterGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

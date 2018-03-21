@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_P_H
 #define QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "listsubscribedrulegroupsrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListSubscribedRuleGroupsRequest;
+
+class QTAWS_EXPORT ListSubscribedRuleGroupsRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    ListSubscribedRuleGroupsRequestPrivate(const WAFRegional::Action action,
+                                   ListSubscribedRuleGroupsRequest * const q);
+    ListSubscribedRuleGroupsRequestPrivate(const ListSubscribedRuleGroupsRequestPrivate &other,
+                                   ListSubscribedRuleGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSubscribedRuleGroupsRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

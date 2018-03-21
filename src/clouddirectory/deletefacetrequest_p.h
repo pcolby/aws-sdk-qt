@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFACETREQUEST_P_H
 #define QTAWS_DELETEFACETREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "deletefacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteFacetRequest;
+
+class QTAWS_EXPORT DeleteFacetRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    DeleteFacetRequestPrivate(const CloudDirectory::Action action,
+                                   DeleteFacetRequest * const q);
+    DeleteFacetRequestPrivate(const DeleteFacetRequestPrivate &other,
+                                   DeleteFacetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFacetRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

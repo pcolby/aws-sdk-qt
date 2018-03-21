@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_H
 #define QTAWS_DELETECERTIFICATEREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteCertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteCertificateRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    DeleteCertificateRequest(const DeleteCertificateRequest &other);
+    DeleteCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCertificateRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

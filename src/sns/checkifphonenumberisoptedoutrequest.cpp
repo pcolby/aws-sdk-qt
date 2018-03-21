@@ -19,3 +19,107 @@
 
 #include "checkifphonenumberisoptedoutrequest.h"
 #include "checkifphonenumberisoptedoutrequest_p.h"
+#include "checkifphonenumberisoptedoutresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  CheckIfPhoneNumberIsOptedOutRequest
+ *
+ * @brief  Implements SNS CheckIfPhoneNumberIsOptedOut requests.
+ *
+ * @see    SNSClient::checkIfPhoneNumberIsOptedOut
+ */
+
+/**
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
+
+/**
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest(const CheckIfPhoneNumberIsOptedOutRequest &other)
+    : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequest object.
+ */
+CheckIfPhoneNumberIsOptedOutRequest::CheckIfPhoneNumberIsOptedOutRequest()
+    : SNSRequest(new CheckIfPhoneNumberIsOptedOutRequestPrivate(SNSRequest::CheckIfPhoneNumberIsOptedOutAction, this))
+{
+
+}
+
+bool CheckIfPhoneNumberIsOptedOutRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CheckIfPhoneNumberIsOptedOutResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CheckIfPhoneNumberIsOptedOutResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response(QNetworkReply * const reply) const
+{
+    return new CheckIfPhoneNumberIsOptedOutResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckIfPhoneNumberIsOptedOutRequestPrivate
+ *
+ * @brief  Private implementation for CheckIfPhoneNumberIsOptedOutRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public CheckIfPhoneNumberIsOptedOutRequest instance.
+ */
+CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
+    const SNSRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)
+    : CheckIfPhoneNumberIsOptedOutPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CheckIfPhoneNumberIsOptedOutRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CheckIfPhoneNumberIsOptedOutRequest instance.
+ */
+CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
+    const CheckIfPhoneNumberIsOptedOutRequestPrivate &other, CheckIfPhoneNumberIsOptedOutRequest * const q)
+    : CheckIfPhoneNumberIsOptedOutPrivate(other, q)
+{
+
+}

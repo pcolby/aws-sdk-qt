@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESERVICEREQUEST_H
 #define QTAWS_DELETESERVICEREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class DeleteServiceRequestPrivate;
+
+class QTAWS_EXPORT DeleteServiceRequest : public ServiceDiscoveryRequest {
+
+public:
+    DeleteServiceRequest(const DeleteServiceRequest &other);
+    DeleteServiceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPLANREQUEST_P_H
 #define QTAWS_GETPLANREQUEST_P_H
 
+#include "glue_p.h"
+#include "getplanrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetPlanRequest;
+
+class QTAWS_EXPORT GetPlanRequestPrivate : public GluePrivate {
+
+public:
+    GetPlanRequestPrivate(const Glue::Action action,
+                                   GetPlanRequest * const q);
+    GetPlanRequestPrivate(const GetPlanRequestPrivate &other,
+                                   GetPlanRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPlanRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

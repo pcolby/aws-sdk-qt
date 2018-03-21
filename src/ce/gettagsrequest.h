@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTAGSREQUEST_H
 #define QTAWS_GETTAGSREQUEST_H
 
+#include "costexplorerrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetTagsRequestPrivate;
+
+class QTAWS_EXPORT GetTagsRequest : public CostExplorerRequest {
+
+public:
+    GetTagsRequest(const GetTagsRequest &other);
+    GetTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTagsRequest)
+
+}
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

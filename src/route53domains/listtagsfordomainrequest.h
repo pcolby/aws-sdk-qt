@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORDOMAINREQUEST_H
 #define QTAWS_LISTTAGSFORDOMAINREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ListTagsForDomainRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForDomainRequest : public Route53DomainsRequest {
+
+public:
+    ListTagsForDomainRequest(const ListTagsForDomainRequest &other);
+    ListTagsForDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForDomainRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

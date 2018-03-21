@@ -20,4 +20,29 @@
 #ifndef QTAWS_INITIATEMULTIPARTUPLOADREQUEST_P_H
 #define QTAWS_INITIATEMULTIPARTUPLOADREQUEST_P_H
 
+#include "glacier_p.h"
+#include "initiatemultipartuploadrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class InitiateMultipartUploadRequest;
+
+class QTAWS_EXPORT InitiateMultipartUploadRequestPrivate : public GlacierPrivate {
+
+public:
+    InitiateMultipartUploadRequestPrivate(const Glacier::Action action,
+                                   InitiateMultipartUploadRequest * const q);
+    InitiateMultipartUploadRequestPrivate(const InitiateMultipartUploadRequestPrivate &other,
+                                   InitiateMultipartUploadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateMultipartUploadRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

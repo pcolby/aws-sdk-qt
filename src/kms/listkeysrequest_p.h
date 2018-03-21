@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTKEYSREQUEST_P_H
 #define QTAWS_LISTKEYSREQUEST_P_H
 
+#include "kms_p.h"
+#include "listkeysrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListKeysRequest;
+
+class QTAWS_EXPORT ListKeysRequestPrivate : public KMSPrivate {
+
+public:
+    ListKeysRequestPrivate(const KMS::Action action,
+                                   ListKeysRequest * const q);
+    ListKeysRequestPrivate(const ListKeysRequestPrivate &other,
+                                   ListKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListKeysRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

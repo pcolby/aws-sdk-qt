@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDREQUEST_P_H
 #define QTAWS_SETIDENTITYHEADERSINNOTIFICATIONSENABLEDREQUEST_P_H
 
+#include "ses_p.h"
+#include "setidentityheadersinnotificationsenabledrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityHeadersInNotificationsEnabledRequest;
+
+class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledRequestPrivate : public SESPrivate {
+
+public:
+    SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SES::Action action,
+                                   SetIdentityHeadersInNotificationsEnabledRequest * const q);
+    SetIdentityHeadersInNotificationsEnabledRequestPrivate(const SetIdentityHeadersInNotificationsEnabledRequestPrivate &other,
+                                   SetIdentityHeadersInNotificationsEnabledRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityHeadersInNotificationsEnabledRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

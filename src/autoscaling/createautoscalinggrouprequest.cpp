@@ -19,3 +19,107 @@
 
 #include "createautoscalinggrouprequest.h"
 #include "createautoscalinggrouprequest_p.h"
+#include "createautoscalinggroupresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CreateAutoScalingGroupRequest
+ *
+ * @brief  Implements AutoScaling CreateAutoScalingGroup requests.
+ *
+ * @see    AutoScalingClient::createAutoScalingGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateAutoScalingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAutoScalingGroupResponse::CreateAutoScalingGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateAutoScalingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest(const CreateAutoScalingGroupRequest &other)
+    : AutoScalingRequest(new CreateAutoScalingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAutoScalingGroupRequest object.
+ */
+CreateAutoScalingGroupRequest::CreateAutoScalingGroupRequest()
+    : AutoScalingRequest(new CreateAutoScalingGroupRequestPrivate(AutoScalingRequest::CreateAutoScalingGroupAction, this))
+{
+
+}
+
+bool CreateAutoScalingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAutoScalingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAutoScalingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * CreateAutoScalingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAutoScalingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAutoScalingGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateAutoScalingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public CreateAutoScalingGroupRequest instance.
+ */
+CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
+    const AutoScalingRequest::Action action, CreateAutoScalingGroupRequest * const q)
+    : CreateAutoScalingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAutoScalingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAutoScalingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAutoScalingGroupRequest instance.
+ */
+CreateAutoScalingGroupRequestPrivate::CreateAutoScalingGroupRequestPrivate(
+    const CreateAutoScalingGroupRequestPrivate &other, CreateAutoScalingGroupRequest * const q)
+    : CreateAutoScalingGroupPrivate(other, q)
+{
+
+}

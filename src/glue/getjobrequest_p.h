@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETJOBREQUEST_P_H
 #define QTAWS_GETJOBREQUEST_P_H
 
+#include "glue_p.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetJobRequest;
+
+class QTAWS_EXPORT GetJobRequestPrivate : public GluePrivate {
+
+public:
+    GetJobRequestPrivate(const Glue::Action action,
+                                   GetJobRequest * const q);
+    GetJobRequestPrivate(const GetJobRequestPrivate &other,
+                                   GetJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

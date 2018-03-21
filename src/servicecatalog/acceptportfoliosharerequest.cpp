@@ -19,3 +19,107 @@
 
 #include "acceptportfoliosharerequest.h"
 #include "acceptportfoliosharerequest_p.h"
+#include "acceptportfolioshareresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  AcceptPortfolioShareRequest
+ *
+ * @brief  Implements ServiceCatalog AcceptPortfolioShare requests.
+ *
+ * @see    ServiceCatalogClient::acceptPortfolioShare
+ */
+
+/**
+ * @brief  Constructs a new AcceptPortfolioShareResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptPortfolioShareResponse::AcceptPortfolioShareResponse(
+
+/**
+ * @brief  Constructs a new AcceptPortfolioShareRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AcceptPortfolioShareRequest::AcceptPortfolioShareRequest(const AcceptPortfolioShareRequest &other)
+    : ServiceCatalogRequest(new AcceptPortfolioShareRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AcceptPortfolioShareRequest object.
+ */
+AcceptPortfolioShareRequest::AcceptPortfolioShareRequest()
+    : ServiceCatalogRequest(new AcceptPortfolioShareRequestPrivate(ServiceCatalogRequest::AcceptPortfolioShareAction, this))
+{
+
+}
+
+bool AcceptPortfolioShareRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AcceptPortfolioShareResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AcceptPortfolioShareResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * AcceptPortfolioShareRequest::response(QNetworkReply * const reply) const
+{
+    return new AcceptPortfolioShareResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptPortfolioShareRequestPrivate
+ *
+ * @brief  Private implementation for AcceptPortfolioShareRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptPortfolioShareRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public AcceptPortfolioShareRequest instance.
+ */
+AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
+    const ServiceCatalogRequest::Action action, AcceptPortfolioShareRequest * const q)
+    : AcceptPortfolioSharePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptPortfolioShareRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AcceptPortfolioShareRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AcceptPortfolioShareRequest instance.
+ */
+AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
+    const AcceptPortfolioShareRequestPrivate &other, AcceptPortfolioShareRequest * const q)
+    : AcceptPortfolioSharePrivate(other, q)
+{
+
+}

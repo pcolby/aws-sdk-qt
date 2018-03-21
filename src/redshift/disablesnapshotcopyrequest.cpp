@@ -19,3 +19,107 @@
 
 #include "disablesnapshotcopyrequest.h"
 #include "disablesnapshotcopyrequest_p.h"
+#include "disablesnapshotcopyresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DisableSnapshotCopyRequest
+ *
+ * @brief  Implements Redshift DisableSnapshotCopy requests.
+ *
+ * @see    RedshiftClient::disableSnapshotCopy
+ */
+
+/**
+ * @brief  Constructs a new DisableSnapshotCopyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableSnapshotCopyResponse::DisableSnapshotCopyResponse(
+
+/**
+ * @brief  Constructs a new DisableSnapshotCopyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableSnapshotCopyRequest::DisableSnapshotCopyRequest(const DisableSnapshotCopyRequest &other)
+    : RedshiftRequest(new DisableSnapshotCopyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableSnapshotCopyRequest object.
+ */
+DisableSnapshotCopyRequest::DisableSnapshotCopyRequest()
+    : RedshiftRequest(new DisableSnapshotCopyRequestPrivate(RedshiftRequest::DisableSnapshotCopyAction, this))
+{
+
+}
+
+bool DisableSnapshotCopyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableSnapshotCopyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableSnapshotCopyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DisableSnapshotCopyRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableSnapshotCopyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableSnapshotCopyRequestPrivate
+ *
+ * @brief  Private implementation for DisableSnapshotCopyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableSnapshotCopyRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DisableSnapshotCopyRequest instance.
+ */
+DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
+    const RedshiftRequest::Action action, DisableSnapshotCopyRequest * const q)
+    : DisableSnapshotCopyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableSnapshotCopyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableSnapshotCopyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableSnapshotCopyRequest instance.
+ */
+DisableSnapshotCopyRequestPrivate::DisableSnapshotCopyRequestPrivate(
+    const DisableSnapshotCopyRequestPrivate &other, DisableSnapshotCopyRequest * const q)
+    : DisableSnapshotCopyPrivate(other, q)
+{
+
+}

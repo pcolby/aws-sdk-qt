@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEVPNCONNECTIONROUTEREQUEST_P_H
 #define QTAWS_CREATEVPNCONNECTIONROUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createvpnconnectionrouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpnConnectionRouteRequest;
+
+class QTAWS_EXPORT CreateVpnConnectionRouteRequestPrivate : public EC2Private {
+
+public:
+    CreateVpnConnectionRouteRequestPrivate(const EC2::Action action,
+                                   CreateVpnConnectionRouteRequest * const q);
+    CreateVpnConnectionRouteRequestPrivate(const CreateVpnConnectionRouteRequestPrivate &other,
+                                   CreateVpnConnectionRouteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVpnConnectionRouteRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

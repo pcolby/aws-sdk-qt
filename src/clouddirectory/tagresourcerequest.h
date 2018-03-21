@@ -20,4 +20,32 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_H
 #define QTAWS_TAGRESOURCEREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class TagResourceRequestPrivate;
+
+class QTAWS_EXPORT TagResourceRequest : public CloudDirectoryRequest {
+
+public:
+    TagResourceRequest(const TagResourceRequest &other);
+    TagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TagResourceRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

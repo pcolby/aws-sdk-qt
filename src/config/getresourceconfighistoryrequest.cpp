@@ -19,3 +19,107 @@
 
 #include "getresourceconfighistoryrequest.h"
 #include "getresourceconfighistoryrequest_p.h"
+#include "getresourceconfighistoryresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetResourceConfigHistoryRequest
+ *
+ * @brief  Implements ConfigService GetResourceConfigHistory requests.
+ *
+ * @see    ConfigServiceClient::getResourceConfigHistory
+ */
+
+/**
+ * @brief  Constructs a new GetResourceConfigHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
+
+/**
+ * @brief  Constructs a new GetResourceConfigHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetResourceConfigHistoryRequest::GetResourceConfigHistoryRequest(const GetResourceConfigHistoryRequest &other)
+    : ConfigServiceRequest(new GetResourceConfigHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetResourceConfigHistoryRequest object.
+ */
+GetResourceConfigHistoryRequest::GetResourceConfigHistoryRequest()
+    : ConfigServiceRequest(new GetResourceConfigHistoryRequestPrivate(ConfigServiceRequest::GetResourceConfigHistoryAction, this))
+{
+
+}
+
+bool GetResourceConfigHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetResourceConfigHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetResourceConfigHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetResourceConfigHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourceConfigHistoryRequestPrivate
+ *
+ * @brief  Private implementation for GetResourceConfigHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceConfigHistoryRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public GetResourceConfigHistoryRequest instance.
+ */
+GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
+    const ConfigServiceRequest::Action action, GetResourceConfigHistoryRequest * const q)
+    : GetResourceConfigHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceConfigHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetResourceConfigHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetResourceConfigHistoryRequest instance.
+ */
+GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
+    const GetResourceConfigHistoryRequestPrivate &other, GetResourceConfigHistoryRequest * const q)
+    : GetResourceConfigHistoryPrivate(other, q)
+{
+
+}

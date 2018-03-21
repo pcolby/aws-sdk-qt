@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONFILTERSREQUEST_H
 #define QTAWS_DESCRIBESUBSCRIPTIONFILTERSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DescribeSubscriptionFiltersRequestPrivate;
+
+class QTAWS_EXPORT DescribeSubscriptionFiltersRequest : public CloudWatchLogsRequest {
+
+public:
+    DescribeSubscriptionFiltersRequest(const DescribeSubscriptionFiltersRequest &other);
+    DescribeSubscriptionFiltersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSubscriptionFiltersRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

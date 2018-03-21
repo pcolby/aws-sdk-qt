@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBEPARAMETERSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeparametersrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeParametersRequest;
+
+class QTAWS_EXPORT DescribeParametersRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeParametersRequestPrivate(const SSM::Action action,
+                                   DescribeParametersRequest * const q);
+    DescribeParametersRequestPrivate(const DescribeParametersRequestPrivate &other,
+                                   DescribeParametersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeParametersRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

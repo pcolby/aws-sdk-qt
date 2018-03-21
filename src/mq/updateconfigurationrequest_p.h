@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONREQUEST_P_H
 
+#include "mq_p.h"
+#include "updateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class UpdateConfigurationRequest;
+
+class QTAWS_EXPORT UpdateConfigurationRequestPrivate : public MQPrivate {
+
+public:
+    UpdateConfigurationRequestPrivate(const MQ::Action action,
+                                   UpdateConfigurationRequest * const q);
+    UpdateConfigurationRequestPrivate(const UpdateConfigurationRequestPrivate &other,
+                                   UpdateConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConfigurationRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

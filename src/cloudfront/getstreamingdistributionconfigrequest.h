@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGREQUEST_H
 #define QTAWS_GETSTREAMINGDISTRIBUTIONCONFIGREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class GetStreamingDistributionConfigRequestPrivate;
+
+class QTAWS_EXPORT GetStreamingDistributionConfigRequest : public CloudFrontRequest {
+
+public:
+    GetStreamingDistributionConfigRequest(const GetStreamingDistributionConfigRequest &other);
+    GetStreamingDistributionConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetStreamingDistributionConfigRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

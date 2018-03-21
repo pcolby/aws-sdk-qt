@@ -19,3 +19,107 @@
 
 #include "stopapplicationrequest.h"
 #include "stopapplicationrequest_p.h"
+#include "stopapplicationresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  StopApplicationRequest
+ *
+ * @brief  Implements KinesisAnalytics StopApplication requests.
+ *
+ * @see    KinesisAnalyticsClient::stopApplication
+ */
+
+/**
+ * @brief  Constructs a new StopApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopApplicationResponse::StopApplicationResponse(
+
+/**
+ * @brief  Constructs a new StopApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopApplicationRequest::StopApplicationRequest(const StopApplicationRequest &other)
+    : KinesisAnalyticsRequest(new StopApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopApplicationRequest object.
+ */
+StopApplicationRequest::StopApplicationRequest()
+    : KinesisAnalyticsRequest(new StopApplicationRequestPrivate(KinesisAnalyticsRequest::StopApplicationAction, this))
+{
+
+}
+
+bool StopApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * StopApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new StopApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopApplicationRequestPrivate
+ *
+ * @brief  Private implementation for StopApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopApplicationRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public StopApplicationRequest instance.
+ */
+StopApplicationRequestPrivate::StopApplicationRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, StopApplicationRequest * const q)
+    : StopApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopApplicationRequest instance.
+ */
+StopApplicationRequestPrivate::StopApplicationRequestPrivate(
+    const StopApplicationRequestPrivate &other, StopApplicationRequest * const q)
+    : StopApplicationPrivate(other, q)
+{
+
+}

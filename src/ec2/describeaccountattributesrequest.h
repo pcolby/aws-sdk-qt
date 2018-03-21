@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAccountAttributesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAccountAttributesRequest : public EC2Request {
+
+public:
+    DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other);
+    DescribeAccountAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountAttributesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

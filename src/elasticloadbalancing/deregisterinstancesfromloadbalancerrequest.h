@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERREQUEST_H
 #define QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERREQUEST_H
 
+#include "elasticloadbalancingrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DeregisterInstancesFromLoadBalancerRequestPrivate;
+
+class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerRequest : public ElasticLoadBalancingRequest {
+
+public:
+    DeregisterInstancesFromLoadBalancerRequest(const DeregisterInstancesFromLoadBalancerRequest &other);
+    DeregisterInstancesFromLoadBalancerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterInstancesFromLoadBalancerRequest)
+
+}
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

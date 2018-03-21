@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLEREQUEST_H
 #define QTAWS_DELETESERVICELINKEDROLEREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteServiceLinkedRoleRequestPrivate;
+
+class QTAWS_EXPORT DeleteServiceLinkedRoleRequest : public CloudFrontRequest {
+
+public:
+    DeleteServiceLinkedRoleRequest(const DeleteServiceLinkedRoleRequest &other);
+    DeleteServiceLinkedRoleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceLinkedRoleRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

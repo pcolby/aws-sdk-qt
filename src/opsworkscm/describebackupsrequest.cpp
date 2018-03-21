@@ -19,3 +19,107 @@
 
 #include "describebackupsrequest.h"
 #include "describebackupsrequest_p.h"
+#include "describebackupsresponse.h"
+#include "opsworkscmrequest_p.h"
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  DescribeBackupsRequest
+ *
+ * @brief  Implements OpsWorksCM DescribeBackups requests.
+ *
+ * @see    OpsWorksCMClient::describeBackups
+ */
+
+/**
+ * @brief  Constructs a new DescribeBackupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBackupsResponse::DescribeBackupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeBackupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeBackupsRequest::DescribeBackupsRequest(const DescribeBackupsRequest &other)
+    : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeBackupsRequest object.
+ */
+DescribeBackupsRequest::DescribeBackupsRequest()
+    : OpsWorksCMRequest(new DescribeBackupsRequestPrivate(OpsWorksCMRequest::DescribeBackupsAction, this))
+{
+
+}
+
+bool DescribeBackupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeBackupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeBackupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksCMClient::send
+ */
+AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeBackupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBackupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeBackupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBackupsRequestPrivate object.
+ *
+ * @param  action  OpsWorksCM action being performed.
+ * @param  q       Pointer to this object's public DescribeBackupsRequest instance.
+ */
+DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
+    const OpsWorksCMRequest::Action action, DescribeBackupsRequest * const q)
+    : DescribeBackupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBackupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeBackupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeBackupsRequest instance.
+ */
+DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
+    const DescribeBackupsRequestPrivate &other, DescribeBackupsRequest * const q)
+    : DescribeBackupsPrivate(other, q)
+{
+
+}

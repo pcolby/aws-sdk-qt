@@ -19,3 +19,107 @@
 
 #include "listassignmentsforhitrequest.h"
 #include "listassignmentsforhitrequest_p.h"
+#include "listassignmentsforhitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListAssignmentsForHITRequest
+ *
+ * @brief  Implements MTurk ListAssignmentsForHIT requests.
+ *
+ * @see    MTurkClient::listAssignmentsForHIT
+ */
+
+/**
+ * @brief  Constructs a new ListAssignmentsForHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
+
+/**
+ * @brief  Constructs a new ListAssignmentsForHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAssignmentsForHITRequest::ListAssignmentsForHITRequest(const ListAssignmentsForHITRequest &other)
+    : MTurkRequest(new ListAssignmentsForHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAssignmentsForHITRequest object.
+ */
+ListAssignmentsForHITRequest::ListAssignmentsForHITRequest()
+    : MTurkRequest(new ListAssignmentsForHITRequestPrivate(MTurkRequest::ListAssignmentsForHITAction, this))
+{
+
+}
+
+bool ListAssignmentsForHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAssignmentsForHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAssignmentsForHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAssignmentsForHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssignmentsForHITRequestPrivate
+ *
+ * @brief  Private implementation for ListAssignmentsForHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public ListAssignmentsForHITRequest instance.
+ */
+ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
+    const MTurkRequest::Action action, ListAssignmentsForHITRequest * const q)
+    : ListAssignmentsForHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssignmentsForHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAssignmentsForHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAssignmentsForHITRequest instance.
+ */
+ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
+    const ListAssignmentsForHITRequestPrivate &other, ListAssignmentsForHITRequest * const q)
+    : ListAssignmentsForHITPrivate(other, q)
+{
+
+}

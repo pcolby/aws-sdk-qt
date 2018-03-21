@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLEVPCCLASSICLINKREQUEST_P_H
 #define QTAWS_DISABLEVPCCLASSICLINKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "disablevpcclassiclinkrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisableVpcClassicLinkRequest;
+
+class QTAWS_EXPORT DisableVpcClassicLinkRequestPrivate : public EC2Private {
+
+public:
+    DisableVpcClassicLinkRequestPrivate(const EC2::Action action,
+                                   DisableVpcClassicLinkRequest * const q);
+    DisableVpcClassicLinkRequestPrivate(const DisableVpcClassicLinkRequestPrivate &other,
+                                   DisableVpcClassicLinkRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableVpcClassicLinkRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

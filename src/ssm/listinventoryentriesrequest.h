@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINVENTORYENTRIESREQUEST_H
 #define QTAWS_LISTINVENTORYENTRIESREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListInventoryEntriesRequestPrivate;
+
+class QTAWS_EXPORT ListInventoryEntriesRequest : public SSMRequest {
+
+public:
+    ListInventoryEntriesRequest(const ListInventoryEntriesRequest &other);
+    ListInventoryEntriesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInventoryEntriesRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

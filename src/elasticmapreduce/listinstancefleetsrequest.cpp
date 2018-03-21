@@ -19,3 +19,107 @@
 
 #include "listinstancefleetsrequest.h"
 #include "listinstancefleetsrequest_p.h"
+#include "listinstancefleetsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListInstanceFleetsRequest
+ *
+ * @brief  Implements EMR ListInstanceFleets requests.
+ *
+ * @see    EMRClient::listInstanceFleets
+ */
+
+/**
+ * @brief  Constructs a new ListInstanceFleetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInstanceFleetsResponse::ListInstanceFleetsResponse(
+
+/**
+ * @brief  Constructs a new ListInstanceFleetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListInstanceFleetsRequest::ListInstanceFleetsRequest(const ListInstanceFleetsRequest &other)
+    : EMRRequest(new ListInstanceFleetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListInstanceFleetsRequest object.
+ */
+ListInstanceFleetsRequest::ListInstanceFleetsRequest()
+    : EMRRequest(new ListInstanceFleetsRequestPrivate(EMRRequest::ListInstanceFleetsAction, this))
+{
+
+}
+
+bool ListInstanceFleetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListInstanceFleetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListInstanceFleetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListInstanceFleetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInstanceFleetsRequestPrivate
+ *
+ * @brief  Private implementation for ListInstanceFleetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceFleetsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public ListInstanceFleetsRequest instance.
+ */
+ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
+    const EMRRequest::Action action, ListInstanceFleetsRequest * const q)
+    : ListInstanceFleetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInstanceFleetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListInstanceFleetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListInstanceFleetsRequest instance.
+ */
+ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
+    const ListInstanceFleetsRequestPrivate &other, ListInstanceFleetsRequest * const q)
+    : ListInstanceFleetsPrivate(other, q)
+{
+
+}

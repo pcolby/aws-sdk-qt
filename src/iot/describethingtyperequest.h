@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETHINGTYPEREQUEST_H
 #define QTAWS_DESCRIBETHINGTYPEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeThingTypeRequestPrivate;
+
+class QTAWS_EXPORT DescribeThingTypeRequest : public IoTRequest {
+
+public:
+    DescribeThingTypeRequest(const DescribeThingTypeRequest &other);
+    DescribeThingTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeThingTypeRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

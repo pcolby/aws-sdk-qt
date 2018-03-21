@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSREQUEST_H
 #define QTAWS_PUTCOMPLIANCEITEMSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutComplianceItemsRequestPrivate;
+
+class QTAWS_EXPORT PutComplianceItemsRequest : public SSMRequest {
+
+public:
+    PutComplianceItemsRequest(const PutComplianceItemsRequest &other);
+    PutComplianceItemsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutComplianceItemsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETITEMREQUEST_H
 #define QTAWS_GETITEMREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class GetItemRequestPrivate;
+
+class QTAWS_EXPORT GetItemRequest : public DynamoDBRequest {
+
+public:
+    GetItemRequest(const GetItemRequest &other);
+    GetItemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetItemRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

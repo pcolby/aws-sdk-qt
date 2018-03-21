@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVPCREQUEST_H
 #define QTAWS_DELETEVPCREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcRequestPrivate;
+
+class QTAWS_EXPORT DeleteVpcRequest : public EC2Request {
+
+public:
+    DeleteVpcRequest(const DeleteVpcRequest &other);
+    DeleteVpcRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

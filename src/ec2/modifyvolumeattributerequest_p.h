@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYVOLUMEATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYVOLUMEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyvolumeattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVolumeAttributeRequest;
+
+class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public EC2Private {
+
+public:
+    ModifyVolumeAttributeRequestPrivate(const EC2::Action action,
+                                   ModifyVolumeAttributeRequest * const q);
+    ModifyVolumeAttributeRequestPrivate(const ModifyVolumeAttributeRequestPrivate &other,
+                                   ModifyVolumeAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVolumeAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

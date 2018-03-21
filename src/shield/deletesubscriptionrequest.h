@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONREQUEST_H
 #define QTAWS_DELETESUBSCRIPTIONREQUEST_H
 
+#include "shieldrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DeleteSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubscriptionRequest : public ShieldRequest {
+
+public:
+    DeleteSubscriptionRequest(const DeleteSubscriptionRequest &other);
+    DeleteSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriptionRequest)
+
+}
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

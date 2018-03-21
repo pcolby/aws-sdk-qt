@@ -19,3 +19,107 @@
 
 #include "stopstreamprocessorrequest.h"
 #include "stopstreamprocessorrequest_p.h"
+#include "stopstreamprocessorresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StopStreamProcessorRequest
+ *
+ * @brief  Implements Rekognition StopStreamProcessor requests.
+ *
+ * @see    RekognitionClient::stopStreamProcessor
+ */
+
+/**
+ * @brief  Constructs a new StopStreamProcessorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStreamProcessorResponse::StopStreamProcessorResponse(
+
+/**
+ * @brief  Constructs a new StopStreamProcessorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopStreamProcessorRequest::StopStreamProcessorRequest(const StopStreamProcessorRequest &other)
+    : RekognitionRequest(new StopStreamProcessorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopStreamProcessorRequest object.
+ */
+StopStreamProcessorRequest::StopStreamProcessorRequest()
+    : RekognitionRequest(new StopStreamProcessorRequestPrivate(RekognitionRequest::StopStreamProcessorAction, this))
+{
+
+}
+
+bool StopStreamProcessorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopStreamProcessorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopStreamProcessorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * StopStreamProcessorRequest::response(QNetworkReply * const reply) const
+{
+    return new StopStreamProcessorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStreamProcessorRequestPrivate
+ *
+ * @brief  Private implementation for StopStreamProcessorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamProcessorRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public StopStreamProcessorRequest instance.
+ */
+StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
+    const RekognitionRequest::Action action, StopStreamProcessorRequest * const q)
+    : StopStreamProcessorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamProcessorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopStreamProcessorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopStreamProcessorRequest instance.
+ */
+StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
+    const StopStreamProcessorRequestPrivate &other, StopStreamProcessorRequest * const q)
+    : StopStreamProcessorPrivate(other, q)
+{
+
+}

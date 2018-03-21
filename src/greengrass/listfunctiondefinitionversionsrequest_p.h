@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTFUNCTIONDEFINITIONVERSIONSREQUEST_P_H
 #define QTAWS_LISTFUNCTIONDEFINITIONVERSIONSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listfunctiondefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListFunctionDefinitionVersionsRequest;
+
+class QTAWS_EXPORT ListFunctionDefinitionVersionsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListFunctionDefinitionVersionsRequestPrivate(const Greengrass::Action action,
+                                   ListFunctionDefinitionVersionsRequest * const q);
+    ListFunctionDefinitionVersionsRequestPrivate(const ListFunctionDefinitionVersionsRequestPrivate &other,
+                                   ListFunctionDefinitionVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListFunctionDefinitionVersionsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

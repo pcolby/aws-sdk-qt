@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPREQUEST_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminRemoveUserFromGroupRequestPrivate;
+
+class QTAWS_EXPORT AdminRemoveUserFromGroupRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminRemoveUserFromGroupRequest(const AdminRemoveUserFromGroupRequest &other);
+    AdminRemoveUserFromGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminRemoveUserFromGroupRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIDENTITIESREQUEST_P_H
 #define QTAWS_LISTIDENTITIESREQUEST_P_H
 
+#include "cognitoidentity_p.h"
+#include "listidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class ListIdentitiesRequest;
+
+class QTAWS_EXPORT ListIdentitiesRequestPrivate : public CognitoIdentityPrivate {
+
+public:
+    ListIdentitiesRequestPrivate(const CognitoIdentity::Action action,
+                                   ListIdentitiesRequest * const q);
+    ListIdentitiesRequestPrivate(const ListIdentitiesRequestPrivate &other,
+                                   ListIdentitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIdentitiesRequest)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVIRTUALMFADEVICEREQUEST_P_H
 #define QTAWS_DELETEVIRTUALMFADEVICEREQUEST_P_H
 
+#include "iam_p.h"
+#include "deletevirtualmfadevicerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteVirtualMFADeviceRequest;
+
+class QTAWS_EXPORT DeleteVirtualMFADeviceRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteVirtualMFADeviceRequestPrivate(const IAM::Action action,
+                                   DeleteVirtualMFADeviceRequest * const q);
+    DeleteVirtualMFADeviceRequestPrivate(const DeleteVirtualMFADeviceRequestPrivate &other,
+                                   DeleteVirtualMFADeviceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVirtualMFADeviceRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

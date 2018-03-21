@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGREQUEST_H
 #define QTAWS_UNTAGREQUEST_H
 
+#include "resourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class UntagRequestPrivate;
+
+class QTAWS_EXPORT UntagRequest : public ResourceGroupsRequest {
+
+public:
+    UntagRequest(const UntagRequest &other);
+    UntagRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagRequest)
+
+}
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

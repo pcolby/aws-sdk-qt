@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDOMAINREQUEST_P_H
 #define QTAWS_GETDOMAINREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getdomainrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetDomainRequest;
+
+class QTAWS_EXPORT GetDomainRequestPrivate : public LightsailPrivate {
+
+public:
+    GetDomainRequestPrivate(const Lightsail::Action action,
+                                   GetDomainRequest * const q);
+    GetDomainRequestPrivate(const GetDomainRequestPrivate &other,
+                                   GetDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDomainRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

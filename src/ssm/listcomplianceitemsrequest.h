@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCOMPLIANCEITEMSREQUEST_H
 #define QTAWS_LISTCOMPLIANCEITEMSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListComplianceItemsRequestPrivate;
+
+class QTAWS_EXPORT ListComplianceItemsRequest : public SSMRequest {
+
+public:
+    ListComplianceItemsRequest(const ListComplianceItemsRequest &other);
+    ListComplianceItemsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListComplianceItemsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

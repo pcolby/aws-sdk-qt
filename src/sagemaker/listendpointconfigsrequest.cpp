@@ -19,3 +19,107 @@
 
 #include "listendpointconfigsrequest.h"
 #include "listendpointconfigsrequest_p.h"
+#include "listendpointconfigsresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListEndpointConfigsRequest
+ *
+ * @brief  Implements SageMaker ListEndpointConfigs requests.
+ *
+ * @see    SageMakerClient::listEndpointConfigs
+ */
+
+/**
+ * @brief  Constructs a new ListEndpointConfigsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEndpointConfigsResponse::ListEndpointConfigsResponse(
+
+/**
+ * @brief  Constructs a new ListEndpointConfigsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEndpointConfigsRequest::ListEndpointConfigsRequest(const ListEndpointConfigsRequest &other)
+    : SageMakerRequest(new ListEndpointConfigsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEndpointConfigsRequest object.
+ */
+ListEndpointConfigsRequest::ListEndpointConfigsRequest()
+    : SageMakerRequest(new ListEndpointConfigsRequestPrivate(SageMakerRequest::ListEndpointConfigsAction, this))
+{
+
+}
+
+bool ListEndpointConfigsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEndpointConfigsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEndpointConfigsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * ListEndpointConfigsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEndpointConfigsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEndpointConfigsRequestPrivate
+ *
+ * @brief  Private implementation for ListEndpointConfigsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointConfigsRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public ListEndpointConfigsRequest instance.
+ */
+ListEndpointConfigsRequestPrivate::ListEndpointConfigsRequestPrivate(
+    const SageMakerRequest::Action action, ListEndpointConfigsRequest * const q)
+    : ListEndpointConfigsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEndpointConfigsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEndpointConfigsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEndpointConfigsRequest instance.
+ */
+ListEndpointConfigsRequestPrivate::ListEndpointConfigsRequestPrivate(
+    const ListEndpointConfigsRequestPrivate &other, ListEndpointConfigsRequest * const q)
+    : ListEndpointConfigsPrivate(other, q)
+{
+
+}

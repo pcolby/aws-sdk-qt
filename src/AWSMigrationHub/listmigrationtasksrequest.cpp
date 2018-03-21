@@ -19,3 +19,107 @@
 
 #include "listmigrationtasksrequest.h"
 #include "listmigrationtasksrequest_p.h"
+#include "listmigrationtasksresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  ListMigrationTasksRequest
+ *
+ * @brief  Implements MigrationHub ListMigrationTasks requests.
+ *
+ * @see    MigrationHubClient::listMigrationTasks
+ */
+
+/**
+ * @brief  Constructs a new ListMigrationTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMigrationTasksResponse::ListMigrationTasksResponse(
+
+/**
+ * @brief  Constructs a new ListMigrationTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListMigrationTasksRequest::ListMigrationTasksRequest(const ListMigrationTasksRequest &other)
+    : MigrationHubRequest(new ListMigrationTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListMigrationTasksRequest object.
+ */
+ListMigrationTasksRequest::ListMigrationTasksRequest()
+    : MigrationHubRequest(new ListMigrationTasksRequestPrivate(MigrationHubRequest::ListMigrationTasksAction, this))
+{
+
+}
+
+bool ListMigrationTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListMigrationTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListMigrationTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * ListMigrationTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new ListMigrationTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMigrationTasksRequestPrivate
+ *
+ * @brief  Private implementation for ListMigrationTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMigrationTasksRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public ListMigrationTasksRequest instance.
+ */
+ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
+    const MigrationHubRequest::Action action, ListMigrationTasksRequest * const q)
+    : ListMigrationTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMigrationTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListMigrationTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListMigrationTasksRequest instance.
+ */
+ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
+    const ListMigrationTasksRequestPrivate &other, ListMigrationTasksRequest * const q)
+    : ListMigrationTasksPrivate(other, q)
+{
+
+}

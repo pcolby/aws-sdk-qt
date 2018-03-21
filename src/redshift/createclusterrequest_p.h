@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_P_H
 #define QTAWS_CREATECLUSTERREQUEST_P_H
 
+#include "redshift_p.h"
+#include "createclusterrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateClusterRequest;
+
+class QTAWS_EXPORT CreateClusterRequestPrivate : public RedshiftPrivate {
+
+public:
+    CreateClusterRequestPrivate(const Redshift::Action action,
+                                   CreateClusterRequest * const q);
+    CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
+                                   CreateClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

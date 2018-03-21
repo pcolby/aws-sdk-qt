@@ -19,3 +19,107 @@
 
 #include "listgroupsrequest.h"
 #include "listgroupsrequest_p.h"
+#include "listgroupsresponse.h"
+#include "resourcegroupsrequest_p.h"
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  ListGroupsRequest
+ *
+ * @brief  Implements ResourceGroups ListGroups requests.
+ *
+ * @see    ResourceGroupsClient::listGroups
+ */
+
+/**
+ * @brief  Constructs a new ListGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupsResponse::ListGroupsResponse(
+
+/**
+ * @brief  Constructs a new ListGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGroupsRequest::ListGroupsRequest(const ListGroupsRequest &other)
+    : ResourceGroupsRequest(new ListGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGroupsRequest object.
+ */
+ListGroupsRequest::ListGroupsRequest()
+    : ResourceGroupsRequest(new ListGroupsRequestPrivate(ResourceGroupsRequest::ListGroupsAction, this))
+{
+
+}
+
+bool ListGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ResourceGroupsClient::send
+ */
+AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupsRequestPrivate
+ *
+ * @brief  Private implementation for ListGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupsRequestPrivate object.
+ *
+ * @param  action  ResourceGroups action being performed.
+ * @param  q       Pointer to this object's public ListGroupsRequest instance.
+ */
+ListGroupsRequestPrivate::ListGroupsRequestPrivate(
+    const ResourceGroupsRequest::Action action, ListGroupsRequest * const q)
+    : ListGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGroupsRequest instance.
+ */
+ListGroupsRequestPrivate::ListGroupsRequestPrivate(
+    const ListGroupsRequestPrivate &other, ListGroupsRequest * const q)
+    : ListGroupsPrivate(other, q)
+{
+
+}

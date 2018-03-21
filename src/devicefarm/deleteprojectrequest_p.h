@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "deleteprojectrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteProjectRequest;
+
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    DeleteProjectRequestPrivate(const DeviceFarm::Action action,
+                                   DeleteProjectRequest * const q);
+    DeleteProjectRequestPrivate(const DeleteProjectRequestPrivate &other,
+                                   DeleteProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProjectRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

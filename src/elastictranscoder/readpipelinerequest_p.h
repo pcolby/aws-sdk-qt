@@ -20,4 +20,29 @@
 #ifndef QTAWS_READPIPELINEREQUEST_P_H
 #define QTAWS_READPIPELINEREQUEST_P_H
 
+#include "elastictranscoder_p.h"
+#include "readpipelinerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ReadPipelineRequest;
+
+class QTAWS_EXPORT ReadPipelineRequestPrivate : public ElasticTranscoderPrivate {
+
+public:
+    ReadPipelineRequestPrivate(const ElasticTranscoder::Action action,
+                                   ReadPipelineRequest * const q);
+    ReadPipelineRequestPrivate(const ReadPipelineRequestPrivate &other,
+                                   ReadPipelineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReadPipelineRequest)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

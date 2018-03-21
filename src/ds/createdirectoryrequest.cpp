@@ -19,3 +19,107 @@
 
 #include "createdirectoryrequest.h"
 #include "createdirectoryrequest_p.h"
+#include "createdirectoryresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateDirectoryRequest
+ *
+ * @brief  Implements DirectoryService CreateDirectory requests.
+ *
+ * @see    DirectoryServiceClient::createDirectory
+ */
+
+/**
+ * @brief  Constructs a new CreateDirectoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectoryResponse::CreateDirectoryResponse(
+
+/**
+ * @brief  Constructs a new CreateDirectoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDirectoryRequest::CreateDirectoryRequest(const CreateDirectoryRequest &other)
+    : DirectoryServiceRequest(new CreateDirectoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDirectoryRequest object.
+ */
+CreateDirectoryRequest::CreateDirectoryRequest()
+    : DirectoryServiceRequest(new CreateDirectoryRequestPrivate(DirectoryServiceRequest::CreateDirectoryAction, this))
+{
+
+}
+
+bool CreateDirectoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDirectoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDirectoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * CreateDirectoryRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDirectoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectoryRequestPrivate
+ *
+ * @brief  Private implementation for CreateDirectoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public CreateDirectoryRequest instance.
+ */
+CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
+    const DirectoryServiceRequest::Action action, CreateDirectoryRequest * const q)
+    : CreateDirectoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDirectoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDirectoryRequest instance.
+ */
+CreateDirectoryRequestPrivate::CreateDirectoryRequestPrivate(
+    const CreateDirectoryRequestPrivate &other, CreateDirectoryRequest * const q)
+    : CreateDirectoryPrivate(other, q)
+{
+
+}

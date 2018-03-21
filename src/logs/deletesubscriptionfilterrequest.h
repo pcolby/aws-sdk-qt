@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONFILTERREQUEST_H
 #define QTAWS_DELETESUBSCRIPTIONFILTERREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteSubscriptionFilterRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubscriptionFilterRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteSubscriptionFilterRequest(const DeleteSubscriptionFilterRequest &other);
+    DeleteSubscriptionFilterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubscriptionFilterRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

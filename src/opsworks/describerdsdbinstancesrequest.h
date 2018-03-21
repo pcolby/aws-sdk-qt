@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERDSDBINSTANCESREQUEST_H
 #define QTAWS_DESCRIBERDSDBINSTANCESREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeRdsDbInstancesRequestPrivate;
+
+class QTAWS_EXPORT DescribeRdsDbInstancesRequest : public OpsWorksRequest {
+
+public:
+    DescribeRdsDbInstancesRequest(const DescribeRdsDbInstancesRequest &other);
+    DescribeRdsDbInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRdsDbInstancesRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

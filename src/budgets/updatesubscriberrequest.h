@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESUBSCRIBERREQUEST_H
 #define QTAWS_UPDATESUBSCRIBERREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class UpdateSubscriberRequestPrivate;
+
+class QTAWS_EXPORT UpdateSubscriberRequest : public BudgetsRequest {
+
+public:
+    UpdateSubscriberRequest(const UpdateSubscriberRequest &other);
+    UpdateSubscriberRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSubscriberRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

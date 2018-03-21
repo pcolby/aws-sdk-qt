@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONREQUEST_H
 #define QTAWS_DELETEREPORTDEFINITIONREQUEST_H
 
+#include "costandusagereportservicerequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class DeleteReportDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteReportDefinitionRequest : public CostandUsageReportServiceRequest {
+
+public:
+    DeleteReportDefinitionRequest(const DeleteReportDefinitionRequest &other);
+    DeleteReportDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReportDefinitionRequest)
+
+}
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTREGEXMATCHSETSREQUEST_H
 #define QTAWS_LISTREGEXMATCHSETSREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListRegexMatchSetsRequestPrivate;
+
+class QTAWS_EXPORT ListRegexMatchSetsRequest : public WAFRegionalRequest {
+
+public:
+    ListRegexMatchSetsRequest(const ListRegexMatchSetsRequest &other);
+    ListRegexMatchSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRegexMatchSetsRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

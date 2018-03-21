@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONREQUEST_H
 #define QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class AssociateConfigurationItemsToApplicationRequestPrivate;
+
+class QTAWS_EXPORT AssociateConfigurationItemsToApplicationRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    AssociateConfigurationItemsToApplicationRequest(const AssociateConfigurationItemsToApplicationRequest &other);
+    AssociateConfigurationItemsToApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateConfigurationItemsToApplicationRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

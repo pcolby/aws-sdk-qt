@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATENFSFILESHAREREQUEST_P_H
 #define QTAWS_UPDATENFSFILESHAREREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "updatenfsfilesharerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateNFSFileShareRequest;
+
+class QTAWS_EXPORT UpdateNFSFileShareRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    UpdateNFSFileShareRequestPrivate(const StorageGateway::Action action,
+                                   UpdateNFSFileShareRequest * const q);
+    UpdateNFSFileShareRequestPrivate(const UpdateNFSFileShareRequestPrivate &other,
+                                   UpdateNFSFileShareRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNFSFileShareRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

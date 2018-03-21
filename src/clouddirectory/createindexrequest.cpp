@@ -19,3 +19,107 @@
 
 #include "createindexrequest.h"
 #include "createindexrequest_p.h"
+#include "createindexresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateIndexRequest
+ *
+ * @brief  Implements CloudDirectory CreateIndex requests.
+ *
+ * @see    CloudDirectoryClient::createIndex
+ */
+
+/**
+ * @brief  Constructs a new CreateIndexResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateIndexResponse::CreateIndexResponse(
+
+/**
+ * @brief  Constructs a new CreateIndexRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateIndexRequest::CreateIndexRequest(const CreateIndexRequest &other)
+    : CloudDirectoryRequest(new CreateIndexRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateIndexRequest object.
+ */
+CreateIndexRequest::CreateIndexRequest()
+    : CloudDirectoryRequest(new CreateIndexRequestPrivate(CloudDirectoryRequest::CreateIndexAction, this))
+{
+
+}
+
+bool CreateIndexRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateIndexResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateIndexResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateIndexResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateIndexRequestPrivate
+ *
+ * @brief  Private implementation for CreateIndexRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIndexRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public CreateIndexRequest instance.
+ */
+CreateIndexRequestPrivate::CreateIndexRequestPrivate(
+    const CloudDirectoryRequest::Action action, CreateIndexRequest * const q)
+    : CreateIndexPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIndexRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateIndexRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateIndexRequest instance.
+ */
+CreateIndexRequestPrivate::CreateIndexRequestPrivate(
+    const CreateIndexRequestPrivate &other, CreateIndexRequest * const q)
+    : CreateIndexPrivate(other, q)
+{
+
+}

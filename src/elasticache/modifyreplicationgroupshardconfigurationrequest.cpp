@@ -19,3 +19,107 @@
 
 #include "modifyreplicationgroupshardconfigurationrequest.h"
 #include "modifyreplicationgroupshardconfigurationrequest_p.h"
+#include "modifyreplicationgroupshardconfigurationresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyReplicationGroupShardConfigurationRequest
+ *
+ * @brief  Implements ElastiCache ModifyReplicationGroupShardConfiguration requests.
+ *
+ * @see    ElastiCacheClient::modifyReplicationGroupShardConfiguration
+ */
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupShardConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationGroupShardConfigurationResponse::ModifyReplicationGroupShardConfigurationResponse(
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConfigurationRequest(const ModifyReplicationGroupShardConfigurationRequest &other)
+    : ElastiCacheRequest(new ModifyReplicationGroupShardConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequest object.
+ */
+ModifyReplicationGroupShardConfigurationRequest::ModifyReplicationGroupShardConfigurationRequest()
+    : ElastiCacheRequest(new ModifyReplicationGroupShardConfigurationRequestPrivate(ElastiCacheRequest::ModifyReplicationGroupShardConfigurationAction, this))
+{
+
+}
+
+bool ModifyReplicationGroupShardConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyReplicationGroupShardConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyReplicationGroupShardConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * ModifyReplicationGroupShardConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyReplicationGroupShardConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationGroupShardConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for ModifyReplicationGroupShardConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public ModifyReplicationGroupShardConfigurationRequest instance.
+ */
+ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
+    const ElastiCacheRequest::Action action, ModifyReplicationGroupShardConfigurationRequest * const q)
+    : ModifyReplicationGroupShardConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationGroupShardConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyReplicationGroupShardConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyReplicationGroupShardConfigurationRequest instance.
+ */
+ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
+    const ModifyReplicationGroupShardConfigurationRequestPrivate &other, ModifyReplicationGroupShardConfigurationRequest * const q)
+    : ModifyReplicationGroupShardConfigurationPrivate(other, q)
+{
+
+}

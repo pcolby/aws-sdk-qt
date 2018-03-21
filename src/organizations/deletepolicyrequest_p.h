@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPOLICYREQUEST_P_H
 #define QTAWS_DELETEPOLICYREQUEST_P_H
 
+#include "organizations_p.h"
+#include "deletepolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeletePolicyRequest;
+
+class QTAWS_EXPORT DeletePolicyRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DeletePolicyRequestPrivate(const Organizations::Action action,
+                                   DeletePolicyRequest * const q);
+    DeletePolicyRequestPrivate(const DeletePolicyRequestPrivate &other,
+                                   DeletePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePolicyRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

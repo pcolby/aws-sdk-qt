@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTONDEMANDREPLICATIONRUNREQUEST_H
 #define QTAWS_STARTONDEMANDREPLICATIONRUNREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class StartOnDemandReplicationRunRequestPrivate;
+
+class QTAWS_EXPORT StartOnDemandReplicationRunRequest : public SMSRequest {
+
+public:
+    StartOnDemandReplicationRunRequest(const StartOnDemandReplicationRunRequest &other);
+    StartOnDemandReplicationRunRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartOnDemandReplicationRunRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

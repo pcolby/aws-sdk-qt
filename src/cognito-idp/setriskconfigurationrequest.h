@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETRISKCONFIGURATIONREQUEST_H
 #define QTAWS_SETRISKCONFIGURATIONREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetRiskConfigurationRequestPrivate;
+
+class QTAWS_EXPORT SetRiskConfigurationRequest : public CognitoIdentityProviderRequest {
+
+public:
+    SetRiskConfigurationRequest(const SetRiskConfigurationRequest &other);
+    SetRiskConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetRiskConfigurationRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

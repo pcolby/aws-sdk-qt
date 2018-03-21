@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETHOSTEDZONEREQUEST_P_H
 #define QTAWS_GETHOSTEDZONEREQUEST_P_H
 
+#include "route53_p.h"
+#include "gethostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHostedZoneRequest;
+
+class QTAWS_EXPORT GetHostedZoneRequestPrivate : public Route53Private {
+
+public:
+    GetHostedZoneRequestPrivate(const Route53::Action action,
+                                   GetHostedZoneRequest * const q);
+    GetHostedZoneRequestPrivate(const GetHostedZoneRequestPrivate &other,
+                                   GetHostedZoneRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetHostedZoneRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

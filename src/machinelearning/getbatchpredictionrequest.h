@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBATCHPREDICTIONREQUEST_H
 #define QTAWS_GETBATCHPREDICTIONREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetBatchPredictionRequestPrivate;
+
+class QTAWS_EXPORT GetBatchPredictionRequest : public MachineLearningRequest {
+
+public:
+    GetBatchPredictionRequest(const GetBatchPredictionRequest &other);
+    GetBatchPredictionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBatchPredictionRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

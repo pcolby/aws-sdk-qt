@@ -19,3 +19,107 @@
 
 #include "gethostedzonelimitrequest.h"
 #include "gethostedzonelimitrequest_p.h"
+#include "gethostedzonelimitresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHostedZoneLimitRequest
+ *
+ * @brief  Implements Route53 GetHostedZoneLimit requests.
+ *
+ * @see    Route53Client::getHostedZoneLimit
+ */
+
+/**
+ * @brief  Constructs a new GetHostedZoneLimitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
+
+/**
+ * @brief  Constructs a new GetHostedZoneLimitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetHostedZoneLimitRequest::GetHostedZoneLimitRequest(const GetHostedZoneLimitRequest &other)
+    : Route53Request(new GetHostedZoneLimitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetHostedZoneLimitRequest object.
+ */
+GetHostedZoneLimitRequest::GetHostedZoneLimitRequest()
+    : Route53Request(new GetHostedZoneLimitRequestPrivate(Route53Request::GetHostedZoneLimitAction, this))
+{
+
+}
+
+bool GetHostedZoneLimitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetHostedZoneLimitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetHostedZoneLimitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkReply * const reply) const
+{
+    return new GetHostedZoneLimitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostedZoneLimitRequestPrivate
+ *
+ * @brief  Private implementation for GetHostedZoneLimitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostedZoneLimitRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetHostedZoneLimitRequest instance.
+ */
+GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
+    const Route53Request::Action action, GetHostedZoneLimitRequest * const q)
+    : GetHostedZoneLimitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostedZoneLimitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetHostedZoneLimitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetHostedZoneLimitRequest instance.
+ */
+GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
+    const GetHostedZoneLimitRequestPrivate &other, GetHostedZoneLimitRequest * const q)
+    : GetHostedZoneLimitPrivate(other, q)
+{
+
+}

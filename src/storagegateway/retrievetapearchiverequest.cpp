@@ -19,3 +19,107 @@
 
 #include "retrievetapearchiverequest.h"
 #include "retrievetapearchiverequest_p.h"
+#include "retrievetapearchiveresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  RetrieveTapeArchiveRequest
+ *
+ * @brief  Implements StorageGateway RetrieveTapeArchive requests.
+ *
+ * @see    StorageGatewayClient::retrieveTapeArchive
+ */
+
+/**
+ * @brief  Constructs a new RetrieveTapeArchiveResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetrieveTapeArchiveResponse::RetrieveTapeArchiveResponse(
+
+/**
+ * @brief  Constructs a new RetrieveTapeArchiveRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RetrieveTapeArchiveRequest::RetrieveTapeArchiveRequest(const RetrieveTapeArchiveRequest &other)
+    : StorageGatewayRequest(new RetrieveTapeArchiveRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RetrieveTapeArchiveRequest object.
+ */
+RetrieveTapeArchiveRequest::RetrieveTapeArchiveRequest()
+    : StorageGatewayRequest(new RetrieveTapeArchiveRequestPrivate(StorageGatewayRequest::RetrieveTapeArchiveAction, this))
+{
+
+}
+
+bool RetrieveTapeArchiveRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RetrieveTapeArchiveResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RetrieveTapeArchiveResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * RetrieveTapeArchiveRequest::response(QNetworkReply * const reply) const
+{
+    return new RetrieveTapeArchiveResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RetrieveTapeArchiveRequestPrivate
+ *
+ * @brief  Private implementation for RetrieveTapeArchiveRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveTapeArchiveRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public RetrieveTapeArchiveRequest instance.
+ */
+RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
+    const StorageGatewayRequest::Action action, RetrieveTapeArchiveRequest * const q)
+    : RetrieveTapeArchivePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveTapeArchiveRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RetrieveTapeArchiveRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RetrieveTapeArchiveRequest instance.
+ */
+RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
+    const RetrieveTapeArchiveRequestPrivate &other, RetrieveTapeArchiveRequest * const q)
+    : RetrieveTapeArchivePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDEVENDPOINTREQUEST_P_H
 #define QTAWS_UPDATEDEVENDPOINTREQUEST_P_H
 
+#include "glue_p.h"
+#include "updatedevendpointrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateDevEndpointRequest;
+
+class QTAWS_EXPORT UpdateDevEndpointRequestPrivate : public GluePrivate {
+
+public:
+    UpdateDevEndpointRequestPrivate(const Glue::Action action,
+                                   UpdateDevEndpointRequest * const q);
+    UpdateDevEndpointRequestPrivate(const UpdateDevEndpointRequestPrivate &other,
+                                   UpdateDevEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDevEndpointRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

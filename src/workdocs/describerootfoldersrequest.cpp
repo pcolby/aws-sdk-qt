@@ -19,3 +19,107 @@
 
 #include "describerootfoldersrequest.h"
 #include "describerootfoldersrequest_p.h"
+#include "describerootfoldersresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeRootFoldersRequest
+ *
+ * @brief  Implements WorkDocs DescribeRootFolders requests.
+ *
+ * @see    WorkDocsClient::describeRootFolders
+ */
+
+/**
+ * @brief  Constructs a new DescribeRootFoldersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRootFoldersResponse::DescribeRootFoldersResponse(
+
+/**
+ * @brief  Constructs a new DescribeRootFoldersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRootFoldersRequest::DescribeRootFoldersRequest(const DescribeRootFoldersRequest &other)
+    : WorkDocsRequest(new DescribeRootFoldersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRootFoldersRequest object.
+ */
+DescribeRootFoldersRequest::DescribeRootFoldersRequest()
+    : WorkDocsRequest(new DescribeRootFoldersRequestPrivate(WorkDocsRequest::DescribeRootFoldersAction, this))
+{
+
+}
+
+bool DescribeRootFoldersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRootFoldersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRootFoldersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRootFoldersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRootFoldersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRootFoldersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRootFoldersRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DescribeRootFoldersRequest instance.
+ */
+DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
+    const WorkDocsRequest::Action action, DescribeRootFoldersRequest * const q)
+    : DescribeRootFoldersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRootFoldersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRootFoldersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRootFoldersRequest instance.
+ */
+DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
+    const DescribeRootFoldersRequestPrivate &other, DescribeRootFoldersRequest * const q)
+    : DescribeRootFoldersPrivate(other, q)
+{
+
+}

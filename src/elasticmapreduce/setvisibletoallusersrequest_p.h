@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSREQUEST_P_H
 #define QTAWS_SETVISIBLETOALLUSERSREQUEST_P_H
 
+#include "emr_p.h"
+#include "setvisibletoallusersrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class SetVisibleToAllUsersRequest;
+
+class QTAWS_EXPORT SetVisibleToAllUsersRequestPrivate : public EMRPrivate {
+
+public:
+    SetVisibleToAllUsersRequestPrivate(const EMR::Action action,
+                                   SetVisibleToAllUsersRequest * const q);
+    SetVisibleToAllUsersRequestPrivate(const SetVisibleToAllUsersRequestPrivate &other,
+                                   SetVisibleToAllUsersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetVisibleToAllUsersRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

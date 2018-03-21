@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRESTAPISREQUEST_P_H
 #define QTAWS_GETRESTAPISREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getrestapisrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetRestApisRequest;
+
+class QTAWS_EXPORT GetRestApisRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetRestApisRequestPrivate(const APIGateway::Action action,
+                                   GetRestApisRequest * const q);
+    GetRestApisRequestPrivate(const GetRestApisRequestPrivate &other,
+                                   GetRestApisRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRestApisRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

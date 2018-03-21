@@ -19,3 +19,107 @@
 
 #include "attachuserpolicyrequest.h"
 #include "attachuserpolicyrequest_p.h"
+#include "attachuserpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AttachUserPolicyRequest
+ *
+ * @brief  Implements IAM AttachUserPolicy requests.
+ *
+ * @see    IAMClient::attachUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new AttachUserPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachUserPolicyResponse::AttachUserPolicyResponse(
+
+/**
+ * @brief  Constructs a new AttachUserPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachUserPolicyRequest::AttachUserPolicyRequest(const AttachUserPolicyRequest &other)
+    : IAMRequest(new AttachUserPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachUserPolicyRequest object.
+ */
+AttachUserPolicyRequest::AttachUserPolicyRequest()
+    : IAMRequest(new AttachUserPolicyRequestPrivate(IAMRequest::AttachUserPolicyAction, this))
+{
+
+}
+
+bool AttachUserPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachUserPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachUserPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * AttachUserPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachUserPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachUserPolicyRequestPrivate
+ *
+ * @brief  Private implementation for AttachUserPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachUserPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public AttachUserPolicyRequest instance.
+ */
+AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
+    const IAMRequest::Action action, AttachUserPolicyRequest * const q)
+    : AttachUserPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachUserPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachUserPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachUserPolicyRequest instance.
+ */
+AttachUserPolicyRequestPrivate::AttachUserPolicyRequestPrivate(
+    const AttachUserPolicyRequestPrivate &other, AttachUserPolicyRequest * const q)
+    : AttachUserPolicyPrivate(other, q)
+{
+
+}

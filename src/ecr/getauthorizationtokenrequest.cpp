@@ -19,3 +19,107 @@
 
 #include "getauthorizationtokenrequest.h"
 #include "getauthorizationtokenrequest_p.h"
+#include "getauthorizationtokenresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetAuthorizationTokenRequest
+ *
+ * @brief  Implements ECR GetAuthorizationToken requests.
+ *
+ * @see    ECRClient::getAuthorizationToken
+ */
+
+/**
+ * @brief  Constructs a new GetAuthorizationTokenResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
+
+/**
+ * @brief  Constructs a new GetAuthorizationTokenRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAuthorizationTokenRequest::GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other)
+    : ECRRequest(new GetAuthorizationTokenRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAuthorizationTokenRequest object.
+ */
+GetAuthorizationTokenRequest::GetAuthorizationTokenRequest()
+    : ECRRequest(new GetAuthorizationTokenRequestPrivate(ECRRequest::GetAuthorizationTokenAction, this))
+{
+
+}
+
+bool GetAuthorizationTokenRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAuthorizationTokenResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAuthorizationTokenResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAuthorizationTokenResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAuthorizationTokenRequestPrivate
+ *
+ * @brief  Private implementation for GetAuthorizationTokenRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public GetAuthorizationTokenRequest instance.
+ */
+GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
+    const ECRRequest::Action action, GetAuthorizationTokenRequest * const q)
+    : GetAuthorizationTokenPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAuthorizationTokenRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAuthorizationTokenRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAuthorizationTokenRequest instance.
+ */
+GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
+    const GetAuthorizationTokenRequestPrivate &other, GetAuthorizationTokenRequest * const q)
+    : GetAuthorizationTokenPrivate(other, q)
+{
+
+}

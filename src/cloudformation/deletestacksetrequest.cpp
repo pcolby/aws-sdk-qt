@@ -19,3 +19,107 @@
 
 #include "deletestacksetrequest.h"
 #include "deletestacksetrequest_p.h"
+#include "deletestacksetresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DeleteStackSetRequest
+ *
+ * @brief  Implements CloudFormation DeleteStackSet requests.
+ *
+ * @see    CloudFormationClient::deleteStackSet
+ */
+
+/**
+ * @brief  Constructs a new DeleteStackSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStackSetResponse::DeleteStackSetResponse(
+
+/**
+ * @brief  Constructs a new DeleteStackSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteStackSetRequest::DeleteStackSetRequest(const DeleteStackSetRequest &other)
+    : CloudFormationRequest(new DeleteStackSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteStackSetRequest object.
+ */
+DeleteStackSetRequest::DeleteStackSetRequest()
+    : CloudFormationRequest(new DeleteStackSetRequestPrivate(CloudFormationRequest::DeleteStackSetAction, this))
+{
+
+}
+
+bool DeleteStackSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteStackSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteStackSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * DeleteStackSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteStackSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStackSetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteStackSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStackSetRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public DeleteStackSetRequest instance.
+ */
+DeleteStackSetRequestPrivate::DeleteStackSetRequestPrivate(
+    const CloudFormationRequest::Action action, DeleteStackSetRequest * const q)
+    : DeleteStackSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStackSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteStackSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteStackSetRequest instance.
+ */
+DeleteStackSetRequestPrivate::DeleteStackSetRequestPrivate(
+    const DeleteStackSetRequestPrivate &other, DeleteStackSetRequest * const q)
+    : DeleteStackSetPrivate(other, q)
+{
+
+}

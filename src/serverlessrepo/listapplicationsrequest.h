@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAPPLICATIONSREQUEST_H
 #define QTAWS_LISTAPPLICATIONSREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class ListApplicationsRequestPrivate;
+
+class QTAWS_EXPORT ListApplicationsRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    ListApplicationsRequest(const ListApplicationsRequest &other);
+    ListApplicationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListApplicationsRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

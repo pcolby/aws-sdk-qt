@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTWORKERBLOCKSREQUEST_H
 #define QTAWS_LISTWORKERBLOCKSREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListWorkerBlocksRequestPrivate;
+
+class QTAWS_EXPORT ListWorkerBlocksRequest : public MTurkRequest {
+
+public:
+    ListWorkerBlocksRequest(const ListWorkerBlocksRequest &other);
+    ListWorkerBlocksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListWorkerBlocksRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETATTRIBUTESREQUEST_P_H
 #define QTAWS_GETATTRIBUTESREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "getattributesrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class GetAttributesRequest;
+
+class QTAWS_EXPORT GetAttributesRequestPrivate : public SimpleDBPrivate {
+
+public:
+    GetAttributesRequestPrivate(const SimpleDB::Action action,
+                                   GetAttributesRequest * const q);
+    GetAttributesRequestPrivate(const GetAttributesRequestPrivate &other,
+                                   GetAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAttributesRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESECURITYGROUPREQUEST_H
 #define QTAWS_DELETESECURITYGROUPREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSecurityGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteSecurityGroupRequest : public EC2Request {
+
+public:
+    DeleteSecurityGroupRequest(const DeleteSecurityGroupRequest &other);
+    DeleteSecurityGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSecurityGroupRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

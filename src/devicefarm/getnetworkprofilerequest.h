@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETNETWORKPROFILEREQUEST_H
 #define QTAWS_GETNETWORKPROFILEREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetNetworkProfileRequestPrivate;
+
+class QTAWS_EXPORT GetNetworkProfileRequest : public DeviceFarmRequest {
+
+public:
+    GetNetworkProfileRequest(const GetNetworkProfileRequest &other);
+    GetNetworkProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetNetworkProfileRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

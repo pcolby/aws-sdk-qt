@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTVOLUMEREQUEST_P_H
 #define QTAWS_IMPORTVOLUMEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "importvolumerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportVolumeRequest;
+
+class QTAWS_EXPORT ImportVolumeRequestPrivate : public EC2Private {
+
+public:
+    ImportVolumeRequestPrivate(const EC2::Action action,
+                                   ImportVolumeRequest * const q);
+    ImportVolumeRequestPrivate(const ImportVolumeRequestPrivate &other,
+                                   ImportVolumeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportVolumeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

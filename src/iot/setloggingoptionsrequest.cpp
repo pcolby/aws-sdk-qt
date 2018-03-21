@@ -19,3 +19,107 @@
 
 #include "setloggingoptionsrequest.h"
 #include "setloggingoptionsrequest_p.h"
+#include "setloggingoptionsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  SetLoggingOptionsRequest
+ *
+ * @brief  Implements IoT SetLoggingOptions requests.
+ *
+ * @see    IoTClient::setLoggingOptions
+ */
+
+/**
+ * @brief  Constructs a new SetLoggingOptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoggingOptionsResponse::SetLoggingOptionsResponse(
+
+/**
+ * @brief  Constructs a new SetLoggingOptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetLoggingOptionsRequest::SetLoggingOptionsRequest(const SetLoggingOptionsRequest &other)
+    : IoTRequest(new SetLoggingOptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetLoggingOptionsRequest object.
+ */
+SetLoggingOptionsRequest::SetLoggingOptionsRequest()
+    : IoTRequest(new SetLoggingOptionsRequestPrivate(IoTRequest::SetLoggingOptionsAction, this))
+{
+
+}
+
+bool SetLoggingOptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetLoggingOptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetLoggingOptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new SetLoggingOptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoggingOptionsRequestPrivate
+ *
+ * @brief  Private implementation for SetLoggingOptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoggingOptionsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public SetLoggingOptionsRequest instance.
+ */
+SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
+    const IoTRequest::Action action, SetLoggingOptionsRequest * const q)
+    : SetLoggingOptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoggingOptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetLoggingOptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetLoggingOptionsRequest instance.
+ */
+SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
+    const SetLoggingOptionsRequestPrivate &other, SetLoggingOptionsRequest * const q)
+    : SetLoggingOptionsPrivate(other, q)
+{
+
+}

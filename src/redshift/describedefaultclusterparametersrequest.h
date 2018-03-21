@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDEFAULTCLUSTERPARAMETERSREQUEST_H
 #define QTAWS_DESCRIBEDEFAULTCLUSTERPARAMETERSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeDefaultClusterParametersRequestPrivate;
+
+class QTAWS_EXPORT DescribeDefaultClusterParametersRequest : public RedshiftRequest {
+
+public:
+    DescribeDefaultClusterParametersRequest(const DescribeDefaultClusterParametersRequest &other);
+    DescribeDefaultClusterParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDefaultClusterParametersRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

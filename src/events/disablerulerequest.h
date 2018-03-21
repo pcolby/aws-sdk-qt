@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLERULEREQUEST_H
 #define QTAWS_DISABLERULEREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DisableRuleRequestPrivate;
+
+class QTAWS_EXPORT DisableRuleRequest : public CloudWatchEventsRequest {
+
+public:
+    DisableRuleRequest(const DisableRuleRequest &other);
+    DisableRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableRuleRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

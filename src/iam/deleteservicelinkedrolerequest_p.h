@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 #define QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 
+#include "iam_p.h"
+#include "deleteservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteServiceLinkedRoleRequest;
+
+class QTAWS_EXPORT DeleteServiceLinkedRoleRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteServiceLinkedRoleRequestPrivate(const IAM::Action action,
+                                   DeleteServiceLinkedRoleRequest * const q);
+    DeleteServiceLinkedRoleRequestPrivate(const DeleteServiceLinkedRoleRequestPrivate &other,
+                                   DeleteServiceLinkedRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServiceLinkedRoleRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

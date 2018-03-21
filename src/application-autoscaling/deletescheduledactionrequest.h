@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONREQUEST_H
 #define QTAWS_DELETESCHEDULEDACTIONREQUEST_H
 
+#include "applicationautoscalingrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DeleteScheduledActionRequestPrivate;
+
+class QTAWS_EXPORT DeleteScheduledActionRequest : public ApplicationAutoScalingRequest {
+
+public:
+    DeleteScheduledActionRequest(const DeleteScheduledActionRequest &other);
+    DeleteScheduledActionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteScheduledActionRequest)
+
+}
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "putlifecyclepolicyrequest.h"
 #include "putlifecyclepolicyrequest_p.h"
+#include "putlifecyclepolicyresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  PutLifecyclePolicyRequest
+ *
+ * @brief  Implements ECR PutLifecyclePolicy requests.
+ *
+ * @see    ECRClient::putLifecyclePolicy
+ */
+
+/**
+ * @brief  Constructs a new PutLifecyclePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutLifecyclePolicyResponse::PutLifecyclePolicyResponse(
+
+/**
+ * @brief  Constructs a new PutLifecyclePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutLifecyclePolicyRequest::PutLifecyclePolicyRequest(const PutLifecyclePolicyRequest &other)
+    : ECRRequest(new PutLifecyclePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutLifecyclePolicyRequest object.
+ */
+PutLifecyclePolicyRequest::PutLifecyclePolicyRequest()
+    : ECRRequest(new PutLifecyclePolicyRequestPrivate(ECRRequest::PutLifecyclePolicyAction, this))
+{
+
+}
+
+bool PutLifecyclePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutLifecyclePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutLifecyclePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutLifecyclePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutLifecyclePolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutLifecyclePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public PutLifecyclePolicyRequest instance.
+ */
+PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
+    const ECRRequest::Action action, PutLifecyclePolicyRequest * const q)
+    : PutLifecyclePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLifecyclePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutLifecyclePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutLifecyclePolicyRequest instance.
+ */
+PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
+    const PutLifecyclePolicyRequestPrivate &other, PutLifecyclePolicyRequest * const q)
+    : PutLifecyclePolicyPrivate(other, q)
+{
+
+}

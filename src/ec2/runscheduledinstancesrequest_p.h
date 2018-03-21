@@ -20,4 +20,29 @@
 #ifndef QTAWS_RUNSCHEDULEDINSTANCESREQUEST_P_H
 #define QTAWS_RUNSCHEDULEDINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "runscheduledinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RunScheduledInstancesRequest;
+
+class QTAWS_EXPORT RunScheduledInstancesRequestPrivate : public EC2Private {
+
+public:
+    RunScheduledInstancesRequestPrivate(const EC2::Action action,
+                                   RunScheduledInstancesRequest * const q);
+    RunScheduledInstancesRequestPrivate(const RunScheduledInstancesRequestPrivate &other,
+                                   RunScheduledInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RunScheduledInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

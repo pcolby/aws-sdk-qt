@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCERECORDSETSREQUEST_H
 #define QTAWS_LISTRESOURCERECORDSETSREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListResourceRecordSetsRequestPrivate;
+
+class QTAWS_EXPORT ListResourceRecordSetsRequest : public Route53Request {
+
+public:
+    ListResourceRecordSetsRequest(const ListResourceRecordSetsRequest &other);
+    ListResourceRecordSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceRecordSetsRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

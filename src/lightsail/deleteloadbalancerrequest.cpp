@@ -19,3 +19,107 @@
 
 #include "deleteloadbalancerrequest.h"
 #include "deleteloadbalancerrequest_p.h"
+#include "deleteloadbalancerresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteLoadBalancerRequest
+ *
+ * @brief  Implements Lightsail DeleteLoadBalancer requests.
+ *
+ * @see    LightsailClient::deleteLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLoadBalancerRequest::DeleteLoadBalancerRequest(const DeleteLoadBalancerRequest &other)
+    : LightsailRequest(new DeleteLoadBalancerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerRequest object.
+ */
+DeleteLoadBalancerRequest::DeleteLoadBalancerRequest()
+    : LightsailRequest(new DeleteLoadBalancerRequestPrivate(LightsailRequest::DeleteLoadBalancerAction, this))
+{
+
+}
+
+bool DeleteLoadBalancerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLoadBalancerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLoadBalancerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * DeleteLoadBalancerRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLoadBalancerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public DeleteLoadBalancerRequest instance.
+ */
+DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
+    const LightsailRequest::Action action, DeleteLoadBalancerRequest * const q)
+    : DeleteLoadBalancerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLoadBalancerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLoadBalancerRequest instance.
+ */
+DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
+    const DeleteLoadBalancerRequestPrivate &other, DeleteLoadBalancerRequest * const q)
+    : DeleteLoadBalancerPrivate(other, q)
+{
+
+}

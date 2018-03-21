@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_H
 #define QTAWS_DELETECERTIFICATEREQUEST_H
 
+#include "acmrequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class DeleteCertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteCertificateRequest : public ACMRequest {
+
+public:
+    DeleteCertificateRequest(const DeleteCertificateRequest &other);
+    DeleteCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCertificateRequest)
+
+}
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

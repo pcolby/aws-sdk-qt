@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "describeworkspacesconnectionstatusrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspacesConnectionStatusRequest;
+
+class QTAWS_EXPORT DescribeWorkspacesConnectionStatusRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    DescribeWorkspacesConnectionStatusRequestPrivate(const WorkSpaces::Action action,
+                                   DescribeWorkspacesConnectionStatusRequest * const q);
+    DescribeWorkspacesConnectionStatusRequestPrivate(const DescribeWorkspacesConnectionStatusRequestPrivate &other,
+                                   DescribeWorkspacesConnectionStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspacesConnectionStatusRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

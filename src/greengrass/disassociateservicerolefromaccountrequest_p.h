@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTREQUEST_P_H
 #define QTAWS_DISASSOCIATESERVICEROLEFROMACCOUNTREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "disassociateservicerolefromaccountrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DisassociateServiceRoleFromAccountRequest;
+
+class QTAWS_EXPORT DisassociateServiceRoleFromAccountRequestPrivate : public GreengrassPrivate {
+
+public:
+    DisassociateServiceRoleFromAccountRequestPrivate(const Greengrass::Action action,
+                                   DisassociateServiceRoleFromAccountRequest * const q);
+    DisassociateServiceRoleFromAccountRequestPrivate(const DisassociateServiceRoleFromAccountRequestPrivate &other,
+                                   DisassociateServiceRoleFromAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateServiceRoleFromAccountRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

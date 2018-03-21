@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRATEBASEDRULESREQUEST_P_H
 #define QTAWS_LISTRATEBASEDRULESREQUEST_P_H
 
+#include "waf_p.h"
+#include "listratebasedrulesrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListRateBasedRulesRequest;
+
+class QTAWS_EXPORT ListRateBasedRulesRequestPrivate : public WAFPrivate {
+
+public:
+    ListRateBasedRulesRequestPrivate(const WAF::Action action,
+                                   ListRateBasedRulesRequest * const q);
+    ListRateBasedRulesRequestPrivate(const ListRateBasedRulesRequestPrivate &other,
+                                   ListRateBasedRulesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRateBasedRulesRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

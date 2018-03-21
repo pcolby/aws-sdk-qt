@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describeimagesrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeImagesRequest;
+
+class QTAWS_EXPORT DescribeImagesRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeImagesRequestPrivate(const AppStream::Action action,
+                                   DescribeImagesRequest * const q);
+    DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
+                                   DescribeImagesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImagesRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

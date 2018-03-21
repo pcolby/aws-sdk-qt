@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSERPOOLDOMAINREQUEST_P_H
 #define QTAWS_CREATEUSERPOOLDOMAINREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "createuserpooldomainrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class CreateUserPoolDomainRequest;
+
+class QTAWS_EXPORT CreateUserPoolDomainRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    CreateUserPoolDomainRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   CreateUserPoolDomainRequest * const q);
+    CreateUserPoolDomainRequestPrivate(const CreateUserPoolDomainRequestPrivate &other,
+                                   CreateUserPoolDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserPoolDomainRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
+#include "lambda_p.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UntagResourceRequest;
+
+class QTAWS_EXPORT UntagResourceRequestPrivate : public LambdaPrivate {
+
+public:
+    UntagResourceRequestPrivate(const Lambda::Action action,
+                                   UntagResourceRequest * const q);
+    UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
+                                   UntagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

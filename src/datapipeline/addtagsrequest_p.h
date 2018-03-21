@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class AddTagsRequest;
+
+class QTAWS_EXPORT AddTagsRequestPrivate : public DataPipelinePrivate {
+
+public:
+    AddTagsRequestPrivate(const DataPipeline::Action action,
+                                   AddTagsRequest * const q);
+    AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
+                                   AddTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

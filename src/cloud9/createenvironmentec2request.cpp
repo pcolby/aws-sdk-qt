@@ -19,3 +19,107 @@
 
 #include "createenvironmentec2request.h"
 #include "createenvironmentec2request_p.h"
+#include "createenvironmentec2response.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  CreateEnvironmentEC2Request
+ *
+ * @brief  Implements Cloud9 CreateEnvironmentEC2 requests.
+ *
+ * @see    Cloud9Client::createEnvironmentEC2
+ */
+
+/**
+ * @brief  Constructs a new CreateEnvironmentEC2Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
+
+/**
+ * @brief  Constructs a new CreateEnvironmentEC2Request object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEnvironmentEC2Request::CreateEnvironmentEC2Request(const CreateEnvironmentEC2Request &other)
+    : Cloud9Request(new CreateEnvironmentEC2RequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEnvironmentEC2Request object.
+ */
+CreateEnvironmentEC2Request::CreateEnvironmentEC2Request()
+    : Cloud9Request(new CreateEnvironmentEC2RequestPrivate(Cloud9Request::CreateEnvironmentEC2Action, this))
+{
+
+}
+
+bool CreateEnvironmentEC2Request::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEnvironmentEC2Response object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEnvironmentEC2Response instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetworkReply * const reply) const
+{
+    return new CreateEnvironmentEC2Response(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEnvironmentEC2RequestPrivate
+ *
+ * @brief  Private implementation for CreateEnvironmentEC2Request.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public CreateEnvironmentEC2Request instance.
+ */
+CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
+    const Cloud9Request::Action action, CreateEnvironmentEC2Request * const q)
+    : CreateEnvironmentEC2Private(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentEC2RequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEnvironmentEC2Request
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEnvironmentEC2Request instance.
+ */
+CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
+    const CreateEnvironmentEC2RequestPrivate &other, CreateEnvironmentEC2Request * const q)
+    : CreateEnvironmentEC2Private(other, q)
+{
+
+}

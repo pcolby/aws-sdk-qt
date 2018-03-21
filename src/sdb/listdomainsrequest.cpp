@@ -19,3 +19,107 @@
 
 #include "listdomainsrequest.h"
 #include "listdomainsrequest_p.h"
+#include "listdomainsresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  ListDomainsRequest
+ *
+ * @brief  Implements SimpleDB ListDomains requests.
+ *
+ * @see    SimpleDBClient::listDomains
+ */
+
+/**
+ * @brief  Constructs a new ListDomainsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDomainsResponse::ListDomainsResponse(
+
+/**
+ * @brief  Constructs a new ListDomainsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDomainsRequest::ListDomainsRequest(const ListDomainsRequest &other)
+    : SimpleDBRequest(new ListDomainsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDomainsRequest object.
+ */
+ListDomainsRequest::ListDomainsRequest()
+    : SimpleDBRequest(new ListDomainsRequestPrivate(SimpleDBRequest::ListDomainsAction, this))
+{
+
+}
+
+bool ListDomainsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDomainsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDomainsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDomainsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDomainsRequestPrivate
+ *
+ * @brief  Private implementation for ListDomainsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDomainsRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public ListDomainsRequest instance.
+ */
+ListDomainsRequestPrivate::ListDomainsRequestPrivate(
+    const SimpleDBRequest::Action action, ListDomainsRequest * const q)
+    : ListDomainsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDomainsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDomainsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDomainsRequest instance.
+ */
+ListDomainsRequestPrivate::ListDomainsRequestPrivate(
+    const ListDomainsRequestPrivate &other, ListDomainsRequest * const q)
+    : ListDomainsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETHOSTEDZONELIMITREQUEST_P_H
 #define QTAWS_GETHOSTEDZONELIMITREQUEST_P_H
 
+#include "route53_p.h"
+#include "gethostedzonelimitrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHostedZoneLimitRequest;
+
+class QTAWS_EXPORT GetHostedZoneLimitRequestPrivate : public Route53Private {
+
+public:
+    GetHostedZoneLimitRequestPrivate(const Route53::Action action,
+                                   GetHostedZoneLimitRequest * const q);
+    GetHostedZoneLimitRequestPrivate(const GetHostedZoneLimitRequestPrivate &other,
+                                   GetHostedZoneLimitRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetHostedZoneLimitRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

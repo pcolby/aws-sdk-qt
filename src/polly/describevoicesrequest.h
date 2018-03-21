@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEVOICESREQUEST_H
 #define QTAWS_DESCRIBEVOICESREQUEST_H
 
+#include "pollyrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class DescribeVoicesRequestPrivate;
+
+class QTAWS_EXPORT DescribeVoicesRequest : public PollyRequest {
+
+public:
+    DescribeVoicesRequest(const DescribeVoicesRequest &other);
+    DescribeVoicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVoicesRequest)
+
+}
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

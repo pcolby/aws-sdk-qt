@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINTEGRATIONREQUEST_P_H
 #define QTAWS_GETINTEGRATIONREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getintegrationrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetIntegrationRequest;
+
+class QTAWS_EXPORT GetIntegrationRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetIntegrationRequestPrivate(const APIGateway::Action action,
+                                   GetIntegrationRequest * const q);
+    GetIntegrationRequestPrivate(const GetIntegrationRequestPrivate &other,
+                                   GetIntegrationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIntegrationRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

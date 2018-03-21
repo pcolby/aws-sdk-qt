@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_P_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "listcuratedenvironmentimagesrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListCuratedEnvironmentImagesRequest;
+
+class QTAWS_EXPORT ListCuratedEnvironmentImagesRequestPrivate : public CodeBuildPrivate {
+
+public:
+    ListCuratedEnvironmentImagesRequestPrivate(const CodeBuild::Action action,
+                                   ListCuratedEnvironmentImagesRequest * const q);
+    ListCuratedEnvironmentImagesRequestPrivate(const ListCuratedEnvironmentImagesRequestPrivate &other,
+                                   ListCuratedEnvironmentImagesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListCuratedEnvironmentImagesRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

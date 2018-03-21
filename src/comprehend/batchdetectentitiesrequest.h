@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDETECTENTITIESREQUEST_H
 #define QTAWS_BATCHDETECTENTITIESREQUEST_H
 
+#include "comprehendrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectEntitiesRequestPrivate;
+
+class QTAWS_EXPORT BatchDetectEntitiesRequest : public ComprehendRequest {
+
+public:
+    BatchDetectEntitiesRequest(const BatchDetectEntitiesRequest &other);
+    BatchDetectEntitiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectEntitiesRequest)
+
+}
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCEREQUEST_H
 #define QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCEREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetDeployablePatchSnapshotForInstanceRequestPrivate;
+
+class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceRequest : public SSMRequest {
+
+public:
+    GetDeployablePatchSnapshotForInstanceRequest(const GetDeployablePatchSnapshotForInstanceRequest &other);
+    GetDeployablePatchSnapshotForInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDeployablePatchSnapshotForInstanceRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

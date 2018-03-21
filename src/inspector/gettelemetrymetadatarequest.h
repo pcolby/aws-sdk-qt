@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTELEMETRYMETADATAREQUEST_H
 #define QTAWS_GETTELEMETRYMETADATAREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class GetTelemetryMetadataRequestPrivate;
+
+class QTAWS_EXPORT GetTelemetryMetadataRequest : public InspectorRequest {
+
+public:
+    GetTelemetryMetadataRequest(const GetTelemetryMetadataRequest &other);
+    GetTelemetryMetadataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTelemetryMetadataRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

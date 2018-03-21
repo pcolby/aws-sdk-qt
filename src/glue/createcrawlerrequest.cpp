@@ -19,3 +19,107 @@
 
 #include "createcrawlerrequest.h"
 #include "createcrawlerrequest_p.h"
+#include "createcrawlerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateCrawlerRequest
+ *
+ * @brief  Implements Glue CreateCrawler requests.
+ *
+ * @see    GlueClient::createCrawler
+ */
+
+/**
+ * @brief  Constructs a new CreateCrawlerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCrawlerResponse::CreateCrawlerResponse(
+
+/**
+ * @brief  Constructs a new CreateCrawlerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCrawlerRequest::CreateCrawlerRequest(const CreateCrawlerRequest &other)
+    : GlueRequest(new CreateCrawlerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCrawlerRequest object.
+ */
+CreateCrawlerRequest::CreateCrawlerRequest()
+    : GlueRequest(new CreateCrawlerRequestPrivate(GlueRequest::CreateCrawlerAction, this))
+{
+
+}
+
+bool CreateCrawlerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCrawlerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCrawlerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * CreateCrawlerRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCrawlerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCrawlerRequestPrivate
+ *
+ * @brief  Private implementation for CreateCrawlerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCrawlerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public CreateCrawlerRequest instance.
+ */
+CreateCrawlerRequestPrivate::CreateCrawlerRequestPrivate(
+    const GlueRequest::Action action, CreateCrawlerRequest * const q)
+    : CreateCrawlerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCrawlerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCrawlerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCrawlerRequest instance.
+ */
+CreateCrawlerRequestPrivate::CreateCrawlerRequestPrivate(
+    const CreateCrawlerRequestPrivate &other, CreateCrawlerRequest * const q)
+    : CreateCrawlerPrivate(other, q)
+{
+
+}

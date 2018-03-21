@@ -19,3 +19,107 @@
 
 #include "getmlmodelrequest.h"
 #include "getmlmodelrequest_p.h"
+#include "getmlmodelresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  GetMLModelRequest
+ *
+ * @brief  Implements MachineLearning GetMLModel requests.
+ *
+ * @see    MachineLearningClient::getMLModel
+ */
+
+/**
+ * @brief  Constructs a new GetMLModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMLModelResponse::GetMLModelResponse(
+
+/**
+ * @brief  Constructs a new GetMLModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMLModelRequest::GetMLModelRequest(const GetMLModelRequest &other)
+    : MachineLearningRequest(new GetMLModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMLModelRequest object.
+ */
+GetMLModelRequest::GetMLModelRequest()
+    : MachineLearningRequest(new GetMLModelRequestPrivate(MachineLearningRequest::GetMLModelAction, this))
+{
+
+}
+
+bool GetMLModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMLModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMLModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMLModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMLModelRequestPrivate
+ *
+ * @brief  Private implementation for GetMLModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMLModelRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public GetMLModelRequest instance.
+ */
+GetMLModelRequestPrivate::GetMLModelRequestPrivate(
+    const MachineLearningRequest::Action action, GetMLModelRequest * const q)
+    : GetMLModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMLModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMLModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMLModelRequest instance.
+ */
+GetMLModelRequestPrivate::GetMLModelRequestPrivate(
+    const GetMLModelRequestPrivate &other, GetMLModelRequest * const q)
+    : GetMLModelPrivate(other, q)
+{
+
+}

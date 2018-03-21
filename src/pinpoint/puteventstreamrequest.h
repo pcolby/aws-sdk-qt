@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTEVENTSTREAMREQUEST_H
 #define QTAWS_PUTEVENTSTREAMREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class PutEventStreamRequestPrivate;
+
+class QTAWS_EXPORT PutEventStreamRequest : public PinpointRequest {
+
+public:
+    PutEventStreamRequest(const PutEventStreamRequest &other);
+    PutEventStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutEventStreamRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

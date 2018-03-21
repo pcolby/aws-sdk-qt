@@ -19,3 +19,107 @@
 
 #include "getoperationdetailrequest.h"
 #include "getoperationdetailrequest_p.h"
+#include "getoperationdetailresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  GetOperationDetailRequest
+ *
+ * @brief  Implements Route53Domains GetOperationDetail requests.
+ *
+ * @see    Route53DomainsClient::getOperationDetail
+ */
+
+/**
+ * @brief  Constructs a new GetOperationDetailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationDetailResponse::GetOperationDetailResponse(
+
+/**
+ * @brief  Constructs a new GetOperationDetailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetOperationDetailRequest::GetOperationDetailRequest(const GetOperationDetailRequest &other)
+    : Route53DomainsRequest(new GetOperationDetailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetOperationDetailRequest object.
+ */
+GetOperationDetailRequest::GetOperationDetailRequest()
+    : Route53DomainsRequest(new GetOperationDetailRequestPrivate(Route53DomainsRequest::GetOperationDetailAction, this))
+{
+
+}
+
+bool GetOperationDetailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetOperationDetailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetOperationDetailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * GetOperationDetailRequest::response(QNetworkReply * const reply) const
+{
+    return new GetOperationDetailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationDetailRequestPrivate
+ *
+ * @brief  Private implementation for GetOperationDetailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationDetailRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public GetOperationDetailRequest instance.
+ */
+GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
+    const Route53DomainsRequest::Action action, GetOperationDetailRequest * const q)
+    : GetOperationDetailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationDetailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetOperationDetailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetOperationDetailRequest instance.
+ */
+GetOperationDetailRequestPrivate::GetOperationDetailRequestPrivate(
+    const GetOperationDetailRequestPrivate &other, GetOperationDetailRequest * const q)
+    : GetOperationDetailPrivate(other, q)
+{
+
+}

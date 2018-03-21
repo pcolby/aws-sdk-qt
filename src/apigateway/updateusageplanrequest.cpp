@@ -19,3 +19,107 @@
 
 #include "updateusageplanrequest.h"
 #include "updateusageplanrequest_p.h"
+#include "updateusageplanresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateUsagePlanRequest
+ *
+ * @brief  Implements APIGateway UpdateUsagePlan requests.
+ *
+ * @see    APIGatewayClient::updateUsagePlan
+ */
+
+/**
+ * @brief  Constructs a new UpdateUsagePlanResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUsagePlanResponse::UpdateUsagePlanResponse(
+
+/**
+ * @brief  Constructs a new UpdateUsagePlanRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateUsagePlanRequest::UpdateUsagePlanRequest(const UpdateUsagePlanRequest &other)
+    : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateUsagePlanRequest object.
+ */
+UpdateUsagePlanRequest::UpdateUsagePlanRequest()
+    : APIGatewayRequest(new UpdateUsagePlanRequestPrivate(APIGatewayRequest::UpdateUsagePlanAction, this))
+{
+
+}
+
+bool UpdateUsagePlanRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateUsagePlanResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateUsagePlanResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateUsagePlanResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUsagePlanRequestPrivate
+ *
+ * @brief  Private implementation for UpdateUsagePlanRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUsagePlanRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateUsagePlanRequest instance.
+ */
+UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateUsagePlanRequest * const q)
+    : UpdateUsagePlanPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUsagePlanRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateUsagePlanRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateUsagePlanRequest instance.
+ */
+UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
+    const UpdateUsagePlanRequestPrivate &other, UpdateUsagePlanRequest * const q)
+    : UpdateUsagePlanPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_H
 #define QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DisassociateMemberFromGroupRequestPrivate;
+
+class QTAWS_EXPORT DisassociateMemberFromGroupRequest : public WorkMailRequest {
+
+public:
+    DisassociateMemberFromGroupRequest(const DisassociateMemberFromGroupRequest &other);
+    DisassociateMemberFromGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateMemberFromGroupRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

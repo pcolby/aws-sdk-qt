@@ -19,3 +19,107 @@
 
 #include "listclosedworkflowexecutionsrequest.h"
 #include "listclosedworkflowexecutionsrequest_p.h"
+#include "listclosedworkflowexecutionsresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  ListClosedWorkflowExecutionsRequest
+ *
+ * @brief  Implements SWF ListClosedWorkflowExecutions requests.
+ *
+ * @see    SWFClient::listClosedWorkflowExecutions
+ */
+
+/**
+ * @brief  Constructs a new ListClosedWorkflowExecutionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
+
+/**
+ * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest(const ListClosedWorkflowExecutionsRequest &other)
+    : SWFRequest(new ListClosedWorkflowExecutionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListClosedWorkflowExecutionsRequest object.
+ */
+ListClosedWorkflowExecutionsRequest::ListClosedWorkflowExecutionsRequest()
+    : SWFRequest(new ListClosedWorkflowExecutionsRequestPrivate(SWFRequest::ListClosedWorkflowExecutionsAction, this))
+{
+
+}
+
+bool ListClosedWorkflowExecutionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListClosedWorkflowExecutionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListClosedWorkflowExecutionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * ListClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListClosedWorkflowExecutionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListClosedWorkflowExecutionsRequestPrivate
+ *
+ * @brief  Private implementation for ListClosedWorkflowExecutionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public ListClosedWorkflowExecutionsRequest instance.
+ */
+ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
+    const SWFRequest::Action action, ListClosedWorkflowExecutionsRequest * const q)
+    : ListClosedWorkflowExecutionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClosedWorkflowExecutionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListClosedWorkflowExecutionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListClosedWorkflowExecutionsRequest instance.
+ */
+ListClosedWorkflowExecutionsRequestPrivate::ListClosedWorkflowExecutionsRequestPrivate(
+    const ListClosedWorkflowExecutionsRequestPrivate &other, ListClosedWorkflowExecutionsRequest * const q)
+    : ListClosedWorkflowExecutionsPrivate(other, q)
+{
+
+}

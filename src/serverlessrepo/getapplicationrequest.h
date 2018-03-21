@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAPPLICATIONREQUEST_H
 #define QTAWS_GETAPPLICATIONREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class GetApplicationRequestPrivate;
+
+class QTAWS_EXPORT GetApplicationRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    GetApplicationRequest(const GetApplicationRequest &other);
+    GetApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetApplicationRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

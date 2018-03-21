@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOPERATIONDETAILREQUEST_H
 #define QTAWS_GETOPERATIONDETAILREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetOperationDetailRequestPrivate;
+
+class QTAWS_EXPORT GetOperationDetailRequest : public Route53DomainsRequest {
+
+public:
+    GetOperationDetailRequest(const GetOperationDetailRequest &other);
+    GetOperationDetailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationDetailRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

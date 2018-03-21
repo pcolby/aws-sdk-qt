@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNLINKDEVELOPERIDENTITYREQUEST_H
 #define QTAWS_UNLINKDEVELOPERIDENTITYREQUEST_H
 
+#include "cognitoidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class UnlinkDeveloperIdentityRequestPrivate;
+
+class QTAWS_EXPORT UnlinkDeveloperIdentityRequest : public CognitoIdentityRequest {
+
+public:
+    UnlinkDeveloperIdentityRequest(const UnlinkDeveloperIdentityRequest &other);
+    UnlinkDeveloperIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UnlinkDeveloperIdentityRequest)
+
+}
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

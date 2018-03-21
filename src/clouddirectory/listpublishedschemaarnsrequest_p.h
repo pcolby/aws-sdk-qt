@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPUBLISHEDSCHEMAARNSREQUEST_P_H
 #define QTAWS_LISTPUBLISHEDSCHEMAARNSREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listpublishedschemaarnsrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListPublishedSchemaArnsRequest;
+
+class QTAWS_EXPORT ListPublishedSchemaArnsRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListPublishedSchemaArnsRequestPrivate(const CloudDirectory::Action action,
+                                   ListPublishedSchemaArnsRequest * const q);
+    ListPublishedSchemaArnsRequestPrivate(const ListPublishedSchemaArnsRequestPrivate &other,
+                                   ListPublishedSchemaArnsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPublishedSchemaArnsRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

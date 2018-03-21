@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETACCESSKEYLASTUSEDREQUEST_H
 #define QTAWS_GETACCESSKEYLASTUSEDREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccessKeyLastUsedRequestPrivate;
+
+class QTAWS_EXPORT GetAccessKeyLastUsedRequest : public IAMRequest {
+
+public:
+    GetAccessKeyLastUsedRequest(const GetAccessKeyLastUsedRequest &other);
+    GetAccessKeyLastUsedRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAccessKeyLastUsedRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

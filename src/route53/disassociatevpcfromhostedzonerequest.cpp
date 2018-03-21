@@ -19,3 +19,107 @@
 
 #include "disassociatevpcfromhostedzonerequest.h"
 #include "disassociatevpcfromhostedzonerequest_p.h"
+#include "disassociatevpcfromhostedzoneresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DisassociateVPCFromHostedZoneRequest
+ *
+ * @brief  Implements Route53 DisassociateVPCFromHostedZone requests.
+ *
+ * @see    Route53Client::disassociateVPCFromHostedZone
+ */
+
+/**
+ * @brief  Constructs a new DisassociateVPCFromHostedZoneResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateVPCFromHostedZoneResponse::DisassociateVPCFromHostedZoneResponse(
+
+/**
+ * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest(const DisassociateVPCFromHostedZoneRequest &other)
+    : Route53Request(new DisassociateVPCFromHostedZoneRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateVPCFromHostedZoneRequest object.
+ */
+DisassociateVPCFromHostedZoneRequest::DisassociateVPCFromHostedZoneRequest()
+    : Route53Request(new DisassociateVPCFromHostedZoneRequestPrivate(Route53Request::DisassociateVPCFromHostedZoneAction, this))
+{
+
+}
+
+bool DisassociateVPCFromHostedZoneRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateVPCFromHostedZoneResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateVPCFromHostedZoneResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateVPCFromHostedZoneResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateVPCFromHostedZoneRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateVPCFromHostedZoneRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public DisassociateVPCFromHostedZoneRequest instance.
+ */
+DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
+    const Route53Request::Action action, DisassociateVPCFromHostedZoneRequest * const q)
+    : DisassociateVPCFromHostedZonePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateVPCFromHostedZoneRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateVPCFromHostedZoneRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateVPCFromHostedZoneRequest instance.
+ */
+DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
+    const DisassociateVPCFromHostedZoneRequestPrivate &other, DisassociateVPCFromHostedZoneRequest * const q)
+    : DisassociateVPCFromHostedZonePrivate(other, q)
+{
+
+}

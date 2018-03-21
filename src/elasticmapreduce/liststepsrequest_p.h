@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTEPSREQUEST_P_H
 #define QTAWS_LISTSTEPSREQUEST_P_H
 
+#include "emr_p.h"
+#include "liststepsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListStepsRequest;
+
+class QTAWS_EXPORT ListStepsRequestPrivate : public EMRPrivate {
+
+public:
+    ListStepsRequestPrivate(const EMR::Action action,
+                                   ListStepsRequest * const q);
+    ListStepsRequestPrivate(const ListStepsRequestPrivate &other,
+                                   ListStepsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStepsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

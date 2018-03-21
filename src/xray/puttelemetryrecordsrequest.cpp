@@ -19,3 +19,107 @@
 
 #include "puttelemetryrecordsrequest.h"
 #include "puttelemetryrecordsrequest_p.h"
+#include "puttelemetryrecordsresponse.h"
+#include "xrayrequest_p.h"
+
+namespace AWS {
+namespace XRay {
+
+/**
+ * @class  PutTelemetryRecordsRequest
+ *
+ * @brief  Implements XRay PutTelemetryRecords requests.
+ *
+ * @see    XRayClient::putTelemetryRecords
+ */
+
+/**
+ * @brief  Constructs a new PutTelemetryRecordsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
+
+/**
+ * @brief  Constructs a new PutTelemetryRecordsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutTelemetryRecordsRequest::PutTelemetryRecordsRequest(const PutTelemetryRecordsRequest &other)
+    : XRayRequest(new PutTelemetryRecordsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutTelemetryRecordsRequest object.
+ */
+PutTelemetryRecordsRequest::PutTelemetryRecordsRequest()
+    : XRayRequest(new PutTelemetryRecordsRequestPrivate(XRayRequest::PutTelemetryRecordsAction, this))
+{
+
+}
+
+bool PutTelemetryRecordsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutTelemetryRecordsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutTelemetryRecordsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  XRayClient::send
+ */
+AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetworkReply * const reply) const
+{
+    return new PutTelemetryRecordsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutTelemetryRecordsRequestPrivate
+ *
+ * @brief  Private implementation for PutTelemetryRecordsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object.
+ *
+ * @param  action  XRay action being performed.
+ * @param  q       Pointer to this object's public PutTelemetryRecordsRequest instance.
+ */
+PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
+    const XRayRequest::Action action, PutTelemetryRecordsRequest * const q)
+    : PutTelemetryRecordsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTelemetryRecordsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutTelemetryRecordsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutTelemetryRecordsRequest instance.
+ */
+PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
+    const PutTelemetryRecordsRequestPrivate &other, PutTelemetryRecordsRequest * const q)
+    : PutTelemetryRecordsPrivate(other, q)
+{
+
+}

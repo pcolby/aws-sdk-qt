@@ -19,3 +19,107 @@
 
 #include "purchasescheduledinstancesrequest.h"
 #include "purchasescheduledinstancesrequest_p.h"
+#include "purchasescheduledinstancesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  PurchaseScheduledInstancesRequest
+ *
+ * @brief  Implements EC2 PurchaseScheduledInstances requests.
+ *
+ * @see    EC2Client::purchaseScheduledInstances
+ */
+
+/**
+ * @brief  Constructs a new PurchaseScheduledInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
+
+/**
+ * @brief  Constructs a new PurchaseScheduledInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest(const PurchaseScheduledInstancesRequest &other)
+    : EC2Request(new PurchaseScheduledInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurchaseScheduledInstancesRequest object.
+ */
+PurchaseScheduledInstancesRequest::PurchaseScheduledInstancesRequest()
+    : EC2Request(new PurchaseScheduledInstancesRequestPrivate(EC2Request::PurchaseScheduledInstancesAction, this))
+{
+
+}
+
+bool PurchaseScheduledInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurchaseScheduledInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurchaseScheduledInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new PurchaseScheduledInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseScheduledInstancesRequestPrivate
+ *
+ * @brief  Private implementation for PurchaseScheduledInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public PurchaseScheduledInstancesRequest instance.
+ */
+PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
+    const EC2Request::Action action, PurchaseScheduledInstancesRequest * const q)
+    : PurchaseScheduledInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseScheduledInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurchaseScheduledInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurchaseScheduledInstancesRequest instance.
+ */
+PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
+    const PurchaseScheduledInstancesRequestPrivate &other, PurchaseScheduledInstancesRequest * const q)
+    : PurchaseScheduledInstancesPrivate(other, q)
+{
+
+}

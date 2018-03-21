@@ -19,3 +19,107 @@
 
 #include "deletevirtualmfadevicerequest.h"
 #include "deletevirtualmfadevicerequest_p.h"
+#include "deletevirtualmfadeviceresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteVirtualMFADeviceRequest
+ *
+ * @brief  Implements IAM DeleteVirtualMFADevice requests.
+ *
+ * @see    IAMClient::deleteVirtualMFADevice
+ */
+
+/**
+ * @brief  Constructs a new DeleteVirtualMFADeviceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
+
+/**
+ * @brief  Constructs a new DeleteVirtualMFADeviceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest(const DeleteVirtualMFADeviceRequest &other)
+    : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVirtualMFADeviceRequest object.
+ */
+DeleteVirtualMFADeviceRequest::DeleteVirtualMFADeviceRequest()
+    : IAMRequest(new DeleteVirtualMFADeviceRequestPrivate(IAMRequest::DeleteVirtualMFADeviceAction, this))
+{
+
+}
+
+bool DeleteVirtualMFADeviceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVirtualMFADeviceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVirtualMFADeviceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVirtualMFADeviceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVirtualMFADeviceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVirtualMFADeviceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVirtualMFADeviceRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteVirtualMFADeviceRequest instance.
+ */
+DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
+    const IAMRequest::Action action, DeleteVirtualMFADeviceRequest * const q)
+    : DeleteVirtualMFADevicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVirtualMFADeviceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVirtualMFADeviceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVirtualMFADeviceRequest instance.
+ */
+DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
+    const DeleteVirtualMFADeviceRequestPrivate &other, DeleteVirtualMFADeviceRequest * const q)
+    : DeleteVirtualMFADevicePrivate(other, q)
+{
+
+}

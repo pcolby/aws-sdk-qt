@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_H
 #define QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteNotificationConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteNotificationConfigurationRequest : public AutoScalingRequest {
+
+public:
+    DeleteNotificationConfigurationRequest(const DeleteNotificationConfigurationRequest &other);
+    DeleteNotificationConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotificationConfigurationRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

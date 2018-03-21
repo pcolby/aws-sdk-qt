@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTFLEETSREQUEST_P_H
 #define QTAWS_LISTFLEETSREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "listfleetsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ListFleetsRequest;
+
+class QTAWS_EXPORT ListFleetsRequestPrivate : public GameLiftPrivate {
+
+public:
+    ListFleetsRequestPrivate(const GameLift::Action action,
+                                   ListFleetsRequest * const q);
+    ListFleetsRequestPrivate(const ListFleetsRequestPrivate &other,
+                                   ListFleetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListFleetsRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPRODUCTSREQUEST_P_H
 #define QTAWS_GETPRODUCTSREQUEST_P_H
 
+#include "pricing_p.h"
+#include "getproductsrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class GetProductsRequest;
+
+class QTAWS_EXPORT GetProductsRequestPrivate : public PricingPrivate {
+
+public:
+    GetProductsRequestPrivate(const Pricing::Action action,
+                                   GetProductsRequest * const q);
+    GetProductsRequestPrivate(const GetProductsRequestPrivate &other,
+                                   GetProductsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetProductsRequest)
+
+};
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

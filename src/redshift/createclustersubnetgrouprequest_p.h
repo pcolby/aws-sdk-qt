@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERSUBNETGROUPREQUEST_P_H
 #define QTAWS_CREATECLUSTERSUBNETGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "createclustersubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateClusterSubnetGroupRequest;
+
+class QTAWS_EXPORT CreateClusterSubnetGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    CreateClusterSubnetGroupRequestPrivate(const Redshift::Action action,
+                                   CreateClusterSubnetGroupRequest * const q);
+    CreateClusterSubnetGroupRequestPrivate(const CreateClusterSubnetGroupRequestPrivate &other,
+                                   CreateClusterSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterSubnetGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

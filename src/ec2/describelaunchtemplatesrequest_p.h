@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELAUNCHTEMPLATESREQUEST_P_H
 #define QTAWS_DESCRIBELAUNCHTEMPLATESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describelaunchtemplatesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeLaunchTemplatesRequest;
+
+class QTAWS_EXPORT DescribeLaunchTemplatesRequestPrivate : public EC2Private {
+
+public:
+    DescribeLaunchTemplatesRequestPrivate(const EC2::Action action,
+                                   DescribeLaunchTemplatesRequest * const q);
+    DescribeLaunchTemplatesRequestPrivate(const DescribeLaunchTemplatesRequestPrivate &other,
+                                   DescribeLaunchTemplatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLaunchTemplatesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

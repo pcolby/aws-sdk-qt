@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTMATCHMAKINGREQUEST_P_H
 #define QTAWS_STARTMATCHMAKINGREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "startmatchmakingrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StartMatchmakingRequest;
+
+class QTAWS_EXPORT StartMatchmakingRequestPrivate : public GameLiftPrivate {
+
+public:
+    StartMatchmakingRequestPrivate(const GameLift::Action action,
+                                   StartMatchmakingRequest * const q);
+    StartMatchmakingRequestPrivate(const StartMatchmakingRequestPrivate &other,
+                                   StartMatchmakingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartMatchmakingRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

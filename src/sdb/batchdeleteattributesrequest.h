@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDELETEATTRIBUTESREQUEST_H
 #define QTAWS_BATCHDELETEATTRIBUTESREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class BatchDeleteAttributesRequestPrivate;
+
+class QTAWS_EXPORT BatchDeleteAttributesRequest : public SimpleDBRequest {
+
+public:
+    BatchDeleteAttributesRequest(const BatchDeleteAttributesRequest &other);
+    BatchDeleteAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteAttributesRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

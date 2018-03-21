@@ -19,3 +19,107 @@
 
 #include "listresourcedatasyncrequest.h"
 #include "listresourcedatasyncrequest_p.h"
+#include "listresourcedatasyncresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListResourceDataSyncRequest
+ *
+ * @brief  Implements SSM ListResourceDataSync requests.
+ *
+ * @see    SSMClient::listResourceDataSync
+ */
+
+/**
+ * @brief  Constructs a new ListResourceDataSyncResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceDataSyncResponse::ListResourceDataSyncResponse(
+
+/**
+ * @brief  Constructs a new ListResourceDataSyncRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourceDataSyncRequest::ListResourceDataSyncRequest(const ListResourceDataSyncRequest &other)
+    : SSMRequest(new ListResourceDataSyncRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourceDataSyncRequest object.
+ */
+ListResourceDataSyncRequest::ListResourceDataSyncRequest()
+    : SSMRequest(new ListResourceDataSyncRequestPrivate(SSMRequest::ListResourceDataSyncAction, this))
+{
+
+}
+
+bool ListResourceDataSyncRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourceDataSyncResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourceDataSyncResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListResourceDataSyncRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourceDataSyncResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceDataSyncRequestPrivate
+ *
+ * @brief  Private implementation for ListResourceDataSyncRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDataSyncRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListResourceDataSyncRequest instance.
+ */
+ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
+    const SSMRequest::Action action, ListResourceDataSyncRequest * const q)
+    : ListResourceDataSyncPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDataSyncRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourceDataSyncRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourceDataSyncRequest instance.
+ */
+ListResourceDataSyncRequestPrivate::ListResourceDataSyncRequestPrivate(
+    const ListResourceDataSyncRequestPrivate &other, ListResourceDataSyncRequest * const q)
+    : ListResourceDataSyncPrivate(other, q)
+{
+
+}

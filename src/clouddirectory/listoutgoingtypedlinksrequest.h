@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_H
 #define QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListOutgoingTypedLinksRequestPrivate;
+
+class QTAWS_EXPORT ListOutgoingTypedLinksRequest : public CloudDirectoryRequest {
+
+public:
+    ListOutgoingTypedLinksRequest(const ListOutgoingTypedLinksRequest &other);
+    ListOutgoingTypedLinksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOutgoingTypedLinksRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEWEBHOOKREQUEST_P_H
 #define QTAWS_DELETEWEBHOOKREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "deletewebhookrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class DeleteWebhookRequest;
+
+class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodeBuildPrivate {
+
+public:
+    DeleteWebhookRequestPrivate(const CodeBuild::Action action,
+                                   DeleteWebhookRequest * const q);
+    DeleteWebhookRequestPrivate(const DeleteWebhookRequestPrivate &other,
+                                   DeleteWebhookRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteWebhookRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

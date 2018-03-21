@@ -19,3 +19,107 @@
 
 #include "createhostedzonerequest.h"
 #include "createhostedzonerequest_p.h"
+#include "createhostedzoneresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateHostedZoneRequest
+ *
+ * @brief  Implements Route53 CreateHostedZone requests.
+ *
+ * @see    Route53Client::createHostedZone
+ */
+
+/**
+ * @brief  Constructs a new CreateHostedZoneResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHostedZoneResponse::CreateHostedZoneResponse(
+
+/**
+ * @brief  Constructs a new CreateHostedZoneRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHostedZoneRequest::CreateHostedZoneRequest(const CreateHostedZoneRequest &other)
+    : Route53Request(new CreateHostedZoneRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHostedZoneRequest object.
+ */
+CreateHostedZoneRequest::CreateHostedZoneRequest()
+    : Route53Request(new CreateHostedZoneRequestPrivate(Route53Request::CreateHostedZoneAction, this))
+{
+
+}
+
+bool CreateHostedZoneRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHostedZoneResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHostedZoneResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHostedZoneResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHostedZoneRequestPrivate
+ *
+ * @brief  Private implementation for CreateHostedZoneRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHostedZoneRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public CreateHostedZoneRequest instance.
+ */
+CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
+    const Route53Request::Action action, CreateHostedZoneRequest * const q)
+    : CreateHostedZonePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHostedZoneRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHostedZoneRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHostedZoneRequest instance.
+ */
+CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
+    const CreateHostedZoneRequestPrivate &other, CreateHostedZoneRequest * const q)
+    : CreateHostedZonePrivate(other, q)
+{
+
+}

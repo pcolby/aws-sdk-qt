@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEENVIRONMENTREQUEST_H
 #define QTAWS_CREATEENVIRONMENTREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT CreateEnvironmentRequest : public ElasticBeanstalkRequest {
+
+public:
+    CreateEnvironmentRequest(const CreateEnvironmentRequest &other);
+    CreateEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateEnvironmentRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

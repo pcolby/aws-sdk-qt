@@ -19,3 +19,107 @@
 
 #include "updatefunctioncoderequest.h"
 #include "updatefunctioncoderequest_p.h"
+#include "updatefunctioncoderesponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  UpdateFunctionCodeRequest
+ *
+ * @brief  Implements Lambda UpdateFunctionCode requests.
+ *
+ * @see    LambdaClient::updateFunctionCode
+ */
+
+/**
+ * @brief  Constructs a new UpdateFunctionCodeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
+
+/**
+ * @brief  Constructs a new UpdateFunctionCodeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateFunctionCodeRequest::UpdateFunctionCodeRequest(const UpdateFunctionCodeRequest &other)
+    : LambdaRequest(new UpdateFunctionCodeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateFunctionCodeRequest object.
+ */
+UpdateFunctionCodeRequest::UpdateFunctionCodeRequest()
+    : LambdaRequest(new UpdateFunctionCodeRequestPrivate(LambdaRequest::UpdateFunctionCodeAction, this))
+{
+
+}
+
+bool UpdateFunctionCodeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateFunctionCodeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateFunctionCodeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * UpdateFunctionCodeRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateFunctionCodeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFunctionCodeRequestPrivate
+ *
+ * @brief  Private implementation for UpdateFunctionCodeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public UpdateFunctionCodeRequest instance.
+ */
+UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
+    const LambdaRequest::Action action, UpdateFunctionCodeRequest * const q)
+    : UpdateFunctionCodePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionCodeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateFunctionCodeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateFunctionCodeRequest instance.
+ */
+UpdateFunctionCodeRequestPrivate::UpdateFunctionCodeRequestPrivate(
+    const UpdateFunctionCodeRequestPrivate &other, UpdateFunctionCodeRequest * const q)
+    : UpdateFunctionCodePrivate(other, q)
+{
+
+}

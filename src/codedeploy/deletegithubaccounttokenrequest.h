@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGITHUBACCOUNTTOKENREQUEST_H
 #define QTAWS_DELETEGITHUBACCOUNTTOKENREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteGitHubAccountTokenRequestPrivate;
+
+class QTAWS_EXPORT DeleteGitHubAccountTokenRequest : public CodeDeployRequest {
+
+public:
+    DeleteGitHubAccountTokenRequest(const DeleteGitHubAccountTokenRequest &other);
+    DeleteGitHubAccountTokenRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGitHubAccountTokenRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

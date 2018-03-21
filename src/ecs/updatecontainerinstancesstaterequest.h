@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONTAINERINSTANCESSTATEREQUEST_H
 #define QTAWS_UPDATECONTAINERINSTANCESSTATEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateContainerInstancesStateRequestPrivate;
+
+class QTAWS_EXPORT UpdateContainerInstancesStateRequest : public ECSRequest {
+
+public:
+    UpdateContainerInstancesStateRequest(const UpdateContainerInstancesStateRequest &other);
+    UpdateContainerInstancesStateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateContainerInstancesStateRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

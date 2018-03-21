@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTAPPLICATIONPOLICYREQUEST_P_H
 #define QTAWS_PUTAPPLICATIONPOLICYREQUEST_P_H
 
+#include "serverlessapplicationrepository_p.h"
+#include "putapplicationpolicyrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class PutApplicationPolicyRequest;
+
+class QTAWS_EXPORT PutApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+
+public:
+    PutApplicationPolicyRequestPrivate(const ServerlessApplicationRepository::Action action,
+                                   PutApplicationPolicyRequest * const q);
+    PutApplicationPolicyRequestPrivate(const PutApplicationPolicyRequestPrivate &other,
+                                   PutApplicationPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutApplicationPolicyRequest)
+
+};
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

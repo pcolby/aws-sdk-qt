@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFINDINGSREQUEST_P_H
 #define QTAWS_DESCRIBEFINDINGSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "describefindingsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeFindingsRequest;
+
+class QTAWS_EXPORT DescribeFindingsRequestPrivate : public InspectorPrivate {
+
+public:
+    DescribeFindingsRequestPrivate(const Inspector::Action action,
+                                   DescribeFindingsRequest * const q);
+    DescribeFindingsRequestPrivate(const DescribeFindingsRequestPrivate &other,
+                                   DescribeFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFindingsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

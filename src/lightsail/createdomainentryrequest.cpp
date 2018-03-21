@@ -19,3 +19,107 @@
 
 #include "createdomainentryrequest.h"
 #include "createdomainentryrequest_p.h"
+#include "createdomainentryresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateDomainEntryRequest
+ *
+ * @brief  Implements Lightsail CreateDomainEntry requests.
+ *
+ * @see    LightsailClient::createDomainEntry
+ */
+
+/**
+ * @brief  Constructs a new CreateDomainEntryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDomainEntryResponse::CreateDomainEntryResponse(
+
+/**
+ * @brief  Constructs a new CreateDomainEntryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDomainEntryRequest::CreateDomainEntryRequest(const CreateDomainEntryRequest &other)
+    : LightsailRequest(new CreateDomainEntryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDomainEntryRequest object.
+ */
+CreateDomainEntryRequest::CreateDomainEntryRequest()
+    : LightsailRequest(new CreateDomainEntryRequestPrivate(LightsailRequest::CreateDomainEntryAction, this))
+{
+
+}
+
+bool CreateDomainEntryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDomainEntryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDomainEntryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * CreateDomainEntryRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDomainEntryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDomainEntryRequestPrivate
+ *
+ * @brief  Private implementation for CreateDomainEntryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainEntryRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public CreateDomainEntryRequest instance.
+ */
+CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
+    const LightsailRequest::Action action, CreateDomainEntryRequest * const q)
+    : CreateDomainEntryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDomainEntryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDomainEntryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDomainEntryRequest instance.
+ */
+CreateDomainEntryRequestPrivate::CreateDomainEntryRequestPrivate(
+    const CreateDomainEntryRequestPrivate &other, CreateDomainEntryRequest * const q)
+    : CreateDomainEntryPrivate(other, q)
+{
+
+}

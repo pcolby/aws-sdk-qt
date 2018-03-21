@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_H
 #define QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DeleteProgressUpdateStreamRequestPrivate;
+
+class QTAWS_EXPORT DeleteProgressUpdateStreamRequest : public MigrationHubRequest {
+
+public:
+    DeleteProgressUpdateStreamRequest(const DeleteProgressUpdateStreamRequest &other);
+    DeleteProgressUpdateStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProgressUpdateStreamRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

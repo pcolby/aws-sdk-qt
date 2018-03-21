@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGROUPREQUEST_H
 #define QTAWS_GETGROUPREQUEST_H
 
+#include "resourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class GetGroupRequestPrivate;
+
+class QTAWS_EXPORT GetGroupRequest : public ResourceGroupsRequest {
+
+public:
+    GetGroupRequest(const GetGroupRequest &other);
+    GetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGroupRequest)
+
+}
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listuserpoolsrequest.h"
 #include "listuserpoolsrequest_p.h"
+#include "listuserpoolsresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListUserPoolsRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ListUserPools requests.
+ *
+ * @see    CognitoIdentityProviderClient::listUserPools
+ */
+
+/**
+ * @brief  Constructs a new ListUserPoolsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUserPoolsResponse::ListUserPoolsResponse(
+
+/**
+ * @brief  Constructs a new ListUserPoolsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListUserPoolsRequest::ListUserPoolsRequest(const ListUserPoolsRequest &other)
+    : CognitoIdentityProviderRequest(new ListUserPoolsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListUserPoolsRequest object.
+ */
+ListUserPoolsRequest::ListUserPoolsRequest()
+    : CognitoIdentityProviderRequest(new ListUserPoolsRequestPrivate(CognitoIdentityProviderRequest::ListUserPoolsAction, this))
+{
+
+}
+
+bool ListUserPoolsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListUserPoolsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListUserPoolsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ListUserPoolsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListUserPoolsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUserPoolsRequestPrivate
+ *
+ * @brief  Private implementation for ListUserPoolsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUserPoolsRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ListUserPoolsRequest instance.
+ */
+ListUserPoolsRequestPrivate::ListUserPoolsRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ListUserPoolsRequest * const q)
+    : ListUserPoolsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUserPoolsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListUserPoolsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListUserPoolsRequest instance.
+ */
+ListUserPoolsRequestPrivate::ListUserPoolsRequestPrivate(
+    const ListUserPoolsRequestPrivate &other, ListUserPoolsRequest * const q)
+    : ListUserPoolsPrivate(other, q)
+{
+
+}

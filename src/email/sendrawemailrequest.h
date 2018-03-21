@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDRAWEMAILREQUEST_H
 #define QTAWS_SENDRAWEMAILREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendRawEmailRequestPrivate;
+
+class QTAWS_EXPORT SendRawEmailRequest : public SESRequest {
+
+public:
+    SendRawEmailRequest(const SendRawEmailRequest &other);
+    SendRawEmailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendRawEmailRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

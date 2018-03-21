@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDOCUMENTREQUEST_H
 #define QTAWS_DELETEDOCUMENTREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteDocumentRequestPrivate;
+
+class QTAWS_EXPORT DeleteDocumentRequest : public WorkDocsRequest {
+
+public:
+    DeleteDocumentRequest(const DeleteDocumentRequest &other);
+    DeleteDocumentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDocumentRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

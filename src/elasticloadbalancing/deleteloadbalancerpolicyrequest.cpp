@@ -19,3 +19,107 @@
 
 #include "deleteloadbalancerpolicyrequest.h"
 #include "deleteloadbalancerpolicyrequest_p.h"
+#include "deleteloadbalancerpolicyresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DeleteLoadBalancerPolicyRequest
+ *
+ * @brief  Implements ElasticLoadBalancing DeleteLoadBalancerPolicy requests.
+ *
+ * @see    ElasticLoadBalancingClient::deleteLoadBalancerPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoadBalancerPolicyResponse::DeleteLoadBalancerPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLoadBalancerPolicyRequest::DeleteLoadBalancerPolicyRequest(const DeleteLoadBalancerPolicyRequest &other)
+    : ElasticLoadBalancingRequest(new DeleteLoadBalancerPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLoadBalancerPolicyRequest object.
+ */
+DeleteLoadBalancerPolicyRequest::DeleteLoadBalancerPolicyRequest()
+    : ElasticLoadBalancingRequest(new DeleteLoadBalancerPolicyRequestPrivate(ElasticLoadBalancingRequest::DeleteLoadBalancerPolicyAction, this))
+{
+
+}
+
+bool DeleteLoadBalancerPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLoadBalancerPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLoadBalancerPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * DeleteLoadBalancerPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLoadBalancerPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoadBalancerPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLoadBalancerPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerPolicyRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public DeleteLoadBalancerPolicyRequest instance.
+ */
+DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerPolicyRequest * const q)
+    : DeleteLoadBalancerPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoadBalancerPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLoadBalancerPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLoadBalancerPolicyRequest instance.
+ */
+DeleteLoadBalancerPolicyRequestPrivate::DeleteLoadBalancerPolicyRequestPrivate(
+    const DeleteLoadBalancerPolicyRequestPrivate &other, DeleteLoadBalancerPolicyRequest * const q)
+    : DeleteLoadBalancerPolicyPrivate(other, q)
+{
+
+}

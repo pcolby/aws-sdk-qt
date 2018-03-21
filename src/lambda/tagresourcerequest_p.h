@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
+#include "lambda_p.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class TagResourceRequest;
+
+class QTAWS_EXPORT TagResourceRequestPrivate : public LambdaPrivate {
+
+public:
+    TagResourceRequestPrivate(const Lambda::Action action,
+                                   TagResourceRequest * const q);
+    TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
+                                   TagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_REPLACENETWORKACLENTRYREQUEST_H
 #define QTAWS_REPLACENETWORKACLENTRYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReplaceNetworkAclEntryRequestPrivate;
+
+class QTAWS_EXPORT ReplaceNetworkAclEntryRequest : public EC2Request {
+
+public:
+    ReplaceNetworkAclEntryRequest(const ReplaceNetworkAclEntryRequest &other);
+    ReplaceNetworkAclEntryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceNetworkAclEntryRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

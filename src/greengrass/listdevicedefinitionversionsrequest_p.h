@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEVICEDEFINITIONVERSIONSREQUEST_P_H
 #define QTAWS_LISTDEVICEDEFINITIONVERSIONSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listdevicedefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListDeviceDefinitionVersionsRequest;
+
+class QTAWS_EXPORT ListDeviceDefinitionVersionsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListDeviceDefinitionVersionsRequestPrivate(const Greengrass::Action action,
+                                   ListDeviceDefinitionVersionsRequest * const q);
+    ListDeviceDefinitionVersionsRequestPrivate(const ListDeviceDefinitionVersionsRequestPrivate &other,
+                                   ListDeviceDefinitionVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeviceDefinitionVersionsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

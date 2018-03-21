@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESTREAMPROCESSORREQUEST_P_H
 #define QTAWS_CREATESTREAMPROCESSORREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "createstreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class CreateStreamProcessorRequest;
+
+class QTAWS_EXPORT CreateStreamProcessorRequestPrivate : public RekognitionPrivate {
+
+public:
+    CreateStreamProcessorRequestPrivate(const Rekognition::Action action,
+                                   CreateStreamProcessorRequest * const q);
+    CreateStreamProcessorRequestPrivate(const CreateStreamProcessorRequestPrivate &other,
+                                   CreateStreamProcessorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStreamProcessorRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

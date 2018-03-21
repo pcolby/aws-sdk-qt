@@ -19,3 +19,107 @@
 
 #include "deletecustomverificationemailtemplaterequest.h"
 #include "deletecustomverificationemailtemplaterequest_p.h"
+#include "deletecustomverificationemailtemplateresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteCustomVerificationEmailTemplateRequest
+ *
+ * @brief  Implements SES DeleteCustomVerificationEmailTemplate requests.
+ *
+ * @see    SESClient::deleteCustomVerificationEmailTemplate
+ */
+
+/**
+ * @brief  Constructs a new DeleteCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemplateResponse(
+
+/**
+ * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTemplateRequest(const DeleteCustomVerificationEmailTemplateRequest &other)
+    : SESRequest(new DeleteCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequest object.
+ */
+DeleteCustomVerificationEmailTemplateRequest::DeleteCustomVerificationEmailTemplateRequest()
+    : SESRequest(new DeleteCustomVerificationEmailTemplateRequestPrivate(SESRequest::DeleteCustomVerificationEmailTemplateAction, this))
+{
+
+}
+
+bool DeleteCustomVerificationEmailTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteCustomVerificationEmailTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteCustomVerificationEmailTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCustomVerificationEmailTemplateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteCustomVerificationEmailTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteCustomVerificationEmailTemplateRequest instance.
+ */
+DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
+    const SESRequest::Action action, DeleteCustomVerificationEmailTemplateRequest * const q)
+    : DeleteCustomVerificationEmailTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteCustomVerificationEmailTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteCustomVerificationEmailTemplateRequest instance.
+ */
+DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
+    const DeleteCustomVerificationEmailTemplateRequestPrivate &other, DeleteCustomVerificationEmailTemplateRequest * const q)
+    : DeleteCustomVerificationEmailTemplatePrivate(other, q)
+{
+
+}

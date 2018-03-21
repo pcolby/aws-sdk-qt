@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEHSMREQUEST_H
 #define QTAWS_DELETEHSMREQUEST_H
 
+#include "cloudhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DeleteHsmRequestPrivate;
+
+class QTAWS_EXPORT DeleteHsmRequest : public CloudHSMRequest {
+
+public:
+    DeleteHsmRequest(const DeleteHsmRequest &other);
+    DeleteHsmRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteHsmRequest)
+
+}
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

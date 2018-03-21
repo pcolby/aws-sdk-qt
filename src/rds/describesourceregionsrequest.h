@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESOURCEREGIONSREQUEST_H
 #define QTAWS_DESCRIBESOURCEREGIONSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeSourceRegionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeSourceRegionsRequest : public RDSRequest {
+
+public:
+    DescribeSourceRegionsRequest(const DescribeSourceRegionsRequest &other);
+    DescribeSourceRegionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSourceRegionsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSREQUEST_P_H
 #define QTAWS_LISTSIZECONSTRAINTSETSREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "listsizeconstraintsetsrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListSizeConstraintSetsRequest;
+
+class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    ListSizeConstraintSetsRequestPrivate(const WAFRegional::Action action,
+                                   ListSizeConstraintSetsRequest * const q);
+    ListSizeConstraintSetsRequestPrivate(const ListSizeConstraintSetsRequestPrivate &other,
+                                   ListSizeConstraintSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSizeConstraintSetsRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

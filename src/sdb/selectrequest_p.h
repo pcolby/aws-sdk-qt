@@ -20,4 +20,29 @@
 #ifndef QTAWS_SELECTREQUEST_P_H
 #define QTAWS_SELECTREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "selectrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class SelectRequest;
+
+class QTAWS_EXPORT SelectRequestPrivate : public SimpleDBPrivate {
+
+public:
+    SelectRequestPrivate(const SimpleDB::Action action,
+                                   SelectRequest * const q);
+    SelectRequestPrivate(const SelectRequestPrivate &other,
+                                   SelectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SelectRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

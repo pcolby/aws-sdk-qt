@@ -20,4 +20,29 @@
 #ifndef QTAWS_ISVPCPEEREDREQUEST_P_H
 #define QTAWS_ISVPCPEEREDREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "isvpcpeeredrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class IsVpcPeeredRequest;
+
+class QTAWS_EXPORT IsVpcPeeredRequestPrivate : public LightsailPrivate {
+
+public:
+    IsVpcPeeredRequestPrivate(const Lightsail::Action action,
+                                   IsVpcPeeredRequest * const q);
+    IsVpcPeeredRequestPrivate(const IsVpcPeeredRequestPrivate &other,
+                                   IsVpcPeeredRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(IsVpcPeeredRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

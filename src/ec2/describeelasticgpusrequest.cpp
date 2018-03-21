@@ -19,3 +19,107 @@
 
 #include "describeelasticgpusrequest.h"
 #include "describeelasticgpusrequest_p.h"
+#include "describeelasticgpusresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeElasticGpusRequest
+ *
+ * @brief  Implements EC2 DescribeElasticGpus requests.
+ *
+ * @see    EC2Client::describeElasticGpus
+ */
+
+/**
+ * @brief  Constructs a new DescribeElasticGpusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticGpusResponse::DescribeElasticGpusResponse(
+
+/**
+ * @brief  Constructs a new DescribeElasticGpusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeElasticGpusRequest::DescribeElasticGpusRequest(const DescribeElasticGpusRequest &other)
+    : EC2Request(new DescribeElasticGpusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeElasticGpusRequest object.
+ */
+DescribeElasticGpusRequest::DescribeElasticGpusRequest()
+    : EC2Request(new DescribeElasticGpusRequestPrivate(EC2Request::DescribeElasticGpusAction, this))
+{
+
+}
+
+bool DescribeElasticGpusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeElasticGpusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeElasticGpusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeElasticGpusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticGpusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeElasticGpusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticGpusRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeElasticGpusRequest instance.
+ */
+DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
+    const EC2Request::Action action, DescribeElasticGpusRequest * const q)
+    : DescribeElasticGpusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticGpusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeElasticGpusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeElasticGpusRequest instance.
+ */
+DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
+    const DescribeElasticGpusRequestPrivate &other, DescribeElasticGpusRequest * const q)
+    : DescribeElasticGpusPrivate(other, q)
+{
+
+}

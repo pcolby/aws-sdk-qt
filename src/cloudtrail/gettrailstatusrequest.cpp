@@ -19,3 +19,107 @@
 
 #include "gettrailstatusrequest.h"
 #include "gettrailstatusrequest_p.h"
+#include "gettrailstatusresponse.h"
+#include "cloudtrailrequest_p.h"
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  GetTrailStatusRequest
+ *
+ * @brief  Implements CloudTrail GetTrailStatus requests.
+ *
+ * @see    CloudTrailClient::getTrailStatus
+ */
+
+/**
+ * @brief  Constructs a new GetTrailStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTrailStatusResponse::GetTrailStatusResponse(
+
+/**
+ * @brief  Constructs a new GetTrailStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTrailStatusRequest::GetTrailStatusRequest(const GetTrailStatusRequest &other)
+    : CloudTrailRequest(new GetTrailStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTrailStatusRequest object.
+ */
+GetTrailStatusRequest::GetTrailStatusRequest()
+    : CloudTrailRequest(new GetTrailStatusRequestPrivate(CloudTrailRequest::GetTrailStatusAction, this))
+{
+
+}
+
+bool GetTrailStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTrailStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTrailStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudTrailClient::send
+ */
+AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTrailStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTrailStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetTrailStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrailStatusRequestPrivate object.
+ *
+ * @param  action  CloudTrail action being performed.
+ * @param  q       Pointer to this object's public GetTrailStatusRequest instance.
+ */
+GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
+    const CloudTrailRequest::Action action, GetTrailStatusRequest * const q)
+    : GetTrailStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrailStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTrailStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTrailStatusRequest instance.
+ */
+GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
+    const GetTrailStatusRequestPrivate &other, GetTrailStatusRequest * const q)
+    : GetTrailStatusPrivate(other, q)
+{
+
+}

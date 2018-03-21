@@ -19,3 +19,107 @@
 
 #include "adduploadbufferrequest.h"
 #include "adduploadbufferrequest_p.h"
+#include "adduploadbufferresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  AddUploadBufferRequest
+ *
+ * @brief  Implements StorageGateway AddUploadBuffer requests.
+ *
+ * @see    StorageGatewayClient::addUploadBuffer
+ */
+
+/**
+ * @brief  Constructs a new AddUploadBufferResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddUploadBufferResponse::AddUploadBufferResponse(
+
+/**
+ * @brief  Constructs a new AddUploadBufferRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddUploadBufferRequest::AddUploadBufferRequest(const AddUploadBufferRequest &other)
+    : StorageGatewayRequest(new AddUploadBufferRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddUploadBufferRequest object.
+ */
+AddUploadBufferRequest::AddUploadBufferRequest()
+    : StorageGatewayRequest(new AddUploadBufferRequestPrivate(StorageGatewayRequest::AddUploadBufferAction, this))
+{
+
+}
+
+bool AddUploadBufferRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddUploadBufferResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddUploadBufferResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * AddUploadBufferRequest::response(QNetworkReply * const reply) const
+{
+    return new AddUploadBufferResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddUploadBufferRequestPrivate
+ *
+ * @brief  Private implementation for AddUploadBufferRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddUploadBufferRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public AddUploadBufferRequest instance.
+ */
+AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
+    const StorageGatewayRequest::Action action, AddUploadBufferRequest * const q)
+    : AddUploadBufferPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddUploadBufferRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddUploadBufferRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddUploadBufferRequest instance.
+ */
+AddUploadBufferRequestPrivate::AddUploadBufferRequestPrivate(
+    const AddUploadBufferRequestPrivate &other, AddUploadBufferRequest * const q)
+    : AddUploadBufferPrivate(other, q)
+{
+
+}

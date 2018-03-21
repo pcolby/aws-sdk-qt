@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTQUALIFICATIONREQUESTSREQUEST_P_H
 #define QTAWS_LISTQUALIFICATIONREQUESTSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "listqualificationrequestsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListQualificationRequestsRequest;
+
+class QTAWS_EXPORT ListQualificationRequestsRequestPrivate : public MTurkPrivate {
+
+public:
+    ListQualificationRequestsRequestPrivate(const MTurk::Action action,
+                                   ListQualificationRequestsRequest * const q);
+    ListQualificationRequestsRequestPrivate(const ListQualificationRequestsRequestPrivate &other,
+                                   ListQualificationRequestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListQualificationRequestsRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

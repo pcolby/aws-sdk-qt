@@ -19,3 +19,107 @@
 
 #include "createdeliverystreamrequest.h"
 #include "createdeliverystreamrequest_p.h"
+#include "createdeliverystreamresponse.h"
+#include "firehoserequest_p.h"
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  CreateDeliveryStreamRequest
+ *
+ * @brief  Implements Firehose CreateDeliveryStream requests.
+ *
+ * @see    FirehoseClient::createDeliveryStream
+ */
+
+/**
+ * @brief  Constructs a new CreateDeliveryStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeliveryStreamResponse::CreateDeliveryStreamResponse(
+
+/**
+ * @brief  Constructs a new CreateDeliveryStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDeliveryStreamRequest::CreateDeliveryStreamRequest(const CreateDeliveryStreamRequest &other)
+    : FirehoseRequest(new CreateDeliveryStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDeliveryStreamRequest object.
+ */
+CreateDeliveryStreamRequest::CreateDeliveryStreamRequest()
+    : FirehoseRequest(new CreateDeliveryStreamRequestPrivate(FirehoseRequest::CreateDeliveryStreamAction, this))
+{
+
+}
+
+bool CreateDeliveryStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDeliveryStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDeliveryStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  FirehoseClient::send
+ */
+AwsAbstractResponse * CreateDeliveryStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDeliveryStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeliveryStreamRequestPrivate
+ *
+ * @brief  Private implementation for CreateDeliveryStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeliveryStreamRequestPrivate object.
+ *
+ * @param  action  Firehose action being performed.
+ * @param  q       Pointer to this object's public CreateDeliveryStreamRequest instance.
+ */
+CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
+    const FirehoseRequest::Action action, CreateDeliveryStreamRequest * const q)
+    : CreateDeliveryStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeliveryStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDeliveryStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDeliveryStreamRequest instance.
+ */
+CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
+    const CreateDeliveryStreamRequestPrivate &other, CreateDeliveryStreamRequest * const q)
+    : CreateDeliveryStreamPrivate(other, q)
+{
+
+}

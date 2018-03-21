@@ -19,3 +19,107 @@
 
 #include "describebandwidthratelimitrequest.h"
 #include "describebandwidthratelimitrequest_p.h"
+#include "describebandwidthratelimitresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeBandwidthRateLimitRequest
+ *
+ * @brief  Implements StorageGateway DescribeBandwidthRateLimit requests.
+ *
+ * @see    StorageGatewayClient::describeBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new DescribeBandwidthRateLimitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBandwidthRateLimitResponse::DescribeBandwidthRateLimitResponse(
+
+/**
+ * @brief  Constructs a new DescribeBandwidthRateLimitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeBandwidthRateLimitRequest::DescribeBandwidthRateLimitRequest(const DescribeBandwidthRateLimitRequest &other)
+    : StorageGatewayRequest(new DescribeBandwidthRateLimitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeBandwidthRateLimitRequest object.
+ */
+DescribeBandwidthRateLimitRequest::DescribeBandwidthRateLimitRequest()
+    : StorageGatewayRequest(new DescribeBandwidthRateLimitRequestPrivate(StorageGatewayRequest::DescribeBandwidthRateLimitAction, this))
+{
+
+}
+
+bool DescribeBandwidthRateLimitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeBandwidthRateLimitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeBandwidthRateLimitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeBandwidthRateLimitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBandwidthRateLimitRequestPrivate
+ *
+ * @brief  Private implementation for DescribeBandwidthRateLimitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBandwidthRateLimitRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeBandwidthRateLimitRequest instance.
+ */
+DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeBandwidthRateLimitRequest * const q)
+    : DescribeBandwidthRateLimitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBandwidthRateLimitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeBandwidthRateLimitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeBandwidthRateLimitRequest instance.
+ */
+DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
+    const DescribeBandwidthRateLimitRequestPrivate &other, DescribeBandwidthRateLimitRequest * const q)
+    : DescribeBandwidthRateLimitPrivate(other, q)
+{
+
+}

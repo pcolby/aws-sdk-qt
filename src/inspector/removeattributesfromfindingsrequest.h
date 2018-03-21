@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEATTRIBUTESFROMFINDINGSREQUEST_H
 #define QTAWS_REMOVEATTRIBUTESFROMFINDINGSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class RemoveAttributesFromFindingsRequestPrivate;
+
+class QTAWS_EXPORT RemoveAttributesFromFindingsRequest : public InspectorRequest {
+
+public:
+    RemoveAttributesFromFindingsRequest(const RemoveAttributesFromFindingsRequest &other);
+    RemoveAttributesFromFindingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAttributesFromFindingsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

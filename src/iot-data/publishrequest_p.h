@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUBLISHREQUEST_P_H
 #define QTAWS_PUBLISHREQUEST_P_H
 
+#include "iotdataplane_p.h"
+#include "publishrequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class PublishRequest;
+
+class QTAWS_EXPORT PublishRequestPrivate : public IoTDataPlanePrivate {
+
+public:
+    PublishRequestPrivate(const IoTDataPlane::Action action,
+                                   PublishRequest * const q);
+    PublishRequestPrivate(const PublishRequestPrivate &other,
+                                   PublishRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PublishRequest)
+
+};
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

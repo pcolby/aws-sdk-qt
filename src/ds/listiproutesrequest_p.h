@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIPROUTESREQUEST_P_H
 #define QTAWS_LISTIPROUTESREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "listiproutesrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ListIpRoutesRequest;
+
+class QTAWS_EXPORT ListIpRoutesRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    ListIpRoutesRequestPrivate(const DirectoryService::Action action,
+                                   ListIpRoutesRequest * const q);
+    ListIpRoutesRequestPrivate(const ListIpRoutesRequestPrivate &other,
+                                   ListIpRoutesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIpRoutesRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

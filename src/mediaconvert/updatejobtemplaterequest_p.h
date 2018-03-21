@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEJOBTEMPLATEREQUEST_P_H
 #define QTAWS_UPDATEJOBTEMPLATEREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "updatejobtemplaterequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class UpdateJobTemplateRequest;
+
+class QTAWS_EXPORT UpdateJobTemplateRequestPrivate : public MediaConvertPrivate {
+
+public:
+    UpdateJobTemplateRequestPrivate(const MediaConvert::Action action,
+                                   UpdateJobTemplateRequest * const q);
+    UpdateJobTemplateRequestPrivate(const UpdateJobTemplateRequestPrivate &other,
+                                   UpdateJobTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobTemplateRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

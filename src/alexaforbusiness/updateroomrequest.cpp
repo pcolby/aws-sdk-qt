@@ -19,3 +19,107 @@
 
 #include "updateroomrequest.h"
 #include "updateroomrequest_p.h"
+#include "updateroomresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateRoomRequest
+ *
+ * @brief  Implements AlexaForBusiness UpdateRoom requests.
+ *
+ * @see    AlexaForBusinessClient::updateRoom
+ */
+
+/**
+ * @brief  Constructs a new UpdateRoomResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRoomResponse::UpdateRoomResponse(
+
+/**
+ * @brief  Constructs a new UpdateRoomRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRoomRequest::UpdateRoomRequest(const UpdateRoomRequest &other)
+    : AlexaForBusinessRequest(new UpdateRoomRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRoomRequest object.
+ */
+UpdateRoomRequest::UpdateRoomRequest()
+    : AlexaForBusinessRequest(new UpdateRoomRequestPrivate(AlexaForBusinessRequest::UpdateRoomAction, this))
+{
+
+}
+
+bool UpdateRoomRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRoomResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRoomResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * UpdateRoomRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRoomResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRoomRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRoomRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoomRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public UpdateRoomRequest instance.
+ */
+UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
+    const AlexaForBusinessRequest::Action action, UpdateRoomRequest * const q)
+    : UpdateRoomPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoomRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRoomRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRoomRequest instance.
+ */
+UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
+    const UpdateRoomRequestPrivate &other, UpdateRoomRequest * const q)
+    : UpdateRoomPrivate(other, q)
+{
+
+}

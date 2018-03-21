@@ -19,3 +19,107 @@
 
 #include "registervolumerequest.h"
 #include "registervolumerequest_p.h"
+#include "registervolumeresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RegisterVolumeRequest
+ *
+ * @brief  Implements OpsWorks RegisterVolume requests.
+ *
+ * @see    OpsWorksClient::registerVolume
+ */
+
+/**
+ * @brief  Constructs a new RegisterVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterVolumeResponse::RegisterVolumeResponse(
+
+/**
+ * @brief  Constructs a new RegisterVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterVolumeRequest::RegisterVolumeRequest(const RegisterVolumeRequest &other)
+    : OpsWorksRequest(new RegisterVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterVolumeRequest object.
+ */
+RegisterVolumeRequest::RegisterVolumeRequest()
+    : OpsWorksRequest(new RegisterVolumeRequestPrivate(OpsWorksRequest::RegisterVolumeAction, this))
+{
+
+}
+
+bool RegisterVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * RegisterVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterVolumeRequestPrivate
+ *
+ * @brief  Private implementation for RegisterVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterVolumeRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public RegisterVolumeRequest instance.
+ */
+RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
+    const OpsWorksRequest::Action action, RegisterVolumeRequest * const q)
+    : RegisterVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterVolumeRequest instance.
+ */
+RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
+    const RegisterVolumeRequestPrivate &other, RegisterVolumeRequest * const q)
+    : RegisterVolumePrivate(other, q)
+{
+
+}

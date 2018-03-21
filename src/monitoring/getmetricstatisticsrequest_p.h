@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMETRICSTATISTICSREQUEST_P_H
 #define QTAWS_GETMETRICSTATISTICSREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "getmetricstatisticsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class GetMetricStatisticsRequest;
+
+class QTAWS_EXPORT GetMetricStatisticsRequestPrivate : public CloudWatchPrivate {
+
+public:
+    GetMetricStatisticsRequestPrivate(const CloudWatch::Action action,
+                                   GetMetricStatisticsRequest * const q);
+    GetMetricStatisticsRequestPrivate(const GetMetricStatisticsRequestPrivate &other,
+                                   GetMetricStatisticsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMetricStatisticsRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

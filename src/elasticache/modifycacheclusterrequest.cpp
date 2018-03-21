@@ -19,3 +19,107 @@
 
 #include "modifycacheclusterrequest.h"
 #include "modifycacheclusterrequest_p.h"
+#include "modifycacheclusterresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyCacheClusterRequest
+ *
+ * @brief  Implements ElastiCache ModifyCacheCluster requests.
+ *
+ * @see    ElastiCacheClient::modifyCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new ModifyCacheClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyCacheClusterResponse::ModifyCacheClusterResponse(
+
+/**
+ * @brief  Constructs a new ModifyCacheClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyCacheClusterRequest::ModifyCacheClusterRequest(const ModifyCacheClusterRequest &other)
+    : ElastiCacheRequest(new ModifyCacheClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyCacheClusterRequest object.
+ */
+ModifyCacheClusterRequest::ModifyCacheClusterRequest()
+    : ElastiCacheRequest(new ModifyCacheClusterRequestPrivate(ElastiCacheRequest::ModifyCacheClusterAction, this))
+{
+
+}
+
+bool ModifyCacheClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyCacheClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyCacheClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * ModifyCacheClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyCacheClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyCacheClusterRequestPrivate
+ *
+ * @brief  Private implementation for ModifyCacheClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheClusterRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public ModifyCacheClusterRequest instance.
+ */
+ModifyCacheClusterRequestPrivate::ModifyCacheClusterRequestPrivate(
+    const ElastiCacheRequest::Action action, ModifyCacheClusterRequest * const q)
+    : ModifyCacheClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyCacheClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyCacheClusterRequest instance.
+ */
+ModifyCacheClusterRequestPrivate::ModifyCacheClusterRequestPrivate(
+    const ModifyCacheClusterRequestPrivate &other, ModifyCacheClusterRequest * const q)
+    : ModifyCacheClusterPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PREDICTREQUEST_H
 #define QTAWS_PREDICTREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class PredictRequestPrivate;
+
+class QTAWS_EXPORT PredictRequest : public MachineLearningRequest {
+
+public:
+    PredictRequest(const PredictRequest &other);
+    PredictRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PredictRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

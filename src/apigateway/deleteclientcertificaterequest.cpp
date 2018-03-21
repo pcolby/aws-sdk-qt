@@ -19,3 +19,107 @@
 
 #include "deleteclientcertificaterequest.h"
 #include "deleteclientcertificaterequest_p.h"
+#include "deleteclientcertificateresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteClientCertificateRequest
+ *
+ * @brief  Implements APIGateway DeleteClientCertificate requests.
+ *
+ * @see    APIGatewayClient::deleteClientCertificate
+ */
+
+/**
+ * @brief  Constructs a new DeleteClientCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteClientCertificateResponse::DeleteClientCertificateResponse(
+
+/**
+ * @brief  Constructs a new DeleteClientCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteClientCertificateRequest::DeleteClientCertificateRequest(const DeleteClientCertificateRequest &other)
+    : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteClientCertificateRequest object.
+ */
+DeleteClientCertificateRequest::DeleteClientCertificateRequest()
+    : APIGatewayRequest(new DeleteClientCertificateRequestPrivate(APIGatewayRequest::DeleteClientCertificateAction, this))
+{
+
+}
+
+bool DeleteClientCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteClientCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteClientCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteClientCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteClientCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteClientCertificateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteClientCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClientCertificateRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteClientCertificateRequest instance.
+ */
+DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteClientCertificateRequest * const q)
+    : DeleteClientCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteClientCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteClientCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteClientCertificateRequest instance.
+ */
+DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
+    const DeleteClientCertificateRequestPrivate &other, DeleteClientCertificateRequest * const q)
+    : DeleteClientCertificatePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createscalingplanrequest.h"
 #include "createscalingplanrequest_p.h"
+#include "createscalingplanresponse.h"
+#include "autoscalingplansrequest_p.h"
+
+namespace AWS {
+namespace AutoScalingPlans {
+
+/**
+ * @class  CreateScalingPlanRequest
+ *
+ * @brief  Implements AutoScalingPlans CreateScalingPlan requests.
+ *
+ * @see    AutoScalingPlansClient::createScalingPlan
+ */
+
+/**
+ * @brief  Constructs a new CreateScalingPlanResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateScalingPlanResponse::CreateScalingPlanResponse(
+
+/**
+ * @brief  Constructs a new CreateScalingPlanRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateScalingPlanRequest::CreateScalingPlanRequest(const CreateScalingPlanRequest &other)
+    : AutoScalingPlansRequest(new CreateScalingPlanRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateScalingPlanRequest object.
+ */
+CreateScalingPlanRequest::CreateScalingPlanRequest()
+    : AutoScalingPlansRequest(new CreateScalingPlanRequestPrivate(AutoScalingPlansRequest::CreateScalingPlanAction, this))
+{
+
+}
+
+bool CreateScalingPlanRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateScalingPlanResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateScalingPlanResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingPlansClient::send
+ */
+AwsAbstractResponse * CreateScalingPlanRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateScalingPlanResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateScalingPlanRequestPrivate
+ *
+ * @brief  Private implementation for CreateScalingPlanRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScalingPlanRequestPrivate object.
+ *
+ * @param  action  AutoScalingPlans action being performed.
+ * @param  q       Pointer to this object's public CreateScalingPlanRequest instance.
+ */
+CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
+    const AutoScalingPlansRequest::Action action, CreateScalingPlanRequest * const q)
+    : CreateScalingPlanPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScalingPlanRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateScalingPlanRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateScalingPlanRequest instance.
+ */
+CreateScalingPlanRequestPrivate::CreateScalingPlanRequestPrivate(
+    const CreateScalingPlanRequestPrivate &other, CreateScalingPlanRequest * const q)
+    : CreateScalingPlanPrivate(other, q)
+{
+
+}

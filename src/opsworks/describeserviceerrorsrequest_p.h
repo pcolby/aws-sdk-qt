@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSREQUEST_P_H
 #define QTAWS_DESCRIBESERVICEERRORSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeserviceerrorsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeServiceErrorsRequest;
+
+class QTAWS_EXPORT DescribeServiceErrorsRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeServiceErrorsRequestPrivate(const OpsWorks::Action action,
+                                   DescribeServiceErrorsRequest * const q);
+    DescribeServiceErrorsRequestPrivate(const DescribeServiceErrorsRequestPrivate &other,
+                                   DescribeServiceErrorsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServiceErrorsRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

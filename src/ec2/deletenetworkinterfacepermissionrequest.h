@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENETWORKINTERFACEPERMISSIONREQUEST_H
 #define QTAWS_DELETENETWORKINTERFACEPERMISSIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteNetworkInterfacePermissionRequestPrivate;
+
+class QTAWS_EXPORT DeleteNetworkInterfacePermissionRequest : public EC2Request {
+
+public:
+    DeleteNetworkInterfacePermissionRequest(const DeleteNetworkInterfacePermissionRequest &other);
+    DeleteNetworkInterfacePermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkInterfacePermissionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

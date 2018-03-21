@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEMOUNTTARGETREQUEST_P_H
 #define QTAWS_CREATEMOUNTTARGETREQUEST_P_H
 
+#include "efs_p.h"
+#include "createmounttargetrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateMountTargetRequest;
+
+class QTAWS_EXPORT CreateMountTargetRequestPrivate : public EFSPrivate {
+
+public:
+    CreateMountTargetRequestPrivate(const EFS::Action action,
+                                   CreateMountTargetRequest * const q);
+    CreateMountTargetRequestPrivate(const CreateMountTargetRequestPrivate &other,
+                                   CreateMountTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateMountTargetRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

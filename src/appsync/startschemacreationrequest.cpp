@@ -19,3 +19,107 @@
 
 #include "startschemacreationrequest.h"
 #include "startschemacreationrequest_p.h"
+#include "startschemacreationresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  StartSchemaCreationRequest
+ *
+ * @brief  Implements AppSync StartSchemaCreation requests.
+ *
+ * @see    AppSyncClient::startSchemaCreation
+ */
+
+/**
+ * @brief  Constructs a new StartSchemaCreationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartSchemaCreationResponse::StartSchemaCreationResponse(
+
+/**
+ * @brief  Constructs a new StartSchemaCreationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartSchemaCreationRequest::StartSchemaCreationRequest(const StartSchemaCreationRequest &other)
+    : AppSyncRequest(new StartSchemaCreationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartSchemaCreationRequest object.
+ */
+StartSchemaCreationRequest::StartSchemaCreationRequest()
+    : AppSyncRequest(new StartSchemaCreationRequestPrivate(AppSyncRequest::StartSchemaCreationAction, this))
+{
+
+}
+
+bool StartSchemaCreationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartSchemaCreationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartSchemaCreationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * StartSchemaCreationRequest::response(QNetworkReply * const reply) const
+{
+    return new StartSchemaCreationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartSchemaCreationRequestPrivate
+ *
+ * @brief  Private implementation for StartSchemaCreationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartSchemaCreationRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public StartSchemaCreationRequest instance.
+ */
+StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
+    const AppSyncRequest::Action action, StartSchemaCreationRequest * const q)
+    : StartSchemaCreationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartSchemaCreationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartSchemaCreationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartSchemaCreationRequest instance.
+ */
+StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
+    const StartSchemaCreationRequestPrivate &other, StartSchemaCreationRequest * const q)
+    : StartSchemaCreationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_SENDAUTOMATIONSIGNALREQUEST_P_H
 #define QTAWS_SENDAUTOMATIONSIGNALREQUEST_P_H
 
+#include "ssm_p.h"
+#include "sendautomationsignalrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class SendAutomationSignalRequest;
+
+class QTAWS_EXPORT SendAutomationSignalRequestPrivate : public SSMPrivate {
+
+public:
+    SendAutomationSignalRequestPrivate(const SSM::Action action,
+                                   SendAutomationSignalRequest * const q);
+    SendAutomationSignalRequestPrivate(const SendAutomationSignalRequestPrivate &other,
+                                   SendAutomationSignalRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SendAutomationSignalRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

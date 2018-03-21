@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATELISTENERREQUEST_H
 #define QTAWS_CREATELISTENERREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class CreateListenerRequestPrivate;
+
+class QTAWS_EXPORT CreateListenerRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    CreateListenerRequest(const CreateListenerRequest &other);
+    CreateListenerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateListenerRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "removefacetfromobjectrequest.h"
 #include "removefacetfromobjectrequest_p.h"
+#include "removefacetfromobjectresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  RemoveFacetFromObjectRequest
+ *
+ * @brief  Implements CloudDirectory RemoveFacetFromObject requests.
+ *
+ * @see    CloudDirectoryClient::removeFacetFromObject
+ */
+
+/**
+ * @brief  Constructs a new RemoveFacetFromObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveFacetFromObjectResponse::RemoveFacetFromObjectResponse(
+
+/**
+ * @brief  Constructs a new RemoveFacetFromObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveFacetFromObjectRequest::RemoveFacetFromObjectRequest(const RemoveFacetFromObjectRequest &other)
+    : CloudDirectoryRequest(new RemoveFacetFromObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveFacetFromObjectRequest object.
+ */
+RemoveFacetFromObjectRequest::RemoveFacetFromObjectRequest()
+    : CloudDirectoryRequest(new RemoveFacetFromObjectRequestPrivate(CloudDirectoryRequest::RemoveFacetFromObjectAction, this))
+{
+
+}
+
+bool RemoveFacetFromObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveFacetFromObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveFacetFromObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveFacetFromObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveFacetFromObjectRequestPrivate
+ *
+ * @brief  Private implementation for RemoveFacetFromObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveFacetFromObjectRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public RemoveFacetFromObjectRequest instance.
+ */
+RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
+    const CloudDirectoryRequest::Action action, RemoveFacetFromObjectRequest * const q)
+    : RemoveFacetFromObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveFacetFromObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveFacetFromObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveFacetFromObjectRequest instance.
+ */
+RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
+    const RemoveFacetFromObjectRequestPrivate &other, RemoveFacetFromObjectRequest * const q)
+    : RemoveFacetFromObjectPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describevpcpeeringauthorizationsrequest.h"
 #include "describevpcpeeringauthorizationsrequest_p.h"
+#include "describevpcpeeringauthorizationsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeVpcPeeringAuthorizationsRequest
+ *
+ * @brief  Implements GameLift DescribeVpcPeeringAuthorizations requests.
+ *
+ * @see    GameLiftClient::describeVpcPeeringAuthorizations
+ */
+
+/**
+ * @brief  Constructs a new DescribeVpcPeeringAuthorizationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcPeeringAuthorizationsResponse::DescribeVpcPeeringAuthorizationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVpcPeeringAuthorizationsRequest::DescribeVpcPeeringAuthorizationsRequest(const DescribeVpcPeeringAuthorizationsRequest &other)
+    : GameLiftRequest(new DescribeVpcPeeringAuthorizationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequest object.
+ */
+DescribeVpcPeeringAuthorizationsRequest::DescribeVpcPeeringAuthorizationsRequest()
+    : GameLiftRequest(new DescribeVpcPeeringAuthorizationsRequestPrivate(GameLiftRequest::DescribeVpcPeeringAuthorizationsAction, this))
+{
+
+}
+
+bool DescribeVpcPeeringAuthorizationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVpcPeeringAuthorizationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVpcPeeringAuthorizationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribeVpcPeeringAuthorizationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVpcPeeringAuthorizationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcPeeringAuthorizationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVpcPeeringAuthorizationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribeVpcPeeringAuthorizationsRequest instance.
+ */
+DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizationsRequestPrivate(
+    const GameLiftRequest::Action action, DescribeVpcPeeringAuthorizationsRequest * const q)
+    : DescribeVpcPeeringAuthorizationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcPeeringAuthorizationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVpcPeeringAuthorizationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVpcPeeringAuthorizationsRequest instance.
+ */
+DescribeVpcPeeringAuthorizationsRequestPrivate::DescribeVpcPeeringAuthorizationsRequestPrivate(
+    const DescribeVpcPeeringAuthorizationsRequestPrivate &other, DescribeVpcPeeringAuthorizationsRequest * const q)
+    : DescribeVpcPeeringAuthorizationsPrivate(other, q)
+{
+
+}

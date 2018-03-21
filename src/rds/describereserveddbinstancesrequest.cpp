@@ -19,3 +19,107 @@
 
 #include "describereserveddbinstancesrequest.h"
 #include "describereserveddbinstancesrequest_p.h"
+#include "describereserveddbinstancesresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeReservedDBInstancesRequest
+ *
+ * @brief  Implements RDS DescribeReservedDBInstances requests.
+ *
+ * @see    RDSClient::describeReservedDBInstances
+ */
+
+/**
+ * @brief  Constructs a new DescribeReservedDBInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReservedDBInstancesResponse::DescribeReservedDBInstancesResponse(
+
+/**
+ * @brief  Constructs a new DescribeReservedDBInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReservedDBInstancesRequest::DescribeReservedDBInstancesRequest(const DescribeReservedDBInstancesRequest &other)
+    : RDSRequest(new DescribeReservedDBInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReservedDBInstancesRequest object.
+ */
+DescribeReservedDBInstancesRequest::DescribeReservedDBInstancesRequest()
+    : RDSRequest(new DescribeReservedDBInstancesRequestPrivate(RDSRequest::DescribeReservedDBInstancesAction, this))
+{
+
+}
+
+bool DescribeReservedDBInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReservedDBInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReservedDBInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeReservedDBInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReservedDBInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReservedDBInstancesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReservedDBInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedDBInstancesRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeReservedDBInstancesRequest instance.
+ */
+DescribeReservedDBInstancesRequestPrivate::DescribeReservedDBInstancesRequestPrivate(
+    const RDSRequest::Action action, DescribeReservedDBInstancesRequest * const q)
+    : DescribeReservedDBInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReservedDBInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReservedDBInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReservedDBInstancesRequest instance.
+ */
+DescribeReservedDBInstancesRequestPrivate::DescribeReservedDBInstancesRequestPrivate(
+    const DescribeReservedDBInstancesRequestPrivate &other, DescribeReservedDBInstancesRequest * const q)
+    : DescribeReservedDBInstancesPrivate(other, q)
+{
+
+}

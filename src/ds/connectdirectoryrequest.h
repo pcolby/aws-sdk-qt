@@ -20,4 +20,32 @@
 #ifndef QTAWS_CONNECTDIRECTORYREQUEST_H
 #define QTAWS_CONNECTDIRECTORYREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ConnectDirectoryRequestPrivate;
+
+class QTAWS_EXPORT ConnectDirectoryRequest : public DirectoryServiceRequest {
+
+public:
+    ConnectDirectoryRequest(const ConnectDirectoryRequest &other);
+    ConnectDirectoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ConnectDirectoryRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

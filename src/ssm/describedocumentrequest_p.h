@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTREQUEST_P_H
 #define QTAWS_DESCRIBEDOCUMENTREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describedocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeDocumentRequest;
+
+class QTAWS_EXPORT DescribeDocumentRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeDocumentRequestPrivate(const SSM::Action action,
+                                   DescribeDocumentRequest * const q);
+    DescribeDocumentRequestPrivate(const DescribeDocumentRequestPrivate &other,
+                                   DescribeDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDocumentRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

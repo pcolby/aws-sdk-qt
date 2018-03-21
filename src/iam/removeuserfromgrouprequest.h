@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEUSERFROMGROUPREQUEST_H
 #define QTAWS_REMOVEUSERFROMGROUPREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class RemoveUserFromGroupRequestPrivate;
+
+class QTAWS_EXPORT RemoveUserFromGroupRequest : public IAMRequest {
+
+public:
+    RemoveUserFromGroupRequest(const RemoveUserFromGroupRequest &other);
+    RemoveUserFromGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveUserFromGroupRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

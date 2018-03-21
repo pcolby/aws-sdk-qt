@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETAPESREQUEST_H
 #define QTAWS_CREATETAPESREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateTapesRequestPrivate;
+
+class QTAWS_EXPORT CreateTapesRequest : public StorageGatewayRequest {
+
+public:
+    CreateTapesRequest(const CreateTapesRequest &other);
+    CreateTapesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTapesRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

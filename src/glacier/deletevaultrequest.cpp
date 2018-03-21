@@ -19,3 +19,107 @@
 
 #include "deletevaultrequest.h"
 #include "deletevaultrequest_p.h"
+#include "deletevaultresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DeleteVaultRequest
+ *
+ * @brief  Implements Glacier DeleteVault requests.
+ *
+ * @see    GlacierClient::deleteVault
+ */
+
+/**
+ * @brief  Constructs a new DeleteVaultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVaultResponse::DeleteVaultResponse(
+
+/**
+ * @brief  Constructs a new DeleteVaultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVaultRequest::DeleteVaultRequest(const DeleteVaultRequest &other)
+    : GlacierRequest(new DeleteVaultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVaultRequest object.
+ */
+DeleteVaultRequest::DeleteVaultRequest()
+    : GlacierRequest(new DeleteVaultRequestPrivate(GlacierRequest::DeleteVaultAction, this))
+{
+
+}
+
+bool DeleteVaultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVaultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVaultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * DeleteVaultRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVaultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVaultRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVaultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public DeleteVaultRequest instance.
+ */
+DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
+    const GlacierRequest::Action action, DeleteVaultRequest * const q)
+    : DeleteVaultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVaultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVaultRequest instance.
+ */
+DeleteVaultRequestPrivate::DeleteVaultRequestPrivate(
+    const DeleteVaultRequestPrivate &other, DeleteVaultRequest * const q)
+    : DeleteVaultPrivate(other, q)
+{
+
+}

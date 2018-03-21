@@ -19,3 +19,107 @@
 
 #include "updatereceiptrulerequest.h"
 #include "updatereceiptrulerequest_p.h"
+#include "updatereceiptruleresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateReceiptRuleRequest
+ *
+ * @brief  Implements SES UpdateReceiptRule requests.
+ *
+ * @see    SESClient::updateReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new UpdateReceiptRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateReceiptRuleResponse::UpdateReceiptRuleResponse(
+
+/**
+ * @brief  Constructs a new UpdateReceiptRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateReceiptRuleRequest::UpdateReceiptRuleRequest(const UpdateReceiptRuleRequest &other)
+    : SESRequest(new UpdateReceiptRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateReceiptRuleRequest object.
+ */
+UpdateReceiptRuleRequest::UpdateReceiptRuleRequest()
+    : SESRequest(new UpdateReceiptRuleRequestPrivate(SESRequest::UpdateReceiptRuleAction, this))
+{
+
+}
+
+bool UpdateReceiptRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateReceiptRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateReceiptRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * UpdateReceiptRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateReceiptRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateReceiptRuleRequestPrivate
+ *
+ * @brief  Private implementation for UpdateReceiptRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateReceiptRuleRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public UpdateReceiptRuleRequest instance.
+ */
+UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
+    const SESRequest::Action action, UpdateReceiptRuleRequest * const q)
+    : UpdateReceiptRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateReceiptRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateReceiptRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateReceiptRuleRequest instance.
+ */
+UpdateReceiptRuleRequestPrivate::UpdateReceiptRuleRequestPrivate(
+    const UpdateReceiptRuleRequestPrivate &other, UpdateReceiptRuleRequest * const q)
+    : UpdateReceiptRulePrivate(other, q)
+{
+
+}

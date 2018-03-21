@@ -19,3 +19,107 @@
 
 #include "listrolepoliciesrequest.h"
 #include "listrolepoliciesrequest_p.h"
+#include "listrolepoliciesresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListRolePoliciesRequest
+ *
+ * @brief  Implements IAM ListRolePolicies requests.
+ *
+ * @see    IAMClient::listRolePolicies
+ */
+
+/**
+ * @brief  Constructs a new ListRolePoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRolePoliciesResponse::ListRolePoliciesResponse(
+
+/**
+ * @brief  Constructs a new ListRolePoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRolePoliciesRequest::ListRolePoliciesRequest(const ListRolePoliciesRequest &other)
+    : IAMRequest(new ListRolePoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRolePoliciesRequest object.
+ */
+ListRolePoliciesRequest::ListRolePoliciesRequest()
+    : IAMRequest(new ListRolePoliciesRequestPrivate(IAMRequest::ListRolePoliciesAction, this))
+{
+
+}
+
+bool ListRolePoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRolePoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRolePoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListRolePoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRolePoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRolePoliciesRequestPrivate
+ *
+ * @brief  Private implementation for ListRolePoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRolePoliciesRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListRolePoliciesRequest instance.
+ */
+ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
+    const IAMRequest::Action action, ListRolePoliciesRequest * const q)
+    : ListRolePoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRolePoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRolePoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRolePoliciesRequest instance.
+ */
+ListRolePoliciesRequestPrivate::ListRolePoliciesRequestPrivate(
+    const ListRolePoliciesRequestPrivate &other, ListRolePoliciesRequest * const q)
+    : ListRolePoliciesPrivate(other, q)
+{
+
+}

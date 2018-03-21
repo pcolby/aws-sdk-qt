@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBROKERSREQUEST_P_H
 #define QTAWS_LISTBROKERSREQUEST_P_H
 
+#include "mq_p.h"
+#include "listbrokersrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListBrokersRequest;
+
+class QTAWS_EXPORT ListBrokersRequestPrivate : public MQPrivate {
+
+public:
+    ListBrokersRequestPrivate(const MQ::Action action,
+                                   ListBrokersRequest * const q);
+    ListBrokersRequestPrivate(const ListBrokersRequestPrivate &other,
+                                   ListBrokersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBrokersRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

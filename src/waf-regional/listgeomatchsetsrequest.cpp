@@ -19,3 +19,107 @@
 
 #include "listgeomatchsetsrequest.h"
 #include "listgeomatchsetsrequest_p.h"
+#include "listgeomatchsetsresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListGeoMatchSetsRequest
+ *
+ * @brief  Implements WAFRegional ListGeoMatchSets requests.
+ *
+ * @see    WAFRegionalClient::listGeoMatchSets
+ */
+
+/**
+ * @brief  Constructs a new ListGeoMatchSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
+
+/**
+ * @brief  Constructs a new ListGeoMatchSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGeoMatchSetsRequest::ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other)
+    : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGeoMatchSetsRequest object.
+ */
+ListGeoMatchSetsRequest::ListGeoMatchSetsRequest()
+    : WAFRegionalRequest(new ListGeoMatchSetsRequestPrivate(WAFRegionalRequest::ListGeoMatchSetsAction, this))
+{
+
+}
+
+bool ListGeoMatchSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGeoMatchSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGeoMatchSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGeoMatchSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGeoMatchSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListGeoMatchSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public ListGeoMatchSetsRequest instance.
+ */
+ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
+    const WAFRegionalRequest::Action action, ListGeoMatchSetsRequest * const q)
+    : ListGeoMatchSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGeoMatchSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGeoMatchSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGeoMatchSetsRequest instance.
+ */
+ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
+    const ListGeoMatchSetsRequestPrivate &other, ListGeoMatchSetsRequest * const q)
+    : ListGeoMatchSetsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEBUNDLETASKSREQUEST_P_H
 #define QTAWS_DESCRIBEBUNDLETASKSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describebundletasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeBundleTasksRequest;
+
+class QTAWS_EXPORT DescribeBundleTasksRequestPrivate : public EC2Private {
+
+public:
+    DescribeBundleTasksRequestPrivate(const EC2::Action action,
+                                   DescribeBundleTasksRequest * const q);
+    DescribeBundleTasksRequestPrivate(const DescribeBundleTasksRequestPrivate &other,
+                                   DescribeBundleTasksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBundleTasksRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

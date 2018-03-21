@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_H
 #define QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class TerminateProvisionedProductRequestPrivate;
+
+class QTAWS_EXPORT TerminateProvisionedProductRequest : public ServiceCatalogRequest {
+
+public:
+    TerminateProvisionedProductRequest(const TerminateProvisionedProductRequest &other);
+    TerminateProvisionedProductRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateProvisionedProductRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

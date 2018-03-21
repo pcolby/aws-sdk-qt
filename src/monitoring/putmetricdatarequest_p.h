@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTMETRICDATAREQUEST_P_H
 #define QTAWS_PUTMETRICDATAREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "putmetricdatarequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class PutMetricDataRequest;
+
+class QTAWS_EXPORT PutMetricDataRequestPrivate : public CloudWatchPrivate {
+
+public:
+    PutMetricDataRequestPrivate(const CloudWatch::Action action,
+                                   PutMetricDataRequest * const q);
+    PutMetricDataRequestPrivate(const PutMetricDataRequestPrivate &other,
+                                   PutMetricDataRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutMetricDataRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

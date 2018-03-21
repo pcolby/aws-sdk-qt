@@ -19,3 +19,107 @@
 
 #include "getintentversionsrequest.h"
 #include "getintentversionsrequest_p.h"
+#include "getintentversionsresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetIntentVersionsRequest
+ *
+ * @brief  Implements LexModelBuildingService GetIntentVersions requests.
+ *
+ * @see    LexModelBuildingServiceClient::getIntentVersions
+ */
+
+/**
+ * @brief  Constructs a new GetIntentVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntentVersionsResponse::GetIntentVersionsResponse(
+
+/**
+ * @brief  Constructs a new GetIntentVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIntentVersionsRequest::GetIntentVersionsRequest(const GetIntentVersionsRequest &other)
+    : LexModelBuildingServiceRequest(new GetIntentVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIntentVersionsRequest object.
+ */
+GetIntentVersionsRequest::GetIntentVersionsRequest()
+    : LexModelBuildingServiceRequest(new GetIntentVersionsRequestPrivate(LexModelBuildingServiceRequest::GetIntentVersionsAction, this))
+{
+
+}
+
+bool GetIntentVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIntentVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIntentVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetIntentVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIntentVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntentVersionsRequestPrivate
+ *
+ * @brief  Private implementation for GetIntentVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentVersionsRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetIntentVersionsRequest instance.
+ */
+GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetIntentVersionsRequest * const q)
+    : GetIntentVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIntentVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIntentVersionsRequest instance.
+ */
+GetIntentVersionsRequestPrivate::GetIntentVersionsRequestPrivate(
+    const GetIntentVersionsRequestPrivate &other, GetIntentVersionsRequest * const q)
+    : GetIntentVersionsPrivate(other, q)
+{
+
+}

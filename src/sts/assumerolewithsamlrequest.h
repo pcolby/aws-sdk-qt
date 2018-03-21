@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSUMEROLEWITHSAMLREQUEST_H
 #define QTAWS_ASSUMEROLEWITHSAMLREQUEST_H
 
+#include "stsrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleWithSAMLRequestPrivate;
+
+class QTAWS_EXPORT AssumeRoleWithSAMLRequest : public STSRequest {
+
+public:
+    AssumeRoleWithSAMLRequest(const AssumeRoleWithSAMLRequest &other);
+    AssumeRoleWithSAMLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssumeRoleWithSAMLRequest)
+
+}
+
+} // namespace STS
+} // namespace AWS
+
 #endif

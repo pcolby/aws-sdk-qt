@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTAGKEYSREQUEST_P_H
 #define QTAWS_GETTAGKEYSREQUEST_P_H
 
+#include "resourcegroupstaggingapi_p.h"
+#include "gettagkeysrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroupsTaggingAPI {
+
+class GetTagKeysRequest;
+
+class QTAWS_EXPORT GetTagKeysRequestPrivate : public ResourceGroupsTaggingAPIPrivate {
+
+public:
+    GetTagKeysRequestPrivate(const ResourceGroupsTaggingAPI::Action action,
+                                   GetTagKeysRequest * const q);
+    GetTagKeysRequestPrivate(const GetTagKeysRequestPrivate &other,
+                                   GetTagKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagKeysRequest)
+
+};
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS
+
 #endif

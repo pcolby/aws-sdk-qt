@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESCRIPTREQUEST_P_H
 #define QTAWS_CREATESCRIPTREQUEST_P_H
 
+#include "glue_p.h"
+#include "createscriptrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateScriptRequest;
+
+class QTAWS_EXPORT CreateScriptRequestPrivate : public GluePrivate {
+
+public:
+    CreateScriptRequestPrivate(const Glue::Action action,
+                                   CreateScriptRequest * const q);
+    CreateScriptRequestPrivate(const CreateScriptRequestPrivate &other,
+                                   CreateScriptRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateScriptRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

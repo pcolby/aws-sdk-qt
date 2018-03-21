@@ -19,3 +19,107 @@
 
 #include "createbucketrequest.h"
 #include "createbucketrequest_p.h"
+#include "createbucketresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  CreateBucketRequest
+ *
+ * @brief  Implements S3 CreateBucket requests.
+ *
+ * @see    S3Client::createBucket
+ */
+
+/**
+ * @brief  Constructs a new CreateBucketResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBucketResponse::CreateBucketResponse(
+
+/**
+ * @brief  Constructs a new CreateBucketRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateBucketRequest::CreateBucketRequest(const CreateBucketRequest &other)
+    : S3Request(new CreateBucketRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateBucketRequest object.
+ */
+CreateBucketRequest::CreateBucketRequest()
+    : S3Request(new CreateBucketRequestPrivate(S3Request::CreateBucketAction, this))
+{
+
+}
+
+bool CreateBucketRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateBucketResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateBucketResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * CreateBucketRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateBucketResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBucketRequestPrivate
+ *
+ * @brief  Private implementation for CreateBucketRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBucketRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public CreateBucketRequest instance.
+ */
+CreateBucketRequestPrivate::CreateBucketRequestPrivate(
+    const S3Request::Action action, CreateBucketRequest * const q)
+    : CreateBucketPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBucketRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateBucketRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateBucketRequest instance.
+ */
+CreateBucketRequestPrivate::CreateBucketRequestPrivate(
+    const CreateBucketRequestPrivate &other, CreateBucketRequest * const q)
+    : CreateBucketPrivate(other, q)
+{
+
+}

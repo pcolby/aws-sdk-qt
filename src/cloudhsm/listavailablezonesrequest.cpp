@@ -19,3 +19,107 @@
 
 #include "listavailablezonesrequest.h"
 #include "listavailablezonesrequest_p.h"
+#include "listavailablezonesresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  ListAvailableZonesRequest
+ *
+ * @brief  Implements CloudHSM ListAvailableZones requests.
+ *
+ * @see    CloudHSMClient::listAvailableZones
+ */
+
+/**
+ * @brief  Constructs a new ListAvailableZonesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAvailableZonesResponse::ListAvailableZonesResponse(
+
+/**
+ * @brief  Constructs a new ListAvailableZonesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAvailableZonesRequest::ListAvailableZonesRequest(const ListAvailableZonesRequest &other)
+    : CloudHSMRequest(new ListAvailableZonesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAvailableZonesRequest object.
+ */
+ListAvailableZonesRequest::ListAvailableZonesRequest()
+    : CloudHSMRequest(new ListAvailableZonesRequestPrivate(CloudHSMRequest::ListAvailableZonesAction, this))
+{
+
+}
+
+bool ListAvailableZonesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAvailableZonesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAvailableZonesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAvailableZonesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAvailableZonesRequestPrivate
+ *
+ * @brief  Private implementation for ListAvailableZonesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAvailableZonesRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public ListAvailableZonesRequest instance.
+ */
+ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
+    const CloudHSMRequest::Action action, ListAvailableZonesRequest * const q)
+    : ListAvailableZonesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAvailableZonesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAvailableZonesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAvailableZonesRequest instance.
+ */
+ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
+    const ListAvailableZonesRequestPrivate &other, ListAvailableZonesRequest * const q)
+    : ListAvailableZonesPrivate(other, q)
+{
+
+}

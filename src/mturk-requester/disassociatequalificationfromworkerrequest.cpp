@@ -19,3 +19,107 @@
 
 #include "disassociatequalificationfromworkerrequest.h"
 #include "disassociatequalificationfromworkerrequest_p.h"
+#include "disassociatequalificationfromworkerresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  DisassociateQualificationFromWorkerRequest
+ *
+ * @brief  Implements MTurk DisassociateQualificationFromWorker requests.
+ *
+ * @see    MTurkClient::disassociateQualificationFromWorker
+ */
+
+/**
+ * @brief  Constructs a new DisassociateQualificationFromWorkerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorkerResponse(
+
+/**
+ * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerRequest(const DisassociateQualificationFromWorkerRequest &other)
+    : MTurkRequest(new DisassociateQualificationFromWorkerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateQualificationFromWorkerRequest object.
+ */
+DisassociateQualificationFromWorkerRequest::DisassociateQualificationFromWorkerRequest()
+    : MTurkRequest(new DisassociateQualificationFromWorkerRequestPrivate(MTurkRequest::DisassociateQualificationFromWorkerAction, this))
+{
+
+}
+
+bool DisassociateQualificationFromWorkerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateQualificationFromWorkerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateQualificationFromWorkerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateQualificationFromWorkerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateQualificationFromWorkerRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateQualificationFromWorkerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public DisassociateQualificationFromWorkerRequest instance.
+ */
+DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
+    const MTurkRequest::Action action, DisassociateQualificationFromWorkerRequest * const q)
+    : DisassociateQualificationFromWorkerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateQualificationFromWorkerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateQualificationFromWorkerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateQualificationFromWorkerRequest instance.
+ */
+DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
+    const DisassociateQualificationFromWorkerRequestPrivate &other, DisassociateQualificationFromWorkerRequest * const q)
+    : DisassociateQualificationFromWorkerPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETINSTANCEREQUEST_H
 #define QTAWS_GETINSTANCEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceRequestPrivate;
+
+class QTAWS_EXPORT GetInstanceRequest : public LightsailRequest {
+
+public:
+    GetInstanceRequest(const GetInstanceRequest &other);
+    GetInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetInstanceRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

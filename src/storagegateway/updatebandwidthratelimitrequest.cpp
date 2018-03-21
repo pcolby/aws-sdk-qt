@@ -19,3 +19,107 @@
 
 #include "updatebandwidthratelimitrequest.h"
 #include "updatebandwidthratelimitrequest_p.h"
+#include "updatebandwidthratelimitresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateBandwidthRateLimitRequest
+ *
+ * @brief  Implements StorageGateway UpdateBandwidthRateLimit requests.
+ *
+ * @see    StorageGatewayClient::updateBandwidthRateLimit
+ */
+
+/**
+ * @brief  Constructs a new UpdateBandwidthRateLimitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
+
+/**
+ * @brief  Constructs a new UpdateBandwidthRateLimitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBandwidthRateLimitRequest::UpdateBandwidthRateLimitRequest(const UpdateBandwidthRateLimitRequest &other)
+    : StorageGatewayRequest(new UpdateBandwidthRateLimitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBandwidthRateLimitRequest object.
+ */
+UpdateBandwidthRateLimitRequest::UpdateBandwidthRateLimitRequest()
+    : StorageGatewayRequest(new UpdateBandwidthRateLimitRequestPrivate(StorageGatewayRequest::UpdateBandwidthRateLimitAction, this))
+{
+
+}
+
+bool UpdateBandwidthRateLimitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBandwidthRateLimitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBandwidthRateLimitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBandwidthRateLimitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBandwidthRateLimitRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBandwidthRateLimitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBandwidthRateLimitRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateBandwidthRateLimitRequest instance.
+ */
+UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
+    const StorageGatewayRequest::Action action, UpdateBandwidthRateLimitRequest * const q)
+    : UpdateBandwidthRateLimitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBandwidthRateLimitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBandwidthRateLimitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBandwidthRateLimitRequest instance.
+ */
+UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
+    const UpdateBandwidthRateLimitRequestPrivate &other, UpdateBandwidthRateLimitRequest * const q)
+    : UpdateBandwidthRateLimitPrivate(other, q)
+{
+
+}

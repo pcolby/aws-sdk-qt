@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCEREQUEST_H
 #define QTAWS_DELETENOTEBOOKINSTANCEREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteNotebookInstanceRequestPrivate;
+
+class QTAWS_EXPORT DeleteNotebookInstanceRequest : public SageMakerRequest {
+
+public:
+    DeleteNotebookInstanceRequest(const DeleteNotebookInstanceRequest &other);
+    DeleteNotebookInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotebookInstanceRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

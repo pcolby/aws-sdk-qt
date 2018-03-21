@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEROUTEREQUEST_H
 #define QTAWS_CREATEROUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateRouteRequestPrivate;
+
+class QTAWS_EXPORT CreateRouteRequest : public EC2Request {
+
+public:
+    CreateRouteRequest(const CreateRouteRequest &other);
+    CreateRouteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateRouteRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

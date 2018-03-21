@@ -19,3 +19,107 @@
 
 #include "setterminationprotectionrequest.h"
 #include "setterminationprotectionrequest_p.h"
+#include "setterminationprotectionresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  SetTerminationProtectionRequest
+ *
+ * @brief  Implements EMR SetTerminationProtection requests.
+ *
+ * @see    EMRClient::setTerminationProtection
+ */
+
+/**
+ * @brief  Constructs a new SetTerminationProtectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetTerminationProtectionResponse::SetTerminationProtectionResponse(
+
+/**
+ * @brief  Constructs a new SetTerminationProtectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetTerminationProtectionRequest::SetTerminationProtectionRequest(const SetTerminationProtectionRequest &other)
+    : EMRRequest(new SetTerminationProtectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetTerminationProtectionRequest object.
+ */
+SetTerminationProtectionRequest::SetTerminationProtectionRequest()
+    : EMRRequest(new SetTerminationProtectionRequestPrivate(EMRRequest::SetTerminationProtectionAction, this))
+{
+
+}
+
+bool SetTerminationProtectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetTerminationProtectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetTerminationProtectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * SetTerminationProtectionRequest::response(QNetworkReply * const reply) const
+{
+    return new SetTerminationProtectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetTerminationProtectionRequestPrivate
+ *
+ * @brief  Private implementation for SetTerminationProtectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTerminationProtectionRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public SetTerminationProtectionRequest instance.
+ */
+SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
+    const EMRRequest::Action action, SetTerminationProtectionRequest * const q)
+    : SetTerminationProtectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTerminationProtectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetTerminationProtectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetTerminationProtectionRequest instance.
+ */
+SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
+    const SetTerminationProtectionRequestPrivate &other, SetTerminationProtectionRequest * const q)
+    : SetTerminationProtectionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMASTERACCOUNTREQUEST_P_H
 #define QTAWS_GETMASTERACCOUNTREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "getmasteraccountrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetMasterAccountRequest;
+
+class QTAWS_EXPORT GetMasterAccountRequestPrivate : public GuardDutyPrivate {
+
+public:
+    GetMasterAccountRequestPrivate(const GuardDuty::Action action,
+                                   GetMasterAccountRequest * const q);
+    GetMasterAccountRequestPrivate(const GetMasterAccountRequestPrivate &other,
+                                   GetMasterAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMasterAccountRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

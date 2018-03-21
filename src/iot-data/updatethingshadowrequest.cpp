@@ -19,3 +19,107 @@
 
 #include "updatethingshadowrequest.h"
 #include "updatethingshadowrequest_p.h"
+#include "updatethingshadowresponse.h"
+#include "iotdataplanerequest_p.h"
+
+namespace AWS {
+namespace IoTDataPlane {
+
+/**
+ * @class  UpdateThingShadowRequest
+ *
+ * @brief  Implements IoTDataPlane UpdateThingShadow requests.
+ *
+ * @see    IoTDataPlaneClient::updateThingShadow
+ */
+
+/**
+ * @brief  Constructs a new UpdateThingShadowResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThingShadowResponse::UpdateThingShadowResponse(
+
+/**
+ * @brief  Constructs a new UpdateThingShadowRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateThingShadowRequest::UpdateThingShadowRequest(const UpdateThingShadowRequest &other)
+    : IoTDataPlaneRequest(new UpdateThingShadowRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateThingShadowRequest object.
+ */
+UpdateThingShadowRequest::UpdateThingShadowRequest()
+    : IoTDataPlaneRequest(new UpdateThingShadowRequestPrivate(IoTDataPlaneRequest::UpdateThingShadowAction, this))
+{
+
+}
+
+bool UpdateThingShadowRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateThingShadowResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateThingShadowResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTDataPlaneClient::send
+ */
+AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateThingShadowResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThingShadowRequestPrivate
+ *
+ * @brief  Private implementation for UpdateThingShadowRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThingShadowRequestPrivate object.
+ *
+ * @param  action  IoTDataPlane action being performed.
+ * @param  q       Pointer to this object's public UpdateThingShadowRequest instance.
+ */
+UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
+    const IoTDataPlaneRequest::Action action, UpdateThingShadowRequest * const q)
+    : UpdateThingShadowPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThingShadowRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateThingShadowRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateThingShadowRequest instance.
+ */
+UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
+    const UpdateThingShadowRequestPrivate &other, UpdateThingShadowRequest * const q)
+    : UpdateThingShadowPrivate(other, q)
+{
+
+}

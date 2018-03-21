@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEFILESYSTEMREQUEST_P_H
 #define QTAWS_CREATEFILESYSTEMREQUEST_P_H
 
+#include "efs_p.h"
+#include "createfilesystemrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateFileSystemRequest;
+
+class QTAWS_EXPORT CreateFileSystemRequestPrivate : public EFSPrivate {
+
+public:
+    CreateFileSystemRequestPrivate(const EFS::Action action,
+                                   CreateFileSystemRequest * const q);
+    CreateFileSystemRequestPrivate(const CreateFileSystemRequestPrivate &other,
+                                   CreateFileSystemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFileSystemRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTLEXICONREQUEST_H
 #define QTAWS_PUTLEXICONREQUEST_H
 
+#include "pollyrequest.h"
+
+namespace AWS {
+
+namespace Polly {
+
+class PutLexiconRequestPrivate;
+
+class QTAWS_EXPORT PutLexiconRequest : public PollyRequest {
+
+public:
+    PutLexiconRequest(const PutLexiconRequest &other);
+    PutLexiconRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutLexiconRequest)
+
+}
+
+} // namespace Polly
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "domainmetadatarequest.h"
 #include "domainmetadatarequest_p.h"
+#include "domainmetadataresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  DomainMetadataRequest
+ *
+ * @brief  Implements SimpleDB DomainMetadata requests.
+ *
+ * @see    SimpleDBClient::domainMetadata
+ */
+
+/**
+ * @brief  Constructs a new DomainMetadataResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DomainMetadataResponse::DomainMetadataResponse(
+
+/**
+ * @brief  Constructs a new DomainMetadataRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DomainMetadataRequest::DomainMetadataRequest(const DomainMetadataRequest &other)
+    : SimpleDBRequest(new DomainMetadataRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DomainMetadataRequest object.
+ */
+DomainMetadataRequest::DomainMetadataRequest()
+    : SimpleDBRequest(new DomainMetadataRequestPrivate(SimpleDBRequest::DomainMetadataAction, this))
+{
+
+}
+
+bool DomainMetadataRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DomainMetadataResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DomainMetadataResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply * const reply) const
+{
+    return new DomainMetadataResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DomainMetadataRequestPrivate
+ *
+ * @brief  Private implementation for DomainMetadataRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DomainMetadataRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public DomainMetadataRequest instance.
+ */
+DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
+    const SimpleDBRequest::Action action, DomainMetadataRequest * const q)
+    : DomainMetadataPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DomainMetadataRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DomainMetadataRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DomainMetadataRequest instance.
+ */
+DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
+    const DomainMetadataRequestPrivate &other, DomainMetadataRequest * const q)
+    : DomainMetadataPrivate(other, q)
+{
+
+}

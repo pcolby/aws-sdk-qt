@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHSTATICIPREQUEST_H
 #define QTAWS_DETACHSTATICIPREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DetachStaticIpRequestPrivate;
+
+class QTAWS_EXPORT DetachStaticIpRequest : public LightsailRequest {
+
+public:
+    DetachStaticIpRequest(const DetachStaticIpRequest &other);
+    DetachStaticIpRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachStaticIpRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

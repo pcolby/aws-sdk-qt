@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "updatefunctionconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateFunctionConfigurationRequest;
+
+class QTAWS_EXPORT UpdateFunctionConfigurationRequestPrivate : public LambdaPrivate {
+
+public:
+    UpdateFunctionConfigurationRequestPrivate(const Lambda::Action action,
+                                   UpdateFunctionConfigurationRequest * const q);
+    UpdateFunctionConfigurationRequestPrivate(const UpdateFunctionConfigurationRequestPrivate &other,
+                                   UpdateFunctionConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFunctionConfigurationRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createappcookiestickinesspolicyrequest.h"
 #include "createappcookiestickinesspolicyrequest_p.h"
+#include "createappcookiestickinesspolicyresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  CreateAppCookieStickinessPolicyRequest
+ *
+ * @brief  Implements ElasticLoadBalancing CreateAppCookieStickinessPolicy requests.
+ *
+ * @see    ElasticLoadBalancingClient::createAppCookieStickinessPolicy
+ */
+
+/**
+ * @brief  Constructs a new CreateAppCookieStickinessPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAppCookieStickinessPolicyResponse::CreateAppCookieStickinessPolicyResponse(
+
+/**
+ * @brief  Constructs a new CreateAppCookieStickinessPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAppCookieStickinessPolicyRequest::CreateAppCookieStickinessPolicyRequest(const CreateAppCookieStickinessPolicyRequest &other)
+    : ElasticLoadBalancingRequest(new CreateAppCookieStickinessPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAppCookieStickinessPolicyRequest object.
+ */
+CreateAppCookieStickinessPolicyRequest::CreateAppCookieStickinessPolicyRequest()
+    : ElasticLoadBalancingRequest(new CreateAppCookieStickinessPolicyRequestPrivate(ElasticLoadBalancingRequest::CreateAppCookieStickinessPolicyAction, this))
+{
+
+}
+
+bool CreateAppCookieStickinessPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAppCookieStickinessPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAppCookieStickinessPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * CreateAppCookieStickinessPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAppCookieStickinessPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAppCookieStickinessPolicyRequestPrivate
+ *
+ * @brief  Private implementation for CreateAppCookieStickinessPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAppCookieStickinessPolicyRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public CreateAppCookieStickinessPolicyRequest instance.
+ */
+CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, CreateAppCookieStickinessPolicyRequest * const q)
+    : CreateAppCookieStickinessPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAppCookieStickinessPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAppCookieStickinessPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAppCookieStickinessPolicyRequest instance.
+ */
+CreateAppCookieStickinessPolicyRequestPrivate::CreateAppCookieStickinessPolicyRequestPrivate(
+    const CreateAppCookieStickinessPolicyRequestPrivate &other, CreateAppCookieStickinessPolicyRequest * const q)
+    : CreateAppCookieStickinessPolicyPrivate(other, q)
+{
+
+}

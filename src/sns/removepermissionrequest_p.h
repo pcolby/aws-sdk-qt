@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEPERMISSIONREQUEST_P_H
 #define QTAWS_REMOVEPERMISSIONREQUEST_P_H
 
+#include "sns_p.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class RemovePermissionRequest;
+
+class QTAWS_EXPORT RemovePermissionRequestPrivate : public SNSPrivate {
+
+public:
+    RemovePermissionRequestPrivate(const SNS::Action action,
+                                   RemovePermissionRequest * const q);
+    RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
+                                   RemovePermissionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemovePermissionRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

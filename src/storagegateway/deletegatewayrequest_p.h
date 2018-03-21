@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEGATEWAYREQUEST_P_H
 #define QTAWS_DELETEGATEWAYREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "deletegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteGatewayRequest;
+
+class QTAWS_EXPORT DeleteGatewayRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DeleteGatewayRequestPrivate(const StorageGateway::Action action,
+                                   DeleteGatewayRequest * const q);
+    DeleteGatewayRequestPrivate(const DeleteGatewayRequestPrivate &other,
+                                   DeleteGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteGatewayRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEKEYREQUEST_H
 #define QTAWS_DESCRIBEKEYREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DescribeKeyRequestPrivate;
+
+class QTAWS_EXPORT DescribeKeyRequest : public KMSRequest {
+
+public:
+    DescribeKeyRequest(const DescribeKeyRequest &other);
+    DescribeKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeKeyRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

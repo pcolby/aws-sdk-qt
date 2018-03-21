@@ -19,3 +19,107 @@
 
 #include "createdbinstancerequest.h"
 #include "createdbinstancerequest_p.h"
+#include "createdbinstanceresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBInstanceRequest
+ *
+ * @brief  Implements RDS CreateDBInstance requests.
+ *
+ * @see    RDSClient::createDBInstance
+ */
+
+/**
+ * @brief  Constructs a new CreateDBInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBInstanceResponse::CreateDBInstanceResponse(
+
+/**
+ * @brief  Constructs a new CreateDBInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBInstanceRequest::CreateDBInstanceRequest(const CreateDBInstanceRequest &other)
+    : RDSRequest(new CreateDBInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBInstanceRequest object.
+ */
+CreateDBInstanceRequest::CreateDBInstanceRequest()
+    : RDSRequest(new CreateDBInstanceRequestPrivate(RDSRequest::CreateDBInstanceAction, this))
+{
+
+}
+
+bool CreateDBInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBInstanceRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBInstanceRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBInstanceRequest instance.
+ */
+CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
+    const RDSRequest::Action action, CreateDBInstanceRequest * const q)
+    : CreateDBInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBInstanceRequest instance.
+ */
+CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
+    const CreateDBInstanceRequestPrivate &other, CreateDBInstanceRequest * const q)
+    : CreateDBInstancePrivate(other, q)
+{
+
+}

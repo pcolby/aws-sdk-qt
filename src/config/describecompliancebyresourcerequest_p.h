@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYRESOURCEREQUEST_P_H
 #define QTAWS_DESCRIBECOMPLIANCEBYRESOURCEREQUEST_P_H
 
+#include "configservice_p.h"
+#include "describecompliancebyresourcerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeComplianceByResourceRequest;
+
+class QTAWS_EXPORT DescribeComplianceByResourceRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DescribeComplianceByResourceRequestPrivate(const ConfigService::Action action,
+                                   DescribeComplianceByResourceRequest * const q);
+    DescribeComplianceByResourceRequestPrivate(const DescribeComplianceByResourceRequestPrivate &other,
+                                   DescribeComplianceByResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeComplianceByResourceRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

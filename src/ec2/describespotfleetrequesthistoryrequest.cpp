@@ -19,3 +19,107 @@
 
 #include "describespotfleetrequesthistoryrequest.h"
 #include "describespotfleetrequesthistoryrequest_p.h"
+#include "describespotfleetrequesthistoryresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSpotFleetRequestHistoryRequest
+ *
+ * @brief  Implements EC2 DescribeSpotFleetRequestHistory requests.
+ *
+ * @see    EC2Client::describeSpotFleetRequestHistory
+ */
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSpotFleetRequestHistoryResponse::DescribeSpotFleetRequestHistoryResponse(
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest(const DescribeSpotFleetRequestHistoryRequest &other)
+    : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequest object.
+ */
+DescribeSpotFleetRequestHistoryRequest::DescribeSpotFleetRequestHistoryRequest()
+    : EC2Request(new DescribeSpotFleetRequestHistoryRequestPrivate(EC2Request::DescribeSpotFleetRequestHistoryAction, this))
+{
+
+}
+
+bool DescribeSpotFleetRequestHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSpotFleetRequestHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSpotFleetRequestHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSpotFleetRequestHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSpotFleetRequestHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSpotFleetRequestHistoryRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSpotFleetRequestHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSpotFleetRequestHistoryRequest instance.
+ */
+DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
+    const EC2Request::Action action, DescribeSpotFleetRequestHistoryRequest * const q)
+    : DescribeSpotFleetRequestHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotFleetRequestHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSpotFleetRequestHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSpotFleetRequestHistoryRequest instance.
+ */
+DescribeSpotFleetRequestHistoryRequestPrivate::DescribeSpotFleetRequestHistoryRequestPrivate(
+    const DescribeSpotFleetRequestHistoryRequestPrivate &other, DescribeSpotFleetRequestHistoryRequest * const q)
+    : DescribeSpotFleetRequestHistoryPrivate(other, q)
+{
+
+}

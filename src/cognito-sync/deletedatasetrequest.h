@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDATASETREQUEST_H
 #define QTAWS_DELETEDATASETREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DeleteDatasetRequestPrivate;
+
+class QTAWS_EXPORT DeleteDatasetRequest : public CognitoSyncRequest {
+
+public:
+    DeleteDatasetRequest(const DeleteDatasetRequest &other);
+    DeleteDatasetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDatasetRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

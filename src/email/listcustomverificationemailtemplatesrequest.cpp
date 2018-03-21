@@ -19,3 +19,107 @@
 
 #include "listcustomverificationemailtemplatesrequest.h"
 #include "listcustomverificationemailtemplatesrequest_p.h"
+#include "listcustomverificationemailtemplatesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListCustomVerificationEmailTemplatesRequest
+ *
+ * @brief  Implements SES ListCustomVerificationEmailTemplates requests.
+ *
+ * @see    SESClient::listCustomVerificationEmailTemplates
+ */
+
+/**
+ * @brief  Constructs a new ListCustomVerificationEmailTemplatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCustomVerificationEmailTemplatesResponse::ListCustomVerificationEmailTemplatesResponse(
+
+/**
+ * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest(const ListCustomVerificationEmailTemplatesRequest &other)
+    : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequest object.
+ */
+ListCustomVerificationEmailTemplatesRequest::ListCustomVerificationEmailTemplatesRequest()
+    : SESRequest(new ListCustomVerificationEmailTemplatesRequestPrivate(SESRequest::ListCustomVerificationEmailTemplatesAction, this))
+{
+
+}
+
+bool ListCustomVerificationEmailTemplatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListCustomVerificationEmailTemplatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListCustomVerificationEmailTemplatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * ListCustomVerificationEmailTemplatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListCustomVerificationEmailTemplatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCustomVerificationEmailTemplatesRequestPrivate
+ *
+ * @brief  Private implementation for ListCustomVerificationEmailTemplatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public ListCustomVerificationEmailTemplatesRequest instance.
+ */
+ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
+    const SESRequest::Action action, ListCustomVerificationEmailTemplatesRequest * const q)
+    : ListCustomVerificationEmailTemplatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCustomVerificationEmailTemplatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListCustomVerificationEmailTemplatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListCustomVerificationEmailTemplatesRequest instance.
+ */
+ListCustomVerificationEmailTemplatesRequestPrivate::ListCustomVerificationEmailTemplatesRequestPrivate(
+    const ListCustomVerificationEmailTemplatesRequestPrivate &other, ListCustomVerificationEmailTemplatesRequest * const q)
+    : ListCustomVerificationEmailTemplatesPrivate(other, q)
+{
+
+}

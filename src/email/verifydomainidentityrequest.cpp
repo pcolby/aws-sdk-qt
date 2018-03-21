@@ -19,3 +19,107 @@
 
 #include "verifydomainidentityrequest.h"
 #include "verifydomainidentityrequest_p.h"
+#include "verifydomainidentityresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyDomainIdentityRequest
+ *
+ * @brief  Implements SES VerifyDomainIdentity requests.
+ *
+ * @see    SESClient::verifyDomainIdentity
+ */
+
+/**
+ * @brief  Constructs a new VerifyDomainIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
+
+/**
+ * @brief  Constructs a new VerifyDomainIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+VerifyDomainIdentityRequest::VerifyDomainIdentityRequest(const VerifyDomainIdentityRequest &other)
+    : SESRequest(new VerifyDomainIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new VerifyDomainIdentityRequest object.
+ */
+VerifyDomainIdentityRequest::VerifyDomainIdentityRequest()
+    : SESRequest(new VerifyDomainIdentityRequestPrivate(SESRequest::VerifyDomainIdentityAction, this))
+{
+
+}
+
+bool VerifyDomainIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an VerifyDomainIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An VerifyDomainIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new VerifyDomainIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyDomainIdentityRequestPrivate
+ *
+ * @brief  Private implementation for VerifyDomainIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainIdentityRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public VerifyDomainIdentityRequest instance.
+ */
+VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
+    const SESRequest::Action action, VerifyDomainIdentityRequest * const q)
+    : VerifyDomainIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the VerifyDomainIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public VerifyDomainIdentityRequest instance.
+ */
+VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
+    const VerifyDomainIdentityRequestPrivate &other, VerifyDomainIdentityRequest * const q)
+    : VerifyDomainIdentityPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPRESETREQUEST_H
 #define QTAWS_DELETEPRESETREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DeletePresetRequestPrivate;
+
+class QTAWS_EXPORT DeletePresetRequest : public MediaConvertRequest {
+
+public:
+    DeletePresetRequest(const DeletePresetRequest &other);
+    DeletePresetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePresetRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTOPICRULEREQUEST_P_H
 #define QTAWS_GETTOPICRULEREQUEST_P_H
 
+#include "iot_p.h"
+#include "gettopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetTopicRuleRequest;
+
+class QTAWS_EXPORT GetTopicRuleRequestPrivate : public IoTPrivate {
+
+public:
+    GetTopicRuleRequestPrivate(const IoT::Action action,
+                                   GetTopicRuleRequest * const q);
+    GetTopicRuleRequestPrivate(const GetTopicRuleRequestPrivate &other,
+                                   GetTopicRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTopicRuleRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

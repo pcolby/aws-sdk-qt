@@ -20,4 +20,29 @@
 #ifndef QTAWS_POLLFORTHIRDPARTYJOBSREQUEST_P_H
 #define QTAWS_POLLFORTHIRDPARTYJOBSREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "pollforthirdpartyjobsrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PollForThirdPartyJobsRequest;
+
+class QTAWS_EXPORT PollForThirdPartyJobsRequestPrivate : public CodePipelinePrivate {
+
+public:
+    PollForThirdPartyJobsRequestPrivate(const CodePipeline::Action action,
+                                   PollForThirdPartyJobsRequest * const q);
+    PollForThirdPartyJobsRequestPrivate(const PollForThirdPartyJobsRequestPrivate &other,
+                                   PollForThirdPartyJobsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PollForThirdPartyJobsRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEV2LOGGINGLEVELREQUEST_P_H
 #define QTAWS_DELETEV2LOGGINGLEVELREQUEST_P_H
 
+#include "iot_p.h"
+#include "deletev2logginglevelrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteV2LoggingLevelRequest;
+
+class QTAWS_EXPORT DeleteV2LoggingLevelRequestPrivate : public IoTPrivate {
+
+public:
+    DeleteV2LoggingLevelRequestPrivate(const IoT::Action action,
+                                   DeleteV2LoggingLevelRequest * const q);
+    DeleteV2LoggingLevelRequestPrivate(const DeleteV2LoggingLevelRequestPrivate &other,
+                                   DeleteV2LoggingLevelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteV2LoggingLevelRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

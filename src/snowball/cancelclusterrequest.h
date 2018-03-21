@@ -20,4 +20,32 @@
 #ifndef QTAWS_CANCELCLUSTERREQUEST_H
 #define QTAWS_CANCELCLUSTERREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CancelClusterRequestPrivate;
+
+class QTAWS_EXPORT CancelClusterRequest : public SnowballRequest {
+
+public:
+    CancelClusterRequest(const CancelClusterRequest &other);
+    CancelClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CancelClusterRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

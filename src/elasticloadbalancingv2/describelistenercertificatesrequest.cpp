@@ -19,3 +19,107 @@
 
 #include "describelistenercertificatesrequest.h"
 #include "describelistenercertificatesrequest_p.h"
+#include "describelistenercertificatesresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeListenerCertificatesRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 DescribeListenerCertificates requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeListenerCertificates
+ */
+
+/**
+ * @brief  Constructs a new DescribeListenerCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeListenerCertificatesResponse::DescribeListenerCertificatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeListenerCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeListenerCertificatesRequest::DescribeListenerCertificatesRequest(const DescribeListenerCertificatesRequest &other)
+    : ElasticLoadBalancingv2Request(new DescribeListenerCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeListenerCertificatesRequest object.
+ */
+DescribeListenerCertificatesRequest::DescribeListenerCertificatesRequest()
+    : ElasticLoadBalancingv2Request(new DescribeListenerCertificatesRequestPrivate(ElasticLoadBalancingv2Request::DescribeListenerCertificatesAction, this))
+{
+
+}
+
+bool DescribeListenerCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeListenerCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeListenerCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * DescribeListenerCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeListenerCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeListenerCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeListenerCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeListenerCertificatesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public DescribeListenerCertificatesRequest instance.
+ */
+DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, DescribeListenerCertificatesRequest * const q)
+    : DescribeListenerCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeListenerCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeListenerCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeListenerCertificatesRequest instance.
+ */
+DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestPrivate(
+    const DescribeListenerCertificatesRequestPrivate &other, DescribeListenerCertificatesRequest * const q)
+    : DescribeListenerCertificatesPrivate(other, q)
+{
+
+}

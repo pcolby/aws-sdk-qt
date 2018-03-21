@@ -19,3 +19,107 @@
 
 #include "getinvitationscountrequest.h"
 #include "getinvitationscountrequest_p.h"
+#include "getinvitationscountresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetInvitationsCountRequest
+ *
+ * @brief  Implements GuardDuty GetInvitationsCount requests.
+ *
+ * @see    GuardDutyClient::getInvitationsCount
+ */
+
+/**
+ * @brief  Constructs a new GetInvitationsCountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInvitationsCountResponse::GetInvitationsCountResponse(
+
+/**
+ * @brief  Constructs a new GetInvitationsCountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInvitationsCountRequest::GetInvitationsCountRequest(const GetInvitationsCountRequest &other)
+    : GuardDutyRequest(new GetInvitationsCountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInvitationsCountRequest object.
+ */
+GetInvitationsCountRequest::GetInvitationsCountRequest()
+    : GuardDutyRequest(new GetInvitationsCountRequestPrivate(GuardDutyRequest::GetInvitationsCountAction, this))
+{
+
+}
+
+bool GetInvitationsCountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInvitationsCountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInvitationsCountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * GetInvitationsCountRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInvitationsCountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInvitationsCountRequestPrivate
+ *
+ * @brief  Private implementation for GetInvitationsCountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvitationsCountRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public GetInvitationsCountRequest instance.
+ */
+GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
+    const GuardDutyRequest::Action action, GetInvitationsCountRequest * const q)
+    : GetInvitationsCountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvitationsCountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInvitationsCountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInvitationsCountRequest instance.
+ */
+GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
+    const GetInvitationsCountRequestPrivate &other, GetInvitationsCountRequest * const q)
+    : GetInvitationsCountPrivate(other, q)
+{
+
+}

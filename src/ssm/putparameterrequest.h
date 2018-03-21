@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTPARAMETERREQUEST_H
 #define QTAWS_PUTPARAMETERREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutParameterRequestPrivate;
+
+class QTAWS_EXPORT PutParameterRequest : public SSMRequest {
+
+public:
+    PutParameterRequest(const PutParameterRequest &other);
+    PutParameterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutParameterRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

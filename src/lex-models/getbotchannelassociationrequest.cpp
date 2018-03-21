@@ -19,3 +19,107 @@
 
 #include "getbotchannelassociationrequest.h"
 #include "getbotchannelassociationrequest_p.h"
+#include "getbotchannelassociationresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBotChannelAssociationRequest
+ *
+ * @brief  Implements LexModelBuildingService GetBotChannelAssociation requests.
+ *
+ * @see    LexModelBuildingServiceClient::getBotChannelAssociation
+ */
+
+/**
+ * @brief  Constructs a new GetBotChannelAssociationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBotChannelAssociationResponse::GetBotChannelAssociationResponse(
+
+/**
+ * @brief  Constructs a new GetBotChannelAssociationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBotChannelAssociationRequest::GetBotChannelAssociationRequest(const GetBotChannelAssociationRequest &other)
+    : LexModelBuildingServiceRequest(new GetBotChannelAssociationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBotChannelAssociationRequest object.
+ */
+GetBotChannelAssociationRequest::GetBotChannelAssociationRequest()
+    : LexModelBuildingServiceRequest(new GetBotChannelAssociationRequestPrivate(LexModelBuildingServiceRequest::GetBotChannelAssociationAction, this))
+{
+
+}
+
+bool GetBotChannelAssociationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBotChannelAssociationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBotChannelAssociationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetBotChannelAssociationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBotChannelAssociationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBotChannelAssociationRequestPrivate
+ *
+ * @brief  Private implementation for GetBotChannelAssociationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotChannelAssociationRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetBotChannelAssociationRequest instance.
+ */
+GetBotChannelAssociationRequestPrivate::GetBotChannelAssociationRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetBotChannelAssociationRequest * const q)
+    : GetBotChannelAssociationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBotChannelAssociationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBotChannelAssociationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBotChannelAssociationRequest instance.
+ */
+GetBotChannelAssociationRequestPrivate::GetBotChannelAssociationRequestPrivate(
+    const GetBotChannelAssociationRequestPrivate &other, GetBotChannelAssociationRequest * const q)
+    : GetBotChannelAssociationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_INDEXFACESREQUEST_P_H
 #define QTAWS_INDEXFACESREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "indexfacesrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class IndexFacesRequest;
+
+class QTAWS_EXPORT IndexFacesRequestPrivate : public RekognitionPrivate {
+
+public:
+    IndexFacesRequestPrivate(const Rekognition::Action action,
+                                   IndexFacesRequest * const q);
+    IndexFacesRequestPrivate(const IndexFacesRequestPrivate &other,
+                                   IndexFacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(IndexFacesRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

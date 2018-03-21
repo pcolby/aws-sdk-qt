@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCOSTANDUSAGEREQUEST_P_H
 #define QTAWS_GETCOSTANDUSAGEREQUEST_P_H
 
+#include "costexplorer_p.h"
+#include "getcostandusagerequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetCostAndUsageRequest;
+
+class QTAWS_EXPORT GetCostAndUsageRequestPrivate : public CostExplorerPrivate {
+
+public:
+    GetCostAndUsageRequestPrivate(const CostExplorer::Action action,
+                                   GetCostAndUsageRequest * const q);
+    GetCostAndUsageRequestPrivate(const GetCostAndUsageRequestPrivate &other,
+                                   GetCostAndUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCostAndUsageRequest)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

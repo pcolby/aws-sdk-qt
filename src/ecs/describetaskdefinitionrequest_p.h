@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETASKDEFINITIONREQUEST_P_H
 #define QTAWS_DESCRIBETASKDEFINITIONREQUEST_P_H
 
+#include "ecs_p.h"
+#include "describetaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeTaskDefinitionRequest;
+
+class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public ECSPrivate {
+
+public:
+    DescribeTaskDefinitionRequestPrivate(const ECS::Action action,
+                                   DescribeTaskDefinitionRequest * const q);
+    DescribeTaskDefinitionRequestPrivate(const DescribeTaskDefinitionRequestPrivate &other,
+                                   DescribeTaskDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTaskDefinitionRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

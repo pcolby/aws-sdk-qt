@@ -19,3 +19,107 @@
 
 #include "peervpcrequest.h"
 #include "peervpcrequest_p.h"
+#include "peervpcresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  PeerVpcRequest
+ *
+ * @brief  Implements Lightsail PeerVpc requests.
+ *
+ * @see    LightsailClient::peerVpc
+ */
+
+/**
+ * @brief  Constructs a new PeerVpcResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PeerVpcResponse::PeerVpcResponse(
+
+/**
+ * @brief  Constructs a new PeerVpcRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PeerVpcRequest::PeerVpcRequest(const PeerVpcRequest &other)
+    : LightsailRequest(new PeerVpcRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PeerVpcRequest object.
+ */
+PeerVpcRequest::PeerVpcRequest()
+    : LightsailRequest(new PeerVpcRequestPrivate(LightsailRequest::PeerVpcAction, this))
+{
+
+}
+
+bool PeerVpcRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PeerVpcResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PeerVpcResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * PeerVpcRequest::response(QNetworkReply * const reply) const
+{
+    return new PeerVpcResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PeerVpcRequestPrivate
+ *
+ * @brief  Private implementation for PeerVpcRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PeerVpcRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public PeerVpcRequest instance.
+ */
+PeerVpcRequestPrivate::PeerVpcRequestPrivate(
+    const LightsailRequest::Action action, PeerVpcRequest * const q)
+    : PeerVpcPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PeerVpcRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PeerVpcRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PeerVpcRequest instance.
+ */
+PeerVpcRequestPrivate::PeerVpcRequestPrivate(
+    const PeerVpcRequestPrivate &other, PeerVpcRequest * const q)
+    : PeerVpcPrivate(other, q)
+{
+
+}

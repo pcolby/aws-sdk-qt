@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPRESETREQUEST_H
 #define QTAWS_CREATEPRESETREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreatePresetRequestPrivate;
+
+class QTAWS_EXPORT CreatePresetRequest : public MediaConvertRequest {
+
+public:
+    CreatePresetRequest(const CreatePresetRequest &other);
+    CreatePresetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePresetRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

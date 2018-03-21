@@ -19,3 +19,107 @@
 
 #include "getsessiontokenrequest.h"
 #include "getsessiontokenrequest_p.h"
+#include "getsessiontokenresponse.h"
+#include "stsrequest_p.h"
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  GetSessionTokenRequest
+ *
+ * @brief  Implements STS GetSessionToken requests.
+ *
+ * @see    STSClient::getSessionToken
+ */
+
+/**
+ * @brief  Constructs a new GetSessionTokenResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSessionTokenResponse::GetSessionTokenResponse(
+
+/**
+ * @brief  Constructs a new GetSessionTokenRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSessionTokenRequest::GetSessionTokenRequest(const GetSessionTokenRequest &other)
+    : STSRequest(new GetSessionTokenRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSessionTokenRequest object.
+ */
+GetSessionTokenRequest::GetSessionTokenRequest()
+    : STSRequest(new GetSessionTokenRequestPrivate(STSRequest::GetSessionTokenAction, this))
+{
+
+}
+
+bool GetSessionTokenRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSessionTokenResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSessionTokenResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  STSClient::send
+ */
+AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSessionTokenResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSessionTokenRequestPrivate
+ *
+ * @brief  Private implementation for GetSessionTokenRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSessionTokenRequestPrivate object.
+ *
+ * @param  action  STS action being performed.
+ * @param  q       Pointer to this object's public GetSessionTokenRequest instance.
+ */
+GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
+    const STSRequest::Action action, GetSessionTokenRequest * const q)
+    : GetSessionTokenPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSessionTokenRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSessionTokenRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSessionTokenRequest instance.
+ */
+GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
+    const GetSessionTokenRequestPrivate &other, GetSessionTokenRequest * const q)
+    : GetSessionTokenPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEOBJECTREQUEST_H
 #define QTAWS_DESCRIBEOBJECTREQUEST_H
 
+#include "mediastoredatarequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class DescribeObjectRequestPrivate;
+
+class QTAWS_EXPORT DescribeObjectRequest : public MediaStoreDataRequest {
+
+public:
+    DescribeObjectRequest(const DescribeObjectRequest &other);
+    DescribeObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeObjectRequest)
+
+}
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

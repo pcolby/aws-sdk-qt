@@ -19,3 +19,107 @@
 
 #include "activategatewayrequest.h"
 #include "activategatewayrequest_p.h"
+#include "activategatewayresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ActivateGatewayRequest
+ *
+ * @brief  Implements StorageGateway ActivateGateway requests.
+ *
+ * @see    StorageGatewayClient::activateGateway
+ */
+
+/**
+ * @brief  Constructs a new ActivateGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ActivateGatewayResponse::ActivateGatewayResponse(
+
+/**
+ * @brief  Constructs a new ActivateGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ActivateGatewayRequest::ActivateGatewayRequest(const ActivateGatewayRequest &other)
+    : StorageGatewayRequest(new ActivateGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ActivateGatewayRequest object.
+ */
+ActivateGatewayRequest::ActivateGatewayRequest()
+    : StorageGatewayRequest(new ActivateGatewayRequestPrivate(StorageGatewayRequest::ActivateGatewayAction, this))
+{
+
+}
+
+bool ActivateGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ActivateGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ActivateGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * ActivateGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new ActivateGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ActivateGatewayRequestPrivate
+ *
+ * @brief  Private implementation for ActivateGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivateGatewayRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public ActivateGatewayRequest instance.
+ */
+ActivateGatewayRequestPrivate::ActivateGatewayRequestPrivate(
+    const StorageGatewayRequest::Action action, ActivateGatewayRequest * const q)
+    : ActivateGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ActivateGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ActivateGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ActivateGatewayRequest instance.
+ */
+ActivateGatewayRequestPrivate::ActivateGatewayRequestPrivate(
+    const ActivateGatewayRequestPrivate &other, ActivateGatewayRequest * const q)
+    : ActivateGatewayPrivate(other, q)
+{
+
+}

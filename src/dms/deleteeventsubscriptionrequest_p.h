@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "deleteeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteEventSubscriptionRequest;
+
+class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DeleteEventSubscriptionRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DeleteEventSubscriptionRequest * const q);
+    DeleteEventSubscriptionRequestPrivate(const DeleteEventSubscriptionRequestPrivate &other,
+                                   DeleteEventSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventSubscriptionRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

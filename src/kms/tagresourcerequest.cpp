@@ -19,3 +19,107 @@
 
 #include "tagresourcerequest.h"
 #include "tagresourcerequest_p.h"
+#include "tagresourceresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  TagResourceRequest
+ *
+ * @brief  Implements KMS TagResource requests.
+ *
+ * @see    KMSClient::tagResource
+ */
+
+/**
+ * @brief  Constructs a new TagResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagResourceResponse::TagResourceResponse(
+
+/**
+ * @brief  Constructs a new TagResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TagResourceRequest::TagResourceRequest(const TagResourceRequest &other)
+    : KMSRequest(new TagResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TagResourceRequest object.
+ */
+TagResourceRequest::TagResourceRequest()
+    : KMSRequest(new TagResourceRequestPrivate(KMSRequest::TagResourceAction, this))
+{
+
+}
+
+bool TagResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TagResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TagResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new TagResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TagResourceRequestPrivate
+ *
+ * @brief  Private implementation for TagResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResourceRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public TagResourceRequest instance.
+ */
+TagResourceRequestPrivate::TagResourceRequestPrivate(
+    const KMSRequest::Action action, TagResourceRequest * const q)
+    : TagResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TagResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TagResourceRequest instance.
+ */
+TagResourceRequestPrivate::TagResourceRequestPrivate(
+    const TagResourceRequestPrivate &other, TagResourceRequest * const q)
+    : TagResourcePrivate(other, q)
+{
+
+}

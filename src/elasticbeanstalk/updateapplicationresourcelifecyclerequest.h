@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLEREQUEST_H
 #define QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLEREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateApplicationResourceLifecycleRequestPrivate;
+
+class QTAWS_EXPORT UpdateApplicationResourceLifecycleRequest : public ElasticBeanstalkRequest {
+
+public:
+    UpdateApplicationResourceLifecycleRequest(const UpdateApplicationResourceLifecycleRequest &other);
+    UpdateApplicationResourceLifecycleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateApplicationResourceLifecycleRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

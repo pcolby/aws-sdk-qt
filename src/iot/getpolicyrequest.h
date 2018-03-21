@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPOLICYREQUEST_H
 #define QTAWS_GETPOLICYREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetPolicyRequest : public IoTRequest {
+
+public:
+    GetPolicyRequest(const GetPolicyRequest &other);
+    GetPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPolicyRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

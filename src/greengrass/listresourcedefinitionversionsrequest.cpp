@@ -19,3 +19,107 @@
 
 #include "listresourcedefinitionversionsrequest.h"
 #include "listresourcedefinitionversionsrequest_p.h"
+#include "listresourcedefinitionversionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListResourceDefinitionVersionsRequest
+ *
+ * @brief  Implements Greengrass ListResourceDefinitionVersions requests.
+ *
+ * @see    GreengrassClient::listResourceDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new ListResourceDefinitionVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceDefinitionVersionsResponse::ListResourceDefinitionVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListResourceDefinitionVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest(const ListResourceDefinitionVersionsRequest &other)
+    : GreengrassRequest(new ListResourceDefinitionVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourceDefinitionVersionsRequest object.
+ */
+ListResourceDefinitionVersionsRequest::ListResourceDefinitionVersionsRequest()
+    : GreengrassRequest(new ListResourceDefinitionVersionsRequestPrivate(GreengrassRequest::ListResourceDefinitionVersionsAction, this))
+{
+
+}
+
+bool ListResourceDefinitionVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourceDefinitionVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourceDefinitionVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListResourceDefinitionVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourceDefinitionVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceDefinitionVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListResourceDefinitionVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListResourceDefinitionVersionsRequest instance.
+ */
+ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequestPrivate(
+    const GreengrassRequest::Action action, ListResourceDefinitionVersionsRequest * const q)
+    : ListResourceDefinitionVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceDefinitionVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourceDefinitionVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourceDefinitionVersionsRequest instance.
+ */
+ListResourceDefinitionVersionsRequestPrivate::ListResourceDefinitionVersionsRequestPrivate(
+    const ListResourceDefinitionVersionsRequestPrivate &other, ListResourceDefinitionVersionsRequest * const q)
+    : ListResourceDefinitionVersionsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPROVISIONINGARTIFACTREQUEST_P_H
 #define QTAWS_CREATEPROVISIONINGARTIFACTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "createprovisioningartifactrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreateProvisioningArtifactRequest;
+
+class QTAWS_EXPORT CreateProvisioningArtifactRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    CreateProvisioningArtifactRequestPrivate(const ServiceCatalog::Action action,
+                                   CreateProvisioningArtifactRequest * const q);
+    CreateProvisioningArtifactRequestPrivate(const CreateProvisioningArtifactRequestPrivate &other,
+                                   CreateProvisioningArtifactRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProvisioningArtifactRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

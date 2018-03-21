@@ -19,3 +19,107 @@
 
 #include "deletelogstreamrequest.h"
 #include "deletelogstreamrequest_p.h"
+#include "deletelogstreamresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteLogStreamRequest
+ *
+ * @brief  Implements CloudWatchLogs DeleteLogStream requests.
+ *
+ * @see    CloudWatchLogsClient::deleteLogStream
+ */
+
+/**
+ * @brief  Constructs a new DeleteLogStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLogStreamResponse::DeleteLogStreamResponse(
+
+/**
+ * @brief  Constructs a new DeleteLogStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLogStreamRequest::DeleteLogStreamRequest(const DeleteLogStreamRequest &other)
+    : CloudWatchLogsRequest(new DeleteLogStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLogStreamRequest object.
+ */
+DeleteLogStreamRequest::DeleteLogStreamRequest()
+    : CloudWatchLogsRequest(new DeleteLogStreamRequestPrivate(CloudWatchLogsRequest::DeleteLogStreamAction, this))
+{
+
+}
+
+bool DeleteLogStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLogStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLogStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DeleteLogStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLogStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLogStreamRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLogStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLogStreamRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DeleteLogStreamRequest instance.
+ */
+DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DeleteLogStreamRequest * const q)
+    : DeleteLogStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLogStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLogStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLogStreamRequest instance.
+ */
+DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
+    const DeleteLogStreamRequestPrivate &other, DeleteLogStreamRequest * const q)
+    : DeleteLogStreamPrivate(other, q)
+{
+
+}

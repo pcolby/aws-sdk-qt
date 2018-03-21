@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_UPDATETAGSFORRESOURCEREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "updatetagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateTagsForResourceRequest;
+
+class QTAWS_EXPORT UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    UpdateTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,
+                                   UpdateTagsForResourceRequest * const q);
+    UpdateTagsForResourceRequestPrivate(const UpdateTagsForResourceRequestPrivate &other,
+                                   UpdateTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTagsForResourceRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

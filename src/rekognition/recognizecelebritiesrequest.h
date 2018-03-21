@@ -20,4 +20,32 @@
 #ifndef QTAWS_RECOGNIZECELEBRITIESREQUEST_H
 #define QTAWS_RECOGNIZECELEBRITIESREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class RecognizeCelebritiesRequestPrivate;
+
+class QTAWS_EXPORT RecognizeCelebritiesRequest : public RekognitionRequest {
+
+public:
+    RecognizeCelebritiesRequest(const RecognizeCelebritiesRequest &other);
+    RecognizeCelebritiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RecognizeCelebritiesRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

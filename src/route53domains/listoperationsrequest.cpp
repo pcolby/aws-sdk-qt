@@ -19,3 +19,107 @@
 
 #include "listoperationsrequest.h"
 #include "listoperationsrequest_p.h"
+#include "listoperationsresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  ListOperationsRequest
+ *
+ * @brief  Implements Route53Domains ListOperations requests.
+ *
+ * @see    Route53DomainsClient::listOperations
+ */
+
+/**
+ * @brief  Constructs a new ListOperationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOperationsResponse::ListOperationsResponse(
+
+/**
+ * @brief  Constructs a new ListOperationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOperationsRequest::ListOperationsRequest(const ListOperationsRequest &other)
+    : Route53DomainsRequest(new ListOperationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOperationsRequest object.
+ */
+ListOperationsRequest::ListOperationsRequest()
+    : Route53DomainsRequest(new ListOperationsRequestPrivate(Route53DomainsRequest::ListOperationsAction, this))
+{
+
+}
+
+bool ListOperationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOperationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOperationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOperationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOperationsRequestPrivate
+ *
+ * @brief  Private implementation for ListOperationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOperationsRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public ListOperationsRequest instance.
+ */
+ListOperationsRequestPrivate::ListOperationsRequestPrivate(
+    const Route53DomainsRequest::Action action, ListOperationsRequest * const q)
+    : ListOperationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOperationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOperationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOperationsRequest instance.
+ */
+ListOperationsRequestPrivate::ListOperationsRequestPrivate(
+    const ListOperationsRequestPrivate &other, ListOperationsRequest * const q)
+    : ListOperationsPrivate(other, q)
+{
+
+}

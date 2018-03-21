@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETVPCLINKSREQUEST_P_H
 #define QTAWS_GETVPCLINKSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getvpclinksrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetVpcLinksRequest;
+
+class QTAWS_EXPORT GetVpcLinksRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetVpcLinksRequestPrivate(const APIGateway::Action action,
+                                   GetVpcLinksRequest * const q);
+    GetVpcLinksRequestPrivate(const GetVpcLinksRequestPrivate &other,
+                                   GetVpcLinksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetVpcLinksRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

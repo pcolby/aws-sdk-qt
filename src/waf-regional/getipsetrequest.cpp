@@ -19,3 +19,107 @@
 
 #include "getipsetrequest.h"
 #include "getipsetrequest_p.h"
+#include "getipsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetIPSetRequest
+ *
+ * @brief  Implements WAFRegional GetIPSet requests.
+ *
+ * @see    WAFRegionalClient::getIPSet
+ */
+
+/**
+ * @brief  Constructs a new GetIPSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIPSetResponse::GetIPSetResponse(
+
+/**
+ * @brief  Constructs a new GetIPSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIPSetRequest::GetIPSetRequest(const GetIPSetRequest &other)
+    : WAFRegionalRequest(new GetIPSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIPSetRequest object.
+ */
+GetIPSetRequest::GetIPSetRequest()
+    : WAFRegionalRequest(new GetIPSetRequestPrivate(WAFRegionalRequest::GetIPSetAction, this))
+{
+
+}
+
+bool GetIPSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIPSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIPSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetIPSetRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIPSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIPSetRequestPrivate
+ *
+ * @brief  Private implementation for GetIPSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIPSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetIPSetRequest instance.
+ */
+GetIPSetRequestPrivate::GetIPSetRequestPrivate(
+    const WAFRegionalRequest::Action action, GetIPSetRequest * const q)
+    : GetIPSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIPSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIPSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIPSetRequest instance.
+ */
+GetIPSetRequestPrivate::GetIPSetRequestPrivate(
+    const GetIPSetRequestPrivate &other, GetIPSetRequest * const q)
+    : GetIPSetPrivate(other, q)
+{
+
+}

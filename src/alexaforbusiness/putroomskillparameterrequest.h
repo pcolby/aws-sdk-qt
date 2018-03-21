@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTROOMSKILLPARAMETERREQUEST_H
 #define QTAWS_PUTROOMSKILLPARAMETERREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class PutRoomSkillParameterRequestPrivate;
+
+class QTAWS_EXPORT PutRoomSkillParameterRequest : public AlexaForBusinessRequest {
+
+public:
+    PutRoomSkillParameterRequest(const PutRoomSkillParameterRequest &other);
+    PutRoomSkillParameterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutRoomSkillParameterRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

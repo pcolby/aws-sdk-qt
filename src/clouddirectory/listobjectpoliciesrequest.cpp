@@ -19,3 +19,107 @@
 
 #include "listobjectpoliciesrequest.h"
 #include "listobjectpoliciesrequest_p.h"
+#include "listobjectpoliciesresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectPoliciesRequest
+ *
+ * @brief  Implements CloudDirectory ListObjectPolicies requests.
+ *
+ * @see    CloudDirectoryClient::listObjectPolicies
+ */
+
+/**
+ * @brief  Constructs a new ListObjectPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectPoliciesResponse::ListObjectPoliciesResponse(
+
+/**
+ * @brief  Constructs a new ListObjectPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectPoliciesRequest::ListObjectPoliciesRequest(const ListObjectPoliciesRequest &other)
+    : CloudDirectoryRequest(new ListObjectPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectPoliciesRequest object.
+ */
+ListObjectPoliciesRequest::ListObjectPoliciesRequest()
+    : CloudDirectoryRequest(new ListObjectPoliciesRequestPrivate(CloudDirectoryRequest::ListObjectPoliciesAction, this))
+{
+
+}
+
+bool ListObjectPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListObjectPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for ListObjectPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectPoliciesRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListObjectPoliciesRequest instance.
+ */
+ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListObjectPoliciesRequest * const q)
+    : ListObjectPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectPoliciesRequest instance.
+ */
+ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
+    const ListObjectPoliciesRequestPrivate &other, ListObjectPoliciesRequest * const q)
+    : ListObjectPoliciesPrivate(other, q)
+{
+
+}

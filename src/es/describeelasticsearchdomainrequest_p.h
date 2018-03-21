@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINREQUEST_P_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINREQUEST_P_H
 
+#include "elasticsearchservice_p.h"
+#include "describeelasticsearchdomainrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DescribeElasticsearchDomainRequest;
+
+class QTAWS_EXPORT DescribeElasticsearchDomainRequestPrivate : public ElasticsearchServicePrivate {
+
+public:
+    DescribeElasticsearchDomainRequestPrivate(const ElasticsearchService::Action action,
+                                   DescribeElasticsearchDomainRequest * const q);
+    DescribeElasticsearchDomainRequestPrivate(const DescribeElasticsearchDomainRequestPrivate &other,
+                                   DescribeElasticsearchDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticsearchDomainRequest)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

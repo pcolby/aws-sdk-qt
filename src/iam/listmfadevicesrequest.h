@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTMFADEVICESREQUEST_H
 #define QTAWS_LISTMFADEVICESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListMFADevicesRequestPrivate;
+
+class QTAWS_EXPORT ListMFADevicesRequest : public IAMRequest {
+
+public:
+    ListMFADevicesRequest(const ListMFADevicesRequest &other);
+    ListMFADevicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListMFADevicesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

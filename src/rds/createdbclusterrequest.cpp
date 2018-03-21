@@ -19,3 +19,107 @@
 
 #include "createdbclusterrequest.h"
 #include "createdbclusterrequest_p.h"
+#include "createdbclusterresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBClusterRequest
+ *
+ * @brief  Implements RDS CreateDBCluster requests.
+ *
+ * @see    RDSClient::createDBCluster
+ */
+
+/**
+ * @brief  Constructs a new CreateDBClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBClusterResponse::CreateDBClusterResponse(
+
+/**
+ * @brief  Constructs a new CreateDBClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBClusterRequest::CreateDBClusterRequest(const CreateDBClusterRequest &other)
+    : RDSRequest(new CreateDBClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBClusterRequest object.
+ */
+CreateDBClusterRequest::CreateDBClusterRequest()
+    : RDSRequest(new CreateDBClusterRequestPrivate(RDSRequest::CreateDBClusterAction, this))
+{
+
+}
+
+bool CreateDBClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBClusterRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBClusterRequest instance.
+ */
+CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
+    const RDSRequest::Action action, CreateDBClusterRequest * const q)
+    : CreateDBClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBClusterRequest instance.
+ */
+CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
+    const CreateDBClusterRequestPrivate &other, CreateDBClusterRequest * const q)
+    : CreateDBClusterPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESNAPSHOTREQUEST_H
 #define QTAWS_CREATESNAPSHOTREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateSnapshotRequestPrivate;
+
+class QTAWS_EXPORT CreateSnapshotRequest : public ElastiCacheRequest {
+
+public:
+    CreateSnapshotRequest(const CreateSnapshotRequest &other);
+    CreateSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSnapshotRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

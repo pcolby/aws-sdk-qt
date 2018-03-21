@@ -19,3 +19,107 @@
 
 #include "createregexpatternsetrequest.h"
 #include "createregexpatternsetrequest_p.h"
+#include "createregexpatternsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateRegexPatternSetRequest
+ *
+ * @brief  Implements WAFRegional CreateRegexPatternSet requests.
+ *
+ * @see    WAFRegionalClient::createRegexPatternSet
+ */
+
+/**
+ * @brief  Constructs a new CreateRegexPatternSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRegexPatternSetResponse::CreateRegexPatternSetResponse(
+
+/**
+ * @brief  Constructs a new CreateRegexPatternSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRegexPatternSetRequest::CreateRegexPatternSetRequest(const CreateRegexPatternSetRequest &other)
+    : WAFRegionalRequest(new CreateRegexPatternSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRegexPatternSetRequest object.
+ */
+CreateRegexPatternSetRequest::CreateRegexPatternSetRequest()
+    : WAFRegionalRequest(new CreateRegexPatternSetRequestPrivate(WAFRegionalRequest::CreateRegexPatternSetAction, this))
+{
+
+}
+
+bool CreateRegexPatternSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRegexPatternSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRegexPatternSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRegexPatternSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRegexPatternSetRequestPrivate
+ *
+ * @brief  Private implementation for CreateRegexPatternSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public CreateRegexPatternSetRequest instance.
+ */
+CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
+    const WAFRegionalRequest::Action action, CreateRegexPatternSetRequest * const q)
+    : CreateRegexPatternSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRegexPatternSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRegexPatternSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRegexPatternSetRequest instance.
+ */
+CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
+    const CreateRegexPatternSetRequestPrivate &other, CreateRegexPatternSetRequest * const q)
+    : CreateRegexPatternSetPrivate(other, q)
+{
+
+}

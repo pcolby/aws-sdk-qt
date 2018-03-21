@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_H
 #define QTAWS_DELETEGROUPREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteGroupRequest : public GreengrassRequest {
+
+public:
+    DeleteGroupRequest(const DeleteGroupRequest &other);
+    DeleteGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGroupRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

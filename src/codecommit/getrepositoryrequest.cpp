@@ -19,3 +19,107 @@
 
 #include "getrepositoryrequest.h"
 #include "getrepositoryrequest_p.h"
+#include "getrepositoryresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetRepositoryRequest
+ *
+ * @brief  Implements CodeCommit GetRepository requests.
+ *
+ * @see    CodeCommitClient::getRepository
+ */
+
+/**
+ * @brief  Constructs a new GetRepositoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRepositoryResponse::GetRepositoryResponse(
+
+/**
+ * @brief  Constructs a new GetRepositoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRepositoryRequest::GetRepositoryRequest(const GetRepositoryRequest &other)
+    : CodeCommitRequest(new GetRepositoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRepositoryRequest object.
+ */
+GetRepositoryRequest::GetRepositoryRequest()
+    : CodeCommitRequest(new GetRepositoryRequestPrivate(CodeCommitRequest::GetRepositoryAction, this))
+{
+
+}
+
+bool GetRepositoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRepositoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRepositoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * GetRepositoryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRepositoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRepositoryRequestPrivate
+ *
+ * @brief  Private implementation for GetRepositoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRepositoryRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public GetRepositoryRequest instance.
+ */
+GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
+    const CodeCommitRequest::Action action, GetRepositoryRequest * const q)
+    : GetRepositoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRepositoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRepositoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRepositoryRequest instance.
+ */
+GetRepositoryRequestPrivate::GetRepositoryRequestPrivate(
+    const GetRepositoryRequestPrivate &other, GetRepositoryRequest * const q)
+    : GetRepositoryPrivate(other, q)
+{
+
+}

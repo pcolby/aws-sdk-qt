@@ -19,3 +19,107 @@
 
 #include "putitemrequest.h"
 #include "putitemrequest_p.h"
+#include "putitemresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  PutItemRequest
+ *
+ * @brief  Implements DynamoDB PutItem requests.
+ *
+ * @see    DynamoDBClient::putItem
+ */
+
+/**
+ * @brief  Constructs a new PutItemResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutItemResponse::PutItemResponse(
+
+/**
+ * @brief  Constructs a new PutItemRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutItemRequest::PutItemRequest(const PutItemRequest &other)
+    : DynamoDBRequest(new PutItemRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutItemRequest object.
+ */
+PutItemRequest::PutItemRequest()
+    : DynamoDBRequest(new PutItemRequestPrivate(DynamoDBRequest::PutItemAction, this))
+{
+
+}
+
+bool PutItemRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutItemResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutItemResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * PutItemRequest::response(QNetworkReply * const reply) const
+{
+    return new PutItemResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutItemRequestPrivate
+ *
+ * @brief  Private implementation for PutItemRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutItemRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public PutItemRequest instance.
+ */
+PutItemRequestPrivate::PutItemRequestPrivate(
+    const DynamoDBRequest::Action action, PutItemRequest * const q)
+    : PutItemPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutItemRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutItemRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutItemRequest instance.
+ */
+PutItemRequestPrivate::PutItemRequestPrivate(
+    const PutItemRequestPrivate &other, PutItemRequest * const q)
+    : PutItemPrivate(other, q)
+{
+
+}

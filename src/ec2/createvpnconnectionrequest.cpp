@@ -19,3 +19,107 @@
 
 #include "createvpnconnectionrequest.h"
 #include "createvpnconnectionrequest_p.h"
+#include "createvpnconnectionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpnConnectionRequest
+ *
+ * @brief  Implements EC2 CreateVpnConnection requests.
+ *
+ * @see    EC2Client::createVpnConnection
+ */
+
+/**
+ * @brief  Constructs a new CreateVpnConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpnConnectionResponse::CreateVpnConnectionResponse(
+
+/**
+ * @brief  Constructs a new CreateVpnConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateVpnConnectionRequest::CreateVpnConnectionRequest(const CreateVpnConnectionRequest &other)
+    : EC2Request(new CreateVpnConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateVpnConnectionRequest object.
+ */
+CreateVpnConnectionRequest::CreateVpnConnectionRequest()
+    : EC2Request(new CreateVpnConnectionRequestPrivate(EC2Request::CreateVpnConnectionAction, this))
+{
+
+}
+
+bool CreateVpnConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateVpnConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateVpnConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateVpnConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateVpnConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpnConnectionRequestPrivate
+ *
+ * @brief  Private implementation for CreateVpnConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnConnectionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateVpnConnectionRequest instance.
+ */
+CreateVpnConnectionRequestPrivate::CreateVpnConnectionRequestPrivate(
+    const EC2Request::Action action, CreateVpnConnectionRequest * const q)
+    : CreateVpnConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateVpnConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateVpnConnectionRequest instance.
+ */
+CreateVpnConnectionRequestPrivate::CreateVpnConnectionRequestPrivate(
+    const CreateVpnConnectionRequestPrivate &other, CreateVpnConnectionRequest * const q)
+    : CreateVpnConnectionPrivate(other, q)
+{
+
+}

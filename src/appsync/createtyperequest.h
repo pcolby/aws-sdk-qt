@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETYPEREQUEST_H
 #define QTAWS_CREATETYPEREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateTypeRequestPrivate;
+
+class QTAWS_EXPORT CreateTypeRequest : public AppSyncRequest {
+
+public:
+    CreateTypeRequest(const CreateTypeRequest &other);
+    CreateTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTypeRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

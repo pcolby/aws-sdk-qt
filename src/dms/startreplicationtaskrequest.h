@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTREPLICATIONTASKREQUEST_H
 #define QTAWS_STARTREPLICATIONTASKREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class StartReplicationTaskRequestPrivate;
+
+class QTAWS_EXPORT StartReplicationTaskRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    StartReplicationTaskRequest(const StartReplicationTaskRequest &other);
+    StartReplicationTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartReplicationTaskRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

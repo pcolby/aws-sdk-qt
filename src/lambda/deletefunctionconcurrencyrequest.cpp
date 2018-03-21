@@ -19,3 +19,107 @@
 
 #include "deletefunctionconcurrencyrequest.h"
 #include "deletefunctionconcurrencyrequest_p.h"
+#include "deletefunctionconcurrencyresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  DeleteFunctionConcurrencyRequest
+ *
+ * @brief  Implements Lambda DeleteFunctionConcurrency requests.
+ *
+ * @see    LambdaClient::deleteFunctionConcurrency
+ */
+
+/**
+ * @brief  Constructs a new DeleteFunctionConcurrencyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionConcurrencyResponse::DeleteFunctionConcurrencyResponse(
+
+/**
+ * @brief  Constructs a new DeleteFunctionConcurrencyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest(const DeleteFunctionConcurrencyRequest &other)
+    : LambdaRequest(new DeleteFunctionConcurrencyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFunctionConcurrencyRequest object.
+ */
+DeleteFunctionConcurrencyRequest::DeleteFunctionConcurrencyRequest()
+    : LambdaRequest(new DeleteFunctionConcurrencyRequestPrivate(LambdaRequest::DeleteFunctionConcurrencyAction, this))
+{
+
+}
+
+bool DeleteFunctionConcurrencyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFunctionConcurrencyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFunctionConcurrencyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFunctionConcurrencyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionConcurrencyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFunctionConcurrencyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public DeleteFunctionConcurrencyRequest instance.
+ */
+DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
+    const LambdaRequest::Action action, DeleteFunctionConcurrencyRequest * const q)
+    : DeleteFunctionConcurrencyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionConcurrencyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFunctionConcurrencyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFunctionConcurrencyRequest instance.
+ */
+DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
+    const DeleteFunctionConcurrencyRequestPrivate &other, DeleteFunctionConcurrencyRequest * const q)
+    : DeleteFunctionConcurrencyPrivate(other, q)
+{
+
+}

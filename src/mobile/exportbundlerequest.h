@@ -20,4 +20,32 @@
 #ifndef QTAWS_EXPORTBUNDLEREQUEST_H
 #define QTAWS_EXPORTBUNDLEREQUEST_H
 
+#include "mobilerequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class ExportBundleRequestPrivate;
+
+class QTAWS_EXPORT ExportBundleRequest : public MobileRequest {
+
+public:
+    ExportBundleRequest(const ExportBundleRequest &other);
+    ExportBundleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ExportBundleRequest)
+
+}
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

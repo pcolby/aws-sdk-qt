@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETREPOSITORYTRIGGERSREQUEST_H
 #define QTAWS_GETREPOSITORYTRIGGERSREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetRepositoryTriggersRequestPrivate;
+
+class QTAWS_EXPORT GetRepositoryTriggersRequest : public CodeCommitRequest {
+
+public:
+    GetRepositoryTriggersRequest(const GetRepositoryTriggersRequest &other);
+    GetRepositoryTriggersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRepositoryTriggersRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

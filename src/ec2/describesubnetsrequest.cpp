@@ -19,3 +19,107 @@
 
 #include "describesubnetsrequest.h"
 #include "describesubnetsrequest_p.h"
+#include "describesubnetsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSubnetsRequest
+ *
+ * @brief  Implements EC2 DescribeSubnets requests.
+ *
+ * @see    EC2Client::describeSubnets
+ */
+
+/**
+ * @brief  Constructs a new DescribeSubnetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubnetsResponse::DescribeSubnetsResponse(
+
+/**
+ * @brief  Constructs a new DescribeSubnetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSubnetsRequest::DescribeSubnetsRequest(const DescribeSubnetsRequest &other)
+    : EC2Request(new DescribeSubnetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSubnetsRequest object.
+ */
+DescribeSubnetsRequest::DescribeSubnetsRequest()
+    : EC2Request(new DescribeSubnetsRequestPrivate(EC2Request::DescribeSubnetsAction, this))
+{
+
+}
+
+bool DescribeSubnetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSubnetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSubnetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSubnetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubnetsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSubnetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubnetsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSubnetsRequest instance.
+ */
+DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
+    const EC2Request::Action action, DescribeSubnetsRequest * const q)
+    : DescribeSubnetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubnetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSubnetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSubnetsRequest instance.
+ */
+DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
+    const DescribeSubnetsRequestPrivate &other, DescribeSubnetsRequest * const q)
+    : DescribeSubnetsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHTYPEDLINKREQUEST_H
 #define QTAWS_ATTACHTYPEDLINKREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachTypedLinkRequestPrivate;
+
+class QTAWS_EXPORT AttachTypedLinkRequest : public CloudDirectoryRequest {
+
+public:
+    AttachTypedLinkRequest(const AttachTypedLinkRequest &other);
+    AttachTypedLinkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachTypedLinkRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

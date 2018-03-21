@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATELOGGERDEFINITIONREQUEST_P_H
 #define QTAWS_UPDATELOGGERDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "updateloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateLoggerDefinitionRequest;
+
+class QTAWS_EXPORT UpdateLoggerDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    UpdateLoggerDefinitionRequestPrivate(const Greengrass::Action action,
+                                   UpdateLoggerDefinitionRequest * const q);
+    UpdateLoggerDefinitionRequestPrivate(const UpdateLoggerDefinitionRequestPrivate &other,
+                                   UpdateLoggerDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateLoggerDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

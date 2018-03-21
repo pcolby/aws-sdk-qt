@@ -19,3 +19,107 @@
 
 #include "describecontainerrequest.h"
 #include "describecontainerrequest_p.h"
+#include "describecontainerresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DescribeContainerRequest
+ *
+ * @brief  Implements MediaStore DescribeContainer requests.
+ *
+ * @see    MediaStoreClient::describeContainer
+ */
+
+/**
+ * @brief  Constructs a new DescribeContainerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeContainerResponse::DescribeContainerResponse(
+
+/**
+ * @brief  Constructs a new DescribeContainerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeContainerRequest::DescribeContainerRequest(const DescribeContainerRequest &other)
+    : MediaStoreRequest(new DescribeContainerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeContainerRequest object.
+ */
+DescribeContainerRequest::DescribeContainerRequest()
+    : MediaStoreRequest(new DescribeContainerRequestPrivate(MediaStoreRequest::DescribeContainerAction, this))
+{
+
+}
+
+bool DescribeContainerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeContainerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeContainerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * DescribeContainerRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeContainerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeContainerRequestPrivate
+ *
+ * @brief  Private implementation for DescribeContainerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeContainerRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public DescribeContainerRequest instance.
+ */
+DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
+    const MediaStoreRequest::Action action, DescribeContainerRequest * const q)
+    : DescribeContainerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeContainerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeContainerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeContainerRequest instance.
+ */
+DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
+    const DescribeContainerRequestPrivate &other, DescribeContainerRequest * const q)
+    : DescribeContainerPrivate(other, q)
+{
+
+}

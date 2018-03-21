@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEADDRESSREQUEST_H
 #define QTAWS_DESCRIBEADDRESSREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class DescribeAddressRequestPrivate;
+
+class QTAWS_EXPORT DescribeAddressRequest : public SnowballRequest {
+
+public:
+    DescribeAddressRequest(const DescribeAddressRequest &other);
+    DescribeAddressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAddressRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

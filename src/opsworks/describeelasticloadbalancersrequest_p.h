@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEELASTICLOADBALANCERSREQUEST_P_H
 #define QTAWS_DESCRIBEELASTICLOADBALANCERSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeelasticloadbalancersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeElasticLoadBalancersRequest;
+
+class QTAWS_EXPORT DescribeElasticLoadBalancersRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeElasticLoadBalancersRequestPrivate(const OpsWorks::Action action,
+                                   DescribeElasticLoadBalancersRequest * const q);
+    DescribeElasticLoadBalancersRequestPrivate(const DescribeElasticLoadBalancersRequestPrivate &other,
+                                   DescribeElasticLoadBalancersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticLoadBalancersRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

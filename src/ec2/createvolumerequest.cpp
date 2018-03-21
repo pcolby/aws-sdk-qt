@@ -19,3 +19,107 @@
 
 #include "createvolumerequest.h"
 #include "createvolumerequest_p.h"
+#include "createvolumeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVolumeRequest
+ *
+ * @brief  Implements EC2 CreateVolume requests.
+ *
+ * @see    EC2Client::createVolume
+ */
+
+/**
+ * @brief  Constructs a new CreateVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVolumeResponse::CreateVolumeResponse(
+
+/**
+ * @brief  Constructs a new CreateVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest &other)
+    : EC2Request(new CreateVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateVolumeRequest object.
+ */
+CreateVolumeRequest::CreateVolumeRequest()
+    : EC2Request(new CreateVolumeRequestPrivate(EC2Request::CreateVolumeAction, this))
+{
+
+}
+
+bool CreateVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVolumeRequestPrivate
+ *
+ * @brief  Private implementation for CreateVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVolumeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateVolumeRequest instance.
+ */
+CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
+    const EC2Request::Action action, CreateVolumeRequest * const q)
+    : CreateVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateVolumeRequest instance.
+ */
+CreateVolumeRequestPrivate::CreateVolumeRequestPrivate(
+    const CreateVolumeRequestPrivate &other, CreateVolumeRequest * const q)
+    : CreateVolumePrivate(other, q)
+{
+
+}

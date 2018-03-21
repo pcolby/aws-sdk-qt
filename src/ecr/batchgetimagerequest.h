@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHGETIMAGEREQUEST_H
 #define QTAWS_BATCHGETIMAGEREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchGetImageRequestPrivate;
+
+class QTAWS_EXPORT BatchGetImageRequest : public ECRRequest {
+
+public:
+    BatchGetImageRequest(const BatchGetImageRequest &other);
+    BatchGetImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetImageRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPIPELINEDEFINITIONREQUEST_H
 #define QTAWS_GETPIPELINEDEFINITIONREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class GetPipelineDefinitionRequestPrivate;
+
+class QTAWS_EXPORT GetPipelineDefinitionRequest : public DataPipelineRequest {
+
+public:
+    GetPipelineDefinitionRequest(const GetPipelineDefinitionRequest &other);
+    GetPipelineDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPipelineDefinitionRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

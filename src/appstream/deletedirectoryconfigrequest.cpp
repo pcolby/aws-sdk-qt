@@ -19,3 +19,107 @@
 
 #include "deletedirectoryconfigrequest.h"
 #include "deletedirectoryconfigrequest_p.h"
+#include "deletedirectoryconfigresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DeleteDirectoryConfigRequest
+ *
+ * @brief  Implements AppStream DeleteDirectoryConfig requests.
+ *
+ * @see    AppStreamClient::deleteDirectoryConfig
+ */
+
+/**
+ * @brief  Constructs a new DeleteDirectoryConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
+
+/**
+ * @brief  Constructs a new DeleteDirectoryConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest(const DeleteDirectoryConfigRequest &other)
+    : AppStreamRequest(new DeleteDirectoryConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDirectoryConfigRequest object.
+ */
+DeleteDirectoryConfigRequest::DeleteDirectoryConfigRequest()
+    : AppStreamRequest(new DeleteDirectoryConfigRequestPrivate(AppStreamRequest::DeleteDirectoryConfigAction, this))
+{
+
+}
+
+bool DeleteDirectoryConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDirectoryConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDirectoryConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDirectoryConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectoryConfigRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDirectoryConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public DeleteDirectoryConfigRequest instance.
+ */
+DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
+    const AppStreamRequest::Action action, DeleteDirectoryConfigRequest * const q)
+    : DeleteDirectoryConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectoryConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDirectoryConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDirectoryConfigRequest instance.
+ */
+DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
+    const DeleteDirectoryConfigRequestPrivate &other, DeleteDirectoryConfigRequest * const q)
+    : DeleteDirectoryConfigPrivate(other, q)
+{
+
+}

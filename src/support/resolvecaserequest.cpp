@@ -19,3 +19,107 @@
 
 #include "resolvecaserequest.h"
 #include "resolvecaserequest_p.h"
+#include "resolvecaseresponse.h"
+#include "supportrequest_p.h"
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  ResolveCaseRequest
+ *
+ * @brief  Implements Support ResolveCase requests.
+ *
+ * @see    SupportClient::resolveCase
+ */
+
+/**
+ * @brief  Constructs a new ResolveCaseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResolveCaseResponse::ResolveCaseResponse(
+
+/**
+ * @brief  Constructs a new ResolveCaseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResolveCaseRequest::ResolveCaseRequest(const ResolveCaseRequest &other)
+    : SupportRequest(new ResolveCaseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResolveCaseRequest object.
+ */
+ResolveCaseRequest::ResolveCaseRequest()
+    : SupportRequest(new ResolveCaseRequestPrivate(SupportRequest::ResolveCaseAction, this))
+{
+
+}
+
+bool ResolveCaseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResolveCaseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResolveCaseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SupportClient::send
+ */
+AwsAbstractResponse * ResolveCaseRequest::response(QNetworkReply * const reply) const
+{
+    return new ResolveCaseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResolveCaseRequestPrivate
+ *
+ * @brief  Private implementation for ResolveCaseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResolveCaseRequestPrivate object.
+ *
+ * @param  action  Support action being performed.
+ * @param  q       Pointer to this object's public ResolveCaseRequest instance.
+ */
+ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
+    const SupportRequest::Action action, ResolveCaseRequest * const q)
+    : ResolveCasePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResolveCaseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResolveCaseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResolveCaseRequest instance.
+ */
+ResolveCaseRequestPrivate::ResolveCaseRequestPrivate(
+    const ResolveCaseRequestPrivate &other, ResolveCaseRequest * const q)
+    : ResolveCasePrivate(other, q)
+{
+
+}

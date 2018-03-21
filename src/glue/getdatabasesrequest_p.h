@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDATABASESREQUEST_P_H
 #define QTAWS_GETDATABASESREQUEST_P_H
 
+#include "glue_p.h"
+#include "getdatabasesrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDatabasesRequest;
+
+class QTAWS_EXPORT GetDatabasesRequestPrivate : public GluePrivate {
+
+public:
+    GetDatabasesRequestPrivate(const Glue::Action action,
+                                   GetDatabasesRequest * const q);
+    GetDatabasesRequestPrivate(const GetDatabasesRequestPrivate &other,
+                                   GetDatabasesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDatabasesRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTYPEDLINKFACETNAMESREQUEST_P_H
 #define QTAWS_LISTTYPEDLINKFACETNAMESREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listtypedlinkfacetnamesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListTypedLinkFacetNamesRequest;
+
+class QTAWS_EXPORT ListTypedLinkFacetNamesRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListTypedLinkFacetNamesRequestPrivate(const CloudDirectory::Action action,
+                                   ListTypedLinkFacetNamesRequest * const q);
+    ListTypedLinkFacetNamesRequestPrivate(const ListTypedLinkFacetNamesRequestPrivate &other,
+                                   ListTypedLinkFacetNamesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTypedLinkFacetNamesRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "mergeshardsrequest.h"
 #include "mergeshardsrequest_p.h"
+#include "mergeshardsresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  MergeShardsRequest
+ *
+ * @brief  Implements Kinesis MergeShards requests.
+ *
+ * @see    KinesisClient::mergeShards
+ */
+
+/**
+ * @brief  Constructs a new MergeShardsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MergeShardsResponse::MergeShardsResponse(
+
+/**
+ * @brief  Constructs a new MergeShardsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+MergeShardsRequest::MergeShardsRequest(const MergeShardsRequest &other)
+    : KinesisRequest(new MergeShardsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new MergeShardsRequest object.
+ */
+MergeShardsRequest::MergeShardsRequest()
+    : KinesisRequest(new MergeShardsRequestPrivate(KinesisRequest::MergeShardsAction, this))
+{
+
+}
+
+bool MergeShardsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an MergeShardsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An MergeShardsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * const reply) const
+{
+    return new MergeShardsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  MergeShardsRequestPrivate
+ *
+ * @brief  Private implementation for MergeShardsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergeShardsRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public MergeShardsRequest instance.
+ */
+MergeShardsRequestPrivate::MergeShardsRequestPrivate(
+    const KinesisRequest::Action action, MergeShardsRequest * const q)
+    : MergeShardsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergeShardsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the MergeShardsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public MergeShardsRequest instance.
+ */
+MergeShardsRequestPrivate::MergeShardsRequestPrivate(
+    const MergeShardsRequestPrivate &other, MergeShardsRequest * const q)
+    : MergeShardsPrivate(other, q)
+{
+
+}

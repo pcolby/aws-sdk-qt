@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHTYPEDLINKREQUEST_H
 #define QTAWS_DETACHTYPEDLINKREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachTypedLinkRequestPrivate;
+
+class QTAWS_EXPORT DetachTypedLinkRequest : public CloudDirectoryRequest {
+
+public:
+    DetachTypedLinkRequest(const DetachTypedLinkRequest &other);
+    DetachTypedLinkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachTypedLinkRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

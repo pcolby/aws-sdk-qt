@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHDELETEBUILDSREQUEST_P_H
 #define QTAWS_BATCHDELETEBUILDSREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "batchdeletebuildsrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class BatchDeleteBuildsRequest;
+
+class QTAWS_EXPORT BatchDeleteBuildsRequestPrivate : public CodeBuildPrivate {
+
+public:
+    BatchDeleteBuildsRequestPrivate(const CodeBuild::Action action,
+                                   BatchDeleteBuildsRequest * const q);
+    BatchDeleteBuildsRequestPrivate(const BatchDeleteBuildsRequestPrivate &other,
+                                   BatchDeleteBuildsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDeleteBuildsRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updateskillgrouprequest.h"
 #include "updateskillgrouprequest_p.h"
+#include "updateskillgroupresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateSkillGroupRequest
+ *
+ * @brief  Implements AlexaForBusiness UpdateSkillGroup requests.
+ *
+ * @see    AlexaForBusinessClient::updateSkillGroup
+ */
+
+/**
+ * @brief  Constructs a new UpdateSkillGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSkillGroupResponse::UpdateSkillGroupResponse(
+
+/**
+ * @brief  Constructs a new UpdateSkillGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSkillGroupRequest::UpdateSkillGroupRequest(const UpdateSkillGroupRequest &other)
+    : AlexaForBusinessRequest(new UpdateSkillGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSkillGroupRequest object.
+ */
+UpdateSkillGroupRequest::UpdateSkillGroupRequest()
+    : AlexaForBusinessRequest(new UpdateSkillGroupRequestPrivate(AlexaForBusinessRequest::UpdateSkillGroupAction, this))
+{
+
+}
+
+bool UpdateSkillGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSkillGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSkillGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSkillGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSkillGroupRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSkillGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSkillGroupRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public UpdateSkillGroupRequest instance.
+ */
+UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
+    const AlexaForBusinessRequest::Action action, UpdateSkillGroupRequest * const q)
+    : UpdateSkillGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSkillGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSkillGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSkillGroupRequest instance.
+ */
+UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
+    const UpdateSkillGroupRequestPrivate &other, UpdateSkillGroupRequest * const q)
+    : UpdateSkillGroupPrivate(other, q)
+{
+
+}

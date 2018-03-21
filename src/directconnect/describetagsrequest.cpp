@@ -19,3 +19,107 @@
 
 #include "describetagsrequest.h"
 #include "describetagsrequest_p.h"
+#include "describetagsresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeTagsRequest
+ *
+ * @brief  Implements DirectConnect DescribeTags requests.
+ *
+ * @see    DirectConnectClient::describeTags
+ */
+
+/**
+ * @brief  Constructs a new DescribeTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTagsResponse::DescribeTagsResponse(
+
+/**
+ * @brief  Constructs a new DescribeTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTagsRequest::DescribeTagsRequest(const DescribeTagsRequest &other)
+    : DirectConnectRequest(new DescribeTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTagsRequest object.
+ */
+DescribeTagsRequest::DescribeTagsRequest()
+    : DirectConnectRequest(new DescribeTagsRequestPrivate(DirectConnectRequest::DescribeTagsAction, this))
+{
+
+}
+
+bool DescribeTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTagsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTagsRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DescribeTagsRequest instance.
+ */
+DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
+    const DirectConnectRequest::Action action, DescribeTagsRequest * const q)
+    : DescribeTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTagsRequest instance.
+ */
+DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
+    const DescribeTagsRequestPrivate &other, DescribeTagsRequest * const q)
+    : DescribeTagsPrivate(other, q)
+{
+
+}

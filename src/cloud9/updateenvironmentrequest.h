@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEENVIRONMENTREQUEST_H
 #define QTAWS_UPDATEENVIRONMENTREQUEST_H
 
+#include "cloud9request.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class UpdateEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT UpdateEnvironmentRequest : public Cloud9Request {
+
+public:
+    UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other);
+    UpdateEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEnvironmentRequest)
+
+}
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMETHODRESPONSEREQUEST_P_H
 #define QTAWS_GETMETHODRESPONSEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getmethodresponserequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetMethodResponseRequest;
+
+class QTAWS_EXPORT GetMethodResponseRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetMethodResponseRequestPrivate(const APIGateway::Action action,
+                                   GetMethodResponseRequest * const q);
+    GetMethodResponseRequestPrivate(const GetMethodResponseRequestPrivate &other,
+                                   GetMethodResponseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMethodResponseRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPROFILEREQUEST_H
 #define QTAWS_CREATEPROFILEREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class CreateProfileRequestPrivate;
+
+class QTAWS_EXPORT CreateProfileRequest : public AlexaForBusinessRequest {
+
+public:
+    CreateProfileRequest(const CreateProfileRequest &other);
+    CreateProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProfileRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

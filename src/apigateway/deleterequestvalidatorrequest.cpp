@@ -19,3 +19,107 @@
 
 #include "deleterequestvalidatorrequest.h"
 #include "deleterequestvalidatorrequest_p.h"
+#include "deleterequestvalidatorresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteRequestValidatorRequest
+ *
+ * @brief  Implements APIGateway DeleteRequestValidator requests.
+ *
+ * @see    APIGatewayClient::deleteRequestValidator
+ */
+
+/**
+ * @brief  Constructs a new DeleteRequestValidatorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
+
+/**
+ * @brief  Constructs a new DeleteRequestValidatorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRequestValidatorRequest::DeleteRequestValidatorRequest(const DeleteRequestValidatorRequest &other)
+    : APIGatewayRequest(new DeleteRequestValidatorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRequestValidatorRequest object.
+ */
+DeleteRequestValidatorRequest::DeleteRequestValidatorRequest()
+    : APIGatewayRequest(new DeleteRequestValidatorRequestPrivate(APIGatewayRequest::DeleteRequestValidatorAction, this))
+{
+
+}
+
+bool DeleteRequestValidatorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRequestValidatorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRequestValidatorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRequestValidatorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRequestValidatorRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRequestValidatorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteRequestValidatorRequest instance.
+ */
+DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteRequestValidatorRequest * const q)
+    : DeleteRequestValidatorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRequestValidatorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRequestValidatorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRequestValidatorRequest instance.
+ */
+DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
+    const DeleteRequestValidatorRequestPrivate &other, DeleteRequestValidatorRequest * const q)
+    : DeleteRequestValidatorPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERATEBASEDRULEREQUEST_P_H
 #define QTAWS_UPDATERATEBASEDRULEREQUEST_P_H
 
+#include "waf_p.h"
+#include "updateratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateRateBasedRuleRequest;
+
+class QTAWS_EXPORT UpdateRateBasedRuleRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateRateBasedRuleRequestPrivate(const WAF::Action action,
+                                   UpdateRateBasedRuleRequest * const q);
+    UpdateRateBasedRuleRequestPrivate(const UpdateRateBasedRuleRequestPrivate &other,
+                                   UpdateRateBasedRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRateBasedRuleRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

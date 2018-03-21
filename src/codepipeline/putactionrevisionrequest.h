@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTACTIONREVISIONREQUEST_H
 #define QTAWS_PUTACTIONREVISIONREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutActionRevisionRequestPrivate;
+
+class QTAWS_EXPORT PutActionRevisionRequest : public CodePipelineRequest {
+
+public:
+    PutActionRevisionRequest(const PutActionRevisionRequest &other);
+    PutActionRevisionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutActionRevisionRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

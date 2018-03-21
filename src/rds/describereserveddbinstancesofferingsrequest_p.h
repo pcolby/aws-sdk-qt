@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describereserveddbinstancesofferingsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeReservedDBInstancesOfferingsRequest;
+
+class QTAWS_EXPORT DescribeReservedDBInstancesOfferingsRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeReservedDBInstancesOfferingsRequestPrivate(const RDS::Action action,
+                                   DescribeReservedDBInstancesOfferingsRequest * const q);
+    DescribeReservedDBInstancesOfferingsRequestPrivate(const DescribeReservedDBInstancesOfferingsRequestPrivate &other,
+                                   DescribeReservedDBInstancesOfferingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedDBInstancesOfferingsRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

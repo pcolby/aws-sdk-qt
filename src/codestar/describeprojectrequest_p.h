@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPROJECTREQUEST_P_H
 #define QTAWS_DESCRIBEPROJECTREQUEST_P_H
 
+#include "codestar_p.h"
+#include "describeprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DescribeProjectRequest;
+
+class QTAWS_EXPORT DescribeProjectRequestPrivate : public CodeStarPrivate {
+
+public:
+    DescribeProjectRequestPrivate(const CodeStar::Action action,
+                                   DescribeProjectRequest * const q);
+    DescribeProjectRequestPrivate(const DescribeProjectRequestPrivate &other,
+                                   DescribeProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProjectRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

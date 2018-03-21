@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLREQUEST_H
 #define QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreatePresignedNotebookInstanceUrlRequestPrivate;
+
+class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlRequest : public SageMakerRequest {
+
+public:
+    CreatePresignedNotebookInstanceUrlRequest(const CreatePresignedNotebookInstanceUrlRequest &other);
+    CreatePresignedNotebookInstanceUrlRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePresignedNotebookInstanceUrlRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

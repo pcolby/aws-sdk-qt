@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTPERMISSIONREQUEST_H
 #define QTAWS_DESCRIBEDOCUMENTPERMISSIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeDocumentPermissionRequestPrivate;
+
+class QTAWS_EXPORT DescribeDocumentPermissionRequest : public SSMRequest {
+
+public:
+    DescribeDocumentPermissionRequest(const DescribeDocumentPermissionRequest &other);
+    DescribeDocumentPermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDocumentPermissionRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

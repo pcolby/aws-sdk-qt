@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERESOURCEDATASYNCREQUEST_H
 #define QTAWS_CREATERESOURCEDATASYNCREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateResourceDataSyncRequestPrivate;
+
+class QTAWS_EXPORT CreateResourceDataSyncRequest : public SSMRequest {
+
+public:
+    CreateResourceDataSyncRequest(const CreateResourceDataSyncRequest &other);
+    CreateResourceDataSyncRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateResourceDataSyncRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

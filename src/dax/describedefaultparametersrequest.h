@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDEFAULTPARAMETERSREQUEST_H
 #define QTAWS_DESCRIBEDEFAULTPARAMETERSREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DescribeDefaultParametersRequestPrivate;
+
+class QTAWS_EXPORT DescribeDefaultParametersRequest : public DAXRequest {
+
+public:
+    DescribeDefaultParametersRequest(const DescribeDefaultParametersRequest &other);
+    DescribeDefaultParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDefaultParametersRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

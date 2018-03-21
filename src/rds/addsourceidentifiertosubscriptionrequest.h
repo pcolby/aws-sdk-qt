@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONREQUEST_H
 #define QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AddSourceIdentifierToSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequest : public RDSRequest {
+
+public:
+    AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other);
+    AddSourceIdentifierToSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddSourceIdentifierToSubscriptionRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

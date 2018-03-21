@@ -19,3 +19,107 @@
 
 #include "deleteemailchannelrequest.h"
 #include "deleteemailchannelrequest_p.h"
+#include "deleteemailchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteEmailChannelRequest
+ *
+ * @brief  Implements Pinpoint DeleteEmailChannel requests.
+ *
+ * @see    PinpointClient::deleteEmailChannel
+ */
+
+/**
+ * @brief  Constructs a new DeleteEmailChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEmailChannelResponse::DeleteEmailChannelResponse(
+
+/**
+ * @brief  Constructs a new DeleteEmailChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteEmailChannelRequest::DeleteEmailChannelRequest(const DeleteEmailChannelRequest &other)
+    : PinpointRequest(new DeleteEmailChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteEmailChannelRequest object.
+ */
+DeleteEmailChannelRequest::DeleteEmailChannelRequest()
+    : PinpointRequest(new DeleteEmailChannelRequestPrivate(PinpointRequest::DeleteEmailChannelAction, this))
+{
+
+}
+
+bool DeleteEmailChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteEmailChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteEmailChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteEmailChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEmailChannelRequestPrivate
+ *
+ * @brief  Private implementation for DeleteEmailChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEmailChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public DeleteEmailChannelRequest instance.
+ */
+DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
+    const PinpointRequest::Action action, DeleteEmailChannelRequest * const q)
+    : DeleteEmailChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEmailChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteEmailChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteEmailChannelRequest instance.
+ */
+DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
+    const DeleteEmailChannelRequestPrivate &other, DeleteEmailChannelRequest * const q)
+    : DeleteEmailChannelPrivate(other, q)
+{
+
+}

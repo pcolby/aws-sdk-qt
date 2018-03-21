@@ -19,3 +19,107 @@
 
 #include "updatenotificationsettingsrequest.h"
 #include "updatenotificationsettingsrequest_p.h"
+#include "updatenotificationsettingsresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateNotificationSettingsRequest
+ *
+ * @brief  Implements MTurk UpdateNotificationSettings requests.
+ *
+ * @see    MTurkClient::updateNotificationSettings
+ */
+
+/**
+ * @brief  Constructs a new UpdateNotificationSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNotificationSettingsResponse::UpdateNotificationSettingsResponse(
+
+/**
+ * @brief  Constructs a new UpdateNotificationSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateNotificationSettingsRequest::UpdateNotificationSettingsRequest(const UpdateNotificationSettingsRequest &other)
+    : MTurkRequest(new UpdateNotificationSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateNotificationSettingsRequest object.
+ */
+UpdateNotificationSettingsRequest::UpdateNotificationSettingsRequest()
+    : MTurkRequest(new UpdateNotificationSettingsRequestPrivate(MTurkRequest::UpdateNotificationSettingsAction, this))
+{
+
+}
+
+bool UpdateNotificationSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateNotificationSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateNotificationSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * UpdateNotificationSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateNotificationSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNotificationSettingsRequestPrivate
+ *
+ * @brief  Private implementation for UpdateNotificationSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotificationSettingsRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public UpdateNotificationSettingsRequest instance.
+ */
+UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPrivate(
+    const MTurkRequest::Action action, UpdateNotificationSettingsRequest * const q)
+    : UpdateNotificationSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotificationSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateNotificationSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateNotificationSettingsRequest instance.
+ */
+UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPrivate(
+    const UpdateNotificationSettingsRequestPrivate &other, UpdateNotificationSettingsRequest * const q)
+    : UpdateNotificationSettingsPrivate(other, q)
+{
+
+}

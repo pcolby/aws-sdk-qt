@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONNECTIONSREQUEST_H
 #define QTAWS_DESCRIBECONNECTIONSREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeConnectionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeConnectionsRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    DescribeConnectionsRequest(const DescribeConnectionsRequest &other);
+    DescribeConnectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConnectionsRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

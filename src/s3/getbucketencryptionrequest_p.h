@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUCKETENCRYPTIONREQUEST_P_H
 #define QTAWS_GETBUCKETENCRYPTIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "getbucketencryptionrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketEncryptionRequest;
+
+class QTAWS_EXPORT GetBucketEncryptionRequestPrivate : public S3Private {
+
+public:
+    GetBucketEncryptionRequestPrivate(const S3::Action action,
+                                   GetBucketEncryptionRequest * const q);
+    GetBucketEncryptionRequestPrivate(const GetBucketEncryptionRequestPrivate &other,
+                                   GetBucketEncryptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketEncryptionRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

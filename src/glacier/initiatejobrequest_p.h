@@ -20,4 +20,29 @@
 #ifndef QTAWS_INITIATEJOBREQUEST_P_H
 #define QTAWS_INITIATEJOBREQUEST_P_H
 
+#include "glacier_p.h"
+#include "initiatejobrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class InitiateJobRequest;
+
+class QTAWS_EXPORT InitiateJobRequestPrivate : public GlacierPrivate {
+
+public:
+    InitiateJobRequestPrivate(const Glacier::Action action,
+                                   InitiateJobRequest * const q);
+    InitiateJobRequestPrivate(const InitiateJobRequestPrivate &other,
+                                   InitiateJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateJobRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

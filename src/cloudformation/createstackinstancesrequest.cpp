@@ -19,3 +19,107 @@
 
 #include "createstackinstancesrequest.h"
 #include "createstackinstancesrequest_p.h"
+#include "createstackinstancesresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  CreateStackInstancesRequest
+ *
+ * @brief  Implements CloudFormation CreateStackInstances requests.
+ *
+ * @see    CloudFormationClient::createStackInstances
+ */
+
+/**
+ * @brief  Constructs a new CreateStackInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStackInstancesResponse::CreateStackInstancesResponse(
+
+/**
+ * @brief  Constructs a new CreateStackInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateStackInstancesRequest::CreateStackInstancesRequest(const CreateStackInstancesRequest &other)
+    : CloudFormationRequest(new CreateStackInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateStackInstancesRequest object.
+ */
+CreateStackInstancesRequest::CreateStackInstancesRequest()
+    : CloudFormationRequest(new CreateStackInstancesRequestPrivate(CloudFormationRequest::CreateStackInstancesAction, this))
+{
+
+}
+
+bool CreateStackInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateStackInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateStackInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * CreateStackInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateStackInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStackInstancesRequestPrivate
+ *
+ * @brief  Private implementation for CreateStackInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStackInstancesRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public CreateStackInstancesRequest instance.
+ */
+CreateStackInstancesRequestPrivate::CreateStackInstancesRequestPrivate(
+    const CloudFormationRequest::Action action, CreateStackInstancesRequest * const q)
+    : CreateStackInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStackInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateStackInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateStackInstancesRequest instance.
+ */
+CreateStackInstancesRequestPrivate::CreateStackInstancesRequestPrivate(
+    const CreateStackInstancesRequestPrivate &other, CreateStackInstancesRequest * const q)
+    : CreateStackInstancesPrivate(other, q)
+{
+
+}

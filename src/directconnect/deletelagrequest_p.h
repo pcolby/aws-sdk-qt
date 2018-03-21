@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELAGREQUEST_P_H
 #define QTAWS_DELETELAGREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "deletelagrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteLagRequest;
+
+class QTAWS_EXPORT DeleteLagRequestPrivate : public DirectConnectPrivate {
+
+public:
+    DeleteLagRequestPrivate(const DirectConnect::Action action,
+                                   DeleteLagRequest * const q);
+    DeleteLagRequestPrivate(const DeleteLagRequestPrivate &other,
+                                   DeleteLagRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLagRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

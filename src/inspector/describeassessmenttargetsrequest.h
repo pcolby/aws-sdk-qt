@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEASSESSMENTTARGETSREQUEST_H
 #define QTAWS_DESCRIBEASSESSMENTTARGETSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeAssessmentTargetsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAssessmentTargetsRequest : public InspectorRequest {
+
+public:
+    DescribeAssessmentTargetsRequest(const DescribeAssessmentTargetsRequest &other);
+    DescribeAssessmentTargetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAssessmentTargetsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSHARDITERATORREQUEST_H
 #define QTAWS_GETSHARDITERATORREQUEST_H
 
+#include "dynamodbstreamsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class GetShardIteratorRequestPrivate;
+
+class QTAWS_EXPORT GetShardIteratorRequest : public DynamoDBStreamsRequest {
+
+public:
+    GetShardIteratorRequest(const GetShardIteratorRequest &other);
+    GetShardIteratorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetShardIteratorRequest)
+
+}
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

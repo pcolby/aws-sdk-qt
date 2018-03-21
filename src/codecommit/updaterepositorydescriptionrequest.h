@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEREPOSITORYDESCRIPTIONREQUEST_H
 #define QTAWS_UPDATEREPOSITORYDESCRIPTIONREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateRepositoryDescriptionRequestPrivate;
+
+class QTAWS_EXPORT UpdateRepositoryDescriptionRequest : public CodeCommitRequest {
+
+public:
+    UpdateRepositoryDescriptionRequest(const UpdateRepositoryDescriptionRequest &other);
+    UpdateRepositoryDescriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRepositoryDescriptionRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

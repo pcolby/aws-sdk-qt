@@ -19,3 +19,107 @@
 
 #include "describeegressonlyinternetgatewaysrequest.h"
 #include "describeegressonlyinternetgatewaysrequest_p.h"
+#include "describeegressonlyinternetgatewaysresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeEgressOnlyInternetGatewaysRequest
+ *
+ * @brief  Implements EC2 DescribeEgressOnlyInternetGateways requests.
+ *
+ * @see    EC2Client::describeEgressOnlyInternetGateways
+ */
+
+/**
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysResponse(
+
+/**
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest(const DescribeEgressOnlyInternetGatewaysRequest &other)
+    : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequest object.
+ */
+DescribeEgressOnlyInternetGatewaysRequest::DescribeEgressOnlyInternetGatewaysRequest()
+    : EC2Request(new DescribeEgressOnlyInternetGatewaysRequestPrivate(EC2Request::DescribeEgressOnlyInternetGatewaysAction, this))
+{
+
+}
+
+bool DescribeEgressOnlyInternetGatewaysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEgressOnlyInternetGatewaysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEgressOnlyInternetGatewaysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeEgressOnlyInternetGatewaysRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEgressOnlyInternetGatewaysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEgressOnlyInternetGatewaysRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEgressOnlyInternetGatewaysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeEgressOnlyInternetGatewaysRequest instance.
+ */
+DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
+    const EC2Request::Action action, DescribeEgressOnlyInternetGatewaysRequest * const q)
+    : DescribeEgressOnlyInternetGatewaysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEgressOnlyInternetGatewaysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEgressOnlyInternetGatewaysRequest instance.
+ */
+DescribeEgressOnlyInternetGatewaysRequestPrivate::DescribeEgressOnlyInternetGatewaysRequestPrivate(
+    const DescribeEgressOnlyInternetGatewaysRequestPrivate &other, DescribeEgressOnlyInternetGatewaysRequest * const q)
+    : DescribeEgressOnlyInternetGatewaysPrivate(other, q)
+{
+
+}

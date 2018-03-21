@@ -19,3 +19,107 @@
 
 #include "createdevicedefinitionrequest.h"
 #include "createdevicedefinitionrequest_p.h"
+#include "createdevicedefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateDeviceDefinitionRequest
+ *
+ * @brief  Implements Greengrass CreateDeviceDefinition requests.
+ *
+ * @see    GreengrassClient::createDeviceDefinition
+ */
+
+/**
+ * @brief  Constructs a new CreateDeviceDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeviceDefinitionResponse::CreateDeviceDefinitionResponse(
+
+/**
+ * @brief  Constructs a new CreateDeviceDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest(const CreateDeviceDefinitionRequest &other)
+    : GreengrassRequest(new CreateDeviceDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDeviceDefinitionRequest object.
+ */
+CreateDeviceDefinitionRequest::CreateDeviceDefinitionRequest()
+    : GreengrassRequest(new CreateDeviceDefinitionRequestPrivate(GreengrassRequest::CreateDeviceDefinitionAction, this))
+{
+
+}
+
+bool CreateDeviceDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDeviceDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDeviceDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * CreateDeviceDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDeviceDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeviceDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for CreateDeviceDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public CreateDeviceDefinitionRequest instance.
+ */
+CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, CreateDeviceDefinitionRequest * const q)
+    : CreateDeviceDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeviceDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDeviceDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDeviceDefinitionRequest instance.
+ */
+CreateDeviceDefinitionRequestPrivate::CreateDeviceDefinitionRequestPrivate(
+    const CreateDeviceDefinitionRequestPrivate &other, CreateDeviceDefinitionRequest * const q)
+    : CreateDeviceDefinitionPrivate(other, q)
+{
+
+}

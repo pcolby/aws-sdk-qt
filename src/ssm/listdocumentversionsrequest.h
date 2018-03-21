@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDOCUMENTVERSIONSREQUEST_H
 #define QTAWS_LISTDOCUMENTVERSIONSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListDocumentVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListDocumentVersionsRequest : public SSMRequest {
+
+public:
+    ListDocumentVersionsRequest(const ListDocumentVersionsRequest &other);
+    ListDocumentVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDocumentVersionsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

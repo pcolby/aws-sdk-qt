@@ -19,3 +19,107 @@
 
 #include "getsampledrequestsrequest.h"
 #include "getsampledrequestsrequest_p.h"
+#include "getsampledrequestsresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetSampledRequestsRequest
+ *
+ * @brief  Implements WAFRegional GetSampledRequests requests.
+ *
+ * @see    WAFRegionalClient::getSampledRequests
+ */
+
+/**
+ * @brief  Constructs a new GetSampledRequestsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSampledRequestsResponse::GetSampledRequestsResponse(
+
+/**
+ * @brief  Constructs a new GetSampledRequestsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSampledRequestsRequest::GetSampledRequestsRequest(const GetSampledRequestsRequest &other)
+    : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSampledRequestsRequest object.
+ */
+GetSampledRequestsRequest::GetSampledRequestsRequest()
+    : WAFRegionalRequest(new GetSampledRequestsRequestPrivate(WAFRegionalRequest::GetSampledRequestsAction, this))
+{
+
+}
+
+bool GetSampledRequestsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSampledRequestsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSampledRequestsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSampledRequestsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSampledRequestsRequestPrivate
+ *
+ * @brief  Private implementation for GetSampledRequestsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSampledRequestsRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetSampledRequestsRequest instance.
+ */
+GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
+    const WAFRegionalRequest::Action action, GetSampledRequestsRequest * const q)
+    : GetSampledRequestsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSampledRequestsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSampledRequestsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSampledRequestsRequest instance.
+ */
+GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
+    const GetSampledRequestsRequestPrivate &other, GetSampledRequestsRequest * const q)
+    : GetSampledRequestsPrivate(other, q)
+{
+
+}

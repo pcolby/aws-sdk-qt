@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPPLICATIONREVISIONREQUEST_P_H
 #define QTAWS_GETAPPLICATIONREVISIONREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "getapplicationrevisionrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetApplicationRevisionRequest;
+
+class QTAWS_EXPORT GetApplicationRevisionRequestPrivate : public CodeDeployPrivate {
+
+public:
+    GetApplicationRevisionRequestPrivate(const CodeDeploy::Action action,
+                                   GetApplicationRevisionRequest * const q);
+    GetApplicationRevisionRequestPrivate(const GetApplicationRevisionRequestPrivate &other,
+                                   GetApplicationRevisionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApplicationRevisionRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

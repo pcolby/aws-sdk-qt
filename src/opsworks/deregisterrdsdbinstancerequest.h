@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERRDSDBINSTANCEREQUEST_H
 #define QTAWS_DEREGISTERRDSDBINSTANCEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterRdsDbInstanceRequestPrivate;
+
+class QTAWS_EXPORT DeregisterRdsDbInstanceRequest : public OpsWorksRequest {
+
+public:
+    DeregisterRdsDbInstanceRequest(const DeregisterRdsDbInstanceRequest &other);
+    DeregisterRdsDbInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterRdsDbInstanceRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

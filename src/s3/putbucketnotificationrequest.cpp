@@ -19,3 +19,107 @@
 
 #include "putbucketnotificationrequest.h"
 #include "putbucketnotificationrequest_p.h"
+#include "putbucketnotificationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketNotificationRequest
+ *
+ * @brief  Implements S3 PutBucketNotification requests.
+ *
+ * @see    S3Client::putBucketNotification
+ */
+
+/**
+ * @brief  Constructs a new PutBucketNotificationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketNotificationResponse::PutBucketNotificationResponse(
+
+/**
+ * @brief  Constructs a new PutBucketNotificationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketNotificationRequest::PutBucketNotificationRequest(const PutBucketNotificationRequest &other)
+    : S3Request(new PutBucketNotificationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketNotificationRequest object.
+ */
+PutBucketNotificationRequest::PutBucketNotificationRequest()
+    : S3Request(new PutBucketNotificationRequestPrivate(S3Request::PutBucketNotificationAction, this))
+{
+
+}
+
+bool PutBucketNotificationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketNotificationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketNotificationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketNotificationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketNotificationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketNotificationRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketNotificationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketNotificationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketNotificationRequest instance.
+ */
+PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
+    const S3Request::Action action, PutBucketNotificationRequest * const q)
+    : PutBucketNotificationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketNotificationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketNotificationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketNotificationRequest instance.
+ */
+PutBucketNotificationRequestPrivate::PutBucketNotificationRequestPrivate(
+    const PutBucketNotificationRequestPrivate &other, PutBucketNotificationRequest * const q)
+    : PutBucketNotificationPrivate(other, q)
+{
+
+}

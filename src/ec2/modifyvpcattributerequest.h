@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYVPCATTRIBUTEREQUEST_H
 #define QTAWS_MODIFYVPCATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcAttributeRequestPrivate;
+
+class QTAWS_EXPORT ModifyVpcAttributeRequest : public EC2Request {
+
+public:
+    ModifyVpcAttributeRequest(const ModifyVpcAttributeRequest &other);
+    ModifyVpcAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

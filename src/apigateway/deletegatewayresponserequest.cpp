@@ -19,3 +19,107 @@
 
 #include "deletegatewayresponserequest.h"
 #include "deletegatewayresponserequest_p.h"
+#include "deletegatewayresponseresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteGatewayResponseRequest
+ *
+ * @brief  Implements APIGateway DeleteGatewayResponse requests.
+ *
+ * @see    APIGatewayClient::deleteGatewayResponse
+ */
+
+/**
+ * @brief  Constructs a new DeleteGatewayResponseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGatewayResponseResponse::DeleteGatewayResponseResponse(
+
+/**
+ * @brief  Constructs a new DeleteGatewayResponseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGatewayResponseRequest::DeleteGatewayResponseRequest(const DeleteGatewayResponseRequest &other)
+    : APIGatewayRequest(new DeleteGatewayResponseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGatewayResponseRequest object.
+ */
+DeleteGatewayResponseRequest::DeleteGatewayResponseRequest()
+    : APIGatewayRequest(new DeleteGatewayResponseRequestPrivate(APIGatewayRequest::DeleteGatewayResponseAction, this))
+{
+
+}
+
+bool DeleteGatewayResponseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGatewayResponseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGatewayResponseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteGatewayResponseRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGatewayResponseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGatewayResponseRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGatewayResponseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteGatewayResponseRequest instance.
+ */
+DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteGatewayResponseRequest * const q)
+    : DeleteGatewayResponsePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGatewayResponseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGatewayResponseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGatewayResponseRequest instance.
+ */
+DeleteGatewayResponseRequestPrivate::DeleteGatewayResponseRequestPrivate(
+    const DeleteGatewayResponseRequestPrivate &other, DeleteGatewayResponseRequest * const q)
+    : DeleteGatewayResponsePrivate(other, q)
+{
+
+}

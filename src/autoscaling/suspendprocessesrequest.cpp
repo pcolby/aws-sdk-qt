@@ -19,3 +19,107 @@
 
 #include "suspendprocessesrequest.h"
 #include "suspendprocessesrequest_p.h"
+#include "suspendprocessesresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  SuspendProcessesRequest
+ *
+ * @brief  Implements AutoScaling SuspendProcesses requests.
+ *
+ * @see    AutoScalingClient::suspendProcesses
+ */
+
+/**
+ * @brief  Constructs a new SuspendProcessesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SuspendProcessesResponse::SuspendProcessesResponse(
+
+/**
+ * @brief  Constructs a new SuspendProcessesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SuspendProcessesRequest::SuspendProcessesRequest(const SuspendProcessesRequest &other)
+    : AutoScalingRequest(new SuspendProcessesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SuspendProcessesRequest object.
+ */
+SuspendProcessesRequest::SuspendProcessesRequest()
+    : AutoScalingRequest(new SuspendProcessesRequestPrivate(AutoScalingRequest::SuspendProcessesAction, this))
+{
+
+}
+
+bool SuspendProcessesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SuspendProcessesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SuspendProcessesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkReply * const reply) const
+{
+    return new SuspendProcessesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SuspendProcessesRequestPrivate
+ *
+ * @brief  Private implementation for SuspendProcessesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SuspendProcessesRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public SuspendProcessesRequest instance.
+ */
+SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
+    const AutoScalingRequest::Action action, SuspendProcessesRequest * const q)
+    : SuspendProcessesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SuspendProcessesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SuspendProcessesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SuspendProcessesRequest instance.
+ */
+SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
+    const SuspendProcessesRequestPrivate &other, SuspendProcessesRequest * const q)
+    : SuspendProcessesPrivate(other, q)
+{
+
+}

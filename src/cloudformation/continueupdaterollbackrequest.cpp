@@ -19,3 +19,107 @@
 
 #include "continueupdaterollbackrequest.h"
 #include "continueupdaterollbackrequest_p.h"
+#include "continueupdaterollbackresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ContinueUpdateRollbackRequest
+ *
+ * @brief  Implements CloudFormation ContinueUpdateRollback requests.
+ *
+ * @see    CloudFormationClient::continueUpdateRollback
+ */
+
+/**
+ * @brief  Constructs a new ContinueUpdateRollbackResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ContinueUpdateRollbackResponse::ContinueUpdateRollbackResponse(
+
+/**
+ * @brief  Constructs a new ContinueUpdateRollbackRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ContinueUpdateRollbackRequest::ContinueUpdateRollbackRequest(const ContinueUpdateRollbackRequest &other)
+    : CloudFormationRequest(new ContinueUpdateRollbackRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ContinueUpdateRollbackRequest object.
+ */
+ContinueUpdateRollbackRequest::ContinueUpdateRollbackRequest()
+    : CloudFormationRequest(new ContinueUpdateRollbackRequestPrivate(CloudFormationRequest::ContinueUpdateRollbackAction, this))
+{
+
+}
+
+bool ContinueUpdateRollbackRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ContinueUpdateRollbackResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ContinueUpdateRollbackResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ContinueUpdateRollbackRequest::response(QNetworkReply * const reply) const
+{
+    return new ContinueUpdateRollbackResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ContinueUpdateRollbackRequestPrivate
+ *
+ * @brief  Private implementation for ContinueUpdateRollbackRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueUpdateRollbackRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ContinueUpdateRollbackRequest instance.
+ */
+ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
+    const CloudFormationRequest::Action action, ContinueUpdateRollbackRequest * const q)
+    : ContinueUpdateRollbackPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueUpdateRollbackRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ContinueUpdateRollbackRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ContinueUpdateRollbackRequest instance.
+ */
+ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
+    const ContinueUpdateRollbackRequestPrivate &other, ContinueUpdateRollbackRequest * const q)
+    : ContinueUpdateRollbackPrivate(other, q)
+{
+
+}

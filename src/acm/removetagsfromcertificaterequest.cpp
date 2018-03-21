@@ -19,3 +19,107 @@
 
 #include "removetagsfromcertificaterequest.h"
 #include "removetagsfromcertificaterequest_p.h"
+#include "removetagsfromcertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  RemoveTagsFromCertificateRequest
+ *
+ * @brief  Implements ACM RemoveTagsFromCertificate requests.
+ *
+ * @see    ACMClient::removeTagsFromCertificate
+ */
+
+/**
+ * @brief  Constructs a new RemoveTagsFromCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
+
+/**
+ * @brief  Constructs a new RemoveTagsFromCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest(const RemoveTagsFromCertificateRequest &other)
+    : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveTagsFromCertificateRequest object.
+ */
+RemoveTagsFromCertificateRequest::RemoveTagsFromCertificateRequest()
+    : ACMRequest(new RemoveTagsFromCertificateRequestPrivate(ACMRequest::RemoveTagsFromCertificateAction, this))
+{
+
+}
+
+bool RemoveTagsFromCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveTagsFromCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveTagsFromCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveTagsFromCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromCertificateRequestPrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public RemoveTagsFromCertificateRequest instance.
+ */
+RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
+    const ACMRequest::Action action, RemoveTagsFromCertificateRequest * const q)
+    : RemoveTagsFromCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveTagsFromCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveTagsFromCertificateRequest instance.
+ */
+RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
+    const RemoveTagsFromCertificateRequestPrivate &other, RemoveTagsFromCertificateRequest * const q)
+    : RemoveTagsFromCertificatePrivate(other, q)
+{
+
+}

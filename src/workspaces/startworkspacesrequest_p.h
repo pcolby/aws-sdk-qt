@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTWORKSPACESREQUEST_P_H
 #define QTAWS_STARTWORKSPACESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "startworkspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class StartWorkspacesRequest;
+
+class QTAWS_EXPORT StartWorkspacesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    StartWorkspacesRequestPrivate(const WorkSpaces::Action action,
+                                   StartWorkspacesRequest * const q);
+    StartWorkspacesRequestPrivate(const StartWorkspacesRequestPrivate &other,
+                                   StartWorkspacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartWorkspacesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

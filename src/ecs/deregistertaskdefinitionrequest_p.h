@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERTASKDEFINITIONREQUEST_P_H
 #define QTAWS_DEREGISTERTASKDEFINITIONREQUEST_P_H
 
+#include "ecs_p.h"
+#include "deregistertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeregisterTaskDefinitionRequest;
+
+class QTAWS_EXPORT DeregisterTaskDefinitionRequestPrivate : public ECSPrivate {
+
+public:
+    DeregisterTaskDefinitionRequestPrivate(const ECS::Action action,
+                                   DeregisterTaskDefinitionRequest * const q);
+    DeregisterTaskDefinitionRequestPrivate(const DeregisterTaskDefinitionRequestPrivate &other,
+                                   DeregisterTaskDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterTaskDefinitionRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

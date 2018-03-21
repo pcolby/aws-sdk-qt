@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONREQUEST_H
 #define QTAWS_DELETEPOLICYVERSIONREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeletePolicyVersionRequestPrivate;
+
+class QTAWS_EXPORT DeletePolicyVersionRequest : public IoTRequest {
+
+public:
+    DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other);
+    DeletePolicyVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePolicyVersionRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

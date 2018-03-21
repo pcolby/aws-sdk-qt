@@ -19,3 +19,107 @@
 
 #include "listtargetsforpolicyrequest.h"
 #include "listtargetsforpolicyrequest_p.h"
+#include "listtargetsforpolicyresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListTargetsForPolicyRequest
+ *
+ * @brief  Implements IoT ListTargetsForPolicy requests.
+ *
+ * @see    IoTClient::listTargetsForPolicy
+ */
+
+/**
+ * @brief  Constructs a new ListTargetsForPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
+
+/**
+ * @brief  Constructs a new ListTargetsForPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTargetsForPolicyRequest::ListTargetsForPolicyRequest(const ListTargetsForPolicyRequest &other)
+    : IoTRequest(new ListTargetsForPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTargetsForPolicyRequest object.
+ */
+ListTargetsForPolicyRequest::ListTargetsForPolicyRequest()
+    : IoTRequest(new ListTargetsForPolicyRequestPrivate(IoTRequest::ListTargetsForPolicyAction, this))
+{
+
+}
+
+bool ListTargetsForPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTargetsForPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTargetsForPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListTargetsForPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTargetsForPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTargetsForPolicyRequestPrivate
+ *
+ * @brief  Private implementation for ListTargetsForPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTargetsForPolicyRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListTargetsForPolicyRequest instance.
+ */
+ListTargetsForPolicyRequestPrivate::ListTargetsForPolicyRequestPrivate(
+    const IoTRequest::Action action, ListTargetsForPolicyRequest * const q)
+    : ListTargetsForPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTargetsForPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTargetsForPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTargetsForPolicyRequest instance.
+ */
+ListTargetsForPolicyRequestPrivate::ListTargetsForPolicyRequestPrivate(
+    const ListTargetsForPolicyRequestPrivate &other, ListTargetsForPolicyRequest * const q)
+    : ListTargetsForPolicyPrivate(other, q)
+{
+
+}

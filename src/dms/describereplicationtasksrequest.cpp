@@ -19,3 +19,107 @@
 
 #include "describereplicationtasksrequest.h"
 #include "describereplicationtasksrequest_p.h"
+#include "describereplicationtasksresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationTasksRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeReplicationTasks requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationTasks
+ */
+
+/**
+ * @brief  Constructs a new DescribeReplicationTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationTasksResponse::DescribeReplicationTasksResponse(
+
+/**
+ * @brief  Constructs a new DescribeReplicationTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReplicationTasksRequest::DescribeReplicationTasksRequest(const DescribeReplicationTasksRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeReplicationTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReplicationTasksRequest object.
+ */
+DescribeReplicationTasksRequest::DescribeReplicationTasksRequest()
+    : DatabaseMigrationServiceRequest(new DescribeReplicationTasksRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationTasksAction, this))
+{
+
+}
+
+bool DescribeReplicationTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReplicationTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReplicationTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeReplicationTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReplicationTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationTasksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReplicationTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationTasksRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeReplicationTasksRequest instance.
+ */
+DescribeReplicationTasksRequestPrivate::DescribeReplicationTasksRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationTasksRequest * const q)
+    : DescribeReplicationTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReplicationTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReplicationTasksRequest instance.
+ */
+DescribeReplicationTasksRequestPrivate::DescribeReplicationTasksRequestPrivate(
+    const DescribeReplicationTasksRequestPrivate &other, DescribeReplicationTasksRequest * const q)
+    : DescribeReplicationTasksPrivate(other, q)
+{
+
+}

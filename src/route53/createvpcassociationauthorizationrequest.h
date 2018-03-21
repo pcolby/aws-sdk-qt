@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEVPCASSOCIATIONAUTHORIZATIONREQUEST_H
 #define QTAWS_CREATEVPCASSOCIATIONAUTHORIZATIONREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class CreateVPCAssociationAuthorizationRequestPrivate;
+
+class QTAWS_EXPORT CreateVPCAssociationAuthorizationRequest : public Route53Request {
+
+public:
+    CreateVPCAssociationAuthorizationRequest(const CreateVPCAssociationAuthorizationRequest &other);
+    CreateVPCAssociationAuthorizationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateVPCAssociationAuthorizationRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBUILDENVIRONMENTREQUEST_H
 #define QTAWS_REBUILDENVIRONMENTREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class RebuildEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT RebuildEnvironmentRequest : public ElasticBeanstalkRequest {
+
+public:
+    RebuildEnvironmentRequest(const RebuildEnvironmentRequest &other);
+    RebuildEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebuildEnvironmentRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

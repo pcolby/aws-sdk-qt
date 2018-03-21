@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEREGEXMATCHSETREQUEST_P_H
 #define QTAWS_CREATEREGEXMATCHSETREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "createregexmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRegexMatchSetRequest;
+
+class QTAWS_EXPORT CreateRegexMatchSetRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    CreateRegexMatchSetRequestPrivate(const WAFRegional::Action action,
+                                   CreateRegexMatchSetRequest * const q);
+    CreateRegexMatchSetRequestPrivate(const CreateRegexMatchSetRequestPrivate &other,
+                                   CreateRegexMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRegexMatchSetRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

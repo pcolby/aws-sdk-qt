@@ -19,3 +19,107 @@
 
 #include "deleteegressonlyinternetgatewayrequest.h"
 #include "deleteegressonlyinternetgatewayrequest_p.h"
+#include "deleteegressonlyinternetgatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteEgressOnlyInternetGatewayRequest
+ *
+ * @brief  Implements EC2 DeleteEgressOnlyInternetGateway requests.
+ *
+ * @see    EC2Client::deleteEgressOnlyInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new DeleteEgressOnlyInternetGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse(
+
+/**
+ * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest(const DeleteEgressOnlyInternetGatewayRequest &other)
+    : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequest object.
+ */
+DeleteEgressOnlyInternetGatewayRequest::DeleteEgressOnlyInternetGatewayRequest()
+    : EC2Request(new DeleteEgressOnlyInternetGatewayRequestPrivate(EC2Request::DeleteEgressOnlyInternetGatewayAction, this))
+{
+
+}
+
+bool DeleteEgressOnlyInternetGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteEgressOnlyInternetGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteEgressOnlyInternetGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteEgressOnlyInternetGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEgressOnlyInternetGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DeleteEgressOnlyInternetGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteEgressOnlyInternetGatewayRequest instance.
+ */
+DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
+    const EC2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)
+    : DeleteEgressOnlyInternetGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEgressOnlyInternetGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteEgressOnlyInternetGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteEgressOnlyInternetGatewayRequest instance.
+ */
+DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
+    const DeleteEgressOnlyInternetGatewayRequestPrivate &other, DeleteEgressOnlyInternetGatewayRequest * const q)
+    : DeleteEgressOnlyInternetGatewayPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_INITIATEDOCUMENTVERSIONUPLOADREQUEST_H
 #define QTAWS_INITIATEDOCUMENTVERSIONUPLOADREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class InitiateDocumentVersionUploadRequestPrivate;
+
+class QTAWS_EXPORT InitiateDocumentVersionUploadRequest : public WorkDocsRequest {
+
+public:
+    InitiateDocumentVersionUploadRequest(const InitiateDocumentVersionUploadRequest &other);
+    InitiateDocumentVersionUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(InitiateDocumentVersionUploadRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

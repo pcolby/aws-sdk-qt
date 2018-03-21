@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGAMESESSIONQUEUEREQUEST_P_H
 #define QTAWS_UPDATEGAMESESSIONQUEUEREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "updategamesessionqueuerequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateGameSessionQueueRequest;
+
+class QTAWS_EXPORT UpdateGameSessionQueueRequestPrivate : public GameLiftPrivate {
+
+public:
+    UpdateGameSessionQueueRequestPrivate(const GameLift::Action action,
+                                   UpdateGameSessionQueueRequest * const q);
+    UpdateGameSessionQueueRequestPrivate(const UpdateGameSessionQueueRequestPrivate &other,
+                                   UpdateGameSessionQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGameSessionQueueRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

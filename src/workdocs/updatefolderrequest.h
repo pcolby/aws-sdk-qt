@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEFOLDERREQUEST_H
 #define QTAWS_UPDATEFOLDERREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class UpdateFolderRequestPrivate;
+
+class QTAWS_EXPORT UpdateFolderRequest : public WorkDocsRequest {
+
+public:
+    UpdateFolderRequest(const UpdateFolderRequest &other);
+    UpdateFolderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFolderRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

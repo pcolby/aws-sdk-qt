@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATESKILLGROUPFROMROOMREQUEST_H
 #define QTAWS_DISASSOCIATESKILLGROUPFROMROOMREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DisassociateSkillGroupFromRoomRequestPrivate;
+
+class QTAWS_EXPORT DisassociateSkillGroupFromRoomRequest : public AlexaForBusinessRequest {
+
+public:
+    DisassociateSkillGroupFromRoomRequest(const DisassociateSkillGroupFromRoomRequest &other);
+    DisassociateSkillGroupFromRoomRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateSkillGroupFromRoomRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

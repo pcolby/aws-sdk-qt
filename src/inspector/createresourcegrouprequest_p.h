@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERESOURCEGROUPREQUEST_P_H
 #define QTAWS_CREATERESOURCEGROUPREQUEST_P_H
 
+#include "inspector_p.h"
+#include "createresourcegrouprequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class CreateResourceGroupRequest;
+
+class QTAWS_EXPORT CreateResourceGroupRequestPrivate : public InspectorPrivate {
+
+public:
+    CreateResourceGroupRequestPrivate(const Inspector::Action action,
+                                   CreateResourceGroupRequest * const q);
+    CreateResourceGroupRequestPrivate(const CreateResourceGroupRequestPrivate &other,
+                                   CreateResourceGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResourceGroupRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

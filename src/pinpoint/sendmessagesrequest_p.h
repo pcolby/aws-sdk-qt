@@ -20,4 +20,29 @@
 #ifndef QTAWS_SENDMESSAGESREQUEST_P_H
 #define QTAWS_SENDMESSAGESREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "sendmessagesrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class SendMessagesRequest;
+
+class QTAWS_EXPORT SendMessagesRequestPrivate : public PinpointPrivate {
+
+public:
+    SendMessagesRequestPrivate(const Pinpoint::Action action,
+                                   SendMessagesRequest * const q);
+    SendMessagesRequestPrivate(const SendMessagesRequestPrivate &other,
+                                   SendMessagesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SendMessagesRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

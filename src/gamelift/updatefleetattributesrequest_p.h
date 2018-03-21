@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEFLEETATTRIBUTESREQUEST_P_H
 #define QTAWS_UPDATEFLEETATTRIBUTESREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "updatefleetattributesrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateFleetAttributesRequest;
+
+class QTAWS_EXPORT UpdateFleetAttributesRequestPrivate : public GameLiftPrivate {
+
+public:
+    UpdateFleetAttributesRequestPrivate(const GameLift::Action action,
+                                   UpdateFleetAttributesRequest * const q);
+    UpdateFleetAttributesRequestPrivate(const UpdateFleetAttributesRequestPrivate &other,
+                                   UpdateFleetAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFleetAttributesRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

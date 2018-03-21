@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEACTIVATEMFADEVICEREQUEST_H
 #define QTAWS_DEACTIVATEMFADEVICEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeactivateMFADeviceRequestPrivate;
+
+class QTAWS_EXPORT DeactivateMFADeviceRequest : public IAMRequest {
+
+public:
+    DeactivateMFADeviceRequest(const DeactivateMFADeviceRequest &other);
+    DeactivateMFADeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeactivateMFADeviceRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

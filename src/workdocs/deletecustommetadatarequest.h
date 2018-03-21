@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECUSTOMMETADATAREQUEST_H
 #define QTAWS_DELETECUSTOMMETADATAREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteCustomMetadataRequestPrivate;
+
+class QTAWS_EXPORT DeleteCustomMetadataRequest : public WorkDocsRequest {
+
+public:
+    DeleteCustomMetadataRequest(const DeleteCustomMetadataRequest &other);
+    DeleteCustomMetadataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomMetadataRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

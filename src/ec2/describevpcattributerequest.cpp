@@ -19,3 +19,107 @@
 
 #include "describevpcattributerequest.h"
 #include "describevpcattributerequest_p.h"
+#include "describevpcattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcAttributeRequest
+ *
+ * @brief  Implements EC2 DescribeVpcAttribute requests.
+ *
+ * @see    EC2Client::describeVpcAttribute
+ */
+
+/**
+ * @brief  Constructs a new DescribeVpcAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcAttributeResponse::DescribeVpcAttributeResponse(
+
+/**
+ * @brief  Constructs a new DescribeVpcAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVpcAttributeRequest::DescribeVpcAttributeRequest(const DescribeVpcAttributeRequest &other)
+    : EC2Request(new DescribeVpcAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVpcAttributeRequest object.
+ */
+DescribeVpcAttributeRequest::DescribeVpcAttributeRequest()
+    : EC2Request(new DescribeVpcAttributeRequestPrivate(EC2Request::DescribeVpcAttributeAction, this))
+{
+
+}
+
+bool DescribeVpcAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVpcAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVpcAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeVpcAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVpcAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcAttributeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVpcAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeVpcAttributeRequest instance.
+ */
+DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
+    const EC2Request::Action action, DescribeVpcAttributeRequest * const q)
+    : DescribeVpcAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVpcAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVpcAttributeRequest instance.
+ */
+DescribeVpcAttributeRequestPrivate::DescribeVpcAttributeRequestPrivate(
+    const DescribeVpcAttributeRequestPrivate &other, DescribeVpcAttributeRequest * const q)
+    : DescribeVpcAttributePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createservicelinkedrolerequest.h"
 #include "createservicelinkedrolerequest_p.h"
+#include "createservicelinkedroleresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateServiceLinkedRoleRequest
+ *
+ * @brief  Implements IAM CreateServiceLinkedRole requests.
+ *
+ * @see    IAMClient::createServiceLinkedRole
+ */
+
+/**
+ * @brief  Constructs a new CreateServiceLinkedRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
+
+/**
+ * @brief  Constructs a new CreateServiceLinkedRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest(const CreateServiceLinkedRoleRequest &other)
+    : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateServiceLinkedRoleRequest object.
+ */
+CreateServiceLinkedRoleRequest::CreateServiceLinkedRoleRequest()
+    : IAMRequest(new CreateServiceLinkedRoleRequestPrivate(IAMRequest::CreateServiceLinkedRoleAction, this))
+{
+
+}
+
+bool CreateServiceLinkedRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateServiceLinkedRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateServiceLinkedRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateServiceLinkedRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateServiceLinkedRoleRequestPrivate
+ *
+ * @brief  Private implementation for CreateServiceLinkedRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceLinkedRoleRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public CreateServiceLinkedRoleRequest instance.
+ */
+CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
+    const IAMRequest::Action action, CreateServiceLinkedRoleRequest * const q)
+    : CreateServiceLinkedRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceLinkedRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateServiceLinkedRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateServiceLinkedRoleRequest instance.
+ */
+CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
+    const CreateServiceLinkedRoleRequestPrivate &other, CreateServiceLinkedRoleRequest * const q)
+    : CreateServiceLinkedRolePrivate(other, q)
+{
+
+}

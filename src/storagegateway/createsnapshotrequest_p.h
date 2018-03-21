@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESNAPSHOTREQUEST_P_H
 #define QTAWS_CREATESNAPSHOTREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "createsnapshotrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateSnapshotRequest;
+
+class QTAWS_EXPORT CreateSnapshotRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    CreateSnapshotRequestPrivate(const StorageGateway::Action action,
+                                   CreateSnapshotRequest * const q);
+    CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
+                                   CreateSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSnapshotRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

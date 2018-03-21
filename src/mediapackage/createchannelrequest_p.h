@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECHANNELREQUEST_P_H
 #define QTAWS_CREATECHANNELREQUEST_P_H
 
+#include "mediapackage_p.h"
+#include "createchannelrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class CreateChannelRequest;
+
+class QTAWS_EXPORT CreateChannelRequestPrivate : public MediaPackagePrivate {
+
+public:
+    CreateChannelRequestPrivate(const MediaPackage::Action action,
+                                   CreateChannelRequest * const q);
+    CreateChannelRequestPrivate(const CreateChannelRequestPrivate &other,
+                                   CreateChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateChannelRequest)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

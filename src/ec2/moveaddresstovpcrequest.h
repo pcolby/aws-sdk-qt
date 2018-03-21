@@ -20,4 +20,32 @@
 #ifndef QTAWS_MOVEADDRESSTOVPCREQUEST_H
 #define QTAWS_MOVEADDRESSTOVPCREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class MoveAddressToVpcRequestPrivate;
+
+class QTAWS_EXPORT MoveAddressToVpcRequest : public EC2Request {
+
+public:
+    MoveAddressToVpcRequest(const MoveAddressToVpcRequest &other);
+    MoveAddressToVpcRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(MoveAddressToVpcRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETINSTANCEMETRICDATAREQUEST_H
 #define QTAWS_GETINSTANCEMETRICDATAREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceMetricDataRequestPrivate;
+
+class QTAWS_EXPORT GetInstanceMetricDataRequest : public LightsailRequest {
+
+public:
+    GetInstanceMetricDataRequest(const GetInstanceMetricDataRequest &other);
+    GetInstanceMetricDataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetInstanceMetricDataRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

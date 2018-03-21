@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEVOLUMESTATUSREQUEST_H
 #define QTAWS_DESCRIBEVOLUMESTATUSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVolumeStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeVolumeStatusRequest : public EC2Request {
+
+public:
+    DescribeVolumeStatusRequest(const DescribeVolumeStatusRequest &other);
+    DescribeVolumeStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVolumeStatusRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

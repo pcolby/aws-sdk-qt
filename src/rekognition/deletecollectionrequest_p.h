@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECOLLECTIONREQUEST_P_H
 #define QTAWS_DELETECOLLECTIONREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "deletecollectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DeleteCollectionRequest;
+
+class QTAWS_EXPORT DeleteCollectionRequestPrivate : public RekognitionPrivate {
+
+public:
+    DeleteCollectionRequestPrivate(const Rekognition::Action action,
+                                   DeleteCollectionRequest * const q);
+    DeleteCollectionRequestPrivate(const DeleteCollectionRequestPrivate &other,
+                                   DeleteCollectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCollectionRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEGROUPREQUEST_P_H
 #define QTAWS_CREATEGROUPREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "creategrouprequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateGroupRequest;
+
+class QTAWS_EXPORT CreateGroupRequestPrivate : public GreengrassPrivate {
+
+public:
+    CreateGroupRequestPrivate(const Greengrass::Action action,
+                                   CreateGroupRequest * const q);
+    CreateGroupRequestPrivate(const CreateGroupRequestPrivate &other,
+                                   CreateGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGroupRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDINSTANCEGROUPSREQUEST_P_H
 #define QTAWS_ADDINSTANCEGROUPSREQUEST_P_H
 
+#include "emr_p.h"
+#include "addinstancegroupsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class AddInstanceGroupsRequest;
+
+class QTAWS_EXPORT AddInstanceGroupsRequestPrivate : public EMRPrivate {
+
+public:
+    AddInstanceGroupsRequestPrivate(const EMR::Action action,
+                                   AddInstanceGroupsRequest * const q);
+    AddInstanceGroupsRequestPrivate(const AddInstanceGroupsRequestPrivate &other,
+                                   AddInstanceGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddInstanceGroupsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

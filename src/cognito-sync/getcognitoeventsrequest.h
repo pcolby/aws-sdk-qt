@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCOGNITOEVENTSREQUEST_H
 #define QTAWS_GETCOGNITOEVENTSREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class GetCognitoEventsRequestPrivate;
+
+class QTAWS_EXPORT GetCognitoEventsRequest : public CognitoSyncRequest {
+
+public:
+    GetCognitoEventsRequest(const GetCognitoEventsRequest &other);
+    GetCognitoEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCognitoEventsRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

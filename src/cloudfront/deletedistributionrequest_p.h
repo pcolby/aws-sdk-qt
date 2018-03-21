@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDISTRIBUTIONREQUEST_P_H
 #define QTAWS_DELETEDISTRIBUTIONREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "deletedistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteDistributionRequest;
+
+class QTAWS_EXPORT DeleteDistributionRequestPrivate : public CloudFrontPrivate {
+
+public:
+    DeleteDistributionRequestPrivate(const CloudFront::Action action,
+                                   DeleteDistributionRequest * const q);
+    DeleteDistributionRequestPrivate(const DeleteDistributionRequestPrivate &other,
+                                   DeleteDistributionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDistributionRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

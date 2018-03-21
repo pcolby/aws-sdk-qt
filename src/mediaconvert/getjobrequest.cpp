@@ -19,3 +19,107 @@
 
 #include "getjobrequest.h"
 #include "getjobrequest_p.h"
+#include "getjobresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  GetJobRequest
+ *
+ * @brief  Implements MediaConvert GetJob requests.
+ *
+ * @see    MediaConvertClient::getJob
+ */
+
+/**
+ * @brief  Constructs a new GetJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobResponse::GetJobResponse(
+
+/**
+ * @brief  Constructs a new GetJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetJobRequest::GetJobRequest(const GetJobRequest &other)
+    : MediaConvertRequest(new GetJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetJobRequest object.
+ */
+GetJobRequest::GetJobRequest()
+    : MediaConvertRequest(new GetJobRequestPrivate(MediaConvertRequest::GetJobAction, this))
+{
+
+}
+
+bool GetJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const reply) const
+{
+    return new GetJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobRequestPrivate
+ *
+ * @brief  Private implementation for GetJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public GetJobRequest instance.
+ */
+GetJobRequestPrivate::GetJobRequestPrivate(
+    const MediaConvertRequest::Action action, GetJobRequest * const q)
+    : GetJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetJobRequest instance.
+ */
+GetJobRequestPrivate::GetJobRequestPrivate(
+    const GetJobRequestPrivate &other, GetJobRequest * const q)
+    : GetJobPrivate(other, q)
+{
+
+}

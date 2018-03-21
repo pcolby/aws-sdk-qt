@@ -20,4 +20,29 @@
 #ifndef QTAWS_PROVISIONPRODUCTREQUEST_P_H
 #define QTAWS_PROVISIONPRODUCTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "provisionproductrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ProvisionProductRequest;
+
+class QTAWS_EXPORT ProvisionProductRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ProvisionProductRequestPrivate(const ServiceCatalog::Action action,
+                                   ProvisionProductRequest * const q);
+    ProvisionProductRequestPrivate(const ProvisionProductRequestPrivate &other,
+                                   ProvisionProductRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ProvisionProductRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

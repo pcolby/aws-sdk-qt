@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSERREQUEST_P_H
 #define QTAWS_CREATEUSERREQUEST_P_H
 
+#include "mq_p.h"
+#include "createuserrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class CreateUserRequest;
+
+class QTAWS_EXPORT CreateUserRequestPrivate : public MQPrivate {
+
+public:
+    CreateUserRequestPrivate(const MQ::Action action,
+                                   CreateUserRequest * const q);
+    CreateUserRequestPrivate(const CreateUserRequestPrivate &other,
+                                   CreateUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

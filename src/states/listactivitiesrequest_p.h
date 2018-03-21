@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTACTIVITIESREQUEST_P_H
 #define QTAWS_LISTACTIVITIESREQUEST_P_H
 
+#include "sfn_p.h"
+#include "listactivitiesrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class ListActivitiesRequest;
+
+class QTAWS_EXPORT ListActivitiesRequestPrivate : public SFNPrivate {
+
+public:
+    ListActivitiesRequestPrivate(const SFN::Action action,
+                                   ListActivitiesRequest * const q);
+    ListActivitiesRequestPrivate(const ListActivitiesRequestPrivate &other,
+                                   ListActivitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListActivitiesRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

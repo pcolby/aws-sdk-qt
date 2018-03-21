@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETIDENTITYPOOLROLESREQUEST_P_H
 #define QTAWS_SETIDENTITYPOOLROLESREQUEST_P_H
 
+#include "cognitoidentity_p.h"
+#include "setidentitypoolrolesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class SetIdentityPoolRolesRequest;
+
+class QTAWS_EXPORT SetIdentityPoolRolesRequestPrivate : public CognitoIdentityPrivate {
+
+public:
+    SetIdentityPoolRolesRequestPrivate(const CognitoIdentity::Action action,
+                                   SetIdentityPoolRolesRequest * const q);
+    SetIdentityPoolRolesRequestPrivate(const SetIdentityPoolRolesRequestPrivate &other,
+                                   SetIdentityPoolRolesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetIdentityPoolRolesRequest)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

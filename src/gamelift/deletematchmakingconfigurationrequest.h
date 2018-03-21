@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMATCHMAKINGCONFIGURATIONREQUEST_H
 #define QTAWS_DELETEMATCHMAKINGCONFIGURATIONREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteMatchmakingConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteMatchmakingConfigurationRequest : public GameLiftRequest {
+
+public:
+    DeleteMatchmakingConfigurationRequest(const DeleteMatchmakingConfigurationRequest &other);
+    DeleteMatchmakingConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMatchmakingConfigurationRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

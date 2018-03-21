@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTROLEPOLICYREQUEST_P_H
 #define QTAWS_PUTROLEPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "putrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutRolePolicyRequest;
+
+class QTAWS_EXPORT PutRolePolicyRequestPrivate : public IAMPrivate {
+
+public:
+    PutRolePolicyRequestPrivate(const IAM::Action action,
+                                   PutRolePolicyRequest * const q);
+    PutRolePolicyRequestPrivate(const PutRolePolicyRequestPrivate &other,
+                                   PutRolePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutRolePolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

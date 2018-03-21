@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_P_H
 #define QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "listvolumerecoverypointsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListVolumeRecoveryPointsRequest;
+
+class QTAWS_EXPORT ListVolumeRecoveryPointsRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    ListVolumeRecoveryPointsRequestPrivate(const StorageGateway::Action action,
+                                   ListVolumeRecoveryPointsRequest * const q);
+    ListVolumeRecoveryPointsRequestPrivate(const ListVolumeRecoveryPointsRequestPrivate &other,
+                                   ListVolumeRecoveryPointsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListVolumeRecoveryPointsRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

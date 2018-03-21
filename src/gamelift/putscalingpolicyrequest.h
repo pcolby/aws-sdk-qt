@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTSCALINGPOLICYREQUEST_H
 #define QTAWS_PUTSCALINGPOLICYREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class PutScalingPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutScalingPolicyRequest : public GameLiftRequest {
+
+public:
+    PutScalingPolicyRequest(const PutScalingPolicyRequest &other);
+    PutScalingPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutScalingPolicyRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

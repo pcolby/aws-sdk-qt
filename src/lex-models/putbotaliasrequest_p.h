@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBOTALIASREQUEST_P_H
 #define QTAWS_PUTBOTALIASREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "putbotaliasrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class PutBotAliasRequest;
+
+class QTAWS_EXPORT PutBotAliasRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    PutBotAliasRequestPrivate(const LexModelBuildingService::Action action,
+                                   PutBotAliasRequest * const q);
+    PutBotAliasRequestPrivate(const PutBotAliasRequestPrivate &other,
+                                   PutBotAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBotAliasRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

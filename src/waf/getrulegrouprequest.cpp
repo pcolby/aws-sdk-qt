@@ -19,3 +19,107 @@
 
 #include "getrulegrouprequest.h"
 #include "getrulegrouprequest_p.h"
+#include "getrulegroupresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRuleGroupRequest
+ *
+ * @brief  Implements WAF GetRuleGroup requests.
+ *
+ * @see    WAFClient::getRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new GetRuleGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRuleGroupResponse::GetRuleGroupResponse(
+
+/**
+ * @brief  Constructs a new GetRuleGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRuleGroupRequest::GetRuleGroupRequest(const GetRuleGroupRequest &other)
+    : WAFRequest(new GetRuleGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRuleGroupRequest object.
+ */
+GetRuleGroupRequest::GetRuleGroupRequest()
+    : WAFRequest(new GetRuleGroupRequestPrivate(WAFRequest::GetRuleGroupAction, this))
+{
+
+}
+
+bool GetRuleGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRuleGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRuleGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * GetRuleGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRuleGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRuleGroupRequestPrivate
+ *
+ * @brief  Private implementation for GetRuleGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRuleGroupRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public GetRuleGroupRequest instance.
+ */
+GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
+    const WAFRequest::Action action, GetRuleGroupRequest * const q)
+    : GetRuleGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRuleGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRuleGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRuleGroupRequest instance.
+ */
+GetRuleGroupRequestPrivate::GetRuleGroupRequestPrivate(
+    const GetRuleGroupRequestPrivate &other, GetRuleGroupRequest * const q)
+    : GetRuleGroupPrivate(other, q)
+{
+
+}

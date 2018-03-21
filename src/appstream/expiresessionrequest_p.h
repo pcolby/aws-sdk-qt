@@ -20,4 +20,29 @@
 #ifndef QTAWS_EXPIRESESSIONREQUEST_P_H
 #define QTAWS_EXPIRESESSIONREQUEST_P_H
 
+#include "appstream_p.h"
+#include "expiresessionrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ExpireSessionRequest;
+
+class QTAWS_EXPORT ExpireSessionRequestPrivate : public AppStreamPrivate {
+
+public:
+    ExpireSessionRequestPrivate(const AppStream::Action action,
+                                   ExpireSessionRequest * const q);
+    ExpireSessionRequestPrivate(const ExpireSessionRequestPrivate &other,
+                                   ExpireSessionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ExpireSessionRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

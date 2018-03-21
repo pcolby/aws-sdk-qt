@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETREQUEST_P_H
 #define QTAWS_DELETESIZECONSTRAINTSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "deletesizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteSizeConstraintSetRequest;
+
+class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WAFPrivate {
+
+public:
+    DeleteSizeConstraintSetRequestPrivate(const WAF::Action action,
+                                   DeleteSizeConstraintSetRequest * const q);
+    DeleteSizeConstraintSetRequestPrivate(const DeleteSizeConstraintSetRequestPrivate &other,
+                                   DeleteSizeConstraintSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSizeConstraintSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

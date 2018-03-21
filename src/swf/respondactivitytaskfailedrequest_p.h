@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_P_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_P_H
 
+#include "swf_p.h"
+#include "respondactivitytaskfailedrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskFailedRequest;
+
+class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SWFPrivate {
+
+public:
+    RespondActivityTaskFailedRequestPrivate(const SWF::Action action,
+                                   RespondActivityTaskFailedRequest * const q);
+    RespondActivityTaskFailedRequestPrivate(const RespondActivityTaskFailedRequestPrivate &other,
+                                   RespondActivityTaskFailedRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RespondActivityTaskFailedRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deregistermanagedinstancerequest.h"
 #include "deregistermanagedinstancerequest_p.h"
+#include "deregistermanagedinstanceresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeregisterManagedInstanceRequest
+ *
+ * @brief  Implements SSM DeregisterManagedInstance requests.
+ *
+ * @see    SSMClient::deregisterManagedInstance
+ */
+
+/**
+ * @brief  Constructs a new DeregisterManagedInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeregisterManagedInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest(const DeregisterManagedInstanceRequest &other)
+    : SSMRequest(new DeregisterManagedInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterManagedInstanceRequest object.
+ */
+DeregisterManagedInstanceRequest::DeregisterManagedInstanceRequest()
+    : SSMRequest(new DeregisterManagedInstanceRequestPrivate(SSMRequest::DeregisterManagedInstanceAction, this))
+{
+
+}
+
+bool DeregisterManagedInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterManagedInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterManagedInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterManagedInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterManagedInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterManagedInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeregisterManagedInstanceRequest instance.
+ */
+DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
+    const SSMRequest::Action action, DeregisterManagedInstanceRequest * const q)
+    : DeregisterManagedInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterManagedInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterManagedInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterManagedInstanceRequest instance.
+ */
+DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
+    const DeregisterManagedInstanceRequestPrivate &other, DeregisterManagedInstanceRequest * const q)
+    : DeregisterManagedInstancePrivate(other, q)
+{
+
+}

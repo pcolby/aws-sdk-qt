@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETDEPLOYMENTSREQUEST_H
 #define QTAWS_RESETDEPLOYMENTSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ResetDeploymentsRequestPrivate;
+
+class QTAWS_EXPORT ResetDeploymentsRequest : public GreengrassRequest {
+
+public:
+    ResetDeploymentsRequest(const ResetDeploymentsRequest &other);
+    ResetDeploymentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetDeploymentsRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

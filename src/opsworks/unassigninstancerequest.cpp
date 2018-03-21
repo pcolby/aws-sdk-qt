@@ -19,3 +19,107 @@
 
 #include "unassigninstancerequest.h"
 #include "unassigninstancerequest_p.h"
+#include "unassigninstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UnassignInstanceRequest
+ *
+ * @brief  Implements OpsWorks UnassignInstance requests.
+ *
+ * @see    OpsWorksClient::unassignInstance
+ */
+
+/**
+ * @brief  Constructs a new UnassignInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnassignInstanceResponse::UnassignInstanceResponse(
+
+/**
+ * @brief  Constructs a new UnassignInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UnassignInstanceRequest::UnassignInstanceRequest(const UnassignInstanceRequest &other)
+    : OpsWorksRequest(new UnassignInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UnassignInstanceRequest object.
+ */
+UnassignInstanceRequest::UnassignInstanceRequest()
+    : OpsWorksRequest(new UnassignInstanceRequestPrivate(OpsWorksRequest::UnassignInstanceAction, this))
+{
+
+}
+
+bool UnassignInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UnassignInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UnassignInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new UnassignInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UnassignInstanceRequestPrivate
+ *
+ * @brief  Private implementation for UnassignInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public UnassignInstanceRequest instance.
+ */
+UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, UnassignInstanceRequest * const q)
+    : UnassignInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnassignInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UnassignInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UnassignInstanceRequest instance.
+ */
+UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
+    const UnassignInstanceRequestPrivate &other, UnassignInstanceRequest * const q)
+    : UnassignInstancePrivate(other, q)
+{
+
+}

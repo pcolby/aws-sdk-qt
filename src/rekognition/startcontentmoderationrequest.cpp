@@ -19,3 +19,107 @@
 
 #include "startcontentmoderationrequest.h"
 #include "startcontentmoderationrequest_p.h"
+#include "startcontentmoderationresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartContentModerationRequest
+ *
+ * @brief  Implements Rekognition StartContentModeration requests.
+ *
+ * @see    RekognitionClient::startContentModeration
+ */
+
+/**
+ * @brief  Constructs a new StartContentModerationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartContentModerationResponse::StartContentModerationResponse(
+
+/**
+ * @brief  Constructs a new StartContentModerationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartContentModerationRequest::StartContentModerationRequest(const StartContentModerationRequest &other)
+    : RekognitionRequest(new StartContentModerationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartContentModerationRequest object.
+ */
+StartContentModerationRequest::StartContentModerationRequest()
+    : RekognitionRequest(new StartContentModerationRequestPrivate(RekognitionRequest::StartContentModerationAction, this))
+{
+
+}
+
+bool StartContentModerationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartContentModerationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartContentModerationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * StartContentModerationRequest::response(QNetworkReply * const reply) const
+{
+    return new StartContentModerationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartContentModerationRequestPrivate
+ *
+ * @brief  Private implementation for StartContentModerationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartContentModerationRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public StartContentModerationRequest instance.
+ */
+StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
+    const RekognitionRequest::Action action, StartContentModerationRequest * const q)
+    : StartContentModerationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartContentModerationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartContentModerationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartContentModerationRequest instance.
+ */
+StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
+    const StartContentModerationRequestPrivate &other, StartContentModerationRequest * const q)
+    : StartContentModerationPrivate(other, q)
+{
+
+}

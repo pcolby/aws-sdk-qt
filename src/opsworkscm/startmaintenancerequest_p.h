@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTMAINTENANCEREQUEST_P_H
 #define QTAWS_STARTMAINTENANCEREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "startmaintenancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class StartMaintenanceRequest;
+
+class QTAWS_EXPORT StartMaintenanceRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    StartMaintenanceRequestPrivate(const OpsWorksCM::Action action,
+                                   StartMaintenanceRequest * const q);
+    StartMaintenanceRequestPrivate(const StartMaintenanceRequestPrivate &other,
+                                   StartMaintenanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartMaintenanceRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

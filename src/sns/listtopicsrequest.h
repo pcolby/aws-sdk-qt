@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTOPICSREQUEST_H
 #define QTAWS_LISTTOPICSREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListTopicsRequestPrivate;
+
+class QTAWS_EXPORT ListTopicsRequest : public SNSRequest {
+
+public:
+    ListTopicsRequest(const ListTopicsRequest &other);
+    ListTopicsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTopicsRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

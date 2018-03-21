@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOMAINCONTACTREQUEST_P_H
 #define QTAWS_UPDATEDOMAINCONTACTREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "updatedomaincontactrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateDomainContactRequest;
+
+class QTAWS_EXPORT UpdateDomainContactRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    UpdateDomainContactRequestPrivate(const Route53Domains::Action action,
+                                   UpdateDomainContactRequest * const q);
+    UpdateDomainContactRequestPrivate(const UpdateDomainContactRequestPrivate &other,
+                                   UpdateDomainContactRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainContactRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

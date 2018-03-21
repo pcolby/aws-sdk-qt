@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERESOLVERREQUEST_P_H
 #define QTAWS_UPDATERESOLVERREQUEST_P_H
 
+#include "appsync_p.h"
+#include "updateresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateResolverRequest;
+
+class QTAWS_EXPORT UpdateResolverRequestPrivate : public AppSyncPrivate {
+
+public:
+    UpdateResolverRequestPrivate(const AppSync::Action action,
+                                   UpdateResolverRequest * const q);
+    UpdateResolverRequestPrivate(const UpdateResolverRequestPrivate &other,
+                                   UpdateResolverRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResolverRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

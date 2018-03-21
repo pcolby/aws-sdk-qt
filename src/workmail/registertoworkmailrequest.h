@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERTOWORKMAILREQUEST_H
 #define QTAWS_REGISTERTOWORKMAILREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class RegisterToWorkMailRequestPrivate;
+
+class QTAWS_EXPORT RegisterToWorkMailRequest : public WorkMailRequest {
+
+public:
+    RegisterToWorkMailRequest(const RegisterToWorkMailRequest &other);
+    RegisterToWorkMailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterToWorkMailRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTTYPESREQUEST_H
 #define QTAWS_DESCRIBEEVENTTYPESREQUEST_H
 
+#include "healthrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeEventTypesRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventTypesRequest : public HealthRequest {
+
+public:
+    DescribeEventTypesRequest(const DescribeEventTypesRequest &other);
+    DescribeEventTypesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventTypesRequest)
+
+}
+
+} // namespace Health
+} // namespace AWS
+
 #endif

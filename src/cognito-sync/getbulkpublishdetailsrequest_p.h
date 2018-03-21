@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBULKPUBLISHDETAILSREQUEST_P_H
 #define QTAWS_GETBULKPUBLISHDETAILSREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "getbulkpublishdetailsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class GetBulkPublishDetailsRequest;
+
+class QTAWS_EXPORT GetBulkPublishDetailsRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    GetBulkPublishDetailsRequestPrivate(const CognitoSync::Action action,
+                                   GetBulkPublishDetailsRequest * const q);
+    GetBulkPublishDetailsRequestPrivate(const GetBulkPublishDetailsRequestPrivate &other,
+                                   GetBulkPublishDetailsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBulkPublishDetailsRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

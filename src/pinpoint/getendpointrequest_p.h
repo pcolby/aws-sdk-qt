@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETENDPOINTREQUEST_P_H
 #define QTAWS_GETENDPOINTREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getendpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetEndpointRequest;
+
+class QTAWS_EXPORT GetEndpointRequestPrivate : public PinpointPrivate {
+
+public:
+    GetEndpointRequestPrivate(const Pinpoint::Action action,
+                                   GetEndpointRequest * const q);
+    GetEndpointRequestPrivate(const GetEndpointRequestPrivate &other,
+                                   GetEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetEndpointRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

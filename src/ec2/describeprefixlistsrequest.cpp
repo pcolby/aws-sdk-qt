@@ -19,3 +19,107 @@
 
 #include "describeprefixlistsrequest.h"
 #include "describeprefixlistsrequest_p.h"
+#include "describeprefixlistsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribePrefixListsRequest
+ *
+ * @brief  Implements EC2 DescribePrefixLists requests.
+ *
+ * @see    EC2Client::describePrefixLists
+ */
+
+/**
+ * @brief  Constructs a new DescribePrefixListsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePrefixListsResponse::DescribePrefixListsResponse(
+
+/**
+ * @brief  Constructs a new DescribePrefixListsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePrefixListsRequest::DescribePrefixListsRequest(const DescribePrefixListsRequest &other)
+    : EC2Request(new DescribePrefixListsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePrefixListsRequest object.
+ */
+DescribePrefixListsRequest::DescribePrefixListsRequest()
+    : EC2Request(new DescribePrefixListsRequestPrivate(EC2Request::DescribePrefixListsAction, this))
+{
+
+}
+
+bool DescribePrefixListsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePrefixListsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePrefixListsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribePrefixListsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePrefixListsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePrefixListsRequestPrivate
+ *
+ * @brief  Private implementation for DescribePrefixListsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePrefixListsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribePrefixListsRequest instance.
+ */
+DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
+    const EC2Request::Action action, DescribePrefixListsRequest * const q)
+    : DescribePrefixListsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePrefixListsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePrefixListsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePrefixListsRequest instance.
+ */
+DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
+    const DescribePrefixListsRequestPrivate &other, DescribePrefixListsRequest * const q)
+    : DescribePrefixListsPrivate(other, q)
+{
+
+}

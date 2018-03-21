@@ -19,3 +19,107 @@
 
 #include "clonereceiptrulesetrequest.h"
 #include "clonereceiptrulesetrequest_p.h"
+#include "clonereceiptrulesetresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  CloneReceiptRuleSetRequest
+ *
+ * @brief  Implements SES CloneReceiptRuleSet requests.
+ *
+ * @see    SESClient::cloneReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new CloneReceiptRuleSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CloneReceiptRuleSetResponse::CloneReceiptRuleSetResponse(
+
+/**
+ * @brief  Constructs a new CloneReceiptRuleSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest(const CloneReceiptRuleSetRequest &other)
+    : SESRequest(new CloneReceiptRuleSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CloneReceiptRuleSetRequest object.
+ */
+CloneReceiptRuleSetRequest::CloneReceiptRuleSetRequest()
+    : SESRequest(new CloneReceiptRuleSetRequestPrivate(SESRequest::CloneReceiptRuleSetAction, this))
+{
+
+}
+
+bool CloneReceiptRuleSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CloneReceiptRuleSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CloneReceiptRuleSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CloneReceiptRuleSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CloneReceiptRuleSetRequestPrivate
+ *
+ * @brief  Private implementation for CloneReceiptRuleSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public CloneReceiptRuleSetRequest instance.
+ */
+CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
+    const SESRequest::Action action, CloneReceiptRuleSetRequest * const q)
+    : CloneReceiptRuleSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CloneReceiptRuleSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CloneReceiptRuleSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CloneReceiptRuleSetRequest instance.
+ */
+CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
+    const CloneReceiptRuleSetRequestPrivate &other, CloneReceiptRuleSetRequest * const q)
+    : CloneReceiptRuleSetPrivate(other, q)
+{
+
+}

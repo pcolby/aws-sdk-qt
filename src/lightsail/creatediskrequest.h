@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDISKREQUEST_H
 #define QTAWS_CREATEDISKREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateDiskRequestPrivate;
+
+class QTAWS_EXPORT CreateDiskRequest : public LightsailRequest {
+
+public:
+    CreateDiskRequest(const CreateDiskRequest &other);
+    CreateDiskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDiskRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

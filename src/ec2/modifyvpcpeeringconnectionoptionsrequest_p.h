@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYVPCPEERINGCONNECTIONOPTIONSREQUEST_P_H
 #define QTAWS_MODIFYVPCPEERINGCONNECTIONOPTIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyvpcpeeringconnectionoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcPeeringConnectionOptionsRequest;
+
+class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsRequestPrivate : public EC2Private {
+
+public:
+    ModifyVpcPeeringConnectionOptionsRequestPrivate(const EC2::Action action,
+                                   ModifyVpcPeeringConnectionOptionsRequest * const q);
+    ModifyVpcPeeringConnectionOptionsRequestPrivate(const ModifyVpcPeeringConnectionOptionsRequestPrivate &other,
+                                   ModifyVpcPeeringConnectionOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVpcPeeringConnectionOptionsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

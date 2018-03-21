@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTSERVICECONFIGURATIONREQUEST_H
 #define QTAWS_MODIFYVPCENDPOINTSERVICECONFIGURATIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcEndpointServiceConfigurationRequestPrivate;
+
+class QTAWS_EXPORT ModifyVpcEndpointServiceConfigurationRequest : public EC2Request {
+
+public:
+    ModifyVpcEndpointServiceConfigurationRequest(const ModifyVpcEndpointServiceConfigurationRequest &other);
+    ModifyVpcEndpointServiceConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcEndpointServiceConfigurationRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

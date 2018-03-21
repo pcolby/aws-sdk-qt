@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINPUTSREQUEST_H
 #define QTAWS_LISTINPUTSREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class ListInputsRequestPrivate;
+
+class QTAWS_EXPORT ListInputsRequest : public MediaLiveRequest {
+
+public:
+    ListInputsRequest(const ListInputsRequest &other);
+    ListInputsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInputsRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

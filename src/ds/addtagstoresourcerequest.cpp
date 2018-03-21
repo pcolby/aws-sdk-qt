@@ -19,3 +19,107 @@
 
 #include "addtagstoresourcerequest.h"
 #include "addtagstoresourcerequest_p.h"
+#include "addtagstoresourceresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  AddTagsToResourceRequest
+ *
+ * @brief  Implements DirectoryService AddTagsToResource requests.
+ *
+ * @see    DirectoryServiceClient::addTagsToResource
+ */
+
+/**
+ * @brief  Constructs a new AddTagsToResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddTagsToResourceResponse::AddTagsToResourceResponse(
+
+/**
+ * @brief  Constructs a new AddTagsToResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddTagsToResourceRequest::AddTagsToResourceRequest(const AddTagsToResourceRequest &other)
+    : DirectoryServiceRequest(new AddTagsToResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddTagsToResourceRequest object.
+ */
+AddTagsToResourceRequest::AddTagsToResourceRequest()
+    : DirectoryServiceRequest(new AddTagsToResourceRequestPrivate(DirectoryServiceRequest::AddTagsToResourceAction, this))
+{
+
+}
+
+bool AddTagsToResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddTagsToResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddTagsToResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new AddTagsToResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddTagsToResourceRequestPrivate
+ *
+ * @brief  Private implementation for AddTagsToResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToResourceRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public AddTagsToResourceRequest instance.
+ */
+AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
+    const DirectoryServiceRequest::Action action, AddTagsToResourceRequest * const q)
+    : AddTagsToResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddTagsToResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddTagsToResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddTagsToResourceRequest instance.
+ */
+AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
+    const AddTagsToResourceRequestPrivate &other, AddTagsToResourceRequest * const q)
+    : AddTagsToResourcePrivate(other, q)
+{
+
+}

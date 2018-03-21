@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEHOSTEDZONEREQUEST_P_H
 #define QTAWS_DELETEHOSTEDZONEREQUEST_P_H
 
+#include "route53_p.h"
+#include "deletehostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteHostedZoneRequest;
+
+class QTAWS_EXPORT DeleteHostedZoneRequestPrivate : public Route53Private {
+
+public:
+    DeleteHostedZoneRequestPrivate(const Route53::Action action,
+                                   DeleteHostedZoneRequest * const q);
+    DeleteHostedZoneRequestPrivate(const DeleteHostedZoneRequestPrivate &other,
+                                   DeleteHostedZoneRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHostedZoneRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

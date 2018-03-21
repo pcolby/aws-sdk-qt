@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESCALINGPLANREQUEST_H
 #define QTAWS_DELETESCALINGPLANREQUEST_H
 
+#include "autoscalingplansrequest.h"
+
+namespace AWS {
+
+namespace AutoScalingPlans {
+
+class DeleteScalingPlanRequestPrivate;
+
+class QTAWS_EXPORT DeleteScalingPlanRequest : public AutoScalingPlansRequest {
+
+public:
+    DeleteScalingPlanRequest(const DeleteScalingPlanRequest &other);
+    DeleteScalingPlanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteScalingPlanRequest)
+
+}
+
+} // namespace AutoScalingPlans
+} // namespace AWS
+
 #endif

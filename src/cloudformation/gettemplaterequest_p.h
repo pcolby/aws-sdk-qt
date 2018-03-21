@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTEMPLATEREQUEST_P_H
 #define QTAWS_GETTEMPLATEREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "gettemplaterequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class GetTemplateRequest;
+
+class QTAWS_EXPORT GetTemplateRequestPrivate : public CloudFormationPrivate {
+
+public:
+    GetTemplateRequestPrivate(const CloudFormation::Action action,
+                                   GetTemplateRequest * const q);
+    GetTemplateRequestPrivate(const GetTemplateRequestPrivate &other,
+                                   GetTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTemplateRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

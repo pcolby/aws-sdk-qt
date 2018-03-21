@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSUMEROLEREQUEST_P_H
 #define QTAWS_ASSUMEROLEREQUEST_P_H
 
+#include "sts_p.h"
+#include "assumerolerequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleRequest;
+
+class QTAWS_EXPORT AssumeRoleRequestPrivate : public STSPrivate {
+
+public:
+    AssumeRoleRequestPrivate(const STS::Action action,
+                                   AssumeRoleRequest * const q);
+    AssumeRoleRequestPrivate(const AssumeRoleRequestPrivate &other,
+                                   AssumeRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssumeRoleRequest)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

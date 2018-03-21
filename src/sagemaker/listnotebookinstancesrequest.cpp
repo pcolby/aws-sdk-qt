@@ -19,3 +19,107 @@
 
 #include "listnotebookinstancesrequest.h"
 #include "listnotebookinstancesrequest_p.h"
+#include "listnotebookinstancesresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListNotebookInstancesRequest
+ *
+ * @brief  Implements SageMaker ListNotebookInstances requests.
+ *
+ * @see    SageMakerClient::listNotebookInstances
+ */
+
+/**
+ * @brief  Constructs a new ListNotebookInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListNotebookInstancesResponse::ListNotebookInstancesResponse(
+
+/**
+ * @brief  Constructs a new ListNotebookInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListNotebookInstancesRequest::ListNotebookInstancesRequest(const ListNotebookInstancesRequest &other)
+    : SageMakerRequest(new ListNotebookInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListNotebookInstancesRequest object.
+ */
+ListNotebookInstancesRequest::ListNotebookInstancesRequest()
+    : SageMakerRequest(new ListNotebookInstancesRequestPrivate(SageMakerRequest::ListNotebookInstancesAction, this))
+{
+
+}
+
+bool ListNotebookInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListNotebookInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListNotebookInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * ListNotebookInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListNotebookInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListNotebookInstancesRequestPrivate
+ *
+ * @brief  Private implementation for ListNotebookInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListNotebookInstancesRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public ListNotebookInstancesRequest instance.
+ */
+ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
+    const SageMakerRequest::Action action, ListNotebookInstancesRequest * const q)
+    : ListNotebookInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListNotebookInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListNotebookInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListNotebookInstancesRequest instance.
+ */
+ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
+    const ListNotebookInstancesRequestPrivate &other, ListNotebookInstancesRequest * const q)
+    : ListNotebookInstancesPrivate(other, q)
+{
+
+}

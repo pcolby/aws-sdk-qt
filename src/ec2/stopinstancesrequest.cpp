@@ -19,3 +19,107 @@
 
 #include "stopinstancesrequest.h"
 #include "stopinstancesrequest_p.h"
+#include "stopinstancesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  StopInstancesRequest
+ *
+ * @brief  Implements EC2 StopInstances requests.
+ *
+ * @see    EC2Client::stopInstances
+ */
+
+/**
+ * @brief  Constructs a new StopInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopInstancesResponse::StopInstancesResponse(
+
+/**
+ * @brief  Constructs a new StopInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopInstancesRequest::StopInstancesRequest(const StopInstancesRequest &other)
+    : EC2Request(new StopInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopInstancesRequest object.
+ */
+StopInstancesRequest::StopInstancesRequest()
+    : EC2Request(new StopInstancesRequestPrivate(EC2Request::StopInstancesAction, this))
+{
+
+}
+
+bool StopInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new StopInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopInstancesRequestPrivate
+ *
+ * @brief  Private implementation for StopInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopInstancesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public StopInstancesRequest instance.
+ */
+StopInstancesRequestPrivate::StopInstancesRequestPrivate(
+    const EC2Request::Action action, StopInstancesRequest * const q)
+    : StopInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopInstancesRequest instance.
+ */
+StopInstancesRequestPrivate::StopInstancesRequestPrivate(
+    const StopInstancesRequestPrivate &other, StopInstancesRequest * const q)
+    : StopInstancesPrivate(other, q)
+{
+
+}

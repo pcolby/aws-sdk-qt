@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERTASKDEFINITIONREQUEST_H
 #define QTAWS_REGISTERTASKDEFINITIONREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RegisterTaskDefinitionRequestPrivate;
+
+class QTAWS_EXPORT RegisterTaskDefinitionRequest : public ECSRequest {
+
+public:
+    RegisterTaskDefinitionRequest(const RegisterTaskDefinitionRequest &other);
+    RegisterTaskDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterTaskDefinitionRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

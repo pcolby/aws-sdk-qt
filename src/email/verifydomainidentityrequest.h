@@ -20,4 +20,32 @@
 #ifndef QTAWS_VERIFYDOMAINIDENTITYREQUEST_H
 #define QTAWS_VERIFYDOMAINIDENTITYREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyDomainIdentityRequestPrivate;
+
+class QTAWS_EXPORT VerifyDomainIdentityRequest : public SESRequest {
+
+public:
+    VerifyDomainIdentityRequest(const VerifyDomainIdentityRequest &other);
+    VerifyDomainIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(VerifyDomainIdentityRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESOURCEPERMISSIONSREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEPERMISSIONSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "describeresourcepermissionsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeResourcePermissionsRequest;
+
+class QTAWS_EXPORT DescribeResourcePermissionsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DescribeResourcePermissionsRequestPrivate(const WorkDocs::Action action,
+                                   DescribeResourcePermissionsRequest * const q);
+    DescribeResourcePermissionsRequestPrivate(const DescribeResourcePermissionsRequestPrivate &other,
+                                   DescribeResourcePermissionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourcePermissionsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

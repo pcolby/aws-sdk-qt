@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYDBSNAPSHOTREQUEST_P_H
 #define QTAWS_MODIFYDBSNAPSHOTREQUEST_P_H
 
+#include "rds_p.h"
+#include "modifydbsnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBSnapshotRequest;
+
+class QTAWS_EXPORT ModifyDBSnapshotRequestPrivate : public RDSPrivate {
+
+public:
+    ModifyDBSnapshotRequestPrivate(const RDS::Action action,
+                                   ModifyDBSnapshotRequest * const q);
+    ModifyDBSnapshotRequestPrivate(const ModifyDBSnapshotRequestPrivate &other,
+                                   ModifyDBSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyDBSnapshotRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

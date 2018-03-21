@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADPARTCOPYREQUEST_H
 #define QTAWS_UPLOADPARTCOPYREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class UploadPartCopyRequestPrivate;
+
+class QTAWS_EXPORT UploadPartCopyRequest : public S3Request {
+
+public:
+    UploadPartCopyRequest(const UploadPartCopyRequest &other);
+    UploadPartCopyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadPartCopyRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

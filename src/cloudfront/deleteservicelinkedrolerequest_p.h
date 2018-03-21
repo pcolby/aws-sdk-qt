@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 #define QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "deleteservicelinkedrolerequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteServiceLinkedRoleRequest;
+
+class QTAWS_EXPORT DeleteServiceLinkedRoleRequestPrivate : public CloudFrontPrivate {
+
+public:
+    DeleteServiceLinkedRoleRequestPrivate(const CloudFront::Action action,
+                                   DeleteServiceLinkedRoleRequest * const q);
+    DeleteServiceLinkedRoleRequestPrivate(const DeleteServiceLinkedRoleRequestPrivate &other,
+                                   DeleteServiceLinkedRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServiceLinkedRoleRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

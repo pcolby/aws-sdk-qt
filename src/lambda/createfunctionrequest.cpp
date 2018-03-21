@@ -19,3 +19,107 @@
 
 #include "createfunctionrequest.h"
 #include "createfunctionrequest_p.h"
+#include "createfunctionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  CreateFunctionRequest
+ *
+ * @brief  Implements Lambda CreateFunction requests.
+ *
+ * @see    LambdaClient::createFunction
+ */
+
+/**
+ * @brief  Constructs a new CreateFunctionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFunctionResponse::CreateFunctionResponse(
+
+/**
+ * @brief  Constructs a new CreateFunctionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateFunctionRequest::CreateFunctionRequest(const CreateFunctionRequest &other)
+    : LambdaRequest(new CreateFunctionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateFunctionRequest object.
+ */
+CreateFunctionRequest::CreateFunctionRequest()
+    : LambdaRequest(new CreateFunctionRequestPrivate(LambdaRequest::CreateFunctionAction, this))
+{
+
+}
+
+bool CreateFunctionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateFunctionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateFunctionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateFunctionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFunctionRequestPrivate
+ *
+ * @brief  Private implementation for CreateFunctionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public CreateFunctionRequest instance.
+ */
+CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
+    const LambdaRequest::Action action, CreateFunctionRequest * const q)
+    : CreateFunctionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateFunctionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateFunctionRequest instance.
+ */
+CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
+    const CreateFunctionRequestPrivate &other, CreateFunctionRequest * const q)
+    : CreateFunctionPrivate(other, q)
+{
+
+}

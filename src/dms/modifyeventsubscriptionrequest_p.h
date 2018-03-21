@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "modifyeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ModifyEventSubscriptionRequest;
+
+class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    ModifyEventSubscriptionRequestPrivate(const DatabaseMigrationService::Action action,
+                                   ModifyEventSubscriptionRequest * const q);
+    ModifyEventSubscriptionRequestPrivate(const ModifyEventSubscriptionRequestPrivate &other,
+                                   ModifyEventSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyEventSubscriptionRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getstackpolicyrequest.h"
 #include "getstackpolicyrequest_p.h"
+#include "getstackpolicyresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  GetStackPolicyRequest
+ *
+ * @brief  Implements CloudFormation GetStackPolicy requests.
+ *
+ * @see    CloudFormationClient::getStackPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetStackPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStackPolicyResponse::GetStackPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetStackPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetStackPolicyRequest::GetStackPolicyRequest(const GetStackPolicyRequest &other)
+    : CloudFormationRequest(new GetStackPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetStackPolicyRequest object.
+ */
+GetStackPolicyRequest::GetStackPolicyRequest()
+    : CloudFormationRequest(new GetStackPolicyRequestPrivate(CloudFormationRequest::GetStackPolicyAction, this))
+{
+
+}
+
+bool GetStackPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetStackPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetStackPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * GetStackPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetStackPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStackPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetStackPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStackPolicyRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public GetStackPolicyRequest instance.
+ */
+GetStackPolicyRequestPrivate::GetStackPolicyRequestPrivate(
+    const CloudFormationRequest::Action action, GetStackPolicyRequest * const q)
+    : GetStackPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStackPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetStackPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetStackPolicyRequest instance.
+ */
+GetStackPolicyRequestPrivate::GetStackPolicyRequestPrivate(
+    const GetStackPolicyRequestPrivate &other, GetStackPolicyRequest * const q)
+    : GetStackPolicyPrivate(other, q)
+{
+
+}

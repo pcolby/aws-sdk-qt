@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSREQUEST_H
 #define QTAWS_DESCRIBEFILESYSTEMSREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeFileSystemsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFileSystemsRequest : public EFSRequest {
+
+public:
+    DescribeFileSystemsRequest(const DescribeFileSystemsRequest &other);
+    DescribeFileSystemsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFileSystemsRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

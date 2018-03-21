@@ -20,4 +20,32 @@
 #ifndef QTAWS_SUBSCRIBETODATASETREQUEST_H
 #define QTAWS_SUBSCRIBETODATASETREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class SubscribeToDatasetRequestPrivate;
+
+class QTAWS_EXPORT SubscribeToDatasetRequest : public CognitoSyncRequest {
+
+public:
+    SubscribeToDatasetRequest(const SubscribeToDatasetRequest &other);
+    SubscribeToDatasetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SubscribeToDatasetRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

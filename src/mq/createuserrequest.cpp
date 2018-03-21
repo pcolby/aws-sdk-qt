@@ -19,3 +19,107 @@
 
 #include "createuserrequest.h"
 #include "createuserrequest_p.h"
+#include "createuserresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  CreateUserRequest
+ *
+ * @brief  Implements MQ CreateUser requests.
+ *
+ * @see    MQClient::createUser
+ */
+
+/**
+ * @brief  Constructs a new CreateUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserResponse::CreateUserResponse(
+
+/**
+ * @brief  Constructs a new CreateUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateUserRequest::CreateUserRequest(const CreateUserRequest &other)
+    : MQRequest(new CreateUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateUserRequest object.
+ */
+CreateUserRequest::CreateUserRequest()
+    : MQRequest(new CreateUserRequestPrivate(MQRequest::CreateUserAction, this))
+{
+
+}
+
+bool CreateUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserRequestPrivate
+ *
+ * @brief  Private implementation for CreateUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public CreateUserRequest instance.
+ */
+CreateUserRequestPrivate::CreateUserRequestPrivate(
+    const MQRequest::Action action, CreateUserRequest * const q)
+    : CreateUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateUserRequest instance.
+ */
+CreateUserRequestPrivate::CreateUserRequestPrivate(
+    const CreateUserRequestPrivate &other, CreateUserRequest * const q)
+    : CreateUserPrivate(other, q)
+{
+
+}

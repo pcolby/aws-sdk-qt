@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSERREQUEST_P_H
 #define QTAWS_CREATEUSERREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "createuserrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class CreateUserRequest;
+
+class QTAWS_EXPORT CreateUserRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    CreateUserRequestPrivate(const AlexaForBusiness::Action action,
+                                   CreateUserRequest * const q);
+    CreateUserRequestPrivate(const CreateUserRequestPrivate &other,
+                                   CreateUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

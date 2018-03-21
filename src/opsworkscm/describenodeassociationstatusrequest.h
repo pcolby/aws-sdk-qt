@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_H
 #define QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeNodeAssociationStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeNodeAssociationStatusRequest : public OpsWorksCMRequest {
+
+public:
+    DescribeNodeAssociationStatusRequest(const DescribeNodeAssociationStatusRequest &other);
+    DescribeNodeAssociationStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNodeAssociationStatusRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

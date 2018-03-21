@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSAMPLEDREQUESTSREQUEST_P_H
 #define QTAWS_GETSAMPLEDREQUESTSREQUEST_P_H
 
+#include "waf_p.h"
+#include "getsampledrequestsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetSampledRequestsRequest;
+
+class QTAWS_EXPORT GetSampledRequestsRequestPrivate : public WAFPrivate {
+
+public:
+    GetSampledRequestsRequestPrivate(const WAF::Action action,
+                                   GetSampledRequestsRequest * const q);
+    GetSampledRequestsRequestPrivate(const GetSampledRequestsRequestPrivate &other,
+                                   GetSampledRequestsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSampledRequestsRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

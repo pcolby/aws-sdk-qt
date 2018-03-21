@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTYPEREQUEST_H
 #define QTAWS_GETTYPEREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetTypeRequestPrivate;
+
+class QTAWS_EXPORT GetTypeRequest : public AppSyncRequest {
+
+public:
+    GetTypeRequest(const GetTypeRequest &other);
+    GetTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTypeRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

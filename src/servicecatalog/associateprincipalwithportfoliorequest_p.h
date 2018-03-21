@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEPRINCIPALWITHPORTFOLIOREQUEST_P_H
 #define QTAWS_ASSOCIATEPRINCIPALWITHPORTFOLIOREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "associateprincipalwithportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class AssociatePrincipalWithPortfolioRequest;
+
+class QTAWS_EXPORT AssociatePrincipalWithPortfolioRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    AssociatePrincipalWithPortfolioRequestPrivate(const ServiceCatalog::Action action,
+                                   AssociatePrincipalWithPortfolioRequest * const q);
+    AssociatePrincipalWithPortfolioRequestPrivate(const AssociatePrincipalWithPortfolioRequestPrivate &other,
+                                   AssociatePrincipalWithPortfolioRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociatePrincipalWithPortfolioRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

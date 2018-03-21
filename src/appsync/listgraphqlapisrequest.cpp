@@ -19,3 +19,107 @@
 
 #include "listgraphqlapisrequest.h"
 #include "listgraphqlapisrequest_p.h"
+#include "listgraphqlapisresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  ListGraphqlApisRequest
+ *
+ * @brief  Implements AppSync ListGraphqlApis requests.
+ *
+ * @see    AppSyncClient::listGraphqlApis
+ */
+
+/**
+ * @brief  Constructs a new ListGraphqlApisResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGraphqlApisResponse::ListGraphqlApisResponse(
+
+/**
+ * @brief  Constructs a new ListGraphqlApisRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGraphqlApisRequest::ListGraphqlApisRequest(const ListGraphqlApisRequest &other)
+    : AppSyncRequest(new ListGraphqlApisRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGraphqlApisRequest object.
+ */
+ListGraphqlApisRequest::ListGraphqlApisRequest()
+    : AppSyncRequest(new ListGraphqlApisRequestPrivate(AppSyncRequest::ListGraphqlApisAction, this))
+{
+
+}
+
+bool ListGraphqlApisRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGraphqlApisResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGraphqlApisResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGraphqlApisResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGraphqlApisRequestPrivate
+ *
+ * @brief  Private implementation for ListGraphqlApisRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGraphqlApisRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public ListGraphqlApisRequest instance.
+ */
+ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
+    const AppSyncRequest::Action action, ListGraphqlApisRequest * const q)
+    : ListGraphqlApisPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGraphqlApisRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGraphqlApisRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGraphqlApisRequest instance.
+ */
+ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
+    const ListGraphqlApisRequestPrivate &other, ListGraphqlApisRequest * const q)
+    : ListGraphqlApisPrivate(other, q)
+{
+
+}

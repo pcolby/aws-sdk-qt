@@ -19,3 +19,107 @@
 
 #include "describenodeassociationstatusrequest.h"
 #include "describenodeassociationstatusrequest_p.h"
+#include "describenodeassociationstatusresponse.h"
+#include "opsworkscmrequest_p.h"
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  DescribeNodeAssociationStatusRequest
+ *
+ * @brief  Implements OpsWorksCM DescribeNodeAssociationStatus requests.
+ *
+ * @see    OpsWorksCMClient::describeNodeAssociationStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeNodeAssociationStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNodeAssociationStatusResponse::DescribeNodeAssociationStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeNodeAssociationStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest(const DescribeNodeAssociationStatusRequest &other)
+    : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeNodeAssociationStatusRequest object.
+ */
+DescribeNodeAssociationStatusRequest::DescribeNodeAssociationStatusRequest()
+    : OpsWorksCMRequest(new DescribeNodeAssociationStatusRequestPrivate(OpsWorksCMRequest::DescribeNodeAssociationStatusAction, this))
+{
+
+}
+
+bool DescribeNodeAssociationStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeNodeAssociationStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeNodeAssociationStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksCMClient::send
+ */
+AwsAbstractResponse * DescribeNodeAssociationStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeNodeAssociationStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNodeAssociationStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeNodeAssociationStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNodeAssociationStatusRequestPrivate object.
+ *
+ * @param  action  OpsWorksCM action being performed.
+ * @param  q       Pointer to this object's public DescribeNodeAssociationStatusRequest instance.
+ */
+DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
+    const OpsWorksCMRequest::Action action, DescribeNodeAssociationStatusRequest * const q)
+    : DescribeNodeAssociationStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNodeAssociationStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeNodeAssociationStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeNodeAssociationStatusRequest instance.
+ */
+DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
+    const DescribeNodeAssociationStatusRequestPrivate &other, DescribeNodeAssociationStatusRequest * const q)
+    : DescribeNodeAssociationStatusPrivate(other, q)
+{
+
+}

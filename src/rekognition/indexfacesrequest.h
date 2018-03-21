@@ -20,4 +20,32 @@
 #ifndef QTAWS_INDEXFACESREQUEST_H
 #define QTAWS_INDEXFACESREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class IndexFacesRequestPrivate;
+
+class QTAWS_EXPORT IndexFacesRequest : public RekognitionRequest {
+
+public:
+    IndexFacesRequest(const IndexFacesRequest &other);
+    IndexFacesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(IndexFacesRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

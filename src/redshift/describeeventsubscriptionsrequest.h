@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeEventSubscriptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventSubscriptionsRequest : public RedshiftRequest {
+
+public:
+    DescribeEventSubscriptionsRequest(const DescribeEventSubscriptionsRequest &other);
+    DescribeEventSubscriptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventSubscriptionsRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

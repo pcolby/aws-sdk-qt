@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETREQUEST_H
 #define QTAWS_UPDATEREGEXPATTERNSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateRegexPatternSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateRegexPatternSetRequest : public WAFRegionalRequest {
+
+public:
+    UpdateRegexPatternSetRequest(const UpdateRegexPatternSetRequest &other);
+    UpdateRegexPatternSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRegexPatternSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

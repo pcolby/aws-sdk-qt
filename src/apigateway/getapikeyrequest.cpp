@@ -19,3 +19,107 @@
 
 #include "getapikeyrequest.h"
 #include "getapikeyrequest_p.h"
+#include "getapikeyresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetApiKeyRequest
+ *
+ * @brief  Implements APIGateway GetApiKey requests.
+ *
+ * @see    APIGatewayClient::getApiKey
+ */
+
+/**
+ * @brief  Constructs a new GetApiKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApiKeyResponse::GetApiKeyResponse(
+
+/**
+ * @brief  Constructs a new GetApiKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetApiKeyRequest::GetApiKeyRequest(const GetApiKeyRequest &other)
+    : APIGatewayRequest(new GetApiKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetApiKeyRequest object.
+ */
+GetApiKeyRequest::GetApiKeyRequest()
+    : APIGatewayRequest(new GetApiKeyRequestPrivate(APIGatewayRequest::GetApiKeyAction, this))
+{
+
+}
+
+bool GetApiKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetApiKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetApiKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetApiKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetApiKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApiKeyRequestPrivate
+ *
+ * @brief  Private implementation for GetApiKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApiKeyRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetApiKeyRequest instance.
+ */
+GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
+    const APIGatewayRequest::Action action, GetApiKeyRequest * const q)
+    : GetApiKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApiKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetApiKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetApiKeyRequest instance.
+ */
+GetApiKeyRequestPrivate::GetApiKeyRequestPrivate(
+    const GetApiKeyRequestPrivate &other, GetApiKeyRequest * const q)
+    : GetApiKeyPrivate(other, q)
+{
+
+}

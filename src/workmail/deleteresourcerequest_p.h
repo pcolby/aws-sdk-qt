@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERESOURCEREQUEST_P_H
 #define QTAWS_DELETERESOURCEREQUEST_P_H
 
+#include "workmail_p.h"
+#include "deleteresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeleteResourceRequest;
+
+class QTAWS_EXPORT DeleteResourceRequestPrivate : public WorkMailPrivate {
+
+public:
+    DeleteResourceRequestPrivate(const WorkMail::Action action,
+                                   DeleteResourceRequest * const q);
+    DeleteResourceRequestPrivate(const DeleteResourceRequestPrivate &other,
+                                   DeleteResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResourceRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

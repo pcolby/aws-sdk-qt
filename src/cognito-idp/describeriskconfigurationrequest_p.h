@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERISKCONFIGURATIONREQUEST_P_H
 #define QTAWS_DESCRIBERISKCONFIGURATIONREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "describeriskconfigurationrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeRiskConfigurationRequest;
+
+class QTAWS_EXPORT DescribeRiskConfigurationRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    DescribeRiskConfigurationRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   DescribeRiskConfigurationRequest * const q);
+    DescribeRiskConfigurationRequestPrivate(const DescribeRiskConfigurationRequestPrivate &other,
+                                   DescribeRiskConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRiskConfigurationRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSREQUEST_H
 #define QTAWS_UPDATEHITREVIEWSTATUSREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateHITReviewStatusRequestPrivate;
+
+class QTAWS_EXPORT UpdateHITReviewStatusRequest : public MTurkRequest {
+
+public:
+    UpdateHITReviewStatusRequest(const UpdateHITReviewStatusRequest &other);
+    UpdateHITReviewStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateHITReviewStatusRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETNAMEDQUERYREQUEST_P_H
 #define QTAWS_BATCHGETNAMEDQUERYREQUEST_P_H
 
+#include "athena_p.h"
+#include "batchgetnamedqueryrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class BatchGetNamedQueryRequest;
+
+class QTAWS_EXPORT BatchGetNamedQueryRequestPrivate : public AthenaPrivate {
+
+public:
+    BatchGetNamedQueryRequestPrivate(const Athena::Action action,
+                                   BatchGetNamedQueryRequest * const q);
+    BatchGetNamedQueryRequestPrivate(const BatchGetNamedQueryRequestPrivate &other,
+                                   BatchGetNamedQueryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetNamedQueryRequest)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

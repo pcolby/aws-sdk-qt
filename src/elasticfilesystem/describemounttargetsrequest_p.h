@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSREQUEST_P_H
 #define QTAWS_DESCRIBEMOUNTTARGETSREQUEST_P_H
 
+#include "efs_p.h"
+#include "describemounttargetsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeMountTargetsRequest;
+
+class QTAWS_EXPORT DescribeMountTargetsRequestPrivate : public EFSPrivate {
+
+public:
+    DescribeMountTargetsRequestPrivate(const EFS::Action action,
+                                   DescribeMountTargetsRequest * const q);
+    DescribeMountTargetsRequestPrivate(const DescribeMountTargetsRequestPrivate &other,
+                                   DescribeMountTargetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMountTargetsRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

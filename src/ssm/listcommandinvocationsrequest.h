@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCOMMANDINVOCATIONSREQUEST_H
 #define QTAWS_LISTCOMMANDINVOCATIONSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListCommandInvocationsRequestPrivate;
+
+class QTAWS_EXPORT ListCommandInvocationsRequest : public SSMRequest {
+
+public:
+    ListCommandInvocationsRequest(const ListCommandInvocationsRequest &other);
+    ListCommandInvocationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListCommandInvocationsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

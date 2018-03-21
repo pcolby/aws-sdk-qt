@@ -19,3 +19,107 @@
 
 #include "getmaintenancewindowtaskrequest.h"
 #include "getmaintenancewindowtaskrequest_p.h"
+#include "getmaintenancewindowtaskresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetMaintenanceWindowTaskRequest
+ *
+ * @brief  Implements SSM GetMaintenanceWindowTask requests.
+ *
+ * @see    SSMClient::getMaintenanceWindowTask
+ */
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMaintenanceWindowTaskResponse::GetMaintenanceWindowTaskResponse(
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMaintenanceWindowTaskRequest::GetMaintenanceWindowTaskRequest(const GetMaintenanceWindowTaskRequest &other)
+    : SSMRequest(new GetMaintenanceWindowTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowTaskRequest object.
+ */
+GetMaintenanceWindowTaskRequest::GetMaintenanceWindowTaskRequest()
+    : SSMRequest(new GetMaintenanceWindowTaskRequestPrivate(SSMRequest::GetMaintenanceWindowTaskAction, this))
+{
+
+}
+
+bool GetMaintenanceWindowTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMaintenanceWindowTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMaintenanceWindowTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetMaintenanceWindowTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMaintenanceWindowTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMaintenanceWindowTaskRequestPrivate
+ *
+ * @brief  Private implementation for GetMaintenanceWindowTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowTaskRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetMaintenanceWindowTaskRequest instance.
+ */
+GetMaintenanceWindowTaskRequestPrivate::GetMaintenanceWindowTaskRequestPrivate(
+    const SSMRequest::Action action, GetMaintenanceWindowTaskRequest * const q)
+    : GetMaintenanceWindowTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMaintenanceWindowTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMaintenanceWindowTaskRequest instance.
+ */
+GetMaintenanceWindowTaskRequestPrivate::GetMaintenanceWindowTaskRequestPrivate(
+    const GetMaintenanceWindowTaskRequestPrivate &other, GetMaintenanceWindowTaskRequest * const q)
+    : GetMaintenanceWindowTaskPrivate(other, q)
+{
+
+}

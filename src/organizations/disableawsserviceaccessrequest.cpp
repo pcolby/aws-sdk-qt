@@ -19,3 +19,107 @@
 
 #include "disableawsserviceaccessrequest.h"
 #include "disableawsserviceaccessrequest_p.h"
+#include "disableawsserviceaccessresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DisableAWSServiceAccessRequest
+ *
+ * @brief  Implements Organizations DisableAWSServiceAccess requests.
+ *
+ * @see    OrganizationsClient::disableAWSServiceAccess
+ */
+
+/**
+ * @brief  Constructs a new DisableAWSServiceAccessResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableAWSServiceAccessResponse::DisableAWSServiceAccessResponse(
+
+/**
+ * @brief  Constructs a new DisableAWSServiceAccessRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableAWSServiceAccessRequest::DisableAWSServiceAccessRequest(const DisableAWSServiceAccessRequest &other)
+    : OrganizationsRequest(new DisableAWSServiceAccessRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableAWSServiceAccessRequest object.
+ */
+DisableAWSServiceAccessRequest::DisableAWSServiceAccessRequest()
+    : OrganizationsRequest(new DisableAWSServiceAccessRequestPrivate(OrganizationsRequest::DisableAWSServiceAccessAction, this))
+{
+
+}
+
+bool DisableAWSServiceAccessRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableAWSServiceAccessResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableAWSServiceAccessResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableAWSServiceAccessResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableAWSServiceAccessRequestPrivate
+ *
+ * @brief  Private implementation for DisableAWSServiceAccessRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableAWSServiceAccessRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public DisableAWSServiceAccessRequest instance.
+ */
+DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
+    const OrganizationsRequest::Action action, DisableAWSServiceAccessRequest * const q)
+    : DisableAWSServiceAccessPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableAWSServiceAccessRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableAWSServiceAccessRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableAWSServiceAccessRequest instance.
+ */
+DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
+    const DisableAWSServiceAccessRequestPrivate &other, DisableAWSServiceAccessRequest * const q)
+    : DisableAWSServiceAccessPrivate(other, q)
+{
+
+}

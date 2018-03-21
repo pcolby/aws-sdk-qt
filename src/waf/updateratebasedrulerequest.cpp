@@ -19,3 +19,107 @@
 
 #include "updateratebasedrulerequest.h"
 #include "updateratebasedrulerequest_p.h"
+#include "updateratebasedruleresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateRateBasedRuleRequest
+ *
+ * @brief  Implements WAF UpdateRateBasedRule requests.
+ *
+ * @see    WAFClient::updateRateBasedRule
+ */
+
+/**
+ * @brief  Constructs a new UpdateRateBasedRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
+
+/**
+ * @brief  Constructs a new UpdateRateBasedRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest(const UpdateRateBasedRuleRequest &other)
+    : WAFRequest(new UpdateRateBasedRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRateBasedRuleRequest object.
+ */
+UpdateRateBasedRuleRequest::UpdateRateBasedRuleRequest()
+    : WAFRequest(new UpdateRateBasedRuleRequestPrivate(WAFRequest::UpdateRateBasedRuleAction, this))
+{
+
+}
+
+bool UpdateRateBasedRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRateBasedRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRateBasedRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRateBasedRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRateBasedRuleRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRateBasedRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRateBasedRuleRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public UpdateRateBasedRuleRequest instance.
+ */
+UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
+    const WAFRequest::Action action, UpdateRateBasedRuleRequest * const q)
+    : UpdateRateBasedRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRateBasedRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRateBasedRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRateBasedRuleRequest instance.
+ */
+UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
+    const UpdateRateBasedRuleRequestPrivate &other, UpdateRateBasedRuleRequest * const q)
+    : UpdateRateBasedRulePrivate(other, q)
+{
+
+}

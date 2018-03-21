@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESTACKSREQUEST_P_H
 #define QTAWS_DESCRIBESTACKSREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describestacksrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeStacksRequest;
+
+class QTAWS_EXPORT DescribeStacksRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeStacksRequestPrivate(const AppStream::Action action,
+                                   DescribeStacksRequest * const q);
+    DescribeStacksRequestPrivate(const DescribeStacksRequestPrivate &other,
+                                   DescribeStacksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStacksRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

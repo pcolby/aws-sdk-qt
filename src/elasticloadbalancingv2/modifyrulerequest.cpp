@@ -19,3 +19,107 @@
 
 #include "modifyrulerequest.h"
 #include "modifyrulerequest_p.h"
+#include "modifyruleresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  ModifyRuleRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 ModifyRule requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::modifyRule
+ */
+
+/**
+ * @brief  Constructs a new ModifyRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyRuleResponse::ModifyRuleResponse(
+
+/**
+ * @brief  Constructs a new ModifyRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyRuleRequest::ModifyRuleRequest(const ModifyRuleRequest &other)
+    : ElasticLoadBalancingv2Request(new ModifyRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyRuleRequest object.
+ */
+ModifyRuleRequest::ModifyRuleRequest()
+    : ElasticLoadBalancingv2Request(new ModifyRuleRequestPrivate(ElasticLoadBalancingv2Request::ModifyRuleAction, this))
+{
+
+}
+
+bool ModifyRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * ModifyRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyRuleRequestPrivate
+ *
+ * @brief  Private implementation for ModifyRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyRuleRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public ModifyRuleRequest instance.
+ */
+ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, ModifyRuleRequest * const q)
+    : ModifyRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyRuleRequest instance.
+ */
+ModifyRuleRequestPrivate::ModifyRuleRequestPrivate(
+    const ModifyRuleRequestPrivate &other, ModifyRuleRequest * const q)
+    : ModifyRulePrivate(other, q)
+{
+
+}

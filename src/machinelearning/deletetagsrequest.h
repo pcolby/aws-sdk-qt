@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETAGSREQUEST_H
 #define QTAWS_DELETETAGSREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteTagsRequestPrivate;
+
+class QTAWS_EXPORT DeleteTagsRequest : public MachineLearningRequest {
+
+public:
+    DeleteTagsRequest(const DeleteTagsRequest &other);
+    DeleteTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

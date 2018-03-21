@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEOPTIONGROUPREQUEST_H
 #define QTAWS_DELETEOPTIONGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteOptionGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteOptionGroupRequest : public RDSRequest {
+
+public:
+    DeleteOptionGroupRequest(const DeleteOptionGroupRequest &other);
+    DeleteOptionGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOptionGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

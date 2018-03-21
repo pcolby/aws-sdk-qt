@@ -19,3 +19,107 @@
 
 #include "describeapplicationsrequest.h"
 #include "describeapplicationsrequest_p.h"
+#include "describeapplicationsresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeApplicationsRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeApplications requests.
+ *
+ * @see    ElasticBeanstalkClient::describeApplications
+ */
+
+/**
+ * @brief  Constructs a new DescribeApplicationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationsResponse::DescribeApplicationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeApplicationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeApplicationsRequest::DescribeApplicationsRequest(const DescribeApplicationsRequest &other)
+    : ElasticBeanstalkRequest(new DescribeApplicationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeApplicationsRequest object.
+ */
+DescribeApplicationsRequest::DescribeApplicationsRequest()
+    : ElasticBeanstalkRequest(new DescribeApplicationsRequestPrivate(ElasticBeanstalkRequest::DescribeApplicationsAction, this))
+{
+
+}
+
+bool DescribeApplicationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeApplicationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeApplicationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeApplicationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeApplicationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeApplicationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeApplicationsRequest instance.
+ */
+DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeApplicationsRequest * const q)
+    : DescribeApplicationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeApplicationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeApplicationsRequest instance.
+ */
+DescribeApplicationsRequestPrivate::DescribeApplicationsRequestPrivate(
+    const DescribeApplicationsRequestPrivate &other, DescribeApplicationsRequest * const q)
+    : DescribeApplicationsPrivate(other, q)
+{
+
+}

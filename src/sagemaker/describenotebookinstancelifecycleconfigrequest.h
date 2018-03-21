@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_H
 #define QTAWS_DESCRIBENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DescribeNotebookInstanceLifecycleConfigRequestPrivate;
+
+class QTAWS_EXPORT DescribeNotebookInstanceLifecycleConfigRequest : public SageMakerRequest {
+
+public:
+    DescribeNotebookInstanceLifecycleConfigRequest(const DescribeNotebookInstanceLifecycleConfigRequest &other);
+    DescribeNotebookInstanceLifecycleConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNotebookInstanceLifecycleConfigRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

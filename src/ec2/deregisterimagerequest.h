@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERIMAGEREQUEST_H
 #define QTAWS_DEREGISTERIMAGEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeregisterImageRequestPrivate;
+
+class QTAWS_EXPORT DeregisterImageRequest : public EC2Request {
+
+public:
+    DeregisterImageRequest(const DeregisterImageRequest &other);
+    DeregisterImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterImageRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

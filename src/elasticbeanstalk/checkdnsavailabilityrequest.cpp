@@ -19,3 +19,107 @@
 
 #include "checkdnsavailabilityrequest.h"
 #include "checkdnsavailabilityrequest_p.h"
+#include "checkdnsavailabilityresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  CheckDNSAvailabilityRequest
+ *
+ * @brief  Implements ElasticBeanstalk CheckDNSAvailability requests.
+ *
+ * @see    ElasticBeanstalkClient::checkDNSAvailability
+ */
+
+/**
+ * @brief  Constructs a new CheckDNSAvailabilityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CheckDNSAvailabilityResponse::CheckDNSAvailabilityResponse(
+
+/**
+ * @brief  Constructs a new CheckDNSAvailabilityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest(const CheckDNSAvailabilityRequest &other)
+    : ElasticBeanstalkRequest(new CheckDNSAvailabilityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CheckDNSAvailabilityRequest object.
+ */
+CheckDNSAvailabilityRequest::CheckDNSAvailabilityRequest()
+    : ElasticBeanstalkRequest(new CheckDNSAvailabilityRequestPrivate(ElasticBeanstalkRequest::CheckDNSAvailabilityAction, this))
+{
+
+}
+
+bool CheckDNSAvailabilityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CheckDNSAvailabilityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CheckDNSAvailabilityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetworkReply * const reply) const
+{
+    return new CheckDNSAvailabilityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CheckDNSAvailabilityRequestPrivate
+ *
+ * @brief  Private implementation for CheckDNSAvailabilityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public CheckDNSAvailabilityRequest instance.
+ */
+CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, CheckDNSAvailabilityRequest * const q)
+    : CheckDNSAvailabilityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CheckDNSAvailabilityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CheckDNSAvailabilityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CheckDNSAvailabilityRequest instance.
+ */
+CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
+    const CheckDNSAvailabilityRequestPrivate &other, CheckDNSAvailabilityRequest * const q)
+    : CheckDNSAvailabilityPrivate(other, q)
+{
+
+}

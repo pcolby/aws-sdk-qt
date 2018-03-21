@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETLAUNCHTEMPLATEDATAREQUEST_P_H
 #define QTAWS_GETLAUNCHTEMPLATEDATAREQUEST_P_H
 
+#include "ec2_p.h"
+#include "getlaunchtemplatedatarequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetLaunchTemplateDataRequest;
+
+class QTAWS_EXPORT GetLaunchTemplateDataRequestPrivate : public EC2Private {
+
+public:
+    GetLaunchTemplateDataRequestPrivate(const EC2::Action action,
+                                   GetLaunchTemplateDataRequest * const q);
+    GetLaunchTemplateDataRequestPrivate(const GetLaunchTemplateDataRequestPrivate &other,
+                                   GetLaunchTemplateDataRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetLaunchTemplateDataRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

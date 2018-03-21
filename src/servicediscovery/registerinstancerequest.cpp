@@ -19,3 +19,107 @@
 
 #include "registerinstancerequest.h"
 #include "registerinstancerequest_p.h"
+#include "registerinstanceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  RegisterInstanceRequest
+ *
+ * @brief  Implements ServiceDiscovery RegisterInstance requests.
+ *
+ * @see    ServiceDiscoveryClient::registerInstance
+ */
+
+/**
+ * @brief  Constructs a new RegisterInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterInstanceResponse::RegisterInstanceResponse(
+
+/**
+ * @brief  Constructs a new RegisterInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterInstanceRequest::RegisterInstanceRequest(const RegisterInstanceRequest &other)
+    : ServiceDiscoveryRequest(new RegisterInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterInstanceRequest object.
+ */
+RegisterInstanceRequest::RegisterInstanceRequest()
+    : ServiceDiscoveryRequest(new RegisterInstanceRequestPrivate(ServiceDiscoveryRequest::RegisterInstanceAction, this))
+{
+
+}
+
+bool RegisterInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterInstanceRequestPrivate
+ *
+ * @brief  Private implementation for RegisterInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterInstanceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public RegisterInstanceRequest instance.
+ */
+RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, RegisterInstanceRequest * const q)
+    : RegisterInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterInstanceRequest instance.
+ */
+RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
+    const RegisterInstanceRequestPrivate &other, RegisterInstanceRequest * const q)
+    : RegisterInstancePrivate(other, q)
+{
+
+}

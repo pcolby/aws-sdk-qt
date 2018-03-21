@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINSTANCESNAPSHOTREQUEST_P_H
 #define QTAWS_CREATEINSTANCESNAPSHOTREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "createinstancesnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateInstanceSnapshotRequest;
+
+class QTAWS_EXPORT CreateInstanceSnapshotRequestPrivate : public LightsailPrivate {
+
+public:
+    CreateInstanceSnapshotRequestPrivate(const Lightsail::Action action,
+                                   CreateInstanceSnapshotRequest * const q);
+    CreateInstanceSnapshotRequestPrivate(const CreateInstanceSnapshotRequestPrivate &other,
+                                   CreateInstanceSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstanceSnapshotRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

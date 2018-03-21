@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_P_H
 #define QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getdevicepoolcompatibilityrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetDevicePoolCompatibilityRequest;
+
+class QTAWS_EXPORT GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetDevicePoolCompatibilityRequestPrivate(const DeviceFarm::Action action,
+                                   GetDevicePoolCompatibilityRequest * const q);
+    GetDevicePoolCompatibilityRequestPrivate(const GetDevicePoolCompatibilityRequestPrivate &other,
+                                   GetDevicePoolCompatibilityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDevicePoolCompatibilityRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

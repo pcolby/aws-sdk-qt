@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESREQUEST_H
 #define QTAWS_MODIFYCLUSTERIAMROLESREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterIamRolesRequestPrivate;
+
+class QTAWS_EXPORT ModifyClusterIamRolesRequest : public RedshiftRequest {
+
+public:
+    ModifyClusterIamRolesRequest(const ModifyClusterIamRolesRequest &other);
+    ModifyClusterIamRolesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyClusterIamRolesRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

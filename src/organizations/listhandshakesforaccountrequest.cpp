@@ -19,3 +19,107 @@
 
 #include "listhandshakesforaccountrequest.h"
 #include "listhandshakesforaccountrequest_p.h"
+#include "listhandshakesforaccountresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListHandshakesForAccountRequest
+ *
+ * @brief  Implements Organizations ListHandshakesForAccount requests.
+ *
+ * @see    OrganizationsClient::listHandshakesForAccount
+ */
+
+/**
+ * @brief  Constructs a new ListHandshakesForAccountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHandshakesForAccountResponse::ListHandshakesForAccountResponse(
+
+/**
+ * @brief  Constructs a new ListHandshakesForAccountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListHandshakesForAccountRequest::ListHandshakesForAccountRequest(const ListHandshakesForAccountRequest &other)
+    : OrganizationsRequest(new ListHandshakesForAccountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListHandshakesForAccountRequest object.
+ */
+ListHandshakesForAccountRequest::ListHandshakesForAccountRequest()
+    : OrganizationsRequest(new ListHandshakesForAccountRequestPrivate(OrganizationsRequest::ListHandshakesForAccountAction, this))
+{
+
+}
+
+bool ListHandshakesForAccountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListHandshakesForAccountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListHandshakesForAccountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListHandshakesForAccountRequest::response(QNetworkReply * const reply) const
+{
+    return new ListHandshakesForAccountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHandshakesForAccountRequestPrivate
+ *
+ * @brief  Private implementation for ListHandshakesForAccountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHandshakesForAccountRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListHandshakesForAccountRequest instance.
+ */
+ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
+    const OrganizationsRequest::Action action, ListHandshakesForAccountRequest * const q)
+    : ListHandshakesForAccountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHandshakesForAccountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListHandshakesForAccountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListHandshakesForAccountRequest instance.
+ */
+ListHandshakesForAccountRequestPrivate::ListHandshakesForAccountRequestPrivate(
+    const ListHandshakesForAccountRequestPrivate &other, ListHandshakesForAccountRequest * const q)
+    : ListHandshakesForAccountPrivate(other, q)
+{
+
+}

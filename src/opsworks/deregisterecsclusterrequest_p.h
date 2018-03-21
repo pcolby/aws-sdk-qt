@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERECSCLUSTERREQUEST_P_H
 #define QTAWS_DEREGISTERECSCLUSTERREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "deregisterecsclusterrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterEcsClusterRequest;
+
+class QTAWS_EXPORT DeregisterEcsClusterRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DeregisterEcsClusterRequestPrivate(const OpsWorks::Action action,
+                                   DeregisterEcsClusterRequest * const q);
+    DeregisterEcsClusterRequestPrivate(const DeregisterEcsClusterRequestPrivate &other,
+                                   DeregisterEcsClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterEcsClusterRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

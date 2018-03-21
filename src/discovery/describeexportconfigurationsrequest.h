@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEXPORTCONFIGURATIONSREQUEST_H
 #define QTAWS_DESCRIBEEXPORTCONFIGURATIONSREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DescribeExportConfigurationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeExportConfigurationsRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    DescribeExportConfigurationsRequest(const DescribeExportConfigurationsRequest &other);
+    DescribeExportConfigurationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeExportConfigurationsRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

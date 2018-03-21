@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOFFERINGPROMOTIONSREQUEST_H
 #define QTAWS_LISTOFFERINGPROMOTIONSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListOfferingPromotionsRequestPrivate;
+
+class QTAWS_EXPORT ListOfferingPromotionsRequest : public DeviceFarmRequest {
+
+public:
+    ListOfferingPromotionsRequest(const ListOfferingPromotionsRequest &other);
+    ListOfferingPromotionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOfferingPromotionsRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

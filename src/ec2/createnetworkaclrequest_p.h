@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATENETWORKACLREQUEST_P_H
 #define QTAWS_CREATENETWORKACLREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createnetworkaclrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNetworkAclRequest;
+
+class QTAWS_EXPORT CreateNetworkAclRequestPrivate : public EC2Private {
+
+public:
+    CreateNetworkAclRequestPrivate(const EC2::Action action,
+                                   CreateNetworkAclRequest * const q);
+    CreateNetworkAclRequestPrivate(const CreateNetworkAclRequestPrivate &other,
+                                   CreateNetworkAclRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNetworkAclRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletevpcpeeringconnectionrequest.h"
 #include "deletevpcpeeringconnectionrequest_p.h"
+#include "deletevpcpeeringconnectionresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcPeeringConnectionRequest
+ *
+ * @brief  Implements EC2 DeleteVpcPeeringConnection requests.
+ *
+ * @see    EC2Client::deleteVpcPeeringConnection
+ */
+
+/**
+ * @brief  Constructs a new DeleteVpcPeeringConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
+
+/**
+ * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest(const DeleteVpcPeeringConnectionRequest &other)
+    : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVpcPeeringConnectionRequest object.
+ */
+DeleteVpcPeeringConnectionRequest::DeleteVpcPeeringConnectionRequest()
+    : EC2Request(new DeleteVpcPeeringConnectionRequestPrivate(EC2Request::DeleteVpcPeeringConnectionAction, this))
+{
+
+}
+
+bool DeleteVpcPeeringConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVpcPeeringConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVpcPeeringConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVpcPeeringConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcPeeringConnectionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVpcPeeringConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
+ */
+DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
+    const EC2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)
+    : DeleteVpcPeeringConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcPeeringConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVpcPeeringConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVpcPeeringConnectionRequest instance.
+ */
+DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
+    const DeleteVpcPeeringConnectionRequestPrivate &other, DeleteVpcPeeringConnectionRequest * const q)
+    : DeleteVpcPeeringConnectionPrivate(other, q)
+{
+
+}

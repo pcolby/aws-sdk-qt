@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSERVICESREQUEST_P_H
 #define QTAWS_LISTSERVICESREQUEST_P_H
 
+#include "ecs_p.h"
+#include "listservicesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListServicesRequest;
+
+class QTAWS_EXPORT ListServicesRequestPrivate : public ECSPrivate {
+
+public:
+    ListServicesRequestPrivate(const ECS::Action action,
+                                   ListServicesRequest * const q);
+    ListServicesRequestPrivate(const ListServicesRequestPrivate &other,
+                                   ListServicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListServicesRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

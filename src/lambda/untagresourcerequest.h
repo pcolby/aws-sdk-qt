@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_H
 #define QTAWS_UNTAGRESOURCEREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UntagResourceRequestPrivate;
+
+class QTAWS_EXPORT UntagResourceRequest : public LambdaRequest {
+
+public:
+    UntagResourceRequest(const UntagResourceRequest &other);
+    UntagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourceRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

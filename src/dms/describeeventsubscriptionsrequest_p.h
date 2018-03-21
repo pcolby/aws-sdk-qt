@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describeeventsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeEventSubscriptionsRequest;
+
+class QTAWS_EXPORT DescribeEventSubscriptionsRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeEventSubscriptionsRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeEventSubscriptionsRequest * const q);
+    DescribeEventSubscriptionsRequestPrivate(const DescribeEventSubscriptionsRequestPrivate &other,
+                                   DescribeEventSubscriptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventSubscriptionsRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

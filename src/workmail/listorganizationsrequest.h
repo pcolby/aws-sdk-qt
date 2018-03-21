@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTORGANIZATIONSREQUEST_H
 #define QTAWS_LISTORGANIZATIONSREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListOrganizationsRequestPrivate;
+
+class QTAWS_EXPORT ListOrganizationsRequest : public WorkMailRequest {
+
+public:
+    ListOrganizationsRequest(const ListOrganizationsRequest &other);
+    ListOrganizationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOrganizationsRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

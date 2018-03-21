@@ -19,3 +19,107 @@
 
 #include "resetpasswordrequest.h"
 #include "resetpasswordrequest_p.h"
+#include "resetpasswordresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  ResetPasswordRequest
+ *
+ * @brief  Implements WorkMail ResetPassword requests.
+ *
+ * @see    WorkMailClient::resetPassword
+ */
+
+/**
+ * @brief  Constructs a new ResetPasswordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetPasswordResponse::ResetPasswordResponse(
+
+/**
+ * @brief  Constructs a new ResetPasswordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetPasswordRequest::ResetPasswordRequest(const ResetPasswordRequest &other)
+    : WorkMailRequest(new ResetPasswordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetPasswordRequest object.
+ */
+ResetPasswordRequest::ResetPasswordRequest()
+    : WorkMailRequest(new ResetPasswordRequestPrivate(WorkMailRequest::ResetPasswordAction, this))
+{
+
+}
+
+bool ResetPasswordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetPasswordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetPasswordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetPasswordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetPasswordRequestPrivate
+ *
+ * @brief  Private implementation for ResetPasswordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetPasswordRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public ResetPasswordRequest instance.
+ */
+ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
+    const WorkMailRequest::Action action, ResetPasswordRequest * const q)
+    : ResetPasswordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetPasswordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetPasswordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetPasswordRequest instance.
+ */
+ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
+    const ResetPasswordRequestPrivate &other, ResetPasswordRequest * const q)
+    : ResetPasswordPrivate(other, q)
+{
+
+}

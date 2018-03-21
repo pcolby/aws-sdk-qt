@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGEOLOCATIONREQUEST_P_H
 #define QTAWS_GETGEOLOCATIONREQUEST_P_H
 
+#include "route53_p.h"
+#include "getgeolocationrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetGeoLocationRequest;
+
+class QTAWS_EXPORT GetGeoLocationRequestPrivate : public Route53Private {
+
+public:
+    GetGeoLocationRequestPrivate(const Route53::Action action,
+                                   GetGeoLocationRequest * const q);
+    GetGeoLocationRequestPrivate(const GetGeoLocationRequestPrivate &other,
+                                   GetGeoLocationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGeoLocationRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "detectlabelsrequest.h"
 #include "detectlabelsrequest_p.h"
+#include "detectlabelsresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DetectLabelsRequest
+ *
+ * @brief  Implements Rekognition DetectLabels requests.
+ *
+ * @see    RekognitionClient::detectLabels
+ */
+
+/**
+ * @brief  Constructs a new DetectLabelsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectLabelsResponse::DetectLabelsResponse(
+
+/**
+ * @brief  Constructs a new DetectLabelsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetectLabelsRequest::DetectLabelsRequest(const DetectLabelsRequest &other)
+    : RekognitionRequest(new DetectLabelsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetectLabelsRequest object.
+ */
+DetectLabelsRequest::DetectLabelsRequest()
+    : RekognitionRequest(new DetectLabelsRequestPrivate(RekognitionRequest::DetectLabelsAction, this))
+{
+
+}
+
+bool DetectLabelsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetectLabelsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetectLabelsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply * const reply) const
+{
+    return new DetectLabelsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectLabelsRequestPrivate
+ *
+ * @brief  Private implementation for DetectLabelsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectLabelsRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public DetectLabelsRequest instance.
+ */
+DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
+    const RekognitionRequest::Action action, DetectLabelsRequest * const q)
+    : DetectLabelsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectLabelsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetectLabelsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetectLabelsRequest instance.
+ */
+DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
+    const DetectLabelsRequestPrivate &other, DetectLabelsRequest * const q)
+    : DetectLabelsPrivate(other, q)
+{
+
+}

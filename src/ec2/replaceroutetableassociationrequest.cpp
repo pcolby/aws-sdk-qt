@@ -19,3 +19,107 @@
 
 #include "replaceroutetableassociationrequest.h"
 #include "replaceroutetableassociationrequest_p.h"
+#include "replaceroutetableassociationresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReplaceRouteTableAssociationRequest
+ *
+ * @brief  Implements EC2 ReplaceRouteTableAssociation requests.
+ *
+ * @see    EC2Client::replaceRouteTableAssociation
+ */
+
+/**
+ * @brief  Constructs a new ReplaceRouteTableAssociationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
+
+/**
+ * @brief  Constructs a new ReplaceRouteTableAssociationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest(const ReplaceRouteTableAssociationRequest &other)
+    : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReplaceRouteTableAssociationRequest object.
+ */
+ReplaceRouteTableAssociationRequest::ReplaceRouteTableAssociationRequest()
+    : EC2Request(new ReplaceRouteTableAssociationRequestPrivate(EC2Request::ReplaceRouteTableAssociationAction, this))
+{
+
+}
+
+bool ReplaceRouteTableAssociationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReplaceRouteTableAssociationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReplaceRouteTableAssociationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response(QNetworkReply * const reply) const
+{
+    return new ReplaceRouteTableAssociationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReplaceRouteTableAssociationRequestPrivate
+ *
+ * @brief  Private implementation for ReplaceRouteTableAssociationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ReplaceRouteTableAssociationRequest instance.
+ */
+ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
+    const EC2Request::Action action, ReplaceRouteTableAssociationRequest * const q)
+    : ReplaceRouteTableAssociationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceRouteTableAssociationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReplaceRouteTableAssociationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReplaceRouteTableAssociationRequest instance.
+ */
+ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
+    const ReplaceRouteTableAssociationRequestPrivate &other, ReplaceRouteTableAssociationRequest * const q)
+    : ReplaceRouteTableAssociationPrivate(other, q)
+{
+
+}

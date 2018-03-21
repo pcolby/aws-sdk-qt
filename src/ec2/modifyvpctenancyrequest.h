@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYVPCTENANCYREQUEST_H
 #define QTAWS_MODIFYVPCTENANCYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcTenancyRequestPrivate;
+
+class QTAWS_EXPORT ModifyVpcTenancyRequest : public EC2Request {
+
+public:
+    ModifyVpcTenancyRequest(const ModifyVpcTenancyRequest &other);
+    ModifyVpcTenancyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcTenancyRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

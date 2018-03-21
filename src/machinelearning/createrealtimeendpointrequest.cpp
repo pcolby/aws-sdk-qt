@@ -19,3 +19,107 @@
 
 #include "createrealtimeendpointrequest.h"
 #include "createrealtimeendpointrequest_p.h"
+#include "createrealtimeendpointresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateRealtimeEndpointRequest
+ *
+ * @brief  Implements MachineLearning CreateRealtimeEndpoint requests.
+ *
+ * @see    MachineLearningClient::createRealtimeEndpoint
+ */
+
+/**
+ * @brief  Constructs a new CreateRealtimeEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
+
+/**
+ * @brief  Constructs a new CreateRealtimeEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRealtimeEndpointRequest::CreateRealtimeEndpointRequest(const CreateRealtimeEndpointRequest &other)
+    : MachineLearningRequest(new CreateRealtimeEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRealtimeEndpointRequest object.
+ */
+CreateRealtimeEndpointRequest::CreateRealtimeEndpointRequest()
+    : MachineLearningRequest(new CreateRealtimeEndpointRequestPrivate(MachineLearningRequest::CreateRealtimeEndpointAction, this))
+{
+
+}
+
+bool CreateRealtimeEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRealtimeEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRealtimeEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRealtimeEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRealtimeEndpointRequestPrivate
+ *
+ * @brief  Private implementation for CreateRealtimeEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRealtimeEndpointRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public CreateRealtimeEndpointRequest instance.
+ */
+CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
+    const MachineLearningRequest::Action action, CreateRealtimeEndpointRequest * const q)
+    : CreateRealtimeEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRealtimeEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRealtimeEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRealtimeEndpointRequest instance.
+ */
+CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
+    const CreateRealtimeEndpointRequestPrivate &other, CreateRealtimeEndpointRequest * const q)
+    : CreateRealtimeEndpointPrivate(other, q)
+{
+
+}

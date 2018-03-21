@@ -19,3 +19,107 @@
 
 #include "describestackeventsrequest.h"
 #include "describestackeventsrequest_p.h"
+#include "describestackeventsresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackEventsRequest
+ *
+ * @brief  Implements CloudFormation DescribeStackEvents requests.
+ *
+ * @see    CloudFormationClient::describeStackEvents
+ */
+
+/**
+ * @brief  Constructs a new DescribeStackEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackEventsResponse::DescribeStackEventsResponse(
+
+/**
+ * @brief  Constructs a new DescribeStackEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStackEventsRequest::DescribeStackEventsRequest(const DescribeStackEventsRequest &other)
+    : CloudFormationRequest(new DescribeStackEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStackEventsRequest object.
+ */
+DescribeStackEventsRequest::DescribeStackEventsRequest()
+    : CloudFormationRequest(new DescribeStackEventsRequestPrivate(CloudFormationRequest::DescribeStackEventsAction, this))
+{
+
+}
+
+bool DescribeStackEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStackEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStackEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * DescribeStackEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStackEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackEventsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStackEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackEventsRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public DescribeStackEventsRequest instance.
+ */
+DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
+    const CloudFormationRequest::Action action, DescribeStackEventsRequest * const q)
+    : DescribeStackEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStackEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStackEventsRequest instance.
+ */
+DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
+    const DescribeStackEventsRequestPrivate &other, DescribeStackEventsRequest * const q)
+    : DescribeStackEventsPrivate(other, q)
+{
+
+}

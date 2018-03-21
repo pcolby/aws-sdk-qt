@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 #define QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 
+#include "waf_p.h"
+#include "listregexpatternsetsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListRegexPatternSetsRequest;
+
+class QTAWS_EXPORT ListRegexPatternSetsRequestPrivate : public WAFPrivate {
+
+public:
+    ListRegexPatternSetsRequestPrivate(const WAF::Action action,
+                                   ListRegexPatternSetsRequest * const q);
+    ListRegexPatternSetsRequestPrivate(const ListRegexPatternSetsRequestPrivate &other,
+                                   ListRegexPatternSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRegexPatternSetsRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

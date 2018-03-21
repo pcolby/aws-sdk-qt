@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREFROMSNAPSHOTREQUEST_H
 #define QTAWS_RESTOREFROMSNAPSHOTREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RestoreFromSnapshotRequestPrivate;
+
+class QTAWS_EXPORT RestoreFromSnapshotRequest : public DirectoryServiceRequest {
+
+public:
+    RestoreFromSnapshotRequest(const RestoreFromSnapshotRequest &other);
+    RestoreFromSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreFromSnapshotRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

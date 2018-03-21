@@ -19,3 +19,107 @@
 
 #include "deregisterpatchbaselineforpatchgrouprequest.h"
 #include "deregisterpatchbaselineforpatchgrouprequest_p.h"
+#include "deregisterpatchbaselineforpatchgroupresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeregisterPatchBaselineForPatchGroupRequest
+ *
+ * @brief  Implements SSM DeregisterPatchBaselineForPatchGroup requests.
+ *
+ * @see    SSMClient::deregisterPatchBaselineForPatchGroup
+ */
+
+/**
+ * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGroupResponse(
+
+/**
+ * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest(const DeregisterPatchBaselineForPatchGroupRequest &other)
+    : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequest object.
+ */
+DeregisterPatchBaselineForPatchGroupRequest::DeregisterPatchBaselineForPatchGroupRequest()
+    : SSMRequest(new DeregisterPatchBaselineForPatchGroupRequestPrivate(SSMRequest::DeregisterPatchBaselineForPatchGroupAction, this))
+{
+
+}
+
+bool DeregisterPatchBaselineForPatchGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterPatchBaselineForPatchGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterPatchBaselineForPatchGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterPatchBaselineForPatchGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterPatchBaselineForPatchGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterPatchBaselineForPatchGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeregisterPatchBaselineForPatchGroupRequest instance.
+ */
+DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
+    const SSMRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)
+    : DeregisterPatchBaselineForPatchGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterPatchBaselineForPatchGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterPatchBaselineForPatchGroupRequest instance.
+ */
+DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
+    const DeregisterPatchBaselineForPatchGroupRequestPrivate &other, DeregisterPatchBaselineForPatchGroupRequest * const q)
+    : DeregisterPatchBaselineForPatchGroupPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describecachediscsivolumesrequest.h"
 #include "describecachediscsivolumesrequest_p.h"
+#include "describecachediscsivolumesresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeCachediSCSIVolumesRequest
+ *
+ * @brief  Implements StorageGateway DescribeCachediSCSIVolumes requests.
+ *
+ * @see    StorageGatewayClient::describeCachediSCSIVolumes
+ */
+
+/**
+ * @brief  Constructs a new DescribeCachediSCSIVolumesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCachediSCSIVolumesResponse::DescribeCachediSCSIVolumesResponse(
+
+/**
+ * @brief  Constructs a new DescribeCachediSCSIVolumesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCachediSCSIVolumesRequest::DescribeCachediSCSIVolumesRequest(const DescribeCachediSCSIVolumesRequest &other)
+    : StorageGatewayRequest(new DescribeCachediSCSIVolumesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCachediSCSIVolumesRequest object.
+ */
+DescribeCachediSCSIVolumesRequest::DescribeCachediSCSIVolumesRequest()
+    : StorageGatewayRequest(new DescribeCachediSCSIVolumesRequestPrivate(StorageGatewayRequest::DescribeCachediSCSIVolumesAction, this))
+{
+
+}
+
+bool DescribeCachediSCSIVolumesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCachediSCSIVolumesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCachediSCSIVolumesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeCachediSCSIVolumesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCachediSCSIVolumesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCachediSCSIVolumesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCachediSCSIVolumesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCachediSCSIVolumesRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeCachediSCSIVolumesRequest instance.
+ */
+DescribeCachediSCSIVolumesRequestPrivate::DescribeCachediSCSIVolumesRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeCachediSCSIVolumesRequest * const q)
+    : DescribeCachediSCSIVolumesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCachediSCSIVolumesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCachediSCSIVolumesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCachediSCSIVolumesRequest instance.
+ */
+DescribeCachediSCSIVolumesRequestPrivate::DescribeCachediSCSIVolumesRequestPrivate(
+    const DescribeCachediSCSIVolumesRequestPrivate &other, DescribeCachediSCSIVolumesRequest * const q)
+    : DescribeCachediSCSIVolumesPrivate(other, q)
+{
+
+}

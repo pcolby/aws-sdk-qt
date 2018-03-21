@@ -19,3 +19,107 @@
 
 #include "startgatewayrequest.h"
 #include "startgatewayrequest_p.h"
+#include "startgatewayresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  StartGatewayRequest
+ *
+ * @brief  Implements StorageGateway StartGateway requests.
+ *
+ * @see    StorageGatewayClient::startGateway
+ */
+
+/**
+ * @brief  Constructs a new StartGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartGatewayResponse::StartGatewayResponse(
+
+/**
+ * @brief  Constructs a new StartGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartGatewayRequest::StartGatewayRequest(const StartGatewayRequest &other)
+    : StorageGatewayRequest(new StartGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartGatewayRequest object.
+ */
+StartGatewayRequest::StartGatewayRequest()
+    : StorageGatewayRequest(new StartGatewayRequestPrivate(StorageGatewayRequest::StartGatewayAction, this))
+{
+
+}
+
+bool StartGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new StartGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartGatewayRequestPrivate
+ *
+ * @brief  Private implementation for StartGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartGatewayRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public StartGatewayRequest instance.
+ */
+StartGatewayRequestPrivate::StartGatewayRequestPrivate(
+    const StorageGatewayRequest::Action action, StartGatewayRequest * const q)
+    : StartGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartGatewayRequest instance.
+ */
+StartGatewayRequestPrivate::StartGatewayRequestPrivate(
+    const StartGatewayRequestPrivate &other, StartGatewayRequest * const q)
+    : StartGatewayPrivate(other, q)
+{
+
+}

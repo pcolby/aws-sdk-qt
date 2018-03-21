@@ -19,3 +19,107 @@
 
 #include "createinterconnectrequest.h"
 #include "createinterconnectrequest_p.h"
+#include "createinterconnectresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateInterconnectRequest
+ *
+ * @brief  Implements DirectConnect CreateInterconnect requests.
+ *
+ * @see    DirectConnectClient::createInterconnect
+ */
+
+/**
+ * @brief  Constructs a new CreateInterconnectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInterconnectResponse::CreateInterconnectResponse(
+
+/**
+ * @brief  Constructs a new CreateInterconnectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInterconnectRequest::CreateInterconnectRequest(const CreateInterconnectRequest &other)
+    : DirectConnectRequest(new CreateInterconnectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInterconnectRequest object.
+ */
+CreateInterconnectRequest::CreateInterconnectRequest()
+    : DirectConnectRequest(new CreateInterconnectRequestPrivate(DirectConnectRequest::CreateInterconnectAction, this))
+{
+
+}
+
+bool CreateInterconnectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInterconnectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInterconnectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInterconnectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInterconnectRequestPrivate
+ *
+ * @brief  Private implementation for CreateInterconnectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInterconnectRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public CreateInterconnectRequest instance.
+ */
+CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
+    const DirectConnectRequest::Action action, CreateInterconnectRequest * const q)
+    : CreateInterconnectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInterconnectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInterconnectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInterconnectRequest instance.
+ */
+CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
+    const CreateInterconnectRequestPrivate &other, CreateInterconnectRequest * const q)
+    : CreateInterconnectPrivate(other, q)
+{
+
+}

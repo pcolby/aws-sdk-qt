@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEKEYROTATIONREQUEST_H
 #define QTAWS_ENABLEKEYROTATIONREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class EnableKeyRotationRequestPrivate;
+
+class QTAWS_EXPORT EnableKeyRotationRequest : public KMSRequest {
+
+public:
+    EnableKeyRotationRequest(const EnableKeyRotationRequest &other);
+    EnableKeyRotationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableKeyRotationRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

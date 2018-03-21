@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHPOLICYREQUEST_P_H
 #define QTAWS_DETACHPOLICYREQUEST_P_H
 
+#include "organizations_p.h"
+#include "detachpolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DetachPolicyRequest;
+
+class QTAWS_EXPORT DetachPolicyRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DetachPolicyRequestPrivate(const Organizations::Action action,
+                                   DetachPolicyRequest * const q);
+    DetachPolicyRequestPrivate(const DetachPolicyRequestPrivate &other,
+                                   DetachPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachPolicyRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

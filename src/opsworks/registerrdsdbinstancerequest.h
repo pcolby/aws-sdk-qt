@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERRDSDBINSTANCEREQUEST_H
 #define QTAWS_REGISTERRDSDBINSTANCEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterRdsDbInstanceRequestPrivate;
+
+class QTAWS_EXPORT RegisterRdsDbInstanceRequest : public OpsWorksRequest {
+
+public:
+    RegisterRdsDbInstanceRequest(const RegisterRdsDbInstanceRequest &other);
+    RegisterRdsDbInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterRdsDbInstanceRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

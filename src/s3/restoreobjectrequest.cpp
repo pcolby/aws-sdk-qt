@@ -19,3 +19,107 @@
 
 #include "restoreobjectrequest.h"
 #include "restoreobjectrequest_p.h"
+#include "restoreobjectresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  RestoreObjectRequest
+ *
+ * @brief  Implements S3 RestoreObject requests.
+ *
+ * @see    S3Client::restoreObject
+ */
+
+/**
+ * @brief  Constructs a new RestoreObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreObjectResponse::RestoreObjectResponse(
+
+/**
+ * @brief  Constructs a new RestoreObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RestoreObjectRequest::RestoreObjectRequest(const RestoreObjectRequest &other)
+    : S3Request(new RestoreObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RestoreObjectRequest object.
+ */
+RestoreObjectRequest::RestoreObjectRequest()
+    : S3Request(new RestoreObjectRequestPrivate(S3Request::RestoreObjectAction, this))
+{
+
+}
+
+bool RestoreObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RestoreObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RestoreObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new RestoreObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreObjectRequestPrivate
+ *
+ * @brief  Private implementation for RestoreObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreObjectRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public RestoreObjectRequest instance.
+ */
+RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
+    const S3Request::Action action, RestoreObjectRequest * const q)
+    : RestoreObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RestoreObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RestoreObjectRequest instance.
+ */
+RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
+    const RestoreObjectRequestPrivate &other, RestoreObjectRequest * const q)
+    : RestoreObjectPrivate(other, q)
+{
+
+}

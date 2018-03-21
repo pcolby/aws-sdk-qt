@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTCONNECTIONNOTIFICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVPCENDPOINTCONNECTIONNOTIFICATIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevpcendpointconnectionnotificationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcEndpointConnectionNotificationsRequest;
+
+class QTAWS_EXPORT DescribeVpcEndpointConnectionNotificationsRequestPrivate : public EC2Private {
+
+public:
+    DescribeVpcEndpointConnectionNotificationsRequestPrivate(const EC2::Action action,
+                                   DescribeVpcEndpointConnectionNotificationsRequest * const q);
+    DescribeVpcEndpointConnectionNotificationsRequestPrivate(const DescribeVpcEndpointConnectionNotificationsRequestPrivate &other,
+                                   DescribeVpcEndpointConnectionNotificationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcEndpointConnectionNotificationsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "startcrawlerrequest.h"
 #include "startcrawlerrequest_p.h"
+#include "startcrawlerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StartCrawlerRequest
+ *
+ * @brief  Implements Glue StartCrawler requests.
+ *
+ * @see    GlueClient::startCrawler
+ */
+
+/**
+ * @brief  Constructs a new StartCrawlerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartCrawlerResponse::StartCrawlerResponse(
+
+/**
+ * @brief  Constructs a new StartCrawlerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartCrawlerRequest::StartCrawlerRequest(const StartCrawlerRequest &other)
+    : GlueRequest(new StartCrawlerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartCrawlerRequest object.
+ */
+StartCrawlerRequest::StartCrawlerRequest()
+    : GlueRequest(new StartCrawlerRequestPrivate(GlueRequest::StartCrawlerAction, this))
+{
+
+}
+
+bool StartCrawlerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartCrawlerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartCrawlerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StartCrawlerRequest::response(QNetworkReply * const reply) const
+{
+    return new StartCrawlerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartCrawlerRequestPrivate
+ *
+ * @brief  Private implementation for StartCrawlerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartCrawlerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StartCrawlerRequest instance.
+ */
+StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
+    const GlueRequest::Action action, StartCrawlerRequest * const q)
+    : StartCrawlerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartCrawlerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartCrawlerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartCrawlerRequest instance.
+ */
+StartCrawlerRequestPrivate::StartCrawlerRequestPrivate(
+    const StartCrawlerRequestPrivate &other, StartCrawlerRequest * const q)
+    : StartCrawlerPrivate(other, q)
+{
+
+}

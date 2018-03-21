@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEOPTIONGROUPREQUEST_P_H
 #define QTAWS_CREATEOPTIONGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "createoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateOptionGroupRequest;
+
+class QTAWS_EXPORT CreateOptionGroupRequestPrivate : public RDSPrivate {
+
+public:
+    CreateOptionGroupRequestPrivate(const RDS::Action action,
+                                   CreateOptionGroupRequest * const q);
+    CreateOptionGroupRequestPrivate(const CreateOptionGroupRequestPrivate &other,
+                                   CreateOptionGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateOptionGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

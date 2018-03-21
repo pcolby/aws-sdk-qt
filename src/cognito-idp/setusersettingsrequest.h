@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETUSERSETTINGSREQUEST_H
 #define QTAWS_SETUSERSETTINGSREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUserSettingsRequestPrivate;
+
+class QTAWS_EXPORT SetUserSettingsRequest : public CognitoIdentityProviderRequest {
+
+public:
+    SetUserSettingsRequest(const SetUserSettingsRequest &other);
+    SetUserSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetUserSettingsRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

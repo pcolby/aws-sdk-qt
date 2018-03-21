@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATENATGATEWAYREQUEST_P_H
 #define QTAWS_CREATENATGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createnatgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNatGatewayRequest;
+
+class QTAWS_EXPORT CreateNatGatewayRequestPrivate : public EC2Private {
+
+public:
+    CreateNatGatewayRequestPrivate(const EC2::Action action,
+                                   CreateNatGatewayRequest * const q);
+    CreateNatGatewayRequestPrivate(const CreateNatGatewayRequestPrivate &other,
+                                   CreateNatGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNatGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

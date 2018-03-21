@@ -19,3 +19,107 @@
 
 #include "getdistributionrequest.h"
 #include "getdistributionrequest_p.h"
+#include "getdistributionresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetDistributionRequest
+ *
+ * @brief  Implements CloudFront GetDistribution requests.
+ *
+ * @see    CloudFrontClient::getDistribution
+ */
+
+/**
+ * @brief  Constructs a new GetDistributionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDistributionResponse::GetDistributionResponse(
+
+/**
+ * @brief  Constructs a new GetDistributionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDistributionRequest::GetDistributionRequest(const GetDistributionRequest &other)
+    : CloudFrontRequest(new GetDistributionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDistributionRequest object.
+ */
+GetDistributionRequest::GetDistributionRequest()
+    : CloudFrontRequest(new GetDistributionRequestPrivate(CloudFrontRequest::GetDistributionAction, this))
+{
+
+}
+
+bool GetDistributionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDistributionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDistributionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * GetDistributionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDistributionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDistributionRequestPrivate
+ *
+ * @brief  Private implementation for GetDistributionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDistributionRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public GetDistributionRequest instance.
+ */
+GetDistributionRequestPrivate::GetDistributionRequestPrivate(
+    const CloudFrontRequest::Action action, GetDistributionRequest * const q)
+    : GetDistributionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDistributionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDistributionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDistributionRequest instance.
+ */
+GetDistributionRequestPrivate::GetDistributionRequestPrivate(
+    const GetDistributionRequestPrivate &other, GetDistributionRequest * const q)
+    : GetDistributionPrivate(other, q)
+{
+
+}

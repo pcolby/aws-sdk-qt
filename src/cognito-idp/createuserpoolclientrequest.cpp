@@ -19,3 +19,107 @@
 
 #include "createuserpoolclientrequest.h"
 #include "createuserpoolclientrequest_p.h"
+#include "createuserpoolclientresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  CreateUserPoolClientRequest
+ *
+ * @brief  Implements CognitoIdentityProvider CreateUserPoolClient requests.
+ *
+ * @see    CognitoIdentityProviderClient::createUserPoolClient
+ */
+
+/**
+ * @brief  Constructs a new CreateUserPoolClientResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserPoolClientResponse::CreateUserPoolClientResponse(
+
+/**
+ * @brief  Constructs a new CreateUserPoolClientRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateUserPoolClientRequest::CreateUserPoolClientRequest(const CreateUserPoolClientRequest &other)
+    : CognitoIdentityProviderRequest(new CreateUserPoolClientRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateUserPoolClientRequest object.
+ */
+CreateUserPoolClientRequest::CreateUserPoolClientRequest()
+    : CognitoIdentityProviderRequest(new CreateUserPoolClientRequestPrivate(CognitoIdentityProviderRequest::CreateUserPoolClientAction, this))
+{
+
+}
+
+bool CreateUserPoolClientRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateUserPoolClientResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateUserPoolClientResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * CreateUserPoolClientRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateUserPoolClientResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserPoolClientRequestPrivate
+ *
+ * @brief  Private implementation for CreateUserPoolClientRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserPoolClientRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public CreateUserPoolClientRequest instance.
+ */
+CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, CreateUserPoolClientRequest * const q)
+    : CreateUserPoolClientPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserPoolClientRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateUserPoolClientRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateUserPoolClientRequest instance.
+ */
+CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
+    const CreateUserPoolClientRequestPrivate &other, CreateUserPoolClientRequest * const q)
+    : CreateUserPoolClientPrivate(other, q)
+{
+
+}

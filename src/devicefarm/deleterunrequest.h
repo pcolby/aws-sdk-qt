@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERUNREQUEST_H
 #define QTAWS_DELETERUNREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteRunRequestPrivate;
+
+class QTAWS_EXPORT DeleteRunRequest : public DeviceFarmRequest {
+
+public:
+    DeleteRunRequest(const DeleteRunRequest &other);
+    DeleteRunRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRunRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

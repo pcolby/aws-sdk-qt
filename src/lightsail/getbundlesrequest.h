@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUNDLESREQUEST_H
 #define QTAWS_GETBUNDLESREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetBundlesRequestPrivate;
+
+class QTAWS_EXPORT GetBundlesRequest : public LightsailRequest {
+
+public:
+    GetBundlesRequest(const GetBundlesRequest &other);
+    GetBundlesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBundlesRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

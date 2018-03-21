@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESNAPSHOTREQUEST_H
 #define QTAWS_DELETESNAPSHOTREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteSnapshotRequestPrivate;
+
+class QTAWS_EXPORT DeleteSnapshotRequest : public ElastiCacheRequest {
+
+public:
+    DeleteSnapshotRequest(const DeleteSnapshotRequest &other);
+    DeleteSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

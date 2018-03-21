@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEASSOCIATIONREQUEST_H
 #define QTAWS_DELETEASSOCIATIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteAssociationRequestPrivate;
+
+class QTAWS_EXPORT DeleteAssociationRequest : public SSMRequest {
+
+public:
+    DeleteAssociationRequest(const DeleteAssociationRequest &other);
+    DeleteAssociationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAssociationRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

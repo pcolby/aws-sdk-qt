@@ -19,3 +19,107 @@
 
 #include "listservicespecificcredentialsrequest.h"
 #include "listservicespecificcredentialsrequest_p.h"
+#include "listservicespecificcredentialsresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListServiceSpecificCredentialsRequest
+ *
+ * @brief  Implements IAM ListServiceSpecificCredentials requests.
+ *
+ * @see    IAMClient::listServiceSpecificCredentials
+ */
+
+/**
+ * @brief  Constructs a new ListServiceSpecificCredentialsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
+
+/**
+ * @brief  Constructs a new ListServiceSpecificCredentialsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest(const ListServiceSpecificCredentialsRequest &other)
+    : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListServiceSpecificCredentialsRequest object.
+ */
+ListServiceSpecificCredentialsRequest::ListServiceSpecificCredentialsRequest()
+    : IAMRequest(new ListServiceSpecificCredentialsRequestPrivate(IAMRequest::ListServiceSpecificCredentialsAction, this))
+{
+
+}
+
+bool ListServiceSpecificCredentialsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListServiceSpecificCredentialsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListServiceSpecificCredentialsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListServiceSpecificCredentialsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListServiceSpecificCredentialsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListServiceSpecificCredentialsRequestPrivate
+ *
+ * @brief  Private implementation for ListServiceSpecificCredentialsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServiceSpecificCredentialsRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListServiceSpecificCredentialsRequest instance.
+ */
+ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
+    const IAMRequest::Action action, ListServiceSpecificCredentialsRequest * const q)
+    : ListServiceSpecificCredentialsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServiceSpecificCredentialsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListServiceSpecificCredentialsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListServiceSpecificCredentialsRequest instance.
+ */
+ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequestPrivate(
+    const ListServiceSpecificCredentialsRequestPrivate &other, ListServiceSpecificCredentialsRequest * const q)
+    : ListServiceSpecificCredentialsPrivate(other, q)
+{
+
+}

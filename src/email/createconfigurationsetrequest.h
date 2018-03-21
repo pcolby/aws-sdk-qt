@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETREQUEST_H
 #define QTAWS_CREATECONFIGURATIONSETREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetRequestPrivate;
+
+class QTAWS_EXPORT CreateConfigurationSetRequest : public SESRequest {
+
+public:
+    CreateConfigurationSetRequest(const CreateConfigurationSetRequest &other);
+    CreateConfigurationSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationSetRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

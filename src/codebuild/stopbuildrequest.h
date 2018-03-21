@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPBUILDREQUEST_H
 #define QTAWS_STOPBUILDREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class StopBuildRequestPrivate;
+
+class QTAWS_EXPORT StopBuildRequest : public CodeBuildRequest {
+
+public:
+    StopBuildRequest(const StopBuildRequest &other);
+    StopBuildRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopBuildRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_H
 #define QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateAdditionalAssignmentsForHITRequestPrivate;
+
+class QTAWS_EXPORT CreateAdditionalAssignmentsForHITRequest : public MTurkRequest {
+
+public:
+    CreateAdditionalAssignmentsForHITRequest(const CreateAdditionalAssignmentsForHITRequest &other);
+    CreateAdditionalAssignmentsForHITRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateAdditionalAssignmentsForHITRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBLUEPRINTSREQUEST_H
 #define QTAWS_GETBLUEPRINTSREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetBlueprintsRequestPrivate;
+
+class QTAWS_EXPORT GetBlueprintsRequest : public LightsailRequest {
+
+public:
+    GetBlueprintsRequest(const GetBlueprintsRequest &other);
+    GetBlueprintsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBlueprintsRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

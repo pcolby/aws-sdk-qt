@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEHSMCLIENTCERTIFICATESREQUEST_H
 #define QTAWS_DESCRIBEHSMCLIENTCERTIFICATESREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeHsmClientCertificatesRequestPrivate;
+
+class QTAWS_EXPORT DescribeHsmClientCertificatesRequest : public RedshiftRequest {
+
+public:
+    DescribeHsmClientCertificatesRequest(const DescribeHsmClientCertificatesRequest &other);
+    DescribeHsmClientCertificatesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHsmClientCertificatesRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

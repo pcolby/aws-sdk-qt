@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVERSREQUEST_P_H
 #define QTAWS_DESCRIBESERVERSREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "describeserversrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeServersRequest;
+
+class QTAWS_EXPORT DescribeServersRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    DescribeServersRequestPrivate(const OpsWorksCM::Action action,
+                                   DescribeServersRequest * const q);
+    DescribeServersRequestPrivate(const DescribeServersRequestPrivate &other,
+                                   DescribeServersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServersRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

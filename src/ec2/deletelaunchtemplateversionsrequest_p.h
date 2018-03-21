@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELAUNCHTEMPLATEVERSIONSREQUEST_P_H
 #define QTAWS_DELETELAUNCHTEMPLATEVERSIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletelaunchtemplateversionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteLaunchTemplateVersionsRequest;
+
+class QTAWS_EXPORT DeleteLaunchTemplateVersionsRequestPrivate : public EC2Private {
+
+public:
+    DeleteLaunchTemplateVersionsRequestPrivate(const EC2::Action action,
+                                   DeleteLaunchTemplateVersionsRequest * const q);
+    DeleteLaunchTemplateVersionsRequestPrivate(const DeleteLaunchTemplateVersionsRequestPrivate &other,
+                                   DeleteLaunchTemplateVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLaunchTemplateVersionsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

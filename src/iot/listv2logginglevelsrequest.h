@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTV2LOGGINGLEVELSREQUEST_H
 #define QTAWS_LISTV2LOGGINGLEVELSREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListV2LoggingLevelsRequestPrivate;
+
+class QTAWS_EXPORT ListV2LoggingLevelsRequest : public IoTRequest {
+
+public:
+    ListV2LoggingLevelsRequest(const ListV2LoggingLevelsRequest &other);
+    ListV2LoggingLevelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListV2LoggingLevelsRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

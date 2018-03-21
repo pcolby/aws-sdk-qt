@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTRESTAPIREQUEST_P_H
 #define QTAWS_PUTRESTAPIREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "putrestapirequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class PutRestApiRequest;
+
+class QTAWS_EXPORT PutRestApiRequestPrivate : public APIGatewayPrivate {
+
+public:
+    PutRestApiRequestPrivate(const APIGateway::Action action,
+                                   PutRestApiRequest * const q);
+    PutRestApiRequestPrivate(const PutRestApiRequestPrivate &other,
+                                   PutRestApiRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutRestApiRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

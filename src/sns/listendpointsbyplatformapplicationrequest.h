@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONREQUEST_H
 #define QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListEndpointsByPlatformApplicationRequestPrivate;
+
+class QTAWS_EXPORT ListEndpointsByPlatformApplicationRequest : public SNSRequest {
+
+public:
+    ListEndpointsByPlatformApplicationRequest(const ListEndpointsByPlatformApplicationRequest &other);
+    ListEndpointsByPlatformApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListEndpointsByPlatformApplicationRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

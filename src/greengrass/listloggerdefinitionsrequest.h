@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTLOGGERDEFINITIONSREQUEST_H
 #define QTAWS_LISTLOGGERDEFINITIONSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListLoggerDefinitionsRequestPrivate;
+
+class QTAWS_EXPORT ListLoggerDefinitionsRequest : public GreengrassRequest {
+
+public:
+    ListLoggerDefinitionsRequest(const ListLoggerDefinitionsRequest &other);
+    ListLoggerDefinitionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListLoggerDefinitionsRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

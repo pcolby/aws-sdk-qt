@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSREQUEST_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSREQUEST_H
 
+#include "iotjobsdataplanerequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class GetPendingJobExecutionsRequestPrivate;
+
+class QTAWS_EXPORT GetPendingJobExecutionsRequest : public IoTJobsDataPlaneRequest {
+
+public:
+    GetPendingJobExecutionsRequest(const GetPendingJobExecutionsRequest &other);
+    GetPendingJobExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPendingJobExecutionsRequest)
+
+}
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

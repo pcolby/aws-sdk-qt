@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class TagResourceRequest;
+
+class QTAWS_EXPORT TagResourceRequestPrivate : public DirectConnectPrivate {
+
+public:
+    TagResourceRequestPrivate(const DirectConnect::Action action,
+                                   TagResourceRequest * const q);
+    TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
+                                   TagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

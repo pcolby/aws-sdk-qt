@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTOBJECTTAGGINGREQUEST_P_H
 #define QTAWS_PUTOBJECTTAGGINGREQUEST_P_H
 
+#include "s3_p.h"
+#include "putobjecttaggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutObjectTaggingRequest;
+
+class QTAWS_EXPORT PutObjectTaggingRequestPrivate : public S3Private {
+
+public:
+    PutObjectTaggingRequestPrivate(const S3::Action action,
+                                   PutObjectTaggingRequest * const q);
+    PutObjectTaggingRequestPrivate(const PutObjectTaggingRequestPrivate &other,
+                                   PutObjectTaggingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutObjectTaggingRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

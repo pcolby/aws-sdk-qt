@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSQLINJECTIONMATCHSETSREQUEST_H
 #define QTAWS_LISTSQLINJECTIONMATCHSETSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListSqlInjectionMatchSetsRequestPrivate;
+
+class QTAWS_EXPORT ListSqlInjectionMatchSetsRequest : public WAFRequest {
+
+public:
+    ListSqlInjectionMatchSetsRequest(const ListSqlInjectionMatchSetsRequest &other);
+    ListSqlInjectionMatchSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListSqlInjectionMatchSetsRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

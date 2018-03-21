@@ -19,3 +19,107 @@
 
 #include "batchputattributesrequest.h"
 #include "batchputattributesrequest_p.h"
+#include "batchputattributesresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  BatchPutAttributesRequest
+ *
+ * @brief  Implements SimpleDB BatchPutAttributes requests.
+ *
+ * @see    SimpleDBClient::batchPutAttributes
+ */
+
+/**
+ * @brief  Constructs a new BatchPutAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchPutAttributesResponse::BatchPutAttributesResponse(
+
+/**
+ * @brief  Constructs a new BatchPutAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchPutAttributesRequest::BatchPutAttributesRequest(const BatchPutAttributesRequest &other)
+    : SimpleDBRequest(new BatchPutAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchPutAttributesRequest object.
+ */
+BatchPutAttributesRequest::BatchPutAttributesRequest()
+    : SimpleDBRequest(new BatchPutAttributesRequestPrivate(SimpleDBRequest::BatchPutAttributesAction, this))
+{
+
+}
+
+bool BatchPutAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchPutAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchPutAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchPutAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchPutAttributesRequestPrivate
+ *
+ * @brief  Private implementation for BatchPutAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchPutAttributesRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public BatchPutAttributesRequest instance.
+ */
+BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
+    const SimpleDBRequest::Action action, BatchPutAttributesRequest * const q)
+    : BatchPutAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchPutAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchPutAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchPutAttributesRequest instance.
+ */
+BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
+    const BatchPutAttributesRequestPrivate &other, BatchPutAttributesRequest * const q)
+    : BatchPutAttributesPrivate(other, q)
+{
+
+}

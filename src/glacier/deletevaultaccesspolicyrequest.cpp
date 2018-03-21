@@ -19,3 +19,107 @@
 
 #include "deletevaultaccesspolicyrequest.h"
 #include "deletevaultaccesspolicyrequest_p.h"
+#include "deletevaultaccesspolicyresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DeleteVaultAccessPolicyRequest
+ *
+ * @brief  Implements Glacier DeleteVaultAccessPolicy requests.
+ *
+ * @see    GlacierClient::deleteVaultAccessPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteVaultAccessPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVaultAccessPolicyResponse::DeleteVaultAccessPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteVaultAccessPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVaultAccessPolicyRequest::DeleteVaultAccessPolicyRequest(const DeleteVaultAccessPolicyRequest &other)
+    : GlacierRequest(new DeleteVaultAccessPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVaultAccessPolicyRequest object.
+ */
+DeleteVaultAccessPolicyRequest::DeleteVaultAccessPolicyRequest()
+    : GlacierRequest(new DeleteVaultAccessPolicyRequestPrivate(GlacierRequest::DeleteVaultAccessPolicyAction, this))
+{
+
+}
+
+bool DeleteVaultAccessPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVaultAccessPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVaultAccessPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * DeleteVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVaultAccessPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVaultAccessPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVaultAccessPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultAccessPolicyRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public DeleteVaultAccessPolicyRequest instance.
+ */
+DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
+    const GlacierRequest::Action action, DeleteVaultAccessPolicyRequest * const q)
+    : DeleteVaultAccessPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVaultAccessPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVaultAccessPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVaultAccessPolicyRequest instance.
+ */
+DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
+    const DeleteVaultAccessPolicyRequestPrivate &other, DeleteVaultAccessPolicyRequest * const q)
+    : DeleteVaultAccessPolicyPrivate(other, q)
+{
+
+}

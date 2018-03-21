@@ -19,3 +19,107 @@
 
 #include "updatestackrequest.h"
 #include "updatestackrequest_p.h"
+#include "updatestackresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  UpdateStackRequest
+ *
+ * @brief  Implements AppStream UpdateStack requests.
+ *
+ * @see    AppStreamClient::updateStack
+ */
+
+/**
+ * @brief  Constructs a new UpdateStackResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStackResponse::UpdateStackResponse(
+
+/**
+ * @brief  Constructs a new UpdateStackRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateStackRequest::UpdateStackRequest(const UpdateStackRequest &other)
+    : AppStreamRequest(new UpdateStackRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateStackRequest object.
+ */
+UpdateStackRequest::UpdateStackRequest()
+    : AppStreamRequest(new UpdateStackRequestPrivate(AppStreamRequest::UpdateStackAction, this))
+{
+
+}
+
+bool UpdateStackRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateStackResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateStackResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateStackResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStackRequestPrivate
+ *
+ * @brief  Private implementation for UpdateStackRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public UpdateStackRequest instance.
+ */
+UpdateStackRequestPrivate::UpdateStackRequestPrivate(
+    const AppStreamRequest::Action action, UpdateStackRequest * const q)
+    : UpdateStackPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateStackRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateStackRequest instance.
+ */
+UpdateStackRequestPrivate::UpdateStackRequestPrivate(
+    const UpdateStackRequestPrivate &other, UpdateStackRequest * const q)
+    : UpdateStackPrivate(other, q)
+{
+
+}

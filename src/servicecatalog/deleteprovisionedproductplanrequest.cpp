@@ -19,3 +19,107 @@
 
 #include "deleteprovisionedproductplanrequest.h"
 #include "deleteprovisionedproductplanrequest_p.h"
+#include "deleteprovisionedproductplanresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeleteProvisionedProductPlanRequest
+ *
+ * @brief  Implements ServiceCatalog DeleteProvisionedProductPlan requests.
+ *
+ * @see    ServiceCatalogClient::deleteProvisionedProductPlan
+ */
+
+/**
+ * @brief  Constructs a new DeleteProvisionedProductPlanResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
+
+/**
+ * @brief  Constructs a new DeleteProvisionedProductPlanRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteProvisionedProductPlanRequest::DeleteProvisionedProductPlanRequest(const DeleteProvisionedProductPlanRequest &other)
+    : ServiceCatalogRequest(new DeleteProvisionedProductPlanRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteProvisionedProductPlanRequest object.
+ */
+DeleteProvisionedProductPlanRequest::DeleteProvisionedProductPlanRequest()
+    : ServiceCatalogRequest(new DeleteProvisionedProductPlanRequestPrivate(ServiceCatalogRequest::DeleteProvisionedProductPlanAction, this))
+{
+
+}
+
+bool DeleteProvisionedProductPlanRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteProvisionedProductPlanResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteProvisionedProductPlanResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DeleteProvisionedProductPlanRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteProvisionedProductPlanResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProvisionedProductPlanRequestPrivate
+ *
+ * @brief  Private implementation for DeleteProvisionedProductPlanRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProvisionedProductPlanRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DeleteProvisionedProductPlanRequest instance.
+ */
+DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestPrivate(
+    const ServiceCatalogRequest::Action action, DeleteProvisionedProductPlanRequest * const q)
+    : DeleteProvisionedProductPlanPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProvisionedProductPlanRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteProvisionedProductPlanRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteProvisionedProductPlanRequest instance.
+ */
+DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestPrivate(
+    const DeleteProvisionedProductPlanRequestPrivate &other, DeleteProvisionedProductPlanRequest * const q)
+    : DeleteProvisionedProductPlanPrivate(other, q)
+{
+
+}

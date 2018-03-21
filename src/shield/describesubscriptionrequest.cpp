@@ -19,3 +19,107 @@
 
 #include "describesubscriptionrequest.h"
 #include "describesubscriptionrequest_p.h"
+#include "describesubscriptionresponse.h"
+#include "shieldrequest_p.h"
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  DescribeSubscriptionRequest
+ *
+ * @brief  Implements Shield DescribeSubscription requests.
+ *
+ * @see    ShieldClient::describeSubscription
+ */
+
+/**
+ * @brief  Constructs a new DescribeSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubscriptionResponse::DescribeSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new DescribeSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSubscriptionRequest::DescribeSubscriptionRequest(const DescribeSubscriptionRequest &other)
+    : ShieldRequest(new DescribeSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSubscriptionRequest object.
+ */
+DescribeSubscriptionRequest::DescribeSubscriptionRequest()
+    : ShieldRequest(new DescribeSubscriptionRequestPrivate(ShieldRequest::DescribeSubscriptionAction, this))
+{
+
+}
+
+bool DescribeSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ShieldClient::send
+ */
+AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubscriptionRequestPrivate object.
+ *
+ * @param  action  Shield action being performed.
+ * @param  q       Pointer to this object's public DescribeSubscriptionRequest instance.
+ */
+DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
+    const ShieldRequest::Action action, DescribeSubscriptionRequest * const q)
+    : DescribeSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSubscriptionRequest instance.
+ */
+DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
+    const DescribeSubscriptionRequestPrivate &other, DescribeSubscriptionRequest * const q)
+    : DescribeSubscriptionPrivate(other, q)
+{
+
+}

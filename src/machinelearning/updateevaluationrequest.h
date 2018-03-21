@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEEVALUATIONREQUEST_H
 #define QTAWS_UPDATEEVALUATIONREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class UpdateEvaluationRequestPrivate;
+
+class QTAWS_EXPORT UpdateEvaluationRequest : public MachineLearningRequest {
+
+public:
+    UpdateEvaluationRequest(const UpdateEvaluationRequest &other);
+    UpdateEvaluationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEvaluationRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

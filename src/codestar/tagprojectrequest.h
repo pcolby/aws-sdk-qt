@@ -20,4 +20,32 @@
 #ifndef QTAWS_TAGPROJECTREQUEST_H
 #define QTAWS_TAGPROJECTREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class TagProjectRequestPrivate;
+
+class QTAWS_EXPORT TagProjectRequest : public CodeStarRequest {
+
+public:
+    TagProjectRequest(const TagProjectRequest &other);
+    TagProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TagProjectRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

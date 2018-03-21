@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUCKETREPLICATIONREQUEST_P_H
 #define QTAWS_GETBUCKETREPLICATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "getbucketreplicationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketReplicationRequest;
+
+class QTAWS_EXPORT GetBucketReplicationRequestPrivate : public S3Private {
+
+public:
+    GetBucketReplicationRequestPrivate(const S3::Action action,
+                                   GetBucketReplicationRequest * const q);
+    GetBucketReplicationRequestPrivate(const GetBucketReplicationRequestPrivate &other,
+                                   GetBucketReplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketReplicationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

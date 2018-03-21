@@ -20,4 +20,29 @@
 #ifndef QTAWS_AUTHORIZESNAPSHOTACCESSREQUEST_P_H
 #define QTAWS_AUTHORIZESNAPSHOTACCESSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "authorizesnapshotaccessrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class AuthorizeSnapshotAccessRequest;
+
+class QTAWS_EXPORT AuthorizeSnapshotAccessRequestPrivate : public RedshiftPrivate {
+
+public:
+    AuthorizeSnapshotAccessRequestPrivate(const Redshift::Action action,
+                                   AuthorizeSnapshotAccessRequest * const q);
+    AuthorizeSnapshotAccessRequestPrivate(const AuthorizeSnapshotAccessRequestPrivate &other,
+                                   AuthorizeSnapshotAccessRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AuthorizeSnapshotAccessRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

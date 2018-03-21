@@ -19,3 +19,107 @@
 
 #include "respondactivitytaskcanceledrequest.h"
 #include "respondactivitytaskcanceledrequest_p.h"
+#include "respondactivitytaskcanceledresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RespondActivityTaskCanceledRequest
+ *
+ * @brief  Implements SWF RespondActivityTaskCanceled requests.
+ *
+ * @see    SWFClient::respondActivityTaskCanceled
+ */
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCanceledResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCanceledRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest(const RespondActivityTaskCanceledRequest &other)
+    : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RespondActivityTaskCanceledRequest object.
+ */
+RespondActivityTaskCanceledRequest::RespondActivityTaskCanceledRequest()
+    : SWFRequest(new RespondActivityTaskCanceledRequestPrivate(SWFRequest::RespondActivityTaskCanceledAction, this))
+{
+
+}
+
+bool RespondActivityTaskCanceledRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RespondActivityTaskCanceledResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RespondActivityTaskCanceledResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(QNetworkReply * const reply) const
+{
+    return new RespondActivityTaskCanceledResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RespondActivityTaskCanceledRequestPrivate
+ *
+ * @brief  Private implementation for RespondActivityTaskCanceledRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public RespondActivityTaskCanceledRequest instance.
+ */
+RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
+    const SWFRequest::Action action, RespondActivityTaskCanceledRequest * const q)
+    : RespondActivityTaskCanceledPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RespondActivityTaskCanceledRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RespondActivityTaskCanceledRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RespondActivityTaskCanceledRequest instance.
+ */
+RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
+    const RespondActivityTaskCanceledRequestPrivate &other, RespondActivityTaskCanceledRequest * const q)
+    : RespondActivityTaskCanceledPrivate(other, q)
+{
+
+}

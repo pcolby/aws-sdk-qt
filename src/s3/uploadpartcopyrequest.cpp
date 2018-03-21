@@ -19,3 +19,107 @@
 
 #include "uploadpartcopyrequest.h"
 #include "uploadpartcopyrequest_p.h"
+#include "uploadpartcopyresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  UploadPartCopyRequest
+ *
+ * @brief  Implements S3 UploadPartCopy requests.
+ *
+ * @see    S3Client::uploadPartCopy
+ */
+
+/**
+ * @brief  Constructs a new UploadPartCopyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadPartCopyResponse::UploadPartCopyResponse(
+
+/**
+ * @brief  Constructs a new UploadPartCopyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UploadPartCopyRequest::UploadPartCopyRequest(const UploadPartCopyRequest &other)
+    : S3Request(new UploadPartCopyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UploadPartCopyRequest object.
+ */
+UploadPartCopyRequest::UploadPartCopyRequest()
+    : S3Request(new UploadPartCopyRequestPrivate(S3Request::UploadPartCopyAction, this))
+{
+
+}
+
+bool UploadPartCopyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UploadPartCopyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UploadPartCopyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply * const reply) const
+{
+    return new UploadPartCopyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadPartCopyRequestPrivate
+ *
+ * @brief  Private implementation for UploadPartCopyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadPartCopyRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public UploadPartCopyRequest instance.
+ */
+UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
+    const S3Request::Action action, UploadPartCopyRequest * const q)
+    : UploadPartCopyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadPartCopyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UploadPartCopyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UploadPartCopyRequest instance.
+ */
+UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
+    const UploadPartCopyRequestPrivate &other, UploadPartCopyRequest * const q)
+    : UploadPartCopyPrivate(other, q)
+{
+
+}

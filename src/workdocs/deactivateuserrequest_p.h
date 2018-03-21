@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEACTIVATEUSERREQUEST_P_H
 #define QTAWS_DEACTIVATEUSERREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deactivateuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeactivateUserRequest;
+
+class QTAWS_EXPORT DeactivateUserRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeactivateUserRequestPrivate(const WorkDocs::Action action,
+                                   DeactivateUserRequest * const q);
+    DeactivateUserRequestPrivate(const DeactivateUserRequestPrivate &other,
+                                   DeactivateUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeactivateUserRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

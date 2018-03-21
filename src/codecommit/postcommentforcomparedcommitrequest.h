@@ -20,4 +20,32 @@
 #ifndef QTAWS_POSTCOMMENTFORCOMPAREDCOMMITREQUEST_H
 #define QTAWS_POSTCOMMENTFORCOMPAREDCOMMITREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PostCommentForComparedCommitRequestPrivate;
+
+class QTAWS_EXPORT PostCommentForComparedCommitRequest : public CodeCommitRequest {
+
+public:
+    PostCommentForComparedCommitRequest(const PostCommentForComparedCommitRequest &other);
+    PostCommentForComparedCommitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PostCommentForComparedCommitRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

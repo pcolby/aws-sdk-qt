@@ -19,3 +19,107 @@
 
 #include "initializeclusterrequest.h"
 #include "initializeclusterrequest_p.h"
+#include "initializeclusterresponse.h"
+#include "cloudhsmv2request_p.h"
+
+namespace AWS {
+namespace CloudHSMV2 {
+
+/**
+ * @class  InitializeClusterRequest
+ *
+ * @brief  Implements CloudHSMV2 InitializeCluster requests.
+ *
+ * @see    CloudHSMV2Client::initializeCluster
+ */
+
+/**
+ * @brief  Constructs a new InitializeClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitializeClusterResponse::InitializeClusterResponse(
+
+/**
+ * @brief  Constructs a new InitializeClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitializeClusterRequest::InitializeClusterRequest(const InitializeClusterRequest &other)
+    : CloudHSMV2Request(new InitializeClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitializeClusterRequest object.
+ */
+InitializeClusterRequest::InitializeClusterRequest()
+    : CloudHSMV2Request(new InitializeClusterRequestPrivate(CloudHSMV2Request::InitializeClusterAction, this))
+{
+
+}
+
+bool InitializeClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitializeClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitializeClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMV2Client::send
+ */
+AwsAbstractResponse * InitializeClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new InitializeClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitializeClusterRequestPrivate
+ *
+ * @brief  Private implementation for InitializeClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitializeClusterRequestPrivate object.
+ *
+ * @param  action  CloudHSMV2 action being performed.
+ * @param  q       Pointer to this object's public InitializeClusterRequest instance.
+ */
+InitializeClusterRequestPrivate::InitializeClusterRequestPrivate(
+    const CloudHSMV2Request::Action action, InitializeClusterRequest * const q)
+    : InitializeClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitializeClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitializeClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitializeClusterRequest instance.
+ */
+InitializeClusterRequestPrivate::InitializeClusterRequestPrivate(
+    const InitializeClusterRequestPrivate &other, InitializeClusterRequest * const q)
+    : InitializeClusterPrivate(other, q)
+{
+
+}

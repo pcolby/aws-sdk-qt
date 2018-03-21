@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETRECEIPTRULEPOSITIONREQUEST_H
 #define QTAWS_SETRECEIPTRULEPOSITIONREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetReceiptRulePositionRequestPrivate;
+
+class QTAWS_EXPORT SetReceiptRulePositionRequest : public SESRequest {
+
+public:
+    SetReceiptRulePositionRequest(const SetReceiptRulePositionRequest &other);
+    SetReceiptRulePositionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetReceiptRulePositionRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

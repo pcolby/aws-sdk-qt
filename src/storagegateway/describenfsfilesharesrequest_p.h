@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBENFSFILESHARESREQUEST_P_H
 #define QTAWS_DESCRIBENFSFILESHARESREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "describenfsfilesharesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeNFSFileSharesRequest;
+
+class QTAWS_EXPORT DescribeNFSFileSharesRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DescribeNFSFileSharesRequestPrivate(const StorageGateway::Action action,
+                                   DescribeNFSFileSharesRequest * const q);
+    DescribeNFSFileSharesRequestPrivate(const DescribeNFSFileSharesRequestPrivate &other,
+                                   DescribeNFSFileSharesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNFSFileSharesRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

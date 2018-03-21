@@ -19,3 +19,107 @@
 
 #include "updatexssmatchsetrequest.h"
 #include "updatexssmatchsetrequest_p.h"
+#include "updatexssmatchsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateXssMatchSetRequest
+ *
+ * @brief  Implements WAF UpdateXssMatchSet requests.
+ *
+ * @see    WAFClient::updateXssMatchSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateXssMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateXssMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateXssMatchSetRequest::UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other)
+    : WAFRequest(new UpdateXssMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateXssMatchSetRequest object.
+ */
+UpdateXssMatchSetRequest::UpdateXssMatchSetRequest()
+    : WAFRequest(new UpdateXssMatchSetRequestPrivate(WAFRequest::UpdateXssMatchSetAction, this))
+{
+
+}
+
+bool UpdateXssMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateXssMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateXssMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * UpdateXssMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateXssMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateXssMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateXssMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public UpdateXssMatchSetRequest instance.
+ */
+UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
+    const WAFRequest::Action action, UpdateXssMatchSetRequest * const q)
+    : UpdateXssMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateXssMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateXssMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateXssMatchSetRequest instance.
+ */
+UpdateXssMatchSetRequestPrivate::UpdateXssMatchSetRequestPrivate(
+    const UpdateXssMatchSetRequestPrivate &other, UpdateXssMatchSetRequest * const q)
+    : UpdateXssMatchSetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONPLACEMENTREQUEST_P_H
 #define QTAWS_DESCRIBEGAMESESSIONPLACEMENTREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describegamesessionplacementrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeGameSessionPlacementRequest;
+
+class QTAWS_EXPORT DescribeGameSessionPlacementRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeGameSessionPlacementRequestPrivate(const GameLift::Action action,
+                                   DescribeGameSessionPlacementRequest * const q);
+    DescribeGameSessionPlacementRequestPrivate(const DescribeGameSessionPlacementRequestPrivate &other,
+                                   DescribeGameSessionPlacementRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeGameSessionPlacementRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

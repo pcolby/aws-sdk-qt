@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDEPLOYMENTSTATUSREQUEST_H
 #define QTAWS_GETDEPLOYMENTSTATUSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetDeploymentStatusRequestPrivate;
+
+class QTAWS_EXPORT GetDeploymentStatusRequest : public GreengrassRequest {
+
+public:
+    GetDeploymentStatusRequest(const GetDeploymentStatusRequest &other);
+    GetDeploymentStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDeploymentStatusRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

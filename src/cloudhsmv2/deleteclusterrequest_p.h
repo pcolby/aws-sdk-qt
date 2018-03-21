@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECLUSTERREQUEST_P_H
 #define QTAWS_DELETECLUSTERREQUEST_P_H
 
+#include "cloudhsmv2_p.h"
+#include "deleteclusterrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DeleteClusterRequest;
+
+class QTAWS_EXPORT DeleteClusterRequestPrivate : public CloudHSMV2Private {
+
+public:
+    DeleteClusterRequestPrivate(const CloudHSMV2::Action action,
+                                   DeleteClusterRequest * const q);
+    DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
+                                   DeleteClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterRequest)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

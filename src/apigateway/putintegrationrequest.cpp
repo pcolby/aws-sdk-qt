@@ -19,3 +19,107 @@
 
 #include "putintegrationrequest.h"
 #include "putintegrationrequest_p.h"
+#include "putintegrationresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutIntegrationRequest
+ *
+ * @brief  Implements APIGateway PutIntegration requests.
+ *
+ * @see    APIGatewayClient::putIntegration
+ */
+
+/**
+ * @brief  Constructs a new PutIntegrationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutIntegrationResponse::PutIntegrationResponse(
+
+/**
+ * @brief  Constructs a new PutIntegrationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutIntegrationRequest::PutIntegrationRequest(const PutIntegrationRequest &other)
+    : APIGatewayRequest(new PutIntegrationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutIntegrationRequest object.
+ */
+PutIntegrationRequest::PutIntegrationRequest()
+    : APIGatewayRequest(new PutIntegrationRequestPrivate(APIGatewayRequest::PutIntegrationAction, this))
+{
+
+}
+
+bool PutIntegrationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutIntegrationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutIntegrationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * PutIntegrationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutIntegrationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutIntegrationRequestPrivate
+ *
+ * @brief  Private implementation for PutIntegrationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntegrationRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public PutIntegrationRequest instance.
+ */
+PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
+    const APIGatewayRequest::Action action, PutIntegrationRequest * const q)
+    : PutIntegrationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntegrationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutIntegrationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutIntegrationRequest instance.
+ */
+PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
+    const PutIntegrationRequestPrivate &other, PutIntegrationRequest * const q)
+    : PutIntegrationPrivate(other, q)
+{
+
+}

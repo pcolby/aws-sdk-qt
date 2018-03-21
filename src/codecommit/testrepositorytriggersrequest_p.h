@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTREPOSITORYTRIGGERSREQUEST_P_H
 #define QTAWS_TESTREPOSITORYTRIGGERSREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "testrepositorytriggersrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class TestRepositoryTriggersRequest;
+
+class QTAWS_EXPORT TestRepositoryTriggersRequestPrivate : public CodeCommitPrivate {
+
+public:
+    TestRepositoryTriggersRequestPrivate(const CodeCommit::Action action,
+                                   TestRepositoryTriggersRequest * const q);
+    TestRepositoryTriggersRequestPrivate(const TestRepositoryTriggersRequestPrivate &other,
+                                   TestRepositoryTriggersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestRepositoryTriggersRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEIDENTITYPOOLREQUEST_H
 #define QTAWS_UPDATEIDENTITYPOOLREQUEST_H
 
+#include "cognitoidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class UpdateIdentityPoolRequestPrivate;
+
+class QTAWS_EXPORT UpdateIdentityPoolRequest : public CognitoIdentityRequest {
+
+public:
+    UpdateIdentityPoolRequest(const UpdateIdentityPoolRequest &other);
+    UpdateIdentityPoolRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIdentityPoolRequest)
+
+}
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

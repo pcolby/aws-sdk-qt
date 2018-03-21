@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETACCELERATECONFIGURATIONREQUEST_P_H
 #define QTAWS_PUTBUCKETACCELERATECONFIGURATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketaccelerateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketAccelerateConfigurationRequest;
+
+class QTAWS_EXPORT PutBucketAccelerateConfigurationRequestPrivate : public S3Private {
+
+public:
+    PutBucketAccelerateConfigurationRequestPrivate(const S3::Action action,
+                                   PutBucketAccelerateConfigurationRequest * const q);
+    PutBucketAccelerateConfigurationRequestPrivate(const PutBucketAccelerateConfigurationRequestPrivate &other,
+                                   PutBucketAccelerateConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketAccelerateConfigurationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

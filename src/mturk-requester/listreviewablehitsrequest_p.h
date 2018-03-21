@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTREVIEWABLEHITSREQUEST_P_H
 #define QTAWS_LISTREVIEWABLEHITSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "listreviewablehitsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListReviewableHITsRequest;
+
+class QTAWS_EXPORT ListReviewableHITsRequestPrivate : public MTurkPrivate {
+
+public:
+    ListReviewableHITsRequestPrivate(const MTurk::Action action,
+                                   ListReviewableHITsRequest * const q);
+    ListReviewableHITsRequestPrivate(const ListReviewableHITsRequestPrivate &other,
+                                   ListReviewableHITsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListReviewableHITsRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

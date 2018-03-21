@@ -19,3 +19,107 @@
 
 #include "deletefunctionrequest.h"
 #include "deletefunctionrequest_p.h"
+#include "deletefunctionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  DeleteFunctionRequest
+ *
+ * @brief  Implements Lambda DeleteFunction requests.
+ *
+ * @see    LambdaClient::deleteFunction
+ */
+
+/**
+ * @brief  Constructs a new DeleteFunctionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFunctionResponse::DeleteFunctionResponse(
+
+/**
+ * @brief  Constructs a new DeleteFunctionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFunctionRequest::DeleteFunctionRequest(const DeleteFunctionRequest &other)
+    : LambdaRequest(new DeleteFunctionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFunctionRequest object.
+ */
+DeleteFunctionRequest::DeleteFunctionRequest()
+    : LambdaRequest(new DeleteFunctionRequestPrivate(LambdaRequest::DeleteFunctionAction, this))
+{
+
+}
+
+bool DeleteFunctionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFunctionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFunctionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFunctionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFunctionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFunctionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public DeleteFunctionRequest instance.
+ */
+DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
+    const LambdaRequest::Action action, DeleteFunctionRequest * const q)
+    : DeleteFunctionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFunctionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFunctionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFunctionRequest instance.
+ */
+DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
+    const DeleteFunctionRequestPrivate &other, DeleteFunctionRequest * const q)
+    : DeleteFunctionPrivate(other, q)
+{
+
+}

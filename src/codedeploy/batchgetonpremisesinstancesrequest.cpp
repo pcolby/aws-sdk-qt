@@ -19,3 +19,107 @@
 
 #include "batchgetonpremisesinstancesrequest.h"
 #include "batchgetonpremisesinstancesrequest_p.h"
+#include "batchgetonpremisesinstancesresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetOnPremisesInstancesRequest
+ *
+ * @brief  Implements CodeDeploy BatchGetOnPremisesInstances requests.
+ *
+ * @see    CodeDeployClient::batchGetOnPremisesInstances
+ */
+
+/**
+ * @brief  Constructs a new BatchGetOnPremisesInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
+
+/**
+ * @brief  Constructs a new BatchGetOnPremisesInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetOnPremisesInstancesRequest::BatchGetOnPremisesInstancesRequest(const BatchGetOnPremisesInstancesRequest &other)
+    : CodeDeployRequest(new BatchGetOnPremisesInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetOnPremisesInstancesRequest object.
+ */
+BatchGetOnPremisesInstancesRequest::BatchGetOnPremisesInstancesRequest()
+    : CodeDeployRequest(new BatchGetOnPremisesInstancesRequestPrivate(CodeDeployRequest::BatchGetOnPremisesInstancesAction, this))
+{
+
+}
+
+bool BatchGetOnPremisesInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetOnPremisesInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetOnPremisesInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetOnPremisesInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetOnPremisesInstancesRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetOnPremisesInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetOnPremisesInstancesRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public BatchGetOnPremisesInstancesRequest instance.
+ */
+BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPrivate(
+    const CodeDeployRequest::Action action, BatchGetOnPremisesInstancesRequest * const q)
+    : BatchGetOnPremisesInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetOnPremisesInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetOnPremisesInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetOnPremisesInstancesRequest instance.
+ */
+BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPrivate(
+    const BatchGetOnPremisesInstancesRequestPrivate &other, BatchGetOnPremisesInstancesRequest * const q)
+    : BatchGetOnPremisesInstancesPrivate(other, q)
+{
+
+}

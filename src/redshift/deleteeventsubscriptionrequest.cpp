@@ -19,3 +19,107 @@
 
 #include "deleteeventsubscriptionrequest.h"
 #include "deleteeventsubscriptionrequest_p.h"
+#include "deleteeventsubscriptionresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteEventSubscriptionRequest
+ *
+ * @brief  Implements Redshift DeleteEventSubscription requests.
+ *
+ * @see    RedshiftClient::deleteEventSubscription
+ */
+
+/**
+ * @brief  Constructs a new DeleteEventSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new DeleteEventSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other)
+    : RedshiftRequest(new DeleteEventSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteEventSubscriptionRequest object.
+ */
+DeleteEventSubscriptionRequest::DeleteEventSubscriptionRequest()
+    : RedshiftRequest(new DeleteEventSubscriptionRequestPrivate(RedshiftRequest::DeleteEventSubscriptionAction, this))
+{
+
+}
+
+bool DeleteEventSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteEventSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteEventSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteEventSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEventSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteEventSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DeleteEventSubscriptionRequest instance.
+ */
+DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
+    const RedshiftRequest::Action action, DeleteEventSubscriptionRequest * const q)
+    : DeleteEventSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEventSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteEventSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteEventSubscriptionRequest instance.
+ */
+DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
+    const DeleteEventSubscriptionRequestPrivate &other, DeleteEventSubscriptionRequest * const q)
+    : DeleteEventSubscriptionPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describenotebookinstancerequest.h"
 #include "describenotebookinstancerequest_p.h"
+#include "describenotebookinstanceresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeNotebookInstanceRequest
+ *
+ * @brief  Implements SageMaker DescribeNotebookInstance requests.
+ *
+ * @see    SageMakerClient::describeNotebookInstance
+ */
+
+/**
+ * @brief  Constructs a new DescribeNotebookInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotebookInstanceResponse::DescribeNotebookInstanceResponse(
+
+/**
+ * @brief  Constructs a new DescribeNotebookInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest(const DescribeNotebookInstanceRequest &other)
+    : SageMakerRequest(new DescribeNotebookInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeNotebookInstanceRequest object.
+ */
+DescribeNotebookInstanceRequest::DescribeNotebookInstanceRequest()
+    : SageMakerRequest(new DescribeNotebookInstanceRequestPrivate(SageMakerRequest::DescribeNotebookInstanceAction, this))
+{
+
+}
+
+bool DescribeNotebookInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeNotebookInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeNotebookInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeNotebookInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotebookInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DescribeNotebookInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public DescribeNotebookInstanceRequest instance.
+ */
+DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
+    const SageMakerRequest::Action action, DescribeNotebookInstanceRequest * const q)
+    : DescribeNotebookInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotebookInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeNotebookInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeNotebookInstanceRequest instance.
+ */
+DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
+    const DescribeNotebookInstanceRequestPrivate &other, DescribeNotebookInstanceRequest * const q)
+    : DescribeNotebookInstancePrivate(other, q)
+{
+
+}

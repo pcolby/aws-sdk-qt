@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTCONTENTMODERATIONREQUEST_P_H
 #define QTAWS_STARTCONTENTMODERATIONREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "startcontentmoderationrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartContentModerationRequest;
+
+class QTAWS_EXPORT StartContentModerationRequestPrivate : public RekognitionPrivate {
+
+public:
+    StartContentModerationRequestPrivate(const Rekognition::Action action,
+                                   StartContentModerationRequest * const q);
+    StartContentModerationRequestPrivate(const StartContentModerationRequestPrivate &other,
+                                   StartContentModerationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartContentModerationRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

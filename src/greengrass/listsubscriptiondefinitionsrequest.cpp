@@ -19,3 +19,107 @@
 
 #include "listsubscriptiondefinitionsrequest.h"
 #include "listsubscriptiondefinitionsrequest_p.h"
+#include "listsubscriptiondefinitionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListSubscriptionDefinitionsRequest
+ *
+ * @brief  Implements Greengrass ListSubscriptionDefinitions requests.
+ *
+ * @see    GreengrassClient::listSubscriptionDefinitions
+ */
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscriptionDefinitionsResponse::ListSubscriptionDefinitionsResponse(
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest(const ListSubscriptionDefinitionsRequest &other)
+    : GreengrassRequest(new ListSubscriptionDefinitionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionsRequest object.
+ */
+ListSubscriptionDefinitionsRequest::ListSubscriptionDefinitionsRequest()
+    : GreengrassRequest(new ListSubscriptionDefinitionsRequestPrivate(GreengrassRequest::ListSubscriptionDefinitionsAction, this))
+{
+
+}
+
+bool ListSubscriptionDefinitionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSubscriptionDefinitionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSubscriptionDefinitionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListSubscriptionDefinitionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSubscriptionDefinitionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscriptionDefinitionsRequestPrivate
+ *
+ * @brief  Private implementation for ListSubscriptionDefinitionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListSubscriptionDefinitionsRequest instance.
+ */
+ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPrivate(
+    const GreengrassRequest::Action action, ListSubscriptionDefinitionsRequest * const q)
+    : ListSubscriptionDefinitionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionDefinitionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSubscriptionDefinitionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSubscriptionDefinitionsRequest instance.
+ */
+ListSubscriptionDefinitionsRequestPrivate::ListSubscriptionDefinitionsRequestPrivate(
+    const ListSubscriptionDefinitionsRequestPrivate &other, ListSubscriptionDefinitionsRequest * const q)
+    : ListSubscriptionDefinitionsPrivate(other, q)
+{
+
+}

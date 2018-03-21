@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBUILDSREQUEST_P_H
 #define QTAWS_LISTBUILDSREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "listbuildsrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListBuildsRequest;
+
+class QTAWS_EXPORT ListBuildsRequestPrivate : public CodeBuildPrivate {
+
+public:
+    ListBuildsRequestPrivate(const CodeBuild::Action action,
+                                   ListBuildsRequest * const q);
+    ListBuildsRequestPrivate(const ListBuildsRequestPrivate &other,
+                                   ListBuildsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBuildsRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

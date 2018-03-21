@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describeorderabledbinstanceoptionsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOrderableDBInstanceOptionsRequest;
+
+class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeOrderableDBInstanceOptionsRequestPrivate(const RDS::Action action,
+                                   DescribeOrderableDBInstanceOptionsRequest * const q);
+    DescribeOrderableDBInstanceOptionsRequestPrivate(const DescribeOrderableDBInstanceOptionsRequestPrivate &other,
+                                   DescribeOrderableDBInstanceOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrderableDBInstanceOptionsRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESUBNETGROUPREQUEST_P_H
 #define QTAWS_CREATESUBNETGROUPREQUEST_P_H
 
+#include "dax_p.h"
+#include "createsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class CreateSubnetGroupRequest;
+
+class QTAWS_EXPORT CreateSubnetGroupRequestPrivate : public DAXPrivate {
+
+public:
+    CreateSubnetGroupRequestPrivate(const DAX::Action action,
+                                   CreateSubnetGroupRequest * const q);
+    CreateSubnetGroupRequestPrivate(const CreateSubnetGroupRequestPrivate &other,
+                                   CreateSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSubnetGroupRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

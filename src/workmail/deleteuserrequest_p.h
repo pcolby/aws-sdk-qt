@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEUSERREQUEST_P_H
 #define QTAWS_DELETEUSERREQUEST_P_H
 
+#include "workmail_p.h"
+#include "deleteuserrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeleteUserRequest;
+
+class QTAWS_EXPORT DeleteUserRequestPrivate : public WorkMailPrivate {
+
+public:
+    DeleteUserRequestPrivate(const WorkMail::Action action,
+                                   DeleteUserRequest * const q);
+    DeleteUserRequestPrivate(const DeleteUserRequestPrivate &other,
+                                   DeleteUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUserRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

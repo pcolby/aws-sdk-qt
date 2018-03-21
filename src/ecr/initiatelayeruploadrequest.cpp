@@ -19,3 +19,107 @@
 
 #include "initiatelayeruploadrequest.h"
 #include "initiatelayeruploadrequest_p.h"
+#include "initiatelayeruploadresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  InitiateLayerUploadRequest
+ *
+ * @brief  Implements ECR InitiateLayerUpload requests.
+ *
+ * @see    ECRClient::initiateLayerUpload
+ */
+
+/**
+ * @brief  Constructs a new InitiateLayerUploadResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateLayerUploadResponse::InitiateLayerUploadResponse(
+
+/**
+ * @brief  Constructs a new InitiateLayerUploadRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitiateLayerUploadRequest::InitiateLayerUploadRequest(const InitiateLayerUploadRequest &other)
+    : ECRRequest(new InitiateLayerUploadRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitiateLayerUploadRequest object.
+ */
+InitiateLayerUploadRequest::InitiateLayerUploadRequest()
+    : ECRRequest(new InitiateLayerUploadRequestPrivate(ECRRequest::InitiateLayerUploadAction, this))
+{
+
+}
+
+bool InitiateLayerUploadRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitiateLayerUploadResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitiateLayerUploadResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetworkReply * const reply) const
+{
+    return new InitiateLayerUploadResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateLayerUploadRequestPrivate
+ *
+ * @brief  Private implementation for InitiateLayerUploadRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateLayerUploadRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public InitiateLayerUploadRequest instance.
+ */
+InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
+    const ECRRequest::Action action, InitiateLayerUploadRequest * const q)
+    : InitiateLayerUploadPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateLayerUploadRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitiateLayerUploadRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitiateLayerUploadRequest instance.
+ */
+InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
+    const InitiateLayerUploadRequestPrivate &other, InitiateLayerUploadRequest * const q)
+    : InitiateLayerUploadPrivate(other, q)
+{
+
+}

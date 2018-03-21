@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDATTRIBUTESTOFINDINGSREQUEST_H
 #define QTAWS_ADDATTRIBUTESTOFINDINGSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class AddAttributesToFindingsRequestPrivate;
+
+class QTAWS_EXPORT AddAttributesToFindingsRequest : public InspectorRequest {
+
+public:
+    AddAttributesToFindingsRequest(const AddAttributesToFindingsRequest &other);
+    AddAttributesToFindingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddAttributesToFindingsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

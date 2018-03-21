@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSTATUSREQUEST_P_H
 
+#include "configservice_p.h"
+#include "describeconfigurationrecorderstatusrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeConfigurationRecorderStatusRequest;
+
+class QTAWS_EXPORT DescribeConfigurationRecorderStatusRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DescribeConfigurationRecorderStatusRequestPrivate(const ConfigService::Action action,
+                                   DescribeConfigurationRecorderStatusRequest * const q);
+    DescribeConfigurationRecorderStatusRequestPrivate(const DescribeConfigurationRecorderStatusRequestPrivate &other,
+                                   DescribeConfigurationRecorderStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationRecorderStatusRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

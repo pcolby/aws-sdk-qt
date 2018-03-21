@@ -19,3 +19,107 @@
 
 #include "removepermissionrequest.h"
 #include "removepermissionrequest_p.h"
+#include "removepermissionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  RemovePermissionRequest
+ *
+ * @brief  Implements Lambda RemovePermission requests.
+ *
+ * @see    LambdaClient::removePermission
+ */
+
+/**
+ * @brief  Constructs a new RemovePermissionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemovePermissionResponse::RemovePermissionResponse(
+
+/**
+ * @brief  Constructs a new RemovePermissionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &other)
+    : LambdaRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemovePermissionRequest object.
+ */
+RemovePermissionRequest::RemovePermissionRequest()
+    : LambdaRequest(new RemovePermissionRequestPrivate(LambdaRequest::RemovePermissionAction, this))
+{
+
+}
+
+bool RemovePermissionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemovePermissionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemovePermissionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * RemovePermissionRequest::response(QNetworkReply * const reply) const
+{
+    return new RemovePermissionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemovePermissionRequestPrivate
+ *
+ * @brief  Private implementation for RemovePermissionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemovePermissionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public RemovePermissionRequest instance.
+ */
+RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
+    const LambdaRequest::Action action, RemovePermissionRequest * const q)
+    : RemovePermissionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemovePermissionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemovePermissionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemovePermissionRequest instance.
+ */
+RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
+    const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)
+    : RemovePermissionPrivate(other, q)
+{
+
+}

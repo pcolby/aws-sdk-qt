@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPLATFORMENDPOINTREQUEST_H
 #define QTAWS_CREATEPLATFORMENDPOINTREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreatePlatformEndpointRequestPrivate;
+
+class QTAWS_EXPORT CreatePlatformEndpointRequest : public SNSRequest {
+
+public:
+    CreatePlatformEndpointRequest(const CreatePlatformEndpointRequest &other);
+    CreatePlatformEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlatformEndpointRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

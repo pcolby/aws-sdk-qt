@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERACTIVITYTYPEREQUEST_P_H
 #define QTAWS_REGISTERACTIVITYTYPEREQUEST_P_H
 
+#include "swf_p.h"
+#include "registeractivitytyperequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterActivityTypeRequest;
+
+class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SWFPrivate {
+
+public:
+    RegisterActivityTypeRequestPrivate(const SWF::Action action,
+                                   RegisterActivityTypeRequest * const q);
+    RegisterActivityTypeRequestPrivate(const RegisterActivityTypeRequestPrivate &other,
+                                   RegisterActivityTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterActivityTypeRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

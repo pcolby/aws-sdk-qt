@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEADDRESSREQUEST_H
 #define QTAWS_DISASSOCIATEADDRESSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateAddressRequestPrivate;
+
+class QTAWS_EXPORT DisassociateAddressRequest : public EC2Request {
+
+public:
+    DisassociateAddressRequest(const DisassociateAddressRequest &other);
+    DisassociateAddressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateAddressRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

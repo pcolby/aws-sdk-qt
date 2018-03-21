@@ -20,4 +20,32 @@
 #ifndef QTAWS_RETRIEVETAPERECOVERYPOINTREQUEST_H
 #define QTAWS_RETRIEVETAPERECOVERYPOINTREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class RetrieveTapeRecoveryPointRequestPrivate;
+
+class QTAWS_EXPORT RetrieveTapeRecoveryPointRequest : public StorageGatewayRequest {
+
+public:
+    RetrieveTapeRecoveryPointRequest(const RetrieveTapeRecoveryPointRequest &other);
+    RetrieveTapeRecoveryPointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RetrieveTapeRecoveryPointRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

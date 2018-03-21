@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTNETWORKPROFILESREQUEST_P_H
 #define QTAWS_LISTNETWORKPROFILESREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listnetworkprofilesrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListNetworkProfilesRequest;
+
+class QTAWS_EXPORT ListNetworkProfilesRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListNetworkProfilesRequestPrivate(const DeviceFarm::Action action,
+                                   ListNetworkProfilesRequest * const q);
+    ListNetworkProfilesRequestPrivate(const ListNetworkProfilesRequestPrivate &other,
+                                   ListNetworkProfilesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListNetworkProfilesRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

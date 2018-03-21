@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONFIGRULEREQUEST_P_H
 #define QTAWS_DELETECONFIGRULEREQUEST_P_H
 
+#include "configservice_p.h"
+#include "deleteconfigrulerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteConfigRuleRequest;
+
+class QTAWS_EXPORT DeleteConfigRuleRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DeleteConfigRuleRequestPrivate(const ConfigService::Action action,
+                                   DeleteConfigRuleRequest * const q);
+    DeleteConfigRuleRequestPrivate(const DeleteConfigRuleRequestPrivate &other,
+                                   DeleteConfigRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigRuleRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

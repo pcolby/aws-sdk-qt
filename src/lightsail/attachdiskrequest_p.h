@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHDISKREQUEST_P_H
 #define QTAWS_ATTACHDISKREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "attachdiskrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class AttachDiskRequest;
+
+class QTAWS_EXPORT AttachDiskRequestPrivate : public LightsailPrivate {
+
+public:
+    AttachDiskRequestPrivate(const Lightsail::Action action,
+                                   AttachDiskRequest * const q);
+    AttachDiskRequestPrivate(const AttachDiskRequestPrivate &other,
+                                   AttachDiskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachDiskRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

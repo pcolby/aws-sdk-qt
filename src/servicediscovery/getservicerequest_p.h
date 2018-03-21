@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSERVICEREQUEST_P_H
 #define QTAWS_GETSERVICEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "getservicerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class GetServiceRequest;
+
+class QTAWS_EXPORT GetServiceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    GetServiceRequestPrivate(const ServiceDiscovery::Action action,
+                                   GetServiceRequest * const q);
+    GetServiceRequestPrivate(const GetServiceRequestPrivate &other,
+                                   GetServiceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetServiceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

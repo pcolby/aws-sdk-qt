@@ -19,3 +19,107 @@
 
 #include "listsigningcertificatesrequest.h"
 #include "listsigningcertificatesrequest_p.h"
+#include "listsigningcertificatesresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListSigningCertificatesRequest
+ *
+ * @brief  Implements IAM ListSigningCertificates requests.
+ *
+ * @see    IAMClient::listSigningCertificates
+ */
+
+/**
+ * @brief  Constructs a new ListSigningCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSigningCertificatesResponse::ListSigningCertificatesResponse(
+
+/**
+ * @brief  Constructs a new ListSigningCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSigningCertificatesRequest::ListSigningCertificatesRequest(const ListSigningCertificatesRequest &other)
+    : IAMRequest(new ListSigningCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSigningCertificatesRequest object.
+ */
+ListSigningCertificatesRequest::ListSigningCertificatesRequest()
+    : IAMRequest(new ListSigningCertificatesRequestPrivate(IAMRequest::ListSigningCertificatesAction, this))
+{
+
+}
+
+bool ListSigningCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSigningCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSigningCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListSigningCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSigningCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSigningCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for ListSigningCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSigningCertificatesRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListSigningCertificatesRequest instance.
+ */
+ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
+    const IAMRequest::Action action, ListSigningCertificatesRequest * const q)
+    : ListSigningCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSigningCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSigningCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSigningCertificatesRequest instance.
+ */
+ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
+    const ListSigningCertificatesRequestPrivate &other, ListSigningCertificatesRequest * const q)
+    : ListSigningCertificatesPrivate(other, q)
+{
+
+}

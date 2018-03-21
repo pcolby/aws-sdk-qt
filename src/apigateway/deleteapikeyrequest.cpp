@@ -19,3 +19,107 @@
 
 #include "deleteapikeyrequest.h"
 #include "deleteapikeyrequest_p.h"
+#include "deleteapikeyresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteApiKeyRequest
+ *
+ * @brief  Implements APIGateway DeleteApiKey requests.
+ *
+ * @see    APIGatewayClient::deleteApiKey
+ */
+
+/**
+ * @brief  Constructs a new DeleteApiKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApiKeyResponse::DeleteApiKeyResponse(
+
+/**
+ * @brief  Constructs a new DeleteApiKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteApiKeyRequest::DeleteApiKeyRequest(const DeleteApiKeyRequest &other)
+    : APIGatewayRequest(new DeleteApiKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteApiKeyRequest object.
+ */
+DeleteApiKeyRequest::DeleteApiKeyRequest()
+    : APIGatewayRequest(new DeleteApiKeyRequestPrivate(APIGatewayRequest::DeleteApiKeyAction, this))
+{
+
+}
+
+bool DeleteApiKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteApiKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteApiKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteApiKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApiKeyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteApiKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApiKeyRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteApiKeyRequest instance.
+ */
+DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteApiKeyRequest * const q)
+    : DeleteApiKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApiKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteApiKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteApiKeyRequest instance.
+ */
+DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
+    const DeleteApiKeyRequestPrivate &other, DeleteApiKeyRequest * const q)
+    : DeleteApiKeyPrivate(other, q)
+{
+
+}

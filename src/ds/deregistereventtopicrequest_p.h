@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTEREVENTTOPICREQUEST_P_H
 #define QTAWS_DEREGISTEREVENTTOPICREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "deregistereventtopicrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeregisterEventTopicRequest;
+
+class QTAWS_EXPORT DeregisterEventTopicRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DeregisterEventTopicRequestPrivate(const DirectoryService::Action action,
+                                   DeregisterEventTopicRequest * const q);
+    DeregisterEventTopicRequestPrivate(const DeregisterEventTopicRequestPrivate &other,
+                                   DeregisterEventTopicRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterEventTopicRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOWNLOADURLFORLAYERREQUEST_H
 #define QTAWS_GETDOWNLOADURLFORLAYERREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetDownloadUrlForLayerRequestPrivate;
+
+class QTAWS_EXPORT GetDownloadUrlForLayerRequest : public ECRRequest {
+
+public:
+    GetDownloadUrlForLayerRequest(const GetDownloadUrlForLayerRequest &other);
+    GetDownloadUrlForLayerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDownloadUrlForLayerRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

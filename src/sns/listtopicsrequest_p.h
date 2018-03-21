@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTOPICSREQUEST_P_H
 #define QTAWS_LISTTOPICSREQUEST_P_H
 
+#include "sns_p.h"
+#include "listtopicsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListTopicsRequest;
+
+class QTAWS_EXPORT ListTopicsRequestPrivate : public SNSPrivate {
+
+public:
+    ListTopicsRequestPrivate(const SNS::Action action,
+                                   ListTopicsRequest * const q);
+    ListTopicsRequestPrivate(const ListTopicsRequestPrivate &other,
+                                   ListTopicsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTopicsRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

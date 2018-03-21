@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTRACESUMMARIESREQUEST_H
 #define QTAWS_GETTRACESUMMARIESREQUEST_H
 
+#include "xrayrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetTraceSummariesRequestPrivate;
+
+class QTAWS_EXPORT GetTraceSummariesRequest : public XRayRequest {
+
+public:
+    GetTraceSummariesRequest(const GetTraceSummariesRequest &other);
+    GetTraceSummariesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTraceSummariesRequest)
+
+}
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

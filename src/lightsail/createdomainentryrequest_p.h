@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDOMAINENTRYREQUEST_P_H
 #define QTAWS_CREATEDOMAINENTRYREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "createdomainentryrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateDomainEntryRequest;
+
+class QTAWS_EXPORT CreateDomainEntryRequestPrivate : public LightsailPrivate {
+
+public:
+    CreateDomainEntryRequestPrivate(const Lightsail::Action action,
+                                   CreateDomainEntryRequest * const q);
+    CreateDomainEntryRequestPrivate(const CreateDomainEntryRequestPrivate &other,
+                                   CreateDomainEntryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDomainEntryRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

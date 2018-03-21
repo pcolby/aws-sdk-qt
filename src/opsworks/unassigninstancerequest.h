@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNASSIGNINSTANCEREQUEST_H
 #define QTAWS_UNASSIGNINSTANCEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UnassignInstanceRequestPrivate;
+
+class QTAWS_EXPORT UnassignInstanceRequest : public OpsWorksRequest {
+
+public:
+    UnassignInstanceRequest(const UnassignInstanceRequest &other);
+    UnassignInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UnassignInstanceRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

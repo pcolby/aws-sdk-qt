@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACTIVATEGATEWAYREQUEST_H
 #define QTAWS_ACTIVATEGATEWAYREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ActivateGatewayRequestPrivate;
+
+class QTAWS_EXPORT ActivateGatewayRequest : public StorageGatewayRequest {
+
+public:
+    ActivateGatewayRequest(const ActivateGatewayRequest &other);
+    ActivateGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ActivateGatewayRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

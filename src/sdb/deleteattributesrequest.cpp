@@ -19,3 +19,107 @@
 
 #include "deleteattributesrequest.h"
 #include "deleteattributesrequest_p.h"
+#include "deleteattributesresponse.h"
+#include "simpledbrequest_p.h"
+
+namespace AWS {
+namespace SimpleDB {
+
+/**
+ * @class  DeleteAttributesRequest
+ *
+ * @brief  Implements SimpleDB DeleteAttributes requests.
+ *
+ * @see    SimpleDBClient::deleteAttributes
+ */
+
+/**
+ * @brief  Constructs a new DeleteAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAttributesResponse::DeleteAttributesResponse(
+
+/**
+ * @brief  Constructs a new DeleteAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteAttributesRequest::DeleteAttributesRequest(const DeleteAttributesRequest &other)
+    : SimpleDBRequest(new DeleteAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteAttributesRequest object.
+ */
+DeleteAttributesRequest::DeleteAttributesRequest()
+    : SimpleDBRequest(new DeleteAttributesRequestPrivate(SimpleDBRequest::DeleteAttributesAction, this))
+{
+
+}
+
+bool DeleteAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SimpleDBClient::send
+ */
+AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAttributesRequestPrivate
+ *
+ * @brief  Private implementation for DeleteAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAttributesRequestPrivate object.
+ *
+ * @param  action  SimpleDB action being performed.
+ * @param  q       Pointer to this object's public DeleteAttributesRequest instance.
+ */
+DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
+    const SimpleDBRequest::Action action, DeleteAttributesRequest * const q)
+    : DeleteAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteAttributesRequest instance.
+ */
+DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
+    const DeleteAttributesRequestPrivate &other, DeleteAttributesRequest * const q)
+    : DeleteAttributesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOLVERSREQUEST_P_H
 #define QTAWS_LISTRESOLVERSREQUEST_P_H
 
+#include "appsync_p.h"
+#include "listresolversrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListResolversRequest;
+
+class QTAWS_EXPORT ListResolversRequestPrivate : public AppSyncPrivate {
+
+public:
+    ListResolversRequestPrivate(const AppSync::Action action,
+                                   ListResolversRequest * const q);
+    ListResolversRequestPrivate(const ListResolversRequestPrivate &other,
+                                   ListResolversRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResolversRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

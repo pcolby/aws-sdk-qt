@@ -19,3 +19,107 @@
 
 #include "updateaccountsendingenabledrequest.h"
 #include "updateaccountsendingenabledrequest_p.h"
+#include "updateaccountsendingenabledresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateAccountSendingEnabledRequest
+ *
+ * @brief  Implements SES UpdateAccountSendingEnabled requests.
+ *
+ * @see    SESClient::updateAccountSendingEnabled
+ */
+
+/**
+ * @brief  Constructs a new UpdateAccountSendingEnabledResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
+
+/**
+ * @brief  Constructs a new UpdateAccountSendingEnabledRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest(const UpdateAccountSendingEnabledRequest &other)
+    : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateAccountSendingEnabledRequest object.
+ */
+UpdateAccountSendingEnabledRequest::UpdateAccountSendingEnabledRequest()
+    : SESRequest(new UpdateAccountSendingEnabledRequestPrivate(SESRequest::UpdateAccountSendingEnabledAction, this))
+{
+
+}
+
+bool UpdateAccountSendingEnabledRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateAccountSendingEnabledResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateAccountSendingEnabledResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateAccountSendingEnabledResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAccountSendingEnabledRequestPrivate
+ *
+ * @brief  Private implementation for UpdateAccountSendingEnabledRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAccountSendingEnabledRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public UpdateAccountSendingEnabledRequest instance.
+ */
+UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
+    const SESRequest::Action action, UpdateAccountSendingEnabledRequest * const q)
+    : UpdateAccountSendingEnabledPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAccountSendingEnabledRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateAccountSendingEnabledRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateAccountSendingEnabledRequest instance.
+ */
+UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
+    const UpdateAccountSendingEnabledRequestPrivate &other, UpdateAccountSendingEnabledRequest * const q)
+    : UpdateAccountSendingEnabledPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETJOBREQUEST_H
 #define QTAWS_GETJOBREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class GetJobRequestPrivate;
+
+class QTAWS_EXPORT GetJobRequest : public MediaConvertRequest {
+
+public:
+    GetJobRequest(const GetJobRequest &other);
+    GetJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetJobRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

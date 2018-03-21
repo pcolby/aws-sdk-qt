@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESTREAMREQUEST_H
 #define QTAWS_DELETESTREAMREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteStreamRequestPrivate;
+
+class QTAWS_EXPORT DeleteStreamRequest : public IoTRequest {
+
+public:
+    DeleteStreamRequest(const DeleteStreamRequest &other);
+    DeleteStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStreamRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listinvalidationsrequest.h"
 #include "listinvalidationsrequest_p.h"
+#include "listinvalidationsresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  ListInvalidationsRequest
+ *
+ * @brief  Implements CloudFront ListInvalidations requests.
+ *
+ * @see    CloudFrontClient::listInvalidations
+ */
+
+/**
+ * @brief  Constructs a new ListInvalidationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInvalidationsResponse::ListInvalidationsResponse(
+
+/**
+ * @brief  Constructs a new ListInvalidationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListInvalidationsRequest::ListInvalidationsRequest(const ListInvalidationsRequest &other)
+    : CloudFrontRequest(new ListInvalidationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListInvalidationsRequest object.
+ */
+ListInvalidationsRequest::ListInvalidationsRequest()
+    : CloudFrontRequest(new ListInvalidationsRequestPrivate(CloudFrontRequest::ListInvalidationsAction, this))
+{
+
+}
+
+bool ListInvalidationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListInvalidationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListInvalidationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListInvalidationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInvalidationsRequestPrivate
+ *
+ * @brief  Private implementation for ListInvalidationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInvalidationsRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public ListInvalidationsRequest instance.
+ */
+ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
+    const CloudFrontRequest::Action action, ListInvalidationsRequest * const q)
+    : ListInvalidationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInvalidationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListInvalidationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListInvalidationsRequest instance.
+ */
+ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
+    const ListInvalidationsRequestPrivate &other, ListInvalidationsRequest * const q)
+    : ListInvalidationsPrivate(other, q)
+{
+
+}

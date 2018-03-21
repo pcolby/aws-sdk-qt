@@ -20,4 +20,29 @@
 #ifndef QTAWS_TRANSLATETEXTREQUEST_P_H
 #define QTAWS_TRANSLATETEXTREQUEST_P_H
 
+#include "translate_p.h"
+#include "translatetextrequest.h"
+
+namespace AWS {
+
+namespace Translate {
+
+class TranslateTextRequest;
+
+class QTAWS_EXPORT TranslateTextRequestPrivate : public TranslatePrivate {
+
+public:
+    TranslateTextRequestPrivate(const Translate::Action action,
+                                   TranslateTextRequest * const q);
+    TranslateTextRequestPrivate(const TranslateTextRequestPrivate &other,
+                                   TranslateTextRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TranslateTextRequest)
+
+};
+
+} // namespace Translate
+} // namespace AWS
+
 #endif

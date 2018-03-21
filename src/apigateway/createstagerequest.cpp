@@ -19,3 +19,107 @@
 
 #include "createstagerequest.h"
 #include "createstagerequest_p.h"
+#include "createstageresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateStageRequest
+ *
+ * @brief  Implements APIGateway CreateStage requests.
+ *
+ * @see    APIGatewayClient::createStage
+ */
+
+/**
+ * @brief  Constructs a new CreateStageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStageResponse::CreateStageResponse(
+
+/**
+ * @brief  Constructs a new CreateStageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateStageRequest::CreateStageRequest(const CreateStageRequest &other)
+    : APIGatewayRequest(new CreateStageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateStageRequest object.
+ */
+CreateStageRequest::CreateStageRequest()
+    : APIGatewayRequest(new CreateStageRequestPrivate(APIGatewayRequest::CreateStageAction, this))
+{
+
+}
+
+bool CreateStageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateStageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateStageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * CreateStageRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateStageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStageRequestPrivate
+ *
+ * @brief  Private implementation for CreateStageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStageRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public CreateStageRequest instance.
+ */
+CreateStageRequestPrivate::CreateStageRequestPrivate(
+    const APIGatewayRequest::Action action, CreateStageRequest * const q)
+    : CreateStagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateStageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateStageRequest instance.
+ */
+CreateStageRequestPrivate::CreateStageRequestPrivate(
+    const CreateStageRequestPrivate &other, CreateStageRequest * const q)
+    : CreateStagePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELAGREQUEST_H
 #define QTAWS_DELETELAGREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteLagRequestPrivate;
+
+class QTAWS_EXPORT DeleteLagRequest : public DirectConnectRequest {
+
+public:
+    DeleteLagRequest(const DeleteLagRequest &other);
+    DeleteLagRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLagRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

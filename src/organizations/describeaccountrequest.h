@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACCOUNTREQUEST_H
 #define QTAWS_DESCRIBEACCOUNTREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeAccountRequestPrivate;
+
+class QTAWS_EXPORT DescribeAccountRequest : public OrganizationsRequest {
+
+public:
+    DescribeAccountRequest(const DescribeAccountRequest &other);
+    DescribeAccountRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

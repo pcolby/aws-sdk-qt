@@ -19,3 +19,107 @@
 
 #include "createfacetrequest.h"
 #include "createfacetrequest_p.h"
+#include "createfacetresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  CreateFacetRequest
+ *
+ * @brief  Implements CloudDirectory CreateFacet requests.
+ *
+ * @see    CloudDirectoryClient::createFacet
+ */
+
+/**
+ * @brief  Constructs a new CreateFacetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFacetResponse::CreateFacetResponse(
+
+/**
+ * @brief  Constructs a new CreateFacetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateFacetRequest::CreateFacetRequest(const CreateFacetRequest &other)
+    : CloudDirectoryRequest(new CreateFacetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateFacetRequest object.
+ */
+CreateFacetRequest::CreateFacetRequest()
+    : CloudDirectoryRequest(new CreateFacetRequestPrivate(CloudDirectoryRequest::CreateFacetAction, this))
+{
+
+}
+
+bool CreateFacetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateFacetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateFacetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * CreateFacetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateFacetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFacetRequestPrivate
+ *
+ * @brief  Private implementation for CreateFacetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFacetRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public CreateFacetRequest instance.
+ */
+CreateFacetRequestPrivate::CreateFacetRequestPrivate(
+    const CloudDirectoryRequest::Action action, CreateFacetRequest * const q)
+    : CreateFacetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFacetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateFacetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateFacetRequest instance.
+ */
+CreateFacetRequestPrivate::CreateFacetRequestPrivate(
+    const CreateFacetRequestPrivate &other, CreateFacetRequest * const q)
+    : CreateFacetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYOPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEAVAILABILITYOPTIONSREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "describeavailabilityoptionsrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeAvailabilityOptionsRequest;
+
+class QTAWS_EXPORT DescribeAvailabilityOptionsRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DescribeAvailabilityOptionsRequestPrivate(const CloudSearch::Action action,
+                                   DescribeAvailabilityOptionsRequest * const q);
+    DescribeAvailabilityOptionsRequestPrivate(const DescribeAvailabilityOptionsRequestPrivate &other,
+                                   DescribeAvailabilityOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAvailabilityOptionsRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

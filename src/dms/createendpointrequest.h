@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEENDPOINTREQUEST_H
 #define QTAWS_CREATEENDPOINTREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class CreateEndpointRequestPrivate;
+
+class QTAWS_EXPORT CreateEndpointRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    CreateEndpointRequest(const CreateEndpointRequest &other);
+    CreateEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateEndpointRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

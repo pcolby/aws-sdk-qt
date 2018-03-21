@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEMATCHMAKINGCONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEMATCHMAKINGCONFIGURATIONSREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describematchmakingconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeMatchmakingConfigurationsRequest;
+
+class QTAWS_EXPORT DescribeMatchmakingConfigurationsRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeMatchmakingConfigurationsRequestPrivate(const GameLift::Action action,
+                                   DescribeMatchmakingConfigurationsRequest * const q);
+    DescribeMatchmakingConfigurationsRequestPrivate(const DescribeMatchmakingConfigurationsRequestPrivate &other,
+                                   DescribeMatchmakingConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeMatchmakingConfigurationsRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createplatformversionrequest.h"
 #include "createplatformversionrequest_p.h"
+#include "createplatformversionresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  CreatePlatformVersionRequest
+ *
+ * @brief  Implements ElasticBeanstalk CreatePlatformVersion requests.
+ *
+ * @see    ElasticBeanstalkClient::createPlatformVersion
+ */
+
+/**
+ * @brief  Constructs a new CreatePlatformVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlatformVersionResponse::CreatePlatformVersionResponse(
+
+/**
+ * @brief  Constructs a new CreatePlatformVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePlatformVersionRequest::CreatePlatformVersionRequest(const CreatePlatformVersionRequest &other)
+    : ElasticBeanstalkRequest(new CreatePlatformVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePlatformVersionRequest object.
+ */
+CreatePlatformVersionRequest::CreatePlatformVersionRequest()
+    : ElasticBeanstalkRequest(new CreatePlatformVersionRequestPrivate(ElasticBeanstalkRequest::CreatePlatformVersionAction, this))
+{
+
+}
+
+bool CreatePlatformVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePlatformVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePlatformVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePlatformVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlatformVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreatePlatformVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformVersionRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public CreatePlatformVersionRequest instance.
+ */
+CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, CreatePlatformVersionRequest * const q)
+    : CreatePlatformVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlatformVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePlatformVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePlatformVersionRequest instance.
+ */
+CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
+    const CreatePlatformVersionRequestPrivate &other, CreatePlatformVersionRequest * const q)
+    : CreatePlatformVersionPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describestacksummaryrequest.h"
 #include "describestacksummaryrequest_p.h"
+#include "describestacksummaryresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeStackSummaryRequest
+ *
+ * @brief  Implements OpsWorks DescribeStackSummary requests.
+ *
+ * @see    OpsWorksClient::describeStackSummary
+ */
+
+/**
+ * @brief  Constructs a new DescribeStackSummaryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackSummaryResponse::DescribeStackSummaryResponse(
+
+/**
+ * @brief  Constructs a new DescribeStackSummaryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStackSummaryRequest::DescribeStackSummaryRequest(const DescribeStackSummaryRequest &other)
+    : OpsWorksRequest(new DescribeStackSummaryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStackSummaryRequest object.
+ */
+DescribeStackSummaryRequest::DescribeStackSummaryRequest()
+    : OpsWorksRequest(new DescribeStackSummaryRequestPrivate(OpsWorksRequest::DescribeStackSummaryAction, this))
+{
+
+}
+
+bool DescribeStackSummaryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStackSummaryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStackSummaryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeStackSummaryRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStackSummaryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackSummaryRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStackSummaryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSummaryRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeStackSummaryRequest instance.
+ */
+DescribeStackSummaryRequestPrivate::DescribeStackSummaryRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeStackSummaryRequest * const q)
+    : DescribeStackSummaryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSummaryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStackSummaryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStackSummaryRequest instance.
+ */
+DescribeStackSummaryRequestPrivate::DescribeStackSummaryRequestPrivate(
+    const DescribeStackSummaryRequestPrivate &other, DescribeStackSummaryRequest * const q)
+    : DescribeStackSummaryPrivate(other, q)
+{
+
+}

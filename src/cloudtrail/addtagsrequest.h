@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSREQUEST_H
 #define QTAWS_ADDTAGSREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class AddTagsRequestPrivate;
+
+class QTAWS_EXPORT AddTagsRequest : public CloudTrailRequest {
+
+public:
+    AddTagsRequest(const AddTagsRequest &other);
+    AddTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

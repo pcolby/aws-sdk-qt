@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETRAININGJOBREQUEST_H
 #define QTAWS_CREATETRAININGJOBREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreateTrainingJobRequestPrivate;
+
+class QTAWS_EXPORT CreateTrainingJobRequest : public SageMakerRequest {
+
+public:
+    CreateTrainingJobRequest(const CreateTrainingJobRequest &other);
+    CreateTrainingJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTrainingJobRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

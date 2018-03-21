@@ -19,3 +19,107 @@
 
 #include "createprivatednsnamespacerequest.h"
 #include "createprivatednsnamespacerequest_p.h"
+#include "createprivatednsnamespaceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  CreatePrivateDnsNamespaceRequest
+ *
+ * @brief  Implements ServiceDiscovery CreatePrivateDnsNamespace requests.
+ *
+ * @see    ServiceDiscoveryClient::createPrivateDnsNamespace
+ */
+
+/**
+ * @brief  Constructs a new CreatePrivateDnsNamespaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePrivateDnsNamespaceResponse::CreatePrivateDnsNamespaceResponse(
+
+/**
+ * @brief  Constructs a new CreatePrivateDnsNamespaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePrivateDnsNamespaceRequest::CreatePrivateDnsNamespaceRequest(const CreatePrivateDnsNamespaceRequest &other)
+    : ServiceDiscoveryRequest(new CreatePrivateDnsNamespaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePrivateDnsNamespaceRequest object.
+ */
+CreatePrivateDnsNamespaceRequest::CreatePrivateDnsNamespaceRequest()
+    : ServiceDiscoveryRequest(new CreatePrivateDnsNamespaceRequestPrivate(ServiceDiscoveryRequest::CreatePrivateDnsNamespaceAction, this))
+{
+
+}
+
+bool CreatePrivateDnsNamespaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePrivateDnsNamespaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePrivateDnsNamespaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePrivateDnsNamespaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePrivateDnsNamespaceRequestPrivate
+ *
+ * @brief  Private implementation for CreatePrivateDnsNamespaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePrivateDnsNamespaceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public CreatePrivateDnsNamespaceRequest instance.
+ */
+CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, CreatePrivateDnsNamespaceRequest * const q)
+    : CreatePrivateDnsNamespacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePrivateDnsNamespaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePrivateDnsNamespaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePrivateDnsNamespaceRequest instance.
+ */
+CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
+    const CreatePrivateDnsNamespaceRequestPrivate &other, CreatePrivateDnsNamespaceRequest * const q)
+    : CreatePrivateDnsNamespacePrivate(other, q)
+{
+
+}

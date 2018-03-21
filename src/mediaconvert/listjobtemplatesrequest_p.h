@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTJOBTEMPLATESREQUEST_P_H
 #define QTAWS_LISTJOBTEMPLATESREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "listjobtemplatesrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class ListJobTemplatesRequest;
+
+class QTAWS_EXPORT ListJobTemplatesRequestPrivate : public MediaConvertPrivate {
+
+public:
+    ListJobTemplatesRequestPrivate(const MediaConvert::Action action,
+                                   ListJobTemplatesRequest * const q);
+    ListJobTemplatesRequestPrivate(const ListJobTemplatesRequestPrivate &other,
+                                   ListJobTemplatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobTemplatesRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

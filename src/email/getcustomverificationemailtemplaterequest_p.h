@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_P_H
 #define QTAWS_GETCUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_P_H
 
+#include "ses_p.h"
+#include "getcustomverificationemailtemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetCustomVerificationEmailTemplateRequest;
+
+class QTAWS_EXPORT GetCustomVerificationEmailTemplateRequestPrivate : public SESPrivate {
+
+public:
+    GetCustomVerificationEmailTemplateRequestPrivate(const SES::Action action,
+                                   GetCustomVerificationEmailTemplateRequest * const q);
+    GetCustomVerificationEmailTemplateRequestPrivate(const GetCustomVerificationEmailTemplateRequestPrivate &other,
+                                   GetCustomVerificationEmailTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCustomVerificationEmailTemplateRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

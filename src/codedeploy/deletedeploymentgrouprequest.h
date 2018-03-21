@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDEPLOYMENTGROUPREQUEST_H
 #define QTAWS_DELETEDEPLOYMENTGROUPREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteDeploymentGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteDeploymentGroupRequest : public CodeDeployRequest {
+
+public:
+    DeleteDeploymentGroupRequest(const DeleteDeploymentGroupRequest &other);
+    DeleteDeploymentGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeploymentGroupRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

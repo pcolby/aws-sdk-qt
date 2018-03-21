@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMLMODELSREQUEST_H
 #define QTAWS_DESCRIBEMLMODELSREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DescribeMLModelsRequestPrivate;
+
+class QTAWS_EXPORT DescribeMLModelsRequest : public MachineLearningRequest {
+
+public:
+    DescribeMLModelsRequest(const DescribeMLModelsRequest &other);
+    DescribeMLModelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMLModelsRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

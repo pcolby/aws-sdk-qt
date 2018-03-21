@@ -19,3 +19,107 @@
 
 #include "resetclusterparametergrouprequest.h"
 #include "resetclusterparametergrouprequest_p.h"
+#include "resetclusterparametergroupresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ResetClusterParameterGroupRequest
+ *
+ * @brief  Implements Redshift ResetClusterParameterGroup requests.
+ *
+ * @see    RedshiftClient::resetClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new ResetClusterParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetClusterParameterGroupResponse::ResetClusterParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new ResetClusterParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetClusterParameterGroupRequest::ResetClusterParameterGroupRequest(const ResetClusterParameterGroupRequest &other)
+    : RedshiftRequest(new ResetClusterParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetClusterParameterGroupRequest object.
+ */
+ResetClusterParameterGroupRequest::ResetClusterParameterGroupRequest()
+    : RedshiftRequest(new ResetClusterParameterGroupRequestPrivate(RedshiftRequest::ResetClusterParameterGroupAction, this))
+{
+
+}
+
+bool ResetClusterParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetClusterParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetClusterParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * ResetClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetClusterParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetClusterParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for ResetClusterParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetClusterParameterGroupRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public ResetClusterParameterGroupRequest instance.
+ */
+ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
+    const RedshiftRequest::Action action, ResetClusterParameterGroupRequest * const q)
+    : ResetClusterParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetClusterParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetClusterParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetClusterParameterGroupRequest instance.
+ */
+ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
+    const ResetClusterParameterGroupRequestPrivate &other, ResetClusterParameterGroupRequest * const q)
+    : ResetClusterParameterGroupPrivate(other, q)
+{
+
+}

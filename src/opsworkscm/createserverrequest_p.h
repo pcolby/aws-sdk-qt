@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESERVERREQUEST_P_H
 #define QTAWS_CREATESERVERREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "createserverrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class CreateServerRequest;
+
+class QTAWS_EXPORT CreateServerRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    CreateServerRequestPrivate(const OpsWorksCM::Action action,
+                                   CreateServerRequest * const q);
+    CreateServerRequestPrivate(const CreateServerRequestPrivate &other,
+                                   CreateServerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateServerRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

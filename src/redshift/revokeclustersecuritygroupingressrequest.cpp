@@ -19,3 +19,107 @@
 
 #include "revokeclustersecuritygroupingressrequest.h"
 #include "revokeclustersecuritygroupingressrequest_p.h"
+#include "revokeclustersecuritygroupingressresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  RevokeClusterSecurityGroupIngressRequest
+ *
+ * @brief  Implements Redshift RevokeClusterSecurityGroupIngress requests.
+ *
+ * @see    RedshiftClient::revokeClusterSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResponse(
+
+/**
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RevokeClusterSecurityGroupIngressRequest::RevokeClusterSecurityGroupIngressRequest(const RevokeClusterSecurityGroupIngressRequest &other)
+    : RedshiftRequest(new RevokeClusterSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequest object.
+ */
+RevokeClusterSecurityGroupIngressRequest::RevokeClusterSecurityGroupIngressRequest()
+    : RedshiftRequest(new RevokeClusterSecurityGroupIngressRequestPrivate(RedshiftRequest::RevokeClusterSecurityGroupIngressAction, this))
+{
+
+}
+
+bool RevokeClusterSecurityGroupIngressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RevokeClusterSecurityGroupIngressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RevokeClusterSecurityGroupIngressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+{
+    return new RevokeClusterSecurityGroupIngressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeClusterSecurityGroupIngressRequestPrivate
+ *
+ * @brief  Private implementation for RevokeClusterSecurityGroupIngressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public RevokeClusterSecurityGroupIngressRequest instance.
+ */
+RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
+    const RedshiftRequest::Action action, RevokeClusterSecurityGroupIngressRequest * const q)
+    : RevokeClusterSecurityGroupIngressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeClusterSecurityGroupIngressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RevokeClusterSecurityGroupIngressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RevokeClusterSecurityGroupIngressRequest instance.
+ */
+RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
+    const RevokeClusterSecurityGroupIngressRequestPrivate &other, RevokeClusterSecurityGroupIngressRequest * const q)
+    : RevokeClusterSecurityGroupIngressPrivate(other, q)
+{
+
+}

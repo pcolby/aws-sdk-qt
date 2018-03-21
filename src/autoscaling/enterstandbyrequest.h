@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENTERSTANDBYREQUEST_H
 #define QTAWS_ENTERSTANDBYREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class EnterStandbyRequestPrivate;
+
+class QTAWS_EXPORT EnterStandbyRequest : public AutoScalingRequest {
+
+public:
+    EnterStandbyRequest(const EnterStandbyRequest &other);
+    EnterStandbyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnterStandbyRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

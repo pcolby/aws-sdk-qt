@@ -19,3 +19,107 @@
 
 #include "describeimportsnapshottasksrequest.h"
 #include "describeimportsnapshottasksrequest_p.h"
+#include "describeimportsnapshottasksresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeImportSnapshotTasksRequest
+ *
+ * @brief  Implements EC2 DescribeImportSnapshotTasks requests.
+ *
+ * @see    EC2Client::describeImportSnapshotTasks
+ */
+
+/**
+ * @brief  Constructs a new DescribeImportSnapshotTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeImportSnapshotTasksResponse::DescribeImportSnapshotTasksResponse(
+
+/**
+ * @brief  Constructs a new DescribeImportSnapshotTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest(const DescribeImportSnapshotTasksRequest &other)
+    : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeImportSnapshotTasksRequest object.
+ */
+DescribeImportSnapshotTasksRequest::DescribeImportSnapshotTasksRequest()
+    : EC2Request(new DescribeImportSnapshotTasksRequestPrivate(EC2Request::DescribeImportSnapshotTasksAction, this))
+{
+
+}
+
+bool DescribeImportSnapshotTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeImportSnapshotTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeImportSnapshotTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeImportSnapshotTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeImportSnapshotTasksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeImportSnapshotTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeImportSnapshotTasksRequest instance.
+ */
+DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
+    const EC2Request::Action action, DescribeImportSnapshotTasksRequest * const q)
+    : DescribeImportSnapshotTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeImportSnapshotTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeImportSnapshotTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeImportSnapshotTasksRequest instance.
+ */
+DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
+    const DescribeImportSnapshotTasksRequestPrivate &other, DescribeImportSnapshotTasksRequest * const q)
+    : DescribeImportSnapshotTasksPrivate(other, q)
+{
+
+}

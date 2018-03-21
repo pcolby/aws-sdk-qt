@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLDOMAINREQUEST_H
 #define QTAWS_DESCRIBEUSERPOOLDOMAINREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeUserPoolDomainRequestPrivate;
+
+class QTAWS_EXPORT DescribeUserPoolDomainRequest : public CognitoIdentityProviderRequest {
+
+public:
+    DescribeUserPoolDomainRequest(const DescribeUserPoolDomainRequest &other);
+    DescribeUserPoolDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUserPoolDomainRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

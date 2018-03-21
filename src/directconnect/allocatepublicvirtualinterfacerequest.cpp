@@ -19,3 +19,107 @@
 
 #include "allocatepublicvirtualinterfacerequest.h"
 #include "allocatepublicvirtualinterfacerequest_p.h"
+#include "allocatepublicvirtualinterfaceresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AllocatePublicVirtualInterfaceRequest
+ *
+ * @brief  Implements DirectConnect AllocatePublicVirtualInterface requests.
+ *
+ * @see    DirectConnectClient::allocatePublicVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new AllocatePublicVirtualInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AllocatePublicVirtualInterfaceResponse::AllocatePublicVirtualInterfaceResponse(
+
+/**
+ * @brief  Constructs a new AllocatePublicVirtualInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AllocatePublicVirtualInterfaceRequest::AllocatePublicVirtualInterfaceRequest(const AllocatePublicVirtualInterfaceRequest &other)
+    : DirectConnectRequest(new AllocatePublicVirtualInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AllocatePublicVirtualInterfaceRequest object.
+ */
+AllocatePublicVirtualInterfaceRequest::AllocatePublicVirtualInterfaceRequest()
+    : DirectConnectRequest(new AllocatePublicVirtualInterfaceRequestPrivate(DirectConnectRequest::AllocatePublicVirtualInterfaceAction, this))
+{
+
+}
+
+bool AllocatePublicVirtualInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AllocatePublicVirtualInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AllocatePublicVirtualInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * AllocatePublicVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new AllocatePublicVirtualInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AllocatePublicVirtualInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for AllocatePublicVirtualInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocatePublicVirtualInterfaceRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public AllocatePublicVirtualInterfaceRequest instance.
+ */
+AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequestPrivate(
+    const DirectConnectRequest::Action action, AllocatePublicVirtualInterfaceRequest * const q)
+    : AllocatePublicVirtualInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocatePublicVirtualInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AllocatePublicVirtualInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AllocatePublicVirtualInterfaceRequest instance.
+ */
+AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequestPrivate(
+    const AllocatePublicVirtualInterfaceRequestPrivate &other, AllocatePublicVirtualInterfaceRequest * const q)
+    : AllocatePublicVirtualInterfacePrivate(other, q)
+{
+
+}

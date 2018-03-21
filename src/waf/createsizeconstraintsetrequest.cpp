@@ -19,3 +19,107 @@
 
 #include "createsizeconstraintsetrequest.h"
 #include "createsizeconstraintsetrequest_p.h"
+#include "createsizeconstraintsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateSizeConstraintSetRequest
+ *
+ * @brief  Implements WAF CreateSizeConstraintSet requests.
+ *
+ * @see    WAFClient::createSizeConstraintSet
+ */
+
+/**
+ * @brief  Constructs a new CreateSizeConstraintSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSizeConstraintSetResponse::CreateSizeConstraintSetResponse(
+
+/**
+ * @brief  Constructs a new CreateSizeConstraintSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest(const CreateSizeConstraintSetRequest &other)
+    : WAFRequest(new CreateSizeConstraintSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSizeConstraintSetRequest object.
+ */
+CreateSizeConstraintSetRequest::CreateSizeConstraintSetRequest()
+    : WAFRequest(new CreateSizeConstraintSetRequestPrivate(WAFRequest::CreateSizeConstraintSetAction, this))
+{
+
+}
+
+bool CreateSizeConstraintSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSizeConstraintSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSizeConstraintSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSizeConstraintSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSizeConstraintSetRequestPrivate
+ *
+ * @brief  Private implementation for CreateSizeConstraintSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public CreateSizeConstraintSetRequest instance.
+ */
+CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
+    const WAFRequest::Action action, CreateSizeConstraintSetRequest * const q)
+    : CreateSizeConstraintSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSizeConstraintSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSizeConstraintSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSizeConstraintSetRequest instance.
+ */
+CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
+    const CreateSizeConstraintSetRequestPrivate &other, CreateSizeConstraintSetRequest * const q)
+    : CreateSizeConstraintSetPrivate(other, q)
+{
+
+}

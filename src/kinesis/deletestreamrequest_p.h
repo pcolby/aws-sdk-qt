@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTREAMREQUEST_P_H
 #define QTAWS_DELETESTREAMREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "deletestreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DeleteStreamRequest;
+
+class QTAWS_EXPORT DeleteStreamRequestPrivate : public KinesisPrivate {
+
+public:
+    DeleteStreamRequestPrivate(const Kinesis::Action action,
+                                   DeleteStreamRequest * const q);
+    DeleteStreamRequestPrivate(const DeleteStreamRequestPrivate &other,
+                                   DeleteStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStreamRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "requestcertificaterequest.h"
 #include "requestcertificaterequest_p.h"
+#include "requestcertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  RequestCertificateRequest
+ *
+ * @brief  Implements ACM RequestCertificate requests.
+ *
+ * @see    ACMClient::requestCertificate
+ */
+
+/**
+ * @brief  Constructs a new RequestCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestCertificateResponse::RequestCertificateResponse(
+
+/**
+ * @brief  Constructs a new RequestCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RequestCertificateRequest::RequestCertificateRequest(const RequestCertificateRequest &other)
+    : ACMRequest(new RequestCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RequestCertificateRequest object.
+ */
+RequestCertificateRequest::RequestCertificateRequest()
+    : ACMRequest(new RequestCertificateRequestPrivate(ACMRequest::RequestCertificateAction, this))
+{
+
+}
+
+bool RequestCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RequestCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RequestCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * RequestCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new RequestCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestCertificateRequestPrivate
+ *
+ * @brief  Private implementation for RequestCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public RequestCertificateRequest instance.
+ */
+RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
+    const ACMRequest::Action action, RequestCertificateRequest * const q)
+    : RequestCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RequestCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RequestCertificateRequest instance.
+ */
+RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
+    const RequestCertificateRequestPrivate &other, RequestCertificateRequest * const q)
+    : RequestCertificatePrivate(other, q)
+{
+
+}

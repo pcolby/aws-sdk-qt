@@ -19,3 +19,107 @@
 
 #include "getstaticiprequest.h"
 #include "getstaticiprequest_p.h"
+#include "getstaticipresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetStaticIpRequest
+ *
+ * @brief  Implements Lightsail GetStaticIp requests.
+ *
+ * @see    LightsailClient::getStaticIp
+ */
+
+/**
+ * @brief  Constructs a new GetStaticIpResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStaticIpResponse::GetStaticIpResponse(
+
+/**
+ * @brief  Constructs a new GetStaticIpRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetStaticIpRequest::GetStaticIpRequest(const GetStaticIpRequest &other)
+    : LightsailRequest(new GetStaticIpRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetStaticIpRequest object.
+ */
+GetStaticIpRequest::GetStaticIpRequest()
+    : LightsailRequest(new GetStaticIpRequestPrivate(LightsailRequest::GetStaticIpAction, this))
+{
+
+}
+
+bool GetStaticIpRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetStaticIpResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetStaticIpResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetStaticIpRequest::response(QNetworkReply * const reply) const
+{
+    return new GetStaticIpResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStaticIpRequestPrivate
+ *
+ * @brief  Private implementation for GetStaticIpRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStaticIpRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetStaticIpRequest instance.
+ */
+GetStaticIpRequestPrivate::GetStaticIpRequestPrivate(
+    const LightsailRequest::Action action, GetStaticIpRequest * const q)
+    : GetStaticIpPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStaticIpRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetStaticIpRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetStaticIpRequest instance.
+ */
+GetStaticIpRequestPrivate::GetStaticIpRequestPrivate(
+    const GetStaticIpRequestPrivate &other, GetStaticIpRequest * const q)
+    : GetStaticIpPrivate(other, q)
+{
+
+}

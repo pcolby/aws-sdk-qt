@@ -19,3 +19,107 @@
 
 #include "describelaunchtemplatesrequest.h"
 #include "describelaunchtemplatesrequest_p.h"
+#include "describelaunchtemplatesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeLaunchTemplatesRequest
+ *
+ * @brief  Implements EC2 DescribeLaunchTemplates requests.
+ *
+ * @see    EC2Client::describeLaunchTemplates
+ */
+
+/**
+ * @brief  Constructs a new DescribeLaunchTemplatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLaunchTemplatesResponse::DescribeLaunchTemplatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeLaunchTemplatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest(const DescribeLaunchTemplatesRequest &other)
+    : EC2Request(new DescribeLaunchTemplatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLaunchTemplatesRequest object.
+ */
+DescribeLaunchTemplatesRequest::DescribeLaunchTemplatesRequest()
+    : EC2Request(new DescribeLaunchTemplatesRequestPrivate(EC2Request::DescribeLaunchTemplatesAction, this))
+{
+
+}
+
+bool DescribeLaunchTemplatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLaunchTemplatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLaunchTemplatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeLaunchTemplatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLaunchTemplatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLaunchTemplatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLaunchTemplatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeLaunchTemplatesRequest instance.
+ */
+DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
+    const EC2Request::Action action, DescribeLaunchTemplatesRequest * const q)
+    : DescribeLaunchTemplatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLaunchTemplatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLaunchTemplatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLaunchTemplatesRequest instance.
+ */
+DescribeLaunchTemplatesRequestPrivate::DescribeLaunchTemplatesRequestPrivate(
+    const DescribeLaunchTemplatesRequestPrivate &other, DescribeLaunchTemplatesRequest * const q)
+    : DescribeLaunchTemplatesPrivate(other, q)
+{
+
+}

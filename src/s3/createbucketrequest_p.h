@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEBUCKETREQUEST_P_H
 #define QTAWS_CREATEBUCKETREQUEST_P_H
 
+#include "s3_p.h"
+#include "createbucketrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class CreateBucketRequest;
+
+class QTAWS_EXPORT CreateBucketRequestPrivate : public S3Private {
+
+public:
+    CreateBucketRequestPrivate(const S3::Action action,
+                                   CreateBucketRequest * const q);
+    CreateBucketRequestPrivate(const CreateBucketRequestPrivate &other,
+                                   CreateBucketRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateBucketRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

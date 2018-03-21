@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONREQUEST_H
 #define QTAWS_DESCRIBEAPPLICATIONREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DescribeApplicationRequestPrivate;
+
+class QTAWS_EXPORT DescribeApplicationRequest : public KinesisAnalyticsRequest {
+
+public:
+    DescribeApplicationRequest(const DescribeApplicationRequest &other);
+    DescribeApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeApplicationRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDOCUMENTATIONVERSIONREQUEST_H
 #define QTAWS_UPDATEDOCUMENTATIONVERSIONREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateDocumentationVersionRequestPrivate;
+
+class QTAWS_EXPORT UpdateDocumentationVersionRequest : public APIGatewayRequest {
+
+public:
+    UpdateDocumentationVersionRequest(const UpdateDocumentationVersionRequest &other);
+    UpdateDocumentationVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDocumentationVersionRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

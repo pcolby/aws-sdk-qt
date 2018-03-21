@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETLOGGINGOPTIONSREQUEST_H
 #define QTAWS_SETLOGGINGOPTIONSREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SetLoggingOptionsRequestPrivate;
+
+class QTAWS_EXPORT SetLoggingOptionsRequest : public IoTRequest {
+
+public:
+    SetLoggingOptionsRequest(const SetLoggingOptionsRequest &other);
+    SetLoggingOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetLoggingOptionsRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

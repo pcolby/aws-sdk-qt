@@ -19,3 +19,107 @@
 
 #include "reencryptrequest.h"
 #include "reencryptrequest_p.h"
+#include "reencryptresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ReEncryptRequest
+ *
+ * @brief  Implements KMS ReEncrypt requests.
+ *
+ * @see    KMSClient::reEncrypt
+ */
+
+/**
+ * @brief  Constructs a new ReEncryptResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReEncryptResponse::ReEncryptResponse(
+
+/**
+ * @brief  Constructs a new ReEncryptRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReEncryptRequest::ReEncryptRequest(const ReEncryptRequest &other)
+    : KMSRequest(new ReEncryptRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReEncryptRequest object.
+ */
+ReEncryptRequest::ReEncryptRequest()
+    : KMSRequest(new ReEncryptRequestPrivate(KMSRequest::ReEncryptAction, this))
+{
+
+}
+
+bool ReEncryptRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReEncryptResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReEncryptResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * const reply) const
+{
+    return new ReEncryptResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReEncryptRequestPrivate
+ *
+ * @brief  Private implementation for ReEncryptRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReEncryptRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public ReEncryptRequest instance.
+ */
+ReEncryptRequestPrivate::ReEncryptRequestPrivate(
+    const KMSRequest::Action action, ReEncryptRequest * const q)
+    : ReEncryptPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReEncryptRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReEncryptRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReEncryptRequest instance.
+ */
+ReEncryptRequestPrivate::ReEncryptRequestPrivate(
+    const ReEncryptRequestPrivate &other, ReEncryptRequest * const q)
+    : ReEncryptPrivate(other, q)
+{
+
+}

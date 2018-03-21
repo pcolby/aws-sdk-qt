@@ -19,3 +19,107 @@
 
 #include "describeenvironmentresourcesrequest.h"
 #include "describeenvironmentresourcesrequest_p.h"
+#include "describeenvironmentresourcesresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentResourcesRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeEnvironmentResources requests.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentResources
+ */
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentResourcesResponse::DescribeEnvironmentResourcesResponse(
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest(const DescribeEnvironmentResourcesRequest &other)
+    : ElasticBeanstalkRequest(new DescribeEnvironmentResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentResourcesRequest object.
+ */
+DescribeEnvironmentResourcesRequest::DescribeEnvironmentResourcesRequest()
+    : ElasticBeanstalkRequest(new DescribeEnvironmentResourcesRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentResourcesAction, this))
+{
+
+}
+
+bool DescribeEnvironmentResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEnvironmentResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEnvironmentResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeEnvironmentResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEnvironmentResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentResourcesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeEnvironmentResourcesRequest instance.
+ */
+DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeEnvironmentResourcesRequest * const q)
+    : DescribeEnvironmentResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEnvironmentResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEnvironmentResourcesRequest instance.
+ */
+DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestPrivate(
+    const DescribeEnvironmentResourcesRequestPrivate &other, DescribeEnvironmentResourcesRequest * const q)
+    : DescribeEnvironmentResourcesPrivate(other, q)
+{
+
+}

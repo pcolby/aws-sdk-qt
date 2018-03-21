@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPATCHGROUPSREQUEST_H
 #define QTAWS_DESCRIBEPATCHGROUPSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribePatchGroupsRequestPrivate;
+
+class QTAWS_EXPORT DescribePatchGroupsRequest : public SSMRequest {
+
+public:
+    DescribePatchGroupsRequest(const DescribePatchGroupsRequest &other);
+    DescribePatchGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePatchGroupsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

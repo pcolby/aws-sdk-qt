@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPROVISIONEDCAPACITYREQUEST_H
 #define QTAWS_LISTPROVISIONEDCAPACITYREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListProvisionedCapacityRequestPrivate;
+
+class QTAWS_EXPORT ListProvisionedCapacityRequest : public GlacierRequest {
+
+public:
+    ListProvisionedCapacityRequest(const ListProvisionedCapacityRequest &other);
+    ListProvisionedCapacityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListProvisionedCapacityRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

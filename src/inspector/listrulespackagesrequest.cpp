@@ -19,3 +19,107 @@
 
 #include "listrulespackagesrequest.h"
 #include "listrulespackagesrequest_p.h"
+#include "listrulespackagesresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListRulesPackagesRequest
+ *
+ * @brief  Implements Inspector ListRulesPackages requests.
+ *
+ * @see    InspectorClient::listRulesPackages
+ */
+
+/**
+ * @brief  Constructs a new ListRulesPackagesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRulesPackagesResponse::ListRulesPackagesResponse(
+
+/**
+ * @brief  Constructs a new ListRulesPackagesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRulesPackagesRequest::ListRulesPackagesRequest(const ListRulesPackagesRequest &other)
+    : InspectorRequest(new ListRulesPackagesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRulesPackagesRequest object.
+ */
+ListRulesPackagesRequest::ListRulesPackagesRequest()
+    : InspectorRequest(new ListRulesPackagesRequestPrivate(InspectorRequest::ListRulesPackagesAction, this))
+{
+
+}
+
+bool ListRulesPackagesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRulesPackagesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRulesPackagesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRulesPackagesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRulesPackagesRequestPrivate
+ *
+ * @brief  Private implementation for ListRulesPackagesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRulesPackagesRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public ListRulesPackagesRequest instance.
+ */
+ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
+    const InspectorRequest::Action action, ListRulesPackagesRequest * const q)
+    : ListRulesPackagesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRulesPackagesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRulesPackagesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRulesPackagesRequest instance.
+ */
+ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
+    const ListRulesPackagesRequestPrivate &other, ListRulesPackagesRequest * const q)
+    : ListRulesPackagesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCONTAINERINSTANCESREQUEST_P_H
 #define QTAWS_LISTCONTAINERINSTANCESREQUEST_P_H
 
+#include "ecs_p.h"
+#include "listcontainerinstancesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListContainerInstancesRequest;
+
+class QTAWS_EXPORT ListContainerInstancesRequestPrivate : public ECSPrivate {
+
+public:
+    ListContainerInstancesRequestPrivate(const ECS::Action action,
+                                   ListContainerInstancesRequest * const q);
+    ListContainerInstancesRequestPrivate(const ListContainerInstancesRequestPrivate &other,
+                                   ListContainerInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListContainerInstancesRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

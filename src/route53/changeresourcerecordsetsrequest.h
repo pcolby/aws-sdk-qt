@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHANGERESOURCERECORDSETSREQUEST_H
 #define QTAWS_CHANGERESOURCERECORDSETSREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ChangeResourceRecordSetsRequestPrivate;
+
+class QTAWS_EXPORT ChangeResourceRecordSetsRequest : public Route53Request {
+
+public:
+    ChangeResourceRecordSetsRequest(const ChangeResourceRecordSetsRequest &other);
+    ChangeResourceRecordSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ChangeResourceRecordSetsRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

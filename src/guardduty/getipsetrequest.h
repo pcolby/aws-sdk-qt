@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETIPSETREQUEST_H
 #define QTAWS_GETIPSETREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetIPSetRequestPrivate;
+
+class QTAWS_EXPORT GetIPSetRequest : public GuardDutyRequest {
+
+public:
+    GetIPSetRequest(const GetIPSetRequest &other);
+    GetIPSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetIPSetRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

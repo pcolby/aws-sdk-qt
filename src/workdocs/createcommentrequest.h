@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECOMMENTREQUEST_H
 #define QTAWS_CREATECOMMENTREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateCommentRequestPrivate;
+
+class QTAWS_EXPORT CreateCommentRequest : public WorkDocsRequest {
+
+public:
+    CreateCommentRequest(const CreateCommentRequest &other);
+    CreateCommentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCommentRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

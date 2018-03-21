@@ -19,3 +19,107 @@
 
 #include "getbuiltinslottypesrequest.h"
 #include "getbuiltinslottypesrequest_p.h"
+#include "getbuiltinslottypesresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBuiltinSlotTypesRequest
+ *
+ * @brief  Implements LexModelBuildingService GetBuiltinSlotTypes requests.
+ *
+ * @see    LexModelBuildingServiceClient::getBuiltinSlotTypes
+ */
+
+/**
+ * @brief  Constructs a new GetBuiltinSlotTypesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBuiltinSlotTypesResponse::GetBuiltinSlotTypesResponse(
+
+/**
+ * @brief  Constructs a new GetBuiltinSlotTypesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest(const GetBuiltinSlotTypesRequest &other)
+    : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBuiltinSlotTypesRequest object.
+ */
+GetBuiltinSlotTypesRequest::GetBuiltinSlotTypesRequest()
+    : LexModelBuildingServiceRequest(new GetBuiltinSlotTypesRequestPrivate(LexModelBuildingServiceRequest::GetBuiltinSlotTypesAction, this))
+{
+
+}
+
+bool GetBuiltinSlotTypesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBuiltinSlotTypesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBuiltinSlotTypesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBuiltinSlotTypesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBuiltinSlotTypesRequestPrivate
+ *
+ * @brief  Private implementation for GetBuiltinSlotTypesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetBuiltinSlotTypesRequest instance.
+ */
+GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetBuiltinSlotTypesRequest * const q)
+    : GetBuiltinSlotTypesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinSlotTypesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBuiltinSlotTypesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBuiltinSlotTypesRequest instance.
+ */
+GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
+    const GetBuiltinSlotTypesRequestPrivate &other, GetBuiltinSlotTypesRequest * const q)
+    : GetBuiltinSlotTypesPrivate(other, q)
+{
+
+}

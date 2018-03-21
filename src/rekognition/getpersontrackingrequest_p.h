@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPERSONTRACKINGREQUEST_P_H
 #define QTAWS_GETPERSONTRACKINGREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "getpersontrackingrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class GetPersonTrackingRequest;
+
+class QTAWS_EXPORT GetPersonTrackingRequestPrivate : public RekognitionPrivate {
+
+public:
+    GetPersonTrackingRequestPrivate(const Rekognition::Action action,
+                                   GetPersonTrackingRequest * const q);
+    GetPersonTrackingRequestPrivate(const GetPersonTrackingRequestPrivate &other,
+                                   GetPersonTrackingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPersonTrackingRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

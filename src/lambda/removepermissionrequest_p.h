@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEPERMISSIONREQUEST_P_H
 #define QTAWS_REMOVEPERMISSIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "removepermissionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class RemovePermissionRequest;
+
+class QTAWS_EXPORT RemovePermissionRequestPrivate : public LambdaPrivate {
+
+public:
+    RemovePermissionRequestPrivate(const Lambda::Action action,
+                                   RemovePermissionRequest * const q);
+    RemovePermissionRequestPrivate(const RemovePermissionRequestPrivate &other,
+                                   RemovePermissionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemovePermissionRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

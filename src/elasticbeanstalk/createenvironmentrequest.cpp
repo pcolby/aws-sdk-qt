@@ -19,3 +19,107 @@
 
 #include "createenvironmentrequest.h"
 #include "createenvironmentrequest_p.h"
+#include "createenvironmentresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  CreateEnvironmentRequest
+ *
+ * @brief  Implements ElasticBeanstalk CreateEnvironment requests.
+ *
+ * @see    ElasticBeanstalkClient::createEnvironment
+ */
+
+/**
+ * @brief  Constructs a new CreateEnvironmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEnvironmentResponse::CreateEnvironmentResponse(
+
+/**
+ * @brief  Constructs a new CreateEnvironmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEnvironmentRequest::CreateEnvironmentRequest(const CreateEnvironmentRequest &other)
+    : ElasticBeanstalkRequest(new CreateEnvironmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEnvironmentRequest object.
+ */
+CreateEnvironmentRequest::CreateEnvironmentRequest()
+    : ElasticBeanstalkRequest(new CreateEnvironmentRequestPrivate(ElasticBeanstalkRequest::CreateEnvironmentAction, this))
+{
+
+}
+
+bool CreateEnvironmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEnvironmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEnvironmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * CreateEnvironmentRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateEnvironmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEnvironmentRequestPrivate
+ *
+ * @brief  Private implementation for CreateEnvironmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public CreateEnvironmentRequest instance.
+ */
+CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, CreateEnvironmentRequest * const q)
+    : CreateEnvironmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEnvironmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEnvironmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEnvironmentRequest instance.
+ */
+CreateEnvironmentRequestPrivate::CreateEnvironmentRequestPrivate(
+    const CreateEnvironmentRequestPrivate &other, CreateEnvironmentRequest * const q)
+    : CreateEnvironmentPrivate(other, q)
+{
+
+}

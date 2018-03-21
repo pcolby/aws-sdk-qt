@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERESOURCESERVERREQUEST_P_H
 #define QTAWS_UPDATERESOURCESERVERREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "updateresourceserverrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateResourceServerRequest;
+
+class QTAWS_EXPORT UpdateResourceServerRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    UpdateResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   UpdateResourceServerRequest * const q);
+    UpdateResourceServerRequestPrivate(const UpdateResourceServerRequestPrivate &other,
+                                   UpdateResourceServerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateResourceServerRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

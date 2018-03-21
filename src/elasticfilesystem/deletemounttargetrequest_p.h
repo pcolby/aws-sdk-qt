@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEMOUNTTARGETREQUEST_P_H
 #define QTAWS_DELETEMOUNTTARGETREQUEST_P_H
 
+#include "efs_p.h"
+#include "deletemounttargetrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteMountTargetRequest;
+
+class QTAWS_EXPORT DeleteMountTargetRequestPrivate : public EFSPrivate {
+
+public:
+    DeleteMountTargetRequestPrivate(const EFS::Action action,
+                                   DeleteMountTargetRequest * const q);
+    DeleteMountTargetRequestPrivate(const DeleteMountTargetRequestPrivate &other,
+                                   DeleteMountTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMountTargetRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "modifynetworkinterfaceattributerequest.h"
 #include "modifynetworkinterfaceattributerequest_p.h"
+#include "modifynetworkinterfaceattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyNetworkInterfaceAttributeRequest
+ *
+ * @brief  Implements EC2 ModifyNetworkInterfaceAttribute requests.
+ *
+ * @see    EC2Client::modifyNetworkInterfaceAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifyNetworkInterfaceAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyNetworkInterfaceAttributeResponse::ModifyNetworkInterfaceAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest(const ModifyNetworkInterfaceAttributeRequest &other)
+    : EC2Request(new ModifyNetworkInterfaceAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequest object.
+ */
+ModifyNetworkInterfaceAttributeRequest::ModifyNetworkInterfaceAttributeRequest()
+    : EC2Request(new ModifyNetworkInterfaceAttributeRequestPrivate(EC2Request::ModifyNetworkInterfaceAttributeAction, this))
+{
+
+}
+
+bool ModifyNetworkInterfaceAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyNetworkInterfaceAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyNetworkInterfaceAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyNetworkInterfaceAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyNetworkInterfaceAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifyNetworkInterfaceAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyNetworkInterfaceAttributeRequest instance.
+ */
+ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
+    const EC2Request::Action action, ModifyNetworkInterfaceAttributeRequest * const q)
+    : ModifyNetworkInterfaceAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyNetworkInterfaceAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyNetworkInterfaceAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyNetworkInterfaceAttributeRequest instance.
+ */
+ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
+    const ModifyNetworkInterfaceAttributeRequestPrivate &other, ModifyNetworkInterfaceAttributeRequest * const q)
+    : ModifyNetworkInterfaceAttributePrivate(other, q)
+{
+
+}

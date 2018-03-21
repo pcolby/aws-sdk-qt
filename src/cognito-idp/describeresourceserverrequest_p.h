@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESOURCESERVERREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCESERVERREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "describeresourceserverrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeResourceServerRequest;
+
+class QTAWS_EXPORT DescribeResourceServerRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    DescribeResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   DescribeResourceServerRequest * const q);
+    DescribeResourceServerRequestPrivate(const DescribeResourceServerRequestPrivate &other,
+                                   DescribeResourceServerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeResourceServerRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

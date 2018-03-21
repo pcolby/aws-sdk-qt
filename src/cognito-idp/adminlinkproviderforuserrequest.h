@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINLINKPROVIDERFORUSERREQUEST_H
 #define QTAWS_ADMINLINKPROVIDERFORUSERREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminLinkProviderForUserRequestPrivate;
+
+class QTAWS_EXPORT AdminLinkProviderForUserRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminLinkProviderForUserRequest(const AdminLinkProviderForUserRequest &other);
+    AdminLinkProviderForUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminLinkProviderForUserRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

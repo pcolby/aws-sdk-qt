@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEVPCCLASSICLINKREQUEST_H
 #define QTAWS_ENABLEVPCCLASSICLINKREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVpcClassicLinkRequestPrivate;
+
+class QTAWS_EXPORT EnableVpcClassicLinkRequest : public EC2Request {
+
+public:
+    EnableVpcClassicLinkRequest(const EnableVpcClassicLinkRequest &other);
+    EnableVpcClassicLinkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableVpcClassicLinkRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

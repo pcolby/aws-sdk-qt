@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_H
 #define QTAWS_UNTAGRESOURCEREQUEST_H
 
+#include "cloudhsmv2request.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class UntagResourceRequestPrivate;
+
+class QTAWS_EXPORT UntagResourceRequest : public CloudHSMV2Request {
+
+public:
+    UntagResourceRequest(const UntagResourceRequest &other);
+    UntagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourceRequest)
+
+}
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

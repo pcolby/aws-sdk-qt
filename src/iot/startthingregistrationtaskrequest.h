@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTTHINGREGISTRATIONTASKREQUEST_H
 #define QTAWS_STARTTHINGREGISTRATIONTASKREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class StartThingRegistrationTaskRequestPrivate;
+
+class QTAWS_EXPORT StartThingRegistrationTaskRequest : public IoTRequest {
+
+public:
+    StartThingRegistrationTaskRequest(const StartThingRegistrationTaskRequest &other);
+    StartThingRegistrationTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartThingRegistrationTaskRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

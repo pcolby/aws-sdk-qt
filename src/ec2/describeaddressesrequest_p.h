@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEADDRESSESREQUEST_P_H
 #define QTAWS_DESCRIBEADDRESSESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeaddressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAddressesRequest;
+
+class QTAWS_EXPORT DescribeAddressesRequestPrivate : public EC2Private {
+
+public:
+    DescribeAddressesRequestPrivate(const EC2::Action action,
+                                   DescribeAddressesRequest * const q);
+    DescribeAddressesRequestPrivate(const DescribeAddressesRequestPrivate &other,
+                                   DescribeAddressesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAddressesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

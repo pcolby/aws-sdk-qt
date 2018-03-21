@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDOMAINREQUEST_P_H
 #define QTAWS_DESCRIBEDOMAINREQUEST_P_H
 
+#include "swf_p.h"
+#include "describedomainrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeDomainRequest;
+
+class QTAWS_EXPORT DescribeDomainRequestPrivate : public SWFPrivate {
+
+public:
+    DescribeDomainRequestPrivate(const SWF::Action action,
+                                   DescribeDomainRequest * const q);
+    DescribeDomainRequestPrivate(const DescribeDomainRequestPrivate &other,
+                                   DescribeDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDomainRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

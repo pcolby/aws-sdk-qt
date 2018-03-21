@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEBASEPATHMAPPINGREQUEST_P_H
 #define QTAWS_UPDATEBASEPATHMAPPINGREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updatebasepathmappingrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateBasePathMappingRequest;
+
+class QTAWS_EXPORT UpdateBasePathMappingRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateBasePathMappingRequestPrivate(const APIGateway::Action action,
+                                   UpdateBasePathMappingRequest * const q);
+    UpdateBasePathMappingRequestPrivate(const UpdateBasePathMappingRequestPrivate &other,
+                                   UpdateBasePathMappingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBasePathMappingRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

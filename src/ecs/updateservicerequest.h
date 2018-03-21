@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVICEREQUEST_H
 #define QTAWS_UPDATESERVICEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateServiceRequestPrivate;
+
+class QTAWS_EXPORT UpdateServiceRequest : public ECSRequest {
+
+public:
+    UpdateServiceRequest(const UpdateServiceRequest &other);
+    UpdateServiceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteslottypeversionrequest.h"
 #include "deleteslottypeversionrequest_p.h"
+#include "deleteslottypeversionresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteSlotTypeVersionRequest
+ *
+ * @brief  Implements LexModelBuildingService DeleteSlotTypeVersion requests.
+ *
+ * @see    LexModelBuildingServiceClient::deleteSlotTypeVersion
+ */
+
+/**
+ * @brief  Constructs a new DeleteSlotTypeVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSlotTypeVersionResponse::DeleteSlotTypeVersionResponse(
+
+/**
+ * @brief  Constructs a new DeleteSlotTypeVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest(const DeleteSlotTypeVersionRequest &other)
+    : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSlotTypeVersionRequest object.
+ */
+DeleteSlotTypeVersionRequest::DeleteSlotTypeVersionRequest()
+    : LexModelBuildingServiceRequest(new DeleteSlotTypeVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteSlotTypeVersionAction, this))
+{
+
+}
+
+bool DeleteSlotTypeVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSlotTypeVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSlotTypeVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * DeleteSlotTypeVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSlotTypeVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSlotTypeVersionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSlotTypeVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public DeleteSlotTypeVersionRequest instance.
+ */
+DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeVersionRequest * const q)
+    : DeleteSlotTypeVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSlotTypeVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSlotTypeVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSlotTypeVersionRequest instance.
+ */
+DeleteSlotTypeVersionRequestPrivate::DeleteSlotTypeVersionRequestPrivate(
+    const DeleteSlotTypeVersionRequestPrivate &other, DeleteSlotTypeVersionRequest * const q)
+    : DeleteSlotTypeVersionPrivate(other, q)
+{
+
+}

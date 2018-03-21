@@ -19,3 +19,107 @@
 
 #include "putbotaliasrequest.h"
 #include "putbotaliasrequest_p.h"
+#include "putbotaliasresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  PutBotAliasRequest
+ *
+ * @brief  Implements LexModelBuildingService PutBotAlias requests.
+ *
+ * @see    LexModelBuildingServiceClient::putBotAlias
+ */
+
+/**
+ * @brief  Constructs a new PutBotAliasResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBotAliasResponse::PutBotAliasResponse(
+
+/**
+ * @brief  Constructs a new PutBotAliasRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBotAliasRequest::PutBotAliasRequest(const PutBotAliasRequest &other)
+    : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBotAliasRequest object.
+ */
+PutBotAliasRequest::PutBotAliasRequest()
+    : LexModelBuildingServiceRequest(new PutBotAliasRequestPrivate(LexModelBuildingServiceRequest::PutBotAliasAction, this))
+{
+
+}
+
+bool PutBotAliasRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBotAliasResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBotAliasResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * PutBotAliasRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBotAliasResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBotAliasRequestPrivate
+ *
+ * @brief  Private implementation for PutBotAliasRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBotAliasRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public PutBotAliasRequest instance.
+ */
+PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, PutBotAliasRequest * const q)
+    : PutBotAliasPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBotAliasRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBotAliasRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBotAliasRequest instance.
+ */
+PutBotAliasRequestPrivate::PutBotAliasRequestPrivate(
+    const PutBotAliasRequestPrivate &other, PutBotAliasRequest * const q)
+    : PutBotAliasPrivate(other, q)
+{
+
+}

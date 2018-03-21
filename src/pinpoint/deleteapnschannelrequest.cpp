@@ -19,3 +19,107 @@
 
 #include "deleteapnschannelrequest.h"
 #include "deleteapnschannelrequest_p.h"
+#include "deleteapnschannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteApnsChannelRequest
+ *
+ * @brief  Implements Pinpoint DeleteApnsChannel requests.
+ *
+ * @see    PinpointClient::deleteApnsChannel
+ */
+
+/**
+ * @brief  Constructs a new DeleteApnsChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApnsChannelResponse::DeleteApnsChannelResponse(
+
+/**
+ * @brief  Constructs a new DeleteApnsChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteApnsChannelRequest::DeleteApnsChannelRequest(const DeleteApnsChannelRequest &other)
+    : PinpointRequest(new DeleteApnsChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteApnsChannelRequest object.
+ */
+DeleteApnsChannelRequest::DeleteApnsChannelRequest()
+    : PinpointRequest(new DeleteApnsChannelRequestPrivate(PinpointRequest::DeleteApnsChannelAction, this))
+{
+
+}
+
+bool DeleteApnsChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteApnsChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteApnsChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteApnsChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApnsChannelRequestPrivate
+ *
+ * @brief  Private implementation for DeleteApnsChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApnsChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public DeleteApnsChannelRequest instance.
+ */
+DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
+    const PinpointRequest::Action action, DeleteApnsChannelRequest * const q)
+    : DeleteApnsChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApnsChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteApnsChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteApnsChannelRequest instance.
+ */
+DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
+    const DeleteApnsChannelRequestPrivate &other, DeleteApnsChannelRequest * const q)
+    : DeleteApnsChannelPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_FORGOTPASSWORDREQUEST_H
 #define QTAWS_FORGOTPASSWORDREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ForgotPasswordRequestPrivate;
+
+class QTAWS_EXPORT ForgotPasswordRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ForgotPasswordRequest(const ForgotPasswordRequest &other);
+    ForgotPasswordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ForgotPasswordRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

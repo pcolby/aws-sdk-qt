@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYFPGAIMAGEATTRIBUTEREQUEST_H
 #define QTAWS_MODIFYFPGAIMAGEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyFpgaImageAttributeRequestPrivate;
+
+class QTAWS_EXPORT ModifyFpgaImageAttributeRequest : public EC2Request {
+
+public:
+    ModifyFpgaImageAttributeRequest(const ModifyFpgaImageAttributeRequest &other);
+    ModifyFpgaImageAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyFpgaImageAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "addtagsrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class AddTagsRequest;
+
+class QTAWS_EXPORT AddTagsRequestPrivate : public MachineLearningPrivate {
+
+public:
+    AddTagsRequestPrivate(const MachineLearning::Action action,
+                                   AddTagsRequest * const q);
+    AddTagsRequestPrivate(const AddTagsRequestPrivate &other,
+                                   AddTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

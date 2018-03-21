@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDBSECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETEDBSECURITYGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "deletedbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBSecurityGroupRequest;
+
+class QTAWS_EXPORT DeleteDBSecurityGroupRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteDBSecurityGroupRequestPrivate(const RDS::Action action,
+                                   DeleteDBSecurityGroupRequest * const q);
+    DeleteDBSecurityGroupRequestPrivate(const DeleteDBSecurityGroupRequestPrivate &other,
+                                   DeleteDBSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBSecurityGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

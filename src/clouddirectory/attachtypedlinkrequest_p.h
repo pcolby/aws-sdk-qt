@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHTYPEDLINKREQUEST_P_H
 #define QTAWS_ATTACHTYPEDLINKREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "attachtypedlinkrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachTypedLinkRequest;
+
+class QTAWS_EXPORT AttachTypedLinkRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    AttachTypedLinkRequestPrivate(const CloudDirectory::Action action,
+                                   AttachTypedLinkRequest * const q);
+    AttachTypedLinkRequestPrivate(const AttachTypedLinkRequestPrivate &other,
+                                   AttachTypedLinkRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachTypedLinkRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

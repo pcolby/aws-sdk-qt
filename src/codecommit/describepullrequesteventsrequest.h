@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPULLREQUESTEVENTSREQUEST_H
 #define QTAWS_DESCRIBEPULLREQUESTEVENTSREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DescribePullRequestEventsRequestPrivate;
+
+class QTAWS_EXPORT DescribePullRequestEventsRequest : public CodeCommitRequest {
+
+public:
+    DescribePullRequestEventsRequest(const DescribePullRequestEventsRequest &other);
+    DescribePullRequestEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePullRequestEventsRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

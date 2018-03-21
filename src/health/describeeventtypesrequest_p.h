@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEVENTTYPESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTTYPESREQUEST_P_H
 
+#include "health_p.h"
+#include "describeeventtypesrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeEventTypesRequest;
+
+class QTAWS_EXPORT DescribeEventTypesRequestPrivate : public HealthPrivate {
+
+public:
+    DescribeEventTypesRequestPrivate(const Health::Action action,
+                                   DescribeEventTypesRequest * const q);
+    DescribeEventTypesRequestPrivate(const DescribeEventTypesRequestPrivate &other,
+                                   DescribeEventTypesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventTypesRequest)
+
+};
+
+} // namespace Health
+} // namespace AWS
+
 #endif

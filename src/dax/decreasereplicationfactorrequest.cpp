@@ -19,3 +19,107 @@
 
 #include "decreasereplicationfactorrequest.h"
 #include "decreasereplicationfactorrequest_p.h"
+#include "decreasereplicationfactorresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DecreaseReplicationFactorRequest
+ *
+ * @brief  Implements DAX DecreaseReplicationFactor requests.
+ *
+ * @see    DAXClient::decreaseReplicationFactor
+ */
+
+/**
+ * @brief  Constructs a new DecreaseReplicationFactorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DecreaseReplicationFactorResponse::DecreaseReplicationFactorResponse(
+
+/**
+ * @brief  Constructs a new DecreaseReplicationFactorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest(const DecreaseReplicationFactorRequest &other)
+    : DAXRequest(new DecreaseReplicationFactorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DecreaseReplicationFactorRequest object.
+ */
+DecreaseReplicationFactorRequest::DecreaseReplicationFactorRequest()
+    : DAXRequest(new DecreaseReplicationFactorRequestPrivate(DAXRequest::DecreaseReplicationFactorAction, this))
+{
+
+}
+
+bool DecreaseReplicationFactorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DecreaseReplicationFactorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DecreaseReplicationFactorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * DecreaseReplicationFactorRequest::response(QNetworkReply * const reply) const
+{
+    return new DecreaseReplicationFactorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DecreaseReplicationFactorRequestPrivate
+ *
+ * @brief  Private implementation for DecreaseReplicationFactorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public DecreaseReplicationFactorRequest instance.
+ */
+DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
+    const DAXRequest::Action action, DecreaseReplicationFactorRequest * const q)
+    : DecreaseReplicationFactorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecreaseReplicationFactorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DecreaseReplicationFactorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DecreaseReplicationFactorRequest instance.
+ */
+DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate(
+    const DecreaseReplicationFactorRequestPrivate &other, DecreaseReplicationFactorRequest * const q)
+    : DecreaseReplicationFactorPrivate(other, q)
+{
+
+}

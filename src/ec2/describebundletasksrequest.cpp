@@ -19,3 +19,107 @@
 
 #include "describebundletasksrequest.h"
 #include "describebundletasksrequest_p.h"
+#include "describebundletasksresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeBundleTasksRequest
+ *
+ * @brief  Implements EC2 DescribeBundleTasks requests.
+ *
+ * @see    EC2Client::describeBundleTasks
+ */
+
+/**
+ * @brief  Constructs a new DescribeBundleTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBundleTasksResponse::DescribeBundleTasksResponse(
+
+/**
+ * @brief  Constructs a new DescribeBundleTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeBundleTasksRequest::DescribeBundleTasksRequest(const DescribeBundleTasksRequest &other)
+    : EC2Request(new DescribeBundleTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeBundleTasksRequest object.
+ */
+DescribeBundleTasksRequest::DescribeBundleTasksRequest()
+    : EC2Request(new DescribeBundleTasksRequestPrivate(EC2Request::DescribeBundleTasksAction, this))
+{
+
+}
+
+bool DescribeBundleTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeBundleTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeBundleTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeBundleTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBundleTasksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeBundleTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBundleTasksRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeBundleTasksRequest instance.
+ */
+DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
+    const EC2Request::Action action, DescribeBundleTasksRequest * const q)
+    : DescribeBundleTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBundleTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeBundleTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeBundleTasksRequest instance.
+ */
+DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
+    const DescribeBundleTasksRequestPrivate &other, DescribeBundleTasksRequest * const q)
+    : DescribeBundleTasksPrivate(other, q)
+{
+
+}

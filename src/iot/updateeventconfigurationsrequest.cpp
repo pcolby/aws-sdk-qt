@@ -19,3 +19,107 @@
 
 #include "updateeventconfigurationsrequest.h"
 #include "updateeventconfigurationsrequest_p.h"
+#include "updateeventconfigurationsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateEventConfigurationsRequest
+ *
+ * @brief  Implements IoT UpdateEventConfigurations requests.
+ *
+ * @see    IoTClient::updateEventConfigurations
+ */
+
+/**
+ * @brief  Constructs a new UpdateEventConfigurationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEventConfigurationsResponse::UpdateEventConfigurationsResponse(
+
+/**
+ * @brief  Constructs a new UpdateEventConfigurationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest(const UpdateEventConfigurationsRequest &other)
+    : IoTRequest(new UpdateEventConfigurationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEventConfigurationsRequest object.
+ */
+UpdateEventConfigurationsRequest::UpdateEventConfigurationsRequest()
+    : IoTRequest(new UpdateEventConfigurationsRequestPrivate(IoTRequest::UpdateEventConfigurationsAction, this))
+{
+
+}
+
+bool UpdateEventConfigurationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEventConfigurationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEventConfigurationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEventConfigurationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEventConfigurationsRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEventConfigurationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public UpdateEventConfigurationsRequest instance.
+ */
+UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
+    const IoTRequest::Action action, UpdateEventConfigurationsRequest * const q)
+    : UpdateEventConfigurationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEventConfigurationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEventConfigurationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEventConfigurationsRequest instance.
+ */
+UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
+    const UpdateEventConfigurationsRequestPrivate &other, UpdateEventConfigurationsRequest * const q)
+    : UpdateEventConfigurationsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEVENDPOINTREQUEST_P_H
 #define QTAWS_GETDEVENDPOINTREQUEST_P_H
 
+#include "glue_p.h"
+#include "getdevendpointrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDevEndpointRequest;
+
+class QTAWS_EXPORT GetDevEndpointRequestPrivate : public GluePrivate {
+
+public:
+    GetDevEndpointRequestPrivate(const Glue::Action action,
+                                   GetDevEndpointRequest * const q);
+    GetDevEndpointRequestPrivate(const GetDevEndpointRequestPrivate &other,
+                                   GetDevEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDevEndpointRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

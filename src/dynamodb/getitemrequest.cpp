@@ -19,3 +19,107 @@
 
 #include "getitemrequest.h"
 #include "getitemrequest_p.h"
+#include "getitemresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  GetItemRequest
+ *
+ * @brief  Implements DynamoDB GetItem requests.
+ *
+ * @see    DynamoDBClient::getItem
+ */
+
+/**
+ * @brief  Constructs a new GetItemResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetItemResponse::GetItemResponse(
+
+/**
+ * @brief  Constructs a new GetItemRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetItemRequest::GetItemRequest(const GetItemRequest &other)
+    : DynamoDBRequest(new GetItemRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetItemRequest object.
+ */
+GetItemRequest::GetItemRequest()
+    : DynamoDBRequest(new GetItemRequestPrivate(DynamoDBRequest::GetItemAction, this))
+{
+
+}
+
+bool GetItemRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetItemResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetItemResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * GetItemRequest::response(QNetworkReply * const reply) const
+{
+    return new GetItemResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetItemRequestPrivate
+ *
+ * @brief  Private implementation for GetItemRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetItemRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public GetItemRequest instance.
+ */
+GetItemRequestPrivate::GetItemRequestPrivate(
+    const DynamoDBRequest::Action action, GetItemRequest * const q)
+    : GetItemPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetItemRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetItemRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetItemRequest instance.
+ */
+GetItemRequestPrivate::GetItemRequestPrivate(
+    const GetItemRequestPrivate &other, GetItemRequest * const q)
+    : GetItemPrivate(other, q)
+{
+
+}

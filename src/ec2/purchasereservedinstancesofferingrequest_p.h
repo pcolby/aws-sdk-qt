@@ -20,4 +20,29 @@
 #ifndef QTAWS_PURCHASERESERVEDINSTANCESOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASERESERVEDINSTANCESOFFERINGREQUEST_P_H
 
+#include "ec2_p.h"
+#include "purchasereservedinstancesofferingrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class PurchaseReservedInstancesOfferingRequest;
+
+class QTAWS_EXPORT PurchaseReservedInstancesOfferingRequestPrivate : public EC2Private {
+
+public:
+    PurchaseReservedInstancesOfferingRequestPrivate(const EC2::Action action,
+                                   PurchaseReservedInstancesOfferingRequest * const q);
+    PurchaseReservedInstancesOfferingRequestPrivate(const PurchaseReservedInstancesOfferingRequestPrivate &other,
+                                   PurchaseReservedInstancesOfferingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseReservedInstancesOfferingRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

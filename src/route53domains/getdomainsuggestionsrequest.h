@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOMAINSUGGESTIONSREQUEST_H
 #define QTAWS_GETDOMAINSUGGESTIONSREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetDomainSuggestionsRequestPrivate;
+
+class QTAWS_EXPORT GetDomainSuggestionsRequest : public Route53DomainsRequest {
+
+public:
+    GetDomainSuggestionsRequest(const GetDomainSuggestionsRequest &other);
+    GetDomainSuggestionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainSuggestionsRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

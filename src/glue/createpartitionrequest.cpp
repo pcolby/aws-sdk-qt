@@ -19,3 +19,107 @@
 
 #include "createpartitionrequest.h"
 #include "createpartitionrequest_p.h"
+#include "createpartitionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreatePartitionRequest
+ *
+ * @brief  Implements Glue CreatePartition requests.
+ *
+ * @see    GlueClient::createPartition
+ */
+
+/**
+ * @brief  Constructs a new CreatePartitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePartitionResponse::CreatePartitionResponse(
+
+/**
+ * @brief  Constructs a new CreatePartitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePartitionRequest::CreatePartitionRequest(const CreatePartitionRequest &other)
+    : GlueRequest(new CreatePartitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePartitionRequest object.
+ */
+CreatePartitionRequest::CreatePartitionRequest()
+    : GlueRequest(new CreatePartitionRequestPrivate(GlueRequest::CreatePartitionAction, this))
+{
+
+}
+
+bool CreatePartitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePartitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePartitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * CreatePartitionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePartitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePartitionRequestPrivate
+ *
+ * @brief  Private implementation for CreatePartitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePartitionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public CreatePartitionRequest instance.
+ */
+CreatePartitionRequestPrivate::CreatePartitionRequestPrivate(
+    const GlueRequest::Action action, CreatePartitionRequest * const q)
+    : CreatePartitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePartitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePartitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePartitionRequest instance.
+ */
+CreatePartitionRequestPrivate::CreatePartitionRequestPrivate(
+    const CreatePartitionRequestPrivate &other, CreatePartitionRequest * const q)
+    : CreatePartitionPrivate(other, q)
+{
+
+}

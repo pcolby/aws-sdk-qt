@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETRAFFICPOLICYINSTANCEREQUEST_P_H
 #define QTAWS_UPDATETRAFFICPOLICYINSTANCEREQUEST_P_H
 
+#include "route53_p.h"
+#include "updatetrafficpolicyinstancerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class UpdateTrafficPolicyInstanceRequest;
+
+class QTAWS_EXPORT UpdateTrafficPolicyInstanceRequestPrivate : public Route53Private {
+
+public:
+    UpdateTrafficPolicyInstanceRequestPrivate(const Route53::Action action,
+                                   UpdateTrafficPolicyInstanceRequest * const q);
+    UpdateTrafficPolicyInstanceRequestPrivate(const UpdateTrafficPolicyInstanceRequestPrivate &other,
+                                   UpdateTrafficPolicyInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTrafficPolicyInstanceRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

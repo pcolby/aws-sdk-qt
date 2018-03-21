@@ -19,3 +19,107 @@
 
 #include "updatecloudfrontoriginaccessidentityrequest.h"
 #include "updatecloudfrontoriginaccessidentityrequest_p.h"
+#include "updatecloudfrontoriginaccessidentityresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  UpdateCloudFrontOriginAccessIdentityRequest
+ *
+ * @brief  Implements CloudFront UpdateCloudFrontOriginAccessIdentity requests.
+ *
+ * @see    CloudFrontClient::updateCloudFrontOriginAccessIdentity
+ */
+
+/**
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCloudFrontOriginAccessIdentityResponse::UpdateCloudFrontOriginAccessIdentityResponse(
+
+/**
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentityRequest(const UpdateCloudFrontOriginAccessIdentityRequest &other)
+    : CloudFrontRequest(new UpdateCloudFrontOriginAccessIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequest object.
+ */
+UpdateCloudFrontOriginAccessIdentityRequest::UpdateCloudFrontOriginAccessIdentityRequest()
+    : CloudFrontRequest(new UpdateCloudFrontOriginAccessIdentityRequestPrivate(CloudFrontRequest::UpdateCloudFrontOriginAccessIdentityAction, this))
+{
+
+}
+
+bool UpdateCloudFrontOriginAccessIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCloudFrontOriginAccessIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * UpdateCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCloudFrontOriginAccessIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCloudFrontOriginAccessIdentityRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCloudFrontOriginAccessIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public UpdateCloudFrontOriginAccessIdentityRequest instance.
+ */
+UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
+    const CloudFrontRequest::Action action, UpdateCloudFrontOriginAccessIdentityRequest * const q)
+    : UpdateCloudFrontOriginAccessIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCloudFrontOriginAccessIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCloudFrontOriginAccessIdentityRequest instance.
+ */
+UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccessIdentityRequestPrivate(
+    const UpdateCloudFrontOriginAccessIdentityRequestPrivate &other, UpdateCloudFrontOriginAccessIdentityRequest * const q)
+    : UpdateCloudFrontOriginAccessIdentityPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETLABELDETECTIONREQUEST_H
 #define QTAWS_GETLABELDETECTIONREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class GetLabelDetectionRequestPrivate;
+
+class QTAWS_EXPORT GetLabelDetectionRequest : public RekognitionRequest {
+
+public:
+    GetLabelDetectionRequest(const GetLabelDetectionRequest &other);
+    GetLabelDetectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetLabelDetectionRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

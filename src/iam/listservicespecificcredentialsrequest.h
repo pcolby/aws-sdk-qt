@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_H
 #define QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListServiceSpecificCredentialsRequestPrivate;
+
+class QTAWS_EXPORT ListServiceSpecificCredentialsRequest : public IAMRequest {
+
+public:
+    ListServiceSpecificCredentialsRequest(const ListServiceSpecificCredentialsRequest &other);
+    ListServiceSpecificCredentialsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListServiceSpecificCredentialsRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

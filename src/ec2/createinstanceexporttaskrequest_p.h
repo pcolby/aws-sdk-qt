@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINSTANCEEXPORTTASKREQUEST_P_H
 #define QTAWS_CREATEINSTANCEEXPORTTASKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createinstanceexporttaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateInstanceExportTaskRequest;
+
+class QTAWS_EXPORT CreateInstanceExportTaskRequestPrivate : public EC2Private {
+
+public:
+    CreateInstanceExportTaskRequestPrivate(const EC2::Action action,
+                                   CreateInstanceExportTaskRequest * const q);
+    CreateInstanceExportTaskRequestPrivate(const CreateInstanceExportTaskRequestPrivate &other,
+                                   CreateInstanceExportTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInstanceExportTaskRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETDESIREDCAPACITYREQUEST_H
 #define QTAWS_SETDESIREDCAPACITYREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SetDesiredCapacityRequestPrivate;
+
+class QTAWS_EXPORT SetDesiredCapacityRequest : public AutoScalingRequest {
+
+public:
+    SetDesiredCapacityRequest(const SetDesiredCapacityRequest &other);
+    SetDesiredCapacityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetDesiredCapacityRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

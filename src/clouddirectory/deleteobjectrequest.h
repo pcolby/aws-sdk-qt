@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEOBJECTREQUEST_H
 #define QTAWS_DELETEOBJECTREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteObjectRequestPrivate;
+
+class QTAWS_EXPORT DeleteObjectRequest : public CloudDirectoryRequest {
+
+public:
+    DeleteObjectRequest(const DeleteObjectRequest &other);
+    DeleteObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteObjectRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

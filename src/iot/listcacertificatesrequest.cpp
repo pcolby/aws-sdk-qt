@@ -19,3 +19,107 @@
 
 #include "listcacertificatesrequest.h"
 #include "listcacertificatesrequest_p.h"
+#include "listcacertificatesresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListCACertificatesRequest
+ *
+ * @brief  Implements IoT ListCACertificates requests.
+ *
+ * @see    IoTClient::listCACertificates
+ */
+
+/**
+ * @brief  Constructs a new ListCACertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCACertificatesResponse::ListCACertificatesResponse(
+
+/**
+ * @brief  Constructs a new ListCACertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListCACertificatesRequest::ListCACertificatesRequest(const ListCACertificatesRequest &other)
+    : IoTRequest(new ListCACertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListCACertificatesRequest object.
+ */
+ListCACertificatesRequest::ListCACertificatesRequest()
+    : IoTRequest(new ListCACertificatesRequestPrivate(IoTRequest::ListCACertificatesAction, this))
+{
+
+}
+
+bool ListCACertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListCACertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListCACertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListCACertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCACertificatesRequestPrivate
+ *
+ * @brief  Private implementation for ListCACertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCACertificatesRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListCACertificatesRequest instance.
+ */
+ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
+    const IoTRequest::Action action, ListCACertificatesRequest * const q)
+    : ListCACertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCACertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListCACertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListCACertificatesRequest instance.
+ */
+ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
+    const ListCACertificatesRequestPrivate &other, ListCACertificatesRequest * const q)
+    : ListCACertificatesPrivate(other, q)
+{
+
+}

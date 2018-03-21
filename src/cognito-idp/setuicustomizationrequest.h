@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETUICUSTOMIZATIONREQUEST_H
 #define QTAWS_SETUICUSTOMIZATIONREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUICustomizationRequestPrivate;
+
+class QTAWS_EXPORT SetUICustomizationRequest : public CognitoIdentityProviderRequest {
+
+public:
+    SetUICustomizationRequest(const SetUICustomizationRequest &other);
+    SetUICustomizationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetUICustomizationRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

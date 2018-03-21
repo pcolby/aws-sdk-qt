@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINVITATIONSREQUEST_H
 #define QTAWS_LISTINVITATIONSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ListInvitationsRequestPrivate;
+
+class QTAWS_EXPORT ListInvitationsRequest : public GuardDutyRequest {
+
+public:
+    ListInvitationsRequest(const ListInvitationsRequest &other);
+    ListInvitationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInvitationsRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

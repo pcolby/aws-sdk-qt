@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeConfigRuleEvaluationStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusRequest : public ConfigServiceRequest {
+
+public:
+    DescribeConfigRuleEvaluationStatusRequest(const DescribeConfigRuleEvaluationStatusRequest &other);
+    DescribeConfigRuleEvaluationStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigRuleEvaluationStatusRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "resetdeploymentsrequest.h"
 #include "resetdeploymentsrequest_p.h"
+#include "resetdeploymentsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ResetDeploymentsRequest
+ *
+ * @brief  Implements Greengrass ResetDeployments requests.
+ *
+ * @see    GreengrassClient::resetDeployments
+ */
+
+/**
+ * @brief  Constructs a new ResetDeploymentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetDeploymentsResponse::ResetDeploymentsResponse(
+
+/**
+ * @brief  Constructs a new ResetDeploymentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetDeploymentsRequest::ResetDeploymentsRequest(const ResetDeploymentsRequest &other)
+    : GreengrassRequest(new ResetDeploymentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetDeploymentsRequest object.
+ */
+ResetDeploymentsRequest::ResetDeploymentsRequest()
+    : GreengrassRequest(new ResetDeploymentsRequestPrivate(GreengrassRequest::ResetDeploymentsAction, this))
+{
+
+}
+
+bool ResetDeploymentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetDeploymentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetDeploymentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetDeploymentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetDeploymentsRequestPrivate
+ *
+ * @brief  Private implementation for ResetDeploymentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDeploymentsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ResetDeploymentsRequest instance.
+ */
+ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
+    const GreengrassRequest::Action action, ResetDeploymentsRequest * const q)
+    : ResetDeploymentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetDeploymentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetDeploymentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetDeploymentsRequest instance.
+ */
+ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
+    const ResetDeploymentsRequestPrivate &other, ResetDeploymentsRequest * const q)
+    : ResetDeploymentsPrivate(other, q)
+{
+
+}

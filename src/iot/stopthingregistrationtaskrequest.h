@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_H
 #define QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class StopThingRegistrationTaskRequestPrivate;
+
+class QTAWS_EXPORT StopThingRegistrationTaskRequest : public IoTRequest {
+
+public:
+    StopThingRegistrationTaskRequest(const StopThingRegistrationTaskRequest &other);
+    StopThingRegistrationTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopThingRegistrationTaskRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

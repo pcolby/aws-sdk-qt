@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFOLDERCONTENTSREQUEST_H
 #define QTAWS_DESCRIBEFOLDERCONTENTSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeFolderContentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFolderContentsRequest : public WorkDocsRequest {
+
+public:
+    DescribeFolderContentsRequest(const DescribeFolderContentsRequest &other);
+    DescribeFolderContentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFolderContentsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

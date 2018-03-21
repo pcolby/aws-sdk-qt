@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTINSTANCEREQUEST_H
 #define QTAWS_STARTINSTANCEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class StartInstanceRequestPrivate;
+
+class QTAWS_EXPORT StartInstanceRequest : public LightsailRequest {
+
+public:
+    StartInstanceRequest(const StartInstanceRequest &other);
+    StartInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartInstanceRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

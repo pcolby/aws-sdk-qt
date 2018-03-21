@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "createdeploymentrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateDeploymentRequest;
+
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public GreengrassPrivate {
+
+public:
+    CreateDeploymentRequestPrivate(const Greengrass::Action action,
+                                   CreateDeploymentRequest * const q);
+    CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
+                                   CreateDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDeploymentRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

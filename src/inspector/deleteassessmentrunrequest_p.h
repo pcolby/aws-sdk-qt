@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEASSESSMENTRUNREQUEST_P_H
 #define QTAWS_DELETEASSESSMENTRUNREQUEST_P_H
 
+#include "inspector_p.h"
+#include "deleteassessmentrunrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DeleteAssessmentRunRequest;
+
+class QTAWS_EXPORT DeleteAssessmentRunRequestPrivate : public InspectorPrivate {
+
+public:
+    DeleteAssessmentRunRequestPrivate(const Inspector::Action action,
+                                   DeleteAssessmentRunRequest * const q);
+    DeleteAssessmentRunRequestPrivate(const DeleteAssessmentRunRequestPrivate &other,
+                                   DeleteAssessmentRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAssessmentRunRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

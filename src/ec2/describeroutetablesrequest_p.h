@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEROUTETABLESREQUEST_P_H
 #define QTAWS_DESCRIBEROUTETABLESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeroutetablesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeRouteTablesRequest;
+
+class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public EC2Private {
+
+public:
+    DescribeRouteTablesRequestPrivate(const EC2::Action action,
+                                   DescribeRouteTablesRequest * const q);
+    DescribeRouteTablesRequestPrivate(const DescribeRouteTablesRequestPrivate &other,
+                                   DescribeRouteTablesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRouteTablesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

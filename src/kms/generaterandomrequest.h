@@ -20,4 +20,32 @@
 #ifndef QTAWS_GENERATERANDOMREQUEST_H
 #define QTAWS_GENERATERANDOMREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GenerateRandomRequestPrivate;
+
+class QTAWS_EXPORT GenerateRandomRequest : public KMSRequest {
+
+public:
+    GenerateRandomRequest(const GenerateRandomRequest &other);
+    GenerateRandomRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GenerateRandomRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

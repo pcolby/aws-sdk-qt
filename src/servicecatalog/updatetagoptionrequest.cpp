@@ -19,3 +19,107 @@
 
 #include "updatetagoptionrequest.h"
 #include "updatetagoptionrequest_p.h"
+#include "updatetagoptionresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateTagOptionRequest
+ *
+ * @brief  Implements ServiceCatalog UpdateTagOption requests.
+ *
+ * @see    ServiceCatalogClient::updateTagOption
+ */
+
+/**
+ * @brief  Constructs a new UpdateTagOptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTagOptionResponse::UpdateTagOptionResponse(
+
+/**
+ * @brief  Constructs a new UpdateTagOptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTagOptionRequest::UpdateTagOptionRequest(const UpdateTagOptionRequest &other)
+    : ServiceCatalogRequest(new UpdateTagOptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTagOptionRequest object.
+ */
+UpdateTagOptionRequest::UpdateTagOptionRequest()
+    : ServiceCatalogRequest(new UpdateTagOptionRequestPrivate(ServiceCatalogRequest::UpdateTagOptionAction, this))
+{
+
+}
+
+bool UpdateTagOptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTagOptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTagOptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTagOptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTagOptionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTagOptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTagOptionRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public UpdateTagOptionRequest instance.
+ */
+UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
+    const ServiceCatalogRequest::Action action, UpdateTagOptionRequest * const q)
+    : UpdateTagOptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTagOptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTagOptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTagOptionRequest instance.
+ */
+UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
+    const UpdateTagOptionRequestPrivate &other, UpdateTagOptionRequest * const q)
+    : UpdateTagOptionPrivate(other, q)
+{
+
+}

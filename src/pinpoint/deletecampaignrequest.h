@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECAMPAIGNREQUEST_H
 #define QTAWS_DELETECAMPAIGNREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteCampaignRequestPrivate;
+
+class QTAWS_EXPORT DeleteCampaignRequest : public PinpointRequest {
+
+public:
+    DeleteCampaignRequest(const DeleteCampaignRequest &other);
+    DeleteCampaignRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCampaignRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTINSTANCEREQUEST_P_H
 #define QTAWS_STARTINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "startinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class StartInstanceRequest;
+
+class QTAWS_EXPORT StartInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    StartInstanceRequestPrivate(const OpsWorks::Action action,
+                                   StartInstanceRequest * const q);
+    StartInstanceRequestPrivate(const StartInstanceRequestPrivate &other,
+                                   StartInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

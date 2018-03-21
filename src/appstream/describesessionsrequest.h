@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESESSIONSREQUEST_H
 #define QTAWS_DESCRIBESESSIONSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeSessionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeSessionsRequest : public AppStreamRequest {
+
+public:
+    DescribeSessionsRequest(const DescribeSessionsRequest &other);
+    DescribeSessionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSessionsRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

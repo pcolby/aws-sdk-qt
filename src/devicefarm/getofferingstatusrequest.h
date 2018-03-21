@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOFFERINGSTATUSREQUEST_H
 #define QTAWS_GETOFFERINGSTATUSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetOfferingStatusRequestPrivate;
+
+class QTAWS_EXPORT GetOfferingStatusRequest : public DeviceFarmRequest {
+
+public:
+    GetOfferingStatusRequest(const GetOfferingStatusRequest &other);
+    GetOfferingStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOfferingStatusRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSKILLGROUPREQUEST_H
 #define QTAWS_GETSKILLGROUPREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetSkillGroupRequestPrivate;
+
+class QTAWS_EXPORT GetSkillGroupRequest : public AlexaForBusinessRequest {
+
+public:
+    GetSkillGroupRequest(const GetSkillGroupRequest &other);
+    GetSkillGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSkillGroupRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

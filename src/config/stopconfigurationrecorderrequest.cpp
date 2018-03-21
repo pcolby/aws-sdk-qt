@@ -19,3 +19,107 @@
 
 #include "stopconfigurationrecorderrequest.h"
 #include "stopconfigurationrecorderrequest_p.h"
+#include "stopconfigurationrecorderresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  StopConfigurationRecorderRequest
+ *
+ * @brief  Implements ConfigService StopConfigurationRecorder requests.
+ *
+ * @see    ConfigServiceClient::stopConfigurationRecorder
+ */
+
+/**
+ * @brief  Constructs a new StopConfigurationRecorderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
+
+/**
+ * @brief  Constructs a new StopConfigurationRecorderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopConfigurationRecorderRequest::StopConfigurationRecorderRequest(const StopConfigurationRecorderRequest &other)
+    : ConfigServiceRequest(new StopConfigurationRecorderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopConfigurationRecorderRequest object.
+ */
+StopConfigurationRecorderRequest::StopConfigurationRecorderRequest()
+    : ConfigServiceRequest(new StopConfigurationRecorderRequestPrivate(ConfigServiceRequest::StopConfigurationRecorderAction, this))
+{
+
+}
+
+bool StopConfigurationRecorderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopConfigurationRecorderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopConfigurationRecorderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * StopConfigurationRecorderRequest::response(QNetworkReply * const reply) const
+{
+    return new StopConfigurationRecorderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopConfigurationRecorderRequestPrivate
+ *
+ * @brief  Private implementation for StopConfigurationRecorderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopConfigurationRecorderRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public StopConfigurationRecorderRequest instance.
+ */
+StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
+    const ConfigServiceRequest::Action action, StopConfigurationRecorderRequest * const q)
+    : StopConfigurationRecorderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopConfigurationRecorderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopConfigurationRecorderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopConfigurationRecorderRequest instance.
+ */
+StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
+    const StopConfigurationRecorderRequestPrivate &other, StopConfigurationRecorderRequest * const q)
+    : StopConfigurationRecorderPrivate(other, q)
+{
+
+}

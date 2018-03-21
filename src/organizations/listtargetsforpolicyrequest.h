@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTARGETSFORPOLICYREQUEST_H
 #define QTAWS_LISTTARGETSFORPOLICYREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListTargetsForPolicyRequestPrivate;
+
+class QTAWS_EXPORT ListTargetsForPolicyRequest : public OrganizationsRequest {
+
+public:
+    ListTargetsForPolicyRequest(const ListTargetsForPolicyRequest &other);
+    ListTargetsForPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTargetsForPolicyRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

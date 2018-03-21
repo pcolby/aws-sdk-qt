@@ -19,3 +19,107 @@
 
 #include "purchasereservedinstancesofferingrequest.h"
 #include "purchasereservedinstancesofferingrequest_p.h"
+#include "purchasereservedinstancesofferingresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  PurchaseReservedInstancesOfferingRequest
+ *
+ * @brief  Implements EC2 PurchaseReservedInstancesOffering requests.
+ *
+ * @see    EC2Client::purchaseReservedInstancesOffering
+ */
+
+/**
+ * @brief  Constructs a new PurchaseReservedInstancesOfferingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResponse(
+
+/**
+ * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest(const PurchaseReservedInstancesOfferingRequest &other)
+    : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurchaseReservedInstancesOfferingRequest object.
+ */
+PurchaseReservedInstancesOfferingRequest::PurchaseReservedInstancesOfferingRequest()
+    : EC2Request(new PurchaseReservedInstancesOfferingRequestPrivate(EC2Request::PurchaseReservedInstancesOfferingAction, this))
+{
+
+}
+
+bool PurchaseReservedInstancesOfferingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurchaseReservedInstancesOfferingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurchaseReservedInstancesOfferingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::response(QNetworkReply * const reply) const
+{
+    return new PurchaseReservedInstancesOfferingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseReservedInstancesOfferingRequestPrivate
+ *
+ * @brief  Private implementation for PurchaseReservedInstancesOfferingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public PurchaseReservedInstancesOfferingRequest instance.
+ */
+PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
+    const EC2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)
+    : PurchaseReservedInstancesOfferingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedInstancesOfferingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurchaseReservedInstancesOfferingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurchaseReservedInstancesOfferingRequest instance.
+ */
+PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
+    const PurchaseReservedInstancesOfferingRequestPrivate &other, PurchaseReservedInstancesOfferingRequest * const q)
+    : PurchaseReservedInstancesOfferingPrivate(other, q)
+{
+
+}

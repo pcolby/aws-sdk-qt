@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEMAINTENANCEWINDOWREQUEST_P_H
 #define QTAWS_DELETEMAINTENANCEWINDOWREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deletemaintenancewindowrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteMaintenanceWindowRequest;
+
+class QTAWS_EXPORT DeleteMaintenanceWindowRequestPrivate : public SSMPrivate {
+
+public:
+    DeleteMaintenanceWindowRequestPrivate(const SSM::Action action,
+                                   DeleteMaintenanceWindowRequest * const q);
+    DeleteMaintenanceWindowRequestPrivate(const DeleteMaintenanceWindowRequestPrivate &other,
+                                   DeleteMaintenanceWindowRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMaintenanceWindowRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

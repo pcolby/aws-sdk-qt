@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONTENTMODERATIONREQUEST_H
 #define QTAWS_GETCONTENTMODERATIONREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class GetContentModerationRequestPrivate;
+
+class QTAWS_EXPORT GetContentModerationRequest : public RekognitionRequest {
+
+public:
+    GetContentModerationRequest(const GetContentModerationRequest &other);
+    GetContentModerationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetContentModerationRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

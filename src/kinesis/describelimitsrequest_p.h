@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELIMITSREQUEST_P_H
 #define QTAWS_DESCRIBELIMITSREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "describelimitsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DescribeLimitsRequest;
+
+class QTAWS_EXPORT DescribeLimitsRequestPrivate : public KinesisPrivate {
+
+public:
+    DescribeLimitsRequestPrivate(const Kinesis::Action action,
+                                   DescribeLimitsRequest * const q);
+    DescribeLimitsRequestPrivate(const DescribeLimitsRequestPrivate &other,
+                                   DescribeLimitsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLimitsRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

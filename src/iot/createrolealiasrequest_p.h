@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEROLEALIASREQUEST_P_H
 #define QTAWS_CREATEROLEALIASREQUEST_P_H
 
+#include "iot_p.h"
+#include "createrolealiasrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateRoleAliasRequest;
+
+class QTAWS_EXPORT CreateRoleAliasRequestPrivate : public IoTPrivate {
+
+public:
+    CreateRoleAliasRequestPrivate(const IoT::Action action,
+                                   CreateRoleAliasRequest * const q);
+    CreateRoleAliasRequestPrivate(const CreateRoleAliasRequestPrivate &other,
+                                   CreateRoleAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRoleAliasRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

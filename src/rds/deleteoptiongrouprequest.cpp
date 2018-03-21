@@ -19,3 +19,107 @@
 
 #include "deleteoptiongrouprequest.h"
 #include "deleteoptiongrouprequest_p.h"
+#include "deleteoptiongroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DeleteOptionGroupRequest
+ *
+ * @brief  Implements RDS DeleteOptionGroup requests.
+ *
+ * @see    RDSClient::deleteOptionGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteOptionGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOptionGroupResponse::DeleteOptionGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteOptionGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteOptionGroupRequest::DeleteOptionGroupRequest(const DeleteOptionGroupRequest &other)
+    : RDSRequest(new DeleteOptionGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteOptionGroupRequest object.
+ */
+DeleteOptionGroupRequest::DeleteOptionGroupRequest()
+    : RDSRequest(new DeleteOptionGroupRequestPrivate(RDSRequest::DeleteOptionGroupAction, this))
+{
+
+}
+
+bool DeleteOptionGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteOptionGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteOptionGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteOptionGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOptionGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteOptionGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOptionGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DeleteOptionGroupRequest instance.
+ */
+DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
+    const RDSRequest::Action action, DeleteOptionGroupRequest * const q)
+    : DeleteOptionGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOptionGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteOptionGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteOptionGroupRequest instance.
+ */
+DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
+    const DeleteOptionGroupRequestPrivate &other, DeleteOptionGroupRequest * const q)
+    : DeleteOptionGroupPrivate(other, q)
+{
+
+}

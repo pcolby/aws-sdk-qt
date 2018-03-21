@@ -19,3 +19,107 @@
 
 #include "deleteimportedkeymaterialrequest.h"
 #include "deleteimportedkeymaterialrequest_p.h"
+#include "deleteimportedkeymaterialresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DeleteImportedKeyMaterialRequest
+ *
+ * @brief  Implements KMS DeleteImportedKeyMaterial requests.
+ *
+ * @see    KMSClient::deleteImportedKeyMaterial
+ */
+
+/**
+ * @brief  Constructs a new DeleteImportedKeyMaterialResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
+
+/**
+ * @brief  Constructs a new DeleteImportedKeyMaterialRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteImportedKeyMaterialRequest::DeleteImportedKeyMaterialRequest(const DeleteImportedKeyMaterialRequest &other)
+    : KMSRequest(new DeleteImportedKeyMaterialRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteImportedKeyMaterialRequest object.
+ */
+DeleteImportedKeyMaterialRequest::DeleteImportedKeyMaterialRequest()
+    : KMSRequest(new DeleteImportedKeyMaterialRequestPrivate(KMSRequest::DeleteImportedKeyMaterialAction, this))
+{
+
+}
+
+bool DeleteImportedKeyMaterialRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteImportedKeyMaterialResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteImportedKeyMaterialResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteImportedKeyMaterialResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteImportedKeyMaterialRequestPrivate
+ *
+ * @brief  Private implementation for DeleteImportedKeyMaterialRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteImportedKeyMaterialRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public DeleteImportedKeyMaterialRequest instance.
+ */
+DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
+    const KMSRequest::Action action, DeleteImportedKeyMaterialRequest * const q)
+    : DeleteImportedKeyMaterialPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteImportedKeyMaterialRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteImportedKeyMaterialRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteImportedKeyMaterialRequest instance.
+ */
+DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
+    const DeleteImportedKeyMaterialRequestPrivate &other, DeleteImportedKeyMaterialRequest * const q)
+    : DeleteImportedKeyMaterialPrivate(other, q)
+{
+
+}

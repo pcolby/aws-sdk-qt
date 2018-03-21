@@ -19,3 +19,107 @@
 
 #include "decodeauthorizationmessagerequest.h"
 #include "decodeauthorizationmessagerequest_p.h"
+#include "decodeauthorizationmessageresponse.h"
+#include "stsrequest_p.h"
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  DecodeAuthorizationMessageRequest
+ *
+ * @brief  Implements STS DecodeAuthorizationMessage requests.
+ *
+ * @see    STSClient::decodeAuthorizationMessage
+ */
+
+/**
+ * @brief  Constructs a new DecodeAuthorizationMessageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
+
+/**
+ * @brief  Constructs a new DecodeAuthorizationMessageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest(const DecodeAuthorizationMessageRequest &other)
+    : STSRequest(new DecodeAuthorizationMessageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DecodeAuthorizationMessageRequest object.
+ */
+DecodeAuthorizationMessageRequest::DecodeAuthorizationMessageRequest()
+    : STSRequest(new DecodeAuthorizationMessageRequestPrivate(STSRequest::DecodeAuthorizationMessageAction, this))
+{
+
+}
+
+bool DecodeAuthorizationMessageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DecodeAuthorizationMessageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DecodeAuthorizationMessageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  STSClient::send
+ */
+AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(QNetworkReply * const reply) const
+{
+    return new DecodeAuthorizationMessageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DecodeAuthorizationMessageRequestPrivate
+ *
+ * @brief  Private implementation for DecodeAuthorizationMessageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecodeAuthorizationMessageRequestPrivate object.
+ *
+ * @param  action  STS action being performed.
+ * @param  q       Pointer to this object's public DecodeAuthorizationMessageRequest instance.
+ */
+DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
+    const STSRequest::Action action, DecodeAuthorizationMessageRequest * const q)
+    : DecodeAuthorizationMessagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DecodeAuthorizationMessageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DecodeAuthorizationMessageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DecodeAuthorizationMessageRequest instance.
+ */
+DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
+    const DecodeAuthorizationMessageRequestPrivate &other, DecodeAuthorizationMessageRequest * const q)
+    : DecodeAuthorizationMessagePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "stopremoteaccesssessionrequest.h"
 #include "stopremoteaccesssessionrequest_p.h"
+#include "stopremoteaccesssessionresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  StopRemoteAccessSessionRequest
+ *
+ * @brief  Implements DeviceFarm StopRemoteAccessSession requests.
+ *
+ * @see    DeviceFarmClient::stopRemoteAccessSession
+ */
+
+/**
+ * @brief  Constructs a new StopRemoteAccessSessionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopRemoteAccessSessionResponse::StopRemoteAccessSessionResponse(
+
+/**
+ * @brief  Constructs a new StopRemoteAccessSessionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest(const StopRemoteAccessSessionRequest &other)
+    : DeviceFarmRequest(new StopRemoteAccessSessionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopRemoteAccessSessionRequest object.
+ */
+StopRemoteAccessSessionRequest::StopRemoteAccessSessionRequest()
+    : DeviceFarmRequest(new StopRemoteAccessSessionRequestPrivate(DeviceFarmRequest::StopRemoteAccessSessionAction, this))
+{
+
+}
+
+bool StopRemoteAccessSessionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopRemoteAccessSessionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopRemoteAccessSessionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
+{
+    return new StopRemoteAccessSessionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopRemoteAccessSessionRequestPrivate
+ *
+ * @brief  Private implementation for StopRemoteAccessSessionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public StopRemoteAccessSessionRequest instance.
+ */
+StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
+    const DeviceFarmRequest::Action action, StopRemoteAccessSessionRequest * const q)
+    : StopRemoteAccessSessionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopRemoteAccessSessionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopRemoteAccessSessionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopRemoteAccessSessionRequest instance.
+ */
+StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
+    const StopRemoteAccessSessionRequestPrivate &other, StopRemoteAccessSessionRequest * const q)
+    : StopRemoteAccessSessionPrivate(other, q)
+{
+
+}

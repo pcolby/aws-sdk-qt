@@ -19,3 +19,107 @@
 
 #include "deletescalingpolicyrequest.h"
 #include "deletescalingpolicyrequest_p.h"
+#include "deletescalingpolicyresponse.h"
+#include "applicationautoscalingrequest_p.h"
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DeleteScalingPolicyRequest
+ *
+ * @brief  Implements ApplicationAutoScaling DeleteScalingPolicy requests.
+ *
+ * @see    ApplicationAutoScalingClient::deleteScalingPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other)
+    : ApplicationAutoScalingRequest(new DeleteScalingPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyRequest object.
+ */
+DeleteScalingPolicyRequest::DeleteScalingPolicyRequest()
+    : ApplicationAutoScalingRequest(new DeleteScalingPolicyRequestPrivate(ApplicationAutoScalingRequest::DeleteScalingPolicyAction, this))
+{
+
+}
+
+bool DeleteScalingPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteScalingPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteScalingPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationAutoScalingClient::send
+ */
+AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteScalingPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteScalingPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteScalingPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object.
+ *
+ * @param  action  ApplicationAutoScaling action being performed.
+ * @param  q       Pointer to this object's public DeleteScalingPolicyRequest instance.
+ */
+DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
+    const ApplicationAutoScalingRequest::Action action, DeleteScalingPolicyRequest * const q)
+    : DeleteScalingPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteScalingPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteScalingPolicyRequest instance.
+ */
+DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
+    const DeleteScalingPolicyRequestPrivate &other, DeleteScalingPolicyRequest * const q)
+    : DeleteScalingPolicyPrivate(other, q)
+{
+
+}

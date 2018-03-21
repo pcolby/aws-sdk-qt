@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCHANGETOKENSTATUSREQUEST_H
 #define QTAWS_GETCHANGETOKENSTATUSREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetChangeTokenStatusRequestPrivate;
+
+class QTAWS_EXPORT GetChangeTokenStatusRequest : public WAFRegionalRequest {
+
+public:
+    GetChangeTokenStatusRequest(const GetChangeTokenStatusRequest &other);
+    GetChangeTokenStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetChangeTokenStatusRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

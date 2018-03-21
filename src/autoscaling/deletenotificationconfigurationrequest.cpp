@@ -19,3 +19,107 @@
 
 #include "deletenotificationconfigurationrequest.h"
 #include "deletenotificationconfigurationrequest_p.h"
+#include "deletenotificationconfigurationresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DeleteNotificationConfigurationRequest
+ *
+ * @brief  Implements AutoScaling DeleteNotificationConfiguration requests.
+ *
+ * @see    AutoScalingClient::deleteNotificationConfiguration
+ */
+
+/**
+ * @brief  Constructs a new DeleteNotificationConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse(
+
+/**
+ * @brief  Constructs a new DeleteNotificationConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest(const DeleteNotificationConfigurationRequest &other)
+    : AutoScalingRequest(new DeleteNotificationConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNotificationConfigurationRequest object.
+ */
+DeleteNotificationConfigurationRequest::DeleteNotificationConfigurationRequest()
+    : AutoScalingRequest(new DeleteNotificationConfigurationRequestPrivate(AutoScalingRequest::DeleteNotificationConfigurationAction, this))
+{
+
+}
+
+bool DeleteNotificationConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNotificationConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNotificationConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DeleteNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNotificationConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotificationConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNotificationConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DeleteNotificationConfigurationRequest instance.
+ */
+DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
+    const AutoScalingRequest::Action action, DeleteNotificationConfigurationRequest * const q)
+    : DeleteNotificationConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNotificationConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNotificationConfigurationRequest instance.
+ */
+DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
+    const DeleteNotificationConfigurationRequestPrivate &other, DeleteNotificationConfigurationRequest * const q)
+    : DeleteNotificationConfigurationPrivate(other, q)
+{
+
+}

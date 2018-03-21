@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DeleteTagsRequest;
+
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    DeleteTagsRequestPrivate(const WorkSpaces::Action action,
+                                   DeleteTagsRequest * const q);
+    DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
+                                   DeleteTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

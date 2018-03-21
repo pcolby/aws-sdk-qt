@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPORTFOLIOREQUEST_H
 #define QTAWS_DELETEPORTFOLIOREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeletePortfolioRequestPrivate;
+
+class QTAWS_EXPORT DeletePortfolioRequest : public ServiceCatalogRequest {
+
+public:
+    DeletePortfolioRequest(const DeletePortfolioRequest &other);
+    DeletePortfolioRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePortfolioRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

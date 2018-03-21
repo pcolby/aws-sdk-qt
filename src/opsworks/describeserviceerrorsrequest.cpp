@@ -19,3 +19,107 @@
 
 #include "describeserviceerrorsrequest.h"
 #include "describeserviceerrorsrequest_p.h"
+#include "describeserviceerrorsresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeServiceErrorsRequest
+ *
+ * @brief  Implements OpsWorks DescribeServiceErrors requests.
+ *
+ * @see    OpsWorksClient::describeServiceErrors
+ */
+
+/**
+ * @brief  Constructs a new DescribeServiceErrorsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
+
+/**
+ * @brief  Constructs a new DescribeServiceErrorsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeServiceErrorsRequest::DescribeServiceErrorsRequest(const DescribeServiceErrorsRequest &other)
+    : OpsWorksRequest(new DescribeServiceErrorsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeServiceErrorsRequest object.
+ */
+DescribeServiceErrorsRequest::DescribeServiceErrorsRequest()
+    : OpsWorksRequest(new DescribeServiceErrorsRequestPrivate(OpsWorksRequest::DescribeServiceErrorsAction, this))
+{
+
+}
+
+bool DescribeServiceErrorsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeServiceErrorsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeServiceErrorsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeServiceErrorsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeServiceErrorsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServiceErrorsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeServiceErrorsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceErrorsRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeServiceErrorsRequest instance.
+ */
+DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeServiceErrorsRequest * const q)
+    : DescribeServiceErrorsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceErrorsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeServiceErrorsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeServiceErrorsRequest instance.
+ */
+DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
+    const DescribeServiceErrorsRequestPrivate &other, DescribeServiceErrorsRequest * const q)
+    : DescribeServiceErrorsPrivate(other, q)
+{
+
+}

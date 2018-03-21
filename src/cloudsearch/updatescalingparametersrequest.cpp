@@ -19,3 +19,107 @@
 
 #include "updatescalingparametersrequest.h"
 #include "updatescalingparametersrequest_p.h"
+#include "updatescalingparametersresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  UpdateScalingParametersRequest
+ *
+ * @brief  Implements CloudSearch UpdateScalingParameters requests.
+ *
+ * @see    CloudSearchClient::updateScalingParameters
+ */
+
+/**
+ * @brief  Constructs a new UpdateScalingParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateScalingParametersResponse::UpdateScalingParametersResponse(
+
+/**
+ * @brief  Constructs a new UpdateScalingParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateScalingParametersRequest::UpdateScalingParametersRequest(const UpdateScalingParametersRequest &other)
+    : CloudSearchRequest(new UpdateScalingParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateScalingParametersRequest object.
+ */
+UpdateScalingParametersRequest::UpdateScalingParametersRequest()
+    : CloudSearchRequest(new UpdateScalingParametersRequestPrivate(CloudSearchRequest::UpdateScalingParametersAction, this))
+{
+
+}
+
+bool UpdateScalingParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateScalingParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateScalingParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * UpdateScalingParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateScalingParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateScalingParametersRequestPrivate
+ *
+ * @brief  Private implementation for UpdateScalingParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateScalingParametersRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public UpdateScalingParametersRequest instance.
+ */
+UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
+    const CloudSearchRequest::Action action, UpdateScalingParametersRequest * const q)
+    : UpdateScalingParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateScalingParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateScalingParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateScalingParametersRequest instance.
+ */
+UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
+    const UpdateScalingParametersRequestPrivate &other, UpdateScalingParametersRequest * const q)
+    : UpdateScalingParametersPrivate(other, q)
+{
+
+}

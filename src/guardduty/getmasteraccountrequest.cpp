@@ -19,3 +19,107 @@
 
 #include "getmasteraccountrequest.h"
 #include "getmasteraccountrequest_p.h"
+#include "getmasteraccountresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  GetMasterAccountRequest
+ *
+ * @brief  Implements GuardDuty GetMasterAccount requests.
+ *
+ * @see    GuardDutyClient::getMasterAccount
+ */
+
+/**
+ * @brief  Constructs a new GetMasterAccountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMasterAccountResponse::GetMasterAccountResponse(
+
+/**
+ * @brief  Constructs a new GetMasterAccountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMasterAccountRequest::GetMasterAccountRequest(const GetMasterAccountRequest &other)
+    : GuardDutyRequest(new GetMasterAccountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMasterAccountRequest object.
+ */
+GetMasterAccountRequest::GetMasterAccountRequest()
+    : GuardDutyRequest(new GetMasterAccountRequestPrivate(GuardDutyRequest::GetMasterAccountAction, this))
+{
+
+}
+
+bool GetMasterAccountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMasterAccountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMasterAccountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMasterAccountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMasterAccountRequestPrivate
+ *
+ * @brief  Private implementation for GetMasterAccountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMasterAccountRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public GetMasterAccountRequest instance.
+ */
+GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
+    const GuardDutyRequest::Action action, GetMasterAccountRequest * const q)
+    : GetMasterAccountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMasterAccountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMasterAccountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMasterAccountRequest instance.
+ */
+GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
+    const GetMasterAccountRequestPrivate &other, GetMasterAccountRequest * const q)
+    : GetMasterAccountPrivate(other, q)
+{
+
+}

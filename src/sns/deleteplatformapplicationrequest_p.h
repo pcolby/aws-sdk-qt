@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPLATFORMAPPLICATIONREQUEST_P_H
 #define QTAWS_DELETEPLATFORMAPPLICATIONREQUEST_P_H
 
+#include "sns_p.h"
+#include "deleteplatformapplicationrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class DeletePlatformApplicationRequest;
+
+class QTAWS_EXPORT DeletePlatformApplicationRequestPrivate : public SNSPrivate {
+
+public:
+    DeletePlatformApplicationRequestPrivate(const SNS::Action action,
+                                   DeletePlatformApplicationRequest * const q);
+    DeletePlatformApplicationRequestPrivate(const DeletePlatformApplicationRequestPrivate &other,
+                                   DeletePlatformApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePlatformApplicationRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

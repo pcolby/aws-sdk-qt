@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class ModifyWorkspacePropertiesRequestPrivate;
+
+class QTAWS_EXPORT ModifyWorkspacePropertiesRequest : public WorkSpacesRequest {
+
+public:
+    ModifyWorkspacePropertiesRequest(const ModifyWorkspacePropertiesRequest &other);
+    ModifyWorkspacePropertiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyWorkspacePropertiesRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

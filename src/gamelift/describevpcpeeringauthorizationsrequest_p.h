@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVPCPEERINGAUTHORIZATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVPCPEERINGAUTHORIZATIONSREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describevpcpeeringauthorizationsrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeVpcPeeringAuthorizationsRequest;
+
+class QTAWS_EXPORT DescribeVpcPeeringAuthorizationsRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeVpcPeeringAuthorizationsRequestPrivate(const GameLift::Action action,
+                                   DescribeVpcPeeringAuthorizationsRequest * const q);
+    DescribeVpcPeeringAuthorizationsRequestPrivate(const DescribeVpcPeeringAuthorizationsRequestPrivate &other,
+                                   DescribeVpcPeeringAuthorizationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcPeeringAuthorizationsRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

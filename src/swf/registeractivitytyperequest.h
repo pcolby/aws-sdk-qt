@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERACTIVITYTYPEREQUEST_H
 #define QTAWS_REGISTERACTIVITYTYPEREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterActivityTypeRequestPrivate;
+
+class QTAWS_EXPORT RegisterActivityTypeRequest : public SWFRequest {
+
+public:
+    RegisterActivityTypeRequest(const RegisterActivityTypeRequest &other);
+    RegisterActivityTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterActivityTypeRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

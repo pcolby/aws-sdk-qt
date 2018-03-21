@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTHINGTYPESREQUEST_P_H
 #define QTAWS_LISTTHINGTYPESREQUEST_P_H
 
+#include "iot_p.h"
+#include "listthingtypesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListThingTypesRequest;
+
+class QTAWS_EXPORT ListThingTypesRequestPrivate : public IoTPrivate {
+
+public:
+    ListThingTypesRequestPrivate(const IoT::Action action,
+                                   ListThingTypesRequest * const q);
+    ListThingTypesRequestPrivate(const ListThingTypesRequestPrivate &other,
+                                   ListThingTypesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListThingTypesRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

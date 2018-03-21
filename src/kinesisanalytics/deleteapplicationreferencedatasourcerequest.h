@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCEREQUEST_H
 #define QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCEREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationReferenceDataSourceRequestPrivate;
+
+class QTAWS_EXPORT DeleteApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
+
+public:
+    DeleteApplicationReferenceDataSourceRequest(const DeleteApplicationReferenceDataSourceRequest &other);
+    DeleteApplicationReferenceDataSourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationReferenceDataSourceRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

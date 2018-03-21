@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEOPTIONGROUPREQUEST_P_H
 #define QTAWS_DELETEOPTIONGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "deleteoptiongrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteOptionGroupRequest;
+
+class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteOptionGroupRequestPrivate(const RDS::Action action,
+                                   DeleteOptionGroupRequest * const q);
+    DeleteOptionGroupRequestPrivate(const DeleteOptionGroupRequestPrivate &other,
+                                   DeleteOptionGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOptionGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

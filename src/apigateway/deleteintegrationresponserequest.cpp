@@ -19,3 +19,107 @@
 
 #include "deleteintegrationresponserequest.h"
 #include "deleteintegrationresponserequest_p.h"
+#include "deleteintegrationresponseresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteIntegrationResponseRequest
+ *
+ * @brief  Implements APIGateway DeleteIntegrationResponse requests.
+ *
+ * @see    APIGatewayClient::deleteIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new DeleteIntegrationResponseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIntegrationResponseResponse::DeleteIntegrationResponseResponse(
+
+/**
+ * @brief  Constructs a new DeleteIntegrationResponseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest(const DeleteIntegrationResponseRequest &other)
+    : APIGatewayRequest(new DeleteIntegrationResponseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIntegrationResponseRequest object.
+ */
+DeleteIntegrationResponseRequest::DeleteIntegrationResponseRequest()
+    : APIGatewayRequest(new DeleteIntegrationResponseRequestPrivate(APIGatewayRequest::DeleteIntegrationResponseAction, this))
+{
+
+}
+
+bool DeleteIntegrationResponseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIntegrationResponseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIntegrationResponseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteIntegrationResponseRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIntegrationResponseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIntegrationResponseRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIntegrationResponseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntegrationResponseRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteIntegrationResponseRequest instance.
+ */
+DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteIntegrationResponseRequest * const q)
+    : DeleteIntegrationResponsePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntegrationResponseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIntegrationResponseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIntegrationResponseRequest instance.
+ */
+DeleteIntegrationResponseRequestPrivate::DeleteIntegrationResponseRequestPrivate(
+    const DeleteIntegrationResponseRequestPrivate &other, DeleteIntegrationResponseRequest * const q)
+    : DeleteIntegrationResponsePrivate(other, q)
+{
+
+}

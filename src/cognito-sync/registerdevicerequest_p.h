@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERDEVICEREQUEST_P_H
 #define QTAWS_REGISTERDEVICEREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "registerdevicerequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class RegisterDeviceRequest;
+
+class QTAWS_EXPORT RegisterDeviceRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    RegisterDeviceRequestPrivate(const CognitoSync::Action action,
+                                   RegisterDeviceRequest * const q);
+    RegisterDeviceRequestPrivate(const RegisterDeviceRequestPrivate &other,
+                                   RegisterDeviceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterDeviceRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

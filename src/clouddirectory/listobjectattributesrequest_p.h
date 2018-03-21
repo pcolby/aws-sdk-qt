@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOBJECTATTRIBUTESREQUEST_P_H
 #define QTAWS_LISTOBJECTATTRIBUTESREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listobjectattributesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListObjectAttributesRequest;
+
+class QTAWS_EXPORT ListObjectAttributesRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListObjectAttributesRequestPrivate(const CloudDirectory::Action action,
+                                   ListObjectAttributesRequest * const q);
+    ListObjectAttributesRequestPrivate(const ListObjectAttributesRequestPrivate &other,
+                                   ListObjectAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListObjectAttributesRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTEVENTPATTERNREQUEST_P_H
 #define QTAWS_TESTEVENTPATTERNREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "testeventpatternrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class TestEventPatternRequest;
+
+class QTAWS_EXPORT TestEventPatternRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    TestEventPatternRequestPrivate(const CloudWatchEvents::Action action,
+                                   TestEventPatternRequest * const q);
+    TestEventPatternRequestPrivate(const TestEventPatternRequestPrivate &other,
+                                   TestEventPatternRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestEventPatternRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

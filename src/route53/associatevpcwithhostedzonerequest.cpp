@@ -19,3 +19,107 @@
 
 #include "associatevpcwithhostedzonerequest.h"
 #include "associatevpcwithhostedzonerequest_p.h"
+#include "associatevpcwithhostedzoneresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  AssociateVPCWithHostedZoneRequest
+ *
+ * @brief  Implements Route53 AssociateVPCWithHostedZone requests.
+ *
+ * @see    Route53Client::associateVPCWithHostedZone
+ */
+
+/**
+ * @brief  Constructs a new AssociateVPCWithHostedZoneResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
+
+/**
+ * @brief  Constructs a new AssociateVPCWithHostedZoneRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateVPCWithHostedZoneRequest::AssociateVPCWithHostedZoneRequest(const AssociateVPCWithHostedZoneRequest &other)
+    : Route53Request(new AssociateVPCWithHostedZoneRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateVPCWithHostedZoneRequest object.
+ */
+AssociateVPCWithHostedZoneRequest::AssociateVPCWithHostedZoneRequest()
+    : Route53Request(new AssociateVPCWithHostedZoneRequestPrivate(Route53Request::AssociateVPCWithHostedZoneAction, this))
+{
+
+}
+
+bool AssociateVPCWithHostedZoneRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateVPCWithHostedZoneResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateVPCWithHostedZoneResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateVPCWithHostedZoneResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateVPCWithHostedZoneRequestPrivate
+ *
+ * @brief  Private implementation for AssociateVPCWithHostedZoneRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVPCWithHostedZoneRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public AssociateVPCWithHostedZoneRequest instance.
+ */
+AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPrivate(
+    const Route53Request::Action action, AssociateVPCWithHostedZoneRequest * const q)
+    : AssociateVPCWithHostedZonePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVPCWithHostedZoneRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateVPCWithHostedZoneRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateVPCWithHostedZoneRequest instance.
+ */
+AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPrivate(
+    const AssociateVPCWithHostedZoneRequestPrivate &other, AssociateVPCWithHostedZoneRequest * const q)
+    : AssociateVPCWithHostedZonePrivate(other, q)
+{
+
+}

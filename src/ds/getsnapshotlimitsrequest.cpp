@@ -19,3 +19,107 @@
 
 #include "getsnapshotlimitsrequest.h"
 #include "getsnapshotlimitsrequest_p.h"
+#include "getsnapshotlimitsresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  GetSnapshotLimitsRequest
+ *
+ * @brief  Implements DirectoryService GetSnapshotLimits requests.
+ *
+ * @see    DirectoryServiceClient::getSnapshotLimits
+ */
+
+/**
+ * @brief  Constructs a new GetSnapshotLimitsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
+
+/**
+ * @brief  Constructs a new GetSnapshotLimitsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSnapshotLimitsRequest::GetSnapshotLimitsRequest(const GetSnapshotLimitsRequest &other)
+    : DirectoryServiceRequest(new GetSnapshotLimitsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSnapshotLimitsRequest object.
+ */
+GetSnapshotLimitsRequest::GetSnapshotLimitsRequest()
+    : DirectoryServiceRequest(new GetSnapshotLimitsRequestPrivate(DirectoryServiceRequest::GetSnapshotLimitsAction, this))
+{
+
+}
+
+bool GetSnapshotLimitsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSnapshotLimitsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSnapshotLimitsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * GetSnapshotLimitsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSnapshotLimitsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSnapshotLimitsRequestPrivate
+ *
+ * @brief  Private implementation for GetSnapshotLimitsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSnapshotLimitsRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public GetSnapshotLimitsRequest instance.
+ */
+GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
+    const DirectoryServiceRequest::Action action, GetSnapshotLimitsRequest * const q)
+    : GetSnapshotLimitsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSnapshotLimitsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSnapshotLimitsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSnapshotLimitsRequest instance.
+ */
+GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
+    const GetSnapshotLimitsRequestPrivate &other, GetSnapshotLimitsRequest * const q)
+    : GetSnapshotLimitsPrivate(other, q)
+{
+
+}

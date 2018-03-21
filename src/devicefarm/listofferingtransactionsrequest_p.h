@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_P_H
 #define QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listofferingtransactionsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListOfferingTransactionsRequest;
+
+class QTAWS_EXPORT ListOfferingTransactionsRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListOfferingTransactionsRequestPrivate(const DeviceFarm::Action action,
+                                   ListOfferingTransactionsRequest * const q);
+    ListOfferingTransactionsRequestPrivate(const ListOfferingTransactionsRequestPrivate &other,
+                                   ListOfferingTransactionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOfferingTransactionsRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

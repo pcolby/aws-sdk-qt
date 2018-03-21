@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPIKEYREQUEST_H
 #define QTAWS_DELETEAPIKEYREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteApiKeyRequestPrivate;
+
+class QTAWS_EXPORT DeleteApiKeyRequest : public APIGatewayRequest {
+
+public:
+    DeleteApiKeyRequest(const DeleteApiKeyRequest &other);
+    DeleteApiKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApiKeyRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

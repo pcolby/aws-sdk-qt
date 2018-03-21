@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_P_H
 #define QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_P_H
 
+#include "iot_p.h"
+#include "listjobexecutionsforjobrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListJobExecutionsForJobRequest;
+
+class QTAWS_EXPORT ListJobExecutionsForJobRequestPrivate : public IoTPrivate {
+
+public:
+    ListJobExecutionsForJobRequestPrivate(const IoT::Action action,
+                                   ListJobExecutionsForJobRequest * const q);
+    ListJobExecutionsForJobRequestPrivate(const ListJobExecutionsForJobRequestPrivate &other,
+                                   ListJobExecutionsForJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListJobExecutionsForJobRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

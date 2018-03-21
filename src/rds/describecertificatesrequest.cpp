@@ -19,3 +19,107 @@
 
 #include "describecertificatesrequest.h"
 #include "describecertificatesrequest_p.h"
+#include "describecertificatesresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeCertificatesRequest
+ *
+ * @brief  Implements RDS DescribeCertificates requests.
+ *
+ * @see    RDSClient::describeCertificates
+ */
+
+/**
+ * @brief  Constructs a new DescribeCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCertificatesResponse::DescribeCertificatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCertificatesRequest::DescribeCertificatesRequest(const DescribeCertificatesRequest &other)
+    : RDSRequest(new DescribeCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCertificatesRequest object.
+ */
+DescribeCertificatesRequest::DescribeCertificatesRequest()
+    : RDSRequest(new DescribeCertificatesRequestPrivate(RDSRequest::DescribeCertificatesAction, this))
+{
+
+}
+
+bool DescribeCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCertificatesRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeCertificatesRequest instance.
+ */
+DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
+    const RDSRequest::Action action, DescribeCertificatesRequest * const q)
+    : DescribeCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCertificatesRequest instance.
+ */
+DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
+    const DescribeCertificatesRequestPrivate &other, DescribeCertificatesRequest * const q)
+    : DescribeCertificatesPrivate(other, q)
+{
+
+}

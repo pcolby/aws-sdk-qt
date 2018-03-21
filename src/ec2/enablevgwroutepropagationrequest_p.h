@@ -20,4 +20,29 @@
 #ifndef QTAWS_ENABLEVGWROUTEPROPAGATIONREQUEST_P_H
 #define QTAWS_ENABLEVGWROUTEPROPAGATIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "enablevgwroutepropagationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class EnableVgwRoutePropagationRequest;
+
+class QTAWS_EXPORT EnableVgwRoutePropagationRequestPrivate : public EC2Private {
+
+public:
+    EnableVgwRoutePropagationRequestPrivate(const EC2::Action action,
+                                   EnableVgwRoutePropagationRequest * const q);
+    EnableVgwRoutePropagationRequestPrivate(const EnableVgwRoutePropagationRequestPrivate &other,
+                                   EnableVgwRoutePropagationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(EnableVgwRoutePropagationRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

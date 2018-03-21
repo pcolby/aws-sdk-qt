@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSTACKSREQUEST_H
 #define QTAWS_LISTSTACKSREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ListStacksRequestPrivate;
+
+class QTAWS_EXPORT ListStacksRequest : public CloudFormationRequest {
+
+public:
+    ListStacksRequest(const ListStacksRequest &other);
+    ListStacksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListStacksRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

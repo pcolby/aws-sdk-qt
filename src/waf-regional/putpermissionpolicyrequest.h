@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYREQUEST_H
 #define QTAWS_PUTPERMISSIONPOLICYREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class PutPermissionPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutPermissionPolicyRequest : public WAFRegionalRequest {
+
+public:
+    PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other);
+    PutPermissionPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutPermissionPolicyRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

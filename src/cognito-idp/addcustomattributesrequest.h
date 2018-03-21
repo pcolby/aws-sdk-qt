@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESREQUEST_H
 #define QTAWS_ADDCUSTOMATTRIBUTESREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AddCustomAttributesRequestPrivate;
+
+class QTAWS_EXPORT AddCustomAttributesRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AddCustomAttributesRequest(const AddCustomAttributesRequest &other);
+    AddCustomAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddCustomAttributesRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

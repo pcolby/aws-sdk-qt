@@ -20,4 +20,32 @@
 #ifndef QTAWS_GRANTACCESSREQUEST_H
 #define QTAWS_GRANTACCESSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class GrantAccessRequestPrivate;
+
+class QTAWS_EXPORT GrantAccessRequest : public OpsWorksRequest {
+
+public:
+    GrantAccessRequest(const GrantAccessRequest &other);
+    GrantAccessRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GrantAccessRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

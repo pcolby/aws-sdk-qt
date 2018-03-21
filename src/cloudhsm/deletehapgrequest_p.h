@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEHAPGREQUEST_P_H
 #define QTAWS_DELETEHAPGREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "deletehapgrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DeleteHapgRequest;
+
+class QTAWS_EXPORT DeleteHapgRequestPrivate : public CloudHSMPrivate {
+
+public:
+    DeleteHapgRequestPrivate(const CloudHSM::Action action,
+                                   DeleteHapgRequest * const q);
+    DeleteHapgRequestPrivate(const DeleteHapgRequestPrivate &other,
+                                   DeleteHapgRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteHapgRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

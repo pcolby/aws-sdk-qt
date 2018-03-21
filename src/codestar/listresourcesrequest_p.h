@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOURCESREQUEST_P_H
 #define QTAWS_LISTRESOURCESREQUEST_P_H
 
+#include "codestar_p.h"
+#include "listresourcesrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class ListResourcesRequest;
+
+class QTAWS_EXPORT ListResourcesRequestPrivate : public CodeStarPrivate {
+
+public:
+    ListResourcesRequestPrivate(const CodeStar::Action action,
+                                   ListResourcesRequest * const q);
+    ListResourcesRequestPrivate(const ListResourcesRequestPrivate &other,
+                                   ListResourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourcesRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

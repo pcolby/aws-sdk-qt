@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOCUMENTDEFAULTVERSIONREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTDEFAULTVERSIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "updatedocumentdefaultversionrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateDocumentDefaultVersionRequest;
+
+class QTAWS_EXPORT UpdateDocumentDefaultVersionRequestPrivate : public SSMPrivate {
+
+public:
+    UpdateDocumentDefaultVersionRequestPrivate(const SSM::Action action,
+                                   UpdateDocumentDefaultVersionRequest * const q);
+    UpdateDocumentDefaultVersionRequestPrivate(const UpdateDocumentDefaultVersionRequestPrivate &other,
+                                   UpdateDocumentDefaultVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentDefaultVersionRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

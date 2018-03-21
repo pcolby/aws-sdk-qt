@@ -19,3 +19,107 @@
 
 #include "receivemessagerequest.h"
 #include "receivemessagerequest_p.h"
+#include "receivemessageresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  ReceiveMessageRequest
+ *
+ * @brief  Implements SQS ReceiveMessage requests.
+ *
+ * @see    SQSClient::receiveMessage
+ */
+
+/**
+ * @brief  Constructs a new ReceiveMessageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReceiveMessageResponse::ReceiveMessageResponse(
+
+/**
+ * @brief  Constructs a new ReceiveMessageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReceiveMessageRequest::ReceiveMessageRequest(const ReceiveMessageRequest &other)
+    : SQSRequest(new ReceiveMessageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReceiveMessageRequest object.
+ */
+ReceiveMessageRequest::ReceiveMessageRequest()
+    : SQSRequest(new ReceiveMessageRequestPrivate(SQSRequest::ReceiveMessageAction, this))
+{
+
+}
+
+bool ReceiveMessageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReceiveMessageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReceiveMessageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply * const reply) const
+{
+    return new ReceiveMessageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReceiveMessageRequestPrivate
+ *
+ * @brief  Private implementation for ReceiveMessageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReceiveMessageRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public ReceiveMessageRequest instance.
+ */
+ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
+    const SQSRequest::Action action, ReceiveMessageRequest * const q)
+    : ReceiveMessagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReceiveMessageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReceiveMessageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReceiveMessageRequest instance.
+ */
+ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
+    const ReceiveMessageRequestPrivate &other, ReceiveMessageRequest * const q)
+    : ReceiveMessagePrivate(other, q)
+{
+
+}

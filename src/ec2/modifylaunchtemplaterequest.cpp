@@ -19,3 +19,107 @@
 
 #include "modifylaunchtemplaterequest.h"
 #include "modifylaunchtemplaterequest_p.h"
+#include "modifylaunchtemplateresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyLaunchTemplateRequest
+ *
+ * @brief  Implements EC2 ModifyLaunchTemplate requests.
+ *
+ * @see    EC2Client::modifyLaunchTemplate
+ */
+
+/**
+ * @brief  Constructs a new ModifyLaunchTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
+
+/**
+ * @brief  Constructs a new ModifyLaunchTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest(const ModifyLaunchTemplateRequest &other)
+    : EC2Request(new ModifyLaunchTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyLaunchTemplateRequest object.
+ */
+ModifyLaunchTemplateRequest::ModifyLaunchTemplateRequest()
+    : EC2Request(new ModifyLaunchTemplateRequestPrivate(EC2Request::ModifyLaunchTemplateAction, this))
+{
+
+}
+
+bool ModifyLaunchTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyLaunchTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyLaunchTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyLaunchTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyLaunchTemplateRequestPrivate
+ *
+ * @brief  Private implementation for ModifyLaunchTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyLaunchTemplateRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyLaunchTemplateRequest instance.
+ */
+ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
+    const EC2Request::Action action, ModifyLaunchTemplateRequest * const q)
+    : ModifyLaunchTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyLaunchTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyLaunchTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyLaunchTemplateRequest instance.
+ */
+ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
+    const ModifyLaunchTemplateRequestPrivate &other, ModifyLaunchTemplateRequest * const q)
+    : ModifyLaunchTemplatePrivate(other, q)
+{
+
+}

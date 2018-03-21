@@ -19,3 +19,107 @@
 
 #include "updateroledescriptionrequest.h"
 #include "updateroledescriptionrequest_p.h"
+#include "updateroledescriptionresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateRoleDescriptionRequest
+ *
+ * @brief  Implements IAM UpdateRoleDescription requests.
+ *
+ * @see    IAMClient::updateRoleDescription
+ */
+
+/**
+ * @brief  Constructs a new UpdateRoleDescriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRoleDescriptionResponse::UpdateRoleDescriptionResponse(
+
+/**
+ * @brief  Constructs a new UpdateRoleDescriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRoleDescriptionRequest::UpdateRoleDescriptionRequest(const UpdateRoleDescriptionRequest &other)
+    : IAMRequest(new UpdateRoleDescriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRoleDescriptionRequest object.
+ */
+UpdateRoleDescriptionRequest::UpdateRoleDescriptionRequest()
+    : IAMRequest(new UpdateRoleDescriptionRequestPrivate(IAMRequest::UpdateRoleDescriptionAction, this))
+{
+
+}
+
+bool UpdateRoleDescriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRoleDescriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRoleDescriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRoleDescriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRoleDescriptionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRoleDescriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoleDescriptionRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateRoleDescriptionRequest instance.
+ */
+UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
+    const IAMRequest::Action action, UpdateRoleDescriptionRequest * const q)
+    : UpdateRoleDescriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRoleDescriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRoleDescriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRoleDescriptionRequest instance.
+ */
+UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
+    const UpdateRoleDescriptionRequestPrivate &other, UpdateRoleDescriptionRequest * const q)
+    : UpdateRoleDescriptionPrivate(other, q)
+{
+
+}

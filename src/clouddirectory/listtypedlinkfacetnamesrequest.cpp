@@ -19,3 +19,107 @@
 
 #include "listtypedlinkfacetnamesrequest.h"
 #include "listtypedlinkfacetnamesrequest_p.h"
+#include "listtypedlinkfacetnamesresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListTypedLinkFacetNamesRequest
+ *
+ * @brief  Implements CloudDirectory ListTypedLinkFacetNames requests.
+ *
+ * @see    CloudDirectoryClient::listTypedLinkFacetNames
+ */
+
+/**
+ * @brief  Constructs a new ListTypedLinkFacetNamesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTypedLinkFacetNamesResponse::ListTypedLinkFacetNamesResponse(
+
+/**
+ * @brief  Constructs a new ListTypedLinkFacetNamesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTypedLinkFacetNamesRequest::ListTypedLinkFacetNamesRequest(const ListTypedLinkFacetNamesRequest &other)
+    : CloudDirectoryRequest(new ListTypedLinkFacetNamesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTypedLinkFacetNamesRequest object.
+ */
+ListTypedLinkFacetNamesRequest::ListTypedLinkFacetNamesRequest()
+    : CloudDirectoryRequest(new ListTypedLinkFacetNamesRequestPrivate(CloudDirectoryRequest::ListTypedLinkFacetNamesAction, this))
+{
+
+}
+
+bool ListTypedLinkFacetNamesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTypedLinkFacetNamesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTypedLinkFacetNamesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListTypedLinkFacetNamesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTypedLinkFacetNamesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTypedLinkFacetNamesRequestPrivate
+ *
+ * @brief  Private implementation for ListTypedLinkFacetNamesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTypedLinkFacetNamesRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListTypedLinkFacetNamesRequest instance.
+ */
+ListTypedLinkFacetNamesRequestPrivate::ListTypedLinkFacetNamesRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListTypedLinkFacetNamesRequest * const q)
+    : ListTypedLinkFacetNamesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTypedLinkFacetNamesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTypedLinkFacetNamesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTypedLinkFacetNamesRequest instance.
+ */
+ListTypedLinkFacetNamesRequestPrivate::ListTypedLinkFacetNamesRequestPrivate(
+    const ListTypedLinkFacetNamesRequestPrivate &other, ListTypedLinkFacetNamesRequest * const q)
+    : ListTypedLinkFacetNamesPrivate(other, q)
+{
+
+}

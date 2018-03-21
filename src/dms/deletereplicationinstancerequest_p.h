@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_DELETEREPLICATIONINSTANCEREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "deletereplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteReplicationInstanceRequest;
+
+class QTAWS_EXPORT DeleteReplicationInstanceRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DeleteReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DeleteReplicationInstanceRequest * const q);
+    DeleteReplicationInstanceRequestPrivate(const DeleteReplicationInstanceRequestPrivate &other,
+                                   DeleteReplicationInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationInstanceRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

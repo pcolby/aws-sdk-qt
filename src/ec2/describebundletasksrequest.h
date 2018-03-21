@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBUNDLETASKSREQUEST_H
 #define QTAWS_DESCRIBEBUNDLETASKSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeBundleTasksRequestPrivate;
+
+class QTAWS_EXPORT DescribeBundleTasksRequest : public EC2Request {
+
+public:
+    DescribeBundleTasksRequest(const DescribeBundleTasksRequest &other);
+    DescribeBundleTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBundleTasksRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

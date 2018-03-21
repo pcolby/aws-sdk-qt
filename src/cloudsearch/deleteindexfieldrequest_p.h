@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEINDEXFIELDREQUEST_P_H
 #define QTAWS_DELETEINDEXFIELDREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "deleteindexfieldrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteIndexFieldRequest;
+
+class QTAWS_EXPORT DeleteIndexFieldRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DeleteIndexFieldRequestPrivate(const CloudSearch::Action action,
+                                   DeleteIndexFieldRequest * const q);
+    DeleteIndexFieldRequestPrivate(const DeleteIndexFieldRequestPrivate &other,
+                                   DeleteIndexFieldRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIndexFieldRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

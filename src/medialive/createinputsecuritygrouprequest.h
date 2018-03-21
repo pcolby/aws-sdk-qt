@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEINPUTSECURITYGROUPREQUEST_H
 #define QTAWS_CREATEINPUTSECURITYGROUPREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class CreateInputSecurityGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateInputSecurityGroupRequest : public MediaLiveRequest {
+
+public:
+    CreateInputSecurityGroupRequest(const CreateInputSecurityGroupRequest &other);
+    CreateInputSecurityGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateInputSecurityGroupRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

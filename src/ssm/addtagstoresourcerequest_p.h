@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "addtagstoresourcerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class AddTagsToResourceRequest;
+
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public SSMPrivate {
+
+public:
+    AddTagsToResourceRequestPrivate(const SSM::Action action,
+                                   AddTagsToResourceRequest * const q);
+    AddTagsToResourceRequestPrivate(const AddTagsToResourceRequestPrivate &other,
+                                   AddTagsToResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToResourceRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

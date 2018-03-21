@@ -19,3 +19,107 @@
 
 #include "listcontainersrequest.h"
 #include "listcontainersrequest_p.h"
+#include "listcontainersresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  ListContainersRequest
+ *
+ * @brief  Implements MediaStore ListContainers requests.
+ *
+ * @see    MediaStoreClient::listContainers
+ */
+
+/**
+ * @brief  Constructs a new ListContainersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListContainersResponse::ListContainersResponse(
+
+/**
+ * @brief  Constructs a new ListContainersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListContainersRequest::ListContainersRequest(const ListContainersRequest &other)
+    : MediaStoreRequest(new ListContainersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListContainersRequest object.
+ */
+ListContainersRequest::ListContainersRequest()
+    : MediaStoreRequest(new ListContainersRequestPrivate(MediaStoreRequest::ListContainersAction, this))
+{
+
+}
+
+bool ListContainersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListContainersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListContainersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * ListContainersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListContainersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListContainersRequestPrivate
+ *
+ * @brief  Private implementation for ListContainersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainersRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public ListContainersRequest instance.
+ */
+ListContainersRequestPrivate::ListContainersRequestPrivate(
+    const MediaStoreRequest::Action action, ListContainersRequest * const q)
+    : ListContainersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListContainersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListContainersRequest instance.
+ */
+ListContainersRequestPrivate::ListContainersRequestPrivate(
+    const ListContainersRequestPrivate &other, ListContainersRequest * const q)
+    : ListContainersPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_H
 #define QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetOnPremisesInstancesRequestPrivate;
+
+class QTAWS_EXPORT BatchGetOnPremisesInstancesRequest : public CodeDeployRequest {
+
+public:
+    BatchGetOnPremisesInstancesRequest(const BatchGetOnPremisesInstancesRequest &other);
+    BatchGetOnPremisesInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetOnPremisesInstancesRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

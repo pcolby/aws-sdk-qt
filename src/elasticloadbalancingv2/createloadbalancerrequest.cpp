@@ -19,3 +19,107 @@
 
 #include "createloadbalancerrequest.h"
 #include "createloadbalancerrequest_p.h"
+#include "createloadbalancerresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  CreateLoadBalancerRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 CreateLoadBalancer requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::createLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLoadBalancerResponse::CreateLoadBalancerResponse(
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLoadBalancerRequest::CreateLoadBalancerRequest(const CreateLoadBalancerRequest &other)
+    : ElasticLoadBalancingv2Request(new CreateLoadBalancerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerRequest object.
+ */
+CreateLoadBalancerRequest::CreateLoadBalancerRequest()
+    : ElasticLoadBalancingv2Request(new CreateLoadBalancerRequestPrivate(ElasticLoadBalancingv2Request::CreateLoadBalancerAction, this))
+{
+
+}
+
+bool CreateLoadBalancerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLoadBalancerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLoadBalancerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * CreateLoadBalancerRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLoadBalancerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLoadBalancerRequestPrivate
+ *
+ * @brief  Private implementation for CreateLoadBalancerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public CreateLoadBalancerRequest instance.
+ */
+CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, CreateLoadBalancerRequest * const q)
+    : CreateLoadBalancerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLoadBalancerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLoadBalancerRequest instance.
+ */
+CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
+    const CreateLoadBalancerRequestPrivate &other, CreateLoadBalancerRequest * const q)
+    : CreateLoadBalancerPrivate(other, q)
+{
+
+}

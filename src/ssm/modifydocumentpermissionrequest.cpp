@@ -19,3 +19,107 @@
 
 #include "modifydocumentpermissionrequest.h"
 #include "modifydocumentpermissionrequest_p.h"
+#include "modifydocumentpermissionresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ModifyDocumentPermissionRequest
+ *
+ * @brief  Implements SSM ModifyDocumentPermission requests.
+ *
+ * @see    SSMClient::modifyDocumentPermission
+ */
+
+/**
+ * @brief  Constructs a new ModifyDocumentPermissionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
+
+/**
+ * @brief  Constructs a new ModifyDocumentPermissionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest(const ModifyDocumentPermissionRequest &other)
+    : SSMRequest(new ModifyDocumentPermissionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyDocumentPermissionRequest object.
+ */
+ModifyDocumentPermissionRequest::ModifyDocumentPermissionRequest()
+    : SSMRequest(new ModifyDocumentPermissionRequestPrivate(SSMRequest::ModifyDocumentPermissionAction, this))
+{
+
+}
+
+bool ModifyDocumentPermissionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyDocumentPermissionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyDocumentPermissionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyDocumentPermissionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDocumentPermissionRequestPrivate
+ *
+ * @brief  Private implementation for ModifyDocumentPermissionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDocumentPermissionRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ModifyDocumentPermissionRequest instance.
+ */
+ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
+    const SSMRequest::Action action, ModifyDocumentPermissionRequest * const q)
+    : ModifyDocumentPermissionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDocumentPermissionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyDocumentPermissionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyDocumentPermissionRequest instance.
+ */
+ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
+    const ModifyDocumentPermissionRequestPrivate &other, ModifyDocumentPermissionRequest * const q)
+    : ModifyDocumentPermissionPrivate(other, q)
+{
+
+}

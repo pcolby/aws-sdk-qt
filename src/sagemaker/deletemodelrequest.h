@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMODELREQUEST_H
 #define QTAWS_DELETEMODELREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteModelRequestPrivate;
+
+class QTAWS_EXPORT DeleteModelRequest : public SageMakerRequest {
+
+public:
+    DeleteModelRequest(const DeleteModelRequest &other);
+    DeleteModelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteModelRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

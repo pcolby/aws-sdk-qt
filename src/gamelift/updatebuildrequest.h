@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEBUILDREQUEST_H
 #define QTAWS_UPDATEBUILDREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateBuildRequestPrivate;
+
+class QTAWS_EXPORT UpdateBuildRequest : public GameLiftRequest {
+
+public:
+    UpdateBuildRequest(const UpdateBuildRequest &other);
+    UpdateBuildRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateBuildRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

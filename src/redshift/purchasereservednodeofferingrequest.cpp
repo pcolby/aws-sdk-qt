@@ -19,3 +19,107 @@
 
 #include "purchasereservednodeofferingrequest.h"
 #include "purchasereservednodeofferingrequest_p.h"
+#include "purchasereservednodeofferingresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  PurchaseReservedNodeOfferingRequest
+ *
+ * @brief  Implements Redshift PurchaseReservedNodeOffering requests.
+ *
+ * @see    RedshiftClient::purchaseReservedNodeOffering
+ */
+
+/**
+ * @brief  Constructs a new PurchaseReservedNodeOfferingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurchaseReservedNodeOfferingResponse::PurchaseReservedNodeOfferingResponse(
+
+/**
+ * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest(const PurchaseReservedNodeOfferingRequest &other)
+    : RedshiftRequest(new PurchaseReservedNodeOfferingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurchaseReservedNodeOfferingRequest object.
+ */
+PurchaseReservedNodeOfferingRequest::PurchaseReservedNodeOfferingRequest()
+    : RedshiftRequest(new PurchaseReservedNodeOfferingRequestPrivate(RedshiftRequest::PurchaseReservedNodeOfferingAction, this))
+{
+
+}
+
+bool PurchaseReservedNodeOfferingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurchaseReservedNodeOfferingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurchaseReservedNodeOfferingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response(QNetworkReply * const reply) const
+{
+    return new PurchaseReservedNodeOfferingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurchaseReservedNodeOfferingRequestPrivate
+ *
+ * @brief  Private implementation for PurchaseReservedNodeOfferingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public PurchaseReservedNodeOfferingRequest instance.
+ */
+PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
+    const RedshiftRequest::Action action, PurchaseReservedNodeOfferingRequest * const q)
+    : PurchaseReservedNodeOfferingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurchaseReservedNodeOfferingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurchaseReservedNodeOfferingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurchaseReservedNodeOfferingRequest instance.
+ */
+PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
+    const PurchaseReservedNodeOfferingRequestPrivate &other, PurchaseReservedNodeOfferingRequest * const q)
+    : PurchaseReservedNodeOfferingPrivate(other, q)
+{
+
+}

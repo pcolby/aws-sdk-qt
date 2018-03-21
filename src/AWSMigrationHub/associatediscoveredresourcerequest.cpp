@@ -19,3 +19,107 @@
 
 #include "associatediscoveredresourcerequest.h"
 #include "associatediscoveredresourcerequest_p.h"
+#include "associatediscoveredresourceresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  AssociateDiscoveredResourceRequest
+ *
+ * @brief  Implements MigrationHub AssociateDiscoveredResource requests.
+ *
+ * @see    MigrationHubClient::associateDiscoveredResource
+ */
+
+/**
+ * @brief  Constructs a new AssociateDiscoveredResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateDiscoveredResourceResponse::AssociateDiscoveredResourceResponse(
+
+/**
+ * @brief  Constructs a new AssociateDiscoveredResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest(const AssociateDiscoveredResourceRequest &other)
+    : MigrationHubRequest(new AssociateDiscoveredResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateDiscoveredResourceRequest object.
+ */
+AssociateDiscoveredResourceRequest::AssociateDiscoveredResourceRequest()
+    : MigrationHubRequest(new AssociateDiscoveredResourceRequestPrivate(MigrationHubRequest::AssociateDiscoveredResourceAction, this))
+{
+
+}
+
+bool AssociateDiscoveredResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateDiscoveredResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateDiscoveredResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateDiscoveredResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateDiscoveredResourceRequestPrivate
+ *
+ * @brief  Private implementation for AssociateDiscoveredResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public AssociateDiscoveredResourceRequest instance.
+ */
+AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
+    const MigrationHubRequest::Action action, AssociateDiscoveredResourceRequest * const q)
+    : AssociateDiscoveredResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateDiscoveredResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateDiscoveredResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateDiscoveredResourceRequest instance.
+ */
+AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
+    const AssociateDiscoveredResourceRequestPrivate &other, AssociateDiscoveredResourceRequest * const q)
+    : AssociateDiscoveredResourcePrivate(other, q)
+{
+
+}

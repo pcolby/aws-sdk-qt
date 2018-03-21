@@ -19,3 +19,107 @@
 
 #include "updatedeploymentrequest.h"
 #include "updatedeploymentrequest_p.h"
+#include "updatedeploymentresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateDeploymentRequest
+ *
+ * @brief  Implements APIGateway UpdateDeployment requests.
+ *
+ * @see    APIGatewayClient::updateDeployment
+ */
+
+/**
+ * @brief  Constructs a new UpdateDeploymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeploymentResponse::UpdateDeploymentResponse(
+
+/**
+ * @brief  Constructs a new UpdateDeploymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDeploymentRequest::UpdateDeploymentRequest(const UpdateDeploymentRequest &other)
+    : APIGatewayRequest(new UpdateDeploymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDeploymentRequest object.
+ */
+UpdateDeploymentRequest::UpdateDeploymentRequest()
+    : APIGatewayRequest(new UpdateDeploymentRequestPrivate(APIGatewayRequest::UpdateDeploymentAction, this))
+{
+
+}
+
+bool UpdateDeploymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDeploymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDeploymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDeploymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeploymentRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDeploymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeploymentRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateDeploymentRequest instance.
+ */
+UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateDeploymentRequest * const q)
+    : UpdateDeploymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeploymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDeploymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDeploymentRequest instance.
+ */
+UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
+    const UpdateDeploymentRequestPrivate &other, UpdateDeploymentRequest * const q)
+    : UpdateDeploymentPrivate(other, q)
+{
+
+}

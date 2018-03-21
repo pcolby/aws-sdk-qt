@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGROUPQUERYREQUEST_P_H
 #define QTAWS_UPDATEGROUPQUERYREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "updategroupqueryrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class UpdateGroupQueryRequest;
+
+class QTAWS_EXPORT UpdateGroupQueryRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    UpdateGroupQueryRequestPrivate(const ResourceGroups::Action action,
+                                   UpdateGroupQueryRequest * const q);
+    UpdateGroupQueryRequestPrivate(const UpdateGroupQueryRequestPrivate &other,
+                                   UpdateGroupQueryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupQueryRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEROUTETABLEREQUEST_H
 #define QTAWS_DELETEROUTETABLEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteRouteTableRequestPrivate;
+
+class QTAWS_EXPORT DeleteRouteTableRequest : public EC2Request {
+
+public:
+    DeleteRouteTableRequest(const DeleteRouteTableRequest &other);
+    DeleteRouteTableRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRouteTableRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

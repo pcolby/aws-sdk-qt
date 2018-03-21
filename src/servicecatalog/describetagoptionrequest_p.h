@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAGOPTIONREQUEST_P_H
 #define QTAWS_DESCRIBETAGOPTIONREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "describetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeTagOptionRequest;
+
+class QTAWS_EXPORT DescribeTagOptionRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    DescribeTagOptionRequestPrivate(const ServiceCatalog::Action action,
+                                   DescribeTagOptionRequest * const q);
+    DescribeTagOptionRequestPrivate(const DescribeTagOptionRequestPrivate &other,
+                                   DescribeTagOptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagOptionRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

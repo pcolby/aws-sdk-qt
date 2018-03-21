@@ -19,3 +19,107 @@
 
 #include "listjobsbystatusrequest.h"
 #include "listjobsbystatusrequest_p.h"
+#include "listjobsbystatusresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ListJobsByStatusRequest
+ *
+ * @brief  Implements ElasticTranscoder ListJobsByStatus requests.
+ *
+ * @see    ElasticTranscoderClient::listJobsByStatus
+ */
+
+/**
+ * @brief  Constructs a new ListJobsByStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobsByStatusResponse::ListJobsByStatusResponse(
+
+/**
+ * @brief  Constructs a new ListJobsByStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListJobsByStatusRequest::ListJobsByStatusRequest(const ListJobsByStatusRequest &other)
+    : ElasticTranscoderRequest(new ListJobsByStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListJobsByStatusRequest object.
+ */
+ListJobsByStatusRequest::ListJobsByStatusRequest()
+    : ElasticTranscoderRequest(new ListJobsByStatusRequestPrivate(ElasticTranscoderRequest::ListJobsByStatusAction, this))
+{
+
+}
+
+bool ListJobsByStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListJobsByStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListJobsByStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * ListJobsByStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new ListJobsByStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobsByStatusRequestPrivate
+ *
+ * @brief  Private implementation for ListJobsByStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsByStatusRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public ListJobsByStatusRequest instance.
+ */
+ListJobsByStatusRequestPrivate::ListJobsByStatusRequestPrivate(
+    const ElasticTranscoderRequest::Action action, ListJobsByStatusRequest * const q)
+    : ListJobsByStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobsByStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListJobsByStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListJobsByStatusRequest instance.
+ */
+ListJobsByStatusRequestPrivate::ListJobsByStatusRequestPrivate(
+    const ListJobsByStatusRequestPrivate &other, ListJobsByStatusRequest * const q)
+    : ListJobsByStatusPrivate(other, q)
+{
+
+}

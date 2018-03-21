@@ -20,4 +20,29 @@
 #ifndef QTAWS_MERGEDEVELOPERIDENTITIESREQUEST_P_H
 #define QTAWS_MERGEDEVELOPERIDENTITIESREQUEST_P_H
 
+#include "cognitoidentity_p.h"
+#include "mergedeveloperidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class MergeDeveloperIdentitiesRequest;
+
+class QTAWS_EXPORT MergeDeveloperIdentitiesRequestPrivate : public CognitoIdentityPrivate {
+
+public:
+    MergeDeveloperIdentitiesRequestPrivate(const CognitoIdentity::Action action,
+                                   MergeDeveloperIdentitiesRequest * const q);
+    MergeDeveloperIdentitiesRequestPrivate(const MergeDeveloperIdentitiesRequestPrivate &other,
+                                   MergeDeveloperIdentitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(MergeDeveloperIdentitiesRequest)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

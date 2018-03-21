@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSTATICIPSREQUEST_H
 #define QTAWS_GETSTATICIPSREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetStaticIpsRequestPrivate;
+
+class QTAWS_EXPORT GetStaticIpsRequest : public LightsailRequest {
+
+public:
+    GetStaticIpsRequest(const GetStaticIpsRequest &other);
+    GetStaticIpsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetStaticIpsRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

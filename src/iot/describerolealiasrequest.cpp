@@ -19,3 +19,107 @@
 
 #include "describerolealiasrequest.h"
 #include "describerolealiasrequest_p.h"
+#include "describerolealiasresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeRoleAliasRequest
+ *
+ * @brief  Implements IoT DescribeRoleAlias requests.
+ *
+ * @see    IoTClient::describeRoleAlias
+ */
+
+/**
+ * @brief  Constructs a new DescribeRoleAliasResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRoleAliasResponse::DescribeRoleAliasResponse(
+
+/**
+ * @brief  Constructs a new DescribeRoleAliasRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRoleAliasRequest::DescribeRoleAliasRequest(const DescribeRoleAliasRequest &other)
+    : IoTRequest(new DescribeRoleAliasRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRoleAliasRequest object.
+ */
+DescribeRoleAliasRequest::DescribeRoleAliasRequest()
+    : IoTRequest(new DescribeRoleAliasRequestPrivate(IoTRequest::DescribeRoleAliasAction, this))
+{
+
+}
+
+bool DescribeRoleAliasRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRoleAliasResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRoleAliasResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeRoleAliasRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRoleAliasResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRoleAliasRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRoleAliasRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRoleAliasRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeRoleAliasRequest instance.
+ */
+DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
+    const IoTRequest::Action action, DescribeRoleAliasRequest * const q)
+    : DescribeRoleAliasPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRoleAliasRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRoleAliasRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRoleAliasRequest instance.
+ */
+DescribeRoleAliasRequestPrivate::DescribeRoleAliasRequestPrivate(
+    const DescribeRoleAliasRequestPrivate &other, DescribeRoleAliasRequest * const q)
+    : DescribeRoleAliasPrivate(other, q)
+{
+
+}

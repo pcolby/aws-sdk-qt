@@ -19,3 +19,107 @@
 
 #include "modifydbinstancerequest.h"
 #include "modifydbinstancerequest_p.h"
+#include "modifydbinstanceresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBInstanceRequest
+ *
+ * @brief  Implements RDS ModifyDBInstance requests.
+ *
+ * @see    RDSClient::modifyDBInstance
+ */
+
+/**
+ * @brief  Constructs a new ModifyDBInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBInstanceResponse::ModifyDBInstanceResponse(
+
+/**
+ * @brief  Constructs a new ModifyDBInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyDBInstanceRequest::ModifyDBInstanceRequest(const ModifyDBInstanceRequest &other)
+    : RDSRequest(new ModifyDBInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyDBInstanceRequest object.
+ */
+ModifyDBInstanceRequest::ModifyDBInstanceRequest()
+    : RDSRequest(new ModifyDBInstanceRequestPrivate(RDSRequest::ModifyDBInstanceAction, this))
+{
+
+}
+
+bool ModifyDBInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyDBInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyDBInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyDBInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBInstanceRequestPrivate
+ *
+ * @brief  Private implementation for ModifyDBInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBInstanceRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ModifyDBInstanceRequest instance.
+ */
+ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
+    const RDSRequest::Action action, ModifyDBInstanceRequest * const q)
+    : ModifyDBInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyDBInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyDBInstanceRequest instance.
+ */
+ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
+    const ModifyDBInstanceRequestPrivate &other, ModifyDBInstanceRequest * const q)
+    : ModifyDBInstancePrivate(other, q)
+{
+
+}

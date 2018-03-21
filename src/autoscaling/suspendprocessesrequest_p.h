@@ -20,4 +20,29 @@
 #ifndef QTAWS_SUSPENDPROCESSESREQUEST_P_H
 #define QTAWS_SUSPENDPROCESSESREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "suspendprocessesrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SuspendProcessesRequest;
+
+class QTAWS_EXPORT SuspendProcessesRequestPrivate : public AutoScalingPrivate {
+
+public:
+    SuspendProcessesRequestPrivate(const AutoScaling::Action action,
+                                   SuspendProcessesRequest * const q);
+    SuspendProcessesRequestPrivate(const SuspendProcessesRequestPrivate &other,
+                                   SuspendProcessesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SuspendProcessesRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_POLLFORJOBSREQUEST_H
 #define QTAWS_POLLFORJOBSREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PollForJobsRequestPrivate;
+
+class QTAWS_EXPORT PollForJobsRequest : public CodePipelineRequest {
+
+public:
+    PollForJobsRequest(const PollForJobsRequest &other);
+    PollForJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PollForJobsRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

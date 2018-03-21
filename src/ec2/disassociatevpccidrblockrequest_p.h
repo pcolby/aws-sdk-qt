@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEVPCCIDRBLOCKREQUEST_P_H
 #define QTAWS_DISASSOCIATEVPCCIDRBLOCKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "disassociatevpccidrblockrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateVpcCidrBlockRequest;
+
+class QTAWS_EXPORT DisassociateVpcCidrBlockRequestPrivate : public EC2Private {
+
+public:
+    DisassociateVpcCidrBlockRequestPrivate(const EC2::Action action,
+                                   DisassociateVpcCidrBlockRequest * const q);
+    DisassociateVpcCidrBlockRequestPrivate(const DisassociateVpcCidrBlockRequestPrivate &other,
+                                   DisassociateVpcCidrBlockRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateVpcCidrBlockRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

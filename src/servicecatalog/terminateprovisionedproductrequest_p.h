@@ -20,4 +20,29 @@
 #ifndef QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_P_H
 #define QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "terminateprovisionedproductrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class TerminateProvisionedProductRequest;
+
+class QTAWS_EXPORT TerminateProvisionedProductRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    TerminateProvisionedProductRequestPrivate(const ServiceCatalog::Action action,
+                                   TerminateProvisionedProductRequest * const q);
+    TerminateProvisionedProductRequestPrivate(const TerminateProvisionedProductRequestPrivate &other,
+                                   TerminateProvisionedProductRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TerminateProvisionedProductRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

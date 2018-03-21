@@ -19,3 +19,107 @@
 
 #include "updatecontaineragentrequest.h"
 #include "updatecontaineragentrequest_p.h"
+#include "updatecontaineragentresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  UpdateContainerAgentRequest
+ *
+ * @brief  Implements ECS UpdateContainerAgent requests.
+ *
+ * @see    ECSClient::updateContainerAgent
+ */
+
+/**
+ * @brief  Constructs a new UpdateContainerAgentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateContainerAgentResponse::UpdateContainerAgentResponse(
+
+/**
+ * @brief  Constructs a new UpdateContainerAgentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateContainerAgentRequest::UpdateContainerAgentRequest(const UpdateContainerAgentRequest &other)
+    : ECSRequest(new UpdateContainerAgentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateContainerAgentRequest object.
+ */
+UpdateContainerAgentRequest::UpdateContainerAgentRequest()
+    : ECSRequest(new UpdateContainerAgentRequestPrivate(ECSRequest::UpdateContainerAgentAction, this))
+{
+
+}
+
+bool UpdateContainerAgentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateContainerAgentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateContainerAgentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateContainerAgentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateContainerAgentRequestPrivate
+ *
+ * @brief  Private implementation for UpdateContainerAgentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateContainerAgentRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public UpdateContainerAgentRequest instance.
+ */
+UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
+    const ECSRequest::Action action, UpdateContainerAgentRequest * const q)
+    : UpdateContainerAgentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateContainerAgentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateContainerAgentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateContainerAgentRequest instance.
+ */
+UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
+    const UpdateContainerAgentRequestPrivate &other, UpdateContainerAgentRequest * const q)
+    : UpdateContainerAgentPrivate(other, q)
+{
+
+}

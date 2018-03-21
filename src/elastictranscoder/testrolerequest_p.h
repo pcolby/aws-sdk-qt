@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTROLEREQUEST_P_H
 #define QTAWS_TESTROLEREQUEST_P_H
 
+#include "elastictranscoder_p.h"
+#include "testrolerequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class TestRoleRequest;
+
+class QTAWS_EXPORT TestRoleRequestPrivate : public ElasticTranscoderPrivate {
+
+public:
+    TestRoleRequestPrivate(const ElasticTranscoder::Action action,
+                                   TestRoleRequest * const q);
+    TestRoleRequestPrivate(const TestRoleRequestPrivate &other,
+                                   TestRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestRoleRequest)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletemaintenancewindowrequest.h"
 #include "deletemaintenancewindowrequest_p.h"
+#include "deletemaintenancewindowresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteMaintenanceWindowRequest
+ *
+ * @brief  Implements SSM DeleteMaintenanceWindow requests.
+ *
+ * @see    SSMClient::deleteMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new DeleteMaintenanceWindowResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
+
+/**
+ * @brief  Constructs a new DeleteMaintenanceWindowRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest(const DeleteMaintenanceWindowRequest &other)
+    : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteMaintenanceWindowRequest object.
+ */
+DeleteMaintenanceWindowRequest::DeleteMaintenanceWindowRequest()
+    : SSMRequest(new DeleteMaintenanceWindowRequestPrivate(SSMRequest::DeleteMaintenanceWindowAction, this))
+{
+
+}
+
+bool DeleteMaintenanceWindowRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteMaintenanceWindowResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteMaintenanceWindowResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteMaintenanceWindowResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteMaintenanceWindowRequestPrivate
+ *
+ * @brief  Private implementation for DeleteMaintenanceWindowRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMaintenanceWindowRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeleteMaintenanceWindowRequest instance.
+ */
+DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
+    const SSMRequest::Action action, DeleteMaintenanceWindowRequest * const q)
+    : DeleteMaintenanceWindowPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteMaintenanceWindowRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteMaintenanceWindowRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteMaintenanceWindowRequest instance.
+ */
+DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
+    const DeleteMaintenanceWindowRequestPrivate &other, DeleteMaintenanceWindowRequest * const q)
+    : DeleteMaintenanceWindowPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOPENIDCONNECTPROVIDERREQUEST_P_H
 #define QTAWS_GETOPENIDCONNECTPROVIDERREQUEST_P_H
 
+#include "iam_p.h"
+#include "getopenidconnectproviderrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetOpenIDConnectProviderRequest;
+
+class QTAWS_EXPORT GetOpenIDConnectProviderRequestPrivate : public IAMPrivate {
+
+public:
+    GetOpenIDConnectProviderRequestPrivate(const IAM::Action action,
+                                   GetOpenIDConnectProviderRequest * const q);
+    GetOpenIDConnectProviderRequestPrivate(const GetOpenIDConnectProviderRequestPrivate &other,
+                                   GetOpenIDConnectProviderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetOpenIDConnectProviderRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEJOBQUEUEREQUEST_P_H
 #define QTAWS_CREATEJOBQUEUEREQUEST_P_H
 
+#include "batch_p.h"
+#include "createjobqueuerequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CreateJobQueueRequest;
+
+class QTAWS_EXPORT CreateJobQueueRequestPrivate : public BatchPrivate {
+
+public:
+    CreateJobQueueRequestPrivate(const Batch::Action action,
+                                   CreateJobQueueRequest * const q);
+    CreateJobQueueRequestPrivate(const CreateJobQueueRequestPrivate &other,
+                                   CreateJobQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateJobQueueRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describetimetoliverequest.h"
 #include "describetimetoliverequest_p.h"
+#include "describetimetoliveresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeTimeToLiveRequest
+ *
+ * @brief  Implements DynamoDB DescribeTimeToLive requests.
+ *
+ * @see    DynamoDBClient::describeTimeToLive
+ */
+
+/**
+ * @brief  Constructs a new DescribeTimeToLiveResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
+
+/**
+ * @brief  Constructs a new DescribeTimeToLiveRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTimeToLiveRequest::DescribeTimeToLiveRequest(const DescribeTimeToLiveRequest &other)
+    : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTimeToLiveRequest object.
+ */
+DescribeTimeToLiveRequest::DescribeTimeToLiveRequest()
+    : DynamoDBRequest(new DescribeTimeToLiveRequestPrivate(DynamoDBRequest::DescribeTimeToLiveAction, this))
+{
+
+}
+
+bool DescribeTimeToLiveRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTimeToLiveResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTimeToLiveResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTimeToLiveResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTimeToLiveRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTimeToLiveRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTimeToLiveRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public DescribeTimeToLiveRequest instance.
+ */
+DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
+    const DynamoDBRequest::Action action, DescribeTimeToLiveRequest * const q)
+    : DescribeTimeToLivePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTimeToLiveRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTimeToLiveRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTimeToLiveRequest instance.
+ */
+DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
+    const DescribeTimeToLiveRequestPrivate &other, DescribeTimeToLiveRequest * const q)
+    : DescribeTimeToLivePrivate(other, q)
+{
+
+}

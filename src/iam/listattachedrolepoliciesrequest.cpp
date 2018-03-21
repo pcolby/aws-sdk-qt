@@ -19,3 +19,107 @@
 
 #include "listattachedrolepoliciesrequest.h"
 #include "listattachedrolepoliciesrequest_p.h"
+#include "listattachedrolepoliciesresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListAttachedRolePoliciesRequest
+ *
+ * @brief  Implements IAM ListAttachedRolePolicies requests.
+ *
+ * @see    IAMClient::listAttachedRolePolicies
+ */
+
+/**
+ * @brief  Constructs a new ListAttachedRolePoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAttachedRolePoliciesResponse::ListAttachedRolePoliciesResponse(
+
+/**
+ * @brief  Constructs a new ListAttachedRolePoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAttachedRolePoliciesRequest::ListAttachedRolePoliciesRequest(const ListAttachedRolePoliciesRequest &other)
+    : IAMRequest(new ListAttachedRolePoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAttachedRolePoliciesRequest object.
+ */
+ListAttachedRolePoliciesRequest::ListAttachedRolePoliciesRequest()
+    : IAMRequest(new ListAttachedRolePoliciesRequestPrivate(IAMRequest::ListAttachedRolePoliciesAction, this))
+{
+
+}
+
+bool ListAttachedRolePoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAttachedRolePoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAttachedRolePoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListAttachedRolePoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAttachedRolePoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAttachedRolePoliciesRequestPrivate
+ *
+ * @brief  Private implementation for ListAttachedRolePoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedRolePoliciesRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListAttachedRolePoliciesRequest instance.
+ */
+ListAttachedRolePoliciesRequestPrivate::ListAttachedRolePoliciesRequestPrivate(
+    const IAMRequest::Action action, ListAttachedRolePoliciesRequest * const q)
+    : ListAttachedRolePoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedRolePoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAttachedRolePoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAttachedRolePoliciesRequest instance.
+ */
+ListAttachedRolePoliciesRequestPrivate::ListAttachedRolePoliciesRequestPrivate(
+    const ListAttachedRolePoliciesRequestPrivate &other, ListAttachedRolePoliciesRequest * const q)
+    : ListAttachedRolePoliciesPrivate(other, q)
+{
+
+}

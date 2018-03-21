@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATERECORDSREQUEST_H
 #define QTAWS_UPDATERECORDSREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class UpdateRecordsRequestPrivate;
+
+class QTAWS_EXPORT UpdateRecordsRequest : public CognitoSyncRequest {
+
+public:
+    UpdateRecordsRequest(const UpdateRecordsRequest &other);
+    UpdateRecordsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateRecordsRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

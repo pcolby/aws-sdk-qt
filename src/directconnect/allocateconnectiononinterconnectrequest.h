@@ -20,4 +20,32 @@
 #ifndef QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_H
 #define QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AllocateConnectionOnInterconnectRequestPrivate;
+
+class QTAWS_EXPORT AllocateConnectionOnInterconnectRequest : public DirectConnectRequest {
+
+public:
+    AllocateConnectionOnInterconnectRequest(const AllocateConnectionOnInterconnectRequest &other);
+    AllocateConnectionOnInterconnectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AllocateConnectionOnInterconnectRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

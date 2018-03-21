@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELOADBALANCERTLSCERTIFICATEREQUEST_H
 #define QTAWS_DELETELOADBALANCERTLSCERTIFICATEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteLoadBalancerTlsCertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateRequest : public LightsailRequest {
+
+public:
+    DeleteLoadBalancerTlsCertificateRequest(const DeleteLoadBalancerTlsCertificateRequest &other);
+    DeleteLoadBalancerTlsCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLoadBalancerTlsCertificateRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

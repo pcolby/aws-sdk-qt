@@ -19,3 +19,107 @@
 
 #include "describestreamsummaryrequest.h"
 #include "describestreamsummaryrequest_p.h"
+#include "describestreamsummaryresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  DescribeStreamSummaryRequest
+ *
+ * @brief  Implements Kinesis DescribeStreamSummary requests.
+ *
+ * @see    KinesisClient::describeStreamSummary
+ */
+
+/**
+ * @brief  Constructs a new DescribeStreamSummaryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStreamSummaryResponse::DescribeStreamSummaryResponse(
+
+/**
+ * @brief  Constructs a new DescribeStreamSummaryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStreamSummaryRequest::DescribeStreamSummaryRequest(const DescribeStreamSummaryRequest &other)
+    : KinesisRequest(new DescribeStreamSummaryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStreamSummaryRequest object.
+ */
+DescribeStreamSummaryRequest::DescribeStreamSummaryRequest()
+    : KinesisRequest(new DescribeStreamSummaryRequestPrivate(KinesisRequest::DescribeStreamSummaryAction, this))
+{
+
+}
+
+bool DescribeStreamSummaryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStreamSummaryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStreamSummaryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * DescribeStreamSummaryRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStreamSummaryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStreamSummaryRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStreamSummaryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStreamSummaryRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public DescribeStreamSummaryRequest instance.
+ */
+DescribeStreamSummaryRequestPrivate::DescribeStreamSummaryRequestPrivate(
+    const KinesisRequest::Action action, DescribeStreamSummaryRequest * const q)
+    : DescribeStreamSummaryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStreamSummaryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStreamSummaryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStreamSummaryRequest instance.
+ */
+DescribeStreamSummaryRequestPrivate::DescribeStreamSummaryRequestPrivate(
+    const DescribeStreamSummaryRequestPrivate &other, DescribeStreamSummaryRequest * const q)
+    : DescribeStreamSummaryPrivate(other, q)
+{
+
+}

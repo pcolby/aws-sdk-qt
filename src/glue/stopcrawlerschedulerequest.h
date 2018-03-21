@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPCRAWLERSCHEDULEREQUEST_H
 #define QTAWS_STOPCRAWLERSCHEDULEREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StopCrawlerScheduleRequestPrivate;
+
+class QTAWS_EXPORT StopCrawlerScheduleRequest : public GlueRequest {
+
+public:
+    StopCrawlerScheduleRequest(const StopCrawlerScheduleRequest &other);
+    StopCrawlerScheduleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopCrawlerScheduleRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

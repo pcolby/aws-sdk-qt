@@ -20,4 +20,29 @@
 #ifndef QTAWS_ENABLEAVAILABILITYZONESFORLOADBALANCERREQUEST_P_H
 #define QTAWS_ENABLEAVAILABILITYZONESFORLOADBALANCERREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "enableavailabilityzonesforloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class EnableAvailabilityZonesForLoadBalancerRequest;
+
+class QTAWS_EXPORT EnableAvailabilityZonesForLoadBalancerRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    EnableAvailabilityZonesForLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   EnableAvailabilityZonesForLoadBalancerRequest * const q);
+    EnableAvailabilityZonesForLoadBalancerRequestPrivate(const EnableAvailabilityZonesForLoadBalancerRequestPrivate &other,
+                                   EnableAvailabilityZonesForLoadBalancerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(EnableAvailabilityZonesForLoadBalancerRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

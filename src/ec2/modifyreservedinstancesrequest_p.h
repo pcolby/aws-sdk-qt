@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYRESERVEDINSTANCESREQUEST_P_H
 #define QTAWS_MODIFYRESERVEDINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyreservedinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyReservedInstancesRequest;
+
+class QTAWS_EXPORT ModifyReservedInstancesRequestPrivate : public EC2Private {
+
+public:
+    ModifyReservedInstancesRequestPrivate(const EC2::Action action,
+                                   ModifyReservedInstancesRequest * const q);
+    ModifyReservedInstancesRequestPrivate(const ModifyReservedInstancesRequestPrivate &other,
+                                   ModifyReservedInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyReservedInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

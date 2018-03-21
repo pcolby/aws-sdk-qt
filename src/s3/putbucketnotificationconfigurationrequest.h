@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTBUCKETNOTIFICATIONCONFIGURATIONREQUEST_H
 #define QTAWS_PUTBUCKETNOTIFICATIONCONFIGURATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketNotificationConfigurationRequestPrivate;
+
+class QTAWS_EXPORT PutBucketNotificationConfigurationRequest : public S3Request {
+
+public:
+    PutBucketNotificationConfigurationRequest(const PutBucketNotificationConfigurationRequest &other);
+    PutBucketNotificationConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketNotificationConfigurationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

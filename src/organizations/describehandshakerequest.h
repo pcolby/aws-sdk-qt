@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEHANDSHAKEREQUEST_H
 #define QTAWS_DESCRIBEHANDSHAKEREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeHandshakeRequestPrivate;
+
+class QTAWS_EXPORT DescribeHandshakeRequest : public OrganizationsRequest {
+
+public:
+    DescribeHandshakeRequest(const DescribeHandshakeRequest &other);
+    DescribeHandshakeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHandshakeRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

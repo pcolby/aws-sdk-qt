@@ -19,3 +19,107 @@
 
 #include "describevaultrequest.h"
 #include "describevaultrequest_p.h"
+#include "describevaultresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  DescribeVaultRequest
+ *
+ * @brief  Implements Glacier DescribeVault requests.
+ *
+ * @see    GlacierClient::describeVault
+ */
+
+/**
+ * @brief  Constructs a new DescribeVaultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVaultResponse::DescribeVaultResponse(
+
+/**
+ * @brief  Constructs a new DescribeVaultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVaultRequest::DescribeVaultRequest(const DescribeVaultRequest &other)
+    : GlacierRequest(new DescribeVaultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVaultRequest object.
+ */
+DescribeVaultRequest::DescribeVaultRequest()
+    : GlacierRequest(new DescribeVaultRequestPrivate(GlacierRequest::DescribeVaultAction, this))
+{
+
+}
+
+bool DescribeVaultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVaultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVaultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * DescribeVaultRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVaultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVaultRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVaultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVaultRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public DescribeVaultRequest instance.
+ */
+DescribeVaultRequestPrivate::DescribeVaultRequestPrivate(
+    const GlacierRequest::Action action, DescribeVaultRequest * const q)
+    : DescribeVaultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVaultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVaultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVaultRequest instance.
+ */
+DescribeVaultRequestPrivate::DescribeVaultRequestPrivate(
+    const DescribeVaultRequestPrivate &other, DescribeVaultRequest * const q)
+    : DescribeVaultPrivate(other, q)
+{
+
+}

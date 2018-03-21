@@ -20,4 +20,29 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENREQUEST_P_H
 #define QTAWS_VERIFYSOFTWARETOKENREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "verifysoftwaretokenrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class VerifySoftwareTokenRequest;
+
+class QTAWS_EXPORT VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    VerifySoftwareTokenRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   VerifySoftwareTokenRequest * const q);
+    VerifySoftwareTokenRequestPrivate(const VerifySoftwareTokenRequestPrivate &other,
+                                   VerifySoftwareTokenRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(VerifySoftwareTokenRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

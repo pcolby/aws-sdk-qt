@@ -19,3 +19,107 @@
 
 #include "addroletodbclusterrequest.h"
 #include "addroletodbclusterrequest_p.h"
+#include "addroletodbclusterresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  AddRoleToDBClusterRequest
+ *
+ * @brief  Implements RDS AddRoleToDBCluster requests.
+ *
+ * @see    RDSClient::addRoleToDBCluster
+ */
+
+/**
+ * @brief  Constructs a new AddRoleToDBClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
+
+/**
+ * @brief  Constructs a new AddRoleToDBClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddRoleToDBClusterRequest::AddRoleToDBClusterRequest(const AddRoleToDBClusterRequest &other)
+    : RDSRequest(new AddRoleToDBClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddRoleToDBClusterRequest object.
+ */
+AddRoleToDBClusterRequest::AddRoleToDBClusterRequest()
+    : RDSRequest(new AddRoleToDBClusterRequestPrivate(RDSRequest::AddRoleToDBClusterAction, this))
+{
+
+}
+
+bool AddRoleToDBClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddRoleToDBClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddRoleToDBClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new AddRoleToDBClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddRoleToDBClusterRequestPrivate
+ *
+ * @brief  Private implementation for AddRoleToDBClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddRoleToDBClusterRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public AddRoleToDBClusterRequest instance.
+ */
+AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
+    const RDSRequest::Action action, AddRoleToDBClusterRequest * const q)
+    : AddRoleToDBClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddRoleToDBClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddRoleToDBClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddRoleToDBClusterRequest instance.
+ */
+AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
+    const AddRoleToDBClusterRequestPrivate &other, AddRoleToDBClusterRequest * const q)
+    : AddRoleToDBClusterPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "unsubscriberequest.h"
 #include "unsubscriberequest_p.h"
+#include "unsubscriberesponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  UnsubscribeRequest
+ *
+ * @brief  Implements SNS Unsubscribe requests.
+ *
+ * @see    SNSClient::unsubscribe
+ */
+
+/**
+ * @brief  Constructs a new UnsubscribeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnsubscribeResponse::UnsubscribeResponse(
+
+/**
+ * @brief  Constructs a new UnsubscribeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UnsubscribeRequest::UnsubscribeRequest(const UnsubscribeRequest &other)
+    : SNSRequest(new UnsubscribeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UnsubscribeRequest object.
+ */
+UnsubscribeRequest::UnsubscribeRequest()
+    : SNSRequest(new UnsubscribeRequestPrivate(SNSRequest::UnsubscribeAction, this))
+{
+
+}
+
+bool UnsubscribeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UnsubscribeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UnsubscribeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * const reply) const
+{
+    return new UnsubscribeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UnsubscribeRequestPrivate
+ *
+ * @brief  Private implementation for UnsubscribeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public UnsubscribeRequest instance.
+ */
+UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
+    const SNSRequest::Action action, UnsubscribeRequest * const q)
+    : UnsubscribePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UnsubscribeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UnsubscribeRequest instance.
+ */
+UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
+    const UnsubscribeRequestPrivate &other, UnsubscribeRequest * const q)
+    : UnsubscribePrivate(other, q)
+{
+
+}

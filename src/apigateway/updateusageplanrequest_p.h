@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSAGEPLANREQUEST_P_H
 #define QTAWS_UPDATEUSAGEPLANREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updateusageplanrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateUsagePlanRequest;
+
+class QTAWS_EXPORT UpdateUsagePlanRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateUsagePlanRequestPrivate(const APIGateway::Action action,
+                                   UpdateUsagePlanRequest * const q);
+    UpdateUsagePlanRequestPrivate(const UpdateUsagePlanRequestPrivate &other,
+                                   UpdateUsagePlanRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUsagePlanRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

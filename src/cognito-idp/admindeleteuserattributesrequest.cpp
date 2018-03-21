@@ -19,3 +19,107 @@
 
 #include "admindeleteuserattributesrequest.h"
 #include "admindeleteuserattributesrequest_p.h"
+#include "admindeleteuserattributesresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminDeleteUserAttributesRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminDeleteUserAttributes requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminDeleteUserAttributes
+ */
+
+/**
+ * @brief  Constructs a new AdminDeleteUserAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
+
+/**
+ * @brief  Constructs a new AdminDeleteUserAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminDeleteUserAttributesRequest::AdminDeleteUserAttributesRequest(const AdminDeleteUserAttributesRequest &other)
+    : CognitoIdentityProviderRequest(new AdminDeleteUserAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminDeleteUserAttributesRequest object.
+ */
+AdminDeleteUserAttributesRequest::AdminDeleteUserAttributesRequest()
+    : CognitoIdentityProviderRequest(new AdminDeleteUserAttributesRequestPrivate(CognitoIdentityProviderRequest::AdminDeleteUserAttributesAction, this))
+{
+
+}
+
+bool AdminDeleteUserAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminDeleteUserAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminDeleteUserAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminDeleteUserAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminDeleteUserAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminDeleteUserAttributesRequestPrivate
+ *
+ * @brief  Private implementation for AdminDeleteUserAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDeleteUserAttributesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminDeleteUserAttributesRequest instance.
+ */
+AdminDeleteUserAttributesRequestPrivate::AdminDeleteUserAttributesRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminDeleteUserAttributesRequest * const q)
+    : AdminDeleteUserAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDeleteUserAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminDeleteUserAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminDeleteUserAttributesRequest instance.
+ */
+AdminDeleteUserAttributesRequestPrivate::AdminDeleteUserAttributesRequestPrivate(
+    const AdminDeleteUserAttributesRequestPrivate &other, AdminDeleteUserAttributesRequest * const q)
+    : AdminDeleteUserAttributesPrivate(other, q)
+{
+
+}

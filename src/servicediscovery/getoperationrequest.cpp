@@ -19,3 +19,107 @@
 
 #include "getoperationrequest.h"
 #include "getoperationrequest_p.h"
+#include "getoperationresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetOperationRequest
+ *
+ * @brief  Implements ServiceDiscovery GetOperation requests.
+ *
+ * @see    ServiceDiscoveryClient::getOperation
+ */
+
+/**
+ * @brief  Constructs a new GetOperationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationResponse::GetOperationResponse(
+
+/**
+ * @brief  Constructs a new GetOperationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetOperationRequest::GetOperationRequest(const GetOperationRequest &other)
+    : ServiceDiscoveryRequest(new GetOperationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetOperationRequest object.
+ */
+GetOperationRequest::GetOperationRequest()
+    : ServiceDiscoveryRequest(new GetOperationRequestPrivate(ServiceDiscoveryRequest::GetOperationAction, this))
+{
+
+}
+
+bool GetOperationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetOperationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetOperationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * GetOperationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetOperationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationRequestPrivate
+ *
+ * @brief  Private implementation for GetOperationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public GetOperationRequest instance.
+ */
+GetOperationRequestPrivate::GetOperationRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, GetOperationRequest * const q)
+    : GetOperationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetOperationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetOperationRequest instance.
+ */
+GetOperationRequestPrivate::GetOperationRequestPrivate(
+    const GetOperationRequestPrivate &other, GetOperationRequest * const q)
+    : GetOperationPrivate(other, q)
+{
+
+}

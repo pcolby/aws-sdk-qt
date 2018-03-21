@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDEPLOYMENTCONFIGREQUEST_H
 #define QTAWS_CREATEDEPLOYMENTCONFIGREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class CreateDeploymentConfigRequestPrivate;
+
+class QTAWS_EXPORT CreateDeploymentConfigRequest : public CodeDeployRequest {
+
+public:
+    CreateDeploymentConfigRequest(const CreateDeploymentConfigRequest &other);
+    CreateDeploymentConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeploymentConfigRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

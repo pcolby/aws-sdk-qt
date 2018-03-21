@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONREQUEST_H
 #define QTAWS_GETRESERVATIONUTILIZATIONREQUEST_H
 
+#include "costexplorerrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationUtilizationRequestPrivate;
+
+class QTAWS_EXPORT GetReservationUtilizationRequest : public CostExplorerRequest {
+
+public:
+    GetReservationUtilizationRequest(const GetReservationUtilizationRequest &other);
+    GetReservationUtilizationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetReservationUtilizationRequest)
+
+}
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

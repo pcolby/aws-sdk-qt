@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "describeendpointsrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class DescribeEndpointsRequest;
+
+class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public MediaConvertPrivate {
+
+public:
+    DescribeEndpointsRequestPrivate(const MediaConvert::Action action,
+                                   DescribeEndpointsRequest * const q);
+    DescribeEndpointsRequestPrivate(const DescribeEndpointsRequestPrivate &other,
+                                   DescribeEndpointsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEndpointsRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

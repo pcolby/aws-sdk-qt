@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "tagresourcerequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class TagResourceRequest;
+
+class QTAWS_EXPORT TagResourceRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    TagResourceRequestPrivate(const CloudDirectory::Action action,
+                                   TagResourceRequest * const q);
+    TagResourceRequestPrivate(const TagResourceRequestPrivate &other,
+                                   TagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagResourceRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

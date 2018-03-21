@@ -19,3 +19,107 @@
 
 #include "getslottypeversionsrequest.h"
 #include "getslottypeversionsrequest_p.h"
+#include "getslottypeversionsresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetSlotTypeVersionsRequest
+ *
+ * @brief  Implements LexModelBuildingService GetSlotTypeVersions requests.
+ *
+ * @see    LexModelBuildingServiceClient::getSlotTypeVersions
+ */
+
+/**
+ * @brief  Constructs a new GetSlotTypeVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSlotTypeVersionsResponse::GetSlotTypeVersionsResponse(
+
+/**
+ * @brief  Constructs a new GetSlotTypeVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSlotTypeVersionsRequest::GetSlotTypeVersionsRequest(const GetSlotTypeVersionsRequest &other)
+    : LexModelBuildingServiceRequest(new GetSlotTypeVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSlotTypeVersionsRequest object.
+ */
+GetSlotTypeVersionsRequest::GetSlotTypeVersionsRequest()
+    : LexModelBuildingServiceRequest(new GetSlotTypeVersionsRequestPrivate(LexModelBuildingServiceRequest::GetSlotTypeVersionsAction, this))
+{
+
+}
+
+bool GetSlotTypeVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSlotTypeVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSlotTypeVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetSlotTypeVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSlotTypeVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSlotTypeVersionsRequestPrivate
+ *
+ * @brief  Private implementation for GetSlotTypeVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSlotTypeVersionsRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetSlotTypeVersionsRequest instance.
+ */
+GetSlotTypeVersionsRequestPrivate::GetSlotTypeVersionsRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetSlotTypeVersionsRequest * const q)
+    : GetSlotTypeVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSlotTypeVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSlotTypeVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSlotTypeVersionsRequest instance.
+ */
+GetSlotTypeVersionsRequestPrivate::GetSlotTypeVersionsRequestPrivate(
+    const GetSlotTypeVersionsRequestPrivate &other, GetSlotTypeVersionsRequest * const q)
+    : GetSlotTypeVersionsPrivate(other, q)
+{
+
+}

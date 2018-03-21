@@ -19,3 +19,107 @@
 
 #include "describeeventtypesrequest.h"
 #include "describeeventtypesrequest_p.h"
+#include "describeeventtypesresponse.h"
+#include "healthrequest_p.h"
+
+namespace AWS {
+namespace Health {
+
+/**
+ * @class  DescribeEventTypesRequest
+ *
+ * @brief  Implements Health DescribeEventTypes requests.
+ *
+ * @see    HealthClient::describeEventTypes
+ */
+
+/**
+ * @brief  Constructs a new DescribeEventTypesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventTypesResponse::DescribeEventTypesResponse(
+
+/**
+ * @brief  Constructs a new DescribeEventTypesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEventTypesRequest::DescribeEventTypesRequest(const DescribeEventTypesRequest &other)
+    : HealthRequest(new DescribeEventTypesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEventTypesRequest object.
+ */
+DescribeEventTypesRequest::DescribeEventTypesRequest()
+    : HealthRequest(new DescribeEventTypesRequestPrivate(HealthRequest::DescribeEventTypesAction, this))
+{
+
+}
+
+bool DescribeEventTypesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEventTypesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEventTypesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  HealthClient::send
+ */
+AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEventTypesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventTypesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEventTypesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTypesRequestPrivate object.
+ *
+ * @param  action  Health action being performed.
+ * @param  q       Pointer to this object's public DescribeEventTypesRequest instance.
+ */
+DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
+    const HealthRequest::Action action, DescribeEventTypesRequest * const q)
+    : DescribeEventTypesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTypesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEventTypesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEventTypesRequest instance.
+ */
+DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
+    const DescribeEventTypesRequestPrivate &other, DescribeEventTypesRequest * const q)
+    : DescribeEventTypesPrivate(other, q)
+{
+
+}

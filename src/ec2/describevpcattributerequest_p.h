@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVPCATTRIBUTEREQUEST_P_H
 #define QTAWS_DESCRIBEVPCATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevpcattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcAttributeRequest;
+
+class QTAWS_EXPORT DescribeVpcAttributeRequestPrivate : public EC2Private {
+
+public:
+    DescribeVpcAttributeRequestPrivate(const EC2::Action action,
+                                   DescribeVpcAttributeRequest * const q);
+    DescribeVpcAttributeRequestPrivate(const DescribeVpcAttributeRequestPrivate &other,
+                                   DescribeVpcAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

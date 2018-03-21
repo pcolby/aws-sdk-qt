@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCOREDEFINITIONVERSIONREQUEST_H
 #define QTAWS_GETCOREDEFINITIONVERSIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetCoreDefinitionVersionRequestPrivate;
+
+class QTAWS_EXPORT GetCoreDefinitionVersionRequest : public GreengrassRequest {
+
+public:
+    GetCoreDefinitionVersionRequest(const GetCoreDefinitionVersionRequest &other);
+    GetCoreDefinitionVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCoreDefinitionVersionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

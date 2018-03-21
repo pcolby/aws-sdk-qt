@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDOCUMENTREQUEST_P_H
 #define QTAWS_DELETEDOCUMENTREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deletedocumentrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteDocumentRequest;
+
+class QTAWS_EXPORT DeleteDocumentRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeleteDocumentRequestPrivate(const WorkDocs::Action action,
+                                   DeleteDocumentRequest * const q);
+    DeleteDocumentRequestPrivate(const DeleteDocumentRequestPrivate &other,
+                                   DeleteDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDocumentRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

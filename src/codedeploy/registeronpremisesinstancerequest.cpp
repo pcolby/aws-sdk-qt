@@ -19,3 +19,107 @@
 
 #include "registeronpremisesinstancerequest.h"
 #include "registeronpremisesinstancerequest_p.h"
+#include "registeronpremisesinstanceresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  RegisterOnPremisesInstanceRequest
+ *
+ * @brief  Implements CodeDeploy RegisterOnPremisesInstance requests.
+ *
+ * @see    CodeDeployClient::registerOnPremisesInstance
+ */
+
+/**
+ * @brief  Constructs a new RegisterOnPremisesInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterOnPremisesInstanceResponse::RegisterOnPremisesInstanceResponse(
+
+/**
+ * @brief  Constructs a new RegisterOnPremisesInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterOnPremisesInstanceRequest::RegisterOnPremisesInstanceRequest(const RegisterOnPremisesInstanceRequest &other)
+    : CodeDeployRequest(new RegisterOnPremisesInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterOnPremisesInstanceRequest object.
+ */
+RegisterOnPremisesInstanceRequest::RegisterOnPremisesInstanceRequest()
+    : CodeDeployRequest(new RegisterOnPremisesInstanceRequestPrivate(CodeDeployRequest::RegisterOnPremisesInstanceAction, this))
+{
+
+}
+
+bool RegisterOnPremisesInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterOnPremisesInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterOnPremisesInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * RegisterOnPremisesInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterOnPremisesInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterOnPremisesInstanceRequestPrivate
+ *
+ * @brief  Private implementation for RegisterOnPremisesInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterOnPremisesInstanceRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public RegisterOnPremisesInstanceRequest instance.
+ */
+RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
+    const CodeDeployRequest::Action action, RegisterOnPremisesInstanceRequest * const q)
+    : RegisterOnPremisesInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterOnPremisesInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterOnPremisesInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterOnPremisesInstanceRequest instance.
+ */
+RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
+    const RegisterOnPremisesInstanceRequestPrivate &other, RegisterOnPremisesInstanceRequest * const q)
+    : RegisterOnPremisesInstancePrivate(other, q)
+{
+
+}

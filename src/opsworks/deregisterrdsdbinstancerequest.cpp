@@ -19,3 +19,107 @@
 
 #include "deregisterrdsdbinstancerequest.h"
 #include "deregisterrdsdbinstancerequest_p.h"
+#include "deregisterrdsdbinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterRdsDbInstanceRequest
+ *
+ * @brief  Implements OpsWorks DeregisterRdsDbInstance requests.
+ *
+ * @see    OpsWorksClient::deregisterRdsDbInstance
+ */
+
+/**
+ * @brief  Constructs a new DeregisterRdsDbInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeregisterRdsDbInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterRdsDbInstanceRequest::DeregisterRdsDbInstanceRequest(const DeregisterRdsDbInstanceRequest &other)
+    : OpsWorksRequest(new DeregisterRdsDbInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterRdsDbInstanceRequest object.
+ */
+DeregisterRdsDbInstanceRequest::DeregisterRdsDbInstanceRequest()
+    : OpsWorksRequest(new DeregisterRdsDbInstanceRequestPrivate(OpsWorksRequest::DeregisterRdsDbInstanceAction, this))
+{
+
+}
+
+bool DeregisterRdsDbInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterRdsDbInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterRdsDbInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterRdsDbInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterRdsDbInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterRdsDbInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterRdsDbInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeregisterRdsDbInstanceRequest instance.
+ */
+DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, DeregisterRdsDbInstanceRequest * const q)
+    : DeregisterRdsDbInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterRdsDbInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterRdsDbInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterRdsDbInstanceRequest instance.
+ */
+DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
+    const DeregisterRdsDbInstanceRequestPrivate &other, DeregisterRdsDbInstanceRequest * const q)
+    : DeregisterRdsDbInstancePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "stopqueryexecutionrequest.h"
 #include "stopqueryexecutionrequest_p.h"
+#include "stopqueryexecutionresponse.h"
+#include "athenarequest_p.h"
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  StopQueryExecutionRequest
+ *
+ * @brief  Implements Athena StopQueryExecution requests.
+ *
+ * @see    AthenaClient::stopQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new StopQueryExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopQueryExecutionResponse::StopQueryExecutionResponse(
+
+/**
+ * @brief  Constructs a new StopQueryExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopQueryExecutionRequest::StopQueryExecutionRequest(const StopQueryExecutionRequest &other)
+    : AthenaRequest(new StopQueryExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopQueryExecutionRequest object.
+ */
+StopQueryExecutionRequest::StopQueryExecutionRequest()
+    : AthenaRequest(new StopQueryExecutionRequestPrivate(AthenaRequest::StopQueryExecutionAction, this))
+{
+
+}
+
+bool StopQueryExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopQueryExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopQueryExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AthenaClient::send
+ */
+AwsAbstractResponse * StopQueryExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new StopQueryExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopQueryExecutionRequestPrivate
+ *
+ * @brief  Private implementation for StopQueryExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopQueryExecutionRequestPrivate object.
+ *
+ * @param  action  Athena action being performed.
+ * @param  q       Pointer to this object's public StopQueryExecutionRequest instance.
+ */
+StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
+    const AthenaRequest::Action action, StopQueryExecutionRequest * const q)
+    : StopQueryExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopQueryExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopQueryExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopQueryExecutionRequest instance.
+ */
+StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
+    const StopQueryExecutionRequestPrivate &other, StopQueryExecutionRequest * const q)
+    : StopQueryExecutionPrivate(other, q)
+{
+
+}

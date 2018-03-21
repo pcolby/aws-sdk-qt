@@ -20,4 +20,29 @@
 #ifndef QTAWS_REPLACEROUTEREQUEST_P_H
 #define QTAWS_REPLACEROUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "replacerouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReplaceRouteRequest;
+
+class QTAWS_EXPORT ReplaceRouteRequestPrivate : public EC2Private {
+
+public:
+    ReplaceRouteRequestPrivate(const EC2::Action action,
+                                   ReplaceRouteRequest * const q);
+    ReplaceRouteRequestPrivate(const ReplaceRouteRequestPrivate &other,
+                                   ReplaceRouteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReplaceRouteRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

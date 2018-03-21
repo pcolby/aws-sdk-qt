@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTCORSPOLICYREQUEST_H
 #define QTAWS_PUTCORSPOLICYREQUEST_H
 
+#include "mediastorerequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class PutCorsPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutCorsPolicyRequest : public MediaStoreRequest {
+
+public:
+    PutCorsPolicyRequest(const PutCorsPolicyRequest &other);
+    PutCorsPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutCorsPolicyRequest)
+
+}
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

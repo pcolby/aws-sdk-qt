@@ -19,3 +19,107 @@
 
 #include "describeinstancecreditspecificationsrequest.h"
 #include "describeinstancecreditspecificationsrequest_p.h"
+#include "describeinstancecreditspecificationsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeInstanceCreditSpecificationsRequest
+ *
+ * @brief  Implements EC2 DescribeInstanceCreditSpecifications requests.
+ *
+ * @see    EC2Client::describeInstanceCreditSpecifications
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstanceCreditSpecificationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest(const DescribeInstanceCreditSpecificationsRequest &other)
+    : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequest object.
+ */
+DescribeInstanceCreditSpecificationsRequest::DescribeInstanceCreditSpecificationsRequest()
+    : EC2Request(new DescribeInstanceCreditSpecificationsRequestPrivate(EC2Request::DescribeInstanceCreditSpecificationsAction, this))
+{
+
+}
+
+bool DescribeInstanceCreditSpecificationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstanceCreditSpecificationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstanceCreditSpecificationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstanceCreditSpecificationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstanceCreditSpecificationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstanceCreditSpecificationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeInstanceCreditSpecificationsRequest instance.
+ */
+DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
+    const EC2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)
+    : DescribeInstanceCreditSpecificationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstanceCreditSpecificationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstanceCreditSpecificationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstanceCreditSpecificationsRequest instance.
+ */
+DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
+    const DescribeInstanceCreditSpecificationsRequestPrivate &other, DescribeInstanceCreditSpecificationsRequest * const q)
+    : DescribeInstanceCreditSpecificationsPrivate(other, q)
+{
+
+}

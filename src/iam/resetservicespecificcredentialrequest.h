@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETSERVICESPECIFICCREDENTIALREQUEST_H
 #define QTAWS_RESETSERVICESPECIFICCREDENTIALREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ResetServiceSpecificCredentialRequestPrivate;
+
+class QTAWS_EXPORT ResetServiceSpecificCredentialRequest : public IAMRequest {
+
+public:
+    ResetServiceSpecificCredentialRequest(const ResetServiceSpecificCredentialRequest &other);
+    ResetServiceSpecificCredentialRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetServiceSpecificCredentialRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

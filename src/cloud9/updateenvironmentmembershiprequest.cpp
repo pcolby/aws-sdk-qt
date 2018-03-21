@@ -19,3 +19,107 @@
 
 #include "updateenvironmentmembershiprequest.h"
 #include "updateenvironmentmembershiprequest_p.h"
+#include "updateenvironmentmembershipresponse.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  UpdateEnvironmentMembershipRequest
+ *
+ * @brief  Implements Cloud9 UpdateEnvironmentMembership requests.
+ *
+ * @see    Cloud9Client::updateEnvironmentMembership
+ */
+
+/**
+ * @brief  Constructs a new UpdateEnvironmentMembershipResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEnvironmentMembershipResponse::UpdateEnvironmentMembershipResponse(
+
+/**
+ * @brief  Constructs a new UpdateEnvironmentMembershipRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEnvironmentMembershipRequest::UpdateEnvironmentMembershipRequest(const UpdateEnvironmentMembershipRequest &other)
+    : Cloud9Request(new UpdateEnvironmentMembershipRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEnvironmentMembershipRequest object.
+ */
+UpdateEnvironmentMembershipRequest::UpdateEnvironmentMembershipRequest()
+    : Cloud9Request(new UpdateEnvironmentMembershipRequestPrivate(Cloud9Request::UpdateEnvironmentMembershipAction, this))
+{
+
+}
+
+bool UpdateEnvironmentMembershipRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEnvironmentMembershipResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEnvironmentMembershipResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEnvironmentMembershipResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEnvironmentMembershipRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEnvironmentMembershipRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEnvironmentMembershipRequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public UpdateEnvironmentMembershipRequest instance.
+ */
+UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPrivate(
+    const Cloud9Request::Action action, UpdateEnvironmentMembershipRequest * const q)
+    : UpdateEnvironmentMembershipPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEnvironmentMembershipRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEnvironmentMembershipRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEnvironmentMembershipRequest instance.
+ */
+UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPrivate(
+    const UpdateEnvironmentMembershipRequestPrivate &other, UpdateEnvironmentMembershipRequest * const q)
+    : UpdateEnvironmentMembershipPrivate(other, q)
+{
+
+}

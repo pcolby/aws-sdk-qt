@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSREQUEST_H
 #define QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeEffectiveInstanceAssociationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsRequest : public SSMRequest {
+
+public:
+    DescribeEffectiveInstanceAssociationsRequest(const DescribeEffectiveInstanceAssociationsRequest &other);
+    DescribeEffectiveInstanceAssociationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEffectiveInstanceAssociationsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

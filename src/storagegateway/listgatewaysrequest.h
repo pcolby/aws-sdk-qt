@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGATEWAYSREQUEST_H
 #define QTAWS_LISTGATEWAYSREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListGatewaysRequestPrivate;
+
+class QTAWS_EXPORT ListGatewaysRequest : public StorageGatewayRequest {
+
+public:
+    ListGatewaysRequest(const ListGatewaysRequest &other);
+    ListGatewaysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGatewaysRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

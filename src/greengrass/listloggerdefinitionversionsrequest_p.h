@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTLOGGERDEFINITIONVERSIONSREQUEST_P_H
 #define QTAWS_LISTLOGGERDEFINITIONVERSIONSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listloggerdefinitionversionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListLoggerDefinitionVersionsRequest;
+
+class QTAWS_EXPORT ListLoggerDefinitionVersionsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListLoggerDefinitionVersionsRequestPrivate(const Greengrass::Action action,
+                                   ListLoggerDefinitionVersionsRequest * const q);
+    ListLoggerDefinitionVersionsRequestPrivate(const ListLoggerDefinitionVersionsRequestPrivate &other,
+                                   ListLoggerDefinitionVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListLoggerDefinitionVersionsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

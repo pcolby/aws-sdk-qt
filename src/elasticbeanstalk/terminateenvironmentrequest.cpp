@@ -19,3 +19,107 @@
 
 #include "terminateenvironmentrequest.h"
 #include "terminateenvironmentrequest_p.h"
+#include "terminateenvironmentresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  TerminateEnvironmentRequest
+ *
+ * @brief  Implements ElasticBeanstalk TerminateEnvironment requests.
+ *
+ * @see    ElasticBeanstalkClient::terminateEnvironment
+ */
+
+/**
+ * @brief  Constructs a new TerminateEnvironmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateEnvironmentResponse::TerminateEnvironmentResponse(
+
+/**
+ * @brief  Constructs a new TerminateEnvironmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TerminateEnvironmentRequest::TerminateEnvironmentRequest(const TerminateEnvironmentRequest &other)
+    : ElasticBeanstalkRequest(new TerminateEnvironmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TerminateEnvironmentRequest object.
+ */
+TerminateEnvironmentRequest::TerminateEnvironmentRequest()
+    : ElasticBeanstalkRequest(new TerminateEnvironmentRequestPrivate(ElasticBeanstalkRequest::TerminateEnvironmentAction, this))
+{
+
+}
+
+bool TerminateEnvironmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TerminateEnvironmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TerminateEnvironmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetworkReply * const reply) const
+{
+    return new TerminateEnvironmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateEnvironmentRequestPrivate
+ *
+ * @brief  Private implementation for TerminateEnvironmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateEnvironmentRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public TerminateEnvironmentRequest instance.
+ */
+TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, TerminateEnvironmentRequest * const q)
+    : TerminateEnvironmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateEnvironmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TerminateEnvironmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TerminateEnvironmentRequest instance.
+ */
+TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
+    const TerminateEnvironmentRequestPrivate &other, TerminateEnvironmentRequest * const q)
+    : TerminateEnvironmentPrivate(other, q)
+{
+
+}

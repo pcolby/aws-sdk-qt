@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTSERVICESREQUEST_P_H
 #define QTAWS_DESCRIBEVPCENDPOINTSERVICESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevpcendpointservicesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcEndpointServicesRequest;
+
+class QTAWS_EXPORT DescribeVpcEndpointServicesRequestPrivate : public EC2Private {
+
+public:
+    DescribeVpcEndpointServicesRequestPrivate(const EC2::Action action,
+                                   DescribeVpcEndpointServicesRequest * const q);
+    DescribeVpcEndpointServicesRequestPrivate(const DescribeVpcEndpointServicesRequestPrivate &other,
+                                   DescribeVpcEndpointServicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpcEndpointServicesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

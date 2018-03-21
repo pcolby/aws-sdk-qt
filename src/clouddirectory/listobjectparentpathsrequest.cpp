@@ -19,3 +19,107 @@
 
 #include "listobjectparentpathsrequest.h"
 #include "listobjectparentpathsrequest_p.h"
+#include "listobjectparentpathsresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectParentPathsRequest
+ *
+ * @brief  Implements CloudDirectory ListObjectParentPaths requests.
+ *
+ * @see    CloudDirectoryClient::listObjectParentPaths
+ */
+
+/**
+ * @brief  Constructs a new ListObjectParentPathsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectParentPathsResponse::ListObjectParentPathsResponse(
+
+/**
+ * @brief  Constructs a new ListObjectParentPathsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectParentPathsRequest::ListObjectParentPathsRequest(const ListObjectParentPathsRequest &other)
+    : CloudDirectoryRequest(new ListObjectParentPathsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectParentPathsRequest object.
+ */
+ListObjectParentPathsRequest::ListObjectParentPathsRequest()
+    : CloudDirectoryRequest(new ListObjectParentPathsRequestPrivate(CloudDirectoryRequest::ListObjectParentPathsAction, this))
+{
+
+}
+
+bool ListObjectParentPathsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectParentPathsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectParentPathsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListObjectParentPathsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectParentPathsRequestPrivate
+ *
+ * @brief  Private implementation for ListObjectParentPathsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectParentPathsRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListObjectParentPathsRequest instance.
+ */
+ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListObjectParentPathsRequest * const q)
+    : ListObjectParentPathsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectParentPathsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectParentPathsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectParentPathsRequest instance.
+ */
+ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
+    const ListObjectParentPathsRequestPrivate &other, ListObjectParentPathsRequest * const q)
+    : ListObjectParentPathsPrivate(other, q)
+{
+
+}

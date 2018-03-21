@@ -19,3 +19,107 @@
 
 #include "createhsmconfigurationrequest.h"
 #include "createhsmconfigurationrequest_p.h"
+#include "createhsmconfigurationresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateHsmConfigurationRequest
+ *
+ * @brief  Implements Redshift CreateHsmConfiguration requests.
+ *
+ * @see    RedshiftClient::createHsmConfiguration
+ */
+
+/**
+ * @brief  Constructs a new CreateHsmConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHsmConfigurationResponse::CreateHsmConfigurationResponse(
+
+/**
+ * @brief  Constructs a new CreateHsmConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHsmConfigurationRequest::CreateHsmConfigurationRequest(const CreateHsmConfigurationRequest &other)
+    : RedshiftRequest(new CreateHsmConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHsmConfigurationRequest object.
+ */
+CreateHsmConfigurationRequest::CreateHsmConfigurationRequest()
+    : RedshiftRequest(new CreateHsmConfigurationRequestPrivate(RedshiftRequest::CreateHsmConfigurationAction, this))
+{
+
+}
+
+bool CreateHsmConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHsmConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHsmConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateHsmConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHsmConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHsmConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for CreateHsmConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmConfigurationRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateHsmConfigurationRequest instance.
+ */
+CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
+    const RedshiftRequest::Action action, CreateHsmConfigurationRequest * const q)
+    : CreateHsmConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHsmConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHsmConfigurationRequest instance.
+ */
+CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
+    const CreateHsmConfigurationRequestPrivate &other, CreateHsmConfigurationRequest * const q)
+    : CreateHsmConfigurationPrivate(other, q)
+{
+
+}

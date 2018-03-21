@@ -19,3 +19,107 @@
 
 #include "getdeployablepatchsnapshotforinstancerequest.h"
 #include "getdeployablepatchsnapshotforinstancerequest_p.h"
+#include "getdeployablepatchsnapshotforinstanceresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetDeployablePatchSnapshotForInstanceRequest
+ *
+ * @brief  Implements SSM GetDeployablePatchSnapshotForInstance requests.
+ *
+ * @see    SSMClient::getDeployablePatchSnapshotForInstance
+ */
+
+/**
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInstanceResponse(
+
+/**
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest(const GetDeployablePatchSnapshotForInstanceRequest &other)
+    : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequest object.
+ */
+GetDeployablePatchSnapshotForInstanceRequest::GetDeployablePatchSnapshotForInstanceRequest()
+    : SSMRequest(new GetDeployablePatchSnapshotForInstanceRequestPrivate(SSMRequest::GetDeployablePatchSnapshotForInstanceAction, this))
+{
+
+}
+
+bool GetDeployablePatchSnapshotForInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDeployablePatchSnapshotForInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDeployablePatchSnapshotForInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDeployablePatchSnapshotForInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeployablePatchSnapshotForInstanceRequestPrivate
+ *
+ * @brief  Private implementation for GetDeployablePatchSnapshotForInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetDeployablePatchSnapshotForInstanceRequest instance.
+ */
+GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
+    const SSMRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)
+    : GetDeployablePatchSnapshotForInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDeployablePatchSnapshotForInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDeployablePatchSnapshotForInstanceRequest instance.
+ */
+GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
+    const GetDeployablePatchSnapshotForInstanceRequestPrivate &other, GetDeployablePatchSnapshotForInstanceRequest * const q)
+    : GetDeployablePatchSnapshotForInstancePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUCKETNOTIFICATIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_GETBUCKETNOTIFICATIONCONFIGURATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "getbucketnotificationconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketNotificationConfigurationRequest;
+
+class QTAWS_EXPORT GetBucketNotificationConfigurationRequestPrivate : public S3Private {
+
+public:
+    GetBucketNotificationConfigurationRequestPrivate(const S3::Action action,
+                                   GetBucketNotificationConfigurationRequest * const q);
+    GetBucketNotificationConfigurationRequestPrivate(const GetBucketNotificationConfigurationRequestPrivate &other,
+                                   GetBucketNotificationConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketNotificationConfigurationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

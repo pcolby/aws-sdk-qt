@@ -19,3 +19,107 @@
 
 #include "getqualificationscorerequest.h"
 #include "getqualificationscorerequest_p.h"
+#include "getqualificationscoreresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetQualificationScoreRequest
+ *
+ * @brief  Implements MTurk GetQualificationScore requests.
+ *
+ * @see    MTurkClient::getQualificationScore
+ */
+
+/**
+ * @brief  Constructs a new GetQualificationScoreResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQualificationScoreResponse::GetQualificationScoreResponse(
+
+/**
+ * @brief  Constructs a new GetQualificationScoreRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetQualificationScoreRequest::GetQualificationScoreRequest(const GetQualificationScoreRequest &other)
+    : MTurkRequest(new GetQualificationScoreRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetQualificationScoreRequest object.
+ */
+GetQualificationScoreRequest::GetQualificationScoreRequest()
+    : MTurkRequest(new GetQualificationScoreRequestPrivate(MTurkRequest::GetQualificationScoreAction, this))
+{
+
+}
+
+bool GetQualificationScoreRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetQualificationScoreResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetQualificationScoreResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * GetQualificationScoreRequest::response(QNetworkReply * const reply) const
+{
+    return new GetQualificationScoreResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQualificationScoreRequestPrivate
+ *
+ * @brief  Private implementation for GetQualificationScoreRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQualificationScoreRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public GetQualificationScoreRequest instance.
+ */
+GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
+    const MTurkRequest::Action action, GetQualificationScoreRequest * const q)
+    : GetQualificationScorePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQualificationScoreRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetQualificationScoreRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetQualificationScoreRequest instance.
+ */
+GetQualificationScoreRequestPrivate::GetQualificationScoreRequestPrivate(
+    const GetQualificationScoreRequestPrivate &other, GetQualificationScoreRequest * const q)
+    : GetQualificationScorePrivate(other, q)
+{
+
+}

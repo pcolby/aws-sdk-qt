@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPIPELINEREQUEST_P_H
 #define QTAWS_UPDATEPIPELINEREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "updatepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class UpdatePipelineRequest;
+
+class QTAWS_EXPORT UpdatePipelineRequestPrivate : public CodePipelinePrivate {
+
+public:
+    UpdatePipelineRequestPrivate(const CodePipeline::Action action,
+                                   UpdatePipelineRequest * const q);
+    UpdatePipelineRequestPrivate(const UpdatePipelineRequestPrivate &other,
+                                   UpdatePipelineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePipelineRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRULESREQUEST_P_H
 #define QTAWS_LISTRULESREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "listrulesrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class ListRulesRequest;
+
+class QTAWS_EXPORT ListRulesRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    ListRulesRequestPrivate(const CloudWatchEvents::Action action,
+                                   ListRulesRequest * const q);
+    ListRulesRequestPrivate(const ListRulesRequestPrivate &other,
+                                   ListRulesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRulesRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

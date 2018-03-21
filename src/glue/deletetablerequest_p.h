@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETABLEREQUEST_P_H
 #define QTAWS_DELETETABLEREQUEST_P_H
 
+#include "glue_p.h"
+#include "deletetablerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTableRequest;
+
+class QTAWS_EXPORT DeleteTableRequestPrivate : public GluePrivate {
+
+public:
+    DeleteTableRequestPrivate(const Glue::Action action,
+                                   DeleteTableRequest * const q);
+    DeleteTableRequestPrivate(const DeleteTableRequestPrivate &other,
+                                   DeleteTableRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTableRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

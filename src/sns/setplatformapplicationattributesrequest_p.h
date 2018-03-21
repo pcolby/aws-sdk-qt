@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_P_H
 #define QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "setplatformapplicationattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetPlatformApplicationAttributesRequest;
+
+class QTAWS_EXPORT SetPlatformApplicationAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    SetPlatformApplicationAttributesRequestPrivate(const SNS::Action action,
+                                   SetPlatformApplicationAttributesRequest * const q);
+    SetPlatformApplicationAttributesRequestPrivate(const SetPlatformApplicationAttributesRequestPrivate &other,
+                                   SetPlatformApplicationAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetPlatformApplicationAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

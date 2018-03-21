@@ -19,3 +19,107 @@
 
 #include "posttextrequest.h"
 #include "posttextrequest_p.h"
+#include "posttextresponse.h"
+#include "lexruntimeservicerequest_p.h"
+
+namespace AWS {
+namespace LexRuntimeService {
+
+/**
+ * @class  PostTextRequest
+ *
+ * @brief  Implements LexRuntimeService PostText requests.
+ *
+ * @see    LexRuntimeServiceClient::postText
+ */
+
+/**
+ * @brief  Constructs a new PostTextResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostTextResponse::PostTextResponse(
+
+/**
+ * @brief  Constructs a new PostTextRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PostTextRequest::PostTextRequest(const PostTextRequest &other)
+    : LexRuntimeServiceRequest(new PostTextRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PostTextRequest object.
+ */
+PostTextRequest::PostTextRequest()
+    : LexRuntimeServiceRequest(new PostTextRequestPrivate(LexRuntimeServiceRequest::PostTextAction, this))
+{
+
+}
+
+bool PostTextRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PostTextResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PostTextResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexRuntimeServiceClient::send
+ */
+AwsAbstractResponse * PostTextRequest::response(QNetworkReply * const reply) const
+{
+    return new PostTextResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PostTextRequestPrivate
+ *
+ * @brief  Private implementation for PostTextRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostTextRequestPrivate object.
+ *
+ * @param  action  LexRuntimeService action being performed.
+ * @param  q       Pointer to this object's public PostTextRequest instance.
+ */
+PostTextRequestPrivate::PostTextRequestPrivate(
+    const LexRuntimeServiceRequest::Action action, PostTextRequest * const q)
+    : PostTextPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostTextRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PostTextRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PostTextRequest instance.
+ */
+PostTextRequestPrivate::PostTextRequestPrivate(
+    const PostTextRequestPrivate &other, PostTextRequest * const q)
+    : PostTextPrivate(other, q)
+{
+
+}

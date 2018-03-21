@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPIPELINEREQUEST_H
 #define QTAWS_DELETEPIPELINEREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class DeletePipelineRequestPrivate;
+
+class QTAWS_EXPORT DeletePipelineRequest : public CodePipelineRequest {
+
+public:
+    DeletePipelineRequest(const DeletePipelineRequest &other);
+    DeletePipelineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePipelineRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

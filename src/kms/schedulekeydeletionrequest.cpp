@@ -19,3 +19,107 @@
 
 #include "schedulekeydeletionrequest.h"
 #include "schedulekeydeletionrequest_p.h"
+#include "schedulekeydeletionresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  ScheduleKeyDeletionRequest
+ *
+ * @brief  Implements KMS ScheduleKeyDeletion requests.
+ *
+ * @see    KMSClient::scheduleKeyDeletion
+ */
+
+/**
+ * @brief  Constructs a new ScheduleKeyDeletionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
+
+/**
+ * @brief  Constructs a new ScheduleKeyDeletionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest(const ScheduleKeyDeletionRequest &other)
+    : KMSRequest(new ScheduleKeyDeletionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ScheduleKeyDeletionRequest object.
+ */
+ScheduleKeyDeletionRequest::ScheduleKeyDeletionRequest()
+    : KMSRequest(new ScheduleKeyDeletionRequestPrivate(KMSRequest::ScheduleKeyDeletionAction, this))
+{
+
+}
+
+bool ScheduleKeyDeletionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ScheduleKeyDeletionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ScheduleKeyDeletionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetworkReply * const reply) const
+{
+    return new ScheduleKeyDeletionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ScheduleKeyDeletionRequestPrivate
+ *
+ * @brief  Private implementation for ScheduleKeyDeletionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScheduleKeyDeletionRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public ScheduleKeyDeletionRequest instance.
+ */
+ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
+    const KMSRequest::Action action, ScheduleKeyDeletionRequest * const q)
+    : ScheduleKeyDeletionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScheduleKeyDeletionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ScheduleKeyDeletionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ScheduleKeyDeletionRequest instance.
+ */
+ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
+    const ScheduleKeyDeletionRequestPrivate &other, ScheduleKeyDeletionRequest * const q)
+    : ScheduleKeyDeletionPrivate(other, q)
+{
+
+}

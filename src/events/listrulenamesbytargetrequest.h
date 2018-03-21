@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRULENAMESBYTARGETREQUEST_H
 #define QTAWS_LISTRULENAMESBYTARGETREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class ListRuleNamesByTargetRequestPrivate;
+
+class QTAWS_EXPORT ListRuleNamesByTargetRequest : public CloudWatchEventsRequest {
+
+public:
+    ListRuleNamesByTargetRequest(const ListRuleNamesByTargetRequest &other);
+    ListRuleNamesByTargetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRuleNamesByTargetRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

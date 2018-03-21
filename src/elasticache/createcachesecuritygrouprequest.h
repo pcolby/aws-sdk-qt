@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECACHESECURITYGROUPREQUEST_H
 #define QTAWS_CREATECACHESECURITYGROUPREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheSecurityGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateCacheSecurityGroupRequest : public ElastiCacheRequest {
+
+public:
+    CreateCacheSecurityGroupRequest(const CreateCacheSecurityGroupRequest &other);
+    CreateCacheSecurityGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCacheSecurityGroupRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

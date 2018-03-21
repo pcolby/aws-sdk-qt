@@ -19,3 +19,107 @@
 
 #include "listattachedpoliciesrequest.h"
 #include "listattachedpoliciesrequest_p.h"
+#include "listattachedpoliciesresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListAttachedPoliciesRequest
+ *
+ * @brief  Implements IoT ListAttachedPolicies requests.
+ *
+ * @see    IoTClient::listAttachedPolicies
+ */
+
+/**
+ * @brief  Constructs a new ListAttachedPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAttachedPoliciesResponse::ListAttachedPoliciesResponse(
+
+/**
+ * @brief  Constructs a new ListAttachedPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAttachedPoliciesRequest::ListAttachedPoliciesRequest(const ListAttachedPoliciesRequest &other)
+    : IoTRequest(new ListAttachedPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAttachedPoliciesRequest object.
+ */
+ListAttachedPoliciesRequest::ListAttachedPoliciesRequest()
+    : IoTRequest(new ListAttachedPoliciesRequestPrivate(IoTRequest::ListAttachedPoliciesAction, this))
+{
+
+}
+
+bool ListAttachedPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAttachedPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAttachedPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListAttachedPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAttachedPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAttachedPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for ListAttachedPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedPoliciesRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListAttachedPoliciesRequest instance.
+ */
+ListAttachedPoliciesRequestPrivate::ListAttachedPoliciesRequestPrivate(
+    const IoTRequest::Action action, ListAttachedPoliciesRequest * const q)
+    : ListAttachedPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAttachedPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAttachedPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAttachedPoliciesRequest instance.
+ */
+ListAttachedPoliciesRequestPrivate::ListAttachedPoliciesRequestPrivate(
+    const ListAttachedPoliciesRequestPrivate &other, ListAttachedPoliciesRequest * const q)
+    : ListAttachedPoliciesPrivate(other, q)
+{
+
+}

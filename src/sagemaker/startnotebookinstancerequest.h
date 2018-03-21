@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTNOTEBOOKINSTANCEREQUEST_H
 #define QTAWS_STARTNOTEBOOKINSTANCEREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class StartNotebookInstanceRequestPrivate;
+
+class QTAWS_EXPORT StartNotebookInstanceRequest : public SageMakerRequest {
+
+public:
+    StartNotebookInstanceRequest(const StartNotebookInstanceRequest &other);
+    StartNotebookInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartNotebookInstanceRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

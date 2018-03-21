@@ -19,3 +19,107 @@
 
 #include "stopcrawlerschedulerequest.h"
 #include "stopcrawlerschedulerequest_p.h"
+#include "stopcrawlerscheduleresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StopCrawlerScheduleRequest
+ *
+ * @brief  Implements Glue StopCrawlerSchedule requests.
+ *
+ * @see    GlueClient::stopCrawlerSchedule
+ */
+
+/**
+ * @brief  Constructs a new StopCrawlerScheduleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopCrawlerScheduleResponse::StopCrawlerScheduleResponse(
+
+/**
+ * @brief  Constructs a new StopCrawlerScheduleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopCrawlerScheduleRequest::StopCrawlerScheduleRequest(const StopCrawlerScheduleRequest &other)
+    : GlueRequest(new StopCrawlerScheduleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopCrawlerScheduleRequest object.
+ */
+StopCrawlerScheduleRequest::StopCrawlerScheduleRequest()
+    : GlueRequest(new StopCrawlerScheduleRequestPrivate(GlueRequest::StopCrawlerScheduleAction, this))
+{
+
+}
+
+bool StopCrawlerScheduleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopCrawlerScheduleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopCrawlerScheduleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StopCrawlerScheduleRequest::response(QNetworkReply * const reply) const
+{
+    return new StopCrawlerScheduleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopCrawlerScheduleRequestPrivate
+ *
+ * @brief  Private implementation for StopCrawlerScheduleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerScheduleRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StopCrawlerScheduleRequest instance.
+ */
+StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
+    const GlueRequest::Action action, StopCrawlerScheduleRequest * const q)
+    : StopCrawlerSchedulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopCrawlerScheduleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopCrawlerScheduleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopCrawlerScheduleRequest instance.
+ */
+StopCrawlerScheduleRequestPrivate::StopCrawlerScheduleRequestPrivate(
+    const StopCrawlerScheduleRequestPrivate &other, StopCrawlerScheduleRequest * const q)
+    : StopCrawlerSchedulePrivate(other, q)
+{
+
+}

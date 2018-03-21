@@ -19,3 +19,107 @@
 
 #include "authorizecachesecuritygroupingressrequest.h"
 #include "authorizecachesecuritygroupingressrequest_p.h"
+#include "authorizecachesecuritygroupingressresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  AuthorizeCacheSecurityGroupIngressRequest
+ *
+ * @brief  Implements ElastiCache AuthorizeCacheSecurityGroupIngress requests.
+ *
+ * @see    ElastiCacheClient::authorizeCacheSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeCacheSecurityGroupIngressResponse::AuthorizeCacheSecurityGroupIngressResponse(
+
+/**
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressRequest(const AuthorizeCacheSecurityGroupIngressRequest &other)
+    : ElastiCacheRequest(new AuthorizeCacheSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequest object.
+ */
+AuthorizeCacheSecurityGroupIngressRequest::AuthorizeCacheSecurityGroupIngressRequest()
+    : ElastiCacheRequest(new AuthorizeCacheSecurityGroupIngressRequestPrivate(ElastiCacheRequest::AuthorizeCacheSecurityGroupIngressAction, this))
+{
+
+}
+
+bool AuthorizeCacheSecurityGroupIngressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AuthorizeCacheSecurityGroupIngressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AuthorizeCacheSecurityGroupIngressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+{
+    return new AuthorizeCacheSecurityGroupIngressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeCacheSecurityGroupIngressRequestPrivate
+ *
+ * @brief  Private implementation for AuthorizeCacheSecurityGroupIngressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public AuthorizeCacheSecurityGroupIngressRequest instance.
+ */
+AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
+    const ElastiCacheRequest::Action action, AuthorizeCacheSecurityGroupIngressRequest * const q)
+    : AuthorizeCacheSecurityGroupIngressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AuthorizeCacheSecurityGroupIngressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AuthorizeCacheSecurityGroupIngressRequest instance.
+ */
+AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
+    const AuthorizeCacheSecurityGroupIngressRequestPrivate &other, AuthorizeCacheSecurityGroupIngressRequest * const q)
+    : AuthorizeCacheSecurityGroupIngressPrivate(other, q)
+{
+
+}

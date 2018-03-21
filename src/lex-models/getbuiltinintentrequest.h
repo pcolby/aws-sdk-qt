@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUILTININTENTREQUEST_H
 #define QTAWS_GETBUILTININTENTREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBuiltinIntentRequestPrivate;
+
+class QTAWS_EXPORT GetBuiltinIntentRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetBuiltinIntentRequest(const GetBuiltinIntentRequest &other);
+    GetBuiltinIntentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBuiltinIntentRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

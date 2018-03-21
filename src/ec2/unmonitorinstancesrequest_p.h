@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNMONITORINSTANCESREQUEST_P_H
 #define QTAWS_UNMONITORINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "unmonitorinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UnmonitorInstancesRequest;
+
+class QTAWS_EXPORT UnmonitorInstancesRequestPrivate : public EC2Private {
+
+public:
+    UnmonitorInstancesRequestPrivate(const EC2::Action action,
+                                   UnmonitorInstancesRequest * const q);
+    UnmonitorInstancesRequestPrivate(const UnmonitorInstancesRequestPrivate &other,
+                                   UnmonitorInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnmonitorInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

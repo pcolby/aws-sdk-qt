@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETECTMODERATIONLABELSREQUEST_H
 #define QTAWS_DETECTMODERATIONLABELSREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DetectModerationLabelsRequestPrivate;
+
+class QTAWS_EXPORT DetectModerationLabelsRequest : public RekognitionRequest {
+
+public:
+    DetectModerationLabelsRequest(const DetectModerationLabelsRequest &other);
+    DetectModerationLabelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetectModerationLabelsRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updateresourceserverrequest.h"
 #include "updateresourceserverrequest_p.h"
+#include "updateresourceserverresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  UpdateResourceServerRequest
+ *
+ * @brief  Implements CognitoIdentityProvider UpdateResourceServer requests.
+ *
+ * @see    CognitoIdentityProviderClient::updateResourceServer
+ */
+
+/**
+ * @brief  Constructs a new UpdateResourceServerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateResourceServerResponse::UpdateResourceServerResponse(
+
+/**
+ * @brief  Constructs a new UpdateResourceServerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateResourceServerRequest::UpdateResourceServerRequest(const UpdateResourceServerRequest &other)
+    : CognitoIdentityProviderRequest(new UpdateResourceServerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateResourceServerRequest object.
+ */
+UpdateResourceServerRequest::UpdateResourceServerRequest()
+    : CognitoIdentityProviderRequest(new UpdateResourceServerRequestPrivate(CognitoIdentityProviderRequest::UpdateResourceServerAction, this))
+{
+
+}
+
+bool UpdateResourceServerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateResourceServerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateResourceServerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * UpdateResourceServerRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateResourceServerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateResourceServerRequestPrivate
+ *
+ * @brief  Private implementation for UpdateResourceServerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceServerRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public UpdateResourceServerRequest instance.
+ */
+UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, UpdateResourceServerRequest * const q)
+    : UpdateResourceServerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceServerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateResourceServerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateResourceServerRequest instance.
+ */
+UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
+    const UpdateResourceServerRequestPrivate &other, UpdateResourceServerRequest * const q)
+    : UpdateResourceServerPrivate(other, q)
+{
+
+}

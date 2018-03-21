@@ -19,3 +19,107 @@
 
 #include "listpolicyprincipalsrequest.h"
 #include "listpolicyprincipalsrequest_p.h"
+#include "listpolicyprincipalsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListPolicyPrincipalsRequest
+ *
+ * @brief  Implements IoT ListPolicyPrincipals requests.
+ *
+ * @see    IoTClient::listPolicyPrincipals
+ */
+
+/**
+ * @brief  Constructs a new ListPolicyPrincipalsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPolicyPrincipalsResponse::ListPolicyPrincipalsResponse(
+
+/**
+ * @brief  Constructs a new ListPolicyPrincipalsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPolicyPrincipalsRequest::ListPolicyPrincipalsRequest(const ListPolicyPrincipalsRequest &other)
+    : IoTRequest(new ListPolicyPrincipalsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPolicyPrincipalsRequest object.
+ */
+ListPolicyPrincipalsRequest::ListPolicyPrincipalsRequest()
+    : IoTRequest(new ListPolicyPrincipalsRequestPrivate(IoTRequest::ListPolicyPrincipalsAction, this))
+{
+
+}
+
+bool ListPolicyPrincipalsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPolicyPrincipalsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPolicyPrincipalsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListPolicyPrincipalsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPolicyPrincipalsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPolicyPrincipalsRequestPrivate
+ *
+ * @brief  Private implementation for ListPolicyPrincipalsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyPrincipalsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListPolicyPrincipalsRequest instance.
+ */
+ListPolicyPrincipalsRequestPrivate::ListPolicyPrincipalsRequestPrivate(
+    const IoTRequest::Action action, ListPolicyPrincipalsRequest * const q)
+    : ListPolicyPrincipalsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyPrincipalsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPolicyPrincipalsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPolicyPrincipalsRequest instance.
+ */
+ListPolicyPrincipalsRequestPrivate::ListPolicyPrincipalsRequestPrivate(
+    const ListPolicyPrincipalsRequestPrivate &other, ListPolicyPrincipalsRequest * const q)
+    : ListPolicyPrincipalsPrivate(other, q)
+{
+
+}

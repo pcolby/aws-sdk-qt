@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREPOSITORYPOLICYREQUEST_P_H
 #define QTAWS_DELETEREPOSITORYPOLICYREQUEST_P_H
 
+#include "ecr_p.h"
+#include "deleterepositorypolicyrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DeleteRepositoryPolicyRequest;
+
+class QTAWS_EXPORT DeleteRepositoryPolicyRequestPrivate : public ECRPrivate {
+
+public:
+    DeleteRepositoryPolicyRequestPrivate(const ECR::Action action,
+                                   DeleteRepositoryPolicyRequest * const q);
+    DeleteRepositoryPolicyRequestPrivate(const DeleteRepositoryPolicyRequestPrivate &other,
+                                   DeleteRepositoryPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRepositoryPolicyRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

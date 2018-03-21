@@ -19,3 +19,107 @@
 
 #include "createintentversionrequest.h"
 #include "createintentversionrequest_p.h"
+#include "createintentversionresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  CreateIntentVersionRequest
+ *
+ * @brief  Implements LexModelBuildingService CreateIntentVersion requests.
+ *
+ * @see    LexModelBuildingServiceClient::createIntentVersion
+ */
+
+/**
+ * @brief  Constructs a new CreateIntentVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateIntentVersionResponse::CreateIntentVersionResponse(
+
+/**
+ * @brief  Constructs a new CreateIntentVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateIntentVersionRequest::CreateIntentVersionRequest(const CreateIntentVersionRequest &other)
+    : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateIntentVersionRequest object.
+ */
+CreateIntentVersionRequest::CreateIntentVersionRequest()
+    : LexModelBuildingServiceRequest(new CreateIntentVersionRequestPrivate(LexModelBuildingServiceRequest::CreateIntentVersionAction, this))
+{
+
+}
+
+bool CreateIntentVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateIntentVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateIntentVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * CreateIntentVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateIntentVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateIntentVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreateIntentVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIntentVersionRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public CreateIntentVersionRequest instance.
+ */
+CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, CreateIntentVersionRequest * const q)
+    : CreateIntentVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateIntentVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateIntentVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateIntentVersionRequest instance.
+ */
+CreateIntentVersionRequestPrivate::CreateIntentVersionRequestPrivate(
+    const CreateIntentVersionRequestPrivate &other, CreateIntentVersionRequest * const q)
+    : CreateIntentVersionPrivate(other, q)
+{
+
+}

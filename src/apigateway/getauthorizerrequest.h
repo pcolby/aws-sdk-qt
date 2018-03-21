@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAUTHORIZERREQUEST_H
 #define QTAWS_GETAUTHORIZERREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT GetAuthorizerRequest : public APIGatewayRequest {
+
+public:
+    GetAuthorizerRequest(const GetAuthorizerRequest &other);
+    GetAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAuthorizerRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

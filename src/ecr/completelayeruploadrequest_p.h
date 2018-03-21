@@ -20,4 +20,29 @@
 #ifndef QTAWS_COMPLETELAYERUPLOADREQUEST_P_H
 #define QTAWS_COMPLETELAYERUPLOADREQUEST_P_H
 
+#include "ecr_p.h"
+#include "completelayeruploadrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class CompleteLayerUploadRequest;
+
+class QTAWS_EXPORT CompleteLayerUploadRequestPrivate : public ECRPrivate {
+
+public:
+    CompleteLayerUploadRequestPrivate(const ECR::Action action,
+                                   CompleteLayerUploadRequest * const q);
+    CompleteLayerUploadRequestPrivate(const CompleteLayerUploadRequestPrivate &other,
+                                   CompleteLayerUploadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CompleteLayerUploadRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

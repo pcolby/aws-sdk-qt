@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETLOCATIONREQUEST_H
 #define QTAWS_GETBUCKETLOCATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketLocationRequestPrivate;
+
+class QTAWS_EXPORT GetBucketLocationRequest : public S3Request {
+
+public:
+    GetBucketLocationRequest(const GetBucketLocationRequest &other);
+    GetBucketLocationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketLocationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

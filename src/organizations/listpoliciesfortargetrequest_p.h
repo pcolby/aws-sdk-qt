@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPOLICIESFORTARGETREQUEST_P_H
 #define QTAWS_LISTPOLICIESFORTARGETREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listpoliciesfortargetrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListPoliciesForTargetRequest;
+
+class QTAWS_EXPORT ListPoliciesForTargetRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListPoliciesForTargetRequestPrivate(const Organizations::Action action,
+                                   ListPoliciesForTargetRequest * const q);
+    ListPoliciesForTargetRequestPrivate(const ListPoliciesForTargetRequestPrivate &other,
+                                   ListPoliciesForTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPoliciesForTargetRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

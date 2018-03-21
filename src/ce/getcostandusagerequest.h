@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCOSTANDUSAGEREQUEST_H
 #define QTAWS_GETCOSTANDUSAGEREQUEST_H
 
+#include "costexplorerrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetCostAndUsageRequestPrivate;
+
+class QTAWS_EXPORT GetCostAndUsageRequest : public CostExplorerRequest {
+
+public:
+    GetCostAndUsageRequest(const GetCostAndUsageRequest &other);
+    GetCostAndUsageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCostAndUsageRequest)
+
+}
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

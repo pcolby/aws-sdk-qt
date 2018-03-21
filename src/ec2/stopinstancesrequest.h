@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPINSTANCESREQUEST_H
 #define QTAWS_STOPINSTANCESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class StopInstancesRequestPrivate;
+
+class QTAWS_EXPORT StopInstancesRequest : public EC2Request {
+
+public:
+    StopInstancesRequest(const StopInstancesRequest &other);
+    StopInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopInstancesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

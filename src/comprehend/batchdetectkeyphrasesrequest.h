@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDETECTKEYPHRASESREQUEST_H
 #define QTAWS_BATCHDETECTKEYPHRASESREQUEST_H
 
+#include "comprehendrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectKeyPhrasesRequestPrivate;
+
+class QTAWS_EXPORT BatchDetectKeyPhrasesRequest : public ComprehendRequest {
+
+public:
+    BatchDetectKeyPhrasesRequest(const BatchDetectKeyPhrasesRequest &other);
+    BatchDetectKeyPhrasesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectKeyPhrasesRequest)
+
+}
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

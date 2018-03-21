@@ -19,3 +19,107 @@
 
 #include "describeapplicationstaterequest.h"
 #include "describeapplicationstaterequest_p.h"
+#include "describeapplicationstateresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DescribeApplicationStateRequest
+ *
+ * @brief  Implements MigrationHub DescribeApplicationState requests.
+ *
+ * @see    MigrationHubClient::describeApplicationState
+ */
+
+/**
+ * @brief  Constructs a new DescribeApplicationStateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationStateResponse::DescribeApplicationStateResponse(
+
+/**
+ * @brief  Constructs a new DescribeApplicationStateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeApplicationStateRequest::DescribeApplicationStateRequest(const DescribeApplicationStateRequest &other)
+    : MigrationHubRequest(new DescribeApplicationStateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeApplicationStateRequest object.
+ */
+DescribeApplicationStateRequest::DescribeApplicationStateRequest()
+    : MigrationHubRequest(new DescribeApplicationStateRequestPrivate(MigrationHubRequest::DescribeApplicationStateAction, this))
+{
+
+}
+
+bool DescribeApplicationStateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeApplicationStateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeApplicationStateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * DescribeApplicationStateRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeApplicationStateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationStateRequestPrivate
+ *
+ * @brief  Private implementation for DescribeApplicationStateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationStateRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public DescribeApplicationStateRequest instance.
+ */
+DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
+    const MigrationHubRequest::Action action, DescribeApplicationStateRequest * const q)
+    : DescribeApplicationStatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationStateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeApplicationStateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeApplicationStateRequest instance.
+ */
+DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
+    const DescribeApplicationStateRequestPrivate &other, DescribeApplicationStateRequest * const q)
+    : DescribeApplicationStatePrivate(other, q)
+{
+
+}

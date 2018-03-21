@@ -19,3 +19,107 @@
 
 #include "updateuserprofilerequest.h"
 #include "updateuserprofilerequest_p.h"
+#include "updateuserprofileresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  UpdateUserProfileRequest
+ *
+ * @brief  Implements CodeStar UpdateUserProfile requests.
+ *
+ * @see    CodeStarClient::updateUserProfile
+ */
+
+/**
+ * @brief  Constructs a new UpdateUserProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserProfileResponse::UpdateUserProfileResponse(
+
+/**
+ * @brief  Constructs a new UpdateUserProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateUserProfileRequest::UpdateUserProfileRequest(const UpdateUserProfileRequest &other)
+    : CodeStarRequest(new UpdateUserProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateUserProfileRequest object.
+ */
+UpdateUserProfileRequest::UpdateUserProfileRequest()
+    : CodeStarRequest(new UpdateUserProfileRequestPrivate(CodeStarRequest::UpdateUserProfileAction, this))
+{
+
+}
+
+bool UpdateUserProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateUserProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateUserProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateUserProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserProfileRequestPrivate
+ *
+ * @brief  Private implementation for UpdateUserProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserProfileRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public UpdateUserProfileRequest instance.
+ */
+UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
+    const CodeStarRequest::Action action, UpdateUserProfileRequest * const q)
+    : UpdateUserProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateUserProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateUserProfileRequest instance.
+ */
+UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
+    const UpdateUserProfileRequestPrivate &other, UpdateUserProfileRequest * const q)
+    : UpdateUserProfilePrivate(other, q)
+{
+
+}

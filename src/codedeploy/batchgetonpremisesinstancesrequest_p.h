@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "batchgetonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class BatchGetOnPremisesInstancesRequest;
+
+class QTAWS_EXPORT BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+
+public:
+    BatchGetOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+                                   BatchGetOnPremisesInstancesRequest * const q);
+    BatchGetOnPremisesInstancesRequestPrivate(const BatchGetOnPremisesInstancesRequestPrivate &other,
+                                   BatchGetOnPremisesInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetOnPremisesInstancesRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

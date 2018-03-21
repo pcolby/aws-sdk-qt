@@ -19,3 +19,107 @@
 
 #include "updateuserrequest.h"
 #include "updateuserrequest_p.h"
+#include "updateuserresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateUserRequest
+ *
+ * @brief  Implements IAM UpdateUser requests.
+ *
+ * @see    IAMClient::updateUser
+ */
+
+/**
+ * @brief  Constructs a new UpdateUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateUserResponse::UpdateUserResponse(
+
+/**
+ * @brief  Constructs a new UpdateUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateUserRequest::UpdateUserRequest(const UpdateUserRequest &other)
+    : IAMRequest(new UpdateUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateUserRequest object.
+ */
+UpdateUserRequest::UpdateUserRequest()
+    : IAMRequest(new UpdateUserRequestPrivate(IAMRequest::UpdateUserAction, this))
+{
+
+}
+
+bool UpdateUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateUserRequestPrivate
+ *
+ * @brief  Private implementation for UpdateUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateUserRequest instance.
+ */
+UpdateUserRequestPrivate::UpdateUserRequestPrivate(
+    const IAMRequest::Action action, UpdateUserRequest * const q)
+    : UpdateUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateUserRequest instance.
+ */
+UpdateUserRequestPrivate::UpdateUserRequestPrivate(
+    const UpdateUserRequestPrivate &other, UpdateUserRequest * const q)
+    : UpdateUserPrivate(other, q)
+{
+
+}

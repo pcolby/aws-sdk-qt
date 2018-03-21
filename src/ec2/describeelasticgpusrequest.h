@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEELASTICGPUSREQUEST_H
 #define QTAWS_DESCRIBEELASTICGPUSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeElasticGpusRequestPrivate;
+
+class QTAWS_EXPORT DescribeElasticGpusRequest : public EC2Request {
+
+public:
+    DescribeElasticGpusRequest(const DescribeElasticGpusRequest &other);
+    DescribeElasticGpusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticGpusRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

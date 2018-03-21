@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDISTRIBUTIONREQUEST_H
 #define QTAWS_GETDISTRIBUTIONREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class GetDistributionRequestPrivate;
+
+class QTAWS_EXPORT GetDistributionRequest : public CloudFrontRequest {
+
+public:
+    GetDistributionRequest(const GetDistributionRequest &other);
+    GetDistributionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDistributionRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createnetworkaclentryrequest.h"
 #include "createnetworkaclentryrequest_p.h"
+#include "createnetworkaclentryresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateNetworkAclEntryRequest
+ *
+ * @brief  Implements EC2 CreateNetworkAclEntry requests.
+ *
+ * @see    EC2Client::createNetworkAclEntry
+ */
+
+/**
+ * @brief  Constructs a new CreateNetworkAclEntryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNetworkAclEntryResponse::CreateNetworkAclEntryResponse(
+
+/**
+ * @brief  Constructs a new CreateNetworkAclEntryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest(const CreateNetworkAclEntryRequest &other)
+    : EC2Request(new CreateNetworkAclEntryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateNetworkAclEntryRequest object.
+ */
+CreateNetworkAclEntryRequest::CreateNetworkAclEntryRequest()
+    : EC2Request(new CreateNetworkAclEntryRequestPrivate(EC2Request::CreateNetworkAclEntryAction, this))
+{
+
+}
+
+bool CreateNetworkAclEntryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateNetworkAclEntryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateNetworkAclEntryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateNetworkAclEntryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNetworkAclEntryRequestPrivate
+ *
+ * @brief  Private implementation for CreateNetworkAclEntryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkAclEntryRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateNetworkAclEntryRequest instance.
+ */
+CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
+    const EC2Request::Action action, CreateNetworkAclEntryRequest * const q)
+    : CreateNetworkAclEntryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkAclEntryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateNetworkAclEntryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateNetworkAclEntryRequest instance.
+ */
+CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
+    const CreateNetworkAclEntryRequestPrivate &other, CreateNetworkAclEntryRequest * const q)
+    : CreateNetworkAclEntryPrivate(other, q)
+{
+
+}

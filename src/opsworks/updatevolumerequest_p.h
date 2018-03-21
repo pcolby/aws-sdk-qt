@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEVOLUMEREQUEST_P_H
 #define QTAWS_UPDATEVOLUMEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "updatevolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateVolumeRequest;
+
+class QTAWS_EXPORT UpdateVolumeRequestPrivate : public OpsWorksPrivate {
+
+public:
+    UpdateVolumeRequestPrivate(const OpsWorks::Action action,
+                                   UpdateVolumeRequest * const q);
+    UpdateVolumeRequestPrivate(const UpdateVolumeRequestPrivate &other,
+                                   UpdateVolumeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateVolumeRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

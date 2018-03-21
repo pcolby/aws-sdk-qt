@@ -19,3 +19,107 @@
 
 #include "deletesegmentrequest.h"
 #include "deletesegmentrequest_p.h"
+#include "deletesegmentresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteSegmentRequest
+ *
+ * @brief  Implements Pinpoint DeleteSegment requests.
+ *
+ * @see    PinpointClient::deleteSegment
+ */
+
+/**
+ * @brief  Constructs a new DeleteSegmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSegmentResponse::DeleteSegmentResponse(
+
+/**
+ * @brief  Constructs a new DeleteSegmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSegmentRequest::DeleteSegmentRequest(const DeleteSegmentRequest &other)
+    : PinpointRequest(new DeleteSegmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSegmentRequest object.
+ */
+DeleteSegmentRequest::DeleteSegmentRequest()
+    : PinpointRequest(new DeleteSegmentRequestPrivate(PinpointRequest::DeleteSegmentAction, this))
+{
+
+}
+
+bool DeleteSegmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSegmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSegmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSegmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSegmentRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSegmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSegmentRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public DeleteSegmentRequest instance.
+ */
+DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
+    const PinpointRequest::Action action, DeleteSegmentRequest * const q)
+    : DeleteSegmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSegmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSegmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSegmentRequest instance.
+ */
+DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
+    const DeleteSegmentRequestPrivate &other, DeleteSegmentRequest * const q)
+    : DeleteSegmentPrivate(other, q)
+{
+
+}

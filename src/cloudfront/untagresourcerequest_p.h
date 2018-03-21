@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "untagresourcerequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class UntagResourceRequest;
+
+class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudFrontPrivate {
+
+public:
+    UntagResourceRequestPrivate(const CloudFront::Action action,
+                                   UntagResourceRequest * const q);
+    UntagResourceRequestPrivate(const UntagResourceRequestPrivate &other,
+                                   UntagResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagResourceRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

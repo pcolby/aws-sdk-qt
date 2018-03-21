@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RemoveTagsFromResourceRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromResourceRequest : public RDSRequest {
+
+public:
+    RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);
+    RemoveTagsFromResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromResourceRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

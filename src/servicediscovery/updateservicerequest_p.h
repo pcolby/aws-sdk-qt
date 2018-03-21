@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESERVICEREQUEST_P_H
 #define QTAWS_UPDATESERVICEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "updateservicerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class UpdateServiceRequest;
+
+class QTAWS_EXPORT UpdateServiceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    UpdateServiceRequestPrivate(const ServiceDiscovery::Action action,
+                                   UpdateServiceRequest * const q);
+    UpdateServiceRequestPrivate(const UpdateServiceRequestPrivate &other,
+                                   UpdateServiceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

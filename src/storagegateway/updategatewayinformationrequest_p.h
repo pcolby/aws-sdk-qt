@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGATEWAYINFORMATIONREQUEST_P_H
 #define QTAWS_UPDATEGATEWAYINFORMATIONREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "updategatewayinformationrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateGatewayInformationRequest;
+
+class QTAWS_EXPORT UpdateGatewayInformationRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    UpdateGatewayInformationRequestPrivate(const StorageGateway::Action action,
+                                   UpdateGatewayInformationRequest * const q);
+    UpdateGatewayInformationRequestPrivate(const UpdateGatewayInformationRequestPrivate &other,
+                                   UpdateGatewayInformationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGatewayInformationRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

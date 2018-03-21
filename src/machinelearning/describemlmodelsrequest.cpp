@@ -19,3 +19,107 @@
 
 #include "describemlmodelsrequest.h"
 #include "describemlmodelsrequest_p.h"
+#include "describemlmodelsresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DescribeMLModelsRequest
+ *
+ * @brief  Implements MachineLearning DescribeMLModels requests.
+ *
+ * @see    MachineLearningClient::describeMLModels
+ */
+
+/**
+ * @brief  Constructs a new DescribeMLModelsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMLModelsResponse::DescribeMLModelsResponse(
+
+/**
+ * @brief  Constructs a new DescribeMLModelsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMLModelsRequest::DescribeMLModelsRequest(const DescribeMLModelsRequest &other)
+    : MachineLearningRequest(new DescribeMLModelsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMLModelsRequest object.
+ */
+DescribeMLModelsRequest::DescribeMLModelsRequest()
+    : MachineLearningRequest(new DescribeMLModelsRequestPrivate(MachineLearningRequest::DescribeMLModelsAction, this))
+{
+
+}
+
+bool DescribeMLModelsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMLModelsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMLModelsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMLModelsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMLModelsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMLModelsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMLModelsRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public DescribeMLModelsRequest instance.
+ */
+DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
+    const MachineLearningRequest::Action action, DescribeMLModelsRequest * const q)
+    : DescribeMLModelsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMLModelsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMLModelsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMLModelsRequest instance.
+ */
+DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
+    const DescribeMLModelsRequestPrivate &other, DescribeMLModelsRequest * const q)
+    : DescribeMLModelsPrivate(other, q)
+{
+
+}

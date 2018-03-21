@@ -20,4 +20,32 @@
 #ifndef QTAWS_POLLFORDECISIONTASKREQUEST_H
 #define QTAWS_POLLFORDECISIONTASKREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class PollForDecisionTaskRequestPrivate;
+
+class QTAWS_EXPORT PollForDecisionTaskRequest : public SWFRequest {
+
+public:
+    PollForDecisionTaskRequest(const PollForDecisionTaskRequest &other);
+    PollForDecisionTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PollForDecisionTaskRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

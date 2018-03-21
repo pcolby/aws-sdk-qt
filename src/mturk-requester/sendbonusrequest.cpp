@@ -19,3 +19,107 @@
 
 #include "sendbonusrequest.h"
 #include "sendbonusrequest_p.h"
+#include "sendbonusresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  SendBonusRequest
+ *
+ * @brief  Implements MTurk SendBonus requests.
+ *
+ * @see    MTurkClient::sendBonus
+ */
+
+/**
+ * @brief  Constructs a new SendBonusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendBonusResponse::SendBonusResponse(
+
+/**
+ * @brief  Constructs a new SendBonusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendBonusRequest::SendBonusRequest(const SendBonusRequest &other)
+    : MTurkRequest(new SendBonusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendBonusRequest object.
+ */
+SendBonusRequest::SendBonusRequest()
+    : MTurkRequest(new SendBonusRequestPrivate(MTurkRequest::SendBonusAction, this))
+{
+
+}
+
+bool SendBonusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendBonusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendBonusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * const reply) const
+{
+    return new SendBonusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendBonusRequestPrivate
+ *
+ * @brief  Private implementation for SendBonusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBonusRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public SendBonusRequest instance.
+ */
+SendBonusRequestPrivate::SendBonusRequestPrivate(
+    const MTurkRequest::Action action, SendBonusRequest * const q)
+    : SendBonusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBonusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendBonusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendBonusRequest instance.
+ */
+SendBonusRequestPrivate::SendBonusRequestPrivate(
+    const SendBonusRequestPrivate &other, SendBonusRequest * const q)
+    : SendBonusPrivate(other, q)
+{
+
+}

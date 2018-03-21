@@ -19,3 +19,107 @@
 
 #include "describelunaclientrequest.h"
 #include "describelunaclientrequest_p.h"
+#include "describelunaclientresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  DescribeLunaClientRequest
+ *
+ * @brief  Implements CloudHSM DescribeLunaClient requests.
+ *
+ * @see    CloudHSMClient::describeLunaClient
+ */
+
+/**
+ * @brief  Constructs a new DescribeLunaClientResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLunaClientResponse::DescribeLunaClientResponse(
+
+/**
+ * @brief  Constructs a new DescribeLunaClientRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLunaClientRequest::DescribeLunaClientRequest(const DescribeLunaClientRequest &other)
+    : CloudHSMRequest(new DescribeLunaClientRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLunaClientRequest object.
+ */
+DescribeLunaClientRequest::DescribeLunaClientRequest()
+    : CloudHSMRequest(new DescribeLunaClientRequestPrivate(CloudHSMRequest::DescribeLunaClientAction, this))
+{
+
+}
+
+bool DescribeLunaClientRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLunaClientResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLunaClientResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * DescribeLunaClientRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLunaClientResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLunaClientRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLunaClientRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLunaClientRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public DescribeLunaClientRequest instance.
+ */
+DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
+    const CloudHSMRequest::Action action, DescribeLunaClientRequest * const q)
+    : DescribeLunaClientPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLunaClientRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLunaClientRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLunaClientRequest instance.
+ */
+DescribeLunaClientRequestPrivate::DescribeLunaClientRequestPrivate(
+    const DescribeLunaClientRequestPrivate &other, DescribeLunaClientRequest * const q)
+    : DescribeLunaClientPrivate(other, q)
+{
+
+}

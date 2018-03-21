@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEITEMREQUEST_P_H
 #define QTAWS_UPDATEITEMREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "updateitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class UpdateItemRequest;
+
+class QTAWS_EXPORT UpdateItemRequestPrivate : public DynamoDBPrivate {
+
+public:
+    UpdateItemRequestPrivate(const DynamoDB::Action action,
+                                   UpdateItemRequest * const q);
+    UpdateItemRequestPrivate(const UpdateItemRequestPrivate &other,
+                                   UpdateItemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateItemRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

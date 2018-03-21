@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEWORKERBLOCKREQUEST_H
 #define QTAWS_CREATEWORKERBLOCKREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class CreateWorkerBlockRequestPrivate;
+
+class QTAWS_EXPORT CreateWorkerBlockRequest : public MTurkRequest {
+
+public:
+    CreateWorkerBlockRequest(const CreateWorkerBlockRequest &other);
+    CreateWorkerBlockRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateWorkerBlockRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

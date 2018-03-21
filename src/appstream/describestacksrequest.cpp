@@ -19,3 +19,107 @@
 
 #include "describestacksrequest.h"
 #include "describestacksrequest_p.h"
+#include "describestacksresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DescribeStacksRequest
+ *
+ * @brief  Implements AppStream DescribeStacks requests.
+ *
+ * @see    AppStreamClient::describeStacks
+ */
+
+/**
+ * @brief  Constructs a new DescribeStacksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStacksResponse::DescribeStacksResponse(
+
+/**
+ * @brief  Constructs a new DescribeStacksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStacksRequest::DescribeStacksRequest(const DescribeStacksRequest &other)
+    : AppStreamRequest(new DescribeStacksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStacksRequest object.
+ */
+DescribeStacksRequest::DescribeStacksRequest()
+    : AppStreamRequest(new DescribeStacksRequestPrivate(AppStreamRequest::DescribeStacksAction, this))
+{
+
+}
+
+bool DescribeStacksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStacksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStacksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStacksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStacksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStacksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStacksRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public DescribeStacksRequest instance.
+ */
+DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
+    const AppStreamRequest::Action action, DescribeStacksRequest * const q)
+    : DescribeStacksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStacksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStacksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStacksRequest instance.
+ */
+DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
+    const DescribeStacksRequestPrivate &other, DescribeStacksRequest * const q)
+    : DescribeStacksPrivate(other, q)
+{
+
+}

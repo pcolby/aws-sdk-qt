@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DESCRIBESUBSCRIPTIONREQUEST_P_H
 
+#include "shield_p.h"
+#include "describesubscriptionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DescribeSubscriptionRequest;
+
+class QTAWS_EXPORT DescribeSubscriptionRequestPrivate : public ShieldPrivate {
+
+public:
+    DescribeSubscriptionRequestPrivate(const Shield::Action action,
+                                   DescribeSubscriptionRequest * const q);
+    DescribeSubscriptionRequestPrivate(const DescribeSubscriptionRequestPrivate &other,
+                                   DescribeSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSubscriptionRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_P_H
 #define QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_P_H
 
+#include "migrationhub_p.h"
+#include "deleteprogressupdatestreamrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DeleteProgressUpdateStreamRequest;
+
+class QTAWS_EXPORT DeleteProgressUpdateStreamRequestPrivate : public MigrationHubPrivate {
+
+public:
+    DeleteProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,
+                                   DeleteProgressUpdateStreamRequest * const q);
+    DeleteProgressUpdateStreamRequestPrivate(const DeleteProgressUpdateStreamRequestPrivate &other,
+                                   DeleteProgressUpdateStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProgressUpdateStreamRequest)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

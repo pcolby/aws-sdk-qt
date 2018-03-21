@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETYPEREQUEST_P_H
 #define QTAWS_CREATETYPEREQUEST_P_H
 
+#include "appsync_p.h"
+#include "createtyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateTypeRequest;
+
+class QTAWS_EXPORT CreateTypeRequestPrivate : public AppSyncPrivate {
+
+public:
+    CreateTypeRequestPrivate(const AppSync::Action action,
+                                   CreateTypeRequest * const q);
+    CreateTypeRequestPrivate(const CreateTypeRequestPrivate &other,
+                                   CreateTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTypeRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

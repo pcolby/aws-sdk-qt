@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEWEBACLREQUEST_P_H
 #define QTAWS_DELETEWEBACLREQUEST_P_H
 
+#include "waf_p.h"
+#include "deletewebaclrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteWebACLRequest;
+
+class QTAWS_EXPORT DeleteWebACLRequestPrivate : public WAFPrivate {
+
+public:
+    DeleteWebACLRequestPrivate(const WAF::Action action,
+                                   DeleteWebACLRequest * const q);
+    DeleteWebACLRequestPrivate(const DeleteWebACLRequestPrivate &other,
+                                   DeleteWebACLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteWebACLRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

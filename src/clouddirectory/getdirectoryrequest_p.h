@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDIRECTORYREQUEST_P_H
 #define QTAWS_GETDIRECTORYREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "getdirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetDirectoryRequest;
+
+class QTAWS_EXPORT GetDirectoryRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    GetDirectoryRequestPrivate(const CloudDirectory::Action action,
+                                   GetDirectoryRequest * const q);
+    GetDirectoryRequestPrivate(const GetDirectoryRequestPrivate &other,
+                                   GetDirectoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDirectoryRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

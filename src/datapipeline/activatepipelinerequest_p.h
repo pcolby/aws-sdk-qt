@@ -20,4 +20,29 @@
 #ifndef QTAWS_ACTIVATEPIPELINEREQUEST_P_H
 #define QTAWS_ACTIVATEPIPELINEREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "activatepipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ActivatePipelineRequest;
+
+class QTAWS_EXPORT ActivatePipelineRequestPrivate : public DataPipelinePrivate {
+
+public:
+    ActivatePipelineRequestPrivate(const DataPipeline::Action action,
+                                   ActivatePipelineRequest * const q);
+    ActivatePipelineRequestPrivate(const ActivatePipelineRequestPrivate &other,
+                                   ActivatePipelineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ActivatePipelineRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatecustomverificationemailtemplaterequest.h"
 #include "updatecustomverificationemailtemplaterequest_p.h"
+#include "updatecustomverificationemailtemplateresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateCustomVerificationEmailTemplateRequest
+ *
+ * @brief  Implements SES UpdateCustomVerificationEmailTemplate requests.
+ *
+ * @see    SESClient::updateCustomVerificationEmailTemplate
+ */
+
+/**
+ * @brief  Constructs a new UpdateCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCustomVerificationEmailTemplateResponse::UpdateCustomVerificationEmailTemplateResponse(
+
+/**
+ * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTemplateRequest(const UpdateCustomVerificationEmailTemplateRequest &other)
+    : SESRequest(new UpdateCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequest object.
+ */
+UpdateCustomVerificationEmailTemplateRequest::UpdateCustomVerificationEmailTemplateRequest()
+    : SESRequest(new UpdateCustomVerificationEmailTemplateRequestPrivate(SESRequest::UpdateCustomVerificationEmailTemplateAction, this))
+{
+
+}
+
+bool UpdateCustomVerificationEmailTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCustomVerificationEmailTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCustomVerificationEmailTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCustomVerificationEmailTemplateRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCustomVerificationEmailTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public UpdateCustomVerificationEmailTemplateRequest instance.
+ */
+UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
+    const SESRequest::Action action, UpdateCustomVerificationEmailTemplateRequest * const q)
+    : UpdateCustomVerificationEmailTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCustomVerificationEmailTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCustomVerificationEmailTemplateRequest instance.
+ */
+UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
+    const UpdateCustomVerificationEmailTemplateRequestPrivate &other, UpdateCustomVerificationEmailTemplateRequest * const q)
+    : UpdateCustomVerificationEmailTemplatePrivate(other, q)
+{
+
+}

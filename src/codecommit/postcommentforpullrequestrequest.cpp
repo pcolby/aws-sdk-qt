@@ -19,3 +19,107 @@
 
 #include "postcommentforpullrequestrequest.h"
 #include "postcommentforpullrequestrequest_p.h"
+#include "postcommentforpullrequestresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PostCommentForPullRequestRequest
+ *
+ * @brief  Implements CodeCommit PostCommentForPullRequest requests.
+ *
+ * @see    CodeCommitClient::postCommentForPullRequest
+ */
+
+/**
+ * @brief  Constructs a new PostCommentForPullRequestResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostCommentForPullRequestResponse::PostCommentForPullRequestResponse(
+
+/**
+ * @brief  Constructs a new PostCommentForPullRequestRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PostCommentForPullRequestRequest::PostCommentForPullRequestRequest(const PostCommentForPullRequestRequest &other)
+    : CodeCommitRequest(new PostCommentForPullRequestRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PostCommentForPullRequestRequest object.
+ */
+PostCommentForPullRequestRequest::PostCommentForPullRequestRequest()
+    : CodeCommitRequest(new PostCommentForPullRequestRequestPrivate(CodeCommitRequest::PostCommentForPullRequestAction, this))
+{
+
+}
+
+bool PostCommentForPullRequestRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PostCommentForPullRequestResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PostCommentForPullRequestResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * PostCommentForPullRequestRequest::response(QNetworkReply * const reply) const
+{
+    return new PostCommentForPullRequestResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PostCommentForPullRequestRequestPrivate
+ *
+ * @brief  Private implementation for PostCommentForPullRequestRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentForPullRequestRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public PostCommentForPullRequestRequest instance.
+ */
+PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
+    const CodeCommitRequest::Action action, PostCommentForPullRequestRequest * const q)
+    : PostCommentForPullRequestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentForPullRequestRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PostCommentForPullRequestRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PostCommentForPullRequestRequest instance.
+ */
+PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
+    const PostCommentForPullRequestRequestPrivate &other, PostCommentForPullRequestRequest * const q)
+    : PostCommentForPullRequestPrivate(other, q)
+{
+
+}

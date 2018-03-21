@@ -19,3 +19,107 @@
 
 #include "searchprofilesrequest.h"
 #include "searchprofilesrequest_p.h"
+#include "searchprofilesresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  SearchProfilesRequest
+ *
+ * @brief  Implements AlexaForBusiness SearchProfiles requests.
+ *
+ * @see    AlexaForBusinessClient::searchProfiles
+ */
+
+/**
+ * @brief  Constructs a new SearchProfilesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchProfilesResponse::SearchProfilesResponse(
+
+/**
+ * @brief  Constructs a new SearchProfilesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SearchProfilesRequest::SearchProfilesRequest(const SearchProfilesRequest &other)
+    : AlexaForBusinessRequest(new SearchProfilesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SearchProfilesRequest object.
+ */
+SearchProfilesRequest::SearchProfilesRequest()
+    : AlexaForBusinessRequest(new SearchProfilesRequestPrivate(AlexaForBusinessRequest::SearchProfilesAction, this))
+{
+
+}
+
+bool SearchProfilesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SearchProfilesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SearchProfilesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply * const reply) const
+{
+    return new SearchProfilesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchProfilesRequestPrivate
+ *
+ * @brief  Private implementation for SearchProfilesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProfilesRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public SearchProfilesRequest instance.
+ */
+SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
+    const AlexaForBusinessRequest::Action action, SearchProfilesRequest * const q)
+    : SearchProfilesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProfilesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SearchProfilesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SearchProfilesRequest instance.
+ */
+SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
+    const SearchProfilesRequestPrivate &other, SearchProfilesRequest * const q)
+    : SearchProfilesPrivate(other, q)
+{
+
+}

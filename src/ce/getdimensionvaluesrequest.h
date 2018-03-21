@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDIMENSIONVALUESREQUEST_H
 #define QTAWS_GETDIMENSIONVALUESREQUEST_H
 
+#include "costexplorerrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetDimensionValuesRequestPrivate;
+
+class QTAWS_EXPORT GetDimensionValuesRequest : public CostExplorerRequest {
+
+public:
+    GetDimensionValuesRequest(const GetDimensionValuesRequest &other);
+    GetDimensionValuesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDimensionValuesRequest)
+
+}
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

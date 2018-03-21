@@ -19,3 +19,107 @@
 
 #include "deletebytematchsetrequest.h"
 #include "deletebytematchsetrequest_p.h"
+#include "deletebytematchsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  DeleteByteMatchSetRequest
+ *
+ * @brief  Implements WAFRegional DeleteByteMatchSet requests.
+ *
+ * @see    WAFRegionalClient::deleteByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new DeleteByteMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteByteMatchSetResponse::DeleteByteMatchSetResponse(
+
+/**
+ * @brief  Constructs a new DeleteByteMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteByteMatchSetRequest::DeleteByteMatchSetRequest(const DeleteByteMatchSetRequest &other)
+    : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteByteMatchSetRequest object.
+ */
+DeleteByteMatchSetRequest::DeleteByteMatchSetRequest()
+    : WAFRegionalRequest(new DeleteByteMatchSetRequestPrivate(WAFRegionalRequest::DeleteByteMatchSetAction, this))
+{
+
+}
+
+bool DeleteByteMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteByteMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteByteMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteByteMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteByteMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteByteMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteByteMatchSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public DeleteByteMatchSetRequest instance.
+ */
+DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
+    const WAFRegionalRequest::Action action, DeleteByteMatchSetRequest * const q)
+    : DeleteByteMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteByteMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteByteMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteByteMatchSetRequest instance.
+ */
+DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
+    const DeleteByteMatchSetRequestPrivate &other, DeleteByteMatchSetRequest * const q)
+    : DeleteByteMatchSetPrivate(other, q)
+{
+
+}

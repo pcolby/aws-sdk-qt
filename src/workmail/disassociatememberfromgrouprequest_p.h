@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_P_H
 #define QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_P_H
 
+#include "workmail_p.h"
+#include "disassociatememberfromgrouprequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DisassociateMemberFromGroupRequest;
+
+class QTAWS_EXPORT DisassociateMemberFromGroupRequestPrivate : public WorkMailPrivate {
+
+public:
+    DisassociateMemberFromGroupRequestPrivate(const WorkMail::Action action,
+                                   DisassociateMemberFromGroupRequest * const q);
+    DisassociateMemberFromGroupRequestPrivate(const DisassociateMemberFromGroupRequestPrivate &other,
+                                   DisassociateMemberFromGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateMemberFromGroupRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

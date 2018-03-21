@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describeorderableclusteroptionsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeOrderableClusterOptionsRequest;
+
+class QTAWS_EXPORT DescribeOrderableClusterOptionsRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeOrderableClusterOptionsRequestPrivate(const Redshift::Action action,
+                                   DescribeOrderableClusterOptionsRequest * const q);
+    DescribeOrderableClusterOptionsRequestPrivate(const DescribeOrderableClusterOptionsRequestPrivate &other,
+                                   DescribeOrderableClusterOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrderableClusterOptionsRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

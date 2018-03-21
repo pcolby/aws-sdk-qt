@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_P_H
 #define QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_P_H
 
+#include "batch_p.h"
+#include "describecomputeenvironmentsrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DescribeComputeEnvironmentsRequest;
+
+class QTAWS_EXPORT DescribeComputeEnvironmentsRequestPrivate : public BatchPrivate {
+
+public:
+    DescribeComputeEnvironmentsRequestPrivate(const Batch::Action action,
+                                   DescribeComputeEnvironmentsRequest * const q);
+    DescribeComputeEnvironmentsRequestPrivate(const DescribeComputeEnvironmentsRequestPrivate &other,
+                                   DescribeComputeEnvironmentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeComputeEnvironmentsRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createtopicrulerequest.h"
 #include "createtopicrulerequest_p.h"
+#include "createtopicruleresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateTopicRuleRequest
+ *
+ * @brief  Implements IoT CreateTopicRule requests.
+ *
+ * @see    IoTClient::createTopicRule
+ */
+
+/**
+ * @brief  Constructs a new CreateTopicRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTopicRuleResponse::CreateTopicRuleResponse(
+
+/**
+ * @brief  Constructs a new CreateTopicRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTopicRuleRequest::CreateTopicRuleRequest(const CreateTopicRuleRequest &other)
+    : IoTRequest(new CreateTopicRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTopicRuleRequest object.
+ */
+CreateTopicRuleRequest::CreateTopicRuleRequest()
+    : IoTRequest(new CreateTopicRuleRequestPrivate(IoTRequest::CreateTopicRuleAction, this))
+{
+
+}
+
+bool CreateTopicRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTopicRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTopicRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CreateTopicRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTopicRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTopicRuleRequestPrivate
+ *
+ * @brief  Private implementation for CreateTopicRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTopicRuleRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CreateTopicRuleRequest instance.
+ */
+CreateTopicRuleRequestPrivate::CreateTopicRuleRequestPrivate(
+    const IoTRequest::Action action, CreateTopicRuleRequest * const q)
+    : CreateTopicRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTopicRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTopicRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTopicRuleRequest instance.
+ */
+CreateTopicRuleRequestPrivate::CreateTopicRuleRequestPrivate(
+    const CreateTopicRuleRequestPrivate &other, CreateTopicRuleRequest * const q)
+    : CreateTopicRulePrivate(other, q)
+{
+
+}

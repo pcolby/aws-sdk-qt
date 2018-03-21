@@ -20,4 +20,32 @@
 #ifndef QTAWS_HEADOBJECTREQUEST_H
 #define QTAWS_HEADOBJECTREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class HeadObjectRequestPrivate;
+
+class QTAWS_EXPORT HeadObjectRequest : public S3Request {
+
+public:
+    HeadObjectRequest(const HeadObjectRequest &other);
+    HeadObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(HeadObjectRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETSMSATTRIBUTESREQUEST_P_H
 #define QTAWS_SETSMSATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "setsmsattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetSMSAttributesRequest;
+
+class QTAWS_EXPORT SetSMSAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    SetSMSAttributesRequestPrivate(const SNS::Action action,
+                                   SetSMSAttributesRequest * const q);
+    SetSMSAttributesRequestPrivate(const SetSMSAttributesRequestPrivate &other,
+                                   SetSMSAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetSMSAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

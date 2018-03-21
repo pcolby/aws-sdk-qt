@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHINSTANCESFROMLOADBALANCERREQUEST_P_H
 #define QTAWS_DETACHINSTANCESFROMLOADBALANCERREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "detachinstancesfromloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DetachInstancesFromLoadBalancerRequest;
+
+class QTAWS_EXPORT DetachInstancesFromLoadBalancerRequestPrivate : public LightsailPrivate {
+
+public:
+    DetachInstancesFromLoadBalancerRequestPrivate(const Lightsail::Action action,
+                                   DetachInstancesFromLoadBalancerRequest * const q);
+    DetachInstancesFromLoadBalancerRequestPrivate(const DetachInstancesFromLoadBalancerRequestPrivate &other,
+                                   DetachInstancesFromLoadBalancerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachInstancesFromLoadBalancerRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

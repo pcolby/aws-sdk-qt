@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEFUNCTIONDEFINITIONREQUEST_H
 #define QTAWS_UPDATEFUNCTIONDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateFunctionDefinitionRequestPrivate;
+
+class QTAWS_EXPORT UpdateFunctionDefinitionRequest : public GreengrassRequest {
+
+public:
+    UpdateFunctionDefinitionRequest(const UpdateFunctionDefinitionRequest &other);
+    UpdateFunctionDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFunctionDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

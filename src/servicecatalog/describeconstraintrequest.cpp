@@ -19,3 +19,107 @@
 
 #include "describeconstraintrequest.h"
 #include "describeconstraintrequest_p.h"
+#include "describeconstraintresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeConstraintRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeConstraint requests.
+ *
+ * @see    ServiceCatalogClient::describeConstraint
+ */
+
+/**
+ * @brief  Constructs a new DescribeConstraintResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConstraintResponse::DescribeConstraintResponse(
+
+/**
+ * @brief  Constructs a new DescribeConstraintRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConstraintRequest::DescribeConstraintRequest(const DescribeConstraintRequest &other)
+    : ServiceCatalogRequest(new DescribeConstraintRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConstraintRequest object.
+ */
+DescribeConstraintRequest::DescribeConstraintRequest()
+    : ServiceCatalogRequest(new DescribeConstraintRequestPrivate(ServiceCatalogRequest::DescribeConstraintAction, this))
+{
+
+}
+
+bool DescribeConstraintRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConstraintResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConstraintResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConstraintResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConstraintRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConstraintRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConstraintRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeConstraintRequest instance.
+ */
+DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeConstraintRequest * const q)
+    : DescribeConstraintPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConstraintRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConstraintRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConstraintRequest instance.
+ */
+DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
+    const DescribeConstraintRequestPrivate &other, DescribeConstraintRequest * const q)
+    : DescribeConstraintPrivate(other, q)
+{
+
+}

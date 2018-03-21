@@ -19,3 +19,107 @@
 
 #include "deleteprovisioningartifactrequest.h"
 #include "deleteprovisioningartifactrequest_p.h"
+#include "deleteprovisioningartifactresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeleteProvisioningArtifactRequest
+ *
+ * @brief  Implements ServiceCatalog DeleteProvisioningArtifact requests.
+ *
+ * @see    ServiceCatalogClient::deleteProvisioningArtifact
+ */
+
+/**
+ * @brief  Constructs a new DeleteProvisioningArtifactResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
+
+/**
+ * @brief  Constructs a new DeleteProvisioningArtifactRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest(const DeleteProvisioningArtifactRequest &other)
+    : ServiceCatalogRequest(new DeleteProvisioningArtifactRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteProvisioningArtifactRequest object.
+ */
+DeleteProvisioningArtifactRequest::DeleteProvisioningArtifactRequest()
+    : ServiceCatalogRequest(new DeleteProvisioningArtifactRequestPrivate(ServiceCatalogRequest::DeleteProvisioningArtifactAction, this))
+{
+
+}
+
+bool DeleteProvisioningArtifactRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteProvisioningArtifactResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteProvisioningArtifactResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteProvisioningArtifactResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProvisioningArtifactRequestPrivate
+ *
+ * @brief  Private implementation for DeleteProvisioningArtifactRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DeleteProvisioningArtifactRequest instance.
+ */
+DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
+    const ServiceCatalogRequest::Action action, DeleteProvisioningArtifactRequest * const q)
+    : DeleteProvisioningArtifactPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProvisioningArtifactRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteProvisioningArtifactRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteProvisioningArtifactRequest instance.
+ */
+DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
+    const DeleteProvisioningArtifactRequestPrivate &other, DeleteProvisioningArtifactRequest * const q)
+    : DeleteProvisioningArtifactPrivate(other, q)
+{
+
+}

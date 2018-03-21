@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBENATGATEWAYSREQUEST_P_H
 #define QTAWS_DESCRIBENATGATEWAYSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describenatgatewaysrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeNatGatewaysRequest;
+
+class QTAWS_EXPORT DescribeNatGatewaysRequestPrivate : public EC2Private {
+
+public:
+    DescribeNatGatewaysRequestPrivate(const EC2::Action action,
+                                   DescribeNatGatewaysRequest * const q);
+    DescribeNatGatewaysRequestPrivate(const DescribeNatGatewaysRequestPrivate &other,
+                                   DescribeNatGatewaysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNatGatewaysRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEBYTEMATCHSETREQUEST_P_H
 #define QTAWS_UPDATEBYTEMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updatebytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateByteMatchSetRequest;
+
+class QTAWS_EXPORT UpdateByteMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateByteMatchSetRequestPrivate(const WAF::Action action,
+                                   UpdateByteMatchSetRequest * const q);
+    UpdateByteMatchSetRequestPrivate(const UpdateByteMatchSetRequestPrivate &other,
+                                   UpdateByteMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateByteMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

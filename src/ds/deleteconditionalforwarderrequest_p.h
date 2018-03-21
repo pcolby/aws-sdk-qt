@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERREQUEST_P_H
 #define QTAWS_DELETECONDITIONALFORWARDERREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "deleteconditionalforwarderrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteConditionalForwarderRequest;
+
+class QTAWS_EXPORT DeleteConditionalForwarderRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DeleteConditionalForwarderRequestPrivate(const DirectoryService::Action action,
+                                   DeleteConditionalForwarderRequest * const q);
+    DeleteConditionalForwarderRequestPrivate(const DeleteConditionalForwarderRequestPrivate &other,
+                                   DeleteConditionalForwarderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConditionalForwarderRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDEVICESREQUEST_H
 #define QTAWS_LISTDEVICESREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListDevicesRequestPrivate;
+
+class QTAWS_EXPORT ListDevicesRequest : public DeviceFarmRequest {
+
+public:
+    ListDevicesRequest(const ListDevicesRequest &other);
+    ListDevicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDevicesRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

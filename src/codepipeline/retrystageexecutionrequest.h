@@ -20,4 +20,32 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONREQUEST_H
 #define QTAWS_RETRYSTAGEEXECUTIONREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class RetryStageExecutionRequestPrivate;
+
+class QTAWS_EXPORT RetryStageExecutionRequest : public CodePipelineRequest {
+
+public:
+    RetryStageExecutionRequest(const RetryStageExecutionRequest &other);
+    RetryStageExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RetryStageExecutionRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

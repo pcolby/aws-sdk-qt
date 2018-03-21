@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDIRECTCONNECTGATEWAYREQUEST_P_H
 #define QTAWS_CREATEDIRECTCONNECTGATEWAYREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "createdirectconnectgatewayrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateDirectConnectGatewayRequest;
+
+class QTAWS_EXPORT CreateDirectConnectGatewayRequestPrivate : public DirectConnectPrivate {
+
+public:
+    CreateDirectConnectGatewayRequestPrivate(const DirectConnect::Action action,
+                                   CreateDirectConnectGatewayRequest * const q);
+    CreateDirectConnectGatewayRequestPrivate(const CreateDirectConnectGatewayRequestPrivate &other,
+                                   CreateDirectConnectGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDirectConnectGatewayRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

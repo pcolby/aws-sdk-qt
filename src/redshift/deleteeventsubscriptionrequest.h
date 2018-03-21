@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteEventSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT DeleteEventSubscriptionRequest : public RedshiftRequest {
+
+public:
+    DeleteEventSubscriptionRequest(const DeleteEventSubscriptionRequest &other);
+    DeleteEventSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEventSubscriptionRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

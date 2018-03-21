@@ -19,3 +19,107 @@
 
 #include "describeresourcepermissionsrequest.h"
 #include "describeresourcepermissionsrequest_p.h"
+#include "describeresourcepermissionsresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeResourcePermissionsRequest
+ *
+ * @brief  Implements WorkDocs DescribeResourcePermissions requests.
+ *
+ * @see    WorkDocsClient::describeResourcePermissions
+ */
+
+/**
+ * @brief  Constructs a new DescribeResourcePermissionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeResourcePermissionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeResourcePermissionsRequest::DescribeResourcePermissionsRequest(const DescribeResourcePermissionsRequest &other)
+    : WorkDocsRequest(new DescribeResourcePermissionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeResourcePermissionsRequest object.
+ */
+DescribeResourcePermissionsRequest::DescribeResourcePermissionsRequest()
+    : WorkDocsRequest(new DescribeResourcePermissionsRequestPrivate(WorkDocsRequest::DescribeResourcePermissionsAction, this))
+{
+
+}
+
+bool DescribeResourcePermissionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeResourcePermissionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeResourcePermissionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DescribeResourcePermissionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeResourcePermissionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeResourcePermissionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeResourcePermissionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResourcePermissionsRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DescribeResourcePermissionsRequest instance.
+ */
+DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
+    const WorkDocsRequest::Action action, DescribeResourcePermissionsRequest * const q)
+    : DescribeResourcePermissionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResourcePermissionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeResourcePermissionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeResourcePermissionsRequest instance.
+ */
+DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
+    const DescribeResourcePermissionsRequestPrivate &other, DescribeResourcePermissionsRequest * const q)
+    : DescribeResourcePermissionsPrivate(other, q)
+{
+
+}

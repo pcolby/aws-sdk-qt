@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTINTEGRATIONREQUEST_H
 #define QTAWS_PUTINTEGRATIONREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class PutIntegrationRequestPrivate;
+
+class QTAWS_EXPORT PutIntegrationRequest : public APIGatewayRequest {
+
+public:
+    PutIntegrationRequest(const PutIntegrationRequest &other);
+    PutIntegrationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutIntegrationRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

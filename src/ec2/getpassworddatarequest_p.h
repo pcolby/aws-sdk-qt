@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPASSWORDDATAREQUEST_P_H
 #define QTAWS_GETPASSWORDDATAREQUEST_P_H
 
+#include "ec2_p.h"
+#include "getpassworddatarequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetPasswordDataRequest;
+
+class QTAWS_EXPORT GetPasswordDataRequestPrivate : public EC2Private {
+
+public:
+    GetPasswordDataRequestPrivate(const EC2::Action action,
+                                   GetPasswordDataRequest * const q);
+    GetPasswordDataRequestPrivate(const GetPasswordDataRequestPrivate &other,
+                                   GetPasswordDataRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPasswordDataRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

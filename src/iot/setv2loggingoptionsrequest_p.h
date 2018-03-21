@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETV2LOGGINGOPTIONSREQUEST_P_H
 #define QTAWS_SETV2LOGGINGOPTIONSREQUEST_P_H
 
+#include "iot_p.h"
+#include "setv2loggingoptionsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SetV2LoggingOptionsRequest;
+
+class QTAWS_EXPORT SetV2LoggingOptionsRequestPrivate : public IoTPrivate {
+
+public:
+    SetV2LoggingOptionsRequestPrivate(const IoT::Action action,
+                                   SetV2LoggingOptionsRequest * const q);
+    SetV2LoggingOptionsRequestPrivate(const SetV2LoggingOptionsRequestPrivate &other,
+                                   SetV2LoggingOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetV2LoggingOptionsRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

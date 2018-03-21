@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEIPSETREQUEST_P_H
 #define QTAWS_DELETEIPSETREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "deleteipsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteIPSetRequest;
+
+class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    DeleteIPSetRequestPrivate(const WAFRegional::Action action,
+                                   DeleteIPSetRequest * const q);
+    DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
+                                   DeleteIPSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIPSetRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

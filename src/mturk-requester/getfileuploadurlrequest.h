@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETFILEUPLOADURLREQUEST_H
 #define QTAWS_GETFILEUPLOADURLREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetFileUploadURLRequestPrivate;
+
+class QTAWS_EXPORT GetFileUploadURLRequest : public MTurkRequest {
+
+public:
+    GetFileUploadURLRequest(const GetFileUploadURLRequest &other);
+    GetFileUploadURLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetFileUploadURLRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

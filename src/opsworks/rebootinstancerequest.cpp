@@ -19,3 +19,107 @@
 
 #include "rebootinstancerequest.h"
 #include "rebootinstancerequest_p.h"
+#include "rebootinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RebootInstanceRequest
+ *
+ * @brief  Implements OpsWorks RebootInstance requests.
+ *
+ * @see    OpsWorksClient::rebootInstance
+ */
+
+/**
+ * @brief  Constructs a new RebootInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootInstanceResponse::RebootInstanceResponse(
+
+/**
+ * @brief  Constructs a new RebootInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RebootInstanceRequest::RebootInstanceRequest(const RebootInstanceRequest &other)
+    : OpsWorksRequest(new RebootInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RebootInstanceRequest object.
+ */
+RebootInstanceRequest::RebootInstanceRequest()
+    : OpsWorksRequest(new RebootInstanceRequestPrivate(OpsWorksRequest::RebootInstanceAction, this))
+{
+
+}
+
+bool RebootInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RebootInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RebootInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new RebootInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootInstanceRequestPrivate
+ *
+ * @brief  Private implementation for RebootInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public RebootInstanceRequest instance.
+ */
+RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, RebootInstanceRequest * const q)
+    : RebootInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RebootInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RebootInstanceRequest instance.
+ */
+RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
+    const RebootInstanceRequestPrivate &other, RebootInstanceRequest * const q)
+    : RebootInstancePrivate(other, q)
+{
+
+}

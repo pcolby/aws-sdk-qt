@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEAPNSCHANNELREQUEST_P_H
 #define QTAWS_UPDATEAPNSCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updateapnschannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateApnsChannelRequest;
+
+class QTAWS_EXPORT UpdateApnsChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateApnsChannelRequestPrivate(const Pinpoint::Action action,
+                                   UpdateApnsChannelRequest * const q);
+    UpdateApnsChannelRequestPrivate(const UpdateApnsChannelRequestPrivate &other,
+                                   UpdateApnsChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApnsChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

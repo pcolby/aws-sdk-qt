@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATECONNECTIONFROMLAGREQUEST_H
 #define QTAWS_DISASSOCIATECONNECTIONFROMLAGREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DisassociateConnectionFromLagRequestPrivate;
+
+class QTAWS_EXPORT DisassociateConnectionFromLagRequest : public DirectConnectRequest {
+
+public:
+    DisassociateConnectionFromLagRequest(const DisassociateConnectionFromLagRequest &other);
+    DisassociateConnectionFromLagRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateConnectionFromLagRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

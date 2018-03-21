@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPLOADPARTCOPYREQUEST_P_H
 #define QTAWS_UPLOADPARTCOPYREQUEST_P_H
 
+#include "s3_p.h"
+#include "uploadpartcopyrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class UploadPartCopyRequest;
+
+class QTAWS_EXPORT UploadPartCopyRequestPrivate : public S3Private {
+
+public:
+    UploadPartCopyRequestPrivate(const S3::Action action,
+                                   UploadPartCopyRequest * const q);
+    UploadPartCopyRequestPrivate(const UploadPartCopyRequestPrivate &other,
+                                   UploadPartCopyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UploadPartCopyRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

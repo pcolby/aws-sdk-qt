@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETREPLICATIONREQUEST_P_H
 #define QTAWS_PUTBUCKETREPLICATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketreplicationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketReplicationRequest;
+
+class QTAWS_EXPORT PutBucketReplicationRequestPrivate : public S3Private {
+
+public:
+    PutBucketReplicationRequestPrivate(const S3::Action action,
+                                   PutBucketReplicationRequest * const q);
+    PutBucketReplicationRequestPrivate(const PutBucketReplicationRequestPrivate &other,
+                                   PutBucketReplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketReplicationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

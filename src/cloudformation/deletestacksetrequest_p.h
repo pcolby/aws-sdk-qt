@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTACKSETREQUEST_P_H
 #define QTAWS_DELETESTACKSETREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "deletestacksetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DeleteStackSetRequest;
+
+class QTAWS_EXPORT DeleteStackSetRequestPrivate : public CloudFormationPrivate {
+
+public:
+    DeleteStackSetRequestPrivate(const CloudFormation::Action action,
+                                   DeleteStackSetRequest * const q);
+    DeleteStackSetRequestPrivate(const DeleteStackSetRequestPrivate &other,
+                                   DeleteStackSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStackSetRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

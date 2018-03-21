@@ -19,3 +19,107 @@
 
 #include "deleteconfigurationsettrackingoptionsrequest.h"
 #include "deleteconfigurationsettrackingoptionsrequest_p.h"
+#include "deleteconfigurationsettrackingoptionsresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteConfigurationSetTrackingOptionsRequest
+ *
+ * @brief  Implements SES DeleteConfigurationSetTrackingOptions requests.
+ *
+ * @see    SESClient::deleteConfigurationSetTrackingOptions
+ */
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOptionsResponse(
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest(const DeleteConfigurationSetTrackingOptionsRequest &other)
+    : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequest object.
+ */
+DeleteConfigurationSetTrackingOptionsRequest::DeleteConfigurationSetTrackingOptionsRequest()
+    : SESRequest(new DeleteConfigurationSetTrackingOptionsRequestPrivate(SESRequest::DeleteConfigurationSetTrackingOptionsAction, this))
+{
+
+}
+
+bool DeleteConfigurationSetTrackingOptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteConfigurationSetTrackingOptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteConfigurationSetTrackingOptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteConfigurationSetTrackingOptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationSetTrackingOptionsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationSetTrackingOptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteConfigurationSetTrackingOptionsRequest instance.
+ */
+DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
+    const SESRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)
+    : DeleteConfigurationSetTrackingOptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteConfigurationSetTrackingOptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteConfigurationSetTrackingOptionsRequest instance.
+ */
+DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
+    const DeleteConfigurationSetTrackingOptionsRequestPrivate &other, DeleteConfigurationSetTrackingOptionsRequest * const q)
+    : DeleteConfigurationSetTrackingOptionsPrivate(other, q)
+{
+
+}

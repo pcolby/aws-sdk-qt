@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTITEMSREQUEST_P_H
 #define QTAWS_LISTITEMSREQUEST_P_H
 
+#include "mediastoredata_p.h"
+#include "listitemsrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class ListItemsRequest;
+
+class QTAWS_EXPORT ListItemsRequestPrivate : public MediaStoreDataPrivate {
+
+public:
+    ListItemsRequestPrivate(const MediaStoreData::Action action,
+                                   ListItemsRequest * const q);
+    ListItemsRequestPrivate(const ListItemsRequestPrivate &other,
+                                   ListItemsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListItemsRequest)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

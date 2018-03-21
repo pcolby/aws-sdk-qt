@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCONSTRAINTSFORPORTFOLIOREQUEST_P_H
 #define QTAWS_LISTCONSTRAINTSFORPORTFOLIOREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "listconstraintsforportfoliorequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListConstraintsForPortfolioRequest;
+
+class QTAWS_EXPORT ListConstraintsForPortfolioRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ListConstraintsForPortfolioRequestPrivate(const ServiceCatalog::Action action,
+                                   ListConstraintsForPortfolioRequest * const q);
+    ListConstraintsForPortfolioRequestPrivate(const ListConstraintsForPortfolioRequestPrivate &other,
+                                   ListConstraintsForPortfolioRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListConstraintsForPortfolioRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

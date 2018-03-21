@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSINGRESSREQUEST_H
 #define QTAWS_UPDATESECURITYGROUPRULEDESCRIPTIONSINGRESSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate;
+
+class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsIngressRequest : public EC2Request {
+
+public:
+    UpdateSecurityGroupRuleDescriptionsIngressRequest(const UpdateSecurityGroupRuleDescriptionsIngressRequest &other);
+    UpdateSecurityGroupRuleDescriptionsIngressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSecurityGroupRuleDescriptionsIngressRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

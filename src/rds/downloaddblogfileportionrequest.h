@@ -20,4 +20,32 @@
 #ifndef QTAWS_DOWNLOADDBLOGFILEPORTIONREQUEST_H
 #define QTAWS_DOWNLOADDBLOGFILEPORTIONREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DownloadDBLogFilePortionRequestPrivate;
+
+class QTAWS_EXPORT DownloadDBLogFilePortionRequest : public RDSRequest {
+
+public:
+    DownloadDBLogFilePortionRequest(const DownloadDBLogFilePortionRequest &other);
+    DownloadDBLogFilePortionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DownloadDBLogFilePortionRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

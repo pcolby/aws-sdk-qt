@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPIKEYREQUEST_H
 #define QTAWS_DELETEAPIKEYREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteApiKeyRequestPrivate;
+
+class QTAWS_EXPORT DeleteApiKeyRequest : public AppSyncRequest {
+
+public:
+    DeleteApiKeyRequest(const DeleteApiKeyRequest &other);
+    DeleteApiKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApiKeyRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

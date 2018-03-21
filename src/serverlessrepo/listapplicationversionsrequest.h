@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAPPLICATIONVERSIONSREQUEST_H
 #define QTAWS_LISTAPPLICATIONVERSIONSREQUEST_H
 
+#include "serverlessapplicationrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ServerlessApplicationRepository {
+
+class ListApplicationVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListApplicationVersionsRequest : public ServerlessApplicationRepositoryRequest {
+
+public:
+    ListApplicationVersionsRequest(const ListApplicationVersionsRequest &other);
+    ListApplicationVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListApplicationVersionsRequest)
+
+}
+
+} // namespace ServerlessApplicationRepository
+} // namespace AWS
+
 #endif

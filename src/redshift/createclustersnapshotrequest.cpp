@@ -19,3 +19,107 @@
 
 #include "createclustersnapshotrequest.h"
 #include "createclustersnapshotrequest_p.h"
+#include "createclustersnapshotresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateClusterSnapshotRequest
+ *
+ * @brief  Implements Redshift CreateClusterSnapshot requests.
+ *
+ * @see    RedshiftClient::createClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CreateClusterSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateClusterSnapshotResponse::CreateClusterSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CreateClusterSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateClusterSnapshotRequest::CreateClusterSnapshotRequest(const CreateClusterSnapshotRequest &other)
+    : RedshiftRequest(new CreateClusterSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateClusterSnapshotRequest object.
+ */
+CreateClusterSnapshotRequest::CreateClusterSnapshotRequest()
+    : RedshiftRequest(new CreateClusterSnapshotRequestPrivate(RedshiftRequest::CreateClusterSnapshotAction, this))
+{
+
+}
+
+bool CreateClusterSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateClusterSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateClusterSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateClusterSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateClusterSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateClusterSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CreateClusterSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterSnapshotRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateClusterSnapshotRequest instance.
+ */
+CreateClusterSnapshotRequestPrivate::CreateClusterSnapshotRequestPrivate(
+    const RedshiftRequest::Action action, CreateClusterSnapshotRequest * const q)
+    : CreateClusterSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateClusterSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateClusterSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateClusterSnapshotRequest instance.
+ */
+CreateClusterSnapshotRequestPrivate::CreateClusterSnapshotRequestPrivate(
+    const CreateClusterSnapshotRequestPrivate &other, CreateClusterSnapshotRequest * const q)
+    : CreateClusterSnapshotPrivate(other, q)
+{
+
+}

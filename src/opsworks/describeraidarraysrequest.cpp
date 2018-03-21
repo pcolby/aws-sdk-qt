@@ -19,3 +19,107 @@
 
 #include "describeraidarraysrequest.h"
 #include "describeraidarraysrequest_p.h"
+#include "describeraidarraysresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeRaidArraysRequest
+ *
+ * @brief  Implements OpsWorks DescribeRaidArrays requests.
+ *
+ * @see    OpsWorksClient::describeRaidArrays
+ */
+
+/**
+ * @brief  Constructs a new DescribeRaidArraysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRaidArraysResponse::DescribeRaidArraysResponse(
+
+/**
+ * @brief  Constructs a new DescribeRaidArraysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRaidArraysRequest::DescribeRaidArraysRequest(const DescribeRaidArraysRequest &other)
+    : OpsWorksRequest(new DescribeRaidArraysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRaidArraysRequest object.
+ */
+DescribeRaidArraysRequest::DescribeRaidArraysRequest()
+    : OpsWorksRequest(new DescribeRaidArraysRequestPrivate(OpsWorksRequest::DescribeRaidArraysAction, this))
+{
+
+}
+
+bool DescribeRaidArraysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRaidArraysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRaidArraysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeRaidArraysRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRaidArraysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRaidArraysRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRaidArraysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRaidArraysRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeRaidArraysRequest instance.
+ */
+DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeRaidArraysRequest * const q)
+    : DescribeRaidArraysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRaidArraysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRaidArraysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRaidArraysRequest instance.
+ */
+DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
+    const DescribeRaidArraysRequestPrivate &other, DescribeRaidArraysRequest * const q)
+    : DescribeRaidArraysPrivate(other, q)
+{
+
+}

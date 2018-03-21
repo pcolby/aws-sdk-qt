@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREALTIMEENDPOINTREQUEST_H
 #define QTAWS_DELETEREALTIMEENDPOINTREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DeleteRealtimeEndpointRequestPrivate;
+
+class QTAWS_EXPORT DeleteRealtimeEndpointRequest : public MachineLearningRequest {
+
+public:
+    DeleteRealtimeEndpointRequest(const DeleteRealtimeEndpointRequest &other);
+    DeleteRealtimeEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRealtimeEndpointRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESCALINGPARAMETERSREQUEST_H
 #define QTAWS_UPDATESCALINGPARAMETERSREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class UpdateScalingParametersRequestPrivate;
+
+class QTAWS_EXPORT UpdateScalingParametersRequest : public CloudSearchRequest {
+
+public:
+    UpdateScalingParametersRequest(const UpdateScalingParametersRequest &other);
+    UpdateScalingParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateScalingParametersRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

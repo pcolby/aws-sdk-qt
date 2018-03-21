@@ -19,3 +19,107 @@
 
 #include "deletebaiduchannelrequest.h"
 #include "deletebaiduchannelrequest_p.h"
+#include "deletebaiduchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  DeleteBaiduChannelRequest
+ *
+ * @brief  Implements Pinpoint DeleteBaiduChannel requests.
+ *
+ * @see    PinpointClient::deleteBaiduChannel
+ */
+
+/**
+ * @brief  Constructs a new DeleteBaiduChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBaiduChannelResponse::DeleteBaiduChannelResponse(
+
+/**
+ * @brief  Constructs a new DeleteBaiduChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBaiduChannelRequest::DeleteBaiduChannelRequest(const DeleteBaiduChannelRequest &other)
+    : PinpointRequest(new DeleteBaiduChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBaiduChannelRequest object.
+ */
+DeleteBaiduChannelRequest::DeleteBaiduChannelRequest()
+    : PinpointRequest(new DeleteBaiduChannelRequestPrivate(PinpointRequest::DeleteBaiduChannelAction, this))
+{
+
+}
+
+bool DeleteBaiduChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBaiduChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBaiduChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBaiduChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBaiduChannelRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBaiduChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public DeleteBaiduChannelRequest instance.
+ */
+DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
+    const PinpointRequest::Action action, DeleteBaiduChannelRequest * const q)
+    : DeleteBaiduChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBaiduChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBaiduChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBaiduChannelRequest instance.
+ */
+DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
+    const DeleteBaiduChannelRequestPrivate &other, DeleteBaiduChannelRequest * const q)
+    : DeleteBaiduChannelPrivate(other, q)
+{
+
+}

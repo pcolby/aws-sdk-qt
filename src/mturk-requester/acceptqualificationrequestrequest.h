@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTQUALIFICATIONREQUESTREQUEST_H
 #define QTAWS_ACCEPTQUALIFICATIONREQUESTREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class AcceptQualificationRequestRequestPrivate;
+
+class QTAWS_EXPORT AcceptQualificationRequestRequest : public MTurkRequest {
+
+public:
+    AcceptQualificationRequestRequest(const AcceptQualificationRequestRequest &other);
+    AcceptQualificationRequestRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptQualificationRequestRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

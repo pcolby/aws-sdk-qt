@@ -19,3 +19,107 @@
 
 #include "listuniqueproblemsrequest.h"
 #include "listuniqueproblemsrequest_p.h"
+#include "listuniqueproblemsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListUniqueProblemsRequest
+ *
+ * @brief  Implements DeviceFarm ListUniqueProblems requests.
+ *
+ * @see    DeviceFarmClient::listUniqueProblems
+ */
+
+/**
+ * @brief  Constructs a new ListUniqueProblemsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListUniqueProblemsResponse::ListUniqueProblemsResponse(
+
+/**
+ * @brief  Constructs a new ListUniqueProblemsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListUniqueProblemsRequest::ListUniqueProblemsRequest(const ListUniqueProblemsRequest &other)
+    : DeviceFarmRequest(new ListUniqueProblemsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListUniqueProblemsRequest object.
+ */
+ListUniqueProblemsRequest::ListUniqueProblemsRequest()
+    : DeviceFarmRequest(new ListUniqueProblemsRequestPrivate(DeviceFarmRequest::ListUniqueProblemsAction, this))
+{
+
+}
+
+bool ListUniqueProblemsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListUniqueProblemsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListUniqueProblemsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListUniqueProblemsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListUniqueProblemsRequestPrivate
+ *
+ * @brief  Private implementation for ListUniqueProblemsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUniqueProblemsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListUniqueProblemsRequest instance.
+ */
+ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListUniqueProblemsRequest * const q)
+    : ListUniqueProblemsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListUniqueProblemsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListUniqueProblemsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListUniqueProblemsRequest instance.
+ */
+ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
+    const ListUniqueProblemsRequestPrivate &other, ListUniqueProblemsRequest * const q)
+    : ListUniqueProblemsPrivate(other, q)
+{
+
+}

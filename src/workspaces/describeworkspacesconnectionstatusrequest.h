@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_H
 #define QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspacesConnectionStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeWorkspacesConnectionStatusRequest : public WorkSpacesRequest {
+
+public:
+    DescribeWorkspacesConnectionStatusRequest(const DescribeWorkspacesConnectionStatusRequest &other);
+    DescribeWorkspacesConnectionStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkspacesConnectionStatusRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

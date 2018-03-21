@@ -19,3 +19,107 @@
 
 #include "describethingrequest.h"
 #include "describethingrequest_p.h"
+#include "describethingresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeThingRequest
+ *
+ * @brief  Implements IoT DescribeThing requests.
+ *
+ * @see    IoTClient::describeThing
+ */
+
+/**
+ * @brief  Constructs a new DescribeThingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeThingResponse::DescribeThingResponse(
+
+/**
+ * @brief  Constructs a new DescribeThingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeThingRequest::DescribeThingRequest(const DescribeThingRequest &other)
+    : IoTRequest(new DescribeThingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeThingRequest object.
+ */
+DescribeThingRequest::DescribeThingRequest()
+    : IoTRequest(new DescribeThingRequestPrivate(IoTRequest::DescribeThingAction, this))
+{
+
+}
+
+bool DescribeThingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeThingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeThingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeThingRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeThingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeThingRequestPrivate
+ *
+ * @brief  Private implementation for DescribeThingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeThingRequest instance.
+ */
+DescribeThingRequestPrivate::DescribeThingRequestPrivate(
+    const IoTRequest::Action action, DescribeThingRequest * const q)
+    : DescribeThingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeThingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeThingRequest instance.
+ */
+DescribeThingRequestPrivate::DescribeThingRequestPrivate(
+    const DescribeThingRequestPrivate &other, DescribeThingRequest * const q)
+    : DescribeThingPrivate(other, q)
+{
+
+}

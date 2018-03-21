@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAPEARCHIVEREQUEST_P_H
 #define QTAWS_DELETETAPEARCHIVEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "deletetapearchiverequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteTapeArchiveRequest;
+
+class QTAWS_EXPORT DeleteTapeArchiveRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DeleteTapeArchiveRequestPrivate(const StorageGateway::Action action,
+                                   DeleteTapeArchiveRequest * const q);
+    DeleteTapeArchiveRequestPrivate(const DeleteTapeArchiveRequestPrivate &other,
+                                   DeleteTapeArchiveRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTapeArchiveRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINPUTSECURITYGROUPSREQUEST_H
 #define QTAWS_LISTINPUTSECURITYGROUPSREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class ListInputSecurityGroupsRequestPrivate;
+
+class QTAWS_EXPORT ListInputSecurityGroupsRequest : public MediaLiveRequest {
+
+public:
+    ListInputSecurityGroupsRequest(const ListInputSecurityGroupsRequest &other);
+    ListInputSecurityGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInputSecurityGroupsRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

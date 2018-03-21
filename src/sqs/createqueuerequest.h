@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEQUEUEREQUEST_H
 #define QTAWS_CREATEQUEUEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class CreateQueueRequestPrivate;
+
+class QTAWS_EXPORT CreateQueueRequest : public SQSRequest {
+
+public:
+    CreateQueueRequest(const CreateQueueRequest &other);
+    CreateQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateQueueRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listphonenumbersoptedoutrequest.h"
 #include "listphonenumbersoptedoutrequest_p.h"
+#include "listphonenumbersoptedoutresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListPhoneNumbersOptedOutRequest
+ *
+ * @brief  Implements SNS ListPhoneNumbersOptedOut requests.
+ *
+ * @see    SNSClient::listPhoneNumbersOptedOut
+ */
+
+/**
+ * @brief  Constructs a new ListPhoneNumbersOptedOutResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
+
+/**
+ * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest(const ListPhoneNumbersOptedOutRequest &other)
+    : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPhoneNumbersOptedOutRequest object.
+ */
+ListPhoneNumbersOptedOutRequest::ListPhoneNumbersOptedOutRequest()
+    : SNSRequest(new ListPhoneNumbersOptedOutRequestPrivate(SNSRequest::ListPhoneNumbersOptedOutAction, this))
+{
+
+}
+
+bool ListPhoneNumbersOptedOutRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPhoneNumbersOptedOutResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPhoneNumbersOptedOutResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPhoneNumbersOptedOutResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPhoneNumbersOptedOutRequestPrivate
+ *
+ * @brief  Private implementation for ListPhoneNumbersOptedOutRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public ListPhoneNumbersOptedOutRequest instance.
+ */
+ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
+    const SNSRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)
+    : ListPhoneNumbersOptedOutPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPhoneNumbersOptedOutRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPhoneNumbersOptedOutRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPhoneNumbersOptedOutRequest instance.
+ */
+ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
+    const ListPhoneNumbersOptedOutRequestPrivate &other, ListPhoneNumbersOptedOutRequest * const q)
+    : ListPhoneNumbersOptedOutPrivate(other, q)
+{
+
+}

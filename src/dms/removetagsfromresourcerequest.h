@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class RemoveTagsFromResourceRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromResourceRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other);
+    RemoveTagsFromResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromResourceRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTESTREQUEST_P_H
 #define QTAWS_GETTESTREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "gettestrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetTestRequest;
+
+class QTAWS_EXPORT GetTestRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetTestRequestPrivate(const DeviceFarm::Action action,
+                                   GetTestRequest * const q);
+    GetTestRequestPrivate(const GetTestRequestPrivate &other,
+                                   GetTestRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTestRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

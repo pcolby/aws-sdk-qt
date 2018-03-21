@@ -20,4 +20,32 @@
 #ifndef QTAWS_PREVIEWAGENTSREQUEST_H
 #define QTAWS_PREVIEWAGENTSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class PreviewAgentsRequestPrivate;
+
+class QTAWS_EXPORT PreviewAgentsRequest : public InspectorRequest {
+
+public:
+    PreviewAgentsRequest(const PreviewAgentsRequest &other);
+    PreviewAgentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PreviewAgentsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFINDINGSREQUEST_H
 #define QTAWS_DESCRIBEFINDINGSREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DescribeFindingsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFindingsRequest : public InspectorRequest {
+
+public:
+    DescribeFindingsRequest(const DescribeFindingsRequest &other);
+    DescribeFindingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFindingsRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

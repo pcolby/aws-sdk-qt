@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERECEIPTRULEREQUEST_H
 #define QTAWS_DELETERECEIPTRULEREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteReceiptRuleRequestPrivate;
+
+class QTAWS_EXPORT DeleteReceiptRuleRequest : public SESRequest {
+
+public:
+    DeleteReceiptRuleRequest(const DeleteReceiptRuleRequest &other);
+    DeleteReceiptRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReceiptRuleRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

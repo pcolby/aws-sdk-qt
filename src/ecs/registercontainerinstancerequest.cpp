@@ -19,3 +19,107 @@
 
 #include "registercontainerinstancerequest.h"
 #include "registercontainerinstancerequest_p.h"
+#include "registercontainerinstanceresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  RegisterContainerInstanceRequest
+ *
+ * @brief  Implements ECS RegisterContainerInstance requests.
+ *
+ * @see    ECSClient::registerContainerInstance
+ */
+
+/**
+ * @brief  Constructs a new RegisterContainerInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
+
+/**
+ * @brief  Constructs a new RegisterContainerInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterContainerInstanceRequest::RegisterContainerInstanceRequest(const RegisterContainerInstanceRequest &other)
+    : ECSRequest(new RegisterContainerInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterContainerInstanceRequest object.
+ */
+RegisterContainerInstanceRequest::RegisterContainerInstanceRequest()
+    : ECSRequest(new RegisterContainerInstanceRequestPrivate(ECSRequest::RegisterContainerInstanceAction, this))
+{
+
+}
+
+bool RegisterContainerInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterContainerInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterContainerInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * RegisterContainerInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterContainerInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterContainerInstanceRequestPrivate
+ *
+ * @brief  Private implementation for RegisterContainerInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterContainerInstanceRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public RegisterContainerInstanceRequest instance.
+ */
+RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
+    const ECSRequest::Action action, RegisterContainerInstanceRequest * const q)
+    : RegisterContainerInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterContainerInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterContainerInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterContainerInstanceRequest instance.
+ */
+RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
+    const RegisterContainerInstanceRequestPrivate &other, RegisterContainerInstanceRequest * const q)
+    : RegisterContainerInstancePrivate(other, q)
+{
+
+}

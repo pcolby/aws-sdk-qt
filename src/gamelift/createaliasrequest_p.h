@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEALIASREQUEST_P_H
 #define QTAWS_CREATEALIASREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "createaliasrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateAliasRequest;
+
+class QTAWS_EXPORT CreateAliasRequestPrivate : public GameLiftPrivate {
+
+public:
+    CreateAliasRequestPrivate(const GameLift::Action action,
+                                   CreateAliasRequest * const q);
+    CreateAliasRequestPrivate(const CreateAliasRequestPrivate &other,
+                                   CreateAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAliasRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

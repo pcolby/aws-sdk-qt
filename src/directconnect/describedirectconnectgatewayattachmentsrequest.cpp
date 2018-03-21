@@ -19,3 +19,107 @@
 
 #include "describedirectconnectgatewayattachmentsrequest.h"
 #include "describedirectconnectgatewayattachmentsrequest_p.h"
+#include "describedirectconnectgatewayattachmentsresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeDirectConnectGatewayAttachmentsRequest
+ *
+ * @brief  Implements DirectConnect DescribeDirectConnectGatewayAttachments requests.
+ *
+ * @see    DirectConnectClient::describeDirectConnectGatewayAttachments
+ */
+
+/**
+ * @brief  Constructs a new DescribeDirectConnectGatewayAttachmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDirectConnectGatewayAttachmentsResponse::DescribeDirectConnectGatewayAttachmentsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDirectConnectGatewayAttachmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDirectConnectGatewayAttachmentsRequest::DescribeDirectConnectGatewayAttachmentsRequest(const DescribeDirectConnectGatewayAttachmentsRequest &other)
+    : DirectConnectRequest(new DescribeDirectConnectGatewayAttachmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDirectConnectGatewayAttachmentsRequest object.
+ */
+DescribeDirectConnectGatewayAttachmentsRequest::DescribeDirectConnectGatewayAttachmentsRequest()
+    : DirectConnectRequest(new DescribeDirectConnectGatewayAttachmentsRequestPrivate(DirectConnectRequest::DescribeDirectConnectGatewayAttachmentsAction, this))
+{
+
+}
+
+bool DescribeDirectConnectGatewayAttachmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDirectConnectGatewayAttachmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDirectConnectGatewayAttachmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DescribeDirectConnectGatewayAttachmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDirectConnectGatewayAttachmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDirectConnectGatewayAttachmentsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDirectConnectGatewayAttachmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectConnectGatewayAttachmentsRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DescribeDirectConnectGatewayAttachmentsRequest instance.
+ */
+DescribeDirectConnectGatewayAttachmentsRequestPrivate::DescribeDirectConnectGatewayAttachmentsRequestPrivate(
+    const DirectConnectRequest::Action action, DescribeDirectConnectGatewayAttachmentsRequest * const q)
+    : DescribeDirectConnectGatewayAttachmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectConnectGatewayAttachmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDirectConnectGatewayAttachmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDirectConnectGatewayAttachmentsRequest instance.
+ */
+DescribeDirectConnectGatewayAttachmentsRequestPrivate::DescribeDirectConnectGatewayAttachmentsRequestPrivate(
+    const DescribeDirectConnectGatewayAttachmentsRequestPrivate &other, DescribeDirectConnectGatewayAttachmentsRequest * const q)
+    : DescribeDirectConnectGatewayAttachmentsPrivate(other, q)
+{
+
+}

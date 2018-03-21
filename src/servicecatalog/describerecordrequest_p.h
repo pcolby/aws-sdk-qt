@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERECORDREQUEST_P_H
 #define QTAWS_DESCRIBERECORDREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "describerecordrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeRecordRequest;
+
+class QTAWS_EXPORT DescribeRecordRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    DescribeRecordRequestPrivate(const ServiceCatalog::Action action,
+                                   DescribeRecordRequest * const q);
+    DescribeRecordRequestPrivate(const DescribeRecordRequestPrivate &other,
+                                   DescribeRecordRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRecordRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

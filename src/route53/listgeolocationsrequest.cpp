@@ -19,3 +19,107 @@
 
 #include "listgeolocationsrequest.h"
 #include "listgeolocationsrequest_p.h"
+#include "listgeolocationsresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListGeoLocationsRequest
+ *
+ * @brief  Implements Route53 ListGeoLocations requests.
+ *
+ * @see    Route53Client::listGeoLocations
+ */
+
+/**
+ * @brief  Constructs a new ListGeoLocationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGeoLocationsResponse::ListGeoLocationsResponse(
+
+/**
+ * @brief  Constructs a new ListGeoLocationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGeoLocationsRequest::ListGeoLocationsRequest(const ListGeoLocationsRequest &other)
+    : Route53Request(new ListGeoLocationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGeoLocationsRequest object.
+ */
+ListGeoLocationsRequest::ListGeoLocationsRequest()
+    : Route53Request(new ListGeoLocationsRequestPrivate(Route53Request::ListGeoLocationsAction, this))
+{
+
+}
+
+bool ListGeoLocationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGeoLocationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGeoLocationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListGeoLocationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGeoLocationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGeoLocationsRequestPrivate
+ *
+ * @brief  Private implementation for ListGeoLocationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGeoLocationsRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListGeoLocationsRequest instance.
+ */
+ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
+    const Route53Request::Action action, ListGeoLocationsRequest * const q)
+    : ListGeoLocationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGeoLocationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGeoLocationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGeoLocationsRequest instance.
+ */
+ListGeoLocationsRequestPrivate::ListGeoLocationsRequestPrivate(
+    const ListGeoLocationsRequestPrivate &other, ListGeoLocationsRequest * const q)
+    : ListGeoLocationsPrivate(other, q)
+{
+
+}

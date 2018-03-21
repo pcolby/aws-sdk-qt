@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECLUSTERREQUEST_P_H
 #define QTAWS_DELETECLUSTERREQUEST_P_H
 
+#include "ecs_p.h"
+#include "deleteclusterrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeleteClusterRequest;
+
+class QTAWS_EXPORT DeleteClusterRequestPrivate : public ECSPrivate {
+
+public:
+    DeleteClusterRequestPrivate(const ECS::Action action,
+                                   DeleteClusterRequest * const q);
+    DeleteClusterRequestPrivate(const DeleteClusterRequestPrivate &other,
+                                   DeleteClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

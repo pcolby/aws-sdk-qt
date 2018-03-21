@@ -19,3 +19,107 @@
 
 #include "mergepullrequestbyfastforwardrequest.h"
 #include "mergepullrequestbyfastforwardrequest_p.h"
+#include "mergepullrequestbyfastforwardresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  MergePullRequestByFastForwardRequest
+ *
+ * @brief  Implements CodeCommit MergePullRequestByFastForward requests.
+ *
+ * @see    CodeCommitClient::mergePullRequestByFastForward
+ */
+
+/**
+ * @brief  Constructs a new MergePullRequestByFastForwardResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
+
+/**
+ * @brief  Constructs a new MergePullRequestByFastForwardRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+MergePullRequestByFastForwardRequest::MergePullRequestByFastForwardRequest(const MergePullRequestByFastForwardRequest &other)
+    : CodeCommitRequest(new MergePullRequestByFastForwardRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new MergePullRequestByFastForwardRequest object.
+ */
+MergePullRequestByFastForwardRequest::MergePullRequestByFastForwardRequest()
+    : CodeCommitRequest(new MergePullRequestByFastForwardRequestPrivate(CodeCommitRequest::MergePullRequestByFastForwardAction, this))
+{
+
+}
+
+bool MergePullRequestByFastForwardRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an MergePullRequestByFastForwardResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An MergePullRequestByFastForwardResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * MergePullRequestByFastForwardRequest::response(QNetworkReply * const reply) const
+{
+    return new MergePullRequestByFastForwardResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  MergePullRequestByFastForwardRequestPrivate
+ *
+ * @brief  Private implementation for MergePullRequestByFastForwardRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergePullRequestByFastForwardRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public MergePullRequestByFastForwardRequest instance.
+ */
+MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
+    const CodeCommitRequest::Action action, MergePullRequestByFastForwardRequest * const q)
+    : MergePullRequestByFastForwardPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new MergePullRequestByFastForwardRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the MergePullRequestByFastForwardRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public MergePullRequestByFastForwardRequest instance.
+ */
+MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
+    const MergePullRequestByFastForwardRequestPrivate &other, MergePullRequestByFastForwardRequest * const q)
+    : MergePullRequestByFastForwardPrivate(other, q)
+{
+
+}

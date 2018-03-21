@@ -20,4 +20,29 @@
 #ifndef QTAWS_EXPORTBUNDLEREQUEST_P_H
 #define QTAWS_EXPORTBUNDLEREQUEST_P_H
 
+#include "mobile_p.h"
+#include "exportbundlerequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class ExportBundleRequest;
+
+class QTAWS_EXPORT ExportBundleRequestPrivate : public MobilePrivate {
+
+public:
+    ExportBundleRequestPrivate(const Mobile::Action action,
+                                   ExportBundleRequest * const q);
+    ExportBundleRequestPrivate(const ExportBundleRequestPrivate &other,
+                                   ExportBundleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ExportBundleRequest)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getinstanceaccessdetailsrequest.h"
 #include "getinstanceaccessdetailsrequest_p.h"
+#include "getinstanceaccessdetailsresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceAccessDetailsRequest
+ *
+ * @brief  Implements Lightsail GetInstanceAccessDetails requests.
+ *
+ * @see    LightsailClient::getInstanceAccessDetails
+ */
+
+/**
+ * @brief  Constructs a new GetInstanceAccessDetailsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceAccessDetailsResponse::GetInstanceAccessDetailsResponse(
+
+/**
+ * @brief  Constructs a new GetInstanceAccessDetailsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInstanceAccessDetailsRequest::GetInstanceAccessDetailsRequest(const GetInstanceAccessDetailsRequest &other)
+    : LightsailRequest(new GetInstanceAccessDetailsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInstanceAccessDetailsRequest object.
+ */
+GetInstanceAccessDetailsRequest::GetInstanceAccessDetailsRequest()
+    : LightsailRequest(new GetInstanceAccessDetailsRequestPrivate(LightsailRequest::GetInstanceAccessDetailsAction, this))
+{
+
+}
+
+bool GetInstanceAccessDetailsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInstanceAccessDetailsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInstanceAccessDetailsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInstanceAccessDetailsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceAccessDetailsRequestPrivate
+ *
+ * @brief  Private implementation for GetInstanceAccessDetailsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceAccessDetailsRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetInstanceAccessDetailsRequest instance.
+ */
+GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
+    const LightsailRequest::Action action, GetInstanceAccessDetailsRequest * const q)
+    : GetInstanceAccessDetailsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceAccessDetailsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInstanceAccessDetailsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInstanceAccessDetailsRequest instance.
+ */
+GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
+    const GetInstanceAccessDetailsRequestPrivate &other, GetInstanceAccessDetailsRequest * const q)
+    : GetInstanceAccessDetailsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTQUERYLOGGINGCONFIGSREQUEST_P_H
 #define QTAWS_LISTQUERYLOGGINGCONFIGSREQUEST_P_H
 
+#include "route53_p.h"
+#include "listqueryloggingconfigsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListQueryLoggingConfigsRequest;
+
+class QTAWS_EXPORT ListQueryLoggingConfigsRequestPrivate : public Route53Private {
+
+public:
+    ListQueryLoggingConfigsRequestPrivate(const Route53::Action action,
+                                   ListQueryLoggingConfigsRequest * const q);
+    ListQueryLoggingConfigsRequestPrivate(const ListQueryLoggingConfigsRequestPrivate &other,
+                                   ListQueryLoggingConfigsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListQueryLoggingConfigsRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

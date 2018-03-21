@@ -19,3 +19,107 @@
 
 #include "describechapcredentialsrequest.h"
 #include "describechapcredentialsrequest_p.h"
+#include "describechapcredentialsresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeChapCredentialsRequest
+ *
+ * @brief  Implements StorageGateway DescribeChapCredentials requests.
+ *
+ * @see    StorageGatewayClient::describeChapCredentials
+ */
+
+/**
+ * @brief  Constructs a new DescribeChapCredentialsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeChapCredentialsResponse::DescribeChapCredentialsResponse(
+
+/**
+ * @brief  Constructs a new DescribeChapCredentialsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeChapCredentialsRequest::DescribeChapCredentialsRequest(const DescribeChapCredentialsRequest &other)
+    : StorageGatewayRequest(new DescribeChapCredentialsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeChapCredentialsRequest object.
+ */
+DescribeChapCredentialsRequest::DescribeChapCredentialsRequest()
+    : StorageGatewayRequest(new DescribeChapCredentialsRequestPrivate(StorageGatewayRequest::DescribeChapCredentialsAction, this))
+{
+
+}
+
+bool DescribeChapCredentialsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeChapCredentialsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeChapCredentialsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeChapCredentialsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeChapCredentialsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeChapCredentialsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeChapCredentialsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeChapCredentialsRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeChapCredentialsRequest instance.
+ */
+DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeChapCredentialsRequest * const q)
+    : DescribeChapCredentialsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeChapCredentialsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeChapCredentialsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeChapCredentialsRequest instance.
+ */
+DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
+    const DescribeChapCredentialsRequestPrivate &other, DescribeChapCredentialsRequest * const q)
+    : DescribeChapCredentialsPrivate(other, q)
+{
+
+}

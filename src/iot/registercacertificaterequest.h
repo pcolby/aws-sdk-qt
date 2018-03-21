@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERCACERTIFICATEREQUEST_H
 #define QTAWS_REGISTERCACERTIFICATEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class RegisterCACertificateRequestPrivate;
+
+class QTAWS_EXPORT RegisterCACertificateRequest : public IoTRequest {
+
+public:
+    RegisterCACertificateRequest(const RegisterCACertificateRequest &other);
+    RegisterCACertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterCACertificateRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

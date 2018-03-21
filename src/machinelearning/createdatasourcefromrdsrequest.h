@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMRDSREQUEST_H
 #define QTAWS_CREATEDATASOURCEFROMRDSREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateDataSourceFromRDSRequestPrivate;
+
+class QTAWS_EXPORT CreateDataSourceFromRDSRequest : public MachineLearningRequest {
+
+public:
+    CreateDataSourceFromRDSRequest(const CreateDataSourceFromRDSRequest &other);
+    CreateDataSourceFromRDSRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceFromRDSRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

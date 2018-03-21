@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERREQUEST_P_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERREQUEST_P_H
 
+#include "mturk_p.h"
+#include "disassociatequalificationfromworkerrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DisassociateQualificationFromWorkerRequest;
+
+class QTAWS_EXPORT DisassociateQualificationFromWorkerRequestPrivate : public MTurkPrivate {
+
+public:
+    DisassociateQualificationFromWorkerRequestPrivate(const MTurk::Action action,
+                                   DisassociateQualificationFromWorkerRequest * const q);
+    DisassociateQualificationFromWorkerRequestPrivate(const DisassociateQualificationFromWorkerRequestPrivate &other,
+                                   DisassociateQualificationFromWorkerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateQualificationFromWorkerRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

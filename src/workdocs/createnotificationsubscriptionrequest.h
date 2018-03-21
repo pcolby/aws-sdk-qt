@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATENOTIFICATIONSUBSCRIPTIONREQUEST_H
 #define QTAWS_CREATENOTIFICATIONSUBSCRIPTIONREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateNotificationSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT CreateNotificationSubscriptionRequest : public WorkDocsRequest {
+
+public:
+    CreateNotificationSubscriptionRequest(const CreateNotificationSubscriptionRequest &other);
+    CreateNotificationSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateNotificationSubscriptionRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

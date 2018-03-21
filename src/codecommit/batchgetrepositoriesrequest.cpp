@@ -19,3 +19,107 @@
 
 #include "batchgetrepositoriesrequest.h"
 #include "batchgetrepositoriesrequest_p.h"
+#include "batchgetrepositoriesresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  BatchGetRepositoriesRequest
+ *
+ * @brief  Implements CodeCommit BatchGetRepositories requests.
+ *
+ * @see    CodeCommitClient::batchGetRepositories
+ */
+
+/**
+ * @brief  Constructs a new BatchGetRepositoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetRepositoriesResponse::BatchGetRepositoriesResponse(
+
+/**
+ * @brief  Constructs a new BatchGetRepositoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetRepositoriesRequest::BatchGetRepositoriesRequest(const BatchGetRepositoriesRequest &other)
+    : CodeCommitRequest(new BatchGetRepositoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetRepositoriesRequest object.
+ */
+BatchGetRepositoriesRequest::BatchGetRepositoriesRequest()
+    : CodeCommitRequest(new BatchGetRepositoriesRequestPrivate(CodeCommitRequest::BatchGetRepositoriesAction, this))
+{
+
+}
+
+bool BatchGetRepositoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetRepositoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetRepositoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * BatchGetRepositoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetRepositoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetRepositoriesRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetRepositoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetRepositoriesRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public BatchGetRepositoriesRequest instance.
+ */
+BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
+    const CodeCommitRequest::Action action, BatchGetRepositoriesRequest * const q)
+    : BatchGetRepositoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetRepositoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetRepositoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetRepositoriesRequest instance.
+ */
+BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
+    const BatchGetRepositoriesRequestPrivate &other, BatchGetRepositoriesRequest * const q)
+    : BatchGetRepositoriesPrivate(other, q)
+{
+
+}

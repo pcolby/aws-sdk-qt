@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIDENTITYPOOLREQUEST_H
 #define QTAWS_DELETEIDENTITYPOOLREQUEST_H
 
+#include "cognitoidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class DeleteIdentityPoolRequestPrivate;
+
+class QTAWS_EXPORT DeleteIdentityPoolRequest : public CognitoIdentityRequest {
+
+public:
+    DeleteIdentityPoolRequest(const DeleteIdentityPoolRequest &other);
+    DeleteIdentityPoolRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIdentityPoolRequest)
+
+}
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

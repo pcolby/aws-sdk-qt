@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECACHESECURITYGROUPREQUEST_P_H
 #define QTAWS_CREATECACHESECURITYGROUPREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "createcachesecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheSecurityGroupRequest;
+
+class QTAWS_EXPORT CreateCacheSecurityGroupRequestPrivate : public ElastiCachePrivate {
+
+public:
+    CreateCacheSecurityGroupRequestPrivate(const ElastiCache::Action action,
+                                   CreateCacheSecurityGroupRequest * const q);
+    CreateCacheSecurityGroupRequestPrivate(const CreateCacheSecurityGroupRequestPrivate &other,
+                                   CreateCacheSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCacheSecurityGroupRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

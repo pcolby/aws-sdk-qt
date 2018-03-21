@@ -19,3 +19,107 @@
 
 #include "associateconfigurationitemstoapplicationrequest.h"
 #include "associateconfigurationitemstoapplicationrequest_p.h"
+#include "associateconfigurationitemstoapplicationresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  AssociateConfigurationItemsToApplicationRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService AssociateConfigurationItemsToApplication requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::associateConfigurationItemsToApplication
+ */
+
+/**
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateConfigurationItemsToApplicationResponse::AssociateConfigurationItemsToApplicationResponse(
+
+/**
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest(const AssociateConfigurationItemsToApplicationRequest &other)
+    : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequest object.
+ */
+AssociateConfigurationItemsToApplicationRequest::AssociateConfigurationItemsToApplicationRequest()
+    : ApplicationDiscoveryServiceRequest(new AssociateConfigurationItemsToApplicationRequestPrivate(ApplicationDiscoveryServiceRequest::AssociateConfigurationItemsToApplicationAction, this))
+{
+
+}
+
+bool AssociateConfigurationItemsToApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateConfigurationItemsToApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateConfigurationItemsToApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * AssociateConfigurationItemsToApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateConfigurationItemsToApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateConfigurationItemsToApplicationRequestPrivate
+ *
+ * @brief  Private implementation for AssociateConfigurationItemsToApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public AssociateConfigurationItemsToApplicationRequest instance.
+ */
+AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)
+    : AssociateConfigurationItemsToApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConfigurationItemsToApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateConfigurationItemsToApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateConfigurationItemsToApplicationRequest instance.
+ */
+AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
+    const AssociateConfigurationItemsToApplicationRequestPrivate &other, AssociateConfigurationItemsToApplicationRequest * const q)
+    : AssociateConfigurationItemsToApplicationPrivate(other, q)
+{
+
+}

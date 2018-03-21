@@ -19,3 +19,107 @@
 
 #include "listserverneighborsrequest.h"
 #include "listserverneighborsrequest_p.h"
+#include "listserverneighborsresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  ListServerNeighborsRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService ListServerNeighbors requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::listServerNeighbors
+ */
+
+/**
+ * @brief  Constructs a new ListServerNeighborsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListServerNeighborsResponse::ListServerNeighborsResponse(
+
+/**
+ * @brief  Constructs a new ListServerNeighborsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListServerNeighborsRequest::ListServerNeighborsRequest(const ListServerNeighborsRequest &other)
+    : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListServerNeighborsRequest object.
+ */
+ListServerNeighborsRequest::ListServerNeighborsRequest()
+    : ApplicationDiscoveryServiceRequest(new ListServerNeighborsRequestPrivate(ApplicationDiscoveryServiceRequest::ListServerNeighborsAction, this))
+{
+
+}
+
+bool ListServerNeighborsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListServerNeighborsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListServerNeighborsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * ListServerNeighborsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListServerNeighborsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListServerNeighborsRequestPrivate
+ *
+ * @brief  Private implementation for ListServerNeighborsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServerNeighborsRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public ListServerNeighborsRequest instance.
+ */
+ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, ListServerNeighborsRequest * const q)
+    : ListServerNeighborsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServerNeighborsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListServerNeighborsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListServerNeighborsRequest instance.
+ */
+ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
+    const ListServerNeighborsRequestPrivate &other, ListServerNeighborsRequest * const q)
+    : ListServerNeighborsPrivate(other, q)
+{
+
+}

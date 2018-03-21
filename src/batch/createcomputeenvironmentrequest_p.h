@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_P_H
 #define QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_P_H
 
+#include "batch_p.h"
+#include "createcomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CreateComputeEnvironmentRequest;
+
+class QTAWS_EXPORT CreateComputeEnvironmentRequestPrivate : public BatchPrivate {
+
+public:
+    CreateComputeEnvironmentRequestPrivate(const Batch::Action action,
+                                   CreateComputeEnvironmentRequest * const q);
+    CreateComputeEnvironmentRequestPrivate(const CreateComputeEnvironmentRequestPrivate &other,
+                                   CreateComputeEnvironmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateComputeEnvironmentRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONTINUEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CONTINUEDEPLOYMENTREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "continuedeploymentrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ContinueDeploymentRequest;
+
+class QTAWS_EXPORT ContinueDeploymentRequestPrivate : public CodeDeployPrivate {
+
+public:
+    ContinueDeploymentRequestPrivate(const CodeDeploy::Action action,
+                                   ContinueDeploymentRequest * const q);
+    ContinueDeploymentRequestPrivate(const ContinueDeploymentRequestPrivate &other,
+                                   ContinueDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ContinueDeploymentRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

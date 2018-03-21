@@ -19,3 +19,107 @@
 
 #include "deleteuserpooldomainrequest.h"
 #include "deleteuserpooldomainrequest_p.h"
+#include "deleteuserpooldomainresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteUserPoolDomainRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DeleteUserPoolDomain requests.
+ *
+ * @see    CognitoIdentityProviderClient::deleteUserPoolDomain
+ */
+
+/**
+ * @brief  Constructs a new DeleteUserPoolDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserPoolDomainResponse::DeleteUserPoolDomainResponse(
+
+/**
+ * @brief  Constructs a new DeleteUserPoolDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest(const DeleteUserPoolDomainRequest &other)
+    : CognitoIdentityProviderRequest(new DeleteUserPoolDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteUserPoolDomainRequest object.
+ */
+DeleteUserPoolDomainRequest::DeleteUserPoolDomainRequest()
+    : CognitoIdentityProviderRequest(new DeleteUserPoolDomainRequestPrivate(CognitoIdentityProviderRequest::DeleteUserPoolDomainAction, this))
+{
+
+}
+
+bool DeleteUserPoolDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteUserPoolDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteUserPoolDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DeleteUserPoolDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteUserPoolDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserPoolDomainRequestPrivate
+ *
+ * @brief  Private implementation for DeleteUserPoolDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DeleteUserPoolDomainRequest instance.
+ */
+DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DeleteUserPoolDomainRequest * const q)
+    : DeleteUserPoolDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserPoolDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteUserPoolDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteUserPoolDomainRequest instance.
+ */
+DeleteUserPoolDomainRequestPrivate::DeleteUserPoolDomainRequestPrivate(
+    const DeleteUserPoolDomainRequestPrivate &other, DeleteUserPoolDomainRequest * const q)
+    : DeleteUserPoolDomainPrivate(other, q)
+{
+
+}

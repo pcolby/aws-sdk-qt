@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONTAINERAGENTREQUEST_H
 #define QTAWS_UPDATECONTAINERAGENTREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateContainerAgentRequestPrivate;
+
+class QTAWS_EXPORT UpdateContainerAgentRequest : public ECSRequest {
+
+public:
+    UpdateContainerAgentRequest(const UpdateContainerAgentRequest &other);
+    UpdateContainerAgentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateContainerAgentRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

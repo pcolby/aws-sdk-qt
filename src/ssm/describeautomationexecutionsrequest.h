@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAUTOMATIONEXECUTIONSREQUEST_H
 #define QTAWS_DESCRIBEAUTOMATIONEXECUTIONSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAutomationExecutionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAutomationExecutionsRequest : public SSMRequest {
+
+public:
+    DescribeAutomationExecutionsRequest(const DescribeAutomationExecutionsRequest &other);
+    DescribeAutomationExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAutomationExecutionsRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

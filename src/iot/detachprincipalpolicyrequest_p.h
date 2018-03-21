@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHPRINCIPALPOLICYREQUEST_P_H
 #define QTAWS_DETACHPRINCIPALPOLICYREQUEST_P_H
 
+#include "iot_p.h"
+#include "detachprincipalpolicyrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DetachPrincipalPolicyRequest;
+
+class QTAWS_EXPORT DetachPrincipalPolicyRequestPrivate : public IoTPrivate {
+
+public:
+    DetachPrincipalPolicyRequestPrivate(const IoT::Action action,
+                                   DetachPrincipalPolicyRequest * const q);
+    DetachPrincipalPolicyRequestPrivate(const DetachPrincipalPolicyRequestPrivate &other,
+                                   DetachPrincipalPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachPrincipalPolicyRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

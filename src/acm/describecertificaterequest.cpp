@@ -19,3 +19,107 @@
 
 #include "describecertificaterequest.h"
 #include "describecertificaterequest_p.h"
+#include "describecertificateresponse.h"
+#include "acmrequest_p.h"
+
+namespace AWS {
+namespace ACM {
+
+/**
+ * @class  DescribeCertificateRequest
+ *
+ * @brief  Implements ACM DescribeCertificate requests.
+ *
+ * @see    ACMClient::describeCertificate
+ */
+
+/**
+ * @brief  Constructs a new DescribeCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCertificateResponse::DescribeCertificateResponse(
+
+/**
+ * @brief  Constructs a new DescribeCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCertificateRequest::DescribeCertificateRequest(const DescribeCertificateRequest &other)
+    : ACMRequest(new DescribeCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCertificateRequest object.
+ */
+DescribeCertificateRequest::DescribeCertificateRequest()
+    : ACMRequest(new DescribeCertificateRequestPrivate(ACMRequest::DescribeCertificateAction, this))
+{
+
+}
+
+bool DescribeCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ACMClient::send
+ */
+AwsAbstractResponse * DescribeCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCertificateRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCertificateRequestPrivate object.
+ *
+ * @param  action  ACM action being performed.
+ * @param  q       Pointer to this object's public DescribeCertificateRequest instance.
+ */
+DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
+    const ACMRequest::Action action, DescribeCertificateRequest * const q)
+    : DescribeCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCertificateRequest instance.
+ */
+DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
+    const DescribeCertificateRequestPrivate &other, DescribeCertificateRequest * const q)
+    : DescribeCertificatePrivate(other, q)
+{
+
+}

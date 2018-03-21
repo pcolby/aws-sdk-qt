@@ -19,3 +19,107 @@
 
 #include "createwebaclrequest.h"
 #include "createwebaclrequest_p.h"
+#include "createwebaclresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateWebACLRequest
+ *
+ * @brief  Implements WAFRegional CreateWebACL requests.
+ *
+ * @see    WAFRegionalClient::createWebACL
+ */
+
+/**
+ * @brief  Constructs a new CreateWebACLResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateWebACLResponse::CreateWebACLResponse(
+
+/**
+ * @brief  Constructs a new CreateWebACLRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateWebACLRequest::CreateWebACLRequest(const CreateWebACLRequest &other)
+    : WAFRegionalRequest(new CreateWebACLRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateWebACLRequest object.
+ */
+CreateWebACLRequest::CreateWebACLRequest()
+    : WAFRegionalRequest(new CreateWebACLRequestPrivate(WAFRegionalRequest::CreateWebACLAction, this))
+{
+
+}
+
+bool CreateWebACLRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateWebACLResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateWebACLResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * CreateWebACLRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateWebACLResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateWebACLRequestPrivate
+ *
+ * @brief  Private implementation for CreateWebACLRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateWebACLRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public CreateWebACLRequest instance.
+ */
+CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
+    const WAFRegionalRequest::Action action, CreateWebACLRequest * const q)
+    : CreateWebACLPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateWebACLRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateWebACLRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateWebACLRequest instance.
+ */
+CreateWebACLRequestPrivate::CreateWebACLRequestPrivate(
+    const CreateWebACLRequestPrivate &other, CreateWebACLRequest * const q)
+    : CreateWebACLPrivate(other, q)
+{
+
+}

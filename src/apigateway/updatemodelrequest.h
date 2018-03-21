@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEMODELREQUEST_H
 #define QTAWS_UPDATEMODELREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateModelRequestPrivate;
+
+class QTAWS_EXPORT UpdateModelRequest : public APIGatewayRequest {
+
+public:
+    UpdateModelRequest(const UpdateModelRequest &other);
+    UpdateModelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateModelRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTASSOCIATIONVERSIONSREQUEST_P_H
 #define QTAWS_LISTASSOCIATIONVERSIONSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listassociationversionsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListAssociationVersionsRequest;
+
+class QTAWS_EXPORT ListAssociationVersionsRequestPrivate : public SSMPrivate {
+
+public:
+    ListAssociationVersionsRequestPrivate(const SSM::Action action,
+                                   ListAssociationVersionsRequest * const q);
+    ListAssociationVersionsRequestPrivate(const ListAssociationVersionsRequestPrivate &other,
+                                   ListAssociationVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssociationVersionsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

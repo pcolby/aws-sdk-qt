@@ -19,3 +19,107 @@
 
 #include "importvolumerequest.h"
 #include "importvolumerequest_p.h"
+#include "importvolumeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ImportVolumeRequest
+ *
+ * @brief  Implements EC2 ImportVolume requests.
+ *
+ * @see    EC2Client::importVolume
+ */
+
+/**
+ * @brief  Constructs a new ImportVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportVolumeResponse::ImportVolumeResponse(
+
+/**
+ * @brief  Constructs a new ImportVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ImportVolumeRequest::ImportVolumeRequest(const ImportVolumeRequest &other)
+    : EC2Request(new ImportVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ImportVolumeRequest object.
+ */
+ImportVolumeRequest::ImportVolumeRequest()
+    : EC2Request(new ImportVolumeRequestPrivate(EC2Request::ImportVolumeAction, this))
+{
+
+}
+
+bool ImportVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ImportVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ImportVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new ImportVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportVolumeRequestPrivate
+ *
+ * @brief  Private implementation for ImportVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportVolumeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ImportVolumeRequest instance.
+ */
+ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
+    const EC2Request::Action action, ImportVolumeRequest * const q)
+    : ImportVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ImportVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ImportVolumeRequest instance.
+ */
+ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
+    const ImportVolumeRequestPrivate &other, ImportVolumeRequest * const q)
+    : ImportVolumePrivate(other, q)
+{
+
+}

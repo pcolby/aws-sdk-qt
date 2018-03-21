@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINSTANCESHEALTHREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCESHEALTHREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "describeinstanceshealthrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeInstancesHealthRequest;
+
+class QTAWS_EXPORT DescribeInstancesHealthRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DescribeInstancesHealthRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DescribeInstancesHealthRequest * const q);
+    DescribeInstancesHealthRequestPrivate(const DescribeInstancesHealthRequestPrivate &other,
+                                   DescribeInstancesHealthRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancesHealthRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_H
 #define QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UpdateFindingsFeedbackRequestPrivate;
+
+class QTAWS_EXPORT UpdateFindingsFeedbackRequest : public GuardDutyRequest {
+
+public:
+    UpdateFindingsFeedbackRequest(const UpdateFindingsFeedbackRequest &other);
+    UpdateFindingsFeedbackRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFindingsFeedbackRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVPCLINKREQUEST_H
 #define QTAWS_DELETEVPCLINKREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteVpcLinkRequestPrivate;
+
+class QTAWS_EXPORT DeleteVpcLinkRequest : public APIGatewayRequest {
+
+public:
+    DeleteVpcLinkRequest(const DeleteVpcLinkRequest &other);
+    DeleteVpcLinkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpcLinkRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

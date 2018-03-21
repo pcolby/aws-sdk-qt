@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 
+#include "cloudhsmv2_p.h"
+#include "describeclustersrequest.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DescribeClustersRequest;
+
+class QTAWS_EXPORT DescribeClustersRequestPrivate : public CloudHSMV2Private {
+
+public:
+    DescribeClustersRequestPrivate(const CloudHSMV2::Action action,
+                                   DescribeClustersRequest * const q);
+    DescribeClustersRequestPrivate(const DescribeClustersRequestPrivate &other,
+                                   DescribeClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClustersRequest)
+
+};
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

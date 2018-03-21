@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEFACETREQUEST_H
 #define QTAWS_CREATEFACETREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateFacetRequestPrivate;
+
+class QTAWS_EXPORT CreateFacetRequest : public CloudDirectoryRequest {
+
+public:
+    CreateFacetRequest(const CreateFacetRequest &other);
+    CreateFacetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateFacetRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

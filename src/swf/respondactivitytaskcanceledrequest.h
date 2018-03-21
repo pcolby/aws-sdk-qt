@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_H
 #define QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskCanceledRequestPrivate;
+
+class QTAWS_EXPORT RespondActivityTaskCanceledRequest : public SWFRequest {
+
+public:
+    RespondActivityTaskCanceledRequest(const RespondActivityTaskCanceledRequest &other);
+    RespondActivityTaskCanceledRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RespondActivityTaskCanceledRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

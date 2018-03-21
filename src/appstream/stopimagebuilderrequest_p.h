@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPIMAGEBUILDERREQUEST_P_H
 #define QTAWS_STOPIMAGEBUILDERREQUEST_P_H
 
+#include "appstream_p.h"
+#include "stopimagebuilderrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StopImageBuilderRequest;
+
+class QTAWS_EXPORT StopImageBuilderRequestPrivate : public AppStreamPrivate {
+
+public:
+    StopImageBuilderRequestPrivate(const AppStream::Action action,
+                                   StopImageBuilderRequest * const q);
+    StopImageBuilderRequestPrivate(const StopImageBuilderRequestPrivate &other,
+                                   StopImageBuilderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopImageBuilderRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

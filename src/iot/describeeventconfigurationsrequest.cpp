@@ -19,3 +19,107 @@
 
 #include "describeeventconfigurationsrequest.h"
 #include "describeeventconfigurationsrequest_p.h"
+#include "describeeventconfigurationsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeEventConfigurationsRequest
+ *
+ * @brief  Implements IoT DescribeEventConfigurations requests.
+ *
+ * @see    IoTClient::describeEventConfigurations
+ */
+
+/**
+ * @brief  Constructs a new DescribeEventConfigurationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeEventConfigurationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest(const DescribeEventConfigurationsRequest &other)
+    : IoTRequest(new DescribeEventConfigurationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEventConfigurationsRequest object.
+ */
+DescribeEventConfigurationsRequest::DescribeEventConfigurationsRequest()
+    : IoTRequest(new DescribeEventConfigurationsRequestPrivate(IoTRequest::DescribeEventConfigurationsAction, this))
+{
+
+}
+
+bool DescribeEventConfigurationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEventConfigurationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEventConfigurationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeEventConfigurationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEventConfigurationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventConfigurationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEventConfigurationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeEventConfigurationsRequest instance.
+ */
+DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
+    const IoTRequest::Action action, DescribeEventConfigurationsRequest * const q)
+    : DescribeEventConfigurationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventConfigurationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEventConfigurationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEventConfigurationsRequest instance.
+ */
+DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
+    const DescribeEventConfigurationsRequestPrivate &other, DescribeEventConfigurationsRequest * const q)
+    : DescribeEventConfigurationsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "settopicattributesrequest.h"
 #include "settopicattributesrequest_p.h"
+#include "settopicattributesresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SetTopicAttributesRequest
+ *
+ * @brief  Implements SNS SetTopicAttributes requests.
+ *
+ * @see    SNSClient::setTopicAttributes
+ */
+
+/**
+ * @brief  Constructs a new SetTopicAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetTopicAttributesResponse::SetTopicAttributesResponse(
+
+/**
+ * @brief  Constructs a new SetTopicAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetTopicAttributesRequest::SetTopicAttributesRequest(const SetTopicAttributesRequest &other)
+    : SNSRequest(new SetTopicAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetTopicAttributesRequest object.
+ */
+SetTopicAttributesRequest::SetTopicAttributesRequest()
+    : SNSRequest(new SetTopicAttributesRequestPrivate(SNSRequest::SetTopicAttributesAction, this))
+{
+
+}
+
+bool SetTopicAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetTopicAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetTopicAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * SetTopicAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new SetTopicAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetTopicAttributesRequestPrivate
+ *
+ * @brief  Private implementation for SetTopicAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTopicAttributesRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public SetTopicAttributesRequest instance.
+ */
+SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
+    const SNSRequest::Action action, SetTopicAttributesRequest * const q)
+    : SetTopicAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetTopicAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetTopicAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetTopicAttributesRequest instance.
+ */
+SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
+    const SetTopicAttributesRequestPrivate &other, SetTopicAttributesRequest * const q)
+    : SetTopicAttributesPrivate(other, q)
+{
+
+}

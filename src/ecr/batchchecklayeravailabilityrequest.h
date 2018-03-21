@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHCHECKLAYERAVAILABILITYREQUEST_H
 #define QTAWS_BATCHCHECKLAYERAVAILABILITYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchCheckLayerAvailabilityRequestPrivate;
+
+class QTAWS_EXPORT BatchCheckLayerAvailabilityRequest : public ECRRequest {
+
+public:
+    BatchCheckLayerAvailabilityRequest(const BatchCheckLayerAvailabilityRequest &other);
+    BatchCheckLayerAvailabilityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchCheckLayerAvailabilityRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

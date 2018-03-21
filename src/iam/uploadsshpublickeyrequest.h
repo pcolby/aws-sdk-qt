@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADSSHPUBLICKEYREQUEST_H
 #define QTAWS_UPLOADSSHPUBLICKEYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UploadSSHPublicKeyRequestPrivate;
+
+class QTAWS_EXPORT UploadSSHPublicKeyRequest : public IAMRequest {
+
+public:
+    UploadSSHPublicKeyRequest(const UploadSSHPublicKeyRequest &other);
+    UploadSSHPublicKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadSSHPublicKeyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

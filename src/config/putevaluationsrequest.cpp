@@ -19,3 +19,107 @@
 
 #include "putevaluationsrequest.h"
 #include "putevaluationsrequest_p.h"
+#include "putevaluationsresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  PutEvaluationsRequest
+ *
+ * @brief  Implements ConfigService PutEvaluations requests.
+ *
+ * @see    ConfigServiceClient::putEvaluations
+ */
+
+/**
+ * @brief  Constructs a new PutEvaluationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutEvaluationsResponse::PutEvaluationsResponse(
+
+/**
+ * @brief  Constructs a new PutEvaluationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutEvaluationsRequest::PutEvaluationsRequest(const PutEvaluationsRequest &other)
+    : ConfigServiceRequest(new PutEvaluationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutEvaluationsRequest object.
+ */
+PutEvaluationsRequest::PutEvaluationsRequest()
+    : ConfigServiceRequest(new PutEvaluationsRequestPrivate(ConfigServiceRequest::PutEvaluationsAction, this))
+{
+
+}
+
+bool PutEvaluationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutEvaluationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutEvaluationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply * const reply) const
+{
+    return new PutEvaluationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutEvaluationsRequestPrivate
+ *
+ * @brief  Private implementation for PutEvaluationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutEvaluationsRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public PutEvaluationsRequest instance.
+ */
+PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
+    const ConfigServiceRequest::Action action, PutEvaluationsRequest * const q)
+    : PutEvaluationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutEvaluationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutEvaluationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutEvaluationsRequest instance.
+ */
+PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
+    const PutEvaluationsRequestPrivate &other, PutEvaluationsRequest * const q)
+    : PutEvaluationsPrivate(other, q)
+{
+
+}

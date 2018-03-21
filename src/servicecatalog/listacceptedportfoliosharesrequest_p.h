@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTACCEPTEDPORTFOLIOSHARESREQUEST_P_H
 #define QTAWS_LISTACCEPTEDPORTFOLIOSHARESREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "listacceptedportfoliosharesrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListAcceptedPortfolioSharesRequest;
+
+class QTAWS_EXPORT ListAcceptedPortfolioSharesRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ListAcceptedPortfolioSharesRequestPrivate(const ServiceCatalog::Action action,
+                                   ListAcceptedPortfolioSharesRequest * const q);
+    ListAcceptedPortfolioSharesRequestPrivate(const ListAcceptedPortfolioSharesRequestPrivate &other,
+                                   ListAcceptedPortfolioSharesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAcceptedPortfolioSharesRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

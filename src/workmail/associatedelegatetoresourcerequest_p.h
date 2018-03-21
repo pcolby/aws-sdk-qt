@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEDELEGATETORESOURCEREQUEST_P_H
 #define QTAWS_ASSOCIATEDELEGATETORESOURCEREQUEST_P_H
 
+#include "workmail_p.h"
+#include "associatedelegatetoresourcerequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class AssociateDelegateToResourceRequest;
+
+class QTAWS_EXPORT AssociateDelegateToResourceRequestPrivate : public WorkMailPrivate {
+
+public:
+    AssociateDelegateToResourceRequestPrivate(const WorkMail::Action action,
+                                   AssociateDelegateToResourceRequest * const q);
+    AssociateDelegateToResourceRequestPrivate(const AssociateDelegateToResourceRequestPrivate &other,
+                                   AssociateDelegateToResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDelegateToResourceRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPARAMETERSREQUEST_H
 #define QTAWS_DELETEPARAMETERSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteParametersRequestPrivate;
+
+class QTAWS_EXPORT DeleteParametersRequest : public SSMRequest {
+
+public:
+    DeleteParametersRequest(const DeleteParametersRequest &other);
+    DeleteParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteParametersRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getattributevaluesrequest.h"
 #include "getattributevaluesrequest_p.h"
+#include "getattributevaluesresponse.h"
+#include "pricingrequest_p.h"
+
+namespace AWS {
+namespace Pricing {
+
+/**
+ * @class  GetAttributeValuesRequest
+ *
+ * @brief  Implements Pricing GetAttributeValues requests.
+ *
+ * @see    PricingClient::getAttributeValues
+ */
+
+/**
+ * @brief  Constructs a new GetAttributeValuesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAttributeValuesResponse::GetAttributeValuesResponse(
+
+/**
+ * @brief  Constructs a new GetAttributeValuesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAttributeValuesRequest::GetAttributeValuesRequest(const GetAttributeValuesRequest &other)
+    : PricingRequest(new GetAttributeValuesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAttributeValuesRequest object.
+ */
+GetAttributeValuesRequest::GetAttributeValuesRequest()
+    : PricingRequest(new GetAttributeValuesRequestPrivate(PricingRequest::GetAttributeValuesAction, this))
+{
+
+}
+
+bool GetAttributeValuesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAttributeValuesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAttributeValuesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PricingClient::send
+ */
+AwsAbstractResponse * GetAttributeValuesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAttributeValuesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAttributeValuesRequestPrivate
+ *
+ * @brief  Private implementation for GetAttributeValuesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAttributeValuesRequestPrivate object.
+ *
+ * @param  action  Pricing action being performed.
+ * @param  q       Pointer to this object's public GetAttributeValuesRequest instance.
+ */
+GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
+    const PricingRequest::Action action, GetAttributeValuesRequest * const q)
+    : GetAttributeValuesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAttributeValuesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAttributeValuesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAttributeValuesRequest instance.
+ */
+GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
+    const GetAttributeValuesRequestPrivate &other, GetAttributeValuesRequest * const q)
+    : GetAttributeValuesPrivate(other, q)
+{
+
+}

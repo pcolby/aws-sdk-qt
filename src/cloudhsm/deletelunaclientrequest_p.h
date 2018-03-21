@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELUNACLIENTREQUEST_P_H
 #define QTAWS_DELETELUNACLIENTREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "deletelunaclientrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DeleteLunaClientRequest;
+
+class QTAWS_EXPORT DeleteLunaClientRequestPrivate : public CloudHSMPrivate {
+
+public:
+    DeleteLunaClientRequestPrivate(const CloudHSM::Action action,
+                                   DeleteLunaClientRequest * const q);
+    DeleteLunaClientRequestPrivate(const DeleteLunaClientRequestPrivate &other,
+                                   DeleteLunaClientRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLunaClientRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

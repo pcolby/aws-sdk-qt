@@ -20,4 +20,29 @@
 #ifndef QTAWS_ALLOCATEADDRESSREQUEST_P_H
 #define QTAWS_ALLOCATEADDRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "allocateaddressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AllocateAddressRequest;
+
+class QTAWS_EXPORT AllocateAddressRequestPrivate : public EC2Private {
+
+public:
+    AllocateAddressRequestPrivate(const EC2::Action action,
+                                   AllocateAddressRequest * const q);
+    AllocateAddressRequestPrivate(const AllocateAddressRequestPrivate &other,
+                                   AllocateAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AllocateAddressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

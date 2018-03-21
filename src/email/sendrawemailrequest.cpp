@@ -19,3 +19,107 @@
 
 #include "sendrawemailrequest.h"
 #include "sendrawemailrequest_p.h"
+#include "sendrawemailresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendRawEmailRequest
+ *
+ * @brief  Implements SES SendRawEmail requests.
+ *
+ * @see    SESClient::sendRawEmail
+ */
+
+/**
+ * @brief  Constructs a new SendRawEmailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendRawEmailResponse::SendRawEmailResponse(
+
+/**
+ * @brief  Constructs a new SendRawEmailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendRawEmailRequest::SendRawEmailRequest(const SendRawEmailRequest &other)
+    : SESRequest(new SendRawEmailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendRawEmailRequest object.
+ */
+SendRawEmailRequest::SendRawEmailRequest()
+    : SESRequest(new SendRawEmailRequestPrivate(SESRequest::SendRawEmailAction, this))
+{
+
+}
+
+bool SendRawEmailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendRawEmailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendRawEmailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SendRawEmailRequest::response(QNetworkReply * const reply) const
+{
+    return new SendRawEmailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendRawEmailRequestPrivate
+ *
+ * @brief  Private implementation for SendRawEmailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendRawEmailRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SendRawEmailRequest instance.
+ */
+SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
+    const SESRequest::Action action, SendRawEmailRequest * const q)
+    : SendRawEmailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendRawEmailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendRawEmailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendRawEmailRequest instance.
+ */
+SendRawEmailRequestPrivate::SendRawEmailRequestPrivate(
+    const SendRawEmailRequestPrivate &other, SendRawEmailRequest * const q)
+    : SendRawEmailPrivate(other, q)
+{
+
+}

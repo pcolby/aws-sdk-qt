@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEIAMINSTANCEPROFILEREQUEST_H
 #define QTAWS_ASSOCIATEIAMINSTANCEPROFILEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateIamInstanceProfileRequestPrivate;
+
+class QTAWS_EXPORT AssociateIamInstanceProfileRequest : public EC2Request {
+
+public:
+    AssociateIamInstanceProfileRequest(const AssociateIamInstanceProfileRequest &other);
+    AssociateIamInstanceProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateIamInstanceProfileRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

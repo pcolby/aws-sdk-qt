@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTRAFFICPOLICYINSTANCESBYHOSTEDZONEREQUEST_H
 #define QTAWS_LISTTRAFFICPOLICYINSTANCESBYHOSTEDZONEREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListTrafficPolicyInstancesByHostedZoneRequestPrivate;
+
+class QTAWS_EXPORT ListTrafficPolicyInstancesByHostedZoneRequest : public Route53Request {
+
+public:
+    ListTrafficPolicyInstancesByHostedZoneRequest(const ListTrafficPolicyInstancesByHostedZoneRequest &other);
+    ListTrafficPolicyInstancesByHostedZoneRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTrafficPolicyInstancesByHostedZoneRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

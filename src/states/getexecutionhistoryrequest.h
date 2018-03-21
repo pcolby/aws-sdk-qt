@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETEXECUTIONHISTORYREQUEST_H
 #define QTAWS_GETEXECUTIONHISTORYREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class GetExecutionHistoryRequestPrivate;
+
+class QTAWS_EXPORT GetExecutionHistoryRequest : public SFNRequest {
+
+public:
+    GetExecutionHistoryRequest(const GetExecutionHistoryRequest &other);
+    GetExecutionHistoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetExecutionHistoryRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

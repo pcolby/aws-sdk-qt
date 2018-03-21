@@ -19,3 +19,107 @@
 
 #include "describetaperecoverypointsrequest.h"
 #include "describetaperecoverypointsrequest_p.h"
+#include "describetaperecoverypointsresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeTapeRecoveryPointsRequest
+ *
+ * @brief  Implements StorageGateway DescribeTapeRecoveryPoints requests.
+ *
+ * @see    StorageGatewayClient::describeTapeRecoveryPoints
+ */
+
+/**
+ * @brief  Constructs a new DescribeTapeRecoveryPointsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTapeRecoveryPointsResponse::DescribeTapeRecoveryPointsResponse(
+
+/**
+ * @brief  Constructs a new DescribeTapeRecoveryPointsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTapeRecoveryPointsRequest::DescribeTapeRecoveryPointsRequest(const DescribeTapeRecoveryPointsRequest &other)
+    : StorageGatewayRequest(new DescribeTapeRecoveryPointsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTapeRecoveryPointsRequest object.
+ */
+DescribeTapeRecoveryPointsRequest::DescribeTapeRecoveryPointsRequest()
+    : StorageGatewayRequest(new DescribeTapeRecoveryPointsRequestPrivate(StorageGatewayRequest::DescribeTapeRecoveryPointsAction, this))
+{
+
+}
+
+bool DescribeTapeRecoveryPointsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTapeRecoveryPointsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTapeRecoveryPointsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTapeRecoveryPointsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTapeRecoveryPointsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTapeRecoveryPointsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTapeRecoveryPointsRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeTapeRecoveryPointsRequest instance.
+ */
+DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeTapeRecoveryPointsRequest * const q)
+    : DescribeTapeRecoveryPointsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTapeRecoveryPointsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTapeRecoveryPointsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTapeRecoveryPointsRequest instance.
+ */
+DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
+    const DescribeTapeRecoveryPointsRequestPrivate &other, DescribeTapeRecoveryPointsRequest * const q)
+    : DescribeTapeRecoveryPointsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "deregistertaskdefinitionrequest.h"
 #include "deregistertaskdefinitionrequest_p.h"
+#include "deregistertaskdefinitionresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DeregisterTaskDefinitionRequest
+ *
+ * @brief  Implements ECS DeregisterTaskDefinition requests.
+ *
+ * @see    ECSClient::deregisterTaskDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeregisterTaskDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeregisterTaskDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest(const DeregisterTaskDefinitionRequest &other)
+    : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterTaskDefinitionRequest object.
+ */
+DeregisterTaskDefinitionRequest::DeregisterTaskDefinitionRequest()
+    : ECSRequest(new DeregisterTaskDefinitionRequestPrivate(ECSRequest::DeregisterTaskDefinitionAction, this))
+{
+
+}
+
+bool DeregisterTaskDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterTaskDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterTaskDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterTaskDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterTaskDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterTaskDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTaskDefinitionRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public DeregisterTaskDefinitionRequest instance.
+ */
+DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
+    const ECSRequest::Action action, DeregisterTaskDefinitionRequest * const q)
+    : DeregisterTaskDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTaskDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterTaskDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterTaskDefinitionRequest instance.
+ */
+DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
+    const DeregisterTaskDefinitionRequestPrivate &other, DeregisterTaskDefinitionRequest * const q)
+    : DeregisterTaskDefinitionPrivate(other, q)
+{
+
+}

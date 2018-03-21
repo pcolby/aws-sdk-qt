@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class UpdateProjectRequest;
+
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public CodeBuildPrivate {
+
+public:
+    UpdateProjectRequestPrivate(const CodeBuild::Action action,
+                                   UpdateProjectRequest * const q);
+    UpdateProjectRequestPrivate(const UpdateProjectRequestPrivate &other,
+                                   UpdateProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

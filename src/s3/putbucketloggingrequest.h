@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTBUCKETLOGGINGREQUEST_H
 #define QTAWS_PUTBUCKETLOGGINGREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketLoggingRequestPrivate;
+
+class QTAWS_EXPORT PutBucketLoggingRequest : public S3Request {
+
+public:
+    PutBucketLoggingRequest(const PutBucketLoggingRequest &other);
+    PutBucketLoggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketLoggingRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

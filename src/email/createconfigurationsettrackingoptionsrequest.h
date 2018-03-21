@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_H
 #define QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetTrackingOptionsRequestPrivate;
+
+class QTAWS_EXPORT CreateConfigurationSetTrackingOptionsRequest : public SESRequest {
+
+public:
+    CreateConfigurationSetTrackingOptionsRequest(const CreateConfigurationSetTrackingOptionsRequest &other);
+    CreateConfigurationSetTrackingOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateConfigurationSetTrackingOptionsRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

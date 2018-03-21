@@ -19,3 +19,107 @@
 
 #include "getkeypairrequest.h"
 #include "getkeypairrequest_p.h"
+#include "getkeypairresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetKeyPairRequest
+ *
+ * @brief  Implements Lightsail GetKeyPair requests.
+ *
+ * @see    LightsailClient::getKeyPair
+ */
+
+/**
+ * @brief  Constructs a new GetKeyPairResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetKeyPairResponse::GetKeyPairResponse(
+
+/**
+ * @brief  Constructs a new GetKeyPairRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetKeyPairRequest::GetKeyPairRequest(const GetKeyPairRequest &other)
+    : LightsailRequest(new GetKeyPairRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetKeyPairRequest object.
+ */
+GetKeyPairRequest::GetKeyPairRequest()
+    : LightsailRequest(new GetKeyPairRequestPrivate(LightsailRequest::GetKeyPairAction, this))
+{
+
+}
+
+bool GetKeyPairRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetKeyPairResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetKeyPairResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetKeyPairRequest::response(QNetworkReply * const reply) const
+{
+    return new GetKeyPairResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetKeyPairRequestPrivate
+ *
+ * @brief  Private implementation for GetKeyPairRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetKeyPairRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetKeyPairRequest instance.
+ */
+GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
+    const LightsailRequest::Action action, GetKeyPairRequest * const q)
+    : GetKeyPairPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetKeyPairRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetKeyPairRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetKeyPairRequest instance.
+ */
+GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
+    const GetKeyPairRequestPrivate &other, GetKeyPairRequest * const q)
+    : GetKeyPairPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "getpartitionrequest.h"
 #include "getpartitionrequest_p.h"
+#include "getpartitionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetPartitionRequest
+ *
+ * @brief  Implements Glue GetPartition requests.
+ *
+ * @see    GlueClient::getPartition
+ */
+
+/**
+ * @brief  Constructs a new GetPartitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPartitionResponse::GetPartitionResponse(
+
+/**
+ * @brief  Constructs a new GetPartitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPartitionRequest::GetPartitionRequest(const GetPartitionRequest &other)
+    : GlueRequest(new GetPartitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPartitionRequest object.
+ */
+GetPartitionRequest::GetPartitionRequest()
+    : GlueRequest(new GetPartitionRequestPrivate(GlueRequest::GetPartitionAction, this))
+{
+
+}
+
+bool GetPartitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPartitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPartitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetPartitionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPartitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPartitionRequestPrivate
+ *
+ * @brief  Private implementation for GetPartitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPartitionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetPartitionRequest instance.
+ */
+GetPartitionRequestPrivate::GetPartitionRequestPrivate(
+    const GlueRequest::Action action, GetPartitionRequest * const q)
+    : GetPartitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPartitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPartitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPartitionRequest instance.
+ */
+GetPartitionRequestPrivate::GetPartitionRequestPrivate(
+    const GetPartitionRequestPrivate &other, GetPartitionRequest * const q)
+    : GetPartitionPrivate(other, q)
+{
+
+}

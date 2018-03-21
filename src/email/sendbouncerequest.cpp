@@ -19,3 +19,107 @@
 
 #include "sendbouncerequest.h"
 #include "sendbouncerequest_p.h"
+#include "sendbounceresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendBounceRequest
+ *
+ * @brief  Implements SES SendBounce requests.
+ *
+ * @see    SESClient::sendBounce
+ */
+
+/**
+ * @brief  Constructs a new SendBounceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendBounceResponse::SendBounceResponse(
+
+/**
+ * @brief  Constructs a new SendBounceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendBounceRequest::SendBounceRequest(const SendBounceRequest &other)
+    : SESRequest(new SendBounceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendBounceRequest object.
+ */
+SendBounceRequest::SendBounceRequest()
+    : SESRequest(new SendBounceRequestPrivate(SESRequest::SendBounceAction, this))
+{
+
+}
+
+bool SendBounceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendBounceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendBounceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * const reply) const
+{
+    return new SendBounceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendBounceRequestPrivate
+ *
+ * @brief  Private implementation for SendBounceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBounceRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SendBounceRequest instance.
+ */
+SendBounceRequestPrivate::SendBounceRequestPrivate(
+    const SESRequest::Action action, SendBounceRequest * const q)
+    : SendBouncePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendBounceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendBounceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendBounceRequest instance.
+ */
+SendBounceRequestPrivate::SendBounceRequestPrivate(
+    const SendBounceRequestPrivate &other, SendBounceRequest * const q)
+    : SendBouncePrivate(other, q)
+{
+
+}

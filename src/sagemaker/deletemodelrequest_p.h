@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEMODELREQUEST_P_H
 #define QTAWS_DELETEMODELREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "deletemodelrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteModelRequest;
+
+class QTAWS_EXPORT DeleteModelRequestPrivate : public SageMakerPrivate {
+
+public:
+    DeleteModelRequestPrivate(const SageMaker::Action action,
+                                   DeleteModelRequest * const q);
+    DeleteModelRequestPrivate(const DeleteModelRequestPrivate &other,
+                                   DeleteModelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteModelRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

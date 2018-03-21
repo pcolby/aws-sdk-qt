@@ -19,3 +19,107 @@
 
 #include "untagresourcesrequest.h"
 #include "untagresourcesrequest_p.h"
+#include "untagresourcesresponse.h"
+#include "resourcegroupstaggingapirequest_p.h"
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  UntagResourcesRequest
+ *
+ * @brief  Implements ResourceGroupsTaggingAPI UntagResources requests.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::untagResources
+ */
+
+/**
+ * @brief  Constructs a new UntagResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResourcesResponse::UntagResourcesResponse(
+
+/**
+ * @brief  Constructs a new UntagResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UntagResourcesRequest::UntagResourcesRequest(const UntagResourcesRequest &other)
+    : ResourceGroupsTaggingAPIRequest(new UntagResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UntagResourcesRequest object.
+ */
+UntagResourcesRequest::UntagResourcesRequest()
+    : ResourceGroupsTaggingAPIRequest(new UntagResourcesRequestPrivate(ResourceGroupsTaggingAPIRequest::UntagResourcesAction, this))
+{
+
+}
+
+bool UntagResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UntagResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UntagResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ResourceGroupsTaggingAPIClient::send
+ */
+AwsAbstractResponse * UntagResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new UntagResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagResourcesRequestPrivate
+ *
+ * @brief  Private implementation for UntagResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourcesRequestPrivate object.
+ *
+ * @param  action  ResourceGroupsTaggingAPI action being performed.
+ * @param  q       Pointer to this object's public UntagResourcesRequest instance.
+ */
+UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
+    const ResourceGroupsTaggingAPIRequest::Action action, UntagResourcesRequest * const q)
+    : UntagResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UntagResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UntagResourcesRequest instance.
+ */
+UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
+    const UntagResourcesRequestPrivate &other, UntagResourcesRequest * const q)
+    : UntagResourcesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CANCELEXPORTTASKREQUEST_H
 #define QTAWS_CANCELEXPORTTASKREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelExportTaskRequestPrivate;
+
+class QTAWS_EXPORT CancelExportTaskRequest : public EC2Request {
+
+public:
+    CancelExportTaskRequest(const CancelExportTaskRequest &other);
+    CancelExportTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CancelExportTaskRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

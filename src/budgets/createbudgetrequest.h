@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEBUDGETREQUEST_H
 #define QTAWS_CREATEBUDGETREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class CreateBudgetRequestPrivate;
+
+class QTAWS_EXPORT CreateBudgetRequest : public BudgetsRequest {
+
+public:
+    CreateBudgetRequest(const CreateBudgetRequest &other);
+    CreateBudgetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateBudgetRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

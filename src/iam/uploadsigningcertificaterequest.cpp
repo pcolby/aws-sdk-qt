@@ -19,3 +19,107 @@
 
 #include "uploadsigningcertificaterequest.h"
 #include "uploadsigningcertificaterequest_p.h"
+#include "uploadsigningcertificateresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UploadSigningCertificateRequest
+ *
+ * @brief  Implements IAM UploadSigningCertificate requests.
+ *
+ * @see    IAMClient::uploadSigningCertificate
+ */
+
+/**
+ * @brief  Constructs a new UploadSigningCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UploadSigningCertificateResponse::UploadSigningCertificateResponse(
+
+/**
+ * @brief  Constructs a new UploadSigningCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UploadSigningCertificateRequest::UploadSigningCertificateRequest(const UploadSigningCertificateRequest &other)
+    : IAMRequest(new UploadSigningCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UploadSigningCertificateRequest object.
+ */
+UploadSigningCertificateRequest::UploadSigningCertificateRequest()
+    : IAMRequest(new UploadSigningCertificateRequestPrivate(IAMRequest::UploadSigningCertificateAction, this))
+{
+
+}
+
+bool UploadSigningCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UploadSigningCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UploadSigningCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UploadSigningCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new UploadSigningCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UploadSigningCertificateRequestPrivate
+ *
+ * @brief  Private implementation for UploadSigningCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadSigningCertificateRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UploadSigningCertificateRequest instance.
+ */
+UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
+    const IAMRequest::Action action, UploadSigningCertificateRequest * const q)
+    : UploadSigningCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UploadSigningCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UploadSigningCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UploadSigningCertificateRequest instance.
+ */
+UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
+    const UploadSigningCertificateRequestPrivate &other, UploadSigningCertificateRequest * const q)
+    : UploadSigningCertificatePrivate(other, q)
+{
+
+}

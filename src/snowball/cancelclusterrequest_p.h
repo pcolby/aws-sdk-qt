@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELCLUSTERREQUEST_P_H
 #define QTAWS_CANCELCLUSTERREQUEST_P_H
 
+#include "snowball_p.h"
+#include "cancelclusterrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CancelClusterRequest;
+
+class QTAWS_EXPORT CancelClusterRequestPrivate : public SnowballPrivate {
+
+public:
+    CancelClusterRequestPrivate(const Snowball::Action action,
+                                   CancelClusterRequest * const q);
+    CancelClusterRequestPrivate(const CancelClusterRequestPrivate &other,
+                                   CancelClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelClusterRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

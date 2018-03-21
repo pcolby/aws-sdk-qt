@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_P_H
 #define QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_P_H
 
+#include "iam_p.h"
+#include "listattachedgrouppoliciesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAttachedGroupPoliciesRequest;
+
+class QTAWS_EXPORT ListAttachedGroupPoliciesRequestPrivate : public IAMPrivate {
+
+public:
+    ListAttachedGroupPoliciesRequestPrivate(const IAM::Action action,
+                                   ListAttachedGroupPoliciesRequest * const q);
+    ListAttachedGroupPoliciesRequestPrivate(const ListAttachedGroupPoliciesRequestPrivate &other,
+                                   ListAttachedGroupPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAttachedGroupPoliciesRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

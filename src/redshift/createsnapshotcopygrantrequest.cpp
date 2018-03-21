@@ -19,3 +19,107 @@
 
 #include "createsnapshotcopygrantrequest.h"
 #include "createsnapshotcopygrantrequest_p.h"
+#include "createsnapshotcopygrantresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  CreateSnapshotCopyGrantRequest
+ *
+ * @brief  Implements Redshift CreateSnapshotCopyGrant requests.
+ *
+ * @see    RedshiftClient::createSnapshotCopyGrant
+ */
+
+/**
+ * @brief  Constructs a new CreateSnapshotCopyGrantResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotCopyGrantResponse::CreateSnapshotCopyGrantResponse(
+
+/**
+ * @brief  Constructs a new CreateSnapshotCopyGrantRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSnapshotCopyGrantRequest::CreateSnapshotCopyGrantRequest(const CreateSnapshotCopyGrantRequest &other)
+    : RedshiftRequest(new CreateSnapshotCopyGrantRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSnapshotCopyGrantRequest object.
+ */
+CreateSnapshotCopyGrantRequest::CreateSnapshotCopyGrantRequest()
+    : RedshiftRequest(new CreateSnapshotCopyGrantRequestPrivate(RedshiftRequest::CreateSnapshotCopyGrantAction, this))
+{
+
+}
+
+bool CreateSnapshotCopyGrantRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSnapshotCopyGrantResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSnapshotCopyGrantResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * CreateSnapshotCopyGrantRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSnapshotCopyGrantResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotCopyGrantRequestPrivate
+ *
+ * @brief  Private implementation for CreateSnapshotCopyGrantRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotCopyGrantRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public CreateSnapshotCopyGrantRequest instance.
+ */
+CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
+    const RedshiftRequest::Action action, CreateSnapshotCopyGrantRequest * const q)
+    : CreateSnapshotCopyGrantPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotCopyGrantRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSnapshotCopyGrantRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSnapshotCopyGrantRequest instance.
+ */
+CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
+    const CreateSnapshotCopyGrantRequestPrivate &other, CreateSnapshotCopyGrantRequest * const q)
+    : CreateSnapshotCopyGrantPrivate(other, q)
+{
+
+}

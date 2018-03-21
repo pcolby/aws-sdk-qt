@@ -19,3 +19,107 @@
 
 #include "deletenamedqueryrequest.h"
 #include "deletenamedqueryrequest_p.h"
+#include "deletenamedqueryresponse.h"
+#include "athenarequest_p.h"
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  DeleteNamedQueryRequest
+ *
+ * @brief  Implements Athena DeleteNamedQuery requests.
+ *
+ * @see    AthenaClient::deleteNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new DeleteNamedQueryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNamedQueryResponse::DeleteNamedQueryResponse(
+
+/**
+ * @brief  Constructs a new DeleteNamedQueryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNamedQueryRequest::DeleteNamedQueryRequest(const DeleteNamedQueryRequest &other)
+    : AthenaRequest(new DeleteNamedQueryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNamedQueryRequest object.
+ */
+DeleteNamedQueryRequest::DeleteNamedQueryRequest()
+    : AthenaRequest(new DeleteNamedQueryRequestPrivate(AthenaRequest::DeleteNamedQueryAction, this))
+{
+
+}
+
+bool DeleteNamedQueryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNamedQueryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNamedQueryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AthenaClient::send
+ */
+AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNamedQueryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNamedQueryRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNamedQueryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNamedQueryRequestPrivate object.
+ *
+ * @param  action  Athena action being performed.
+ * @param  q       Pointer to this object's public DeleteNamedQueryRequest instance.
+ */
+DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
+    const AthenaRequest::Action action, DeleteNamedQueryRequest * const q)
+    : DeleteNamedQueryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNamedQueryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNamedQueryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNamedQueryRequest instance.
+ */
+DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
+    const DeleteNamedQueryRequestPrivate &other, DeleteNamedQueryRequest * const q)
+    : DeleteNamedQueryPrivate(other, q)
+{
+
+}

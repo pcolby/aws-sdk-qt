@@ -20,4 +20,29 @@
 #ifndef QTAWS_ENABLEMETRICSCOLLECTIONREQUEST_P_H
 #define QTAWS_ENABLEMETRICSCOLLECTIONREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "enablemetricscollectionrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class EnableMetricsCollectionRequest;
+
+class QTAWS_EXPORT EnableMetricsCollectionRequestPrivate : public AutoScalingPrivate {
+
+public:
+    EnableMetricsCollectionRequestPrivate(const AutoScaling::Action action,
+                                   EnableMetricsCollectionRequest * const q);
+    EnableMetricsCollectionRequestPrivate(const EnableMetricsCollectionRequestPrivate &other,
+                                   EnableMetricsCollectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(EnableMetricsCollectionRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTIMAGEREQUEST_P_H
 #define QTAWS_IMPORTIMAGEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "importimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportImageRequest;
+
+class QTAWS_EXPORT ImportImageRequestPrivate : public EC2Private {
+
+public:
+    ImportImageRequestPrivate(const EC2::Action action,
+                                   ImportImageRequest * const q);
+    ImportImageRequestPrivate(const ImportImageRequestPrivate &other,
+                                   ImportImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportImageRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

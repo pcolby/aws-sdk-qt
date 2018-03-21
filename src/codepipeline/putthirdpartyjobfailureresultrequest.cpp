@@ -19,3 +19,107 @@
 
 #include "putthirdpartyjobfailureresultrequest.h"
 #include "putthirdpartyjobfailureresultrequest_p.h"
+#include "putthirdpartyjobfailureresultresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PutThirdPartyJobFailureResultRequest
+ *
+ * @brief  Implements CodePipeline PutThirdPartyJobFailureResult requests.
+ *
+ * @see    CodePipelineClient::putThirdPartyJobFailureResult
+ */
+
+/**
+ * @brief  Constructs a new PutThirdPartyJobFailureResultResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutThirdPartyJobFailureResultResponse::PutThirdPartyJobFailureResultResponse(
+
+/**
+ * @brief  Constructs a new PutThirdPartyJobFailureResultRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutThirdPartyJobFailureResultRequest::PutThirdPartyJobFailureResultRequest(const PutThirdPartyJobFailureResultRequest &other)
+    : CodePipelineRequest(new PutThirdPartyJobFailureResultRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutThirdPartyJobFailureResultRequest object.
+ */
+PutThirdPartyJobFailureResultRequest::PutThirdPartyJobFailureResultRequest()
+    : CodePipelineRequest(new PutThirdPartyJobFailureResultRequestPrivate(CodePipelineRequest::PutThirdPartyJobFailureResultAction, this))
+{
+
+}
+
+bool PutThirdPartyJobFailureResultRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutThirdPartyJobFailureResultResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutThirdPartyJobFailureResultResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::response(QNetworkReply * const reply) const
+{
+    return new PutThirdPartyJobFailureResultResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutThirdPartyJobFailureResultRequestPrivate
+ *
+ * @brief  Private implementation for PutThirdPartyJobFailureResultRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutThirdPartyJobFailureResultRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public PutThirdPartyJobFailureResultRequest instance.
+ */
+PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
+    const CodePipelineRequest::Action action, PutThirdPartyJobFailureResultRequest * const q)
+    : PutThirdPartyJobFailureResultPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutThirdPartyJobFailureResultRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutThirdPartyJobFailureResultRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutThirdPartyJobFailureResultRequest instance.
+ */
+PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
+    const PutThirdPartyJobFailureResultRequestPrivate &other, PutThirdPartyJobFailureResultRequest * const q)
+    : PutThirdPartyJobFailureResultPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONSTRAINTREQUEST_H
 #define QTAWS_DESCRIBECONSTRAINTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeConstraintRequestPrivate;
+
+class QTAWS_EXPORT DescribeConstraintRequest : public ServiceCatalogRequest {
+
+public:
+    DescribeConstraintRequest(const DescribeConstraintRequest &other);
+    DescribeConstraintRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConstraintRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

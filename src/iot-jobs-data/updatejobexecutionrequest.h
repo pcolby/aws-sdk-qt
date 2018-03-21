@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEJOBEXECUTIONREQUEST_H
 #define QTAWS_UPDATEJOBEXECUTIONREQUEST_H
 
+#include "iotjobsdataplanerequest.h"
+
+namespace AWS {
+
+namespace IoTJobsDataPlane {
+
+class UpdateJobExecutionRequestPrivate;
+
+class QTAWS_EXPORT UpdateJobExecutionRequest : public IoTJobsDataPlaneRequest {
+
+public:
+    UpdateJobExecutionRequest(const UpdateJobExecutionRequest &other);
+    UpdateJobExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateJobExecutionRequest)
+
+}
+
+} // namespace IoTJobsDataPlane
+} // namespace AWS
+
 #endif

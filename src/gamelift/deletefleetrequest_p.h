@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFLEETREQUEST_P_H
 #define QTAWS_DELETEFLEETREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "deletefleetrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteFleetRequest;
+
+class QTAWS_EXPORT DeleteFleetRequestPrivate : public GameLiftPrivate {
+
+public:
+    DeleteFleetRequestPrivate(const GameLift::Action action,
+                                   DeleteFleetRequest * const q);
+    DeleteFleetRequestPrivate(const DeleteFleetRequestPrivate &other,
+                                   DeleteFleetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFleetRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

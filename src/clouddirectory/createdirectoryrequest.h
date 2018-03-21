@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDIRECTORYREQUEST_H
 #define QTAWS_CREATEDIRECTORYREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateDirectoryRequestPrivate;
+
+class QTAWS_EXPORT CreateDirectoryRequest : public CloudDirectoryRequest {
+
+public:
+    CreateDirectoryRequest(const CreateDirectoryRequest &other);
+    CreateDirectoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDirectoryRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

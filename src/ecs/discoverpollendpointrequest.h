@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISCOVERPOLLENDPOINTREQUEST_H
 #define QTAWS_DISCOVERPOLLENDPOINTREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DiscoverPollEndpointRequestPrivate;
+
+class QTAWS_EXPORT DiscoverPollEndpointRequest : public ECSRequest {
+
+public:
+    DiscoverPollEndpointRequest(const DiscoverPollEndpointRequest &other);
+    DiscoverPollEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DiscoverPollEndpointRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELOGGERDEFINITIONREQUEST_P_H
 #define QTAWS_DELETELOGGERDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "deleteloggerdefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteLoggerDefinitionRequest;
+
+class QTAWS_EXPORT DeleteLoggerDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    DeleteLoggerDefinitionRequestPrivate(const Greengrass::Action action,
+                                   DeleteLoggerDefinitionRequest * const q);
+    DeleteLoggerDefinitionRequestPrivate(const DeleteLoggerDefinitionRequestPrivate &other,
+                                   DeleteLoggerDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLoggerDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

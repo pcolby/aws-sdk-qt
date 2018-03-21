@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTUSERSREQUEST_P_H
 #define QTAWS_LISTUSERSREQUEST_P_H
 
+#include "workmail_p.h"
+#include "listusersrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListUsersRequest;
+
+class QTAWS_EXPORT ListUsersRequestPrivate : public WorkMailPrivate {
+
+public:
+    ListUsersRequestPrivate(const WorkMail::Action action,
+                                   ListUsersRequest * const q);
+    ListUsersRequestPrivate(const ListUsersRequestPrivate &other,
+                                   ListUsersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListUsersRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

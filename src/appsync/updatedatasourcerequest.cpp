@@ -19,3 +19,107 @@
 
 #include "updatedatasourcerequest.h"
 #include "updatedatasourcerequest_p.h"
+#include "updatedatasourceresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  UpdateDataSourceRequest
+ *
+ * @brief  Implements AppSync UpdateDataSource requests.
+ *
+ * @see    AppSyncClient::updateDataSource
+ */
+
+/**
+ * @brief  Constructs a new UpdateDataSourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDataSourceResponse::UpdateDataSourceResponse(
+
+/**
+ * @brief  Constructs a new UpdateDataSourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDataSourceRequest::UpdateDataSourceRequest(const UpdateDataSourceRequest &other)
+    : AppSyncRequest(new UpdateDataSourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDataSourceRequest object.
+ */
+UpdateDataSourceRequest::UpdateDataSourceRequest()
+    : AppSyncRequest(new UpdateDataSourceRequestPrivate(AppSyncRequest::UpdateDataSourceAction, this))
+{
+
+}
+
+bool UpdateDataSourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDataSourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDataSourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDataSourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDataSourceRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDataSourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDataSourceRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public UpdateDataSourceRequest instance.
+ */
+UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
+    const AppSyncRequest::Action action, UpdateDataSourceRequest * const q)
+    : UpdateDataSourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDataSourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDataSourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDataSourceRequest instance.
+ */
+UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
+    const UpdateDataSourceRequestPrivate &other, UpdateDataSourceRequest * const q)
+    : UpdateDataSourcePrivate(other, q)
+{
+
+}

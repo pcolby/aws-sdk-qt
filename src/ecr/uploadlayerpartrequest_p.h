@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPLOADLAYERPARTREQUEST_P_H
 #define QTAWS_UPLOADLAYERPARTREQUEST_P_H
 
+#include "ecr_p.h"
+#include "uploadlayerpartrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class UploadLayerPartRequest;
+
+class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRPrivate {
+
+public:
+    UploadLayerPartRequestPrivate(const ECR::Action action,
+                                   UploadLayerPartRequest * const q);
+    UploadLayerPartRequestPrivate(const UploadLayerPartRequestPrivate &other,
+                                   UploadLayerPartRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UploadLayerPartRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

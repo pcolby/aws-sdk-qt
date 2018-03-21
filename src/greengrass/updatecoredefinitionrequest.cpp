@@ -19,3 +19,107 @@
 
 #include "updatecoredefinitionrequest.h"
 #include "updatecoredefinitionrequest_p.h"
+#include "updatecoredefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  UpdateCoreDefinitionRequest
+ *
+ * @brief  Implements Greengrass UpdateCoreDefinition requests.
+ *
+ * @see    GreengrassClient::updateCoreDefinition
+ */
+
+/**
+ * @brief  Constructs a new UpdateCoreDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCoreDefinitionResponse::UpdateCoreDefinitionResponse(
+
+/**
+ * @brief  Constructs a new UpdateCoreDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest(const UpdateCoreDefinitionRequest &other)
+    : GreengrassRequest(new UpdateCoreDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCoreDefinitionRequest object.
+ */
+UpdateCoreDefinitionRequest::UpdateCoreDefinitionRequest()
+    : GreengrassRequest(new UpdateCoreDefinitionRequestPrivate(GreengrassRequest::UpdateCoreDefinitionAction, this))
+{
+
+}
+
+bool UpdateCoreDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCoreDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCoreDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * UpdateCoreDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCoreDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCoreDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCoreDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public UpdateCoreDefinitionRequest instance.
+ */
+UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, UpdateCoreDefinitionRequest * const q)
+    : UpdateCoreDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCoreDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCoreDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCoreDefinitionRequest instance.
+ */
+UpdateCoreDefinitionRequestPrivate::UpdateCoreDefinitionRequestPrivate(
+    const UpdateCoreDefinitionRequestPrivate &other, UpdateCoreDefinitionRequest * const q)
+    : UpdateCoreDefinitionPrivate(other, q)
+{
+
+}

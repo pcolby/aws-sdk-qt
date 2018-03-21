@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class CreateApplicationRequestPrivate;
+
+class QTAWS_EXPORT CreateApplicationRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    CreateApplicationRequest(const CreateApplicationRequest &other);
+    CreateApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateApplicationRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

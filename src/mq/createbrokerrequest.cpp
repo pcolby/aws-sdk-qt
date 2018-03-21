@@ -19,3 +19,107 @@
 
 #include "createbrokerrequest.h"
 #include "createbrokerrequest_p.h"
+#include "createbrokerresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  CreateBrokerRequest
+ *
+ * @brief  Implements MQ CreateBroker requests.
+ *
+ * @see    MQClient::createBroker
+ */
+
+/**
+ * @brief  Constructs a new CreateBrokerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBrokerResponse::CreateBrokerResponse(
+
+/**
+ * @brief  Constructs a new CreateBrokerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateBrokerRequest::CreateBrokerRequest(const CreateBrokerRequest &other)
+    : MQRequest(new CreateBrokerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateBrokerRequest object.
+ */
+CreateBrokerRequest::CreateBrokerRequest()
+    : MQRequest(new CreateBrokerRequestPrivate(MQRequest::CreateBrokerAction, this))
+{
+
+}
+
+bool CreateBrokerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateBrokerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateBrokerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateBrokerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBrokerRequestPrivate
+ *
+ * @brief  Private implementation for CreateBrokerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBrokerRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public CreateBrokerRequest instance.
+ */
+CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
+    const MQRequest::Action action, CreateBrokerRequest * const q)
+    : CreateBrokerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBrokerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateBrokerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateBrokerRequest instance.
+ */
+CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
+    const CreateBrokerRequestPrivate &other, CreateBrokerRequest * const q)
+    : CreateBrokerPrivate(other, q)
+{
+
+}

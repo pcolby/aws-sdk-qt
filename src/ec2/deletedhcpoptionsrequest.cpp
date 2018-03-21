@@ -19,3 +19,107 @@
 
 #include "deletedhcpoptionsrequest.h"
 #include "deletedhcpoptionsrequest_p.h"
+#include "deletedhcpoptionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteDhcpOptionsRequest
+ *
+ * @brief  Implements EC2 DeleteDhcpOptions requests.
+ *
+ * @see    EC2Client::deleteDhcpOptions
+ */
+
+/**
+ * @brief  Constructs a new DeleteDhcpOptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
+
+/**
+ * @brief  Constructs a new DeleteDhcpOptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest(const DeleteDhcpOptionsRequest &other)
+    : EC2Request(new DeleteDhcpOptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDhcpOptionsRequest object.
+ */
+DeleteDhcpOptionsRequest::DeleteDhcpOptionsRequest()
+    : EC2Request(new DeleteDhcpOptionsRequestPrivate(EC2Request::DeleteDhcpOptionsAction, this))
+{
+
+}
+
+bool DeleteDhcpOptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDhcpOptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDhcpOptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDhcpOptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDhcpOptionsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDhcpOptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteDhcpOptionsRequest instance.
+ */
+DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
+    const EC2Request::Action action, DeleteDhcpOptionsRequest * const q)
+    : DeleteDhcpOptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDhcpOptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDhcpOptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDhcpOptionsRequest instance.
+ */
+DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
+    const DeleteDhcpOptionsRequestPrivate &other, DeleteDhcpOptionsRequest * const q)
+    : DeleteDhcpOptionsPrivate(other, q)
+{
+
+}

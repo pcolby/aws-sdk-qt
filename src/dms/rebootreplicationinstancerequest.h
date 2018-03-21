@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_H
 #define QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class RebootReplicationInstanceRequestPrivate;
+
+class QTAWS_EXPORT RebootReplicationInstanceRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    RebootReplicationInstanceRequest(const RebootReplicationInstanceRequest &other);
+    RebootReplicationInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootReplicationInstanceRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

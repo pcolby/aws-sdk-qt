@@ -19,3 +19,107 @@
 
 #include "untagloggrouprequest.h"
 #include "untagloggrouprequest_p.h"
+#include "untagloggroupresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  UntagLogGroupRequest
+ *
+ * @brief  Implements CloudWatchLogs UntagLogGroup requests.
+ *
+ * @see    CloudWatchLogsClient::untagLogGroup
+ */
+
+/**
+ * @brief  Constructs a new UntagLogGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagLogGroupResponse::UntagLogGroupResponse(
+
+/**
+ * @brief  Constructs a new UntagLogGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UntagLogGroupRequest::UntagLogGroupRequest(const UntagLogGroupRequest &other)
+    : CloudWatchLogsRequest(new UntagLogGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UntagLogGroupRequest object.
+ */
+UntagLogGroupRequest::UntagLogGroupRequest()
+    : CloudWatchLogsRequest(new UntagLogGroupRequestPrivate(CloudWatchLogsRequest::UntagLogGroupAction, this))
+{
+
+}
+
+bool UntagLogGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UntagLogGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UntagLogGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * UntagLogGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new UntagLogGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagLogGroupRequestPrivate
+ *
+ * @brief  Private implementation for UntagLogGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagLogGroupRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public UntagLogGroupRequest instance.
+ */
+UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
+    const CloudWatchLogsRequest::Action action, UntagLogGroupRequest * const q)
+    : UntagLogGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagLogGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UntagLogGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UntagLogGroupRequest instance.
+ */
+UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
+    const UntagLogGroupRequestPrivate &other, UntagLogGroupRequest * const q)
+    : UntagLogGroupPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATENETWORKPROFILEREQUEST_P_H
 #define QTAWS_CREATENETWORKPROFILEREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "createnetworkprofilerequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateNetworkProfileRequest;
+
+class QTAWS_EXPORT CreateNetworkProfileRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    CreateNetworkProfileRequestPrivate(const DeviceFarm::Action action,
+                                   CreateNetworkProfileRequest * const q);
+    CreateNetworkProfileRequestPrivate(const CreateNetworkProfileRequestPrivate &other,
+                                   CreateNetworkProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateNetworkProfileRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

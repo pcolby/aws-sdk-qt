@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTACKSUMMARYREQUEST_H
 #define QTAWS_DESCRIBESTACKSUMMARYREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStackSummaryRequestPrivate;
+
+class QTAWS_EXPORT DescribeStackSummaryRequest : public OpsWorksRequest {
+
+public:
+    DescribeStackSummaryRequest(const DescribeStackSummaryRequest &other);
+    DescribeStackSummaryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStackSummaryRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

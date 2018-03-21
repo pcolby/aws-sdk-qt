@@ -19,3 +19,107 @@
 
 #include "detachprincipalpolicyrequest.h"
 #include "detachprincipalpolicyrequest_p.h"
+#include "detachprincipalpolicyresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DetachPrincipalPolicyRequest
+ *
+ * @brief  Implements IoT DetachPrincipalPolicy requests.
+ *
+ * @see    IoTClient::detachPrincipalPolicy
+ */
+
+/**
+ * @brief  Constructs a new DetachPrincipalPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachPrincipalPolicyResponse::DetachPrincipalPolicyResponse(
+
+/**
+ * @brief  Constructs a new DetachPrincipalPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachPrincipalPolicyRequest::DetachPrincipalPolicyRequest(const DetachPrincipalPolicyRequest &other)
+    : IoTRequest(new DetachPrincipalPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachPrincipalPolicyRequest object.
+ */
+DetachPrincipalPolicyRequest::DetachPrincipalPolicyRequest()
+    : IoTRequest(new DetachPrincipalPolicyRequestPrivate(IoTRequest::DetachPrincipalPolicyAction, this))
+{
+
+}
+
+bool DetachPrincipalPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachPrincipalPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachPrincipalPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DetachPrincipalPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachPrincipalPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachPrincipalPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DetachPrincipalPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPrincipalPolicyRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DetachPrincipalPolicyRequest instance.
+ */
+DetachPrincipalPolicyRequestPrivate::DetachPrincipalPolicyRequestPrivate(
+    const IoTRequest::Action action, DetachPrincipalPolicyRequest * const q)
+    : DetachPrincipalPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPrincipalPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachPrincipalPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachPrincipalPolicyRequest instance.
+ */
+DetachPrincipalPolicyRequestPrivate::DetachPrincipalPolicyRequestPrivate(
+    const DetachPrincipalPolicyRequestPrivate &other, DetachPrincipalPolicyRequest * const q)
+    : DetachPrincipalPolicyPrivate(other, q)
+{
+
+}

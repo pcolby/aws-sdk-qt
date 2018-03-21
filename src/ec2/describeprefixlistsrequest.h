@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPREFIXLISTSREQUEST_H
 #define QTAWS_DESCRIBEPREFIXLISTSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribePrefixListsRequestPrivate;
+
+class QTAWS_EXPORT DescribePrefixListsRequest : public EC2Request {
+
+public:
+    DescribePrefixListsRequest(const DescribePrefixListsRequest &other);
+    DescribePrefixListsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePrefixListsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

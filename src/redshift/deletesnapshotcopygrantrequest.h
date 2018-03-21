@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESNAPSHOTCOPYGRANTREQUEST_H
 #define QTAWS_DELETESNAPSHOTCOPYGRANTREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteSnapshotCopyGrantRequestPrivate;
+
+class QTAWS_EXPORT DeleteSnapshotCopyGrantRequest : public RedshiftRequest {
+
+public:
+    DeleteSnapshotCopyGrantRequest(const DeleteSnapshotCopyGrantRequest &other);
+    DeleteSnapshotCopyGrantRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotCopyGrantRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

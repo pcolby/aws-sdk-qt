@@ -19,3 +19,107 @@
 
 #include "updatedevicerequest.h"
 #include "updatedevicerequest_p.h"
+#include "updatedeviceresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  UpdateDeviceRequest
+ *
+ * @brief  Implements AlexaForBusiness UpdateDevice requests.
+ *
+ * @see    AlexaForBusinessClient::updateDevice
+ */
+
+/**
+ * @brief  Constructs a new UpdateDeviceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDeviceResponse::UpdateDeviceResponse(
+
+/**
+ * @brief  Constructs a new UpdateDeviceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDeviceRequest::UpdateDeviceRequest(const UpdateDeviceRequest &other)
+    : AlexaForBusinessRequest(new UpdateDeviceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDeviceRequest object.
+ */
+UpdateDeviceRequest::UpdateDeviceRequest()
+    : AlexaForBusinessRequest(new UpdateDeviceRequestPrivate(AlexaForBusinessRequest::UpdateDeviceAction, this))
+{
+
+}
+
+bool UpdateDeviceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDeviceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDeviceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDeviceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDeviceRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDeviceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeviceRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public UpdateDeviceRequest instance.
+ */
+UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
+    const AlexaForBusinessRequest::Action action, UpdateDeviceRequest * const q)
+    : UpdateDevicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDeviceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDeviceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDeviceRequest instance.
+ */
+UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
+    const UpdateDeviceRequestPrivate &other, UpdateDeviceRequest * const q)
+    : UpdateDevicePrivate(other, q)
+{
+
+}

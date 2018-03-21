@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBOOTINSTANCESREQUEST_P_H
 #define QTAWS_REBOOTINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "rebootinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RebootInstancesRequest;
+
+class QTAWS_EXPORT RebootInstancesRequestPrivate : public EC2Private {
+
+public:
+    RebootInstancesRequestPrivate(const EC2::Action action,
+                                   RebootInstancesRequest * const q);
+    RebootInstancesRequestPrivate(const RebootInstancesRequestPrivate &other,
+                                   RebootInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebootInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

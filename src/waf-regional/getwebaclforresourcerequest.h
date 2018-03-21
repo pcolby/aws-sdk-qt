@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETWEBACLFORRESOURCEREQUEST_H
 #define QTAWS_GETWEBACLFORRESOURCEREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetWebACLForResourceRequestPrivate;
+
+class QTAWS_EXPORT GetWebACLForResourceRequest : public WAFRegionalRequest {
+
+public:
+    GetWebACLForResourceRequest(const GetWebACLForResourceRequest &other);
+    GetWebACLForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetWebACLForResourceRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

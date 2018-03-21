@@ -19,3 +19,107 @@
 
 #include "describecustomergatewaysrequest.h"
 #include "describecustomergatewaysrequest_p.h"
+#include "describecustomergatewaysresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeCustomerGatewaysRequest
+ *
+ * @brief  Implements EC2 DescribeCustomerGateways requests.
+ *
+ * @see    EC2Client::describeCustomerGateways
+ */
+
+/**
+ * @brief  Constructs a new DescribeCustomerGatewaysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
+
+/**
+ * @brief  Constructs a new DescribeCustomerGatewaysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest(const DescribeCustomerGatewaysRequest &other)
+    : EC2Request(new DescribeCustomerGatewaysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCustomerGatewaysRequest object.
+ */
+DescribeCustomerGatewaysRequest::DescribeCustomerGatewaysRequest()
+    : EC2Request(new DescribeCustomerGatewaysRequestPrivate(EC2Request::DescribeCustomerGatewaysAction, this))
+{
+
+}
+
+bool DescribeCustomerGatewaysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCustomerGatewaysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCustomerGatewaysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCustomerGatewaysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCustomerGatewaysRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCustomerGatewaysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCustomerGatewaysRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeCustomerGatewaysRequest instance.
+ */
+DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
+    const EC2Request::Action action, DescribeCustomerGatewaysRequest * const q)
+    : DescribeCustomerGatewaysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCustomerGatewaysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCustomerGatewaysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCustomerGatewaysRequest instance.
+ */
+DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
+    const DescribeCustomerGatewaysRequestPrivate &other, DescribeCustomerGatewaysRequest * const q)
+    : DescribeCustomerGatewaysPrivate(other, q)
+{
+
+}

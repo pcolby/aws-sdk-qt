@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEBUDGETREQUEST_P_H
 #define QTAWS_DESCRIBEBUDGETREQUEST_P_H
 
+#include "budgets_p.h"
+#include "describebudgetrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeBudgetRequest;
+
+class QTAWS_EXPORT DescribeBudgetRequestPrivate : public BudgetsPrivate {
+
+public:
+    DescribeBudgetRequestPrivate(const Budgets::Action action,
+                                   DescribeBudgetRequest * const q);
+    DescribeBudgetRequestPrivate(const DescribeBudgetRequestPrivate &other,
+                                   DescribeBudgetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBudgetRequest)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describespotfleetrequestsrequest.h"
 #include "describespotfleetrequestsrequest_p.h"
+#include "describespotfleetrequestsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSpotFleetRequestsRequest
+ *
+ * @brief  Implements EC2 DescribeSpotFleetRequests requests.
+ *
+ * @see    EC2Client::describeSpotFleetRequests
+ */
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSpotFleetRequestsResponse::DescribeSpotFleetRequestsResponse(
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSpotFleetRequestsRequest::DescribeSpotFleetRequestsRequest(const DescribeSpotFleetRequestsRequest &other)
+    : EC2Request(new DescribeSpotFleetRequestsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSpotFleetRequestsRequest object.
+ */
+DescribeSpotFleetRequestsRequest::DescribeSpotFleetRequestsRequest()
+    : EC2Request(new DescribeSpotFleetRequestsRequestPrivate(EC2Request::DescribeSpotFleetRequestsAction, this))
+{
+
+}
+
+bool DescribeSpotFleetRequestsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSpotFleetRequestsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSpotFleetRequestsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSpotFleetRequestsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSpotFleetRequestsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSpotFleetRequestsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotFleetRequestsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSpotFleetRequestsRequest instance.
+ */
+DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate(
+    const EC2Request::Action action, DescribeSpotFleetRequestsRequest * const q)
+    : DescribeSpotFleetRequestsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotFleetRequestsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSpotFleetRequestsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSpotFleetRequestsRequest instance.
+ */
+DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate(
+    const DescribeSpotFleetRequestsRequestPrivate &other, DescribeSpotFleetRequestsRequest * const q)
+    : DescribeSpotFleetRequestsPrivate(other, q)
+{
+
+}

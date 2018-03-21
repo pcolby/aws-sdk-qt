@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVPNGATEWAYREQUEST_P_H
 #define QTAWS_DELETEVPNGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletevpngatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpnGatewayRequest;
+
+class QTAWS_EXPORT DeleteVpnGatewayRequestPrivate : public EC2Private {
+
+public:
+    DeleteVpnGatewayRequestPrivate(const EC2::Action action,
+                                   DeleteVpnGatewayRequest * const q);
+    DeleteVpnGatewayRequestPrivate(const DeleteVpnGatewayRequestPrivate &other,
+                                   DeleteVpnGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpnGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

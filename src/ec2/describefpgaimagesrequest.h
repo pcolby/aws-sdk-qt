@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFPGAIMAGESREQUEST_H
 #define QTAWS_DESCRIBEFPGAIMAGESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeFpgaImagesRequestPrivate;
+
+class QTAWS_EXPORT DescribeFpgaImagesRequest : public EC2Request {
+
+public:
+    DescribeFpgaImagesRequest(const DescribeFpgaImagesRequest &other);
+    DescribeFpgaImagesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFpgaImagesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

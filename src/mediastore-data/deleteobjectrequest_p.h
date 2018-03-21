@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEOBJECTREQUEST_P_H
 #define QTAWS_DELETEOBJECTREQUEST_P_H
 
+#include "mediastoredata_p.h"
+#include "deleteobjectrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class DeleteObjectRequest;
+
+class QTAWS_EXPORT DeleteObjectRequestPrivate : public MediaStoreDataPrivate {
+
+public:
+    DeleteObjectRequestPrivate(const MediaStoreData::Action action,
+                                   DeleteObjectRequest * const q);
+    DeleteObjectRequestPrivate(const DeleteObjectRequestPrivate &other,
+                                   DeleteObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteObjectRequest)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

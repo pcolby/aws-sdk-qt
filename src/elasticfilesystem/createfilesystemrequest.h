@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEFILESYSTEMREQUEST_H
 #define QTAWS_CREATEFILESYSTEMREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateFileSystemRequestPrivate;
+
+class QTAWS_EXPORT CreateFileSystemRequest : public EFSRequest {
+
+public:
+    CreateFileSystemRequest(const CreateFileSystemRequest &other);
+    CreateFileSystemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateFileSystemRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

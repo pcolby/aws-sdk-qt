@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEVTLDEVICETYPEREQUEST_P_H
 #define QTAWS_UPDATEVTLDEVICETYPEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "updatevtldevicetyperequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateVTLDeviceTypeRequest;
+
+class QTAWS_EXPORT UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    UpdateVTLDeviceTypeRequestPrivate(const StorageGateway::Action action,
+                                   UpdateVTLDeviceTypeRequest * const q);
+    UpdateVTLDeviceTypeRequestPrivate(const UpdateVTLDeviceTypeRequestPrivate &other,
+                                   UpdateVTLDeviceTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateVTLDeviceTypeRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

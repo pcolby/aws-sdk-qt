@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPROTECTIONREQUEST_H
 #define QTAWS_CREATEPROTECTIONREQUEST_H
 
+#include "shieldrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class CreateProtectionRequestPrivate;
+
+class QTAWS_EXPORT CreateProtectionRequest : public ShieldRequest {
+
+public:
+    CreateProtectionRequest(const CreateProtectionRequest &other);
+    CreateProtectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProtectionRequest)
+
+}
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPRINCIPALPOLICIESREQUEST_H
 #define QTAWS_LISTPRINCIPALPOLICIESREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListPrincipalPoliciesRequestPrivate;
+
+class QTAWS_EXPORT ListPrincipalPoliciesRequest : public IoTRequest {
+
+public:
+    ListPrincipalPoliciesRequest(const ListPrincipalPoliciesRequest &other);
+    ListPrincipalPoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPrincipalPoliciesRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

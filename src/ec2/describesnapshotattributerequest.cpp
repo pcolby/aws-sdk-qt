@@ -19,3 +19,107 @@
 
 #include "describesnapshotattributerequest.h"
 #include "describesnapshotattributerequest_p.h"
+#include "describesnapshotattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSnapshotAttributeRequest
+ *
+ * @brief  Implements EC2 DescribeSnapshotAttribute requests.
+ *
+ * @see    EC2Client::describeSnapshotAttribute
+ */
+
+/**
+ * @brief  Constructs a new DescribeSnapshotAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSnapshotAttributeResponse::DescribeSnapshotAttributeResponse(
+
+/**
+ * @brief  Constructs a new DescribeSnapshotAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest(const DescribeSnapshotAttributeRequest &other)
+    : EC2Request(new DescribeSnapshotAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSnapshotAttributeRequest object.
+ */
+DescribeSnapshotAttributeRequest::DescribeSnapshotAttributeRequest()
+    : EC2Request(new DescribeSnapshotAttributeRequestPrivate(EC2Request::DescribeSnapshotAttributeAction, this))
+{
+
+}
+
+bool DescribeSnapshotAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSnapshotAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSnapshotAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSnapshotAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSnapshotAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSnapshotAttributeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSnapshotAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSnapshotAttributeRequest instance.
+ */
+DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
+    const EC2Request::Action action, DescribeSnapshotAttributeRequest * const q)
+    : DescribeSnapshotAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSnapshotAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSnapshotAttributeRequest instance.
+ */
+DescribeSnapshotAttributeRequestPrivate::DescribeSnapshotAttributeRequestPrivate(
+    const DescribeSnapshotAttributeRequestPrivate &other, DescribeSnapshotAttributeRequest * const q)
+    : DescribeSnapshotAttributePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "viewbillingrequest.h"
 #include "viewbillingrequest_p.h"
+#include "viewbillingresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  ViewBillingRequest
+ *
+ * @brief  Implements Route53Domains ViewBilling requests.
+ *
+ * @see    Route53DomainsClient::viewBilling
+ */
+
+/**
+ * @brief  Constructs a new ViewBillingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ViewBillingResponse::ViewBillingResponse(
+
+/**
+ * @brief  Constructs a new ViewBillingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ViewBillingRequest::ViewBillingRequest(const ViewBillingRequest &other)
+    : Route53DomainsRequest(new ViewBillingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ViewBillingRequest object.
+ */
+ViewBillingRequest::ViewBillingRequest()
+    : Route53DomainsRequest(new ViewBillingRequestPrivate(Route53DomainsRequest::ViewBillingAction, this))
+{
+
+}
+
+bool ViewBillingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ViewBillingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ViewBillingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * const reply) const
+{
+    return new ViewBillingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ViewBillingRequestPrivate
+ *
+ * @brief  Private implementation for ViewBillingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ViewBillingRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public ViewBillingRequest instance.
+ */
+ViewBillingRequestPrivate::ViewBillingRequestPrivate(
+    const Route53DomainsRequest::Action action, ViewBillingRequest * const q)
+    : ViewBillingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ViewBillingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ViewBillingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ViewBillingRequest instance.
+ */
+ViewBillingRequestPrivate::ViewBillingRequestPrivate(
+    const ViewBillingRequestPrivate &other, ViewBillingRequest * const q)
+    : ViewBillingPrivate(other, q)
+{
+
+}

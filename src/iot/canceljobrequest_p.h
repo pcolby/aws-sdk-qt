@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
+#include "iot_p.h"
+#include "canceljobrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CancelJobRequest;
+
+class QTAWS_EXPORT CancelJobRequestPrivate : public IoTPrivate {
+
+public:
+    CancelJobRequestPrivate(const IoT::Action action,
+                                   CancelJobRequest * const q);
+    CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
+                                   CancelJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelJobRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

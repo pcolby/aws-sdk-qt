@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCONSOLESCREENSHOTREQUEST_P_H
 #define QTAWS_GETCONSOLESCREENSHOTREQUEST_P_H
 
+#include "ec2_p.h"
+#include "getconsolescreenshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetConsoleScreenshotRequest;
+
+class QTAWS_EXPORT GetConsoleScreenshotRequestPrivate : public EC2Private {
+
+public:
+    GetConsoleScreenshotRequestPrivate(const EC2::Action action,
+                                   GetConsoleScreenshotRequest * const q);
+    GetConsoleScreenshotRequestPrivate(const GetConsoleScreenshotRequestPrivate &other,
+                                   GetConsoleScreenshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetConsoleScreenshotRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

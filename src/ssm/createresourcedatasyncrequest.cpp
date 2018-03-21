@@ -19,3 +19,107 @@
 
 #include "createresourcedatasyncrequest.h"
 #include "createresourcedatasyncrequest_p.h"
+#include "createresourcedatasyncresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CreateResourceDataSyncRequest
+ *
+ * @brief  Implements SSM CreateResourceDataSync requests.
+ *
+ * @see    SSMClient::createResourceDataSync
+ */
+
+/**
+ * @brief  Constructs a new CreateResourceDataSyncResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
+
+/**
+ * @brief  Constructs a new CreateResourceDataSyncRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateResourceDataSyncRequest::CreateResourceDataSyncRequest(const CreateResourceDataSyncRequest &other)
+    : SSMRequest(new CreateResourceDataSyncRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateResourceDataSyncRequest object.
+ */
+CreateResourceDataSyncRequest::CreateResourceDataSyncRequest()
+    : SSMRequest(new CreateResourceDataSyncRequestPrivate(SSMRequest::CreateResourceDataSyncAction, this))
+{
+
+}
+
+bool CreateResourceDataSyncRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateResourceDataSyncResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateResourceDataSyncResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * CreateResourceDataSyncRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateResourceDataSyncResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateResourceDataSyncRequestPrivate
+ *
+ * @brief  Private implementation for CreateResourceDataSyncRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceDataSyncRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public CreateResourceDataSyncRequest instance.
+ */
+CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
+    const SSMRequest::Action action, CreateResourceDataSyncRequest * const q)
+    : CreateResourceDataSyncPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceDataSyncRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateResourceDataSyncRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateResourceDataSyncRequest instance.
+ */
+CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
+    const CreateResourceDataSyncRequestPrivate &other, CreateResourceDataSyncRequest * const q)
+    : CreateResourceDataSyncPrivate(other, q)
+{
+
+}

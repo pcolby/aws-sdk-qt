@@ -19,3 +19,107 @@
 
 #include "restoredbinstancefromdbsnapshotrequest.h"
 #include "restoredbinstancefromdbsnapshotrequest_p.h"
+#include "restoredbinstancefromdbsnapshotresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  RestoreDBInstanceFromDBSnapshotRequest
+ *
+ * @brief  Implements RDS RestoreDBInstanceFromDBSnapshot requests.
+ *
+ * @see    RDSClient::restoreDBInstanceFromDBSnapshot
+ */
+
+/**
+ * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse(
+
+/**
+ * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest(const RestoreDBInstanceFromDBSnapshotRequest &other)
+    : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequest object.
+ */
+RestoreDBInstanceFromDBSnapshotRequest::RestoreDBInstanceFromDBSnapshotRequest()
+    : RDSRequest(new RestoreDBInstanceFromDBSnapshotRequestPrivate(RDSRequest::RestoreDBInstanceFromDBSnapshotAction, this))
+{
+
+}
+
+bool RestoreDBInstanceFromDBSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RestoreDBInstanceFromDBSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RestoreDBInstanceFromDBSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new RestoreDBInstanceFromDBSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreDBInstanceFromDBSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for RestoreDBInstanceFromDBSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public RestoreDBInstanceFromDBSnapshotRequest instance.
+ */
+RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
+    const RDSRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)
+    : RestoreDBInstanceFromDBSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RestoreDBInstanceFromDBSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RestoreDBInstanceFromDBSnapshotRequest instance.
+ */
+RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
+    const RestoreDBInstanceFromDBSnapshotRequestPrivate &other, RestoreDBInstanceFromDBSnapshotRequest * const q)
+    : RestoreDBInstanceFromDBSnapshotPrivate(other, q)
+{
+
+}

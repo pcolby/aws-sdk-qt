@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPIMAGEBUILDERREQUEST_H
 #define QTAWS_STOPIMAGEBUILDERREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class StopImageBuilderRequestPrivate;
+
+class QTAWS_EXPORT StopImageBuilderRequest : public AppStreamRequest {
+
+public:
+    StopImageBuilderRequest(const StopImageBuilderRequest &other);
+    StopImageBuilderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopImageBuilderRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPIPELINEREQUEST_H
 #define QTAWS_UPDATEPIPELINEREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class UpdatePipelineRequestPrivate;
+
+class QTAWS_EXPORT UpdatePipelineRequest : public CodePipelineRequest {
+
+public:
+    UpdatePipelineRequest(const UpdatePipelineRequest &other);
+    UpdatePipelineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePipelineRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

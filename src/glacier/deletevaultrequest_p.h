@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVAULTREQUEST_P_H
 #define QTAWS_DELETEVAULTREQUEST_P_H
 
+#include "glacier_p.h"
+#include "deletevaultrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DeleteVaultRequest;
+
+class QTAWS_EXPORT DeleteVaultRequestPrivate : public GlacierPrivate {
+
+public:
+    DeleteVaultRequestPrivate(const Glacier::Action action,
+                                   DeleteVaultRequest * const q);
+    DeleteVaultRequestPrivate(const DeleteVaultRequestPrivate &other,
+                                   DeleteVaultRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVaultRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

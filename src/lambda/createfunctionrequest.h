@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEFUNCTIONREQUEST_H
 #define QTAWS_CREATEFUNCTIONREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class CreateFunctionRequestPrivate;
+
+class QTAWS_EXPORT CreateFunctionRequest : public LambdaRequest {
+
+public:
+    CreateFunctionRequest(const CreateFunctionRequest &other);
+    CreateFunctionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateFunctionRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

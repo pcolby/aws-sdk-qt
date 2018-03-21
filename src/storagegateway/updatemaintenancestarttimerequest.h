@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEMAINTENANCESTARTTIMEREQUEST_H
 #define QTAWS_UPDATEMAINTENANCESTARTTIMEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateMaintenanceStartTimeRequestPrivate;
+
+class QTAWS_EXPORT UpdateMaintenanceStartTimeRequest : public StorageGatewayRequest {
+
+public:
+    UpdateMaintenanceStartTimeRequest(const UpdateMaintenanceStartTimeRequest &other);
+    UpdateMaintenanceStartTimeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMaintenanceStartTimeRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

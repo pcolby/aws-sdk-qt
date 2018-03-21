@@ -20,4 +20,32 @@
 #ifndef QTAWS_SPLITSHARDREQUEST_H
 #define QTAWS_SPLITSHARDREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class SplitShardRequestPrivate;
+
+class QTAWS_EXPORT SplitShardRequest : public KinesisRequest {
+
+public:
+    SplitShardRequest(const SplitShardRequest &other);
+    SplitShardRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SplitShardRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

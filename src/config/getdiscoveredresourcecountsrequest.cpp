@@ -19,3 +19,107 @@
 
 #include "getdiscoveredresourcecountsrequest.h"
 #include "getdiscoveredresourcecountsrequest_p.h"
+#include "getdiscoveredresourcecountsresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  GetDiscoveredResourceCountsRequest
+ *
+ * @brief  Implements ConfigService GetDiscoveredResourceCounts requests.
+ *
+ * @see    ConfigServiceClient::getDiscoveredResourceCounts
+ */
+
+/**
+ * @brief  Constructs a new GetDiscoveredResourceCountsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
+
+/**
+ * @brief  Constructs a new GetDiscoveredResourceCountsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDiscoveredResourceCountsRequest::GetDiscoveredResourceCountsRequest(const GetDiscoveredResourceCountsRequest &other)
+    : ConfigServiceRequest(new GetDiscoveredResourceCountsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDiscoveredResourceCountsRequest object.
+ */
+GetDiscoveredResourceCountsRequest::GetDiscoveredResourceCountsRequest()
+    : ConfigServiceRequest(new GetDiscoveredResourceCountsRequestPrivate(ConfigServiceRequest::GetDiscoveredResourceCountsAction, this))
+{
+
+}
+
+bool GetDiscoveredResourceCountsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDiscoveredResourceCountsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDiscoveredResourceCountsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDiscoveredResourceCountsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDiscoveredResourceCountsRequestPrivate
+ *
+ * @brief  Private implementation for GetDiscoveredResourceCountsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDiscoveredResourceCountsRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public GetDiscoveredResourceCountsRequest instance.
+ */
+GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
+    const ConfigServiceRequest::Action action, GetDiscoveredResourceCountsRequest * const q)
+    : GetDiscoveredResourceCountsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDiscoveredResourceCountsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDiscoveredResourceCountsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDiscoveredResourceCountsRequest instance.
+ */
+GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
+    const GetDiscoveredResourceCountsRequestPrivate &other, GetDiscoveredResourceCountsRequest * const q)
+    : GetDiscoveredResourceCountsPrivate(other, q)
+{
+
+}

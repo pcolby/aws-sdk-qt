@@ -20,4 +20,29 @@
 #ifndef QTAWS_VALIDATECONFIGURATIONSETTINGSREQUEST_P_H
 #define QTAWS_VALIDATECONFIGURATIONSETTINGSREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "validateconfigurationsettingsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ValidateConfigurationSettingsRequest;
+
+class QTAWS_EXPORT ValidateConfigurationSettingsRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    ValidateConfigurationSettingsRequestPrivate(const ElasticBeanstalk::Action action,
+                                   ValidateConfigurationSettingsRequest * const q);
+    ValidateConfigurationSettingsRequestPrivate(const ValidateConfigurationSettingsRequestPrivate &other,
+                                   ValidateConfigurationSettingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ValidateConfigurationSettingsRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

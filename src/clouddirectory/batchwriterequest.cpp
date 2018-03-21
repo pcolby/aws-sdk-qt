@@ -19,3 +19,107 @@
 
 #include "batchwriterequest.h"
 #include "batchwriterequest_p.h"
+#include "batchwriteresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  BatchWriteRequest
+ *
+ * @brief  Implements CloudDirectory BatchWrite requests.
+ *
+ * @see    CloudDirectoryClient::batchWrite
+ */
+
+/**
+ * @brief  Constructs a new BatchWriteResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchWriteResponse::BatchWriteResponse(
+
+/**
+ * @brief  Constructs a new BatchWriteRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchWriteRequest::BatchWriteRequest(const BatchWriteRequest &other)
+    : CloudDirectoryRequest(new BatchWriteRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchWriteRequest object.
+ */
+BatchWriteRequest::BatchWriteRequest()
+    : CloudDirectoryRequest(new BatchWriteRequestPrivate(CloudDirectoryRequest::BatchWriteAction, this))
+{
+
+}
+
+bool BatchWriteRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchWriteResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchWriteResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchWriteResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchWriteRequestPrivate
+ *
+ * @brief  Private implementation for BatchWriteRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchWriteRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public BatchWriteRequest instance.
+ */
+BatchWriteRequestPrivate::BatchWriteRequestPrivate(
+    const CloudDirectoryRequest::Action action, BatchWriteRequest * const q)
+    : BatchWritePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchWriteRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchWriteRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchWriteRequest instance.
+ */
+BatchWriteRequestPrivate::BatchWriteRequestPrivate(
+    const BatchWriteRequestPrivate &other, BatchWriteRequest * const q)
+    : BatchWritePrivate(other, q)
+{
+
+}

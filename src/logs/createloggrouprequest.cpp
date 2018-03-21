@@ -19,3 +19,107 @@
 
 #include "createloggrouprequest.h"
 #include "createloggrouprequest_p.h"
+#include "createloggroupresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CreateLogGroupRequest
+ *
+ * @brief  Implements CloudWatchLogs CreateLogGroup requests.
+ *
+ * @see    CloudWatchLogsClient::createLogGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateLogGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLogGroupResponse::CreateLogGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateLogGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLogGroupRequest::CreateLogGroupRequest(const CreateLogGroupRequest &other)
+    : CloudWatchLogsRequest(new CreateLogGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLogGroupRequest object.
+ */
+CreateLogGroupRequest::CreateLogGroupRequest()
+    : CloudWatchLogsRequest(new CreateLogGroupRequestPrivate(CloudWatchLogsRequest::CreateLogGroupAction, this))
+{
+
+}
+
+bool CreateLogGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLogGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLogGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * CreateLogGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLogGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLogGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateLogGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLogGroupRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public CreateLogGroupRequest instance.
+ */
+CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
+    const CloudWatchLogsRequest::Action action, CreateLogGroupRequest * const q)
+    : CreateLogGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLogGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLogGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLogGroupRequest instance.
+ */
+CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
+    const CreateLogGroupRequestPrivate &other, CreateLogGroupRequest * const q)
+    : CreateLogGroupPrivate(other, q)
+{
+
+}

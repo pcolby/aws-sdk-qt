@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPOLICYATTACHMENTSREQUEST_P_H
 #define QTAWS_LISTPOLICYATTACHMENTSREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listpolicyattachmentsrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListPolicyAttachmentsRequest;
+
+class QTAWS_EXPORT ListPolicyAttachmentsRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListPolicyAttachmentsRequestPrivate(const CloudDirectory::Action action,
+                                   ListPolicyAttachmentsRequest * const q);
+    ListPolicyAttachmentsRequestPrivate(const ListPolicyAttachmentsRequestPrivate &other,
+                                   ListPolicyAttachmentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPolicyAttachmentsRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEMEMBERSREQUEST_P_H
 #define QTAWS_DELETEMEMBERSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "deletemembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteMembersRequest;
+
+class QTAWS_EXPORT DeleteMembersRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DeleteMembersRequestPrivate(const GuardDuty::Action action,
+                                   DeleteMembersRequest * const q);
+    DeleteMembersRequestPrivate(const DeleteMembersRequestPrivate &other,
+                                   DeleteMembersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteMembersRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

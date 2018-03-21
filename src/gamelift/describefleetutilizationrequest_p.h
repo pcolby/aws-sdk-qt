@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFLEETUTILIZATIONREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETUTILIZATIONREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describefleetutilizationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetUtilizationRequest;
+
+class QTAWS_EXPORT DescribeFleetUtilizationRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeFleetUtilizationRequestPrivate(const GameLift::Action action,
+                                   DescribeFleetUtilizationRequest * const q);
+    DescribeFleetUtilizationRequestPrivate(const DescribeFleetUtilizationRequestPrivate &other,
+                                   DescribeFleetUtilizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetUtilizationRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

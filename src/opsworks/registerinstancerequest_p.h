@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "registerinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterInstanceRequest;
+
+class QTAWS_EXPORT RegisterInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    RegisterInstanceRequestPrivate(const OpsWorks::Action action,
+                                   RegisterInstanceRequest * const q);
+    RegisterInstanceRequestPrivate(const RegisterInstanceRequestPrivate &other,
+                                   RegisterInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

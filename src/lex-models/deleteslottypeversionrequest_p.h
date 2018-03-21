@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESLOTTYPEVERSIONREQUEST_P_H
 #define QTAWS_DELETESLOTTYPEVERSIONREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "deleteslottypeversionrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteSlotTypeVersionRequest;
+
+class QTAWS_EXPORT DeleteSlotTypeVersionRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    DeleteSlotTypeVersionRequestPrivate(const LexModelBuildingService::Action action,
+                                   DeleteSlotTypeVersionRequest * const q);
+    DeleteSlotTypeVersionRequestPrivate(const DeleteSlotTypeVersionRequestPrivate &other,
+                                   DeleteSlotTypeVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSlotTypeVersionRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

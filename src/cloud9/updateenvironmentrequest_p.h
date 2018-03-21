@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 #define QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "updateenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class UpdateEnvironmentRequest;
+
+class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public Cloud9Private {
+
+public:
+    UpdateEnvironmentRequestPrivate(const Cloud9::Action action,
+                                   UpdateEnvironmentRequest * const q);
+    UpdateEnvironmentRequestPrivate(const UpdateEnvironmentRequestPrivate &other,
+                                   UpdateEnvironmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEnvironmentRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

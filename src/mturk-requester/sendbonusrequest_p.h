@@ -20,4 +20,29 @@
 #ifndef QTAWS_SENDBONUSREQUEST_P_H
 #define QTAWS_SENDBONUSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "sendbonusrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class SendBonusRequest;
+
+class QTAWS_EXPORT SendBonusRequestPrivate : public MTurkPrivate {
+
+public:
+    SendBonusRequestPrivate(const MTurk::Action action,
+                                   SendBonusRequest * const q);
+    SendBonusRequestPrivate(const SendBonusRequestPrivate &other,
+                                   SendBonusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SendBonusRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "attachloadbalancersrequest.h"
 #include "attachloadbalancersrequest_p.h"
+#include "attachloadbalancersresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  AttachLoadBalancersRequest
+ *
+ * @brief  Implements AutoScaling AttachLoadBalancers requests.
+ *
+ * @see    AutoScalingClient::attachLoadBalancers
+ */
+
+/**
+ * @brief  Constructs a new AttachLoadBalancersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachLoadBalancersResponse::AttachLoadBalancersResponse(
+
+/**
+ * @brief  Constructs a new AttachLoadBalancersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachLoadBalancersRequest::AttachLoadBalancersRequest(const AttachLoadBalancersRequest &other)
+    : AutoScalingRequest(new AttachLoadBalancersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachLoadBalancersRequest object.
+ */
+AttachLoadBalancersRequest::AttachLoadBalancersRequest()
+    : AutoScalingRequest(new AttachLoadBalancersRequestPrivate(AutoScalingRequest::AttachLoadBalancersAction, this))
+{
+
+}
+
+bool AttachLoadBalancersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachLoadBalancersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachLoadBalancersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachLoadBalancersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachLoadBalancersRequestPrivate
+ *
+ * @brief  Private implementation for AttachLoadBalancersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancersRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public AttachLoadBalancersRequest instance.
+ */
+AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
+    const AutoScalingRequest::Action action, AttachLoadBalancersRequest * const q)
+    : AttachLoadBalancersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachLoadBalancersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachLoadBalancersRequest instance.
+ */
+AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
+    const AttachLoadBalancersRequestPrivate &other, AttachLoadBalancersRequest * const q)
+    : AttachLoadBalancersPrivate(other, q)
+{
+
+}

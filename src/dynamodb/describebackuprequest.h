@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBACKUPREQUEST_H
 #define QTAWS_DESCRIBEBACKUPREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeBackupRequestPrivate;
+
+class QTAWS_EXPORT DescribeBackupRequest : public DynamoDBRequest {
+
+public:
+    DescribeBackupRequest(const DescribeBackupRequest &other);
+    DescribeBackupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBackupRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

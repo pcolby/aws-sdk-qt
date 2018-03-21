@@ -19,3 +19,107 @@
 
 #include "updatevtldevicetyperequest.h"
 #include "updatevtldevicetyperequest_p.h"
+#include "updatevtldevicetyperesponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  UpdateVTLDeviceTypeRequest
+ *
+ * @brief  Implements StorageGateway UpdateVTLDeviceType requests.
+ *
+ * @see    StorageGatewayClient::updateVTLDeviceType
+ */
+
+/**
+ * @brief  Constructs a new UpdateVTLDeviceTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
+
+/**
+ * @brief  Constructs a new UpdateVTLDeviceTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateVTLDeviceTypeRequest::UpdateVTLDeviceTypeRequest(const UpdateVTLDeviceTypeRequest &other)
+    : StorageGatewayRequest(new UpdateVTLDeviceTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateVTLDeviceTypeRequest object.
+ */
+UpdateVTLDeviceTypeRequest::UpdateVTLDeviceTypeRequest()
+    : StorageGatewayRequest(new UpdateVTLDeviceTypeRequestPrivate(StorageGatewayRequest::UpdateVTLDeviceTypeAction, this))
+{
+
+}
+
+bool UpdateVTLDeviceTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateVTLDeviceTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateVTLDeviceTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * UpdateVTLDeviceTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateVTLDeviceTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateVTLDeviceTypeRequestPrivate
+ *
+ * @brief  Private implementation for UpdateVTLDeviceTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateVTLDeviceTypeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateVTLDeviceTypeRequest instance.
+ */
+UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
+    const StorageGatewayRequest::Action action, UpdateVTLDeviceTypeRequest * const q)
+    : UpdateVTLDeviceTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateVTLDeviceTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateVTLDeviceTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateVTLDeviceTypeRequest instance.
+ */
+UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
+    const UpdateVTLDeviceTypeRequestPrivate &other, UpdateVTLDeviceTypeRequest * const q)
+    : UpdateVTLDeviceTypePrivate(other, q)
+{
+
+}

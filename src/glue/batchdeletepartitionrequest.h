@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDELETEPARTITIONREQUEST_H
 #define QTAWS_BATCHDELETEPARTITIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchDeletePartitionRequestPrivate;
+
+class QTAWS_EXPORT BatchDeletePartitionRequest : public GlueRequest {
+
+public:
+    BatchDeletePartitionRequest(const BatchDeletePartitionRequest &other);
+    BatchDeletePartitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeletePartitionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

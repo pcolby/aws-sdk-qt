@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETEMAILCHANNELREQUEST_H
 #define QTAWS_GETEMAILCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetEmailChannelRequestPrivate;
+
+class QTAWS_EXPORT GetEmailChannelRequest : public PinpointRequest {
+
+public:
+    GetEmailChannelRequest(const GetEmailChannelRequest &other);
+    GetEmailChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetEmailChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

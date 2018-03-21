@@ -19,3 +19,107 @@
 
 #include "createsamlproviderrequest.h"
 #include "createsamlproviderrequest_p.h"
+#include "createsamlproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreateSAMLProviderRequest
+ *
+ * @brief  Implements IAM CreateSAMLProvider requests.
+ *
+ * @see    IAMClient::createSAMLProvider
+ */
+
+/**
+ * @brief  Constructs a new CreateSAMLProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSAMLProviderResponse::CreateSAMLProviderResponse(
+
+/**
+ * @brief  Constructs a new CreateSAMLProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSAMLProviderRequest::CreateSAMLProviderRequest(const CreateSAMLProviderRequest &other)
+    : IAMRequest(new CreateSAMLProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSAMLProviderRequest object.
+ */
+CreateSAMLProviderRequest::CreateSAMLProviderRequest()
+    : IAMRequest(new CreateSAMLProviderRequestPrivate(IAMRequest::CreateSAMLProviderAction, this))
+{
+
+}
+
+bool CreateSAMLProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSAMLProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSAMLProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * CreateSAMLProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSAMLProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSAMLProviderRequestPrivate
+ *
+ * @brief  Private implementation for CreateSAMLProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSAMLProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public CreateSAMLProviderRequest instance.
+ */
+CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
+    const IAMRequest::Action action, CreateSAMLProviderRequest * const q)
+    : CreateSAMLProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSAMLProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSAMLProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSAMLProviderRequest instance.
+ */
+CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
+    const CreateSAMLProviderRequestPrivate &other, CreateSAMLProviderRequest * const q)
+    : CreateSAMLProviderPrivate(other, q)
+{
+
+}

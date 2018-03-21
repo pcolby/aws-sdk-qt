@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONTINUOUSBACKUPSREQUEST_P_H
 #define QTAWS_DESCRIBECONTINUOUSBACKUPSREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "describecontinuousbackupsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeContinuousBackupsRequest;
+
+class QTAWS_EXPORT DescribeContinuousBackupsRequestPrivate : public DynamoDBPrivate {
+
+public:
+    DescribeContinuousBackupsRequestPrivate(const DynamoDB::Action action,
+                                   DescribeContinuousBackupsRequest * const q);
+    DescribeContinuousBackupsRequestPrivate(const DescribeContinuousBackupsRequestPrivate &other,
+                                   DescribeContinuousBackupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeContinuousBackupsRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

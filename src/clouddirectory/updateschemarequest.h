@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESCHEMAREQUEST_H
 #define QTAWS_UPDATESCHEMAREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateSchemaRequestPrivate;
+
+class QTAWS_EXPORT UpdateSchemaRequest : public CloudDirectoryRequest {
+
+public:
+    UpdateSchemaRequest(const UpdateSchemaRequest &other);
+    UpdateSchemaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSchemaRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

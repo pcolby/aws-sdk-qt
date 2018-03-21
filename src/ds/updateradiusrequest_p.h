@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERADIUSREQUEST_P_H
 #define QTAWS_UPDATERADIUSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "updateradiusrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateRadiusRequest;
+
+class QTAWS_EXPORT UpdateRadiusRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    UpdateRadiusRequestPrivate(const DirectoryService::Action action,
+                                   UpdateRadiusRequest * const q);
+    UpdateRadiusRequestPrivate(const UpdateRadiusRequestPrivate &other,
+                                   UpdateRadiusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRadiusRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

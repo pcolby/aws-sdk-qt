@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECHAPCREDENTIALSREQUEST_H
 #define QTAWS_DELETECHAPCREDENTIALSREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteChapCredentialsRequestPrivate;
+
+class QTAWS_EXPORT DeleteChapCredentialsRequest : public StorageGatewayRequest {
+
+public:
+    DeleteChapCredentialsRequest(const DeleteChapCredentialsRequest &other);
+    DeleteChapCredentialsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteChapCredentialsRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

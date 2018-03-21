@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBUILDREQUEST_H
 #define QTAWS_DELETEBUILDREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteBuildRequestPrivate;
+
+class QTAWS_EXPORT DeleteBuildRequest : public GameLiftRequest {
+
+public:
+    DeleteBuildRequest(const DeleteBuildRequest &other);
+    DeleteBuildRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBuildRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFILESYSTEMREQUEST_P_H
 #define QTAWS_DELETEFILESYSTEMREQUEST_P_H
 
+#include "efs_p.h"
+#include "deletefilesystemrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteFileSystemRequest;
+
+class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EFSPrivate {
+
+public:
+    DeleteFileSystemRequestPrivate(const EFS::Action action,
+                                   DeleteFileSystemRequest * const q);
+    DeleteFileSystemRequestPrivate(const DeleteFileSystemRequestPrivate &other,
+                                   DeleteFileSystemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFileSystemRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

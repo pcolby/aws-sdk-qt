@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETUICUSTOMIZATIONREQUEST_P_H
 #define QTAWS_SETUICUSTOMIZATIONREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "setuicustomizationrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUICustomizationRequest;
+
+class QTAWS_EXPORT SetUICustomizationRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    SetUICustomizationRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   SetUICustomizationRequest * const q);
+    SetUICustomizationRequestPrivate(const SetUICustomizationRequestPrivate &other,
+                                   SetUICustomizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetUICustomizationRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

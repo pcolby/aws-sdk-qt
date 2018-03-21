@@ -19,3 +19,107 @@
 
 #include "deleteconfigurationsetrequest.h"
 #include "deleteconfigurationsetrequest_p.h"
+#include "deleteconfigurationsetresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteConfigurationSetRequest
+ *
+ * @brief  Implements SES DeleteConfigurationSet requests.
+ *
+ * @see    SESClient::deleteConfigurationSet
+ */
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteConfigurationSetRequest::DeleteConfigurationSetRequest(const DeleteConfigurationSetRequest &other)
+    : SESRequest(new DeleteConfigurationSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteConfigurationSetRequest object.
+ */
+DeleteConfigurationSetRequest::DeleteConfigurationSetRequest()
+    : SESRequest(new DeleteConfigurationSetRequestPrivate(SESRequest::DeleteConfigurationSetAction, this))
+{
+
+}
+
+bool DeleteConfigurationSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteConfigurationSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteConfigurationSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteConfigurationSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigurationSetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteConfigurationSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteConfigurationSetRequest instance.
+ */
+DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
+    const SESRequest::Action action, DeleteConfigurationSetRequest * const q)
+    : DeleteConfigurationSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigurationSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteConfigurationSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteConfigurationSetRequest instance.
+ */
+DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
+    const DeleteConfigurationSetRequestPrivate &other, DeleteConfigurationSetRequest * const q)
+    : DeleteConfigurationSetPrivate(other, q)
+{
+
+}

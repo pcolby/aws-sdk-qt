@@ -20,4 +20,29 @@
 #ifndef QTAWS_TRANSFERCERTIFICATEREQUEST_P_H
 #define QTAWS_TRANSFERCERTIFICATEREQUEST_P_H
 
+#include "iot_p.h"
+#include "transfercertificaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class TransferCertificateRequest;
+
+class QTAWS_EXPORT TransferCertificateRequestPrivate : public IoTPrivate {
+
+public:
+    TransferCertificateRequestPrivate(const IoT::Action action,
+                                   TransferCertificateRequest * const q);
+    TransferCertificateRequestPrivate(const TransferCertificateRequestPrivate &other,
+                                   TransferCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TransferCertificateRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

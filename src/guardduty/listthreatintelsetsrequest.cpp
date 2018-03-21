@@ -19,3 +19,107 @@
 
 #include "listthreatintelsetsrequest.h"
 #include "listthreatintelsetsrequest_p.h"
+#include "listthreatintelsetsresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  ListThreatIntelSetsRequest
+ *
+ * @brief  Implements GuardDuty ListThreatIntelSets requests.
+ *
+ * @see    GuardDutyClient::listThreatIntelSets
+ */
+
+/**
+ * @brief  Constructs a new ListThreatIntelSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThreatIntelSetsResponse::ListThreatIntelSetsResponse(
+
+/**
+ * @brief  Constructs a new ListThreatIntelSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListThreatIntelSetsRequest::ListThreatIntelSetsRequest(const ListThreatIntelSetsRequest &other)
+    : GuardDutyRequest(new ListThreatIntelSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListThreatIntelSetsRequest object.
+ */
+ListThreatIntelSetsRequest::ListThreatIntelSetsRequest()
+    : GuardDutyRequest(new ListThreatIntelSetsRequestPrivate(GuardDutyRequest::ListThreatIntelSetsAction, this))
+{
+
+}
+
+bool ListThreatIntelSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListThreatIntelSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListThreatIntelSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListThreatIntelSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThreatIntelSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListThreatIntelSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public ListThreatIntelSetsRequest instance.
+ */
+ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
+    const GuardDutyRequest::Action action, ListThreatIntelSetsRequest * const q)
+    : ListThreatIntelSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThreatIntelSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListThreatIntelSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListThreatIntelSetsRequest instance.
+ */
+ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
+    const ListThreatIntelSetsRequestPrivate &other, ListThreatIntelSetsRequest * const q)
+    : ListThreatIntelSetsPrivate(other, q)
+{
+
+}

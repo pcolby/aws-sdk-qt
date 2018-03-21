@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETLOGGINGREQUEST_H
 #define QTAWS_GETBUCKETLOGGINGREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketLoggingRequestPrivate;
+
+class QTAWS_EXPORT GetBucketLoggingRequest : public S3Request {
+
+public:
+    GetBucketLoggingRequest(const GetBucketLoggingRequest &other);
+    GetBucketLoggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketLoggingRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

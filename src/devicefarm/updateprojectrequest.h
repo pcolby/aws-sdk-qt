@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_H
 #define QTAWS_UPDATEPROJECTREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class UpdateProjectRequestPrivate;
+
+class QTAWS_EXPORT UpdateProjectRequest : public DeviceFarmRequest {
+
+public:
+    UpdateProjectRequest(const UpdateProjectRequest &other);
+    UpdateProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProjectRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

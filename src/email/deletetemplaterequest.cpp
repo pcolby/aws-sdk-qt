@@ -19,3 +19,107 @@
 
 #include "deletetemplaterequest.h"
 #include "deletetemplaterequest_p.h"
+#include "deletetemplateresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteTemplateRequest
+ *
+ * @brief  Implements SES DeleteTemplate requests.
+ *
+ * @see    SESClient::deleteTemplate
+ */
+
+/**
+ * @brief  Constructs a new DeleteTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTemplateResponse::DeleteTemplateResponse(
+
+/**
+ * @brief  Constructs a new DeleteTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteTemplateRequest::DeleteTemplateRequest(const DeleteTemplateRequest &other)
+    : SESRequest(new DeleteTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteTemplateRequest object.
+ */
+DeleteTemplateRequest::DeleteTemplateRequest()
+    : SESRequest(new DeleteTemplateRequestPrivate(SESRequest::DeleteTemplateAction, this))
+{
+
+}
+
+bool DeleteTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTemplateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTemplateRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteTemplateRequest instance.
+ */
+DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
+    const SESRequest::Action action, DeleteTemplateRequest * const q)
+    : DeleteTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteTemplateRequest instance.
+ */
+DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
+    const DeleteTemplateRequestPrivate &other, DeleteTemplateRequest * const q)
+    : DeleteTemplatePrivate(other, q)
+{
+
+}

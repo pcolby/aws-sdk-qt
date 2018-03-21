@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERULEREQUEST_P_H
 #define QTAWS_DELETERULEREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "deleterulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DeleteRuleRequest;
+
+class QTAWS_EXPORT DeleteRuleRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    DeleteRuleRequestPrivate(const CloudWatchEvents::Action action,
+                                   DeleteRuleRequest * const q);
+    DeleteRuleRequestPrivate(const DeleteRuleRequestPrivate &other,
+                                   DeleteRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRuleRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTROLEPOLICYREQUEST_H
 #define QTAWS_PUTROLEPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutRolePolicyRequestPrivate;
+
+class QTAWS_EXPORT PutRolePolicyRequest : public IAMRequest {
+
+public:
+    PutRolePolicyRequest(const PutRolePolicyRequest &other);
+    PutRolePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutRolePolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

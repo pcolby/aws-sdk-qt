@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYDBSUBNETGROUPREQUEST_H
 #define QTAWS_MODIFYDBSUBNETGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyDBSubnetGroupRequest : public RDSRequest {
+
+public:
+    ModifyDBSubnetGroupRequest(const ModifyDBSubnetGroupRequest &other);
+    ModifyDBSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyDBSubnetGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

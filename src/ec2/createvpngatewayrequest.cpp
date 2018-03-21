@@ -19,3 +19,107 @@
 
 #include "createvpngatewayrequest.h"
 #include "createvpngatewayrequest_p.h"
+#include "createvpngatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateVpnGatewayRequest
+ *
+ * @brief  Implements EC2 CreateVpnGateway requests.
+ *
+ * @see    EC2Client::createVpnGateway
+ */
+
+/**
+ * @brief  Constructs a new CreateVpnGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateVpnGatewayResponse::CreateVpnGatewayResponse(
+
+/**
+ * @brief  Constructs a new CreateVpnGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateVpnGatewayRequest::CreateVpnGatewayRequest(const CreateVpnGatewayRequest &other)
+    : EC2Request(new CreateVpnGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateVpnGatewayRequest object.
+ */
+CreateVpnGatewayRequest::CreateVpnGatewayRequest()
+    : EC2Request(new CreateVpnGatewayRequestPrivate(EC2Request::CreateVpnGatewayAction, this))
+{
+
+}
+
+bool CreateVpnGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateVpnGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateVpnGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateVpnGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateVpnGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateVpnGatewayRequestPrivate
+ *
+ * @brief  Private implementation for CreateVpnGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateVpnGatewayRequest instance.
+ */
+CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
+    const EC2Request::Action action, CreateVpnGatewayRequest * const q)
+    : CreateVpnGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateVpnGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateVpnGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateVpnGatewayRequest instance.
+ */
+CreateVpnGatewayRequestPrivate::CreateVpnGatewayRequestPrivate(
+    const CreateVpnGatewayRequestPrivate &other, CreateVpnGatewayRequest * const q)
+    : CreateVpnGatewayPrivate(other, q)
+{
+
+}

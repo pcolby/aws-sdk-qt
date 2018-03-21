@@ -19,3 +19,107 @@
 
 #include "describefleetsrequest.h"
 #include "describefleetsrequest_p.h"
+#include "describefleetsresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  DescribeFleetsRequest
+ *
+ * @brief  Implements AppStream DescribeFleets requests.
+ *
+ * @see    AppStreamClient::describeFleets
+ */
+
+/**
+ * @brief  Constructs a new DescribeFleetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetsResponse::DescribeFleetsResponse(
+
+/**
+ * @brief  Constructs a new DescribeFleetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFleetsRequest::DescribeFleetsRequest(const DescribeFleetsRequest &other)
+    : AppStreamRequest(new DescribeFleetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFleetsRequest object.
+ */
+DescribeFleetsRequest::DescribeFleetsRequest()
+    : AppStreamRequest(new DescribeFleetsRequestPrivate(AppStreamRequest::DescribeFleetsAction, this))
+{
+
+}
+
+bool DescribeFleetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFleetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFleetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFleetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFleetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetsRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public DescribeFleetsRequest instance.
+ */
+DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
+    const AppStreamRequest::Action action, DescribeFleetsRequest * const q)
+    : DescribeFleetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFleetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFleetsRequest instance.
+ */
+DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
+    const DescribeFleetsRequestPrivate &other, DescribeFleetsRequest * const q)
+    : DescribeFleetsPrivate(other, q)
+{
+
+}

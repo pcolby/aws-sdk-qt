@@ -19,3 +19,107 @@
 
 #include "listtapesrequest.h"
 #include "listtapesrequest_p.h"
+#include "listtapesresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListTapesRequest
+ *
+ * @brief  Implements StorageGateway ListTapes requests.
+ *
+ * @see    StorageGatewayClient::listTapes
+ */
+
+/**
+ * @brief  Constructs a new ListTapesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTapesResponse::ListTapesResponse(
+
+/**
+ * @brief  Constructs a new ListTapesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTapesRequest::ListTapesRequest(const ListTapesRequest &other)
+    : StorageGatewayRequest(new ListTapesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTapesRequest object.
+ */
+ListTapesRequest::ListTapesRequest()
+    : StorageGatewayRequest(new ListTapesRequestPrivate(StorageGatewayRequest::ListTapesAction, this))
+{
+
+}
+
+bool ListTapesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTapesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTapesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * ListTapesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTapesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTapesRequestPrivate
+ *
+ * @brief  Private implementation for ListTapesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTapesRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public ListTapesRequest instance.
+ */
+ListTapesRequestPrivate::ListTapesRequestPrivate(
+    const StorageGatewayRequest::Action action, ListTapesRequest * const q)
+    : ListTapesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTapesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTapesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTapesRequest instance.
+ */
+ListTapesRequestPrivate::ListTapesRequestPrivate(
+    const ListTapesRequestPrivate &other, ListTapesRequest * const q)
+    : ListTapesPrivate(other, q)
+{
+
+}

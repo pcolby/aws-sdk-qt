@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINPUTREQUEST_H
 #define QTAWS_DELETEINPUTREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DeleteInputRequestPrivate;
+
+class QTAWS_EXPORT DeleteInputRequest : public MediaLiveRequest {
+
+public:
+    DeleteInputRequest(const DeleteInputRequest &other);
+    DeleteInputRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInputRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTEMPLATESUMMARYREQUEST_P_H
 #define QTAWS_GETTEMPLATESUMMARYREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "gettemplatesummaryrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class GetTemplateSummaryRequest;
+
+class QTAWS_EXPORT GetTemplateSummaryRequestPrivate : public CloudFormationPrivate {
+
+public:
+    GetTemplateSummaryRequestPrivate(const CloudFormation::Action action,
+                                   GetTemplateSummaryRequest * const q);
+    GetTemplateSummaryRequestPrivate(const GetTemplateSummaryRequestPrivate &other,
+                                   GetTemplateSummaryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTemplateSummaryRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

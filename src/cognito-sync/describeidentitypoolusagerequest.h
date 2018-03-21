@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIDENTITYPOOLUSAGEREQUEST_H
 #define QTAWS_DESCRIBEIDENTITYPOOLUSAGEREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DescribeIdentityPoolUsageRequestPrivate;
+
+class QTAWS_EXPORT DescribeIdentityPoolUsageRequest : public CognitoSyncRequest {
+
+public:
+    DescribeIdentityPoolUsageRequest(const DescribeIdentityPoolUsageRequest &other);
+    DescribeIdentityPoolUsageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdentityPoolUsageRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

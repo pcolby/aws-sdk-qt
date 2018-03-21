@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEACTIVATEUSERREQUEST_H
 #define QTAWS_DEACTIVATEUSERREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeactivateUserRequestPrivate;
+
+class QTAWS_EXPORT DeactivateUserRequest : public WorkDocsRequest {
+
+public:
+    DeactivateUserRequest(const DeactivateUserRequest &other);
+    DeactivateUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeactivateUserRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

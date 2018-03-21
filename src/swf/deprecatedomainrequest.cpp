@@ -19,3 +19,107 @@
 
 #include "deprecatedomainrequest.h"
 #include "deprecatedomainrequest_p.h"
+#include "deprecatedomainresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DeprecateDomainRequest
+ *
+ * @brief  Implements SWF DeprecateDomain requests.
+ *
+ * @see    SWFClient::deprecateDomain
+ */
+
+/**
+ * @brief  Constructs a new DeprecateDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeprecateDomainResponse::DeprecateDomainResponse(
+
+/**
+ * @brief  Constructs a new DeprecateDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeprecateDomainRequest::DeprecateDomainRequest(const DeprecateDomainRequest &other)
+    : SWFRequest(new DeprecateDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeprecateDomainRequest object.
+ */
+DeprecateDomainRequest::DeprecateDomainRequest()
+    : SWFRequest(new DeprecateDomainRequestPrivate(SWFRequest::DeprecateDomainAction, this))
+{
+
+}
+
+bool DeprecateDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeprecateDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeprecateDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new DeprecateDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeprecateDomainRequestPrivate
+ *
+ * @brief  Private implementation for DeprecateDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateDomainRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public DeprecateDomainRequest instance.
+ */
+DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
+    const SWFRequest::Action action, DeprecateDomainRequest * const q)
+    : DeprecateDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeprecateDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeprecateDomainRequest instance.
+ */
+DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
+    const DeprecateDomainRequestPrivate &other, DeprecateDomainRequest * const q)
+    : DeprecateDomainPrivate(other, q)
+{
+
+}

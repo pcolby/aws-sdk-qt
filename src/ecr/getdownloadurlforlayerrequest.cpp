@@ -19,3 +19,107 @@
 
 #include "getdownloadurlforlayerrequest.h"
 #include "getdownloadurlforlayerrequest_p.h"
+#include "getdownloadurlforlayerresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetDownloadUrlForLayerRequest
+ *
+ * @brief  Implements ECR GetDownloadUrlForLayer requests.
+ *
+ * @see    ECRClient::getDownloadUrlForLayer
+ */
+
+/**
+ * @brief  Constructs a new GetDownloadUrlForLayerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
+
+/**
+ * @brief  Constructs a new GetDownloadUrlForLayerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest(const GetDownloadUrlForLayerRequest &other)
+    : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDownloadUrlForLayerRequest object.
+ */
+GetDownloadUrlForLayerRequest::GetDownloadUrlForLayerRequest()
+    : ECRRequest(new GetDownloadUrlForLayerRequestPrivate(ECRRequest::GetDownloadUrlForLayerAction, this))
+{
+
+}
+
+bool GetDownloadUrlForLayerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDownloadUrlForLayerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDownloadUrlForLayerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDownloadUrlForLayerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDownloadUrlForLayerRequestPrivate
+ *
+ * @brief  Private implementation for GetDownloadUrlForLayerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public GetDownloadUrlForLayerRequest instance.
+ */
+GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
+    const ECRRequest::Action action, GetDownloadUrlForLayerRequest * const q)
+    : GetDownloadUrlForLayerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDownloadUrlForLayerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDownloadUrlForLayerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDownloadUrlForLayerRequest instance.
+ */
+GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
+    const GetDownloadUrlForLayerRequestPrivate &other, GetDownloadUrlForLayerRequest * const q)
+    : GetDownloadUrlForLayerPrivate(other, q)
+{
+
+}

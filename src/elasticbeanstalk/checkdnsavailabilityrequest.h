@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHECKDNSAVAILABILITYREQUEST_H
 #define QTAWS_CHECKDNSAVAILABILITYREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CheckDNSAvailabilityRequestPrivate;
+
+class QTAWS_EXPORT CheckDNSAvailabilityRequest : public ElasticBeanstalkRequest {
+
+public:
+    CheckDNSAvailabilityRequest(const CheckDNSAvailabilityRequest &other);
+    CheckDNSAvailabilityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CheckDNSAvailabilityRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

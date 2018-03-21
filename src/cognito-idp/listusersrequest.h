@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTUSERSREQUEST_H
 #define QTAWS_LISTUSERSREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ListUsersRequestPrivate;
+
+class QTAWS_EXPORT ListUsersRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ListUsersRequest(const ListUsersRequest &other);
+    ListUsersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListUsersRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

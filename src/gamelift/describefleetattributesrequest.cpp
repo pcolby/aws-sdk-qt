@@ -19,3 +19,107 @@
 
 #include "describefleetattributesrequest.h"
 #include "describefleetattributesrequest_p.h"
+#include "describefleetattributesresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetAttributesRequest
+ *
+ * @brief  Implements GameLift DescribeFleetAttributes requests.
+ *
+ * @see    GameLiftClient::describeFleetAttributes
+ */
+
+/**
+ * @brief  Constructs a new DescribeFleetAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetAttributesResponse::DescribeFleetAttributesResponse(
+
+/**
+ * @brief  Constructs a new DescribeFleetAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFleetAttributesRequest::DescribeFleetAttributesRequest(const DescribeFleetAttributesRequest &other)
+    : GameLiftRequest(new DescribeFleetAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFleetAttributesRequest object.
+ */
+DescribeFleetAttributesRequest::DescribeFleetAttributesRequest()
+    : GameLiftRequest(new DescribeFleetAttributesRequestPrivate(GameLiftRequest::DescribeFleetAttributesAction, this))
+{
+
+}
+
+bool DescribeFleetAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFleetAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFleetAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribeFleetAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFleetAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetAttributesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFleetAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetAttributesRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribeFleetAttributesRequest instance.
+ */
+DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
+    const GameLiftRequest::Action action, DescribeFleetAttributesRequest * const q)
+    : DescribeFleetAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFleetAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFleetAttributesRequest instance.
+ */
+DescribeFleetAttributesRequestPrivate::DescribeFleetAttributesRequestPrivate(
+    const DescribeFleetAttributesRequestPrivate &other, DescribeFleetAttributesRequest * const q)
+    : DescribeFleetAttributesPrivate(other, q)
+{
+
+}

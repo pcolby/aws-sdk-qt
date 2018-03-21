@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEBOTVERSIONREQUEST_H
 #define QTAWS_CREATEBOTVERSIONREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class CreateBotVersionRequestPrivate;
+
+class QTAWS_EXPORT CreateBotVersionRequest : public LexModelBuildingServiceRequest {
+
+public:
+    CreateBotVersionRequest(const CreateBotVersionRequest &other);
+    CreateBotVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateBotVersionRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

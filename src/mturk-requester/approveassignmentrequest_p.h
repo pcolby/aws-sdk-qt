@@ -20,4 +20,29 @@
 #ifndef QTAWS_APPROVEASSIGNMENTREQUEST_P_H
 #define QTAWS_APPROVEASSIGNMENTREQUEST_P_H
 
+#include "mturk_p.h"
+#include "approveassignmentrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ApproveAssignmentRequest;
+
+class QTAWS_EXPORT ApproveAssignmentRequestPrivate : public MTurkPrivate {
+
+public:
+    ApproveAssignmentRequestPrivate(const MTurk::Action action,
+                                   ApproveAssignmentRequest * const q);
+    ApproveAssignmentRequestPrivate(const ApproveAssignmentRequestPrivate &other,
+                                   ApproveAssignmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ApproveAssignmentRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

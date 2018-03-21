@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGREQUEST_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINCONFIGREQUEST_H
 
+#include "elasticsearchservicerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DescribeElasticsearchDomainConfigRequestPrivate;
+
+class QTAWS_EXPORT DescribeElasticsearchDomainConfigRequest : public ElasticsearchServiceRequest {
+
+public:
+    DescribeElasticsearchDomainConfigRequest(const DescribeElasticsearchDomainConfigRequest &other);
+    DescribeElasticsearchDomainConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeElasticsearchDomainConfigRequest)
+
+}
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

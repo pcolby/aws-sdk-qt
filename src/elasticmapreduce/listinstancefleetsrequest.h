@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINSTANCEFLEETSREQUEST_H
 #define QTAWS_LISTINSTANCEFLEETSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListInstanceFleetsRequestPrivate;
+
+class QTAWS_EXPORT ListInstanceFleetsRequest : public EMRRequest {
+
+public:
+    ListInstanceFleetsRequest(const ListInstanceFleetsRequest &other);
+    ListInstanceFleetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInstanceFleetsRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

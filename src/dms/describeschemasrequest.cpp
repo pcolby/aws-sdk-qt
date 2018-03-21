@@ -19,3 +19,107 @@
 
 #include "describeschemasrequest.h"
 #include "describeschemasrequest_p.h"
+#include "describeschemasresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeSchemasRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeSchemas requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeSchemas
+ */
+
+/**
+ * @brief  Constructs a new DescribeSchemasResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSchemasResponse::DescribeSchemasResponse(
+
+/**
+ * @brief  Constructs a new DescribeSchemasRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSchemasRequest::DescribeSchemasRequest(const DescribeSchemasRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSchemasRequest object.
+ */
+DescribeSchemasRequest::DescribeSchemasRequest()
+    : DatabaseMigrationServiceRequest(new DescribeSchemasRequestPrivate(DatabaseMigrationServiceRequest::DescribeSchemasAction, this))
+{
+
+}
+
+bool DescribeSchemasRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSchemasResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSchemasResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSchemasResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSchemasRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSchemasRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSchemasRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeSchemasRequest instance.
+ */
+DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeSchemasRequest * const q)
+    : DescribeSchemasPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSchemasRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSchemasRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSchemasRequest instance.
+ */
+DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
+    const DescribeSchemasRequestPrivate &other, DescribeSchemasRequest * const q)
+    : DescribeSchemasPrivate(other, q)
+{
+
+}

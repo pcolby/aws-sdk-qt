@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPROJECTSREQUEST_H
 #define QTAWS_LISTPROJECTSREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListProjectsRequestPrivate;
+
+class QTAWS_EXPORT ListProjectsRequest : public CodeBuildRequest {
+
+public:
+    ListProjectsRequest(const ListProjectsRequest &other);
+    ListProjectsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListProjectsRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_POLLFORTASKREQUEST_P_H
 #define QTAWS_POLLFORTASKREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "pollfortaskrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class PollForTaskRequest;
+
+class QTAWS_EXPORT PollForTaskRequestPrivate : public DataPipelinePrivate {
+
+public:
+    PollForTaskRequestPrivate(const DataPipeline::Action action,
+                                   PollForTaskRequest * const q);
+    PollForTaskRequestPrivate(const PollForTaskRequestPrivate &other,
+                                   PollForTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PollForTaskRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getinventoryrequest.h"
 #include "getinventoryrequest_p.h"
+#include "getinventoryresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetInventoryRequest
+ *
+ * @brief  Implements SSM GetInventory requests.
+ *
+ * @see    SSMClient::getInventory
+ */
+
+/**
+ * @brief  Constructs a new GetInventoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInventoryResponse::GetInventoryResponse(
+
+/**
+ * @brief  Constructs a new GetInventoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInventoryRequest::GetInventoryRequest(const GetInventoryRequest &other)
+    : SSMRequest(new GetInventoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInventoryRequest object.
+ */
+GetInventoryRequest::GetInventoryRequest()
+    : SSMRequest(new GetInventoryRequestPrivate(SSMRequest::GetInventoryAction, this))
+{
+
+}
+
+bool GetInventoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInventoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInventoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInventoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInventoryRequestPrivate
+ *
+ * @brief  Private implementation for GetInventoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInventoryRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetInventoryRequest instance.
+ */
+GetInventoryRequestPrivate::GetInventoryRequestPrivate(
+    const SSMRequest::Action action, GetInventoryRequest * const q)
+    : GetInventoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInventoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInventoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInventoryRequest instance.
+ */
+GetInventoryRequestPrivate::GetInventoryRequestPrivate(
+    const GetInventoryRequestPrivate &other, GetInventoryRequest * const q)
+    : GetInventoryPrivate(other, q)
+{
+
+}

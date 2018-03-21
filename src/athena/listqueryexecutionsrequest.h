@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTQUERYEXECUTIONSREQUEST_H
 #define QTAWS_LISTQUERYEXECUTIONSREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class ListQueryExecutionsRequestPrivate;
+
+class QTAWS_EXPORT ListQueryExecutionsRequest : public AthenaRequest {
+
+public:
+    ListQueryExecutionsRequest(const ListQueryExecutionsRequest &other);
+    ListQueryExecutionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListQueryExecutionsRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

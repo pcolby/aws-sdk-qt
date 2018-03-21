@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREGEXPATTERNSETREQUEST_P_H
 #define QTAWS_DELETEREGEXPATTERNSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "deleteregexpatternsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteRegexPatternSetRequest;
+
+class QTAWS_EXPORT DeleteRegexPatternSetRequestPrivate : public WAFPrivate {
+
+public:
+    DeleteRegexPatternSetRequestPrivate(const WAF::Action action,
+                                   DeleteRegexPatternSetRequest * const q);
+    DeleteRegexPatternSetRequestPrivate(const DeleteRegexPatternSetRequestPrivate &other,
+                                   DeleteRegexPatternSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRegexPatternSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

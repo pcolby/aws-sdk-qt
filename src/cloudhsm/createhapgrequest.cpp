@@ -19,3 +19,107 @@
 
 #include "createhapgrequest.h"
 #include "createhapgrequest_p.h"
+#include "createhapgresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  CreateHapgRequest
+ *
+ * @brief  Implements CloudHSM CreateHapg requests.
+ *
+ * @see    CloudHSMClient::createHapg
+ */
+
+/**
+ * @brief  Constructs a new CreateHapgResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHapgResponse::CreateHapgResponse(
+
+/**
+ * @brief  Constructs a new CreateHapgRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHapgRequest::CreateHapgRequest(const CreateHapgRequest &other)
+    : CloudHSMRequest(new CreateHapgRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHapgRequest object.
+ */
+CreateHapgRequest::CreateHapgRequest()
+    : CloudHSMRequest(new CreateHapgRequestPrivate(CloudHSMRequest::CreateHapgAction, this))
+{
+
+}
+
+bool CreateHapgRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHapgResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHapgResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * CreateHapgRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHapgResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHapgRequestPrivate
+ *
+ * @brief  Private implementation for CreateHapgRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHapgRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public CreateHapgRequest instance.
+ */
+CreateHapgRequestPrivate::CreateHapgRequestPrivate(
+    const CloudHSMRequest::Action action, CreateHapgRequest * const q)
+    : CreateHapgPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHapgRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHapgRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHapgRequest instance.
+ */
+CreateHapgRequestPrivate::CreateHapgRequestPrivate(
+    const CreateHapgRequestPrivate &other, CreateHapgRequest * const q)
+    : CreateHapgPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESPOTFLEETREQUESTHISTORYREQUEST_H
 #define QTAWS_DESCRIBESPOTFLEETREQUESTHISTORYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotFleetRequestHistoryRequestPrivate;
+
+class QTAWS_EXPORT DescribeSpotFleetRequestHistoryRequest : public EC2Request {
+
+public:
+    DescribeSpotFleetRequestHistoryRequest(const DescribeSpotFleetRequestHistoryRequest &other);
+    DescribeSpotFleetRequestHistoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotFleetRequestHistoryRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

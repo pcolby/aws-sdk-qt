@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENETWORKACLENTRYREQUEST_H
 #define QTAWS_DELETENETWORKACLENTRYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteNetworkAclEntryRequestPrivate;
+
+class QTAWS_EXPORT DeleteNetworkAclEntryRequest : public EC2Request {
+
+public:
+    DeleteNetworkAclEntryRequest(const DeleteNetworkAclEntryRequest &other);
+    DeleteNetworkAclEntryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNetworkAclEntryRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

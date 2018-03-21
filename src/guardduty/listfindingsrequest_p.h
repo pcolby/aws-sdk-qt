@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTFINDINGSREQUEST_P_H
 #define QTAWS_LISTFINDINGSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "listfindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ListFindingsRequest;
+
+class QTAWS_EXPORT ListFindingsRequestPrivate : public GuardDutyPrivate {
+
+public:
+    ListFindingsRequestPrivate(const GuardDuty::Action action,
+                                   ListFindingsRequest * const q);
+    ListFindingsRequestPrivate(const ListFindingsRequestPrivate &other,
+                                   ListFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListFindingsRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

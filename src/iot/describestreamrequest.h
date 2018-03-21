@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTREAMREQUEST_H
 #define QTAWS_DESCRIBESTREAMREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeStreamRequestPrivate;
+
+class QTAWS_EXPORT DescribeStreamRequest : public IoTRequest {
+
+public:
+    DescribeStreamRequest(const DescribeStreamRequest &other);
+    DescribeStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

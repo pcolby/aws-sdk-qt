@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDELETEIMAGEREQUEST_H
 #define QTAWS_BATCHDELETEIMAGEREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchDeleteImageRequestPrivate;
+
+class QTAWS_EXPORT BatchDeleteImageRequest : public ECRRequest {
+
+public:
+    BatchDeleteImageRequest(const BatchDeleteImageRequest &other);
+    BatchDeleteImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDeleteImageRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

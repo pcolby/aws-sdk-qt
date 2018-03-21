@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVOLUMEATTRIBUTEREQUEST_P_H
 #define QTAWS_DESCRIBEVOLUMEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevolumeattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVolumeAttributeRequest;
+
+class QTAWS_EXPORT DescribeVolumeAttributeRequestPrivate : public EC2Private {
+
+public:
+    DescribeVolumeAttributeRequestPrivate(const EC2::Action action,
+                                   DescribeVolumeAttributeRequest * const q);
+    DescribeVolumeAttributeRequestPrivate(const DescribeVolumeAttributeRequestPrivate &other,
+                                   DescribeVolumeAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVolumeAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

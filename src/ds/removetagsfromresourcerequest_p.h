@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "removetagsfromresourcerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RemoveTagsFromResourceRequest;
+
+class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    RemoveTagsFromResourceRequestPrivate(const DirectoryService::Action action,
+                                   RemoveTagsFromResourceRequest * const q);
+    RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
+                                   RemoveTagsFromResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromResourceRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

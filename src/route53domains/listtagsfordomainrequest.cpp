@@ -19,3 +19,107 @@
 
 #include "listtagsfordomainrequest.h"
 #include "listtagsfordomainrequest_p.h"
+#include "listtagsfordomainresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  ListTagsForDomainRequest
+ *
+ * @brief  Implements Route53Domains ListTagsForDomain requests.
+ *
+ * @see    Route53DomainsClient::listTagsForDomain
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForDomainResponse::ListTagsForDomainResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForDomainRequest::ListTagsForDomainRequest(const ListTagsForDomainRequest &other)
+    : Route53DomainsRequest(new ListTagsForDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForDomainRequest object.
+ */
+ListTagsForDomainRequest::ListTagsForDomainRequest()
+    : Route53DomainsRequest(new ListTagsForDomainRequestPrivate(Route53DomainsRequest::ListTagsForDomainAction, this))
+{
+
+}
+
+bool ListTagsForDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForDomainRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForDomainRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public ListTagsForDomainRequest instance.
+ */
+ListTagsForDomainRequestPrivate::ListTagsForDomainRequestPrivate(
+    const Route53DomainsRequest::Action action, ListTagsForDomainRequest * const q)
+    : ListTagsForDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForDomainRequest instance.
+ */
+ListTagsForDomainRequestPrivate::ListTagsForDomainRequestPrivate(
+    const ListTagsForDomainRequestPrivate &other, ListTagsForDomainRequest * const q)
+    : ListTagsForDomainPrivate(other, q)
+{
+
+}

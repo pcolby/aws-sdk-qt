@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEVICEPOOLSREQUEST_P_H
 #define QTAWS_LISTDEVICEPOOLSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listdevicepoolsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListDevicePoolsRequest;
+
+class QTAWS_EXPORT ListDevicePoolsRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListDevicePoolsRequestPrivate(const DeviceFarm::Action action,
+                                   ListDevicePoolsRequest * const q);
+    ListDevicePoolsRequestPrivate(const ListDevicePoolsRequestPrivate &other,
+                                   ListDevicePoolsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDevicePoolsRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETLOCALCONSOLEPASSWORDREQUEST_H
 #define QTAWS_SETLOCALCONSOLEPASSWORDREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class SetLocalConsolePasswordRequestPrivate;
+
+class QTAWS_EXPORT SetLocalConsolePasswordRequest : public StorageGatewayRequest {
+
+public:
+    SetLocalConsolePasswordRequest(const SetLocalConsolePasswordRequest &other);
+    SetLocalConsolePasswordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetLocalConsolePasswordRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

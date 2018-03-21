@@ -19,3 +19,107 @@
 
 #include "listservicesrequest.h"
 #include "listservicesrequest_p.h"
+#include "listservicesresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListServicesRequest
+ *
+ * @brief  Implements ECS ListServices requests.
+ *
+ * @see    ECSClient::listServices
+ */
+
+/**
+ * @brief  Constructs a new ListServicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListServicesResponse::ListServicesResponse(
+
+/**
+ * @brief  Constructs a new ListServicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListServicesRequest::ListServicesRequest(const ListServicesRequest &other)
+    : ECSRequest(new ListServicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListServicesRequest object.
+ */
+ListServicesRequest::ListServicesRequest()
+    : ECSRequest(new ListServicesRequestPrivate(ECSRequest::ListServicesAction, this))
+{
+
+}
+
+bool ListServicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListServicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListServicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * ListServicesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListServicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListServicesRequestPrivate
+ *
+ * @brief  Private implementation for ListServicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServicesRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public ListServicesRequest instance.
+ */
+ListServicesRequestPrivate::ListServicesRequestPrivate(
+    const ECSRequest::Action action, ListServicesRequest * const q)
+    : ListServicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListServicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListServicesRequest instance.
+ */
+ListServicesRequestPrivate::ListServicesRequestPrivate(
+    const ListServicesRequestPrivate &other, ListServicesRequest * const q)
+    : ListServicesPrivate(other, q)
+{
+
+}

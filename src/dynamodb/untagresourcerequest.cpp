@@ -19,3 +19,107 @@
 
 #include "untagresourcerequest.h"
 #include "untagresourcerequest_p.h"
+#include "untagresourceresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  UntagResourceRequest
+ *
+ * @brief  Implements DynamoDB UntagResource requests.
+ *
+ * @see    DynamoDBClient::untagResource
+ */
+
+/**
+ * @brief  Constructs a new UntagResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResourceResponse::UntagResourceResponse(
+
+/**
+ * @brief  Constructs a new UntagResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UntagResourceRequest::UntagResourceRequest(const UntagResourceRequest &other)
+    : DynamoDBRequest(new UntagResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UntagResourceRequest object.
+ */
+UntagResourceRequest::UntagResourceRequest()
+    : DynamoDBRequest(new UntagResourceRequestPrivate(DynamoDBRequest::UntagResourceAction, this))
+{
+
+}
+
+bool UntagResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UntagResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UntagResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new UntagResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagResourceRequestPrivate
+ *
+ * @brief  Private implementation for UntagResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourceRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public UntagResourceRequest instance.
+ */
+UntagResourceRequestPrivate::UntagResourceRequestPrivate(
+    const DynamoDBRequest::Action action, UntagResourceRequest * const q)
+    : UntagResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UntagResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UntagResourceRequest instance.
+ */
+UntagResourceRequestPrivate::UntagResourceRequestPrivate(
+    const UntagResourceRequestPrivate &other, UntagResourceRequest * const q)
+    : UntagResourcePrivate(other, q)
+{
+
+}

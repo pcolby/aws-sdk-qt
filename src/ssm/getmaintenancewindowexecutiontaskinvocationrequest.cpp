@@ -19,3 +19,107 @@
 
 #include "getmaintenancewindowexecutiontaskinvocationrequest.h"
 #include "getmaintenancewindowexecutiontaskinvocationrequest_p.h"
+#include "getmaintenancewindowexecutiontaskinvocationresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetMaintenanceWindowExecutionTaskInvocationRequest
+ *
+ * @brief  Implements SSM GetMaintenanceWindowExecutionTaskInvocation requests.
+ *
+ * @see    SSMClient::getMaintenanceWindowExecutionTaskInvocation
+ */
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMaintenanceWindowExecutionTaskInvocationResponse::GetMaintenanceWindowExecutionTaskInvocationResponse(
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest(const GetMaintenanceWindowExecutionTaskInvocationRequest &other)
+    : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequest object.
+ */
+GetMaintenanceWindowExecutionTaskInvocationRequest::GetMaintenanceWindowExecutionTaskInvocationRequest()
+    : SSMRequest(new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(SSMRequest::GetMaintenanceWindowExecutionTaskInvocationAction, this))
+{
+
+}
+
+bool GetMaintenanceWindowExecutionTaskInvocationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMaintenanceWindowExecutionTaskInvocationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMaintenanceWindowExecutionTaskInvocationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetMaintenanceWindowExecutionTaskInvocationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMaintenanceWindowExecutionTaskInvocationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMaintenanceWindowExecutionTaskInvocationRequestPrivate
+ *
+ * @brief  Private implementation for GetMaintenanceWindowExecutionTaskInvocationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetMaintenanceWindowExecutionTaskInvocationRequest instance.
+ */
+GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
+    const SSMRequest::Action action, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
+    : GetMaintenanceWindowExecutionTaskInvocationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMaintenanceWindowExecutionTaskInvocationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMaintenanceWindowExecutionTaskInvocationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMaintenanceWindowExecutionTaskInvocationRequest instance.
+ */
+GetMaintenanceWindowExecutionTaskInvocationRequestPrivate::GetMaintenanceWindowExecutionTaskInvocationRequestPrivate(
+    const GetMaintenanceWindowExecutionTaskInvocationRequestPrivate &other, GetMaintenanceWindowExecutionTaskInvocationRequest * const q)
+    : GetMaintenanceWindowExecutionTaskInvocationPrivate(other, q)
+{
+
+}

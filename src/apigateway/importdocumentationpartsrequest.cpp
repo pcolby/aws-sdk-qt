@@ -19,3 +19,107 @@
 
 #include "importdocumentationpartsrequest.h"
 #include "importdocumentationpartsrequest_p.h"
+#include "importdocumentationpartsresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  ImportDocumentationPartsRequest
+ *
+ * @brief  Implements APIGateway ImportDocumentationParts requests.
+ *
+ * @see    APIGatewayClient::importDocumentationParts
+ */
+
+/**
+ * @brief  Constructs a new ImportDocumentationPartsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
+
+/**
+ * @brief  Constructs a new ImportDocumentationPartsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ImportDocumentationPartsRequest::ImportDocumentationPartsRequest(const ImportDocumentationPartsRequest &other)
+    : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ImportDocumentationPartsRequest object.
+ */
+ImportDocumentationPartsRequest::ImportDocumentationPartsRequest()
+    : APIGatewayRequest(new ImportDocumentationPartsRequestPrivate(APIGatewayRequest::ImportDocumentationPartsAction, this))
+{
+
+}
+
+bool ImportDocumentationPartsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ImportDocumentationPartsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ImportDocumentationPartsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNetworkReply * const reply) const
+{
+    return new ImportDocumentationPartsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportDocumentationPartsRequestPrivate
+ *
+ * @brief  Private implementation for ImportDocumentationPartsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public ImportDocumentationPartsRequest instance.
+ */
+ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
+    const APIGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)
+    : ImportDocumentationPartsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportDocumentationPartsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ImportDocumentationPartsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ImportDocumentationPartsRequest instance.
+ */
+ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
+    const ImportDocumentationPartsRequestPrivate &other, ImportDocumentationPartsRequest * const q)
+    : ImportDocumentationPartsPrivate(other, q)
+{
+
+}

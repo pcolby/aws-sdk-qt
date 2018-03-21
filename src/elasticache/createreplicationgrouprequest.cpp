@@ -19,3 +19,107 @@
 
 #include "createreplicationgrouprequest.h"
 #include "createreplicationgrouprequest_p.h"
+#include "createreplicationgroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateReplicationGroupRequest
+ *
+ * @brief  Implements ElastiCache CreateReplicationGroup requests.
+ *
+ * @see    ElastiCacheClient::createReplicationGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateReplicationGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateReplicationGroupResponse::CreateReplicationGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateReplicationGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateReplicationGroupRequest::CreateReplicationGroupRequest(const CreateReplicationGroupRequest &other)
+    : ElastiCacheRequest(new CreateReplicationGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateReplicationGroupRequest object.
+ */
+CreateReplicationGroupRequest::CreateReplicationGroupRequest()
+    : ElastiCacheRequest(new CreateReplicationGroupRequestPrivate(ElastiCacheRequest::CreateReplicationGroupAction, this))
+{
+
+}
+
+bool CreateReplicationGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateReplicationGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateReplicationGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * CreateReplicationGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateReplicationGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateReplicationGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateReplicationGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public CreateReplicationGroupRequest instance.
+ */
+CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, CreateReplicationGroupRequest * const q)
+    : CreateReplicationGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateReplicationGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateReplicationGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateReplicationGroupRequest instance.
+ */
+CreateReplicationGroupRequestPrivate::CreateReplicationGroupRequestPrivate(
+    const CreateReplicationGroupRequestPrivate &other, CreateReplicationGroupRequest * const q)
+    : CreateReplicationGroupPrivate(other, q)
+{
+
+}

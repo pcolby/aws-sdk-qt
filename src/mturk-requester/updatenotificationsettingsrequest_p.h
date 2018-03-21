@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_P_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "updatenotificationsettingsrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateNotificationSettingsRequest;
+
+class QTAWS_EXPORT UpdateNotificationSettingsRequestPrivate : public MTurkPrivate {
+
+public:
+    UpdateNotificationSettingsRequestPrivate(const MTurk::Action action,
+                                   UpdateNotificationSettingsRequest * const q);
+    UpdateNotificationSettingsRequestPrivate(const UpdateNotificationSettingsRequestPrivate &other,
+                                   UpdateNotificationSettingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNotificationSettingsRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERESOLVERREQUEST_P_H
 #define QTAWS_DELETERESOLVERREQUEST_P_H
 
+#include "appsync_p.h"
+#include "deleteresolverrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteResolverRequest;
+
+class QTAWS_EXPORT DeleteResolverRequestPrivate : public AppSyncPrivate {
+
+public:
+    DeleteResolverRequestPrivate(const AppSync::Action action,
+                                   DeleteResolverRequest * const q);
+    DeleteResolverRequestPrivate(const DeleteResolverRequestPrivate &other,
+                                   DeleteResolverRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteResolverRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

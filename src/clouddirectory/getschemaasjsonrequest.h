@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSCHEMAASJSONREQUEST_H
 #define QTAWS_GETSCHEMAASJSONREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetSchemaAsJsonRequestPrivate;
+
+class QTAWS_EXPORT GetSchemaAsJsonRequest : public CloudDirectoryRequest {
+
+public:
+    GetSchemaAsJsonRequest(const GetSchemaAsJsonRequest &other);
+    GetSchemaAsJsonRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSchemaAsJsonRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

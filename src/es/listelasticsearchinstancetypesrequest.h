@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESREQUEST_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESREQUEST_H
 
+#include "elasticsearchservicerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class ListElasticsearchInstanceTypesRequestPrivate;
+
+class QTAWS_EXPORT ListElasticsearchInstanceTypesRequest : public ElasticsearchServiceRequest {
+
+public:
+    ListElasticsearchInstanceTypesRequest(const ListElasticsearchInstanceTypesRequest &other);
+    ListElasticsearchInstanceTypesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListElasticsearchInstanceTypesRequest)
+
+}
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

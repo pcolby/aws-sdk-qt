@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTINVENTORYREQUEST_H
 #define QTAWS_PUTINVENTORYREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutInventoryRequestPrivate;
+
+class QTAWS_EXPORT PutInventoryRequest : public SSMRequest {
+
+public:
+    PutInventoryRequest(const PutInventoryRequest &other);
+    PutInventoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutInventoryRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

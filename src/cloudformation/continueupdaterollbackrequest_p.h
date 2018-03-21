@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONTINUEUPDATEROLLBACKREQUEST_P_H
 #define QTAWS_CONTINUEUPDATEROLLBACKREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "continueupdaterollbackrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class ContinueUpdateRollbackRequest;
+
+class QTAWS_EXPORT ContinueUpdateRollbackRequestPrivate : public CloudFormationPrivate {
+
+public:
+    ContinueUpdateRollbackRequestPrivate(const CloudFormation::Action action,
+                                   ContinueUpdateRollbackRequest * const q);
+    ContinueUpdateRollbackRequestPrivate(const ContinueUpdateRollbackRequestPrivate &other,
+                                   ContinueUpdateRollbackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ContinueUpdateRollbackRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

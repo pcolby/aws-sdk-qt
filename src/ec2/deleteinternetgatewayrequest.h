@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINTERNETGATEWAYREQUEST_H
 #define QTAWS_DELETEINTERNETGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteInternetGatewayRequestPrivate;
+
+class QTAWS_EXPORT DeleteInternetGatewayRequest : public EC2Request {
+
+public:
+    DeleteInternetGatewayRequest(const DeleteInternetGatewayRequest &other);
+    DeleteInternetGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInternetGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

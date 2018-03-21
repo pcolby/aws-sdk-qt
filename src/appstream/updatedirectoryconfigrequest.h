@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDIRECTORYCONFIGREQUEST_H
 #define QTAWS_UPDATEDIRECTORYCONFIGREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateDirectoryConfigRequestPrivate;
+
+class QTAWS_EXPORT UpdateDirectoryConfigRequest : public AppStreamRequest {
+
+public:
+    UpdateDirectoryConfigRequest(const UpdateDirectoryConfigRequest &other);
+    UpdateDirectoryConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDirectoryConfigRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describemigrationtaskrequest.h"
 #include "describemigrationtaskrequest_p.h"
+#include "describemigrationtaskresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DescribeMigrationTaskRequest
+ *
+ * @brief  Implements MigrationHub DescribeMigrationTask requests.
+ *
+ * @see    MigrationHubClient::describeMigrationTask
+ */
+
+/**
+ * @brief  Constructs a new DescribeMigrationTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMigrationTaskResponse::DescribeMigrationTaskResponse(
+
+/**
+ * @brief  Constructs a new DescribeMigrationTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMigrationTaskRequest::DescribeMigrationTaskRequest(const DescribeMigrationTaskRequest &other)
+    : MigrationHubRequest(new DescribeMigrationTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMigrationTaskRequest object.
+ */
+DescribeMigrationTaskRequest::DescribeMigrationTaskRequest()
+    : MigrationHubRequest(new DescribeMigrationTaskRequestPrivate(MigrationHubRequest::DescribeMigrationTaskAction, this))
+{
+
+}
+
+bool DescribeMigrationTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMigrationTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMigrationTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * DescribeMigrationTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMigrationTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMigrationTaskRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMigrationTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public DescribeMigrationTaskRequest instance.
+ */
+DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
+    const MigrationHubRequest::Action action, DescribeMigrationTaskRequest * const q)
+    : DescribeMigrationTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMigrationTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMigrationTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMigrationTaskRequest instance.
+ */
+DescribeMigrationTaskRequestPrivate::DescribeMigrationTaskRequestPrivate(
+    const DescribeMigrationTaskRequestPrivate &other, DescribeMigrationTaskRequest * const q)
+    : DescribeMigrationTaskPrivate(other, q)
+{
+
+}

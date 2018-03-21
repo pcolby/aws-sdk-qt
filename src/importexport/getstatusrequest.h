@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSTATUSREQUEST_H
 #define QTAWS_GETSTATUSREQUEST_H
 
+#include "importexportrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class GetStatusRequestPrivate;
+
+class QTAWS_EXPORT GetStatusRequest : public ImportExportRequest {
+
+public:
+    GetStatusRequest(const GetStatusRequest &other);
+    GetStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetStatusRequest)
+
+}
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACTIVATEUSERREQUEST_H
 #define QTAWS_ACTIVATEUSERREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class ActivateUserRequestPrivate;
+
+class QTAWS_EXPORT ActivateUserRequest : public WorkDocsRequest {
+
+public:
+    ActivateUserRequest(const ActivateUserRequest &other);
+    ActivateUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ActivateUserRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

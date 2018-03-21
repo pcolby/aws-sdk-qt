@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESTREAMREQUEST_H
 #define QTAWS_UPDATESTREAMREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateStreamRequestPrivate;
+
+class QTAWS_EXPORT UpdateStreamRequest : public IoTRequest {
+
+public:
+    UpdateStreamRequest(const UpdateStreamRequest &other);
+    UpdateStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStreamRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

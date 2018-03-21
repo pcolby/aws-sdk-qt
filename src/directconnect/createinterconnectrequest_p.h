@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINTERCONNECTREQUEST_P_H
 #define QTAWS_CREATEINTERCONNECTREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "createinterconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateInterconnectRequest;
+
+class QTAWS_EXPORT CreateInterconnectRequestPrivate : public DirectConnectPrivate {
+
+public:
+    CreateInterconnectRequestPrivate(const DirectConnect::Action action,
+                                   CreateInterconnectRequest * const q);
+    CreateInterconnectRequestPrivate(const CreateInterconnectRequestPrivate &other,
+                                   CreateInterconnectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInterconnectRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

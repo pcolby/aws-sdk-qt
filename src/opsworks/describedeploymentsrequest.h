@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDEPLOYMENTSREQUEST_H
 #define QTAWS_DESCRIBEDEPLOYMENTSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeDeploymentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeDeploymentsRequest : public OpsWorksRequest {
+
+public:
+    DescribeDeploymentsRequest(const DescribeDeploymentsRequest &other);
+    DescribeDeploymentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDeploymentsRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

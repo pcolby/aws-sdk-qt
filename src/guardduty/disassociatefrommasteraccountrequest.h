@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEFROMMASTERACCOUNTREQUEST_H
 #define QTAWS_DISASSOCIATEFROMMASTERACCOUNTREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DisassociateFromMasterAccountRequestPrivate;
+
+class QTAWS_EXPORT DisassociateFromMasterAccountRequest : public GuardDutyRequest {
+
+public:
+    DisassociateFromMasterAccountRequest(const DisassociateFromMasterAccountRequest &other);
+    DisassociateFromMasterAccountRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateFromMasterAccountRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

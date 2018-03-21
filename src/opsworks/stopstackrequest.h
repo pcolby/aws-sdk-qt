@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPSTACKREQUEST_H
 #define QTAWS_STOPSTACKREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class StopStackRequestPrivate;
+
+class QTAWS_EXPORT StopStackRequest : public OpsWorksRequest {
+
+public:
+    StopStackRequest(const StopStackRequest &other);
+    StopStackRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopStackRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

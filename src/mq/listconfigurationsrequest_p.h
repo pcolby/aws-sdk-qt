@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 
+#include "mq_p.h"
+#include "listconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class ListConfigurationsRequest;
+
+class QTAWS_EXPORT ListConfigurationsRequestPrivate : public MQPrivate {
+
+public:
+    ListConfigurationsRequestPrivate(const MQ::Action action,
+                                   ListConfigurationsRequest * const q);
+    ListConfigurationsRequestPrivate(const ListConfigurationsRequestPrivate &other,
+                                   ListConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListConfigurationsRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

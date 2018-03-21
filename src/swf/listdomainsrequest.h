@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDOMAINSREQUEST_H
 #define QTAWS_LISTDOMAINSREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListDomainsRequestPrivate;
+
+class QTAWS_EXPORT ListDomainsRequest : public SWFRequest {
+
+public:
+    ListDomainsRequest(const ListDomainsRequest &other);
+    ListDomainsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDomainsRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

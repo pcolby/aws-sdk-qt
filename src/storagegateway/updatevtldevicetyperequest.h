@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEVTLDEVICETYPEREQUEST_H
 #define QTAWS_UPDATEVTLDEVICETYPEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateVTLDeviceTypeRequestPrivate;
+
+class QTAWS_EXPORT UpdateVTLDeviceTypeRequest : public StorageGatewayRequest {
+
+public:
+    UpdateVTLDeviceTypeRequest(const UpdateVTLDeviceTypeRequest &other);
+    UpdateVTLDeviceTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateVTLDeviceTypeRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

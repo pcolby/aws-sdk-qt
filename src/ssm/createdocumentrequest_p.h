@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDOCUMENTREQUEST_P_H
 #define QTAWS_CREATEDOCUMENTREQUEST_P_H
 
+#include "ssm_p.h"
+#include "createdocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateDocumentRequest;
+
+class QTAWS_EXPORT CreateDocumentRequestPrivate : public SSMPrivate {
+
+public:
+    CreateDocumentRequestPrivate(const SSM::Action action,
+                                   CreateDocumentRequest * const q);
+    CreateDocumentRequestPrivate(const CreateDocumentRequestPrivate &other,
+                                   CreateDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDocumentRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

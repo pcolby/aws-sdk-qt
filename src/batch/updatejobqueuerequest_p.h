@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEJOBQUEUEREQUEST_P_H
 #define QTAWS_UPDATEJOBQUEUEREQUEST_P_H
 
+#include "batch_p.h"
+#include "updatejobqueuerequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class UpdateJobQueueRequest;
+
+class QTAWS_EXPORT UpdateJobQueueRequestPrivate : public BatchPrivate {
+
+public:
+    UpdateJobQueueRequestPrivate(const Batch::Action action,
+                                   UpdateJobQueueRequest * const q);
+    UpdateJobQueueRequestPrivate(const UpdateJobQueueRequestPrivate &other,
+                                   UpdateJobQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateJobQueueRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

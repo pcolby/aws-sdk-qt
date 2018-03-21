@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESEGMENTREQUEST_P_H
 #define QTAWS_DELETESEGMENTREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "deletesegmentrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteSegmentRequest;
+
+class QTAWS_EXPORT DeleteSegmentRequestPrivate : public PinpointPrivate {
+
+public:
+    DeleteSegmentRequestPrivate(const Pinpoint::Action action,
+                                   DeleteSegmentRequest * const q);
+    DeleteSegmentRequestPrivate(const DeleteSegmentRequestPrivate &other,
+                                   DeleteSegmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSegmentRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

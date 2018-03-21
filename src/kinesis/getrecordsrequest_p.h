@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRECORDSREQUEST_P_H
 #define QTAWS_GETRECORDSREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "getrecordsrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class GetRecordsRequest;
+
+class QTAWS_EXPORT GetRecordsRequestPrivate : public KinesisPrivate {
+
+public:
+    GetRecordsRequestPrivate(const Kinesis::Action action,
+                                   GetRecordsRequest * const q);
+    GetRecordsRequestPrivate(const GetRecordsRequestPrivate &other,
+                                   GetRecordsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRecordsRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

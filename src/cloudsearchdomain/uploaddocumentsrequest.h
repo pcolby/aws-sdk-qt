@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADDOCUMENTSREQUEST_H
 #define QTAWS_UPLOADDOCUMENTSREQUEST_H
 
+#include "cloudsearchdomainrequest.h"
+
+namespace AWS {
+
+namespace CloudSearchDomain {
+
+class UploadDocumentsRequestPrivate;
+
+class QTAWS_EXPORT UploadDocumentsRequest : public CloudSearchDomainRequest {
+
+public:
+    UploadDocumentsRequest(const UploadDocumentsRequest &other);
+    UploadDocumentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadDocumentsRequest)
+
+}
+
+} // namespace CloudSearchDomain
+} // namespace AWS
+
 #endif

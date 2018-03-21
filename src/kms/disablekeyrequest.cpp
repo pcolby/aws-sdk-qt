@@ -19,3 +19,107 @@
 
 #include "disablekeyrequest.h"
 #include "disablekeyrequest_p.h"
+#include "disablekeyresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DisableKeyRequest
+ *
+ * @brief  Implements KMS DisableKey requests.
+ *
+ * @see    KMSClient::disableKey
+ */
+
+/**
+ * @brief  Constructs a new DisableKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableKeyResponse::DisableKeyResponse(
+
+/**
+ * @brief  Constructs a new DisableKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableKeyRequest::DisableKeyRequest(const DisableKeyRequest &other)
+    : KMSRequest(new DisableKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableKeyRequest object.
+ */
+DisableKeyRequest::DisableKeyRequest()
+    : KMSRequest(new DisableKeyRequestPrivate(KMSRequest::DisableKeyAction, this))
+{
+
+}
+
+bool DisableKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * DisableKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableKeyRequestPrivate
+ *
+ * @brief  Private implementation for DisableKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public DisableKeyRequest instance.
+ */
+DisableKeyRequestPrivate::DisableKeyRequestPrivate(
+    const KMSRequest::Action action, DisableKeyRequest * const q)
+    : DisableKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableKeyRequest instance.
+ */
+DisableKeyRequestPrivate::DisableKeyRequestPrivate(
+    const DisableKeyRequestPrivate &other, DisableKeyRequest * const q)
+    : DisableKeyPrivate(other, q)
+{
+
+}

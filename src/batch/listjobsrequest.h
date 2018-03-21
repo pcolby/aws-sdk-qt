@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTJOBSREQUEST_H
 #define QTAWS_LISTJOBSREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class ListJobsRequestPrivate;
+
+class QTAWS_EXPORT ListJobsRequest : public BatchRequest {
+
+public:
+    ListJobsRequest(const ListJobsRequest &other);
+    ListJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListJobsRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

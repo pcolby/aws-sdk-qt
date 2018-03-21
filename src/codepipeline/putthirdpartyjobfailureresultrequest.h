@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTTHIRDPARTYJOBFAILURERESULTREQUEST_H
 #define QTAWS_PUTTHIRDPARTYJOBFAILURERESULTREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutThirdPartyJobFailureResultRequestPrivate;
+
+class QTAWS_EXPORT PutThirdPartyJobFailureResultRequest : public CodePipelineRequest {
+
+public:
+    PutThirdPartyJobFailureResultRequest(const PutThirdPartyJobFailureResultRequest &other);
+    PutThirdPartyJobFailureResultRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutThirdPartyJobFailureResultRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

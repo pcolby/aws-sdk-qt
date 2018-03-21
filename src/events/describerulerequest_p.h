@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERULEREQUEST_P_H
 #define QTAWS_DESCRIBERULEREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "describerulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DescribeRuleRequest;
+
+class QTAWS_EXPORT DescribeRuleRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    DescribeRuleRequestPrivate(const CloudWatchEvents::Action action,
+                                   DescribeRuleRequest * const q);
+    DescribeRuleRequestPrivate(const DescribeRuleRequestPrivate &other,
+                                   DescribeRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRuleRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

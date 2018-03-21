@@ -19,3 +19,107 @@
 
 #include "describepipelinesrequest.h"
 #include "describepipelinesrequest_p.h"
+#include "describepipelinesresponse.h"
+#include "datapipelinerequest_p.h"
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  DescribePipelinesRequest
+ *
+ * @brief  Implements DataPipeline DescribePipelines requests.
+ *
+ * @see    DataPipelineClient::describePipelines
+ */
+
+/**
+ * @brief  Constructs a new DescribePipelinesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePipelinesResponse::DescribePipelinesResponse(
+
+/**
+ * @brief  Constructs a new DescribePipelinesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePipelinesRequest::DescribePipelinesRequest(const DescribePipelinesRequest &other)
+    : DataPipelineRequest(new DescribePipelinesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePipelinesRequest object.
+ */
+DescribePipelinesRequest::DescribePipelinesRequest()
+    : DataPipelineRequest(new DescribePipelinesRequestPrivate(DataPipelineRequest::DescribePipelinesAction, this))
+{
+
+}
+
+bool DescribePipelinesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePipelinesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePipelinesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DataPipelineClient::send
+ */
+AwsAbstractResponse * DescribePipelinesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePipelinesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePipelinesRequestPrivate
+ *
+ * @brief  Private implementation for DescribePipelinesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePipelinesRequestPrivate object.
+ *
+ * @param  action  DataPipeline action being performed.
+ * @param  q       Pointer to this object's public DescribePipelinesRequest instance.
+ */
+DescribePipelinesRequestPrivate::DescribePipelinesRequestPrivate(
+    const DataPipelineRequest::Action action, DescribePipelinesRequest * const q)
+    : DescribePipelinesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePipelinesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePipelinesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePipelinesRequest instance.
+ */
+DescribePipelinesRequestPrivate::DescribePipelinesRequestPrivate(
+    const DescribePipelinesRequestPrivate &other, DescribePipelinesRequest * const q)
+    : DescribePipelinesPrivate(other, q)
+{
+
+}

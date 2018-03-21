@@ -19,3 +19,107 @@
 
 #include "describesecuritygroupsrequest.h"
 #include "describesecuritygroupsrequest_p.h"
+#include "describesecuritygroupsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSecurityGroupsRequest
+ *
+ * @brief  Implements EC2 DescribeSecurityGroups requests.
+ *
+ * @see    EC2Client::describeSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeSecurityGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSecurityGroupsResponse::DescribeSecurityGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeSecurityGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest(const DescribeSecurityGroupsRequest &other)
+    : EC2Request(new DescribeSecurityGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSecurityGroupsRequest object.
+ */
+DescribeSecurityGroupsRequest::DescribeSecurityGroupsRequest()
+    : EC2Request(new DescribeSecurityGroupsRequestPrivate(EC2Request::DescribeSecurityGroupsAction, this))
+{
+
+}
+
+bool DescribeSecurityGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSecurityGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSecurityGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSecurityGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSecurityGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSecurityGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSecurityGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSecurityGroupsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSecurityGroupsRequest instance.
+ */
+DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
+    const EC2Request::Action action, DescribeSecurityGroupsRequest * const q)
+    : DescribeSecurityGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSecurityGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSecurityGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSecurityGroupsRequest instance.
+ */
+DescribeSecurityGroupsRequestPrivate::DescribeSecurityGroupsRequestPrivate(
+    const DescribeSecurityGroupsRequestPrivate &other, DescribeSecurityGroupsRequest * const q)
+    : DescribeSecurityGroupsPrivate(other, q)
+{
+
+}

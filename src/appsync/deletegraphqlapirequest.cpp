@@ -19,3 +19,107 @@
 
 #include "deletegraphqlapirequest.h"
 #include "deletegraphqlapirequest_p.h"
+#include "deletegraphqlapiresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  DeleteGraphqlApiRequest
+ *
+ * @brief  Implements AppSync DeleteGraphqlApi requests.
+ *
+ * @see    AppSyncClient::deleteGraphqlApi
+ */
+
+/**
+ * @brief  Constructs a new DeleteGraphqlApiResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
+
+/**
+ * @brief  Constructs a new DeleteGraphqlApiRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGraphqlApiRequest::DeleteGraphqlApiRequest(const DeleteGraphqlApiRequest &other)
+    : AppSyncRequest(new DeleteGraphqlApiRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGraphqlApiRequest object.
+ */
+DeleteGraphqlApiRequest::DeleteGraphqlApiRequest()
+    : AppSyncRequest(new DeleteGraphqlApiRequestPrivate(AppSyncRequest::DeleteGraphqlApiAction, this))
+{
+
+}
+
+bool DeleteGraphqlApiRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGraphqlApiResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGraphqlApiResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGraphqlApiResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGraphqlApiRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGraphqlApiRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGraphqlApiRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public DeleteGraphqlApiRequest instance.
+ */
+DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
+    const AppSyncRequest::Action action, DeleteGraphqlApiRequest * const q)
+    : DeleteGraphqlApiPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGraphqlApiRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGraphqlApiRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGraphqlApiRequest instance.
+ */
+DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
+    const DeleteGraphqlApiRequestPrivate &other, DeleteGraphqlApiRequest * const q)
+    : DeleteGraphqlApiPrivate(other, q)
+{
+
+}

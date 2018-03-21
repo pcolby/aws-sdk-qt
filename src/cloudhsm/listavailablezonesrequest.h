@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAVAILABLEZONESREQUEST_H
 #define QTAWS_LISTAVAILABLEZONESREQUEST_H
 
+#include "cloudhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class ListAvailableZonesRequestPrivate;
+
+class QTAWS_EXPORT ListAvailableZonesRequest : public CloudHSMRequest {
+
+public:
+    ListAvailableZonesRequest(const ListAvailableZonesRequest &other);
+    ListAvailableZonesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAvailableZonesRequest)
+
+}
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

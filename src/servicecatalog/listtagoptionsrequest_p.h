@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGOPTIONSREQUEST_P_H
 #define QTAWS_LISTTAGOPTIONSREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "listtagoptionsrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListTagOptionsRequest;
+
+class QTAWS_EXPORT ListTagOptionsRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ListTagOptionsRequestPrivate(const ServiceCatalog::Action action,
+                                   ListTagOptionsRequest * const q);
+    ListTagOptionsRequestPrivate(const ListTagOptionsRequestPrivate &other,
+                                   ListTagOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagOptionsRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

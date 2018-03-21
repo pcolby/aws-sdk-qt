@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHVOLUMEREQUEST_H
 #define QTAWS_DETACHVOLUMEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachVolumeRequestPrivate;
+
+class QTAWS_EXPORT DetachVolumeRequest : public EC2Request {
+
+public:
+    DetachVolumeRequest(const DetachVolumeRequest &other);
+    DetachVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachVolumeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

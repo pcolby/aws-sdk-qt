@@ -19,3 +19,107 @@
 
 #include "putcorspolicyrequest.h"
 #include "putcorspolicyrequest_p.h"
+#include "putcorspolicyresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  PutCorsPolicyRequest
+ *
+ * @brief  Implements MediaStore PutCorsPolicy requests.
+ *
+ * @see    MediaStoreClient::putCorsPolicy
+ */
+
+/**
+ * @brief  Constructs a new PutCorsPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutCorsPolicyResponse::PutCorsPolicyResponse(
+
+/**
+ * @brief  Constructs a new PutCorsPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutCorsPolicyRequest::PutCorsPolicyRequest(const PutCorsPolicyRequest &other)
+    : MediaStoreRequest(new PutCorsPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutCorsPolicyRequest object.
+ */
+PutCorsPolicyRequest::PutCorsPolicyRequest()
+    : MediaStoreRequest(new PutCorsPolicyRequestPrivate(MediaStoreRequest::PutCorsPolicyAction, this))
+{
+
+}
+
+bool PutCorsPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutCorsPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutCorsPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * PutCorsPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutCorsPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutCorsPolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutCorsPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutCorsPolicyRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public PutCorsPolicyRequest instance.
+ */
+PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
+    const MediaStoreRequest::Action action, PutCorsPolicyRequest * const q)
+    : PutCorsPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutCorsPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutCorsPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutCorsPolicyRequest instance.
+ */
+PutCorsPolicyRequestPrivate::PutCorsPolicyRequestPrivate(
+    const PutCorsPolicyRequestPrivate &other, PutCorsPolicyRequest * const q)
+    : PutCorsPolicyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTTELEMETRYRECORDSREQUEST_H
 #define QTAWS_PUTTELEMETRYRECORDSREQUEST_H
 
+#include "xrayrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class PutTelemetryRecordsRequestPrivate;
+
+class QTAWS_EXPORT PutTelemetryRecordsRequest : public XRayRequest {
+
+public:
+    PutTelemetryRecordsRequest(const PutTelemetryRecordsRequest &other);
+    PutTelemetryRecordsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutTelemetryRecordsRequest)
+
+}
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

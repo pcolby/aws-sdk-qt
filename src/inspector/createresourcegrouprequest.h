@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERESOURCEGROUPREQUEST_H
 #define QTAWS_CREATERESOURCEGROUPREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class CreateResourceGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateResourceGroupRequest : public InspectorRequest {
+
+public:
+    CreateResourceGroupRequest(const CreateResourceGroupRequest &other);
+    CreateResourceGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateResourceGroupRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

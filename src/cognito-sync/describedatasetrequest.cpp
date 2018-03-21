@@ -19,3 +19,107 @@
 
 #include "describedatasetrequest.h"
 #include "describedatasetrequest_p.h"
+#include "describedatasetresponse.h"
+#include "cognitosyncrequest_p.h"
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  DescribeDatasetRequest
+ *
+ * @brief  Implements CognitoSync DescribeDataset requests.
+ *
+ * @see    CognitoSyncClient::describeDataset
+ */
+
+/**
+ * @brief  Constructs a new DescribeDatasetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDatasetResponse::DescribeDatasetResponse(
+
+/**
+ * @brief  Constructs a new DescribeDatasetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDatasetRequest::DescribeDatasetRequest(const DescribeDatasetRequest &other)
+    : CognitoSyncRequest(new DescribeDatasetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDatasetRequest object.
+ */
+DescribeDatasetRequest::DescribeDatasetRequest()
+    : CognitoSyncRequest(new DescribeDatasetRequestPrivate(CognitoSyncRequest::DescribeDatasetAction, this))
+{
+
+}
+
+bool DescribeDatasetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDatasetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDatasetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoSyncClient::send
+ */
+AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDatasetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDatasetRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDatasetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDatasetRequestPrivate object.
+ *
+ * @param  action  CognitoSync action being performed.
+ * @param  q       Pointer to this object's public DescribeDatasetRequest instance.
+ */
+DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
+    const CognitoSyncRequest::Action action, DescribeDatasetRequest * const q)
+    : DescribeDatasetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDatasetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDatasetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDatasetRequest instance.
+ */
+DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
+    const DescribeDatasetRequestPrivate &other, DescribeDatasetRequest * const q)
+    : DescribeDatasetPrivate(other, q)
+{
+
+}

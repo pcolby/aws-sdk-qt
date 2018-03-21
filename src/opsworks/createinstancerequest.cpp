@@ -19,3 +19,107 @@
 
 #include "createinstancerequest.h"
 #include "createinstancerequest_p.h"
+#include "createinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  CreateInstanceRequest
+ *
+ * @brief  Implements OpsWorks CreateInstance requests.
+ *
+ * @see    OpsWorksClient::createInstance
+ */
+
+/**
+ * @brief  Constructs a new CreateInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceResponse::CreateInstanceResponse(
+
+/**
+ * @brief  Constructs a new CreateInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInstanceRequest::CreateInstanceRequest(const CreateInstanceRequest &other)
+    : OpsWorksRequest(new CreateInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInstanceRequest object.
+ */
+CreateInstanceRequest::CreateInstanceRequest()
+    : OpsWorksRequest(new CreateInstanceRequestPrivate(OpsWorksRequest::CreateInstanceAction, this))
+{
+
+}
+
+bool CreateInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * CreateInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceRequestPrivate
+ *
+ * @brief  Private implementation for CreateInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public CreateInstanceRequest instance.
+ */
+CreateInstanceRequestPrivate::CreateInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, CreateInstanceRequest * const q)
+    : CreateInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInstanceRequest instance.
+ */
+CreateInstanceRequestPrivate::CreateInstanceRequestPrivate(
+    const CreateInstanceRequestPrivate &other, CreateInstanceRequest * const q)
+    : CreateInstancePrivate(other, q)
+{
+
+}

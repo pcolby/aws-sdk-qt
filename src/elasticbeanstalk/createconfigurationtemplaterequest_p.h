@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONFIGURATIONTEMPLATEREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONTEMPLATEREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "createconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateConfigurationTemplateRequest;
+
+class QTAWS_EXPORT CreateConfigurationTemplateRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    CreateConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,
+                                   CreateConfigurationTemplateRequest * const q);
+    CreateConfigurationTemplateRequestPrivate(const CreateConfigurationTemplateRequestPrivate &other,
+                                   CreateConfigurationTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationTemplateRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

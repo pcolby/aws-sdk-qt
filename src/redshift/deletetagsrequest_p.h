@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteTagsRequest;
+
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteTagsRequestPrivate(const Redshift::Action action,
+                                   DeleteTagsRequest * const q);
+    DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
+                                   DeleteTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

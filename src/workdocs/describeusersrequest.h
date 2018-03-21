@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEUSERSREQUEST_H
 #define QTAWS_DESCRIBEUSERSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeUsersRequestPrivate;
+
+class QTAWS_EXPORT DescribeUsersRequest : public WorkDocsRequest {
+
+public:
+    DescribeUsersRequest(const DescribeUsersRequest &other);
+    DescribeUsersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUsersRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

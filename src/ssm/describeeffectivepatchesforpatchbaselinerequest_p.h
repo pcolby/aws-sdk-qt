@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_P_H
 #define QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeeffectivepatchesforpatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeEffectivePatchesForPatchBaselineRequest;
+
+class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeEffectivePatchesForPatchBaselineRequestPrivate(const SSM::Action action,
+                                   DescribeEffectivePatchesForPatchBaselineRequest * const q);
+    DescribeEffectivePatchesForPatchBaselineRequestPrivate(const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other,
+                                   DescribeEffectivePatchesForPatchBaselineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEffectivePatchesForPatchBaselineRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

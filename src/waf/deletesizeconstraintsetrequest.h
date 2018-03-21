@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETREQUEST_H
 #define QTAWS_DELETESIZECONSTRAINTSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteSizeConstraintSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteSizeConstraintSetRequest : public WAFRequest {
+
+public:
+    DeleteSizeConstraintSetRequest(const DeleteSizeConstraintSetRequest &other);
+    DeleteSizeConstraintSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSizeConstraintSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

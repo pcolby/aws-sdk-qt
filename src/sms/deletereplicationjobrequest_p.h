@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBREQUEST_P_H
 #define QTAWS_DELETEREPLICATIONJOBREQUEST_P_H
 
+#include "sms_p.h"
+#include "deletereplicationjobrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class DeleteReplicationJobRequest;
+
+class QTAWS_EXPORT DeleteReplicationJobRequestPrivate : public SMSPrivate {
+
+public:
+    DeleteReplicationJobRequestPrivate(const SMS::Action action,
+                                   DeleteReplicationJobRequest * const q);
+    DeleteReplicationJobRequestPrivate(const DeleteReplicationJobRequestPrivate &other,
+                                   DeleteReplicationJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationJobRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

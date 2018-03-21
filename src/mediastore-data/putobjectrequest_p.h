@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTOBJECTREQUEST_P_H
 #define QTAWS_PUTOBJECTREQUEST_P_H
 
+#include "mediastoredata_p.h"
+#include "putobjectrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class PutObjectRequest;
+
+class QTAWS_EXPORT PutObjectRequestPrivate : public MediaStoreDataPrivate {
+
+public:
+    PutObjectRequestPrivate(const MediaStoreData::Action action,
+                                   PutObjectRequest * const q);
+    PutObjectRequestPrivate(const PutObjectRequestPrivate &other,
+                                   PutObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutObjectRequest)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

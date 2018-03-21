@@ -19,3 +19,107 @@
 
 #include "describelistenersrequest.h"
 #include "describelistenersrequest_p.h"
+#include "describelistenersresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeListenersRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 DescribeListeners requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeListeners
+ */
+
+/**
+ * @brief  Constructs a new DescribeListenersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeListenersResponse::DescribeListenersResponse(
+
+/**
+ * @brief  Constructs a new DescribeListenersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeListenersRequest::DescribeListenersRequest(const DescribeListenersRequest &other)
+    : ElasticLoadBalancingv2Request(new DescribeListenersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeListenersRequest object.
+ */
+DescribeListenersRequest::DescribeListenersRequest()
+    : ElasticLoadBalancingv2Request(new DescribeListenersRequestPrivate(ElasticLoadBalancingv2Request::DescribeListenersAction, this))
+{
+
+}
+
+bool DescribeListenersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeListenersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeListenersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * DescribeListenersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeListenersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeListenersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeListenersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeListenersRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public DescribeListenersRequest instance.
+ */
+DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, DescribeListenersRequest * const q)
+    : DescribeListenersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeListenersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeListenersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeListenersRequest instance.
+ */
+DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
+    const DescribeListenersRequestPrivate &other, DescribeListenersRequest * const q)
+    : DescribeListenersPrivate(other, q)
+{
+
+}

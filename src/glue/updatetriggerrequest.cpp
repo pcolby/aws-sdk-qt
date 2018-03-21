@@ -19,3 +19,107 @@
 
 #include "updatetriggerrequest.h"
 #include "updatetriggerrequest_p.h"
+#include "updatetriggerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateTriggerRequest
+ *
+ * @brief  Implements Glue UpdateTrigger requests.
+ *
+ * @see    GlueClient::updateTrigger
+ */
+
+/**
+ * @brief  Constructs a new UpdateTriggerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTriggerResponse::UpdateTriggerResponse(
+
+/**
+ * @brief  Constructs a new UpdateTriggerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTriggerRequest::UpdateTriggerRequest(const UpdateTriggerRequest &other)
+    : GlueRequest(new UpdateTriggerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTriggerRequest object.
+ */
+UpdateTriggerRequest::UpdateTriggerRequest()
+    : GlueRequest(new UpdateTriggerRequestPrivate(GlueRequest::UpdateTriggerAction, this))
+{
+
+}
+
+bool UpdateTriggerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTriggerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTriggerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTriggerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTriggerRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTriggerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTriggerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public UpdateTriggerRequest instance.
+ */
+UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
+    const GlueRequest::Action action, UpdateTriggerRequest * const q)
+    : UpdateTriggerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTriggerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTriggerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTriggerRequest instance.
+ */
+UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
+    const UpdateTriggerRequestPrivate &other, UpdateTriggerRequest * const q)
+    : UpdateTriggerPrivate(other, q)
+{
+
+}

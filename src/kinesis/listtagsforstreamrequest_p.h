@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORSTREAMREQUEST_P_H
 #define QTAWS_LISTTAGSFORSTREAMREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "listtagsforstreamrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListTagsForStreamRequest;
+
+class QTAWS_EXPORT ListTagsForStreamRequestPrivate : public KinesisPrivate {
+
+public:
+    ListTagsForStreamRequestPrivate(const Kinesis::Action action,
+                                   ListTagsForStreamRequest * const q);
+    ListTagsForStreamRequestPrivate(const ListTagsForStreamRequestPrivate &other,
+                                   ListTagsForStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForStreamRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletedatasetrequest.h"
 #include "deletedatasetrequest_p.h"
+#include "deletedatasetresponse.h"
+#include "cognitosyncrequest_p.h"
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  DeleteDatasetRequest
+ *
+ * @brief  Implements CognitoSync DeleteDataset requests.
+ *
+ * @see    CognitoSyncClient::deleteDataset
+ */
+
+/**
+ * @brief  Constructs a new DeleteDatasetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDatasetResponse::DeleteDatasetResponse(
+
+/**
+ * @brief  Constructs a new DeleteDatasetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDatasetRequest::DeleteDatasetRequest(const DeleteDatasetRequest &other)
+    : CognitoSyncRequest(new DeleteDatasetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDatasetRequest object.
+ */
+DeleteDatasetRequest::DeleteDatasetRequest()
+    : CognitoSyncRequest(new DeleteDatasetRequestPrivate(CognitoSyncRequest::DeleteDatasetAction, this))
+{
+
+}
+
+bool DeleteDatasetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDatasetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDatasetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoSyncClient::send
+ */
+AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDatasetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDatasetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDatasetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDatasetRequestPrivate object.
+ *
+ * @param  action  CognitoSync action being performed.
+ * @param  q       Pointer to this object's public DeleteDatasetRequest instance.
+ */
+DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
+    const CognitoSyncRequest::Action action, DeleteDatasetRequest * const q)
+    : DeleteDatasetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDatasetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDatasetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDatasetRequest instance.
+ */
+DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
+    const DeleteDatasetRequestPrivate &other, DeleteDatasetRequest * const q)
+    : DeleteDatasetPrivate(other, q)
+{
+
+}

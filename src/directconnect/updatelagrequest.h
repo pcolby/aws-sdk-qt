@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATELAGREQUEST_H
 #define QTAWS_UPDATELAGREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class UpdateLagRequestPrivate;
+
+class QTAWS_EXPORT UpdateLagRequest : public DirectConnectRequest {
+
+public:
+    UpdateLagRequest(const UpdateLagRequest &other);
+    UpdateLagRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLagRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

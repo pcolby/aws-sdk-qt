@@ -19,3 +19,107 @@
 
 #include "postcommentreplyrequest.h"
 #include "postcommentreplyrequest_p.h"
+#include "postcommentreplyresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PostCommentReplyRequest
+ *
+ * @brief  Implements CodeCommit PostCommentReply requests.
+ *
+ * @see    CodeCommitClient::postCommentReply
+ */
+
+/**
+ * @brief  Constructs a new PostCommentReplyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostCommentReplyResponse::PostCommentReplyResponse(
+
+/**
+ * @brief  Constructs a new PostCommentReplyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PostCommentReplyRequest::PostCommentReplyRequest(const PostCommentReplyRequest &other)
+    : CodeCommitRequest(new PostCommentReplyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PostCommentReplyRequest object.
+ */
+PostCommentReplyRequest::PostCommentReplyRequest()
+    : CodeCommitRequest(new PostCommentReplyRequestPrivate(CodeCommitRequest::PostCommentReplyAction, this))
+{
+
+}
+
+bool PostCommentReplyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PostCommentReplyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PostCommentReplyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkReply * const reply) const
+{
+    return new PostCommentReplyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PostCommentReplyRequestPrivate
+ *
+ * @brief  Private implementation for PostCommentReplyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentReplyRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public PostCommentReplyRequest instance.
+ */
+PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
+    const CodeCommitRequest::Action action, PostCommentReplyRequest * const q)
+    : PostCommentReplyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostCommentReplyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PostCommentReplyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PostCommentReplyRequest instance.
+ */
+PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
+    const PostCommentReplyRequestPrivate &other, PostCommentReplyRequest * const q)
+    : PostCommentReplyPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describenetworkinterfacepermissionsrequest.h"
 #include "describenetworkinterfacepermissionsrequest_p.h"
+#include "describenetworkinterfacepermissionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeNetworkInterfacePermissionsRequest
+ *
+ * @brief  Implements EC2 DescribeNetworkInterfacePermissions requests.
+ *
+ * @see    EC2Client::describeNetworkInterfacePermissions
+ */
+
+/**
+ * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsRequest(const DescribeNetworkInterfacePermissionsRequest &other)
+    : EC2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequest object.
+ */
+DescribeNetworkInterfacePermissionsRequest::DescribeNetworkInterfacePermissionsRequest()
+    : EC2Request(new DescribeNetworkInterfacePermissionsRequestPrivate(EC2Request::DescribeNetworkInterfacePermissionsAction, this))
+{
+
+}
+
+bool DescribeNetworkInterfacePermissionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeNetworkInterfacePermissionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeNetworkInterfacePermissionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeNetworkInterfacePermissionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeNetworkInterfacePermissionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNetworkInterfacePermissionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeNetworkInterfacePermissionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeNetworkInterfacePermissionsRequest instance.
+ */
+DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
+    const EC2Request::Action action, DescribeNetworkInterfacePermissionsRequest * const q)
+    : DescribeNetworkInterfacePermissionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNetworkInterfacePermissionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeNetworkInterfacePermissionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeNetworkInterfacePermissionsRequest instance.
+ */
+DescribeNetworkInterfacePermissionsRequestPrivate::DescribeNetworkInterfacePermissionsRequestPrivate(
+    const DescribeNetworkInterfacePermissionsRequestPrivate &other, DescribeNetworkInterfacePermissionsRequest * const q)
+    : DescribeNetworkInterfacePermissionsPrivate(other, q)
+{
+
+}

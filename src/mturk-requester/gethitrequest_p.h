@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETHITREQUEST_P_H
 #define QTAWS_GETHITREQUEST_P_H
 
+#include "mturk_p.h"
+#include "gethitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetHITRequest;
+
+class QTAWS_EXPORT GetHITRequestPrivate : public MTurkPrivate {
+
+public:
+    GetHITRequestPrivate(const MTurk::Action action,
+                                   GetHITRequest * const q);
+    GetHITRequestPrivate(const GetHITRequestPrivate &other,
+                                   GetHITRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetHITRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

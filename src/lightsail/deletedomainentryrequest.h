@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDOMAINENTRYREQUEST_H
 #define QTAWS_DELETEDOMAINENTRYREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteDomainEntryRequestPrivate;
+
+class QTAWS_EXPORT DeleteDomainEntryRequest : public LightsailRequest {
+
+public:
+    DeleteDomainEntryRequest(const DeleteDomainEntryRequest &other);
+    DeleteDomainEntryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDomainEntryRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

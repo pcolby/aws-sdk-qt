@@ -19,3 +19,107 @@
 
 #include "getmediarequest.h"
 #include "getmediarequest_p.h"
+#include "getmediaresponse.h"
+#include "kinesisvideomediarequest_p.h"
+
+namespace AWS {
+namespace KinesisVideoMedia {
+
+/**
+ * @class  GetMediaRequest
+ *
+ * @brief  Implements KinesisVideoMedia GetMedia requests.
+ *
+ * @see    KinesisVideoMediaClient::getMedia
+ */
+
+/**
+ * @brief  Constructs a new GetMediaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMediaResponse::GetMediaResponse(
+
+/**
+ * @brief  Constructs a new GetMediaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMediaRequest::GetMediaRequest(const GetMediaRequest &other)
+    : KinesisVideoMediaRequest(new GetMediaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMediaRequest object.
+ */
+GetMediaRequest::GetMediaRequest()
+    : KinesisVideoMediaRequest(new GetMediaRequestPrivate(KinesisVideoMediaRequest::GetMediaAction, this))
+{
+
+}
+
+bool GetMediaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMediaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMediaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisVideoMediaClient::send
+ */
+AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMediaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMediaRequestPrivate
+ *
+ * @brief  Private implementation for GetMediaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMediaRequestPrivate object.
+ *
+ * @param  action  KinesisVideoMedia action being performed.
+ * @param  q       Pointer to this object's public GetMediaRequest instance.
+ */
+GetMediaRequestPrivate::GetMediaRequestPrivate(
+    const KinesisVideoMediaRequest::Action action, GetMediaRequest * const q)
+    : GetMediaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMediaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMediaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMediaRequest instance.
+ */
+GetMediaRequestPrivate::GetMediaRequestPrivate(
+    const GetMediaRequestPrivate &other, GetMediaRequest * const q)
+    : GetMediaPrivate(other, q)
+{
+
+}

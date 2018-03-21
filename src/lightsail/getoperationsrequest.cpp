@@ -19,3 +19,107 @@
 
 #include "getoperationsrequest.h"
 #include "getoperationsrequest_p.h"
+#include "getoperationsresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetOperationsRequest
+ *
+ * @brief  Implements Lightsail GetOperations requests.
+ *
+ * @see    LightsailClient::getOperations
+ */
+
+/**
+ * @brief  Constructs a new GetOperationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOperationsResponse::GetOperationsResponse(
+
+/**
+ * @brief  Constructs a new GetOperationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetOperationsRequest::GetOperationsRequest(const GetOperationsRequest &other)
+    : LightsailRequest(new GetOperationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetOperationsRequest object.
+ */
+GetOperationsRequest::GetOperationsRequest()
+    : LightsailRequest(new GetOperationsRequestPrivate(LightsailRequest::GetOperationsAction, this))
+{
+
+}
+
+bool GetOperationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetOperationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetOperationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetOperationsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetOperationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOperationsRequestPrivate
+ *
+ * @brief  Private implementation for GetOperationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationsRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetOperationsRequest instance.
+ */
+GetOperationsRequestPrivate::GetOperationsRequestPrivate(
+    const LightsailRequest::Action action, GetOperationsRequest * const q)
+    : GetOperationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOperationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetOperationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetOperationsRequest instance.
+ */
+GetOperationsRequestPrivate::GetOperationsRequestPrivate(
+    const GetOperationsRequestPrivate &other, GetOperationsRequest * const q)
+    : GetOperationsPrivate(other, q)
+{
+
+}

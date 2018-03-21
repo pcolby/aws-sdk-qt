@@ -19,3 +19,107 @@
 
 #include "getdimensionvaluesrequest.h"
 #include "getdimensionvaluesrequest_p.h"
+#include "getdimensionvaluesresponse.h"
+#include "costexplorerrequest_p.h"
+
+namespace AWS {
+namespace CostExplorer {
+
+/**
+ * @class  GetDimensionValuesRequest
+ *
+ * @brief  Implements CostExplorer GetDimensionValues requests.
+ *
+ * @see    CostExplorerClient::getDimensionValues
+ */
+
+/**
+ * @brief  Constructs a new GetDimensionValuesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDimensionValuesResponse::GetDimensionValuesResponse(
+
+/**
+ * @brief  Constructs a new GetDimensionValuesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDimensionValuesRequest::GetDimensionValuesRequest(const GetDimensionValuesRequest &other)
+    : CostExplorerRequest(new GetDimensionValuesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDimensionValuesRequest object.
+ */
+GetDimensionValuesRequest::GetDimensionValuesRequest()
+    : CostExplorerRequest(new GetDimensionValuesRequestPrivate(CostExplorerRequest::GetDimensionValuesAction, this))
+{
+
+}
+
+bool GetDimensionValuesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDimensionValuesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDimensionValuesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CostExplorerClient::send
+ */
+AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDimensionValuesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDimensionValuesRequestPrivate
+ *
+ * @brief  Private implementation for GetDimensionValuesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDimensionValuesRequestPrivate object.
+ *
+ * @param  action  CostExplorer action being performed.
+ * @param  q       Pointer to this object's public GetDimensionValuesRequest instance.
+ */
+GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
+    const CostExplorerRequest::Action action, GetDimensionValuesRequest * const q)
+    : GetDimensionValuesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDimensionValuesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDimensionValuesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDimensionValuesRequest instance.
+ */
+GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
+    const GetDimensionValuesRequestPrivate &other, GetDimensionValuesRequest * const q)
+    : GetDimensionValuesPrivate(other, q)
+{
+
+}

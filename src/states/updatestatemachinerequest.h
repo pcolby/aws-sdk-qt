@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESTATEMACHINEREQUEST_H
 #define QTAWS_UPDATESTATEMACHINEREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class UpdateStateMachineRequestPrivate;
+
+class QTAWS_EXPORT UpdateStateMachineRequest : public SFNRequest {
+
+public:
+    UpdateStateMachineRequest(const UpdateStateMachineRequest &other);
+    UpdateStateMachineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStateMachineRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

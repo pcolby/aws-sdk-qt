@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINDEXFIELDSREQUEST_H
 #define QTAWS_DESCRIBEINDEXFIELDSREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeIndexFieldsRequestPrivate;
+
+class QTAWS_EXPORT DescribeIndexFieldsRequest : public CloudSearchRequest {
+
+public:
+    DescribeIndexFieldsRequest(const DescribeIndexFieldsRequest &other);
+    DescribeIndexFieldsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIndexFieldsRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

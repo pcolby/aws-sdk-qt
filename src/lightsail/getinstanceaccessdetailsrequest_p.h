@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINSTANCEACCESSDETAILSREQUEST_P_H
 #define QTAWS_GETINSTANCEACCESSDETAILSREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getinstanceaccessdetailsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetInstanceAccessDetailsRequest;
+
+class QTAWS_EXPORT GetInstanceAccessDetailsRequestPrivate : public LightsailPrivate {
+
+public:
+    GetInstanceAccessDetailsRequestPrivate(const Lightsail::Action action,
+                                   GetInstanceAccessDetailsRequest * const q);
+    GetInstanceAccessDetailsRequestPrivate(const GetInstanceAccessDetailsRequestPrivate &other,
+                                   GetInstanceAccessDetailsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstanceAccessDetailsRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

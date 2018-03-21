@@ -19,3 +19,107 @@
 
 #include "updateregexmatchsetrequest.h"
 #include "updateregexmatchsetrequest_p.h"
+#include "updateregexmatchsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateRegexMatchSetRequest
+ *
+ * @brief  Implements WAF UpdateRegexMatchSet requests.
+ *
+ * @see    WAFClient::updateRegexMatchSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateRegexMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateRegexMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest(const UpdateRegexMatchSetRequest &other)
+    : WAFRequest(new UpdateRegexMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRegexMatchSetRequest object.
+ */
+UpdateRegexMatchSetRequest::UpdateRegexMatchSetRequest()
+    : WAFRequest(new UpdateRegexMatchSetRequestPrivate(WAFRequest::UpdateRegexMatchSetAction, this))
+{
+
+}
+
+bool UpdateRegexMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRegexMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRegexMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * UpdateRegexMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRegexMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRegexMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRegexMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRegexMatchSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public UpdateRegexMatchSetRequest instance.
+ */
+UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
+    const WAFRequest::Action action, UpdateRegexMatchSetRequest * const q)
+    : UpdateRegexMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRegexMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRegexMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRegexMatchSetRequest instance.
+ */
+UpdateRegexMatchSetRequestPrivate::UpdateRegexMatchSetRequestPrivate(
+    const UpdateRegexMatchSetRequestPrivate &other, UpdateRegexMatchSetRequest * const q)
+    : UpdateRegexMatchSetPrivate(other, q)
+{
+
+}

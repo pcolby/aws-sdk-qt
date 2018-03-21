@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEROLEFROMGROUPREQUEST_H
 #define QTAWS_DISASSOCIATEROLEFROMGROUPREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DisassociateRoleFromGroupRequestPrivate;
+
+class QTAWS_EXPORT DisassociateRoleFromGroupRequest : public GreengrassRequest {
+
+public:
+    DisassociateRoleFromGroupRequest(const DisassociateRoleFromGroupRequest &other);
+    DisassociateRoleFromGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateRoleFromGroupRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

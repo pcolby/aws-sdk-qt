@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTREAMSUMMARYREQUEST_H
 #define QTAWS_DESCRIBESTREAMSUMMARYREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class DescribeStreamSummaryRequestPrivate;
+
+class QTAWS_EXPORT DescribeStreamSummaryRequest : public KinesisRequest {
+
+public:
+    DescribeStreamSummaryRequest(const DescribeStreamSummaryRequest &other);
+    DescribeStreamSummaryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamSummaryRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

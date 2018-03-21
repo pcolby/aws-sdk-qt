@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDIRECTORIESREQUEST_H
 #define QTAWS_DESCRIBEDIRECTORIESREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeDirectoriesRequestPrivate;
+
+class QTAWS_EXPORT DescribeDirectoriesRequest : public DirectoryServiceRequest {
+
+public:
+    DescribeDirectoriesRequest(const DescribeDirectoriesRequest &other);
+    DescribeDirectoriesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDirectoriesRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

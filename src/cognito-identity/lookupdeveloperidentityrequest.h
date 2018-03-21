@@ -20,4 +20,32 @@
 #ifndef QTAWS_LOOKUPDEVELOPERIDENTITYREQUEST_H
 #define QTAWS_LOOKUPDEVELOPERIDENTITYREQUEST_H
 
+#include "cognitoidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class LookupDeveloperIdentityRequestPrivate;
+
+class QTAWS_EXPORT LookupDeveloperIdentityRequest : public CognitoIdentityRequest {
+
+public:
+    LookupDeveloperIdentityRequest(const LookupDeveloperIdentityRequest &other);
+    LookupDeveloperIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(LookupDeveloperIdentityRequest)
+
+}
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

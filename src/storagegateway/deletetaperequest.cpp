@@ -19,3 +19,107 @@
 
 #include "deletetaperequest.h"
 #include "deletetaperequest_p.h"
+#include "deletetaperesponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteTapeRequest
+ *
+ * @brief  Implements StorageGateway DeleteTape requests.
+ *
+ * @see    StorageGatewayClient::deleteTape
+ */
+
+/**
+ * @brief  Constructs a new DeleteTapeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTapeResponse::DeleteTapeResponse(
+
+/**
+ * @brief  Constructs a new DeleteTapeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteTapeRequest::DeleteTapeRequest(const DeleteTapeRequest &other)
+    : StorageGatewayRequest(new DeleteTapeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteTapeRequest object.
+ */
+DeleteTapeRequest::DeleteTapeRequest()
+    : StorageGatewayRequest(new DeleteTapeRequestPrivate(StorageGatewayRequest::DeleteTapeAction, this))
+{
+
+}
+
+bool DeleteTapeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteTapeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteTapeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteTapeRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteTapeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTapeRequestPrivate
+ *
+ * @brief  Private implementation for DeleteTapeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTapeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteTapeRequest instance.
+ */
+DeleteTapeRequestPrivate::DeleteTapeRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteTapeRequest * const q)
+    : DeleteTapePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTapeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteTapeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteTapeRequest instance.
+ */
+DeleteTapeRequestPrivate::DeleteTapeRequestPrivate(
+    const DeleteTapeRequestPrivate &other, DeleteTapeRequest * const q)
+    : DeleteTapePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEMETRICFILTERREQUEST_H
 #define QTAWS_DELETEMETRICFILTERREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteMetricFilterRequestPrivate;
+
+class QTAWS_EXPORT DeleteMetricFilterRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteMetricFilterRequest(const DeleteMetricFilterRequest &other);
+    DeleteMetricFilterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteMetricFilterRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "unsubscribefromdatasetrequest.h"
 #include "unsubscribefromdatasetrequest_p.h"
+#include "unsubscribefromdatasetresponse.h"
+#include "cognitosyncrequest_p.h"
+
+namespace AWS {
+namespace CognitoSync {
+
+/**
+ * @class  UnsubscribeFromDatasetRequest
+ *
+ * @brief  Implements CognitoSync UnsubscribeFromDataset requests.
+ *
+ * @see    CognitoSyncClient::unsubscribeFromDataset
+ */
+
+/**
+ * @brief  Constructs a new UnsubscribeFromDatasetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UnsubscribeFromDatasetResponse::UnsubscribeFromDatasetResponse(
+
+/**
+ * @brief  Constructs a new UnsubscribeFromDatasetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UnsubscribeFromDatasetRequest::UnsubscribeFromDatasetRequest(const UnsubscribeFromDatasetRequest &other)
+    : CognitoSyncRequest(new UnsubscribeFromDatasetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UnsubscribeFromDatasetRequest object.
+ */
+UnsubscribeFromDatasetRequest::UnsubscribeFromDatasetRequest()
+    : CognitoSyncRequest(new UnsubscribeFromDatasetRequestPrivate(CognitoSyncRequest::UnsubscribeFromDatasetAction, this))
+{
+
+}
+
+bool UnsubscribeFromDatasetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UnsubscribeFromDatasetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UnsubscribeFromDatasetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoSyncClient::send
+ */
+AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetworkReply * const reply) const
+{
+    return new UnsubscribeFromDatasetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UnsubscribeFromDatasetRequestPrivate
+ *
+ * @brief  Private implementation for UnsubscribeFromDatasetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeFromDatasetRequestPrivate object.
+ *
+ * @param  action  CognitoSync action being performed.
+ * @param  q       Pointer to this object's public UnsubscribeFromDatasetRequest instance.
+ */
+UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
+    const CognitoSyncRequest::Action action, UnsubscribeFromDatasetRequest * const q)
+    : UnsubscribeFromDatasetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UnsubscribeFromDatasetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UnsubscribeFromDatasetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UnsubscribeFromDatasetRequest instance.
+ */
+UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
+    const UnsubscribeFromDatasetRequestPrivate &other, UnsubscribeFromDatasetRequest * const q)
+    : UnsubscribeFromDatasetPrivate(other, q)
+{
+
+}

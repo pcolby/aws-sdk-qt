@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_P_H
 #define QTAWS_CREATECLUSTERREQUEST_P_H
 
+#include "snowball_p.h"
+#include "createclusterrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CreateClusterRequest;
+
+class QTAWS_EXPORT CreateClusterRequestPrivate : public SnowballPrivate {
+
+public:
+    CreateClusterRequestPrivate(const Snowball::Action action,
+                                   CreateClusterRequest * const q);
+    CreateClusterRequestPrivate(const CreateClusterRequestPrivate &other,
+                                   CreateClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESERVICEREQUEST_P_H
 #define QTAWS_UPDATESERVICEREQUEST_P_H
 
+#include "ecs_p.h"
+#include "updateservicerequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class UpdateServiceRequest;
+
+class QTAWS_EXPORT UpdateServiceRequestPrivate : public ECSPrivate {
+
+public:
+    UpdateServiceRequestPrivate(const ECS::Action action,
+                                   UpdateServiceRequest * const q);
+    UpdateServiceRequestPrivate(const UpdateServiceRequestPrivate &other,
+                                   UpdateServiceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServiceRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

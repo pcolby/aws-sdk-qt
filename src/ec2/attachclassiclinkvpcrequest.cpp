@@ -19,3 +19,107 @@
 
 #include "attachclassiclinkvpcrequest.h"
 #include "attachclassiclinkvpcrequest_p.h"
+#include "attachclassiclinkvpcresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AttachClassicLinkVpcRequest
+ *
+ * @brief  Implements EC2 AttachClassicLinkVpc requests.
+ *
+ * @see    EC2Client::attachClassicLinkVpc
+ */
+
+/**
+ * @brief  Constructs a new AttachClassicLinkVpcResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachClassicLinkVpcResponse::AttachClassicLinkVpcResponse(
+
+/**
+ * @brief  Constructs a new AttachClassicLinkVpcRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest(const AttachClassicLinkVpcRequest &other)
+    : EC2Request(new AttachClassicLinkVpcRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachClassicLinkVpcRequest object.
+ */
+AttachClassicLinkVpcRequest::AttachClassicLinkVpcRequest()
+    : EC2Request(new AttachClassicLinkVpcRequestPrivate(EC2Request::AttachClassicLinkVpcAction, this))
+{
+
+}
+
+bool AttachClassicLinkVpcRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachClassicLinkVpcResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachClassicLinkVpcResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachClassicLinkVpcResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachClassicLinkVpcRequestPrivate
+ *
+ * @brief  Private implementation for AttachClassicLinkVpcRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AttachClassicLinkVpcRequest instance.
+ */
+AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
+    const EC2Request::Action action, AttachClassicLinkVpcRequest * const q)
+    : AttachClassicLinkVpcPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachClassicLinkVpcRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachClassicLinkVpcRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachClassicLinkVpcRequest instance.
+ */
+AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
+    const AttachClassicLinkVpcRequestPrivate &other, AttachClassicLinkVpcRequest * const q)
+    : AttachClassicLinkVpcPrivate(other, q)
+{
+
+}

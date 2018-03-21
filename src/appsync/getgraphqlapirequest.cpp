@@ -19,3 +19,107 @@
 
 #include "getgraphqlapirequest.h"
 #include "getgraphqlapirequest_p.h"
+#include "getgraphqlapiresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  GetGraphqlApiRequest
+ *
+ * @brief  Implements AppSync GetGraphqlApi requests.
+ *
+ * @see    AppSyncClient::getGraphqlApi
+ */
+
+/**
+ * @brief  Constructs a new GetGraphqlApiResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGraphqlApiResponse::GetGraphqlApiResponse(
+
+/**
+ * @brief  Constructs a new GetGraphqlApiRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetGraphqlApiRequest::GetGraphqlApiRequest(const GetGraphqlApiRequest &other)
+    : AppSyncRequest(new GetGraphqlApiRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetGraphqlApiRequest object.
+ */
+GetGraphqlApiRequest::GetGraphqlApiRequest()
+    : AppSyncRequest(new GetGraphqlApiRequestPrivate(AppSyncRequest::GetGraphqlApiAction, this))
+{
+
+}
+
+bool GetGraphqlApiRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetGraphqlApiResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetGraphqlApiResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * GetGraphqlApiRequest::response(QNetworkReply * const reply) const
+{
+    return new GetGraphqlApiResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGraphqlApiRequestPrivate
+ *
+ * @brief  Private implementation for GetGraphqlApiRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGraphqlApiRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public GetGraphqlApiRequest instance.
+ */
+GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
+    const AppSyncRequest::Action action, GetGraphqlApiRequest * const q)
+    : GetGraphqlApiPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGraphqlApiRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetGraphqlApiRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetGraphqlApiRequest instance.
+ */
+GetGraphqlApiRequestPrivate::GetGraphqlApiRequestPrivate(
+    const GetGraphqlApiRequestPrivate &other, GetGraphqlApiRequest * const q)
+    : GetGraphqlApiPrivate(other, q)
+{
+
+}

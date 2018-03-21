@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOBJECTPARENTPATHSREQUEST_H
 #define QTAWS_LISTOBJECTPARENTPATHSREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListObjectParentPathsRequestPrivate;
+
+class QTAWS_EXPORT ListObjectParentPathsRequest : public CloudDirectoryRequest {
+
+public:
+    ListObjectParentPathsRequest(const ListObjectParentPathsRequest &other);
+    ListObjectParentPathsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectParentPathsRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

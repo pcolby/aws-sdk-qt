@@ -19,3 +19,107 @@
 
 #include "deletelaunchtemplaterequest.h"
 #include "deletelaunchtemplaterequest_p.h"
+#include "deletelaunchtemplateresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteLaunchTemplateRequest
+ *
+ * @brief  Implements EC2 DeleteLaunchTemplate requests.
+ *
+ * @see    EC2Client::deleteLaunchTemplate
+ */
+
+/**
+ * @brief  Constructs a new DeleteLaunchTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLaunchTemplateResponse::DeleteLaunchTemplateResponse(
+
+/**
+ * @brief  Constructs a new DeleteLaunchTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest(const DeleteLaunchTemplateRequest &other)
+    : EC2Request(new DeleteLaunchTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLaunchTemplateRequest object.
+ */
+DeleteLaunchTemplateRequest::DeleteLaunchTemplateRequest()
+    : EC2Request(new DeleteLaunchTemplateRequestPrivate(EC2Request::DeleteLaunchTemplateAction, this))
+{
+
+}
+
+bool DeleteLaunchTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLaunchTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLaunchTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLaunchTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLaunchTemplateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLaunchTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLaunchTemplateRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteLaunchTemplateRequest instance.
+ */
+DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
+    const EC2Request::Action action, DeleteLaunchTemplateRequest * const q)
+    : DeleteLaunchTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLaunchTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLaunchTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLaunchTemplateRequest instance.
+ */
+DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
+    const DeleteLaunchTemplateRequestPrivate &other, DeleteLaunchTemplateRequest * const q)
+    : DeleteLaunchTemplatePrivate(other, q)
+{
+
+}

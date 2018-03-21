@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSREQUEST_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeEngineDefaultParametersRequestPrivate;
+
+class QTAWS_EXPORT DescribeEngineDefaultParametersRequest : public ElastiCacheRequest {
+
+public:
+    DescribeEngineDefaultParametersRequest(const DescribeEngineDefaultParametersRequest &other);
+    DescribeEngineDefaultParametersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEngineDefaultParametersRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

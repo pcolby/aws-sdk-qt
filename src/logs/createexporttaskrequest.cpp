@@ -19,3 +19,107 @@
 
 #include "createexporttaskrequest.h"
 #include "createexporttaskrequest_p.h"
+#include "createexporttaskresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CreateExportTaskRequest
+ *
+ * @brief  Implements CloudWatchLogs CreateExportTask requests.
+ *
+ * @see    CloudWatchLogsClient::createExportTask
+ */
+
+/**
+ * @brief  Constructs a new CreateExportTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateExportTaskResponse::CreateExportTaskResponse(
+
+/**
+ * @brief  Constructs a new CreateExportTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateExportTaskRequest::CreateExportTaskRequest(const CreateExportTaskRequest &other)
+    : CloudWatchLogsRequest(new CreateExportTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateExportTaskRequest object.
+ */
+CreateExportTaskRequest::CreateExportTaskRequest()
+    : CloudWatchLogsRequest(new CreateExportTaskRequestPrivate(CloudWatchLogsRequest::CreateExportTaskAction, this))
+{
+
+}
+
+bool CreateExportTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateExportTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateExportTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateExportTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateExportTaskRequestPrivate
+ *
+ * @brief  Private implementation for CreateExportTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateExportTaskRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public CreateExportTaskRequest instance.
+ */
+CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
+    const CloudWatchLogsRequest::Action action, CreateExportTaskRequest * const q)
+    : CreateExportTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateExportTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateExportTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateExportTaskRequest instance.
+ */
+CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
+    const CreateExportTaskRequestPrivate &other, CreateExportTaskRequest * const q)
+    : CreateExportTaskPrivate(other, q)
+{
+
+}

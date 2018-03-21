@@ -19,3 +19,107 @@
 
 #include "deletebuildrequest.h"
 #include "deletebuildrequest_p.h"
+#include "deletebuildresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DeleteBuildRequest
+ *
+ * @brief  Implements GameLift DeleteBuild requests.
+ *
+ * @see    GameLiftClient::deleteBuild
+ */
+
+/**
+ * @brief  Constructs a new DeleteBuildResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBuildResponse::DeleteBuildResponse(
+
+/**
+ * @brief  Constructs a new DeleteBuildRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBuildRequest::DeleteBuildRequest(const DeleteBuildRequest &other)
+    : GameLiftRequest(new DeleteBuildRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBuildRequest object.
+ */
+DeleteBuildRequest::DeleteBuildRequest()
+    : GameLiftRequest(new DeleteBuildRequestPrivate(GameLiftRequest::DeleteBuildAction, this))
+{
+
+}
+
+bool DeleteBuildRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBuildResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBuildResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBuildResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBuildRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBuildRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBuildRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DeleteBuildRequest instance.
+ */
+DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
+    const GameLiftRequest::Action action, DeleteBuildRequest * const q)
+    : DeleteBuildPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBuildRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBuildRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBuildRequest instance.
+ */
+DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
+    const DeleteBuildRequestPrivate &other, DeleteBuildRequest * const q)
+    : DeleteBuildPrivate(other, q)
+{
+
+}

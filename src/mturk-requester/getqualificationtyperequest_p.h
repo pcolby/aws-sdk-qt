@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETQUALIFICATIONTYPEREQUEST_P_H
 #define QTAWS_GETQUALIFICATIONTYPEREQUEST_P_H
 
+#include "mturk_p.h"
+#include "getqualificationtyperequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetQualificationTypeRequest;
+
+class QTAWS_EXPORT GetQualificationTypeRequestPrivate : public MTurkPrivate {
+
+public:
+    GetQualificationTypeRequestPrivate(const MTurk::Action action,
+                                   GetQualificationTypeRequest * const q);
+    GetQualificationTypeRequestPrivate(const GetQualificationTypeRequestPrivate &other,
+                                   GetQualificationTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetQualificationTypeRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

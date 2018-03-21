@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSCHEMAEXTENSIONSREQUEST_P_H
 #define QTAWS_LISTSCHEMAEXTENSIONSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "listschemaextensionsrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class ListSchemaExtensionsRequest;
+
+class QTAWS_EXPORT ListSchemaExtensionsRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    ListSchemaExtensionsRequestPrivate(const DirectoryService::Action action,
+                                   ListSchemaExtensionsRequest * const q);
+    ListSchemaExtensionsRequestPrivate(const ListSchemaExtensionsRequestPrivate &other,
+                                   ListSchemaExtensionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSchemaExtensionsRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

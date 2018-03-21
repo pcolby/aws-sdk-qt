@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_P_H
 #define QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "updatedomainnameserversrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateDomainNameserversRequest;
+
+class QTAWS_EXPORT UpdateDomainNameserversRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    UpdateDomainNameserversRequestPrivate(const Route53Domains::Action action,
+                                   UpdateDomainNameserversRequest * const q);
+    UpdateDomainNameserversRequestPrivate(const UpdateDomainNameserversRequestPrivate &other,
+                                   UpdateDomainNameserversRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDomainNameserversRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

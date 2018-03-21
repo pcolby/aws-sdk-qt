@@ -19,3 +19,107 @@
 
 #include "deleterealtimeendpointrequest.h"
 #include "deleterealtimeendpointrequest_p.h"
+#include "deleterealtimeendpointresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  DeleteRealtimeEndpointRequest
+ *
+ * @brief  Implements MachineLearning DeleteRealtimeEndpoint requests.
+ *
+ * @see    MachineLearningClient::deleteRealtimeEndpoint
+ */
+
+/**
+ * @brief  Constructs a new DeleteRealtimeEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRealtimeEndpointResponse::DeleteRealtimeEndpointResponse(
+
+/**
+ * @brief  Constructs a new DeleteRealtimeEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRealtimeEndpointRequest::DeleteRealtimeEndpointRequest(const DeleteRealtimeEndpointRequest &other)
+    : MachineLearningRequest(new DeleteRealtimeEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRealtimeEndpointRequest object.
+ */
+DeleteRealtimeEndpointRequest::DeleteRealtimeEndpointRequest()
+    : MachineLearningRequest(new DeleteRealtimeEndpointRequestPrivate(MachineLearningRequest::DeleteRealtimeEndpointAction, this))
+{
+
+}
+
+bool DeleteRealtimeEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRealtimeEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRealtimeEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRealtimeEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRealtimeEndpointRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRealtimeEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRealtimeEndpointRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public DeleteRealtimeEndpointRequest instance.
+ */
+DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
+    const MachineLearningRequest::Action action, DeleteRealtimeEndpointRequest * const q)
+    : DeleteRealtimeEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRealtimeEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRealtimeEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRealtimeEndpointRequest instance.
+ */
+DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
+    const DeleteRealtimeEndpointRequestPrivate &other, DeleteRealtimeEndpointRequest * const q)
+    : DeleteRealtimeEndpointPrivate(other, q)
+{
+
+}

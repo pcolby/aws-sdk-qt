@@ -19,3 +19,107 @@
 
 #include "getinvalidationrequest.h"
 #include "getinvalidationrequest_p.h"
+#include "getinvalidationresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetInvalidationRequest
+ *
+ * @brief  Implements CloudFront GetInvalidation requests.
+ *
+ * @see    CloudFrontClient::getInvalidation
+ */
+
+/**
+ * @brief  Constructs a new GetInvalidationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInvalidationResponse::GetInvalidationResponse(
+
+/**
+ * @brief  Constructs a new GetInvalidationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInvalidationRequest::GetInvalidationRequest(const GetInvalidationRequest &other)
+    : CloudFrontRequest(new GetInvalidationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInvalidationRequest object.
+ */
+GetInvalidationRequest::GetInvalidationRequest()
+    : CloudFrontRequest(new GetInvalidationRequestPrivate(CloudFrontRequest::GetInvalidationAction, this))
+{
+
+}
+
+bool GetInvalidationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInvalidationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInvalidationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * GetInvalidationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInvalidationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInvalidationRequestPrivate
+ *
+ * @brief  Private implementation for GetInvalidationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvalidationRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public GetInvalidationRequest instance.
+ */
+GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
+    const CloudFrontRequest::Action action, GetInvalidationRequest * const q)
+    : GetInvalidationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInvalidationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInvalidationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInvalidationRequest instance.
+ */
+GetInvalidationRequestPrivate::GetInvalidationRequestPrivate(
+    const GetInvalidationRequestPrivate &other, GetInvalidationRequest * const q)
+    : GetInvalidationPrivate(other, q)
+{
+
+}

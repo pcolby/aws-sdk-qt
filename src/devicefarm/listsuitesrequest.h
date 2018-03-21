@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSUITESREQUEST_H
 #define QTAWS_LISTSUITESREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListSuitesRequestPrivate;
+
+class QTAWS_EXPORT ListSuitesRequest : public DeviceFarmRequest {
+
+public:
+    ListSuitesRequest(const ListSuitesRequest &other);
+    ListSuitesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListSuitesRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

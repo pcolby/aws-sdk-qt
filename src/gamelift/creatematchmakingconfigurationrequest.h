@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEMATCHMAKINGCONFIGURATIONREQUEST_H
 #define QTAWS_CREATEMATCHMAKINGCONFIGURATIONREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class CreateMatchmakingConfigurationRequestPrivate;
+
+class QTAWS_EXPORT CreateMatchmakingConfigurationRequest : public GameLiftRequest {
+
+public:
+    CreateMatchmakingConfigurationRequest(const CreateMatchmakingConfigurationRequest &other);
+    CreateMatchmakingConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateMatchmakingConfigurationRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describepatchgroupstaterequest.h"
 #include "describepatchgroupstaterequest_p.h"
+#include "describepatchgroupstateresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribePatchGroupStateRequest
+ *
+ * @brief  Implements SSM DescribePatchGroupState requests.
+ *
+ * @see    SSMClient::describePatchGroupState
+ */
+
+/**
+ * @brief  Constructs a new DescribePatchGroupStateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePatchGroupStateResponse::DescribePatchGroupStateResponse(
+
+/**
+ * @brief  Constructs a new DescribePatchGroupStateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePatchGroupStateRequest::DescribePatchGroupStateRequest(const DescribePatchGroupStateRequest &other)
+    : SSMRequest(new DescribePatchGroupStateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePatchGroupStateRequest object.
+ */
+DescribePatchGroupStateRequest::DescribePatchGroupStateRequest()
+    : SSMRequest(new DescribePatchGroupStateRequestPrivate(SSMRequest::DescribePatchGroupStateAction, this))
+{
+
+}
+
+bool DescribePatchGroupStateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePatchGroupStateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePatchGroupStateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribePatchGroupStateRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePatchGroupStateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePatchGroupStateRequestPrivate
+ *
+ * @brief  Private implementation for DescribePatchGroupStateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePatchGroupStateRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribePatchGroupStateRequest instance.
+ */
+DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
+    const SSMRequest::Action action, DescribePatchGroupStateRequest * const q)
+    : DescribePatchGroupStatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePatchGroupStateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePatchGroupStateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePatchGroupStateRequest instance.
+ */
+DescribePatchGroupStateRequestPrivate::DescribePatchGroupStateRequestPrivate(
+    const DescribePatchGroupStateRequestPrivate &other, DescribePatchGroupStateRequest * const q)
+    : DescribePatchGroupStatePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "continuedeploymentrequest.h"
 #include "continuedeploymentrequest_p.h"
+#include "continuedeploymentresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ContinueDeploymentRequest
+ *
+ * @brief  Implements CodeDeploy ContinueDeployment requests.
+ *
+ * @see    CodeDeployClient::continueDeployment
+ */
+
+/**
+ * @brief  Constructs a new ContinueDeploymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ContinueDeploymentResponse::ContinueDeploymentResponse(
+
+/**
+ * @brief  Constructs a new ContinueDeploymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ContinueDeploymentRequest::ContinueDeploymentRequest(const ContinueDeploymentRequest &other)
+    : CodeDeployRequest(new ContinueDeploymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ContinueDeploymentRequest object.
+ */
+ContinueDeploymentRequest::ContinueDeploymentRequest()
+    : CodeDeployRequest(new ContinueDeploymentRequestPrivate(CodeDeployRequest::ContinueDeploymentAction, this))
+{
+
+}
+
+bool ContinueDeploymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ContinueDeploymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ContinueDeploymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ContinueDeploymentRequest::response(QNetworkReply * const reply) const
+{
+    return new ContinueDeploymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ContinueDeploymentRequestPrivate
+ *
+ * @brief  Private implementation for ContinueDeploymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueDeploymentRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ContinueDeploymentRequest instance.
+ */
+ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
+    const CodeDeployRequest::Action action, ContinueDeploymentRequest * const q)
+    : ContinueDeploymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ContinueDeploymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ContinueDeploymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ContinueDeploymentRequest instance.
+ */
+ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
+    const ContinueDeploymentRequestPrivate &other, ContinueDeploymentRequest * const q)
+    : ContinueDeploymentPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_H
 #define QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeConfigurationOptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeConfigurationOptionsRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeConfigurationOptionsRequest(const DescribeConfigurationOptionsRequest &other);
+    DescribeConfigurationOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConfigurationOptionsRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

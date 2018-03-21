@@ -19,3 +19,107 @@
 
 #include "shutdowngatewayrequest.h"
 #include "shutdowngatewayrequest_p.h"
+#include "shutdowngatewayresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ShutdownGatewayRequest
+ *
+ * @brief  Implements StorageGateway ShutdownGateway requests.
+ *
+ * @see    StorageGatewayClient::shutdownGateway
+ */
+
+/**
+ * @brief  Constructs a new ShutdownGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ShutdownGatewayResponse::ShutdownGatewayResponse(
+
+/**
+ * @brief  Constructs a new ShutdownGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ShutdownGatewayRequest::ShutdownGatewayRequest(const ShutdownGatewayRequest &other)
+    : StorageGatewayRequest(new ShutdownGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ShutdownGatewayRequest object.
+ */
+ShutdownGatewayRequest::ShutdownGatewayRequest()
+    : StorageGatewayRequest(new ShutdownGatewayRequestPrivate(StorageGatewayRequest::ShutdownGatewayAction, this))
+{
+
+}
+
+bool ShutdownGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ShutdownGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ShutdownGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new ShutdownGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ShutdownGatewayRequestPrivate
+ *
+ * @brief  Private implementation for ShutdownGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ShutdownGatewayRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public ShutdownGatewayRequest instance.
+ */
+ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
+    const StorageGatewayRequest::Action action, ShutdownGatewayRequest * const q)
+    : ShutdownGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ShutdownGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ShutdownGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ShutdownGatewayRequest instance.
+ */
+ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
+    const ShutdownGatewayRequestPrivate &other, ShutdownGatewayRequest * const q)
+    : ShutdownGatewayPrivate(other, q)
+{
+
+}

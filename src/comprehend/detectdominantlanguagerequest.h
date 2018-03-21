@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETECTDOMINANTLANGUAGEREQUEST_H
 #define QTAWS_DETECTDOMINANTLANGUAGEREQUEST_H
 
+#include "comprehendrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class DetectDominantLanguageRequestPrivate;
+
+class QTAWS_EXPORT DetectDominantLanguageRequest : public ComprehendRequest {
+
+public:
+    DetectDominantLanguageRequest(const DetectDominantLanguageRequest &other);
+    DetectDominantLanguageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetectDominantLanguageRequest)
+
+}
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDATABASEREQUEST_H
 #define QTAWS_DELETEDATABASEREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteDatabaseRequestPrivate;
+
+class QTAWS_EXPORT DeleteDatabaseRequest : public GlueRequest {
+
+public:
+    DeleteDatabaseRequest(const DeleteDatabaseRequest &other);
+    DeleteDatabaseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDatabaseRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

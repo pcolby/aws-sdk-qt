@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSKILLGROUPREQUEST_P_H
 #define QTAWS_GETSKILLGROUPREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "getskillgrouprequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetSkillGroupRequest;
+
+class QTAWS_EXPORT GetSkillGroupRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    GetSkillGroupRequestPrivate(const AlexaForBusiness::Action action,
+                                   GetSkillGroupRequest * const q);
+    GetSkillGroupRequestPrivate(const GetSkillGroupRequestPrivate &other,
+                                   GetSkillGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSkillGroupRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

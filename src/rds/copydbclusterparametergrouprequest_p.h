@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_COPYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "copydbclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBClusterParameterGroupRequest;
+
+class QTAWS_EXPORT CopyDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+
+public:
+    CopyDBClusterParameterGroupRequestPrivate(const RDS::Action action,
+                                   CopyDBClusterParameterGroupRequest * const q);
+    CopyDBClusterParameterGroupRequestPrivate(const CopyDBClusterParameterGroupRequestPrivate &other,
+                                   CopyDBClusterParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopyDBClusterParameterGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

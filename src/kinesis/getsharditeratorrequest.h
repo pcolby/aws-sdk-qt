@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSHARDITERATORREQUEST_H
 #define QTAWS_GETSHARDITERATORREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class GetShardIteratorRequestPrivate;
+
+class QTAWS_EXPORT GetShardIteratorRequest : public KinesisRequest {
+
+public:
+    GetShardIteratorRequest(const GetShardIteratorRequest &other);
+    GetShardIteratorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetShardIteratorRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEJOBTEMPLATEREQUEST_H
 #define QTAWS_CREATEJOBTEMPLATEREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreateJobTemplateRequestPrivate;
+
+class QTAWS_EXPORT CreateJobTemplateRequest : public MediaConvertRequest {
+
+public:
+    CreateJobTemplateRequest(const CreateJobTemplateRequest &other);
+    CreateJobTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateJobTemplateRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

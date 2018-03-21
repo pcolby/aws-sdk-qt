@@ -19,3 +19,107 @@
 
 #include "createservicerequest.h"
 #include "createservicerequest_p.h"
+#include "createserviceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  CreateServiceRequest
+ *
+ * @brief  Implements ServiceDiscovery CreateService requests.
+ *
+ * @see    ServiceDiscoveryClient::createService
+ */
+
+/**
+ * @brief  Constructs a new CreateServiceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateServiceResponse::CreateServiceResponse(
+
+/**
+ * @brief  Constructs a new CreateServiceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateServiceRequest::CreateServiceRequest(const CreateServiceRequest &other)
+    : ServiceDiscoveryRequest(new CreateServiceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateServiceRequest object.
+ */
+CreateServiceRequest::CreateServiceRequest()
+    : ServiceDiscoveryRequest(new CreateServiceRequestPrivate(ServiceDiscoveryRequest::CreateServiceAction, this))
+{
+
+}
+
+bool CreateServiceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateServiceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateServiceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateServiceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateServiceRequestPrivate
+ *
+ * @brief  Private implementation for CreateServiceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public CreateServiceRequest instance.
+ */
+CreateServiceRequestPrivate::CreateServiceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, CreateServiceRequest * const q)
+    : CreateServicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateServiceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateServiceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateServiceRequest instance.
+ */
+CreateServiceRequestPrivate::CreateServiceRequestPrivate(
+    const CreateServiceRequestPrivate &other, CreateServiceRequest * const q)
+    : CreateServicePrivate(other, q)
+{
+
+}

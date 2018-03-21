@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFLEETEVENTSREQUEST_H
 #define QTAWS_DESCRIBEFLEETEVENTSREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetEventsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFleetEventsRequest : public GameLiftRequest {
+
+public:
+    DescribeFleetEventsRequest(const DescribeFleetEventsRequest &other);
+    DescribeFleetEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFleetEventsRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERREQUEST_P_H
 #define QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "setloadbalancerpoliciesforbackendserverrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class SetLoadBalancerPoliciesForBackendServerRequest;
+
+class QTAWS_EXPORT SetLoadBalancerPoliciesForBackendServerRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    SetLoadBalancerPoliciesForBackendServerRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   SetLoadBalancerPoliciesForBackendServerRequest * const q);
+    SetLoadBalancerPoliciesForBackendServerRequestPrivate(const SetLoadBalancerPoliciesForBackendServerRequestPrivate &other,
+                                   SetLoadBalancerPoliciesForBackendServerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetLoadBalancerPoliciesForBackendServerRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

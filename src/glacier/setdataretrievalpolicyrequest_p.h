@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETDATARETRIEVALPOLICYREQUEST_P_H
 #define QTAWS_SETDATARETRIEVALPOLICYREQUEST_P_H
 
+#include "glacier_p.h"
+#include "setdataretrievalpolicyrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class SetDataRetrievalPolicyRequest;
+
+class QTAWS_EXPORT SetDataRetrievalPolicyRequestPrivate : public GlacierPrivate {
+
+public:
+    SetDataRetrievalPolicyRequestPrivate(const Glacier::Action action,
+                                   SetDataRetrievalPolicyRequest * const q);
+    SetDataRetrievalPolicyRequestPrivate(const SetDataRetrievalPolicyRequestPrivate &other,
+                                   SetDataRetrievalPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetDataRetrievalPolicyRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

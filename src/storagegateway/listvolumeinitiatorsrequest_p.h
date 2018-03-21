@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTVOLUMEINITIATORSREQUEST_P_H
 #define QTAWS_LISTVOLUMEINITIATORSREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "listvolumeinitiatorsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListVolumeInitiatorsRequest;
+
+class QTAWS_EXPORT ListVolumeInitiatorsRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    ListVolumeInitiatorsRequestPrivate(const StorageGateway::Action action,
+                                   ListVolumeInitiatorsRequest * const q);
+    ListVolumeInitiatorsRequestPrivate(const ListVolumeInitiatorsRequestPrivate &other,
+                                   ListVolumeInitiatorsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListVolumeInitiatorsRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

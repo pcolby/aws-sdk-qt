@@ -19,3 +19,107 @@
 
 #include "detachtypedlinkrequest.h"
 #include "detachtypedlinkrequest_p.h"
+#include "detachtypedlinkresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DetachTypedLinkRequest
+ *
+ * @brief  Implements CloudDirectory DetachTypedLink requests.
+ *
+ * @see    CloudDirectoryClient::detachTypedLink
+ */
+
+/**
+ * @brief  Constructs a new DetachTypedLinkResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachTypedLinkResponse::DetachTypedLinkResponse(
+
+/**
+ * @brief  Constructs a new DetachTypedLinkRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachTypedLinkRequest::DetachTypedLinkRequest(const DetachTypedLinkRequest &other)
+    : CloudDirectoryRequest(new DetachTypedLinkRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachTypedLinkRequest object.
+ */
+DetachTypedLinkRequest::DetachTypedLinkRequest()
+    : CloudDirectoryRequest(new DetachTypedLinkRequestPrivate(CloudDirectoryRequest::DetachTypedLinkAction, this))
+{
+
+}
+
+bool DetachTypedLinkRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachTypedLinkResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachTypedLinkResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DetachTypedLinkRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachTypedLinkResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachTypedLinkRequestPrivate
+ *
+ * @brief  Private implementation for DetachTypedLinkRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachTypedLinkRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DetachTypedLinkRequest instance.
+ */
+DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
+    const CloudDirectoryRequest::Action action, DetachTypedLinkRequest * const q)
+    : DetachTypedLinkPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachTypedLinkRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachTypedLinkRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachTypedLinkRequest instance.
+ */
+DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
+    const DetachTypedLinkRequestPrivate &other, DetachTypedLinkRequest * const q)
+    : DetachTypedLinkPrivate(other, q)
+{
+
+}

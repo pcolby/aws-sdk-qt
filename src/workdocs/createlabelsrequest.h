@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATELABELSREQUEST_H
 #define QTAWS_CREATELABELSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateLabelsRequestPrivate;
+
+class QTAWS_EXPORT CreateLabelsRequest : public WorkDocsRequest {
+
+public:
+    CreateLabelsRequest(const CreateLabelsRequest &other);
+    CreateLabelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateLabelsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

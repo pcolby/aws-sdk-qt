@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBRANCHREQUEST_H
 #define QTAWS_GETBRANCHREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetBranchRequestPrivate;
+
+class QTAWS_EXPORT GetBranchRequest : public CodeCommitRequest {
+
+public:
+    GetBranchRequest(const GetBranchRequest &other);
+    GetBranchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBranchRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

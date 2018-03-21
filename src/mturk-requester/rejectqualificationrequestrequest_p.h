@@ -20,4 +20,29 @@
 #ifndef QTAWS_REJECTQUALIFICATIONREQUESTREQUEST_P_H
 #define QTAWS_REJECTQUALIFICATIONREQUESTREQUEST_P_H
 
+#include "mturk_p.h"
+#include "rejectqualificationrequestrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class RejectQualificationRequestRequest;
+
+class QTAWS_EXPORT RejectQualificationRequestRequestPrivate : public MTurkPrivate {
+
+public:
+    RejectQualificationRequestRequestPrivate(const MTurk::Action action,
+                                   RejectQualificationRequestRequest * const q);
+    RejectQualificationRequestRequestPrivate(const RejectQualificationRequestRequestPrivate &other,
+                                   RejectQualificationRequestRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RejectQualificationRequestRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

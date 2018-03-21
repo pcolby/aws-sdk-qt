@@ -19,3 +19,107 @@
 
 #include "rejectcertificatetransferrequest.h"
 #include "rejectcertificatetransferrequest_p.h"
+#include "rejectcertificatetransferresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  RejectCertificateTransferRequest
+ *
+ * @brief  Implements IoT RejectCertificateTransfer requests.
+ *
+ * @see    IoTClient::rejectCertificateTransfer
+ */
+
+/**
+ * @brief  Constructs a new RejectCertificateTransferResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RejectCertificateTransferResponse::RejectCertificateTransferResponse(
+
+/**
+ * @brief  Constructs a new RejectCertificateTransferRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RejectCertificateTransferRequest::RejectCertificateTransferRequest(const RejectCertificateTransferRequest &other)
+    : IoTRequest(new RejectCertificateTransferRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RejectCertificateTransferRequest object.
+ */
+RejectCertificateTransferRequest::RejectCertificateTransferRequest()
+    : IoTRequest(new RejectCertificateTransferRequestPrivate(IoTRequest::RejectCertificateTransferAction, this))
+{
+
+}
+
+bool RejectCertificateTransferRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RejectCertificateTransferResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RejectCertificateTransferResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * RejectCertificateTransferRequest::response(QNetworkReply * const reply) const
+{
+    return new RejectCertificateTransferResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RejectCertificateTransferRequestPrivate
+ *
+ * @brief  Private implementation for RejectCertificateTransferRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectCertificateTransferRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public RejectCertificateTransferRequest instance.
+ */
+RejectCertificateTransferRequestPrivate::RejectCertificateTransferRequestPrivate(
+    const IoTRequest::Action action, RejectCertificateTransferRequest * const q)
+    : RejectCertificateTransferPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectCertificateTransferRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RejectCertificateTransferRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RejectCertificateTransferRequest instance.
+ */
+RejectCertificateTransferRequestPrivate::RejectCertificateTransferRequestPrivate(
+    const RejectCertificateTransferRequestPrivate &other, RejectCertificateTransferRequest * const q)
+    : RejectCertificateTransferPrivate(other, q)
+{
+
+}

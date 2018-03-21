@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESIZECONSTRAINTSETREQUEST_P_H
 #define QTAWS_CREATESIZECONSTRAINTSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "createsizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateSizeConstraintSetRequest;
+
+class QTAWS_EXPORT CreateSizeConstraintSetRequestPrivate : public WAFPrivate {
+
+public:
+    CreateSizeConstraintSetRequestPrivate(const WAF::Action action,
+                                   CreateSizeConstraintSetRequest * const q);
+    CreateSizeConstraintSetRequestPrivate(const CreateSizeConstraintSetRequestPrivate &other,
+                                   CreateSizeConstraintSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSizeConstraintSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

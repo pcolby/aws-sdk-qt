@@ -20,4 +20,32 @@
 #ifndef QTAWS_NOTIFYWORKERSREQUEST_H
 #define QTAWS_NOTIFYWORKERSREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class NotifyWorkersRequestPrivate;
+
+class QTAWS_EXPORT NotifyWorkersRequest : public MTurkRequest {
+
+public:
+    NotifyWorkersRequest(const NotifyWorkersRequest &other);
+    NotifyWorkersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(NotifyWorkersRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETUSERMFAPREFERENCEREQUEST_H
 #define QTAWS_SETUSERMFAPREFERENCEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SetUserMFAPreferenceRequestPrivate;
+
+class QTAWS_EXPORT SetUserMFAPreferenceRequest : public CognitoIdentityProviderRequest {
+
+public:
+    SetUserMFAPreferenceRequest(const SetUserMFAPreferenceRequest &other);
+    SetUserMFAPreferenceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetUserMFAPreferenceRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

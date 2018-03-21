@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPIPELINESREQUEST_P_H
 #define QTAWS_LISTPIPELINESREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "listpipelinesrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class ListPipelinesRequest;
+
+class QTAWS_EXPORT ListPipelinesRequestPrivate : public CodePipelinePrivate {
+
+public:
+    ListPipelinesRequestPrivate(const CodePipeline::Action action,
+                                   ListPipelinesRequest * const q);
+    ListPipelinesRequestPrivate(const ListPipelinesRequestPrivate &other,
+                                   ListPipelinesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPipelinesRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

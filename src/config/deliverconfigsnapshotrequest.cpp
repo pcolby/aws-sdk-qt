@@ -19,3 +19,107 @@
 
 #include "deliverconfigsnapshotrequest.h"
 #include "deliverconfigsnapshotrequest_p.h"
+#include "deliverconfigsnapshotresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DeliverConfigSnapshotRequest
+ *
+ * @brief  Implements ConfigService DeliverConfigSnapshot requests.
+ *
+ * @see    ConfigServiceClient::deliverConfigSnapshot
+ */
+
+/**
+ * @brief  Constructs a new DeliverConfigSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
+
+/**
+ * @brief  Constructs a new DeliverConfigSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeliverConfigSnapshotRequest::DeliverConfigSnapshotRequest(const DeliverConfigSnapshotRequest &other)
+    : ConfigServiceRequest(new DeliverConfigSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeliverConfigSnapshotRequest object.
+ */
+DeliverConfigSnapshotRequest::DeliverConfigSnapshotRequest()
+    : ConfigServiceRequest(new DeliverConfigSnapshotRequestPrivate(ConfigServiceRequest::DeliverConfigSnapshotAction, this))
+{
+
+}
+
+bool DeliverConfigSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeliverConfigSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeliverConfigSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new DeliverConfigSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeliverConfigSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for DeliverConfigSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeliverConfigSnapshotRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public DeliverConfigSnapshotRequest instance.
+ */
+DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
+    const ConfigServiceRequest::Action action, DeliverConfigSnapshotRequest * const q)
+    : DeliverConfigSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeliverConfigSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeliverConfigSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeliverConfigSnapshotRequest instance.
+ */
+DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
+    const DeliverConfigSnapshotRequestPrivate &other, DeliverConfigSnapshotRequest * const q)
+    : DeliverConfigSnapshotPrivate(other, q)
+{
+
+}

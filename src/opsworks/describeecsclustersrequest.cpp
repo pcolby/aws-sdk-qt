@@ -19,3 +19,107 @@
 
 #include "describeecsclustersrequest.h"
 #include "describeecsclustersrequest_p.h"
+#include "describeecsclustersresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeEcsClustersRequest
+ *
+ * @brief  Implements OpsWorks DescribeEcsClusters requests.
+ *
+ * @see    OpsWorksClient::describeEcsClusters
+ */
+
+/**
+ * @brief  Constructs a new DescribeEcsClustersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEcsClustersResponse::DescribeEcsClustersResponse(
+
+/**
+ * @brief  Constructs a new DescribeEcsClustersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEcsClustersRequest::DescribeEcsClustersRequest(const DescribeEcsClustersRequest &other)
+    : OpsWorksRequest(new DescribeEcsClustersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEcsClustersRequest object.
+ */
+DescribeEcsClustersRequest::DescribeEcsClustersRequest()
+    : OpsWorksRequest(new DescribeEcsClustersRequestPrivate(OpsWorksRequest::DescribeEcsClustersAction, this))
+{
+
+}
+
+bool DescribeEcsClustersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEcsClustersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEcsClustersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeEcsClustersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEcsClustersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEcsClustersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEcsClustersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEcsClustersRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeEcsClustersRequest instance.
+ */
+DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeEcsClustersRequest * const q)
+    : DescribeEcsClustersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEcsClustersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEcsClustersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEcsClustersRequest instance.
+ */
+DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
+    const DescribeEcsClustersRequestPrivate &other, DescribeEcsClustersRequest * const q)
+    : DescribeEcsClustersPrivate(other, q)
+{
+
+}

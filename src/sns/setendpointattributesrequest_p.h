@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETENDPOINTATTRIBUTESREQUEST_P_H
 #define QTAWS_SETENDPOINTATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "setendpointattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetEndpointAttributesRequest;
+
+class QTAWS_EXPORT SetEndpointAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    SetEndpointAttributesRequestPrivate(const SNS::Action action,
+                                   SetEndpointAttributesRequest * const q);
+    SetEndpointAttributesRequestPrivate(const SetEndpointAttributesRequestPrivate &other,
+                                   SetEndpointAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetEndpointAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

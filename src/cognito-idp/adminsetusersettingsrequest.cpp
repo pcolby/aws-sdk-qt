@@ -19,3 +19,107 @@
 
 #include "adminsetusersettingsrequest.h"
 #include "adminsetusersettingsrequest_p.h"
+#include "adminsetusersettingsresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminSetUserSettingsRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminSetUserSettings requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminSetUserSettings
+ */
+
+/**
+ * @brief  Constructs a new AdminSetUserSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminSetUserSettingsResponse::AdminSetUserSettingsResponse(
+
+/**
+ * @brief  Constructs a new AdminSetUserSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminSetUserSettingsRequest::AdminSetUserSettingsRequest(const AdminSetUserSettingsRequest &other)
+    : CognitoIdentityProviderRequest(new AdminSetUserSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminSetUserSettingsRequest object.
+ */
+AdminSetUserSettingsRequest::AdminSetUserSettingsRequest()
+    : CognitoIdentityProviderRequest(new AdminSetUserSettingsRequestPrivate(CognitoIdentityProviderRequest::AdminSetUserSettingsAction, this))
+{
+
+}
+
+bool AdminSetUserSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminSetUserSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminSetUserSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminSetUserSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminSetUserSettingsRequestPrivate
+ *
+ * @brief  Private implementation for AdminSetUserSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminSetUserSettingsRequest instance.
+ */
+AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminSetUserSettingsRequest * const q)
+    : AdminSetUserSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminSetUserSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminSetUserSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminSetUserSettingsRequest instance.
+ */
+AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
+    const AdminSetUserSettingsRequestPrivate &other, AdminSetUserSettingsRequest * const q)
+    : AdminSetUserSettingsPrivate(other, q)
+{
+
+}

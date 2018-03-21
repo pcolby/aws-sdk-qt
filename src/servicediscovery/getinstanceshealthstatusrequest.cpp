@@ -19,3 +19,107 @@
 
 #include "getinstanceshealthstatusrequest.h"
 #include "getinstanceshealthstatusrequest_p.h"
+#include "getinstanceshealthstatusresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetInstancesHealthStatusRequest
+ *
+ * @brief  Implements ServiceDiscovery GetInstancesHealthStatus requests.
+ *
+ * @see    ServiceDiscoveryClient::getInstancesHealthStatus
+ */
+
+/**
+ * @brief  Constructs a new GetInstancesHealthStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
+
+/**
+ * @brief  Constructs a new GetInstancesHealthStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest(const GetInstancesHealthStatusRequest &other)
+    : ServiceDiscoveryRequest(new GetInstancesHealthStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInstancesHealthStatusRequest object.
+ */
+GetInstancesHealthStatusRequest::GetInstancesHealthStatusRequest()
+    : ServiceDiscoveryRequest(new GetInstancesHealthStatusRequestPrivate(ServiceDiscoveryRequest::GetInstancesHealthStatusAction, this))
+{
+
+}
+
+bool GetInstancesHealthStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInstancesHealthStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInstancesHealthStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInstancesHealthStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstancesHealthStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetInstancesHealthStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public GetInstancesHealthStatusRequest instance.
+ */
+GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, GetInstancesHealthStatusRequest * const q)
+    : GetInstancesHealthStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstancesHealthStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInstancesHealthStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInstancesHealthStatusRequest instance.
+ */
+GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
+    const GetInstancesHealthStatusRequestPrivate &other, GetInstancesHealthStatusRequest * const q)
+    : GetInstancesHealthStatusPrivate(other, q)
+{
+
+}

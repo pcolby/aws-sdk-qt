@@ -19,3 +19,107 @@
 
 #include "getqueueattributesrequest.h"
 #include "getqueueattributesrequest_p.h"
+#include "getqueueattributesresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  GetQueueAttributesRequest
+ *
+ * @brief  Implements SQS GetQueueAttributes requests.
+ *
+ * @see    SQSClient::getQueueAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetQueueAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueueAttributesResponse::GetQueueAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetQueueAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetQueueAttributesRequest::GetQueueAttributesRequest(const GetQueueAttributesRequest &other)
+    : SQSRequest(new GetQueueAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetQueueAttributesRequest object.
+ */
+GetQueueAttributesRequest::GetQueueAttributesRequest()
+    : SQSRequest(new GetQueueAttributesRequestPrivate(SQSRequest::GetQueueAttributesAction, this))
+{
+
+}
+
+bool GetQueueAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetQueueAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetQueueAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * GetQueueAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetQueueAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueueAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetQueueAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueueAttributesRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public GetQueueAttributesRequest instance.
+ */
+GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
+    const SQSRequest::Action action, GetQueueAttributesRequest * const q)
+    : GetQueueAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueueAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetQueueAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetQueueAttributesRequest instance.
+ */
+GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
+    const GetQueueAttributesRequestPrivate &other, GetQueueAttributesRequest * const q)
+    : GetQueueAttributesPrivate(other, q)
+{
+
+}

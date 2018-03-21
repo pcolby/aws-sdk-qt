@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSREQUEST_H
 #define QTAWS_DESCRIBEMOUNTTARGETSREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeMountTargetsRequestPrivate;
+
+class QTAWS_EXPORT DescribeMountTargetsRequest : public EFSRequest {
+
+public:
+    DescribeMountTargetsRequest(const DescribeMountTargetsRequest &other);
+    DescribeMountTargetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMountTargetsRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

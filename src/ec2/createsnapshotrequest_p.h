@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESNAPSHOTREQUEST_P_H
 #define QTAWS_CREATESNAPSHOTREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createsnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateSnapshotRequest;
+
+class QTAWS_EXPORT CreateSnapshotRequestPrivate : public EC2Private {
+
+public:
+    CreateSnapshotRequestPrivate(const EC2::Action action,
+                                   CreateSnapshotRequest * const q);
+    CreateSnapshotRequestPrivate(const CreateSnapshotRequestPrivate &other,
+                                   CreateSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSnapshotRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

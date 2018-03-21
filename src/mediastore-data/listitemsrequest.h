@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTITEMSREQUEST_H
 #define QTAWS_LISTITEMSREQUEST_H
 
+#include "mediastoredatarequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class ListItemsRequestPrivate;
+
+class QTAWS_EXPORT ListItemsRequest : public MediaStoreDataRequest {
+
+public:
+    ListItemsRequest(const ListItemsRequest &other);
+    ListItemsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListItemsRequest)
+
+}
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

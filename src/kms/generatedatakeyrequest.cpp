@@ -19,3 +19,107 @@
 
 #include "generatedatakeyrequest.h"
 #include "generatedatakeyrequest_p.h"
+#include "generatedatakeyresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  GenerateDataKeyRequest
+ *
+ * @brief  Implements KMS GenerateDataKey requests.
+ *
+ * @see    KMSClient::generateDataKey
+ */
+
+/**
+ * @brief  Constructs a new GenerateDataKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GenerateDataKeyResponse::GenerateDataKeyResponse(
+
+/**
+ * @brief  Constructs a new GenerateDataKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GenerateDataKeyRequest::GenerateDataKeyRequest(const GenerateDataKeyRequest &other)
+    : KMSRequest(new GenerateDataKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GenerateDataKeyRequest object.
+ */
+GenerateDataKeyRequest::GenerateDataKeyRequest()
+    : KMSRequest(new GenerateDataKeyRequestPrivate(KMSRequest::GenerateDataKeyAction, this))
+{
+
+}
+
+bool GenerateDataKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GenerateDataKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GenerateDataKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new GenerateDataKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GenerateDataKeyRequestPrivate
+ *
+ * @brief  Private implementation for GenerateDataKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateDataKeyRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public GenerateDataKeyRequest instance.
+ */
+GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
+    const KMSRequest::Action action, GenerateDataKeyRequest * const q)
+    : GenerateDataKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GenerateDataKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GenerateDataKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GenerateDataKeyRequest instance.
+ */
+GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
+    const GenerateDataKeyRequestPrivate &other, GenerateDataKeyRequest * const q)
+    : GenerateDataKeyPrivate(other, q)
+{
+
+}

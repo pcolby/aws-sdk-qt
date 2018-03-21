@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPIPELINESTATEREQUEST_H
 #define QTAWS_GETPIPELINESTATEREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetPipelineStateRequestPrivate;
+
+class QTAWS_EXPORT GetPipelineStateRequest : public CodePipelineRequest {
+
+public:
+    GetPipelineStateRequest(const GetPipelineStateRequest &other);
+    GetPipelineStateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPipelineStateRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

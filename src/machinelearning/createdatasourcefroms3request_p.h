@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMS3REQUEST_P_H
 #define QTAWS_CREATEDATASOURCEFROMS3REQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "createdatasourcefroms3request.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateDataSourceFromS3Request;
+
+class QTAWS_EXPORT CreateDataSourceFromS3RequestPrivate : public MachineLearningPrivate {
+
+public:
+    CreateDataSourceFromS3RequestPrivate(const MachineLearning::Action action,
+                                   CreateDataSourceFromS3Request * const q);
+    CreateDataSourceFromS3RequestPrivate(const CreateDataSourceFromS3RequestPrivate &other,
+                                   CreateDataSourceFromS3Request * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDataSourceFromS3Request)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

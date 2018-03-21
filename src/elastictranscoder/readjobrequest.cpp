@@ -19,3 +19,107 @@
 
 #include "readjobrequest.h"
 #include "readjobrequest_p.h"
+#include "readjobresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ReadJobRequest
+ *
+ * @brief  Implements ElasticTranscoder ReadJob requests.
+ *
+ * @see    ElasticTranscoderClient::readJob
+ */
+
+/**
+ * @brief  Constructs a new ReadJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReadJobResponse::ReadJobResponse(
+
+/**
+ * @brief  Constructs a new ReadJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReadJobRequest::ReadJobRequest(const ReadJobRequest &other)
+    : ElasticTranscoderRequest(new ReadJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReadJobRequest object.
+ */
+ReadJobRequest::ReadJobRequest()
+    : ElasticTranscoderRequest(new ReadJobRequestPrivate(ElasticTranscoderRequest::ReadJobAction, this))
+{
+
+}
+
+bool ReadJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReadJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReadJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * const reply) const
+{
+    return new ReadJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReadJobRequestPrivate
+ *
+ * @brief  Private implementation for ReadJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadJobRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public ReadJobRequest instance.
+ */
+ReadJobRequestPrivate::ReadJobRequestPrivate(
+    const ElasticTranscoderRequest::Action action, ReadJobRequest * const q)
+    : ReadJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReadJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReadJobRequest instance.
+ */
+ReadJobRequestPrivate::ReadJobRequestPrivate(
+    const ReadJobRequestPrivate &other, ReadJobRequest * const q)
+    : ReadJobPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEGROUPREQUEST_H
 #define QTAWS_UPDATEGROUPREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateGroupRequestPrivate;
+
+class QTAWS_EXPORT UpdateGroupRequest : public IAMRequest {
+
+public:
+    UpdateGroupRequest(const UpdateGroupRequest &other);
+    UpdateGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGroupRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

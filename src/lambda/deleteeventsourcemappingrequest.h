@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEVENTSOURCEMAPPINGREQUEST_H
 #define QTAWS_DELETEEVENTSOURCEMAPPINGREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteEventSourceMappingRequestPrivate;
+
+class QTAWS_EXPORT DeleteEventSourceMappingRequest : public LambdaRequest {
+
+public:
+    DeleteEventSourceMappingRequest(const DeleteEventSourceMappingRequest &other);
+    DeleteEventSourceMappingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEventSourceMappingRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

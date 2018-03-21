@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETWORKFLOWEXECUTIONHISTORYREQUEST_P_H
 #define QTAWS_GETWORKFLOWEXECUTIONHISTORYREQUEST_P_H
 
+#include "swf_p.h"
+#include "getworkflowexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class GetWorkflowExecutionHistoryRequest;
+
+class QTAWS_EXPORT GetWorkflowExecutionHistoryRequestPrivate : public SWFPrivate {
+
+public:
+    GetWorkflowExecutionHistoryRequestPrivate(const SWF::Action action,
+                                   GetWorkflowExecutionHistoryRequest * const q);
+    GetWorkflowExecutionHistoryRequestPrivate(const GetWorkflowExecutionHistoryRequestPrivate &other,
+                                   GetWorkflowExecutionHistoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetWorkflowExecutionHistoryRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

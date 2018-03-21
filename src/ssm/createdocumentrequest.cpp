@@ -19,3 +19,107 @@
 
 #include "createdocumentrequest.h"
 #include "createdocumentrequest_p.h"
+#include "createdocumentresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CreateDocumentRequest
+ *
+ * @brief  Implements SSM CreateDocument requests.
+ *
+ * @see    SSMClient::createDocument
+ */
+
+/**
+ * @brief  Constructs a new CreateDocumentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDocumentResponse::CreateDocumentResponse(
+
+/**
+ * @brief  Constructs a new CreateDocumentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDocumentRequest::CreateDocumentRequest(const CreateDocumentRequest &other)
+    : SSMRequest(new CreateDocumentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDocumentRequest object.
+ */
+CreateDocumentRequest::CreateDocumentRequest()
+    : SSMRequest(new CreateDocumentRequestPrivate(SSMRequest::CreateDocumentAction, this))
+{
+
+}
+
+bool CreateDocumentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDocumentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDocumentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * CreateDocumentRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDocumentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDocumentRequestPrivate
+ *
+ * @brief  Private implementation for CreateDocumentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDocumentRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public CreateDocumentRequest instance.
+ */
+CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
+    const SSMRequest::Action action, CreateDocumentRequest * const q)
+    : CreateDocumentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDocumentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDocumentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDocumentRequest instance.
+ */
+CreateDocumentRequestPrivate::CreateDocumentRequestPrivate(
+    const CreateDocumentRequestPrivate &other, CreateDocumentRequest * const q)
+    : CreateDocumentPrivate(other, q)
+{
+
+}

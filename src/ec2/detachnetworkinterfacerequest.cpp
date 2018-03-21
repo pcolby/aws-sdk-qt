@@ -19,3 +19,107 @@
 
 #include "detachnetworkinterfacerequest.h"
 #include "detachnetworkinterfacerequest_p.h"
+#include "detachnetworkinterfaceresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DetachNetworkInterfaceRequest
+ *
+ * @brief  Implements EC2 DetachNetworkInterface requests.
+ *
+ * @see    EC2Client::detachNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new DetachNetworkInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
+
+/**
+ * @brief  Constructs a new DetachNetworkInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest(const DetachNetworkInterfaceRequest &other)
+    : EC2Request(new DetachNetworkInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachNetworkInterfaceRequest object.
+ */
+DetachNetworkInterfaceRequest::DetachNetworkInterfaceRequest()
+    : EC2Request(new DetachNetworkInterfaceRequestPrivate(EC2Request::DetachNetworkInterfaceAction, this))
+{
+
+}
+
+bool DetachNetworkInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachNetworkInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachNetworkInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachNetworkInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachNetworkInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for DetachNetworkInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachNetworkInterfaceRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DetachNetworkInterfaceRequest instance.
+ */
+DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
+    const EC2Request::Action action, DetachNetworkInterfaceRequest * const q)
+    : DetachNetworkInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachNetworkInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachNetworkInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachNetworkInterfaceRequest instance.
+ */
+DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
+    const DetachNetworkInterfaceRequestPrivate &other, DetachNetworkInterfaceRequest * const q)
+    : DetachNetworkInterfacePrivate(other, q)
+{
+
+}

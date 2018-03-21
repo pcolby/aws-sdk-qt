@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTQUEUESREQUEST_H
 #define QTAWS_LISTQUEUESREQUEST_H
 
+#include "mediaconvertrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class ListQueuesRequestPrivate;
+
+class QTAWS_EXPORT ListQueuesRequest : public MediaConvertRequest {
+
+public:
+    ListQueuesRequest(const ListQueuesRequest &other);
+    ListQueuesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListQueuesRequest)
+
+}
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

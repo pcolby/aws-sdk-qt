@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEBACKUPREQUEST_H
 #define QTAWS_CREATEBACKUPREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class CreateBackupRequestPrivate;
+
+class QTAWS_EXPORT CreateBackupRequest : public OpsWorksCMRequest {
+
+public:
+    CreateBackupRequest(const CreateBackupRequest &other);
+    CreateBackupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateBackupRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

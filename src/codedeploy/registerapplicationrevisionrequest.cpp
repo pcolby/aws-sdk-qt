@@ -19,3 +19,107 @@
 
 #include "registerapplicationrevisionrequest.h"
 #include "registerapplicationrevisionrequest_p.h"
+#include "registerapplicationrevisionresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  RegisterApplicationRevisionRequest
+ *
+ * @brief  Implements CodeDeploy RegisterApplicationRevision requests.
+ *
+ * @see    CodeDeployClient::registerApplicationRevision
+ */
+
+/**
+ * @brief  Constructs a new RegisterApplicationRevisionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterApplicationRevisionResponse::RegisterApplicationRevisionResponse(
+
+/**
+ * @brief  Constructs a new RegisterApplicationRevisionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterApplicationRevisionRequest::RegisterApplicationRevisionRequest(const RegisterApplicationRevisionRequest &other)
+    : CodeDeployRequest(new RegisterApplicationRevisionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterApplicationRevisionRequest object.
+ */
+RegisterApplicationRevisionRequest::RegisterApplicationRevisionRequest()
+    : CodeDeployRequest(new RegisterApplicationRevisionRequestPrivate(CodeDeployRequest::RegisterApplicationRevisionAction, this))
+{
+
+}
+
+bool RegisterApplicationRevisionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterApplicationRevisionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterApplicationRevisionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * RegisterApplicationRevisionRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterApplicationRevisionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterApplicationRevisionRequestPrivate
+ *
+ * @brief  Private implementation for RegisterApplicationRevisionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterApplicationRevisionRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public RegisterApplicationRevisionRequest instance.
+ */
+RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
+    const CodeDeployRequest::Action action, RegisterApplicationRevisionRequest * const q)
+    : RegisterApplicationRevisionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterApplicationRevisionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterApplicationRevisionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterApplicationRevisionRequest instance.
+ */
+RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
+    const RegisterApplicationRevisionRequestPrivate &other, RegisterApplicationRevisionRequest * const q)
+    : RegisterApplicationRevisionPrivate(other, q)
+{
+
+}

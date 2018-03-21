@@ -19,3 +19,107 @@
 
 #include "getsuiterequest.h"
 #include "getsuiterequest_p.h"
+#include "getsuiteresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetSuiteRequest
+ *
+ * @brief  Implements DeviceFarm GetSuite requests.
+ *
+ * @see    DeviceFarmClient::getSuite
+ */
+
+/**
+ * @brief  Constructs a new GetSuiteResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSuiteResponse::GetSuiteResponse(
+
+/**
+ * @brief  Constructs a new GetSuiteRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSuiteRequest::GetSuiteRequest(const GetSuiteRequest &other)
+    : DeviceFarmRequest(new GetSuiteRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSuiteRequest object.
+ */
+GetSuiteRequest::GetSuiteRequest()
+    : DeviceFarmRequest(new GetSuiteRequestPrivate(DeviceFarmRequest::GetSuiteAction, this))
+{
+
+}
+
+bool GetSuiteRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSuiteResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSuiteResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSuiteResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSuiteRequestPrivate
+ *
+ * @brief  Private implementation for GetSuiteRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSuiteRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public GetSuiteRequest instance.
+ */
+GetSuiteRequestPrivate::GetSuiteRequestPrivate(
+    const DeviceFarmRequest::Action action, GetSuiteRequest * const q)
+    : GetSuitePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSuiteRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSuiteRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSuiteRequest instance.
+ */
+GetSuiteRequestPrivate::GetSuiteRequestPrivate(
+    const GetSuiteRequestPrivate &other, GetSuiteRequest * const q)
+    : GetSuitePrivate(other, q)
+{
+
+}

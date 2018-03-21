@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHINSTANCESREQUEST_H
 #define QTAWS_DETACHINSTANCESREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DetachInstancesRequestPrivate;
+
+class QTAWS_EXPORT DetachInstancesRequest : public AutoScalingRequest {
+
+public:
+    DetachInstancesRequest(const DetachInstancesRequest &other);
+    DetachInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachInstancesRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

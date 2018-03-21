@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEEMAILCHANNELREQUEST_H
 #define QTAWS_UPDATEEMAILCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEmailChannelRequestPrivate;
+
+class QTAWS_EXPORT UpdateEmailChannelRequest : public PinpointRequest {
+
+public:
+    UpdateEmailChannelRequest(const UpdateEmailChannelRequest &other);
+    UpdateEmailChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEmailChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

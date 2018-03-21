@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERIMAGEREQUEST_P_H
 #define QTAWS_REGISTERIMAGEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "registerimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RegisterImageRequest;
+
+class QTAWS_EXPORT RegisterImageRequestPrivate : public EC2Private {
+
+public:
+    RegisterImageRequestPrivate(const EC2::Action action,
+                                   RegisterImageRequest * const q);
+    RegisterImageRequestPrivate(const RegisterImageRequestPrivate &other,
+                                   RegisterImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterImageRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETENDPOINTATTRIBUTESREQUEST_H
 #define QTAWS_GETENDPOINTATTRIBUTESREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetEndpointAttributesRequestPrivate;
+
+class QTAWS_EXPORT GetEndpointAttributesRequest : public SNSRequest {
+
+public:
+    GetEndpointAttributesRequest(const GetEndpointAttributesRequest &other);
+    GetEndpointAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetEndpointAttributesRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

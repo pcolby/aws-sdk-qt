@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSREQUEST_P_H
 #define QTAWS_LISTBOOTSTRAPACTIONSREQUEST_P_H
 
+#include "emr_p.h"
+#include "listbootstrapactionsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListBootstrapActionsRequest;
+
+class QTAWS_EXPORT ListBootstrapActionsRequestPrivate : public EMRPrivate {
+
+public:
+    ListBootstrapActionsRequestPrivate(const EMR::Action action,
+                                   ListBootstrapActionsRequest * const q);
+    ListBootstrapActionsRequestPrivate(const ListBootstrapActionsRequestPrivate &other,
+                                   ListBootstrapActionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBootstrapActionsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

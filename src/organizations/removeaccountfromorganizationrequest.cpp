@@ -19,3 +19,107 @@
 
 #include "removeaccountfromorganizationrequest.h"
 #include "removeaccountfromorganizationrequest_p.h"
+#include "removeaccountfromorganizationresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  RemoveAccountFromOrganizationRequest
+ *
+ * @brief  Implements Organizations RemoveAccountFromOrganization requests.
+ *
+ * @see    OrganizationsClient::removeAccountFromOrganization
+ */
+
+/**
+ * @brief  Constructs a new RemoveAccountFromOrganizationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
+
+/**
+ * @brief  Constructs a new RemoveAccountFromOrganizationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveAccountFromOrganizationRequest::RemoveAccountFromOrganizationRequest(const RemoveAccountFromOrganizationRequest &other)
+    : OrganizationsRequest(new RemoveAccountFromOrganizationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveAccountFromOrganizationRequest object.
+ */
+RemoveAccountFromOrganizationRequest::RemoveAccountFromOrganizationRequest()
+    : OrganizationsRequest(new RemoveAccountFromOrganizationRequestPrivate(OrganizationsRequest::RemoveAccountFromOrganizationAction, this))
+{
+
+}
+
+bool RemoveAccountFromOrganizationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveAccountFromOrganizationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveAccountFromOrganizationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * RemoveAccountFromOrganizationRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveAccountFromOrganizationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAccountFromOrganizationRequestPrivate
+ *
+ * @brief  Private implementation for RemoveAccountFromOrganizationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAccountFromOrganizationRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public RemoveAccountFromOrganizationRequest instance.
+ */
+RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
+    const OrganizationsRequest::Action action, RemoveAccountFromOrganizationRequest * const q)
+    : RemoveAccountFromOrganizationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAccountFromOrganizationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveAccountFromOrganizationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveAccountFromOrganizationRequest instance.
+ */
+RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
+    const RemoveAccountFromOrganizationRequestPrivate &other, RemoveAccountFromOrganizationRequest * const q)
+    : RemoveAccountFromOrganizationPrivate(other, q)
+{
+
+}

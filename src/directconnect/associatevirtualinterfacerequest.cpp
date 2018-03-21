@@ -19,3 +19,107 @@
 
 #include "associatevirtualinterfacerequest.h"
 #include "associatevirtualinterfacerequest_p.h"
+#include "associatevirtualinterfaceresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AssociateVirtualInterfaceRequest
+ *
+ * @brief  Implements DirectConnect AssociateVirtualInterface requests.
+ *
+ * @see    DirectConnectClient::associateVirtualInterface
+ */
+
+/**
+ * @brief  Constructs a new AssociateVirtualInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateVirtualInterfaceResponse::AssociateVirtualInterfaceResponse(
+
+/**
+ * @brief  Constructs a new AssociateVirtualInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateVirtualInterfaceRequest::AssociateVirtualInterfaceRequest(const AssociateVirtualInterfaceRequest &other)
+    : DirectConnectRequest(new AssociateVirtualInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateVirtualInterfaceRequest object.
+ */
+AssociateVirtualInterfaceRequest::AssociateVirtualInterfaceRequest()
+    : DirectConnectRequest(new AssociateVirtualInterfaceRequestPrivate(DirectConnectRequest::AssociateVirtualInterfaceAction, this))
+{
+
+}
+
+bool AssociateVirtualInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateVirtualInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateVirtualInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * AssociateVirtualInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateVirtualInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateVirtualInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for AssociateVirtualInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVirtualInterfaceRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public AssociateVirtualInterfaceRequest instance.
+ */
+AssociateVirtualInterfaceRequestPrivate::AssociateVirtualInterfaceRequestPrivate(
+    const DirectConnectRequest::Action action, AssociateVirtualInterfaceRequest * const q)
+    : AssociateVirtualInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateVirtualInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateVirtualInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateVirtualInterfaceRequest instance.
+ */
+AssociateVirtualInterfaceRequestPrivate::AssociateVirtualInterfaceRequestPrivate(
+    const AssociateVirtualInterfaceRequestPrivate &other, AssociateVirtualInterfaceRequest * const q)
+    : AssociateVirtualInterfacePrivate(other, q)
+{
+
+}

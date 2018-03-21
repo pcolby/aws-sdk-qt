@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOUTGOINGCERTIFICATESREQUEST_H
 #define QTAWS_LISTOUTGOINGCERTIFICATESREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListOutgoingCertificatesRequestPrivate;
+
+class QTAWS_EXPORT ListOutgoingCertificatesRequest : public IoTRequest {
+
+public:
+    ListOutgoingCertificatesRequest(const ListOutgoingCertificatesRequest &other);
+    ListOutgoingCertificatesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOutgoingCertificatesRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

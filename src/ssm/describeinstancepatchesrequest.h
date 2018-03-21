@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHESREQUEST_H
 #define QTAWS_DESCRIBEINSTANCEPATCHESREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstancePatchesRequestPrivate;
+
+class QTAWS_EXPORT DescribeInstancePatchesRequest : public SSMRequest {
+
+public:
+    DescribeInstancePatchesRequest(const DescribeInstancePatchesRequest &other);
+    DescribeInstancePatchesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstancePatchesRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

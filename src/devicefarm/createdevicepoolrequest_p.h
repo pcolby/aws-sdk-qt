@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDEVICEPOOLREQUEST_P_H
 #define QTAWS_CREATEDEVICEPOOLREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "createdevicepoolrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateDevicePoolRequest;
+
+class QTAWS_EXPORT CreateDevicePoolRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    CreateDevicePoolRequestPrivate(const DeviceFarm::Action action,
+                                   CreateDevicePoolRequest * const q);
+    CreateDevicePoolRequestPrivate(const CreateDevicePoolRequestPrivate &other,
+                                   CreateDevicePoolRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDevicePoolRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

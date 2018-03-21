@@ -19,3 +19,107 @@
 
 #include "describenotificationsforbudgetrequest.h"
 #include "describenotificationsforbudgetrequest_p.h"
+#include "describenotificationsforbudgetresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeNotificationsForBudgetRequest
+ *
+ * @brief  Implements Budgets DescribeNotificationsForBudget requests.
+ *
+ * @see    BudgetsClient::describeNotificationsForBudget
+ */
+
+/**
+ * @brief  Constructs a new DescribeNotificationsForBudgetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotificationsForBudgetResponse::DescribeNotificationsForBudgetResponse(
+
+/**
+ * @brief  Constructs a new DescribeNotificationsForBudgetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeNotificationsForBudgetRequest::DescribeNotificationsForBudgetRequest(const DescribeNotificationsForBudgetRequest &other)
+    : BudgetsRequest(new DescribeNotificationsForBudgetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeNotificationsForBudgetRequest object.
+ */
+DescribeNotificationsForBudgetRequest::DescribeNotificationsForBudgetRequest()
+    : BudgetsRequest(new DescribeNotificationsForBudgetRequestPrivate(BudgetsRequest::DescribeNotificationsForBudgetAction, this))
+{
+
+}
+
+bool DescribeNotificationsForBudgetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeNotificationsForBudgetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeNotificationsForBudgetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * DescribeNotificationsForBudgetRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeNotificationsForBudgetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotificationsForBudgetRequestPrivate
+ *
+ * @brief  Private implementation for DescribeNotificationsForBudgetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationsForBudgetRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public DescribeNotificationsForBudgetRequest instance.
+ */
+DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequestPrivate(
+    const BudgetsRequest::Action action, DescribeNotificationsForBudgetRequest * const q)
+    : DescribeNotificationsForBudgetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationsForBudgetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeNotificationsForBudgetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeNotificationsForBudgetRequest instance.
+ */
+DescribeNotificationsForBudgetRequestPrivate::DescribeNotificationsForBudgetRequestPrivate(
+    const DescribeNotificationsForBudgetRequestPrivate &other, DescribeNotificationsForBudgetRequest * const q)
+    : DescribeNotificationsForBudgetPrivate(other, q)
+{
+
+}

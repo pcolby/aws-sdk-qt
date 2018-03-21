@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONREQUEST_H
 #define QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotDatafeedSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT DescribeSpotDatafeedSubscriptionRequest : public EC2Request {
+
+public:
+    DescribeSpotDatafeedSubscriptionRequest(const DescribeSpotDatafeedSubscriptionRequest &other);
+    DescribeSpotDatafeedSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSpotDatafeedSubscriptionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

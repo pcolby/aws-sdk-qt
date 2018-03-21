@@ -19,3 +19,107 @@
 
 #include "getconsoleoutputrequest.h"
 #include "getconsoleoutputrequest_p.h"
+#include "getconsoleoutputresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  GetConsoleOutputRequest
+ *
+ * @brief  Implements EC2 GetConsoleOutput requests.
+ *
+ * @see    EC2Client::getConsoleOutput
+ */
+
+/**
+ * @brief  Constructs a new GetConsoleOutputResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConsoleOutputResponse::GetConsoleOutputResponse(
+
+/**
+ * @brief  Constructs a new GetConsoleOutputRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetConsoleOutputRequest::GetConsoleOutputRequest(const GetConsoleOutputRequest &other)
+    : EC2Request(new GetConsoleOutputRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetConsoleOutputRequest object.
+ */
+GetConsoleOutputRequest::GetConsoleOutputRequest()
+    : EC2Request(new GetConsoleOutputRequestPrivate(EC2Request::GetConsoleOutputAction, this))
+{
+
+}
+
+bool GetConsoleOutputRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetConsoleOutputResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetConsoleOutputResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkReply * const reply) const
+{
+    return new GetConsoleOutputResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConsoleOutputRequestPrivate
+ *
+ * @brief  Private implementation for GetConsoleOutputRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConsoleOutputRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public GetConsoleOutputRequest instance.
+ */
+GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
+    const EC2Request::Action action, GetConsoleOutputRequest * const q)
+    : GetConsoleOutputPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConsoleOutputRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetConsoleOutputRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetConsoleOutputRequest instance.
+ */
+GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
+    const GetConsoleOutputRequestPrivate &other, GetConsoleOutputRequest * const q)
+    : GetConsoleOutputPrivate(other, q)
+{
+
+}

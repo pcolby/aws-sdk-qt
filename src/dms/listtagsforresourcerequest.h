@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ListTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForResourceRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    ListTagsForResourceRequest(const ListTagsForResourceRequest &other);
+    ListTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForResourceRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

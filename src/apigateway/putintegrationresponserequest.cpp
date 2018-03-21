@@ -19,3 +19,107 @@
 
 #include "putintegrationresponserequest.h"
 #include "putintegrationresponserequest_p.h"
+#include "putintegrationresponseresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutIntegrationResponseRequest
+ *
+ * @brief  Implements APIGateway PutIntegrationResponse requests.
+ *
+ * @see    APIGatewayClient::putIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new PutIntegrationResponseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutIntegrationResponseResponse::PutIntegrationResponseResponse(
+
+/**
+ * @brief  Constructs a new PutIntegrationResponseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutIntegrationResponseRequest::PutIntegrationResponseRequest(const PutIntegrationResponseRequest &other)
+    : APIGatewayRequest(new PutIntegrationResponseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutIntegrationResponseRequest object.
+ */
+PutIntegrationResponseRequest::PutIntegrationResponseRequest()
+    : APIGatewayRequest(new PutIntegrationResponseRequestPrivate(APIGatewayRequest::PutIntegrationResponseAction, this))
+{
+
+}
+
+bool PutIntegrationResponseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutIntegrationResponseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutIntegrationResponseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * PutIntegrationResponseRequest::response(QNetworkReply * const reply) const
+{
+    return new PutIntegrationResponseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutIntegrationResponseRequestPrivate
+ *
+ * @brief  Private implementation for PutIntegrationResponseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntegrationResponseRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public PutIntegrationResponseRequest instance.
+ */
+PutIntegrationResponseRequestPrivate::PutIntegrationResponseRequestPrivate(
+    const APIGatewayRequest::Action action, PutIntegrationResponseRequest * const q)
+    : PutIntegrationResponsePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutIntegrationResponseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutIntegrationResponseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutIntegrationResponseRequest instance.
+ */
+PutIntegrationResponseRequestPrivate::PutIntegrationResponseRequestPrivate(
+    const PutIntegrationResponseRequestPrivate &other, PutIntegrationResponseRequest * const q)
+    : PutIntegrationResponsePrivate(other, q)
+{
+
+}

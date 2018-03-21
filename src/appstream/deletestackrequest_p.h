@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTACKREQUEST_P_H
 #define QTAWS_DELETESTACKREQUEST_P_H
 
+#include "appstream_p.h"
+#include "deletestackrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteStackRequest;
+
+class QTAWS_EXPORT DeleteStackRequestPrivate : public AppStreamPrivate {
+
+public:
+    DeleteStackRequestPrivate(const AppStream::Action action,
+                                   DeleteStackRequest * const q);
+    DeleteStackRequestPrivate(const DeleteStackRequestPrivate &other,
+                                   DeleteStackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStackRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

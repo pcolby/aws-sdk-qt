@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREADDRESSTOCLASSICREQUEST_H
 #define QTAWS_RESTOREADDRESSTOCLASSICREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RestoreAddressToClassicRequestPrivate;
+
+class QTAWS_EXPORT RestoreAddressToClassicRequest : public EC2Request {
+
+public:
+    RestoreAddressToClassicRequest(const RestoreAddressToClassicRequest &other);
+    RestoreAddressToClassicRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreAddressToClassicRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

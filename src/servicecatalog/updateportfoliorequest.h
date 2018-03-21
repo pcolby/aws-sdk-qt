@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPORTFOLIOREQUEST_H
 #define QTAWS_UPDATEPORTFOLIOREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdatePortfolioRequestPrivate;
+
+class QTAWS_EXPORT UpdatePortfolioRequest : public ServiceCatalogRequest {
+
+public:
+    UpdatePortfolioRequest(const UpdatePortfolioRequest &other);
+    UpdatePortfolioRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePortfolioRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

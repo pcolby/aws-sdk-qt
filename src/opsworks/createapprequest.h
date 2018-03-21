@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEAPPREQUEST_H
 #define QTAWS_CREATEAPPREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateAppRequestPrivate;
+
+class QTAWS_EXPORT CreateAppRequest : public OpsWorksRequest {
+
+public:
+    CreateAppRequest(const CreateAppRequest &other);
+    CreateAppRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateAppRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

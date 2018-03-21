@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEENVIRONMENTREQUEST_H
 #define QTAWS_DELETEENVIRONMENTREQUEST_H
 
+#include "cloud9request.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DeleteEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT DeleteEnvironmentRequest : public Cloud9Request {
+
+public:
+    DeleteEnvironmentRequest(const DeleteEnvironmentRequest &other);
+    DeleteEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEnvironmentRequest)
+
+}
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

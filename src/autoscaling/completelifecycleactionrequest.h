@@ -20,4 +20,32 @@
 #ifndef QTAWS_COMPLETELIFECYCLEACTIONREQUEST_H
 #define QTAWS_COMPLETELIFECYCLEACTIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CompleteLifecycleActionRequestPrivate;
+
+class QTAWS_EXPORT CompleteLifecycleActionRequest : public AutoScalingRequest {
+
+public:
+    CompleteLifecycleActionRequest(const CompleteLifecycleActionRequest &other);
+    CompleteLifecycleActionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CompleteLifecycleActionRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

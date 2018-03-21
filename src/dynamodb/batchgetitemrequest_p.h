@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETITEMREQUEST_P_H
 #define QTAWS_BATCHGETITEMREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "batchgetitemrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class BatchGetItemRequest;
+
+class QTAWS_EXPORT BatchGetItemRequestPrivate : public DynamoDBPrivate {
+
+public:
+    BatchGetItemRequestPrivate(const DynamoDB::Action action,
+                                   BatchGetItemRequest * const q);
+    BatchGetItemRequestPrivate(const BatchGetItemRequestPrivate &other,
+                                   BatchGetItemRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetItemRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

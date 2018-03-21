@@ -19,3 +19,107 @@
 
 #include "listloggerdefinitionversionsrequest.h"
 #include "listloggerdefinitionversionsrequest_p.h"
+#include "listloggerdefinitionversionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListLoggerDefinitionVersionsRequest
+ *
+ * @brief  Implements Greengrass ListLoggerDefinitionVersions requests.
+ *
+ * @see    GreengrassClient::listLoggerDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new ListLoggerDefinitionVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListLoggerDefinitionVersionsResponse::ListLoggerDefinitionVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest(const ListLoggerDefinitionVersionsRequest &other)
+    : GreengrassRequest(new ListLoggerDefinitionVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListLoggerDefinitionVersionsRequest object.
+ */
+ListLoggerDefinitionVersionsRequest::ListLoggerDefinitionVersionsRequest()
+    : GreengrassRequest(new ListLoggerDefinitionVersionsRequestPrivate(GreengrassRequest::ListLoggerDefinitionVersionsAction, this))
+{
+
+}
+
+bool ListLoggerDefinitionVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListLoggerDefinitionVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListLoggerDefinitionVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListLoggerDefinitionVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListLoggerDefinitionVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListLoggerDefinitionVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListLoggerDefinitionVersionsRequest instance.
+ */
+ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
+    const GreengrassRequest::Action action, ListLoggerDefinitionVersionsRequest * const q)
+    : ListLoggerDefinitionVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListLoggerDefinitionVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListLoggerDefinitionVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListLoggerDefinitionVersionsRequest instance.
+ */
+ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
+    const ListLoggerDefinitionVersionsRequestPrivate &other, ListLoggerDefinitionVersionsRequest * const q)
+    : ListLoggerDefinitionVersionsPrivate(other, q)
+{
+
+}

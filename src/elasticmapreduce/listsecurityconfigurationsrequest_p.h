@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSECURITYCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTSECURITYCONFIGURATIONSREQUEST_P_H
 
+#include "emr_p.h"
+#include "listsecurityconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListSecurityConfigurationsRequest;
+
+class QTAWS_EXPORT ListSecurityConfigurationsRequestPrivate : public EMRPrivate {
+
+public:
+    ListSecurityConfigurationsRequestPrivate(const EMR::Action action,
+                                   ListSecurityConfigurationsRequest * const q);
+    ListSecurityConfigurationsRequestPrivate(const ListSecurityConfigurationsRequestPrivate &other,
+                                   ListSecurityConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSecurityConfigurationsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

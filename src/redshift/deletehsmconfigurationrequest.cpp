@@ -19,3 +19,107 @@
 
 #include "deletehsmconfigurationrequest.h"
 #include "deletehsmconfigurationrequest_p.h"
+#include "deletehsmconfigurationresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DeleteHsmConfigurationRequest
+ *
+ * @brief  Implements Redshift DeleteHsmConfiguration requests.
+ *
+ * @see    RedshiftClient::deleteHsmConfiguration
+ */
+
+/**
+ * @brief  Constructs a new DeleteHsmConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHsmConfigurationResponse::DeleteHsmConfigurationResponse(
+
+/**
+ * @brief  Constructs a new DeleteHsmConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest(const DeleteHsmConfigurationRequest &other)
+    : RedshiftRequest(new DeleteHsmConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteHsmConfigurationRequest object.
+ */
+DeleteHsmConfigurationRequest::DeleteHsmConfigurationRequest()
+    : RedshiftRequest(new DeleteHsmConfigurationRequestPrivate(RedshiftRequest::DeleteHsmConfigurationAction, this))
+{
+
+}
+
+bool DeleteHsmConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteHsmConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteHsmConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteHsmConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHsmConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteHsmConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DeleteHsmConfigurationRequest instance.
+ */
+DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
+    const RedshiftRequest::Action action, DeleteHsmConfigurationRequest * const q)
+    : DeleteHsmConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHsmConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteHsmConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteHsmConfigurationRequest instance.
+ */
+DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
+    const DeleteHsmConfigurationRequestPrivate &other, DeleteHsmConfigurationRequest * const q)
+    : DeleteHsmConfigurationPrivate(other, q)
+{
+
+}

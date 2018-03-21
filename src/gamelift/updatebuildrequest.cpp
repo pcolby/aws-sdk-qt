@@ -19,3 +19,107 @@
 
 #include "updatebuildrequest.h"
 #include "updatebuildrequest_p.h"
+#include "updatebuildresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateBuildRequest
+ *
+ * @brief  Implements GameLift UpdateBuild requests.
+ *
+ * @see    GameLiftClient::updateBuild
+ */
+
+/**
+ * @brief  Constructs a new UpdateBuildResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBuildResponse::UpdateBuildResponse(
+
+/**
+ * @brief  Constructs a new UpdateBuildRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBuildRequest::UpdateBuildRequest(const UpdateBuildRequest &other)
+    : GameLiftRequest(new UpdateBuildRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBuildRequest object.
+ */
+UpdateBuildRequest::UpdateBuildRequest()
+    : GameLiftRequest(new UpdateBuildRequestPrivate(GameLiftRequest::UpdateBuildAction, this))
+{
+
+}
+
+bool UpdateBuildRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBuildResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBuildResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateBuildRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBuildResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBuildRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBuildRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBuildRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateBuildRequest instance.
+ */
+UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
+    const GameLiftRequest::Action action, UpdateBuildRequest * const q)
+    : UpdateBuildPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBuildRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBuildRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBuildRequest instance.
+ */
+UpdateBuildRequestPrivate::UpdateBuildRequestPrivate(
+    const UpdateBuildRequestPrivate &other, UpdateBuildRequest * const q)
+    : UpdateBuildPrivate(other, q)
+{
+
+}

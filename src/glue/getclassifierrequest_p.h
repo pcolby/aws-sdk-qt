@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCLASSIFIERREQUEST_P_H
 #define QTAWS_GETCLASSIFIERREQUEST_P_H
 
+#include "glue_p.h"
+#include "getclassifierrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetClassifierRequest;
+
+class QTAWS_EXPORT GetClassifierRequestPrivate : public GluePrivate {
+
+public:
+    GetClassifierRequestPrivate(const Glue::Action action,
+                                   GetClassifierRequest * const q);
+    GetClassifierRequestPrivate(const GetClassifierRequestPrivate &other,
+                                   GetClassifierRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetClassifierRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

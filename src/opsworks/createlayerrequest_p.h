@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELAYERREQUEST_P_H
 #define QTAWS_CREATELAYERREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "createlayerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateLayerRequest;
+
+class QTAWS_EXPORT CreateLayerRequestPrivate : public OpsWorksPrivate {
+
+public:
+    CreateLayerRequestPrivate(const OpsWorks::Action action,
+                                   CreateLayerRequest * const q);
+    CreateLayerRequestPrivate(const CreateLayerRequestPrivate &other,
+                                   CreateLayerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLayerRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

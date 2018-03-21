@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELISTENERREQUEST_H
 #define QTAWS_DELETELISTENERREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DeleteListenerRequestPrivate;
+
+class QTAWS_EXPORT DeleteListenerRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    DeleteListenerRequest(const DeleteListenerRequest &other);
+    DeleteListenerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteListenerRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONALUNITREQUEST_H
 #define QTAWS_DESCRIBEORGANIZATIONALUNITREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeOrganizationalUnitRequestPrivate;
+
+class QTAWS_EXPORT DescribeOrganizationalUnitRequest : public OrganizationsRequest {
+
+public:
+    DescribeOrganizationalUnitRequest(const DescribeOrganizationalUnitRequest &other);
+    DescribeOrganizationalUnitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrganizationalUnitRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

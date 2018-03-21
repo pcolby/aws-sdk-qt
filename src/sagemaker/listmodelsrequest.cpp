@@ -19,3 +19,107 @@
 
 #include "listmodelsrequest.h"
 #include "listmodelsrequest_p.h"
+#include "listmodelsresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  ListModelsRequest
+ *
+ * @brief  Implements SageMaker ListModels requests.
+ *
+ * @see    SageMakerClient::listModels
+ */
+
+/**
+ * @brief  Constructs a new ListModelsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListModelsResponse::ListModelsResponse(
+
+/**
+ * @brief  Constructs a new ListModelsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListModelsRequest::ListModelsRequest(const ListModelsRequest &other)
+    : SageMakerRequest(new ListModelsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListModelsRequest object.
+ */
+ListModelsRequest::ListModelsRequest()
+    : SageMakerRequest(new ListModelsRequestPrivate(SageMakerRequest::ListModelsAction, this))
+{
+
+}
+
+bool ListModelsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListModelsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListModelsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListModelsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListModelsRequestPrivate
+ *
+ * @brief  Private implementation for ListModelsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListModelsRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public ListModelsRequest instance.
+ */
+ListModelsRequestPrivate::ListModelsRequestPrivate(
+    const SageMakerRequest::Action action, ListModelsRequest * const q)
+    : ListModelsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListModelsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListModelsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListModelsRequest instance.
+ */
+ListModelsRequestPrivate::ListModelsRequestPrivate(
+    const ListModelsRequestPrivate &other, ListModelsRequest * const q)
+    : ListModelsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEVIRTUALMFADEVICEREQUEST_P_H
 #define QTAWS_CREATEVIRTUALMFADEVICEREQUEST_P_H
 
+#include "iam_p.h"
+#include "createvirtualmfadevicerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateVirtualMFADeviceRequest;
+
+class QTAWS_EXPORT CreateVirtualMFADeviceRequestPrivate : public IAMPrivate {
+
+public:
+    CreateVirtualMFADeviceRequestPrivate(const IAM::Action action,
+                                   CreateVirtualMFADeviceRequest * const q);
+    CreateVirtualMFADeviceRequestPrivate(const CreateVirtualMFADeviceRequestPrivate &other,
+                                   CreateVirtualMFADeviceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateVirtualMFADeviceRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

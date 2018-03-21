@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEACCOUNTALIASREQUEST_H
 #define QTAWS_DELETEACCOUNTALIASREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteAccountAliasRequestPrivate;
+
+class QTAWS_EXPORT DeleteAccountAliasRequest : public IAMRequest {
+
+public:
+    DeleteAccountAliasRequest(const DeleteAccountAliasRequest &other);
+    DeleteAccountAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAccountAliasRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

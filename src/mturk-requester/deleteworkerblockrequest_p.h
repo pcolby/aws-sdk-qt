@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEWORKERBLOCKREQUEST_P_H
 #define QTAWS_DELETEWORKERBLOCKREQUEST_P_H
 
+#include "mturk_p.h"
+#include "deleteworkerblockrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteWorkerBlockRequest;
+
+class QTAWS_EXPORT DeleteWorkerBlockRequestPrivate : public MTurkPrivate {
+
+public:
+    DeleteWorkerBlockRequestPrivate(const MTurk::Action action,
+                                   DeleteWorkerBlockRequest * const q);
+    DeleteWorkerBlockRequestPrivate(const DeleteWorkerBlockRequestPrivate &other,
+                                   DeleteWorkerBlockRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteWorkerBlockRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINTENTSREQUEST_P_H
 #define QTAWS_GETINTENTSREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "getintentsrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetIntentsRequest;
+
+class QTAWS_EXPORT GetIntentsRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    GetIntentsRequestPrivate(const LexModelBuildingService::Action action,
+                                   GetIntentsRequest * const q);
+    GetIntentsRequestPrivate(const GetIntentsRequestPrivate &other,
+                                   GetIntentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIntentsRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

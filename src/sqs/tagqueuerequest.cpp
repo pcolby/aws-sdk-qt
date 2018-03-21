@@ -19,3 +19,107 @@
 
 #include "tagqueuerequest.h"
 #include "tagqueuerequest_p.h"
+#include "tagqueueresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  TagQueueRequest
+ *
+ * @brief  Implements SQS TagQueue requests.
+ *
+ * @see    SQSClient::tagQueue
+ */
+
+/**
+ * @brief  Constructs a new TagQueueResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagQueueResponse::TagQueueResponse(
+
+/**
+ * @brief  Constructs a new TagQueueRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TagQueueRequest::TagQueueRequest(const TagQueueRequest &other)
+    : SQSRequest(new TagQueueRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TagQueueRequest object.
+ */
+TagQueueRequest::TagQueueRequest()
+    : SQSRequest(new TagQueueRequestPrivate(SQSRequest::TagQueueAction, this))
+{
+
+}
+
+bool TagQueueRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TagQueueResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TagQueueResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * const reply) const
+{
+    return new TagQueueResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TagQueueRequestPrivate
+ *
+ * @brief  Private implementation for TagQueueRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagQueueRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public TagQueueRequest instance.
+ */
+TagQueueRequestPrivate::TagQueueRequestPrivate(
+    const SQSRequest::Action action, TagQueueRequest * const q)
+    : TagQueuePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagQueueRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TagQueueRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TagQueueRequest instance.
+ */
+TagQueueRequestPrivate::TagQueueRequestPrivate(
+    const TagQueueRequestPrivate &other, TagQueueRequest * const q)
+    : TagQueuePrivate(other, q)
+{
+
+}

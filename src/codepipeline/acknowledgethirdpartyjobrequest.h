@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACKNOWLEDGETHIRDPARTYJOBREQUEST_H
 #define QTAWS_ACKNOWLEDGETHIRDPARTYJOBREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class AcknowledgeThirdPartyJobRequestPrivate;
+
+class QTAWS_EXPORT AcknowledgeThirdPartyJobRequest : public CodePipelineRequest {
+
+public:
+    AcknowledgeThirdPartyJobRequest(const AcknowledgeThirdPartyJobRequest &other);
+    AcknowledgeThirdPartyJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcknowledgeThirdPartyJobRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

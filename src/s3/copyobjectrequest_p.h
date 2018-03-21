@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYOBJECTREQUEST_P_H
 #define QTAWS_COPYOBJECTREQUEST_P_H
 
+#include "s3_p.h"
+#include "copyobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class CopyObjectRequest;
+
+class QTAWS_EXPORT CopyObjectRequestPrivate : public S3Private {
+
+public:
+    CopyObjectRequestPrivate(const S3::Action action,
+                                   CopyObjectRequest * const q);
+    CopyObjectRequestPrivate(const CopyObjectRequestPrivate &other,
+                                   CopyObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopyObjectRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

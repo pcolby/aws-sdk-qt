@@ -19,3 +19,107 @@
 
 #include "describevolumeattributerequest.h"
 #include "describevolumeattributerequest_p.h"
+#include "describevolumeattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVolumeAttributeRequest
+ *
+ * @brief  Implements EC2 DescribeVolumeAttribute requests.
+ *
+ * @see    EC2Client::describeVolumeAttribute
+ */
+
+/**
+ * @brief  Constructs a new DescribeVolumeAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
+
+/**
+ * @brief  Constructs a new DescribeVolumeAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest(const DescribeVolumeAttributeRequest &other)
+    : EC2Request(new DescribeVolumeAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVolumeAttributeRequest object.
+ */
+DescribeVolumeAttributeRequest::DescribeVolumeAttributeRequest()
+    : EC2Request(new DescribeVolumeAttributeRequestPrivate(EC2Request::DescribeVolumeAttributeAction, this))
+{
+
+}
+
+bool DescribeVolumeAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVolumeAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVolumeAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVolumeAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVolumeAttributeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVolumeAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeVolumeAttributeRequest instance.
+ */
+DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
+    const EC2Request::Action action, DescribeVolumeAttributeRequest * const q)
+    : DescribeVolumeAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVolumeAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVolumeAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVolumeAttributeRequest instance.
+ */
+DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
+    const DescribeVolumeAttributeRequestPrivate &other, DescribeVolumeAttributeRequest * const q)
+    : DescribeVolumeAttributePrivate(other, q)
+{
+
+}

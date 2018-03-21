@@ -19,3 +19,107 @@
 
 #include "listsubscriptionsrequest.h"
 #include "listsubscriptionsrequest_p.h"
+#include "listsubscriptionsresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListSubscriptionsRequest
+ *
+ * @brief  Implements SNS ListSubscriptions requests.
+ *
+ * @see    SNSClient::listSubscriptions
+ */
+
+/**
+ * @brief  Constructs a new ListSubscriptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscriptionsResponse::ListSubscriptionsResponse(
+
+/**
+ * @brief  Constructs a new ListSubscriptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSubscriptionsRequest::ListSubscriptionsRequest(const ListSubscriptionsRequest &other)
+    : SNSRequest(new ListSubscriptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSubscriptionsRequest object.
+ */
+ListSubscriptionsRequest::ListSubscriptionsRequest()
+    : SNSRequest(new ListSubscriptionsRequestPrivate(SNSRequest::ListSubscriptionsAction, this))
+{
+
+}
+
+bool ListSubscriptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSubscriptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSubscriptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSubscriptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscriptionsRequestPrivate
+ *
+ * @brief  Private implementation for ListSubscriptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionsRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public ListSubscriptionsRequest instance.
+ */
+ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
+    const SNSRequest::Action action, ListSubscriptionsRequest * const q)
+    : ListSubscriptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSubscriptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSubscriptionsRequest instance.
+ */
+ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
+    const ListSubscriptionsRequestPrivate &other, ListSubscriptionsRequest * const q)
+    : ListSubscriptionsPrivate(other, q)
+{
+
+}

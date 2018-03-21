@@ -19,3 +19,107 @@
 
 #include "setstackpolicyrequest.h"
 #include "setstackpolicyrequest_p.h"
+#include "setstackpolicyresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  SetStackPolicyRequest
+ *
+ * @brief  Implements CloudFormation SetStackPolicy requests.
+ *
+ * @see    CloudFormationClient::setStackPolicy
+ */
+
+/**
+ * @brief  Constructs a new SetStackPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetStackPolicyResponse::SetStackPolicyResponse(
+
+/**
+ * @brief  Constructs a new SetStackPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetStackPolicyRequest::SetStackPolicyRequest(const SetStackPolicyRequest &other)
+    : CloudFormationRequest(new SetStackPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetStackPolicyRequest object.
+ */
+SetStackPolicyRequest::SetStackPolicyRequest()
+    : CloudFormationRequest(new SetStackPolicyRequestPrivate(CloudFormationRequest::SetStackPolicyAction, this))
+{
+
+}
+
+bool SetStackPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetStackPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetStackPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * SetStackPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new SetStackPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetStackPolicyRequestPrivate
+ *
+ * @brief  Private implementation for SetStackPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetStackPolicyRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public SetStackPolicyRequest instance.
+ */
+SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
+    const CloudFormationRequest::Action action, SetStackPolicyRequest * const q)
+    : SetStackPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetStackPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetStackPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetStackPolicyRequest instance.
+ */
+SetStackPolicyRequestPrivate::SetStackPolicyRequestPrivate(
+    const SetStackPolicyRequestPrivate &other, SetStackPolicyRequest * const q)
+    : SetStackPolicyPrivate(other, q)
+{
+
+}

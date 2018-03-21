@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCRAWLERMETRICSREQUEST_H
 #define QTAWS_GETCRAWLERMETRICSREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetCrawlerMetricsRequestPrivate;
+
+class QTAWS_EXPORT GetCrawlerMetricsRequest : public GlueRequest {
+
+public:
+    GetCrawlerMetricsRequest(const GetCrawlerMetricsRequest &other);
+    GetCrawlerMetricsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCrawlerMetricsRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

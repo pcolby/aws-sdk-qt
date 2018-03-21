@@ -19,3 +19,107 @@
 
 #include "describeorganizationrequest.h"
 #include "describeorganizationrequest_p.h"
+#include "describeorganizationresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  DescribeOrganizationRequest
+ *
+ * @brief  Implements WorkMail DescribeOrganization requests.
+ *
+ * @see    WorkMailClient::describeOrganization
+ */
+
+/**
+ * @brief  Constructs a new DescribeOrganizationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrganizationResponse::DescribeOrganizationResponse(
+
+/**
+ * @brief  Constructs a new DescribeOrganizationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeOrganizationRequest::DescribeOrganizationRequest(const DescribeOrganizationRequest &other)
+    : WorkMailRequest(new DescribeOrganizationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeOrganizationRequest object.
+ */
+DescribeOrganizationRequest::DescribeOrganizationRequest()
+    : WorkMailRequest(new DescribeOrganizationRequestPrivate(WorkMailRequest::DescribeOrganizationAction, this))
+{
+
+}
+
+bool DescribeOrganizationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeOrganizationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeOrganizationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * DescribeOrganizationRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeOrganizationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrganizationRequestPrivate
+ *
+ * @brief  Private implementation for DescribeOrganizationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrganizationRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public DescribeOrganizationRequest instance.
+ */
+DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
+    const WorkMailRequest::Action action, DescribeOrganizationRequest * const q)
+    : DescribeOrganizationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrganizationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeOrganizationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeOrganizationRequest instance.
+ */
+DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
+    const DescribeOrganizationRequestPrivate &other, DescribeOrganizationRequest * const q)
+    : DescribeOrganizationPrivate(other, q)
+{
+
+}

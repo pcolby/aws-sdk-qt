@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFOLDERCONTENTSREQUEST_P_H
 #define QTAWS_DELETEFOLDERCONTENTSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deletefoldercontentsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteFolderContentsRequest;
+
+class QTAWS_EXPORT DeleteFolderContentsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeleteFolderContentsRequestPrivate(const WorkDocs::Action action,
+                                   DeleteFolderContentsRequest * const q);
+    DeleteFolderContentsRequestPrivate(const DeleteFolderContentsRequestPrivate &other,
+                                   DeleteFolderContentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFolderContentsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

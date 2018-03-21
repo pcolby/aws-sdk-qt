@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPRODUCTVIEWREQUEST_P_H
 #define QTAWS_DESCRIBEPRODUCTVIEWREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "describeproductviewrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeProductViewRequest;
+
+class QTAWS_EXPORT DescribeProductViewRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    DescribeProductViewRequestPrivate(const ServiceCatalog::Action action,
+                                   DescribeProductViewRequest * const q);
+    DescribeProductViewRequestPrivate(const DescribeProductViewRequestPrivate &other,
+                                   DescribeProductViewRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProductViewRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

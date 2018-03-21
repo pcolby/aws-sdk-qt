@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTACCESSKEYSREQUEST_P_H
 #define QTAWS_LISTACCESSKEYSREQUEST_P_H
 
+#include "iam_p.h"
+#include "listaccesskeysrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAccessKeysRequest;
+
+class QTAWS_EXPORT ListAccessKeysRequestPrivate : public IAMPrivate {
+
+public:
+    ListAccessKeysRequestPrivate(const IAM::Action action,
+                                   ListAccessKeysRequest * const q);
+    ListAccessKeysRequestPrivate(const ListAccessKeysRequestPrivate &other,
+                                   ListAccessKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAccessKeysRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "copyoptiongrouprequest.h"
 #include "copyoptiongrouprequest_p.h"
+#include "copyoptiongroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyOptionGroupRequest
+ *
+ * @brief  Implements RDS CopyOptionGroup requests.
+ *
+ * @see    RDSClient::copyOptionGroup
+ */
+
+/**
+ * @brief  Constructs a new CopyOptionGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyOptionGroupResponse::CopyOptionGroupResponse(
+
+/**
+ * @brief  Constructs a new CopyOptionGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyOptionGroupRequest::CopyOptionGroupRequest(const CopyOptionGroupRequest &other)
+    : RDSRequest(new CopyOptionGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyOptionGroupRequest object.
+ */
+CopyOptionGroupRequest::CopyOptionGroupRequest()
+    : RDSRequest(new CopyOptionGroupRequestPrivate(RDSRequest::CopyOptionGroupAction, this))
+{
+
+}
+
+bool CopyOptionGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyOptionGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyOptionGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyOptionGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyOptionGroupRequestPrivate
+ *
+ * @brief  Private implementation for CopyOptionGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyOptionGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CopyOptionGroupRequest instance.
+ */
+CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
+    const RDSRequest::Action action, CopyOptionGroupRequest * const q)
+    : CopyOptionGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyOptionGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyOptionGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyOptionGroupRequest instance.
+ */
+CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
+    const CopyOptionGroupRequestPrivate &other, CopyOptionGroupRequest * const q)
+    : CopyOptionGroupPrivate(other, q)
+{
+
+}

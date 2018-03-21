@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPRIMARYEMAILADDRESSREQUEST_P_H
 #define QTAWS_UPDATEPRIMARYEMAILADDRESSREQUEST_P_H
 
+#include "workmail_p.h"
+#include "updateprimaryemailaddressrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class UpdatePrimaryEmailAddressRequest;
+
+class QTAWS_EXPORT UpdatePrimaryEmailAddressRequestPrivate : public WorkMailPrivate {
+
+public:
+    UpdatePrimaryEmailAddressRequestPrivate(const WorkMail::Action action,
+                                   UpdatePrimaryEmailAddressRequest * const q);
+    UpdatePrimaryEmailAddressRequestPrivate(const UpdatePrimaryEmailAddressRequestPrivate &other,
+                                   UpdatePrimaryEmailAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePrimaryEmailAddressRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_H
 #define QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListVersionsByFunctionRequestPrivate;
+
+class QTAWS_EXPORT ListVersionsByFunctionRequest : public LambdaRequest {
+
+public:
+    ListVersionsByFunctionRequest(const ListVersionsByFunctionRequest &other);
+    ListVersionsByFunctionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListVersionsByFunctionRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

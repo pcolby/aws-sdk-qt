@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTCLOSEDWORKFLOWEXECUTIONSREQUEST_P_H
 
+#include "swf_p.h"
+#include "listclosedworkflowexecutionsrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListClosedWorkflowExecutionsRequest;
+
+class QTAWS_EXPORT ListClosedWorkflowExecutionsRequestPrivate : public SWFPrivate {
+
+public:
+    ListClosedWorkflowExecutionsRequestPrivate(const SWF::Action action,
+                                   ListClosedWorkflowExecutionsRequest * const q);
+    ListClosedWorkflowExecutionsRequestPrivate(const ListClosedWorkflowExecutionsRequestPrivate &other,
+                                   ListClosedWorkflowExecutionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListClosedWorkflowExecutionsRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

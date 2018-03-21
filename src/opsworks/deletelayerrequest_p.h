@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELAYERREQUEST_P_H
 #define QTAWS_DELETELAYERREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "deletelayerrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeleteLayerRequest;
+
+class QTAWS_EXPORT DeleteLayerRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DeleteLayerRequestPrivate(const OpsWorks::Action action,
+                                   DeleteLayerRequest * const q);
+    DeleteLayerRequestPrivate(const DeleteLayerRequestPrivate &other,
+                                   DeleteLayerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLayerRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

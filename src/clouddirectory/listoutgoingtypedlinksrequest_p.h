@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_P_H
 #define QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listoutgoingtypedlinksrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListOutgoingTypedLinksRequest;
+
+class QTAWS_EXPORT ListOutgoingTypedLinksRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListOutgoingTypedLinksRequestPrivate(const CloudDirectory::Action action,
+                                   ListOutgoingTypedLinksRequest * const q);
+    ListOutgoingTypedLinksRequestPrivate(const ListOutgoingTypedLinksRequestPrivate &other,
+                                   ListOutgoingTypedLinksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOutgoingTypedLinksRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

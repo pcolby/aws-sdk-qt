@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEAPIKEYREQUEST_P_H
 #define QTAWS_UPDATEAPIKEYREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updateapikeyrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateApiKeyRequest;
+
+class QTAWS_EXPORT UpdateApiKeyRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateApiKeyRequestPrivate(const APIGateway::Action action,
+                                   UpdateApiKeyRequest * const q);
+    UpdateApiKeyRequestPrivate(const UpdateApiKeyRequestPrivate &other,
+                                   UpdateApiKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApiKeyRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createhittyperequest.h"
 #include "createhittyperequest_p.h"
+#include "createhittyperesponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateHITTypeRequest
+ *
+ * @brief  Implements MTurk CreateHITType requests.
+ *
+ * @see    MTurkClient::createHITType
+ */
+
+/**
+ * @brief  Constructs a new CreateHITTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHITTypeResponse::CreateHITTypeResponse(
+
+/**
+ * @brief  Constructs a new CreateHITTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHITTypeRequest::CreateHITTypeRequest(const CreateHITTypeRequest &other)
+    : MTurkRequest(new CreateHITTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHITTypeRequest object.
+ */
+CreateHITTypeRequest::CreateHITTypeRequest()
+    : MTurkRequest(new CreateHITTypeRequestPrivate(MTurkRequest::CreateHITTypeAction, this))
+{
+
+}
+
+bool CreateHITTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHITTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHITTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * CreateHITTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHITTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHITTypeRequestPrivate
+ *
+ * @brief  Private implementation for CreateHITTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITTypeRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public CreateHITTypeRequest instance.
+ */
+CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
+    const MTurkRequest::Action action, CreateHITTypeRequest * const q)
+    : CreateHITTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHITTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHITTypeRequest instance.
+ */
+CreateHITTypeRequestPrivate::CreateHITTypeRequestPrivate(
+    const CreateHITTypeRequestPrivate &other, CreateHITTypeRequest * const q)
+    : CreateHITTypePrivate(other, q)
+{
+
+}

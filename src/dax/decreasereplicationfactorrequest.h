@@ -20,4 +20,32 @@
 #ifndef QTAWS_DECREASEREPLICATIONFACTORREQUEST_H
 #define QTAWS_DECREASEREPLICATIONFACTORREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DecreaseReplicationFactorRequestPrivate;
+
+class QTAWS_EXPORT DecreaseReplicationFactorRequest : public DAXRequest {
+
+public:
+    DecreaseReplicationFactorRequest(const DecreaseReplicationFactorRequest &other);
+    DecreaseReplicationFactorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DecreaseReplicationFactorRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

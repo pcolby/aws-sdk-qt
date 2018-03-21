@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTRULEREQUEST_P_H
 #define QTAWS_PUTRULEREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "putrulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class PutRuleRequest;
+
+class QTAWS_EXPORT PutRuleRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    PutRuleRequestPrivate(const CloudWatchEvents::Action action,
+                                   PutRuleRequest * const q);
+    PutRuleRequestPrivate(const PutRuleRequestPrivate &other,
+                                   PutRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutRuleRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

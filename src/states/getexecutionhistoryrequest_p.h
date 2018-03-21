@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETEXECUTIONHISTORYREQUEST_P_H
 #define QTAWS_GETEXECUTIONHISTORYREQUEST_P_H
 
+#include "sfn_p.h"
+#include "getexecutionhistoryrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class GetExecutionHistoryRequest;
+
+class QTAWS_EXPORT GetExecutionHistoryRequestPrivate : public SFNPrivate {
+
+public:
+    GetExecutionHistoryRequestPrivate(const SFN::Action action,
+                                   GetExecutionHistoryRequest * const q);
+    GetExecutionHistoryRequestPrivate(const GetExecutionHistoryRequestPrivate &other,
+                                   GetExecutionHistoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetExecutionHistoryRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONTAINERINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBECONTAINERINSTANCESREQUEST_P_H
 
+#include "ecs_p.h"
+#include "describecontainerinstancesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeContainerInstancesRequest;
+
+class QTAWS_EXPORT DescribeContainerInstancesRequestPrivate : public ECSPrivate {
+
+public:
+    DescribeContainerInstancesRequestPrivate(const ECS::Action action,
+                                   DescribeContainerInstancesRequest * const q);
+    DescribeContainerInstancesRequestPrivate(const DescribeContainerInstancesRequestPrivate &other,
+                                   DescribeContainerInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeContainerInstancesRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

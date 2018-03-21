@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMDATASETREQUEST_P_H
 #define QTAWS_UNSUBSCRIBEFROMDATASETREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "unsubscribefromdatasetrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class UnsubscribeFromDatasetRequest;
+
+class QTAWS_EXPORT UnsubscribeFromDatasetRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    UnsubscribeFromDatasetRequestPrivate(const CognitoSync::Action action,
+                                   UnsubscribeFromDatasetRequest * const q);
+    UnsubscribeFromDatasetRequestPrivate(const UnsubscribeFromDatasetRequestPrivate &other,
+                                   UnsubscribeFromDatasetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnsubscribeFromDatasetRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

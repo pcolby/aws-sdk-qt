@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_H
 #define QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class CreateComputeEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT CreateComputeEnvironmentRequest : public BatchRequest {
+
+public:
+    CreateComputeEnvironmentRequest(const CreateComputeEnvironmentRequest &other);
+    CreateComputeEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateComputeEnvironmentRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listconfigurationsetsrequest.h"
 #include "listconfigurationsetsrequest_p.h"
+#include "listconfigurationsetsresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListConfigurationSetsRequest
+ *
+ * @brief  Implements SES ListConfigurationSets requests.
+ *
+ * @see    SESClient::listConfigurationSets
+ */
+
+/**
+ * @brief  Constructs a new ListConfigurationSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListConfigurationSetsResponse::ListConfigurationSetsResponse(
+
+/**
+ * @brief  Constructs a new ListConfigurationSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListConfigurationSetsRequest::ListConfigurationSetsRequest(const ListConfigurationSetsRequest &other)
+    : SESRequest(new ListConfigurationSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListConfigurationSetsRequest object.
+ */
+ListConfigurationSetsRequest::ListConfigurationSetsRequest()
+    : SESRequest(new ListConfigurationSetsRequestPrivate(SESRequest::ListConfigurationSetsAction, this))
+{
+
+}
+
+bool ListConfigurationSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListConfigurationSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListConfigurationSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * ListConfigurationSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListConfigurationSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListConfigurationSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListConfigurationSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationSetsRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public ListConfigurationSetsRequest instance.
+ */
+ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
+    const SESRequest::Action action, ListConfigurationSetsRequest * const q)
+    : ListConfigurationSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListConfigurationSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListConfigurationSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListConfigurationSetsRequest instance.
+ */
+ListConfigurationSetsRequestPrivate::ListConfigurationSetsRequestPrivate(
+    const ListConfigurationSetsRequestPrivate &other, ListConfigurationSetsRequest * const q)
+    : ListConfigurationSetsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "listsubscriptiondefinitionversionsrequest.h"
 #include "listsubscriptiondefinitionversionsrequest_p.h"
+#include "listsubscriptiondefinitionversionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListSubscriptionDefinitionVersionsRequest
+ *
+ * @brief  Implements Greengrass ListSubscriptionDefinitionVersions requests.
+ *
+ * @see    GreengrassClient::listSubscriptionDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSubscriptionDefinitionVersionsResponse::ListSubscriptionDefinitionVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsRequest(const ListSubscriptionDefinitionVersionsRequest &other)
+    : GreengrassRequest(new ListSubscriptionDefinitionVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequest object.
+ */
+ListSubscriptionDefinitionVersionsRequest::ListSubscriptionDefinitionVersionsRequest()
+    : GreengrassRequest(new ListSubscriptionDefinitionVersionsRequestPrivate(GreengrassRequest::ListSubscriptionDefinitionVersionsAction, this))
+{
+
+}
+
+bool ListSubscriptionDefinitionVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSubscriptionDefinitionVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSubscriptionDefinitionVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSubscriptionDefinitionVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSubscriptionDefinitionVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListSubscriptionDefinitionVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListSubscriptionDefinitionVersionsRequest instance.
+ */
+ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
+    const GreengrassRequest::Action action, ListSubscriptionDefinitionVersionsRequest * const q)
+    : ListSubscriptionDefinitionVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSubscriptionDefinitionVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSubscriptionDefinitionVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSubscriptionDefinitionVersionsRequest instance.
+ */
+ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
+    const ListSubscriptionDefinitionVersionsRequestPrivate &other, ListSubscriptionDefinitionVersionsRequest * const q)
+    : ListSubscriptionDefinitionVersionsPrivate(other, q)
+{
+
+}

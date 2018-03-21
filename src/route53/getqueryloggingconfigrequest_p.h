@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETQUERYLOGGINGCONFIGREQUEST_P_H
 #define QTAWS_GETQUERYLOGGINGCONFIGREQUEST_P_H
 
+#include "route53_p.h"
+#include "getqueryloggingconfigrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetQueryLoggingConfigRequest;
+
+class QTAWS_EXPORT GetQueryLoggingConfigRequestPrivate : public Route53Private {
+
+public:
+    GetQueryLoggingConfigRequestPrivate(const Route53::Action action,
+                                   GetQueryLoggingConfigRequest * const q);
+    GetQueryLoggingConfigRequestPrivate(const GetQueryLoggingConfigRequestPrivate &other,
+                                   GetQueryLoggingConfigRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetQueryLoggingConfigRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

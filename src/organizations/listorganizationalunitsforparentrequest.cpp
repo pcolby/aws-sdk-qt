@@ -19,3 +19,107 @@
 
 #include "listorganizationalunitsforparentrequest.h"
 #include "listorganizationalunitsforparentrequest_p.h"
+#include "listorganizationalunitsforparentresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListOrganizationalUnitsForParentRequest
+ *
+ * @brief  Implements Organizations ListOrganizationalUnitsForParent requests.
+ *
+ * @see    OrganizationsClient::listOrganizationalUnitsForParent
+ */
+
+/**
+ * @brief  Constructs a new ListOrganizationalUnitsForParentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOrganizationalUnitsForParentResponse::ListOrganizationalUnitsForParentResponse(
+
+/**
+ * @brief  Constructs a new ListOrganizationalUnitsForParentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOrganizationalUnitsForParentRequest::ListOrganizationalUnitsForParentRequest(const ListOrganizationalUnitsForParentRequest &other)
+    : OrganizationsRequest(new ListOrganizationalUnitsForParentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOrganizationalUnitsForParentRequest object.
+ */
+ListOrganizationalUnitsForParentRequest::ListOrganizationalUnitsForParentRequest()
+    : OrganizationsRequest(new ListOrganizationalUnitsForParentRequestPrivate(OrganizationsRequest::ListOrganizationalUnitsForParentAction, this))
+{
+
+}
+
+bool ListOrganizationalUnitsForParentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOrganizationalUnitsForParentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOrganizationalUnitsForParentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOrganizationalUnitsForParentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOrganizationalUnitsForParentRequestPrivate
+ *
+ * @brief  Private implementation for ListOrganizationalUnitsForParentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationalUnitsForParentRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListOrganizationalUnitsForParentRequest instance.
+ */
+ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
+    const OrganizationsRequest::Action action, ListOrganizationalUnitsForParentRequest * const q)
+    : ListOrganizationalUnitsForParentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOrganizationalUnitsForParentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOrganizationalUnitsForParentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOrganizationalUnitsForParentRequest instance.
+ */
+ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
+    const ListOrganizationalUnitsForParentRequestPrivate &other, ListOrganizationalUnitsForParentRequest * const q)
+    : ListOrganizationalUnitsForParentPrivate(other, q)
+{
+
+}

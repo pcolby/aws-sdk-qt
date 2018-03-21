@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESREQUEST_H
 #define QTAWS_PUTRESOURCEATTRIBUTESREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class PutResourceAttributesRequestPrivate;
+
+class QTAWS_EXPORT PutResourceAttributesRequest : public MigrationHubRequest {
+
+public:
+    PutResourceAttributesRequest(const PutResourceAttributesRequest &other);
+    PutResourceAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutResourceAttributesRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

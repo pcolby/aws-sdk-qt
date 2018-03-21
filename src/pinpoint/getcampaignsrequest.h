@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCAMPAIGNSREQUEST_H
 #define QTAWS_GETCAMPAIGNSREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetCampaignsRequestPrivate;
+
+class QTAWS_EXPORT GetCampaignsRequest : public PinpointRequest {
+
+public:
+    GetCampaignsRequest(const GetCampaignsRequest &other);
+    GetCampaignsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCampaignsRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

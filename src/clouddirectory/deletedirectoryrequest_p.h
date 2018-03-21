@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDIRECTORYREQUEST_P_H
 #define QTAWS_DELETEDIRECTORYREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "deletedirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteDirectoryRequest;
+
+class QTAWS_EXPORT DeleteDirectoryRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    DeleteDirectoryRequestPrivate(const CloudDirectory::Action action,
+                                   DeleteDirectoryRequest * const q);
+    DeleteDirectoryRequestPrivate(const DeleteDirectoryRequestPrivate &other,
+                                   DeleteDirectoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDirectoryRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETARGETGROUPATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBETARGETGROUPATTRIBUTESREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "describetargetgroupattributesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeTargetGroupAttributesRequest;
+
+class QTAWS_EXPORT DescribeTargetGroupAttributesRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DescribeTargetGroupAttributesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DescribeTargetGroupAttributesRequest * const q);
+    DescribeTargetGroupAttributesRequestPrivate(const DescribeTargetGroupAttributesRequestPrivate &other,
+                                   DescribeTargetGroupAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTargetGroupAttributesRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

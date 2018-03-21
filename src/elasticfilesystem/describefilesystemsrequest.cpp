@@ -19,3 +19,107 @@
 
 #include "describefilesystemsrequest.h"
 #include "describefilesystemsrequest_p.h"
+#include "describefilesystemsresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DescribeFileSystemsRequest
+ *
+ * @brief  Implements EFS DescribeFileSystems requests.
+ *
+ * @see    EFSClient::describeFileSystems
+ */
+
+/**
+ * @brief  Constructs a new DescribeFileSystemsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFileSystemsResponse::DescribeFileSystemsResponse(
+
+/**
+ * @brief  Constructs a new DescribeFileSystemsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFileSystemsRequest::DescribeFileSystemsRequest(const DescribeFileSystemsRequest &other)
+    : EFSRequest(new DescribeFileSystemsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFileSystemsRequest object.
+ */
+DescribeFileSystemsRequest::DescribeFileSystemsRequest()
+    : EFSRequest(new DescribeFileSystemsRequestPrivate(EFSRequest::DescribeFileSystemsAction, this))
+{
+
+}
+
+bool DescribeFileSystemsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFileSystemsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFileSystemsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFileSystemsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFileSystemsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFileSystemsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFileSystemsRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public DescribeFileSystemsRequest instance.
+ */
+DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
+    const EFSRequest::Action action, DescribeFileSystemsRequest * const q)
+    : DescribeFileSystemsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFileSystemsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFileSystemsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFileSystemsRequest instance.
+ */
+DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
+    const DescribeFileSystemsRequestPrivate &other, DescribeFileSystemsRequest * const q)
+    : DescribeFileSystemsPrivate(other, q)
+{
+
+}

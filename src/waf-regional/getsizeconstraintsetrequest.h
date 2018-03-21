@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSIZECONSTRAINTSETREQUEST_H
 #define QTAWS_GETSIZECONSTRAINTSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetSizeConstraintSetRequestPrivate;
+
+class QTAWS_EXPORT GetSizeConstraintSetRequest : public WAFRegionalRequest {
+
+public:
+    GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other);
+    GetSizeConstraintSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSizeConstraintSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

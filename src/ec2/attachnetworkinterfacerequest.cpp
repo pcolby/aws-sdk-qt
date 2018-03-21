@@ -19,3 +19,107 @@
 
 #include "attachnetworkinterfacerequest.h"
 #include "attachnetworkinterfacerequest_p.h"
+#include "attachnetworkinterfaceresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AttachNetworkInterfaceRequest
+ *
+ * @brief  Implements EC2 AttachNetworkInterface requests.
+ *
+ * @see    EC2Client::attachNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new AttachNetworkInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachNetworkInterfaceResponse::AttachNetworkInterfaceResponse(
+
+/**
+ * @brief  Constructs a new AttachNetworkInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest(const AttachNetworkInterfaceRequest &other)
+    : EC2Request(new AttachNetworkInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachNetworkInterfaceRequest object.
+ */
+AttachNetworkInterfaceRequest::AttachNetworkInterfaceRequest()
+    : EC2Request(new AttachNetworkInterfaceRequestPrivate(EC2Request::AttachNetworkInterfaceAction, this))
+{
+
+}
+
+bool AttachNetworkInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachNetworkInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachNetworkInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachNetworkInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachNetworkInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for AttachNetworkInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AttachNetworkInterfaceRequest instance.
+ */
+AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
+    const EC2Request::Action action, AttachNetworkInterfaceRequest * const q)
+    : AttachNetworkInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachNetworkInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachNetworkInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachNetworkInterfaceRequest instance.
+ */
+AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
+    const AttachNetworkInterfaceRequestPrivate &other, AttachNetworkInterfaceRequest * const q)
+    : AttachNetworkInterfacePrivate(other, q)
+{
+
+}

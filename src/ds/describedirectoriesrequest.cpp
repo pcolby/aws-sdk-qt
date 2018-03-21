@@ -19,3 +19,107 @@
 
 #include "describedirectoriesrequest.h"
 #include "describedirectoriesrequest_p.h"
+#include "describedirectoriesresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeDirectoriesRequest
+ *
+ * @brief  Implements DirectoryService DescribeDirectories requests.
+ *
+ * @see    DirectoryServiceClient::describeDirectories
+ */
+
+/**
+ * @brief  Constructs a new DescribeDirectoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDirectoriesResponse::DescribeDirectoriesResponse(
+
+/**
+ * @brief  Constructs a new DescribeDirectoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDirectoriesRequest::DescribeDirectoriesRequest(const DescribeDirectoriesRequest &other)
+    : DirectoryServiceRequest(new DescribeDirectoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDirectoriesRequest object.
+ */
+DescribeDirectoriesRequest::DescribeDirectoriesRequest()
+    : DirectoryServiceRequest(new DescribeDirectoriesRequestPrivate(DirectoryServiceRequest::DescribeDirectoriesAction, this))
+{
+
+}
+
+bool DescribeDirectoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDirectoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDirectoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeDirectoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDirectoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDirectoriesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDirectoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectoriesRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeDirectoriesRequest instance.
+ */
+DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeDirectoriesRequest * const q)
+    : DescribeDirectoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDirectoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDirectoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDirectoriesRequest instance.
+ */
+DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
+    const DescribeDirectoriesRequestPrivate &other, DescribeDirectoriesRequest * const q)
+    : DescribeDirectoriesPrivate(other, q)
+{
+
+}

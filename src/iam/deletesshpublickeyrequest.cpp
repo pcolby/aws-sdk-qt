@@ -19,3 +19,107 @@
 
 #include "deletesshpublickeyrequest.h"
 #include "deletesshpublickeyrequest_p.h"
+#include "deletesshpublickeyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteSSHPublicKeyRequest
+ *
+ * @brief  Implements IAM DeleteSSHPublicKey requests.
+ *
+ * @see    IAMClient::deleteSSHPublicKey
+ */
+
+/**
+ * @brief  Constructs a new DeleteSSHPublicKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSSHPublicKeyResponse::DeleteSSHPublicKeyResponse(
+
+/**
+ * @brief  Constructs a new DeleteSSHPublicKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest(const DeleteSSHPublicKeyRequest &other)
+    : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSSHPublicKeyRequest object.
+ */
+DeleteSSHPublicKeyRequest::DeleteSSHPublicKeyRequest()
+    : IAMRequest(new DeleteSSHPublicKeyRequestPrivate(IAMRequest::DeleteSSHPublicKeyAction, this))
+{
+
+}
+
+bool DeleteSSHPublicKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSSHPublicKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSSHPublicKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSSHPublicKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSSHPublicKeyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSSHPublicKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSSHPublicKeyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteSSHPublicKeyRequest instance.
+ */
+DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
+    const IAMRequest::Action action, DeleteSSHPublicKeyRequest * const q)
+    : DeleteSSHPublicKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSSHPublicKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSSHPublicKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSSHPublicKeyRequest instance.
+ */
+DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
+    const DeleteSSHPublicKeyRequestPrivate &other, DeleteSSHPublicKeyRequest * const q)
+    : DeleteSSHPublicKeyPrivate(other, q)
+{
+
+}

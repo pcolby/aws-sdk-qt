@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTJOBSUCCESSRESULTREQUEST_H
 #define QTAWS_PUTJOBSUCCESSRESULTREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutJobSuccessResultRequestPrivate;
+
+class QTAWS_EXPORT PutJobSuccessResultRequest : public CodePipelineRequest {
+
+public:
+    PutJobSuccessResultRequest(const PutJobSuccessResultRequest &other);
+    PutJobSuccessResultRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutJobSuccessResultRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

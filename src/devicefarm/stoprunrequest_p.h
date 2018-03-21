@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPRUNREQUEST_P_H
 #define QTAWS_STOPRUNREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "stoprunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class StopRunRequest;
+
+class QTAWS_EXPORT StopRunRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    StopRunRequestPrivate(const DeviceFarm::Action action,
+                                   StopRunRequest * const q);
+    StopRunRequestPrivate(const StopRunRequestPrivate &other,
+                                   StopRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopRunRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

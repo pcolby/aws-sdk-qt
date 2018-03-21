@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEDHCPOPTIONSREQUEST_P_H
 #define QTAWS_ASSOCIATEDHCPOPTIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "associatedhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateDhcpOptionsRequest;
+
+class QTAWS_EXPORT AssociateDhcpOptionsRequestPrivate : public EC2Private {
+
+public:
+    AssociateDhcpOptionsRequestPrivate(const EC2::Action action,
+                                   AssociateDhcpOptionsRequest * const q);
+    AssociateDhcpOptionsRequestPrivate(const AssociateDhcpOptionsRequestPrivate &other,
+                                   AssociateDhcpOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDhcpOptionsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

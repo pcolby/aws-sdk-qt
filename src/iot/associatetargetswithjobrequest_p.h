@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATETARGETSWITHJOBREQUEST_P_H
 #define QTAWS_ASSOCIATETARGETSWITHJOBREQUEST_P_H
 
+#include "iot_p.h"
+#include "associatetargetswithjobrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class AssociateTargetsWithJobRequest;
+
+class QTAWS_EXPORT AssociateTargetsWithJobRequestPrivate : public IoTPrivate {
+
+public:
+    AssociateTargetsWithJobRequestPrivate(const IoT::Action action,
+                                   AssociateTargetsWithJobRequest * const q);
+    AssociateTargetsWithJobRequestPrivate(const AssociateTargetsWithJobRequestPrivate &other,
+                                   AssociateTargetsWithJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateTargetsWithJobRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

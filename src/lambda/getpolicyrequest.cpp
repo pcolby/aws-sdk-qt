@@ -19,3 +19,107 @@
 
 #include "getpolicyrequest.h"
 #include "getpolicyrequest_p.h"
+#include "getpolicyresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  GetPolicyRequest
+ *
+ * @brief  Implements Lambda GetPolicy requests.
+ *
+ * @see    LambdaClient::getPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPolicyResponse::GetPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPolicyRequest::GetPolicyRequest(const GetPolicyRequest &other)
+    : LambdaRequest(new GetPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPolicyRequest object.
+ */
+GetPolicyRequest::GetPolicyRequest()
+    : LambdaRequest(new GetPolicyRequestPrivate(LambdaRequest::GetPolicyAction, this))
+{
+
+}
+
+bool GetPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPolicyRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public GetPolicyRequest instance.
+ */
+GetPolicyRequestPrivate::GetPolicyRequestPrivate(
+    const LambdaRequest::Action action, GetPolicyRequest * const q)
+    : GetPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPolicyRequest instance.
+ */
+GetPolicyRequestPrivate::GetPolicyRequestPrivate(
+    const GetPolicyRequestPrivate &other, GetPolicyRequest * const q)
+    : GetPolicyPrivate(other, q)
+{
+
+}

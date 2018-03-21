@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESENDVALIDATIONEMAILREQUEST_P_H
 #define QTAWS_RESENDVALIDATIONEMAILREQUEST_P_H
 
+#include "acm_p.h"
+#include "resendvalidationemailrequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class ResendValidationEmailRequest;
+
+class QTAWS_EXPORT ResendValidationEmailRequestPrivate : public ACMPrivate {
+
+public:
+    ResendValidationEmailRequestPrivate(const ACM::Action action,
+                                   ResendValidationEmailRequest * const q);
+    ResendValidationEmailRequestPrivate(const ResendValidationEmailRequestPrivate &other,
+                                   ResendValidationEmailRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResendValidationEmailRequest)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESMSCHANNELREQUEST_P_H
 #define QTAWS_UPDATESMSCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updatesmschannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateSmsChannelRequest;
+
+class QTAWS_EXPORT UpdateSmsChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateSmsChannelRequestPrivate(const Pinpoint::Action action,
+                                   UpdateSmsChannelRequest * const q);
+    UpdateSmsChannelRequestPrivate(const UpdateSmsChannelRequestPrivate &other,
+                                   UpdateSmsChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSmsChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

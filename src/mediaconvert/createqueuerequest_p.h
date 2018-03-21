@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEQUEUEREQUEST_P_H
 #define QTAWS_CREATEQUEUEREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "createqueuerequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CreateQueueRequest;
+
+class QTAWS_EXPORT CreateQueueRequestPrivate : public MediaConvertPrivate {
+
+public:
+    CreateQueueRequestPrivate(const MediaConvert::Action action,
+                                   CreateQueueRequest * const q);
+    CreateQueueRequestPrivate(const CreateQueueRequestPrivate &other,
+                                   CreateQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateQueueRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

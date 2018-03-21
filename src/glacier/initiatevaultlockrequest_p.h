@@ -20,4 +20,29 @@
 #ifndef QTAWS_INITIATEVAULTLOCKREQUEST_P_H
 #define QTAWS_INITIATEVAULTLOCKREQUEST_P_H
 
+#include "glacier_p.h"
+#include "initiatevaultlockrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class InitiateVaultLockRequest;
+
+class QTAWS_EXPORT InitiateVaultLockRequestPrivate : public GlacierPrivate {
+
+public:
+    InitiateVaultLockRequestPrivate(const Glacier::Action action,
+                                   InitiateVaultLockRequest * const q);
+    InitiateVaultLockRequestPrivate(const InitiateVaultLockRequestPrivate &other,
+                                   InitiateVaultLockRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateVaultLockRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

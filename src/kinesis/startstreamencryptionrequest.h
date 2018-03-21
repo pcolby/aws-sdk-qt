@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTSTREAMENCRYPTIONREQUEST_H
 #define QTAWS_STARTSTREAMENCRYPTIONREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class StartStreamEncryptionRequestPrivate;
+
+class QTAWS_EXPORT StartStreamEncryptionRequest : public KinesisRequest {
+
+public:
+    StartStreamEncryptionRequest(const StartStreamEncryptionRequest &other);
+    StartStreamEncryptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartStreamEncryptionRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

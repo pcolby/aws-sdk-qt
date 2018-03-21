@@ -20,4 +20,32 @@
 #ifndef QTAWS_EXITSTANDBYREQUEST_H
 #define QTAWS_EXITSTANDBYREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class ExitStandbyRequestPrivate;
+
+class QTAWS_EXPORT ExitStandbyRequest : public AutoScalingRequest {
+
+public:
+    ExitStandbyRequest(const ExitStandbyRequest &other);
+    ExitStandbyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ExitStandbyRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

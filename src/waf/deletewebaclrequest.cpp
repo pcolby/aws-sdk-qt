@@ -19,3 +19,107 @@
 
 #include "deletewebaclrequest.h"
 #include "deletewebaclrequest_p.h"
+#include "deletewebaclresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  DeleteWebACLRequest
+ *
+ * @brief  Implements WAF DeleteWebACL requests.
+ *
+ * @see    WAFClient::deleteWebACL
+ */
+
+/**
+ * @brief  Constructs a new DeleteWebACLResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteWebACLResponse::DeleteWebACLResponse(
+
+/**
+ * @brief  Constructs a new DeleteWebACLRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteWebACLRequest::DeleteWebACLRequest(const DeleteWebACLRequest &other)
+    : WAFRequest(new DeleteWebACLRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteWebACLRequest object.
+ */
+DeleteWebACLRequest::DeleteWebACLRequest()
+    : WAFRequest(new DeleteWebACLRequestPrivate(WAFRequest::DeleteWebACLAction, this))
+{
+
+}
+
+bool DeleteWebACLRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteWebACLResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteWebACLResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteWebACLResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteWebACLRequestPrivate
+ *
+ * @brief  Private implementation for DeleteWebACLRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteWebACLRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public DeleteWebACLRequest instance.
+ */
+DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
+    const WAFRequest::Action action, DeleteWebACLRequest * const q)
+    : DeleteWebACLPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteWebACLRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteWebACLRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteWebACLRequest instance.
+ */
+DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
+    const DeleteWebACLRequestPrivate &other, DeleteWebACLRequest * const q)
+    : DeleteWebACLPrivate(other, q)
+{
+
+}

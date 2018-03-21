@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVPCENDPOINTSERVICECONFIGURATIONSREQUEST_P_H
 #define QTAWS_DELETEVPCENDPOINTSERVICECONFIGURATIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletevpcendpointserviceconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcEndpointServiceConfigurationsRequest;
+
+class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsRequestPrivate : public EC2Private {
+
+public:
+    DeleteVpcEndpointServiceConfigurationsRequestPrivate(const EC2::Action action,
+                                   DeleteVpcEndpointServiceConfigurationsRequest * const q);
+    DeleteVpcEndpointServiceConfigurationsRequestPrivate(const DeleteVpcEndpointServiceConfigurationsRequestPrivate &other,
+                                   DeleteVpcEndpointServiceConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcEndpointServiceConfigurationsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTITEMREQUEST_H
 #define QTAWS_PUTITEMREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class PutItemRequestPrivate;
+
+class QTAWS_EXPORT PutItemRequest : public DynamoDBRequest {
+
+public:
+    PutItemRequest(const PutItemRequest &other);
+    PutItemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutItemRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

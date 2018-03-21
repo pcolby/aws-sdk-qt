@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEALARMSFORMETRICREQUEST_P_H
 #define QTAWS_DESCRIBEALARMSFORMETRICREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "describealarmsformetricrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DescribeAlarmsForMetricRequest;
+
+class QTAWS_EXPORT DescribeAlarmsForMetricRequestPrivate : public CloudWatchPrivate {
+
+public:
+    DescribeAlarmsForMetricRequestPrivate(const CloudWatch::Action action,
+                                   DescribeAlarmsForMetricRequest * const q);
+    DescribeAlarmsForMetricRequestPrivate(const DescribeAlarmsForMetricRequestPrivate &other,
+                                   DescribeAlarmsForMetricRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAlarmsForMetricRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

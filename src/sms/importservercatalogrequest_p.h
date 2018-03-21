@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTSERVERCATALOGREQUEST_P_H
 #define QTAWS_IMPORTSERVERCATALOGREQUEST_P_H
 
+#include "sms_p.h"
+#include "importservercatalogrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class ImportServerCatalogRequest;
+
+class QTAWS_EXPORT ImportServerCatalogRequestPrivate : public SMSPrivate {
+
+public:
+    ImportServerCatalogRequestPrivate(const SMS::Action action,
+                                   ImportServerCatalogRequest * const q);
+    ImportServerCatalogRequestPrivate(const ImportServerCatalogRequestPrivate &other,
+                                   ImportServerCatalogRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportServerCatalogRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEALIASREQUEST_P_H
 #define QTAWS_DELETEALIASREQUEST_P_H
 
+#include "lambda_p.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteAliasRequest;
+
+class QTAWS_EXPORT DeleteAliasRequestPrivate : public LambdaPrivate {
+
+public:
+    DeleteAliasRequestPrivate(const Lambda::Action action,
+                                   DeleteAliasRequest * const q);
+    DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
+                                   DeleteAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAliasRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

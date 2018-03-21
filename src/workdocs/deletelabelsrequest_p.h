@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELABELSREQUEST_P_H
 #define QTAWS_DELETELABELSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deletelabelsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteLabelsRequest;
+
+class QTAWS_EXPORT DeleteLabelsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeleteLabelsRequestPrivate(const WorkDocs::Action action,
+                                   DeleteLabelsRequest * const q);
+    DeleteLabelsRequestPrivate(const DeleteLabelsRequestPrivate &other,
+                                   DeleteLabelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLabelsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

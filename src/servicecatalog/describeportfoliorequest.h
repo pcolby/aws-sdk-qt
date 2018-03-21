@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPORTFOLIOREQUEST_H
 #define QTAWS_DESCRIBEPORTFOLIOREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribePortfolioRequestPrivate;
+
+class QTAWS_EXPORT DescribePortfolioRequest : public ServiceCatalogRequest {
+
+public:
+    DescribePortfolioRequest(const DescribePortfolioRequest &other);
+    DescribePortfolioRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePortfolioRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

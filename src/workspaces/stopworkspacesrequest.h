@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPWORKSPACESREQUEST_H
 #define QTAWS_STOPWORKSPACESREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class StopWorkspacesRequestPrivate;
+
+class QTAWS_EXPORT StopWorkspacesRequest : public WorkSpacesRequest {
+
+public:
+    StopWorkspacesRequest(const StopWorkspacesRequest &other);
+    StopWorkspacesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopWorkspacesRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

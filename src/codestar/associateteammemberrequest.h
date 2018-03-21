@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATETEAMMEMBERREQUEST_H
 #define QTAWS_ASSOCIATETEAMMEMBERREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class AssociateTeamMemberRequestPrivate;
+
+class QTAWS_EXPORT AssociateTeamMemberRequest : public CodeStarRequest {
+
+public:
+    AssociateTeamMemberRequest(const AssociateTeamMemberRequest &other);
+    AssociateTeamMemberRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateTeamMemberRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

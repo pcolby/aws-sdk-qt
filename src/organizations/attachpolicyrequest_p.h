@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHPOLICYREQUEST_P_H
 #define QTAWS_ATTACHPOLICYREQUEST_P_H
 
+#include "organizations_p.h"
+#include "attachpolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class AttachPolicyRequest;
+
+class QTAWS_EXPORT AttachPolicyRequestPrivate : public OrganizationsPrivate {
+
+public:
+    AttachPolicyRequestPrivate(const Organizations::Action action,
+                                   AttachPolicyRequest * const q);
+    AttachPolicyRequestPrivate(const AttachPolicyRequestPrivate &other,
+                                   AttachPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachPolicyRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describereplicationtaskassessmentresultsrequest.h"
 #include "describereplicationtaskassessmentresultsrequest_p.h"
+#include "describereplicationtaskassessmentresultsresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeReplicationTaskAssessmentResultsRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeReplicationTaskAssessmentResults
+ */
+
+/**
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReplicationTaskAssessmentResultsResponse::DescribeReplicationTaskAssessmentResultsResponse(
+
+/**
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest(const DescribeReplicationTaskAssessmentResultsRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequest object.
+ */
+DescribeReplicationTaskAssessmentResultsRequest::DescribeReplicationTaskAssessmentResultsRequest()
+    : DatabaseMigrationServiceRequest(new DescribeReplicationTaskAssessmentResultsRequestPrivate(DatabaseMigrationServiceRequest::DescribeReplicationTaskAssessmentResultsAction, this))
+{
+
+}
+
+bool DescribeReplicationTaskAssessmentResultsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReplicationTaskAssessmentResultsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReplicationTaskAssessmentResultsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReplicationTaskAssessmentResultsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReplicationTaskAssessmentResultsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReplicationTaskAssessmentResultsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeReplicationTaskAssessmentResultsRequest instance.
+ */
+DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeReplicationTaskAssessmentResultsRequest * const q)
+    : DescribeReplicationTaskAssessmentResultsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReplicationTaskAssessmentResultsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReplicationTaskAssessmentResultsRequest instance.
+ */
+DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
+    const DescribeReplicationTaskAssessmentResultsRequestPrivate &other, DescribeReplicationTaskAssessmentResultsRequest * const q)
+    : DescribeReplicationTaskAssessmentResultsPrivate(other, q)
+{
+
+}

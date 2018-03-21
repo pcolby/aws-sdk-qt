@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_P_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_P_H
 
+#include "mturk_p.h"
+#include "associatequalificationwithworkerrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class AssociateQualificationWithWorkerRequest;
+
+class QTAWS_EXPORT AssociateQualificationWithWorkerRequestPrivate : public MTurkPrivate {
+
+public:
+    AssociateQualificationWithWorkerRequestPrivate(const MTurk::Action action,
+                                   AssociateQualificationWithWorkerRequest * const q);
+    AssociateQualificationWithWorkerRequestPrivate(const AssociateQualificationWithWorkerRequestPrivate &other,
+                                   AssociateQualificationWithWorkerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateQualificationWithWorkerRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

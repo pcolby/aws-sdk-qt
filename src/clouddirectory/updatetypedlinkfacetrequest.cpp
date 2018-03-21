@@ -19,3 +19,107 @@
 
 #include "updatetypedlinkfacetrequest.h"
 #include "updatetypedlinkfacetrequest_p.h"
+#include "updatetypedlinkfacetresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpdateTypedLinkFacetRequest
+ *
+ * @brief  Implements CloudDirectory UpdateTypedLinkFacet requests.
+ *
+ * @see    CloudDirectoryClient::updateTypedLinkFacet
+ */
+
+/**
+ * @brief  Constructs a new UpdateTypedLinkFacetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTypedLinkFacetResponse::UpdateTypedLinkFacetResponse(
+
+/**
+ * @brief  Constructs a new UpdateTypedLinkFacetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest(const UpdateTypedLinkFacetRequest &other)
+    : CloudDirectoryRequest(new UpdateTypedLinkFacetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTypedLinkFacetRequest object.
+ */
+UpdateTypedLinkFacetRequest::UpdateTypedLinkFacetRequest()
+    : CloudDirectoryRequest(new UpdateTypedLinkFacetRequestPrivate(CloudDirectoryRequest::UpdateTypedLinkFacetAction, this))
+{
+
+}
+
+bool UpdateTypedLinkFacetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTypedLinkFacetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTypedLinkFacetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTypedLinkFacetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTypedLinkFacetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTypedLinkFacetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public UpdateTypedLinkFacetRequest instance.
+ */
+UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
+    const CloudDirectoryRequest::Action action, UpdateTypedLinkFacetRequest * const q)
+    : UpdateTypedLinkFacetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypedLinkFacetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTypedLinkFacetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTypedLinkFacetRequest instance.
+ */
+UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
+    const UpdateTypedLinkFacetRequestPrivate &other, UpdateTypedLinkFacetRequest * const q)
+    : UpdateTypedLinkFacetPrivate(other, q)
+{
+
+}

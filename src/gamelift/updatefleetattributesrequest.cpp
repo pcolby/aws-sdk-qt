@@ -19,3 +19,107 @@
 
 #include "updatefleetattributesrequest.h"
 #include "updatefleetattributesrequest_p.h"
+#include "updatefleetattributesresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateFleetAttributesRequest
+ *
+ * @brief  Implements GameLift UpdateFleetAttributes requests.
+ *
+ * @see    GameLiftClient::updateFleetAttributes
+ */
+
+/**
+ * @brief  Constructs a new UpdateFleetAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFleetAttributesResponse::UpdateFleetAttributesResponse(
+
+/**
+ * @brief  Constructs a new UpdateFleetAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateFleetAttributesRequest::UpdateFleetAttributesRequest(const UpdateFleetAttributesRequest &other)
+    : GameLiftRequest(new UpdateFleetAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateFleetAttributesRequest object.
+ */
+UpdateFleetAttributesRequest::UpdateFleetAttributesRequest()
+    : GameLiftRequest(new UpdateFleetAttributesRequestPrivate(GameLiftRequest::UpdateFleetAttributesAction, this))
+{
+
+}
+
+bool UpdateFleetAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateFleetAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateFleetAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateFleetAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFleetAttributesRequestPrivate
+ *
+ * @brief  Private implementation for UpdateFleetAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetAttributesRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateFleetAttributesRequest instance.
+ */
+UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
+    const GameLiftRequest::Action action, UpdateFleetAttributesRequest * const q)
+    : UpdateFleetAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateFleetAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateFleetAttributesRequest instance.
+ */
+UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
+    const UpdateFleetAttributesRequestPrivate &other, UpdateFleetAttributesRequest * const q)
+    : UpdateFleetAttributesPrivate(other, q)
+{
+
+}

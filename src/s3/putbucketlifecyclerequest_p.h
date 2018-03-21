@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETLIFECYCLEREQUEST_P_H
 #define QTAWS_PUTBUCKETLIFECYCLEREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketlifecyclerequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketLifecycleRequest;
+
+class QTAWS_EXPORT PutBucketLifecycleRequestPrivate : public S3Private {
+
+public:
+    PutBucketLifecycleRequestPrivate(const S3::Action action,
+                                   PutBucketLifecycleRequest * const q);
+    PutBucketLifecycleRequestPrivate(const PutBucketLifecycleRequestPrivate &other,
+                                   PutBucketLifecycleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketLifecycleRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

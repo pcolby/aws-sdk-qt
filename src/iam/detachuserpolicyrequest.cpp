@@ -19,3 +19,107 @@
 
 #include "detachuserpolicyrequest.h"
 #include "detachuserpolicyrequest_p.h"
+#include "detachuserpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DetachUserPolicyRequest
+ *
+ * @brief  Implements IAM DetachUserPolicy requests.
+ *
+ * @see    IAMClient::detachUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new DetachUserPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachUserPolicyResponse::DetachUserPolicyResponse(
+
+/**
+ * @brief  Constructs a new DetachUserPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachUserPolicyRequest::DetachUserPolicyRequest(const DetachUserPolicyRequest &other)
+    : IAMRequest(new DetachUserPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachUserPolicyRequest object.
+ */
+DetachUserPolicyRequest::DetachUserPolicyRequest()
+    : IAMRequest(new DetachUserPolicyRequestPrivate(IAMRequest::DetachUserPolicyAction, this))
+{
+
+}
+
+bool DetachUserPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachUserPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachUserPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachUserPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachUserPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DetachUserPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachUserPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DetachUserPolicyRequest instance.
+ */
+DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
+    const IAMRequest::Action action, DetachUserPolicyRequest * const q)
+    : DetachUserPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachUserPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachUserPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachUserPolicyRequest instance.
+ */
+DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
+    const DetachUserPolicyRequestPrivate &other, DetachUserPolicyRequest * const q)
+    : DetachUserPolicyPrivate(other, q)
+{
+
+}

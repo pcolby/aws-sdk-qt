@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "deleteendpointrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteEndpointRequest;
+
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DeleteEndpointRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DeleteEndpointRequest * const q);
+    DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
+                                   DeleteEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

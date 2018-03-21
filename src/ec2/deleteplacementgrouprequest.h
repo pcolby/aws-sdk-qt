@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPLACEMENTGROUPREQUEST_H
 #define QTAWS_DELETEPLACEMENTGROUPREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeletePlacementGroupRequestPrivate;
+
+class QTAWS_EXPORT DeletePlacementGroupRequest : public EC2Request {
+
+public:
+    DeletePlacementGroupRequest(const DeletePlacementGroupRequest &other);
+    DeletePlacementGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePlacementGroupRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

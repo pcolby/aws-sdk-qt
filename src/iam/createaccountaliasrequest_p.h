@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEACCOUNTALIASREQUEST_P_H
 #define QTAWS_CREATEACCOUNTALIASREQUEST_P_H
 
+#include "iam_p.h"
+#include "createaccountaliasrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreateAccountAliasRequest;
+
+class QTAWS_EXPORT CreateAccountAliasRequestPrivate : public IAMPrivate {
+
+public:
+    CreateAccountAliasRequestPrivate(const IAM::Action action,
+                                   CreateAccountAliasRequest * const q);
+    CreateAccountAliasRequestPrivate(const CreateAccountAliasRequestPrivate &other,
+                                   CreateAccountAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAccountAliasRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

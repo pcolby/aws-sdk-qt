@@ -19,3 +19,107 @@
 
 #include "getidentitymailfromdomainattributesrequest.h"
 #include "getidentitymailfromdomainattributesrequest_p.h"
+#include "getidentitymailfromdomainattributesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityMailFromDomainAttributesRequest
+ *
+ * @brief  Implements SES GetIdentityMailFromDomainAttributes requests.
+ *
+ * @see    SESClient::getIdentityMailFromDomainAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest(const GetIdentityMailFromDomainAttributesRequest &other)
+    : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequest object.
+ */
+GetIdentityMailFromDomainAttributesRequest::GetIdentityMailFromDomainAttributesRequest()
+    : SESRequest(new GetIdentityMailFromDomainAttributesRequestPrivate(SESRequest::GetIdentityMailFromDomainAttributesAction, this))
+{
+
+}
+
+bool GetIdentityMailFromDomainAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityMailFromDomainAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityMailFromDomainAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetIdentityMailFromDomainAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityMailFromDomainAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityMailFromDomainAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityMailFromDomainAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetIdentityMailFromDomainAttributesRequest instance.
+ */
+GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
+    const SESRequest::Action action, GetIdentityMailFromDomainAttributesRequest * const q)
+    : GetIdentityMailFromDomainAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityMailFromDomainAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityMailFromDomainAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityMailFromDomainAttributesRequest instance.
+ */
+GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttributesRequestPrivate(
+    const GetIdentityMailFromDomainAttributesRequestPrivate &other, GetIdentityMailFromDomainAttributesRequest * const q)
+    : GetIdentityMailFromDomainAttributesPrivate(other, q)
+{
+
+}

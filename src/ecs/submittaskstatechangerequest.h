@@ -20,4 +20,32 @@
 #ifndef QTAWS_SUBMITTASKSTATECHANGEREQUEST_H
 #define QTAWS_SUBMITTASKSTATECHANGEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class SubmitTaskStateChangeRequestPrivate;
+
+class QTAWS_EXPORT SubmitTaskStateChangeRequest : public ECSRequest {
+
+public:
+    SubmitTaskStateChangeRequest(const SubmitTaskStateChangeRequest &other);
+    SubmitTaskStateChangeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SubmitTaskStateChangeRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICESREQUEST_P_H
 
+#include "ecs_p.h"
+#include "describeservicesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DescribeServicesRequest;
+
+class QTAWS_EXPORT DescribeServicesRequestPrivate : public ECSPrivate {
+
+public:
+    DescribeServicesRequestPrivate(const ECS::Action action,
+                                   DescribeServicesRequest * const q);
+    DescribeServicesRequestPrivate(const DescribeServicesRequestPrivate &other,
+                                   DescribeServicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServicesRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

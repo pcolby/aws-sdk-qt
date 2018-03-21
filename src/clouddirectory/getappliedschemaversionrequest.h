@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAPPLIEDSCHEMAVERSIONREQUEST_H
 #define QTAWS_GETAPPLIEDSCHEMAVERSIONREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetAppliedSchemaVersionRequestPrivate;
+
+class QTAWS_EXPORT GetAppliedSchemaVersionRequest : public CloudDirectoryRequest {
+
+public:
+    GetAppliedSchemaVersionRequest(const GetAppliedSchemaVersionRequest &other);
+    GetAppliedSchemaVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAppliedSchemaVersionRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

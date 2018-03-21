@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEGROUPREQUEST_H
 #define QTAWS_CREATEGROUPREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class CreateGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateGroupRequest : public WorkMailRequest {
+
+public:
+    CreateGroupRequest(const CreateGroupRequest &other);
+    CreateGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateGroupRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

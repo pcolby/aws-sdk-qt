@@ -19,3 +19,107 @@
 
 #include "listservercertificatesrequest.h"
 #include "listservercertificatesrequest_p.h"
+#include "listservercertificatesresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListServerCertificatesRequest
+ *
+ * @brief  Implements IAM ListServerCertificates requests.
+ *
+ * @see    IAMClient::listServerCertificates
+ */
+
+/**
+ * @brief  Constructs a new ListServerCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListServerCertificatesResponse::ListServerCertificatesResponse(
+
+/**
+ * @brief  Constructs a new ListServerCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListServerCertificatesRequest::ListServerCertificatesRequest(const ListServerCertificatesRequest &other)
+    : IAMRequest(new ListServerCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListServerCertificatesRequest object.
+ */
+ListServerCertificatesRequest::ListServerCertificatesRequest()
+    : IAMRequest(new ListServerCertificatesRequestPrivate(IAMRequest::ListServerCertificatesAction, this))
+{
+
+}
+
+bool ListServerCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListServerCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListServerCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListServerCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListServerCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListServerCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for ListServerCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServerCertificatesRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListServerCertificatesRequest instance.
+ */
+ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
+    const IAMRequest::Action action, ListServerCertificatesRequest * const q)
+    : ListServerCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListServerCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListServerCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListServerCertificatesRequest instance.
+ */
+ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
+    const ListServerCertificatesRequestPrivate &other, ListServerCertificatesRequest * const q)
+    : ListServerCertificatesPrivate(other, q)
+{
+
+}

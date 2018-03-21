@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCALLERIDENTITYREQUEST_H
 #define QTAWS_GETCALLERIDENTITYREQUEST_H
 
+#include "stsrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class GetCallerIdentityRequestPrivate;
+
+class QTAWS_EXPORT GetCallerIdentityRequest : public STSRequest {
+
+public:
+    GetCallerIdentityRequest(const GetCallerIdentityRequest &other);
+    GetCallerIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCallerIdentityRequest)
+
+}
+
+} // namespace STS
+} // namespace AWS
+
 #endif

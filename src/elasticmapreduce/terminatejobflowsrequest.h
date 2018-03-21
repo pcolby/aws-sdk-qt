@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEJOBFLOWSREQUEST_H
 #define QTAWS_TERMINATEJOBFLOWSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class TerminateJobFlowsRequestPrivate;
+
+class QTAWS_EXPORT TerminateJobFlowsRequest : public EMRRequest {
+
+public:
+    TerminateJobFlowsRequest(const TerminateJobFlowsRequest &other);
+    TerminateJobFlowsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateJobFlowsRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

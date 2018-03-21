@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPATCHBASELINEREQUEST_P_H
 #define QTAWS_UPDATEPATCHBASELINEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "updatepatchbaselinerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdatePatchBaselineRequest;
+
+class QTAWS_EXPORT UpdatePatchBaselineRequestPrivate : public SSMPrivate {
+
+public:
+    UpdatePatchBaselineRequestPrivate(const SSM::Action action,
+                                   UpdatePatchBaselineRequest * const q);
+    UpdatePatchBaselineRequestPrivate(const UpdatePatchBaselineRequestPrivate &other,
+                                   UpdatePatchBaselineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePatchBaselineRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

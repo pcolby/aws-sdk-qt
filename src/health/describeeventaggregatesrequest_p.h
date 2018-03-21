@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEVENTAGGREGATESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTAGGREGATESREQUEST_P_H
 
+#include "health_p.h"
+#include "describeeventaggregatesrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeEventAggregatesRequest;
+
+class QTAWS_EXPORT DescribeEventAggregatesRequestPrivate : public HealthPrivate {
+
+public:
+    DescribeEventAggregatesRequestPrivate(const Health::Action action,
+                                   DescribeEventAggregatesRequest * const q);
+    DescribeEventAggregatesRequestPrivate(const DescribeEventAggregatesRequestPrivate &other,
+                                   DescribeEventAggregatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventAggregatesRequest)
+
+};
+
+} // namespace Health
+} // namespace AWS
+
 #endif

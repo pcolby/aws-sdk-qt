@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSERPOOLREQUEST_P_H
 #define QTAWS_UPDATEUSERPOOLREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "updateuserpoolrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateUserPoolRequest;
+
+class QTAWS_EXPORT UpdateUserPoolRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    UpdateUserPoolRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   UpdateUserPoolRequest * const q);
+    UpdateUserPoolRequestPrivate(const UpdateUserPoolRequestPrivate &other,
+                                   UpdateUserPoolRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserPoolRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

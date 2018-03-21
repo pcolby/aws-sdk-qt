@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESNAPSHOTREQUEST_P_H
 #define QTAWS_DELETESNAPSHOTREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "deletesnapshotrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteSnapshotRequest;
+
+class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public ElastiCachePrivate {
+
+public:
+    DeleteSnapshotRequestPrivate(const ElastiCache::Action action,
+                                   DeleteSnapshotRequest * const q);
+    DeleteSnapshotRequestPrivate(const DeleteSnapshotRequestPrivate &other,
+                                   DeleteSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSnapshotRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

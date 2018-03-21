@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDATARETENTIONREQUEST_P_H
 #define QTAWS_UPDATEDATARETENTIONREQUEST_P_H
 
+#include "kinesisvideo_p.h"
+#include "updatedataretentionrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class UpdateDataRetentionRequest;
+
+class QTAWS_EXPORT UpdateDataRetentionRequestPrivate : public KinesisVideoPrivate {
+
+public:
+    UpdateDataRetentionRequestPrivate(const KinesisVideo::Action action,
+                                   UpdateDataRetentionRequest * const q);
+    UpdateDataRetentionRequestPrivate(const UpdateDataRetentionRequestPrivate &other,
+                                   UpdateDataRetentionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDataRetentionRequest)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

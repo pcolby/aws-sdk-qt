@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class UpdateServerEngineAttributesRequestPrivate;
+
+class QTAWS_EXPORT UpdateServerEngineAttributesRequest : public OpsWorksCMRequest {
+
+public:
+    UpdateServerEngineAttributesRequest(const UpdateServerEngineAttributesRequest &other);
+    UpdateServerEngineAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServerEngineAttributesRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

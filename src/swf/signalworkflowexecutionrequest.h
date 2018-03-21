@@ -20,4 +20,32 @@
 #ifndef QTAWS_SIGNALWORKFLOWEXECUTIONREQUEST_H
 #define QTAWS_SIGNALWORKFLOWEXECUTIONREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class SignalWorkflowExecutionRequestPrivate;
+
+class QTAWS_EXPORT SignalWorkflowExecutionRequest : public SWFRequest {
+
+public:
+    SignalWorkflowExecutionRequest(const SignalWorkflowExecutionRequest &other);
+    SignalWorkflowExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SignalWorkflowExecutionRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

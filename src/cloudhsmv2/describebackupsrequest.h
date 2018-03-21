@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBACKUPSREQUEST_H
 #define QTAWS_DESCRIBEBACKUPSREQUEST_H
 
+#include "cloudhsmv2request.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class DescribeBackupsRequestPrivate;
+
+class QTAWS_EXPORT DescribeBackupsRequest : public CloudHSMV2Request {
+
+public:
+    DescribeBackupsRequest(const DescribeBackupsRequest &other);
+    DescribeBackupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBackupsRequest)
+
+}
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

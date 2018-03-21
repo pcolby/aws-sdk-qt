@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSNAPSHOTLIMITSREQUEST_H
 #define QTAWS_GETSNAPSHOTLIMITSREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class GetSnapshotLimitsRequestPrivate;
+
+class QTAWS_EXPORT GetSnapshotLimitsRequest : public DirectoryServiceRequest {
+
+public:
+    GetSnapshotLimitsRequest(const GetSnapshotLimitsRequest &other);
+    GetSnapshotLimitsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSnapshotLimitsRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

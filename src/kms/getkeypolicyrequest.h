@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETKEYPOLICYREQUEST_H
 #define QTAWS_GETKEYPOLICYREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetKeyPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetKeyPolicyRequest : public KMSRequest {
+
+public:
+    GetKeyPolicyRequest(const GetKeyPolicyRequest &other);
+    GetKeyPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetKeyPolicyRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

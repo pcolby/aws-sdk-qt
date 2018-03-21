@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINADDUSERTOGROUPREQUEST_H
 #define QTAWS_ADMINADDUSERTOGROUPREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminAddUserToGroupRequestPrivate;
+
+class QTAWS_EXPORT AdminAddUserToGroupRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminAddUserToGroupRequest(const AdminAddUserToGroupRequest &other);
+    AdminAddUserToGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminAddUserToGroupRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

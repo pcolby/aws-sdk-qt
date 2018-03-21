@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMREDSHIFTREQUEST_H
 #define QTAWS_CREATEDATASOURCEFROMREDSHIFTREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateDataSourceFromRedshiftRequestPrivate;
+
+class QTAWS_EXPORT CreateDataSourceFromRedshiftRequest : public MachineLearningRequest {
+
+public:
+    CreateDataSourceFromRedshiftRequest(const CreateDataSourceFromRedshiftRequest &other);
+    CreateDataSourceFromRedshiftRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceFromRedshiftRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

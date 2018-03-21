@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTGATEWAYREQUEST_P_H
 #define QTAWS_STARTGATEWAYREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "startgatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class StartGatewayRequest;
+
+class QTAWS_EXPORT StartGatewayRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    StartGatewayRequestPrivate(const StorageGateway::Action action,
+                                   StartGatewayRequest * const q);
+    StartGatewayRequestPrivate(const StartGatewayRequestPrivate &other,
+                                   StartGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartGatewayRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

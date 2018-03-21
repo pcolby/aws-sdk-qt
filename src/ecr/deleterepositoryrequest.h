@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREPOSITORYREQUEST_H
 #define QTAWS_DELETEREPOSITORYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DeleteRepositoryRequestPrivate;
+
+class QTAWS_EXPORT DeleteRepositoryRequest : public ECRRequest {
+
+public:
+    DeleteRepositoryRequest(const DeleteRepositoryRequest &other);
+    DeleteRepositoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRepositoryRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

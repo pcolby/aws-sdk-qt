@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETJOBREQUEST_P_H
 #define QTAWS_GETJOBREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getjobrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetJobRequest;
+
+class QTAWS_EXPORT GetJobRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetJobRequestPrivate(const DeviceFarm::Action action,
+                                   GetJobRequest * const q);
+    GetJobRequestPrivate(const GetJobRequestPrivate &other,
+                                   GetJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

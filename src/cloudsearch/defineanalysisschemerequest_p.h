@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEFINEANALYSISSCHEMEREQUEST_P_H
 #define QTAWS_DEFINEANALYSISSCHEMEREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "defineanalysisschemerequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DefineAnalysisSchemeRequest;
+
+class QTAWS_EXPORT DefineAnalysisSchemeRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DefineAnalysisSchemeRequestPrivate(const CloudSearch::Action action,
+                                   DefineAnalysisSchemeRequest * const q);
+    DefineAnalysisSchemeRequestPrivate(const DefineAnalysisSchemeRequestPrivate &other,
+                                   DefineAnalysisSchemeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DefineAnalysisSchemeRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

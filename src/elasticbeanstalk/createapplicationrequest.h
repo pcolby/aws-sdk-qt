@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreateApplicationRequestPrivate;
+
+class QTAWS_EXPORT CreateApplicationRequest : public ElasticBeanstalkRequest {
+
+public:
+    CreateApplicationRequest(const CreateApplicationRequest &other);
+    CreateApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateApplicationRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

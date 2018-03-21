@@ -20,4 +20,29 @@
 #ifndef QTAWS_MOVEACCOUNTREQUEST_P_H
 #define QTAWS_MOVEACCOUNTREQUEST_P_H
 
+#include "organizations_p.h"
+#include "moveaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class MoveAccountRequest;
+
+class QTAWS_EXPORT MoveAccountRequestPrivate : public OrganizationsPrivate {
+
+public:
+    MoveAccountRequestPrivate(const Organizations::Action action,
+                                   MoveAccountRequest * const q);
+    MoveAccountRequestPrivate(const MoveAccountRequestPrivate &other,
+                                   MoveAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(MoveAccountRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

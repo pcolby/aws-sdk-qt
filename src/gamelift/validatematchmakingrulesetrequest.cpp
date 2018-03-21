@@ -19,3 +19,107 @@
 
 #include "validatematchmakingrulesetrequest.h"
 #include "validatematchmakingrulesetrequest_p.h"
+#include "validatematchmakingrulesetresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  ValidateMatchmakingRuleSetRequest
+ *
+ * @brief  Implements GameLift ValidateMatchmakingRuleSet requests.
+ *
+ * @see    GameLiftClient::validateMatchmakingRuleSet
+ */
+
+/**
+ * @brief  Constructs a new ValidateMatchmakingRuleSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ValidateMatchmakingRuleSetResponse::ValidateMatchmakingRuleSetResponse(
+
+/**
+ * @brief  Constructs a new ValidateMatchmakingRuleSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ValidateMatchmakingRuleSetRequest::ValidateMatchmakingRuleSetRequest(const ValidateMatchmakingRuleSetRequest &other)
+    : GameLiftRequest(new ValidateMatchmakingRuleSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ValidateMatchmakingRuleSetRequest object.
+ */
+ValidateMatchmakingRuleSetRequest::ValidateMatchmakingRuleSetRequest()
+    : GameLiftRequest(new ValidateMatchmakingRuleSetRequestPrivate(GameLiftRequest::ValidateMatchmakingRuleSetAction, this))
+{
+
+}
+
+bool ValidateMatchmakingRuleSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ValidateMatchmakingRuleSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ValidateMatchmakingRuleSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * ValidateMatchmakingRuleSetRequest::response(QNetworkReply * const reply) const
+{
+    return new ValidateMatchmakingRuleSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ValidateMatchmakingRuleSetRequestPrivate
+ *
+ * @brief  Private implementation for ValidateMatchmakingRuleSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateMatchmakingRuleSetRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public ValidateMatchmakingRuleSetRequest instance.
+ */
+ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPrivate(
+    const GameLiftRequest::Action action, ValidateMatchmakingRuleSetRequest * const q)
+    : ValidateMatchmakingRuleSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateMatchmakingRuleSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ValidateMatchmakingRuleSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ValidateMatchmakingRuleSetRequest instance.
+ */
+ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPrivate(
+    const ValidateMatchmakingRuleSetRequestPrivate &other, ValidateMatchmakingRuleSetRequest * const q)
+    : ValidateMatchmakingRuleSetPrivate(other, q)
+{
+
+}

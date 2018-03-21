@@ -19,3 +19,107 @@
 
 #include "modifyloadbalancerattributesrequest.h"
 #include "modifyloadbalancerattributesrequest_p.h"
+#include "modifyloadbalancerattributesresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  ModifyLoadBalancerAttributesRequest
+ *
+ * @brief  Implements ElasticLoadBalancing ModifyLoadBalancerAttributes requests.
+ *
+ * @see    ElasticLoadBalancingClient::modifyLoadBalancerAttributes
+ */
+
+/**
+ * @brief  Constructs a new ModifyLoadBalancerAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
+
+/**
+ * @brief  Constructs a new ModifyLoadBalancerAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest(const ModifyLoadBalancerAttributesRequest &other)
+    : ElasticLoadBalancingRequest(new ModifyLoadBalancerAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyLoadBalancerAttributesRequest object.
+ */
+ModifyLoadBalancerAttributesRequest::ModifyLoadBalancerAttributesRequest()
+    : ElasticLoadBalancingRequest(new ModifyLoadBalancerAttributesRequestPrivate(ElasticLoadBalancingRequest::ModifyLoadBalancerAttributesAction, this))
+{
+
+}
+
+bool ModifyLoadBalancerAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyLoadBalancerAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyLoadBalancerAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyLoadBalancerAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyLoadBalancerAttributesRequestPrivate
+ *
+ * @brief  Private implementation for ModifyLoadBalancerAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyLoadBalancerAttributesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public ModifyLoadBalancerAttributesRequest instance.
+ */
+ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, ModifyLoadBalancerAttributesRequest * const q)
+    : ModifyLoadBalancerAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyLoadBalancerAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyLoadBalancerAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyLoadBalancerAttributesRequest instance.
+ */
+ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
+    const ModifyLoadBalancerAttributesRequestPrivate &other, ModifyLoadBalancerAttributesRequest * const q)
+    : ModifyLoadBalancerAttributesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEWEBACLREQUEST_P_H
 #define QTAWS_DISASSOCIATEWEBACLREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "disassociatewebaclrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DisassociateWebACLRequest;
+
+class QTAWS_EXPORT DisassociateWebACLRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    DisassociateWebACLRequestPrivate(const WAFRegional::Action action,
+                                   DisassociateWebACLRequest * const q);
+    DisassociateWebACLRequestPrivate(const DisassociateWebACLRequestPrivate &other,
+                                   DisassociateWebACLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateWebACLRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

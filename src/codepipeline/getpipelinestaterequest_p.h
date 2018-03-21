@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPIPELINESTATEREQUEST_P_H
 #define QTAWS_GETPIPELINESTATEREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "getpipelinestaterequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetPipelineStateRequest;
+
+class QTAWS_EXPORT GetPipelineStateRequestPrivate : public CodePipelinePrivate {
+
+public:
+    GetPipelineStateRequestPrivate(const CodePipeline::Action action,
+                                   GetPipelineStateRequest * const q);
+    GetPipelineStateRequestPrivate(const GetPipelineStateRequestPrivate &other,
+                                   GetPipelineStateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPipelineStateRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

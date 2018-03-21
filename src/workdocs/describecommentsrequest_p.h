@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECOMMENTSREQUEST_P_H
 #define QTAWS_DESCRIBECOMMENTSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "describecommentsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeCommentsRequest;
+
+class QTAWS_EXPORT DescribeCommentsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DescribeCommentsRequestPrivate(const WorkDocs::Action action,
+                                   DescribeCommentsRequest * const q);
+    DescribeCommentsRequestPrivate(const DescribeCommentsRequestPrivate &other,
+                                   DescribeCommentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCommentsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

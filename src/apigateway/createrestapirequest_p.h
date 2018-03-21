@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERESTAPIREQUEST_P_H
 #define QTAWS_CREATERESTAPIREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "createrestapirequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateRestApiRequest;
+
+class QTAWS_EXPORT CreateRestApiRequestPrivate : public APIGatewayPrivate {
+
+public:
+    CreateRestApiRequestPrivate(const APIGateway::Action action,
+                                   CreateRestApiRequest * const q);
+    CreateRestApiRequestPrivate(const CreateRestApiRequestPrivate &other,
+                                   CreateRestApiRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRestApiRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

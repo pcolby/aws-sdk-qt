@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccountAuthorizationDetailsRequestPrivate;
+
+class QTAWS_EXPORT GetAccountAuthorizationDetailsRequest : public IAMRequest {
+
+public:
+    GetAccountAuthorizationDetailsRequest(const GetAccountAuthorizationDetailsRequest &other);
+    GetAccountAuthorizationDetailsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountAuthorizationDetailsRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

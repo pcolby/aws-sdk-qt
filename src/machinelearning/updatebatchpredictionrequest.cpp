@@ -19,3 +19,107 @@
 
 #include "updatebatchpredictionrequest.h"
 #include "updatebatchpredictionrequest_p.h"
+#include "updatebatchpredictionresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  UpdateBatchPredictionRequest
+ *
+ * @brief  Implements MachineLearning UpdateBatchPrediction requests.
+ *
+ * @see    MachineLearningClient::updateBatchPrediction
+ */
+
+/**
+ * @brief  Constructs a new UpdateBatchPredictionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBatchPredictionResponse::UpdateBatchPredictionResponse(
+
+/**
+ * @brief  Constructs a new UpdateBatchPredictionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBatchPredictionRequest::UpdateBatchPredictionRequest(const UpdateBatchPredictionRequest &other)
+    : MachineLearningRequest(new UpdateBatchPredictionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBatchPredictionRequest object.
+ */
+UpdateBatchPredictionRequest::UpdateBatchPredictionRequest()
+    : MachineLearningRequest(new UpdateBatchPredictionRequestPrivate(MachineLearningRequest::UpdateBatchPredictionAction, this))
+{
+
+}
+
+bool UpdateBatchPredictionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBatchPredictionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBatchPredictionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * UpdateBatchPredictionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBatchPredictionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBatchPredictionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBatchPredictionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public UpdateBatchPredictionRequest instance.
+ */
+UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
+    const MachineLearningRequest::Action action, UpdateBatchPredictionRequest * const q)
+    : UpdateBatchPredictionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBatchPredictionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBatchPredictionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBatchPredictionRequest instance.
+ */
+UpdateBatchPredictionRequestPrivate::UpdateBatchPredictionRequestPrivate(
+    const UpdateBatchPredictionRequestPrivate &other, UpdateBatchPredictionRequest * const q)
+    : UpdateBatchPredictionPrivate(other, q)
+{
+
+}

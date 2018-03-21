@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTEPREQUEST_H
 #define QTAWS_DESCRIBESTEPREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeStepRequestPrivate;
+
+class QTAWS_EXPORT DescribeStepRequest : public EMRRequest {
+
+public:
+    DescribeStepRequest(const DescribeStepRequest &other);
+    DescribeStepRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStepRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "exitstandbyrequest.h"
 #include "exitstandbyrequest_p.h"
+#include "exitstandbyresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  ExitStandbyRequest
+ *
+ * @brief  Implements AutoScaling ExitStandby requests.
+ *
+ * @see    AutoScalingClient::exitStandby
+ */
+
+/**
+ * @brief  Constructs a new ExitStandbyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExitStandbyResponse::ExitStandbyResponse(
+
+/**
+ * @brief  Constructs a new ExitStandbyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ExitStandbyRequest::ExitStandbyRequest(const ExitStandbyRequest &other)
+    : AutoScalingRequest(new ExitStandbyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ExitStandbyRequest object.
+ */
+ExitStandbyRequest::ExitStandbyRequest()
+    : AutoScalingRequest(new ExitStandbyRequestPrivate(AutoScalingRequest::ExitStandbyAction, this))
+{
+
+}
+
+bool ExitStandbyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ExitStandbyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ExitStandbyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * const reply) const
+{
+    return new ExitStandbyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ExitStandbyRequestPrivate
+ *
+ * @brief  Private implementation for ExitStandbyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExitStandbyRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public ExitStandbyRequest instance.
+ */
+ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
+    const AutoScalingRequest::Action action, ExitStandbyRequest * const q)
+    : ExitStandbyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExitStandbyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ExitStandbyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ExitStandbyRequest instance.
+ */
+ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
+    const ExitStandbyRequestPrivate &other, ExitStandbyRequest * const q)
+    : ExitStandbyPrivate(other, q)
+{
+
+}

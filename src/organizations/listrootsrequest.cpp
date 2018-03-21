@@ -19,3 +19,107 @@
 
 #include "listrootsrequest.h"
 #include "listrootsrequest_p.h"
+#include "listrootsresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListRootsRequest
+ *
+ * @brief  Implements Organizations ListRoots requests.
+ *
+ * @see    OrganizationsClient::listRoots
+ */
+
+/**
+ * @brief  Constructs a new ListRootsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRootsResponse::ListRootsResponse(
+
+/**
+ * @brief  Constructs a new ListRootsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRootsRequest::ListRootsRequest(const ListRootsRequest &other)
+    : OrganizationsRequest(new ListRootsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRootsRequest object.
+ */
+ListRootsRequest::ListRootsRequest()
+    : OrganizationsRequest(new ListRootsRequestPrivate(OrganizationsRequest::ListRootsAction, this))
+{
+
+}
+
+bool ListRootsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRootsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRootsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRootsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRootsRequestPrivate
+ *
+ * @brief  Private implementation for ListRootsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRootsRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListRootsRequest instance.
+ */
+ListRootsRequestPrivate::ListRootsRequestPrivate(
+    const OrganizationsRequest::Action action, ListRootsRequest * const q)
+    : ListRootsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRootsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRootsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRootsRequest instance.
+ */
+ListRootsRequestPrivate::ListRootsRequestPrivate(
+    const ListRootsRequestPrivate &other, ListRootsRequest * const q)
+    : ListRootsPrivate(other, q)
+{
+
+}

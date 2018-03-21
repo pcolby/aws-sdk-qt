@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONNECTIONREQUEST_P_H
 #define QTAWS_DELETECONNECTIONREQUEST_P_H
 
+#include "glue_p.h"
+#include "deleteconnectionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteConnectionRequest;
+
+class QTAWS_EXPORT DeleteConnectionRequestPrivate : public GluePrivate {
+
+public:
+    DeleteConnectionRequestPrivate(const Glue::Action action,
+                                   DeleteConnectionRequest * const q);
+    DeleteConnectionRequestPrivate(const DeleteConnectionRequestPrivate &other,
+                                   DeleteConnectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConnectionRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

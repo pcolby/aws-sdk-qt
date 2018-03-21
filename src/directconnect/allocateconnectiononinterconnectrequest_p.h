@@ -20,4 +20,29 @@
 #ifndef QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_P_H
 #define QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "allocateconnectiononinterconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AllocateConnectionOnInterconnectRequest;
+
+class QTAWS_EXPORT AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectPrivate {
+
+public:
+    AllocateConnectionOnInterconnectRequestPrivate(const DirectConnect::Action action,
+                                   AllocateConnectionOnInterconnectRequest * const q);
+    AllocateConnectionOnInterconnectRequestPrivate(const AllocateConnectionOnInterconnectRequestPrivate &other,
+                                   AllocateConnectionOnInterconnectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AllocateConnectionOnInterconnectRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

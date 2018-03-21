@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEBAIDUCHANNELREQUEST_P_H
 #define QTAWS_UPDATEBAIDUCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updatebaiduchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateBaiduChannelRequest;
+
+class QTAWS_EXPORT UpdateBaiduChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateBaiduChannelRequestPrivate(const Pinpoint::Action action,
+                                   UpdateBaiduChannelRequest * const q);
+    UpdateBaiduChannelRequestPrivate(const UpdateBaiduChannelRequestPrivate &other,
+                                   UpdateBaiduChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBaiduChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

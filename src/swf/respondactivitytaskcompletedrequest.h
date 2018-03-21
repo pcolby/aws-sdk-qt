@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCOMPLETEDREQUEST_H
 #define QTAWS_RESPONDACTIVITYTASKCOMPLETEDREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskCompletedRequestPrivate;
+
+class QTAWS_EXPORT RespondActivityTaskCompletedRequest : public SWFRequest {
+
+public:
+    RespondActivityTaskCompletedRequest(const RespondActivityTaskCompletedRequest &other);
+    RespondActivityTaskCompletedRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RespondActivityTaskCompletedRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

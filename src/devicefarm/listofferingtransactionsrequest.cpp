@@ -19,3 +19,107 @@
 
 #include "listofferingtransactionsrequest.h"
 #include "listofferingtransactionsrequest_p.h"
+#include "listofferingtransactionsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListOfferingTransactionsRequest
+ *
+ * @brief  Implements DeviceFarm ListOfferingTransactions requests.
+ *
+ * @see    DeviceFarmClient::listOfferingTransactions
+ */
+
+/**
+ * @brief  Constructs a new ListOfferingTransactionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOfferingTransactionsResponse::ListOfferingTransactionsResponse(
+
+/**
+ * @brief  Constructs a new ListOfferingTransactionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOfferingTransactionsRequest::ListOfferingTransactionsRequest(const ListOfferingTransactionsRequest &other)
+    : DeviceFarmRequest(new ListOfferingTransactionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOfferingTransactionsRequest object.
+ */
+ListOfferingTransactionsRequest::ListOfferingTransactionsRequest()
+    : DeviceFarmRequest(new ListOfferingTransactionsRequestPrivate(DeviceFarmRequest::ListOfferingTransactionsAction, this))
+{
+
+}
+
+bool ListOfferingTransactionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOfferingTransactionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOfferingTransactionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOfferingTransactionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOfferingTransactionsRequestPrivate
+ *
+ * @brief  Private implementation for ListOfferingTransactionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListOfferingTransactionsRequest instance.
+ */
+ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListOfferingTransactionsRequest * const q)
+    : ListOfferingTransactionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOfferingTransactionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOfferingTransactionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOfferingTransactionsRequest instance.
+ */
+ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
+    const ListOfferingTransactionsRequestPrivate &other, ListOfferingTransactionsRequest * const q)
+    : ListOfferingTransactionsPrivate(other, q)
+{
+
+}

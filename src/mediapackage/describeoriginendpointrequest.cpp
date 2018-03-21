@@ -19,3 +19,107 @@
 
 #include "describeoriginendpointrequest.h"
 #include "describeoriginendpointrequest_p.h"
+#include "describeoriginendpointresponse.h"
+#include "mediapackagerequest_p.h"
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  DescribeOriginEndpointRequest
+ *
+ * @brief  Implements MediaPackage DescribeOriginEndpoint requests.
+ *
+ * @see    MediaPackageClient::describeOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new DescribeOriginEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
+
+/**
+ * @brief  Constructs a new DescribeOriginEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeOriginEndpointRequest::DescribeOriginEndpointRequest(const DescribeOriginEndpointRequest &other)
+    : MediaPackageRequest(new DescribeOriginEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeOriginEndpointRequest object.
+ */
+DescribeOriginEndpointRequest::DescribeOriginEndpointRequest()
+    : MediaPackageRequest(new DescribeOriginEndpointRequestPrivate(MediaPackageRequest::DescribeOriginEndpointAction, this))
+{
+
+}
+
+bool DescribeOriginEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeOriginEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeOriginEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaPackageClient::send
+ */
+AwsAbstractResponse * DescribeOriginEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeOriginEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOriginEndpointRequestPrivate
+ *
+ * @brief  Private implementation for DescribeOriginEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object.
+ *
+ * @param  action  MediaPackage action being performed.
+ * @param  q       Pointer to this object's public DescribeOriginEndpointRequest instance.
+ */
+DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
+    const MediaPackageRequest::Action action, DescribeOriginEndpointRequest * const q)
+    : DescribeOriginEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOriginEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeOriginEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeOriginEndpointRequest instance.
+ */
+DescribeOriginEndpointRequestPrivate::DescribeOriginEndpointRequestPrivate(
+    const DescribeOriginEndpointRequestPrivate &other, DescribeOriginEndpointRequest * const q)
+    : DescribeOriginEndpointPrivate(other, q)
+{
+
+}

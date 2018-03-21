@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATEREQUEST_H
 #define QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATEREQUEST_H
 
+#include "elasticloadbalancingrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class SetLoadBalancerListenerSSLCertificateRequestPrivate;
+
+class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateRequest : public ElasticLoadBalancingRequest {
+
+public:
+    SetLoadBalancerListenerSSLCertificateRequest(const SetLoadBalancerListenerSSLCertificateRequest &other);
+    SetLoadBalancerListenerSSLCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBalancerListenerSSLCertificateRequest)
+
+}
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

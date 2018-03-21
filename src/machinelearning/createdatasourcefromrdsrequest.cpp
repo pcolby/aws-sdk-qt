@@ -19,3 +19,107 @@
 
 #include "createdatasourcefromrdsrequest.h"
 #include "createdatasourcefromrdsrequest_p.h"
+#include "createdatasourcefromrdsresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateDataSourceFromRDSRequest
+ *
+ * @brief  Implements MachineLearning CreateDataSourceFromRDS requests.
+ *
+ * @see    MachineLearningClient::createDataSourceFromRDS
+ */
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromRDSResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDataSourceFromRDSResponse::CreateDataSourceFromRDSResponse(
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromRDSRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDataSourceFromRDSRequest::CreateDataSourceFromRDSRequest(const CreateDataSourceFromRDSRequest &other)
+    : MachineLearningRequest(new CreateDataSourceFromRDSRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromRDSRequest object.
+ */
+CreateDataSourceFromRDSRequest::CreateDataSourceFromRDSRequest()
+    : MachineLearningRequest(new CreateDataSourceFromRDSRequestPrivate(MachineLearningRequest::CreateDataSourceFromRDSAction, this))
+{
+
+}
+
+bool CreateDataSourceFromRDSRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDataSourceFromRDSResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDataSourceFromRDSResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDataSourceFromRDSResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDataSourceFromRDSRequestPrivate
+ *
+ * @brief  Private implementation for CreateDataSourceFromRDSRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromRDSRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public CreateDataSourceFromRDSRequest instance.
+ */
+CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
+    const MachineLearningRequest::Action action, CreateDataSourceFromRDSRequest * const q)
+    : CreateDataSourceFromRDSPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromRDSRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDataSourceFromRDSRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDataSourceFromRDSRequest instance.
+ */
+CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
+    const CreateDataSourceFromRDSRequestPrivate &other, CreateDataSourceFromRDSRequest * const q)
+    : CreateDataSourceFromRDSPrivate(other, q)
+{
+
+}

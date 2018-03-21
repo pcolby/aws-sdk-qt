@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTATEMACHINESREQUEST_P_H
 #define QTAWS_LISTSTATEMACHINESREQUEST_P_H
 
+#include "sfn_p.h"
+#include "liststatemachinesrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class ListStateMachinesRequest;
+
+class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SFNPrivate {
+
+public:
+    ListStateMachinesRequestPrivate(const SFN::Action action,
+                                   ListStateMachinesRequest * const q);
+    ListStateMachinesRequestPrivate(const ListStateMachinesRequestPrivate &other,
+                                   ListStateMachinesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStateMachinesRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPIKEYSREQUEST_P_H
 #define QTAWS_GETAPIKEYSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getapikeysrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetApiKeysRequest;
+
+class QTAWS_EXPORT GetApiKeysRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetApiKeysRequestPrivate(const APIGateway::Action action,
+                                   GetApiKeysRequest * const q);
+    GetApiKeysRequestPrivate(const GetApiKeysRequestPrivate &other,
+                                   GetApiKeysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApiKeysRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

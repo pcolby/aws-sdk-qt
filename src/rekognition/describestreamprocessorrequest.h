@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTREAMPROCESSORREQUEST_H
 #define QTAWS_DESCRIBESTREAMPROCESSORREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DescribeStreamProcessorRequestPrivate;
+
+class QTAWS_EXPORT DescribeStreamProcessorRequest : public RekognitionRequest {
+
+public:
+    DescribeStreamProcessorRequest(const DescribeStreamProcessorRequest &other);
+    DescribeStreamProcessorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStreamProcessorRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

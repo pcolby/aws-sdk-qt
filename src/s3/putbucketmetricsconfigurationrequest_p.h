@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETMETRICSCONFIGURATIONREQUEST_P_H
 #define QTAWS_PUTBUCKETMETRICSCONFIGURATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketmetricsconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketMetricsConfigurationRequest;
+
+class QTAWS_EXPORT PutBucketMetricsConfigurationRequestPrivate : public S3Private {
+
+public:
+    PutBucketMetricsConfigurationRequestPrivate(const S3::Action action,
+                                   PutBucketMetricsConfigurationRequest * const q);
+    PutBucketMetricsConfigurationRequestPrivate(const PutBucketMetricsConfigurationRequestPrivate &other,
+                                   PutBucketMetricsConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketMetricsConfigurationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

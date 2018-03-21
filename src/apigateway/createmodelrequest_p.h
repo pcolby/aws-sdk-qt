@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEMODELREQUEST_P_H
 #define QTAWS_CREATEMODELREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "createmodelrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateModelRequest;
+
+class QTAWS_EXPORT CreateModelRequestPrivate : public APIGatewayPrivate {
+
+public:
+    CreateModelRequestPrivate(const APIGateway::Action action,
+                                   CreateModelRequest * const q);
+    CreateModelRequestPrivate(const CreateModelRequestPrivate &other,
+                                   CreateModelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateModelRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

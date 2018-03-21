@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTACCOUNTALIASESREQUEST_H
 #define QTAWS_LISTACCOUNTALIASESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAccountAliasesRequestPrivate;
+
+class QTAWS_EXPORT ListAccountAliasesRequest : public IAMRequest {
+
+public:
+    ListAccountAliasesRequest(const ListAccountAliasesRequest &other);
+    ListAccountAliasesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAccountAliasesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

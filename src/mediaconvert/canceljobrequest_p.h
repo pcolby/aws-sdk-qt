@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "canceljobrequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class CancelJobRequest;
+
+class QTAWS_EXPORT CancelJobRequestPrivate : public MediaConvertPrivate {
+
+public:
+    CancelJobRequestPrivate(const MediaConvert::Action action,
+                                   CancelJobRequest * const q);
+    CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
+                                   CancelJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelJobRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

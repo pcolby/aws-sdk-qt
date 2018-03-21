@@ -19,3 +19,107 @@
 
 #include "putpipelinedefinitionrequest.h"
 #include "putpipelinedefinitionrequest_p.h"
+#include "putpipelinedefinitionresponse.h"
+#include "datapipelinerequest_p.h"
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  PutPipelineDefinitionRequest
+ *
+ * @brief  Implements DataPipeline PutPipelineDefinition requests.
+ *
+ * @see    DataPipelineClient::putPipelineDefinition
+ */
+
+/**
+ * @brief  Constructs a new PutPipelineDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutPipelineDefinitionResponse::PutPipelineDefinitionResponse(
+
+/**
+ * @brief  Constructs a new PutPipelineDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutPipelineDefinitionRequest::PutPipelineDefinitionRequest(const PutPipelineDefinitionRequest &other)
+    : DataPipelineRequest(new PutPipelineDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutPipelineDefinitionRequest object.
+ */
+PutPipelineDefinitionRequest::PutPipelineDefinitionRequest()
+    : DataPipelineRequest(new PutPipelineDefinitionRequestPrivate(DataPipelineRequest::PutPipelineDefinitionAction, this))
+{
+
+}
+
+bool PutPipelineDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutPipelineDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutPipelineDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DataPipelineClient::send
+ */
+AwsAbstractResponse * PutPipelineDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new PutPipelineDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutPipelineDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for PutPipelineDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPipelineDefinitionRequestPrivate object.
+ *
+ * @param  action  DataPipeline action being performed.
+ * @param  q       Pointer to this object's public PutPipelineDefinitionRequest instance.
+ */
+PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
+    const DataPipelineRequest::Action action, PutPipelineDefinitionRequest * const q)
+    : PutPipelineDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPipelineDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutPipelineDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutPipelineDefinitionRequest instance.
+ */
+PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
+    const PutPipelineDefinitionRequestPrivate &other, PutPipelineDefinitionRequest * const q)
+    : PutPipelineDefinitionPrivate(other, q)
+{
+
+}

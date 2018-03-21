@@ -19,3 +19,107 @@
 
 #include "getgroupcertificateauthorityrequest.h"
 #include "getgroupcertificateauthorityrequest_p.h"
+#include "getgroupcertificateauthorityresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetGroupCertificateAuthorityRequest
+ *
+ * @brief  Implements Greengrass GetGroupCertificateAuthority requests.
+ *
+ * @see    GreengrassClient::getGroupCertificateAuthority
+ */
+
+/**
+ * @brief  Constructs a new GetGroupCertificateAuthorityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGroupCertificateAuthorityResponse::GetGroupCertificateAuthorityResponse(
+
+/**
+ * @brief  Constructs a new GetGroupCertificateAuthorityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest(const GetGroupCertificateAuthorityRequest &other)
+    : GreengrassRequest(new GetGroupCertificateAuthorityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetGroupCertificateAuthorityRequest object.
+ */
+GetGroupCertificateAuthorityRequest::GetGroupCertificateAuthorityRequest()
+    : GreengrassRequest(new GetGroupCertificateAuthorityRequestPrivate(GreengrassRequest::GetGroupCertificateAuthorityAction, this))
+{
+
+}
+
+bool GetGroupCertificateAuthorityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetGroupCertificateAuthorityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetGroupCertificateAuthorityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetGroupCertificateAuthorityRequest::response(QNetworkReply * const reply) const
+{
+    return new GetGroupCertificateAuthorityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGroupCertificateAuthorityRequestPrivate
+ *
+ * @brief  Private implementation for GetGroupCertificateAuthorityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetGroupCertificateAuthorityRequest instance.
+ */
+GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestPrivate(
+    const GreengrassRequest::Action action, GetGroupCertificateAuthorityRequest * const q)
+    : GetGroupCertificateAuthorityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGroupCertificateAuthorityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetGroupCertificateAuthorityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetGroupCertificateAuthorityRequest instance.
+ */
+GetGroupCertificateAuthorityRequestPrivate::GetGroupCertificateAuthorityRequestPrivate(
+    const GetGroupCertificateAuthorityRequestPrivate &other, GetGroupCertificateAuthorityRequest * const q)
+    : GetGroupCertificateAuthorityPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "enablevpcclassiclinkdnssupportrequest.h"
 #include "enablevpcclassiclinkdnssupportrequest_p.h"
+#include "enablevpcclassiclinkdnssupportresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  EnableVpcClassicLinkDnsSupportRequest
+ *
+ * @brief  Implements EC2 EnableVpcClassicLinkDnsSupport requests.
+ *
+ * @see    EC2Client::enableVpcClassicLinkDnsSupport
+ */
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableVpcClassicLinkDnsSupportResponse::EnableVpcClassicLinkDnsSupportResponse(
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest(const EnableVpcClassicLinkDnsSupportRequest &other)
+    : EC2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequest object.
+ */
+EnableVpcClassicLinkDnsSupportRequest::EnableVpcClassicLinkDnsSupportRequest()
+    : EC2Request(new EnableVpcClassicLinkDnsSupportRequestPrivate(EC2Request::EnableVpcClassicLinkDnsSupportAction, this))
+{
+
+}
+
+bool EnableVpcClassicLinkDnsSupportRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableVpcClassicLinkDnsSupportResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableVpcClassicLinkDnsSupportResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * EnableVpcClassicLinkDnsSupportRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableVpcClassicLinkDnsSupportResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableVpcClassicLinkDnsSupportRequestPrivate
+ *
+ * @brief  Private implementation for EnableVpcClassicLinkDnsSupportRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public EnableVpcClassicLinkDnsSupportRequest instance.
+ */
+EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequestPrivate(
+    const EC2Request::Action action, EnableVpcClassicLinkDnsSupportRequest * const q)
+    : EnableVpcClassicLinkDnsSupportPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVpcClassicLinkDnsSupportRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableVpcClassicLinkDnsSupportRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableVpcClassicLinkDnsSupportRequest instance.
+ */
+EnableVpcClassicLinkDnsSupportRequestPrivate::EnableVpcClassicLinkDnsSupportRequestPrivate(
+    const EnableVpcClassicLinkDnsSupportRequestPrivate &other, EnableVpcClassicLinkDnsSupportRequest * const q)
+    : EnableVpcClassicLinkDnsSupportPrivate(other, q)
+{
+
+}

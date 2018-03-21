@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEACTIVITYREQUEST_H
 #define QTAWS_DELETEACTIVITYREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteActivityRequestPrivate;
+
+class QTAWS_EXPORT DeleteActivityRequest : public SFNRequest {
+
+public:
+    DeleteActivityRequest(const DeleteActivityRequest &other);
+    DeleteActivityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteActivityRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "setloadbasedautoscalingrequest.h"
 #include "setloadbasedautoscalingrequest_p.h"
+#include "setloadbasedautoscalingresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  SetLoadBasedAutoScalingRequest
+ *
+ * @brief  Implements OpsWorks SetLoadBasedAutoScaling requests.
+ *
+ * @see    OpsWorksClient::setLoadBasedAutoScaling
+ */
+
+/**
+ * @brief  Constructs a new SetLoadBasedAutoScalingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLoadBasedAutoScalingResponse::SetLoadBasedAutoScalingResponse(
+
+/**
+ * @brief  Constructs a new SetLoadBasedAutoScalingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetLoadBasedAutoScalingRequest::SetLoadBasedAutoScalingRequest(const SetLoadBasedAutoScalingRequest &other)
+    : OpsWorksRequest(new SetLoadBasedAutoScalingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetLoadBasedAutoScalingRequest object.
+ */
+SetLoadBasedAutoScalingRequest::SetLoadBasedAutoScalingRequest()
+    : OpsWorksRequest(new SetLoadBasedAutoScalingRequestPrivate(OpsWorksRequest::SetLoadBasedAutoScalingAction, this))
+{
+
+}
+
+bool SetLoadBasedAutoScalingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetLoadBasedAutoScalingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetLoadBasedAutoScalingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNetworkReply * const reply) const
+{
+    return new SetLoadBasedAutoScalingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLoadBasedAutoScalingRequestPrivate
+ *
+ * @brief  Private implementation for SetLoadBasedAutoScalingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBasedAutoScalingRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public SetLoadBasedAutoScalingRequest instance.
+ */
+SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
+    const OpsWorksRequest::Action action, SetLoadBasedAutoScalingRequest * const q)
+    : SetLoadBasedAutoScalingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLoadBasedAutoScalingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetLoadBasedAutoScalingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetLoadBasedAutoScalingRequest instance.
+ */
+SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
+    const SetLoadBasedAutoScalingRequestPrivate &other, SetLoadBasedAutoScalingRequest * const q)
+    : SetLoadBasedAutoScalingPrivate(other, q)
+{
+
+}

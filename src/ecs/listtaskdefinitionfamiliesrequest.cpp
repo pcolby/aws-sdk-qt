@@ -19,3 +19,107 @@
 
 #include "listtaskdefinitionfamiliesrequest.h"
 #include "listtaskdefinitionfamiliesrequest_p.h"
+#include "listtaskdefinitionfamiliesresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListTaskDefinitionFamiliesRequest
+ *
+ * @brief  Implements ECS ListTaskDefinitionFamilies requests.
+ *
+ * @see    ECSClient::listTaskDefinitionFamilies
+ */
+
+/**
+ * @brief  Constructs a new ListTaskDefinitionFamiliesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTaskDefinitionFamiliesResponse::ListTaskDefinitionFamiliesResponse(
+
+/**
+ * @brief  Constructs a new ListTaskDefinitionFamiliesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest(const ListTaskDefinitionFamiliesRequest &other)
+    : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTaskDefinitionFamiliesRequest object.
+ */
+ListTaskDefinitionFamiliesRequest::ListTaskDefinitionFamiliesRequest()
+    : ECSRequest(new ListTaskDefinitionFamiliesRequestPrivate(ECSRequest::ListTaskDefinitionFamiliesAction, this))
+{
+
+}
+
+bool ListTaskDefinitionFamiliesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTaskDefinitionFamiliesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTaskDefinitionFamiliesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * ListTaskDefinitionFamiliesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTaskDefinitionFamiliesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTaskDefinitionFamiliesRequestPrivate
+ *
+ * @brief  Private implementation for ListTaskDefinitionFamiliesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTaskDefinitionFamiliesRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public ListTaskDefinitionFamiliesRequest instance.
+ */
+ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
+    const ECSRequest::Action action, ListTaskDefinitionFamiliesRequest * const q)
+    : ListTaskDefinitionFamiliesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTaskDefinitionFamiliesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTaskDefinitionFamiliesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTaskDefinitionFamiliesRequest instance.
+ */
+ListTaskDefinitionFamiliesRequestPrivate::ListTaskDefinitionFamiliesRequestPrivate(
+    const ListTaskDefinitionFamiliesRequestPrivate &other, ListTaskDefinitionFamiliesRequest * const q)
+    : ListTaskDefinitionFamiliesPrivate(other, q)
+{
+
+}

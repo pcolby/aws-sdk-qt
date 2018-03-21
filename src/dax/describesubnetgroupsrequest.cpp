@@ -19,3 +19,107 @@
 
 #include "describesubnetgroupsrequest.h"
 #include "describesubnetgroupsrequest_p.h"
+#include "describesubnetgroupsresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeSubnetGroupsRequest
+ *
+ * @brief  Implements DAX DescribeSubnetGroups requests.
+ *
+ * @see    DAXClient::describeSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeSubnetGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeSubnetGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest(const DescribeSubnetGroupsRequest &other)
+    : DAXRequest(new DescribeSubnetGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSubnetGroupsRequest object.
+ */
+DescribeSubnetGroupsRequest::DescribeSubnetGroupsRequest()
+    : DAXRequest(new DescribeSubnetGroupsRequestPrivate(DAXRequest::DescribeSubnetGroupsAction, this))
+{
+
+}
+
+bool DescribeSubnetGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSubnetGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSubnetGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSubnetGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubnetGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSubnetGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public DescribeSubnetGroupsRequest instance.
+ */
+DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
+    const DAXRequest::Action action, DescribeSubnetGroupsRequest * const q)
+    : DescribeSubnetGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubnetGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSubnetGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSubnetGroupsRequest instance.
+ */
+DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
+    const DescribeSubnetGroupsRequestPrivate &other, DescribeSubnetGroupsRequest * const q)
+    : DescribeSubnetGroupsPrivate(other, q)
+{
+
+}

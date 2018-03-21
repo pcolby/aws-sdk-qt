@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPLOADSIGNINGCERTIFICATEREQUEST_H
 #define QTAWS_UPLOADSIGNINGCERTIFICATEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UploadSigningCertificateRequestPrivate;
+
+class QTAWS_EXPORT UploadSigningCertificateRequest : public IAMRequest {
+
+public:
+    UploadSigningCertificateRequest(const UploadSigningCertificateRequest &other);
+    UploadSigningCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UploadSigningCertificateRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

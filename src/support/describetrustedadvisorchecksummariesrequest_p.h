@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESREQUEST_P_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESREQUEST_P_H
 
+#include "support_p.h"
+#include "describetrustedadvisorchecksummariesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeTrustedAdvisorCheckSummariesRequest;
+
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckSummariesRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeTrustedAdvisorCheckSummariesRequestPrivate(const Support::Action action,
+                                   DescribeTrustedAdvisorCheckSummariesRequest * const q);
+    DescribeTrustedAdvisorCheckSummariesRequestPrivate(const DescribeTrustedAdvisorCheckSummariesRequestPrivate &other,
+                                   DescribeTrustedAdvisorCheckSummariesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTrustedAdvisorCheckSummariesRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

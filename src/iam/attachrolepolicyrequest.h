@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHROLEPOLICYREQUEST_H
 #define QTAWS_ATTACHROLEPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AttachRolePolicyRequestPrivate;
+
+class QTAWS_EXPORT AttachRolePolicyRequest : public IAMRequest {
+
+public:
+    AttachRolePolicyRequest(const AttachRolePolicyRequest &other);
+    AttachRolePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachRolePolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

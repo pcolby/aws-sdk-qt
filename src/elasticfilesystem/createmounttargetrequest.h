@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEMOUNTTARGETREQUEST_H
 #define QTAWS_CREATEMOUNTTARGETREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class CreateMountTargetRequestPrivate;
+
+class QTAWS_EXPORT CreateMountTargetRequest : public EFSRequest {
+
+public:
+    CreateMountTargetRequest(const CreateMountTargetRequest &other);
+    CreateMountTargetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateMountTargetRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

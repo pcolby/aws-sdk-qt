@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSUMEROLEWITHSAMLREQUEST_P_H
 #define QTAWS_ASSUMEROLEWITHSAMLREQUEST_P_H
 
+#include "sts_p.h"
+#include "assumerolewithsamlrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class AssumeRoleWithSAMLRequest;
+
+class QTAWS_EXPORT AssumeRoleWithSAMLRequestPrivate : public STSPrivate {
+
+public:
+    AssumeRoleWithSAMLRequestPrivate(const STS::Action action,
+                                   AssumeRoleWithSAMLRequest * const q);
+    AssumeRoleWithSAMLRequestPrivate(const AssumeRoleWithSAMLRequestPrivate &other,
+                                   AssumeRoleWithSAMLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssumeRoleWithSAMLRequest)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

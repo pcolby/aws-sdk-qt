@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDPERMISSIONREQUEST_P_H
 #define QTAWS_ADDPERMISSIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "addpermissionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class AddPermissionRequest;
+
+class QTAWS_EXPORT AddPermissionRequestPrivate : public LambdaPrivate {
+
+public:
+    AddPermissionRequestPrivate(const Lambda::Action action,
+                                   AddPermissionRequest * const q);
+    AddPermissionRequestPrivate(const AddPermissionRequestPrivate &other,
+                                   AddPermissionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddPermissionRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

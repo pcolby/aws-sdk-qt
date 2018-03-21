@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPROVISIONEDPRODUCTPLANREQUEST_H
 #define QTAWS_CREATEPROVISIONEDPRODUCTPLANREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreateProvisionedProductPlanRequestPrivate;
+
+class QTAWS_EXPORT CreateProvisionedProductPlanRequest : public ServiceCatalogRequest {
+
+public:
+    CreateProvisionedProductPlanRequest(const CreateProvisionedProductPlanRequest &other);
+    CreateProvisionedProductPlanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateProvisionedProductPlanRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

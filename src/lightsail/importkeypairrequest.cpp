@@ -19,3 +19,107 @@
 
 #include "importkeypairrequest.h"
 #include "importkeypairrequest_p.h"
+#include "importkeypairresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  ImportKeyPairRequest
+ *
+ * @brief  Implements Lightsail ImportKeyPair requests.
+ *
+ * @see    LightsailClient::importKeyPair
+ */
+
+/**
+ * @brief  Constructs a new ImportKeyPairResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ImportKeyPairResponse::ImportKeyPairResponse(
+
+/**
+ * @brief  Constructs a new ImportKeyPairRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ImportKeyPairRequest::ImportKeyPairRequest(const ImportKeyPairRequest &other)
+    : LightsailRequest(new ImportKeyPairRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ImportKeyPairRequest object.
+ */
+ImportKeyPairRequest::ImportKeyPairRequest()
+    : LightsailRequest(new ImportKeyPairRequestPrivate(LightsailRequest::ImportKeyPairAction, this))
+{
+
+}
+
+bool ImportKeyPairRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ImportKeyPairResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ImportKeyPairResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply * const reply) const
+{
+    return new ImportKeyPairResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ImportKeyPairRequestPrivate
+ *
+ * @brief  Private implementation for ImportKeyPairRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportKeyPairRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public ImportKeyPairRequest instance.
+ */
+ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
+    const LightsailRequest::Action action, ImportKeyPairRequest * const q)
+    : ImportKeyPairPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ImportKeyPairRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ImportKeyPairRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ImportKeyPairRequest instance.
+ */
+ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
+    const ImportKeyPairRequestPrivate &other, ImportKeyPairRequest * const q)
+    : ImportKeyPairPrivate(other, q)
+{
+
+}

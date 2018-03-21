@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLELOGGINGREQUEST_H
 #define QTAWS_ENABLELOGGINGREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class EnableLoggingRequestPrivate;
+
+class QTAWS_EXPORT EnableLoggingRequest : public RedshiftRequest {
+
+public:
+    EnableLoggingRequest(const EnableLoggingRequest &other);
+    EnableLoggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableLoggingRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getregexmatchsetrequest.h"
 #include "getregexmatchsetrequest_p.h"
+#include "getregexmatchsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRegexMatchSetRequest
+ *
+ * @brief  Implements WAF GetRegexMatchSet requests.
+ *
+ * @see    WAFClient::getRegexMatchSet
+ */
+
+/**
+ * @brief  Constructs a new GetRegexMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRegexMatchSetResponse::GetRegexMatchSetResponse(
+
+/**
+ * @brief  Constructs a new GetRegexMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRegexMatchSetRequest::GetRegexMatchSetRequest(const GetRegexMatchSetRequest &other)
+    : WAFRequest(new GetRegexMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRegexMatchSetRequest object.
+ */
+GetRegexMatchSetRequest::GetRegexMatchSetRequest()
+    : WAFRequest(new GetRegexMatchSetRequestPrivate(WAFRequest::GetRegexMatchSetAction, this))
+{
+
+}
+
+bool GetRegexMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRegexMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRegexMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * GetRegexMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRegexMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRegexMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for GetRegexMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegexMatchSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public GetRegexMatchSetRequest instance.
+ */
+GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
+    const WAFRequest::Action action, GetRegexMatchSetRequest * const q)
+    : GetRegexMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegexMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRegexMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRegexMatchSetRequest instance.
+ */
+GetRegexMatchSetRequestPrivate::GetRegexMatchSetRequestPrivate(
+    const GetRegexMatchSetRequestPrivate &other, GetRegexMatchSetRequest * const q)
+    : GetRegexMatchSetPrivate(other, q)
+{
+
+}

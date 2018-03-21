@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOBJECTCHILDRENREQUEST_H
 #define QTAWS_LISTOBJECTCHILDRENREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListObjectChildrenRequestPrivate;
+
+class QTAWS_EXPORT ListObjectChildrenRequest : public CloudDirectoryRequest {
+
+public:
+    ListObjectChildrenRequest(const ListObjectChildrenRequest &other);
+    ListObjectChildrenRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectChildrenRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

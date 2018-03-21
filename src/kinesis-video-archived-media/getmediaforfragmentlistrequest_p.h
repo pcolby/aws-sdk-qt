@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMEDIAFORFRAGMENTLISTREQUEST_P_H
 #define QTAWS_GETMEDIAFORFRAGMENTLISTREQUEST_P_H
 
+#include "kinesisvideoarchivedmedia_p.h"
+#include "getmediaforfragmentlistrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideoArchivedMedia {
+
+class GetMediaForFragmentListRequest;
+
+class QTAWS_EXPORT GetMediaForFragmentListRequestPrivate : public KinesisVideoArchivedMediaPrivate {
+
+public:
+    GetMediaForFragmentListRequestPrivate(const KinesisVideoArchivedMedia::Action action,
+                                   GetMediaForFragmentListRequest * const q);
+    GetMediaForFragmentListRequestPrivate(const GetMediaForFragmentListRequestPrivate &other,
+                                   GetMediaForFragmentListRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetMediaForFragmentListRequest)
+
+};
+
+} // namespace KinesisVideoArchivedMedia
+} // namespace AWS
+
 #endif

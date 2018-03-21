@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATENETWORKACLENTRYREQUEST_H
 #define QTAWS_CREATENETWORKACLENTRYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateNetworkAclEntryRequestPrivate;
+
+class QTAWS_EXPORT CreateNetworkAclEntryRequest : public EC2Request {
+
+public:
+    CreateNetworkAclEntryRequest(const CreateNetworkAclEntryRequest &other);
+    CreateNetworkAclEntryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateNetworkAclEntryRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

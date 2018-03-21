@@ -19,3 +19,107 @@
 
 #include "deregistertargetsrequest.h"
 #include "deregistertargetsrequest_p.h"
+#include "deregistertargetsresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DeregisterTargetsRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 DeregisterTargets requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::deregisterTargets
+ */
+
+/**
+ * @brief  Constructs a new DeregisterTargetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterTargetsResponse::DeregisterTargetsResponse(
+
+/**
+ * @brief  Constructs a new DeregisterTargetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterTargetsRequest::DeregisterTargetsRequest(const DeregisterTargetsRequest &other)
+    : ElasticLoadBalancingv2Request(new DeregisterTargetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterTargetsRequest object.
+ */
+DeregisterTargetsRequest::DeregisterTargetsRequest()
+    : ElasticLoadBalancingv2Request(new DeregisterTargetsRequestPrivate(ElasticLoadBalancingv2Request::DeregisterTargetsAction, this))
+{
+
+}
+
+bool DeregisterTargetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterTargetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterTargetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterTargetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterTargetsRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterTargetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTargetsRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public DeregisterTargetsRequest instance.
+ */
+DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, DeregisterTargetsRequest * const q)
+    : DeregisterTargetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterTargetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterTargetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterTargetsRequest instance.
+ */
+DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
+    const DeregisterTargetsRequestPrivate &other, DeregisterTargetsRequest * const q)
+    : DeregisterTargetsPrivate(other, q)
+{
+
+}

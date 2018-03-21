@@ -19,3 +19,107 @@
 
 #include "createglobaltablerequest.h"
 #include "createglobaltablerequest_p.h"
+#include "createglobaltableresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  CreateGlobalTableRequest
+ *
+ * @brief  Implements DynamoDB CreateGlobalTable requests.
+ *
+ * @see    DynamoDBClient::createGlobalTable
+ */
+
+/**
+ * @brief  Constructs a new CreateGlobalTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGlobalTableResponse::CreateGlobalTableResponse(
+
+/**
+ * @brief  Constructs a new CreateGlobalTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateGlobalTableRequest::CreateGlobalTableRequest(const CreateGlobalTableRequest &other)
+    : DynamoDBRequest(new CreateGlobalTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateGlobalTableRequest object.
+ */
+CreateGlobalTableRequest::CreateGlobalTableRequest()
+    : DynamoDBRequest(new CreateGlobalTableRequestPrivate(DynamoDBRequest::CreateGlobalTableAction, this))
+{
+
+}
+
+bool CreateGlobalTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateGlobalTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateGlobalTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * CreateGlobalTableRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateGlobalTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGlobalTableRequestPrivate
+ *
+ * @brief  Private implementation for CreateGlobalTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGlobalTableRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public CreateGlobalTableRequest instance.
+ */
+CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
+    const DynamoDBRequest::Action action, CreateGlobalTableRequest * const q)
+    : CreateGlobalTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGlobalTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateGlobalTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateGlobalTableRequest instance.
+ */
+CreateGlobalTableRequestPrivate::CreateGlobalTableRequestPrivate(
+    const CreateGlobalTableRequestPrivate &other, CreateGlobalTableRequest * const q)
+    : CreateGlobalTablePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "updateconfigurationseteventdestinationrequest.h"
 #include "updateconfigurationseteventdestinationrequest_p.h"
+#include "updateconfigurationseteventdestinationresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateConfigurationSetEventDestinationRequest
+ *
+ * @brief  Implements SES UpdateConfigurationSetEventDestination requests.
+ *
+ * @see    SESClient::updateConfigurationSetEventDestination
+ */
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationSetEventDestinationResponse::UpdateConfigurationSetEventDestinationResponse(
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateConfigurationSetEventDestinationRequest::UpdateConfigurationSetEventDestinationRequest(const UpdateConfigurationSetEventDestinationRequest &other)
+    : SESRequest(new UpdateConfigurationSetEventDestinationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequest object.
+ */
+UpdateConfigurationSetEventDestinationRequest::UpdateConfigurationSetEventDestinationRequest()
+    : SESRequest(new UpdateConfigurationSetEventDestinationRequestPrivate(SESRequest::UpdateConfigurationSetEventDestinationAction, this))
+{
+
+}
+
+bool UpdateConfigurationSetEventDestinationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateConfigurationSetEventDestinationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateConfigurationSetEventDestinationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * UpdateConfigurationSetEventDestinationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateConfigurationSetEventDestinationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationSetEventDestinationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationSetEventDestinationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public UpdateConfigurationSetEventDestinationRequest instance.
+ */
+UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEventDestinationRequestPrivate(
+    const SESRequest::Action action, UpdateConfigurationSetEventDestinationRequest * const q)
+    : UpdateConfigurationSetEventDestinationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetEventDestinationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateConfigurationSetEventDestinationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateConfigurationSetEventDestinationRequest instance.
+ */
+UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEventDestinationRequestPrivate(
+    const UpdateConfigurationSetEventDestinationRequestPrivate &other, UpdateConfigurationSetEventDestinationRequest * const q)
+    : UpdateConfigurationSetEventDestinationPrivate(other, q)
+{
+
+}

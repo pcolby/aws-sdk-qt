@@ -19,3 +19,107 @@
 
 #include "deletebucketencryptionrequest.h"
 #include "deletebucketencryptionrequest_p.h"
+#include "deletebucketencryptionresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketEncryptionRequest
+ *
+ * @brief  Implements S3 DeleteBucketEncryption requests.
+ *
+ * @see    S3Client::deleteBucketEncryption
+ */
+
+/**
+ * @brief  Constructs a new DeleteBucketEncryptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketEncryptionResponse::DeleteBucketEncryptionResponse(
+
+/**
+ * @brief  Constructs a new DeleteBucketEncryptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBucketEncryptionRequest::DeleteBucketEncryptionRequest(const DeleteBucketEncryptionRequest &other)
+    : S3Request(new DeleteBucketEncryptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBucketEncryptionRequest object.
+ */
+DeleteBucketEncryptionRequest::DeleteBucketEncryptionRequest()
+    : S3Request(new DeleteBucketEncryptionRequestPrivate(S3Request::DeleteBucketEncryptionAction, this))
+{
+
+}
+
+bool DeleteBucketEncryptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBucketEncryptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBucketEncryptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * DeleteBucketEncryptionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBucketEncryptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketEncryptionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBucketEncryptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketEncryptionRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public DeleteBucketEncryptionRequest instance.
+ */
+DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
+    const S3Request::Action action, DeleteBucketEncryptionRequest * const q)
+    : DeleteBucketEncryptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketEncryptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBucketEncryptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBucketEncryptionRequest instance.
+ */
+DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
+    const DeleteBucketEncryptionRequestPrivate &other, DeleteBucketEncryptionRequest * const q)
+    : DeleteBucketEncryptionPrivate(other, q)
+{
+
+}

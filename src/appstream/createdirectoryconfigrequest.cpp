@@ -19,3 +19,107 @@
 
 #include "createdirectoryconfigrequest.h"
 #include "createdirectoryconfigrequest_p.h"
+#include "createdirectoryconfigresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CreateDirectoryConfigRequest
+ *
+ * @brief  Implements AppStream CreateDirectoryConfig requests.
+ *
+ * @see    AppStreamClient::createDirectoryConfig
+ */
+
+/**
+ * @brief  Constructs a new CreateDirectoryConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
+
+/**
+ * @brief  Constructs a new CreateDirectoryConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDirectoryConfigRequest::CreateDirectoryConfigRequest(const CreateDirectoryConfigRequest &other)
+    : AppStreamRequest(new CreateDirectoryConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDirectoryConfigRequest object.
+ */
+CreateDirectoryConfigRequest::CreateDirectoryConfigRequest()
+    : AppStreamRequest(new CreateDirectoryConfigRequestPrivate(AppStreamRequest::CreateDirectoryConfigAction, this))
+{
+
+}
+
+bool CreateDirectoryConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDirectoryConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDirectoryConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDirectoryConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDirectoryConfigRequestPrivate
+ *
+ * @brief  Private implementation for CreateDirectoryConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public CreateDirectoryConfigRequest instance.
+ */
+CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
+    const AppStreamRequest::Action action, CreateDirectoryConfigRequest * const q)
+    : CreateDirectoryConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDirectoryConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDirectoryConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDirectoryConfigRequest instance.
+ */
+CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
+    const CreateDirectoryConfigRequestPrivate &other, CreateDirectoryConfigRequest * const q)
+    : CreateDirectoryConfigPrivate(other, q)
+{
+
+}

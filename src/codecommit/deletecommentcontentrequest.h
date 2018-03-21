@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECOMMENTCONTENTREQUEST_H
 #define QTAWS_DELETECOMMENTCONTENTREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class DeleteCommentContentRequestPrivate;
+
+class QTAWS_EXPORT DeleteCommentContentRequest : public CodeCommitRequest {
+
+public:
+    DeleteCommentContentRequest(const DeleteCommentContentRequest &other);
+    DeleteCommentContentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCommentContentRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

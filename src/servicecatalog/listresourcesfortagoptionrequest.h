@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCESFORTAGOPTIONREQUEST_H
 #define QTAWS_LISTRESOURCESFORTAGOPTIONREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListResourcesForTagOptionRequestPrivate;
+
+class QTAWS_EXPORT ListResourcesForTagOptionRequest : public ServiceCatalogRequest {
+
+public:
+    ListResourcesForTagOptionRequest(const ListResourcesForTagOptionRequest &other);
+    ListResourcesForTagOptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourcesForTagOptionRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

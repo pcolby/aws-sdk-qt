@@ -19,3 +19,107 @@
 
 #include "updatesigningcertificaterequest.h"
 #include "updatesigningcertificaterequest_p.h"
+#include "updatesigningcertificateresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateSigningCertificateRequest
+ *
+ * @brief  Implements IAM UpdateSigningCertificate requests.
+ *
+ * @see    IAMClient::updateSigningCertificate
+ */
+
+/**
+ * @brief  Constructs a new UpdateSigningCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSigningCertificateResponse::UpdateSigningCertificateResponse(
+
+/**
+ * @brief  Constructs a new UpdateSigningCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSigningCertificateRequest::UpdateSigningCertificateRequest(const UpdateSigningCertificateRequest &other)
+    : IAMRequest(new UpdateSigningCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSigningCertificateRequest object.
+ */
+UpdateSigningCertificateRequest::UpdateSigningCertificateRequest()
+    : IAMRequest(new UpdateSigningCertificateRequestPrivate(IAMRequest::UpdateSigningCertificateAction, this))
+{
+
+}
+
+bool UpdateSigningCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSigningCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSigningCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSigningCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSigningCertificateRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSigningCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSigningCertificateRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateSigningCertificateRequest instance.
+ */
+UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
+    const IAMRequest::Action action, UpdateSigningCertificateRequest * const q)
+    : UpdateSigningCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSigningCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSigningCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSigningCertificateRequest instance.
+ */
+UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
+    const UpdateSigningCertificateRequestPrivate &other, UpdateSigningCertificateRequest * const q)
+    : UpdateSigningCertificatePrivate(other, q)
+{
+
+}

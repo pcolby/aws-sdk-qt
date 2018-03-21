@@ -19,3 +19,107 @@
 
 #include "getregionsrequest.h"
 #include "getregionsrequest_p.h"
+#include "getregionsresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetRegionsRequest
+ *
+ * @brief  Implements Lightsail GetRegions requests.
+ *
+ * @see    LightsailClient::getRegions
+ */
+
+/**
+ * @brief  Constructs a new GetRegionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRegionsResponse::GetRegionsResponse(
+
+/**
+ * @brief  Constructs a new GetRegionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRegionsRequest::GetRegionsRequest(const GetRegionsRequest &other)
+    : LightsailRequest(new GetRegionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRegionsRequest object.
+ */
+GetRegionsRequest::GetRegionsRequest()
+    : LightsailRequest(new GetRegionsRequestPrivate(LightsailRequest::GetRegionsAction, this))
+{
+
+}
+
+bool GetRegionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRegionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRegionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRegionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRegionsRequestPrivate
+ *
+ * @brief  Private implementation for GetRegionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegionsRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetRegionsRequest instance.
+ */
+GetRegionsRequestPrivate::GetRegionsRequestPrivate(
+    const LightsailRequest::Action action, GetRegionsRequest * const q)
+    : GetRegionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRegionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRegionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRegionsRequest instance.
+ */
+GetRegionsRequestPrivate::GetRegionsRequestPrivate(
+    const GetRegionsRequestPrivate &other, GetRegionsRequest * const q)
+    : GetRegionsPrivate(other, q)
+{
+
+}

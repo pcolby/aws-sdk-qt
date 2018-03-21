@@ -20,4 +20,29 @@
 #ifndef QTAWS_RENEWDOMAINREQUEST_P_H
 #define QTAWS_RENEWDOMAINREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "renewdomainrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class RenewDomainRequest;
+
+class QTAWS_EXPORT RenewDomainRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    RenewDomainRequestPrivate(const Route53Domains::Action action,
+                                   RenewDomainRequest * const q);
+    RenewDomainRequestPrivate(const RenewDomainRequestPrivate &other,
+                                   RenewDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RenewDomainRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

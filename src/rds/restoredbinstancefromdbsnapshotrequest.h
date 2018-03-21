@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREDBINSTANCEFROMDBSNAPSHOTREQUEST_H
 #define QTAWS_RESTOREDBINSTANCEFROMDBSNAPSHOTREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBInstanceFromDBSnapshotRequestPrivate;
+
+class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotRequest : public RDSRequest {
+
+public:
+    RestoreDBInstanceFromDBSnapshotRequest(const RestoreDBInstanceFromDBSnapshotRequest &other);
+    RestoreDBInstanceFromDBSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreDBInstanceFromDBSnapshotRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

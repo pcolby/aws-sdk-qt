@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEQUERYLOGGINGCONFIGREQUEST_P_H
 #define QTAWS_CREATEQUERYLOGGINGCONFIGREQUEST_P_H
 
+#include "route53_p.h"
+#include "createqueryloggingconfigrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class CreateQueryLoggingConfigRequest;
+
+class QTAWS_EXPORT CreateQueryLoggingConfigRequestPrivate : public Route53Private {
+
+public:
+    CreateQueryLoggingConfigRequestPrivate(const Route53::Action action,
+                                   CreateQueryLoggingConfigRequest * const q);
+    CreateQueryLoggingConfigRequestPrivate(const CreateQueryLoggingConfigRequestPrivate &other,
+                                   CreateQueryLoggingConfigRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateQueryLoggingConfigRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

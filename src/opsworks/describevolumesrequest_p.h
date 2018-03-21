@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVOLUMESREQUEST_P_H
 #define QTAWS_DESCRIBEVOLUMESREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describevolumesrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeVolumesRequest;
+
+class QTAWS_EXPORT DescribeVolumesRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeVolumesRequestPrivate(const OpsWorks::Action action,
+                                   DescribeVolumesRequest * const q);
+    DescribeVolumesRequestPrivate(const DescribeVolumesRequestPrivate &other,
+                                   DescribeVolumesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVolumesRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

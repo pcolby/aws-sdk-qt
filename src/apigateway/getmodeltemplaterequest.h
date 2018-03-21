@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETMODELTEMPLATEREQUEST_H
 #define QTAWS_GETMODELTEMPLATEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetModelTemplateRequestPrivate;
+
+class QTAWS_EXPORT GetModelTemplateRequest : public APIGatewayRequest {
+
+public:
+    GetModelTemplateRequest(const GetModelTemplateRequest &other);
+    GetModelTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetModelTemplateRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

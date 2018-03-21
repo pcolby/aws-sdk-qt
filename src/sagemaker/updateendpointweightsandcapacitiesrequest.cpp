@@ -19,3 +19,107 @@
 
 #include "updateendpointweightsandcapacitiesrequest.h"
 #include "updateendpointweightsandcapacitiesrequest_p.h"
+#include "updateendpointweightsandcapacitiesresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  UpdateEndpointWeightsAndCapacitiesRequest
+ *
+ * @brief  Implements SageMaker UpdateEndpointWeightsAndCapacities requests.
+ *
+ * @see    SageMakerClient::updateEndpointWeightsAndCapacities
+ */
+
+/**
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEndpointWeightsAndCapacitiesResponse::UpdateEndpointWeightsAndCapacitiesResponse(
+
+/**
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesRequest(const UpdateEndpointWeightsAndCapacitiesRequest &other)
+    : SageMakerRequest(new UpdateEndpointWeightsAndCapacitiesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequest object.
+ */
+UpdateEndpointWeightsAndCapacitiesRequest::UpdateEndpointWeightsAndCapacitiesRequest()
+    : SageMakerRequest(new UpdateEndpointWeightsAndCapacitiesRequestPrivate(SageMakerRequest::UpdateEndpointWeightsAndCapacitiesAction, this))
+{
+
+}
+
+bool UpdateEndpointWeightsAndCapacitiesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEndpointWeightsAndCapacitiesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEndpointWeightsAndCapacitiesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEndpointWeightsAndCapacitiesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEndpointWeightsAndCapacitiesRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEndpointWeightsAndCapacitiesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public UpdateEndpointWeightsAndCapacitiesRequest instance.
+ */
+UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
+    const SageMakerRequest::Action action, UpdateEndpointWeightsAndCapacitiesRequest * const q)
+    : UpdateEndpointWeightsAndCapacitiesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointWeightsAndCapacitiesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEndpointWeightsAndCapacitiesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEndpointWeightsAndCapacitiesRequest instance.
+ */
+UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
+    const UpdateEndpointWeightsAndCapacitiesRequestPrivate &other, UpdateEndpointWeightsAndCapacitiesRequest * const q)
+    : UpdateEndpointWeightsAndCapacitiesPrivate(other, q)
+{
+
+}

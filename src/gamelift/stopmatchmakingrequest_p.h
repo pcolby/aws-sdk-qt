@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPMATCHMAKINGREQUEST_P_H
 #define QTAWS_STOPMATCHMAKINGREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "stopmatchmakingrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StopMatchmakingRequest;
+
+class QTAWS_EXPORT StopMatchmakingRequestPrivate : public GameLiftPrivate {
+
+public:
+    StopMatchmakingRequestPrivate(const GameLift::Action action,
+                                   StopMatchmakingRequest * const q);
+    StopMatchmakingRequestPrivate(const StopMatchmakingRequestPrivate &other,
+                                   StopMatchmakingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopMatchmakingRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

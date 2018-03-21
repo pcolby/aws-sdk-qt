@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTACTIVATEDRULESINRULEGROUPREQUEST_H
 #define QTAWS_LISTACTIVATEDRULESINRULEGROUPREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListActivatedRulesInRuleGroupRequestPrivate;
+
+class QTAWS_EXPORT ListActivatedRulesInRuleGroupRequest : public WAFRegionalRequest {
+
+public:
+    ListActivatedRulesInRuleGroupRequest(const ListActivatedRulesInRuleGroupRequest &other);
+    ListActivatedRulesInRuleGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListActivatedRulesInRuleGroupRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

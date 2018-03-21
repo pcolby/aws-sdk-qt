@@ -19,3 +19,107 @@
 
 #include "verifytrustrequest.h"
 #include "verifytrustrequest_p.h"
+#include "verifytrustresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  VerifyTrustRequest
+ *
+ * @brief  Implements DirectoryService VerifyTrust requests.
+ *
+ * @see    DirectoryServiceClient::verifyTrust
+ */
+
+/**
+ * @brief  Constructs a new VerifyTrustResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyTrustResponse::VerifyTrustResponse(
+
+/**
+ * @brief  Constructs a new VerifyTrustRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+VerifyTrustRequest::VerifyTrustRequest(const VerifyTrustRequest &other)
+    : DirectoryServiceRequest(new VerifyTrustRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new VerifyTrustRequest object.
+ */
+VerifyTrustRequest::VerifyTrustRequest()
+    : DirectoryServiceRequest(new VerifyTrustRequestPrivate(DirectoryServiceRequest::VerifyTrustAction, this))
+{
+
+}
+
+bool VerifyTrustRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an VerifyTrustResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An VerifyTrustResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * const reply) const
+{
+    return new VerifyTrustResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyTrustRequestPrivate
+ *
+ * @brief  Private implementation for VerifyTrustRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyTrustRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public VerifyTrustRequest instance.
+ */
+VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
+    const DirectoryServiceRequest::Action action, VerifyTrustRequest * const q)
+    : VerifyTrustPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyTrustRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the VerifyTrustRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public VerifyTrustRequest instance.
+ */
+VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
+    const VerifyTrustRequestPrivate &other, VerifyTrustRequest * const q)
+    : VerifyTrustPrivate(other, q)
+{
+
+}

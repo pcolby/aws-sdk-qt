@@ -19,3 +19,107 @@
 
 #include "deletereplicationsubnetgrouprequest.h"
 #include "deletereplicationsubnetgrouprequest_p.h"
+#include "deletereplicationsubnetgroupresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DeleteReplicationSubnetGroupRequest
+ *
+ * @brief  Implements DatabaseMigrationService DeleteReplicationSubnetGroup requests.
+ *
+ * @see    DatabaseMigrationServiceClient::deleteReplicationSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteReplicationSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationSubnetGroupResponse::DeleteReplicationSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest(const DeleteReplicationSubnetGroupRequest &other)
+    : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReplicationSubnetGroupRequest object.
+ */
+DeleteReplicationSubnetGroupRequest::DeleteReplicationSubnetGroupRequest()
+    : DatabaseMigrationServiceRequest(new DeleteReplicationSubnetGroupRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationSubnetGroupAction, this))
+{
+
+}
+
+bool DeleteReplicationSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReplicationSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReplicationSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReplicationSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReplicationSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DeleteReplicationSubnetGroupRequest instance.
+ */
+DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)
+    : DeleteReplicationSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReplicationSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReplicationSubnetGroupRequest instance.
+ */
+DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
+    const DeleteReplicationSubnetGroupRequestPrivate &other, DeleteReplicationSubnetGroupRequest * const q)
+    : DeleteReplicationSubnetGroupPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_INVITEACCOUNTTOORGANIZATIONREQUEST_P_H
 #define QTAWS_INVITEACCOUNTTOORGANIZATIONREQUEST_P_H
 
+#include "organizations_p.h"
+#include "inviteaccounttoorganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class InviteAccountToOrganizationRequest;
+
+class QTAWS_EXPORT InviteAccountToOrganizationRequestPrivate : public OrganizationsPrivate {
+
+public:
+    InviteAccountToOrganizationRequestPrivate(const Organizations::Action action,
+                                   InviteAccountToOrganizationRequest * const q);
+    InviteAccountToOrganizationRequestPrivate(const InviteAccountToOrganizationRequestPrivate &other,
+                                   InviteAccountToOrganizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InviteAccountToOrganizationRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

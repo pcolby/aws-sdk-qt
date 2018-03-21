@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLEGATEWAYREQUEST_H
 #define QTAWS_DISABLEGATEWAYREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DisableGatewayRequestPrivate;
+
+class QTAWS_EXPORT DisableGatewayRequest : public StorageGatewayRequest {
+
+public:
+    DisableGatewayRequest(const DisableGatewayRequest &other);
+    DisableGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableGatewayRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

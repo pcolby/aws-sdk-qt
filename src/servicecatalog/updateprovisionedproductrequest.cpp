@@ -19,3 +19,107 @@
 
 #include "updateprovisionedproductrequest.h"
 #include "updateprovisionedproductrequest_p.h"
+#include "updateprovisionedproductresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateProvisionedProductRequest
+ *
+ * @brief  Implements ServiceCatalog UpdateProvisionedProduct requests.
+ *
+ * @see    ServiceCatalogClient::updateProvisionedProduct
+ */
+
+/**
+ * @brief  Constructs a new UpdateProvisionedProductResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateProvisionedProductResponse::UpdateProvisionedProductResponse(
+
+/**
+ * @brief  Constructs a new UpdateProvisionedProductRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateProvisionedProductRequest::UpdateProvisionedProductRequest(const UpdateProvisionedProductRequest &other)
+    : ServiceCatalogRequest(new UpdateProvisionedProductRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateProvisionedProductRequest object.
+ */
+UpdateProvisionedProductRequest::UpdateProvisionedProductRequest()
+    : ServiceCatalogRequest(new UpdateProvisionedProductRequestPrivate(ServiceCatalogRequest::UpdateProvisionedProductAction, this))
+{
+
+}
+
+bool UpdateProvisionedProductRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateProvisionedProductResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateProvisionedProductResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateProvisionedProductResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateProvisionedProductRequestPrivate
+ *
+ * @brief  Private implementation for UpdateProvisionedProductRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public UpdateProvisionedProductRequest instance.
+ */
+UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
+    const ServiceCatalogRequest::Action action, UpdateProvisionedProductRequest * const q)
+    : UpdateProvisionedProductPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateProvisionedProductRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateProvisionedProductRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateProvisionedProductRequest instance.
+ */
+UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
+    const UpdateProvisionedProductRequestPrivate &other, UpdateProvisionedProductRequest * const q)
+    : UpdateProvisionedProductPrivate(other, q)
+{
+
+}

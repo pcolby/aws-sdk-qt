@@ -19,3 +19,107 @@
 
 #include "describeinstancepatchstatesrequest.h"
 #include "describeinstancepatchstatesrequest_p.h"
+#include "describeinstancepatchstatesresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeInstancePatchStatesRequest
+ *
+ * @brief  Implements SSM DescribeInstancePatchStates requests.
+ *
+ * @see    SSMClient::describeInstancePatchStates
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstancePatchStatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancePatchStatesResponse::DescribeInstancePatchStatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstancePatchStatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstancePatchStatesRequest::DescribeInstancePatchStatesRequest(const DescribeInstancePatchStatesRequest &other)
+    : SSMRequest(new DescribeInstancePatchStatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstancePatchStatesRequest object.
+ */
+DescribeInstancePatchStatesRequest::DescribeInstancePatchStatesRequest()
+    : SSMRequest(new DescribeInstancePatchStatesRequestPrivate(SSMRequest::DescribeInstancePatchStatesAction, this))
+{
+
+}
+
+bool DescribeInstancePatchStatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstancePatchStatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstancePatchStatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeInstancePatchStatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstancePatchStatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancePatchStatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstancePatchStatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancePatchStatesRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeInstancePatchStatesRequest instance.
+ */
+DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPrivate(
+    const SSMRequest::Action action, DescribeInstancePatchStatesRequest * const q)
+    : DescribeInstancePatchStatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancePatchStatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstancePatchStatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstancePatchStatesRequest instance.
+ */
+DescribeInstancePatchStatesRequestPrivate::DescribeInstancePatchStatesRequestPrivate(
+    const DescribeInstancePatchStatesRequestPrivate &other, DescribeInstancePatchStatesRequest * const q)
+    : DescribeInstancePatchStatesPrivate(other, q)
+{
+
+}

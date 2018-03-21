@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSREQUEST_P_H
 #define QTAWS_LISTAPPLICATIONREVISIONSREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "listapplicationrevisionsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListApplicationRevisionsRequest;
+
+class QTAWS_EXPORT ListApplicationRevisionsRequestPrivate : public CodeDeployPrivate {
+
+public:
+    ListApplicationRevisionsRequestPrivate(const CodeDeploy::Action action,
+                                   ListApplicationRevisionsRequest * const q);
+    ListApplicationRevisionsRequestPrivate(const ListApplicationRevisionsRequestPrivate &other,
+                                   ListApplicationRevisionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListApplicationRevisionsRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

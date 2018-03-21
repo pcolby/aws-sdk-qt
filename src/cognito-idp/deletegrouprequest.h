@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_H
 #define QTAWS_DELETEGROUPREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DeleteGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteGroupRequest : public CognitoIdentityProviderRequest {
+
+public:
+    DeleteGroupRequest(const DeleteGroupRequest &other);
+    DeleteGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGroupRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

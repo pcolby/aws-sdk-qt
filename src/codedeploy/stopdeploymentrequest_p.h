@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPDEPLOYMENTREQUEST_P_H
 #define QTAWS_STOPDEPLOYMENTREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "stopdeploymentrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class StopDeploymentRequest;
+
+class QTAWS_EXPORT StopDeploymentRequestPrivate : public CodeDeployPrivate {
+
+public:
+    StopDeploymentRequestPrivate(const CodeDeploy::Action action,
+                                   StopDeploymentRequest * const q);
+    StopDeploymentRequestPrivate(const StopDeploymentRequestPrivate &other,
+                                   StopDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopDeploymentRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

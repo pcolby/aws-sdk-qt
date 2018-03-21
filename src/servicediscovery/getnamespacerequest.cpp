@@ -19,3 +19,107 @@
 
 #include "getnamespacerequest.h"
 #include "getnamespacerequest_p.h"
+#include "getnamespaceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  GetNamespaceRequest
+ *
+ * @brief  Implements ServiceDiscovery GetNamespace requests.
+ *
+ * @see    ServiceDiscoveryClient::getNamespace
+ */
+
+/**
+ * @brief  Constructs a new GetNamespaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetNamespaceResponse::GetNamespaceResponse(
+
+/**
+ * @brief  Constructs a new GetNamespaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetNamespaceRequest::GetNamespaceRequest(const GetNamespaceRequest &other)
+    : ServiceDiscoveryRequest(new GetNamespaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetNamespaceRequest object.
+ */
+GetNamespaceRequest::GetNamespaceRequest()
+    : ServiceDiscoveryRequest(new GetNamespaceRequestPrivate(ServiceDiscoveryRequest::GetNamespaceAction, this))
+{
+
+}
+
+bool GetNamespaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetNamespaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetNamespaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * GetNamespaceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetNamespaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetNamespaceRequestPrivate
+ *
+ * @brief  Private implementation for GetNamespaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamespaceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public GetNamespaceRequest instance.
+ */
+GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, GetNamespaceRequest * const q)
+    : GetNamespacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamespaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetNamespaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetNamespaceRequest instance.
+ */
+GetNamespaceRequestPrivate::GetNamespaceRequestPrivate(
+    const GetNamespaceRequestPrivate &other, GetNamespaceRequest * const q)
+    : GetNamespacePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "globalsignoutrequest.h"
 #include "globalsignoutrequest_p.h"
+#include "globalsignoutresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GlobalSignOutRequest
+ *
+ * @brief  Implements CognitoIdentityProvider GlobalSignOut requests.
+ *
+ * @see    CognitoIdentityProviderClient::globalSignOut
+ */
+
+/**
+ * @brief  Constructs a new GlobalSignOutResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GlobalSignOutResponse::GlobalSignOutResponse(
+
+/**
+ * @brief  Constructs a new GlobalSignOutRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GlobalSignOutRequest::GlobalSignOutRequest(const GlobalSignOutRequest &other)
+    : CognitoIdentityProviderRequest(new GlobalSignOutRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GlobalSignOutRequest object.
+ */
+GlobalSignOutRequest::GlobalSignOutRequest()
+    : CognitoIdentityProviderRequest(new GlobalSignOutRequestPrivate(CognitoIdentityProviderRequest::GlobalSignOutAction, this))
+{
+
+}
+
+bool GlobalSignOutRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GlobalSignOutResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GlobalSignOutResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply * const reply) const
+{
+    return new GlobalSignOutResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GlobalSignOutRequestPrivate
+ *
+ * @brief  Private implementation for GlobalSignOutRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GlobalSignOutRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public GlobalSignOutRequest instance.
+ */
+GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, GlobalSignOutRequest * const q)
+    : GlobalSignOutPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GlobalSignOutRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GlobalSignOutRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GlobalSignOutRequest instance.
+ */
+GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
+    const GlobalSignOutRequestPrivate &other, GlobalSignOutRequest * const q)
+    : GlobalSignOutPrivate(other, q)
+{
+
+}

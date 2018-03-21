@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINSTANCEACCESSREQUEST_P_H
 #define QTAWS_GETINSTANCEACCESSREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "getinstanceaccessrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class GetInstanceAccessRequest;
+
+class QTAWS_EXPORT GetInstanceAccessRequestPrivate : public GameLiftPrivate {
+
+public:
+    GetInstanceAccessRequestPrivate(const GameLift::Action action,
+                                   GetInstanceAccessRequest * const q);
+    GetInstanceAccessRequestPrivate(const GetInstanceAccessRequestPrivate &other,
+                                   GetInstanceAccessRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetInstanceAccessRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETHINGGROUPREQUEST_H
 #define QTAWS_CREATETHINGGROUPREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateThingGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateThingGroupRequest : public IoTRequest {
+
+public:
+    CreateThingGroupRequest(const CreateThingGroupRequest &other);
+    CreateThingGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateThingGroupRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeworkspacedirectoriesrequest.h"
 #include "describeworkspacedirectoriesrequest_p.h"
+#include "describeworkspacedirectoriesresponse.h"
+#include "workspacesrequest_p.h"
+
+namespace AWS {
+namespace WorkSpaces {
+
+/**
+ * @class  DescribeWorkspaceDirectoriesRequest
+ *
+ * @brief  Implements WorkSpaces DescribeWorkspaceDirectories requests.
+ *
+ * @see    WorkSpacesClient::describeWorkspaceDirectories
+ */
+
+/**
+ * @brief  Constructs a new DescribeWorkspaceDirectoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkspaceDirectoriesResponse::DescribeWorkspaceDirectoriesResponse(
+
+/**
+ * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest(const DescribeWorkspaceDirectoriesRequest &other)
+    : WorkSpacesRequest(new DescribeWorkspaceDirectoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeWorkspaceDirectoriesRequest object.
+ */
+DescribeWorkspaceDirectoriesRequest::DescribeWorkspaceDirectoriesRequest()
+    : WorkSpacesRequest(new DescribeWorkspaceDirectoriesRequestPrivate(WorkSpacesRequest::DescribeWorkspaceDirectoriesAction, this))
+{
+
+}
+
+bool DescribeWorkspaceDirectoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeWorkspaceDirectoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeWorkspaceDirectoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkSpacesClient::send
+ */
+AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeWorkspaceDirectoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkspaceDirectoriesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeWorkspaceDirectoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object.
+ *
+ * @param  action  WorkSpaces action being performed.
+ * @param  q       Pointer to this object's public DescribeWorkspaceDirectoriesRequest instance.
+ */
+DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
+    const WorkSpacesRequest::Action action, DescribeWorkspaceDirectoriesRequest * const q)
+    : DescribeWorkspaceDirectoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkspaceDirectoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeWorkspaceDirectoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeWorkspaceDirectoriesRequest instance.
+ */
+DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
+    const DescribeWorkspaceDirectoriesRequestPrivate &other, DescribeWorkspaceDirectoriesRequest * const q)
+    : DescribeWorkspaceDirectoriesPrivate(other, q)
+{
+
+}

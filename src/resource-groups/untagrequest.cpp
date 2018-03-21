@@ -19,3 +19,107 @@
 
 #include "untagrequest.h"
 #include "untagrequest_p.h"
+#include "untagresponse.h"
+#include "resourcegroupsrequest_p.h"
+
+namespace AWS {
+namespace ResourceGroups {
+
+/**
+ * @class  UntagRequest
+ *
+ * @brief  Implements ResourceGroups Untag requests.
+ *
+ * @see    ResourceGroupsClient::untag
+ */
+
+/**
+ * @brief  Constructs a new UntagResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UntagResponse::UntagResponse(
+
+/**
+ * @brief  Constructs a new UntagRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UntagRequest::UntagRequest(const UntagRequest &other)
+    : ResourceGroupsRequest(new UntagRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UntagRequest object.
+ */
+UntagRequest::UntagRequest()
+    : ResourceGroupsRequest(new UntagRequestPrivate(ResourceGroupsRequest::UntagAction, this))
+{
+
+}
+
+bool UntagRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UntagResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UntagResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ResourceGroupsClient::send
+ */
+AwsAbstractResponse * UntagRequest::response(QNetworkReply * const reply) const
+{
+    return new UntagResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UntagRequestPrivate
+ *
+ * @brief  Private implementation for UntagRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagRequestPrivate object.
+ *
+ * @param  action  ResourceGroups action being performed.
+ * @param  q       Pointer to this object's public UntagRequest instance.
+ */
+UntagRequestPrivate::UntagRequestPrivate(
+    const ResourceGroupsRequest::Action action, UntagRequest * const q)
+    : UntagPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UntagRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UntagRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UntagRequest instance.
+ */
+UntagRequestPrivate::UntagRequestPrivate(
+    const UntagRequestPrivate &other, UntagRequest * const q)
+    : UntagPrivate(other, q)
+{
+
+}

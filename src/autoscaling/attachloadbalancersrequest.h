@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHLOADBALANCERSREQUEST_H
 #define QTAWS_ATTACHLOADBALANCERSREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class AttachLoadBalancersRequestPrivate;
+
+class QTAWS_EXPORT AttachLoadBalancersRequest : public AutoScalingRequest {
+
+public:
+    AttachLoadBalancersRequest(const AttachLoadBalancersRequest &other);
+    AttachLoadBalancersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachLoadBalancersRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

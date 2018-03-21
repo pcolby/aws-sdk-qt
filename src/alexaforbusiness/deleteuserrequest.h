@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUSERREQUEST_H
 #define QTAWS_DELETEUSERREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DeleteUserRequestPrivate;
+
+class QTAWS_EXPORT DeleteUserRequest : public AlexaForBusinessRequest {
+
+public:
+    DeleteUserRequest(const DeleteUserRequest &other);
+    DeleteUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

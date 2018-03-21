@@ -19,3 +19,107 @@
 
 #include "describedefaultauthorizerrequest.h"
 #include "describedefaultauthorizerrequest_p.h"
+#include "describedefaultauthorizerresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeDefaultAuthorizerRequest
+ *
+ * @brief  Implements IoT DescribeDefaultAuthorizer requests.
+ *
+ * @see    IoTClient::describeDefaultAuthorizer
+ */
+
+/**
+ * @brief  Constructs a new DescribeDefaultAuthorizerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDefaultAuthorizerResponse::DescribeDefaultAuthorizerResponse(
+
+/**
+ * @brief  Constructs a new DescribeDefaultAuthorizerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDefaultAuthorizerRequest::DescribeDefaultAuthorizerRequest(const DescribeDefaultAuthorizerRequest &other)
+    : IoTRequest(new DescribeDefaultAuthorizerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDefaultAuthorizerRequest object.
+ */
+DescribeDefaultAuthorizerRequest::DescribeDefaultAuthorizerRequest()
+    : IoTRequest(new DescribeDefaultAuthorizerRequestPrivate(IoTRequest::DescribeDefaultAuthorizerAction, this))
+{
+
+}
+
+bool DescribeDefaultAuthorizerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDefaultAuthorizerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDefaultAuthorizerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeDefaultAuthorizerRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDefaultAuthorizerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDefaultAuthorizerRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDefaultAuthorizerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultAuthorizerRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeDefaultAuthorizerRequest instance.
+ */
+DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate(
+    const IoTRequest::Action action, DescribeDefaultAuthorizerRequest * const q)
+    : DescribeDefaultAuthorizerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultAuthorizerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDefaultAuthorizerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDefaultAuthorizerRequest instance.
+ */
+DescribeDefaultAuthorizerRequestPrivate::DescribeDefaultAuthorizerRequestPrivate(
+    const DescribeDefaultAuthorizerRequestPrivate &other, DescribeDefaultAuthorizerRequest * const q)
+    : DescribeDefaultAuthorizerPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONREQUEST_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class SendTestEventNotificationRequestPrivate;
+
+class QTAWS_EXPORT SendTestEventNotificationRequest : public MTurkRequest {
+
+public:
+    SendTestEventNotificationRequest(const SendTestEventNotificationRequest &other);
+    SendTestEventNotificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendTestEventNotificationRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

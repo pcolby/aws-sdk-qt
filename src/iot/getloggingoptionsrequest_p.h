@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETLOGGINGOPTIONSREQUEST_P_H
 #define QTAWS_GETLOGGINGOPTIONSREQUEST_P_H
 
+#include "iot_p.h"
+#include "getloggingoptionsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetLoggingOptionsRequest;
+
+class QTAWS_EXPORT GetLoggingOptionsRequestPrivate : public IoTPrivate {
+
+public:
+    GetLoggingOptionsRequestPrivate(const IoT::Action action,
+                                   GetLoggingOptionsRequest * const q);
+    GetLoggingOptionsRequestPrivate(const GetLoggingOptionsRequestPrivate &other,
+                                   GetLoggingOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetLoggingOptionsRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

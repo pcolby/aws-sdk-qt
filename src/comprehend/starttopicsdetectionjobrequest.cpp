@@ -19,3 +19,107 @@
 
 #include "starttopicsdetectionjobrequest.h"
 #include "starttopicsdetectionjobrequest_p.h"
+#include "starttopicsdetectionjobresponse.h"
+#include "comprehendrequest_p.h"
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  StartTopicsDetectionJobRequest
+ *
+ * @brief  Implements Comprehend StartTopicsDetectionJob requests.
+ *
+ * @see    ComprehendClient::startTopicsDetectionJob
+ */
+
+/**
+ * @brief  Constructs a new StartTopicsDetectionJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartTopicsDetectionJobResponse::StartTopicsDetectionJobResponse(
+
+/**
+ * @brief  Constructs a new StartTopicsDetectionJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest(const StartTopicsDetectionJobRequest &other)
+    : ComprehendRequest(new StartTopicsDetectionJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartTopicsDetectionJobRequest object.
+ */
+StartTopicsDetectionJobRequest::StartTopicsDetectionJobRequest()
+    : ComprehendRequest(new StartTopicsDetectionJobRequestPrivate(ComprehendRequest::StartTopicsDetectionJobAction, this))
+{
+
+}
+
+bool StartTopicsDetectionJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartTopicsDetectionJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartTopicsDetectionJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ComprehendClient::send
+ */
+AwsAbstractResponse * StartTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
+{
+    return new StartTopicsDetectionJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartTopicsDetectionJobRequestPrivate
+ *
+ * @brief  Private implementation for StartTopicsDetectionJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object.
+ *
+ * @param  action  Comprehend action being performed.
+ * @param  q       Pointer to this object's public StartTopicsDetectionJobRequest instance.
+ */
+StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
+    const ComprehendRequest::Action action, StartTopicsDetectionJobRequest * const q)
+    : StartTopicsDetectionJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTopicsDetectionJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartTopicsDetectionJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartTopicsDetectionJobRequest instance.
+ */
+StartTopicsDetectionJobRequestPrivate::StartTopicsDetectionJobRequestPrivate(
+    const StartTopicsDetectionJobRequestPrivate &other, StartTopicsDetectionJobRequest * const q)
+    : StartTopicsDetectionJobPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "deletethinggrouprequest.h"
 #include "deletethinggrouprequest_p.h"
+#include "deletethinggroupresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteThingGroupRequest
+ *
+ * @brief  Implements IoT DeleteThingGroup requests.
+ *
+ * @see    IoTClient::deleteThingGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteThingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteThingGroupResponse::DeleteThingGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteThingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteThingGroupRequest::DeleteThingGroupRequest(const DeleteThingGroupRequest &other)
+    : IoTRequest(new DeleteThingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteThingGroupRequest object.
+ */
+DeleteThingGroupRequest::DeleteThingGroupRequest()
+    : IoTRequest(new DeleteThingGroupRequestPrivate(IoTRequest::DeleteThingGroupAction, this))
+{
+
+}
+
+bool DeleteThingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteThingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteThingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DeleteThingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteThingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteThingGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteThingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteThingGroupRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DeleteThingGroupRequest instance.
+ */
+DeleteThingGroupRequestPrivate::DeleteThingGroupRequestPrivate(
+    const IoTRequest::Action action, DeleteThingGroupRequest * const q)
+    : DeleteThingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteThingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteThingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteThingGroupRequest instance.
+ */
+DeleteThingGroupRequestPrivate::DeleteThingGroupRequestPrivate(
+    const DeleteThingGroupRequestPrivate &other, DeleteThingGroupRequest * const q)
+    : DeleteThingGroupPrivate(other, q)
+{
+
+}

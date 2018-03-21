@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECUSTOMMETADATAREQUEST_P_H
 #define QTAWS_DELETECUSTOMMETADATAREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "deletecustommetadatarequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteCustomMetadataRequest;
+
+class QTAWS_EXPORT DeleteCustomMetadataRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DeleteCustomMetadataRequestPrivate(const WorkDocs::Action action,
+                                   DeleteCustomMetadataRequest * const q);
+    DeleteCustomMetadataRequestPrivate(const DeleteCustomMetadataRequestPrivate &other,
+                                   DeleteCustomMetadataRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCustomMetadataRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

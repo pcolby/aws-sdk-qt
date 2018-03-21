@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "describetagsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeTagsRequest;
+
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DescribeTagsRequestPrivate(const AutoScaling::Action action,
+                                   DescribeTagsRequest * const q);
+    DescribeTagsRequestPrivate(const DescribeTagsRequestPrivate &other,
+                                   DescribeTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTagsRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

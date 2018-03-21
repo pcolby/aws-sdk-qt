@@ -19,3 +19,107 @@
 
 #include "createcustomactiontyperequest.h"
 #include "createcustomactiontyperequest_p.h"
+#include "createcustomactiontyperesponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  CreateCustomActionTypeRequest
+ *
+ * @brief  Implements CodePipeline CreateCustomActionType requests.
+ *
+ * @see    CodePipelineClient::createCustomActionType
+ */
+
+/**
+ * @brief  Constructs a new CreateCustomActionTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
+
+/**
+ * @brief  Constructs a new CreateCustomActionTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCustomActionTypeRequest::CreateCustomActionTypeRequest(const CreateCustomActionTypeRequest &other)
+    : CodePipelineRequest(new CreateCustomActionTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCustomActionTypeRequest object.
+ */
+CreateCustomActionTypeRequest::CreateCustomActionTypeRequest()
+    : CodePipelineRequest(new CreateCustomActionTypeRequestPrivate(CodePipelineRequest::CreateCustomActionTypeAction, this))
+{
+
+}
+
+bool CreateCustomActionTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCustomActionTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCustomActionTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * CreateCustomActionTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCustomActionTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomActionTypeRequestPrivate
+ *
+ * @brief  Private implementation for CreateCustomActionTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomActionTypeRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public CreateCustomActionTypeRequest instance.
+ */
+CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
+    const CodePipelineRequest::Action action, CreateCustomActionTypeRequest * const q)
+    : CreateCustomActionTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomActionTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCustomActionTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCustomActionTypeRequest instance.
+ */
+CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
+    const CreateCustomActionTypeRequestPrivate &other, CreateCustomActionTypeRequest * const q)
+    : CreateCustomActionTypePrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIMAGEREQUEST_H
 #define QTAWS_DELETEIMAGEREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteImageRequestPrivate;
+
+class QTAWS_EXPORT DeleteImageRequest : public AppStreamRequest {
+
+public:
+    DeleteImageRequest(const DeleteImageRequest &other);
+    DeleteImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteImageRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

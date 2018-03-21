@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEORGANIZATIONALUNITREQUEST_H
 #define QTAWS_UPDATEORGANIZATIONALUNITREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class UpdateOrganizationalUnitRequestPrivate;
+
+class QTAWS_EXPORT UpdateOrganizationalUnitRequest : public OrganizationsRequest {
+
+public:
+    UpdateOrganizationalUnitRequest(const UpdateOrganizationalUnitRequest &other);
+    UpdateOrganizationalUnitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateOrganizationalUnitRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

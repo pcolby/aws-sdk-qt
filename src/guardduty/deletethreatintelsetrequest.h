@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETHREATINTELSETREQUEST_H
 #define QTAWS_DELETETHREATINTELSETREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteThreatIntelSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteThreatIntelSetRequest : public GuardDutyRequest {
+
+public:
+    DeleteThreatIntelSetRequest(const DeleteThreatIntelSetRequest &other);
+    DeleteThreatIntelSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteThreatIntelSetRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

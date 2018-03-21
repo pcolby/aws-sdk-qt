@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTRENDERTEMPLATEREQUEST_P_H
 #define QTAWS_TESTRENDERTEMPLATEREQUEST_P_H
 
+#include "ses_p.h"
+#include "testrendertemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class TestRenderTemplateRequest;
+
+class QTAWS_EXPORT TestRenderTemplateRequestPrivate : public SESPrivate {
+
+public:
+    TestRenderTemplateRequestPrivate(const SES::Action action,
+                                   TestRenderTemplateRequest * const q);
+    TestRenderTemplateRequestPrivate(const TestRenderTemplateRequestPrivate &other,
+                                   TestRenderTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestRenderTemplateRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

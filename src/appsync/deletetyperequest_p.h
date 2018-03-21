@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETYPEREQUEST_P_H
 #define QTAWS_DELETETYPEREQUEST_P_H
 
+#include "appsync_p.h"
+#include "deletetyperequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteTypeRequest;
+
+class QTAWS_EXPORT DeleteTypeRequestPrivate : public AppSyncPrivate {
+
+public:
+    DeleteTypeRequestPrivate(const AppSync::Action action,
+                                   DeleteTypeRequest * const q);
+    DeleteTypeRequestPrivate(const DeleteTypeRequestPrivate &other,
+                                   DeleteTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTypeRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

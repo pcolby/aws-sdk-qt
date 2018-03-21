@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDBINSTANCEREQUEST_H
 #define QTAWS_CREATEDBINSTANCEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBInstanceRequestPrivate;
+
+class QTAWS_EXPORT CreateDBInstanceRequest : public RDSRequest {
+
+public:
+    CreateDBInstanceRequest(const CreateDBInstanceRequest &other);
+    CreateDBInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBInstanceRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

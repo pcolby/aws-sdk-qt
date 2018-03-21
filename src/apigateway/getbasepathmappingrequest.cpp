@@ -19,3 +19,107 @@
 
 #include "getbasepathmappingrequest.h"
 #include "getbasepathmappingrequest_p.h"
+#include "getbasepathmappingresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetBasePathMappingRequest
+ *
+ * @brief  Implements APIGateway GetBasePathMapping requests.
+ *
+ * @see    APIGatewayClient::getBasePathMapping
+ */
+
+/**
+ * @brief  Constructs a new GetBasePathMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBasePathMappingResponse::GetBasePathMappingResponse(
+
+/**
+ * @brief  Constructs a new GetBasePathMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBasePathMappingRequest::GetBasePathMappingRequest(const GetBasePathMappingRequest &other)
+    : APIGatewayRequest(new GetBasePathMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBasePathMappingRequest object.
+ */
+GetBasePathMappingRequest::GetBasePathMappingRequest()
+    : APIGatewayRequest(new GetBasePathMappingRequestPrivate(APIGatewayRequest::GetBasePathMappingAction, this))
+{
+
+}
+
+bool GetBasePathMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBasePathMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBasePathMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetBasePathMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBasePathMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBasePathMappingRequestPrivate
+ *
+ * @brief  Private implementation for GetBasePathMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBasePathMappingRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetBasePathMappingRequest instance.
+ */
+GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
+    const APIGatewayRequest::Action action, GetBasePathMappingRequest * const q)
+    : GetBasePathMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBasePathMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBasePathMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBasePathMappingRequest instance.
+ */
+GetBasePathMappingRequestPrivate::GetBasePathMappingRequestPrivate(
+    const GetBasePathMappingRequestPrivate &other, GetBasePathMappingRequest * const q)
+    : GetBasePathMappingPrivate(other, q)
+{
+
+}

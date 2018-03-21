@@ -20,4 +20,29 @@
 #ifndef QTAWS_CHANGEPASSWORDREQUEST_P_H
 #define QTAWS_CHANGEPASSWORDREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "changepasswordrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ChangePasswordRequest;
+
+class QTAWS_EXPORT ChangePasswordRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    ChangePasswordRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   ChangePasswordRequest * const q);
+    ChangePasswordRequestPrivate(const ChangePasswordRequestPrivate &other,
+                                   ChangePasswordRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ChangePasswordRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

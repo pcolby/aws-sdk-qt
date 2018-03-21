@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFLEETSREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETSREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describefleetsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeFleetsRequest;
+
+class QTAWS_EXPORT DescribeFleetsRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeFleetsRequestPrivate(const AppStream::Action action,
+                                   DescribeFleetsRequest * const q);
+    DescribeFleetsRequestPrivate(const DescribeFleetsRequestPrivate &other,
+                                   DescribeFleetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetsRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

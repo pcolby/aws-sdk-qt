@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHTYPEDLINKREQUEST_P_H
 #define QTAWS_DETACHTYPEDLINKREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "detachtypedlinkrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachTypedLinkRequest;
+
+class QTAWS_EXPORT DetachTypedLinkRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    DetachTypedLinkRequestPrivate(const CloudDirectory::Action action,
+                                   DetachTypedLinkRequest * const q);
+    DetachTypedLinkRequestPrivate(const DetachTypedLinkRequestPrivate &other,
+                                   DetachTypedLinkRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachTypedLinkRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

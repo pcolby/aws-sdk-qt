@@ -19,3 +19,107 @@
 
 #include "createdeploymentconfigrequest.h"
 #include "createdeploymentconfigrequest_p.h"
+#include "createdeploymentconfigresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  CreateDeploymentConfigRequest
+ *
+ * @brief  Implements CodeDeploy CreateDeploymentConfig requests.
+ *
+ * @see    CodeDeployClient::createDeploymentConfig
+ */
+
+/**
+ * @brief  Constructs a new CreateDeploymentConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDeploymentConfigResponse::CreateDeploymentConfigResponse(
+
+/**
+ * @brief  Constructs a new CreateDeploymentConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDeploymentConfigRequest::CreateDeploymentConfigRequest(const CreateDeploymentConfigRequest &other)
+    : CodeDeployRequest(new CreateDeploymentConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDeploymentConfigRequest object.
+ */
+CreateDeploymentConfigRequest::CreateDeploymentConfigRequest()
+    : CodeDeployRequest(new CreateDeploymentConfigRequestPrivate(CodeDeployRequest::CreateDeploymentConfigAction, this))
+{
+
+}
+
+bool CreateDeploymentConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDeploymentConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDeploymentConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * CreateDeploymentConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDeploymentConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDeploymentConfigRequestPrivate
+ *
+ * @brief  Private implementation for CreateDeploymentConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentConfigRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public CreateDeploymentConfigRequest instance.
+ */
+CreateDeploymentConfigRequestPrivate::CreateDeploymentConfigRequestPrivate(
+    const CodeDeployRequest::Action action, CreateDeploymentConfigRequest * const q)
+    : CreateDeploymentConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDeploymentConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDeploymentConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDeploymentConfigRequest instance.
+ */
+CreateDeploymentConfigRequestPrivate::CreateDeploymentConfigRequestPrivate(
+    const CreateDeploymentConfigRequestPrivate &other, CreateDeploymentConfigRequest * const q)
+    : CreateDeploymentConfigPrivate(other, q)
+{
+
+}

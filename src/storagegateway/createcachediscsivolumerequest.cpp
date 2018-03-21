@@ -19,3 +19,107 @@
 
 #include "createcachediscsivolumerequest.h"
 #include "createcachediscsivolumerequest_p.h"
+#include "createcachediscsivolumeresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CreateCachediSCSIVolumeRequest
+ *
+ * @brief  Implements StorageGateway CreateCachediSCSIVolume requests.
+ *
+ * @see    StorageGatewayClient::createCachediSCSIVolume
+ */
+
+/**
+ * @brief  Constructs a new CreateCachediSCSIVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCachediSCSIVolumeResponse::CreateCachediSCSIVolumeResponse(
+
+/**
+ * @brief  Constructs a new CreateCachediSCSIVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCachediSCSIVolumeRequest::CreateCachediSCSIVolumeRequest(const CreateCachediSCSIVolumeRequest &other)
+    : StorageGatewayRequest(new CreateCachediSCSIVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCachediSCSIVolumeRequest object.
+ */
+CreateCachediSCSIVolumeRequest::CreateCachediSCSIVolumeRequest()
+    : StorageGatewayRequest(new CreateCachediSCSIVolumeRequestPrivate(StorageGatewayRequest::CreateCachediSCSIVolumeAction, this))
+{
+
+}
+
+bool CreateCachediSCSIVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCachediSCSIVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCachediSCSIVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * CreateCachediSCSIVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCachediSCSIVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCachediSCSIVolumeRequestPrivate
+ *
+ * @brief  Private implementation for CreateCachediSCSIVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCachediSCSIVolumeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public CreateCachediSCSIVolumeRequest instance.
+ */
+CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
+    const StorageGatewayRequest::Action action, CreateCachediSCSIVolumeRequest * const q)
+    : CreateCachediSCSIVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCachediSCSIVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCachediSCSIVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCachediSCSIVolumeRequest instance.
+ */
+CreateCachediSCSIVolumeRequestPrivate::CreateCachediSCSIVolumeRequestPrivate(
+    const CreateCachediSCSIVolumeRequestPrivate &other, CreateCachediSCSIVolumeRequest * const q)
+    : CreateCachediSCSIVolumePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "getfederationtokenrequest.h"
 #include "getfederationtokenrequest_p.h"
+#include "getfederationtokenresponse.h"
+#include "stsrequest_p.h"
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  GetFederationTokenRequest
+ *
+ * @brief  Implements STS GetFederationToken requests.
+ *
+ * @see    STSClient::getFederationToken
+ */
+
+/**
+ * @brief  Constructs a new GetFederationTokenResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFederationTokenResponse::GetFederationTokenResponse(
+
+/**
+ * @brief  Constructs a new GetFederationTokenRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetFederationTokenRequest::GetFederationTokenRequest(const GetFederationTokenRequest &other)
+    : STSRequest(new GetFederationTokenRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetFederationTokenRequest object.
+ */
+GetFederationTokenRequest::GetFederationTokenRequest()
+    : STSRequest(new GetFederationTokenRequestPrivate(STSRequest::GetFederationTokenAction, this))
+{
+
+}
+
+bool GetFederationTokenRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetFederationTokenResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetFederationTokenResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  STSClient::send
+ */
+AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkReply * const reply) const
+{
+    return new GetFederationTokenResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFederationTokenRequestPrivate
+ *
+ * @brief  Private implementation for GetFederationTokenRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFederationTokenRequestPrivate object.
+ *
+ * @param  action  STS action being performed.
+ * @param  q       Pointer to this object's public GetFederationTokenRequest instance.
+ */
+GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
+    const STSRequest::Action action, GetFederationTokenRequest * const q)
+    : GetFederationTokenPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFederationTokenRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetFederationTokenRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetFederationTokenRequest instance.
+ */
+GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
+    const GetFederationTokenRequestPrivate &other, GetFederationTokenRequest * const q)
+    : GetFederationTokenPrivate(other, q)
+{
+
+}

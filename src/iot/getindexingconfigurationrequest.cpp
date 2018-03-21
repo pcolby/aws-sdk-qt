@@ -19,3 +19,107 @@
 
 #include "getindexingconfigurationrequest.h"
 #include "getindexingconfigurationrequest_p.h"
+#include "getindexingconfigurationresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetIndexingConfigurationRequest
+ *
+ * @brief  Implements IoT GetIndexingConfiguration requests.
+ *
+ * @see    IoTClient::getIndexingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new GetIndexingConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIndexingConfigurationResponse::GetIndexingConfigurationResponse(
+
+/**
+ * @brief  Constructs a new GetIndexingConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIndexingConfigurationRequest::GetIndexingConfigurationRequest(const GetIndexingConfigurationRequest &other)
+    : IoTRequest(new GetIndexingConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIndexingConfigurationRequest object.
+ */
+GetIndexingConfigurationRequest::GetIndexingConfigurationRequest()
+    : IoTRequest(new GetIndexingConfigurationRequestPrivate(IoTRequest::GetIndexingConfigurationAction, this))
+{
+
+}
+
+bool GetIndexingConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIndexingConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIndexingConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * GetIndexingConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIndexingConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIndexingConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for GetIndexingConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIndexingConfigurationRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public GetIndexingConfigurationRequest instance.
+ */
+GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
+    const IoTRequest::Action action, GetIndexingConfigurationRequest * const q)
+    : GetIndexingConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIndexingConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIndexingConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIndexingConfigurationRequest instance.
+ */
+GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
+    const GetIndexingConfigurationRequestPrivate &other, GetIndexingConfigurationRequest * const q)
+    : GetIndexingConfigurationPrivate(other, q)
+{
+
+}

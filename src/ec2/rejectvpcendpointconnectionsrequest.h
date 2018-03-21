@@ -20,4 +20,32 @@
 #ifndef QTAWS_REJECTVPCENDPOINTCONNECTIONSREQUEST_H
 #define QTAWS_REJECTVPCENDPOINTCONNECTIONSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RejectVpcEndpointConnectionsRequestPrivate;
+
+class QTAWS_EXPORT RejectVpcEndpointConnectionsRequest : public EC2Request {
+
+public:
+    RejectVpcEndpointConnectionsRequest(const RejectVpcEndpointConnectionsRequest &other);
+    RejectVpcEndpointConnectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RejectVpcEndpointConnectionsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

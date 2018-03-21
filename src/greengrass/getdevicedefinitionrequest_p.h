@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEVICEDEFINITIONREQUEST_P_H
 #define QTAWS_GETDEVICEDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "getdevicedefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetDeviceDefinitionRequest;
+
+class QTAWS_EXPORT GetDeviceDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    GetDeviceDefinitionRequestPrivate(const Greengrass::Action action,
+                                   GetDeviceDefinitionRequest * const q);
+    GetDeviceDefinitionRequestPrivate(const GetDeviceDefinitionRequestPrivate &other,
+                                   GetDeviceDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeviceDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

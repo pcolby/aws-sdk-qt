@@ -19,3 +19,107 @@
 
 #include "deleteelasticsearchdomainrequest.h"
 #include "deleteelasticsearchdomainrequest_p.h"
+#include "deleteelasticsearchdomainresponse.h"
+#include "elasticsearchservicerequest_p.h"
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  DeleteElasticsearchDomainRequest
+ *
+ * @brief  Implements ElasticsearchService DeleteElasticsearchDomain requests.
+ *
+ * @see    ElasticsearchServiceClient::deleteElasticsearchDomain
+ */
+
+/**
+ * @brief  Constructs a new DeleteElasticsearchDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
+
+/**
+ * @brief  Constructs a new DeleteElasticsearchDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest(const DeleteElasticsearchDomainRequest &other)
+    : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteElasticsearchDomainRequest object.
+ */
+DeleteElasticsearchDomainRequest::DeleteElasticsearchDomainRequest()
+    : ElasticsearchServiceRequest(new DeleteElasticsearchDomainRequestPrivate(ElasticsearchServiceRequest::DeleteElasticsearchDomainAction, this))
+{
+
+}
+
+bool DeleteElasticsearchDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteElasticsearchDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteElasticsearchDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticsearchServiceClient::send
+ */
+AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteElasticsearchDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteElasticsearchDomainRequestPrivate
+ *
+ * @brief  Private implementation for DeleteElasticsearchDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object.
+ *
+ * @param  action  ElasticsearchService action being performed.
+ * @param  q       Pointer to this object's public DeleteElasticsearchDomainRequest instance.
+ */
+DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
+    const ElasticsearchServiceRequest::Action action, DeleteElasticsearchDomainRequest * const q)
+    : DeleteElasticsearchDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteElasticsearchDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteElasticsearchDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteElasticsearchDomainRequest instance.
+ */
+DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
+    const DeleteElasticsearchDomainRequestPrivate &other, DeleteElasticsearchDomainRequest * const q)
+    : DeleteElasticsearchDomainPrivate(other, q)
+{
+
+}

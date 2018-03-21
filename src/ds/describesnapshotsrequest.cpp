@@ -19,3 +19,107 @@
 
 #include "describesnapshotsrequest.h"
 #include "describesnapshotsrequest_p.h"
+#include "describesnapshotsresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeSnapshotsRequest
+ *
+ * @brief  Implements DirectoryService DescribeSnapshots requests.
+ *
+ * @see    DirectoryServiceClient::describeSnapshots
+ */
+
+/**
+ * @brief  Constructs a new DescribeSnapshotsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSnapshotsResponse::DescribeSnapshotsResponse(
+
+/**
+ * @brief  Constructs a new DescribeSnapshotsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSnapshotsRequest::DescribeSnapshotsRequest(const DescribeSnapshotsRequest &other)
+    : DirectoryServiceRequest(new DescribeSnapshotsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSnapshotsRequest object.
+ */
+DescribeSnapshotsRequest::DescribeSnapshotsRequest()
+    : DirectoryServiceRequest(new DescribeSnapshotsRequestPrivate(DirectoryServiceRequest::DescribeSnapshotsAction, this))
+{
+
+}
+
+bool DescribeSnapshotsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSnapshotsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSnapshotsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSnapshotsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSnapshotsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSnapshotsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotsRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeSnapshotsRequest instance.
+ */
+DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeSnapshotsRequest * const q)
+    : DescribeSnapshotsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSnapshotsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSnapshotsRequest instance.
+ */
+DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
+    const DescribeSnapshotsRequestPrivate &other, DescribeSnapshotsRequest * const q)
+    : DescribeSnapshotsPrivate(other, q)
+{
+
+}

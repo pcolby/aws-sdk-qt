@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTBACKUPSREQUEST_P_H
 #define QTAWS_LISTBACKUPSREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "listbackupsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListBackupsRequest;
+
+class QTAWS_EXPORT ListBackupsRequestPrivate : public DynamoDBPrivate {
+
+public:
+    ListBackupsRequestPrivate(const DynamoDB::Action action,
+                                   ListBackupsRequest * const q);
+    ListBackupsRequestPrivate(const ListBackupsRequestPrivate &other,
+                                   ListBackupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListBackupsRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

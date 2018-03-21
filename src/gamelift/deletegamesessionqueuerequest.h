@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGAMESESSIONQUEUEREQUEST_H
 #define QTAWS_DELETEGAMESESSIONQUEUEREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DeleteGameSessionQueueRequestPrivate;
+
+class QTAWS_EXPORT DeleteGameSessionQueueRequest : public GameLiftRequest {
+
+public:
+    DeleteGameSessionQueueRequest(const DeleteGameSessionQueueRequest &other);
+    DeleteGameSessionQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGameSessionQueueRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

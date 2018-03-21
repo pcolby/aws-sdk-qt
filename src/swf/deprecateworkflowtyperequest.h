@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEPRECATEWORKFLOWTYPEREQUEST_H
 #define QTAWS_DEPRECATEWORKFLOWTYPEREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DeprecateWorkflowTypeRequestPrivate;
+
+class QTAWS_EXPORT DeprecateWorkflowTypeRequest : public SWFRequest {
+
+public:
+    DeprecateWorkflowTypeRequest(const DeprecateWorkflowTypeRequest &other);
+    DeprecateWorkflowTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateWorkflowTypeRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

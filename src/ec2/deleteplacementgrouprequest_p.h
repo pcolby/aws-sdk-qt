@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPLACEMENTGROUPREQUEST_P_H
 #define QTAWS_DELETEPLACEMENTGROUPREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deleteplacementgrouprequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeletePlacementGroupRequest;
+
+class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public EC2Private {
+
+public:
+    DeletePlacementGroupRequestPrivate(const EC2::Action action,
+                                   DeletePlacementGroupRequest * const q);
+    DeletePlacementGroupRequestPrivate(const DeletePlacementGroupRequestPrivate &other,
+                                   DeletePlacementGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePlacementGroupRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

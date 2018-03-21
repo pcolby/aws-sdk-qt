@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECONNECTIONREQUEST_H
 #define QTAWS_CREATECONNECTIONREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class CreateConnectionRequestPrivate;
+
+class QTAWS_EXPORT CreateConnectionRequest : public DirectConnectRequest {
+
+public:
+    CreateConnectionRequest(const CreateConnectionRequest &other);
+    CreateConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateConnectionRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

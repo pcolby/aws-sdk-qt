@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEIPSETREQUEST_P_H
 #define QTAWS_CREATEIPSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "createipsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateIPSetRequest;
+
+class QTAWS_EXPORT CreateIPSetRequestPrivate : public WAFPrivate {
+
+public:
+    CreateIPSetRequestPrivate(const WAF::Action action,
+                                   CreateIPSetRequest * const q);
+    CreateIPSetRequestPrivate(const CreateIPSetRequestPrivate &other,
+                                   CreateIPSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateIPSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

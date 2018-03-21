@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class AddTagsToResourceRequestPrivate;
+
+class QTAWS_EXPORT AddTagsToResourceRequest : public ElastiCacheRequest {
+
+public:
+    AddTagsToResourceRequest(const AddTagsToResourceRequest &other);
+    AddTagsToResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToResourceRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

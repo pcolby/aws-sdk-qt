@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETACLREQUEST_P_H
 #define QTAWS_PUTBUCKETACLREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketaclrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketAclRequest;
+
+class QTAWS_EXPORT PutBucketAclRequestPrivate : public S3Private {
+
+public:
+    PutBucketAclRequestPrivate(const S3::Action action,
+                                   PutBucketAclRequest * const q);
+    PutBucketAclRequestPrivate(const PutBucketAclRequestPrivate &other,
+                                   PutBucketAclRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketAclRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

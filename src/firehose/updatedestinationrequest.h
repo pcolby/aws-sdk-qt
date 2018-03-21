@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDESTINATIONREQUEST_H
 #define QTAWS_UPDATEDESTINATIONREQUEST_H
 
+#include "firehoserequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class UpdateDestinationRequestPrivate;
+
+class QTAWS_EXPORT UpdateDestinationRequest : public FirehoseRequest {
+
+public:
+    UpdateDestinationRequest(const UpdateDestinationRequest &other);
+    UpdateDestinationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDestinationRequest)
+
+}
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTVPCPEERINGCONNECTIONREQUEST_H
 #define QTAWS_ACCEPTVPCPEERINGCONNECTIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AcceptVpcPeeringConnectionRequestPrivate;
+
+class QTAWS_EXPORT AcceptVpcPeeringConnectionRequest : public EC2Request {
+
+public:
+    AcceptVpcPeeringConnectionRequest(const AcceptVpcPeeringConnectionRequest &other);
+    AcceptVpcPeeringConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptVpcPeeringConnectionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

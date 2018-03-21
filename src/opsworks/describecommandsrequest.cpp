@@ -19,3 +19,107 @@
 
 #include "describecommandsrequest.h"
 #include "describecommandsrequest_p.h"
+#include "describecommandsresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeCommandsRequest
+ *
+ * @brief  Implements OpsWorks DescribeCommands requests.
+ *
+ * @see    OpsWorksClient::describeCommands
+ */
+
+/**
+ * @brief  Constructs a new DescribeCommandsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCommandsResponse::DescribeCommandsResponse(
+
+/**
+ * @brief  Constructs a new DescribeCommandsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCommandsRequest::DescribeCommandsRequest(const DescribeCommandsRequest &other)
+    : OpsWorksRequest(new DescribeCommandsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCommandsRequest object.
+ */
+DescribeCommandsRequest::DescribeCommandsRequest()
+    : OpsWorksRequest(new DescribeCommandsRequestPrivate(OpsWorksRequest::DescribeCommandsAction, this))
+{
+
+}
+
+bool DescribeCommandsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCommandsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCommandsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeCommandsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCommandsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCommandsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCommandsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCommandsRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeCommandsRequest instance.
+ */
+DescribeCommandsRequestPrivate::DescribeCommandsRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeCommandsRequest * const q)
+    : DescribeCommandsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCommandsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCommandsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCommandsRequest instance.
+ */
+DescribeCommandsRequestPrivate::DescribeCommandsRequestPrivate(
+    const DescribeCommandsRequestPrivate &other, DescribeCommandsRequest * const q)
+    : DescribeCommandsPrivate(other, q)
+{
+
+}

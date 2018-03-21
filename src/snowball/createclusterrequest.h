@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_H
 #define QTAWS_CREATECLUSTERREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class CreateClusterRequestPrivate;
+
+class QTAWS_EXPORT CreateClusterRequest : public SnowballRequest {
+
+public:
+    CreateClusterRequest(const CreateClusterRequest &other);
+    CreateClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateClusterRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

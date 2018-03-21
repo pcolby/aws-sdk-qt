@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPNOTEBOOKINSTANCEREQUEST_H
 #define QTAWS_STOPNOTEBOOKINSTANCEREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class StopNotebookInstanceRequestPrivate;
+
+class QTAWS_EXPORT StopNotebookInstanceRequest : public SageMakerRequest {
+
+public:
+    StopNotebookInstanceRequest(const StopNotebookInstanceRequest &other);
+    StopNotebookInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopNotebookInstanceRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

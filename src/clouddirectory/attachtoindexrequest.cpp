@@ -19,3 +19,107 @@
 
 #include "attachtoindexrequest.h"
 #include "attachtoindexrequest_p.h"
+#include "attachtoindexresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachToIndexRequest
+ *
+ * @brief  Implements CloudDirectory AttachToIndex requests.
+ *
+ * @see    CloudDirectoryClient::attachToIndex
+ */
+
+/**
+ * @brief  Constructs a new AttachToIndexResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachToIndexResponse::AttachToIndexResponse(
+
+/**
+ * @brief  Constructs a new AttachToIndexRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachToIndexRequest::AttachToIndexRequest(const AttachToIndexRequest &other)
+    : CloudDirectoryRequest(new AttachToIndexRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachToIndexRequest object.
+ */
+AttachToIndexRequest::AttachToIndexRequest()
+    : CloudDirectoryRequest(new AttachToIndexRequestPrivate(CloudDirectoryRequest::AttachToIndexAction, this))
+{
+
+}
+
+bool AttachToIndexRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachToIndexResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachToIndexResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * AttachToIndexRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachToIndexResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachToIndexRequestPrivate
+ *
+ * @brief  Private implementation for AttachToIndexRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachToIndexRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public AttachToIndexRequest instance.
+ */
+AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
+    const CloudDirectoryRequest::Action action, AttachToIndexRequest * const q)
+    : AttachToIndexPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachToIndexRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachToIndexRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachToIndexRequest instance.
+ */
+AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
+    const AttachToIndexRequestPrivate &other, AttachToIndexRequest * const q)
+    : AttachToIndexPrivate(other, q)
+{
+
+}

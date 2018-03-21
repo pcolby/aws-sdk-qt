@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describestackprovisioningparametersrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeStackProvisioningParametersRequest;
+
+class QTAWS_EXPORT DescribeStackProvisioningParametersRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeStackProvisioningParametersRequestPrivate(const OpsWorks::Action action,
+                                   DescribeStackProvisioningParametersRequest * const q);
+    DescribeStackProvisioningParametersRequestPrivate(const DescribeStackProvisioningParametersRequestPrivate &other,
+                                   DescribeStackProvisioningParametersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStackProvisioningParametersRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

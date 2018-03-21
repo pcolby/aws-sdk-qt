@@ -19,3 +19,107 @@
 
 #include "listversionsbyfunctionrequest.h"
 #include "listversionsbyfunctionrequest_p.h"
+#include "listversionsbyfunctionresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  ListVersionsByFunctionRequest
+ *
+ * @brief  Implements Lambda ListVersionsByFunction requests.
+ *
+ * @see    LambdaClient::listVersionsByFunction
+ */
+
+/**
+ * @brief  Constructs a new ListVersionsByFunctionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVersionsByFunctionResponse::ListVersionsByFunctionResponse(
+
+/**
+ * @brief  Constructs a new ListVersionsByFunctionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListVersionsByFunctionRequest::ListVersionsByFunctionRequest(const ListVersionsByFunctionRequest &other)
+    : LambdaRequest(new ListVersionsByFunctionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListVersionsByFunctionRequest object.
+ */
+ListVersionsByFunctionRequest::ListVersionsByFunctionRequest()
+    : LambdaRequest(new ListVersionsByFunctionRequestPrivate(LambdaRequest::ListVersionsByFunctionAction, this))
+{
+
+}
+
+bool ListVersionsByFunctionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListVersionsByFunctionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListVersionsByFunctionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * ListVersionsByFunctionRequest::response(QNetworkReply * const reply) const
+{
+    return new ListVersionsByFunctionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVersionsByFunctionRequestPrivate
+ *
+ * @brief  Private implementation for ListVersionsByFunctionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVersionsByFunctionRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public ListVersionsByFunctionRequest instance.
+ */
+ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
+    const LambdaRequest::Action action, ListVersionsByFunctionRequest * const q)
+    : ListVersionsByFunctionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVersionsByFunctionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListVersionsByFunctionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListVersionsByFunctionRequest instance.
+ */
+ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
+    const ListVersionsByFunctionRequestPrivate &other, ListVersionsByFunctionRequest * const q)
+    : ListVersionsByFunctionPrivate(other, q)
+{
+
+}

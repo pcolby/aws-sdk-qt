@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTVIRTUALMFADEVICESREQUEST_H
 #define QTAWS_LISTVIRTUALMFADEVICESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListVirtualMFADevicesRequestPrivate;
+
+class QTAWS_EXPORT ListVirtualMFADevicesRequest : public IAMRequest {
+
+public:
+    ListVirtualMFADevicesRequest(const ListVirtualMFADevicesRequest &other);
+    ListVirtualMFADevicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListVirtualMFADevicesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "deletenotificationconfigurationrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteNotificationConfigurationRequest;
+
+class QTAWS_EXPORT DeleteNotificationConfigurationRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DeleteNotificationConfigurationRequestPrivate(const AutoScaling::Action action,
+                                   DeleteNotificationConfigurationRequest * const q);
+    DeleteNotificationConfigurationRequestPrivate(const DeleteNotificationConfigurationRequestPrivate &other,
+                                   DeleteNotificationConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteNotificationConfigurationRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

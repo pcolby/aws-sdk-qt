@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLETOPICRULEREQUEST_P_H
 #define QTAWS_DISABLETOPICRULEREQUEST_P_H
 
+#include "iot_p.h"
+#include "disabletopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DisableTopicRuleRequest;
+
+class QTAWS_EXPORT DisableTopicRuleRequestPrivate : public IoTPrivate {
+
+public:
+    DisableTopicRuleRequestPrivate(const IoT::Action action,
+                                   DisableTopicRuleRequest * const q);
+    DisableTopicRuleRequestPrivate(const DisableTopicRuleRequestPrivate &other,
+                                   DisableTopicRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableTopicRuleRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

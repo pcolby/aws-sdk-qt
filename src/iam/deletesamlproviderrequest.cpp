@@ -19,3 +19,107 @@
 
 #include "deletesamlproviderrequest.h"
 #include "deletesamlproviderrequest_p.h"
+#include "deletesamlproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteSAMLProviderRequest
+ *
+ * @brief  Implements IAM DeleteSAMLProvider requests.
+ *
+ * @see    IAMClient::deleteSAMLProvider
+ */
+
+/**
+ * @brief  Constructs a new DeleteSAMLProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
+
+/**
+ * @brief  Constructs a new DeleteSAMLProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSAMLProviderRequest::DeleteSAMLProviderRequest(const DeleteSAMLProviderRequest &other)
+    : IAMRequest(new DeleteSAMLProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSAMLProviderRequest object.
+ */
+DeleteSAMLProviderRequest::DeleteSAMLProviderRequest()
+    : IAMRequest(new DeleteSAMLProviderRequestPrivate(IAMRequest::DeleteSAMLProviderAction, this))
+{
+
+}
+
+bool DeleteSAMLProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSAMLProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSAMLProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSAMLProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSAMLProviderRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSAMLProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSAMLProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteSAMLProviderRequest instance.
+ */
+DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
+    const IAMRequest::Action action, DeleteSAMLProviderRequest * const q)
+    : DeleteSAMLProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSAMLProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSAMLProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSAMLProviderRequest instance.
+ */
+DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
+    const DeleteSAMLProviderRequestPrivate &other, DeleteSAMLProviderRequest * const q)
+    : DeleteSAMLProviderPrivate(other, q)
+{
+
+}

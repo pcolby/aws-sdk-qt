@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTINSTANCESREQUEST_P_H
 #define QTAWS_STARTINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "startinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class StartInstancesRequest;
+
+class QTAWS_EXPORT StartInstancesRequestPrivate : public EC2Private {
+
+public:
+    StartInstancesRequestPrivate(const EC2::Action action,
+                                   StartInstancesRequest * const q);
+    StartInstancesRequestPrivate(const StartInstancesRequestPrivate &other,
+                                   StartInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGROUPREQUEST_P_H
 #define QTAWS_GETGROUPREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "getgrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetGroupRequest;
+
+class QTAWS_EXPORT GetGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    GetGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   GetGroupRequest * const q);
+    GetGroupRequestPrivate(const GetGroupRequestPrivate &other,
+                                   GetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

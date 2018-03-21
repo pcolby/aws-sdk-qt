@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTEVALUATIONSREQUEST_H
 #define QTAWS_PUTEVALUATIONSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutEvaluationsRequestPrivate;
+
+class QTAWS_EXPORT PutEvaluationsRequest : public ConfigServiceRequest {
+
+public:
+    PutEvaluationsRequest(const PutEvaluationsRequest &other);
+    PutEvaluationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutEvaluationsRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

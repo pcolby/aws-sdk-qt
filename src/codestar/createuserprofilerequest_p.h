@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSERPROFILEREQUEST_P_H
 #define QTAWS_CREATEUSERPROFILEREQUEST_P_H
 
+#include "codestar_p.h"
+#include "createuserprofilerequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class CreateUserProfileRequest;
+
+class QTAWS_EXPORT CreateUserProfileRequestPrivate : public CodeStarPrivate {
+
+public:
+    CreateUserProfileRequestPrivate(const CodeStar::Action action,
+                                   CreateUserProfileRequest * const q);
+    CreateUserProfileRequestPrivate(const CreateUserProfileRequestPrivate &other,
+                                   CreateUserProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUserProfileRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

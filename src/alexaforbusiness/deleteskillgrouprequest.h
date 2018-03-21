@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESKILLGROUPREQUEST_H
 #define QTAWS_DELETESKILLGROUPREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class DeleteSkillGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteSkillGroupRequest : public AlexaForBusinessRequest {
+
+public:
+    DeleteSkillGroupRequest(const DeleteSkillGroupRequest &other);
+    DeleteSkillGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSkillGroupRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

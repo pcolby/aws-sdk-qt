@@ -19,3 +19,107 @@
 
 #include "describeclusterrequest.h"
 #include "describeclusterrequest_p.h"
+#include "describeclusterresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  DescribeClusterRequest
+ *
+ * @brief  Implements Snowball DescribeCluster requests.
+ *
+ * @see    SnowballClient::describeCluster
+ */
+
+/**
+ * @brief  Constructs a new DescribeClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterResponse::DescribeClusterResponse(
+
+/**
+ * @brief  Constructs a new DescribeClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeClusterRequest::DescribeClusterRequest(const DescribeClusterRequest &other)
+    : SnowballRequest(new DescribeClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeClusterRequest object.
+ */
+DescribeClusterRequest::DescribeClusterRequest()
+    : SnowballRequest(new DescribeClusterRequestPrivate(SnowballRequest::DescribeClusterAction, this))
+{
+
+}
+
+bool DescribeClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * DescribeClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterRequestPrivate
+ *
+ * @brief  Private implementation for DescribeClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public DescribeClusterRequest instance.
+ */
+DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
+    const SnowballRequest::Action action, DescribeClusterRequest * const q)
+    : DescribeClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeClusterRequest instance.
+ */
+DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
+    const DescribeClusterRequestPrivate &other, DescribeClusterRequest * const q)
+    : DescribeClusterPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTRESOURCESREQUEST_H
 #define QTAWS_DESCRIBEENVIRONMENTRESOURCESREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentResourcesRequestPrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentResourcesRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeEnvironmentResourcesRequest(const DescribeEnvironmentResourcesRequest &other);
+    DescribeEnvironmentResourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentResourcesRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

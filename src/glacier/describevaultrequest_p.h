@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVAULTREQUEST_P_H
 #define QTAWS_DESCRIBEVAULTREQUEST_P_H
 
+#include "glacier_p.h"
+#include "describevaultrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class DescribeVaultRequest;
+
+class QTAWS_EXPORT DescribeVaultRequestPrivate : public GlacierPrivate {
+
+public:
+    DescribeVaultRequestPrivate(const Glacier::Action action,
+                                   DescribeVaultRequest * const q);
+    DescribeVaultRequestPrivate(const DescribeVaultRequestPrivate &other,
+                                   DescribeVaultRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVaultRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

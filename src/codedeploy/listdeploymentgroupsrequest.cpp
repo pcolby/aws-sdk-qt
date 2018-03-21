@@ -19,3 +19,107 @@
 
 #include "listdeploymentgroupsrequest.h"
 #include "listdeploymentgroupsrequest_p.h"
+#include "listdeploymentgroupsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListDeploymentGroupsRequest
+ *
+ * @brief  Implements CodeDeploy ListDeploymentGroups requests.
+ *
+ * @see    CodeDeployClient::listDeploymentGroups
+ */
+
+/**
+ * @brief  Constructs a new ListDeploymentGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeploymentGroupsResponse::ListDeploymentGroupsResponse(
+
+/**
+ * @brief  Constructs a new ListDeploymentGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDeploymentGroupsRequest::ListDeploymentGroupsRequest(const ListDeploymentGroupsRequest &other)
+    : CodeDeployRequest(new ListDeploymentGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDeploymentGroupsRequest object.
+ */
+ListDeploymentGroupsRequest::ListDeploymentGroupsRequest()
+    : CodeDeployRequest(new ListDeploymentGroupsRequestPrivate(CodeDeployRequest::ListDeploymentGroupsAction, this))
+{
+
+}
+
+bool ListDeploymentGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDeploymentGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDeploymentGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ListDeploymentGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDeploymentGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeploymentGroupsRequestPrivate
+ *
+ * @brief  Private implementation for ListDeploymentGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeploymentGroupsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ListDeploymentGroupsRequest instance.
+ */
+ListDeploymentGroupsRequestPrivate::ListDeploymentGroupsRequestPrivate(
+    const CodeDeployRequest::Action action, ListDeploymentGroupsRequest * const q)
+    : ListDeploymentGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeploymentGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDeploymentGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDeploymentGroupsRequest instance.
+ */
+ListDeploymentGroupsRequestPrivate::ListDeploymentGroupsRequestPrivate(
+    const ListDeploymentGroupsRequestPrivate &other, ListDeploymentGroupsRequest * const q)
+    : ListDeploymentGroupsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTGRANTSREQUEST_P_H
 #define QTAWS_LISTGRANTSREQUEST_P_H
 
+#include "kms_p.h"
+#include "listgrantsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListGrantsRequest;
+
+class QTAWS_EXPORT ListGrantsRequestPrivate : public KMSPrivate {
+
+public:
+    ListGrantsRequestPrivate(const KMS::Action action,
+                                   ListGrantsRequest * const q);
+    ListGrantsRequestPrivate(const ListGrantsRequestPrivate &other,
+                                   ListGrantsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListGrantsRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

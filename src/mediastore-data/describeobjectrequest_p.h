@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEOBJECTREQUEST_P_H
 #define QTAWS_DESCRIBEOBJECTREQUEST_P_H
 
+#include "mediastoredata_p.h"
+#include "describeobjectrequest.h"
+
+namespace AWS {
+
+namespace MediaStoreData {
+
+class DescribeObjectRequest;
+
+class QTAWS_EXPORT DescribeObjectRequestPrivate : public MediaStoreDataPrivate {
+
+public:
+    DescribeObjectRequestPrivate(const MediaStoreData::Action action,
+                                   DescribeObjectRequest * const q);
+    DescribeObjectRequestPrivate(const DescribeObjectRequestPrivate &other,
+                                   DescribeObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeObjectRequest)
+
+};
+
+} // namespace MediaStoreData
+} // namespace AWS
+
 #endif

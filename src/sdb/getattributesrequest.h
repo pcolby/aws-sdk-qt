@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETATTRIBUTESREQUEST_H
 #define QTAWS_GETATTRIBUTESREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class GetAttributesRequestPrivate;
+
+class QTAWS_EXPORT GetAttributesRequest : public SimpleDBRequest {
+
+public:
+    GetAttributesRequest(const GetAttributesRequest &other);
+    GetAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAttributesRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

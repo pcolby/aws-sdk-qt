@@ -19,3 +19,107 @@
 
 #include "deleteapplicationsrequest.h"
 #include "deleteapplicationsrequest_p.h"
+#include "deleteapplicationsresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DeleteApplicationsRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService DeleteApplications requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::deleteApplications
+ */
+
+/**
+ * @brief  Constructs a new DeleteApplicationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationsResponse::DeleteApplicationsResponse(
+
+/**
+ * @brief  Constructs a new DeleteApplicationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteApplicationsRequest::DeleteApplicationsRequest(const DeleteApplicationsRequest &other)
+    : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteApplicationsRequest object.
+ */
+DeleteApplicationsRequest::DeleteApplicationsRequest()
+    : ApplicationDiscoveryServiceRequest(new DeleteApplicationsRequestPrivate(ApplicationDiscoveryServiceRequest::DeleteApplicationsAction, this))
+{
+
+}
+
+bool DeleteApplicationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteApplicationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteApplicationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * DeleteApplicationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteApplicationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteApplicationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationsRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public DeleteApplicationsRequest instance.
+ */
+DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, DeleteApplicationsRequest * const q)
+    : DeleteApplicationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteApplicationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteApplicationsRequest instance.
+ */
+DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
+    const DeleteApplicationsRequestPrivate &other, DeleteApplicationsRequest * const q)
+    : DeleteApplicationsPrivate(other, q)
+{
+
+}

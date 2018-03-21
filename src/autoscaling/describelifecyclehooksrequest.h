@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBELIFECYCLEHOOKSREQUEST_H
 #define QTAWS_DESCRIBELIFECYCLEHOOKSREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeLifecycleHooksRequestPrivate;
+
+class QTAWS_EXPORT DescribeLifecycleHooksRequest : public AutoScalingRequest {
+
+public:
+    DescribeLifecycleHooksRequest(const DescribeLifecycleHooksRequest &other);
+    DescribeLifecycleHooksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLifecycleHooksRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAUTHORIZATIONTOKENREQUEST_H
 #define QTAWS_GETAUTHORIZATIONTOKENREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetAuthorizationTokenRequestPrivate;
+
+class QTAWS_EXPORT GetAuthorizationTokenRequest : public ECRRequest {
+
+public:
+    GetAuthorizationTokenRequest(const GetAuthorizationTokenRequest &other);
+    GetAuthorizationTokenRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAuthorizationTokenRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

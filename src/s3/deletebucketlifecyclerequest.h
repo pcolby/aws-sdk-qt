@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBUCKETLIFECYCLEREQUEST_H
 #define QTAWS_DELETEBUCKETLIFECYCLEREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketLifecycleRequestPrivate;
+
+class QTAWS_EXPORT DeleteBucketLifecycleRequest : public S3Request {
+
+public:
+    DeleteBucketLifecycleRequest(const DeleteBucketLifecycleRequest &other);
+    DeleteBucketLifecycleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketLifecycleRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

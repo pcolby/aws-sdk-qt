@@ -19,3 +19,107 @@
 
 #include "stopstackrequest.h"
 #include "stopstackrequest_p.h"
+#include "stopstackresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  StopStackRequest
+ *
+ * @brief  Implements OpsWorks StopStack requests.
+ *
+ * @see    OpsWorksClient::stopStack
+ */
+
+/**
+ * @brief  Constructs a new StopStackResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStackResponse::StopStackResponse(
+
+/**
+ * @brief  Constructs a new StopStackRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopStackRequest::StopStackRequest(const StopStackRequest &other)
+    : OpsWorksRequest(new StopStackRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopStackRequest object.
+ */
+StopStackRequest::StopStackRequest()
+    : OpsWorksRequest(new StopStackRequestPrivate(OpsWorksRequest::StopStackAction, this))
+{
+
+}
+
+bool StopStackRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopStackResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopStackResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * StopStackRequest::response(QNetworkReply * const reply) const
+{
+    return new StopStackResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStackRequestPrivate
+ *
+ * @brief  Private implementation for StopStackRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public StopStackRequest instance.
+ */
+StopStackRequestPrivate::StopStackRequestPrivate(
+    const OpsWorksRequest::Action action, StopStackRequest * const q)
+    : StopStackPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopStackRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopStackRequest instance.
+ */
+StopStackRequestPrivate::StopStackRequestPrivate(
+    const StopStackRequestPrivate &other, StopStackRequest * const q)
+    : StopStackPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEIPSETREQUEST_H
 #define QTAWS_UPDATEIPSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateIPSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateIPSetRequest : public WAFRegionalRequest {
+
+public:
+    UpdateIPSetRequest(const UpdateIPSetRequest &other);
+    UpdateIPSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateIPSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

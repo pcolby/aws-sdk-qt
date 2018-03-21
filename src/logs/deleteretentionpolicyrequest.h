@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYREQUEST_H
 #define QTAWS_DELETERETENTIONPOLICYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteRetentionPolicyRequestPrivate;
+
+class QTAWS_EXPORT DeleteRetentionPolicyRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteRetentionPolicyRequest(const DeleteRetentionPolicyRequest &other);
+    DeleteRetentionPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRetentionPolicyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETJOBMANIFESTREQUEST_P_H
 #define QTAWS_GETJOBMANIFESTREQUEST_P_H
 
+#include "snowball_p.h"
+#include "getjobmanifestrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetJobManifestRequest;
+
+class QTAWS_EXPORT GetJobManifestRequestPrivate : public SnowballPrivate {
+
+public:
+    GetJobManifestRequestPrivate(const Snowball::Action action,
+                                   GetJobManifestRequest * const q);
+    GetJobManifestRequestPrivate(const GetJobManifestRequestPrivate &other,
+                                   GetJobManifestRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobManifestRequest)
+
+};
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

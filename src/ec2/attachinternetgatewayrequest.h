@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHINTERNETGATEWAYREQUEST_H
 #define QTAWS_ATTACHINTERNETGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachInternetGatewayRequestPrivate;
+
+class QTAWS_EXPORT AttachInternetGatewayRequest : public EC2Request {
+
+public:
+    AttachInternetGatewayRequest(const AttachInternetGatewayRequest &other);
+    AttachInternetGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachInternetGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

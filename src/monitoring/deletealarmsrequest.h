@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEALARMSREQUEST_H
 #define QTAWS_DELETEALARMSREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DeleteAlarmsRequestPrivate;
+
+class QTAWS_EXPORT DeleteAlarmsRequest : public CloudWatchRequest {
+
+public:
+    DeleteAlarmsRequest(const DeleteAlarmsRequest &other);
+    DeleteAlarmsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAlarmsRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

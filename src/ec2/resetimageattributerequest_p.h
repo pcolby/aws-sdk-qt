@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETIMAGEATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETIMAGEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "resetimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetImageAttributeRequest;
+
+class QTAWS_EXPORT ResetImageAttributeRequestPrivate : public EC2Private {
+
+public:
+    ResetImageAttributeRequestPrivate(const EC2::Action action,
+                                   ResetImageAttributeRequest * const q);
+    ResetImageAttributeRequestPrivate(const ResetImageAttributeRequestPrivate &other,
+                                   ResetImageAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetImageAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

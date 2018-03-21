@@ -19,3 +19,107 @@
 
 #include "deletefpgaimagerequest.h"
 #include "deletefpgaimagerequest_p.h"
+#include "deletefpgaimageresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteFpgaImageRequest
+ *
+ * @brief  Implements EC2 DeleteFpgaImage requests.
+ *
+ * @see    EC2Client::deleteFpgaImage
+ */
+
+/**
+ * @brief  Constructs a new DeleteFpgaImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFpgaImageResponse::DeleteFpgaImageResponse(
+
+/**
+ * @brief  Constructs a new DeleteFpgaImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFpgaImageRequest::DeleteFpgaImageRequest(const DeleteFpgaImageRequest &other)
+    : EC2Request(new DeleteFpgaImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFpgaImageRequest object.
+ */
+DeleteFpgaImageRequest::DeleteFpgaImageRequest()
+    : EC2Request(new DeleteFpgaImageRequestPrivate(EC2Request::DeleteFpgaImageAction, this))
+{
+
+}
+
+bool DeleteFpgaImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFpgaImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFpgaImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFpgaImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFpgaImageRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFpgaImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFpgaImageRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteFpgaImageRequest instance.
+ */
+DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
+    const EC2Request::Action action, DeleteFpgaImageRequest * const q)
+    : DeleteFpgaImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFpgaImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFpgaImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFpgaImageRequest instance.
+ */
+DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
+    const DeleteFpgaImageRequestPrivate &other, DeleteFpgaImageRequest * const q)
+    : DeleteFpgaImagePrivate(other, q)
+{
+
+}

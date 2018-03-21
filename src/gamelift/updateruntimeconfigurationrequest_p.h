@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERUNTIMECONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATERUNTIMECONFIGURATIONREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "updateruntimeconfigurationrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class UpdateRuntimeConfigurationRequest;
+
+class QTAWS_EXPORT UpdateRuntimeConfigurationRequestPrivate : public GameLiftPrivate {
+
+public:
+    UpdateRuntimeConfigurationRequestPrivate(const GameLift::Action action,
+                                   UpdateRuntimeConfigurationRequest * const q);
+    UpdateRuntimeConfigurationRequestPrivate(const UpdateRuntimeConfigurationRequestPrivate &other,
+                                   UpdateRuntimeConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRuntimeConfigurationRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

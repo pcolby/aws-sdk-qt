@@ -19,3 +19,107 @@
 
 #include "deletevpcendpointconnectionnotificationsrequest.h"
 #include "deletevpcendpointconnectionnotificationsrequest_p.h"
+#include "deletevpcendpointconnectionnotificationsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcEndpointConnectionNotificationsRequest
+ *
+ * @brief  Implements EC2 DeleteVpcEndpointConnectionNotifications requests.
+ *
+ * @see    EC2Client::deleteVpcEndpointConnectionNotifications
+ */
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNotificationsResponse(
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest(const DeleteVpcEndpointConnectionNotificationsRequest &other)
+    : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequest object.
+ */
+DeleteVpcEndpointConnectionNotificationsRequest::DeleteVpcEndpointConnectionNotificationsRequest()
+    : EC2Request(new DeleteVpcEndpointConnectionNotificationsRequestPrivate(EC2Request::DeleteVpcEndpointConnectionNotificationsAction, this))
+{
+
+}
+
+bool DeleteVpcEndpointConnectionNotificationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVpcEndpointConnectionNotificationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVpcEndpointConnectionNotificationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVpcEndpointConnectionNotificationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcEndpointConnectionNotificationsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVpcEndpointConnectionNotificationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteVpcEndpointConnectionNotificationsRequest instance.
+ */
+DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
+    const EC2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)
+    : DeleteVpcEndpointConnectionNotificationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVpcEndpointConnectionNotificationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVpcEndpointConnectionNotificationsRequest instance.
+ */
+DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
+    const DeleteVpcEndpointConnectionNotificationsRequestPrivate &other, DeleteVpcEndpointConnectionNotificationsRequest * const q)
+    : DeleteVpcEndpointConnectionNotificationsPrivate(other, q)
+{
+
+}

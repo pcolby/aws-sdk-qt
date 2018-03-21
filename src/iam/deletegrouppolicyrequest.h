@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGROUPPOLICYREQUEST_H
 #define QTAWS_DELETEGROUPPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteGroupPolicyRequestPrivate;
+
+class QTAWS_EXPORT DeleteGroupPolicyRequest : public IAMRequest {
+
+public:
+    DeleteGroupPolicyRequest(const DeleteGroupPolicyRequest &other);
+    DeleteGroupPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGroupPolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

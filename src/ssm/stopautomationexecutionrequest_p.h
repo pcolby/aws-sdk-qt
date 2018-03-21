@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPAUTOMATIONEXECUTIONREQUEST_P_H
 #define QTAWS_STOPAUTOMATIONEXECUTIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "stopautomationexecutionrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class StopAutomationExecutionRequest;
+
+class QTAWS_EXPORT StopAutomationExecutionRequestPrivate : public SSMPrivate {
+
+public:
+    StopAutomationExecutionRequestPrivate(const SSM::Action action,
+                                   StopAutomationExecutionRequest * const q);
+    StopAutomationExecutionRequestPrivate(const StopAutomationExecutionRequestPrivate &other,
+                                   StopAutomationExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopAutomationExecutionRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

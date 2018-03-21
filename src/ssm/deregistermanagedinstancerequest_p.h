@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERMANAGEDINSTANCEREQUEST_P_H
 #define QTAWS_DEREGISTERMANAGEDINSTANCEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deregistermanagedinstancerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeregisterManagedInstanceRequest;
+
+class QTAWS_EXPORT DeregisterManagedInstanceRequestPrivate : public SSMPrivate {
+
+public:
+    DeregisterManagedInstanceRequestPrivate(const SSM::Action action,
+                                   DeregisterManagedInstanceRequest * const q);
+    DeregisterManagedInstanceRequestPrivate(const DeregisterManagedInstanceRequestPrivate &other,
+                                   DeregisterManagedInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterManagedInstanceRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

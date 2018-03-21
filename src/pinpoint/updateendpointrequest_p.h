@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEENDPOINTREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updateendpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEndpointRequest;
+
+class QTAWS_EXPORT UpdateEndpointRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateEndpointRequestPrivate(const Pinpoint::Action action,
+                                   UpdateEndpointRequest * const q);
+    UpdateEndpointRequestPrivate(const UpdateEndpointRequestPrivate &other,
+                                   UpdateEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

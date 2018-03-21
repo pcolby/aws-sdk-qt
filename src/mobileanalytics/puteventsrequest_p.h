@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTEVENTSREQUEST_P_H
 #define QTAWS_PUTEVENTSREQUEST_P_H
 
+#include "mobileanalytics_p.h"
+#include "puteventsrequest.h"
+
+namespace AWS {
+
+namespace MobileAnalytics {
+
+class PutEventsRequest;
+
+class QTAWS_EXPORT PutEventsRequestPrivate : public MobileAnalyticsPrivate {
+
+public:
+    PutEventsRequestPrivate(const MobileAnalytics::Action action,
+                                   PutEventsRequest * const q);
+    PutEventsRequestPrivate(const PutEventsRequestPrivate &other,
+                                   PutEventsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutEventsRequest)
+
+};
+
+} // namespace MobileAnalytics
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getchangerequest.h"
 #include "getchangerequest_p.h"
+#include "getchangeresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetChangeRequest
+ *
+ * @brief  Implements Route53 GetChange requests.
+ *
+ * @see    Route53Client::getChange
+ */
+
+/**
+ * @brief  Constructs a new GetChangeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetChangeResponse::GetChangeResponse(
+
+/**
+ * @brief  Constructs a new GetChangeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetChangeRequest::GetChangeRequest(const GetChangeRequest &other)
+    : Route53Request(new GetChangeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetChangeRequest object.
+ */
+GetChangeRequest::GetChangeRequest()
+    : Route53Request(new GetChangeRequestPrivate(Route53Request::GetChangeAction, this))
+{
+
+}
+
+bool GetChangeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetChangeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetChangeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * const reply) const
+{
+    return new GetChangeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetChangeRequestPrivate
+ *
+ * @brief  Private implementation for GetChangeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetChangeRequest instance.
+ */
+GetChangeRequestPrivate::GetChangeRequestPrivate(
+    const Route53Request::Action action, GetChangeRequest * const q)
+    : GetChangePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetChangeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetChangeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetChangeRequest instance.
+ */
+GetChangeRequestPrivate::GetChangeRequestPrivate(
+    const GetChangeRequestPrivate &other, GetChangeRequest * const q)
+    : GetChangePrivate(other, q)
+{
+
+}

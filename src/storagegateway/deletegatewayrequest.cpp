@@ -19,3 +19,107 @@
 
 #include "deletegatewayrequest.h"
 #include "deletegatewayrequest_p.h"
+#include "deletegatewayresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteGatewayRequest
+ *
+ * @brief  Implements StorageGateway DeleteGateway requests.
+ *
+ * @see    StorageGatewayClient::deleteGateway
+ */
+
+/**
+ * @brief  Constructs a new DeleteGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGatewayResponse::DeleteGatewayResponse(
+
+/**
+ * @brief  Constructs a new DeleteGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGatewayRequest::DeleteGatewayRequest(const DeleteGatewayRequest &other)
+    : StorageGatewayRequest(new DeleteGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGatewayRequest object.
+ */
+DeleteGatewayRequest::DeleteGatewayRequest()
+    : StorageGatewayRequest(new DeleteGatewayRequestPrivate(StorageGatewayRequest::DeleteGatewayAction, this))
+{
+
+}
+
+bool DeleteGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGatewayRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteGatewayRequest instance.
+ */
+DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteGatewayRequest * const q)
+    : DeleteGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGatewayRequest instance.
+ */
+DeleteGatewayRequestPrivate::DeleteGatewayRequestPrivate(
+    const DeleteGatewayRequestPrivate &other, DeleteGatewayRequest * const q)
+    : DeleteGatewayPrivate(other, q)
+{
+
+}

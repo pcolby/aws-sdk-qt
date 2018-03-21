@@ -19,3 +19,107 @@
 
 #include "deleteloggerdefinitionrequest.h"
 #include "deleteloggerdefinitionrequest_p.h"
+#include "deleteloggerdefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteLoggerDefinitionRequest
+ *
+ * @brief  Implements Greengrass DeleteLoggerDefinition requests.
+ *
+ * @see    GreengrassClient::deleteLoggerDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeleteLoggerDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeleteLoggerDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest(const DeleteLoggerDefinitionRequest &other)
+    : GreengrassRequest(new DeleteLoggerDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLoggerDefinitionRequest object.
+ */
+DeleteLoggerDefinitionRequest::DeleteLoggerDefinitionRequest()
+    : GreengrassRequest(new DeleteLoggerDefinitionRequestPrivate(GreengrassRequest::DeleteLoggerDefinitionAction, this))
+{
+
+}
+
+bool DeleteLoggerDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLoggerDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLoggerDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLoggerDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLoggerDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLoggerDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DeleteLoggerDefinitionRequest instance.
+ */
+DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, DeleteLoggerDefinitionRequest * const q)
+    : DeleteLoggerDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLoggerDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLoggerDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLoggerDefinitionRequest instance.
+ */
+DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
+    const DeleteLoggerDefinitionRequestPrivate &other, DeleteLoggerDefinitionRequest * const q)
+    : DeleteLoggerDefinitionPrivate(other, q)
+{
+
+}

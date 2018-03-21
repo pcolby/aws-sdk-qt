@@ -19,3 +19,107 @@
 
 #include "getidentitynotificationattributesrequest.h"
 #include "getidentitynotificationattributesrequest_p.h"
+#include "getidentitynotificationattributesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityNotificationAttributesRequest
+ *
+ * @brief  Implements SES GetIdentityNotificationAttributes requests.
+ *
+ * @see    SESClient::getIdentityNotificationAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityNotificationAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityNotificationAttributesResponse::GetIdentityNotificationAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityNotificationAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesRequest(const GetIdentityNotificationAttributesRequest &other)
+    : SESRequest(new GetIdentityNotificationAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityNotificationAttributesRequest object.
+ */
+GetIdentityNotificationAttributesRequest::GetIdentityNotificationAttributesRequest()
+    : SESRequest(new GetIdentityNotificationAttributesRequestPrivate(SESRequest::GetIdentityNotificationAttributesAction, this))
+{
+
+}
+
+bool GetIdentityNotificationAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityNotificationAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityNotificationAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetIdentityNotificationAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityNotificationAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityNotificationAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityNotificationAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetIdentityNotificationAttributesRequest instance.
+ */
+GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttributesRequestPrivate(
+    const SESRequest::Action action, GetIdentityNotificationAttributesRequest * const q)
+    : GetIdentityNotificationAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityNotificationAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityNotificationAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityNotificationAttributesRequest instance.
+ */
+GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttributesRequestPrivate(
+    const GetIdentityNotificationAttributesRequestPrivate &other, GetIdentityNotificationAttributesRequest * const q)
+    : GetIdentityNotificationAttributesPrivate(other, q)
+{
+
+}

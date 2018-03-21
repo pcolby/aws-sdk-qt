@@ -19,3 +19,107 @@
 
 #include "deleteidentitypolicyrequest.h"
 #include "deleteidentitypolicyrequest_p.h"
+#include "deleteidentitypolicyresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DeleteIdentityPolicyRequest
+ *
+ * @brief  Implements SES DeleteIdentityPolicy requests.
+ *
+ * @see    SESClient::deleteIdentityPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteIdentityPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIdentityPolicyResponse::DeleteIdentityPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteIdentityPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest(const DeleteIdentityPolicyRequest &other)
+    : SESRequest(new DeleteIdentityPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIdentityPolicyRequest object.
+ */
+DeleteIdentityPolicyRequest::DeleteIdentityPolicyRequest()
+    : SESRequest(new DeleteIdentityPolicyRequestPrivate(SESRequest::DeleteIdentityPolicyAction, this))
+{
+
+}
+
+bool DeleteIdentityPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIdentityPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIdentityPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIdentityPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIdentityPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIdentityPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DeleteIdentityPolicyRequest instance.
+ */
+DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
+    const SESRequest::Action action, DeleteIdentityPolicyRequest * const q)
+    : DeleteIdentityPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIdentityPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIdentityPolicyRequest instance.
+ */
+DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
+    const DeleteIdentityPolicyRequestPrivate &other, DeleteIdentityPolicyRequest * const q)
+    : DeleteIdentityPolicyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 #define QTAWS_STOPDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "stopdatacollectionbyagentidsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class StopDataCollectionByAgentIdsRequest;
+
+class QTAWS_EXPORT StopDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    StopDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   StopDataCollectionByAgentIdsRequest * const q);
+    StopDataCollectionByAgentIdsRequestPrivate(const StopDataCollectionByAgentIdsRequestPrivate &other,
+                                   StopDataCollectionByAgentIdsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopDataCollectionByAgentIdsRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

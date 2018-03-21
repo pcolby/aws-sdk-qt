@@ -19,3 +19,107 @@
 
 #include "removeuserfromgrouprequest.h"
 #include "removeuserfromgrouprequest_p.h"
+#include "removeuserfromgroupresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  RemoveUserFromGroupRequest
+ *
+ * @brief  Implements IAM RemoveUserFromGroup requests.
+ *
+ * @see    IAMClient::removeUserFromGroup
+ */
+
+/**
+ * @brief  Constructs a new RemoveUserFromGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
+
+/**
+ * @brief  Constructs a new RemoveUserFromGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveUserFromGroupRequest::RemoveUserFromGroupRequest(const RemoveUserFromGroupRequest &other)
+    : IAMRequest(new RemoveUserFromGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveUserFromGroupRequest object.
+ */
+RemoveUserFromGroupRequest::RemoveUserFromGroupRequest()
+    : IAMRequest(new RemoveUserFromGroupRequestPrivate(IAMRequest::RemoveUserFromGroupAction, this))
+{
+
+}
+
+bool RemoveUserFromGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveUserFromGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveUserFromGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveUserFromGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveUserFromGroupRequestPrivate
+ *
+ * @brief  Private implementation for RemoveUserFromGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveUserFromGroupRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public RemoveUserFromGroupRequest instance.
+ */
+RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
+    const IAMRequest::Action action, RemoveUserFromGroupRequest * const q)
+    : RemoveUserFromGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveUserFromGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveUserFromGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveUserFromGroupRequest instance.
+ */
+RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
+    const RemoveUserFromGroupRequestPrivate &other, RemoveUserFromGroupRequest * const q)
+    : RemoveUserFromGroupPrivate(other, q)
+{
+
+}

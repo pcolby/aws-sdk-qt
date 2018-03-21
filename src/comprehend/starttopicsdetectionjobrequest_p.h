@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTTOPICSDETECTIONJOBREQUEST_P_H
 #define QTAWS_STARTTOPICSDETECTIONJOBREQUEST_P_H
 
+#include "comprehend_p.h"
+#include "starttopicsdetectionjobrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class StartTopicsDetectionJobRequest;
+
+class QTAWS_EXPORT StartTopicsDetectionJobRequestPrivate : public ComprehendPrivate {
+
+public:
+    StartTopicsDetectionJobRequestPrivate(const Comprehend::Action action,
+                                   StartTopicsDetectionJobRequest * const q);
+    StartTopicsDetectionJobRequestPrivate(const StartTopicsDetectionJobRequestPrivate &other,
+                                   StartTopicsDetectionJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartTopicsDetectionJobRequest)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

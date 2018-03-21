@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGAMESESSIONLOGURLREQUEST_H
 #define QTAWS_GETGAMESESSIONLOGURLREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class GetGameSessionLogUrlRequestPrivate;
+
+class QTAWS_EXPORT GetGameSessionLogUrlRequest : public GameLiftRequest {
+
+public:
+    GetGameSessionLogUrlRequest(const GetGameSessionLogUrlRequest &other);
+    GetGameSessionLogUrlRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGameSessionLogUrlRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

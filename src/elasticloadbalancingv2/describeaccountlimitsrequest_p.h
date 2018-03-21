@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "describeaccountlimitsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeAccountLimitsRequest;
+
+class QTAWS_EXPORT DescribeAccountLimitsRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DescribeAccountLimitsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DescribeAccountLimitsRequest * const q);
+    DescribeAccountLimitsRequestPrivate(const DescribeAccountLimitsRequestPrivate &other,
+                                   DescribeAccountLimitsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountLimitsRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

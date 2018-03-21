@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESUBNETGROUPREQUEST_P_H
 #define QTAWS_UPDATESUBNETGROUPREQUEST_P_H
 
+#include "dax_p.h"
+#include "updatesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateSubnetGroupRequest;
+
+class QTAWS_EXPORT UpdateSubnetGroupRequestPrivate : public DAXPrivate {
+
+public:
+    UpdateSubnetGroupRequestPrivate(const DAX::Action action,
+                                   UpdateSubnetGroupRequest * const q);
+    UpdateSubnetGroupRequestPrivate(const UpdateSubnetGroupRequestPrivate &other,
+                                   UpdateSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSubnetGroupRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

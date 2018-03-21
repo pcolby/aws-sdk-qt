@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPSTREAMPROCESSORREQUEST_H
 #define QTAWS_STOPSTREAMPROCESSORREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StopStreamProcessorRequestPrivate;
+
+class QTAWS_EXPORT StopStreamProcessorRequest : public RekognitionRequest {
+
+public:
+    StopStreamProcessorRequest(const StopStreamProcessorRequest &other);
+    StopStreamProcessorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopStreamProcessorRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

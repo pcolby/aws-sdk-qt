@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECUSTOMERGATEWAYREQUEST_H
 #define QTAWS_CREATECUSTOMERGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateCustomerGatewayRequestPrivate;
+
+class QTAWS_EXPORT CreateCustomerGatewayRequest : public EC2Request {
+
+public:
+    CreateCustomerGatewayRequest(const CreateCustomerGatewayRequest &other);
+    CreateCustomerGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomerGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

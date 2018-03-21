@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDTASKSUCCESSREQUEST_H
 #define QTAWS_SENDTASKSUCCESSREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class SendTaskSuccessRequestPrivate;
+
+class QTAWS_EXPORT SendTaskSuccessRequest : public SFNRequest {
+
+public:
+    SendTaskSuccessRequest(const SendTaskSuccessRequest &other);
+    SendTaskSuccessRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendTaskSuccessRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

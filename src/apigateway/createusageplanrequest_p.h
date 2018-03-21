@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEUSAGEPLANREQUEST_P_H
 #define QTAWS_CREATEUSAGEPLANREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "createusageplanrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateUsagePlanRequest;
+
+class QTAWS_EXPORT CreateUsagePlanRequestPrivate : public APIGatewayPrivate {
+
+public:
+    CreateUsagePlanRequestPrivate(const APIGateway::Action action,
+                                   CreateUsagePlanRequest * const q);
+    CreateUsagePlanRequestPrivate(const CreateUsagePlanRequestPrivate &other,
+                                   CreateUsagePlanRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateUsagePlanRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPROFILEREQUEST_P_H
 #define QTAWS_GETPROFILEREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "getprofilerequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetProfileRequest;
+
+class QTAWS_EXPORT GetProfileRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    GetProfileRequestPrivate(const AlexaForBusiness::Action action,
+                                   GetProfileRequest * const q);
+    GetProfileRequestPrivate(const GetProfileRequestPrivate &other,
+                                   GetProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetProfileRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

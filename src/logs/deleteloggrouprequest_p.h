@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETELOGGROUPREQUEST_P_H
 #define QTAWS_DELETELOGGROUPREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "deleteloggrouprequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteLogGroupRequest;
+
+class QTAWS_EXPORT DeleteLogGroupRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    DeleteLogGroupRequestPrivate(const CloudWatchLogs::Action action,
+                                   DeleteLogGroupRequest * const q);
+    DeleteLogGroupRequestPrivate(const DeleteLogGroupRequestPrivate &other,
+                                   DeleteLogGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteLogGroupRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPROJECTREQUEST_H
 #define QTAWS_DESCRIBEPROJECTREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DescribeProjectRequestPrivate;
+
+class QTAWS_EXPORT DescribeProjectRequest : public CodeStarRequest {
+
+public:
+    DescribeProjectRequest(const DescribeProjectRequest &other);
+    DescribeProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeProjectRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

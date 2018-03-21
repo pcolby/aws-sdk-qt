@@ -19,3 +19,107 @@
 
 #include "putscheduledactionrequest.h"
 #include "putscheduledactionrequest_p.h"
+#include "putscheduledactionresponse.h"
+#include "applicationautoscalingrequest_p.h"
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  PutScheduledActionRequest
+ *
+ * @brief  Implements ApplicationAutoScaling PutScheduledAction requests.
+ *
+ * @see    ApplicationAutoScalingClient::putScheduledAction
+ */
+
+/**
+ * @brief  Constructs a new PutScheduledActionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutScheduledActionResponse::PutScheduledActionResponse(
+
+/**
+ * @brief  Constructs a new PutScheduledActionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutScheduledActionRequest::PutScheduledActionRequest(const PutScheduledActionRequest &other)
+    : ApplicationAutoScalingRequest(new PutScheduledActionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutScheduledActionRequest object.
+ */
+PutScheduledActionRequest::PutScheduledActionRequest()
+    : ApplicationAutoScalingRequest(new PutScheduledActionRequestPrivate(ApplicationAutoScalingRequest::PutScheduledActionAction, this))
+{
+
+}
+
+bool PutScheduledActionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutScheduledActionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutScheduledActionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationAutoScalingClient::send
+ */
+AwsAbstractResponse * PutScheduledActionRequest::response(QNetworkReply * const reply) const
+{
+    return new PutScheduledActionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutScheduledActionRequestPrivate
+ *
+ * @brief  Private implementation for PutScheduledActionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutScheduledActionRequestPrivate object.
+ *
+ * @param  action  ApplicationAutoScaling action being performed.
+ * @param  q       Pointer to this object's public PutScheduledActionRequest instance.
+ */
+PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
+    const ApplicationAutoScalingRequest::Action action, PutScheduledActionRequest * const q)
+    : PutScheduledActionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutScheduledActionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutScheduledActionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutScheduledActionRequest instance.
+ */
+PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
+    const PutScheduledActionRequestPrivate &other, PutScheduledActionRequest * const q)
+    : PutScheduledActionPrivate(other, q)
+{
+
+}

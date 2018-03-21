@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_H
 #define QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_H
 
+#include "healthrequest.h"
+
+namespace AWS {
+
+namespace Health {
+
+class DescribeAffectedEntitiesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAffectedEntitiesRequest : public HealthRequest {
+
+public:
+    DescribeAffectedEntitiesRequest(const DescribeAffectedEntitiesRequest &other);
+    DescribeAffectedEntitiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAffectedEntitiesRequest)
+
+}
+
+} // namespace Health
+} // namespace AWS
+
 #endif

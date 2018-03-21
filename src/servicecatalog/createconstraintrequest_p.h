@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONSTRAINTREQUEST_P_H
 #define QTAWS_CREATECONSTRAINTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "createconstraintrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class CreateConstraintRequest;
+
+class QTAWS_EXPORT CreateConstraintRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    CreateConstraintRequestPrivate(const ServiceCatalog::Action action,
+                                   CreateConstraintRequest * const q);
+    CreateConstraintRequestPrivate(const CreateConstraintRequestPrivate &other,
+                                   CreateConstraintRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConstraintRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

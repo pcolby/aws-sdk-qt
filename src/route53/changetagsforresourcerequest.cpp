@@ -19,3 +19,107 @@
 
 #include "changetagsforresourcerequest.h"
 #include "changetagsforresourcerequest_p.h"
+#include "changetagsforresourceresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ChangeTagsForResourceRequest
+ *
+ * @brief  Implements Route53 ChangeTagsForResource requests.
+ *
+ * @see    Route53Client::changeTagsForResource
+ */
+
+/**
+ * @brief  Constructs a new ChangeTagsForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
+
+/**
+ * @brief  Constructs a new ChangeTagsForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ChangeTagsForResourceRequest::ChangeTagsForResourceRequest(const ChangeTagsForResourceRequest &other)
+    : Route53Request(new ChangeTagsForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ChangeTagsForResourceRequest object.
+ */
+ChangeTagsForResourceRequest::ChangeTagsForResourceRequest()
+    : Route53Request(new ChangeTagsForResourceRequestPrivate(Route53Request::ChangeTagsForResourceAction, this))
+{
+
+}
+
+bool ChangeTagsForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ChangeTagsForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ChangeTagsForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new ChangeTagsForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ChangeTagsForResourceRequestPrivate
+ *
+ * @brief  Private implementation for ChangeTagsForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ChangeTagsForResourceRequest instance.
+ */
+ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
+    const Route53Request::Action action, ChangeTagsForResourceRequest * const q)
+    : ChangeTagsForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangeTagsForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ChangeTagsForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ChangeTagsForResourceRequest instance.
+ */
+ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
+    const ChangeTagsForResourceRequestPrivate &other, ChangeTagsForResourceRequest * const q)
+    : ChangeTagsForResourcePrivate(other, q)
+{
+
+}

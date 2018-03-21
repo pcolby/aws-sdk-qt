@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRECORDSREQUEST_H
 #define QTAWS_GETRECORDSREQUEST_H
 
+#include "dynamodbstreamsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class GetRecordsRequestPrivate;
+
+class QTAWS_EXPORT GetRecordsRequest : public DynamoDBStreamsRequest {
+
+public:
+    GetRecordsRequest(const GetRecordsRequest &other);
+    GetRecordsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRecordsRequest)
+
+}
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

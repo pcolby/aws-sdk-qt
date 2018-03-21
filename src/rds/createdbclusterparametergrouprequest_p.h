@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_CREATEDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "createdbclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBClusterParameterGroupRequest;
+
+class QTAWS_EXPORT CreateDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+
+public:
+    CreateDBClusterParameterGroupRequestPrivate(const RDS::Action action,
+                                   CreateDBClusterParameterGroupRequest * const q);
+    CreateDBClusterParameterGroupRequestPrivate(const CreateDBClusterParameterGroupRequestPrivate &other,
+                                   CreateDBClusterParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBClusterParameterGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

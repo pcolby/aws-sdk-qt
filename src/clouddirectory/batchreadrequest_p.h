@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHREADREQUEST_P_H
 #define QTAWS_BATCHREADREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "batchreadrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class BatchReadRequest;
+
+class QTAWS_EXPORT BatchReadRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    BatchReadRequestPrivate(const CloudDirectory::Action action,
+                                   BatchReadRequest * const q);
+    BatchReadRequestPrivate(const BatchReadRequestPrivate &other,
+                                   BatchReadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchReadRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

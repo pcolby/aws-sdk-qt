@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDEPLOYMENTSREQUEST_P_H
 #define QTAWS_DESCRIBEDEPLOYMENTSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describedeploymentsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeDeploymentsRequest;
+
+class QTAWS_EXPORT DescribeDeploymentsRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeDeploymentsRequestPrivate(const OpsWorks::Action action,
+                                   DescribeDeploymentsRequest * const q);
+    DescribeDeploymentsRequestPrivate(const DescribeDeploymentsRequestPrivate &other,
+                                   DescribeDeploymentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDeploymentsRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

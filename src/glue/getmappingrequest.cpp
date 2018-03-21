@@ -19,3 +19,107 @@
 
 #include "getmappingrequest.h"
 #include "getmappingrequest_p.h"
+#include "getmappingresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetMappingRequest
+ *
+ * @brief  Implements Glue GetMapping requests.
+ *
+ * @see    GlueClient::getMapping
+ */
+
+/**
+ * @brief  Constructs a new GetMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetMappingResponse::GetMappingResponse(
+
+/**
+ * @brief  Constructs a new GetMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetMappingRequest::GetMappingRequest(const GetMappingRequest &other)
+    : GlueRequest(new GetMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetMappingRequest object.
+ */
+GetMappingRequest::GetMappingRequest()
+    : GlueRequest(new GetMappingRequestPrivate(GlueRequest::GetMappingAction, this))
+{
+
+}
+
+bool GetMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new GetMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetMappingRequestPrivate
+ *
+ * @brief  Private implementation for GetMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMappingRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetMappingRequest instance.
+ */
+GetMappingRequestPrivate::GetMappingRequestPrivate(
+    const GlueRequest::Action action, GetMappingRequest * const q)
+    : GetMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetMappingRequest instance.
+ */
+GetMappingRequestPrivate::GetMappingRequestPrivate(
+    const GetMappingRequestPrivate &other, GetMappingRequest * const q)
+    : GetMappingPrivate(other, q)
+{
+
+}

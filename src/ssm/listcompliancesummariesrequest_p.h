@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCOMPLIANCESUMMARIESREQUEST_P_H
 #define QTAWS_LISTCOMPLIANCESUMMARIESREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listcompliancesummariesrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListComplianceSummariesRequest;
+
+class QTAWS_EXPORT ListComplianceSummariesRequestPrivate : public SSMPrivate {
+
+public:
+    ListComplianceSummariesRequestPrivate(const SSM::Action action,
+                                   ListComplianceSummariesRequest * const q);
+    ListComplianceSummariesRequestPrivate(const ListComplianceSummariesRequestPrivate &other,
+                                   ListComplianceSummariesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListComplianceSummariesRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

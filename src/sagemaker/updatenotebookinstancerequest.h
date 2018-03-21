@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATENOTEBOOKINSTANCEREQUEST_H
 #define QTAWS_UPDATENOTEBOOKINSTANCEREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class UpdateNotebookInstanceRequestPrivate;
+
+class QTAWS_EXPORT UpdateNotebookInstanceRequest : public SageMakerRequest {
+
+public:
+    UpdateNotebookInstanceRequest(const UpdateNotebookInstanceRequest &other);
+    UpdateNotebookInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateNotebookInstanceRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

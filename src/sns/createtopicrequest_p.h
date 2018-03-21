@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETOPICREQUEST_P_H
 #define QTAWS_CREATETOPICREQUEST_P_H
 
+#include "sns_p.h"
+#include "createtopicrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CreateTopicRequest;
+
+class QTAWS_EXPORT CreateTopicRequestPrivate : public SNSPrivate {
+
+public:
+    CreateTopicRequestPrivate(const SNS::Action action,
+                                   CreateTopicRequest * const q);
+    CreateTopicRequestPrivate(const CreateTopicRequestPrivate &other,
+                                   CreateTopicRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTopicRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

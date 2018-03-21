@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATERESOURCEREQUEST_H
 #define QTAWS_UPDATERESOURCEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateResourceRequestPrivate;
+
+class QTAWS_EXPORT UpdateResourceRequest : public APIGatewayRequest {
+
+public:
+    UpdateResourceRequest(const UpdateResourceRequest &other);
+    UpdateResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResourceRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

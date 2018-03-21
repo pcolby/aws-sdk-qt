@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESTOREDBINSTANCETOPOINTINTIMEREQUEST_H
 #define QTAWS_RESTOREDBINSTANCETOPOINTINTIMEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBInstanceToPointInTimeRequestPrivate;
+
+class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequest : public RDSRequest {
+
+public:
+    RestoreDBInstanceToPointInTimeRequest(const RestoreDBInstanceToPointInTimeRequest &other);
+    RestoreDBInstanceToPointInTimeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RestoreDBInstanceToPointInTimeRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

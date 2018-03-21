@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCREDENTIALSFORIDENTITYREQUEST_P_H
 #define QTAWS_GETCREDENTIALSFORIDENTITYREQUEST_P_H
 
+#include "cognitoidentity_p.h"
+#include "getcredentialsforidentityrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentity {
+
+class GetCredentialsForIdentityRequest;
+
+class QTAWS_EXPORT GetCredentialsForIdentityRequestPrivate : public CognitoIdentityPrivate {
+
+public:
+    GetCredentialsForIdentityRequestPrivate(const CognitoIdentity::Action action,
+                                   GetCredentialsForIdentityRequest * const q);
+    GetCredentialsForIdentityRequestPrivate(const GetCredentialsForIdentityRequestPrivate &other,
+                                   GetCredentialsForIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCredentialsForIdentityRequest)
+
+};
+
+} // namespace CognitoIdentity
+} // namespace AWS
+
 #endif

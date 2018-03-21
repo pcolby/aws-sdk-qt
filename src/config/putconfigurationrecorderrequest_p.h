@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTCONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_PUTCONFIGURATIONRECORDERREQUEST_P_H
 
+#include "configservice_p.h"
+#include "putconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutConfigurationRecorderRequest;
+
+class QTAWS_EXPORT PutConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+
+public:
+    PutConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+                                   PutConfigurationRecorderRequest * const q);
+    PutConfigurationRecorderRequestPrivate(const PutConfigurationRecorderRequestPrivate &other,
+                                   PutConfigurationRecorderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutConfigurationRecorderRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

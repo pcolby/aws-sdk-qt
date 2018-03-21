@@ -19,3 +19,107 @@
 
 #include "getbucketversioningrequest.h"
 #include "getbucketversioningrequest_p.h"
+#include "getbucketversioningresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketVersioningRequest
+ *
+ * @brief  Implements S3 GetBucketVersioning requests.
+ *
+ * @see    S3Client::getBucketVersioning
+ */
+
+/**
+ * @brief  Constructs a new GetBucketVersioningResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketVersioningResponse::GetBucketVersioningResponse(
+
+/**
+ * @brief  Constructs a new GetBucketVersioningRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBucketVersioningRequest::GetBucketVersioningRequest(const GetBucketVersioningRequest &other)
+    : S3Request(new GetBucketVersioningRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBucketVersioningRequest object.
+ */
+GetBucketVersioningRequest::GetBucketVersioningRequest()
+    : S3Request(new GetBucketVersioningRequestPrivate(S3Request::GetBucketVersioningAction, this))
+{
+
+}
+
+bool GetBucketVersioningRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBucketVersioningResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBucketVersioningResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * GetBucketVersioningRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBucketVersioningResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketVersioningRequestPrivate
+ *
+ * @brief  Private implementation for GetBucketVersioningRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketVersioningRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public GetBucketVersioningRequest instance.
+ */
+GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
+    const S3Request::Action action, GetBucketVersioningRequest * const q)
+    : GetBucketVersioningPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketVersioningRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBucketVersioningRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBucketVersioningRequest instance.
+ */
+GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
+    const GetBucketVersioningRequestPrivate &other, GetBucketVersioningRequest * const q)
+    : GetBucketVersioningPrivate(other, q)
+{
+
+}

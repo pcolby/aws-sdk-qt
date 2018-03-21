@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFLEETCAPACITYREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETCAPACITYREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describefleetcapacityrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeFleetCapacityRequest;
+
+class QTAWS_EXPORT DescribeFleetCapacityRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeFleetCapacityRequestPrivate(const GameLift::Action action,
+                                   DescribeFleetCapacityRequest * const q);
+    DescribeFleetCapacityRequestPrivate(const DescribeFleetCapacityRequestPrivate &other,
+                                   DescribeFleetCapacityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFleetCapacityRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

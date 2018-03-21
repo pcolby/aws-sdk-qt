@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFLOWLOGSREQUEST_P_H
 #define QTAWS_DESCRIBEFLOWLOGSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeflowlogsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeFlowLogsRequest;
+
+class QTAWS_EXPORT DescribeFlowLogsRequestPrivate : public EC2Private {
+
+public:
+    DescribeFlowLogsRequestPrivate(const EC2::Action action,
+                                   DescribeFlowLogsRequest * const q);
+    DescribeFlowLogsRequestPrivate(const DescribeFlowLogsRequestPrivate &other,
+                                   DescribeFlowLogsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFlowLogsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

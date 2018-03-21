@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONREQUEST_H
 #define QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListAWSServiceAccessForOrganizationRequestPrivate;
+
+class QTAWS_EXPORT ListAWSServiceAccessForOrganizationRequest : public OrganizationsRequest {
+
+public:
+    ListAWSServiceAccessForOrganizationRequest(const ListAWSServiceAccessForOrganizationRequest &other);
+    ListAWSServiceAccessForOrganizationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAWSServiceAccessForOrganizationRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

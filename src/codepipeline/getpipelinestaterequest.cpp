@@ -19,3 +19,107 @@
 
 #include "getpipelinestaterequest.h"
 #include "getpipelinestaterequest_p.h"
+#include "getpipelinestateresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  GetPipelineStateRequest
+ *
+ * @brief  Implements CodePipeline GetPipelineState requests.
+ *
+ * @see    CodePipelineClient::getPipelineState
+ */
+
+/**
+ * @brief  Constructs a new GetPipelineStateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPipelineStateResponse::GetPipelineStateResponse(
+
+/**
+ * @brief  Constructs a new GetPipelineStateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPipelineStateRequest::GetPipelineStateRequest(const GetPipelineStateRequest &other)
+    : CodePipelineRequest(new GetPipelineStateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPipelineStateRequest object.
+ */
+GetPipelineStateRequest::GetPipelineStateRequest()
+    : CodePipelineRequest(new GetPipelineStateRequestPrivate(CodePipelineRequest::GetPipelineStateAction, this))
+{
+
+}
+
+bool GetPipelineStateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPipelineStateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPipelineStateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * GetPipelineStateRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPipelineStateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPipelineStateRequestPrivate
+ *
+ * @brief  Private implementation for GetPipelineStateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineStateRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public GetPipelineStateRequest instance.
+ */
+GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
+    const CodePipelineRequest::Action action, GetPipelineStateRequest * const q)
+    : GetPipelineStatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPipelineStateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPipelineStateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPipelineStateRequest instance.
+ */
+GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
+    const GetPipelineStateRequestPrivate &other, GetPipelineStateRequest * const q)
+    : GetPipelineStatePrivate(other, q)
+{
+
+}

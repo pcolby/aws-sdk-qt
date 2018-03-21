@@ -19,3 +19,107 @@
 
 #include "createtablerequest.h"
 #include "createtablerequest_p.h"
+#include "createtableresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateTableRequest
+ *
+ * @brief  Implements Glue CreateTable requests.
+ *
+ * @see    GlueClient::createTable
+ */
+
+/**
+ * @brief  Constructs a new CreateTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTableResponse::CreateTableResponse(
+
+/**
+ * @brief  Constructs a new CreateTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
+    : GlueRequest(new CreateTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTableRequest object.
+ */
+CreateTableRequest::CreateTableRequest()
+    : GlueRequest(new CreateTableRequestPrivate(GlueRequest::CreateTableAction, this))
+{
+
+}
+
+bool CreateTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTableRequestPrivate
+ *
+ * @brief  Private implementation for CreateTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTableRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public CreateTableRequest instance.
+ */
+CreateTableRequestPrivate::CreateTableRequestPrivate(
+    const GlueRequest::Action action, CreateTableRequest * const q)
+    : CreateTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTableRequest instance.
+ */
+CreateTableRequestPrivate::CreateTableRequestPrivate(
+    const CreateTableRequestPrivate &other, CreateTableRequest * const q)
+    : CreateTablePrivate(other, q)
+{
+
+}

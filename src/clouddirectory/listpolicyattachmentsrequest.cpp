@@ -19,3 +19,107 @@
 
 #include "listpolicyattachmentsrequest.h"
 #include "listpolicyattachmentsrequest_p.h"
+#include "listpolicyattachmentsresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListPolicyAttachmentsRequest
+ *
+ * @brief  Implements CloudDirectory ListPolicyAttachments requests.
+ *
+ * @see    CloudDirectoryClient::listPolicyAttachments
+ */
+
+/**
+ * @brief  Constructs a new ListPolicyAttachmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPolicyAttachmentsResponse::ListPolicyAttachmentsResponse(
+
+/**
+ * @brief  Constructs a new ListPolicyAttachmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest(const ListPolicyAttachmentsRequest &other)
+    : CloudDirectoryRequest(new ListPolicyAttachmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPolicyAttachmentsRequest object.
+ */
+ListPolicyAttachmentsRequest::ListPolicyAttachmentsRequest()
+    : CloudDirectoryRequest(new ListPolicyAttachmentsRequestPrivate(CloudDirectoryRequest::ListPolicyAttachmentsAction, this))
+{
+
+}
+
+bool ListPolicyAttachmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPolicyAttachmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPolicyAttachmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPolicyAttachmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPolicyAttachmentsRequestPrivate
+ *
+ * @brief  Private implementation for ListPolicyAttachmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListPolicyAttachmentsRequest instance.
+ */
+ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListPolicyAttachmentsRequest * const q)
+    : ListPolicyAttachmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPolicyAttachmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPolicyAttachmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPolicyAttachmentsRequest instance.
+ */
+ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
+    const ListPolicyAttachmentsRequestPrivate &other, ListPolicyAttachmentsRequest * const q)
+    : ListPolicyAttachmentsPrivate(other, q)
+{
+
+}

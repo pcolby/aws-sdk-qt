@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINSTANCESREQUEST_H
 #define QTAWS_LISTINSTANCESREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class ListInstancesRequestPrivate;
+
+class QTAWS_EXPORT ListInstancesRequest : public ServiceDiscoveryRequest {
+
+public:
+    ListInstancesRequest(const ListInstancesRequest &other);
+    ListInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInstancesRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

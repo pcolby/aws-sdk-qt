@@ -19,3 +19,107 @@
 
 #include "describeorderabledbinstanceoptionsrequest.h"
 #include "describeorderabledbinstanceoptionsrequest_p.h"
+#include "describeorderabledbinstanceoptionsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeOrderableDBInstanceOptionsRequest
+ *
+ * @brief  Implements RDS DescribeOrderableDBInstanceOptions requests.
+ *
+ * @see    RDSClient::describeOrderableDBInstanceOptions
+ */
+
+/**
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other)
+    : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequest object.
+ */
+DescribeOrderableDBInstanceOptionsRequest::DescribeOrderableDBInstanceOptionsRequest()
+    : RDSRequest(new DescribeOrderableDBInstanceOptionsRequestPrivate(RDSRequest::DescribeOrderableDBInstanceOptionsAction, this))
+{
+
+}
+
+bool DescribeOrderableDBInstanceOptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeOrderableDBInstanceOptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeOrderableDBInstanceOptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeOrderableDBInstanceOptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOrderableDBInstanceOptionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeOrderableDBInstanceOptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeOrderableDBInstanceOptionsRequest instance.
+ */
+DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
+    const RDSRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)
+    : DescribeOrderableDBInstanceOptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOrderableDBInstanceOptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeOrderableDBInstanceOptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeOrderableDBInstanceOptionsRequest instance.
+ */
+DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
+    const DescribeOrderableDBInstanceOptionsRequestPrivate &other, DescribeOrderableDBInstanceOptionsRequest * const q)
+    : DescribeOrderableDBInstanceOptionsPrivate(other, q)
+{
+
+}

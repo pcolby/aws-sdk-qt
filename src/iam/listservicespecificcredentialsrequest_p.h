@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_P_H
 #define QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_P_H
 
+#include "iam_p.h"
+#include "listservicespecificcredentialsrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListServiceSpecificCredentialsRequest;
+
+class QTAWS_EXPORT ListServiceSpecificCredentialsRequestPrivate : public IAMPrivate {
+
+public:
+    ListServiceSpecificCredentialsRequestPrivate(const IAM::Action action,
+                                   ListServiceSpecificCredentialsRequest * const q);
+    ListServiceSpecificCredentialsRequestPrivate(const ListServiceSpecificCredentialsRequestPrivate &other,
+                                   ListServiceSpecificCredentialsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListServiceSpecificCredentialsRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

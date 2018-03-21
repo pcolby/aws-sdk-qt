@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEPRECATETHINGTYPEREQUEST_H
 #define QTAWS_DEPRECATETHINGTYPEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeprecateThingTypeRequestPrivate;
+
+class QTAWS_EXPORT DeprecateThingTypeRequest : public IoTRequest {
+
+public:
+    DeprecateThingTypeRequest(const DeprecateThingTypeRequest &other);
+    DeprecateThingTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateThingTypeRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

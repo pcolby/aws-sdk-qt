@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTSCHEMACREATIONREQUEST_P_H
 #define QTAWS_STARTSCHEMACREATIONREQUEST_P_H
 
+#include "appsync_p.h"
+#include "startschemacreationrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class StartSchemaCreationRequest;
+
+class QTAWS_EXPORT StartSchemaCreationRequestPrivate : public AppSyncPrivate {
+
+public:
+    StartSchemaCreationRequestPrivate(const AppSync::Action action,
+                                   StartSchemaCreationRequest * const q);
+    StartSchemaCreationRequestPrivate(const StartSchemaCreationRequestPrivate &other,
+                                   StartSchemaCreationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartSchemaCreationRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

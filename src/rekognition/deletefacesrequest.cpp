@@ -19,3 +19,107 @@
 
 #include "deletefacesrequest.h"
 #include "deletefacesrequest_p.h"
+#include "deletefacesresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DeleteFacesRequest
+ *
+ * @brief  Implements Rekognition DeleteFaces requests.
+ *
+ * @see    RekognitionClient::deleteFaces
+ */
+
+/**
+ * @brief  Constructs a new DeleteFacesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFacesResponse::DeleteFacesResponse(
+
+/**
+ * @brief  Constructs a new DeleteFacesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFacesRequest::DeleteFacesRequest(const DeleteFacesRequest &other)
+    : RekognitionRequest(new DeleteFacesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFacesRequest object.
+ */
+DeleteFacesRequest::DeleteFacesRequest()
+    : RekognitionRequest(new DeleteFacesRequestPrivate(RekognitionRequest::DeleteFacesAction, this))
+{
+
+}
+
+bool DeleteFacesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFacesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFacesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFacesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFacesRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFacesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFacesRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public DeleteFacesRequest instance.
+ */
+DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
+    const RekognitionRequest::Action action, DeleteFacesRequest * const q)
+    : DeleteFacesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFacesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFacesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFacesRequest instance.
+ */
+DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
+    const DeleteFacesRequestPrivate &other, DeleteFacesRequest * const q)
+    : DeleteFacesPrivate(other, q)
+{
+
+}

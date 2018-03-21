@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEITEMREQUEST_H
 #define QTAWS_DELETEITEMREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DeleteItemRequestPrivate;
+
+class QTAWS_EXPORT DeleteItemRequest : public DynamoDBRequest {
+
+public:
+    DeleteItemRequest(const DeleteItemRequest &other);
+    DeleteItemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteItemRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTATTRIBUTESREQUEST_H
 #define QTAWS_PUTATTRIBUTESREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class PutAttributesRequestPrivate;
+
+class QTAWS_EXPORT PutAttributesRequest : public SimpleDBRequest {
+
+public:
+    PutAttributesRequest(const PutAttributesRequest &other);
+    PutAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutAttributesRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

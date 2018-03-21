@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEGROUPVERSIONREQUEST_H
 #define QTAWS_CREATEGROUPVERSIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateGroupVersionRequestPrivate;
+
+class QTAWS_EXPORT CreateGroupVersionRequest : public GreengrassRequest {
+
+public:
+    CreateGroupVersionRequest(const CreateGroupVersionRequest &other);
+    CreateGroupVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateGroupVersionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

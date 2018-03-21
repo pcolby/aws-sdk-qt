@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETYPEDLINKFACETREQUEST_H
 #define QTAWS_DELETETYPEDLINKFACETREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DeleteTypedLinkFacetRequestPrivate;
+
+class QTAWS_EXPORT DeleteTypedLinkFacetRequest : public CloudDirectoryRequest {
+
+public:
+    DeleteTypedLinkFacetRequest(const DeleteTypedLinkFacetRequest &other);
+    DeleteTypedLinkFacetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTypedLinkFacetRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

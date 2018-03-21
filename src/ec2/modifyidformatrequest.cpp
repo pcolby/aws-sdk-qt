@@ -19,3 +19,107 @@
 
 #include "modifyidformatrequest.h"
 #include "modifyidformatrequest_p.h"
+#include "modifyidformatresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyIdFormatRequest
+ *
+ * @brief  Implements EC2 ModifyIdFormat requests.
+ *
+ * @see    EC2Client::modifyIdFormat
+ */
+
+/**
+ * @brief  Constructs a new ModifyIdFormatResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyIdFormatResponse::ModifyIdFormatResponse(
+
+/**
+ * @brief  Constructs a new ModifyIdFormatRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyIdFormatRequest::ModifyIdFormatRequest(const ModifyIdFormatRequest &other)
+    : EC2Request(new ModifyIdFormatRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyIdFormatRequest object.
+ */
+ModifyIdFormatRequest::ModifyIdFormatRequest()
+    : EC2Request(new ModifyIdFormatRequestPrivate(EC2Request::ModifyIdFormatAction, this))
+{
+
+}
+
+bool ModifyIdFormatRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyIdFormatResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyIdFormatResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyIdFormatRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyIdFormatResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyIdFormatRequestPrivate
+ *
+ * @brief  Private implementation for ModifyIdFormatRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyIdFormatRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyIdFormatRequest instance.
+ */
+ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
+    const EC2Request::Action action, ModifyIdFormatRequest * const q)
+    : ModifyIdFormatPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyIdFormatRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyIdFormatRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyIdFormatRequest instance.
+ */
+ModifyIdFormatRequestPrivate::ModifyIdFormatRequestPrivate(
+    const ModifyIdFormatRequestPrivate &other, ModifyIdFormatRequest * const q)
+    : ModifyIdFormatPrivate(other, q)
+{
+
+}

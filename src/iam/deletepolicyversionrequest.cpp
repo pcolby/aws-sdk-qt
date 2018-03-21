@@ -19,3 +19,107 @@
 
 #include "deletepolicyversionrequest.h"
 #include "deletepolicyversionrequest_p.h"
+#include "deletepolicyversionresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeletePolicyVersionRequest
+ *
+ * @brief  Implements IAM DeletePolicyVersion requests.
+ *
+ * @see    IAMClient::deletePolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new DeletePolicyVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePolicyVersionResponse::DeletePolicyVersionResponse(
+
+/**
+ * @brief  Constructs a new DeletePolicyVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeletePolicyVersionRequest::DeletePolicyVersionRequest(const DeletePolicyVersionRequest &other)
+    : IAMRequest(new DeletePolicyVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeletePolicyVersionRequest object.
+ */
+DeletePolicyVersionRequest::DeletePolicyVersionRequest()
+    : IAMRequest(new DeletePolicyVersionRequestPrivate(IAMRequest::DeletePolicyVersionAction, this))
+{
+
+}
+
+bool DeletePolicyVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeletePolicyVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeletePolicyVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeletePolicyVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePolicyVersionRequestPrivate
+ *
+ * @brief  Private implementation for DeletePolicyVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyVersionRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeletePolicyVersionRequest instance.
+ */
+DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
+    const IAMRequest::Action action, DeletePolicyVersionRequest * const q)
+    : DeletePolicyVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePolicyVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeletePolicyVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeletePolicyVersionRequest instance.
+ */
+DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
+    const DeletePolicyVersionRequestPrivate &other, DeletePolicyVersionRequest * const q)
+    : DeletePolicyVersionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNASSIGNPRIVATEIPADDRESSESREQUEST_H
 #define QTAWS_UNASSIGNPRIVATEIPADDRESSESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UnassignPrivateIpAddressesRequestPrivate;
+
+class QTAWS_EXPORT UnassignPrivateIpAddressesRequest : public EC2Request {
+
+public:
+    UnassignPrivateIpAddressesRequest(const UnassignPrivateIpAddressesRequest &other);
+    UnassignPrivateIpAddressesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UnassignPrivateIpAddressesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

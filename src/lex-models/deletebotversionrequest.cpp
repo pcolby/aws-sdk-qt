@@ -19,3 +19,107 @@
 
 #include "deletebotversionrequest.h"
 #include "deletebotversionrequest_p.h"
+#include "deletebotversionresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteBotVersionRequest
+ *
+ * @brief  Implements LexModelBuildingService DeleteBotVersion requests.
+ *
+ * @see    LexModelBuildingServiceClient::deleteBotVersion
+ */
+
+/**
+ * @brief  Constructs a new DeleteBotVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBotVersionResponse::DeleteBotVersionResponse(
+
+/**
+ * @brief  Constructs a new DeleteBotVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBotVersionRequest::DeleteBotVersionRequest(const DeleteBotVersionRequest &other)
+    : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBotVersionRequest object.
+ */
+DeleteBotVersionRequest::DeleteBotVersionRequest()
+    : LexModelBuildingServiceRequest(new DeleteBotVersionRequestPrivate(LexModelBuildingServiceRequest::DeleteBotVersionAction, this))
+{
+
+}
+
+bool DeleteBotVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBotVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBotVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBotVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBotVersionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBotVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBotVersionRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public DeleteBotVersionRequest instance.
+ */
+DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, DeleteBotVersionRequest * const q)
+    : DeleteBotVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBotVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBotVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBotVersionRequest instance.
+ */
+DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
+    const DeleteBotVersionRequestPrivate &other, DeleteBotVersionRequest * const q)
+    : DeleteBotVersionPrivate(other, q)
+{
+
+}

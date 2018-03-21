@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDEVICEDEFINITIONREQUEST_H
 #define QTAWS_DELETEDEVICEDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteDeviceDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteDeviceDefinitionRequest : public GreengrassRequest {
+
+public:
+    DeleteDeviceDefinitionRequest(const DeleteDeviceDefinitionRequest &other);
+    DeleteDeviceDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeviceDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

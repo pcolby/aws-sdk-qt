@@ -19,3 +19,107 @@
 
 #include "detachpolicyrequest.h"
 #include "detachpolicyrequest_p.h"
+#include "detachpolicyresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DetachPolicyRequest
+ *
+ * @brief  Implements Organizations DetachPolicy requests.
+ *
+ * @see    OrganizationsClient::detachPolicy
+ */
+
+/**
+ * @brief  Constructs a new DetachPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachPolicyResponse::DetachPolicyResponse(
+
+/**
+ * @brief  Constructs a new DetachPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachPolicyRequest::DetachPolicyRequest(const DetachPolicyRequest &other)
+    : OrganizationsRequest(new DetachPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachPolicyRequest object.
+ */
+DetachPolicyRequest::DetachPolicyRequest()
+    : OrganizationsRequest(new DetachPolicyRequestPrivate(OrganizationsRequest::DetachPolicyAction, this))
+{
+
+}
+
+bool DetachPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DetachPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPolicyRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public DetachPolicyRequest instance.
+ */
+DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
+    const OrganizationsRequest::Action action, DetachPolicyRequest * const q)
+    : DetachPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachPolicyRequest instance.
+ */
+DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
+    const DetachPolicyRequestPrivate &other, DetachPolicyRequest * const q)
+    : DetachPolicyPrivate(other, q)
+{
+
+}

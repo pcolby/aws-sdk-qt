@@ -19,3 +19,107 @@
 
 #include "deletedirectconnectgatewayrequest.h"
 #include "deletedirectconnectgatewayrequest_p.h"
+#include "deletedirectconnectgatewayresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteDirectConnectGatewayRequest
+ *
+ * @brief  Implements DirectConnect DeleteDirectConnectGateway requests.
+ *
+ * @see    DirectConnectClient::deleteDirectConnectGateway
+ */
+
+/**
+ * @brief  Constructs a new DeleteDirectConnectGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDirectConnectGatewayResponse::DeleteDirectConnectGatewayResponse(
+
+/**
+ * @brief  Constructs a new DeleteDirectConnectGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDirectConnectGatewayRequest::DeleteDirectConnectGatewayRequest(const DeleteDirectConnectGatewayRequest &other)
+    : DirectConnectRequest(new DeleteDirectConnectGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDirectConnectGatewayRequest object.
+ */
+DeleteDirectConnectGatewayRequest::DeleteDirectConnectGatewayRequest()
+    : DirectConnectRequest(new DeleteDirectConnectGatewayRequestPrivate(DirectConnectRequest::DeleteDirectConnectGatewayAction, this))
+{
+
+}
+
+bool DeleteDirectConnectGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDirectConnectGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDirectConnectGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DeleteDirectConnectGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDirectConnectGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDirectConnectGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDirectConnectGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectConnectGatewayRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DeleteDirectConnectGatewayRequest instance.
+ */
+DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
+    const DirectConnectRequest::Action action, DeleteDirectConnectGatewayRequest * const q)
+    : DeleteDirectConnectGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDirectConnectGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDirectConnectGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDirectConnectGatewayRequest instance.
+ */
+DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
+    const DeleteDirectConnectGatewayRequestPrivate &other, DeleteDirectConnectGatewayRequest * const q)
+    : DeleteDirectConnectGatewayPrivate(other, q)
+{
+
+}

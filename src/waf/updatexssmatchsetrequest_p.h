@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETREQUEST_P_H
 #define QTAWS_UPDATEXSSMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updatexssmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateXssMatchSetRequest;
+
+class QTAWS_EXPORT UpdateXssMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateXssMatchSetRequestPrivate(const WAF::Action action,
+                                   UpdateXssMatchSetRequest * const q);
+    UpdateXssMatchSetRequestPrivate(const UpdateXssMatchSetRequestPrivate &other,
+                                   UpdateXssMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateXssMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

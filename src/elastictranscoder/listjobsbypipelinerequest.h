@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTJOBSBYPIPELINEREQUEST_H
 #define QTAWS_LISTJOBSBYPIPELINEREQUEST_H
 
+#include "elastictranscoderrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ListJobsByPipelineRequestPrivate;
+
+class QTAWS_EXPORT ListJobsByPipelineRequest : public ElasticTranscoderRequest {
+
+public:
+    ListJobsByPipelineRequest(const ListJobsByPipelineRequest &other);
+    ListJobsByPipelineRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListJobsByPipelineRequest)
+
+}
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

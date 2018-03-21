@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTREAMINGDISTRIBUTIONSREQUEST_P_H
 #define QTAWS_LISTSTREAMINGDISTRIBUTIONSREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "liststreamingdistributionsrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListStreamingDistributionsRequest;
+
+class QTAWS_EXPORT ListStreamingDistributionsRequestPrivate : public CloudFrontPrivate {
+
+public:
+    ListStreamingDistributionsRequestPrivate(const CloudFront::Action action,
+                                   ListStreamingDistributionsRequest * const q);
+    ListStreamingDistributionsRequestPrivate(const ListStreamingDistributionsRequestPrivate &other,
+                                   ListStreamingDistributionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamingDistributionsRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "gettopicrulerequest.h"
 #include "gettopicrulerequest_p.h"
+#include "gettopicruleresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  GetTopicRuleRequest
+ *
+ * @brief  Implements IoT GetTopicRule requests.
+ *
+ * @see    IoTClient::getTopicRule
+ */
+
+/**
+ * @brief  Constructs a new GetTopicRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTopicRuleResponse::GetTopicRuleResponse(
+
+/**
+ * @brief  Constructs a new GetTopicRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTopicRuleRequest::GetTopicRuleRequest(const GetTopicRuleRequest &other)
+    : IoTRequest(new GetTopicRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTopicRuleRequest object.
+ */
+GetTopicRuleRequest::GetTopicRuleRequest()
+    : IoTRequest(new GetTopicRuleRequestPrivate(IoTRequest::GetTopicRuleAction, this))
+{
+
+}
+
+bool GetTopicRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTopicRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTopicRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * GetTopicRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTopicRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTopicRuleRequestPrivate
+ *
+ * @brief  Private implementation for GetTopicRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTopicRuleRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public GetTopicRuleRequest instance.
+ */
+GetTopicRuleRequestPrivate::GetTopicRuleRequestPrivate(
+    const IoTRequest::Action action, GetTopicRuleRequest * const q)
+    : GetTopicRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTopicRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTopicRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTopicRuleRequest instance.
+ */
+GetTopicRuleRequestPrivate::GetTopicRuleRequestPrivate(
+    const GetTopicRuleRequestPrivate &other, GetTopicRuleRequest * const q)
+    : GetTopicRulePrivate(other, q)
+{
+
+}

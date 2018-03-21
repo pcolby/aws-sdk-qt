@@ -19,3 +19,107 @@
 
 #include "describescheduledinstanceavailabilityrequest.h"
 #include "describescheduledinstanceavailabilityrequest_p.h"
+#include "describescheduledinstanceavailabilityresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeScheduledInstanceAvailabilityRequest
+ *
+ * @brief  Implements EC2 DescribeScheduledInstanceAvailability requests.
+ *
+ * @see    EC2Client::describeScheduledInstanceAvailability
+ */
+
+/**
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabilityResponse(
+
+/**
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest(const DescribeScheduledInstanceAvailabilityRequest &other)
+    : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequest object.
+ */
+DescribeScheduledInstanceAvailabilityRequest::DescribeScheduledInstanceAvailabilityRequest()
+    : EC2Request(new DescribeScheduledInstanceAvailabilityRequestPrivate(EC2Request::DescribeScheduledInstanceAvailabilityAction, this))
+{
+
+}
+
+bool DescribeScheduledInstanceAvailabilityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeScheduledInstanceAvailabilityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeScheduledInstanceAvailabilityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeScheduledInstanceAvailabilityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScheduledInstanceAvailabilityRequestPrivate
+ *
+ * @brief  Private implementation for DescribeScheduledInstanceAvailabilityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeScheduledInstanceAvailabilityRequest instance.
+ */
+DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
+    const EC2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)
+    : DescribeScheduledInstanceAvailabilityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScheduledInstanceAvailabilityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeScheduledInstanceAvailabilityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeScheduledInstanceAvailabilityRequest instance.
+ */
+DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
+    const DescribeScheduledInstanceAvailabilityRequestPrivate &other, DescribeScheduledInstanceAvailabilityRequest * const q)
+    : DescribeScheduledInstanceAvailabilityPrivate(other, q)
+{
+
+}

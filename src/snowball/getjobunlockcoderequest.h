@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETJOBUNLOCKCODEREQUEST_H
 #define QTAWS_GETJOBUNLOCKCODEREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetJobUnlockCodeRequestPrivate;
+
+class QTAWS_EXPORT GetJobUnlockCodeRequest : public SnowballRequest {
+
+public:
+    GetJobUnlockCodeRequest(const GetJobUnlockCodeRequest &other);
+    GetJobUnlockCodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetJobUnlockCodeRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

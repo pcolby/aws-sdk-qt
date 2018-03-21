@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPROFILEREQUEST_H
 #define QTAWS_UPDATEPROFILEREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class UpdateProfileRequestPrivate;
+
+class QTAWS_EXPORT UpdateProfileRequest : public AlexaForBusinessRequest {
+
+public:
+    UpdateProfileRequest(const UpdateProfileRequest &other);
+    UpdateProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProfileRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

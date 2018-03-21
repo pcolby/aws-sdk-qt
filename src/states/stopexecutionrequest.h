@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPEXECUTIONREQUEST_H
 #define QTAWS_STOPEXECUTIONREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StopExecutionRequestPrivate;
+
+class QTAWS_EXPORT StopExecutionRequest : public SFNRequest {
+
+public:
+    StopExecutionRequest(const StopExecutionRequest &other);
+    StopExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopExecutionRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

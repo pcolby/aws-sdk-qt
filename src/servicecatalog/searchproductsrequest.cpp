@@ -19,3 +19,107 @@
 
 #include "searchproductsrequest.h"
 #include "searchproductsrequest_p.h"
+#include "searchproductsresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  SearchProductsRequest
+ *
+ * @brief  Implements ServiceCatalog SearchProducts requests.
+ *
+ * @see    ServiceCatalogClient::searchProducts
+ */
+
+/**
+ * @brief  Constructs a new SearchProductsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SearchProductsResponse::SearchProductsResponse(
+
+/**
+ * @brief  Constructs a new SearchProductsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SearchProductsRequest::SearchProductsRequest(const SearchProductsRequest &other)
+    : ServiceCatalogRequest(new SearchProductsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SearchProductsRequest object.
+ */
+SearchProductsRequest::SearchProductsRequest()
+    : ServiceCatalogRequest(new SearchProductsRequestPrivate(ServiceCatalogRequest::SearchProductsAction, this))
+{
+
+}
+
+bool SearchProductsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SearchProductsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SearchProductsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * SearchProductsRequest::response(QNetworkReply * const reply) const
+{
+    return new SearchProductsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SearchProductsRequestPrivate
+ *
+ * @brief  Private implementation for SearchProductsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProductsRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public SearchProductsRequest instance.
+ */
+SearchProductsRequestPrivate::SearchProductsRequestPrivate(
+    const ServiceCatalogRequest::Action action, SearchProductsRequest * const q)
+    : SearchProductsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SearchProductsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SearchProductsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SearchProductsRequest instance.
+ */
+SearchProductsRequestPrivate::SearchProductsRequestPrivate(
+    const SearchProductsRequestPrivate &other, SearchProductsRequest * const q)
+    : SearchProductsPrivate(other, q)
+{
+
+}

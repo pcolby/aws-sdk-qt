@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTSCHEMACREATIONREQUEST_H
 #define QTAWS_STARTSCHEMACREATIONREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class StartSchemaCreationRequestPrivate;
+
+class QTAWS_EXPORT StartSchemaCreationRequest : public AppSyncRequest {
+
+public:
+    StartSchemaCreationRequest(const StartSchemaCreationRequest &other);
+    StartSchemaCreationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartSchemaCreationRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

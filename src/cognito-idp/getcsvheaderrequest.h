@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCSVHEADERREQUEST_H
 #define QTAWS_GETCSVHEADERREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetCSVHeaderRequestPrivate;
+
+class QTAWS_EXPORT GetCSVHeaderRequest : public CognitoIdentityProviderRequest {
+
+public:
+    GetCSVHeaderRequest(const GetCSVHeaderRequest &other);
+    GetCSVHeaderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCSVHeaderRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEACCESSKEYREQUEST_P_H
 #define QTAWS_UPDATEACCESSKEYREQUEST_P_H
 
+#include "iam_p.h"
+#include "updateaccesskeyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateAccessKeyRequest;
+
+class QTAWS_EXPORT UpdateAccessKeyRequestPrivate : public IAMPrivate {
+
+public:
+    UpdateAccessKeyRequestPrivate(const IAM::Action action,
+                                   UpdateAccessKeyRequest * const q);
+    UpdateAccessKeyRequestPrivate(const UpdateAccessKeyRequestPrivate &other,
+                                   UpdateAccessKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAccessKeyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

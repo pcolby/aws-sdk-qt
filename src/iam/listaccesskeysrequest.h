@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTACCESSKEYSREQUEST_H
 #define QTAWS_LISTACCESSKEYSREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAccessKeysRequestPrivate;
+
+class QTAWS_EXPORT ListAccessKeysRequest : public IAMRequest {
+
+public:
+    ListAccessKeysRequest(const ListAccessKeysRequest &other);
+    ListAccessKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAccessKeysRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

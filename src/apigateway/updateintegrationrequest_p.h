@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEINTEGRATIONREQUEST_P_H
 #define QTAWS_UPDATEINTEGRATIONREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updateintegrationrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateIntegrationRequest;
+
+class QTAWS_EXPORT UpdateIntegrationRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateIntegrationRequestPrivate(const APIGateway::Action action,
+                                   UpdateIntegrationRequest * const q);
+    UpdateIntegrationRequestPrivate(const UpdateIntegrationRequestPrivate &other,
+                                   UpdateIntegrationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateIntegrationRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

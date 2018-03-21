@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRATEBASEDRULESREQUEST_H
 #define QTAWS_LISTRATEBASEDRULESREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListRateBasedRulesRequestPrivate;
+
+class QTAWS_EXPORT ListRateBasedRulesRequest : public WAFRequest {
+
+public:
+    ListRateBasedRulesRequest(const ListRateBasedRulesRequest &other);
+    ListRateBasedRulesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRateBasedRulesRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

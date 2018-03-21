@@ -20,4 +20,29 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONREQUEST_P_H
 #define QTAWS_RETRYSTAGEEXECUTIONREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "retrystageexecutionrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class RetryStageExecutionRequest;
+
+class QTAWS_EXPORT RetryStageExecutionRequestPrivate : public CodePipelinePrivate {
+
+public:
+    RetryStageExecutionRequestPrivate(const CodePipeline::Action action,
+                                   RetryStageExecutionRequest * const q);
+    RetryStageExecutionRequestPrivate(const RetryStageExecutionRequestPrivate &other,
+                                   RetryStageExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RetryStageExecutionRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

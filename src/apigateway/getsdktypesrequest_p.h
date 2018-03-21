@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSDKTYPESREQUEST_P_H
 #define QTAWS_GETSDKTYPESREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getsdktypesrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetSdkTypesRequest;
+
+class QTAWS_EXPORT GetSdkTypesRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetSdkTypesRequestPrivate(const APIGateway::Action action,
+                                   GetSdkTypesRequest * const q);
+    GetSdkTypesRequestPrivate(const GetSdkTypesRequestPrivate &other,
+                                   GetSdkTypesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSdkTypesRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

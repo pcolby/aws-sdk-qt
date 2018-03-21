@@ -19,3 +19,107 @@
 
 #include "getbucketaccelerateconfigurationrequest.h"
 #include "getbucketaccelerateconfigurationrequest_p.h"
+#include "getbucketaccelerateconfigurationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  GetBucketAccelerateConfigurationRequest
+ *
+ * @brief  Implements S3 GetBucketAccelerateConfiguration requests.
+ *
+ * @see    S3Client::getBucketAccelerateConfiguration
+ */
+
+/**
+ * @brief  Constructs a new GetBucketAccelerateConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBucketAccelerateConfigurationResponse::GetBucketAccelerateConfigurationResponse(
+
+/**
+ * @brief  Constructs a new GetBucketAccelerateConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest(const GetBucketAccelerateConfigurationRequest &other)
+    : S3Request(new GetBucketAccelerateConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBucketAccelerateConfigurationRequest object.
+ */
+GetBucketAccelerateConfigurationRequest::GetBucketAccelerateConfigurationRequest()
+    : S3Request(new GetBucketAccelerateConfigurationRequestPrivate(S3Request::GetBucketAccelerateConfigurationAction, this))
+{
+
+}
+
+bool GetBucketAccelerateConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBucketAccelerateConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBucketAccelerateConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * GetBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBucketAccelerateConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBucketAccelerateConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for GetBucketAccelerateConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketAccelerateConfigurationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public GetBucketAccelerateConfigurationRequest instance.
+ */
+GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
+    const S3Request::Action action, GetBucketAccelerateConfigurationRequest * const q)
+    : GetBucketAccelerateConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBucketAccelerateConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBucketAccelerateConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBucketAccelerateConfigurationRequest instance.
+ */
+GetBucketAccelerateConfigurationRequestPrivate::GetBucketAccelerateConfigurationRequestPrivate(
+    const GetBucketAccelerateConfigurationRequestPrivate &other, GetBucketAccelerateConfigurationRequest * const q)
+    : GetBucketAccelerateConfigurationPrivate(other, q)
+{
+
+}

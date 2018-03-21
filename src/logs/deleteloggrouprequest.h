@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELOGGROUPREQUEST_H
 #define QTAWS_DELETELOGGROUPREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteLogGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteLogGroupRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteLogGroupRequest(const DeleteLogGroupRequest &other);
+    DeleteLogGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLogGroupRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

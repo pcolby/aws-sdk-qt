@@ -19,3 +19,107 @@
 
 #include "predictrequest.h"
 #include "predictrequest_p.h"
+#include "predictresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  PredictRequest
+ *
+ * @brief  Implements MachineLearning Predict requests.
+ *
+ * @see    MachineLearningClient::predict
+ */
+
+/**
+ * @brief  Constructs a new PredictResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PredictResponse::PredictResponse(
+
+/**
+ * @brief  Constructs a new PredictRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PredictRequest::PredictRequest(const PredictRequest &other)
+    : MachineLearningRequest(new PredictRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PredictRequest object.
+ */
+PredictRequest::PredictRequest()
+    : MachineLearningRequest(new PredictRequestPrivate(MachineLearningRequest::PredictAction, this))
+{
+
+}
+
+bool PredictRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PredictResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PredictResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * PredictRequest::response(QNetworkReply * const reply) const
+{
+    return new PredictResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PredictRequestPrivate
+ *
+ * @brief  Private implementation for PredictRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PredictRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public PredictRequest instance.
+ */
+PredictRequestPrivate::PredictRequestPrivate(
+    const MachineLearningRequest::Action action, PredictRequest * const q)
+    : PredictPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PredictRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PredictRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PredictRequest instance.
+ */
+PredictRequestPrivate::PredictRequestPrivate(
+    const PredictRequestPrivate &other, PredictRequest * const q)
+    : PredictPrivate(other, q)
+{
+
+}

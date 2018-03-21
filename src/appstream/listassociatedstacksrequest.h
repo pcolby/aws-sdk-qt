@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTASSOCIATEDSTACKSREQUEST_H
 #define QTAWS_LISTASSOCIATEDSTACKSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ListAssociatedStacksRequestPrivate;
+
+class QTAWS_EXPORT ListAssociatedStacksRequest : public AppStreamRequest {
+
+public:
+    ListAssociatedStacksRequest(const ListAssociatedStacksRequest &other);
+    ListAssociatedStacksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAssociatedStacksRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

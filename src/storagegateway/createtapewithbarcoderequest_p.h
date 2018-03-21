@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETAPEWITHBARCODEREQUEST_P_H
 #define QTAWS_CREATETAPEWITHBARCODEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "createtapewithbarcoderequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class CreateTapeWithBarcodeRequest;
+
+class QTAWS_EXPORT CreateTapeWithBarcodeRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    CreateTapeWithBarcodeRequestPrivate(const StorageGateway::Action action,
+                                   CreateTapeWithBarcodeRequest * const q);
+    CreateTapeWithBarcodeRequestPrivate(const CreateTapeWithBarcodeRequestPrivate &other,
+                                   CreateTapeWithBarcodeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTapeWithBarcodeRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

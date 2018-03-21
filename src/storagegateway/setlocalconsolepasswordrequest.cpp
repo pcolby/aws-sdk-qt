@@ -19,3 +19,107 @@
 
 #include "setlocalconsolepasswordrequest.h"
 #include "setlocalconsolepasswordrequest_p.h"
+#include "setlocalconsolepasswordresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  SetLocalConsolePasswordRequest
+ *
+ * @brief  Implements StorageGateway SetLocalConsolePassword requests.
+ *
+ * @see    StorageGatewayClient::setLocalConsolePassword
+ */
+
+/**
+ * @brief  Constructs a new SetLocalConsolePasswordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetLocalConsolePasswordResponse::SetLocalConsolePasswordResponse(
+
+/**
+ * @brief  Constructs a new SetLocalConsolePasswordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetLocalConsolePasswordRequest::SetLocalConsolePasswordRequest(const SetLocalConsolePasswordRequest &other)
+    : StorageGatewayRequest(new SetLocalConsolePasswordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetLocalConsolePasswordRequest object.
+ */
+SetLocalConsolePasswordRequest::SetLocalConsolePasswordRequest()
+    : StorageGatewayRequest(new SetLocalConsolePasswordRequestPrivate(StorageGatewayRequest::SetLocalConsolePasswordAction, this))
+{
+
+}
+
+bool SetLocalConsolePasswordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetLocalConsolePasswordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetLocalConsolePasswordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNetworkReply * const reply) const
+{
+    return new SetLocalConsolePasswordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetLocalConsolePasswordRequestPrivate
+ *
+ * @brief  Private implementation for SetLocalConsolePasswordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLocalConsolePasswordRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public SetLocalConsolePasswordRequest instance.
+ */
+SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
+    const StorageGatewayRequest::Action action, SetLocalConsolePasswordRequest * const q)
+    : SetLocalConsolePasswordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetLocalConsolePasswordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetLocalConsolePasswordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetLocalConsolePasswordRequest instance.
+ */
+SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
+    const SetLocalConsolePasswordRequestPrivate &other, SetLocalConsolePasswordRequest * const q)
+    : SetLocalConsolePasswordPrivate(other, q)
+{
+
+}

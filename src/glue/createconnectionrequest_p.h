@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONNECTIONREQUEST_P_H
 #define QTAWS_CREATECONNECTIONREQUEST_P_H
 
+#include "glue_p.h"
+#include "createconnectionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateConnectionRequest;
+
+class QTAWS_EXPORT CreateConnectionRequestPrivate : public GluePrivate {
+
+public:
+    CreateConnectionRequestPrivate(const Glue::Action action,
+                                   CreateConnectionRequest * const q);
+    CreateConnectionRequestPrivate(const CreateConnectionRequestPrivate &other,
+                                   CreateConnectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConnectionRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

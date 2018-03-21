@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEIMAGEBUILDERSTREAMINGURLREQUEST_P_H
 #define QTAWS_CREATEIMAGEBUILDERSTREAMINGURLREQUEST_P_H
 
+#include "appstream_p.h"
+#include "createimagebuilderstreamingurlrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateImageBuilderStreamingURLRequest;
+
+class QTAWS_EXPORT CreateImageBuilderStreamingURLRequestPrivate : public AppStreamPrivate {
+
+public:
+    CreateImageBuilderStreamingURLRequestPrivate(const AppStream::Action action,
+                                   CreateImageBuilderStreamingURLRequest * const q);
+    CreateImageBuilderStreamingURLRequestPrivate(const CreateImageBuilderStreamingURLRequestPrivate &other,
+                                   CreateImageBuilderStreamingURLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateImageBuilderStreamingURLRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

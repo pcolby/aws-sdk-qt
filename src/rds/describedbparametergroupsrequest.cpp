@@ -19,3 +19,107 @@
 
 #include "describedbparametergroupsrequest.h"
 #include "describedbparametergroupsrequest_p.h"
+#include "describedbparametergroupsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBParameterGroupsRequest
+ *
+ * @brief  Implements RDS DescribeDBParameterGroups requests.
+ *
+ * @see    RDSClient::describeDBParameterGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBParameterGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBParameterGroupsResponse::DescribeDBParameterGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBParameterGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBParameterGroupsRequest::DescribeDBParameterGroupsRequest(const DescribeDBParameterGroupsRequest &other)
+    : RDSRequest(new DescribeDBParameterGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBParameterGroupsRequest object.
+ */
+DescribeDBParameterGroupsRequest::DescribeDBParameterGroupsRequest()
+    : RDSRequest(new DescribeDBParameterGroupsRequestPrivate(RDSRequest::DescribeDBParameterGroupsAction, this))
+{
+
+}
+
+bool DescribeDBParameterGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBParameterGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBParameterGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBParameterGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBParameterGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBParameterGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBParameterGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBParameterGroupsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBParameterGroupsRequest instance.
+ */
+DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate(
+    const RDSRequest::Action action, DescribeDBParameterGroupsRequest * const q)
+    : DescribeDBParameterGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBParameterGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBParameterGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBParameterGroupsRequest instance.
+ */
+DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate(
+    const DescribeDBParameterGroupsRequestPrivate &other, DescribeDBParameterGroupsRequest * const q)
+    : DescribeDBParameterGroupsPrivate(other, q)
+{
+
+}

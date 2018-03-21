@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREGEXMATCHSETREQUEST_P_H
 #define QTAWS_GETREGEXMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "getregexmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRegexMatchSetRequest;
+
+class QTAWS_EXPORT GetRegexMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    GetRegexMatchSetRequestPrivate(const WAF::Action action,
+                                   GetRegexMatchSetRequest * const q);
+    GetRegexMatchSetRequestPrivate(const GetRegexMatchSetRequestPrivate &other,
+                                   GetRegexMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRegexMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEVPCWITHHOSTEDZONEREQUEST_P_H
 #define QTAWS_ASSOCIATEVPCWITHHOSTEDZONEREQUEST_P_H
 
+#include "route53_p.h"
+#include "associatevpcwithhostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class AssociateVPCWithHostedZoneRequest;
+
+class QTAWS_EXPORT AssociateVPCWithHostedZoneRequestPrivate : public Route53Private {
+
+public:
+    AssociateVPCWithHostedZoneRequestPrivate(const Route53::Action action,
+                                   AssociateVPCWithHostedZoneRequest * const q);
+    AssociateVPCWithHostedZoneRequestPrivate(const AssociateVPCWithHostedZoneRequestPrivate &other,
+                                   AssociateVPCWithHostedZoneRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateVPCWithHostedZoneRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

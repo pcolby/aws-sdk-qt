@@ -19,3 +19,107 @@
 
 #include "putgrouppolicyrequest.h"
 #include "putgrouppolicyrequest_p.h"
+#include "putgrouppolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  PutGroupPolicyRequest
+ *
+ * @brief  Implements IAM PutGroupPolicy requests.
+ *
+ * @see    IAMClient::putGroupPolicy
+ */
+
+/**
+ * @brief  Constructs a new PutGroupPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutGroupPolicyResponse::PutGroupPolicyResponse(
+
+/**
+ * @brief  Constructs a new PutGroupPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutGroupPolicyRequest::PutGroupPolicyRequest(const PutGroupPolicyRequest &other)
+    : IAMRequest(new PutGroupPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutGroupPolicyRequest object.
+ */
+PutGroupPolicyRequest::PutGroupPolicyRequest()
+    : IAMRequest(new PutGroupPolicyRequestPrivate(IAMRequest::PutGroupPolicyAction, this))
+{
+
+}
+
+bool PutGroupPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutGroupPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutGroupPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * PutGroupPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutGroupPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutGroupPolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutGroupPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutGroupPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public PutGroupPolicyRequest instance.
+ */
+PutGroupPolicyRequestPrivate::PutGroupPolicyRequestPrivate(
+    const IAMRequest::Action action, PutGroupPolicyRequest * const q)
+    : PutGroupPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutGroupPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutGroupPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutGroupPolicyRequest instance.
+ */
+PutGroupPolicyRequestPrivate::PutGroupPolicyRequestPrivate(
+    const PutGroupPolicyRequestPrivate &other, PutGroupPolicyRequest * const q)
+    : PutGroupPolicyPrivate(other, q)
+{
+
+}

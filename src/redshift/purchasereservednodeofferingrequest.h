@@ -20,4 +20,32 @@
 #ifndef QTAWS_PURCHASERESERVEDNODEOFFERINGREQUEST_H
 #define QTAWS_PURCHASERESERVEDNODEOFFERINGREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class PurchaseReservedNodeOfferingRequestPrivate;
+
+class QTAWS_EXPORT PurchaseReservedNodeOfferingRequest : public RedshiftRequest {
+
+public:
+    PurchaseReservedNodeOfferingRequest(const PurchaseReservedNodeOfferingRequest &other);
+    PurchaseReservedNodeOfferingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseReservedNodeOfferingRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

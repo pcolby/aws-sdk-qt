@@ -19,3 +19,107 @@
 
 #include "submitjobrequest.h"
 #include "submitjobrequest_p.h"
+#include "submitjobresponse.h"
+#include "batchrequest_p.h"
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  SubmitJobRequest
+ *
+ * @brief  Implements Batch SubmitJob requests.
+ *
+ * @see    BatchClient::submitJob
+ */
+
+/**
+ * @brief  Constructs a new SubmitJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SubmitJobResponse::SubmitJobResponse(
+
+/**
+ * @brief  Constructs a new SubmitJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SubmitJobRequest::SubmitJobRequest(const SubmitJobRequest &other)
+    : BatchRequest(new SubmitJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SubmitJobRequest object.
+ */
+SubmitJobRequest::SubmitJobRequest()
+    : BatchRequest(new SubmitJobRequestPrivate(BatchRequest::SubmitJobAction, this))
+{
+
+}
+
+bool SubmitJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SubmitJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SubmitJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BatchClient::send
+ */
+AwsAbstractResponse * SubmitJobRequest::response(QNetworkReply * const reply) const
+{
+    return new SubmitJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SubmitJobRequestPrivate
+ *
+ * @brief  Private implementation for SubmitJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubmitJobRequestPrivate object.
+ *
+ * @param  action  Batch action being performed.
+ * @param  q       Pointer to this object's public SubmitJobRequest instance.
+ */
+SubmitJobRequestPrivate::SubmitJobRequestPrivate(
+    const BatchRequest::Action action, SubmitJobRequest * const q)
+    : SubmitJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SubmitJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SubmitJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SubmitJobRequest instance.
+ */
+SubmitJobRequestPrivate::SubmitJobRequestPrivate(
+    const SubmitJobRequestPrivate &other, SubmitJobRequest * const q)
+    : SubmitJobPrivate(other, q)
+{
+
+}

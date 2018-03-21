@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEELASTICIPSREQUEST_P_H
 #define QTAWS_DESCRIBEELASTICIPSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeelasticipsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeElasticIpsRequest;
+
+class QTAWS_EXPORT DescribeElasticIpsRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeElasticIpsRequestPrivate(const OpsWorks::Action action,
+                                   DescribeElasticIpsRequest * const q);
+    DescribeElasticIpsRequestPrivate(const DescribeElasticIpsRequestPrivate &other,
+                                   DescribeElasticIpsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeElasticIpsRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

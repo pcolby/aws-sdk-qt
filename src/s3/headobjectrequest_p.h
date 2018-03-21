@@ -20,4 +20,29 @@
 #ifndef QTAWS_HEADOBJECTREQUEST_P_H
 #define QTAWS_HEADOBJECTREQUEST_P_H
 
+#include "s3_p.h"
+#include "headobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class HeadObjectRequest;
+
+class QTAWS_EXPORT HeadObjectRequestPrivate : public S3Private {
+
+public:
+    HeadObjectRequestPrivate(const S3::Action action,
+                                   HeadObjectRequest * const q);
+    HeadObjectRequestPrivate(const HeadObjectRequestPrivate &other,
+                                   HeadObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(HeadObjectRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

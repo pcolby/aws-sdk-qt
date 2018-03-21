@@ -19,3 +19,107 @@
 
 #include "deleteretentionpolicyrequest.h"
 #include "deleteretentionpolicyrequest_p.h"
+#include "deleteretentionpolicyresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DeleteRetentionPolicyRequest
+ *
+ * @brief  Implements CloudWatchLogs DeleteRetentionPolicy requests.
+ *
+ * @see    CloudWatchLogsClient::deleteRetentionPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteRetentionPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteRetentionPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRetentionPolicyRequest::DeleteRetentionPolicyRequest(const DeleteRetentionPolicyRequest &other)
+    : CloudWatchLogsRequest(new DeleteRetentionPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRetentionPolicyRequest object.
+ */
+DeleteRetentionPolicyRequest::DeleteRetentionPolicyRequest()
+    : CloudWatchLogsRequest(new DeleteRetentionPolicyRequestPrivate(CloudWatchLogsRequest::DeleteRetentionPolicyAction, this))
+{
+
+}
+
+bool DeleteRetentionPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRetentionPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRetentionPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRetentionPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRetentionPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRetentionPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRetentionPolicyRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DeleteRetentionPolicyRequest instance.
+ */
+DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DeleteRetentionPolicyRequest * const q)
+    : DeleteRetentionPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRetentionPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRetentionPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRetentionPolicyRequest instance.
+ */
+DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
+    const DeleteRetentionPolicyRequestPrivate &other, DeleteRetentionPolicyRequest * const q)
+    : DeleteRetentionPolicyPrivate(other, q)
+{
+
+}

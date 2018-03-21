@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEREPLICATIONSUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETEREPLICATIONSUBNETGROUPREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "deletereplicationsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DeleteReplicationSubnetGroupRequest;
+
+class QTAWS_EXPORT DeleteReplicationSubnetGroupRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DeleteReplicationSubnetGroupRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DeleteReplicationSubnetGroupRequest * const q);
+    DeleteReplicationSubnetGroupRequestPrivate(const DeleteReplicationSubnetGroupRequestPrivate &other,
+                                   DeleteReplicationSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReplicationSubnetGroupRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

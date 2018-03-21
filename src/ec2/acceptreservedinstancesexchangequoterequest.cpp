@@ -19,3 +19,107 @@
 
 #include "acceptreservedinstancesexchangequoterequest.h"
 #include "acceptreservedinstancesexchangequoterequest_p.h"
+#include "acceptreservedinstancesexchangequoteresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AcceptReservedInstancesExchangeQuoteRequest
+ *
+ * @brief  Implements EC2 AcceptReservedInstancesExchangeQuote requests.
+ *
+ * @see    EC2Client::acceptReservedInstancesExchangeQuote
+ */
+
+/**
+ * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcceptReservedInstancesExchangeQuoteResponse::AcceptReservedInstancesExchangeQuoteResponse(
+
+/**
+ * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AcceptReservedInstancesExchangeQuoteRequest::AcceptReservedInstancesExchangeQuoteRequest(const AcceptReservedInstancesExchangeQuoteRequest &other)
+    : EC2Request(new AcceptReservedInstancesExchangeQuoteRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequest object.
+ */
+AcceptReservedInstancesExchangeQuoteRequest::AcceptReservedInstancesExchangeQuoteRequest()
+    : EC2Request(new AcceptReservedInstancesExchangeQuoteRequestPrivate(EC2Request::AcceptReservedInstancesExchangeQuoteAction, this))
+{
+
+}
+
+bool AcceptReservedInstancesExchangeQuoteRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AcceptReservedInstancesExchangeQuoteResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AcceptReservedInstancesExchangeQuoteResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AcceptReservedInstancesExchangeQuoteRequest::response(QNetworkReply * const reply) const
+{
+    return new AcceptReservedInstancesExchangeQuoteResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AcceptReservedInstancesExchangeQuoteRequestPrivate
+ *
+ * @brief  Private implementation for AcceptReservedInstancesExchangeQuoteRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AcceptReservedInstancesExchangeQuoteRequest instance.
+ */
+AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExchangeQuoteRequestPrivate(
+    const EC2Request::Action action, AcceptReservedInstancesExchangeQuoteRequest * const q)
+    : AcceptReservedInstancesExchangeQuotePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AcceptReservedInstancesExchangeQuoteRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AcceptReservedInstancesExchangeQuoteRequest instance.
+ */
+AcceptReservedInstancesExchangeQuoteRequestPrivate::AcceptReservedInstancesExchangeQuoteRequestPrivate(
+    const AcceptReservedInstancesExchangeQuoteRequestPrivate &other, AcceptReservedInstancesExchangeQuoteRequest * const q)
+    : AcceptReservedInstancesExchangeQuotePrivate(other, q)
+{
+
+}

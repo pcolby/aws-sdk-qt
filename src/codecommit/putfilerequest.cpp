@@ -19,3 +19,107 @@
 
 #include "putfilerequest.h"
 #include "putfilerequest_p.h"
+#include "putfileresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PutFileRequest
+ *
+ * @brief  Implements CodeCommit PutFile requests.
+ *
+ * @see    CodeCommitClient::putFile
+ */
+
+/**
+ * @brief  Constructs a new PutFileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutFileResponse::PutFileResponse(
+
+/**
+ * @brief  Constructs a new PutFileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutFileRequest::PutFileRequest(const PutFileRequest &other)
+    : CodeCommitRequest(new PutFileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutFileRequest object.
+ */
+PutFileRequest::PutFileRequest()
+    : CodeCommitRequest(new PutFileRequestPrivate(CodeCommitRequest::PutFileAction, this))
+{
+
+}
+
+bool PutFileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutFileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutFileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * PutFileRequest::response(QNetworkReply * const reply) const
+{
+    return new PutFileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutFileRequestPrivate
+ *
+ * @brief  Private implementation for PutFileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFileRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public PutFileRequest instance.
+ */
+PutFileRequestPrivate::PutFileRequestPrivate(
+    const CodeCommitRequest::Action action, PutFileRequest * const q)
+    : PutFilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutFileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutFileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutFileRequest instance.
+ */
+PutFileRequestPrivate::PutFileRequestPrivate(
+    const PutFileRequestPrivate &other, PutFileRequest * const q)
+    : PutFilePrivate(other, q)
+{
+
+}

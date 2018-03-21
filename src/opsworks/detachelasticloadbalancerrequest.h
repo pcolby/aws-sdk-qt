@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHELASTICLOADBALANCERREQUEST_H
 #define QTAWS_DETACHELASTICLOADBALANCERREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DetachElasticLoadBalancerRequestPrivate;
+
+class QTAWS_EXPORT DetachElasticLoadBalancerRequest : public OpsWorksRequest {
+
+public:
+    DetachElasticLoadBalancerRequest(const DetachElasticLoadBalancerRequest &other);
+    DetachElasticLoadBalancerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachElasticLoadBalancerRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

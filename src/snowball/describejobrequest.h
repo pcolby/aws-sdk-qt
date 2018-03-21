@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEJOBREQUEST_H
 #define QTAWS_DESCRIBEJOBREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class DescribeJobRequestPrivate;
+
+class QTAWS_EXPORT DescribeJobRequest : public SnowballRequest {
+
+public:
+    DescribeJobRequest(const DescribeJobRequest &other);
+    DescribeJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

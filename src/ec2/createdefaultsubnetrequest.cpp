@@ -19,3 +19,107 @@
 
 #include "createdefaultsubnetrequest.h"
 #include "createdefaultsubnetrequest_p.h"
+#include "createdefaultsubnetresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateDefaultSubnetRequest
+ *
+ * @brief  Implements EC2 CreateDefaultSubnet requests.
+ *
+ * @see    EC2Client::createDefaultSubnet
+ */
+
+/**
+ * @brief  Constructs a new CreateDefaultSubnetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDefaultSubnetResponse::CreateDefaultSubnetResponse(
+
+/**
+ * @brief  Constructs a new CreateDefaultSubnetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDefaultSubnetRequest::CreateDefaultSubnetRequest(const CreateDefaultSubnetRequest &other)
+    : EC2Request(new CreateDefaultSubnetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDefaultSubnetRequest object.
+ */
+CreateDefaultSubnetRequest::CreateDefaultSubnetRequest()
+    : EC2Request(new CreateDefaultSubnetRequestPrivate(EC2Request::CreateDefaultSubnetAction, this))
+{
+
+}
+
+bool CreateDefaultSubnetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDefaultSubnetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDefaultSubnetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateDefaultSubnetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDefaultSubnetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDefaultSubnetRequestPrivate
+ *
+ * @brief  Private implementation for CreateDefaultSubnetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateDefaultSubnetRequest instance.
+ */
+CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
+    const EC2Request::Action action, CreateDefaultSubnetRequest * const q)
+    : CreateDefaultSubnetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDefaultSubnetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDefaultSubnetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDefaultSubnetRequest instance.
+ */
+CreateDefaultSubnetRequestPrivate::CreateDefaultSubnetRequestPrivate(
+    const CreateDefaultSubnetRequestPrivate &other, CreateDefaultSubnetRequest * const q)
+    : CreateDefaultSubnetPrivate(other, q)
+{
+
+}

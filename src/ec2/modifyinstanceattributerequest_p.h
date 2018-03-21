@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYINSTANCEATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYINSTANCEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstanceAttributeRequest;
+
+class QTAWS_EXPORT ModifyInstanceAttributeRequestPrivate : public EC2Private {
+
+public:
+    ModifyInstanceAttributeRequestPrivate(const EC2::Action action,
+                                   ModifyInstanceAttributeRequest * const q);
+    ModifyInstanceAttributeRequestPrivate(const ModifyInstanceAttributeRequestPrivate &other,
+                                   ModifyInstanceAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstanceAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

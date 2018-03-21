@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_H
 #define QTAWS_UNTAGRESOURCEREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class UntagResourceRequestPrivate;
+
+class QTAWS_EXPORT UntagResourceRequest : public DirectConnectRequest {
+
+public:
+    UntagResourceRequest(const UntagResourceRequest &other);
+    UntagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagResourceRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

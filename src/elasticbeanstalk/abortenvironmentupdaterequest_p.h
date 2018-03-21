@@ -20,4 +20,29 @@
 #ifndef QTAWS_ABORTENVIRONMENTUPDATEREQUEST_P_H
 #define QTAWS_ABORTENVIRONMENTUPDATEREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "abortenvironmentupdaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class AbortEnvironmentUpdateRequest;
+
+class QTAWS_EXPORT AbortEnvironmentUpdateRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    AbortEnvironmentUpdateRequestPrivate(const ElasticBeanstalk::Action action,
+                                   AbortEnvironmentUpdateRequest * const q);
+    AbortEnvironmentUpdateRequestPrivate(const AbortEnvironmentUpdateRequestPrivate &other,
+                                   AbortEnvironmentUpdateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AbortEnvironmentUpdateRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

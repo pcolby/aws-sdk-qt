@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_H
 #define QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentHealthRequestPrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentHealthRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeEnvironmentHealthRequest(const DescribeEnvironmentHealthRequest &other);
+    DescribeEnvironmentHealthRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentHealthRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getdeploymentrequest.h"
 #include "getdeploymentrequest_p.h"
+#include "getdeploymentresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDeploymentRequest
+ *
+ * @brief  Implements APIGateway GetDeployment requests.
+ *
+ * @see    APIGatewayClient::getDeployment
+ */
+
+/**
+ * @brief  Constructs a new GetDeploymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeploymentResponse::GetDeploymentResponse(
+
+/**
+ * @brief  Constructs a new GetDeploymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDeploymentRequest::GetDeploymentRequest(const GetDeploymentRequest &other)
+    : APIGatewayRequest(new GetDeploymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDeploymentRequest object.
+ */
+GetDeploymentRequest::GetDeploymentRequest()
+    : APIGatewayRequest(new GetDeploymentRequestPrivate(APIGatewayRequest::GetDeploymentAction, this))
+{
+
+}
+
+bool GetDeploymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDeploymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDeploymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetDeploymentRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDeploymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeploymentRequestPrivate
+ *
+ * @brief  Private implementation for GetDeploymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetDeploymentRequest instance.
+ */
+GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
+    const APIGatewayRequest::Action action, GetDeploymentRequest * const q)
+    : GetDeploymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDeploymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDeploymentRequest instance.
+ */
+GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
+    const GetDeploymentRequestPrivate &other, GetDeploymentRequest * const q)
+    : GetDeploymentPrivate(other, q)
+{
+
+}

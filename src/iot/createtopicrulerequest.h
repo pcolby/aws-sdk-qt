@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETOPICRULEREQUEST_H
 #define QTAWS_CREATETOPICRULEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreateTopicRuleRequestPrivate;
+
+class QTAWS_EXPORT CreateTopicRuleRequest : public IoTRequest {
+
+public:
+    CreateTopicRuleRequest(const CreateTopicRuleRequest &other);
+    CreateTopicRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTopicRuleRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

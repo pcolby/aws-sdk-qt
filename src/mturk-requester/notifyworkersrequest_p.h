@@ -20,4 +20,29 @@
 #ifndef QTAWS_NOTIFYWORKERSREQUEST_P_H
 #define QTAWS_NOTIFYWORKERSREQUEST_P_H
 
+#include "mturk_p.h"
+#include "notifyworkersrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class NotifyWorkersRequest;
+
+class QTAWS_EXPORT NotifyWorkersRequestPrivate : public MTurkPrivate {
+
+public:
+    NotifyWorkersRequestPrivate(const MTurk::Action action,
+                                   NotifyWorkersRequest * const q);
+    NotifyWorkersRequestPrivate(const NotifyWorkersRequestPrivate &other,
+                                   NotifyWorkersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(NotifyWorkersRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

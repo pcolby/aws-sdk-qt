@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEUSAGEPLANREQUEST_P_H
 #define QTAWS_DELETEUSAGEPLANREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deleteusageplanrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteUsagePlanRequest;
+
+class QTAWS_EXPORT DeleteUsagePlanRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteUsagePlanRequestPrivate(const APIGateway::Action action,
+                                   DeleteUsagePlanRequest * const q);
+    DeleteUsagePlanRequestPrivate(const DeleteUsagePlanRequestPrivate &other,
+                                   DeleteUsagePlanRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteUsagePlanRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

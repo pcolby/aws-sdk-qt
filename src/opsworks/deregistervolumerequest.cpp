@@ -19,3 +19,107 @@
 
 #include "deregistervolumerequest.h"
 #include "deregistervolumerequest_p.h"
+#include "deregistervolumeresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterVolumeRequest
+ *
+ * @brief  Implements OpsWorks DeregisterVolume requests.
+ *
+ * @see    OpsWorksClient::deregisterVolume
+ */
+
+/**
+ * @brief  Constructs a new DeregisterVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterVolumeResponse::DeregisterVolumeResponse(
+
+/**
+ * @brief  Constructs a new DeregisterVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterVolumeRequest::DeregisterVolumeRequest(const DeregisterVolumeRequest &other)
+    : OpsWorksRequest(new DeregisterVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterVolumeRequest object.
+ */
+DeregisterVolumeRequest::DeregisterVolumeRequest()
+    : OpsWorksRequest(new DeregisterVolumeRequestPrivate(OpsWorksRequest::DeregisterVolumeAction, this))
+{
+
+}
+
+bool DeregisterVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterVolumeRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterVolumeRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeregisterVolumeRequest instance.
+ */
+DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
+    const OpsWorksRequest::Action action, DeregisterVolumeRequest * const q)
+    : DeregisterVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterVolumeRequest instance.
+ */
+DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
+    const DeregisterVolumeRequestPrivate &other, DeregisterVolumeRequest * const q)
+    : DeregisterVolumePrivate(other, q)
+{
+
+}

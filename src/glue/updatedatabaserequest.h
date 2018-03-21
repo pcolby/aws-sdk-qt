@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDATABASEREQUEST_H
 #define QTAWS_UPDATEDATABASEREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateDatabaseRequestPrivate;
+
+class QTAWS_EXPORT UpdateDatabaseRequest : public GlueRequest {
+
+public:
+    UpdateDatabaseRequest(const UpdateDatabaseRequest &other);
+    UpdateDatabaseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDatabaseRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

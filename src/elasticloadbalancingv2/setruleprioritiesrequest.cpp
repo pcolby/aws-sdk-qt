@@ -19,3 +19,107 @@
 
 #include "setruleprioritiesrequest.h"
 #include "setruleprioritiesrequest_p.h"
+#include "setruleprioritiesresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  SetRulePrioritiesRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 SetRulePriorities requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::setRulePriorities
+ */
+
+/**
+ * @brief  Constructs a new SetRulePrioritiesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetRulePrioritiesResponse::SetRulePrioritiesResponse(
+
+/**
+ * @brief  Constructs a new SetRulePrioritiesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetRulePrioritiesRequest::SetRulePrioritiesRequest(const SetRulePrioritiesRequest &other)
+    : ElasticLoadBalancingv2Request(new SetRulePrioritiesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetRulePrioritiesRequest object.
+ */
+SetRulePrioritiesRequest::SetRulePrioritiesRequest()
+    : ElasticLoadBalancingv2Request(new SetRulePrioritiesRequestPrivate(ElasticLoadBalancingv2Request::SetRulePrioritiesAction, this))
+{
+
+}
+
+bool SetRulePrioritiesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetRulePrioritiesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetRulePrioritiesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * SetRulePrioritiesRequest::response(QNetworkReply * const reply) const
+{
+    return new SetRulePrioritiesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetRulePrioritiesRequestPrivate
+ *
+ * @brief  Private implementation for SetRulePrioritiesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetRulePrioritiesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public SetRulePrioritiesRequest instance.
+ */
+SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, SetRulePrioritiesRequest * const q)
+    : SetRulePrioritiesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetRulePrioritiesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetRulePrioritiesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetRulePrioritiesRequest instance.
+ */
+SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
+    const SetRulePrioritiesRequestPrivate &other, SetRulePrioritiesRequest * const q)
+    : SetRulePrioritiesPrivate(other, q)
+{
+
+}

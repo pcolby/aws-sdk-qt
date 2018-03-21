@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
+#include "mobile_p.h"
+#include "updateprojectrequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class UpdateProjectRequest;
+
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public MobilePrivate {
+
+public:
+    UpdateProjectRequestPrivate(const Mobile::Action action,
+                                   UpdateProjectRequest * const q);
+    UpdateProjectRequestPrivate(const UpdateProjectRequestPrivate &other,
+                                   UpdateProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateProjectRequest)
+
+};
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

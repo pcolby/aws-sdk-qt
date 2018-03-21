@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETVAULTNOTIFICATIONSREQUEST_P_H
 #define QTAWS_GETVAULTNOTIFICATIONSREQUEST_P_H
 
+#include "glacier_p.h"
+#include "getvaultnotificationsrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class GetVaultNotificationsRequest;
+
+class QTAWS_EXPORT GetVaultNotificationsRequestPrivate : public GlacierPrivate {
+
+public:
+    GetVaultNotificationsRequestPrivate(const Glacier::Action action,
+                                   GetVaultNotificationsRequest * const q);
+    GetVaultNotificationsRequestPrivate(const GetVaultNotificationsRequestPrivate &other,
+                                   GetVaultNotificationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetVaultNotificationsRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

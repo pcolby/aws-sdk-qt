@@ -19,3 +19,107 @@
 
 #include "startuserimportjobrequest.h"
 #include "startuserimportjobrequest_p.h"
+#include "startuserimportjobresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  StartUserImportJobRequest
+ *
+ * @brief  Implements CognitoIdentityProvider StartUserImportJob requests.
+ *
+ * @see    CognitoIdentityProviderClient::startUserImportJob
+ */
+
+/**
+ * @brief  Constructs a new StartUserImportJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartUserImportJobResponse::StartUserImportJobResponse(
+
+/**
+ * @brief  Constructs a new StartUserImportJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartUserImportJobRequest::StartUserImportJobRequest(const StartUserImportJobRequest &other)
+    : CognitoIdentityProviderRequest(new StartUserImportJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartUserImportJobRequest object.
+ */
+StartUserImportJobRequest::StartUserImportJobRequest()
+    : CognitoIdentityProviderRequest(new StartUserImportJobRequestPrivate(CognitoIdentityProviderRequest::StartUserImportJobAction, this))
+{
+
+}
+
+bool StartUserImportJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartUserImportJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartUserImportJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkReply * const reply) const
+{
+    return new StartUserImportJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartUserImportJobRequestPrivate
+ *
+ * @brief  Private implementation for StartUserImportJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartUserImportJobRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public StartUserImportJobRequest instance.
+ */
+StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, StartUserImportJobRequest * const q)
+    : StartUserImportJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartUserImportJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartUserImportJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartUserImportJobRequest instance.
+ */
+StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
+    const StartUserImportJobRequestPrivate &other, StartUserImportJobRequest * const q)
+    : StartUserImportJobPrivate(other, q)
+{
+
+}

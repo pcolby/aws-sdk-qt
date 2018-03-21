@@ -19,3 +19,107 @@
 
 #include "copyimagerequest.h"
 #include "copyimagerequest_p.h"
+#include "copyimageresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CopyImageRequest
+ *
+ * @brief  Implements AppStream CopyImage requests.
+ *
+ * @see    AppStreamClient::copyImage
+ */
+
+/**
+ * @brief  Constructs a new CopyImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyImageResponse::CopyImageResponse(
+
+/**
+ * @brief  Constructs a new CopyImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyImageRequest::CopyImageRequest(const CopyImageRequest &other)
+    : AppStreamRequest(new CopyImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyImageRequest object.
+ */
+CopyImageRequest::CopyImageRequest()
+    : AppStreamRequest(new CopyImageRequestPrivate(AppStreamRequest::CopyImageAction, this))
+{
+
+}
+
+bool CopyImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyImageRequestPrivate
+ *
+ * @brief  Private implementation for CopyImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyImageRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public CopyImageRequest instance.
+ */
+CopyImageRequestPrivate::CopyImageRequestPrivate(
+    const AppStreamRequest::Action action, CopyImageRequest * const q)
+    : CopyImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyImageRequest instance.
+ */
+CopyImageRequestPrivate::CopyImageRequestPrivate(
+    const CopyImageRequestPrivate &other, CopyImageRequest * const q)
+    : CopyImagePrivate(other, q)
+{
+
+}

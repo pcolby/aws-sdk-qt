@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLESSOREQUEST_P_H
 #define QTAWS_DISABLESSOREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "disablessorequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DisableSsoRequest;
+
+class QTAWS_EXPORT DisableSsoRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DisableSsoRequestPrivate(const DirectoryService::Action action,
+                                   DisableSsoRequest * const q);
+    DisableSsoRequestPrivate(const DisableSsoRequestPrivate &other,
+                                   DisableSsoRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableSsoRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

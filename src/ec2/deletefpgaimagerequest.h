@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEFPGAIMAGEREQUEST_H
 #define QTAWS_DELETEFPGAIMAGEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFpgaImageRequestPrivate;
+
+class QTAWS_EXPORT DeleteFpgaImageRequest : public EC2Request {
+
+public:
+    DeleteFpgaImageRequest(const DeleteFpgaImageRequest &other);
+    DeleteFpgaImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFpgaImageRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

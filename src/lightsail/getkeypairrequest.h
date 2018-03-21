@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETKEYPAIRREQUEST_H
 #define QTAWS_GETKEYPAIRREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetKeyPairRequestPrivate;
+
+class QTAWS_EXPORT GetKeyPairRequest : public LightsailRequest {
+
+public:
+    GetKeyPairRequest(const GetKeyPairRequest &other);
+    GetKeyPairRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetKeyPairRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

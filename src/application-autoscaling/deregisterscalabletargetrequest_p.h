@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERSCALABLETARGETREQUEST_P_H
 #define QTAWS_DEREGISTERSCALABLETARGETREQUEST_P_H
 
+#include "applicationautoscaling_p.h"
+#include "deregisterscalabletargetrequest.h"
+
+namespace AWS {
+
+namespace ApplicationAutoScaling {
+
+class DeregisterScalableTargetRequest;
+
+class QTAWS_EXPORT DeregisterScalableTargetRequestPrivate : public ApplicationAutoScalingPrivate {
+
+public:
+    DeregisterScalableTargetRequestPrivate(const ApplicationAutoScaling::Action action,
+                                   DeregisterScalableTargetRequest * const q);
+    DeregisterScalableTargetRequestPrivate(const DeregisterScalableTargetRequestPrivate &other,
+                                   DeregisterScalableTargetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterScalableTargetRequest)
+
+};
+
+} // namespace ApplicationAutoScaling
+} // namespace AWS
+
 #endif

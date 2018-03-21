@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONSOLEOUTPUTREQUEST_H
 #define QTAWS_GETCONSOLEOUTPUTREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetConsoleOutputRequestPrivate;
+
+class QTAWS_EXPORT GetConsoleOutputRequest : public EC2Request {
+
+public:
+    GetConsoleOutputRequest(const GetConsoleOutputRequest &other);
+    GetConsoleOutputRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetConsoleOutputRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

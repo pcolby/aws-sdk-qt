@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETGEOLOCATIONREQUEST_H
 #define QTAWS_GETGEOLOCATIONREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetGeoLocationRequestPrivate;
+
+class QTAWS_EXPORT GetGeoLocationRequest : public Route53Request {
+
+public:
+    GetGeoLocationRequest(const GetGeoLocationRequest &other);
+    GetGeoLocationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetGeoLocationRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

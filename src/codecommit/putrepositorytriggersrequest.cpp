@@ -19,3 +19,107 @@
 
 #include "putrepositorytriggersrequest.h"
 #include "putrepositorytriggersrequest_p.h"
+#include "putrepositorytriggersresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  PutRepositoryTriggersRequest
+ *
+ * @brief  Implements CodeCommit PutRepositoryTriggers requests.
+ *
+ * @see    CodeCommitClient::putRepositoryTriggers
+ */
+
+/**
+ * @brief  Constructs a new PutRepositoryTriggersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
+
+/**
+ * @brief  Constructs a new PutRepositoryTriggersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutRepositoryTriggersRequest::PutRepositoryTriggersRequest(const PutRepositoryTriggersRequest &other)
+    : CodeCommitRequest(new PutRepositoryTriggersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutRepositoryTriggersRequest object.
+ */
+PutRepositoryTriggersRequest::PutRepositoryTriggersRequest()
+    : CodeCommitRequest(new PutRepositoryTriggersRequestPrivate(CodeCommitRequest::PutRepositoryTriggersAction, this))
+{
+
+}
+
+bool PutRepositoryTriggersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutRepositoryTriggersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutRepositoryTriggersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetworkReply * const reply) const
+{
+    return new PutRepositoryTriggersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRepositoryTriggersRequestPrivate
+ *
+ * @brief  Private implementation for PutRepositoryTriggersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRepositoryTriggersRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public PutRepositoryTriggersRequest instance.
+ */
+PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
+    const CodeCommitRequest::Action action, PutRepositoryTriggersRequest * const q)
+    : PutRepositoryTriggersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRepositoryTriggersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutRepositoryTriggersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutRepositoryTriggersRequest instance.
+ */
+PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
+    const PutRepositoryTriggersRequestPrivate &other, PutRepositoryTriggersRequest * const q)
+    : PutRepositoryTriggersPrivate(other, q)
+{
+
+}

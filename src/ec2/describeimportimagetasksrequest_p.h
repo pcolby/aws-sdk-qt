@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIMPORTIMAGETASKSREQUEST_P_H
 #define QTAWS_DESCRIBEIMPORTIMAGETASKSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeimportimagetasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeImportImageTasksRequest;
+
+class QTAWS_EXPORT DescribeImportImageTasksRequestPrivate : public EC2Private {
+
+public:
+    DescribeImportImageTasksRequestPrivate(const EC2::Action action,
+                                   DescribeImportImageTasksRequest * const q);
+    DescribeImportImageTasksRequestPrivate(const DescribeImportImageTasksRequestPrivate &other,
+                                   DescribeImportImageTasksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImportImageTasksRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteparametersrequest.h"
 #include "deleteparametersrequest_p.h"
+#include "deleteparametersresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DeleteParametersRequest
+ *
+ * @brief  Implements SSM DeleteParameters requests.
+ *
+ * @see    SSMClient::deleteParameters
+ */
+
+/**
+ * @brief  Constructs a new DeleteParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteParametersResponse::DeleteParametersResponse(
+
+/**
+ * @brief  Constructs a new DeleteParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteParametersRequest::DeleteParametersRequest(const DeleteParametersRequest &other)
+    : SSMRequest(new DeleteParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteParametersRequest object.
+ */
+DeleteParametersRequest::DeleteParametersRequest()
+    : SSMRequest(new DeleteParametersRequestPrivate(SSMRequest::DeleteParametersAction, this))
+{
+
+}
+
+bool DeleteParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DeleteParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteParametersRequestPrivate
+ *
+ * @brief  Private implementation for DeleteParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParametersRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DeleteParametersRequest instance.
+ */
+DeleteParametersRequestPrivate::DeleteParametersRequestPrivate(
+    const SSMRequest::Action action, DeleteParametersRequest * const q)
+    : DeleteParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteParametersRequest instance.
+ */
+DeleteParametersRequestPrivate::DeleteParametersRequestPrivate(
+    const DeleteParametersRequestPrivate &other, DeleteParametersRequest * const q)
+    : DeleteParametersPrivate(other, q)
+{
+
+}

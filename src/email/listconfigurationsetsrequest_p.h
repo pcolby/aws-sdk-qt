@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCONFIGURATIONSETSREQUEST_P_H
 #define QTAWS_LISTCONFIGURATIONSETSREQUEST_P_H
 
+#include "ses_p.h"
+#include "listconfigurationsetsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListConfigurationSetsRequest;
+
+class QTAWS_EXPORT ListConfigurationSetsRequestPrivate : public SESPrivate {
+
+public:
+    ListConfigurationSetsRequestPrivate(const SES::Action action,
+                                   ListConfigurationSetsRequest * const q);
+    ListConfigurationSetsRequestPrivate(const ListConfigurationSetsRequestPrivate &other,
+                                   ListConfigurationSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListConfigurationSetsRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

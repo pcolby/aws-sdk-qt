@@ -20,4 +20,29 @@
 #ifndef QTAWS_REJECTASSIGNMENTREQUEST_P_H
 #define QTAWS_REJECTASSIGNMENTREQUEST_P_H
 
+#include "mturk_p.h"
+#include "rejectassignmentrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class RejectAssignmentRequest;
+
+class QTAWS_EXPORT RejectAssignmentRequestPrivate : public MTurkPrivate {
+
+public:
+    RejectAssignmentRequestPrivate(const MTurk::Action action,
+                                   RejectAssignmentRequest * const q);
+    RejectAssignmentRequestPrivate(const RejectAssignmentRequestPrivate &other,
+                                   RejectAssignmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RejectAssignmentRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

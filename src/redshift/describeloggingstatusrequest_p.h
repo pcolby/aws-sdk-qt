@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELOGGINGSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBELOGGINGSTATUSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describeloggingstatusrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeLoggingStatusRequest;
+
+class QTAWS_EXPORT DescribeLoggingStatusRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeLoggingStatusRequestPrivate(const Redshift::Action action,
+                                   DescribeLoggingStatusRequest * const q);
+    DescribeLoggingStatusRequestPrivate(const DescribeLoggingStatusRequestPrivate &other,
+                                   DescribeLoggingStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLoggingStatusRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

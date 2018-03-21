@@ -20,4 +20,32 @@
 #ifndef QTAWS_VERIFYEMAILIDENTITYREQUEST_H
 #define QTAWS_VERIFYEMAILIDENTITYREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyEmailIdentityRequestPrivate;
+
+class QTAWS_EXPORT VerifyEmailIdentityRequest : public SESRequest {
+
+public:
+    VerifyEmailIdentityRequest(const VerifyEmailIdentityRequest &other);
+    VerifyEmailIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(VerifyEmailIdentityRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

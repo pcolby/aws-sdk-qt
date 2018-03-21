@@ -19,3 +19,107 @@
 
 #include "invokerequest.h"
 #include "invokerequest_p.h"
+#include "invokeresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  InvokeRequest
+ *
+ * @brief  Implements Lambda Invoke requests.
+ *
+ * @see    LambdaClient::invoke
+ */
+
+/**
+ * @brief  Constructs a new InvokeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InvokeResponse::InvokeResponse(
+
+/**
+ * @brief  Constructs a new InvokeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InvokeRequest::InvokeRequest(const InvokeRequest &other)
+    : LambdaRequest(new InvokeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InvokeRequest object.
+ */
+InvokeRequest::InvokeRequest()
+    : LambdaRequest(new InvokeRequestPrivate(LambdaRequest::InvokeAction, this))
+{
+
+}
+
+bool InvokeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InvokeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InvokeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * InvokeRequest::response(QNetworkReply * const reply) const
+{
+    return new InvokeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InvokeRequestPrivate
+ *
+ * @brief  Private implementation for InvokeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InvokeRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public InvokeRequest instance.
+ */
+InvokeRequestPrivate::InvokeRequestPrivate(
+    const LambdaRequest::Action action, InvokeRequest * const q)
+    : InvokePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InvokeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InvokeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InvokeRequest instance.
+ */
+InvokeRequestPrivate::InvokeRequestPrivate(
+    const InvokeRequestPrivate &other, InvokeRequest * const q)
+    : InvokePrivate(other, q)
+{
+
+}

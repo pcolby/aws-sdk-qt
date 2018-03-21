@@ -19,3 +19,107 @@
 
 #include "getcustomverificationemailtemplaterequest.h"
 #include "getcustomverificationemailtemplaterequest_p.h"
+#include "getcustomverificationemailtemplateresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetCustomVerificationEmailTemplateRequest
+ *
+ * @brief  Implements SES GetCustomVerificationEmailTemplate requests.
+ *
+ * @see    SESClient::getCustomVerificationEmailTemplate
+ */
+
+/**
+ * @brief  Constructs a new GetCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCustomVerificationEmailTemplateResponse::GetCustomVerificationEmailTemplateResponse(
+
+/**
+ * @brief  Constructs a new GetCustomVerificationEmailTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest(const GetCustomVerificationEmailTemplateRequest &other)
+    : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCustomVerificationEmailTemplateRequest object.
+ */
+GetCustomVerificationEmailTemplateRequest::GetCustomVerificationEmailTemplateRequest()
+    : SESRequest(new GetCustomVerificationEmailTemplateRequestPrivate(SESRequest::GetCustomVerificationEmailTemplateAction, this))
+{
+
+}
+
+bool GetCustomVerificationEmailTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCustomVerificationEmailTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCustomVerificationEmailTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetCustomVerificationEmailTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCustomVerificationEmailTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCustomVerificationEmailTemplateRequestPrivate
+ *
+ * @brief  Private implementation for GetCustomVerificationEmailTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCustomVerificationEmailTemplateRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetCustomVerificationEmailTemplateRequest instance.
+ */
+GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
+    const SESRequest::Action action, GetCustomVerificationEmailTemplateRequest * const q)
+    : GetCustomVerificationEmailTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCustomVerificationEmailTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCustomVerificationEmailTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCustomVerificationEmailTemplateRequest instance.
+ */
+GetCustomVerificationEmailTemplateRequestPrivate::GetCustomVerificationEmailTemplateRequestPrivate(
+    const GetCustomVerificationEmailTemplateRequestPrivate &other, GetCustomVerificationEmailTemplateRequest * const q)
+    : GetCustomVerificationEmailTemplatePrivate(other, q)
+{
+
+}

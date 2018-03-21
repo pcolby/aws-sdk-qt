@@ -20,4 +20,29 @@
 #ifndef QTAWS_REJECTVPCPEERINGCONNECTIONREQUEST_P_H
 #define QTAWS_REJECTVPCPEERINGCONNECTIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "rejectvpcpeeringconnectionrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RejectVpcPeeringConnectionRequest;
+
+class QTAWS_EXPORT RejectVpcPeeringConnectionRequestPrivate : public EC2Private {
+
+public:
+    RejectVpcPeeringConnectionRequestPrivate(const EC2::Action action,
+                                   RejectVpcPeeringConnectionRequest * const q);
+    RejectVpcPeeringConnectionRequestPrivate(const RejectVpcPeeringConnectionRequestPrivate &other,
+                                   RejectVpcPeeringConnectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RejectVpcPeeringConnectionRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

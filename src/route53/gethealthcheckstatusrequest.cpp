@@ -19,3 +19,107 @@
 
 #include "gethealthcheckstatusrequest.h"
 #include "gethealthcheckstatusrequest_p.h"
+#include "gethealthcheckstatusresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHealthCheckStatusRequest
+ *
+ * @brief  Implements Route53 GetHealthCheckStatus requests.
+ *
+ * @see    Route53Client::getHealthCheckStatus
+ */
+
+/**
+ * @brief  Constructs a new GetHealthCheckStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHealthCheckStatusResponse::GetHealthCheckStatusResponse(
+
+/**
+ * @brief  Constructs a new GetHealthCheckStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetHealthCheckStatusRequest::GetHealthCheckStatusRequest(const GetHealthCheckStatusRequest &other)
+    : Route53Request(new GetHealthCheckStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetHealthCheckStatusRequest object.
+ */
+GetHealthCheckStatusRequest::GetHealthCheckStatusRequest()
+    : Route53Request(new GetHealthCheckStatusRequestPrivate(Route53Request::GetHealthCheckStatusAction, this))
+{
+
+}
+
+bool GetHealthCheckStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetHealthCheckStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetHealthCheckStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetHealthCheckStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetHealthCheckStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHealthCheckStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetHealthCheckStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHealthCheckStatusRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetHealthCheckStatusRequest instance.
+ */
+GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
+    const Route53Request::Action action, GetHealthCheckStatusRequest * const q)
+    : GetHealthCheckStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHealthCheckStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetHealthCheckStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetHealthCheckStatusRequest instance.
+ */
+GetHealthCheckStatusRequestPrivate::GetHealthCheckStatusRequestPrivate(
+    const GetHealthCheckStatusRequestPrivate &other, GetHealthCheckStatusRequest * const q)
+    : GetHealthCheckStatusPrivate(other, q)
+{
+
+}

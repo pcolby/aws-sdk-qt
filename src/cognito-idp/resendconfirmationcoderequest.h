@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESENDCONFIRMATIONCODEREQUEST_H
 #define QTAWS_RESENDCONFIRMATIONCODEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ResendConfirmationCodeRequestPrivate;
+
+class QTAWS_EXPORT ResendConfirmationCodeRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ResendConfirmationCodeRequest(const ResendConfirmationCodeRequest &other);
+    ResendConfirmationCodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResendConfirmationCodeRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

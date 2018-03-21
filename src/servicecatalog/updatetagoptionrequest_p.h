@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETAGOPTIONREQUEST_P_H
 #define QTAWS_UPDATETAGOPTIONREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "updatetagoptionrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateTagOptionRequest;
+
+class QTAWS_EXPORT UpdateTagOptionRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    UpdateTagOptionRequestPrivate(const ServiceCatalog::Action action,
+                                   UpdateTagOptionRequest * const q);
+    UpdateTagOptionRequestPrivate(const UpdateTagOptionRequestPrivate &other,
+                                   UpdateTagOptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTagOptionRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

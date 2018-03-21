@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESHARDCOUNTREQUEST_H
 #define QTAWS_UPDATESHARDCOUNTREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class UpdateShardCountRequestPrivate;
+
+class QTAWS_EXPORT UpdateShardCountRequest : public KinesisRequest {
+
+public:
+    UpdateShardCountRequest(const UpdateShardCountRequest &other);
+    UpdateShardCountRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateShardCountRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

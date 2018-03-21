@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDOCUMENTATIONPARTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTATIONPARTREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "updatedocumentationpartrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class UpdateDocumentationPartRequest;
+
+class QTAWS_EXPORT UpdateDocumentationPartRequestPrivate : public APIGatewayPrivate {
+
+public:
+    UpdateDocumentationPartRequestPrivate(const APIGateway::Action action,
+                                   UpdateDocumentationPartRequest * const q);
+    UpdateDocumentationPartRequestPrivate(const UpdateDocumentationPartRequestPrivate &other,
+                                   UpdateDocumentationPartRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDocumentationPartRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

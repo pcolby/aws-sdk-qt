@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTMFADEVICESREQUEST_P_H
 #define QTAWS_LISTMFADEVICESREQUEST_P_H
 
+#include "iam_p.h"
+#include "listmfadevicesrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListMFADevicesRequest;
+
+class QTAWS_EXPORT ListMFADevicesRequestPrivate : public IAMPrivate {
+
+public:
+    ListMFADevicesRequestPrivate(const IAM::Action action,
+                                   ListMFADevicesRequest * const q);
+    ListMFADevicesRequestPrivate(const ListMFADevicesRequestPrivate &other,
+                                   ListMFADevicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListMFADevicesRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

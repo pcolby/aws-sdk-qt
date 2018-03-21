@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTOBJECTREQUEST_P_H
 #define QTAWS_PUTOBJECTREQUEST_P_H
 
+#include "s3_p.h"
+#include "putobjectrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutObjectRequest;
+
+class QTAWS_EXPORT PutObjectRequestPrivate : public S3Private {
+
+public:
+    PutObjectRequestPrivate(const S3::Action action,
+                                   PutObjectRequest * const q);
+    PutObjectRequestPrivate(const PutObjectRequestPrivate &other,
+                                   PutObjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutObjectRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletebasepathmappingrequest.h"
 #include "deletebasepathmappingrequest_p.h"
+#include "deletebasepathmappingresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteBasePathMappingRequest
+ *
+ * @brief  Implements APIGateway DeleteBasePathMapping requests.
+ *
+ * @see    APIGatewayClient::deleteBasePathMapping
+ */
+
+/**
+ * @brief  Constructs a new DeleteBasePathMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
+
+/**
+ * @brief  Constructs a new DeleteBasePathMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBasePathMappingRequest::DeleteBasePathMappingRequest(const DeleteBasePathMappingRequest &other)
+    : APIGatewayRequest(new DeleteBasePathMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBasePathMappingRequest object.
+ */
+DeleteBasePathMappingRequest::DeleteBasePathMappingRequest()
+    : APIGatewayRequest(new DeleteBasePathMappingRequestPrivate(APIGatewayRequest::DeleteBasePathMappingAction, this))
+{
+
+}
+
+bool DeleteBasePathMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBasePathMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBasePathMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBasePathMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBasePathMappingRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBasePathMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteBasePathMappingRequest instance.
+ */
+DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteBasePathMappingRequest * const q)
+    : DeleteBasePathMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBasePathMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBasePathMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBasePathMappingRequest instance.
+ */
+DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
+    const DeleteBasePathMappingRequestPrivate &other, DeleteBasePathMappingRequest * const q)
+    : DeleteBasePathMappingPrivate(other, q)
+{
+
+}

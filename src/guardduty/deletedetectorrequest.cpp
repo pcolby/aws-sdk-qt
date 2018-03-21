@@ -19,3 +19,107 @@
 
 #include "deletedetectorrequest.h"
 #include "deletedetectorrequest_p.h"
+#include "deletedetectorresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  DeleteDetectorRequest
+ *
+ * @brief  Implements GuardDuty DeleteDetector requests.
+ *
+ * @see    GuardDutyClient::deleteDetector
+ */
+
+/**
+ * @brief  Constructs a new DeleteDetectorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDetectorResponse::DeleteDetectorResponse(
+
+/**
+ * @brief  Constructs a new DeleteDetectorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDetectorRequest::DeleteDetectorRequest(const DeleteDetectorRequest &other)
+    : GuardDutyRequest(new DeleteDetectorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDetectorRequest object.
+ */
+DeleteDetectorRequest::DeleteDetectorRequest()
+    : GuardDutyRequest(new DeleteDetectorRequestPrivate(GuardDutyRequest::DeleteDetectorAction, this))
+{
+
+}
+
+bool DeleteDetectorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDetectorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDetectorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDetectorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDetectorRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDetectorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDetectorRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public DeleteDetectorRequest instance.
+ */
+DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
+    const GuardDutyRequest::Action action, DeleteDetectorRequest * const q)
+    : DeleteDetectorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDetectorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDetectorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDetectorRequest instance.
+ */
+DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
+    const DeleteDetectorRequestPrivate &other, DeleteDetectorRequest * const q)
+    : DeleteDetectorPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSTREAMSREQUEST_P_H
 #define QTAWS_LISTSTREAMSREQUEST_P_H
 
+#include "dynamodbstreams_p.h"
+#include "liststreamsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class ListStreamsRequest;
+
+class QTAWS_EXPORT ListStreamsRequestPrivate : public DynamoDBStreamsPrivate {
+
+public:
+    ListStreamsRequestPrivate(const DynamoDBStreams::Action action,
+                                   ListStreamsRequest * const q);
+    ListStreamsRequestPrivate(const ListStreamsRequestPrivate &other,
+                                   ListStreamsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListStreamsRequest)
+
+};
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

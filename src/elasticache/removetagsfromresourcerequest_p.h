@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "removetagsfromresourcerequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class RemoveTagsFromResourceRequest;
+
+class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public ElastiCachePrivate {
+
+public:
+    RemoveTagsFromResourceRequestPrivate(const ElastiCache::Action action,
+                                   RemoveTagsFromResourceRequest * const q);
+    RemoveTagsFromResourceRequestPrivate(const RemoveTagsFromResourceRequestPrivate &other,
+                                   RemoveTagsFromResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsFromResourceRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

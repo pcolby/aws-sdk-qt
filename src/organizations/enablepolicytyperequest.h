@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEPOLICYTYPEREQUEST_H
 #define QTAWS_ENABLEPOLICYTYPEREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class EnablePolicyTypeRequestPrivate;
+
+class QTAWS_EXPORT EnablePolicyTypeRequest : public OrganizationsRequest {
+
+public:
+    EnablePolicyTypeRequest(const EnablePolicyTypeRequest &other);
+    EnablePolicyTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnablePolicyTypeRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

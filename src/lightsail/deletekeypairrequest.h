@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEKEYPAIRREQUEST_H
 #define QTAWS_DELETEKEYPAIRREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteKeyPairRequestPrivate;
+
+class QTAWS_EXPORT DeleteKeyPairRequest : public LightsailRequest {
+
+public:
+    DeleteKeyPairRequest(const DeleteKeyPairRequest &other);
+    DeleteKeyPairRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteKeyPairRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

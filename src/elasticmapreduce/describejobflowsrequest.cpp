@@ -19,3 +19,107 @@
 
 #include "describejobflowsrequest.h"
 #include "describejobflowsrequest_p.h"
+#include "describejobflowsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  DescribeJobFlowsRequest
+ *
+ * @brief  Implements EMR DescribeJobFlows requests.
+ *
+ * @see    EMRClient::describeJobFlows
+ */
+
+/**
+ * @brief  Constructs a new DescribeJobFlowsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeJobFlowsResponse::DescribeJobFlowsResponse(
+
+/**
+ * @brief  Constructs a new DescribeJobFlowsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeJobFlowsRequest::DescribeJobFlowsRequest(const DescribeJobFlowsRequest &other)
+    : EMRRequest(new DescribeJobFlowsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeJobFlowsRequest object.
+ */
+DescribeJobFlowsRequest::DescribeJobFlowsRequest()
+    : EMRRequest(new DescribeJobFlowsRequestPrivate(EMRRequest::DescribeJobFlowsAction, this))
+{
+
+}
+
+bool DescribeJobFlowsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeJobFlowsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeJobFlowsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeJobFlowsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeJobFlowsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeJobFlowsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeJobFlowsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public DescribeJobFlowsRequest instance.
+ */
+DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
+    const EMRRequest::Action action, DescribeJobFlowsRequest * const q)
+    : DescribeJobFlowsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeJobFlowsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeJobFlowsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeJobFlowsRequest instance.
+ */
+DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
+    const DescribeJobFlowsRequestPrivate &other, DescribeJobFlowsRequest * const q)
+    : DescribeJobFlowsPrivate(other, q)
+{
+
+}

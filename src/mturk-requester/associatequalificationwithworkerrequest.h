@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class AssociateQualificationWithWorkerRequestPrivate;
+
+class QTAWS_EXPORT AssociateQualificationWithWorkerRequest : public MTurkRequest {
+
+public:
+    AssociateQualificationWithWorkerRequest(const AssociateQualificationWithWorkerRequest &other);
+    AssociateQualificationWithWorkerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateQualificationWithWorkerRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

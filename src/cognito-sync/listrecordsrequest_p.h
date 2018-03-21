@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRECORDSREQUEST_P_H
 #define QTAWS_LISTRECORDSREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "listrecordsrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class ListRecordsRequest;
+
+class QTAWS_EXPORT ListRecordsRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    ListRecordsRequestPrivate(const CognitoSync::Action action,
+                                   ListRecordsRequest * const q);
+    ListRecordsRequestPrivate(const ListRecordsRequestPrivate &other,
+                                   ListRecordsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRecordsRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECUSTOMMETADATAREQUEST_H
 #define QTAWS_CREATECUSTOMMETADATAREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateCustomMetadataRequestPrivate;
+
+class QTAWS_EXPORT CreateCustomMetadataRequest : public WorkDocsRequest {
+
+public:
+    CreateCustomMetadataRequest(const CreateCustomMetadataRequest &other);
+    CreateCustomMetadataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomMetadataRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

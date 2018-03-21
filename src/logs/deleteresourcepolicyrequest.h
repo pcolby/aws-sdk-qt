@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYREQUEST_H
 #define QTAWS_DELETERESOURCEPOLICYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteResourcePolicyRequestPrivate;
+
+class QTAWS_EXPORT DeleteResourcePolicyRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteResourcePolicyRequest(const DeleteResourcePolicyRequest &other);
+    DeleteResourcePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourcePolicyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

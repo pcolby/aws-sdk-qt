@@ -20,4 +20,29 @@
 #ifndef QTAWS_SUBSCRIBETOEVENTREQUEST_P_H
 #define QTAWS_SUBSCRIBETOEVENTREQUEST_P_H
 
+#include "inspector_p.h"
+#include "subscribetoeventrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class SubscribeToEventRequest;
+
+class QTAWS_EXPORT SubscribeToEventRequestPrivate : public InspectorPrivate {
+
+public:
+    SubscribeToEventRequestPrivate(const Inspector::Action action,
+                                   SubscribeToEventRequest * const q);
+    SubscribeToEventRequestPrivate(const SubscribeToEventRequestPrivate &other,
+                                   SubscribeToEventRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SubscribeToEventRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

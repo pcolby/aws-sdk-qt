@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_P_H
 #define QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_P_H
 
+#include "swf_p.h"
+#include "respondactivitytaskcanceledrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskCanceledRequest;
+
+class QTAWS_EXPORT RespondActivityTaskCanceledRequestPrivate : public SWFPrivate {
+
+public:
+    RespondActivityTaskCanceledRequestPrivate(const SWF::Action action,
+                                   RespondActivityTaskCanceledRequest * const q);
+    RespondActivityTaskCanceledRequestPrivate(const RespondActivityTaskCanceledRequestPrivate &other,
+                                   RespondActivityTaskCanceledRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RespondActivityTaskCanceledRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

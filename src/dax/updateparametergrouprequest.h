@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPARAMETERGROUPREQUEST_H
 #define QTAWS_UPDATEPARAMETERGROUPREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT UpdateParameterGroupRequest : public DAXRequest {
+
+public:
+    UpdateParameterGroupRequest(const UpdateParameterGroupRequest &other);
+    UpdateParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateParameterGroupRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

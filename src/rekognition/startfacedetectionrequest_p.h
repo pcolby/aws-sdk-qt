@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTFACEDETECTIONREQUEST_P_H
 #define QTAWS_STARTFACEDETECTIONREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "startfacedetectionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class StartFaceDetectionRequest;
+
+class QTAWS_EXPORT StartFaceDetectionRequestPrivate : public RekognitionPrivate {
+
+public:
+    StartFaceDetectionRequestPrivate(const Rekognition::Action action,
+                                   StartFaceDetectionRequest * const q);
+    StartFaceDetectionRequestPrivate(const StartFaceDetectionRequestPrivate &other,
+                                   StartFaceDetectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartFaceDetectionRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHDETECTSENTIMENTREQUEST_H
 #define QTAWS_BATCHDETECTSENTIMENTREQUEST_H
 
+#include "comprehendrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectSentimentRequestPrivate;
+
+class QTAWS_EXPORT BatchDetectSentimentRequest : public ComprehendRequest {
+
+public:
+    BatchDetectSentimentRequest(const BatchDetectSentimentRequest &other);
+    BatchDetectSentimentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchDetectSentimentRequest)
+
+}
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

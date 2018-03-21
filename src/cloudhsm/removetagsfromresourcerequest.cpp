@@ -19,3 +19,107 @@
 
 #include "removetagsfromresourcerequest.h"
 #include "removetagsfromresourcerequest_p.h"
+#include "removetagsfromresourceresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  RemoveTagsFromResourceRequest
+ *
+ * @brief  Implements CloudHSM RemoveTagsFromResource requests.
+ *
+ * @see    CloudHSMClient::removeTagsFromResource
+ */
+
+/**
+ * @brief  Constructs a new RemoveTagsFromResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
+
+/**
+ * @brief  Constructs a new RemoveTagsFromResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest(const RemoveTagsFromResourceRequest &other)
+    : CloudHSMRequest(new RemoveTagsFromResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveTagsFromResourceRequest object.
+ */
+RemoveTagsFromResourceRequest::RemoveTagsFromResourceRequest()
+    : CloudHSMRequest(new RemoveTagsFromResourceRequestPrivate(CloudHSMRequest::RemoveTagsFromResourceAction, this))
+{
+
+}
+
+bool RemoveTagsFromResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveTagsFromResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveTagsFromResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveTagsFromResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromResourceRequestPrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public RemoveTagsFromResourceRequest instance.
+ */
+RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
+    const CloudHSMRequest::Action action, RemoveTagsFromResourceRequest * const q)
+    : RemoveTagsFromResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveTagsFromResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveTagsFromResourceRequest instance.
+ */
+RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
+    const RemoveTagsFromResourceRequestPrivate &other, RemoveTagsFromResourceRequest * const q)
+    : RemoveTagsFromResourcePrivate(other, q)
+{
+
+}

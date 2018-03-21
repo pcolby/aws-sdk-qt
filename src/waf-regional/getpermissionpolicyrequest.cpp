@@ -19,3 +19,107 @@
 
 #include "getpermissionpolicyrequest.h"
 #include "getpermissionpolicyrequest_p.h"
+#include "getpermissionpolicyresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetPermissionPolicyRequest
+ *
+ * @brief  Implements WAFRegional GetPermissionPolicy requests.
+ *
+ * @see    WAFRegionalClient::getPermissionPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetPermissionPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPermissionPolicyResponse::GetPermissionPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetPermissionPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPermissionPolicyRequest::GetPermissionPolicyRequest(const GetPermissionPolicyRequest &other)
+    : WAFRegionalRequest(new GetPermissionPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPermissionPolicyRequest object.
+ */
+GetPermissionPolicyRequest::GetPermissionPolicyRequest()
+    : WAFRegionalRequest(new GetPermissionPolicyRequestPrivate(WAFRegionalRequest::GetPermissionPolicyAction, this))
+{
+
+}
+
+bool GetPermissionPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPermissionPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPermissionPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPermissionPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPermissionPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetPermissionPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPermissionPolicyRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetPermissionPolicyRequest instance.
+ */
+GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
+    const WAFRegionalRequest::Action action, GetPermissionPolicyRequest * const q)
+    : GetPermissionPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPermissionPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPermissionPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPermissionPolicyRequest instance.
+ */
+GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
+    const GetPermissionPolicyRequestPrivate &other, GetPermissionPolicyRequest * const q)
+    : GetPermissionPolicyPrivate(other, q)
+{
+
+}

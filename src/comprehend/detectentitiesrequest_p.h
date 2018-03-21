@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETECTENTITIESREQUEST_P_H
 #define QTAWS_DETECTENTITIESREQUEST_P_H
 
+#include "comprehend_p.h"
+#include "detectentitiesrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class DetectEntitiesRequest;
+
+class QTAWS_EXPORT DetectEntitiesRequestPrivate : public ComprehendPrivate {
+
+public:
+    DetectEntitiesRequestPrivate(const Comprehend::Action action,
+                                   DetectEntitiesRequest * const q);
+    DetectEntitiesRequestPrivate(const DetectEntitiesRequestPrivate &other,
+                                   DetectEntitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetectEntitiesRequest)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

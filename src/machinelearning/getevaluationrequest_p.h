@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETEVALUATIONREQUEST_P_H
 #define QTAWS_GETEVALUATIONREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "getevaluationrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetEvaluationRequest;
+
+class QTAWS_EXPORT GetEvaluationRequestPrivate : public MachineLearningPrivate {
+
+public:
+    GetEvaluationRequestPrivate(const MachineLearning::Action action,
+                                   GetEvaluationRequest * const q);
+    GetEvaluationRequestPrivate(const GetEvaluationRequestPrivate &other,
+                                   GetEvaluationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetEvaluationRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

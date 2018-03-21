@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTKEYPAIRREQUEST_P_H
 #define QTAWS_IMPORTKEYPAIRREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "importkeypairrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class ImportKeyPairRequest;
+
+class QTAWS_EXPORT ImportKeyPairRequestPrivate : public LightsailPrivate {
+
+public:
+    ImportKeyPairRequestPrivate(const Lightsail::Action action,
+                                   ImportKeyPairRequest * const q);
+    ImportKeyPairRequestPrivate(const ImportKeyPairRequestPrivate &other,
+                                   ImportKeyPairRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportKeyPairRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

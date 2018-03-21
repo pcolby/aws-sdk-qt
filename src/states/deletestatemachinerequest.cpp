@@ -19,3 +19,107 @@
 
 #include "deletestatemachinerequest.h"
 #include "deletestatemachinerequest_p.h"
+#include "deletestatemachineresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DeleteStateMachineRequest
+ *
+ * @brief  Implements SFN DeleteStateMachine requests.
+ *
+ * @see    SFNClient::deleteStateMachine
+ */
+
+/**
+ * @brief  Constructs a new DeleteStateMachineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteStateMachineResponse::DeleteStateMachineResponse(
+
+/**
+ * @brief  Constructs a new DeleteStateMachineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteStateMachineRequest::DeleteStateMachineRequest(const DeleteStateMachineRequest &other)
+    : SFNRequest(new DeleteStateMachineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteStateMachineRequest object.
+ */
+DeleteStateMachineRequest::DeleteStateMachineRequest()
+    : SFNRequest(new DeleteStateMachineRequestPrivate(SFNRequest::DeleteStateMachineAction, this))
+{
+
+}
+
+bool DeleteStateMachineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteStateMachineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteStateMachineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteStateMachineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteStateMachineRequestPrivate
+ *
+ * @brief  Private implementation for DeleteStateMachineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStateMachineRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public DeleteStateMachineRequest instance.
+ */
+DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
+    const SFNRequest::Action action, DeleteStateMachineRequest * const q)
+    : DeleteStateMachinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteStateMachineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteStateMachineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteStateMachineRequest instance.
+ */
+DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
+    const DeleteStateMachineRequestPrivate &other, DeleteStateMachineRequest * const q)
+    : DeleteStateMachinePrivate(other, q)
+{
+
+}

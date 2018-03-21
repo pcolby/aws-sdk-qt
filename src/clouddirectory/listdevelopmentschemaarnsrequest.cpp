@@ -19,3 +19,107 @@
 
 #include "listdevelopmentschemaarnsrequest.h"
 #include "listdevelopmentschemaarnsrequest_p.h"
+#include "listdevelopmentschemaarnsresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListDevelopmentSchemaArnsRequest
+ *
+ * @brief  Implements CloudDirectory ListDevelopmentSchemaArns requests.
+ *
+ * @see    CloudDirectoryClient::listDevelopmentSchemaArns
+ */
+
+/**
+ * @brief  Constructs a new ListDevelopmentSchemaArnsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDevelopmentSchemaArnsResponse::ListDevelopmentSchemaArnsResponse(
+
+/**
+ * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest(const ListDevelopmentSchemaArnsRequest &other)
+    : CloudDirectoryRequest(new ListDevelopmentSchemaArnsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDevelopmentSchemaArnsRequest object.
+ */
+ListDevelopmentSchemaArnsRequest::ListDevelopmentSchemaArnsRequest()
+    : CloudDirectoryRequest(new ListDevelopmentSchemaArnsRequestPrivate(CloudDirectoryRequest::ListDevelopmentSchemaArnsAction, this))
+{
+
+}
+
+bool ListDevelopmentSchemaArnsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDevelopmentSchemaArnsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDevelopmentSchemaArnsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListDevelopmentSchemaArnsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDevelopmentSchemaArnsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDevelopmentSchemaArnsRequestPrivate
+ *
+ * @brief  Private implementation for ListDevelopmentSchemaArnsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListDevelopmentSchemaArnsRequest instance.
+ */
+ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListDevelopmentSchemaArnsRequest * const q)
+    : ListDevelopmentSchemaArnsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevelopmentSchemaArnsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDevelopmentSchemaArnsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDevelopmentSchemaArnsRequest instance.
+ */
+ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate(
+    const ListDevelopmentSchemaArnsRequestPrivate &other, ListDevelopmentSchemaArnsRequest * const q)
+    : ListDevelopmentSchemaArnsPrivate(other, q)
+{
+
+}

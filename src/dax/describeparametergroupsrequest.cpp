@@ -19,3 +19,107 @@
 
 #include "describeparametergroupsrequest.h"
 #include "describeparametergroupsrequest_p.h"
+#include "describeparametergroupsresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DescribeParameterGroupsRequest
+ *
+ * @brief  Implements DAX DescribeParameterGroups requests.
+ *
+ * @see    DAXClient::describeParameterGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeParameterGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeParameterGroupsResponse::DescribeParameterGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeParameterGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeParameterGroupsRequest::DescribeParameterGroupsRequest(const DescribeParameterGroupsRequest &other)
+    : DAXRequest(new DescribeParameterGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeParameterGroupsRequest object.
+ */
+DescribeParameterGroupsRequest::DescribeParameterGroupsRequest()
+    : DAXRequest(new DescribeParameterGroupsRequestPrivate(DAXRequest::DescribeParameterGroupsAction, this))
+{
+
+}
+
+bool DescribeParameterGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeParameterGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeParameterGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * DescribeParameterGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeParameterGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeParameterGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeParameterGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeParameterGroupsRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public DescribeParameterGroupsRequest instance.
+ */
+DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
+    const DAXRequest::Action action, DescribeParameterGroupsRequest * const q)
+    : DescribeParameterGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeParameterGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeParameterGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeParameterGroupsRequest instance.
+ */
+DescribeParameterGroupsRequestPrivate::DescribeParameterGroupsRequestPrivate(
+    const DescribeParameterGroupsRequestPrivate &other, DescribeParameterGroupsRequest * const q)
+    : DescribeParameterGroupsPrivate(other, q)
+{
+
+}

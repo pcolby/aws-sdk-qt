@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEOBJECTSREQUEST_H
 #define QTAWS_DELETEOBJECTSREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteObjectsRequestPrivate;
+
+class QTAWS_EXPORT DeleteObjectsRequest : public S3Request {
+
+public:
+    DeleteObjectsRequest(const DeleteObjectsRequest &other);
+    DeleteObjectsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteObjectsRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

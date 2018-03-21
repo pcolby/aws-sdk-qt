@@ -20,4 +20,32 @@
 #ifndef QTAWS_PURCHASEOFFERINGREQUEST_H
 #define QTAWS_PURCHASEOFFERINGREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class PurchaseOfferingRequestPrivate;
+
+class QTAWS_EXPORT PurchaseOfferingRequest : public DeviceFarmRequest {
+
+public:
+    PurchaseOfferingRequest(const PurchaseOfferingRequest &other);
+    PurchaseOfferingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseOfferingRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

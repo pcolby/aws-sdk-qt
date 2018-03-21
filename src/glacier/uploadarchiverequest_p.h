@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPLOADARCHIVEREQUEST_P_H
 #define QTAWS_UPLOADARCHIVEREQUEST_P_H
 
+#include "glacier_p.h"
+#include "uploadarchiverequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class UploadArchiveRequest;
+
+class QTAWS_EXPORT UploadArchiveRequestPrivate : public GlacierPrivate {
+
+public:
+    UploadArchiveRequestPrivate(const Glacier::Action action,
+                                   UploadArchiveRequest * const q);
+    UploadArchiveRequestPrivate(const UploadArchiveRequestPrivate &other,
+                                   UploadArchiveRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UploadArchiveRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

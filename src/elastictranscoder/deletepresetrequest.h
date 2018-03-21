@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPRESETREQUEST_H
 #define QTAWS_DELETEPRESETREQUEST_H
 
+#include "elastictranscoderrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class DeletePresetRequestPrivate;
+
+class QTAWS_EXPORT DeletePresetRequest : public ElasticTranscoderRequest {
+
+public:
+    DeletePresetRequest(const DeletePresetRequest &other);
+    DeletePresetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePresetRequest)
+
+}
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

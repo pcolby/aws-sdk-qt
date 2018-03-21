@@ -19,3 +19,107 @@
 
 #include "modifysnapshotcopyretentionperiodrequest.h"
 #include "modifysnapshotcopyretentionperiodrequest_p.h"
+#include "modifysnapshotcopyretentionperiodresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ModifySnapshotCopyRetentionPeriodRequest
+ *
+ * @brief  Implements Redshift ModifySnapshotCopyRetentionPeriod requests.
+ *
+ * @see    RedshiftClient::modifySnapshotCopyRetentionPeriod
+ */
+
+/**
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResponse(
+
+/**
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifySnapshotCopyRetentionPeriodRequest::ModifySnapshotCopyRetentionPeriodRequest(const ModifySnapshotCopyRetentionPeriodRequest &other)
+    : RedshiftRequest(new ModifySnapshotCopyRetentionPeriodRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequest object.
+ */
+ModifySnapshotCopyRetentionPeriodRequest::ModifySnapshotCopyRetentionPeriodRequest()
+    : RedshiftRequest(new ModifySnapshotCopyRetentionPeriodRequestPrivate(RedshiftRequest::ModifySnapshotCopyRetentionPeriodAction, this))
+{
+
+}
+
+bool ModifySnapshotCopyRetentionPeriodRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifySnapshotCopyRetentionPeriodResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifySnapshotCopyRetentionPeriodResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * ModifySnapshotCopyRetentionPeriodRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifySnapshotCopyRetentionPeriodResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifySnapshotCopyRetentionPeriodRequestPrivate
+ *
+ * @brief  Private implementation for ModifySnapshotCopyRetentionPeriodRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public ModifySnapshotCopyRetentionPeriodRequest instance.
+ */
+ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
+    const RedshiftRequest::Action action, ModifySnapshotCopyRetentionPeriodRequest * const q)
+    : ModifySnapshotCopyRetentionPeriodPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifySnapshotCopyRetentionPeriodRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifySnapshotCopyRetentionPeriodRequest instance.
+ */
+ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
+    const ModifySnapshotCopyRetentionPeriodRequestPrivate &other, ModifySnapshotCopyRetentionPeriodRequest * const q)
+    : ModifySnapshotCopyRetentionPeriodPrivate(other, q)
+{
+
+}

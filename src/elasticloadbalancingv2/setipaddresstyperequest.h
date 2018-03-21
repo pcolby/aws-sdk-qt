@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETIPADDRESSTYPEREQUEST_H
 #define QTAWS_SETIPADDRESSTYPEREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class SetIpAddressTypeRequestPrivate;
+
+class QTAWS_EXPORT SetIpAddressTypeRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    SetIpAddressTypeRequest(const SetIpAddressTypeRequest &other);
+    SetIpAddressTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetIpAddressTypeRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

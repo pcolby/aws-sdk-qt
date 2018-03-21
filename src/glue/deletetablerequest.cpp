@@ -19,3 +19,107 @@
 
 #include "deletetablerequest.h"
 #include "deletetablerequest_p.h"
+#include "deletetableresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteTableRequest
+ *
+ * @brief  Implements Glue DeleteTable requests.
+ *
+ * @see    GlueClient::deleteTable
+ */
+
+/**
+ * @brief  Constructs a new DeleteTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTableResponse::DeleteTableResponse(
+
+/**
+ * @brief  Constructs a new DeleteTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteTableRequest::DeleteTableRequest(const DeleteTableRequest &other)
+    : GlueRequest(new DeleteTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteTableRequest object.
+ */
+DeleteTableRequest::DeleteTableRequest()
+    : GlueRequest(new DeleteTableRequestPrivate(GlueRequest::DeleteTableAction, this))
+{
+
+}
+
+bool DeleteTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTableRequestPrivate
+ *
+ * @brief  Private implementation for DeleteTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTableRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public DeleteTableRequest instance.
+ */
+DeleteTableRequestPrivate::DeleteTableRequestPrivate(
+    const GlueRequest::Action action, DeleteTableRequest * const q)
+    : DeleteTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteTableRequest instance.
+ */
+DeleteTableRequestPrivate::DeleteTableRequestPrivate(
+    const DeleteTableRequestPrivate &other, DeleteTableRequest * const q)
+    : DeleteTablePrivate(other, q)
+{
+
+}

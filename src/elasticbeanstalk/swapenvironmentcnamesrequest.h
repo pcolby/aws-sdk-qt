@@ -20,4 +20,32 @@
 #ifndef QTAWS_SWAPENVIRONMENTCNAMESREQUEST_H
 #define QTAWS_SWAPENVIRONMENTCNAMESREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class SwapEnvironmentCNAMEsRequestPrivate;
+
+class QTAWS_EXPORT SwapEnvironmentCNAMEsRequest : public ElasticBeanstalkRequest {
+
+public:
+    SwapEnvironmentCNAMEsRequest(const SwapEnvironmentCNAMEsRequest &other);
+    SwapEnvironmentCNAMEsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SwapEnvironmentCNAMEsRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_P_H
 
+#include "configservice_p.h"
+#include "describeconfigruleevaluationstatusrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeConfigRuleEvaluationStatusRequest;
+
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DescribeConfigRuleEvaluationStatusRequestPrivate(const ConfigService::Action action,
+                                   DescribeConfigRuleEvaluationStatusRequest * const q);
+    DescribeConfigRuleEvaluationStatusRequestPrivate(const DescribeConfigRuleEvaluationStatusRequestPrivate &other,
+                                   DescribeConfigRuleEvaluationStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigRuleEvaluationStatusRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

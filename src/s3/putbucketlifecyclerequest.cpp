@@ -19,3 +19,107 @@
 
 #include "putbucketlifecyclerequest.h"
 #include "putbucketlifecyclerequest_p.h"
+#include "putbucketlifecycleresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketLifecycleRequest
+ *
+ * @brief  Implements S3 PutBucketLifecycle requests.
+ *
+ * @see    S3Client::putBucketLifecycle
+ */
+
+/**
+ * @brief  Constructs a new PutBucketLifecycleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketLifecycleResponse::PutBucketLifecycleResponse(
+
+/**
+ * @brief  Constructs a new PutBucketLifecycleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketLifecycleRequest::PutBucketLifecycleRequest(const PutBucketLifecycleRequest &other)
+    : S3Request(new PutBucketLifecycleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketLifecycleRequest object.
+ */
+PutBucketLifecycleRequest::PutBucketLifecycleRequest()
+    : S3Request(new PutBucketLifecycleRequestPrivate(S3Request::PutBucketLifecycleAction, this))
+{
+
+}
+
+bool PutBucketLifecycleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketLifecycleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketLifecycleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketLifecycleRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketLifecycleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketLifecycleRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketLifecycleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLifecycleRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketLifecycleRequest instance.
+ */
+PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
+    const S3Request::Action action, PutBucketLifecycleRequest * const q)
+    : PutBucketLifecyclePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketLifecycleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketLifecycleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketLifecycleRequest instance.
+ */
+PutBucketLifecycleRequestPrivate::PutBucketLifecycleRequestPrivate(
+    const PutBucketLifecycleRequestPrivate &other, PutBucketLifecycleRequest * const q)
+    : PutBucketLifecyclePrivate(other, q)
+{
+
+}

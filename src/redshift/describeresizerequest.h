@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESIZEREQUEST_H
 #define QTAWS_DESCRIBERESIZEREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeResizeRequestPrivate;
+
+class QTAWS_EXPORT DescribeResizeRequest : public RedshiftRequest {
+
+public:
+    DescribeResizeRequest(const DescribeResizeRequest &other);
+    DescribeResizeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeResizeRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

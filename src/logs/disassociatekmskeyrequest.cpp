@@ -19,3 +19,107 @@
 
 #include "disassociatekmskeyrequest.h"
 #include "disassociatekmskeyrequest_p.h"
+#include "disassociatekmskeyresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DisassociateKmsKeyRequest
+ *
+ * @brief  Implements CloudWatchLogs DisassociateKmsKey requests.
+ *
+ * @see    CloudWatchLogsClient::disassociateKmsKey
+ */
+
+/**
+ * @brief  Constructs a new DisassociateKmsKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
+
+/**
+ * @brief  Constructs a new DisassociateKmsKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateKmsKeyRequest::DisassociateKmsKeyRequest(const DisassociateKmsKeyRequest &other)
+    : CloudWatchLogsRequest(new DisassociateKmsKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateKmsKeyRequest object.
+ */
+DisassociateKmsKeyRequest::DisassociateKmsKeyRequest()
+    : CloudWatchLogsRequest(new DisassociateKmsKeyRequestPrivate(CloudWatchLogsRequest::DisassociateKmsKeyAction, this))
+{
+
+}
+
+bool DisassociateKmsKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateKmsKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateKmsKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateKmsKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateKmsKeyRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateKmsKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateKmsKeyRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DisassociateKmsKeyRequest instance.
+ */
+DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DisassociateKmsKeyRequest * const q)
+    : DisassociateKmsKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateKmsKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateKmsKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateKmsKeyRequest instance.
+ */
+DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
+    const DisassociateKmsKeyRequestPrivate &other, DisassociateKmsKeyRequest * const q)
+    : DisassociateKmsKeyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELAUNCHCONFIGURATIONREQUEST_P_H
 #define QTAWS_CREATELAUNCHCONFIGURATIONREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "createlaunchconfigurationrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CreateLaunchConfigurationRequest;
+
+class QTAWS_EXPORT CreateLaunchConfigurationRequestPrivate : public AutoScalingPrivate {
+
+public:
+    CreateLaunchConfigurationRequestPrivate(const AutoScaling::Action action,
+                                   CreateLaunchConfigurationRequest * const q);
+    CreateLaunchConfigurationRequestPrivate(const CreateLaunchConfigurationRequestPrivate &other,
+                                   CreateLaunchConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLaunchConfigurationRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

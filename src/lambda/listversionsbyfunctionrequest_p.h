@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_P_H
 #define QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "listversionsbyfunctionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListVersionsByFunctionRequest;
+
+class QTAWS_EXPORT ListVersionsByFunctionRequestPrivate : public LambdaPrivate {
+
+public:
+    ListVersionsByFunctionRequestPrivate(const Lambda::Action action,
+                                   ListVersionsByFunctionRequest * const q);
+    ListVersionsByFunctionRequestPrivate(const ListVersionsByFunctionRequestPrivate &other,
+                                   ListVersionsByFunctionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListVersionsByFunctionRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

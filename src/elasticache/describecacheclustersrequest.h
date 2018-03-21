@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECACHECLUSTERSREQUEST_H
 #define QTAWS_DESCRIBECACHECLUSTERSREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DescribeCacheClustersRequestPrivate;
+
+class QTAWS_EXPORT DescribeCacheClustersRequest : public ElastiCacheRequest {
+
+public:
+    DescribeCacheClustersRequest(const DescribeCacheClustersRequest &other);
+    DescribeCacheClustersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCacheClustersRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

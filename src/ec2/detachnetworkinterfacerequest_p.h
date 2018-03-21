@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHNETWORKINTERFACEREQUEST_P_H
 #define QTAWS_DETACHNETWORKINTERFACEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "detachnetworkinterfacerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachNetworkInterfaceRequest;
+
+class QTAWS_EXPORT DetachNetworkInterfaceRequestPrivate : public EC2Private {
+
+public:
+    DetachNetworkInterfaceRequestPrivate(const EC2::Action action,
+                                   DetachNetworkInterfaceRequest * const q);
+    DetachNetworkInterfaceRequestPrivate(const DetachNetworkInterfaceRequestPrivate &other,
+                                   DetachNetworkInterfaceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachNetworkInterfaceRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

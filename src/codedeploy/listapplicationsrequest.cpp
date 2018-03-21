@@ -19,3 +19,107 @@
 
 #include "listapplicationsrequest.h"
 #include "listapplicationsrequest_p.h"
+#include "listapplicationsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListApplicationsRequest
+ *
+ * @brief  Implements CodeDeploy ListApplications requests.
+ *
+ * @see    CodeDeployClient::listApplications
+ */
+
+/**
+ * @brief  Constructs a new ListApplicationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationsResponse::ListApplicationsResponse(
+
+/**
+ * @brief  Constructs a new ListApplicationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListApplicationsRequest::ListApplicationsRequest(const ListApplicationsRequest &other)
+    : CodeDeployRequest(new ListApplicationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListApplicationsRequest object.
+ */
+ListApplicationsRequest::ListApplicationsRequest()
+    : CodeDeployRequest(new ListApplicationsRequestPrivate(CodeDeployRequest::ListApplicationsAction, this))
+{
+
+}
+
+bool ListApplicationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListApplicationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListApplicationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ListApplicationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListApplicationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationsRequestPrivate
+ *
+ * @brief  Private implementation for ListApplicationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ListApplicationsRequest instance.
+ */
+ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
+    const CodeDeployRequest::Action action, ListApplicationsRequest * const q)
+    : ListApplicationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListApplicationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListApplicationsRequest instance.
+ */
+ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
+    const ListApplicationsRequestPrivate &other, ListApplicationsRequest * const q)
+    : ListApplicationsPrivate(other, q)
+{
+
+}

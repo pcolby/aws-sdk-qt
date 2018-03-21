@@ -19,3 +19,107 @@
 
 #include "disablessorequest.h"
 #include "disablessorequest_p.h"
+#include "disablessoresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DisableSsoRequest
+ *
+ * @brief  Implements DirectoryService DisableSso requests.
+ *
+ * @see    DirectoryServiceClient::disableSso
+ */
+
+/**
+ * @brief  Constructs a new DisableSsoResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableSsoResponse::DisableSsoResponse(
+
+/**
+ * @brief  Constructs a new DisableSsoRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableSsoRequest::DisableSsoRequest(const DisableSsoRequest &other)
+    : DirectoryServiceRequest(new DisableSsoRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableSsoRequest object.
+ */
+DisableSsoRequest::DisableSsoRequest()
+    : DirectoryServiceRequest(new DisableSsoRequestPrivate(DirectoryServiceRequest::DisableSsoAction, this))
+{
+
+}
+
+bool DisableSsoRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableSsoResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableSsoResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DisableSsoRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableSsoResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableSsoRequestPrivate
+ *
+ * @brief  Private implementation for DisableSsoRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableSsoRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DisableSsoRequest instance.
+ */
+DisableSsoRequestPrivate::DisableSsoRequestPrivate(
+    const DirectoryServiceRequest::Action action, DisableSsoRequest * const q)
+    : DisableSsoPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableSsoRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableSsoRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableSsoRequest instance.
+ */
+DisableSsoRequestPrivate::DisableSsoRequestPrivate(
+    const DisableSsoRequestPrivate &other, DisableSsoRequest * const q)
+    : DisableSsoPrivate(other, q)
+{
+
+}

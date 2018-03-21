@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBELAUNCHTEMPLATESREQUEST_H
 #define QTAWS_DESCRIBELAUNCHTEMPLATESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeLaunchTemplatesRequestPrivate;
+
+class QTAWS_EXPORT DescribeLaunchTemplatesRequest : public EC2Request {
+
+public:
+    DescribeLaunchTemplatesRequest(const DescribeLaunchTemplatesRequest &other);
+    DescribeLaunchTemplatesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLaunchTemplatesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

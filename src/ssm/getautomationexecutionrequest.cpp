@@ -19,3 +19,107 @@
 
 #include "getautomationexecutionrequest.h"
 #include "getautomationexecutionrequest_p.h"
+#include "getautomationexecutionresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetAutomationExecutionRequest
+ *
+ * @brief  Implements SSM GetAutomationExecution requests.
+ *
+ * @see    SSMClient::getAutomationExecution
+ */
+
+/**
+ * @brief  Constructs a new GetAutomationExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAutomationExecutionResponse::GetAutomationExecutionResponse(
+
+/**
+ * @brief  Constructs a new GetAutomationExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAutomationExecutionRequest::GetAutomationExecutionRequest(const GetAutomationExecutionRequest &other)
+    : SSMRequest(new GetAutomationExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAutomationExecutionRequest object.
+ */
+GetAutomationExecutionRequest::GetAutomationExecutionRequest()
+    : SSMRequest(new GetAutomationExecutionRequestPrivate(SSMRequest::GetAutomationExecutionAction, this))
+{
+
+}
+
+bool GetAutomationExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAutomationExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAutomationExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetAutomationExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAutomationExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAutomationExecutionRequestPrivate
+ *
+ * @brief  Private implementation for GetAutomationExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAutomationExecutionRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetAutomationExecutionRequest instance.
+ */
+GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
+    const SSMRequest::Action action, GetAutomationExecutionRequest * const q)
+    : GetAutomationExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAutomationExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAutomationExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAutomationExecutionRequest instance.
+ */
+GetAutomationExecutionRequestPrivate::GetAutomationExecutionRequestPrivate(
+    const GetAutomationExecutionRequestPrivate &other, GetAutomationExecutionRequest * const q)
+    : GetAutomationExecutionPrivate(other, q)
+{
+
+}

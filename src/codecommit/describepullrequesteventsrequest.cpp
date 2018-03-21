@@ -19,3 +19,107 @@
 
 #include "describepullrequesteventsrequest.h"
 #include "describepullrequesteventsrequest_p.h"
+#include "describepullrequesteventsresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  DescribePullRequestEventsRequest
+ *
+ * @brief  Implements CodeCommit DescribePullRequestEvents requests.
+ *
+ * @see    CodeCommitClient::describePullRequestEvents
+ */
+
+/**
+ * @brief  Constructs a new DescribePullRequestEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
+
+/**
+ * @brief  Constructs a new DescribePullRequestEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePullRequestEventsRequest::DescribePullRequestEventsRequest(const DescribePullRequestEventsRequest &other)
+    : CodeCommitRequest(new DescribePullRequestEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePullRequestEventsRequest object.
+ */
+DescribePullRequestEventsRequest::DescribePullRequestEventsRequest()
+    : CodeCommitRequest(new DescribePullRequestEventsRequestPrivate(CodeCommitRequest::DescribePullRequestEventsAction, this))
+{
+
+}
+
+bool DescribePullRequestEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePullRequestEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePullRequestEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * DescribePullRequestEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePullRequestEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePullRequestEventsRequestPrivate
+ *
+ * @brief  Private implementation for DescribePullRequestEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePullRequestEventsRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public DescribePullRequestEventsRequest instance.
+ */
+DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
+    const CodeCommitRequest::Action action, DescribePullRequestEventsRequest * const q)
+    : DescribePullRequestEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePullRequestEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePullRequestEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePullRequestEventsRequest instance.
+ */
+DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
+    const DescribePullRequestEventsRequestPrivate &other, DescribePullRequestEventsRequest * const q)
+    : DescribePullRequestEventsPrivate(other, q)
+{
+
+}

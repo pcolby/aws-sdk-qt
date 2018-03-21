@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPIPELINENOTIFICATIONSREQUEST_H
 #define QTAWS_UPDATEPIPELINENOTIFICATIONSREQUEST_H
 
+#include "elastictranscoderrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class UpdatePipelineNotificationsRequestPrivate;
+
+class QTAWS_EXPORT UpdatePipelineNotificationsRequest : public ElasticTranscoderRequest {
+
+public:
+    UpdatePipelineNotificationsRequest(const UpdatePipelineNotificationsRequest &other);
+    UpdatePipelineNotificationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdatePipelineNotificationsRequest)
+
+}
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

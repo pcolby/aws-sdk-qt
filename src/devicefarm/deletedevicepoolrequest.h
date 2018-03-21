@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDEVICEPOOLREQUEST_H
 #define QTAWS_DELETEDEVICEPOOLREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteDevicePoolRequestPrivate;
+
+class QTAWS_EXPORT DeleteDevicePoolRequest : public DeviceFarmRequest {
+
+public:
+    DeleteDevicePoolRequest(const DeleteDevicePoolRequest &other);
+    DeleteDevicePoolRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDevicePoolRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

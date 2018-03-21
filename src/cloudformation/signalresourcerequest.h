@@ -20,4 +20,32 @@
 #ifndef QTAWS_SIGNALRESOURCEREQUEST_H
 #define QTAWS_SIGNALRESOURCEREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class SignalResourceRequestPrivate;
+
+class QTAWS_EXPORT SignalResourceRequest : public CloudFormationRequest {
+
+public:
+    SignalResourceRequest(const SignalResourceRequest &other);
+    SignalResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SignalResourceRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

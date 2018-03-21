@@ -19,3 +19,107 @@
 
 #include "deleteservercatalogrequest.h"
 #include "deleteservercatalogrequest_p.h"
+#include "deleteservercatalogresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  DeleteServerCatalogRequest
+ *
+ * @brief  Implements SMS DeleteServerCatalog requests.
+ *
+ * @see    SMSClient::deleteServerCatalog
+ */
+
+/**
+ * @brief  Constructs a new DeleteServerCatalogResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServerCatalogResponse::DeleteServerCatalogResponse(
+
+/**
+ * @brief  Constructs a new DeleteServerCatalogRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteServerCatalogRequest::DeleteServerCatalogRequest(const DeleteServerCatalogRequest &other)
+    : SMSRequest(new DeleteServerCatalogRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteServerCatalogRequest object.
+ */
+DeleteServerCatalogRequest::DeleteServerCatalogRequest()
+    : SMSRequest(new DeleteServerCatalogRequestPrivate(SMSRequest::DeleteServerCatalogAction, this))
+{
+
+}
+
+bool DeleteServerCatalogRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteServerCatalogResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteServerCatalogResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteServerCatalogResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServerCatalogRequestPrivate
+ *
+ * @brief  Private implementation for DeleteServerCatalogRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServerCatalogRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public DeleteServerCatalogRequest instance.
+ */
+DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
+    const SMSRequest::Action action, DeleteServerCatalogRequest * const q)
+    : DeleteServerCatalogPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServerCatalogRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteServerCatalogRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteServerCatalogRequest instance.
+ */
+DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
+    const DeleteServerCatalogRequestPrivate &other, DeleteServerCatalogRequest * const q)
+    : DeleteServerCatalogPrivate(other, q)
+{
+
+}

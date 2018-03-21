@@ -19,3 +19,107 @@
 
 #include "tagresourcesrequest.h"
 #include "tagresourcesrequest_p.h"
+#include "tagresourcesresponse.h"
+#include "resourcegroupstaggingapirequest_p.h"
+
+namespace AWS {
+namespace ResourceGroupsTaggingAPI {
+
+/**
+ * @class  TagResourcesRequest
+ *
+ * @brief  Implements ResourceGroupsTaggingAPI TagResources requests.
+ *
+ * @see    ResourceGroupsTaggingAPIClient::tagResources
+ */
+
+/**
+ * @brief  Constructs a new TagResourcesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagResourcesResponse::TagResourcesResponse(
+
+/**
+ * @brief  Constructs a new TagResourcesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TagResourcesRequest::TagResourcesRequest(const TagResourcesRequest &other)
+    : ResourceGroupsTaggingAPIRequest(new TagResourcesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TagResourcesRequest object.
+ */
+TagResourcesRequest::TagResourcesRequest()
+    : ResourceGroupsTaggingAPIRequest(new TagResourcesRequestPrivate(ResourceGroupsTaggingAPIRequest::TagResourcesAction, this))
+{
+
+}
+
+bool TagResourcesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TagResourcesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TagResourcesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ResourceGroupsTaggingAPIClient::send
+ */
+AwsAbstractResponse * TagResourcesRequest::response(QNetworkReply * const reply) const
+{
+    return new TagResourcesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TagResourcesRequestPrivate
+ *
+ * @brief  Private implementation for TagResourcesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResourcesRequestPrivate object.
+ *
+ * @param  action  ResourceGroupsTaggingAPI action being performed.
+ * @param  q       Pointer to this object's public TagResourcesRequest instance.
+ */
+TagResourcesRequestPrivate::TagResourcesRequestPrivate(
+    const ResourceGroupsTaggingAPIRequest::Action action, TagResourcesRequest * const q)
+    : TagResourcesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagResourcesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TagResourcesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TagResourcesRequest instance.
+ */
+TagResourcesRequestPrivate::TagResourcesRequestPrivate(
+    const TagResourcesRequestPrivate &other, TagResourcesRequest * const q)
+    : TagResourcesPrivate(other, q)
+{
+
+}

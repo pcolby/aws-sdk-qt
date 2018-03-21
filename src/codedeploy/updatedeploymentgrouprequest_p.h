@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDEPLOYMENTGROUPREQUEST_P_H
 #define QTAWS_UPDATEDEPLOYMENTGROUPREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "updatedeploymentgrouprequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class UpdateDeploymentGroupRequest;
+
+class QTAWS_EXPORT UpdateDeploymentGroupRequestPrivate : public CodeDeployPrivate {
+
+public:
+    UpdateDeploymentGroupRequestPrivate(const CodeDeploy::Action action,
+                                   UpdateDeploymentGroupRequest * const q);
+    UpdateDeploymentGroupRequestPrivate(const UpdateDeploymentGroupRequestPrivate &other,
+                                   UpdateDeploymentGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDeploymentGroupRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

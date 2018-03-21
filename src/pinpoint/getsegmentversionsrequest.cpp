@@ -19,3 +19,107 @@
 
 #include "getsegmentversionsrequest.h"
 #include "getsegmentversionsrequest_p.h"
+#include "getsegmentversionsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetSegmentVersionsRequest
+ *
+ * @brief  Implements Pinpoint GetSegmentVersions requests.
+ *
+ * @see    PinpointClient::getSegmentVersions
+ */
+
+/**
+ * @brief  Constructs a new GetSegmentVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSegmentVersionsResponse::GetSegmentVersionsResponse(
+
+/**
+ * @brief  Constructs a new GetSegmentVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSegmentVersionsRequest::GetSegmentVersionsRequest(const GetSegmentVersionsRequest &other)
+    : PinpointRequest(new GetSegmentVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSegmentVersionsRequest object.
+ */
+GetSegmentVersionsRequest::GetSegmentVersionsRequest()
+    : PinpointRequest(new GetSegmentVersionsRequestPrivate(PinpointRequest::GetSegmentVersionsAction, this))
+{
+
+}
+
+bool GetSegmentVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSegmentVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSegmentVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetSegmentVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSegmentVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSegmentVersionsRequestPrivate
+ *
+ * @brief  Private implementation for GetSegmentVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentVersionsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetSegmentVersionsRequest instance.
+ */
+GetSegmentVersionsRequestPrivate::GetSegmentVersionsRequestPrivate(
+    const PinpointRequest::Action action, GetSegmentVersionsRequest * const q)
+    : GetSegmentVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSegmentVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSegmentVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSegmentVersionsRequest instance.
+ */
+GetSegmentVersionsRequestPrivate::GetSegmentVersionsRequestPrivate(
+    const GetSegmentVersionsRequestPrivate &other, GetSegmentVersionsRequest * const q)
+    : GetSegmentVersionsPrivate(other, q)
+{
+
+}

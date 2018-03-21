@@ -19,3 +19,107 @@
 
 #include "modifyinstanceattributerequest.h"
 #include "modifyinstanceattributerequest_p.h"
+#include "modifyinstanceattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyInstanceAttributeRequest
+ *
+ * @brief  Implements EC2 ModifyInstanceAttribute requests.
+ *
+ * @see    EC2Client::modifyInstanceAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifyInstanceAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifyInstanceAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest(const ModifyInstanceAttributeRequest &other)
+    : EC2Request(new ModifyInstanceAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyInstanceAttributeRequest object.
+ */
+ModifyInstanceAttributeRequest::ModifyInstanceAttributeRequest()
+    : EC2Request(new ModifyInstanceAttributeRequestPrivate(EC2Request::ModifyInstanceAttributeAction, this))
+{
+
+}
+
+bool ModifyInstanceAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyInstanceAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyInstanceAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyInstanceAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyInstanceAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifyInstanceAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyInstanceAttributeRequest instance.
+ */
+ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
+    const EC2Request::Action action, ModifyInstanceAttributeRequest * const q)
+    : ModifyInstanceAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyInstanceAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyInstanceAttributeRequest instance.
+ */
+ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
+    const ModifyInstanceAttributeRequestPrivate &other, ModifyInstanceAttributeRequest * const q)
+    : ModifyInstanceAttributePrivate(other, q)
+{
+
+}

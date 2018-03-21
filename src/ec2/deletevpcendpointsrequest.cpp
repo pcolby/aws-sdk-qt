@@ -19,3 +19,107 @@
 
 #include "deletevpcendpointsrequest.h"
 #include "deletevpcendpointsrequest_p.h"
+#include "deletevpcendpointsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcEndpointsRequest
+ *
+ * @brief  Implements EC2 DeleteVpcEndpoints requests.
+ *
+ * @see    EC2Client::deleteVpcEndpoints
+ */
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest(const DeleteVpcEndpointsRequest &other)
+    : EC2Request(new DeleteVpcEndpointsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVpcEndpointsRequest object.
+ */
+DeleteVpcEndpointsRequest::DeleteVpcEndpointsRequest()
+    : EC2Request(new DeleteVpcEndpointsRequestPrivate(EC2Request::DeleteVpcEndpointsAction, this))
+{
+
+}
+
+bool DeleteVpcEndpointsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVpcEndpointsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVpcEndpointsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteVpcEndpointsRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVpcEndpointsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcEndpointsRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVpcEndpointsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteVpcEndpointsRequest instance.
+ */
+DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
+    const EC2Request::Action action, DeleteVpcEndpointsRequest * const q)
+    : DeleteVpcEndpointsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcEndpointsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVpcEndpointsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVpcEndpointsRequest instance.
+ */
+DeleteVpcEndpointsRequestPrivate::DeleteVpcEndpointsRequestPrivate(
+    const DeleteVpcEndpointsRequestPrivate &other, DeleteVpcEndpointsRequest * const q)
+    : DeleteVpcEndpointsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEWORKINGSTORAGEREQUEST_H
 #define QTAWS_DESCRIBEWORKINGSTORAGEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeWorkingStorageRequestPrivate;
+
+class QTAWS_EXPORT DescribeWorkingStorageRequest : public StorageGatewayRequest {
+
+public:
+    DescribeWorkingStorageRequest(const DescribeWorkingStorageRequest &other);
+    DescribeWorkingStorageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkingStorageRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

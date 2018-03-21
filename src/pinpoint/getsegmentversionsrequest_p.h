@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSEGMENTVERSIONSREQUEST_P_H
 #define QTAWS_GETSEGMENTVERSIONSREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getsegmentversionsrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetSegmentVersionsRequest;
+
+class QTAWS_EXPORT GetSegmentVersionsRequestPrivate : public PinpointPrivate {
+
+public:
+    GetSegmentVersionsRequestPrivate(const Pinpoint::Action action,
+                                   GetSegmentVersionsRequest * const q);
+    GetSegmentVersionsRequestPrivate(const GetSegmentVersionsRequestPrivate &other,
+                                   GetSegmentVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSegmentVersionsRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

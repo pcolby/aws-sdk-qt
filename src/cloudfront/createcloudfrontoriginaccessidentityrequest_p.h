@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 #define QTAWS_CREATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "createcloudfrontoriginaccessidentityrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateCloudFrontOriginAccessIdentityRequest;
+
+class QTAWS_EXPORT CreateCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontPrivate {
+
+public:
+    CreateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,
+                                   CreateCloudFrontOriginAccessIdentityRequest * const q);
+    CreateCloudFrontOriginAccessIdentityRequestPrivate(const CreateCloudFrontOriginAccessIdentityRequestPrivate &other,
+                                   CreateCloudFrontOriginAccessIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCloudFrontOriginAccessIdentityRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_P_H
 #define QTAWS_REMOVETAGSREQUEST_P_H
 
+#include "cloudtrail_p.h"
+#include "removetagsrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class RemoveTagsRequest;
+
+class QTAWS_EXPORT RemoveTagsRequestPrivate : public CloudTrailPrivate {
+
+public:
+    RemoveTagsRequestPrivate(const CloudTrail::Action action,
+                                   RemoveTagsRequest * const q);
+    RemoveTagsRequestPrivate(const RemoveTagsRequestPrivate &other,
+                                   RemoveTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveTagsRequest)
+
+};
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

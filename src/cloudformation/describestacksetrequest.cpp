@@ -19,3 +19,107 @@
 
 #include "describestacksetrequest.h"
 #include "describestacksetrequest_p.h"
+#include "describestacksetresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  DescribeStackSetRequest
+ *
+ * @brief  Implements CloudFormation DescribeStackSet requests.
+ *
+ * @see    CloudFormationClient::describeStackSet
+ */
+
+/**
+ * @brief  Constructs a new DescribeStackSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStackSetResponse::DescribeStackSetResponse(
+
+/**
+ * @brief  Constructs a new DescribeStackSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStackSetRequest::DescribeStackSetRequest(const DescribeStackSetRequest &other)
+    : CloudFormationRequest(new DescribeStackSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStackSetRequest object.
+ */
+DescribeStackSetRequest::DescribeStackSetRequest()
+    : CloudFormationRequest(new DescribeStackSetRequestPrivate(CloudFormationRequest::DescribeStackSetAction, this))
+{
+
+}
+
+bool DescribeStackSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStackSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStackSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * DescribeStackSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStackSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStackSetRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStackSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSetRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public DescribeStackSetRequest instance.
+ */
+DescribeStackSetRequestPrivate::DescribeStackSetRequestPrivate(
+    const CloudFormationRequest::Action action, DescribeStackSetRequest * const q)
+    : DescribeStackSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStackSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStackSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStackSetRequest instance.
+ */
+DescribeStackSetRequestPrivate::DescribeStackSetRequestPrivate(
+    const DescribeStackSetRequestPrivate &other, DescribeStackSetRequest * const q)
+    : DescribeStackSetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTKEYPOLICYREQUEST_H
 #define QTAWS_PUTKEYPOLICYREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class PutKeyPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutKeyPolicyRequest : public KMSRequest {
+
+public:
+    PutKeyPolicyRequest(const PutKeyPolicyRequest &other);
+    PutKeyPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutKeyPolicyRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETIMEBASEDAUTOSCALINGREQUEST_H
 #define QTAWS_DESCRIBETIMEBASEDAUTOSCALINGREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeTimeBasedAutoScalingRequestPrivate;
+
+class QTAWS_EXPORT DescribeTimeBasedAutoScalingRequest : public OpsWorksRequest {
+
+public:
+    DescribeTimeBasedAutoScalingRequest(const DescribeTimeBasedAutoScalingRequest &other);
+    DescribeTimeBasedAutoScalingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTimeBasedAutoScalingRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

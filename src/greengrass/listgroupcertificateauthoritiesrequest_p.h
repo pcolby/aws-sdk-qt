@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTGROUPCERTIFICATEAUTHORITIESREQUEST_P_H
 #define QTAWS_LISTGROUPCERTIFICATEAUTHORITIESREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listgroupcertificateauthoritiesrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListGroupCertificateAuthoritiesRequest;
+
+class QTAWS_EXPORT ListGroupCertificateAuthoritiesRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListGroupCertificateAuthoritiesRequestPrivate(const Greengrass::Action action,
+                                   ListGroupCertificateAuthoritiesRequest * const q);
+    ListGroupCertificateAuthoritiesRequestPrivate(const ListGroupCertificateAuthoritiesRequestPrivate &other,
+                                   ListGroupCertificateAuthoritiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupCertificateAuthoritiesRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

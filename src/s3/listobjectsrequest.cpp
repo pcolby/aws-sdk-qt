@@ -19,3 +19,107 @@
 
 #include "listobjectsrequest.h"
 #include "listobjectsrequest_p.h"
+#include "listobjectsresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  ListObjectsRequest
+ *
+ * @brief  Implements S3 ListObjects requests.
+ *
+ * @see    S3Client::listObjects
+ */
+
+/**
+ * @brief  Constructs a new ListObjectsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectsResponse::ListObjectsResponse(
+
+/**
+ * @brief  Constructs a new ListObjectsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectsRequest::ListObjectsRequest(const ListObjectsRequest &other)
+    : S3Request(new ListObjectsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectsRequest object.
+ */
+ListObjectsRequest::ListObjectsRequest()
+    : S3Request(new ListObjectsRequestPrivate(S3Request::ListObjectsAction, this))
+{
+
+}
+
+bool ListObjectsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * ListObjectsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListObjectsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectsRequestPrivate
+ *
+ * @brief  Private implementation for ListObjectsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectsRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public ListObjectsRequest instance.
+ */
+ListObjectsRequestPrivate::ListObjectsRequestPrivate(
+    const S3Request::Action action, ListObjectsRequest * const q)
+    : ListObjectsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectsRequest instance.
+ */
+ListObjectsRequestPrivate::ListObjectsRequestPrivate(
+    const ListObjectsRequestPrivate &other, ListObjectsRequest * const q)
+    : ListObjectsPrivate(other, q)
+{
+
+}

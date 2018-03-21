@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETJOBOUTPUTREQUEST_H
 #define QTAWS_GETJOBOUTPUTREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class GetJobOutputRequestPrivate;
+
+class QTAWS_EXPORT GetJobOutputRequest : public GlacierRequest {
+
+public:
+    GetJobOutputRequest(const GetJobOutputRequest &other);
+    GetJobOutputRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetJobOutputRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

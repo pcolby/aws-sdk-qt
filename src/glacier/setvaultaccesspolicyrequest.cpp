@@ -19,3 +19,107 @@
 
 #include "setvaultaccesspolicyrequest.h"
 #include "setvaultaccesspolicyrequest_p.h"
+#include "setvaultaccesspolicyresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  SetVaultAccessPolicyRequest
+ *
+ * @brief  Implements Glacier SetVaultAccessPolicy requests.
+ *
+ * @see    GlacierClient::setVaultAccessPolicy
+ */
+
+/**
+ * @brief  Constructs a new SetVaultAccessPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetVaultAccessPolicyResponse::SetVaultAccessPolicyResponse(
+
+/**
+ * @brief  Constructs a new SetVaultAccessPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetVaultAccessPolicyRequest::SetVaultAccessPolicyRequest(const SetVaultAccessPolicyRequest &other)
+    : GlacierRequest(new SetVaultAccessPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetVaultAccessPolicyRequest object.
+ */
+SetVaultAccessPolicyRequest::SetVaultAccessPolicyRequest()
+    : GlacierRequest(new SetVaultAccessPolicyRequestPrivate(GlacierRequest::SetVaultAccessPolicyAction, this))
+{
+
+}
+
+bool SetVaultAccessPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetVaultAccessPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetVaultAccessPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new SetVaultAccessPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetVaultAccessPolicyRequestPrivate
+ *
+ * @brief  Private implementation for SetVaultAccessPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetVaultAccessPolicyRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public SetVaultAccessPolicyRequest instance.
+ */
+SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
+    const GlacierRequest::Action action, SetVaultAccessPolicyRequest * const q)
+    : SetVaultAccessPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetVaultAccessPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetVaultAccessPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetVaultAccessPolicyRequest instance.
+ */
+SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
+    const SetVaultAccessPolicyRequestPrivate &other, SetVaultAccessPolicyRequest * const q)
+    : SetVaultAccessPolicyPrivate(other, q)
+{
+
+}

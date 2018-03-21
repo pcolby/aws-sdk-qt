@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONTAINERPOLICYREQUEST_P_H
 #define QTAWS_DELETECONTAINERPOLICYREQUEST_P_H
 
+#include "mediastore_p.h"
+#include "deletecontainerpolicyrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class DeleteContainerPolicyRequest;
+
+class QTAWS_EXPORT DeleteContainerPolicyRequestPrivate : public MediaStorePrivate {
+
+public:
+    DeleteContainerPolicyRequestPrivate(const MediaStore::Action action,
+                                   DeleteContainerPolicyRequest * const q);
+    DeleteContainerPolicyRequestPrivate(const DeleteContainerPolicyRequestPrivate &other,
+                                   DeleteContainerPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteContainerPolicyRequest)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

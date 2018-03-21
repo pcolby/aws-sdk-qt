@@ -19,3 +19,107 @@
 
 #include "listgatewaysrequest.h"
 #include "listgatewaysrequest_p.h"
+#include "listgatewaysresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListGatewaysRequest
+ *
+ * @brief  Implements StorageGateway ListGateways requests.
+ *
+ * @see    StorageGatewayClient::listGateways
+ */
+
+/**
+ * @brief  Constructs a new ListGatewaysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGatewaysResponse::ListGatewaysResponse(
+
+/**
+ * @brief  Constructs a new ListGatewaysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGatewaysRequest::ListGatewaysRequest(const ListGatewaysRequest &other)
+    : StorageGatewayRequest(new ListGatewaysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGatewaysRequest object.
+ */
+ListGatewaysRequest::ListGatewaysRequest()
+    : StorageGatewayRequest(new ListGatewaysRequestPrivate(StorageGatewayRequest::ListGatewaysAction, this))
+{
+
+}
+
+bool ListGatewaysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGatewaysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGatewaysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * ListGatewaysRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGatewaysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGatewaysRequestPrivate
+ *
+ * @brief  Private implementation for ListGatewaysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGatewaysRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public ListGatewaysRequest instance.
+ */
+ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
+    const StorageGatewayRequest::Action action, ListGatewaysRequest * const q)
+    : ListGatewaysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGatewaysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGatewaysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGatewaysRequest instance.
+ */
+ListGatewaysRequestPrivate::ListGatewaysRequestPrivate(
+    const ListGatewaysRequestPrivate &other, ListGatewaysRequest * const q)
+    : ListGatewaysPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETUSERPOOLMFACONFIGREQUEST_H
 #define QTAWS_GETUSERPOOLMFACONFIGREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetUserPoolMfaConfigRequestPrivate;
+
+class QTAWS_EXPORT GetUserPoolMfaConfigRequest : public CognitoIdentityProviderRequest {
+
+public:
+    GetUserPoolMfaConfigRequest(const GetUserPoolMfaConfigRequest &other);
+    GetUserPoolMfaConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetUserPoolMfaConfigRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

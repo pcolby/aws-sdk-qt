@@ -19,3 +19,107 @@
 
 #include "describedeploymentsrequest.h"
 #include "describedeploymentsrequest_p.h"
+#include "describedeploymentsresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeDeploymentsRequest
+ *
+ * @brief  Implements OpsWorks DescribeDeployments requests.
+ *
+ * @see    OpsWorksClient::describeDeployments
+ */
+
+/**
+ * @brief  Constructs a new DescribeDeploymentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDeploymentsResponse::DescribeDeploymentsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDeploymentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDeploymentsRequest::DescribeDeploymentsRequest(const DescribeDeploymentsRequest &other)
+    : OpsWorksRequest(new DescribeDeploymentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDeploymentsRequest object.
+ */
+DescribeDeploymentsRequest::DescribeDeploymentsRequest()
+    : OpsWorksRequest(new DescribeDeploymentsRequestPrivate(OpsWorksRequest::DescribeDeploymentsAction, this))
+{
+
+}
+
+bool DescribeDeploymentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDeploymentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDeploymentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeDeploymentsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDeploymentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDeploymentsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDeploymentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeploymentsRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeDeploymentsRequest instance.
+ */
+DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeDeploymentsRequest * const q)
+    : DescribeDeploymentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDeploymentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDeploymentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDeploymentsRequest instance.
+ */
+DescribeDeploymentsRequestPrivate::DescribeDeploymentsRequestPrivate(
+    const DescribeDeploymentsRequestPrivate &other, DescribeDeploymentsRequest * const q)
+    : DescribeDeploymentsPrivate(other, q)
+{
+
+}

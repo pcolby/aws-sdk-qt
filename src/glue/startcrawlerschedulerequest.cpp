@@ -19,3 +19,107 @@
 
 #include "startcrawlerschedulerequest.h"
 #include "startcrawlerschedulerequest_p.h"
+#include "startcrawlerscheduleresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StartCrawlerScheduleRequest
+ *
+ * @brief  Implements Glue StartCrawlerSchedule requests.
+ *
+ * @see    GlueClient::startCrawlerSchedule
+ */
+
+/**
+ * @brief  Constructs a new StartCrawlerScheduleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
+
+/**
+ * @brief  Constructs a new StartCrawlerScheduleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartCrawlerScheduleRequest::StartCrawlerScheduleRequest(const StartCrawlerScheduleRequest &other)
+    : GlueRequest(new StartCrawlerScheduleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartCrawlerScheduleRequest object.
+ */
+StartCrawlerScheduleRequest::StartCrawlerScheduleRequest()
+    : GlueRequest(new StartCrawlerScheduleRequestPrivate(GlueRequest::StartCrawlerScheduleAction, this))
+{
+
+}
+
+bool StartCrawlerScheduleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartCrawlerScheduleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartCrawlerScheduleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StartCrawlerScheduleRequest::response(QNetworkReply * const reply) const
+{
+    return new StartCrawlerScheduleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartCrawlerScheduleRequestPrivate
+ *
+ * @brief  Private implementation for StartCrawlerScheduleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartCrawlerScheduleRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StartCrawlerScheduleRequest instance.
+ */
+StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
+    const GlueRequest::Action action, StartCrawlerScheduleRequest * const q)
+    : StartCrawlerSchedulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartCrawlerScheduleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartCrawlerScheduleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartCrawlerScheduleRequest instance.
+ */
+StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
+    const StartCrawlerScheduleRequestPrivate &other, StartCrawlerScheduleRequest * const q)
+    : StartCrawlerSchedulePrivate(other, q)
+{
+
+}

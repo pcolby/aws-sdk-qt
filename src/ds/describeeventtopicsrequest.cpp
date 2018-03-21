@@ -19,3 +19,107 @@
 
 #include "describeeventtopicsrequest.h"
 #include "describeeventtopicsrequest_p.h"
+#include "describeeventtopicsresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeEventTopicsRequest
+ *
+ * @brief  Implements DirectoryService DescribeEventTopics requests.
+ *
+ * @see    DirectoryServiceClient::describeEventTopics
+ */
+
+/**
+ * @brief  Constructs a new DescribeEventTopicsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEventTopicsResponse::DescribeEventTopicsResponse(
+
+/**
+ * @brief  Constructs a new DescribeEventTopicsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEventTopicsRequest::DescribeEventTopicsRequest(const DescribeEventTopicsRequest &other)
+    : DirectoryServiceRequest(new DescribeEventTopicsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEventTopicsRequest object.
+ */
+DescribeEventTopicsRequest::DescribeEventTopicsRequest()
+    : DirectoryServiceRequest(new DescribeEventTopicsRequestPrivate(DirectoryServiceRequest::DescribeEventTopicsAction, this))
+{
+
+}
+
+bool DescribeEventTopicsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEventTopicsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEventTopicsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEventTopicsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEventTopicsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEventTopicsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTopicsRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeEventTopicsRequest instance.
+ */
+DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeEventTopicsRequest * const q)
+    : DescribeEventTopicsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEventTopicsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEventTopicsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEventTopicsRequest instance.
+ */
+DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
+    const DescribeEventTopicsRequestPrivate &other, DescribeEventTopicsRequest * const q)
+    : DescribeEventTopicsPrivate(other, q)
+{
+
+}

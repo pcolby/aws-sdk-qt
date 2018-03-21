@@ -19,3 +19,107 @@
 
 #include "getintentsrequest.h"
 #include "getintentsrequest_p.h"
+#include "getintentsresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetIntentsRequest
+ *
+ * @brief  Implements LexModelBuildingService GetIntents requests.
+ *
+ * @see    LexModelBuildingServiceClient::getIntents
+ */
+
+/**
+ * @brief  Constructs a new GetIntentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntentsResponse::GetIntentsResponse(
+
+/**
+ * @brief  Constructs a new GetIntentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIntentsRequest::GetIntentsRequest(const GetIntentsRequest &other)
+    : LexModelBuildingServiceRequest(new GetIntentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIntentsRequest object.
+ */
+GetIntentsRequest::GetIntentsRequest()
+    : LexModelBuildingServiceRequest(new GetIntentsRequestPrivate(LexModelBuildingServiceRequest::GetIntentsAction, this))
+{
+
+}
+
+bool GetIntentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIntentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIntentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetIntentsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIntentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntentsRequestPrivate
+ *
+ * @brief  Private implementation for GetIntentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentsRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetIntentsRequest instance.
+ */
+GetIntentsRequestPrivate::GetIntentsRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetIntentsRequest * const q)
+    : GetIntentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIntentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIntentsRequest instance.
+ */
+GetIntentsRequestPrivate::GetIntentsRequestPrivate(
+    const GetIntentsRequestPrivate &other, GetIntentsRequest * const q)
+    : GetIntentsPrivate(other, q)
+{
+
+}

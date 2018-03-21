@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDOCUMENTSREQUEST_P_H
 #define QTAWS_LISTDOCUMENTSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "listdocumentsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListDocumentsRequest;
+
+class QTAWS_EXPORT ListDocumentsRequestPrivate : public SSMPrivate {
+
+public:
+    ListDocumentsRequestPrivate(const SSM::Action action,
+                                   ListDocumentsRequest * const q);
+    ListDocumentsRequestPrivate(const ListDocumentsRequestPrivate &other,
+                                   ListDocumentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDocumentsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

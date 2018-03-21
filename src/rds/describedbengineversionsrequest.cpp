@@ -19,3 +19,107 @@
 
 #include "describedbengineversionsrequest.h"
 #include "describedbengineversionsrequest_p.h"
+#include "describedbengineversionsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBEngineVersionsRequest
+ *
+ * @brief  Implements RDS DescribeDBEngineVersions requests.
+ *
+ * @see    RDSClient::describeDBEngineVersions
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBEngineVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBEngineVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest(const DescribeDBEngineVersionsRequest &other)
+    : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBEngineVersionsRequest object.
+ */
+DescribeDBEngineVersionsRequest::DescribeDBEngineVersionsRequest()
+    : RDSRequest(new DescribeDBEngineVersionsRequestPrivate(RDSRequest::DescribeDBEngineVersionsAction, this))
+{
+
+}
+
+bool DescribeDBEngineVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBEngineVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBEngineVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBEngineVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBEngineVersionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBEngineVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBEngineVersionsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBEngineVersionsRequest instance.
+ */
+DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
+    const RDSRequest::Action action, DescribeDBEngineVersionsRequest * const q)
+    : DescribeDBEngineVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBEngineVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBEngineVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBEngineVersionsRequest instance.
+ */
+DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
+    const DescribeDBEngineVersionsRequestPrivate &other, DescribeDBEngineVersionsRequest * const q)
+    : DescribeDBEngineVersionsPrivate(other, q)
+{
+
+}

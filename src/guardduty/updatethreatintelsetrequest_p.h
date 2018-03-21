@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETHREATINTELSETREQUEST_P_H
 #define QTAWS_UPDATETHREATINTELSETREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "updatethreatintelsetrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UpdateThreatIntelSetRequest;
+
+class QTAWS_EXPORT UpdateThreatIntelSetRequestPrivate : public GuardDutyPrivate {
+
+public:
+    UpdateThreatIntelSetRequestPrivate(const GuardDuty::Action action,
+                                   UpdateThreatIntelSetRequest * const q);
+    UpdateThreatIntelSetRequestPrivate(const UpdateThreatIntelSetRequestPrivate &other,
+                                   UpdateThreatIntelSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateThreatIntelSetRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

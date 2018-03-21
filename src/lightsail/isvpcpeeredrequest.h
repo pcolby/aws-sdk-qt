@@ -20,4 +20,32 @@
 #ifndef QTAWS_ISVPCPEEREDREQUEST_H
 #define QTAWS_ISVPCPEEREDREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class IsVpcPeeredRequestPrivate;
+
+class QTAWS_EXPORT IsVpcPeeredRequest : public LightsailRequest {
+
+public:
+    IsVpcPeeredRequest(const IsVpcPeeredRequest &other);
+    IsVpcPeeredRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(IsVpcPeeredRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

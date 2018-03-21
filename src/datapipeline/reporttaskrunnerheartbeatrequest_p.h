@@ -20,4 +20,29 @@
 #ifndef QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_P_H
 #define QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "reporttaskrunnerheartbeatrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ReportTaskRunnerHeartbeatRequest;
+
+class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelinePrivate {
+
+public:
+    ReportTaskRunnerHeartbeatRequestPrivate(const DataPipeline::Action action,
+                                   ReportTaskRunnerHeartbeatRequest * const q);
+    ReportTaskRunnerHeartbeatRequestPrivate(const ReportTaskRunnerHeartbeatRequestPrivate &other,
+                                   ReportTaskRunnerHeartbeatRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReportTaskRunnerHeartbeatRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listrepositoriesrequest.h"
 #include "listrepositoriesrequest_p.h"
+#include "listrepositoriesresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  ListRepositoriesRequest
+ *
+ * @brief  Implements CodeCommit ListRepositories requests.
+ *
+ * @see    CodeCommitClient::listRepositories
+ */
+
+/**
+ * @brief  Constructs a new ListRepositoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRepositoriesResponse::ListRepositoriesResponse(
+
+/**
+ * @brief  Constructs a new ListRepositoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRepositoriesRequest::ListRepositoriesRequest(const ListRepositoriesRequest &other)
+    : CodeCommitRequest(new ListRepositoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRepositoriesRequest object.
+ */
+ListRepositoriesRequest::ListRepositoriesRequest()
+    : CodeCommitRequest(new ListRepositoriesRequestPrivate(CodeCommitRequest::ListRepositoriesAction, this))
+{
+
+}
+
+bool ListRepositoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRepositoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRepositoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * ListRepositoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRepositoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRepositoriesRequestPrivate
+ *
+ * @brief  Private implementation for ListRepositoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRepositoriesRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public ListRepositoriesRequest instance.
+ */
+ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
+    const CodeCommitRequest::Action action, ListRepositoriesRequest * const q)
+    : ListRepositoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRepositoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRepositoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRepositoriesRequest instance.
+ */
+ListRepositoriesRequestPrivate::ListRepositoriesRequestPrivate(
+    const ListRepositoriesRequestPrivate &other, ListRepositoriesRequest * const q)
+    : ListRepositoriesPrivate(other, q)
+{
+
+}

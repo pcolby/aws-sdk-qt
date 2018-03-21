@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVPNGATEWAYSREQUEST_P_H
 #define QTAWS_DESCRIBEVPNGATEWAYSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevpngatewaysrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpnGatewaysRequest;
+
+class QTAWS_EXPORT DescribeVpnGatewaysRequestPrivate : public EC2Private {
+
+public:
+    DescribeVpnGatewaysRequestPrivate(const EC2::Action action,
+                                   DescribeVpnGatewaysRequest * const q);
+    DescribeVpnGatewaysRequestPrivate(const DescribeVpnGatewaysRequestPrivate &other,
+                                   DescribeVpnGatewaysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVpnGatewaysRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

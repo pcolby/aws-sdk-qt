@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCOMMENTREQUEST_P_H
 #define QTAWS_GETCOMMENTREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "getcommentrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetCommentRequest;
+
+class QTAWS_EXPORT GetCommentRequestPrivate : public CodeCommitPrivate {
+
+public:
+    GetCommentRequestPrivate(const CodeCommit::Action action,
+                                   GetCommentRequest * const q);
+    GetCommentRequestPrivate(const GetCommentRequestPrivate &other,
+                                   GetCommentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCommentRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

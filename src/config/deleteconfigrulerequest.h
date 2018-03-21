@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECONFIGRULEREQUEST_H
 #define QTAWS_DELETECONFIGRULEREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteConfigRuleRequestPrivate;
+
+class QTAWS_EXPORT DeleteConfigRuleRequest : public ConfigServiceRequest {
+
+public:
+    DeleteConfigRuleRequest(const DeleteConfigRuleRequest &other);
+    DeleteConfigRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConfigRuleRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEHITTYPEOFHITREQUEST_H
 #define QTAWS_UPDATEHITTYPEOFHITREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateHITTypeOfHITRequestPrivate;
+
+class QTAWS_EXPORT UpdateHITTypeOfHITRequest : public MTurkRequest {
+
+public:
+    UpdateHITTypeOfHITRequest(const UpdateHITTypeOfHITRequest &other);
+    UpdateHITTypeOfHITRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateHITTypeOfHITRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

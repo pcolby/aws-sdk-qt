@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSREQUEST_H
 #define QTAWS_GETACCOUNTSETTINGSREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetAccountSettingsRequestPrivate;
+
+class QTAWS_EXPORT GetAccountSettingsRequest : public LambdaRequest {
+
+public:
+    GetAccountSettingsRequest(const GetAccountSettingsRequest &other);
+    GetAccountSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountSettingsRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

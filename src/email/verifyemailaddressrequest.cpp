@@ -19,3 +19,107 @@
 
 #include "verifyemailaddressrequest.h"
 #include "verifyemailaddressrequest_p.h"
+#include "verifyemailaddressresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyEmailAddressRequest
+ *
+ * @brief  Implements SES VerifyEmailAddress requests.
+ *
+ * @see    SESClient::verifyEmailAddress
+ */
+
+/**
+ * @brief  Constructs a new VerifyEmailAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyEmailAddressResponse::VerifyEmailAddressResponse(
+
+/**
+ * @brief  Constructs a new VerifyEmailAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+VerifyEmailAddressRequest::VerifyEmailAddressRequest(const VerifyEmailAddressRequest &other)
+    : SESRequest(new VerifyEmailAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new VerifyEmailAddressRequest object.
+ */
+VerifyEmailAddressRequest::VerifyEmailAddressRequest()
+    : SESRequest(new VerifyEmailAddressRequestPrivate(SESRequest::VerifyEmailAddressAction, this))
+{
+
+}
+
+bool VerifyEmailAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an VerifyEmailAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An VerifyEmailAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * VerifyEmailAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new VerifyEmailAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyEmailAddressRequestPrivate
+ *
+ * @brief  Private implementation for VerifyEmailAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyEmailAddressRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public VerifyEmailAddressRequest instance.
+ */
+VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
+    const SESRequest::Action action, VerifyEmailAddressRequest * const q)
+    : VerifyEmailAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyEmailAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the VerifyEmailAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public VerifyEmailAddressRequest instance.
+ */
+VerifyEmailAddressRequestPrivate::VerifyEmailAddressRequestPrivate(
+    const VerifyEmailAddressRequestPrivate &other, VerifyEmailAddressRequest * const q)
+    : VerifyEmailAddressPrivate(other, q)
+{
+
+}

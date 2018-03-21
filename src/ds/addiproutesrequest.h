@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDIPROUTESREQUEST_H
 #define QTAWS_ADDIPROUTESREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class AddIpRoutesRequestPrivate;
+
+class QTAWS_EXPORT AddIpRoutesRequest : public DirectoryServiceRequest {
+
+public:
+    AddIpRoutesRequest(const AddIpRoutesRequest &other);
+    AddIpRoutesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddIpRoutesRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

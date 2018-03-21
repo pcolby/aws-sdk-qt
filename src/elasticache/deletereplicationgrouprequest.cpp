@@ -19,3 +19,107 @@
 
 #include "deletereplicationgrouprequest.h"
 #include "deletereplicationgrouprequest_p.h"
+#include "deletereplicationgroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DeleteReplicationGroupRequest
+ *
+ * @brief  Implements ElastiCache DeleteReplicationGroup requests.
+ *
+ * @see    ElastiCacheClient::deleteReplicationGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteReplicationGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationGroupResponse::DeleteReplicationGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteReplicationGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReplicationGroupRequest::DeleteReplicationGroupRequest(const DeleteReplicationGroupRequest &other)
+    : ElastiCacheRequest(new DeleteReplicationGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReplicationGroupRequest object.
+ */
+DeleteReplicationGroupRequest::DeleteReplicationGroupRequest()
+    : ElastiCacheRequest(new DeleteReplicationGroupRequestPrivate(ElastiCacheRequest::DeleteReplicationGroupAction, this))
+{
+
+}
+
+bool DeleteReplicationGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReplicationGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReplicationGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReplicationGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReplicationGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public DeleteReplicationGroupRequest instance.
+ */
+DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, DeleteReplicationGroupRequest * const q)
+    : DeleteReplicationGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReplicationGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReplicationGroupRequest instance.
+ */
+DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
+    const DeleteReplicationGroupRequestPrivate &other, DeleteReplicationGroupRequest * const q)
+    : DeleteReplicationGroupPrivate(other, q)
+{
+
+}

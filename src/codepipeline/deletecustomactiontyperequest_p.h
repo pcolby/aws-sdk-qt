@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECUSTOMACTIONTYPEREQUEST_P_H
 #define QTAWS_DELETECUSTOMACTIONTYPEREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "deletecustomactiontyperequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class DeleteCustomActionTypeRequest;
+
+class QTAWS_EXPORT DeleteCustomActionTypeRequestPrivate : public CodePipelinePrivate {
+
+public:
+    DeleteCustomActionTypeRequestPrivate(const CodePipeline::Action action,
+                                   DeleteCustomActionTypeRequest * const q);
+    DeleteCustomActionTypeRequestPrivate(const DeleteCustomActionTypeRequestPrivate &other,
+                                   DeleteCustomActionTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCustomActionTypeRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

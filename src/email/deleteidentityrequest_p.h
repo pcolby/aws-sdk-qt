@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEIDENTITYREQUEST_P_H
 #define QTAWS_DELETEIDENTITYREQUEST_P_H
 
+#include "ses_p.h"
+#include "deleteidentityrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteIdentityRequest;
+
+class QTAWS_EXPORT DeleteIdentityRequestPrivate : public SESPrivate {
+
+public:
+    DeleteIdentityRequestPrivate(const SES::Action action,
+                                   DeleteIdentityRequest * const q);
+    DeleteIdentityRequestPrivate(const DeleteIdentityRequestPrivate &other,
+                                   DeleteIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIdentityRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

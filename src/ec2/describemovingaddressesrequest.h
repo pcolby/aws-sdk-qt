@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMOVINGADDRESSESREQUEST_H
 #define QTAWS_DESCRIBEMOVINGADDRESSESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeMovingAddressesRequestPrivate;
+
+class QTAWS_EXPORT DescribeMovingAddressesRequest : public EC2Request {
+
+public:
+    DescribeMovingAddressesRequest(const DescribeMovingAddressesRequest &other);
+    DescribeMovingAddressesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMovingAddressesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

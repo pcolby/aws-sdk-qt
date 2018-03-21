@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPTASKREQUEST_P_H
 #define QTAWS_STOPTASKREQUEST_P_H
 
+#include "ecs_p.h"
+#include "stoptaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StopTaskRequest;
+
+class QTAWS_EXPORT StopTaskRequestPrivate : public ECSPrivate {
+
+public:
+    StopTaskRequestPrivate(const ECS::Action action,
+                                   StopTaskRequest * const q);
+    StopTaskRequestPrivate(const StopTaskRequestPrivate &other,
+                                   StopTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopTaskRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

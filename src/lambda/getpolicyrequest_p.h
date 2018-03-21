@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPOLICYREQUEST_P_H
 #define QTAWS_GETPOLICYREQUEST_P_H
 
+#include "lambda_p.h"
+#include "getpolicyrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetPolicyRequest;
+
+class QTAWS_EXPORT GetPolicyRequestPrivate : public LambdaPrivate {
+
+public:
+    GetPolicyRequestPrivate(const Lambda::Action action,
+                                   GetPolicyRequest * const q);
+    GetPolicyRequestPrivate(const GetPolicyRequestPrivate &other,
+                                   GetPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPolicyRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

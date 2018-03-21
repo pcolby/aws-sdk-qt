@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETIMETOLIVEREQUEST_H
 #define QTAWS_DESCRIBETIMETOLIVEREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeTimeToLiveRequestPrivate;
+
+class QTAWS_EXPORT DescribeTimeToLiveRequest : public DynamoDBRequest {
+
+public:
+    DescribeTimeToLiveRequest(const DescribeTimeToLiveRequest &other);
+    DescribeTimeToLiveRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTimeToLiveRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

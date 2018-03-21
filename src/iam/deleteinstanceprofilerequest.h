@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINSTANCEPROFILEREQUEST_H
 #define QTAWS_DELETEINSTANCEPROFILEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteInstanceProfileRequestPrivate;
+
+class QTAWS_EXPORT DeleteInstanceProfileRequest : public IAMRequest {
+
+public:
+    DeleteInstanceProfileRequest(const DeleteInstanceProfileRequest &other);
+    DeleteInstanceProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInstanceProfileRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

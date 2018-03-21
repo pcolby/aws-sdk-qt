@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESNAPSHOTSCHEDULEREQUEST_P_H
 #define QTAWS_UPDATESNAPSHOTSCHEDULEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "updatesnapshotschedulerequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateSnapshotScheduleRequest;
+
+class QTAWS_EXPORT UpdateSnapshotScheduleRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    UpdateSnapshotScheduleRequestPrivate(const StorageGateway::Action action,
+                                   UpdateSnapshotScheduleRequest * const q);
+    UpdateSnapshotScheduleRequestPrivate(const UpdateSnapshotScheduleRequestPrivate &other,
+                                   UpdateSnapshotScheduleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSnapshotScheduleRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

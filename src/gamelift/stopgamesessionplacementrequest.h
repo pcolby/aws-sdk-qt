@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPGAMESESSIONPLACEMENTREQUEST_H
 #define QTAWS_STOPGAMESESSIONPLACEMENTREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StopGameSessionPlacementRequestPrivate;
+
+class QTAWS_EXPORT StopGameSessionPlacementRequest : public GameLiftRequest {
+
+public:
+    StopGameSessionPlacementRequest(const StopGameSessionPlacementRequest &other);
+    StopGameSessionPlacementRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopGameSessionPlacementRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

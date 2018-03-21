@@ -19,3 +19,107 @@
 
 #include "acknowledgejobrequest.h"
 #include "acknowledgejobrequest_p.h"
+#include "acknowledgejobresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  AcknowledgeJobRequest
+ *
+ * @brief  Implements CodePipeline AcknowledgeJob requests.
+ *
+ * @see    CodePipelineClient::acknowledgeJob
+ */
+
+/**
+ * @brief  Constructs a new AcknowledgeJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AcknowledgeJobResponse::AcknowledgeJobResponse(
+
+/**
+ * @brief  Constructs a new AcknowledgeJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AcknowledgeJobRequest::AcknowledgeJobRequest(const AcknowledgeJobRequest &other)
+    : CodePipelineRequest(new AcknowledgeJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AcknowledgeJobRequest object.
+ */
+AcknowledgeJobRequest::AcknowledgeJobRequest()
+    : CodePipelineRequest(new AcknowledgeJobRequestPrivate(CodePipelineRequest::AcknowledgeJobAction, this))
+{
+
+}
+
+bool AcknowledgeJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AcknowledgeJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AcknowledgeJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply * const reply) const
+{
+    return new AcknowledgeJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AcknowledgeJobRequestPrivate
+ *
+ * @brief  Private implementation for AcknowledgeJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcknowledgeJobRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public AcknowledgeJobRequest instance.
+ */
+AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
+    const CodePipelineRequest::Action action, AcknowledgeJobRequest * const q)
+    : AcknowledgeJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AcknowledgeJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AcknowledgeJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AcknowledgeJobRequest instance.
+ */
+AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
+    const AcknowledgeJobRequestPrivate &other, AcknowledgeJobRequest * const q)
+    : AcknowledgeJobPrivate(other, q)
+{
+
+}

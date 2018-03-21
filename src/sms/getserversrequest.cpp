@@ -19,3 +19,107 @@
 
 #include "getserversrequest.h"
 #include "getserversrequest_p.h"
+#include "getserversresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  GetServersRequest
+ *
+ * @brief  Implements SMS GetServers requests.
+ *
+ * @see    SMSClient::getServers
+ */
+
+/**
+ * @brief  Constructs a new GetServersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetServersResponse::GetServersResponse(
+
+/**
+ * @brief  Constructs a new GetServersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetServersRequest::GetServersRequest(const GetServersRequest &other)
+    : SMSRequest(new GetServersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetServersRequest object.
+ */
+GetServersRequest::GetServersRequest()
+    : SMSRequest(new GetServersRequestPrivate(SMSRequest::GetServersAction, this))
+{
+
+}
+
+bool GetServersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetServersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetServersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * GetServersRequest::response(QNetworkReply * const reply) const
+{
+    return new GetServersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetServersRequestPrivate
+ *
+ * @brief  Private implementation for GetServersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServersRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public GetServersRequest instance.
+ */
+GetServersRequestPrivate::GetServersRequestPrivate(
+    const SMSRequest::Action action, GetServersRequest * const q)
+    : GetServersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetServersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetServersRequest instance.
+ */
+GetServersRequestPrivate::GetServersRequestPrivate(
+    const GetServersRequestPrivate &other, GetServersRequest * const q)
+    : GetServersPrivate(other, q)
+{
+
+}

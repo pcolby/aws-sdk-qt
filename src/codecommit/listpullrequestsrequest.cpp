@@ -19,3 +19,107 @@
 
 #include "listpullrequestsrequest.h"
 #include "listpullrequestsrequest_p.h"
+#include "listpullrequestsresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  ListPullRequestsRequest
+ *
+ * @brief  Implements CodeCommit ListPullRequests requests.
+ *
+ * @see    CodeCommitClient::listPullRequests
+ */
+
+/**
+ * @brief  Constructs a new ListPullRequestsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPullRequestsResponse::ListPullRequestsResponse(
+
+/**
+ * @brief  Constructs a new ListPullRequestsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPullRequestsRequest::ListPullRequestsRequest(const ListPullRequestsRequest &other)
+    : CodeCommitRequest(new ListPullRequestsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPullRequestsRequest object.
+ */
+ListPullRequestsRequest::ListPullRequestsRequest()
+    : CodeCommitRequest(new ListPullRequestsRequestPrivate(CodeCommitRequest::ListPullRequestsAction, this))
+{
+
+}
+
+bool ListPullRequestsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPullRequestsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPullRequestsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPullRequestsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPullRequestsRequestPrivate
+ *
+ * @brief  Private implementation for ListPullRequestsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPullRequestsRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public ListPullRequestsRequest instance.
+ */
+ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
+    const CodeCommitRequest::Action action, ListPullRequestsRequest * const q)
+    : ListPullRequestsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPullRequestsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPullRequestsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPullRequestsRequest instance.
+ */
+ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
+    const ListPullRequestsRequestPrivate &other, ListPullRequestsRequest * const q)
+    : ListPullRequestsPrivate(other, q)
+{
+
+}

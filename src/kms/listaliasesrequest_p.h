@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTALIASESREQUEST_P_H
 #define QTAWS_LISTALIASESREQUEST_P_H
 
+#include "kms_p.h"
+#include "listaliasesrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListAliasesRequest;
+
+class QTAWS_EXPORT ListAliasesRequestPrivate : public KMSPrivate {
+
+public:
+    ListAliasesRequestPrivate(const KMS::Action action,
+                                   ListAliasesRequest * const q);
+    ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
+                                   ListAliasesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAliasesRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

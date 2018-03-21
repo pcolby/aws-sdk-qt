@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESERVEDNODESREQUEST_H
 #define QTAWS_DESCRIBERESERVEDNODESREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeReservedNodesRequestPrivate;
+
+class QTAWS_EXPORT DescribeReservedNodesRequest : public RedshiftRequest {
+
+public:
+    DescribeReservedNodesRequest(const DescribeReservedNodesRequest &other);
+    DescribeReservedNodesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReservedNodesRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

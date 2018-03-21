@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDASHBOARDSREQUEST_H
 #define QTAWS_DELETEDASHBOARDSREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DeleteDashboardsRequestPrivate;
+
+class QTAWS_EXPORT DeleteDashboardsRequest : public CloudWatchRequest {
+
+public:
+    DeleteDashboardsRequest(const DeleteDashboardsRequest &other);
+    DeleteDashboardsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDashboardsRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

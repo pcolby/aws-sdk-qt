@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERFROMWORKMAILREQUEST_H
 #define QTAWS_DEREGISTERFROMWORKMAILREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeregisterFromWorkMailRequestPrivate;
+
+class QTAWS_EXPORT DeregisterFromWorkMailRequest : public WorkMailRequest {
+
+public:
+    DeregisterFromWorkMailRequest(const DeregisterFromWorkMailRequest &other);
+    DeregisterFromWorkMailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterFromWorkMailRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

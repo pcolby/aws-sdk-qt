@@ -20,4 +20,32 @@
 #ifndef QTAWS_REVOKEINVITATIONREQUEST_H
 #define QTAWS_REVOKEINVITATIONREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class RevokeInvitationRequestPrivate;
+
+class QTAWS_EXPORT RevokeInvitationRequest : public AlexaForBusinessRequest {
+
+public:
+    RevokeInvitationRequest(const RevokeInvitationRequest &other);
+    RevokeInvitationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RevokeInvitationRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

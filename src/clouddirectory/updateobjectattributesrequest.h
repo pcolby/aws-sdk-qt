@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEOBJECTATTRIBUTESREQUEST_H
 #define QTAWS_UPDATEOBJECTATTRIBUTESREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateObjectAttributesRequestPrivate;
+
+class QTAWS_EXPORT UpdateObjectAttributesRequest : public CloudDirectoryRequest {
+
+public:
+    UpdateObjectAttributesRequest(const UpdateObjectAttributesRequest &other);
+    UpdateObjectAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateObjectAttributesRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

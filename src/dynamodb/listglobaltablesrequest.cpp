@@ -19,3 +19,107 @@
 
 #include "listglobaltablesrequest.h"
 #include "listglobaltablesrequest_p.h"
+#include "listglobaltablesresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  ListGlobalTablesRequest
+ *
+ * @brief  Implements DynamoDB ListGlobalTables requests.
+ *
+ * @see    DynamoDBClient::listGlobalTables
+ */
+
+/**
+ * @brief  Constructs a new ListGlobalTablesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGlobalTablesResponse::ListGlobalTablesResponse(
+
+/**
+ * @brief  Constructs a new ListGlobalTablesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGlobalTablesRequest::ListGlobalTablesRequest(const ListGlobalTablesRequest &other)
+    : DynamoDBRequest(new ListGlobalTablesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGlobalTablesRequest object.
+ */
+ListGlobalTablesRequest::ListGlobalTablesRequest()
+    : DynamoDBRequest(new ListGlobalTablesRequestPrivate(DynamoDBRequest::ListGlobalTablesAction, this))
+{
+
+}
+
+bool ListGlobalTablesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGlobalTablesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGlobalTablesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * ListGlobalTablesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGlobalTablesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGlobalTablesRequestPrivate
+ *
+ * @brief  Private implementation for ListGlobalTablesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGlobalTablesRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public ListGlobalTablesRequest instance.
+ */
+ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
+    const DynamoDBRequest::Action action, ListGlobalTablesRequest * const q)
+    : ListGlobalTablesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGlobalTablesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGlobalTablesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGlobalTablesRequest instance.
+ */
+ListGlobalTablesRequestPrivate::ListGlobalTablesRequestPrivate(
+    const ListGlobalTablesRequestPrivate &other, ListGlobalTablesRequest * const q)
+    : ListGlobalTablesPrivate(other, q)
+{
+
+}

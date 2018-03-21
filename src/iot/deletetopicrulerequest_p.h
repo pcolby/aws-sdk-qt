@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETOPICRULEREQUEST_P_H
 #define QTAWS_DELETETOPICRULEREQUEST_P_H
 
+#include "iot_p.h"
+#include "deletetopicrulerequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteTopicRuleRequest;
+
+class QTAWS_EXPORT DeleteTopicRuleRequestPrivate : public IoTPrivate {
+
+public:
+    DeleteTopicRuleRequestPrivate(const IoT::Action action,
+                                   DeleteTopicRuleRequest * const q);
+    DeleteTopicRuleRequestPrivate(const DeleteTopicRuleRequestPrivate &other,
+                                   DeleteTopicRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTopicRuleRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

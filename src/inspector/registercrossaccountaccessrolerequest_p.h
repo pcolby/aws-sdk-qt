@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERCROSSACCOUNTACCESSROLEREQUEST_P_H
 #define QTAWS_REGISTERCROSSACCOUNTACCESSROLEREQUEST_P_H
 
+#include "inspector_p.h"
+#include "registercrossaccountaccessrolerequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class RegisterCrossAccountAccessRoleRequest;
+
+class QTAWS_EXPORT RegisterCrossAccountAccessRoleRequestPrivate : public InspectorPrivate {
+
+public:
+    RegisterCrossAccountAccessRoleRequestPrivate(const Inspector::Action action,
+                                   RegisterCrossAccountAccessRoleRequest * const q);
+    RegisterCrossAccountAccessRoleRequestPrivate(const RegisterCrossAccountAccessRoleRequestPrivate &other,
+                                   RegisterCrossAccountAccessRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterCrossAccountAccessRoleRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

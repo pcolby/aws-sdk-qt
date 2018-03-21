@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIMPORTSNAPSHOTTASKSREQUEST_P_H
 #define QTAWS_DESCRIBEIMPORTSNAPSHOTTASKSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeimportsnapshottasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeImportSnapshotTasksRequest;
+
+class QTAWS_EXPORT DescribeImportSnapshotTasksRequestPrivate : public EC2Private {
+
+public:
+    DescribeImportSnapshotTasksRequestPrivate(const EC2::Action action,
+                                   DescribeImportSnapshotTasksRequest * const q);
+    DescribeImportSnapshotTasksRequestPrivate(const DescribeImportSnapshotTasksRequestPrivate &other,
+                                   DescribeImportSnapshotTasksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImportSnapshotTasksRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETROLEREQUEST_P_H
 #define QTAWS_GETROLEREQUEST_P_H
 
+#include "iam_p.h"
+#include "getrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetRoleRequest;
+
+class QTAWS_EXPORT GetRoleRequestPrivate : public IAMPrivate {
+
+public:
+    GetRoleRequestPrivate(const IAM::Action action,
+                                   GetRoleRequest * const q);
+    GetRoleRequestPrivate(const GetRoleRequestPrivate &other,
+                                   GetRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRoleRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

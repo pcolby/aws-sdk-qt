@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSREQUEST_P_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "updatenumberofdomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class UpdateNumberOfDomainControllersRequest;
+
+class QTAWS_EXPORT UpdateNumberOfDomainControllersRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    UpdateNumberOfDomainControllersRequestPrivate(const DirectoryService::Action action,
+                                   UpdateNumberOfDomainControllersRequest * const q);
+    UpdateNumberOfDomainControllersRequestPrivate(const UpdateNumberOfDomainControllersRequestPrivate &other,
+                                   UpdateNumberOfDomainControllersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateNumberOfDomainControllersRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

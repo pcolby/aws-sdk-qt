@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUILTINSLOTTYPESREQUEST_P_H
 #define QTAWS_GETBUILTINSLOTTYPESREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "getbuiltinslottypesrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBuiltinSlotTypesRequest;
+
+class QTAWS_EXPORT GetBuiltinSlotTypesRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    GetBuiltinSlotTypesRequestPrivate(const LexModelBuildingService::Action action,
+                                   GetBuiltinSlotTypesRequest * const q);
+    GetBuiltinSlotTypesRequestPrivate(const GetBuiltinSlotTypesRequestPrivate &other,
+                                   GetBuiltinSlotTypesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBuiltinSlotTypesRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

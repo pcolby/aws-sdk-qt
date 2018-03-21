@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVOLUMEREQUEST_H
 #define QTAWS_DELETEVOLUMEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVolumeRequestPrivate;
+
+class QTAWS_EXPORT DeleteVolumeRequest : public EC2Request {
+
+public:
+    DeleteVolumeRequest(const DeleteVolumeRequest &other);
+    DeleteVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVolumeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

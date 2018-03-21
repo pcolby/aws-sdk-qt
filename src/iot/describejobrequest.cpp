@@ -19,3 +19,107 @@
 
 #include "describejobrequest.h"
 #include "describejobrequest_p.h"
+#include "describejobresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeJobRequest
+ *
+ * @brief  Implements IoT DescribeJob requests.
+ *
+ * @see    IoTClient::describeJob
+ */
+
+/**
+ * @brief  Constructs a new DescribeJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeJobResponse::DescribeJobResponse(
+
+/**
+ * @brief  Constructs a new DescribeJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeJobRequest::DescribeJobRequest(const DescribeJobRequest &other)
+    : IoTRequest(new DescribeJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeJobRequest object.
+ */
+DescribeJobRequest::DescribeJobRequest()
+    : IoTRequest(new DescribeJobRequestPrivate(IoTRequest::DescribeJobAction, this))
+{
+
+}
+
+bool DescribeJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeJobRequestPrivate
+ *
+ * @brief  Private implementation for DescribeJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeJobRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeJobRequest instance.
+ */
+DescribeJobRequestPrivate::DescribeJobRequestPrivate(
+    const IoTRequest::Action action, DescribeJobRequest * const q)
+    : DescribeJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeJobRequest instance.
+ */
+DescribeJobRequestPrivate::DescribeJobRequestPrivate(
+    const DescribeJobRequestPrivate &other, DescribeJobRequest * const q)
+    : DescribeJobPrivate(other, q)
+{
+
+}

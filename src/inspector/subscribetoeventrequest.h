@@ -20,4 +20,32 @@
 #ifndef QTAWS_SUBSCRIBETOEVENTREQUEST_H
 #define QTAWS_SUBSCRIBETOEVENTREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class SubscribeToEventRequestPrivate;
+
+class QTAWS_EXPORT SubscribeToEventRequest : public InspectorRequest {
+
+public:
+    SubscribeToEventRequest(const SubscribeToEventRequest &other);
+    SubscribeToEventRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SubscribeToEventRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

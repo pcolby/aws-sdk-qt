@@ -19,3 +19,107 @@
 
 #include "getrulerequest.h"
 #include "getrulerequest_p.h"
+#include "getruleresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  GetRuleRequest
+ *
+ * @brief  Implements WAF GetRule requests.
+ *
+ * @see    WAFClient::getRule
+ */
+
+/**
+ * @brief  Constructs a new GetRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRuleResponse::GetRuleResponse(
+
+/**
+ * @brief  Constructs a new GetRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRuleRequest::GetRuleRequest(const GetRuleRequest &other)
+    : WAFRequest(new GetRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRuleRequest object.
+ */
+GetRuleRequest::GetRuleRequest()
+    : WAFRequest(new GetRuleRequestPrivate(WAFRequest::GetRuleAction, this))
+{
+
+}
+
+bool GetRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * GetRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRuleRequestPrivate
+ *
+ * @brief  Private implementation for GetRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRuleRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public GetRuleRequest instance.
+ */
+GetRuleRequestPrivate::GetRuleRequestPrivate(
+    const WAFRequest::Action action, GetRuleRequest * const q)
+    : GetRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRuleRequest instance.
+ */
+GetRuleRequestPrivate::GetRuleRequestPrivate(
+    const GetRuleRequestPrivate &other, GetRuleRequest * const q)
+    : GetRulePrivate(other, q)
+{
+
+}

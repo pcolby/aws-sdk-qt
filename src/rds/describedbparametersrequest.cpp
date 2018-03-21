@@ -19,3 +19,107 @@
 
 #include "describedbparametersrequest.h"
 #include "describedbparametersrequest_p.h"
+#include "describedbparametersresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBParametersRequest
+ *
+ * @brief  Implements RDS DescribeDBParameters requests.
+ *
+ * @see    RDSClient::describeDBParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBParametersResponse::DescribeDBParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBParametersRequest::DescribeDBParametersRequest(const DescribeDBParametersRequest &other)
+    : RDSRequest(new DescribeDBParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBParametersRequest object.
+ */
+DescribeDBParametersRequest::DescribeDBParametersRequest()
+    : RDSRequest(new DescribeDBParametersRequestPrivate(RDSRequest::DescribeDBParametersAction, this))
+{
+
+}
+
+bool DescribeDBParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBParametersRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBParametersRequest instance.
+ */
+DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
+    const RDSRequest::Action action, DescribeDBParametersRequest * const q)
+    : DescribeDBParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBParametersRequest instance.
+ */
+DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
+    const DescribeDBParametersRequestPrivate &other, DescribeDBParametersRequest * const q)
+    : DescribeDBParametersPrivate(other, q)
+{
+
+}

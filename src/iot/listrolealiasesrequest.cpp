@@ -19,3 +19,107 @@
 
 #include "listrolealiasesrequest.h"
 #include "listrolealiasesrequest_p.h"
+#include "listrolealiasesresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListRoleAliasesRequest
+ *
+ * @brief  Implements IoT ListRoleAliases requests.
+ *
+ * @see    IoTClient::listRoleAliases
+ */
+
+/**
+ * @brief  Constructs a new ListRoleAliasesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRoleAliasesResponse::ListRoleAliasesResponse(
+
+/**
+ * @brief  Constructs a new ListRoleAliasesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRoleAliasesRequest::ListRoleAliasesRequest(const ListRoleAliasesRequest &other)
+    : IoTRequest(new ListRoleAliasesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRoleAliasesRequest object.
+ */
+ListRoleAliasesRequest::ListRoleAliasesRequest()
+    : IoTRequest(new ListRoleAliasesRequestPrivate(IoTRequest::ListRoleAliasesAction, this))
+{
+
+}
+
+bool ListRoleAliasesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRoleAliasesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRoleAliasesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListRoleAliasesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRoleAliasesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRoleAliasesRequestPrivate
+ *
+ * @brief  Private implementation for ListRoleAliasesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRoleAliasesRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListRoleAliasesRequest instance.
+ */
+ListRoleAliasesRequestPrivate::ListRoleAliasesRequestPrivate(
+    const IoTRequest::Action action, ListRoleAliasesRequest * const q)
+    : ListRoleAliasesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRoleAliasesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRoleAliasesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRoleAliasesRequest instance.
+ */
+ListRoleAliasesRequestPrivate::ListRoleAliasesRequestPrivate(
+    const ListRoleAliasesRequestPrivate &other, ListRoleAliasesRequest * const q)
+    : ListRoleAliasesPrivate(other, q)
+{
+
+}

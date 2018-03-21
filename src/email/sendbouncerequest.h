@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDBOUNCEREQUEST_H
 #define QTAWS_SENDBOUNCEREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SendBounceRequestPrivate;
+
+class QTAWS_EXPORT SendBounceRequest : public SESRequest {
+
+public:
+    SendBounceRequest(const SendBounceRequest &other);
+    SendBounceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendBounceRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

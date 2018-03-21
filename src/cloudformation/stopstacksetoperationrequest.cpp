@@ -19,3 +19,107 @@
 
 #include "stopstacksetoperationrequest.h"
 #include "stopstacksetoperationrequest_p.h"
+#include "stopstacksetoperationresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  StopStackSetOperationRequest
+ *
+ * @brief  Implements CloudFormation StopStackSetOperation requests.
+ *
+ * @see    CloudFormationClient::stopStackSetOperation
+ */
+
+/**
+ * @brief  Constructs a new StopStackSetOperationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStackSetOperationResponse::StopStackSetOperationResponse(
+
+/**
+ * @brief  Constructs a new StopStackSetOperationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopStackSetOperationRequest::StopStackSetOperationRequest(const StopStackSetOperationRequest &other)
+    : CloudFormationRequest(new StopStackSetOperationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopStackSetOperationRequest object.
+ */
+StopStackSetOperationRequest::StopStackSetOperationRequest()
+    : CloudFormationRequest(new StopStackSetOperationRequestPrivate(CloudFormationRequest::StopStackSetOperationAction, this))
+{
+
+}
+
+bool StopStackSetOperationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopStackSetOperationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopStackSetOperationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * StopStackSetOperationRequest::response(QNetworkReply * const reply) const
+{
+    return new StopStackSetOperationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStackSetOperationRequestPrivate
+ *
+ * @brief  Private implementation for StopStackSetOperationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackSetOperationRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public StopStackSetOperationRequest instance.
+ */
+StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
+    const CloudFormationRequest::Action action, StopStackSetOperationRequest * const q)
+    : StopStackSetOperationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStackSetOperationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopStackSetOperationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopStackSetOperationRequest instance.
+ */
+StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
+    const StopStackSetOperationRequestPrivate &other, StopStackSetOperationRequest * const q)
+    : StopStackSetOperationPrivate(other, q)
+{
+
+}

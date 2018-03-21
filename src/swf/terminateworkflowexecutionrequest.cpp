@@ -19,3 +19,107 @@
 
 #include "terminateworkflowexecutionrequest.h"
 #include "terminateworkflowexecutionrequest_p.h"
+#include "terminateworkflowexecutionresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  TerminateWorkflowExecutionRequest
+ *
+ * @brief  Implements SWF TerminateWorkflowExecution requests.
+ *
+ * @see    SWFClient::terminateWorkflowExecution
+ */
+
+/**
+ * @brief  Constructs a new TerminateWorkflowExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
+
+/**
+ * @brief  Constructs a new TerminateWorkflowExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest(const TerminateWorkflowExecutionRequest &other)
+    : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TerminateWorkflowExecutionRequest object.
+ */
+TerminateWorkflowExecutionRequest::TerminateWorkflowExecutionRequest()
+    : SWFRequest(new TerminateWorkflowExecutionRequestPrivate(SWFRequest::TerminateWorkflowExecutionAction, this))
+{
+
+}
+
+bool TerminateWorkflowExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TerminateWorkflowExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TerminateWorkflowExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new TerminateWorkflowExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateWorkflowExecutionRequestPrivate
+ *
+ * @brief  Private implementation for TerminateWorkflowExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public TerminateWorkflowExecutionRequest instance.
+ */
+TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
+    const SWFRequest::Action action, TerminateWorkflowExecutionRequest * const q)
+    : TerminateWorkflowExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateWorkflowExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TerminateWorkflowExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TerminateWorkflowExecutionRequest instance.
+ */
+TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
+    const TerminateWorkflowExecutionRequestPrivate &other, TerminateWorkflowExecutionRequest * const q)
+    : TerminateWorkflowExecutionPrivate(other, q)
+{
+
+}

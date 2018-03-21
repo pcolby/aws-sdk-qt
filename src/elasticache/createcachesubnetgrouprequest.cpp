@@ -19,3 +19,107 @@
 
 #include "createcachesubnetgrouprequest.h"
 #include "createcachesubnetgrouprequest_p.h"
+#include "createcachesubnetgroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  CreateCacheSubnetGroupRequest
+ *
+ * @brief  Implements ElastiCache CreateCacheSubnetGroup requests.
+ *
+ * @see    ElastiCacheClient::createCacheSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateCacheSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCacheSubnetGroupResponse::CreateCacheSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateCacheSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCacheSubnetGroupRequest::CreateCacheSubnetGroupRequest(const CreateCacheSubnetGroupRequest &other)
+    : ElastiCacheRequest(new CreateCacheSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCacheSubnetGroupRequest object.
+ */
+CreateCacheSubnetGroupRequest::CreateCacheSubnetGroupRequest()
+    : ElastiCacheRequest(new CreateCacheSubnetGroupRequestPrivate(ElastiCacheRequest::CreateCacheSubnetGroupAction, this))
+{
+
+}
+
+bool CreateCacheSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCacheSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCacheSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * CreateCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCacheSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCacheSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateCacheSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheSubnetGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public CreateCacheSubnetGroupRequest instance.
+ */
+CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, CreateCacheSubnetGroupRequest * const q)
+    : CreateCacheSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCacheSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCacheSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCacheSubnetGroupRequest instance.
+ */
+CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
+    const CreateCacheSubnetGroupRequestPrivate &other, CreateCacheSubnetGroupRequest * const q)
+    : CreateCacheSubnetGroupPrivate(other, q)
+{
+
+}

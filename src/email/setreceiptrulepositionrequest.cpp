@@ -19,3 +19,107 @@
 
 #include "setreceiptrulepositionrequest.h"
 #include "setreceiptrulepositionrequest_p.h"
+#include "setreceiptrulepositionresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SetReceiptRulePositionRequest
+ *
+ * @brief  Implements SES SetReceiptRulePosition requests.
+ *
+ * @see    SESClient::setReceiptRulePosition
+ */
+
+/**
+ * @brief  Constructs a new SetReceiptRulePositionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
+
+/**
+ * @brief  Constructs a new SetReceiptRulePositionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetReceiptRulePositionRequest::SetReceiptRulePositionRequest(const SetReceiptRulePositionRequest &other)
+    : SESRequest(new SetReceiptRulePositionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetReceiptRulePositionRequest object.
+ */
+SetReceiptRulePositionRequest::SetReceiptRulePositionRequest()
+    : SESRequest(new SetReceiptRulePositionRequestPrivate(SESRequest::SetReceiptRulePositionAction, this))
+{
+
+}
+
+bool SetReceiptRulePositionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetReceiptRulePositionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetReceiptRulePositionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetworkReply * const reply) const
+{
+    return new SetReceiptRulePositionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetReceiptRulePositionRequestPrivate
+ *
+ * @brief  Private implementation for SetReceiptRulePositionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetReceiptRulePositionRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SetReceiptRulePositionRequest instance.
+ */
+SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
+    const SESRequest::Action action, SetReceiptRulePositionRequest * const q)
+    : SetReceiptRulePositionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetReceiptRulePositionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetReceiptRulePositionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetReceiptRulePositionRequest instance.
+ */
+SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
+    const SetReceiptRulePositionRequestPrivate &other, SetReceiptRulePositionRequest * const q)
+    : SetReceiptRulePositionPrivate(other, q)
+{
+
+}

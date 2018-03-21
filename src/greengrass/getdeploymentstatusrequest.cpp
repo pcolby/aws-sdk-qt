@@ -19,3 +19,107 @@
 
 #include "getdeploymentstatusrequest.h"
 #include "getdeploymentstatusrequest_p.h"
+#include "getdeploymentstatusresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetDeploymentStatusRequest
+ *
+ * @brief  Implements Greengrass GetDeploymentStatus requests.
+ *
+ * @see    GreengrassClient::getDeploymentStatus
+ */
+
+/**
+ * @brief  Constructs a new GetDeploymentStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDeploymentStatusResponse::GetDeploymentStatusResponse(
+
+/**
+ * @brief  Constructs a new GetDeploymentStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDeploymentStatusRequest::GetDeploymentStatusRequest(const GetDeploymentStatusRequest &other)
+    : GreengrassRequest(new GetDeploymentStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDeploymentStatusRequest object.
+ */
+GetDeploymentStatusRequest::GetDeploymentStatusRequest()
+    : GreengrassRequest(new GetDeploymentStatusRequestPrivate(GreengrassRequest::GetDeploymentStatusAction, this))
+{
+
+}
+
+bool GetDeploymentStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDeploymentStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDeploymentStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDeploymentStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDeploymentStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetDeploymentStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentStatusRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetDeploymentStatusRequest instance.
+ */
+GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
+    const GreengrassRequest::Action action, GetDeploymentStatusRequest * const q)
+    : GetDeploymentStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDeploymentStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDeploymentStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDeploymentStatusRequest instance.
+ */
+GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
+    const GetDeploymentStatusRequestPrivate &other, GetDeploymentStatusRequest * const q)
+    : GetDeploymentStatusPrivate(other, q)
+{
+
+}

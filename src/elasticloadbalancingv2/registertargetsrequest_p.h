@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERTARGETSREQUEST_P_H
 #define QTAWS_REGISTERTARGETSREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "registertargetsrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class RegisterTargetsRequest;
+
+class QTAWS_EXPORT RegisterTargetsRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    RegisterTargetsRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   RegisterTargetsRequest * const q);
+    RegisterTargetsRequestPrivate(const RegisterTargetsRequestPrivate &other,
+                                   RegisterTargetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterTargetsRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

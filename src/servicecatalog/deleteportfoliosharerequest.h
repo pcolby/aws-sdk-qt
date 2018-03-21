@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPORTFOLIOSHAREREQUEST_H
 #define QTAWS_DELETEPORTFOLIOSHAREREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeletePortfolioShareRequestPrivate;
+
+class QTAWS_EXPORT DeletePortfolioShareRequest : public ServiceCatalogRequest {
+
+public:
+    DeletePortfolioShareRequest(const DeletePortfolioShareRequest &other);
+    DeletePortfolioShareRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePortfolioShareRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

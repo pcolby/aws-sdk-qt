@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVOLUMESMODIFICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVOLUMESMODIFICATIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describevolumesmodificationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVolumesModificationsRequest;
+
+class QTAWS_EXPORT DescribeVolumesModificationsRequestPrivate : public EC2Private {
+
+public:
+    DescribeVolumesModificationsRequestPrivate(const EC2::Action action,
+                                   DescribeVolumesModificationsRequest * const q);
+    DescribeVolumesModificationsRequestPrivate(const DescribeVolumesModificationsRequestPrivate &other,
+                                   DescribeVolumesModificationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVolumesModificationsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getentitlementsrequest.h"
 #include "getentitlementsrequest_p.h"
+#include "getentitlementsresponse.h"
+#include "marketplaceentitlementservicerequest_p.h"
+
+namespace AWS {
+namespace MarketplaceEntitlementService {
+
+/**
+ * @class  GetEntitlementsRequest
+ *
+ * @brief  Implements MarketplaceEntitlementService GetEntitlements requests.
+ *
+ * @see    MarketplaceEntitlementServiceClient::getEntitlements
+ */
+
+/**
+ * @brief  Constructs a new GetEntitlementsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEntitlementsResponse::GetEntitlementsResponse(
+
+/**
+ * @brief  Constructs a new GetEntitlementsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetEntitlementsRequest::GetEntitlementsRequest(const GetEntitlementsRequest &other)
+    : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetEntitlementsRequest object.
+ */
+GetEntitlementsRequest::GetEntitlementsRequest()
+    : MarketplaceEntitlementServiceRequest(new GetEntitlementsRequestPrivate(MarketplaceEntitlementServiceRequest::GetEntitlementsAction, this))
+{
+
+}
+
+bool GetEntitlementsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetEntitlementsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetEntitlementsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MarketplaceEntitlementServiceClient::send
+ */
+AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetEntitlementsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEntitlementsRequestPrivate
+ *
+ * @brief  Private implementation for GetEntitlementsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEntitlementsRequestPrivate object.
+ *
+ * @param  action  MarketplaceEntitlementService action being performed.
+ * @param  q       Pointer to this object's public GetEntitlementsRequest instance.
+ */
+GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
+    const MarketplaceEntitlementServiceRequest::Action action, GetEntitlementsRequest * const q)
+    : GetEntitlementsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEntitlementsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetEntitlementsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetEntitlementsRequest instance.
+ */
+GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
+    const GetEntitlementsRequestPrivate &other, GetEntitlementsRequest * const q)
+    : GetEntitlementsPrivate(other, q)
+{
+
+}

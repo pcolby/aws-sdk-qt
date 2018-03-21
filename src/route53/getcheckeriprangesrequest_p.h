@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCHECKERIPRANGESREQUEST_P_H
 #define QTAWS_GETCHECKERIPRANGESREQUEST_P_H
 
+#include "route53_p.h"
+#include "getcheckeriprangesrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetCheckerIpRangesRequest;
+
+class QTAWS_EXPORT GetCheckerIpRangesRequestPrivate : public Route53Private {
+
+public:
+    GetCheckerIpRangesRequestPrivate(const Route53::Action action,
+                                   GetCheckerIpRangesRequest * const q);
+    GetCheckerIpRangesRequestPrivate(const GetCheckerIpRangesRequestPrivate &other,
+                                   GetCheckerIpRangesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCheckerIpRangesRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

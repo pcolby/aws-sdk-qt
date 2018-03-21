@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETREQUEST_H
 #define QTAWS_CREATEBYTEMATCHSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateByteMatchSetRequestPrivate;
+
+class QTAWS_EXPORT CreateByteMatchSetRequest : public WAFRegionalRequest {
+
+public:
+    CreateByteMatchSetRequest(const CreateByteMatchSetRequest &other);
+    CreateByteMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateByteMatchSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

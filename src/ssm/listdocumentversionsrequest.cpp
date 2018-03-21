@@ -19,3 +19,107 @@
 
 #include "listdocumentversionsrequest.h"
 #include "listdocumentversionsrequest_p.h"
+#include "listdocumentversionsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListDocumentVersionsRequest
+ *
+ * @brief  Implements SSM ListDocumentVersions requests.
+ *
+ * @see    SSMClient::listDocumentVersions
+ */
+
+/**
+ * @brief  Constructs a new ListDocumentVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDocumentVersionsResponse::ListDocumentVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListDocumentVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDocumentVersionsRequest::ListDocumentVersionsRequest(const ListDocumentVersionsRequest &other)
+    : SSMRequest(new ListDocumentVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDocumentVersionsRequest object.
+ */
+ListDocumentVersionsRequest::ListDocumentVersionsRequest()
+    : SSMRequest(new ListDocumentVersionsRequestPrivate(SSMRequest::ListDocumentVersionsAction, this))
+{
+
+}
+
+bool ListDocumentVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDocumentVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDocumentVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDocumentVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDocumentVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListDocumentVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDocumentVersionsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListDocumentVersionsRequest instance.
+ */
+ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
+    const SSMRequest::Action action, ListDocumentVersionsRequest * const q)
+    : ListDocumentVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDocumentVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDocumentVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDocumentVersionsRequest instance.
+ */
+ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
+    const ListDocumentVersionsRequestPrivate &other, ListDocumentVersionsRequest * const q)
+    : ListDocumentVersionsPrivate(other, q)
+{
+
+}

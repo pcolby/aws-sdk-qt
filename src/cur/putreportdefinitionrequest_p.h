@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONREQUEST_P_H
 #define QTAWS_PUTREPORTDEFINITIONREQUEST_P_H
 
+#include "costandusagereportservice_p.h"
+#include "putreportdefinitionrequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class PutReportDefinitionRequest;
+
+class QTAWS_EXPORT PutReportDefinitionRequestPrivate : public CostandUsageReportServicePrivate {
+
+public:
+    PutReportDefinitionRequestPrivate(const CostandUsageReportService::Action action,
+                                   PutReportDefinitionRequest * const q);
+    PutReportDefinitionRequestPrivate(const PutReportDefinitionRequestPrivate &other,
+                                   PutReportDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutReportDefinitionRequest)
+
+};
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatefleetportsettingsrequest.h"
 #include "updatefleetportsettingsrequest_p.h"
+#include "updatefleetportsettingsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateFleetPortSettingsRequest
+ *
+ * @brief  Implements GameLift UpdateFleetPortSettings requests.
+ *
+ * @see    GameLiftClient::updateFleetPortSettings
+ */
+
+/**
+ * @brief  Constructs a new UpdateFleetPortSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFleetPortSettingsResponse::UpdateFleetPortSettingsResponse(
+
+/**
+ * @brief  Constructs a new UpdateFleetPortSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateFleetPortSettingsRequest::UpdateFleetPortSettingsRequest(const UpdateFleetPortSettingsRequest &other)
+    : GameLiftRequest(new UpdateFleetPortSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateFleetPortSettingsRequest object.
+ */
+UpdateFleetPortSettingsRequest::UpdateFleetPortSettingsRequest()
+    : GameLiftRequest(new UpdateFleetPortSettingsRequestPrivate(GameLiftRequest::UpdateFleetPortSettingsAction, this))
+{
+
+}
+
+bool UpdateFleetPortSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateFleetPortSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateFleetPortSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateFleetPortSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateFleetPortSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFleetPortSettingsRequestPrivate
+ *
+ * @brief  Private implementation for UpdateFleetPortSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetPortSettingsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateFleetPortSettingsRequest instance.
+ */
+UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
+    const GameLiftRequest::Action action, UpdateFleetPortSettingsRequest * const q)
+    : UpdateFleetPortSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFleetPortSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateFleetPortSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateFleetPortSettingsRequest instance.
+ */
+UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
+    const UpdateFleetPortSettingsRequestPrivate &other, UpdateFleetPortSettingsRequest * const q)
+    : UpdateFleetPortSettingsPrivate(other, q)
+{
+
+}

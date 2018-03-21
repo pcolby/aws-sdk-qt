@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "deleteendpointrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteEndpointRequest;
+
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SageMakerPrivate {
+
+public:
+    DeleteEndpointRequestPrivate(const SageMaker::Action action,
+                                   DeleteEndpointRequest * const q);
+    DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
+                                   DeleteEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

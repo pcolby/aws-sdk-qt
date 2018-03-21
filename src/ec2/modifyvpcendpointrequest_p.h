@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTREQUEST_P_H
 #define QTAWS_MODIFYVPCENDPOINTREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyvpcendpointrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcEndpointRequest;
+
+class QTAWS_EXPORT ModifyVpcEndpointRequestPrivate : public EC2Private {
+
+public:
+    ModifyVpcEndpointRequestPrivate(const EC2::Action action,
+                                   ModifyVpcEndpointRequest * const q);
+    ModifyVpcEndpointRequestPrivate(const ModifyVpcEndpointRequestPrivate &other,
+                                   ModifyVpcEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVpcEndpointRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

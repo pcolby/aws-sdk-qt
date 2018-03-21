@@ -19,3 +19,107 @@
 
 #include "updatedocumentversionrequest.h"
 #include "updatedocumentversionrequest_p.h"
+#include "updatedocumentversionresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  UpdateDocumentVersionRequest
+ *
+ * @brief  Implements WorkDocs UpdateDocumentVersion requests.
+ *
+ * @see    WorkDocsClient::updateDocumentVersion
+ */
+
+/**
+ * @brief  Constructs a new UpdateDocumentVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDocumentVersionResponse::UpdateDocumentVersionResponse(
+
+/**
+ * @brief  Constructs a new UpdateDocumentVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDocumentVersionRequest::UpdateDocumentVersionRequest(const UpdateDocumentVersionRequest &other)
+    : WorkDocsRequest(new UpdateDocumentVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDocumentVersionRequest object.
+ */
+UpdateDocumentVersionRequest::UpdateDocumentVersionRequest()
+    : WorkDocsRequest(new UpdateDocumentVersionRequestPrivate(WorkDocsRequest::UpdateDocumentVersionAction, this))
+{
+
+}
+
+bool UpdateDocumentVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDocumentVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDocumentVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * UpdateDocumentVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDocumentVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDocumentVersionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDocumentVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentVersionRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public UpdateDocumentVersionRequest instance.
+ */
+UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
+    const WorkDocsRequest::Action action, UpdateDocumentVersionRequest * const q)
+    : UpdateDocumentVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDocumentVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDocumentVersionRequest instance.
+ */
+UpdateDocumentVersionRequestPrivate::UpdateDocumentVersionRequestPrivate(
+    const UpdateDocumentVersionRequestPrivate &other, UpdateDocumentVersionRequest * const q)
+    : UpdateDocumentVersionPrivate(other, q)
+{
+
+}

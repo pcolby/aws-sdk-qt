@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETYPEDLINKFACETREQUEST_H
 #define QTAWS_UPDATETYPEDLINKFACETREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class UpdateTypedLinkFacetRequestPrivate;
+
+class QTAWS_EXPORT UpdateTypedLinkFacetRequest : public CloudDirectoryRequest {
+
+public:
+    UpdateTypedLinkFacetRequest(const UpdateTypedLinkFacetRequest &other);
+    UpdateTypedLinkFacetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTypedLinkFacetRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

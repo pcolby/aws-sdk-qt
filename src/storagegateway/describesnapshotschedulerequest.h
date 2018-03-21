@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSCHEDULEREQUEST_H
 #define QTAWS_DESCRIBESNAPSHOTSCHEDULEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeSnapshotScheduleRequestPrivate;
+
+class QTAWS_EXPORT DescribeSnapshotScheduleRequest : public StorageGatewayRequest {
+
+public:
+    DescribeSnapshotScheduleRequest(const DescribeSnapshotScheduleRequest &other);
+    DescribeSnapshotScheduleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeSnapshotScheduleRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

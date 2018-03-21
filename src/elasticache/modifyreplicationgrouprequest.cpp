@@ -19,3 +19,107 @@
 
 #include "modifyreplicationgrouprequest.h"
 #include "modifyreplicationgrouprequest_p.h"
+#include "modifyreplicationgroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyReplicationGroupRequest
+ *
+ * @brief  Implements ElastiCache ModifyReplicationGroup requests.
+ *
+ * @see    ElastiCacheClient::modifyReplicationGroup
+ */
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationGroupResponse::ModifyReplicationGroupResponse(
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyReplicationGroupRequest::ModifyReplicationGroupRequest(const ModifyReplicationGroupRequest &other)
+    : ElastiCacheRequest(new ModifyReplicationGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyReplicationGroupRequest object.
+ */
+ModifyReplicationGroupRequest::ModifyReplicationGroupRequest()
+    : ElastiCacheRequest(new ModifyReplicationGroupRequestPrivate(ElastiCacheRequest::ModifyReplicationGroupAction, this))
+{
+
+}
+
+bool ModifyReplicationGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyReplicationGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyReplicationGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * ModifyReplicationGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyReplicationGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationGroupRequestPrivate
+ *
+ * @brief  Private implementation for ModifyReplicationGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public ModifyReplicationGroupRequest instance.
+ */
+ModifyReplicationGroupRequestPrivate::ModifyReplicationGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, ModifyReplicationGroupRequest * const q)
+    : ModifyReplicationGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyReplicationGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyReplicationGroupRequest instance.
+ */
+ModifyReplicationGroupRequestPrivate::ModifyReplicationGroupRequestPrivate(
+    const ModifyReplicationGroupRequestPrivate &other, ModifyReplicationGroupRequest * const q)
+    : ModifyReplicationGroupPrivate(other, q)
+{
+
+}

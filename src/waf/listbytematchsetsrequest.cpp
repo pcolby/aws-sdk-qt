@@ -19,3 +19,107 @@
 
 #include "listbytematchsetsrequest.h"
 #include "listbytematchsetsrequest_p.h"
+#include "listbytematchsetsresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListByteMatchSetsRequest
+ *
+ * @brief  Implements WAF ListByteMatchSets requests.
+ *
+ * @see    WAFClient::listByteMatchSets
+ */
+
+/**
+ * @brief  Constructs a new ListByteMatchSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListByteMatchSetsResponse::ListByteMatchSetsResponse(
+
+/**
+ * @brief  Constructs a new ListByteMatchSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListByteMatchSetsRequest::ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other)
+    : WAFRequest(new ListByteMatchSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListByteMatchSetsRequest object.
+ */
+ListByteMatchSetsRequest::ListByteMatchSetsRequest()
+    : WAFRequest(new ListByteMatchSetsRequestPrivate(WAFRequest::ListByteMatchSetsAction, this))
+{
+
+}
+
+bool ListByteMatchSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListByteMatchSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListByteMatchSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * ListByteMatchSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListByteMatchSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListByteMatchSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListByteMatchSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListByteMatchSetsRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public ListByteMatchSetsRequest instance.
+ */
+ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
+    const WAFRequest::Action action, ListByteMatchSetsRequest * const q)
+    : ListByteMatchSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListByteMatchSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListByteMatchSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListByteMatchSetsRequest instance.
+ */
+ListByteMatchSetsRequestPrivate::ListByteMatchSetsRequestPrivate(
+    const ListByteMatchSetsRequestPrivate &other, ListByteMatchSetsRequest * const q)
+    : ListByteMatchSetsPrivate(other, q)
+{
+
+}

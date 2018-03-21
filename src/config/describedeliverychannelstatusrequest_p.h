@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSTATUSREQUEST_P_H
 
+#include "configservice_p.h"
+#include "describedeliverychannelstatusrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeDeliveryChannelStatusRequest;
+
+class QTAWS_EXPORT DescribeDeliveryChannelStatusRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DescribeDeliveryChannelStatusRequestPrivate(const ConfigService::Action action,
+                                   DescribeDeliveryChannelStatusRequest * const q);
+    DescribeDeliveryChannelStatusRequestPrivate(const DescribeDeliveryChannelStatusRequestPrivate &other,
+                                   DescribeDeliveryChannelStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDeliveryChannelStatusRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

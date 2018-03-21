@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_P_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_P_H
 
+#include "budgets_p.h"
+#include "describesubscribersfornotificationrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeSubscribersForNotificationRequest;
+
+class QTAWS_EXPORT DescribeSubscribersForNotificationRequestPrivate : public BudgetsPrivate {
+
+public:
+    DescribeSubscribersForNotificationRequestPrivate(const Budgets::Action action,
+                                   DescribeSubscribersForNotificationRequest * const q);
+    DescribeSubscribersForNotificationRequestPrivate(const DescribeSubscribersForNotificationRequestPrivate &other,
+                                   DescribeSubscribersForNotificationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSubscribersForNotificationRequest)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

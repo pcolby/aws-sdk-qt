@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCEREQUEST_H
 #define QTAWS_UPDATETAGSFORRESOURCEREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT UpdateTagsForResourceRequest : public ElasticBeanstalkRequest {
+
+public:
+    UpdateTagsForResourceRequest(const UpdateTagsForResourceRequest &other);
+    UpdateTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagsForResourceRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

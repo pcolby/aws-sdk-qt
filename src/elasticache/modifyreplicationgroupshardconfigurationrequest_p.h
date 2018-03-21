@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONREQUEST_P_H
 #define QTAWS_MODIFYREPLICATIONGROUPSHARDCONFIGURATIONREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "modifyreplicationgroupshardconfigurationrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyReplicationGroupShardConfigurationRequest;
+
+class QTAWS_EXPORT ModifyReplicationGroupShardConfigurationRequestPrivate : public ElastiCachePrivate {
+
+public:
+    ModifyReplicationGroupShardConfigurationRequestPrivate(const ElastiCache::Action action,
+                                   ModifyReplicationGroupShardConfigurationRequest * const q);
+    ModifyReplicationGroupShardConfigurationRequestPrivate(const ModifyReplicationGroupShardConfigurationRequestPrivate &other,
+                                   ModifyReplicationGroupShardConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyReplicationGroupShardConfigurationRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

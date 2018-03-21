@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTASSIGNMENTSFORHITREQUEST_P_H
 #define QTAWS_LISTASSIGNMENTSFORHITREQUEST_P_H
 
+#include "mturk_p.h"
+#include "listassignmentsforhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class ListAssignmentsForHITRequest;
+
+class QTAWS_EXPORT ListAssignmentsForHITRequestPrivate : public MTurkPrivate {
+
+public:
+    ListAssignmentsForHITRequestPrivate(const MTurk::Action action,
+                                   ListAssignmentsForHITRequest * const q);
+    ListAssignmentsForHITRequestPrivate(const ListAssignmentsForHITRequestPrivate &other,
+                                   ListAssignmentsForHITRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssignmentsForHITRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

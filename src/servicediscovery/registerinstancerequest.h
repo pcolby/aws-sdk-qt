@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERINSTANCEREQUEST_H
 #define QTAWS_REGISTERINSTANCEREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class RegisterInstanceRequestPrivate;
+
+class QTAWS_EXPORT RegisterInstanceRequest : public ServiceDiscoveryRequest {
+
+public:
+    RegisterInstanceRequest(const RegisterInstanceRequest &other);
+    RegisterInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterInstanceRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

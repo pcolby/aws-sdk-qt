@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEMICROSOFTADREQUEST_H
 #define QTAWS_CREATEMICROSOFTADREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateMicrosoftADRequestPrivate;
+
+class QTAWS_EXPORT CreateMicrosoftADRequest : public DirectoryServiceRequest {
+
+public:
+    CreateMicrosoftADRequest(const CreateMicrosoftADRequest &other);
+    CreateMicrosoftADRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateMicrosoftADRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

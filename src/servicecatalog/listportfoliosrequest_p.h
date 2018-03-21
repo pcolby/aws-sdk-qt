@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPORTFOLIOSREQUEST_P_H
 #define QTAWS_LISTPORTFOLIOSREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "listportfoliosrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListPortfoliosRequest;
+
+class QTAWS_EXPORT ListPortfoliosRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    ListPortfoliosRequestPrivate(const ServiceCatalog::Action action,
+                                   ListPortfoliosRequest * const q);
+    ListPortfoliosRequestPrivate(const ListPortfoliosRequestPrivate &other,
+                                   ListPortfoliosRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListPortfoliosRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

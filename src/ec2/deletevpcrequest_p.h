@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVPCREQUEST_P_H
 #define QTAWS_DELETEVPCREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletevpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpcRequest;
+
+class QTAWS_EXPORT DeleteVpcRequestPrivate : public EC2Private {
+
+public:
+    DeleteVpcRequestPrivate(const EC2::Action action,
+                                   DeleteVpcRequest * const q);
+    DeleteVpcRequestPrivate(const DeleteVpcRequestPrivate &other,
+                                   DeleteVpcRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVpcRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

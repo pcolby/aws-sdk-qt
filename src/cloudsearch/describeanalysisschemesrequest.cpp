@@ -19,3 +19,107 @@
 
 #include "describeanalysisschemesrequest.h"
 #include "describeanalysisschemesrequest_p.h"
+#include "describeanalysisschemesresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeAnalysisSchemesRequest
+ *
+ * @brief  Implements CloudSearch DescribeAnalysisSchemes requests.
+ *
+ * @see    CloudSearchClient::describeAnalysisSchemes
+ */
+
+/**
+ * @brief  Constructs a new DescribeAnalysisSchemesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAnalysisSchemesResponse::DescribeAnalysisSchemesResponse(
+
+/**
+ * @brief  Constructs a new DescribeAnalysisSchemesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAnalysisSchemesRequest::DescribeAnalysisSchemesRequest(const DescribeAnalysisSchemesRequest &other)
+    : CloudSearchRequest(new DescribeAnalysisSchemesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAnalysisSchemesRequest object.
+ */
+DescribeAnalysisSchemesRequest::DescribeAnalysisSchemesRequest()
+    : CloudSearchRequest(new DescribeAnalysisSchemesRequestPrivate(CloudSearchRequest::DescribeAnalysisSchemesAction, this))
+{
+
+}
+
+bool DescribeAnalysisSchemesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAnalysisSchemesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAnalysisSchemesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DescribeAnalysisSchemesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAnalysisSchemesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAnalysisSchemesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAnalysisSchemesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAnalysisSchemesRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DescribeAnalysisSchemesRequest instance.
+ */
+DescribeAnalysisSchemesRequestPrivate::DescribeAnalysisSchemesRequestPrivate(
+    const CloudSearchRequest::Action action, DescribeAnalysisSchemesRequest * const q)
+    : DescribeAnalysisSchemesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAnalysisSchemesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAnalysisSchemesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAnalysisSchemesRequest instance.
+ */
+DescribeAnalysisSchemesRequestPrivate::DescribeAnalysisSchemesRequestPrivate(
+    const DescribeAnalysisSchemesRequestPrivate &other, DescribeAnalysisSchemesRequest * const q)
+    : DescribeAnalysisSchemesPrivate(other, q)
+{
+
+}

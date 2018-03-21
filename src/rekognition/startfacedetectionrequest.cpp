@@ -19,3 +19,107 @@
 
 #include "startfacedetectionrequest.h"
 #include "startfacedetectionrequest_p.h"
+#include "startfacedetectionresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  StartFaceDetectionRequest
+ *
+ * @brief  Implements Rekognition StartFaceDetection requests.
+ *
+ * @see    RekognitionClient::startFaceDetection
+ */
+
+/**
+ * @brief  Constructs a new StartFaceDetectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartFaceDetectionResponse::StartFaceDetectionResponse(
+
+/**
+ * @brief  Constructs a new StartFaceDetectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartFaceDetectionRequest::StartFaceDetectionRequest(const StartFaceDetectionRequest &other)
+    : RekognitionRequest(new StartFaceDetectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartFaceDetectionRequest object.
+ */
+StartFaceDetectionRequest::StartFaceDetectionRequest()
+    : RekognitionRequest(new StartFaceDetectionRequestPrivate(RekognitionRequest::StartFaceDetectionAction, this))
+{
+
+}
+
+bool StartFaceDetectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartFaceDetectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartFaceDetectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartFaceDetectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartFaceDetectionRequestPrivate
+ *
+ * @brief  Private implementation for StartFaceDetectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFaceDetectionRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public StartFaceDetectionRequest instance.
+ */
+StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
+    const RekognitionRequest::Action action, StartFaceDetectionRequest * const q)
+    : StartFaceDetectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFaceDetectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartFaceDetectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartFaceDetectionRequest instance.
+ */
+StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
+    const StartFaceDetectionRequestPrivate &other, StartFaceDetectionRequest * const q)
+    : StartFaceDetectionPrivate(other, q)
+{
+
+}

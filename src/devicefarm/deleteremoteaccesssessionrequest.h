@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREMOTEACCESSSESSIONREQUEST_H
 #define QTAWS_DELETEREMOTEACCESSSESSIONREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteRemoteAccessSessionRequestPrivate;
+
+class QTAWS_EXPORT DeleteRemoteAccessSessionRequest : public DeviceFarmRequest {
+
+public:
+    DeleteRemoteAccessSessionRequest(const DeleteRemoteAccessSessionRequest &other);
+    DeleteRemoteAccessSessionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRemoteAccessSessionRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

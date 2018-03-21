@@ -19,3 +19,107 @@
 
 #include "rebootcacheclusterrequest.h"
 #include "rebootcacheclusterrequest_p.h"
+#include "rebootcacheclusterresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  RebootCacheClusterRequest
+ *
+ * @brief  Implements ElastiCache RebootCacheCluster requests.
+ *
+ * @see    ElastiCacheClient::rebootCacheCluster
+ */
+
+/**
+ * @brief  Constructs a new RebootCacheClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RebootCacheClusterResponse::RebootCacheClusterResponse(
+
+/**
+ * @brief  Constructs a new RebootCacheClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RebootCacheClusterRequest::RebootCacheClusterRequest(const RebootCacheClusterRequest &other)
+    : ElastiCacheRequest(new RebootCacheClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RebootCacheClusterRequest object.
+ */
+RebootCacheClusterRequest::RebootCacheClusterRequest()
+    : ElastiCacheRequest(new RebootCacheClusterRequestPrivate(ElastiCacheRequest::RebootCacheClusterAction, this))
+{
+
+}
+
+bool RebootCacheClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RebootCacheClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RebootCacheClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new RebootCacheClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RebootCacheClusterRequestPrivate
+ *
+ * @brief  Private implementation for RebootCacheClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootCacheClusterRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public RebootCacheClusterRequest instance.
+ */
+RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
+    const ElastiCacheRequest::Action action, RebootCacheClusterRequest * const q)
+    : RebootCacheClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RebootCacheClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RebootCacheClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RebootCacheClusterRequest instance.
+ */
+RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
+    const RebootCacheClusterRequestPrivate &other, RebootCacheClusterRequest * const q)
+    : RebootCacheClusterPrivate(other, q)
+{
+
+}

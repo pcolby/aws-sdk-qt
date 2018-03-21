@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESTREAMINGURLREQUEST_H
 #define QTAWS_CREATESTREAMINGURLREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateStreamingURLRequestPrivate;
+
+class QTAWS_EXPORT CreateStreamingURLRequest : public AppStreamRequest {
+
+public:
+    CreateStreamingURLRequest(const CreateStreamingURLRequest &other);
+    CreateStreamingURLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamingURLRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

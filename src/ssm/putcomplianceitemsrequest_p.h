@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSREQUEST_P_H
 #define QTAWS_PUTCOMPLIANCEITEMSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "putcomplianceitemsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class PutComplianceItemsRequest;
+
+class QTAWS_EXPORT PutComplianceItemsRequestPrivate : public SSMPrivate {
+
+public:
+    PutComplianceItemsRequestPrivate(const SSM::Action action,
+                                   PutComplianceItemsRequest * const q);
+    PutComplianceItemsRequestPrivate(const PutComplianceItemsRequestPrivate &other,
+                                   PutComplianceItemsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutComplianceItemsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

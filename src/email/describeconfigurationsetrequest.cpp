@@ -19,3 +19,107 @@
 
 #include "describeconfigurationsetrequest.h"
 #include "describeconfigurationsetrequest_p.h"
+#include "describeconfigurationsetresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DescribeConfigurationSetRequest
+ *
+ * @brief  Implements SES DescribeConfigurationSet requests.
+ *
+ * @see    SESClient::describeConfigurationSet
+ */
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationSetResponse::DescribeConfigurationSetResponse(
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConfigurationSetRequest::DescribeConfigurationSetRequest(const DescribeConfigurationSetRequest &other)
+    : SESRequest(new DescribeConfigurationSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSetRequest object.
+ */
+DescribeConfigurationSetRequest::DescribeConfigurationSetRequest()
+    : SESRequest(new DescribeConfigurationSetRequestPrivate(SESRequest::DescribeConfigurationSetAction, this))
+{
+
+}
+
+bool DescribeConfigurationSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConfigurationSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConfigurationSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConfigurationSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationSetRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationSetRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DescribeConfigurationSetRequest instance.
+ */
+DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
+    const SESRequest::Action action, DescribeConfigurationSetRequest * const q)
+    : DescribeConfigurationSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConfigurationSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConfigurationSetRequest instance.
+ */
+DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
+    const DescribeConfigurationSetRequestPrivate &other, DescribeConfigurationSetRequest * const q)
+    : DescribeConfigurationSetPrivate(other, q)
+{
+
+}

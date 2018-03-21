@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEEVENTSOURCEMAPPINGREQUEST_P_H
 #define QTAWS_UPDATEEVENTSOURCEMAPPINGREQUEST_P_H
 
+#include "lambda_p.h"
+#include "updateeventsourcemappingrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateEventSourceMappingRequest;
+
+class QTAWS_EXPORT UpdateEventSourceMappingRequestPrivate : public LambdaPrivate {
+
+public:
+    UpdateEventSourceMappingRequestPrivate(const Lambda::Action action,
+                                   UpdateEventSourceMappingRequest * const q);
+    UpdateEventSourceMappingRequestPrivate(const UpdateEventSourceMappingRequestPrivate &other,
+                                   UpdateEventSourceMappingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEventSourceMappingRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

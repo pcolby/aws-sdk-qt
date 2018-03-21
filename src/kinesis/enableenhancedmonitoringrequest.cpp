@@ -19,3 +19,107 @@
 
 #include "enableenhancedmonitoringrequest.h"
 #include "enableenhancedmonitoringrequest_p.h"
+#include "enableenhancedmonitoringresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  EnableEnhancedMonitoringRequest
+ *
+ * @brief  Implements Kinesis EnableEnhancedMonitoring requests.
+ *
+ * @see    KinesisClient::enableEnhancedMonitoring
+ */
+
+/**
+ * @brief  Constructs a new EnableEnhancedMonitoringResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableEnhancedMonitoringResponse::EnableEnhancedMonitoringResponse(
+
+/**
+ * @brief  Constructs a new EnableEnhancedMonitoringRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest(const EnableEnhancedMonitoringRequest &other)
+    : KinesisRequest(new EnableEnhancedMonitoringRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableEnhancedMonitoringRequest object.
+ */
+EnableEnhancedMonitoringRequest::EnableEnhancedMonitoringRequest()
+    : KinesisRequest(new EnableEnhancedMonitoringRequestPrivate(KinesisRequest::EnableEnhancedMonitoringAction, this))
+{
+
+}
+
+bool EnableEnhancedMonitoringRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableEnhancedMonitoringResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableEnhancedMonitoringResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableEnhancedMonitoringResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableEnhancedMonitoringRequestPrivate
+ *
+ * @brief  Private implementation for EnableEnhancedMonitoringRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public EnableEnhancedMonitoringRequest instance.
+ */
+EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
+    const KinesisRequest::Action action, EnableEnhancedMonitoringRequest * const q)
+    : EnableEnhancedMonitoringPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableEnhancedMonitoringRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableEnhancedMonitoringRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableEnhancedMonitoringRequest instance.
+ */
+EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
+    const EnableEnhancedMonitoringRequestPrivate &other, EnableEnhancedMonitoringRequest * const q)
+    : EnableEnhancedMonitoringPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describedbsubnetgroupsrequest.h"
 #include "describedbsubnetgroupsrequest_p.h"
+#include "describedbsubnetgroupsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBSubnetGroupsRequest
+ *
+ * @brief  Implements RDS DescribeDBSubnetGroups requests.
+ *
+ * @see    RDSClient::describeDBSubnetGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBSubnetGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBSubnetGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest(const DescribeDBSubnetGroupsRequest &other)
+    : RDSRequest(new DescribeDBSubnetGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBSubnetGroupsRequest object.
+ */
+DescribeDBSubnetGroupsRequest::DescribeDBSubnetGroupsRequest()
+    : RDSRequest(new DescribeDBSubnetGroupsRequestPrivate(RDSRequest::DescribeDBSubnetGroupsAction, this))
+{
+
+}
+
+bool DescribeDBSubnetGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBSubnetGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBSubnetGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBSubnetGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBSubnetGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBSubnetGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSubnetGroupsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBSubnetGroupsRequest instance.
+ */
+DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
+    const RDSRequest::Action action, DescribeDBSubnetGroupsRequest * const q)
+    : DescribeDBSubnetGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSubnetGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBSubnetGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBSubnetGroupsRequest instance.
+ */
+DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
+    const DescribeDBSubnetGroupsRequestPrivate &other, DescribeDBSubnetGroupsRequest * const q)
+    : DescribeDBSubnetGroupsPrivate(other, q)
+{
+
+}

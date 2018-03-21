@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTESTREQUEST_H
 #define QTAWS_GETTESTREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetTestRequestPrivate;
+
+class QTAWS_EXPORT GetTestRequest : public DeviceFarmRequest {
+
+public:
+    GetTestRequest(const GetTestRequest &other);
+    GetTestRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTestRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

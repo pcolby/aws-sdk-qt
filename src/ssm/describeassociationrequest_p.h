@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEASSOCIATIONREQUEST_P_H
 #define QTAWS_DESCRIBEASSOCIATIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAssociationRequest;
+
+class QTAWS_EXPORT DescribeAssociationRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeAssociationRequestPrivate(const SSM::Action action,
+                                   DescribeAssociationRequest * const q);
+    DescribeAssociationRequestPrivate(const DescribeAssociationRequestPrivate &other,
+                                   DescribeAssociationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAssociationRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

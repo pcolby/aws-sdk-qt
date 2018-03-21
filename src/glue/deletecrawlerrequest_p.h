@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECRAWLERREQUEST_P_H
 #define QTAWS_DELETECRAWLERREQUEST_P_H
 
+#include "glue_p.h"
+#include "deletecrawlerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteCrawlerRequest;
+
+class QTAWS_EXPORT DeleteCrawlerRequestPrivate : public GluePrivate {
+
+public:
+    DeleteCrawlerRequestPrivate(const Glue::Action action,
+                                   DeleteCrawlerRequest * const q);
+    DeleteCrawlerRequestPrivate(const DeleteCrawlerRequestPrivate &other,
+                                   DeleteCrawlerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCrawlerRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

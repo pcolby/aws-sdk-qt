@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECUSTOMERGATEWAYREQUEST_P_H
 #define QTAWS_CREATECUSTOMERGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createcustomergatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateCustomerGatewayRequest;
+
+class QTAWS_EXPORT CreateCustomerGatewayRequestPrivate : public EC2Private {
+
+public:
+    CreateCustomerGatewayRequestPrivate(const EC2::Action action,
+                                   CreateCustomerGatewayRequest * const q);
+    CreateCustomerGatewayRequestPrivate(const CreateCustomerGatewayRequestPrivate &other,
+                                   CreateCustomerGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCustomerGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

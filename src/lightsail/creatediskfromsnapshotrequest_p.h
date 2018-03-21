@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDISKFROMSNAPSHOTREQUEST_P_H
 #define QTAWS_CREATEDISKFROMSNAPSHOTREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "creatediskfromsnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateDiskFromSnapshotRequest;
+
+class QTAWS_EXPORT CreateDiskFromSnapshotRequestPrivate : public LightsailPrivate {
+
+public:
+    CreateDiskFromSnapshotRequestPrivate(const Lightsail::Action action,
+                                   CreateDiskFromSnapshotRequest * const q);
+    CreateDiskFromSnapshotRequestPrivate(const CreateDiskFromSnapshotRequestPrivate &other,
+                                   CreateDiskFromSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDiskFromSnapshotRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

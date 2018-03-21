@@ -19,3 +19,107 @@
 
 #include "cancelcommandrequest.h"
 #include "cancelcommandrequest_p.h"
+#include "cancelcommandresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CancelCommandRequest
+ *
+ * @brief  Implements SSM CancelCommand requests.
+ *
+ * @see    SSMClient::cancelCommand
+ */
+
+/**
+ * @brief  Constructs a new CancelCommandResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelCommandResponse::CancelCommandResponse(
+
+/**
+ * @brief  Constructs a new CancelCommandRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelCommandRequest::CancelCommandRequest(const CancelCommandRequest &other)
+    : SSMRequest(new CancelCommandRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelCommandRequest object.
+ */
+CancelCommandRequest::CancelCommandRequest()
+    : SSMRequest(new CancelCommandRequestPrivate(SSMRequest::CancelCommandAction, this))
+{
+
+}
+
+bool CancelCommandRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelCommandResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelCommandResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelCommandResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelCommandRequestPrivate
+ *
+ * @brief  Private implementation for CancelCommandRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelCommandRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public CancelCommandRequest instance.
+ */
+CancelCommandRequestPrivate::CancelCommandRequestPrivate(
+    const SSMRequest::Action action, CancelCommandRequest * const q)
+    : CancelCommandPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelCommandRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelCommandRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelCommandRequest instance.
+ */
+CancelCommandRequestPrivate::CancelCommandRequestPrivate(
+    const CancelCommandRequestPrivate &other, CancelCommandRequest * const q)
+    : CancelCommandPrivate(other, q)
+{
+
+}

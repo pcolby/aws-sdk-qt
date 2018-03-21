@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBGPPEERREQUEST_H
 #define QTAWS_DELETEBGPPEERREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteBGPPeerRequestPrivate;
+
+class QTAWS_EXPORT DeleteBGPPeerRequest : public DirectConnectRequest {
+
+public:
+    DeleteBGPPeerRequest(const DeleteBGPPeerRequest &other);
+    DeleteBGPPeerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBGPPeerRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

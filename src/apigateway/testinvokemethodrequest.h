@@ -20,4 +20,32 @@
 #ifndef QTAWS_TESTINVOKEMETHODREQUEST_H
 #define QTAWS_TESTINVOKEMETHODREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class TestInvokeMethodRequestPrivate;
+
+class QTAWS_EXPORT TestInvokeMethodRequest : public APIGatewayRequest {
+
+public:
+    TestInvokeMethodRequest(const TestInvokeMethodRequest &other);
+    TestInvokeMethodRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TestInvokeMethodRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

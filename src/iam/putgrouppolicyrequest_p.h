@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTGROUPPOLICYREQUEST_P_H
 #define QTAWS_PUTGROUPPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "putgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutGroupPolicyRequest;
+
+class QTAWS_EXPORT PutGroupPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    PutGroupPolicyRequestPrivate(const IAM::Action action,
+                                   PutGroupPolicyRequest * const q);
+    PutGroupPolicyRequestPrivate(const PutGroupPolicyRequestPrivate &other,
+                                   PutGroupPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutGroupPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

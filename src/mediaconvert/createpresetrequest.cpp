@@ -19,3 +19,107 @@
 
 #include "createpresetrequest.h"
 #include "createpresetrequest_p.h"
+#include "createpresetresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  CreatePresetRequest
+ *
+ * @brief  Implements MediaConvert CreatePreset requests.
+ *
+ * @see    MediaConvertClient::createPreset
+ */
+
+/**
+ * @brief  Constructs a new CreatePresetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePresetResponse::CreatePresetResponse(
+
+/**
+ * @brief  Constructs a new CreatePresetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePresetRequest::CreatePresetRequest(const CreatePresetRequest &other)
+    : MediaConvertRequest(new CreatePresetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePresetRequest object.
+ */
+CreatePresetRequest::CreatePresetRequest()
+    : MediaConvertRequest(new CreatePresetRequestPrivate(MediaConvertRequest::CreatePresetAction, this))
+{
+
+}
+
+bool CreatePresetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePresetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePresetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePresetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePresetRequestPrivate
+ *
+ * @brief  Private implementation for CreatePresetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePresetRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public CreatePresetRequest instance.
+ */
+CreatePresetRequestPrivate::CreatePresetRequestPrivate(
+    const MediaConvertRequest::Action action, CreatePresetRequest * const q)
+    : CreatePresetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePresetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePresetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePresetRequest instance.
+ */
+CreatePresetRequestPrivate::CreatePresetRequestPrivate(
+    const CreatePresetRequestPrivate &other, CreatePresetRequest * const q)
+    : CreatePresetPrivate(other, q)
+{
+
+}

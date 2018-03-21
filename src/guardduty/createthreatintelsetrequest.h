@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETHREATINTELSETREQUEST_H
 #define QTAWS_CREATETHREATINTELSETREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateThreatIntelSetRequestPrivate;
+
+class QTAWS_EXPORT CreateThreatIntelSetRequest : public GuardDutyRequest {
+
+public:
+    CreateThreatIntelSetRequest(const CreateThreatIntelSetRequest &other);
+    CreateThreatIntelSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateThreatIntelSetRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

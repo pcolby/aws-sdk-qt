@@ -19,3 +19,107 @@
 
 #include "createsnapshotrequest.h"
 #include "createsnapshotrequest_p.h"
+#include "createsnapshotresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateSnapshotRequest
+ *
+ * @brief  Implements DirectoryService CreateSnapshot requests.
+ *
+ * @see    DirectoryServiceClient::createSnapshot
+ */
+
+/**
+ * @brief  Constructs a new CreateSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSnapshotResponse::CreateSnapshotResponse(
+
+/**
+ * @brief  Constructs a new CreateSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest &other)
+    : DirectoryServiceRequest(new CreateSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSnapshotRequest object.
+ */
+CreateSnapshotRequest::CreateSnapshotRequest()
+    : DirectoryServiceRequest(new CreateSnapshotRequestPrivate(DirectoryServiceRequest::CreateSnapshotAction, this))
+{
+
+}
+
+bool CreateSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for CreateSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public CreateSnapshotRequest instance.
+ */
+CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
+    const DirectoryServiceRequest::Action action, CreateSnapshotRequest * const q)
+    : CreateSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSnapshotRequest instance.
+ */
+CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
+    const CreateSnapshotRequestPrivate &other, CreateSnapshotRequest * const q)
+    : CreateSnapshotPrivate(other, q)
+{
+
+}

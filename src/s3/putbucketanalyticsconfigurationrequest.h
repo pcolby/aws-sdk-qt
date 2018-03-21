@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTBUCKETANALYTICSCONFIGURATIONREQUEST_H
 #define QTAWS_PUTBUCKETANALYTICSCONFIGURATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketAnalyticsConfigurationRequestPrivate;
+
+class QTAWS_EXPORT PutBucketAnalyticsConfigurationRequest : public S3Request {
+
+public:
+    PutBucketAnalyticsConfigurationRequest(const PutBucketAnalyticsConfigurationRequest &other);
+    PutBucketAnalyticsConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketAnalyticsConfigurationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

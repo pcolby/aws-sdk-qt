@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEFUNCTIONCODEREQUEST_P_H
 #define QTAWS_UPDATEFUNCTIONCODEREQUEST_P_H
 
+#include "lambda_p.h"
+#include "updatefunctioncoderequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateFunctionCodeRequest;
+
+class QTAWS_EXPORT UpdateFunctionCodeRequestPrivate : public LambdaPrivate {
+
+public:
+    UpdateFunctionCodeRequestPrivate(const Lambda::Action action,
+                                   UpdateFunctionCodeRequest * const q);
+    UpdateFunctionCodeRequestPrivate(const UpdateFunctionCodeRequestPrivate &other,
+                                   UpdateFunctionCodeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFunctionCodeRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONTAINERREQUEST_P_H
 #define QTAWS_CREATECONTAINERREQUEST_P_H
 
+#include "mediastore_p.h"
+#include "createcontainerrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class CreateContainerRequest;
+
+class QTAWS_EXPORT CreateContainerRequestPrivate : public MediaStorePrivate {
+
+public:
+    CreateContainerRequestPrivate(const MediaStore::Action action,
+                                   CreateContainerRequest * const q);
+    CreateContainerRequestPrivate(const CreateContainerRequestPrivate &other,
+                                   CreateContainerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateContainerRequest)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

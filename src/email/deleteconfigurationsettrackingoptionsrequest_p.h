@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 
+#include "ses_p.h"
+#include "deleteconfigurationsettrackingoptionsrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteConfigurationSetTrackingOptionsRequest;
+
+class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsRequestPrivate : public SESPrivate {
+
+public:
+    DeleteConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,
+                                   DeleteConfigurationSetTrackingOptionsRequest * const q);
+    DeleteConfigurationSetTrackingOptionsRequestPrivate(const DeleteConfigurationSetTrackingOptionsRequestPrivate &other,
+                                   DeleteConfigurationSetTrackingOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationSetTrackingOptionsRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

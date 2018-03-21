@@ -19,3 +19,107 @@
 
 #include "deletedomainnamerequest.h"
 #include "deletedomainnamerequest_p.h"
+#include "deletedomainnameresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteDomainNameRequest
+ *
+ * @brief  Implements APIGateway DeleteDomainName requests.
+ *
+ * @see    APIGatewayClient::deleteDomainName
+ */
+
+/**
+ * @brief  Constructs a new DeleteDomainNameResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDomainNameResponse::DeleteDomainNameResponse(
+
+/**
+ * @brief  Constructs a new DeleteDomainNameRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDomainNameRequest::DeleteDomainNameRequest(const DeleteDomainNameRequest &other)
+    : APIGatewayRequest(new DeleteDomainNameRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDomainNameRequest object.
+ */
+DeleteDomainNameRequest::DeleteDomainNameRequest()
+    : APIGatewayRequest(new DeleteDomainNameRequestPrivate(APIGatewayRequest::DeleteDomainNameAction, this))
+{
+
+}
+
+bool DeleteDomainNameRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDomainNameResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDomainNameResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDomainNameResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDomainNameRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDomainNameRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainNameRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteDomainNameRequest instance.
+ */
+DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteDomainNameRequest * const q)
+    : DeleteDomainNamePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainNameRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDomainNameRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDomainNameRequest instance.
+ */
+DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
+    const DeleteDomainNameRequestPrivate &other, DeleteDomainNameRequest * const q)
+    : DeleteDomainNamePrivate(other, q)
+{
+
+}

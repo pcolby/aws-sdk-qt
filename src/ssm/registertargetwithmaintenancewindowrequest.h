@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERTARGETWITHMAINTENANCEWINDOWREQUEST_H
 #define QTAWS_REGISTERTARGETWITHMAINTENANCEWINDOWREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class RegisterTargetWithMaintenanceWindowRequestPrivate;
+
+class QTAWS_EXPORT RegisterTargetWithMaintenanceWindowRequest : public SSMRequest {
+
+public:
+    RegisterTargetWithMaintenanceWindowRequest(const RegisterTargetWithMaintenanceWindowRequest &other);
+    RegisterTargetWithMaintenanceWindowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterTargetWithMaintenanceWindowRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

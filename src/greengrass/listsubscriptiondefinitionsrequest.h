@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONDEFINITIONSREQUEST_H
 #define QTAWS_LISTSUBSCRIPTIONDEFINITIONSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListSubscriptionDefinitionsRequestPrivate;
+
+class QTAWS_EXPORT ListSubscriptionDefinitionsRequest : public GreengrassRequest {
+
+public:
+    ListSubscriptionDefinitionsRequest(const ListSubscriptionDefinitionsRequest &other);
+    ListSubscriptionDefinitionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListSubscriptionDefinitionsRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

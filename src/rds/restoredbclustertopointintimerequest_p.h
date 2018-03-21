@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESTOREDBCLUSTERTOPOINTINTIMEREQUEST_P_H
 #define QTAWS_RESTOREDBCLUSTERTOPOINTINTIMEREQUEST_P_H
 
+#include "rds_p.h"
+#include "restoredbclustertopointintimerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RestoreDBClusterToPointInTimeRequest;
+
+class QTAWS_EXPORT RestoreDBClusterToPointInTimeRequestPrivate : public RDSPrivate {
+
+public:
+    RestoreDBClusterToPointInTimeRequestPrivate(const RDS::Action action,
+                                   RestoreDBClusterToPointInTimeRequest * const q);
+    RestoreDBClusterToPointInTimeRequestPrivate(const RestoreDBClusterToPointInTimeRequestPrivate &other,
+                                   RestoreDBClusterToPointInTimeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RestoreDBClusterToPointInTimeRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

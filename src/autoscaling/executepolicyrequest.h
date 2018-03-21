@@ -20,4 +20,32 @@
 #ifndef QTAWS_EXECUTEPOLICYREQUEST_H
 #define QTAWS_EXECUTEPOLICYREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class ExecutePolicyRequestPrivate;
+
+class QTAWS_EXPORT ExecutePolicyRequest : public AutoScalingRequest {
+
+public:
+    ExecutePolicyRequest(const ExecutePolicyRequest &other);
+    ExecutePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ExecutePolicyRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

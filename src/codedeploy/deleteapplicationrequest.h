@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteApplicationRequestPrivate;
+
+class QTAWS_EXPORT DeleteApplicationRequest : public CodeDeployRequest {
+
+public:
+    DeleteApplicationRequest(const DeleteApplicationRequest &other);
+    DeleteApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBUILDWORKSPACESREQUEST_H
 #define QTAWS_REBUILDWORKSPACESREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class RebuildWorkspacesRequestPrivate;
+
+class QTAWS_EXPORT RebuildWorkspacesRequest : public WorkSpacesRequest {
+
+public:
+    RebuildWorkspacesRequest(const RebuildWorkspacesRequest &other);
+    RebuildWorkspacesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebuildWorkspacesRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

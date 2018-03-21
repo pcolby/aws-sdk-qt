@@ -19,3 +19,107 @@
 
 #include "getmodelrequest.h"
 #include "getmodelrequest_p.h"
+#include "getmodelresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetModelRequest
+ *
+ * @brief  Implements APIGateway GetModel requests.
+ *
+ * @see    APIGatewayClient::getModel
+ */
+
+/**
+ * @brief  Constructs a new GetModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetModelResponse::GetModelResponse(
+
+/**
+ * @brief  Constructs a new GetModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetModelRequest::GetModelRequest(const GetModelRequest &other)
+    : APIGatewayRequest(new GetModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetModelRequest object.
+ */
+GetModelRequest::GetModelRequest()
+    : APIGatewayRequest(new GetModelRequestPrivate(APIGatewayRequest::GetModelAction, this))
+{
+
+}
+
+bool GetModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetModelRequest::response(QNetworkReply * const reply) const
+{
+    return new GetModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetModelRequestPrivate
+ *
+ * @brief  Private implementation for GetModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetModelRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetModelRequest instance.
+ */
+GetModelRequestPrivate::GetModelRequestPrivate(
+    const APIGatewayRequest::Action action, GetModelRequest * const q)
+    : GetModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetModelRequest instance.
+ */
+GetModelRequestPrivate::GetModelRequestPrivate(
+    const GetModelRequestPrivate &other, GetModelRequest * const q)
+    : GetModelPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "attachinstancesrequest.h"
 #include "attachinstancesrequest_p.h"
+#include "attachinstancesresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  AttachInstancesRequest
+ *
+ * @brief  Implements AutoScaling AttachInstances requests.
+ *
+ * @see    AutoScalingClient::attachInstances
+ */
+
+/**
+ * @brief  Constructs a new AttachInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachInstancesResponse::AttachInstancesResponse(
+
+/**
+ * @brief  Constructs a new AttachInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachInstancesRequest::AttachInstancesRequest(const AttachInstancesRequest &other)
+    : AutoScalingRequest(new AttachInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachInstancesRequest object.
+ */
+AttachInstancesRequest::AttachInstancesRequest()
+    : AutoScalingRequest(new AttachInstancesRequestPrivate(AutoScalingRequest::AttachInstancesAction, this))
+{
+
+}
+
+bool AttachInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * AttachInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachInstancesRequestPrivate
+ *
+ * @brief  Private implementation for AttachInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachInstancesRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public AttachInstancesRequest instance.
+ */
+AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
+    const AutoScalingRequest::Action action, AttachInstancesRequest * const q)
+    : AttachInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachInstancesRequest instance.
+ */
+AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
+    const AttachInstancesRequestPrivate &other, AttachInstancesRequest * const q)
+    : AttachInstancesPrivate(other, q)
+{
+
+}

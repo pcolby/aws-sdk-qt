@@ -19,3 +19,107 @@
 
 #include "stopmatchmakingrequest.h"
 #include "stopmatchmakingrequest_p.h"
+#include "stopmatchmakingresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StopMatchmakingRequest
+ *
+ * @brief  Implements GameLift StopMatchmaking requests.
+ *
+ * @see    GameLiftClient::stopMatchmaking
+ */
+
+/**
+ * @brief  Constructs a new StopMatchmakingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopMatchmakingResponse::StopMatchmakingResponse(
+
+/**
+ * @brief  Constructs a new StopMatchmakingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopMatchmakingRequest::StopMatchmakingRequest(const StopMatchmakingRequest &other)
+    : GameLiftRequest(new StopMatchmakingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopMatchmakingRequest object.
+ */
+StopMatchmakingRequest::StopMatchmakingRequest()
+    : GameLiftRequest(new StopMatchmakingRequestPrivate(GameLiftRequest::StopMatchmakingAction, this))
+{
+
+}
+
+bool StopMatchmakingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopMatchmakingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopMatchmakingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkReply * const reply) const
+{
+    return new StopMatchmakingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopMatchmakingRequestPrivate
+ *
+ * @brief  Private implementation for StopMatchmakingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopMatchmakingRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public StopMatchmakingRequest instance.
+ */
+StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
+    const GameLiftRequest::Action action, StopMatchmakingRequest * const q)
+    : StopMatchmakingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopMatchmakingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopMatchmakingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopMatchmakingRequest instance.
+ */
+StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
+    const StopMatchmakingRequestPrivate &other, StopMatchmakingRequest * const q)
+    : StopMatchmakingPrivate(other, q)
+{
+
+}

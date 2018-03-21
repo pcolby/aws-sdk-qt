@@ -19,3 +19,107 @@
 
 #include "startloggingrequest.h"
 #include "startloggingrequest_p.h"
+#include "startloggingresponse.h"
+#include "cloudtrailrequest_p.h"
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  StartLoggingRequest
+ *
+ * @brief  Implements CloudTrail StartLogging requests.
+ *
+ * @see    CloudTrailClient::startLogging
+ */
+
+/**
+ * @brief  Constructs a new StartLoggingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartLoggingResponse::StartLoggingResponse(
+
+/**
+ * @brief  Constructs a new StartLoggingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartLoggingRequest::StartLoggingRequest(const StartLoggingRequest &other)
+    : CloudTrailRequest(new StartLoggingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartLoggingRequest object.
+ */
+StartLoggingRequest::StartLoggingRequest()
+    : CloudTrailRequest(new StartLoggingRequestPrivate(CloudTrailRequest::StartLoggingAction, this))
+{
+
+}
+
+bool StartLoggingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartLoggingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartLoggingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudTrailClient::send
+ */
+AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply * const reply) const
+{
+    return new StartLoggingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartLoggingRequestPrivate
+ *
+ * @brief  Private implementation for StartLoggingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartLoggingRequestPrivate object.
+ *
+ * @param  action  CloudTrail action being performed.
+ * @param  q       Pointer to this object's public StartLoggingRequest instance.
+ */
+StartLoggingRequestPrivate::StartLoggingRequestPrivate(
+    const CloudTrailRequest::Action action, StartLoggingRequest * const q)
+    : StartLoggingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartLoggingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartLoggingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartLoggingRequest instance.
+ */
+StartLoggingRequestPrivate::StartLoggingRequestPrivate(
+    const StartLoggingRequestPrivate &other, StartLoggingRequest * const q)
+    : StartLoggingPrivate(other, q)
+{
+
+}

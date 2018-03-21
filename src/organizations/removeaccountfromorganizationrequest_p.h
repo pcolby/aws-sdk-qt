@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEACCOUNTFROMORGANIZATIONREQUEST_P_H
 #define QTAWS_REMOVEACCOUNTFROMORGANIZATIONREQUEST_P_H
 
+#include "organizations_p.h"
+#include "removeaccountfromorganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class RemoveAccountFromOrganizationRequest;
+
+class QTAWS_EXPORT RemoveAccountFromOrganizationRequestPrivate : public OrganizationsPrivate {
+
+public:
+    RemoveAccountFromOrganizationRequestPrivate(const Organizations::Action action,
+                                   RemoveAccountFromOrganizationRequest * const q);
+    RemoveAccountFromOrganizationRequestPrivate(const RemoveAccountFromOrganizationRequestPrivate &other,
+                                   RemoveAccountFromOrganizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveAccountFromOrganizationRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "attachpolicyrequest.h"
 #include "attachpolicyrequest_p.h"
+#include "attachpolicyresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AttachPolicyRequest
+ *
+ * @brief  Implements CloudDirectory AttachPolicy requests.
+ *
+ * @see    CloudDirectoryClient::attachPolicy
+ */
+
+/**
+ * @brief  Constructs a new AttachPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachPolicyResponse::AttachPolicyResponse(
+
+/**
+ * @brief  Constructs a new AttachPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachPolicyRequest::AttachPolicyRequest(const AttachPolicyRequest &other)
+    : CloudDirectoryRequest(new AttachPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachPolicyRequest object.
+ */
+AttachPolicyRequest::AttachPolicyRequest()
+    : CloudDirectoryRequest(new AttachPolicyRequestPrivate(CloudDirectoryRequest::AttachPolicyAction, this))
+{
+
+}
+
+bool AttachPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachPolicyRequestPrivate
+ *
+ * @brief  Private implementation for AttachPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachPolicyRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public AttachPolicyRequest instance.
+ */
+AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
+    const CloudDirectoryRequest::Action action, AttachPolicyRequest * const q)
+    : AttachPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachPolicyRequest instance.
+ */
+AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
+    const AttachPolicyRequestPrivate &other, AttachPolicyRequest * const q)
+    : AttachPolicyPrivate(other, q)
+{
+
+}

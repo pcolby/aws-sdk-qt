@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPOLICYREQUEST_H
 #define QTAWS_DELETEPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeletePolicyRequestPrivate;
+
+class QTAWS_EXPORT DeletePolicyRequest : public IAMRequest {
+
+public:
+    DeletePolicyRequest(const DeletePolicyRequest &other);
+    DeletePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeletePolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

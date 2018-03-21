@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEWEBHOOKREQUEST_H
 #define QTAWS_CREATEWEBHOOKREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class CreateWebhookRequestPrivate;
+
+class QTAWS_EXPORT CreateWebhookRequest : public CodeBuildRequest {
+
+public:
+    CreateWebhookRequest(const CreateWebhookRequest &other);
+    CreateWebhookRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateWebhookRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

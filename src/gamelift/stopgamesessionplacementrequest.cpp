@@ -19,3 +19,107 @@
 
 #include "stopgamesessionplacementrequest.h"
 #include "stopgamesessionplacementrequest_p.h"
+#include "stopgamesessionplacementresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  StopGameSessionPlacementRequest
+ *
+ * @brief  Implements GameLift StopGameSessionPlacement requests.
+ *
+ * @see    GameLiftClient::stopGameSessionPlacement
+ */
+
+/**
+ * @brief  Constructs a new StopGameSessionPlacementResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
+
+/**
+ * @brief  Constructs a new StopGameSessionPlacementRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopGameSessionPlacementRequest::StopGameSessionPlacementRequest(const StopGameSessionPlacementRequest &other)
+    : GameLiftRequest(new StopGameSessionPlacementRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopGameSessionPlacementRequest object.
+ */
+StopGameSessionPlacementRequest::StopGameSessionPlacementRequest()
+    : GameLiftRequest(new StopGameSessionPlacementRequestPrivate(GameLiftRequest::StopGameSessionPlacementAction, this))
+{
+
+}
+
+bool StopGameSessionPlacementRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopGameSessionPlacementResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopGameSessionPlacementResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNetworkReply * const reply) const
+{
+    return new StopGameSessionPlacementResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopGameSessionPlacementRequestPrivate
+ *
+ * @brief  Private implementation for StopGameSessionPlacementRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopGameSessionPlacementRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public StopGameSessionPlacementRequest instance.
+ */
+StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
+    const GameLiftRequest::Action action, StopGameSessionPlacementRequest * const q)
+    : StopGameSessionPlacementPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopGameSessionPlacementRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopGameSessionPlacementRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopGameSessionPlacementRequest instance.
+ */
+StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
+    const StopGameSessionPlacementRequestPrivate &other, StopGameSessionPlacementRequest * const q)
+    : StopGameSessionPlacementPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPERMISSIONPOLICYREQUEST_P_H
 #define QTAWS_GETPERMISSIONPOLICYREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "getpermissionpolicyrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetPermissionPolicyRequest;
+
+class QTAWS_EXPORT GetPermissionPolicyRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    GetPermissionPolicyRequestPrivate(const WAFRegional::Action action,
+                                   GetPermissionPolicyRequest * const q);
+    GetPermissionPolicyRequestPrivate(const GetPermissionPolicyRequestPrivate &other,
+                                   GetPermissionPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetPermissionPolicyRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

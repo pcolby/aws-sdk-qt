@@ -19,3 +19,107 @@
 
 #include "batchgetdeploymentinstancesrequest.h"
 #include "batchgetdeploymentinstancesrequest_p.h"
+#include "batchgetdeploymentinstancesresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetDeploymentInstancesRequest
+ *
+ * @brief  Implements CodeDeploy BatchGetDeploymentInstances requests.
+ *
+ * @see    CodeDeployClient::batchGetDeploymentInstances
+ */
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetDeploymentInstancesResponse::BatchGetDeploymentInstancesResponse(
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetDeploymentInstancesRequest::BatchGetDeploymentInstancesRequest(const BatchGetDeploymentInstancesRequest &other)
+    : CodeDeployRequest(new BatchGetDeploymentInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentInstancesRequest object.
+ */
+BatchGetDeploymentInstancesRequest::BatchGetDeploymentInstancesRequest()
+    : CodeDeployRequest(new BatchGetDeploymentInstancesRequestPrivate(CodeDeployRequest::BatchGetDeploymentInstancesAction, this))
+{
+
+}
+
+bool BatchGetDeploymentInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetDeploymentInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetDeploymentInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * BatchGetDeploymentInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetDeploymentInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetDeploymentInstancesRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetDeploymentInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentInstancesRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public BatchGetDeploymentInstancesRequest instance.
+ */
+BatchGetDeploymentInstancesRequestPrivate::BatchGetDeploymentInstancesRequestPrivate(
+    const CodeDeployRequest::Action action, BatchGetDeploymentInstancesRequest * const q)
+    : BatchGetDeploymentInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetDeploymentInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetDeploymentInstancesRequest instance.
+ */
+BatchGetDeploymentInstancesRequestPrivate::BatchGetDeploymentInstancesRequestPrivate(
+    const BatchGetDeploymentInstancesRequestPrivate &other, BatchGetDeploymentInstancesRequest * const q)
+    : BatchGetDeploymentInstancesPrivate(other, q)
+{
+
+}

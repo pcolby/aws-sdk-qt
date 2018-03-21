@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIPSETREQUEST_H
 #define QTAWS_DELETEIPSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteIPSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteIPSetRequest : public WAFRequest {
+
+public:
+    DeleteIPSetRequest(const DeleteIPSetRequest &other);
+    DeleteIPSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIPSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

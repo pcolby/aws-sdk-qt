@@ -19,3 +19,107 @@
 
 #include "getmodeltemplaterequest.h"
 #include "getmodeltemplaterequest_p.h"
+#include "getmodeltemplateresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetModelTemplateRequest
+ *
+ * @brief  Implements APIGateway GetModelTemplate requests.
+ *
+ * @see    APIGatewayClient::getModelTemplate
+ */
+
+/**
+ * @brief  Constructs a new GetModelTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetModelTemplateResponse::GetModelTemplateResponse(
+
+/**
+ * @brief  Constructs a new GetModelTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetModelTemplateRequest::GetModelTemplateRequest(const GetModelTemplateRequest &other)
+    : APIGatewayRequest(new GetModelTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetModelTemplateRequest object.
+ */
+GetModelTemplateRequest::GetModelTemplateRequest()
+    : APIGatewayRequest(new GetModelTemplateRequestPrivate(APIGatewayRequest::GetModelTemplateAction, this))
+{
+
+}
+
+bool GetModelTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetModelTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetModelTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetModelTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new GetModelTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetModelTemplateRequestPrivate
+ *
+ * @brief  Private implementation for GetModelTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetModelTemplateRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetModelTemplateRequest instance.
+ */
+GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
+    const APIGatewayRequest::Action action, GetModelTemplateRequest * const q)
+    : GetModelTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetModelTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetModelTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetModelTemplateRequest instance.
+ */
+GetModelTemplateRequestPrivate::GetModelTemplateRequestPrivate(
+    const GetModelTemplateRequestPrivate &other, GetModelTemplateRequest * const q)
+    : GetModelTemplatePrivate(other, q)
+{
+
+}

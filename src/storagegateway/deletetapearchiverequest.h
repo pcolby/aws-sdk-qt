@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETAPEARCHIVEREQUEST_H
 #define QTAWS_DELETETAPEARCHIVEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteTapeArchiveRequestPrivate;
+
+class QTAWS_EXPORT DeleteTapeArchiveRequest : public StorageGatewayRequest {
+
+public:
+    DeleteTapeArchiveRequest(const DeleteTapeArchiveRequest &other);
+    DeleteTapeArchiveRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTapeArchiveRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

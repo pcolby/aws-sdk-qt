@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETTAGSFORRESOURCEREQUEST_H
 #define QTAWS_SETTAGSFORRESOURCEREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class SetTagsForResourceRequestPrivate;
+
+class QTAWS_EXPORT SetTagsForResourceRequest : public InspectorRequest {
+
+public:
+    SetTagsForResourceRequest(const SetTagsForResourceRequest &other);
+    SetTagsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetTagsForResourceRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

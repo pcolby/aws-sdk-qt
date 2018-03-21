@@ -19,3 +19,107 @@
 
 #include "updateservercertificaterequest.h"
 #include "updateservercertificaterequest_p.h"
+#include "updateservercertificateresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateServerCertificateRequest
+ *
+ * @brief  Implements IAM UpdateServerCertificate requests.
+ *
+ * @see    IAMClient::updateServerCertificate
+ */
+
+/**
+ * @brief  Constructs a new UpdateServerCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServerCertificateResponse::UpdateServerCertificateResponse(
+
+/**
+ * @brief  Constructs a new UpdateServerCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateServerCertificateRequest::UpdateServerCertificateRequest(const UpdateServerCertificateRequest &other)
+    : IAMRequest(new UpdateServerCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateServerCertificateRequest object.
+ */
+UpdateServerCertificateRequest::UpdateServerCertificateRequest()
+    : IAMRequest(new UpdateServerCertificateRequestPrivate(IAMRequest::UpdateServerCertificateAction, this))
+{
+
+}
+
+bool UpdateServerCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateServerCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateServerCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateServerCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateServerCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServerCertificateRequestPrivate
+ *
+ * @brief  Private implementation for UpdateServerCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServerCertificateRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateServerCertificateRequest instance.
+ */
+UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
+    const IAMRequest::Action action, UpdateServerCertificateRequest * const q)
+    : UpdateServerCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServerCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateServerCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateServerCertificateRequest instance.
+ */
+UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
+    const UpdateServerCertificateRequestPrivate &other, UpdateServerCertificateRequest * const q)
+    : UpdateServerCertificatePrivate(other, q)
+{
+
+}

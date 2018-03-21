@@ -19,3 +19,107 @@
 
 #include "adminresetuserpasswordrequest.h"
 #include "adminresetuserpasswordrequest_p.h"
+#include "adminresetuserpasswordresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminResetUserPasswordRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminResetUserPassword requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminResetUserPassword
+ */
+
+/**
+ * @brief  Constructs a new AdminResetUserPasswordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminResetUserPasswordResponse::AdminResetUserPasswordResponse(
+
+/**
+ * @brief  Constructs a new AdminResetUserPasswordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminResetUserPasswordRequest::AdminResetUserPasswordRequest(const AdminResetUserPasswordRequest &other)
+    : CognitoIdentityProviderRequest(new AdminResetUserPasswordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminResetUserPasswordRequest object.
+ */
+AdminResetUserPasswordRequest::AdminResetUserPasswordRequest()
+    : CognitoIdentityProviderRequest(new AdminResetUserPasswordRequestPrivate(CognitoIdentityProviderRequest::AdminResetUserPasswordAction, this))
+{
+
+}
+
+bool AdminResetUserPasswordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminResetUserPasswordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminResetUserPasswordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminResetUserPasswordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminResetUserPasswordRequestPrivate
+ *
+ * @brief  Private implementation for AdminResetUserPasswordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminResetUserPasswordRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminResetUserPasswordRequest instance.
+ */
+AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminResetUserPasswordRequest * const q)
+    : AdminResetUserPasswordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminResetUserPasswordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminResetUserPasswordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminResetUserPasswordRequest instance.
+ */
+AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
+    const AdminResetUserPasswordRequestPrivate &other, AdminResetUserPasswordRequest * const q)
+    : AdminResetUserPasswordPrivate(other, q)
+{
+
+}

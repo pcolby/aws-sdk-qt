@@ -19,3 +19,107 @@
 
 #include "createbytematchsetrequest.h"
 #include "createbytematchsetrequest_p.h"
+#include "createbytematchsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  CreateByteMatchSetRequest
+ *
+ * @brief  Implements WAF CreateByteMatchSet requests.
+ *
+ * @see    WAFClient::createByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new CreateByteMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateByteMatchSetResponse::CreateByteMatchSetResponse(
+
+/**
+ * @brief  Constructs a new CreateByteMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateByteMatchSetRequest::CreateByteMatchSetRequest(const CreateByteMatchSetRequest &other)
+    : WAFRequest(new CreateByteMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateByteMatchSetRequest object.
+ */
+CreateByteMatchSetRequest::CreateByteMatchSetRequest()
+    : WAFRequest(new CreateByteMatchSetRequestPrivate(WAFRequest::CreateByteMatchSetAction, this))
+{
+
+}
+
+bool CreateByteMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateByteMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateByteMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * CreateByteMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateByteMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateByteMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for CreateByteMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateByteMatchSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public CreateByteMatchSetRequest instance.
+ */
+CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
+    const WAFRequest::Action action, CreateByteMatchSetRequest * const q)
+    : CreateByteMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateByteMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateByteMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateByteMatchSetRequest instance.
+ */
+CreateByteMatchSetRequestPrivate::CreateByteMatchSetRequestPrivate(
+    const CreateByteMatchSetRequestPrivate &other, CreateByteMatchSetRequest * const q)
+    : CreateByteMatchSetPrivate(other, q)
+{
+
+}

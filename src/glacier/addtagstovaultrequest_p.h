@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSTOVAULTREQUEST_P_H
 #define QTAWS_ADDTAGSTOVAULTREQUEST_P_H
 
+#include "glacier_p.h"
+#include "addtagstovaultrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class AddTagsToVaultRequest;
+
+class QTAWS_EXPORT AddTagsToVaultRequestPrivate : public GlacierPrivate {
+
+public:
+    AddTagsToVaultRequestPrivate(const Glacier::Action action,
+                                   AddTagsToVaultRequest * const q);
+    AddTagsToVaultRequestPrivate(const AddTagsToVaultRequestPrivate &other,
+                                   AddTagsToVaultRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToVaultRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

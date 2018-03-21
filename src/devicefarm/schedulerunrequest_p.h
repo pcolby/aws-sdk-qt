@@ -20,4 +20,29 @@
 #ifndef QTAWS_SCHEDULERUNREQUEST_P_H
 #define QTAWS_SCHEDULERUNREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "schedulerunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ScheduleRunRequest;
+
+class QTAWS_EXPORT ScheduleRunRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ScheduleRunRequestPrivate(const DeviceFarm::Action action,
+                                   ScheduleRunRequest * const q);
+    ScheduleRunRequestPrivate(const ScheduleRunRequestPrivate &other,
+                                   ScheduleRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ScheduleRunRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

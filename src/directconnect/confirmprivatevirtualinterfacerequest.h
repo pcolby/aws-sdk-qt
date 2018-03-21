@@ -20,4 +20,32 @@
 #ifndef QTAWS_CONFIRMPRIVATEVIRTUALINTERFACEREQUEST_H
 #define QTAWS_CONFIRMPRIVATEVIRTUALINTERFACEREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class ConfirmPrivateVirtualInterfaceRequestPrivate;
+
+class QTAWS_EXPORT ConfirmPrivateVirtualInterfaceRequest : public DirectConnectRequest {
+
+public:
+    ConfirmPrivateVirtualInterfaceRequest(const ConfirmPrivateVirtualInterfaceRequest &other);
+    ConfirmPrivateVirtualInterfaceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ConfirmPrivateVirtualInterfaceRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

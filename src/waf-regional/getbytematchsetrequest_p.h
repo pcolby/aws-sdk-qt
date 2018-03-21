@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBYTEMATCHSETREQUEST_P_H
 #define QTAWS_GETBYTEMATCHSETREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "getbytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetByteMatchSetRequest;
+
+class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    GetByteMatchSetRequestPrivate(const WAFRegional::Action action,
+                                   GetByteMatchSetRequest * const q);
+    GetByteMatchSetRequestPrivate(const GetByteMatchSetRequestPrivate &other,
+                                   GetByteMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetByteMatchSetRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

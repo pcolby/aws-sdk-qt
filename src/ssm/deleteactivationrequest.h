@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEACTIVATIONREQUEST_H
 #define QTAWS_DELETEACTIVATIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteActivationRequestPrivate;
+
+class QTAWS_EXPORT DeleteActivationRequest : public SSMRequest {
+
+public:
+    DeleteActivationRequest(const DeleteActivationRequest &other);
+    DeleteActivationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteActivationRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

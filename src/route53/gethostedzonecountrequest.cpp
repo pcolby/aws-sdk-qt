@@ -19,3 +19,107 @@
 
 #include "gethostedzonecountrequest.h"
 #include "gethostedzonecountrequest_p.h"
+#include "gethostedzonecountresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetHostedZoneCountRequest
+ *
+ * @brief  Implements Route53 GetHostedZoneCount requests.
+ *
+ * @see    Route53Client::getHostedZoneCount
+ */
+
+/**
+ * @brief  Constructs a new GetHostedZoneCountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHostedZoneCountResponse::GetHostedZoneCountResponse(
+
+/**
+ * @brief  Constructs a new GetHostedZoneCountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetHostedZoneCountRequest::GetHostedZoneCountRequest(const GetHostedZoneCountRequest &other)
+    : Route53Request(new GetHostedZoneCountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetHostedZoneCountRequest object.
+ */
+GetHostedZoneCountRequest::GetHostedZoneCountRequest()
+    : Route53Request(new GetHostedZoneCountRequestPrivate(Route53Request::GetHostedZoneCountAction, this))
+{
+
+}
+
+bool GetHostedZoneCountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetHostedZoneCountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetHostedZoneCountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkReply * const reply) const
+{
+    return new GetHostedZoneCountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHostedZoneCountRequestPrivate
+ *
+ * @brief  Private implementation for GetHostedZoneCountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostedZoneCountRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetHostedZoneCountRequest instance.
+ */
+GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
+    const Route53Request::Action action, GetHostedZoneCountRequest * const q)
+    : GetHostedZoneCountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHostedZoneCountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetHostedZoneCountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetHostedZoneCountRequest instance.
+ */
+GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
+    const GetHostedZoneCountRequestPrivate &other, GetHostedZoneCountRequest * const q)
+    : GetHostedZoneCountPrivate(other, q)
+{
+
+}

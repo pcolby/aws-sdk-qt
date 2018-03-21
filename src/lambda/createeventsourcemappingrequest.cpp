@@ -19,3 +19,107 @@
 
 #include "createeventsourcemappingrequest.h"
 #include "createeventsourcemappingrequest_p.h"
+#include "createeventsourcemappingresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  CreateEventSourceMappingRequest
+ *
+ * @brief  Implements Lambda CreateEventSourceMapping requests.
+ *
+ * @see    LambdaClient::createEventSourceMapping
+ */
+
+/**
+ * @brief  Constructs a new CreateEventSourceMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEventSourceMappingResponse::CreateEventSourceMappingResponse(
+
+/**
+ * @brief  Constructs a new CreateEventSourceMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEventSourceMappingRequest::CreateEventSourceMappingRequest(const CreateEventSourceMappingRequest &other)
+    : LambdaRequest(new CreateEventSourceMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEventSourceMappingRequest object.
+ */
+CreateEventSourceMappingRequest::CreateEventSourceMappingRequest()
+    : LambdaRequest(new CreateEventSourceMappingRequestPrivate(LambdaRequest::CreateEventSourceMappingAction, this))
+{
+
+}
+
+bool CreateEventSourceMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEventSourceMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEventSourceMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * CreateEventSourceMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateEventSourceMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEventSourceMappingRequestPrivate
+ *
+ * @brief  Private implementation for CreateEventSourceMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEventSourceMappingRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public CreateEventSourceMappingRequest instance.
+ */
+CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
+    const LambdaRequest::Action action, CreateEventSourceMappingRequest * const q)
+    : CreateEventSourceMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEventSourceMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEventSourceMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEventSourceMappingRequest instance.
+ */
+CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
+    const CreateEventSourceMappingRequestPrivate &other, CreateEventSourceMappingRequest * const q)
+    : CreateEventSourceMappingPrivate(other, q)
+{
+
+}

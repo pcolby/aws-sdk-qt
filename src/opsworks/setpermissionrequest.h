@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETPERMISSIONREQUEST_H
 #define QTAWS_SETPERMISSIONREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetPermissionRequestPrivate;
+
+class QTAWS_EXPORT SetPermissionRequest : public OpsWorksRequest {
+
+public:
+    SetPermissionRequest(const SetPermissionRequest &other);
+    SetPermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetPermissionRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

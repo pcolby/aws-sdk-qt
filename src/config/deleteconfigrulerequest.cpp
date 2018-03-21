@@ -19,3 +19,107 @@
 
 #include "deleteconfigrulerequest.h"
 #include "deleteconfigrulerequest_p.h"
+#include "deleteconfigruleresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DeleteConfigRuleRequest
+ *
+ * @brief  Implements ConfigService DeleteConfigRule requests.
+ *
+ * @see    ConfigServiceClient::deleteConfigRule
+ */
+
+/**
+ * @brief  Constructs a new DeleteConfigRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConfigRuleResponse::DeleteConfigRuleResponse(
+
+/**
+ * @brief  Constructs a new DeleteConfigRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteConfigRuleRequest::DeleteConfigRuleRequest(const DeleteConfigRuleRequest &other)
+    : ConfigServiceRequest(new DeleteConfigRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteConfigRuleRequest object.
+ */
+DeleteConfigRuleRequest::DeleteConfigRuleRequest()
+    : ConfigServiceRequest(new DeleteConfigRuleRequestPrivate(ConfigServiceRequest::DeleteConfigRuleAction, this))
+{
+
+}
+
+bool DeleteConfigRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteConfigRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteConfigRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteConfigRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConfigRuleRequestPrivate
+ *
+ * @brief  Private implementation for DeleteConfigRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigRuleRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public DeleteConfigRuleRequest instance.
+ */
+DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
+    const ConfigServiceRequest::Action action, DeleteConfigRuleRequest * const q)
+    : DeleteConfigRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConfigRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteConfigRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteConfigRuleRequest instance.
+ */
+DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
+    const DeleteConfigRuleRequestPrivate &other, DeleteConfigRuleRequest * const q)
+    : DeleteConfigRulePrivate(other, q)
+{
+
+}

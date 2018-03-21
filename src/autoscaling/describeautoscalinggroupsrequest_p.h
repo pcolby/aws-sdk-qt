@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAUTOSCALINGGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEAUTOSCALINGGROUPSREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "describeautoscalinggroupsrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeAutoScalingGroupsRequest;
+
+class QTAWS_EXPORT DescribeAutoScalingGroupsRequestPrivate : public AutoScalingPrivate {
+
+public:
+    DescribeAutoScalingGroupsRequestPrivate(const AutoScaling::Action action,
+                                   DescribeAutoScalingGroupsRequest * const q);
+    DescribeAutoScalingGroupsRequestPrivate(const DescribeAutoScalingGroupsRequestPrivate &other,
+                                   DescribeAutoScalingGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAutoScalingGroupsRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTACKSREQUEST_H
 #define QTAWS_DESCRIBESTACKSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeStacksRequestPrivate;
+
+class QTAWS_EXPORT DescribeStacksRequest : public AppStreamRequest {
+
+public:
+    DescribeStacksRequest(const DescribeStacksRequest &other);
+    DescribeStacksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStacksRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

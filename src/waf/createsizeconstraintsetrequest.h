@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESIZECONSTRAINTSETREQUEST_H
 #define QTAWS_CREATESIZECONSTRAINTSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateSizeConstraintSetRequestPrivate;
+
+class QTAWS_EXPORT CreateSizeConstraintSetRequest : public WAFRequest {
+
+public:
+    CreateSizeConstraintSetRequest(const CreateSizeConstraintSetRequest &other);
+    CreateSizeConstraintSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSizeConstraintSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

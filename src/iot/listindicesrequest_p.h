@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTINDICESREQUEST_P_H
 #define QTAWS_LISTINDICESREQUEST_P_H
 
+#include "iot_p.h"
+#include "listindicesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class ListIndicesRequest;
+
+class QTAWS_EXPORT ListIndicesRequestPrivate : public IoTPrivate {
+
+public:
+    ListIndicesRequestPrivate(const IoT::Action action,
+                                   ListIndicesRequest * const q);
+    ListIndicesRequestPrivate(const ListIndicesRequestPrivate &other,
+                                   ListIndicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIndicesRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

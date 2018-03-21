@@ -19,3 +19,107 @@
 
 #include "initiateauthrequest.h"
 #include "initiateauthrequest_p.h"
+#include "initiateauthresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  InitiateAuthRequest
+ *
+ * @brief  Implements CognitoIdentityProvider InitiateAuth requests.
+ *
+ * @see    CognitoIdentityProviderClient::initiateAuth
+ */
+
+/**
+ * @brief  Constructs a new InitiateAuthResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateAuthResponse::InitiateAuthResponse(
+
+/**
+ * @brief  Constructs a new InitiateAuthRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitiateAuthRequest::InitiateAuthRequest(const InitiateAuthRequest &other)
+    : CognitoIdentityProviderRequest(new InitiateAuthRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitiateAuthRequest object.
+ */
+InitiateAuthRequest::InitiateAuthRequest()
+    : CognitoIdentityProviderRequest(new InitiateAuthRequestPrivate(CognitoIdentityProviderRequest::InitiateAuthAction, this))
+{
+
+}
+
+bool InitiateAuthRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitiateAuthResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitiateAuthResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply * const reply) const
+{
+    return new InitiateAuthResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateAuthRequestPrivate
+ *
+ * @brief  Private implementation for InitiateAuthRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateAuthRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public InitiateAuthRequest instance.
+ */
+InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, InitiateAuthRequest * const q)
+    : InitiateAuthPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateAuthRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitiateAuthRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitiateAuthRequest instance.
+ */
+InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
+    const InitiateAuthRequestPrivate &other, InitiateAuthRequest * const q)
+    : InitiateAuthPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createhealthcheckrequest.h"
 #include "createhealthcheckrequest_p.h"
+#include "createhealthcheckresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateHealthCheckRequest
+ *
+ * @brief  Implements Route53 CreateHealthCheck requests.
+ *
+ * @see    Route53Client::createHealthCheck
+ */
+
+/**
+ * @brief  Constructs a new CreateHealthCheckResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHealthCheckResponse::CreateHealthCheckResponse(
+
+/**
+ * @brief  Constructs a new CreateHealthCheckRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHealthCheckRequest::CreateHealthCheckRequest(const CreateHealthCheckRequest &other)
+    : Route53Request(new CreateHealthCheckRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHealthCheckRequest object.
+ */
+CreateHealthCheckRequest::CreateHealthCheckRequest()
+    : Route53Request(new CreateHealthCheckRequestPrivate(Route53Request::CreateHealthCheckAction, this))
+{
+
+}
+
+bool CreateHealthCheckRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHealthCheckResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHealthCheckResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * CreateHealthCheckRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHealthCheckResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHealthCheckRequestPrivate
+ *
+ * @brief  Private implementation for CreateHealthCheckRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHealthCheckRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public CreateHealthCheckRequest instance.
+ */
+CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
+    const Route53Request::Action action, CreateHealthCheckRequest * const q)
+    : CreateHealthCheckPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHealthCheckRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHealthCheckRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHealthCheckRequest instance.
+ */
+CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
+    const CreateHealthCheckRequestPrivate &other, CreateHealthCheckRequest * const q)
+    : CreateHealthCheckPrivate(other, q)
+{
+
+}

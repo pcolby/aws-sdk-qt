@@ -19,3 +19,107 @@
 
 #include "describeuserprofilesrequest.h"
 #include "describeuserprofilesrequest_p.h"
+#include "describeuserprofilesresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeUserProfilesRequest
+ *
+ * @brief  Implements OpsWorks DescribeUserProfiles requests.
+ *
+ * @see    OpsWorksClient::describeUserProfiles
+ */
+
+/**
+ * @brief  Constructs a new DescribeUserProfilesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserProfilesResponse::DescribeUserProfilesResponse(
+
+/**
+ * @brief  Constructs a new DescribeUserProfilesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeUserProfilesRequest::DescribeUserProfilesRequest(const DescribeUserProfilesRequest &other)
+    : OpsWorksRequest(new DescribeUserProfilesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeUserProfilesRequest object.
+ */
+DescribeUserProfilesRequest::DescribeUserProfilesRequest()
+    : OpsWorksRequest(new DescribeUserProfilesRequestPrivate(OpsWorksRequest::DescribeUserProfilesAction, this))
+{
+
+}
+
+bool DescribeUserProfilesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeUserProfilesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeUserProfilesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeUserProfilesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeUserProfilesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserProfilesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeUserProfilesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserProfilesRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeUserProfilesRequest instance.
+ */
+DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeUserProfilesRequest * const q)
+    : DescribeUserProfilesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserProfilesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeUserProfilesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeUserProfilesRequest instance.
+ */
+DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
+    const DescribeUserProfilesRequestPrivate &other, DescribeUserProfilesRequest * const q)
+    : DescribeUserProfilesPrivate(other, q)
+{
+
+}

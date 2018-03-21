@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESREQUEST_P_H
 #define QTAWS_LISTCLOUDFRONTORIGINACCESSIDENTITIESREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "listcloudfrontoriginaccessidentitiesrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListCloudFrontOriginAccessIdentitiesRequest;
+
+class QTAWS_EXPORT ListCloudFrontOriginAccessIdentitiesRequestPrivate : public CloudFrontPrivate {
+
+public:
+    ListCloudFrontOriginAccessIdentitiesRequestPrivate(const CloudFront::Action action,
+                                   ListCloudFrontOriginAccessIdentitiesRequest * const q);
+    ListCloudFrontOriginAccessIdentitiesRequestPrivate(const ListCloudFrontOriginAccessIdentitiesRequestPrivate &other,
+                                   ListCloudFrontOriginAccessIdentitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListCloudFrontOriginAccessIdentitiesRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

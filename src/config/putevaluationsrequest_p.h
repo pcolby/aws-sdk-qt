@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTEVALUATIONSREQUEST_P_H
 #define QTAWS_PUTEVALUATIONSREQUEST_P_H
 
+#include "configservice_p.h"
+#include "putevaluationsrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutEvaluationsRequest;
+
+class QTAWS_EXPORT PutEvaluationsRequestPrivate : public ConfigServicePrivate {
+
+public:
+    PutEvaluationsRequestPrivate(const ConfigService::Action action,
+                                   PutEvaluationsRequest * const q);
+    PutEvaluationsRequestPrivate(const PutEvaluationsRequestPrivate &other,
+                                   PutEvaluationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutEvaluationsRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

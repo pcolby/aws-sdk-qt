@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBENATGATEWAYSREQUEST_H
 #define QTAWS_DESCRIBENATGATEWAYSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeNatGatewaysRequestPrivate;
+
+class QTAWS_EXPORT DescribeNatGatewaysRequest : public EC2Request {
+
+public:
+    DescribeNatGatewaysRequest(const DescribeNatGatewaysRequest &other);
+    DescribeNatGatewaysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeNatGatewaysRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

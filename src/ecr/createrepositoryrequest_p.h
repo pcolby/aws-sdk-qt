@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEREPOSITORYREQUEST_P_H
 #define QTAWS_CREATEREPOSITORYREQUEST_P_H
 
+#include "ecr_p.h"
+#include "createrepositoryrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class CreateRepositoryRequest;
+
+class QTAWS_EXPORT CreateRepositoryRequestPrivate : public ECRPrivate {
+
+public:
+    CreateRepositoryRequestPrivate(const ECR::Action action,
+                                   CreateRepositoryRequest * const q);
+    CreateRepositoryRequestPrivate(const CreateRepositoryRequestPrivate &other,
+                                   CreateRepositoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRepositoryRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

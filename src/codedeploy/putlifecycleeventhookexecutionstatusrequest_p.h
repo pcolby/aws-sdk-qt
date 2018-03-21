@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_P_H
 #define QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "putlifecycleeventhookexecutionstatusrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class PutLifecycleEventHookExecutionStatusRequest;
+
+class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployPrivate {
+
+public:
+    PutLifecycleEventHookExecutionStatusRequestPrivate(const CodeDeploy::Action action,
+                                   PutLifecycleEventHookExecutionStatusRequest * const q);
+    PutLifecycleEventHookExecutionStatusRequestPrivate(const PutLifecycleEventHookExecutionStatusRequestPrivate &other,
+                                   PutLifecycleEventHookExecutionStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutLifecycleEventHookExecutionStatusRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

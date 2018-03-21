@@ -19,3 +19,107 @@
 
 #include "rejectvpcendpointconnectionsrequest.h"
 #include "rejectvpcendpointconnectionsrequest_p.h"
+#include "rejectvpcendpointconnectionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RejectVpcEndpointConnectionsRequest
+ *
+ * @brief  Implements EC2 RejectVpcEndpointConnections requests.
+ *
+ * @see    EC2Client::rejectVpcEndpointConnections
+ */
+
+/**
+ * @brief  Constructs a new RejectVpcEndpointConnectionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RejectVpcEndpointConnectionsResponse::RejectVpcEndpointConnectionsResponse(
+
+/**
+ * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest(const RejectVpcEndpointConnectionsRequest &other)
+    : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RejectVpcEndpointConnectionsRequest object.
+ */
+RejectVpcEndpointConnectionsRequest::RejectVpcEndpointConnectionsRequest()
+    : EC2Request(new RejectVpcEndpointConnectionsRequestPrivate(EC2Request::RejectVpcEndpointConnectionsAction, this))
+{
+
+}
+
+bool RejectVpcEndpointConnectionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RejectVpcEndpointConnectionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RejectVpcEndpointConnectionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response(QNetworkReply * const reply) const
+{
+    return new RejectVpcEndpointConnectionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RejectVpcEndpointConnectionsRequestPrivate
+ *
+ * @brief  Private implementation for RejectVpcEndpointConnectionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public RejectVpcEndpointConnectionsRequest instance.
+ */
+RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
+    const EC2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)
+    : RejectVpcEndpointConnectionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RejectVpcEndpointConnectionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RejectVpcEndpointConnectionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RejectVpcEndpointConnectionsRequest instance.
+ */
+RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
+    const RejectVpcEndpointConnectionsRequestPrivate &other, RejectVpcEndpointConnectionsRequest * const q)
+    : RejectVpcEndpointConnectionsPrivate(other, q)
+{
+
+}

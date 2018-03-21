@@ -19,3 +19,107 @@
 
 #include "updatestacksetrequest.h"
 #include "updatestacksetrequest_p.h"
+#include "updatestacksetresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  UpdateStackSetRequest
+ *
+ * @brief  Implements CloudFormation UpdateStackSet requests.
+ *
+ * @see    CloudFormationClient::updateStackSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateStackSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStackSetResponse::UpdateStackSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateStackSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateStackSetRequest::UpdateStackSetRequest(const UpdateStackSetRequest &other)
+    : CloudFormationRequest(new UpdateStackSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateStackSetRequest object.
+ */
+UpdateStackSetRequest::UpdateStackSetRequest()
+    : CloudFormationRequest(new UpdateStackSetRequestPrivate(CloudFormationRequest::UpdateStackSetAction, this))
+{
+
+}
+
+bool UpdateStackSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateStackSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateStackSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * UpdateStackSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateStackSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStackSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateStackSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackSetRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public UpdateStackSetRequest instance.
+ */
+UpdateStackSetRequestPrivate::UpdateStackSetRequestPrivate(
+    const CloudFormationRequest::Action action, UpdateStackSetRequest * const q)
+    : UpdateStackSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStackSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateStackSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateStackSetRequest instance.
+ */
+UpdateStackSetRequestPrivate::UpdateStackSetRequestPrivate(
+    const UpdateStackSetRequestPrivate &other, UpdateStackSetRequest * const q)
+    : UpdateStackSetPrivate(other, q)
+{
+
+}

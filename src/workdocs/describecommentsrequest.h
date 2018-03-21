@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECOMMENTSREQUEST_H
 #define QTAWS_DESCRIBECOMMENTSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeCommentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeCommentsRequest : public WorkDocsRequest {
+
+public:
+    DescribeCommentsRequest(const DescribeCommentsRequest &other);
+    DescribeCommentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCommentsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEASSESSMENTTEMPLATEREQUEST_P_H
 #define QTAWS_DELETEASSESSMENTTEMPLATEREQUEST_P_H
 
+#include "inspector_p.h"
+#include "deleteassessmenttemplaterequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DeleteAssessmentTemplateRequest;
+
+class QTAWS_EXPORT DeleteAssessmentTemplateRequestPrivate : public InspectorPrivate {
+
+public:
+    DeleteAssessmentTemplateRequestPrivate(const Inspector::Action action,
+                                   DeleteAssessmentTemplateRequest * const q);
+    DeleteAssessmentTemplateRequestPrivate(const DeleteAssessmentTemplateRequestPrivate &other,
+                                   DeleteAssessmentTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAssessmentTemplateRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

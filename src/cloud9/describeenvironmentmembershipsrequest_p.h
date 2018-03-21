@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "describeenvironmentmembershipsrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DescribeEnvironmentMembershipsRequest;
+
+class QTAWS_EXPORT DescribeEnvironmentMembershipsRequestPrivate : public Cloud9Private {
+
+public:
+    DescribeEnvironmentMembershipsRequestPrivate(const Cloud9::Action action,
+                                   DescribeEnvironmentMembershipsRequest * const q);
+    DescribeEnvironmentMembershipsRequestPrivate(const DescribeEnvironmentMembershipsRequestPrivate &other,
+                                   DescribeEnvironmentMembershipsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentMembershipsRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

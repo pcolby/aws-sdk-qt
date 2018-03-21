@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESIZECONSTRAINTSETREQUEST_P_H
 #define QTAWS_UPDATESIZECONSTRAINTSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updatesizeconstraintsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateSizeConstraintSetRequest;
+
+class QTAWS_EXPORT UpdateSizeConstraintSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateSizeConstraintSetRequestPrivate(const WAF::Action action,
+                                   UpdateSizeConstraintSetRequest * const q);
+    UpdateSizeConstraintSetRequestPrivate(const UpdateSizeConstraintSetRequestPrivate &other,
+                                   UpdateSizeConstraintSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateSizeConstraintSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

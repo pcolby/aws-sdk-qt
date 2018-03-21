@@ -20,4 +20,29 @@
 #ifndef QTAWS_VERIFYDOMAINDKIMREQUEST_P_H
 #define QTAWS_VERIFYDOMAINDKIMREQUEST_P_H
 
+#include "ses_p.h"
+#include "verifydomaindkimrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyDomainDkimRequest;
+
+class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SESPrivate {
+
+public:
+    VerifyDomainDkimRequestPrivate(const SES::Action action,
+                                   VerifyDomainDkimRequest * const q);
+    VerifyDomainDkimRequestPrivate(const VerifyDomainDkimRequestPrivate &other,
+                                   VerifyDomainDkimRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyDomainDkimRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

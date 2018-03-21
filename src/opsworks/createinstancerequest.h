@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEINSTANCEREQUEST_H
 #define QTAWS_CREATEINSTANCEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateInstanceRequestPrivate;
+
+class QTAWS_EXPORT CreateInstanceRequest : public OpsWorksRequest {
+
+public:
+    CreateInstanceRequest(const CreateInstanceRequest &other);
+    CreateInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateInstanceRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

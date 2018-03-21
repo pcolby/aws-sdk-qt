@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_P_H
 
+#include "ecr_p.h"
+#include "describeimagesrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DescribeImagesRequest;
+
+class QTAWS_EXPORT DescribeImagesRequestPrivate : public ECRPrivate {
+
+public:
+    DescribeImagesRequestPrivate(const ECR::Action action,
+                                   DescribeImagesRequest * const q);
+    DescribeImagesRequestPrivate(const DescribeImagesRequestPrivate &other,
+                                   DescribeImagesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImagesRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

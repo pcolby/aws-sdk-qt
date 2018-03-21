@@ -20,4 +20,29 @@
 #ifndef QTAWS_GENERATEDATASETREQUEST_P_H
 #define QTAWS_GENERATEDATASETREQUEST_P_H
 
+#include "marketplacecommerceanalytics_p.h"
+#include "generatedatasetrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceCommerceAnalytics {
+
+class GenerateDataSetRequest;
+
+class QTAWS_EXPORT GenerateDataSetRequestPrivate : public MarketplaceCommerceAnalyticsPrivate {
+
+public:
+    GenerateDataSetRequestPrivate(const MarketplaceCommerceAnalytics::Action action,
+                                   GenerateDataSetRequest * const q);
+    GenerateDataSetRequestPrivate(const GenerateDataSetRequestPrivate &other,
+                                   GenerateDataSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GenerateDataSetRequest)
+
+};
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTCONTAINERPOLICYREQUEST_H
 #define QTAWS_PUTCONTAINERPOLICYREQUEST_H
 
+#include "mediastorerequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class PutContainerPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutContainerPolicyRequest : public MediaStoreRequest {
+
+public:
+    PutContainerPolicyRequest(const PutContainerPolicyRequest &other);
+    PutContainerPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutContainerPolicyRequest)
+
+}
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

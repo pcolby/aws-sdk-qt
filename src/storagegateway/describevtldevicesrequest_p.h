@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEVTLDEVICESREQUEST_P_H
 #define QTAWS_DESCRIBEVTLDEVICESREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "describevtldevicesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeVTLDevicesRequest;
+
+class QTAWS_EXPORT DescribeVTLDevicesRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DescribeVTLDevicesRequestPrivate(const StorageGateway::Action action,
+                                   DescribeVTLDevicesRequest * const q);
+    DescribeVTLDevicesRequestPrivate(const DescribeVTLDevicesRequestPrivate &other,
+                                   DescribeVTLDevicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeVTLDevicesRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

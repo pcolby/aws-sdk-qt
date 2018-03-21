@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTWEBACLSREQUEST_H
 #define QTAWS_LISTWEBACLSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListWebACLsRequestPrivate;
+
+class QTAWS_EXPORT ListWebACLsRequest : public WAFRequest {
+
+public:
+    ListWebACLsRequest(const ListWebACLsRequest &other);
+    ListWebACLsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListWebACLsRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

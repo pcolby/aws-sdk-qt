@@ -19,3 +19,107 @@
 
 #include "stopstreamencryptionrequest.h"
 #include "stopstreamencryptionrequest_p.h"
+#include "stopstreamencryptionresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  StopStreamEncryptionRequest
+ *
+ * @brief  Implements Kinesis StopStreamEncryption requests.
+ *
+ * @see    KinesisClient::stopStreamEncryption
+ */
+
+/**
+ * @brief  Constructs a new StopStreamEncryptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopStreamEncryptionResponse::StopStreamEncryptionResponse(
+
+/**
+ * @brief  Constructs a new StopStreamEncryptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopStreamEncryptionRequest::StopStreamEncryptionRequest(const StopStreamEncryptionRequest &other)
+    : KinesisRequest(new StopStreamEncryptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopStreamEncryptionRequest object.
+ */
+StopStreamEncryptionRequest::StopStreamEncryptionRequest()
+    : KinesisRequest(new StopStreamEncryptionRequestPrivate(KinesisRequest::StopStreamEncryptionAction, this))
+{
+
+}
+
+bool StopStreamEncryptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopStreamEncryptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopStreamEncryptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetworkReply * const reply) const
+{
+    return new StopStreamEncryptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopStreamEncryptionRequestPrivate
+ *
+ * @brief  Private implementation for StopStreamEncryptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamEncryptionRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public StopStreamEncryptionRequest instance.
+ */
+StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
+    const KinesisRequest::Action action, StopStreamEncryptionRequest * const q)
+    : StopStreamEncryptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopStreamEncryptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopStreamEncryptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopStreamEncryptionRequest instance.
+ */
+StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
+    const StopStreamEncryptionRequestPrivate &other, StopStreamEncryptionRequest * const q)
+    : StopStreamEncryptionPrivate(other, q)
+{
+
+}

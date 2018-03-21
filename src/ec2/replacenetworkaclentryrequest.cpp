@@ -19,3 +19,107 @@
 
 #include "replacenetworkaclentryrequest.h"
 #include "replacenetworkaclentryrequest_p.h"
+#include "replacenetworkaclentryresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ReplaceNetworkAclEntryRequest
+ *
+ * @brief  Implements EC2 ReplaceNetworkAclEntry requests.
+ *
+ * @see    EC2Client::replaceNetworkAclEntry
+ */
+
+/**
+ * @brief  Constructs a new ReplaceNetworkAclEntryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
+
+/**
+ * @brief  Constructs a new ReplaceNetworkAclEntryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest(const ReplaceNetworkAclEntryRequest &other)
+    : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReplaceNetworkAclEntryRequest object.
+ */
+ReplaceNetworkAclEntryRequest::ReplaceNetworkAclEntryRequest()
+    : EC2Request(new ReplaceNetworkAclEntryRequestPrivate(EC2Request::ReplaceNetworkAclEntryAction, this))
+{
+
+}
+
+bool ReplaceNetworkAclEntryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReplaceNetworkAclEntryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReplaceNetworkAclEntryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetworkReply * const reply) const
+{
+    return new ReplaceNetworkAclEntryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReplaceNetworkAclEntryRequestPrivate
+ *
+ * @brief  Private implementation for ReplaceNetworkAclEntryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ReplaceNetworkAclEntryRequest instance.
+ */
+ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
+    const EC2Request::Action action, ReplaceNetworkAclEntryRequest * const q)
+    : ReplaceNetworkAclEntryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceNetworkAclEntryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReplaceNetworkAclEntryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReplaceNetworkAclEntryRequest instance.
+ */
+ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
+    const ReplaceNetworkAclEntryRequestPrivate &other, ReplaceNetworkAclEntryRequest * const q)
+    : ReplaceNetworkAclEntryPrivate(other, q)
+{
+
+}

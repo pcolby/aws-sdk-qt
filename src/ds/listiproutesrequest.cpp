@@ -19,3 +19,107 @@
 
 #include "listiproutesrequest.h"
 #include "listiproutesrequest_p.h"
+#include "listiproutesresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  ListIpRoutesRequest
+ *
+ * @brief  Implements DirectoryService ListIpRoutes requests.
+ *
+ * @see    DirectoryServiceClient::listIpRoutes
+ */
+
+/**
+ * @brief  Constructs a new ListIpRoutesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListIpRoutesResponse::ListIpRoutesResponse(
+
+/**
+ * @brief  Constructs a new ListIpRoutesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListIpRoutesRequest::ListIpRoutesRequest(const ListIpRoutesRequest &other)
+    : DirectoryServiceRequest(new ListIpRoutesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListIpRoutesRequest object.
+ */
+ListIpRoutesRequest::ListIpRoutesRequest()
+    : DirectoryServiceRequest(new ListIpRoutesRequestPrivate(DirectoryServiceRequest::ListIpRoutesAction, this))
+{
+
+}
+
+bool ListIpRoutesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListIpRoutesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListIpRoutesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * ListIpRoutesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListIpRoutesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListIpRoutesRequestPrivate
+ *
+ * @brief  Private implementation for ListIpRoutesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIpRoutesRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public ListIpRoutesRequest instance.
+ */
+ListIpRoutesRequestPrivate::ListIpRoutesRequestPrivate(
+    const DirectoryServiceRequest::Action action, ListIpRoutesRequest * const q)
+    : ListIpRoutesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListIpRoutesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListIpRoutesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListIpRoutesRequest instance.
+ */
+ListIpRoutesRequestPrivate::ListIpRoutesRequestPrivate(
+    const ListIpRoutesRequestPrivate &other, ListIpRoutesRequest * const q)
+    : ListIpRoutesPrivate(other, q)
+{
+
+}

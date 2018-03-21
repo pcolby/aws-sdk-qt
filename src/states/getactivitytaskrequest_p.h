@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACTIVITYTASKREQUEST_P_H
 #define QTAWS_GETACTIVITYTASKREQUEST_P_H
 
+#include "sfn_p.h"
+#include "getactivitytaskrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class GetActivityTaskRequest;
+
+class QTAWS_EXPORT GetActivityTaskRequestPrivate : public SFNPrivate {
+
+public:
+    GetActivityTaskRequestPrivate(const SFN::Action action,
+                                   GetActivityTaskRequest * const q);
+    GetActivityTaskRequestPrivate(const GetActivityTaskRequestPrivate &other,
+                                   GetActivityTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetActivityTaskRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

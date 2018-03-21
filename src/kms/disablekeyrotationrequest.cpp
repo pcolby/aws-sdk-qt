@@ -19,3 +19,107 @@
 
 #include "disablekeyrotationrequest.h"
 #include "disablekeyrotationrequest_p.h"
+#include "disablekeyrotationresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DisableKeyRotationRequest
+ *
+ * @brief  Implements KMS DisableKeyRotation requests.
+ *
+ * @see    KMSClient::disableKeyRotation
+ */
+
+/**
+ * @brief  Constructs a new DisableKeyRotationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableKeyRotationResponse::DisableKeyRotationResponse(
+
+/**
+ * @brief  Constructs a new DisableKeyRotationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableKeyRotationRequest::DisableKeyRotationRequest(const DisableKeyRotationRequest &other)
+    : KMSRequest(new DisableKeyRotationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableKeyRotationRequest object.
+ */
+DisableKeyRotationRequest::DisableKeyRotationRequest()
+    : KMSRequest(new DisableKeyRotationRequestPrivate(KMSRequest::DisableKeyRotationAction, this))
+{
+
+}
+
+bool DisableKeyRotationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableKeyRotationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableKeyRotationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * DisableKeyRotationRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableKeyRotationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableKeyRotationRequestPrivate
+ *
+ * @brief  Private implementation for DisableKeyRotationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyRotationRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public DisableKeyRotationRequest instance.
+ */
+DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
+    const KMSRequest::Action action, DisableKeyRotationRequest * const q)
+    : DisableKeyRotationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableKeyRotationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableKeyRotationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableKeyRotationRequest instance.
+ */
+DisableKeyRotationRequestPrivate::DisableKeyRotationRequestPrivate(
+    const DisableKeyRotationRequestPrivate &other, DisableKeyRotationRequest * const q)
+    : DisableKeyRotationPrivate(other, q)
+{
+
+}

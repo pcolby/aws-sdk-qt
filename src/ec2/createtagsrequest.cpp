@@ -19,3 +19,107 @@
 
 #include "createtagsrequest.h"
 #include "createtagsrequest_p.h"
+#include "createtagsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateTagsRequest
+ *
+ * @brief  Implements EC2 CreateTags requests.
+ *
+ * @see    EC2Client::createTags
+ */
+
+/**
+ * @brief  Constructs a new CreateTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTagsResponse::CreateTagsResponse(
+
+/**
+ * @brief  Constructs a new CreateTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTagsRequest::CreateTagsRequest(const CreateTagsRequest &other)
+    : EC2Request(new CreateTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTagsRequest object.
+ */
+CreateTagsRequest::CreateTagsRequest()
+    : EC2Request(new CreateTagsRequestPrivate(EC2Request::CreateTagsAction, this))
+{
+
+}
+
+bool CreateTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTagsRequestPrivate
+ *
+ * @brief  Private implementation for CreateTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTagsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateTagsRequest instance.
+ */
+CreateTagsRequestPrivate::CreateTagsRequestPrivate(
+    const EC2Request::Action action, CreateTagsRequest * const q)
+    : CreateTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTagsRequest instance.
+ */
+CreateTagsRequestPrivate::CreateTagsRequestPrivate(
+    const CreateTagsRequestPrivate &other, CreateTagsRequest * const q)
+    : CreateTagsPrivate(other, q)
+{
+
+}

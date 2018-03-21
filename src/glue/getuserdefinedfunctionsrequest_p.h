@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETUSERDEFINEDFUNCTIONSREQUEST_P_H
 #define QTAWS_GETUSERDEFINEDFUNCTIONSREQUEST_P_H
 
+#include "glue_p.h"
+#include "getuserdefinedfunctionsrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetUserDefinedFunctionsRequest;
+
+class QTAWS_EXPORT GetUserDefinedFunctionsRequestPrivate : public GluePrivate {
+
+public:
+    GetUserDefinedFunctionsRequestPrivate(const Glue::Action action,
+                                   GetUserDefinedFunctionsRequest * const q);
+    GetUserDefinedFunctionsRequestPrivate(const GetUserDefinedFunctionsRequestPrivate &other,
+                                   GetUserDefinedFunctionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetUserDefinedFunctionsRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

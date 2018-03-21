@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEKEYDESCRIPTIONREQUEST_P_H
 #define QTAWS_UPDATEKEYDESCRIPTIONREQUEST_P_H
 
+#include "kms_p.h"
+#include "updatekeydescriptionrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UpdateKeyDescriptionRequest;
+
+class QTAWS_EXPORT UpdateKeyDescriptionRequestPrivate : public KMSPrivate {
+
+public:
+    UpdateKeyDescriptionRequestPrivate(const KMS::Action action,
+                                   UpdateKeyDescriptionRequest * const q);
+    UpdateKeyDescriptionRequestPrivate(const UpdateKeyDescriptionRequestPrivate &other,
+                                   UpdateKeyDescriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateKeyDescriptionRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

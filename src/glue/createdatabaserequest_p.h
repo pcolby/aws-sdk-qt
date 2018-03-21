@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDATABASEREQUEST_P_H
 #define QTAWS_CREATEDATABASEREQUEST_P_H
 
+#include "glue_p.h"
+#include "createdatabaserequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateDatabaseRequest;
+
+class QTAWS_EXPORT CreateDatabaseRequestPrivate : public GluePrivate {
+
+public:
+    CreateDatabaseRequestPrivate(const Glue::Action action,
+                                   CreateDatabaseRequest * const q);
+    CreateDatabaseRequestPrivate(const CreateDatabaseRequestPrivate &other,
+                                   CreateDatabaseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDatabaseRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

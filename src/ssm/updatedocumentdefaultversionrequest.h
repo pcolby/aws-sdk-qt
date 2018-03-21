@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDOCUMENTDEFAULTVERSIONREQUEST_H
 #define QTAWS_UPDATEDOCUMENTDEFAULTVERSIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateDocumentDefaultVersionRequestPrivate;
+
+class QTAWS_EXPORT UpdateDocumentDefaultVersionRequest : public SSMRequest {
+
+public:
+    UpdateDocumentDefaultVersionRequest(const UpdateDocumentDefaultVersionRequest &other);
+    UpdateDocumentDefaultVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDocumentDefaultVersionRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

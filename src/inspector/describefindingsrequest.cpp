@@ -19,3 +19,107 @@
 
 #include "describefindingsrequest.h"
 #include "describefindingsrequest_p.h"
+#include "describefindingsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  DescribeFindingsRequest
+ *
+ * @brief  Implements Inspector DescribeFindings requests.
+ *
+ * @see    InspectorClient::describeFindings
+ */
+
+/**
+ * @brief  Constructs a new DescribeFindingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFindingsResponse::DescribeFindingsResponse(
+
+/**
+ * @brief  Constructs a new DescribeFindingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFindingsRequest::DescribeFindingsRequest(const DescribeFindingsRequest &other)
+    : InspectorRequest(new DescribeFindingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFindingsRequest object.
+ */
+DescribeFindingsRequest::DescribeFindingsRequest()
+    : InspectorRequest(new DescribeFindingsRequestPrivate(InspectorRequest::DescribeFindingsAction, this))
+{
+
+}
+
+bool DescribeFindingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFindingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFindingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFindingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFindingsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFindingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFindingsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public DescribeFindingsRequest instance.
+ */
+DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
+    const InspectorRequest::Action action, DescribeFindingsRequest * const q)
+    : DescribeFindingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFindingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFindingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFindingsRequest instance.
+ */
+DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
+    const DescribeFindingsRequestPrivate &other, DescribeFindingsRequest * const q)
+    : DescribeFindingsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELABELSREQUEST_P_H
 #define QTAWS_CREATELABELSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "createlabelsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateLabelsRequest;
+
+class QTAWS_EXPORT CreateLabelsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    CreateLabelsRequestPrivate(const WorkDocs::Action action,
+                                   CreateLabelsRequest * const q);
+    CreateLabelsRequestPrivate(const CreateLabelsRequestPrivate &other,
+                                   CreateLabelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLabelsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

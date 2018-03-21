@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEROUTEREQUEST_P_H
 #define QTAWS_CREATEROUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createrouterequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateRouteRequest;
+
+class QTAWS_EXPORT CreateRouteRequestPrivate : public EC2Private {
+
+public:
+    CreateRouteRequestPrivate(const EC2::Action action,
+                                   CreateRouteRequest * const q);
+    CreateRouteRequestPrivate(const CreateRouteRequestPrivate &other,
+                                   CreateRouteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRouteRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

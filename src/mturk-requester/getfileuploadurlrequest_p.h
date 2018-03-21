@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETFILEUPLOADURLREQUEST_P_H
 #define QTAWS_GETFILEUPLOADURLREQUEST_P_H
 
+#include "mturk_p.h"
+#include "getfileuploadurlrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetFileUploadURLRequest;
+
+class QTAWS_EXPORT GetFileUploadURLRequestPrivate : public MTurkPrivate {
+
+public:
+    GetFileUploadURLRequestPrivate(const MTurk::Action action,
+                                   GetFileUploadURLRequest * const q);
+    GetFileUploadURLRequestPrivate(const GetFileUploadURLRequestPrivate &other,
+                                   GetFileUploadURLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetFileUploadURLRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

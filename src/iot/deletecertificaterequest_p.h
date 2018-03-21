@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_P_H
 #define QTAWS_DELETECERTIFICATEREQUEST_P_H
 
+#include "iot_p.h"
+#include "deletecertificaterequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteCertificateRequest;
+
+class QTAWS_EXPORT DeleteCertificateRequestPrivate : public IoTPrivate {
+
+public:
+    DeleteCertificateRequestPrivate(const IoT::Action action,
+                                   DeleteCertificateRequest * const q);
+    DeleteCertificateRequestPrivate(const DeleteCertificateRequestPrivate &other,
+                                   DeleteCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCertificateRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

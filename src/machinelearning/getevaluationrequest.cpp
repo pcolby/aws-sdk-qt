@@ -19,3 +19,107 @@
 
 #include "getevaluationrequest.h"
 #include "getevaluationrequest_p.h"
+#include "getevaluationresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  GetEvaluationRequest
+ *
+ * @brief  Implements MachineLearning GetEvaluation requests.
+ *
+ * @see    MachineLearningClient::getEvaluation
+ */
+
+/**
+ * @brief  Constructs a new GetEvaluationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetEvaluationResponse::GetEvaluationResponse(
+
+/**
+ * @brief  Constructs a new GetEvaluationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetEvaluationRequest::GetEvaluationRequest(const GetEvaluationRequest &other)
+    : MachineLearningRequest(new GetEvaluationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetEvaluationRequest object.
+ */
+GetEvaluationRequest::GetEvaluationRequest()
+    : MachineLearningRequest(new GetEvaluationRequestPrivate(MachineLearningRequest::GetEvaluationAction, this))
+{
+
+}
+
+bool GetEvaluationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetEvaluationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetEvaluationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * GetEvaluationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetEvaluationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetEvaluationRequestPrivate
+ *
+ * @brief  Private implementation for GetEvaluationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEvaluationRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public GetEvaluationRequest instance.
+ */
+GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
+    const MachineLearningRequest::Action action, GetEvaluationRequest * const q)
+    : GetEvaluationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetEvaluationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetEvaluationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetEvaluationRequest instance.
+ */
+GetEvaluationRequestPrivate::GetEvaluationRequestPrivate(
+    const GetEvaluationRequestPrivate &other, GetEvaluationRequest * const q)
+    : GetEvaluationPrivate(other, q)
+{
+
+}

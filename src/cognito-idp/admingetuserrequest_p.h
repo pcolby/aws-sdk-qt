@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINGETUSERREQUEST_P_H
 #define QTAWS_ADMINGETUSERREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "admingetuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminGetUserRequest;
+
+class QTAWS_EXPORT AdminGetUserRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminGetUserRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminGetUserRequest * const q);
+    AdminGetUserRequestPrivate(const AdminGetUserRequestPrivate &other,
+                                   AdminGetUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminGetUserRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatejobexecutionrequest.h"
 #include "updatejobexecutionrequest_p.h"
+#include "updatejobexecutionresponse.h"
+#include "iotjobsdataplanerequest_p.h"
+
+namespace AWS {
+namespace IoTJobsDataPlane {
+
+/**
+ * @class  UpdateJobExecutionRequest
+ *
+ * @brief  Implements IoTJobsDataPlane UpdateJobExecution requests.
+ *
+ * @see    IoTJobsDataPlaneClient::updateJobExecution
+ */
+
+/**
+ * @brief  Constructs a new UpdateJobExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateJobExecutionResponse::UpdateJobExecutionResponse(
+
+/**
+ * @brief  Constructs a new UpdateJobExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateJobExecutionRequest::UpdateJobExecutionRequest(const UpdateJobExecutionRequest &other)
+    : IoTJobsDataPlaneRequest(new UpdateJobExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateJobExecutionRequest object.
+ */
+UpdateJobExecutionRequest::UpdateJobExecutionRequest()
+    : IoTJobsDataPlaneRequest(new UpdateJobExecutionRequestPrivate(IoTJobsDataPlaneRequest::UpdateJobExecutionAction, this))
+{
+
+}
+
+bool UpdateJobExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateJobExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateJobExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTJobsDataPlaneClient::send
+ */
+AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateJobExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateJobExecutionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateJobExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobExecutionRequestPrivate object.
+ *
+ * @param  action  IoTJobsDataPlane action being performed.
+ * @param  q       Pointer to this object's public UpdateJobExecutionRequest instance.
+ */
+UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
+    const IoTJobsDataPlaneRequest::Action action, UpdateJobExecutionRequest * const q)
+    : UpdateJobExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateJobExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateJobExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateJobExecutionRequest instance.
+ */
+UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
+    const UpdateJobExecutionRequestPrivate &other, UpdateJobExecutionRequest * const q)
+    : UpdateJobExecutionPrivate(other, q)
+{
+
+}

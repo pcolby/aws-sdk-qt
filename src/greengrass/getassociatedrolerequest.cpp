@@ -19,3 +19,107 @@
 
 #include "getassociatedrolerequest.h"
 #include "getassociatedrolerequest_p.h"
+#include "getassociatedroleresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetAssociatedRoleRequest
+ *
+ * @brief  Implements Greengrass GetAssociatedRole requests.
+ *
+ * @see    GreengrassClient::getAssociatedRole
+ */
+
+/**
+ * @brief  Constructs a new GetAssociatedRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAssociatedRoleResponse::GetAssociatedRoleResponse(
+
+/**
+ * @brief  Constructs a new GetAssociatedRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAssociatedRoleRequest::GetAssociatedRoleRequest(const GetAssociatedRoleRequest &other)
+    : GreengrassRequest(new GetAssociatedRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAssociatedRoleRequest object.
+ */
+GetAssociatedRoleRequest::GetAssociatedRoleRequest()
+    : GreengrassRequest(new GetAssociatedRoleRequestPrivate(GreengrassRequest::GetAssociatedRoleAction, this))
+{
+
+}
+
+bool GetAssociatedRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAssociatedRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAssociatedRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAssociatedRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAssociatedRoleRequestPrivate
+ *
+ * @brief  Private implementation for GetAssociatedRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAssociatedRoleRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetAssociatedRoleRequest instance.
+ */
+GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
+    const GreengrassRequest::Action action, GetAssociatedRoleRequest * const q)
+    : GetAssociatedRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAssociatedRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAssociatedRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAssociatedRoleRequest instance.
+ */
+GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
+    const GetAssociatedRoleRequestPrivate &other, GetAssociatedRoleRequest * const q)
+    : GetAssociatedRolePrivate(other, q)
+{
+
+}

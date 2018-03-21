@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEREPOSITORYREQUEST_P_H
 #define QTAWS_CREATEREPOSITORYREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "createrepositoryrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class CreateRepositoryRequest;
+
+class QTAWS_EXPORT CreateRepositoryRequestPrivate : public CodeCommitPrivate {
+
+public:
+    CreateRepositoryRequestPrivate(const CodeCommit::Action action,
+                                   CreateRepositoryRequest * const q);
+    CreateRepositoryRequestPrivate(const CreateRepositoryRequestPrivate &other,
+                                   CreateRepositoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRepositoryRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTOPICATTRIBUTESREQUEST_P_H
 #define QTAWS_GETTOPICATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "gettopicattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetTopicAttributesRequest;
+
+class QTAWS_EXPORT GetTopicAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    GetTopicAttributesRequestPrivate(const SNS::Action action,
+                                   GetTopicAttributesRequest * const q);
+    GetTopicAttributesRequestPrivate(const GetTopicAttributesRequestPrivate &other,
+                                   GetTopicAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTopicAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSERVICEGRAPHREQUEST_H
 #define QTAWS_GETSERVICEGRAPHREQUEST_H
 
+#include "xrayrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetServiceGraphRequestPrivate;
+
+class QTAWS_EXPORT GetServiceGraphRequest : public XRayRequest {
+
+public:
+    GetServiceGraphRequest(const GetServiceGraphRequest &other);
+    GetServiceGraphRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetServiceGraphRequest)
+
+}
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGRAPHQLAPIREQUEST_P_H
 #define QTAWS_GETGRAPHQLAPIREQUEST_P_H
 
+#include "appsync_p.h"
+#include "getgraphqlapirequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class GetGraphqlApiRequest;
+
+class QTAWS_EXPORT GetGraphqlApiRequestPrivate : public AppSyncPrivate {
+
+public:
+    GetGraphqlApiRequestPrivate(const AppSync::Action action,
+                                   GetGraphqlApiRequest * const q);
+    GetGraphqlApiRequestPrivate(const GetGraphqlApiRequestPrivate &other,
+                                   GetGraphqlApiRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGraphqlApiRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

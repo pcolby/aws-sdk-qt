@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
+#include "sns_p.h"
+#include "deleteendpointrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class DeleteEndpointRequest;
+
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SNSPrivate {
+
+public:
+    DeleteEndpointRequestPrivate(const SNS::Action action,
+                                   DeleteEndpointRequest * const q);
+    DeleteEndpointRequestPrivate(const DeleteEndpointRequestPrivate &other,
+                                   DeleteEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEndpointRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESTREAMREQUEST_H
 #define QTAWS_DELETESTREAMREQUEST_H
 
+#include "kinesisvideorequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class DeleteStreamRequestPrivate;
+
+class QTAWS_EXPORT DeleteStreamRequest : public KinesisVideoRequest {
+
+public:
+    DeleteStreamRequest(const DeleteStreamRequest &other);
+    DeleteStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStreamRequest)
+
+}
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

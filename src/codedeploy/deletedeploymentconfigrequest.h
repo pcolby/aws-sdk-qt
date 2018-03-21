@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDEPLOYMENTCONFIGREQUEST_H
 #define QTAWS_DELETEDEPLOYMENTCONFIGREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class DeleteDeploymentConfigRequestPrivate;
+
+class QTAWS_EXPORT DeleteDeploymentConfigRequest : public CodeDeployRequest {
+
+public:
+    DeleteDeploymentConfigRequest(const DeleteDeploymentConfigRequest &other);
+    DeleteDeploymentConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDeploymentConfigRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

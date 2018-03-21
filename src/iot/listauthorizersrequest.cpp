@@ -19,3 +19,107 @@
 
 #include "listauthorizersrequest.h"
 #include "listauthorizersrequest_p.h"
+#include "listauthorizersresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListAuthorizersRequest
+ *
+ * @brief  Implements IoT ListAuthorizers requests.
+ *
+ * @see    IoTClient::listAuthorizers
+ */
+
+/**
+ * @brief  Constructs a new ListAuthorizersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAuthorizersResponse::ListAuthorizersResponse(
+
+/**
+ * @brief  Constructs a new ListAuthorizersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAuthorizersRequest::ListAuthorizersRequest(const ListAuthorizersRequest &other)
+    : IoTRequest(new ListAuthorizersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAuthorizersRequest object.
+ */
+ListAuthorizersRequest::ListAuthorizersRequest()
+    : IoTRequest(new ListAuthorizersRequestPrivate(IoTRequest::ListAuthorizersAction, this))
+{
+
+}
+
+bool ListAuthorizersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAuthorizersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAuthorizersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAuthorizersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAuthorizersRequestPrivate
+ *
+ * @brief  Private implementation for ListAuthorizersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAuthorizersRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListAuthorizersRequest instance.
+ */
+ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
+    const IoTRequest::Action action, ListAuthorizersRequest * const q)
+    : ListAuthorizersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAuthorizersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAuthorizersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAuthorizersRequest instance.
+ */
+ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
+    const ListAuthorizersRequestPrivate &other, ListAuthorizersRequest * const q)
+    : ListAuthorizersPrivate(other, q)
+{
+
+}

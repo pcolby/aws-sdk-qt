@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEQUEUEREQUEST_P_H
 #define QTAWS_DELETEQUEUEREQUEST_P_H
 
+#include "sqs_p.h"
+#include "deletequeuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class DeleteQueueRequest;
+
+class QTAWS_EXPORT DeleteQueueRequestPrivate : public SQSPrivate {
+
+public:
+    DeleteQueueRequestPrivate(const SQS::Action action,
+                                   DeleteQueueRequest * const q);
+    DeleteQueueRequestPrivate(const DeleteQueueRequestPrivate &other,
+                                   DeleteQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteQueueRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

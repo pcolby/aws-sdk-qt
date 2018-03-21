@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERVOLUMEREQUEST_P_H
 #define QTAWS_REGISTERVOLUMEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "registervolumerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RegisterVolumeRequest;
+
+class QTAWS_EXPORT RegisterVolumeRequestPrivate : public OpsWorksPrivate {
+
+public:
+    RegisterVolumeRequestPrivate(const OpsWorks::Action action,
+                                   RegisterVolumeRequest * const q);
+    RegisterVolumeRequestPrivate(const RegisterVolumeRequestPrivate &other,
+                                   RegisterVolumeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterVolumeRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

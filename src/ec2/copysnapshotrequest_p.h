@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYSNAPSHOTREQUEST_P_H
 #define QTAWS_COPYSNAPSHOTREQUEST_P_H
 
+#include "ec2_p.h"
+#include "copysnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopySnapshotRequest;
+
+class QTAWS_EXPORT CopySnapshotRequestPrivate : public EC2Private {
+
+public:
+    CopySnapshotRequestPrivate(const EC2::Action action,
+                                   CopySnapshotRequest * const q);
+    CopySnapshotRequestPrivate(const CopySnapshotRequestPrivate &other,
+                                   CopySnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopySnapshotRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSREQUEST_H
 #define QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ListAllowedNodeTypeModificationsRequestPrivate;
+
+class QTAWS_EXPORT ListAllowedNodeTypeModificationsRequest : public ElastiCacheRequest {
+
+public:
+    ListAllowedNodeTypeModificationsRequest(const ListAllowedNodeTypeModificationsRequest &other);
+    ListAllowedNodeTypeModificationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAllowedNodeTypeModificationsRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

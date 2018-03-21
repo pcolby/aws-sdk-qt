@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKRESULTREQUEST_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKRESULTREQUEST_H
 
+#include "supportrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeTrustedAdvisorCheckResultRequestPrivate;
+
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckResultRequest : public SupportRequest {
+
+public:
+    DescribeTrustedAdvisorCheckResultRequest(const DescribeTrustedAdvisorCheckResultRequest &other);
+    DescribeTrustedAdvisorCheckResultRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTrustedAdvisorCheckResultRequest)
+
+}
+
+} // namespace Support
+} // namespace AWS
+
 #endif

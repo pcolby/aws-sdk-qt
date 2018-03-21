@@ -20,4 +20,32 @@
 #ifndef QTAWS_UNTAGQUEUEREQUEST_H
 #define QTAWS_UNTAGQUEUEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class UntagQueueRequestPrivate;
+
+class QTAWS_EXPORT UntagQueueRequest : public SQSRequest {
+
+public:
+    UntagQueueRequest(const UntagQueueRequest &other);
+    UntagQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UntagQueueRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

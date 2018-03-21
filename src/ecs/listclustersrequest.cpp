@@ -19,3 +19,107 @@
 
 #include "listclustersrequest.h"
 #include "listclustersrequest_p.h"
+#include "listclustersresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListClustersRequest
+ *
+ * @brief  Implements ECS ListClusters requests.
+ *
+ * @see    ECSClient::listClusters
+ */
+
+/**
+ * @brief  Constructs a new ListClustersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListClustersResponse::ListClustersResponse(
+
+/**
+ * @brief  Constructs a new ListClustersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListClustersRequest::ListClustersRequest(const ListClustersRequest &other)
+    : ECSRequest(new ListClustersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListClustersRequest object.
+ */
+ListClustersRequest::ListClustersRequest()
+    : ECSRequest(new ListClustersRequestPrivate(ECSRequest::ListClustersAction, this))
+{
+
+}
+
+bool ListClustersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListClustersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListClustersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * ListClustersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListClustersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListClustersRequestPrivate
+ *
+ * @brief  Private implementation for ListClustersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClustersRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public ListClustersRequest instance.
+ */
+ListClustersRequestPrivate::ListClustersRequestPrivate(
+    const ECSRequest::Action action, ListClustersRequest * const q)
+    : ListClustersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListClustersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListClustersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListClustersRequest instance.
+ */
+ListClustersRequestPrivate::ListClustersRequestPrivate(
+    const ListClustersRequestPrivate &other, ListClustersRequest * const q)
+    : ListClustersPrivate(other, q)
+{
+
+}

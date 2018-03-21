@@ -20,4 +20,32 @@
 #ifndef QTAWS_TRANSFERDOMAINREQUEST_H
 #define QTAWS_TRANSFERDOMAINREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class TransferDomainRequestPrivate;
+
+class QTAWS_EXPORT TransferDomainRequest : public Route53DomainsRequest {
+
+public:
+    TransferDomainRequest(const TransferDomainRequest &other);
+    TransferDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TransferDomainRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

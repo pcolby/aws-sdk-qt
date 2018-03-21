@@ -19,3 +19,107 @@
 
 #include "describebudgetsrequest.h"
 #include "describebudgetsrequest_p.h"
+#include "describebudgetsresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeBudgetsRequest
+ *
+ * @brief  Implements Budgets DescribeBudgets requests.
+ *
+ * @see    BudgetsClient::describeBudgets
+ */
+
+/**
+ * @brief  Constructs a new DescribeBudgetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBudgetsResponse::DescribeBudgetsResponse(
+
+/**
+ * @brief  Constructs a new DescribeBudgetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeBudgetsRequest::DescribeBudgetsRequest(const DescribeBudgetsRequest &other)
+    : BudgetsRequest(new DescribeBudgetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeBudgetsRequest object.
+ */
+DescribeBudgetsRequest::DescribeBudgetsRequest()
+    : BudgetsRequest(new DescribeBudgetsRequestPrivate(BudgetsRequest::DescribeBudgetsAction, this))
+{
+
+}
+
+bool DescribeBudgetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeBudgetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeBudgetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * DescribeBudgetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeBudgetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBudgetsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeBudgetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBudgetsRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public DescribeBudgetsRequest instance.
+ */
+DescribeBudgetsRequestPrivate::DescribeBudgetsRequestPrivate(
+    const BudgetsRequest::Action action, DescribeBudgetsRequest * const q)
+    : DescribeBudgetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBudgetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeBudgetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeBudgetsRequest instance.
+ */
+DescribeBudgetsRequestPrivate::DescribeBudgetsRequestPrivate(
+    const DescribeBudgetsRequestPrivate &other, DescribeBudgetsRequest * const q)
+    : DescribeBudgetsPrivate(other, q)
+{
+
+}

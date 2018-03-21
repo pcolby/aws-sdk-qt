@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTVPCENDPOINTCONNECTIONSREQUEST_H
 #define QTAWS_ACCEPTVPCENDPOINTCONNECTIONSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AcceptVpcEndpointConnectionsRequestPrivate;
+
+class QTAWS_EXPORT AcceptVpcEndpointConnectionsRequest : public EC2Request {
+
+public:
+    AcceptVpcEndpointConnectionsRequest(const AcceptVpcEndpointConnectionsRequest &other);
+    AcceptVpcEndpointConnectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptVpcEndpointConnectionsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

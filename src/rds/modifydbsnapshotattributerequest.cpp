@@ -19,3 +19,107 @@
 
 #include "modifydbsnapshotattributerequest.h"
 #include "modifydbsnapshotattributerequest_p.h"
+#include "modifydbsnapshotattributeresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBSnapshotAttributeRequest
+ *
+ * @brief  Implements RDS ModifyDBSnapshotAttribute requests.
+ *
+ * @see    RDSClient::modifyDBSnapshotAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBSnapshotAttributeResponse::ModifyDBSnapshotAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyDBSnapshotAttributeRequest::ModifyDBSnapshotAttributeRequest(const ModifyDBSnapshotAttributeRequest &other)
+    : RDSRequest(new ModifyDBSnapshotAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotAttributeRequest object.
+ */
+ModifyDBSnapshotAttributeRequest::ModifyDBSnapshotAttributeRequest()
+    : RDSRequest(new ModifyDBSnapshotAttributeRequestPrivate(RDSRequest::ModifyDBSnapshotAttributeAction, this))
+{
+
+}
+
+bool ModifyDBSnapshotAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyDBSnapshotAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyDBSnapshotAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ModifyDBSnapshotAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyDBSnapshotAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBSnapshotAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifyDBSnapshotAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBSnapshotAttributeRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ModifyDBSnapshotAttributeRequest instance.
+ */
+ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
+    const RDSRequest::Action action, ModifyDBSnapshotAttributeRequest * const q)
+    : ModifyDBSnapshotAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBSnapshotAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyDBSnapshotAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyDBSnapshotAttributeRequest instance.
+ */
+ModifyDBSnapshotAttributeRequestPrivate::ModifyDBSnapshotAttributeRequestPrivate(
+    const ModifyDBSnapshotAttributeRequestPrivate &other, ModifyDBSnapshotAttributeRequest * const q)
+    : ModifyDBSnapshotAttributePrivate(other, q)
+{
+
+}

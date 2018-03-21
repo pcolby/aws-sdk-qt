@@ -19,3 +19,107 @@
 
 #include "detachobjectrequest.h"
 #include "detachobjectrequest_p.h"
+#include "detachobjectresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  DetachObjectRequest
+ *
+ * @brief  Implements CloudDirectory DetachObject requests.
+ *
+ * @see    CloudDirectoryClient::detachObject
+ */
+
+/**
+ * @brief  Constructs a new DetachObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachObjectResponse::DetachObjectResponse(
+
+/**
+ * @brief  Constructs a new DetachObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachObjectRequest::DetachObjectRequest(const DetachObjectRequest &other)
+    : CloudDirectoryRequest(new DetachObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachObjectRequest object.
+ */
+DetachObjectRequest::DetachObjectRequest()
+    : CloudDirectoryRequest(new DetachObjectRequestPrivate(CloudDirectoryRequest::DetachObjectAction, this))
+{
+
+}
+
+bool DetachObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachObjectRequestPrivate
+ *
+ * @brief  Private implementation for DetachObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachObjectRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public DetachObjectRequest instance.
+ */
+DetachObjectRequestPrivate::DetachObjectRequestPrivate(
+    const CloudDirectoryRequest::Action action, DetachObjectRequest * const q)
+    : DetachObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachObjectRequest instance.
+ */
+DetachObjectRequestPrivate::DetachObjectRequestPrivate(
+    const DetachObjectRequestPrivate &other, DetachObjectRequest * const q)
+    : DetachObjectPrivate(other, q)
+{
+
+}

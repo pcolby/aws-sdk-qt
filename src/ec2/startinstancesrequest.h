@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTINSTANCESREQUEST_H
 #define QTAWS_STARTINSTANCESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class StartInstancesRequestPrivate;
+
+class QTAWS_EXPORT StartInstancesRequest : public EC2Request {
+
+public:
+    StartInstancesRequest(const StartInstancesRequest &other);
+    StartInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartInstancesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

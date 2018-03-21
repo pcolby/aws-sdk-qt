@@ -20,4 +20,29 @@
 #ifndef QTAWS_RETRIEVEENVIRONMENTINFOREQUEST_P_H
 #define QTAWS_RETRIEVEENVIRONMENTINFOREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "retrieveenvironmentinforequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class RetrieveEnvironmentInfoRequest;
+
+class QTAWS_EXPORT RetrieveEnvironmentInfoRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    RetrieveEnvironmentInfoRequestPrivate(const ElasticBeanstalk::Action action,
+                                   RetrieveEnvironmentInfoRequest * const q);
+    RetrieveEnvironmentInfoRequestPrivate(const RetrieveEnvironmentInfoRequestPrivate &other,
+                                   RetrieveEnvironmentInfoRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RetrieveEnvironmentInfoRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

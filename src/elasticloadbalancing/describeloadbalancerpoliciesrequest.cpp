@@ -19,3 +19,107 @@
 
 #include "describeloadbalancerpoliciesrequest.h"
 #include "describeloadbalancerpoliciesrequest_p.h"
+#include "describeloadbalancerpoliciesresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  DescribeLoadBalancerPoliciesRequest
+ *
+ * @brief  Implements ElasticLoadBalancing DescribeLoadBalancerPolicies requests.
+ *
+ * @see    ElasticLoadBalancingClient::describeLoadBalancerPolicies
+ */
+
+/**
+ * @brief  Constructs a new DescribeLoadBalancerPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoadBalancerPoliciesResponse::DescribeLoadBalancerPoliciesResponse(
+
+/**
+ * @brief  Constructs a new DescribeLoadBalancerPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLoadBalancerPoliciesRequest::DescribeLoadBalancerPoliciesRequest(const DescribeLoadBalancerPoliciesRequest &other)
+    : ElasticLoadBalancingRequest(new DescribeLoadBalancerPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLoadBalancerPoliciesRequest object.
+ */
+DescribeLoadBalancerPoliciesRequest::DescribeLoadBalancerPoliciesRequest()
+    : ElasticLoadBalancingRequest(new DescribeLoadBalancerPoliciesRequestPrivate(ElasticLoadBalancingRequest::DescribeLoadBalancerPoliciesAction, this))
+{
+
+}
+
+bool DescribeLoadBalancerPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLoadBalancerPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLoadBalancerPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * DescribeLoadBalancerPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLoadBalancerPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoadBalancerPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLoadBalancerPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoadBalancerPoliciesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public DescribeLoadBalancerPoliciesRequest instance.
+ */
+DescribeLoadBalancerPoliciesRequestPrivate::DescribeLoadBalancerPoliciesRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, DescribeLoadBalancerPoliciesRequest * const q)
+    : DescribeLoadBalancerPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoadBalancerPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLoadBalancerPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLoadBalancerPoliciesRequest instance.
+ */
+DescribeLoadBalancerPoliciesRequestPrivate::DescribeLoadBalancerPoliciesRequestPrivate(
+    const DescribeLoadBalancerPoliciesRequestPrivate &other, DescribeLoadBalancerPoliciesRequest * const q)
+    : DescribeLoadBalancerPoliciesPrivate(other, q)
+{
+
+}

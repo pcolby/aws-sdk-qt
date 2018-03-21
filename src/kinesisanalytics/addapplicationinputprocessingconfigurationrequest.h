@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_H
 #define QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationInputProcessingConfigurationRequestPrivate;
+
+class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequest : public KinesisAnalyticsRequest {
+
+public:
+    AddApplicationInputProcessingConfigurationRequest(const AddApplicationInputProcessingConfigurationRequest &other);
+    AddApplicationInputProcessingConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddApplicationInputProcessingConfigurationRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

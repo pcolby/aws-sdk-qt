@@ -19,3 +19,107 @@
 
 #include "getgamesessionlogurlrequest.h"
 #include "getgamesessionlogurlrequest_p.h"
+#include "getgamesessionlogurlresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  GetGameSessionLogUrlRequest
+ *
+ * @brief  Implements GameLift GetGameSessionLogUrl requests.
+ *
+ * @see    GameLiftClient::getGameSessionLogUrl
+ */
+
+/**
+ * @brief  Constructs a new GetGameSessionLogUrlResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
+
+/**
+ * @brief  Constructs a new GetGameSessionLogUrlRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetGameSessionLogUrlRequest::GetGameSessionLogUrlRequest(const GetGameSessionLogUrlRequest &other)
+    : GameLiftRequest(new GetGameSessionLogUrlRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetGameSessionLogUrlRequest object.
+ */
+GetGameSessionLogUrlRequest::GetGameSessionLogUrlRequest()
+    : GameLiftRequest(new GetGameSessionLogUrlRequestPrivate(GameLiftRequest::GetGameSessionLogUrlAction, this))
+{
+
+}
+
+bool GetGameSessionLogUrlRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetGameSessionLogUrlResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetGameSessionLogUrlResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * GetGameSessionLogUrlRequest::response(QNetworkReply * const reply) const
+{
+    return new GetGameSessionLogUrlResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGameSessionLogUrlRequestPrivate
+ *
+ * @brief  Private implementation for GetGameSessionLogUrlRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGameSessionLogUrlRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public GetGameSessionLogUrlRequest instance.
+ */
+GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
+    const GameLiftRequest::Action action, GetGameSessionLogUrlRequest * const q)
+    : GetGameSessionLogUrlPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGameSessionLogUrlRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetGameSessionLogUrlRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetGameSessionLogUrlRequest instance.
+ */
+GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
+    const GetGameSessionLogUrlRequestPrivate &other, GetGameSessionLogUrlRequest * const q)
+    : GetGameSessionLogUrlPrivate(other, q)
+{
+
+}

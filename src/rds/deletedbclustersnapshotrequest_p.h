@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDBCLUSTERSNAPSHOTREQUEST_P_H
 #define QTAWS_DELETEDBCLUSTERSNAPSHOTREQUEST_P_H
 
+#include "rds_p.h"
+#include "deletedbclustersnapshotrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DeleteDBClusterSnapshotRequest;
+
+class QTAWS_EXPORT DeleteDBClusterSnapshotRequestPrivate : public RDSPrivate {
+
+public:
+    DeleteDBClusterSnapshotRequestPrivate(const RDS::Action action,
+                                   DeleteDBClusterSnapshotRequest * const q);
+    DeleteDBClusterSnapshotRequestPrivate(const DeleteDBClusterSnapshotRequestPrivate &other,
+                                   DeleteDBClusterSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDBClusterSnapshotRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEKEYDESCRIPTIONREQUEST_H
 #define QTAWS_UPDATEKEYDESCRIPTIONREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UpdateKeyDescriptionRequestPrivate;
+
+class QTAWS_EXPORT UpdateKeyDescriptionRequest : public KMSRequest {
+
+public:
+    UpdateKeyDescriptionRequest(const UpdateKeyDescriptionRequest &other);
+    UpdateKeyDescriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateKeyDescriptionRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

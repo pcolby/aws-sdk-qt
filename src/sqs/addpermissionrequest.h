@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDPERMISSIONREQUEST_H
 #define QTAWS_ADDPERMISSIONREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class AddPermissionRequestPrivate;
+
+class QTAWS_EXPORT AddPermissionRequest : public SQSRequest {
+
+public:
+    AddPermissionRequest(const AddPermissionRequest &other);
+    AddPermissionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddPermissionRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

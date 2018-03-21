@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTCONFIGRULEREQUEST_H
 #define QTAWS_PUTCONFIGRULEREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutConfigRuleRequestPrivate;
+
+class QTAWS_EXPORT PutConfigRuleRequest : public ConfigServiceRequest {
+
+public:
+    PutConfigRuleRequest(const PutConfigRuleRequest &other);
+    PutConfigRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutConfigRuleRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

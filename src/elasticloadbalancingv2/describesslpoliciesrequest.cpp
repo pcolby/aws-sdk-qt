@@ -19,3 +19,107 @@
 
 #include "describesslpoliciesrequest.h"
 #include "describesslpoliciesrequest_p.h"
+#include "describesslpoliciesresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  DescribeSSLPoliciesRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 DescribeSSLPolicies requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::describeSSLPolicies
+ */
+
+/**
+ * @brief  Constructs a new DescribeSSLPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
+
+/**
+ * @brief  Constructs a new DescribeSSLPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSSLPoliciesRequest::DescribeSSLPoliciesRequest(const DescribeSSLPoliciesRequest &other)
+    : ElasticLoadBalancingv2Request(new DescribeSSLPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSSLPoliciesRequest object.
+ */
+DescribeSSLPoliciesRequest::DescribeSSLPoliciesRequest()
+    : ElasticLoadBalancingv2Request(new DescribeSSLPoliciesRequestPrivate(ElasticLoadBalancingv2Request::DescribeSSLPoliciesAction, this))
+{
+
+}
+
+bool DescribeSSLPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSSLPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSSLPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * DescribeSSLPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSSLPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSSLPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSSLPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSSLPoliciesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSSLPoliciesRequest instance.
+ */
+DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, DescribeSSLPoliciesRequest * const q)
+    : DescribeSSLPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSSLPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSSLPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSSLPoliciesRequest instance.
+ */
+DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
+    const DescribeSSLPoliciesRequestPrivate &other, DescribeSSLPoliciesRequest * const q)
+    : DescribeSSLPoliciesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRULEGROUPREQUEST_H
 #define QTAWS_GETRULEGROUPREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetRuleGroupRequestPrivate;
+
+class QTAWS_EXPORT GetRuleGroupRequest : public WAFRegionalRequest {
+
+public:
+    GetRuleGroupRequest(const GetRuleGroupRequest &other);
+    GetRuleGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRuleGroupRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

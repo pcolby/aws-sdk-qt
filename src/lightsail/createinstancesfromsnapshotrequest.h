@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEINSTANCESFROMSNAPSHOTREQUEST_H
 #define QTAWS_CREATEINSTANCESFROMSNAPSHOTREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CreateInstancesFromSnapshotRequestPrivate;
+
+class QTAWS_EXPORT CreateInstancesFromSnapshotRequest : public LightsailRequest {
+
+public:
+    CreateInstancesFromSnapshotRequest(const CreateInstancesFromSnapshotRequest &other);
+    CreateInstancesFromSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateInstancesFromSnapshotRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

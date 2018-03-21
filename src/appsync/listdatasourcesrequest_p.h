@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDATASOURCESREQUEST_P_H
 #define QTAWS_LISTDATASOURCESREQUEST_P_H
 
+#include "appsync_p.h"
+#include "listdatasourcesrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListDataSourcesRequest;
+
+class QTAWS_EXPORT ListDataSourcesRequestPrivate : public AppSyncPrivate {
+
+public:
+    ListDataSourcesRequestPrivate(const AppSync::Action action,
+                                   ListDataSourcesRequest * const q);
+    ListDataSourcesRequestPrivate(const ListDataSourcesRequestPrivate &other,
+                                   ListDataSourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDataSourcesRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

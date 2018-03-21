@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_H
 #define QTAWS_DELETEPROJECTREQUEST_H
 
+#include "mobilerequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class DeleteProjectRequestPrivate;
+
+class QTAWS_EXPORT DeleteProjectRequest : public MobileRequest {
+
+public:
+    DeleteProjectRequest(const DeleteProjectRequest &other);
+    DeleteProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProjectRequest)
+
+}
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

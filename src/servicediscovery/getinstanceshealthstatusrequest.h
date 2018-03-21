@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETINSTANCESHEALTHSTATUSREQUEST_H
 #define QTAWS_GETINSTANCESHEALTHSTATUSREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class GetInstancesHealthStatusRequestPrivate;
+
+class QTAWS_EXPORT GetInstancesHealthStatusRequest : public ServiceDiscoveryRequest {
+
+public:
+    GetInstancesHealthStatusRequest(const GetInstancesHealthStatusRequest &other);
+    GetInstancesHealthStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetInstancesHealthStatusRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

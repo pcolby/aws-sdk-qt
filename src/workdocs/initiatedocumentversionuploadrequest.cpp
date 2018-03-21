@@ -19,3 +19,107 @@
 
 #include "initiatedocumentversionuploadrequest.h"
 #include "initiatedocumentversionuploadrequest_p.h"
+#include "initiatedocumentversionuploadresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  InitiateDocumentVersionUploadRequest
+ *
+ * @brief  Implements WorkDocs InitiateDocumentVersionUpload requests.
+ *
+ * @see    WorkDocsClient::initiateDocumentVersionUpload
+ */
+
+/**
+ * @brief  Constructs a new InitiateDocumentVersionUploadResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateDocumentVersionUploadResponse::InitiateDocumentVersionUploadResponse(
+
+/**
+ * @brief  Constructs a new InitiateDocumentVersionUploadRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitiateDocumentVersionUploadRequest::InitiateDocumentVersionUploadRequest(const InitiateDocumentVersionUploadRequest &other)
+    : WorkDocsRequest(new InitiateDocumentVersionUploadRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitiateDocumentVersionUploadRequest object.
+ */
+InitiateDocumentVersionUploadRequest::InitiateDocumentVersionUploadRequest()
+    : WorkDocsRequest(new InitiateDocumentVersionUploadRequestPrivate(WorkDocsRequest::InitiateDocumentVersionUploadAction, this))
+{
+
+}
+
+bool InitiateDocumentVersionUploadRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitiateDocumentVersionUploadResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitiateDocumentVersionUploadResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * InitiateDocumentVersionUploadRequest::response(QNetworkReply * const reply) const
+{
+    return new InitiateDocumentVersionUploadResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateDocumentVersionUploadRequestPrivate
+ *
+ * @brief  Private implementation for InitiateDocumentVersionUploadRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateDocumentVersionUploadRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public InitiateDocumentVersionUploadRequest instance.
+ */
+InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
+    const WorkDocsRequest::Action action, InitiateDocumentVersionUploadRequest * const q)
+    : InitiateDocumentVersionUploadPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateDocumentVersionUploadRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitiateDocumentVersionUploadRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitiateDocumentVersionUploadRequest instance.
+ */
+InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
+    const InitiateDocumentVersionUploadRequestPrivate &other, InitiateDocumentVersionUploadRequest * const q)
+    : InitiateDocumentVersionUploadPrivate(other, q)
+{
+
+}

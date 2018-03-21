@@ -19,3 +19,107 @@
 
 #include "enabledirectoryrequest.h"
 #include "enabledirectoryrequest_p.h"
+#include "enabledirectoryresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  EnableDirectoryRequest
+ *
+ * @brief  Implements CloudDirectory EnableDirectory requests.
+ *
+ * @see    CloudDirectoryClient::enableDirectory
+ */
+
+/**
+ * @brief  Constructs a new EnableDirectoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableDirectoryResponse::EnableDirectoryResponse(
+
+/**
+ * @brief  Constructs a new EnableDirectoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableDirectoryRequest::EnableDirectoryRequest(const EnableDirectoryRequest &other)
+    : CloudDirectoryRequest(new EnableDirectoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableDirectoryRequest object.
+ */
+EnableDirectoryRequest::EnableDirectoryRequest()
+    : CloudDirectoryRequest(new EnableDirectoryRequestPrivate(CloudDirectoryRequest::EnableDirectoryAction, this))
+{
+
+}
+
+bool EnableDirectoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableDirectoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableDirectoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * EnableDirectoryRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableDirectoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableDirectoryRequestPrivate
+ *
+ * @brief  Private implementation for EnableDirectoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableDirectoryRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public EnableDirectoryRequest instance.
+ */
+EnableDirectoryRequestPrivate::EnableDirectoryRequestPrivate(
+    const CloudDirectoryRequest::Action action, EnableDirectoryRequest * const q)
+    : EnableDirectoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableDirectoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableDirectoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableDirectoryRequest instance.
+ */
+EnableDirectoryRequestPrivate::EnableDirectoryRequestPrivate(
+    const EnableDirectoryRequestPrivate &other, EnableDirectoryRequest * const q)
+    : EnableDirectoryPrivate(other, q)
+{
+
+}

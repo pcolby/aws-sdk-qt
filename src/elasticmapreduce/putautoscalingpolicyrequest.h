@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYREQUEST_H
 #define QTAWS_PUTAUTOSCALINGPOLICYREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class PutAutoScalingPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutAutoScalingPolicyRequest : public EMRRequest {
+
+public:
+    PutAutoScalingPolicyRequest(const PutAutoScalingPolicyRequest &other);
+    PutAutoScalingPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutAutoScalingPolicyRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

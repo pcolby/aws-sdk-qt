@@ -19,3 +19,107 @@
 
 #include "describemovingaddressesrequest.h"
 #include "describemovingaddressesrequest_p.h"
+#include "describemovingaddressesresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeMovingAddressesRequest
+ *
+ * @brief  Implements EC2 DescribeMovingAddresses requests.
+ *
+ * @see    EC2Client::describeMovingAddresses
+ */
+
+/**
+ * @brief  Constructs a new DescribeMovingAddressesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
+
+/**
+ * @brief  Constructs a new DescribeMovingAddressesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMovingAddressesRequest::DescribeMovingAddressesRequest(const DescribeMovingAddressesRequest &other)
+    : EC2Request(new DescribeMovingAddressesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMovingAddressesRequest object.
+ */
+DescribeMovingAddressesRequest::DescribeMovingAddressesRequest()
+    : EC2Request(new DescribeMovingAddressesRequestPrivate(EC2Request::DescribeMovingAddressesAction, this))
+{
+
+}
+
+bool DescribeMovingAddressesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMovingAddressesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMovingAddressesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeMovingAddressesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMovingAddressesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMovingAddressesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMovingAddressesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeMovingAddressesRequest instance.
+ */
+DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
+    const EC2Request::Action action, DescribeMovingAddressesRequest * const q)
+    : DescribeMovingAddressesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMovingAddressesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMovingAddressesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMovingAddressesRequest instance.
+ */
+DescribeMovingAddressesRequestPrivate::DescribeMovingAddressesRequestPrivate(
+    const DescribeMovingAddressesRequestPrivate &other, DescribeMovingAddressesRequest * const q)
+    : DescribeMovingAddressesPrivate(other, q)
+{
+
+}

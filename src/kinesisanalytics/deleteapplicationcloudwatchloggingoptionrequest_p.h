@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 
+#include "kinesisanalytics_p.h"
+#include "deleteapplicationcloudwatchloggingoptionrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationCloudWatchLoggingOptionRequest;
+
+class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsPrivate {
+
+public:
+    DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalytics::Action action,
+                                   DeleteApplicationCloudWatchLoggingOptionRequest * const q);
+    DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const DeleteApplicationCloudWatchLoggingOptionRequestPrivate &other,
+                                   DeleteApplicationCloudWatchLoggingOptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationCloudWatchLoggingOptionRequest)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSMSCHANNELREQUEST_H
 #define QTAWS_GETSMSCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetSmsChannelRequestPrivate;
+
+class QTAWS_EXPORT GetSmsChannelRequest : public PinpointRequest {
+
+public:
+    GetSmsChannelRequest(const GetSmsChannelRequest &other);
+    GetSmsChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSmsChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

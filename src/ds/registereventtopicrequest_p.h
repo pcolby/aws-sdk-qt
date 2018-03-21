@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTEREVENTTOPICREQUEST_P_H
 #define QTAWS_REGISTEREVENTTOPICREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "registereventtopicrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class RegisterEventTopicRequest;
+
+class QTAWS_EXPORT RegisterEventTopicRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    RegisterEventTopicRequestPrivate(const DirectoryService::Action action,
+                                   RegisterEventTopicRequest * const q);
+    RegisterEventTopicRequestPrivate(const RegisterEventTopicRequestPrivate &other,
+                                   RegisterEventTopicRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterEventTopicRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTSUPPORTDATAEXPORTREQUEST_H
 #define QTAWS_STARTSUPPORTDATAEXPORTREQUEST_H
 
+#include "marketplacecommerceanalyticsrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceCommerceAnalytics {
+
+class StartSupportDataExportRequestPrivate;
+
+class QTAWS_EXPORT StartSupportDataExportRequest : public MarketplaceCommerceAnalyticsRequest {
+
+public:
+    StartSupportDataExportRequest(const StartSupportDataExportRequest &other);
+    StartSupportDataExportRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartSupportDataExportRequest)
+
+}
+
+} // namespace MarketplaceCommerceAnalytics
+} // namespace AWS
+
 #endif

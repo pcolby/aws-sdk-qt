@@ -19,3 +19,107 @@
 
 #include "runtaskrequest.h"
 #include "runtaskrequest_p.h"
+#include "runtaskresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  RunTaskRequest
+ *
+ * @brief  Implements ECS RunTask requests.
+ *
+ * @see    ECSClient::runTask
+ */
+
+/**
+ * @brief  Constructs a new RunTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RunTaskResponse::RunTaskResponse(
+
+/**
+ * @brief  Constructs a new RunTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RunTaskRequest::RunTaskRequest(const RunTaskRequest &other)
+    : ECSRequest(new RunTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RunTaskRequest object.
+ */
+RunTaskRequest::RunTaskRequest()
+    : ECSRequest(new RunTaskRequestPrivate(ECSRequest::RunTaskAction, this))
+{
+
+}
+
+bool RunTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RunTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RunTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new RunTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RunTaskRequestPrivate
+ *
+ * @brief  Private implementation for RunTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RunTaskRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public RunTaskRequest instance.
+ */
+RunTaskRequestPrivate::RunTaskRequestPrivate(
+    const ECSRequest::Action action, RunTaskRequest * const q)
+    : RunTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RunTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RunTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RunTaskRequest instance.
+ */
+RunTaskRequestPrivate::RunTaskRequestPrivate(
+    const RunTaskRequestPrivate &other, RunTaskRequest * const q)
+    : RunTaskPrivate(other, q)
+{
+
+}

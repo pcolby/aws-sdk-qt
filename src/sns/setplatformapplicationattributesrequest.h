@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_H
 #define QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetPlatformApplicationAttributesRequestPrivate;
+
+class QTAWS_EXPORT SetPlatformApplicationAttributesRequest : public SNSRequest {
+
+public:
+    SetPlatformApplicationAttributesRequest(const SetPlatformApplicationAttributesRequest &other);
+    SetPlatformApplicationAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetPlatformApplicationAttributesRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

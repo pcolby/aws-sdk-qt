@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLEKEYREQUEST_H
 #define QTAWS_DISABLEKEYREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DisableKeyRequestPrivate;
+
+class QTAWS_EXPORT DisableKeyRequest : public KMSRequest {
+
+public:
+    DisableKeyRequest(const DisableKeyRequest &other);
+    DisableKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableKeyRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

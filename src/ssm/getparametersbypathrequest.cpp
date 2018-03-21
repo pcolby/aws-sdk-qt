@@ -19,3 +19,107 @@
 
 #include "getparametersbypathrequest.h"
 #include "getparametersbypathrequest_p.h"
+#include "getparametersbypathresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetParametersByPathRequest
+ *
+ * @brief  Implements SSM GetParametersByPath requests.
+ *
+ * @see    SSMClient::getParametersByPath
+ */
+
+/**
+ * @brief  Constructs a new GetParametersByPathResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetParametersByPathResponse::GetParametersByPathResponse(
+
+/**
+ * @brief  Constructs a new GetParametersByPathRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetParametersByPathRequest::GetParametersByPathRequest(const GetParametersByPathRequest &other)
+    : SSMRequest(new GetParametersByPathRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetParametersByPathRequest object.
+ */
+GetParametersByPathRequest::GetParametersByPathRequest()
+    : SSMRequest(new GetParametersByPathRequestPrivate(SSMRequest::GetParametersByPathAction, this))
+{
+
+}
+
+bool GetParametersByPathRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetParametersByPathResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetParametersByPathResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetParametersByPathRequest::response(QNetworkReply * const reply) const
+{
+    return new GetParametersByPathResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetParametersByPathRequestPrivate
+ *
+ * @brief  Private implementation for GetParametersByPathRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersByPathRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetParametersByPathRequest instance.
+ */
+GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
+    const SSMRequest::Action action, GetParametersByPathRequest * const q)
+    : GetParametersByPathPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetParametersByPathRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetParametersByPathRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetParametersByPathRequest instance.
+ */
+GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
+    const GetParametersByPathRequestPrivate &other, GetParametersByPathRequest * const q)
+    : GetParametersByPathPrivate(other, q)
+{
+
+}

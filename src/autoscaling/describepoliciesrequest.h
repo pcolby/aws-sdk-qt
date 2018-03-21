@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPOLICIESREQUEST_H
 #define QTAWS_DESCRIBEPOLICIESREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribePoliciesRequestPrivate;
+
+class QTAWS_EXPORT DescribePoliciesRequest : public AutoScalingRequest {
+
+public:
+    DescribePoliciesRequest(const DescribePoliciesRequest &other);
+    DescribePoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePoliciesRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

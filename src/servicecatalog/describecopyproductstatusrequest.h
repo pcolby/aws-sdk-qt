@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECOPYPRODUCTSTATUSREQUEST_H
 #define QTAWS_DESCRIBECOPYPRODUCTSTATUSREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeCopyProductStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeCopyProductStatusRequest : public ServiceCatalogRequest {
+
+public:
+    DescribeCopyProductStatusRequest(const DescribeCopyProductStatusRequest &other);
+    DescribeCopyProductStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCopyProductStatusRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

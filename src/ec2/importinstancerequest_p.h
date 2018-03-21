@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTINSTANCEREQUEST_P_H
 #define QTAWS_IMPORTINSTANCEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "importinstancerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportInstanceRequest;
+
+class QTAWS_EXPORT ImportInstanceRequestPrivate : public EC2Private {
+
+public:
+    ImportInstanceRequestPrivate(const EC2::Action action,
+                                   ImportInstanceRequest * const q);
+    ImportInstanceRequestPrivate(const ImportInstanceRequestPrivate &other,
+                                   ImportInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportInstanceRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

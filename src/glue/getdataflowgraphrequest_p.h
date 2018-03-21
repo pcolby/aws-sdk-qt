@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDATAFLOWGRAPHREQUEST_P_H
 #define QTAWS_GETDATAFLOWGRAPHREQUEST_P_H
 
+#include "glue_p.h"
+#include "getdataflowgraphrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetDataflowGraphRequest;
+
+class QTAWS_EXPORT GetDataflowGraphRequestPrivate : public GluePrivate {
+
+public:
+    GetDataflowGraphRequestPrivate(const Glue::Action action,
+                                   GetDataflowGraphRequest * const q);
+    GetDataflowGraphRequestPrivate(const GetDataflowGraphRequestPrivate &other,
+                                   GetDataflowGraphRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataflowGraphRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

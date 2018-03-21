@@ -19,3 +19,107 @@
 
 #include "getintegrationresponserequest.h"
 #include "getintegrationresponserequest_p.h"
+#include "getintegrationresponseresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetIntegrationResponseRequest
+ *
+ * @brief  Implements APIGateway GetIntegrationResponse requests.
+ *
+ * @see    APIGatewayClient::getIntegrationResponse
+ */
+
+/**
+ * @brief  Constructs a new GetIntegrationResponseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntegrationResponseResponse::GetIntegrationResponseResponse(
+
+/**
+ * @brief  Constructs a new GetIntegrationResponseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIntegrationResponseRequest::GetIntegrationResponseRequest(const GetIntegrationResponseRequest &other)
+    : APIGatewayRequest(new GetIntegrationResponseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIntegrationResponseRequest object.
+ */
+GetIntegrationResponseRequest::GetIntegrationResponseRequest()
+    : APIGatewayRequest(new GetIntegrationResponseRequestPrivate(APIGatewayRequest::GetIntegrationResponseAction, this))
+{
+
+}
+
+bool GetIntegrationResponseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIntegrationResponseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIntegrationResponseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetIntegrationResponseRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIntegrationResponseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntegrationResponseRequestPrivate
+ *
+ * @brief  Private implementation for GetIntegrationResponseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntegrationResponseRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetIntegrationResponseRequest instance.
+ */
+GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
+    const APIGatewayRequest::Action action, GetIntegrationResponseRequest * const q)
+    : GetIntegrationResponsePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntegrationResponseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIntegrationResponseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIntegrationResponseRequest instance.
+ */
+GetIntegrationResponseRequestPrivate::GetIntegrationResponseRequestPrivate(
+    const GetIntegrationResponseRequestPrivate &other, GetIntegrationResponseRequest * const q)
+    : GetIntegrationResponsePrivate(other, q)
+{
+
+}

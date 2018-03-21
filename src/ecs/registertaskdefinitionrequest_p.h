@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERTASKDEFINITIONREQUEST_P_H
 #define QTAWS_REGISTERTASKDEFINITIONREQUEST_P_H
 
+#include "ecs_p.h"
+#include "registertaskdefinitionrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RegisterTaskDefinitionRequest;
+
+class QTAWS_EXPORT RegisterTaskDefinitionRequestPrivate : public ECSPrivate {
+
+public:
+    RegisterTaskDefinitionRequestPrivate(const ECS::Action action,
+                                   RegisterTaskDefinitionRequest * const q);
+    RegisterTaskDefinitionRequestPrivate(const RegisterTaskDefinitionRequestPrivate &other,
+                                   RegisterTaskDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterTaskDefinitionRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

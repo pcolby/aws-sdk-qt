@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYIMAGEATTRIBUTEREQUEST_H
 #define QTAWS_MODIFYIMAGEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyImageAttributeRequestPrivate;
+
+class QTAWS_EXPORT ModifyImageAttributeRequest : public EC2Request {
+
+public:
+    ModifyImageAttributeRequest(const ModifyImageAttributeRequest &other);
+    ModifyImageAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyImageAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

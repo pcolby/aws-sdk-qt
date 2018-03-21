@@ -19,3 +19,107 @@
 
 #include "listreceiptrulesetsrequest.h"
 #include "listreceiptrulesetsrequest_p.h"
+#include "listreceiptrulesetsresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ListReceiptRuleSetsRequest
+ *
+ * @brief  Implements SES ListReceiptRuleSets requests.
+ *
+ * @see    SESClient::listReceiptRuleSets
+ */
+
+/**
+ * @brief  Constructs a new ListReceiptRuleSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReceiptRuleSetsResponse::ListReceiptRuleSetsResponse(
+
+/**
+ * @brief  Constructs a new ListReceiptRuleSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListReceiptRuleSetsRequest::ListReceiptRuleSetsRequest(const ListReceiptRuleSetsRequest &other)
+    : SESRequest(new ListReceiptRuleSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListReceiptRuleSetsRequest object.
+ */
+ListReceiptRuleSetsRequest::ListReceiptRuleSetsRequest()
+    : SESRequest(new ListReceiptRuleSetsRequestPrivate(SESRequest::ListReceiptRuleSetsAction, this))
+{
+
+}
+
+bool ListReceiptRuleSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListReceiptRuleSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListReceiptRuleSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * ListReceiptRuleSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListReceiptRuleSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReceiptRuleSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListReceiptRuleSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReceiptRuleSetsRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public ListReceiptRuleSetsRequest instance.
+ */
+ListReceiptRuleSetsRequestPrivate::ListReceiptRuleSetsRequestPrivate(
+    const SESRequest::Action action, ListReceiptRuleSetsRequest * const q)
+    : ListReceiptRuleSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReceiptRuleSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListReceiptRuleSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListReceiptRuleSetsRequest instance.
+ */
+ListReceiptRuleSetsRequestPrivate::ListReceiptRuleSetsRequestPrivate(
+    const ListReceiptRuleSetsRequestPrivate &other, ListReceiptRuleSetsRequest * const q)
+    : ListReceiptRuleSetsPrivate(other, q)
+{
+
+}

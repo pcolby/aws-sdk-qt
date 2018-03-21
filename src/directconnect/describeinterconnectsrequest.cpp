@@ -19,3 +19,107 @@
 
 #include "describeinterconnectsrequest.h"
 #include "describeinterconnectsrequest_p.h"
+#include "describeinterconnectsresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DescribeInterconnectsRequest
+ *
+ * @brief  Implements DirectConnect DescribeInterconnects requests.
+ *
+ * @see    DirectConnectClient::describeInterconnects
+ */
+
+/**
+ * @brief  Constructs a new DescribeInterconnectsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInterconnectsResponse::DescribeInterconnectsResponse(
+
+/**
+ * @brief  Constructs a new DescribeInterconnectsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInterconnectsRequest::DescribeInterconnectsRequest(const DescribeInterconnectsRequest &other)
+    : DirectConnectRequest(new DescribeInterconnectsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInterconnectsRequest object.
+ */
+DescribeInterconnectsRequest::DescribeInterconnectsRequest()
+    : DirectConnectRequest(new DescribeInterconnectsRequestPrivate(DirectConnectRequest::DescribeInterconnectsAction, this))
+{
+
+}
+
+bool DescribeInterconnectsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInterconnectsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInterconnectsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DescribeInterconnectsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInterconnectsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInterconnectsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInterconnectsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInterconnectsRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DescribeInterconnectsRequest instance.
+ */
+DescribeInterconnectsRequestPrivate::DescribeInterconnectsRequestPrivate(
+    const DirectConnectRequest::Action action, DescribeInterconnectsRequest * const q)
+    : DescribeInterconnectsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInterconnectsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInterconnectsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInterconnectsRequest instance.
+ */
+DescribeInterconnectsRequestPrivate::DescribeInterconnectsRequestPrivate(
+    const DescribeInterconnectsRequestPrivate &other, DescribeInterconnectsRequest * const q)
+    : DescribeInterconnectsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECONNECTIONREQUEST_P_H
 #define QTAWS_UPDATECONNECTIONREQUEST_P_H
 
+#include "glue_p.h"
+#include "updateconnectionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateConnectionRequest;
+
+class QTAWS_EXPORT UpdateConnectionRequestPrivate : public GluePrivate {
+
+public:
+    UpdateConnectionRequestPrivate(const Glue::Action action,
+                                   UpdateConnectionRequest * const q);
+    UpdateConnectionRequestPrivate(const UpdateConnectionRequestPrivate &other,
+                                   UpdateConnectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateConnectionRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

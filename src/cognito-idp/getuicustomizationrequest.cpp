@@ -19,3 +19,107 @@
 
 #include "getuicustomizationrequest.h"
 #include "getuicustomizationrequest_p.h"
+#include "getuicustomizationresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  GetUICustomizationRequest
+ *
+ * @brief  Implements CognitoIdentityProvider GetUICustomization requests.
+ *
+ * @see    CognitoIdentityProviderClient::getUICustomization
+ */
+
+/**
+ * @brief  Constructs a new GetUICustomizationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUICustomizationResponse::GetUICustomizationResponse(
+
+/**
+ * @brief  Constructs a new GetUICustomizationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetUICustomizationRequest::GetUICustomizationRequest(const GetUICustomizationRequest &other)
+    : CognitoIdentityProviderRequest(new GetUICustomizationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetUICustomizationRequest object.
+ */
+GetUICustomizationRequest::GetUICustomizationRequest()
+    : CognitoIdentityProviderRequest(new GetUICustomizationRequestPrivate(CognitoIdentityProviderRequest::GetUICustomizationAction, this))
+{
+
+}
+
+bool GetUICustomizationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetUICustomizationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetUICustomizationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * GetUICustomizationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetUICustomizationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUICustomizationRequestPrivate
+ *
+ * @brief  Private implementation for GetUICustomizationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUICustomizationRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public GetUICustomizationRequest instance.
+ */
+GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, GetUICustomizationRequest * const q)
+    : GetUICustomizationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUICustomizationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetUICustomizationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetUICustomizationRequest instance.
+ */
+GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
+    const GetUICustomizationRequestPrivate &other, GetUICustomizationRequest * const q)
+    : GetUICustomizationPrivate(other, q)
+{
+
+}

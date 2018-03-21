@@ -20,4 +20,29 @@
 #ifndef QTAWS_TAGPROJECTREQUEST_P_H
 #define QTAWS_TAGPROJECTREQUEST_P_H
 
+#include "codestar_p.h"
+#include "tagprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class TagProjectRequest;
+
+class QTAWS_EXPORT TagProjectRequestPrivate : public CodeStarPrivate {
+
+public:
+    TagProjectRequestPrivate(const CodeStar::Action action,
+                                   TagProjectRequest * const q);
+    TagProjectRequestPrivate(const TagProjectRequestPrivate &other,
+                                   TagProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TagProjectRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

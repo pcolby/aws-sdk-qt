@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAPIKEYSREQUEST_H
 #define QTAWS_LISTAPIKEYSREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListApiKeysRequestPrivate;
+
+class QTAWS_EXPORT ListApiKeysRequest : public AppSyncRequest {
+
+public:
+    ListApiKeysRequest(const ListApiKeysRequest &other);
+    ListApiKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListApiKeysRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

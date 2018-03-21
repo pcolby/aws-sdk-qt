@@ -19,3 +19,107 @@
 
 #include "registerrdsdbinstancerequest.h"
 #include "registerrdsdbinstancerequest_p.h"
+#include "registerrdsdbinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RegisterRdsDbInstanceRequest
+ *
+ * @brief  Implements OpsWorks RegisterRdsDbInstance requests.
+ *
+ * @see    OpsWorksClient::registerRdsDbInstance
+ */
+
+/**
+ * @brief  Constructs a new RegisterRdsDbInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterRdsDbInstanceResponse::RegisterRdsDbInstanceResponse(
+
+/**
+ * @brief  Constructs a new RegisterRdsDbInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterRdsDbInstanceRequest::RegisterRdsDbInstanceRequest(const RegisterRdsDbInstanceRequest &other)
+    : OpsWorksRequest(new RegisterRdsDbInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterRdsDbInstanceRequest object.
+ */
+RegisterRdsDbInstanceRequest::RegisterRdsDbInstanceRequest()
+    : OpsWorksRequest(new RegisterRdsDbInstanceRequestPrivate(OpsWorksRequest::RegisterRdsDbInstanceAction, this))
+{
+
+}
+
+bool RegisterRdsDbInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterRdsDbInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterRdsDbInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterRdsDbInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterRdsDbInstanceRequestPrivate
+ *
+ * @brief  Private implementation for RegisterRdsDbInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterRdsDbInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public RegisterRdsDbInstanceRequest instance.
+ */
+RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, RegisterRdsDbInstanceRequest * const q)
+    : RegisterRdsDbInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterRdsDbInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterRdsDbInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterRdsDbInstanceRequest instance.
+ */
+RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
+    const RegisterRdsDbInstanceRequestPrivate &other, RegisterRdsDbInstanceRequest * const q)
+    : RegisterRdsDbInstancePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEPLOYMENTSREQUEST_P_H
 #define QTAWS_LISTDEPLOYMENTSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listdeploymentsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListDeploymentsRequest;
+
+class QTAWS_EXPORT ListDeploymentsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListDeploymentsRequestPrivate(const Greengrass::Action action,
+                                   ListDeploymentsRequest * const q);
+    ListDeploymentsRequestPrivate(const ListDeploymentsRequestPrivate &other,
+                                   ListDeploymentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeploymentsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

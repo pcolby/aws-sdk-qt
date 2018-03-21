@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATELOGINPROFILEREQUEST_H
 #define QTAWS_UPDATELOGINPROFILEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateLoginProfileRequestPrivate;
+
+class QTAWS_EXPORT UpdateLoginProfileRequest : public IAMRequest {
+
+public:
+    UpdateLoginProfileRequest(const UpdateLoginProfileRequest &other);
+    UpdateLoginProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLoginProfileRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

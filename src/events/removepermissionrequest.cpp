@@ -19,3 +19,107 @@
 
 #include "removepermissionrequest.h"
 #include "removepermissionrequest_p.h"
+#include "removepermissionresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  RemovePermissionRequest
+ *
+ * @brief  Implements CloudWatchEvents RemovePermission requests.
+ *
+ * @see    CloudWatchEventsClient::removePermission
+ */
+
+/**
+ * @brief  Constructs a new RemovePermissionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemovePermissionResponse::RemovePermissionResponse(
+
+/**
+ * @brief  Constructs a new RemovePermissionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemovePermissionRequest::RemovePermissionRequest(const RemovePermissionRequest &other)
+    : CloudWatchEventsRequest(new RemovePermissionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemovePermissionRequest object.
+ */
+RemovePermissionRequest::RemovePermissionRequest()
+    : CloudWatchEventsRequest(new RemovePermissionRequestPrivate(CloudWatchEventsRequest::RemovePermissionAction, this))
+{
+
+}
+
+bool RemovePermissionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemovePermissionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemovePermissionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * RemovePermissionRequest::response(QNetworkReply * const reply) const
+{
+    return new RemovePermissionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemovePermissionRequestPrivate
+ *
+ * @brief  Private implementation for RemovePermissionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemovePermissionRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public RemovePermissionRequest instance.
+ */
+RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
+    const CloudWatchEventsRequest::Action action, RemovePermissionRequest * const q)
+    : RemovePermissionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemovePermissionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemovePermissionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemovePermissionRequest instance.
+ */
+RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
+    const RemovePermissionRequestPrivate &other, RemovePermissionRequest * const q)
+    : RemovePermissionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESTREAMINGDISTRIBUTIONREQUEST_P_H
 #define QTAWS_UPDATESTREAMINGDISTRIBUTIONREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "updatestreamingdistributionrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class UpdateStreamingDistributionRequest;
+
+class QTAWS_EXPORT UpdateStreamingDistributionRequestPrivate : public CloudFrontPrivate {
+
+public:
+    UpdateStreamingDistributionRequestPrivate(const CloudFront::Action action,
+                                   UpdateStreamingDistributionRequest * const q);
+    UpdateStreamingDistributionRequestPrivate(const UpdateStreamingDistributionRequestPrivate &other,
+                                   UpdateStreamingDistributionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStreamingDistributionRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

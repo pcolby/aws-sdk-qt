@@ -19,3 +19,107 @@
 
 #include "listelasticsearchversionsrequest.h"
 #include "listelasticsearchversionsrequest_p.h"
+#include "listelasticsearchversionsresponse.h"
+#include "elasticsearchservicerequest_p.h"
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  ListElasticsearchVersionsRequest
+ *
+ * @brief  Implements ElasticsearchService ListElasticsearchVersions requests.
+ *
+ * @see    ElasticsearchServiceClient::listElasticsearchVersions
+ */
+
+/**
+ * @brief  Constructs a new ListElasticsearchVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListElasticsearchVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest(const ListElasticsearchVersionsRequest &other)
+    : ElasticsearchServiceRequest(new ListElasticsearchVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListElasticsearchVersionsRequest object.
+ */
+ListElasticsearchVersionsRequest::ListElasticsearchVersionsRequest()
+    : ElasticsearchServiceRequest(new ListElasticsearchVersionsRequestPrivate(ElasticsearchServiceRequest::ListElasticsearchVersionsAction, this))
+{
+
+}
+
+bool ListElasticsearchVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListElasticsearchVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListElasticsearchVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticsearchServiceClient::send
+ */
+AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListElasticsearchVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListElasticsearchVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListElasticsearchVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object.
+ *
+ * @param  action  ElasticsearchService action being performed.
+ * @param  q       Pointer to this object's public ListElasticsearchVersionsRequest instance.
+ */
+ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
+    const ElasticsearchServiceRequest::Action action, ListElasticsearchVersionsRequest * const q)
+    : ListElasticsearchVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListElasticsearchVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListElasticsearchVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListElasticsearchVersionsRequest instance.
+ */
+ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
+    const ListElasticsearchVersionsRequestPrivate &other, ListElasticsearchVersionsRequest * const q)
+    : ListElasticsearchVersionsPrivate(other, q)
+{
+
+}

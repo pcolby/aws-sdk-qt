@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTUSERSREQUEST_H
 #define QTAWS_LISTUSERSREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListUsersRequestPrivate;
+
+class QTAWS_EXPORT ListUsersRequest : public WorkMailRequest {
+
+public:
+    ListUsersRequest(const ListUsersRequest &other);
+    ListUsersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListUsersRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

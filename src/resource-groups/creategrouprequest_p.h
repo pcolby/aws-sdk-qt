@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEGROUPREQUEST_P_H
 #define QTAWS_CREATEGROUPREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "creategrouprequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class CreateGroupRequest;
+
+class QTAWS_EXPORT CreateGroupRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    CreateGroupRequestPrivate(const ResourceGroups::Action action,
+                                   CreateGroupRequest * const q);
+    CreateGroupRequestPrivate(const CreateGroupRequestPrivate &other,
+                                   CreateGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGroupRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

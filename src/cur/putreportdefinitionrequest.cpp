@@ -19,3 +19,107 @@
 
 #include "putreportdefinitionrequest.h"
 #include "putreportdefinitionrequest_p.h"
+#include "putreportdefinitionresponse.h"
+#include "costandusagereportservicerequest_p.h"
+
+namespace AWS {
+namespace CostandUsageReportService {
+
+/**
+ * @class  PutReportDefinitionRequest
+ *
+ * @brief  Implements CostandUsageReportService PutReportDefinition requests.
+ *
+ * @see    CostandUsageReportServiceClient::putReportDefinition
+ */
+
+/**
+ * @brief  Constructs a new PutReportDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutReportDefinitionResponse::PutReportDefinitionResponse(
+
+/**
+ * @brief  Constructs a new PutReportDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutReportDefinitionRequest::PutReportDefinitionRequest(const PutReportDefinitionRequest &other)
+    : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutReportDefinitionRequest object.
+ */
+PutReportDefinitionRequest::PutReportDefinitionRequest()
+    : CostandUsageReportServiceRequest(new PutReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::PutReportDefinitionAction, this))
+{
+
+}
+
+bool PutReportDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutReportDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutReportDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CostandUsageReportServiceClient::send
+ */
+AwsAbstractResponse * PutReportDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new PutReportDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutReportDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for PutReportDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutReportDefinitionRequestPrivate object.
+ *
+ * @param  action  CostandUsageReportService action being performed.
+ * @param  q       Pointer to this object's public PutReportDefinitionRequest instance.
+ */
+PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
+    const CostandUsageReportServiceRequest::Action action, PutReportDefinitionRequest * const q)
+    : PutReportDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutReportDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutReportDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutReportDefinitionRequest instance.
+ */
+PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
+    const PutReportDefinitionRequestPrivate &other, PutReportDefinitionRequest * const q)
+    : PutReportDefinitionPrivate(other, q)
+{
+
+}

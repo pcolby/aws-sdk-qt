@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETIDENTITYPOOLCONFIGURATIONREQUEST_H
 #define QTAWS_SETIDENTITYPOOLCONFIGURATIONREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class SetIdentityPoolConfigurationRequestPrivate;
+
+class QTAWS_EXPORT SetIdentityPoolConfigurationRequest : public CognitoSyncRequest {
+
+public:
+    SetIdentityPoolConfigurationRequest(const SetIdentityPoolConfigurationRequest &other);
+    SetIdentityPoolConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityPoolConfigurationRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

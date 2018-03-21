@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGEOMATCHSETSREQUEST_H
 #define QTAWS_LISTGEOMATCHSETSREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class ListGeoMatchSetsRequestPrivate;
+
+class QTAWS_EXPORT ListGeoMatchSetsRequest : public WAFRegionalRequest {
+
+public:
+    ListGeoMatchSetsRequest(const ListGeoMatchSetsRequest &other);
+    ListGeoMatchSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGeoMatchSetsRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

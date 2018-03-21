@@ -19,3 +19,107 @@
 
 #include "deleteparametergrouprequest.h"
 #include "deleteparametergrouprequest_p.h"
+#include "deleteparametergroupresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  DeleteParameterGroupRequest
+ *
+ * @brief  Implements DAX DeleteParameterGroup requests.
+ *
+ * @see    DAXClient::deleteParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteParameterGroupResponse::DeleteParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteParameterGroupRequest::DeleteParameterGroupRequest(const DeleteParameterGroupRequest &other)
+    : DAXRequest(new DeleteParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteParameterGroupRequest object.
+ */
+DeleteParameterGroupRequest::DeleteParameterGroupRequest()
+    : DAXRequest(new DeleteParameterGroupRequestPrivate(DAXRequest::DeleteParameterGroupAction, this))
+{
+
+}
+
+bool DeleteParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParameterGroupRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public DeleteParameterGroupRequest instance.
+ */
+DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
+    const DAXRequest::Action action, DeleteParameterGroupRequest * const q)
+    : DeleteParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteParameterGroupRequest instance.
+ */
+DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
+    const DeleteParameterGroupRequestPrivate &other, DeleteParameterGroupRequest * const q)
+    : DeleteParameterGroupPrivate(other, q)
+{
+
+}

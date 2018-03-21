@@ -19,3 +19,107 @@
 
 #include "getexportjobsrequest.h"
 #include "getexportjobsrequest_p.h"
+#include "getexportjobsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetExportJobsRequest
+ *
+ * @brief  Implements Pinpoint GetExportJobs requests.
+ *
+ * @see    PinpointClient::getExportJobs
+ */
+
+/**
+ * @brief  Constructs a new GetExportJobsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetExportJobsResponse::GetExportJobsResponse(
+
+/**
+ * @brief  Constructs a new GetExportJobsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetExportJobsRequest::GetExportJobsRequest(const GetExportJobsRequest &other)
+    : PinpointRequest(new GetExportJobsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetExportJobsRequest object.
+ */
+GetExportJobsRequest::GetExportJobsRequest()
+    : PinpointRequest(new GetExportJobsRequestPrivate(PinpointRequest::GetExportJobsAction, this))
+{
+
+}
+
+bool GetExportJobsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetExportJobsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetExportJobsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetExportJobsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetExportJobsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetExportJobsRequestPrivate
+ *
+ * @brief  Private implementation for GetExportJobsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExportJobsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetExportJobsRequest instance.
+ */
+GetExportJobsRequestPrivate::GetExportJobsRequestPrivate(
+    const PinpointRequest::Action action, GetExportJobsRequest * const q)
+    : GetExportJobsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetExportJobsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetExportJobsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetExportJobsRequest instance.
+ */
+GetExportJobsRequestPrivate::GetExportJobsRequestPrivate(
+    const GetExportJobsRequestPrivate &other, GetExportJobsRequest * const q)
+    : GetExportJobsPrivate(other, q)
+{
+
+}

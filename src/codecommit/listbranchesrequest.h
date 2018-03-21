@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTBRANCHESREQUEST_H
 #define QTAWS_LISTBRANCHESREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class ListBranchesRequestPrivate;
+
+class QTAWS_EXPORT ListBranchesRequest : public CodeCommitRequest {
+
+public:
+    ListBranchesRequest(const ListBranchesRequest &other);
+    ListBranchesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListBranchesRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

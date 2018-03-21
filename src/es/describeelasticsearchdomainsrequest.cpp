@@ -19,3 +19,107 @@
 
 #include "describeelasticsearchdomainsrequest.h"
 #include "describeelasticsearchdomainsrequest_p.h"
+#include "describeelasticsearchdomainsresponse.h"
+#include "elasticsearchservicerequest_p.h"
+
+namespace AWS {
+namespace ElasticsearchService {
+
+/**
+ * @class  DescribeElasticsearchDomainsRequest
+ *
+ * @brief  Implements ElasticsearchService DescribeElasticsearchDomains requests.
+ *
+ * @see    ElasticsearchServiceClient::describeElasticsearchDomains
+ */
+
+/**
+ * @brief  Constructs a new DescribeElasticsearchDomainsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticsearchDomainsResponse::DescribeElasticsearchDomainsResponse(
+
+/**
+ * @brief  Constructs a new DescribeElasticsearchDomainsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeElasticsearchDomainsRequest::DescribeElasticsearchDomainsRequest(const DescribeElasticsearchDomainsRequest &other)
+    : ElasticsearchServiceRequest(new DescribeElasticsearchDomainsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeElasticsearchDomainsRequest object.
+ */
+DescribeElasticsearchDomainsRequest::DescribeElasticsearchDomainsRequest()
+    : ElasticsearchServiceRequest(new DescribeElasticsearchDomainsRequestPrivate(ElasticsearchServiceRequest::DescribeElasticsearchDomainsAction, this))
+{
+
+}
+
+bool DescribeElasticsearchDomainsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeElasticsearchDomainsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeElasticsearchDomainsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticsearchServiceClient::send
+ */
+AwsAbstractResponse * DescribeElasticsearchDomainsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeElasticsearchDomainsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticsearchDomainsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeElasticsearchDomainsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticsearchDomainsRequestPrivate object.
+ *
+ * @param  action  ElasticsearchService action being performed.
+ * @param  q       Pointer to this object's public DescribeElasticsearchDomainsRequest instance.
+ */
+DescribeElasticsearchDomainsRequestPrivate::DescribeElasticsearchDomainsRequestPrivate(
+    const ElasticsearchServiceRequest::Action action, DescribeElasticsearchDomainsRequest * const q)
+    : DescribeElasticsearchDomainsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticsearchDomainsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeElasticsearchDomainsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeElasticsearchDomainsRequest instance.
+ */
+DescribeElasticsearchDomainsRequestPrivate::DescribeElasticsearchDomainsRequestPrivate(
+    const DescribeElasticsearchDomainsRequestPrivate &other, DescribeElasticsearchDomainsRequest * const q)
+    : DescribeElasticsearchDomainsPrivate(other, q)
+{
+
+}

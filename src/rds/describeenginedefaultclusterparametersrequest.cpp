@@ -19,3 +19,107 @@
 
 #include "describeenginedefaultclusterparametersrequest.h"
 #include "describeenginedefaultclusterparametersrequest_p.h"
+#include "describeenginedefaultclusterparametersresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeEngineDefaultClusterParametersRequest
+ *
+ * @brief  Implements RDS DescribeEngineDefaultClusterParameters requests.
+ *
+ * @see    RDSClient::describeEngineDefaultClusterParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultClusterParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest(const DescribeEngineDefaultClusterParametersRequest &other)
+    : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequest object.
+ */
+DescribeEngineDefaultClusterParametersRequest::DescribeEngineDefaultClusterParametersRequest()
+    : RDSRequest(new DescribeEngineDefaultClusterParametersRequestPrivate(RDSRequest::DescribeEngineDefaultClusterParametersAction, this))
+{
+
+}
+
+bool DescribeEngineDefaultClusterParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEngineDefaultClusterParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEngineDefaultClusterParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEngineDefaultClusterParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEngineDefaultClusterParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEngineDefaultClusterParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeEngineDefaultClusterParametersRequest instance.
+ */
+DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
+    const RDSRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)
+    : DescribeEngineDefaultClusterParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEngineDefaultClusterParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEngineDefaultClusterParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEngineDefaultClusterParametersRequest instance.
+ */
+DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
+    const DescribeEngineDefaultClusterParametersRequestPrivate &other, DescribeEngineDefaultClusterParametersRequest * const q)
+    : DescribeEngineDefaultClusterParametersPrivate(other, q)
+{
+
+}

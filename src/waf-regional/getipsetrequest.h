@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETIPSETREQUEST_H
 #define QTAWS_GETIPSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetIPSetRequestPrivate;
+
+class QTAWS_EXPORT GetIPSetRequest : public WAFRegionalRequest {
+
+public:
+    GetIPSetRequest(const GetIPSetRequest &other);
+    GetIPSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetIPSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

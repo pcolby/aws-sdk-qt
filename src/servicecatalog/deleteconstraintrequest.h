@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECONSTRAINTREQUEST_H
 #define QTAWS_DELETECONSTRAINTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteConstraintRequestPrivate;
+
+class QTAWS_EXPORT DeleteConstraintRequest : public ServiceCatalogRequest {
+
+public:
+    DeleteConstraintRequest(const DeleteConstraintRequest &other);
+    DeleteConstraintRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConstraintRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

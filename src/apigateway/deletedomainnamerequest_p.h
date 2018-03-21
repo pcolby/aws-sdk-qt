@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDOMAINNAMEREQUEST_P_H
 #define QTAWS_DELETEDOMAINNAMEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deletedomainnamerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteDomainNameRequest;
+
+class QTAWS_EXPORT DeleteDomainNameRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteDomainNameRequestPrivate(const APIGateway::Action action,
+                                   DeleteDomainNameRequest * const q);
+    DeleteDomainNameRequestPrivate(const DeleteDomainNameRequestPrivate &other,
+                                   DeleteDomainNameRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDomainNameRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

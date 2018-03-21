@@ -19,3 +19,107 @@
 
 #include "starttriggerrequest.h"
 #include "starttriggerrequest_p.h"
+#include "starttriggerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  StartTriggerRequest
+ *
+ * @brief  Implements Glue StartTrigger requests.
+ *
+ * @see    GlueClient::startTrigger
+ */
+
+/**
+ * @brief  Constructs a new StartTriggerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartTriggerResponse::StartTriggerResponse(
+
+/**
+ * @brief  Constructs a new StartTriggerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartTriggerRequest::StartTriggerRequest(const StartTriggerRequest &other)
+    : GlueRequest(new StartTriggerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartTriggerRequest object.
+ */
+StartTriggerRequest::StartTriggerRequest()
+    : GlueRequest(new StartTriggerRequestPrivate(GlueRequest::StartTriggerAction, this))
+{
+
+}
+
+bool StartTriggerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartTriggerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartTriggerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply * const reply) const
+{
+    return new StartTriggerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartTriggerRequestPrivate
+ *
+ * @brief  Private implementation for StartTriggerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTriggerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public StartTriggerRequest instance.
+ */
+StartTriggerRequestPrivate::StartTriggerRequestPrivate(
+    const GlueRequest::Action action, StartTriggerRequest * const q)
+    : StartTriggerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartTriggerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartTriggerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartTriggerRequest instance.
+ */
+StartTriggerRequestPrivate::StartTriggerRequestPrivate(
+    const StartTriggerRequestPrivate &other, StartTriggerRequest * const q)
+    : StartTriggerPrivate(other, q)
+{
+
+}

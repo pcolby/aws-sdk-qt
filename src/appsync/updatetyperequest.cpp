@@ -19,3 +19,107 @@
 
 #include "updatetyperequest.h"
 #include "updatetyperequest_p.h"
+#include "updatetyperesponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  UpdateTypeRequest
+ *
+ * @brief  Implements AppSync UpdateType requests.
+ *
+ * @see    AppSyncClient::updateType
+ */
+
+/**
+ * @brief  Constructs a new UpdateTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTypeResponse::UpdateTypeResponse(
+
+/**
+ * @brief  Constructs a new UpdateTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTypeRequest::UpdateTypeRequest(const UpdateTypeRequest &other)
+    : AppSyncRequest(new UpdateTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTypeRequest object.
+ */
+UpdateTypeRequest::UpdateTypeRequest()
+    : AppSyncRequest(new UpdateTypeRequestPrivate(AppSyncRequest::UpdateTypeAction, this))
+{
+
+}
+
+bool UpdateTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * UpdateTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTypeRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypeRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public UpdateTypeRequest instance.
+ */
+UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
+    const AppSyncRequest::Action action, UpdateTypeRequest * const q)
+    : UpdateTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTypeRequest instance.
+ */
+UpdateTypeRequestPrivate::UpdateTypeRequestPrivate(
+    const UpdateTypeRequestPrivate &other, UpdateTypeRequest * const q)
+    : UpdateTypePrivate(other, q)
+{
+
+}

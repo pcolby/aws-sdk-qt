@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCHANNELSREQUEST_H
 #define QTAWS_LISTCHANNELSREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class ListChannelsRequestPrivate;
+
+class QTAWS_EXPORT ListChannelsRequest : public MediaLiveRequest {
+
+public:
+    ListChannelsRequest(const ListChannelsRequest &other);
+    ListChannelsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListChannelsRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

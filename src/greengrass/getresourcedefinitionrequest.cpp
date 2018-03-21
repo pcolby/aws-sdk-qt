@@ -19,3 +19,107 @@
 
 #include "getresourcedefinitionrequest.h"
 #include "getresourcedefinitionrequest_p.h"
+#include "getresourcedefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetResourceDefinitionRequest
+ *
+ * @brief  Implements Greengrass GetResourceDefinition requests.
+ *
+ * @see    GreengrassClient::getResourceDefinition
+ */
+
+/**
+ * @brief  Constructs a new GetResourceDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourceDefinitionResponse::GetResourceDefinitionResponse(
+
+/**
+ * @brief  Constructs a new GetResourceDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetResourceDefinitionRequest::GetResourceDefinitionRequest(const GetResourceDefinitionRequest &other)
+    : GreengrassRequest(new GetResourceDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetResourceDefinitionRequest object.
+ */
+GetResourceDefinitionRequest::GetResourceDefinitionRequest()
+    : GreengrassRequest(new GetResourceDefinitionRequestPrivate(GreengrassRequest::GetResourceDefinitionAction, this))
+{
+
+}
+
+bool GetResourceDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetResourceDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetResourceDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetResourceDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetResourceDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourceDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for GetResourceDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetResourceDefinitionRequest instance.
+ */
+GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, GetResourceDefinitionRequest * const q)
+    : GetResourceDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetResourceDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetResourceDefinitionRequest instance.
+ */
+GetResourceDefinitionRequestPrivate::GetResourceDefinitionRequestPrivate(
+    const GetResourceDefinitionRequestPrivate &other, GetResourceDefinitionRequest * const q)
+    : GetResourceDefinitionPrivate(other, q)
+{
+
+}

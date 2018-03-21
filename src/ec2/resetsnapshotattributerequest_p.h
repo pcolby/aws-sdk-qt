@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETSNAPSHOTATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETSNAPSHOTATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "resetsnapshotattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetSnapshotAttributeRequest;
+
+class QTAWS_EXPORT ResetSnapshotAttributeRequestPrivate : public EC2Private {
+
+public:
+    ResetSnapshotAttributeRequestPrivate(const EC2::Action action,
+                                   ResetSnapshotAttributeRequest * const q);
+    ResetSnapshotAttributeRequestPrivate(const ResetSnapshotAttributeRequestPrivate &other,
+                                   ResetSnapshotAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetSnapshotAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

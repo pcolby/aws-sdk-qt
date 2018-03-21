@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGCMCHANNELREQUEST_P_H
 #define QTAWS_GETGCMCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getgcmchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetGcmChannelRequest;
+
+class QTAWS_EXPORT GetGcmChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    GetGcmChannelRequestPrivate(const Pinpoint::Action action,
+                                   GetGcmChannelRequest * const q);
+    GetGcmChannelRequestPrivate(const GetGcmChannelRequestPrivate &other,
+                                   GetGcmChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGcmChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

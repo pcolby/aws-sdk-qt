@@ -19,3 +19,107 @@
 
 #include "deletegithubaccounttokenrequest.h"
 #include "deletegithubaccounttokenrequest_p.h"
+#include "deletegithubaccounttokenresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  DeleteGitHubAccountTokenRequest
+ *
+ * @brief  Implements CodeDeploy DeleteGitHubAccountToken requests.
+ *
+ * @see    CodeDeployClient::deleteGitHubAccountToken
+ */
+
+/**
+ * @brief  Constructs a new DeleteGitHubAccountTokenResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
+
+/**
+ * @brief  Constructs a new DeleteGitHubAccountTokenRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGitHubAccountTokenRequest::DeleteGitHubAccountTokenRequest(const DeleteGitHubAccountTokenRequest &other)
+    : CodeDeployRequest(new DeleteGitHubAccountTokenRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGitHubAccountTokenRequest object.
+ */
+DeleteGitHubAccountTokenRequest::DeleteGitHubAccountTokenRequest()
+    : CodeDeployRequest(new DeleteGitHubAccountTokenRequestPrivate(CodeDeployRequest::DeleteGitHubAccountTokenAction, this))
+{
+
+}
+
+bool DeleteGitHubAccountTokenRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGitHubAccountTokenResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGitHubAccountTokenResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGitHubAccountTokenResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGitHubAccountTokenRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGitHubAccountTokenRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGitHubAccountTokenRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public DeleteGitHubAccountTokenRequest instance.
+ */
+DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
+    const CodeDeployRequest::Action action, DeleteGitHubAccountTokenRequest * const q)
+    : DeleteGitHubAccountTokenPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGitHubAccountTokenRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGitHubAccountTokenRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGitHubAccountTokenRequest instance.
+ */
+DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
+    const DeleteGitHubAccountTokenRequestPrivate &other, DeleteGitHubAccountTokenRequest * const q)
+    : DeleteGitHubAccountTokenPrivate(other, q)
+{
+
+}

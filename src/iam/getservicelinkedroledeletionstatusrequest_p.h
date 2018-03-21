@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSREQUEST_P_H
 #define QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSREQUEST_P_H
 
+#include "iam_p.h"
+#include "getservicelinkedroledeletionstatusrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetServiceLinkedRoleDeletionStatusRequest;
+
+class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequestPrivate : public IAMPrivate {
+
+public:
+    GetServiceLinkedRoleDeletionStatusRequestPrivate(const IAM::Action action,
+                                   GetServiceLinkedRoleDeletionStatusRequest * const q);
+    GetServiceLinkedRoleDeletionStatusRequestPrivate(const GetServiceLinkedRoleDeletionStatusRequestPrivate &other,
+                                   GetServiceLinkedRoleDeletionStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetServiceLinkedRoleDeletionStatusRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

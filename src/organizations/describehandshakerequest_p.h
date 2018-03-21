@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHANDSHAKEREQUEST_P_H
 #define QTAWS_DESCRIBEHANDSHAKEREQUEST_P_H
 
+#include "organizations_p.h"
+#include "describehandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeHandshakeRequest;
+
+class QTAWS_EXPORT DescribeHandshakeRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DescribeHandshakeRequestPrivate(const Organizations::Action action,
+                                   DescribeHandshakeRequest * const q);
+    DescribeHandshakeRequestPrivate(const DescribeHandshakeRequestPrivate &other,
+                                   DescribeHandshakeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHandshakeRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

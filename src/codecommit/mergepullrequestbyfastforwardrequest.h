@@ -20,4 +20,32 @@
 #ifndef QTAWS_MERGEPULLREQUESTBYFASTFORWARDREQUEST_H
 #define QTAWS_MERGEPULLREQUESTBYFASTFORWARDREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class MergePullRequestByFastForwardRequestPrivate;
+
+class QTAWS_EXPORT MergePullRequestByFastForwardRequest : public CodeCommitRequest {
+
+public:
+    MergePullRequestByFastForwardRequest(const MergePullRequestByFastForwardRequest &other);
+    MergePullRequestByFastForwardRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(MergePullRequestByFastForwardRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

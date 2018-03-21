@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESREQUEST_P_H
 #define QTAWS_PUTRESOURCEATTRIBUTESREQUEST_P_H
 
+#include "migrationhub_p.h"
+#include "putresourceattributesrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class PutResourceAttributesRequest;
+
+class QTAWS_EXPORT PutResourceAttributesRequestPrivate : public MigrationHubPrivate {
+
+public:
+    PutResourceAttributesRequestPrivate(const MigrationHub::Action action,
+                                   PutResourceAttributesRequest * const q);
+    PutResourceAttributesRequestPrivate(const PutResourceAttributesRequestPrivate &other,
+                                   PutResourceAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutResourceAttributesRequest)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDEFAULTBRANCHREQUEST_H
 #define QTAWS_UPDATEDEFAULTBRANCHREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateDefaultBranchRequestPrivate;
+
+class QTAWS_EXPORT UpdateDefaultBranchRequest : public CodeCommitRequest {
+
+public:
+    UpdateDefaultBranchRequest(const UpdateDefaultBranchRequest &other);
+    UpdateDefaultBranchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDefaultBranchRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

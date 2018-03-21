@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTUSERPROFILESREQUEST_H
 #define QTAWS_LISTUSERPROFILESREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class ListUserProfilesRequestPrivate;
+
+class QTAWS_EXPORT ListUserProfilesRequest : public CodeStarRequest {
+
+public:
+    ListUserProfilesRequest(const ListUserProfilesRequest &other);
+    ListUserProfilesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListUserProfilesRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

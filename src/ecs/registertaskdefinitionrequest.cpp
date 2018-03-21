@@ -19,3 +19,107 @@
 
 #include "registertaskdefinitionrequest.h"
 #include "registertaskdefinitionrequest_p.h"
+#include "registertaskdefinitionresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  RegisterTaskDefinitionRequest
+ *
+ * @brief  Implements ECS RegisterTaskDefinition requests.
+ *
+ * @see    ECSClient::registerTaskDefinition
+ */
+
+/**
+ * @brief  Constructs a new RegisterTaskDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
+
+/**
+ * @brief  Constructs a new RegisterTaskDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest(const RegisterTaskDefinitionRequest &other)
+    : ECSRequest(new RegisterTaskDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterTaskDefinitionRequest object.
+ */
+RegisterTaskDefinitionRequest::RegisterTaskDefinitionRequest()
+    : ECSRequest(new RegisterTaskDefinitionRequestPrivate(ECSRequest::RegisterTaskDefinitionAction, this))
+{
+
+}
+
+bool RegisterTaskDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterTaskDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterTaskDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterTaskDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterTaskDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for RegisterTaskDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterTaskDefinitionRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public RegisterTaskDefinitionRequest instance.
+ */
+RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
+    const ECSRequest::Action action, RegisterTaskDefinitionRequest * const q)
+    : RegisterTaskDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterTaskDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterTaskDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterTaskDefinitionRequest instance.
+ */
+RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
+    const RegisterTaskDefinitionRequestPrivate &other, RegisterTaskDefinitionRequest * const q)
+    : RegisterTaskDefinitionPrivate(other, q)
+{
+
+}

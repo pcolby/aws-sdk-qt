@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_P_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "updateserverengineattributesrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class UpdateServerEngineAttributesRequest;
+
+class QTAWS_EXPORT UpdateServerEngineAttributesRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    UpdateServerEngineAttributesRequestPrivate(const OpsWorksCM::Action action,
+                                   UpdateServerEngineAttributesRequest * const q);
+    UpdateServerEngineAttributesRequestPrivate(const UpdateServerEngineAttributesRequestPrivate &other,
+                                   UpdateServerEngineAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateServerEngineAttributesRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

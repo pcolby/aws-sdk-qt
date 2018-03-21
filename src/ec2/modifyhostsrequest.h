@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYHOSTSREQUEST_H
 #define QTAWS_MODIFYHOSTSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyHostsRequestPrivate;
+
+class QTAWS_EXPORT ModifyHostsRequest : public EC2Request {
+
+public:
+    ModifyHostsRequest(const ModifyHostsRequest &other);
+    ModifyHostsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyHostsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

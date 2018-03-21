@@ -19,3 +19,107 @@
 
 #include "putpermissionpolicyrequest.h"
 #include "putpermissionpolicyrequest_p.h"
+#include "putpermissionpolicyresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  PutPermissionPolicyRequest
+ *
+ * @brief  Implements WAF PutPermissionPolicy requests.
+ *
+ * @see    WAFClient::putPermissionPolicy
+ */
+
+/**
+ * @brief  Constructs a new PutPermissionPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutPermissionPolicyResponse::PutPermissionPolicyResponse(
+
+/**
+ * @brief  Constructs a new PutPermissionPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutPermissionPolicyRequest::PutPermissionPolicyRequest(const PutPermissionPolicyRequest &other)
+    : WAFRequest(new PutPermissionPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutPermissionPolicyRequest object.
+ */
+PutPermissionPolicyRequest::PutPermissionPolicyRequest()
+    : WAFRequest(new PutPermissionPolicyRequestPrivate(WAFRequest::PutPermissionPolicyAction, this))
+{
+
+}
+
+bool PutPermissionPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutPermissionPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutPermissionPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutPermissionPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutPermissionPolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutPermissionPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPermissionPolicyRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public PutPermissionPolicyRequest instance.
+ */
+PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
+    const WAFRequest::Action action, PutPermissionPolicyRequest * const q)
+    : PutPermissionPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutPermissionPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutPermissionPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutPermissionPolicyRequest instance.
+ */
+PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
+    const PutPermissionPolicyRequestPrivate &other, PutPermissionPolicyRequest * const q)
+    : PutPermissionPolicyPrivate(other, q)
+{
+
+}

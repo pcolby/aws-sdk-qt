@@ -19,3 +19,107 @@
 
 #include "getresourcerequest.h"
 #include "getresourcerequest_p.h"
+#include "getresourceresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetResourceRequest
+ *
+ * @brief  Implements APIGateway GetResource requests.
+ *
+ * @see    APIGatewayClient::getResource
+ */
+
+/**
+ * @brief  Constructs a new GetResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetResourceResponse::GetResourceResponse(
+
+/**
+ * @brief  Constructs a new GetResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetResourceRequest::GetResourceRequest(const GetResourceRequest &other)
+    : APIGatewayRequest(new GetResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetResourceRequest object.
+ */
+GetResourceRequest::GetResourceRequest()
+    : APIGatewayRequest(new GetResourceRequestPrivate(APIGatewayRequest::GetResourceAction, this))
+{
+
+}
+
+bool GetResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetResourceRequestPrivate
+ *
+ * @brief  Private implementation for GetResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetResourceRequest instance.
+ */
+GetResourceRequestPrivate::GetResourceRequestPrivate(
+    const APIGatewayRequest::Action action, GetResourceRequest * const q)
+    : GetResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetResourceRequest instance.
+ */
+GetResourceRequestPrivate::GetResourceRequestPrivate(
+    const GetResourceRequestPrivate &other, GetResourceRequest * const q)
+    : GetResourcePrivate(other, q)
+{
+
+}

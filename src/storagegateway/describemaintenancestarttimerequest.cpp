@@ -19,3 +19,107 @@
 
 #include "describemaintenancestarttimerequest.h"
 #include "describemaintenancestarttimerequest_p.h"
+#include "describemaintenancestarttimeresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeMaintenanceStartTimeRequest
+ *
+ * @brief  Implements StorageGateway DescribeMaintenanceStartTime requests.
+ *
+ * @see    StorageGatewayClient::describeMaintenanceStartTime
+ */
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceStartTimeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceStartTimeResponse::DescribeMaintenanceStartTimeResponse(
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceStartTimeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMaintenanceStartTimeRequest::DescribeMaintenanceStartTimeRequest(const DescribeMaintenanceStartTimeRequest &other)
+    : StorageGatewayRequest(new DescribeMaintenanceStartTimeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceStartTimeRequest object.
+ */
+DescribeMaintenanceStartTimeRequest::DescribeMaintenanceStartTimeRequest()
+    : StorageGatewayRequest(new DescribeMaintenanceStartTimeRequestPrivate(StorageGatewayRequest::DescribeMaintenanceStartTimeAction, this))
+{
+
+}
+
+bool DescribeMaintenanceStartTimeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMaintenanceStartTimeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMaintenanceStartTimeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeMaintenanceStartTimeRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMaintenanceStartTimeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceStartTimeRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceStartTimeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceStartTimeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeMaintenanceStartTimeRequest instance.
+ */
+DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeMaintenanceStartTimeRequest * const q)
+    : DescribeMaintenanceStartTimePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceStartTimeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMaintenanceStartTimeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMaintenanceStartTimeRequest instance.
+ */
+DescribeMaintenanceStartTimeRequestPrivate::DescribeMaintenanceStartTimeRequestPrivate(
+    const DescribeMaintenanceStartTimeRequestPrivate &other, DescribeMaintenanceStartTimeRequest * const q)
+    : DescribeMaintenanceStartTimePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBUCKETENCRYPTIONREQUEST_P_H
 #define QTAWS_DELETEBUCKETENCRYPTIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "deletebucketencryptionrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketEncryptionRequest;
+
+class QTAWS_EXPORT DeleteBucketEncryptionRequestPrivate : public S3Private {
+
+public:
+    DeleteBucketEncryptionRequestPrivate(const S3::Action action,
+                                   DeleteBucketEncryptionRequest * const q);
+    DeleteBucketEncryptionRequestPrivate(const DeleteBucketEncryptionRequestPrivate &other,
+                                   DeleteBucketEncryptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBucketEncryptionRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

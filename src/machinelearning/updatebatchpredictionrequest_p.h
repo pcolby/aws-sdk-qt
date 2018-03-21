@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEBATCHPREDICTIONREQUEST_P_H
 #define QTAWS_UPDATEBATCHPREDICTIONREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "updatebatchpredictionrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class UpdateBatchPredictionRequest;
+
+class QTAWS_EXPORT UpdateBatchPredictionRequestPrivate : public MachineLearningPrivate {
+
+public:
+    UpdateBatchPredictionRequestPrivate(const MachineLearning::Action action,
+                                   UpdateBatchPredictionRequest * const q);
+    UpdateBatchPredictionRequestPrivate(const UpdateBatchPredictionRequestPrivate &other,
+                                   UpdateBatchPredictionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBatchPredictionRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

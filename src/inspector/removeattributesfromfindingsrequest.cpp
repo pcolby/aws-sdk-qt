@@ -19,3 +19,107 @@
 
 #include "removeattributesfromfindingsrequest.h"
 #include "removeattributesfromfindingsrequest_p.h"
+#include "removeattributesfromfindingsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  RemoveAttributesFromFindingsRequest
+ *
+ * @brief  Implements Inspector RemoveAttributesFromFindings requests.
+ *
+ * @see    InspectorClient::removeAttributesFromFindings
+ */
+
+/**
+ * @brief  Constructs a new RemoveAttributesFromFindingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAttributesFromFindingsResponse::RemoveAttributesFromFindingsResponse(
+
+/**
+ * @brief  Constructs a new RemoveAttributesFromFindingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest(const RemoveAttributesFromFindingsRequest &other)
+    : InspectorRequest(new RemoveAttributesFromFindingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveAttributesFromFindingsRequest object.
+ */
+RemoveAttributesFromFindingsRequest::RemoveAttributesFromFindingsRequest()
+    : InspectorRequest(new RemoveAttributesFromFindingsRequestPrivate(InspectorRequest::RemoveAttributesFromFindingsAction, this))
+{
+
+}
+
+bool RemoveAttributesFromFindingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveAttributesFromFindingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveAttributesFromFindingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveAttributesFromFindingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAttributesFromFindingsRequestPrivate
+ *
+ * @brief  Private implementation for RemoveAttributesFromFindingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public RemoveAttributesFromFindingsRequest instance.
+ */
+RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
+    const InspectorRequest::Action action, RemoveAttributesFromFindingsRequest * const q)
+    : RemoveAttributesFromFindingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAttributesFromFindingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveAttributesFromFindingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveAttributesFromFindingsRequest instance.
+ */
+RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
+    const RemoveAttributesFromFindingsRequestPrivate &other, RemoveAttributesFromFindingsRequest * const q)
+    : RemoveAttributesFromFindingsPrivate(other, q)
+{
+
+}

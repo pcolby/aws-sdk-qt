@@ -19,3 +19,107 @@
 
 #include "putnotificationconfigurationrequest.h"
 #include "putnotificationconfigurationrequest_p.h"
+#include "putnotificationconfigurationresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  PutNotificationConfigurationRequest
+ *
+ * @brief  Implements AutoScaling PutNotificationConfiguration requests.
+ *
+ * @see    AutoScalingClient::putNotificationConfiguration
+ */
+
+/**
+ * @brief  Constructs a new PutNotificationConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutNotificationConfigurationResponse::PutNotificationConfigurationResponse(
+
+/**
+ * @brief  Constructs a new PutNotificationConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutNotificationConfigurationRequest::PutNotificationConfigurationRequest(const PutNotificationConfigurationRequest &other)
+    : AutoScalingRequest(new PutNotificationConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutNotificationConfigurationRequest object.
+ */
+PutNotificationConfigurationRequest::PutNotificationConfigurationRequest()
+    : AutoScalingRequest(new PutNotificationConfigurationRequestPrivate(AutoScalingRequest::PutNotificationConfigurationAction, this))
+{
+
+}
+
+bool PutNotificationConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutNotificationConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutNotificationConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * PutNotificationConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutNotificationConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutNotificationConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for PutNotificationConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public PutNotificationConfigurationRequest instance.
+ */
+PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
+    const AutoScalingRequest::Action action, PutNotificationConfigurationRequest * const q)
+    : PutNotificationConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutNotificationConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutNotificationConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutNotificationConfigurationRequest instance.
+ */
+PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
+    const PutNotificationConfigurationRequestPrivate &other, PutNotificationConfigurationRequest * const q)
+    : PutNotificationConfigurationPrivate(other, q)
+{
+
+}

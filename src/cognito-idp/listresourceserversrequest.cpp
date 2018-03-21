@@ -19,3 +19,107 @@
 
 #include "listresourceserversrequest.h"
 #include "listresourceserversrequest_p.h"
+#include "listresourceserversresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListResourceServersRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ListResourceServers requests.
+ *
+ * @see    CognitoIdentityProviderClient::listResourceServers
+ */
+
+/**
+ * @brief  Constructs a new ListResourceServersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceServersResponse::ListResourceServersResponse(
+
+/**
+ * @brief  Constructs a new ListResourceServersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourceServersRequest::ListResourceServersRequest(const ListResourceServersRequest &other)
+    : CognitoIdentityProviderRequest(new ListResourceServersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourceServersRequest object.
+ */
+ListResourceServersRequest::ListResourceServersRequest()
+    : CognitoIdentityProviderRequest(new ListResourceServersRequestPrivate(CognitoIdentityProviderRequest::ListResourceServersAction, this))
+{
+
+}
+
+bool ListResourceServersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourceServersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourceServersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ListResourceServersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourceServersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceServersRequestPrivate
+ *
+ * @brief  Private implementation for ListResourceServersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceServersRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ListResourceServersRequest instance.
+ */
+ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ListResourceServersRequest * const q)
+    : ListResourceServersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceServersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourceServersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourceServersRequest instance.
+ */
+ListResourceServersRequestPrivate::ListResourceServersRequestPrivate(
+    const ListResourceServersRequestPrivate &other, ListResourceServersRequest * const q)
+    : ListResourceServersPrivate(other, q)
+{
+
+}

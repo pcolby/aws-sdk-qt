@@ -19,3 +19,107 @@
 
 #include "tagprojectrequest.h"
 #include "tagprojectrequest_p.h"
+#include "tagprojectresponse.h"
+#include "codestarrequest_p.h"
+
+namespace AWS {
+namespace CodeStar {
+
+/**
+ * @class  TagProjectRequest
+ *
+ * @brief  Implements CodeStar TagProject requests.
+ *
+ * @see    CodeStarClient::tagProject
+ */
+
+/**
+ * @brief  Constructs a new TagProjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TagProjectResponse::TagProjectResponse(
+
+/**
+ * @brief  Constructs a new TagProjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TagProjectRequest::TagProjectRequest(const TagProjectRequest &other)
+    : CodeStarRequest(new TagProjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TagProjectRequest object.
+ */
+TagProjectRequest::TagProjectRequest()
+    : CodeStarRequest(new TagProjectRequestPrivate(CodeStarRequest::TagProjectAction, this))
+{
+
+}
+
+bool TagProjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TagProjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TagProjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeStarClient::send
+ */
+AwsAbstractResponse * TagProjectRequest::response(QNetworkReply * const reply) const
+{
+    return new TagProjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TagProjectRequestPrivate
+ *
+ * @brief  Private implementation for TagProjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagProjectRequestPrivate object.
+ *
+ * @param  action  CodeStar action being performed.
+ * @param  q       Pointer to this object's public TagProjectRequest instance.
+ */
+TagProjectRequestPrivate::TagProjectRequestPrivate(
+    const CodeStarRequest::Action action, TagProjectRequest * const q)
+    : TagProjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TagProjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TagProjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TagProjectRequest instance.
+ */
+TagProjectRequestPrivate::TagProjectRequestPrivate(
+    const TagProjectRequestPrivate &other, TagProjectRequest * const q)
+    : TagProjectPrivate(other, q)
+{
+
+}

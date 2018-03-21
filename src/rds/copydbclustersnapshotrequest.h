@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYDBCLUSTERSNAPSHOTREQUEST_H
 #define QTAWS_COPYDBCLUSTERSNAPSHOTREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBClusterSnapshotRequestPrivate;
+
+class QTAWS_EXPORT CopyDBClusterSnapshotRequest : public RDSRequest {
+
+public:
+    CopyDBClusterSnapshotRequest(const CopyDBClusterSnapshotRequest &other);
+    CopyDBClusterSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopyDBClusterSnapshotRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

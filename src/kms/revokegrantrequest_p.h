@@ -20,4 +20,29 @@
 #ifndef QTAWS_REVOKEGRANTREQUEST_P_H
 #define QTAWS_REVOKEGRANTREQUEST_P_H
 
+#include "kms_p.h"
+#include "revokegrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class RevokeGrantRequest;
+
+class QTAWS_EXPORT RevokeGrantRequestPrivate : public KMSPrivate {
+
+public:
+    RevokeGrantRequestPrivate(const KMS::Action action,
+                                   RevokeGrantRequest * const q);
+    RevokeGrantRequestPrivate(const RevokeGrantRequestPrivate &other,
+                                   RevokeGrantRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeGrantRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

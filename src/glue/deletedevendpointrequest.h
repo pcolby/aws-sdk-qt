@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDEVENDPOINTREQUEST_H
 #define QTAWS_DELETEDEVENDPOINTREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteDevEndpointRequestPrivate;
+
+class QTAWS_EXPORT DeleteDevEndpointRequest : public GlueRequest {
+
+public:
+    DeleteDevEndpointRequest(const DeleteDevEndpointRequest &other);
+    DeleteDevEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDevEndpointRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

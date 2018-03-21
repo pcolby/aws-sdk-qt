@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSTACKPOLICYREQUEST_P_H
 #define QTAWS_GETSTACKPOLICYREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "getstackpolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class GetStackPolicyRequest;
+
+class QTAWS_EXPORT GetStackPolicyRequestPrivate : public CloudFormationPrivate {
+
+public:
+    GetStackPolicyRequestPrivate(const CloudFormation::Action action,
+                                   GetStackPolicyRequest * const q);
+    GetStackPolicyRequestPrivate(const GetStackPolicyRequestPrivate &other,
+                                   GetStackPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetStackPolicyRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

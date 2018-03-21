@@ -19,3 +19,107 @@
 
 #include "createpolicyversionrequest.h"
 #include "createpolicyversionrequest_p.h"
+#include "createpolicyversionresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreatePolicyVersionRequest
+ *
+ * @brief  Implements IAM CreatePolicyVersion requests.
+ *
+ * @see    IAMClient::createPolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePolicyVersionResponse::CreatePolicyVersionResponse(
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersionRequest &other)
+    : IAMRequest(new CreatePolicyVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionRequest object.
+ */
+CreatePolicyVersionRequest::CreatePolicyVersionRequest()
+    : IAMRequest(new CreatePolicyVersionRequestPrivate(IAMRequest::CreatePolicyVersionAction, this))
+{
+
+}
+
+bool CreatePolicyVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePolicyVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePolicyVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePolicyVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePolicyVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreatePolicyVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyVersionRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public CreatePolicyVersionRequest instance.
+ */
+CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
+    const IAMRequest::Action action, CreatePolicyVersionRequest * const q)
+    : CreatePolicyVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePolicyVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePolicyVersionRequest instance.
+ */
+CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
+    const CreatePolicyVersionRequestPrivate &other, CreatePolicyVersionRequest * const q)
+    : CreatePolicyVersionPrivate(other, q)
+{
+
+}

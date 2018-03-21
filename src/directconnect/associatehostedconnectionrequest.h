@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEHOSTEDCONNECTIONREQUEST_H
 #define QTAWS_ASSOCIATEHOSTEDCONNECTIONREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class AssociateHostedConnectionRequestPrivate;
+
+class QTAWS_EXPORT AssociateHostedConnectionRequest : public DirectConnectRequest {
+
+public:
+    AssociateHostedConnectionRequest(const AssociateHostedConnectionRequest &other);
+    AssociateHostedConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateHostedConnectionRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

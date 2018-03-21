@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESTREAMREQUEST_H
 #define QTAWS_CREATESTREAMREQUEST_H
 
+#include "kinesisvideorequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class CreateStreamRequestPrivate;
+
+class QTAWS_EXPORT CreateStreamRequest : public KinesisVideoRequest {
+
+public:
+    CreateStreamRequest(const CreateStreamRequest &other);
+    CreateStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateStreamRequest)
+
+}
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

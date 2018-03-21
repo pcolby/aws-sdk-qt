@@ -19,3 +19,107 @@
 
 #include "describespotpricehistoryrequest.h"
 #include "describespotpricehistoryrequest_p.h"
+#include "describespotpricehistoryresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeSpotPriceHistoryRequest
+ *
+ * @brief  Implements EC2 DescribeSpotPriceHistory requests.
+ *
+ * @see    EC2Client::describeSpotPriceHistory
+ */
+
+/**
+ * @brief  Constructs a new DescribeSpotPriceHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSpotPriceHistoryResponse::DescribeSpotPriceHistoryResponse(
+
+/**
+ * @brief  Constructs a new DescribeSpotPriceHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest(const DescribeSpotPriceHistoryRequest &other)
+    : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSpotPriceHistoryRequest object.
+ */
+DescribeSpotPriceHistoryRequest::DescribeSpotPriceHistoryRequest()
+    : EC2Request(new DescribeSpotPriceHistoryRequestPrivate(EC2Request::DescribeSpotPriceHistoryAction, this))
+{
+
+}
+
+bool DescribeSpotPriceHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSpotPriceHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSpotPriceHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSpotPriceHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSpotPriceHistoryRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSpotPriceHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeSpotPriceHistoryRequest instance.
+ */
+DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
+    const EC2Request::Action action, DescribeSpotPriceHistoryRequest * const q)
+    : DescribeSpotPriceHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSpotPriceHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSpotPriceHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSpotPriceHistoryRequest instance.
+ */
+DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
+    const DescribeSpotPriceHistoryRequestPrivate &other, DescribeSpotPriceHistoryRequest * const q)
+    : DescribeSpotPriceHistoryPrivate(other, q)
+{
+
+}

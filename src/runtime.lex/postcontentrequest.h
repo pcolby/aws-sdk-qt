@@ -20,4 +20,32 @@
 #ifndef QTAWS_POSTCONTENTREQUEST_H
 #define QTAWS_POSTCONTENTREQUEST_H
 
+#include "lexruntimeservicerequest.h"
+
+namespace AWS {
+
+namespace LexRuntimeService {
+
+class PostContentRequestPrivate;
+
+class QTAWS_EXPORT PostContentRequest : public LexRuntimeServiceRequest {
+
+public:
+    PostContentRequest(const PostContentRequest &other);
+    PostContentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PostContentRequest)
+
+}
+
+} // namespace LexRuntimeService
+} // namespace AWS
+
 #endif

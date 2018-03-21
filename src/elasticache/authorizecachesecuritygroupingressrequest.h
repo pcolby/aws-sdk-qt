@@ -20,4 +20,32 @@
 #ifndef QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSREQUEST_H
 #define QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class AuthorizeCacheSecurityGroupIngressRequestPrivate;
+
+class QTAWS_EXPORT AuthorizeCacheSecurityGroupIngressRequest : public ElastiCacheRequest {
+
+public:
+    AuthorizeCacheSecurityGroupIngressRequest(const AuthorizeCacheSecurityGroupIngressRequest &other);
+    AuthorizeCacheSecurityGroupIngressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeCacheSecurityGroupIngressRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

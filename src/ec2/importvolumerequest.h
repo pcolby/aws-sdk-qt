@@ -20,4 +20,32 @@
 #ifndef QTAWS_IMPORTVOLUMEREQUEST_H
 #define QTAWS_IMPORTVOLUMEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ImportVolumeRequestPrivate;
+
+class QTAWS_EXPORT ImportVolumeRequest : public EC2Request {
+
+public:
+    ImportVolumeRequest(const ImportVolumeRequest &other);
+    ImportVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ImportVolumeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

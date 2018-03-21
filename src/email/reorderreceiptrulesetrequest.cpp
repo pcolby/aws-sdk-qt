@@ -19,3 +19,107 @@
 
 #include "reorderreceiptrulesetrequest.h"
 #include "reorderreceiptrulesetrequest_p.h"
+#include "reorderreceiptrulesetresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  ReorderReceiptRuleSetRequest
+ *
+ * @brief  Implements SES ReorderReceiptRuleSet requests.
+ *
+ * @see    SESClient::reorderReceiptRuleSet
+ */
+
+/**
+ * @brief  Constructs a new ReorderReceiptRuleSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
+
+/**
+ * @brief  Constructs a new ReorderReceiptRuleSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest(const ReorderReceiptRuleSetRequest &other)
+    : SESRequest(new ReorderReceiptRuleSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReorderReceiptRuleSetRequest object.
+ */
+ReorderReceiptRuleSetRequest::ReorderReceiptRuleSetRequest()
+    : SESRequest(new ReorderReceiptRuleSetRequestPrivate(SESRequest::ReorderReceiptRuleSetAction, this))
+{
+
+}
+
+bool ReorderReceiptRuleSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReorderReceiptRuleSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReorderReceiptRuleSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetworkReply * const reply) const
+{
+    return new ReorderReceiptRuleSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReorderReceiptRuleSetRequestPrivate
+ *
+ * @brief  Private implementation for ReorderReceiptRuleSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReorderReceiptRuleSetRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public ReorderReceiptRuleSetRequest instance.
+ */
+ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
+    const SESRequest::Action action, ReorderReceiptRuleSetRequest * const q)
+    : ReorderReceiptRuleSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReorderReceiptRuleSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReorderReceiptRuleSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReorderReceiptRuleSetRequest instance.
+ */
+ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
+    const ReorderReceiptRuleSetRequestPrivate &other, ReorderReceiptRuleSetRequest * const q)
+    : ReorderReceiptRuleSetPrivate(other, q)
+{
+
+}

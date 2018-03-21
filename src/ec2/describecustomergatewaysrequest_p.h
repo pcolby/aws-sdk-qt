@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECUSTOMERGATEWAYSREQUEST_P_H
 #define QTAWS_DESCRIBECUSTOMERGATEWAYSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describecustomergatewaysrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeCustomerGatewaysRequest;
+
+class QTAWS_EXPORT DescribeCustomerGatewaysRequestPrivate : public EC2Private {
+
+public:
+    DescribeCustomerGatewaysRequestPrivate(const EC2::Action action,
+                                   DescribeCustomerGatewaysRequest * const q);
+    DescribeCustomerGatewaysRequestPrivate(const DescribeCustomerGatewaysRequestPrivate &other,
+                                   DescribeCustomerGatewaysRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCustomerGatewaysRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

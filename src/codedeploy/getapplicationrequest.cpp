@@ -19,3 +19,107 @@
 
 #include "getapplicationrequest.h"
 #include "getapplicationrequest_p.h"
+#include "getapplicationresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  GetApplicationRequest
+ *
+ * @brief  Implements CodeDeploy GetApplication requests.
+ *
+ * @see    CodeDeployClient::getApplication
+ */
+
+/**
+ * @brief  Constructs a new GetApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationResponse::GetApplicationResponse(
+
+/**
+ * @brief  Constructs a new GetApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetApplicationRequest::GetApplicationRequest(const GetApplicationRequest &other)
+    : CodeDeployRequest(new GetApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetApplicationRequest object.
+ */
+GetApplicationRequest::GetApplicationRequest()
+    : CodeDeployRequest(new GetApplicationRequestPrivate(CodeDeployRequest::GetApplicationAction, this))
+{
+
+}
+
+bool GetApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationRequestPrivate
+ *
+ * @brief  Private implementation for GetApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public GetApplicationRequest instance.
+ */
+GetApplicationRequestPrivate::GetApplicationRequestPrivate(
+    const CodeDeployRequest::Action action, GetApplicationRequest * const q)
+    : GetApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetApplicationRequest instance.
+ */
+GetApplicationRequestPrivate::GetApplicationRequestPrivate(
+    const GetApplicationRequestPrivate &other, GetApplicationRequest * const q)
+    : GetApplicationPrivate(other, q)
+{
+
+}

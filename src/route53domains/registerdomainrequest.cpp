@@ -19,3 +19,107 @@
 
 #include "registerdomainrequest.h"
 #include "registerdomainrequest_p.h"
+#include "registerdomainresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  RegisterDomainRequest
+ *
+ * @brief  Implements Route53Domains RegisterDomain requests.
+ *
+ * @see    Route53DomainsClient::registerDomain
+ */
+
+/**
+ * @brief  Constructs a new RegisterDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterDomainResponse::RegisterDomainResponse(
+
+/**
+ * @brief  Constructs a new RegisterDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterDomainRequest::RegisterDomainRequest(const RegisterDomainRequest &other)
+    : Route53DomainsRequest(new RegisterDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterDomainRequest object.
+ */
+RegisterDomainRequest::RegisterDomainRequest()
+    : Route53DomainsRequest(new RegisterDomainRequestPrivate(Route53DomainsRequest::RegisterDomainAction, this))
+{
+
+}
+
+bool RegisterDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterDomainRequestPrivate
+ *
+ * @brief  Private implementation for RegisterDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterDomainRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public RegisterDomainRequest instance.
+ */
+RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
+    const Route53DomainsRequest::Action action, RegisterDomainRequest * const q)
+    : RegisterDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterDomainRequest instance.
+ */
+RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
+    const RegisterDomainRequestPrivate &other, RegisterDomainRequest * const q)
+    : RegisterDomainPrivate(other, q)
+{
+
+}

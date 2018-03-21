@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEXSSMATCHSETREQUEST_P_H
 #define QTAWS_DELETEXSSMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "deletexssmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteXssMatchSetRequest;
+
+class QTAWS_EXPORT DeleteXssMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    DeleteXssMatchSetRequestPrivate(const WAF::Action action,
+                                   DeleteXssMatchSetRequest * const q);
+    DeleteXssMatchSetRequestPrivate(const DeleteXssMatchSetRequestPrivate &other,
+                                   DeleteXssMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteXssMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

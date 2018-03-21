@@ -19,3 +19,107 @@
 
 #include "describeinstanceshealthrequest.h"
 #include "describeinstanceshealthrequest_p.h"
+#include "describeinstanceshealthresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeInstancesHealthRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeInstancesHealth requests.
+ *
+ * @see    ElasticBeanstalkClient::describeInstancesHealth
+ */
+
+/**
+ * @brief  Constructs a new DescribeInstancesHealthResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
+
+/**
+ * @brief  Constructs a new DescribeInstancesHealthRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInstancesHealthRequest::DescribeInstancesHealthRequest(const DescribeInstancesHealthRequest &other)
+    : ElasticBeanstalkRequest(new DescribeInstancesHealthRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInstancesHealthRequest object.
+ */
+DescribeInstancesHealthRequest::DescribeInstancesHealthRequest()
+    : ElasticBeanstalkRequest(new DescribeInstancesHealthRequestPrivate(ElasticBeanstalkRequest::DescribeInstancesHealthAction, this))
+{
+
+}
+
+bool DescribeInstancesHealthRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInstancesHealthResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInstancesHealthResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeInstancesHealthRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInstancesHealthResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInstancesHealthRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInstancesHealthRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancesHealthRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeInstancesHealthRequest instance.
+ */
+DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeInstancesHealthRequest * const q)
+    : DescribeInstancesHealthPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInstancesHealthRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInstancesHealthRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInstancesHealthRequest instance.
+ */
+DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
+    const DescribeInstancesHealthRequestPrivate &other, DescribeInstancesHealthRequest * const q)
+    : DescribeInstancesHealthPrivate(other, q)
+{
+
+}

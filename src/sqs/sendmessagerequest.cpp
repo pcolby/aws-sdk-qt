@@ -19,3 +19,107 @@
 
 #include "sendmessagerequest.h"
 #include "sendmessagerequest_p.h"
+#include "sendmessageresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  SendMessageRequest
+ *
+ * @brief  Implements SQS SendMessage requests.
+ *
+ * @see    SQSClient::sendMessage
+ */
+
+/**
+ * @brief  Constructs a new SendMessageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendMessageResponse::SendMessageResponse(
+
+/**
+ * @brief  Constructs a new SendMessageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendMessageRequest::SendMessageRequest(const SendMessageRequest &other)
+    : SQSRequest(new SendMessageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendMessageRequest object.
+ */
+SendMessageRequest::SendMessageRequest()
+    : SQSRequest(new SendMessageRequestPrivate(SQSRequest::SendMessageAction, this))
+{
+
+}
+
+bool SendMessageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendMessageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendMessageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * SendMessageRequest::response(QNetworkReply * const reply) const
+{
+    return new SendMessageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendMessageRequestPrivate
+ *
+ * @brief  Private implementation for SendMessageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessageRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public SendMessageRequest instance.
+ */
+SendMessageRequestPrivate::SendMessageRequestPrivate(
+    const SQSRequest::Action action, SendMessageRequest * const q)
+    : SendMessagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendMessageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendMessageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendMessageRequest instance.
+ */
+SendMessageRequestPrivate::SendMessageRequestPrivate(
+    const SendMessageRequestPrivate &other, SendMessageRequest * const q)
+    : SendMessagePrivate(other, q)
+{
+
+}

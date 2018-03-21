@@ -19,3 +19,107 @@
 
 #include "getcommandinvocationrequest.h"
 #include "getcommandinvocationrequest_p.h"
+#include "getcommandinvocationresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetCommandInvocationRequest
+ *
+ * @brief  Implements SSM GetCommandInvocation requests.
+ *
+ * @see    SSMClient::getCommandInvocation
+ */
+
+/**
+ * @brief  Constructs a new GetCommandInvocationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCommandInvocationResponse::GetCommandInvocationResponse(
+
+/**
+ * @brief  Constructs a new GetCommandInvocationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCommandInvocationRequest::GetCommandInvocationRequest(const GetCommandInvocationRequest &other)
+    : SSMRequest(new GetCommandInvocationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCommandInvocationRequest object.
+ */
+GetCommandInvocationRequest::GetCommandInvocationRequest()
+    : SSMRequest(new GetCommandInvocationRequestPrivate(SSMRequest::GetCommandInvocationAction, this))
+{
+
+}
+
+bool GetCommandInvocationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCommandInvocationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCommandInvocationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetCommandInvocationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCommandInvocationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCommandInvocationRequestPrivate
+ *
+ * @brief  Private implementation for GetCommandInvocationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCommandInvocationRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetCommandInvocationRequest instance.
+ */
+GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
+    const SSMRequest::Action action, GetCommandInvocationRequest * const q)
+    : GetCommandInvocationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCommandInvocationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCommandInvocationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCommandInvocationRequest instance.
+ */
+GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
+    const GetCommandInvocationRequestPrivate &other, GetCommandInvocationRequest * const q)
+    : GetCommandInvocationPrivate(other, q)
+{
+
+}

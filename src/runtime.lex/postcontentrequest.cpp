@@ -19,3 +19,107 @@
 
 #include "postcontentrequest.h"
 #include "postcontentrequest_p.h"
+#include "postcontentresponse.h"
+#include "lexruntimeservicerequest_p.h"
+
+namespace AWS {
+namespace LexRuntimeService {
+
+/**
+ * @class  PostContentRequest
+ *
+ * @brief  Implements LexRuntimeService PostContent requests.
+ *
+ * @see    LexRuntimeServiceClient::postContent
+ */
+
+/**
+ * @brief  Constructs a new PostContentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PostContentResponse::PostContentResponse(
+
+/**
+ * @brief  Constructs a new PostContentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PostContentRequest::PostContentRequest(const PostContentRequest &other)
+    : LexRuntimeServiceRequest(new PostContentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PostContentRequest object.
+ */
+PostContentRequest::PostContentRequest()
+    : LexRuntimeServiceRequest(new PostContentRequestPrivate(LexRuntimeServiceRequest::PostContentAction, this))
+{
+
+}
+
+bool PostContentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PostContentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PostContentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexRuntimeServiceClient::send
+ */
+AwsAbstractResponse * PostContentRequest::response(QNetworkReply * const reply) const
+{
+    return new PostContentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PostContentRequestPrivate
+ *
+ * @brief  Private implementation for PostContentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostContentRequestPrivate object.
+ *
+ * @param  action  LexRuntimeService action being performed.
+ * @param  q       Pointer to this object's public PostContentRequest instance.
+ */
+PostContentRequestPrivate::PostContentRequestPrivate(
+    const LexRuntimeServiceRequest::Action action, PostContentRequest * const q)
+    : PostContentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PostContentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PostContentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PostContentRequest instance.
+ */
+PostContentRequestPrivate::PostContentRequestPrivate(
+    const PostContentRequestPrivate &other, PostContentRequest * const q)
+    : PostContentPrivate(other, q)
+{
+
+}

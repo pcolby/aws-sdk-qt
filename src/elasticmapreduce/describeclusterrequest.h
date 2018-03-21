@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECLUSTERREQUEST_H
 #define QTAWS_DESCRIBECLUSTERREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeClusterRequestPrivate;
+
+class QTAWS_EXPORT DescribeClusterRequest : public EMRRequest {
+
+public:
+    DescribeClusterRequest(const DescribeClusterRequest &other);
+    DescribeClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeClusterRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

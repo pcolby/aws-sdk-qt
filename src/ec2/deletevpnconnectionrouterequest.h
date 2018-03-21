@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVPNCONNECTIONROUTEREQUEST_H
 #define QTAWS_DELETEVPNCONNECTIONROUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpnConnectionRouteRequestPrivate;
+
+class QTAWS_EXPORT DeleteVpnConnectionRouteRequest : public EC2Request {
+
+public:
+    DeleteVpnConnectionRouteRequest(const DeleteVpnConnectionRouteRequest &other);
+    DeleteVpnConnectionRouteRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpnConnectionRouteRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "cancelschemaextensionrequest.h"
 #include "cancelschemaextensionrequest_p.h"
+#include "cancelschemaextensionresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CancelSchemaExtensionRequest
+ *
+ * @brief  Implements DirectoryService CancelSchemaExtension requests.
+ *
+ * @see    DirectoryServiceClient::cancelSchemaExtension
+ */
+
+/**
+ * @brief  Constructs a new CancelSchemaExtensionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
+
+/**
+ * @brief  Constructs a new CancelSchemaExtensionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelSchemaExtensionRequest::CancelSchemaExtensionRequest(const CancelSchemaExtensionRequest &other)
+    : DirectoryServiceRequest(new CancelSchemaExtensionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelSchemaExtensionRequest object.
+ */
+CancelSchemaExtensionRequest::CancelSchemaExtensionRequest()
+    : DirectoryServiceRequest(new CancelSchemaExtensionRequestPrivate(DirectoryServiceRequest::CancelSchemaExtensionAction, this))
+{
+
+}
+
+bool CancelSchemaExtensionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelSchemaExtensionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelSchemaExtensionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelSchemaExtensionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelSchemaExtensionRequestPrivate
+ *
+ * @brief  Private implementation for CancelSchemaExtensionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public CancelSchemaExtensionRequest instance.
+ */
+CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
+    const DirectoryServiceRequest::Action action, CancelSchemaExtensionRequest * const q)
+    : CancelSchemaExtensionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelSchemaExtensionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelSchemaExtensionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelSchemaExtensionRequest instance.
+ */
+CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
+    const CancelSchemaExtensionRequestPrivate &other, CancelSchemaExtensionRequest * const q)
+    : CancelSchemaExtensionPrivate(other, q)
+{
+
+}

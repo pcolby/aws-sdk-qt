@@ -19,3 +19,107 @@
 
 #include "listobjectparentsrequest.h"
 #include "listobjectparentsrequest_p.h"
+#include "listobjectparentsresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListObjectParentsRequest
+ *
+ * @brief  Implements CloudDirectory ListObjectParents requests.
+ *
+ * @see    CloudDirectoryClient::listObjectParents
+ */
+
+/**
+ * @brief  Constructs a new ListObjectParentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListObjectParentsResponse::ListObjectParentsResponse(
+
+/**
+ * @brief  Constructs a new ListObjectParentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListObjectParentsRequest::ListObjectParentsRequest(const ListObjectParentsRequest &other)
+    : CloudDirectoryRequest(new ListObjectParentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListObjectParentsRequest object.
+ */
+ListObjectParentsRequest::ListObjectParentsRequest()
+    : CloudDirectoryRequest(new ListObjectParentsRequestPrivate(CloudDirectoryRequest::ListObjectParentsAction, this))
+{
+
+}
+
+bool ListObjectParentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListObjectParentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListObjectParentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListObjectParentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListObjectParentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListObjectParentsRequestPrivate
+ *
+ * @brief  Private implementation for ListObjectParentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectParentsRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListObjectParentsRequest instance.
+ */
+ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListObjectParentsRequest * const q)
+    : ListObjectParentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListObjectParentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListObjectParentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListObjectParentsRequest instance.
+ */
+ListObjectParentsRequestPrivate::ListObjectParentsRequestPrivate(
+    const ListObjectParentsRequestPrivate &other, ListObjectParentsRequest * const q)
+    : ListObjectParentsPrivate(other, q)
+{
+
+}

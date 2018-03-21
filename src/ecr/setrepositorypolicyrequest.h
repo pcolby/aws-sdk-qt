@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETREPOSITORYPOLICYREQUEST_H
 #define QTAWS_SETREPOSITORYPOLICYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class SetRepositoryPolicyRequestPrivate;
+
+class QTAWS_EXPORT SetRepositoryPolicyRequest : public ECRRequest {
+
+public:
+    SetRepositoryPolicyRequest(const SetRepositoryPolicyRequest &other);
+    SetRepositoryPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetRepositoryPolicyRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

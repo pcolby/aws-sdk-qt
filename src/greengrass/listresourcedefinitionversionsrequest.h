@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCEDEFINITIONVERSIONSREQUEST_H
 #define QTAWS_LISTRESOURCEDEFINITIONVERSIONSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListResourceDefinitionVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListResourceDefinitionVersionsRequest : public GreengrassRequest {
+
+public:
+    ListResourceDefinitionVersionsRequest(const ListResourceDefinitionVersionsRequest &other);
+    ListResourceDefinitionVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceDefinitionVersionsRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

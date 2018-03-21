@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRETIRABLEGRANTSREQUEST_H
 #define QTAWS_LISTRETIRABLEGRANTSREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListRetirableGrantsRequestPrivate;
+
+class QTAWS_EXPORT ListRetirableGrantsRequest : public KMSRequest {
+
+public:
+    ListRetirableGrantsRequest(const ListRetirableGrantsRequest &other);
+    ListRetirableGrantsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRetirableGrantsRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

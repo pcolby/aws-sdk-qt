@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCALLERIDENTITYREQUEST_P_H
 #define QTAWS_GETCALLERIDENTITYREQUEST_P_H
 
+#include "sts_p.h"
+#include "getcalleridentityrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class GetCallerIdentityRequest;
+
+class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public STSPrivate {
+
+public:
+    GetCallerIdentityRequestPrivate(const STS::Action action,
+                                   GetCallerIdentityRequest * const q);
+    GetCallerIdentityRequestPrivate(const GetCallerIdentityRequestPrivate &other,
+                                   GetCallerIdentityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCallerIdentityRequest)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

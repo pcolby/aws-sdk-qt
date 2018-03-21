@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPEXECUTIONREQUEST_P_H
 #define QTAWS_STOPEXECUTIONREQUEST_P_H
 
+#include "sfn_p.h"
+#include "stopexecutionrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class StopExecutionRequest;
+
+class QTAWS_EXPORT StopExecutionRequestPrivate : public SFNPrivate {
+
+public:
+    StopExecutionRequestPrivate(const SFN::Action action,
+                                   StopExecutionRequest * const q);
+    StopExecutionRequestPrivate(const StopExecutionRequestPrivate &other,
+                                   StopExecutionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopExecutionRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

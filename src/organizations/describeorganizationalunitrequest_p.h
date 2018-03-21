@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONALUNITREQUEST_P_H
 #define QTAWS_DESCRIBEORGANIZATIONALUNITREQUEST_P_H
 
+#include "organizations_p.h"
+#include "describeorganizationalunitrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribeOrganizationalUnitRequest;
+
+class QTAWS_EXPORT DescribeOrganizationalUnitRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DescribeOrganizationalUnitRequestPrivate(const Organizations::Action action,
+                                   DescribeOrganizationalUnitRequest * const q);
+    DescribeOrganizationalUnitRequestPrivate(const DescribeOrganizationalUnitRequestPrivate &other,
+                                   DescribeOrganizationalUnitRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrganizationalUnitRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

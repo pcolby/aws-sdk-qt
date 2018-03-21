@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIDENTITIESREQUEST_P_H
 #define QTAWS_LISTIDENTITIESREQUEST_P_H
 
+#include "ses_p.h"
+#include "listidentitiesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListIdentitiesRequest;
+
+class QTAWS_EXPORT ListIdentitiesRequestPrivate : public SESPrivate {
+
+public:
+    ListIdentitiesRequestPrivate(const SES::Action action,
+                                   ListIdentitiesRequest * const q);
+    ListIdentitiesRequestPrivate(const ListIdentitiesRequestPrivate &other,
+                                   ListIdentitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIdentitiesRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

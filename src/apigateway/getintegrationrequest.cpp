@@ -19,3 +19,107 @@
 
 #include "getintegrationrequest.h"
 #include "getintegrationrequest_p.h"
+#include "getintegrationresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetIntegrationRequest
+ *
+ * @brief  Implements APIGateway GetIntegration requests.
+ *
+ * @see    APIGatewayClient::getIntegration
+ */
+
+/**
+ * @brief  Constructs a new GetIntegrationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntegrationResponse::GetIntegrationResponse(
+
+/**
+ * @brief  Constructs a new GetIntegrationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIntegrationRequest::GetIntegrationRequest(const GetIntegrationRequest &other)
+    : APIGatewayRequest(new GetIntegrationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIntegrationRequest object.
+ */
+GetIntegrationRequest::GetIntegrationRequest()
+    : APIGatewayRequest(new GetIntegrationRequestPrivate(APIGatewayRequest::GetIntegrationAction, this))
+{
+
+}
+
+bool GetIntegrationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIntegrationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIntegrationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetIntegrationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIntegrationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntegrationRequestPrivate
+ *
+ * @brief  Private implementation for GetIntegrationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntegrationRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetIntegrationRequest instance.
+ */
+GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
+    const APIGatewayRequest::Action action, GetIntegrationRequest * const q)
+    : GetIntegrationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntegrationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIntegrationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIntegrationRequest instance.
+ */
+GetIntegrationRequestPrivate::GetIntegrationRequestPrivate(
+    const GetIntegrationRequestPrivate &other, GetIntegrationRequest * const q)
+    : GetIntegrationPrivate(other, q)
+{
+
+}

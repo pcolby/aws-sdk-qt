@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPERMISSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEPERMISSIONSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describepermissionsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribePermissionsRequest;
+
+class QTAWS_EXPORT DescribePermissionsRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribePermissionsRequestPrivate(const OpsWorks::Action action,
+                                   DescribePermissionsRequest * const q);
+    DescribePermissionsRequestPrivate(const DescribePermissionsRequestPrivate &other,
+                                   DescribePermissionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePermissionsRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

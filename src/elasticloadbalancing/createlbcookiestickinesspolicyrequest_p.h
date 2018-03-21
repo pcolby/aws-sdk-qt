@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELBCOOKIESTICKINESSPOLICYREQUEST_P_H
 #define QTAWS_CREATELBCOOKIESTICKINESSPOLICYREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "createlbcookiestickinesspolicyrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class CreateLBCookieStickinessPolicyRequest;
+
+class QTAWS_EXPORT CreateLBCookieStickinessPolicyRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    CreateLBCookieStickinessPolicyRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   CreateLBCookieStickinessPolicyRequest * const q);
+    CreateLBCookieStickinessPolicyRequestPrivate(const CreateLBCookieStickinessPolicyRequestPrivate &other,
+                                   CreateLBCookieStickinessPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLBCookieStickinessPolicyRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

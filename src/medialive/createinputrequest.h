@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEINPUTREQUEST_H
 #define QTAWS_CREATEINPUTREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class CreateInputRequestPrivate;
+
+class QTAWS_EXPORT CreateInputRequest : public MediaLiveRequest {
+
+public:
+    CreateInputRequest(const CreateInputRequest &other);
+    CreateInputRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateInputRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEMEMBERSREQUEST_H
 #define QTAWS_CREATEMEMBERSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateMembersRequestPrivate;
+
+class QTAWS_EXPORT CreateMembersRequest : public GuardDutyRequest {
+
+public:
+    CreateMembersRequest(const CreateMembersRequest &other);
+    CreateMembersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateMembersRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "verifydomaindkimrequest.h"
 #include "verifydomaindkimrequest_p.h"
+#include "verifydomaindkimresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  VerifyDomainDkimRequest
+ *
+ * @brief  Implements SES VerifyDomainDkim requests.
+ *
+ * @see    SESClient::verifyDomainDkim
+ */
+
+/**
+ * @brief  Constructs a new VerifyDomainDkimResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+VerifyDomainDkimResponse::VerifyDomainDkimResponse(
+
+/**
+ * @brief  Constructs a new VerifyDomainDkimRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+VerifyDomainDkimRequest::VerifyDomainDkimRequest(const VerifyDomainDkimRequest &other)
+    : SESRequest(new VerifyDomainDkimRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new VerifyDomainDkimRequest object.
+ */
+VerifyDomainDkimRequest::VerifyDomainDkimRequest()
+    : SESRequest(new VerifyDomainDkimRequestPrivate(SESRequest::VerifyDomainDkimAction, this))
+{
+
+}
+
+bool VerifyDomainDkimRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an VerifyDomainDkimResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An VerifyDomainDkimResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkReply * const reply) const
+{
+    return new VerifyDomainDkimResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  VerifyDomainDkimRequestPrivate
+ *
+ * @brief  Private implementation for VerifyDomainDkimRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainDkimRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public VerifyDomainDkimRequest instance.
+ */
+VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
+    const SESRequest::Action action, VerifyDomainDkimRequest * const q)
+    : VerifyDomainDkimPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new VerifyDomainDkimRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the VerifyDomainDkimRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public VerifyDomainDkimRequest instance.
+ */
+VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
+    const VerifyDomainDkimRequestPrivate &other, VerifyDomainDkimRequest * const q)
+    : VerifyDomainDkimPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_P_H
 #define QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_P_H
 
+#include "kinesisanalytics_p.h"
+#include "addapplicationinputprocessingconfigurationrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationInputProcessingConfigurationRequest;
+
+class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsPrivate {
+
+public:
+    AddApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalytics::Action action,
+                                   AddApplicationInputProcessingConfigurationRequest * const q);
+    AddApplicationInputProcessingConfigurationRequestPrivate(const AddApplicationInputProcessingConfigurationRequestPrivate &other,
+                                   AddApplicationInputProcessingConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddApplicationInputProcessingConfigurationRequest)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

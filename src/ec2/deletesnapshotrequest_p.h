@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESNAPSHOTREQUEST_P_H
 #define QTAWS_DELETESNAPSHOTREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletesnapshotrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteSnapshotRequest;
+
+class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public EC2Private {
+
+public:
+    DeleteSnapshotRequestPrivate(const EC2::Action action,
+                                   DeleteSnapshotRequest * const q);
+    DeleteSnapshotRequestPrivate(const DeleteSnapshotRequestPrivate &other,
+                                   DeleteSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSnapshotRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

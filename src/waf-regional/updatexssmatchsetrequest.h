@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETREQUEST_H
 #define QTAWS_UPDATEXSSMATCHSETREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateXssMatchSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateXssMatchSetRequest : public WAFRegionalRequest {
+
+public:
+    UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other);
+    UpdateXssMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateXssMatchSetRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

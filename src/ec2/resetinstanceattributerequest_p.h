@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETINSTANCEATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETINSTANCEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "resetinstanceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetInstanceAttributeRequest;
+
+class QTAWS_EXPORT ResetInstanceAttributeRequestPrivate : public EC2Private {
+
+public:
+    ResetInstanceAttributeRequestPrivate(const EC2::Action action,
+                                   ResetInstanceAttributeRequest * const q);
+    ResetInstanceAttributeRequestPrivate(const ResetInstanceAttributeRequestPrivate &other,
+                                   ResetInstanceAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetInstanceAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

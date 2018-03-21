@@ -19,3 +19,107 @@
 
 #include "describedefaultclusterparametersrequest.h"
 #include "describedefaultclusterparametersrequest_p.h"
+#include "describedefaultclusterparametersresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeDefaultClusterParametersRequest
+ *
+ * @brief  Implements Redshift DescribeDefaultClusterParameters requests.
+ *
+ * @see    RedshiftClient::describeDefaultClusterParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeDefaultClusterParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDefaultClusterParametersResponse::DescribeDefaultClusterParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeDefaultClusterParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDefaultClusterParametersRequest::DescribeDefaultClusterParametersRequest(const DescribeDefaultClusterParametersRequest &other)
+    : RedshiftRequest(new DescribeDefaultClusterParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDefaultClusterParametersRequest object.
+ */
+DescribeDefaultClusterParametersRequest::DescribeDefaultClusterParametersRequest()
+    : RedshiftRequest(new DescribeDefaultClusterParametersRequestPrivate(RedshiftRequest::DescribeDefaultClusterParametersAction, this))
+{
+
+}
+
+bool DescribeDefaultClusterParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDefaultClusterParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDefaultClusterParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeDefaultClusterParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDefaultClusterParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDefaultClusterParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDefaultClusterParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultClusterParametersRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeDefaultClusterParametersRequest instance.
+ */
+DescribeDefaultClusterParametersRequestPrivate::DescribeDefaultClusterParametersRequestPrivate(
+    const RedshiftRequest::Action action, DescribeDefaultClusterParametersRequest * const q)
+    : DescribeDefaultClusterParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDefaultClusterParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDefaultClusterParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDefaultClusterParametersRequest instance.
+ */
+DescribeDefaultClusterParametersRequestPrivate::DescribeDefaultClusterParametersRequestPrivate(
+    const DescribeDefaultClusterParametersRequestPrivate &other, DescribeDefaultClusterParametersRequest * const q)
+    : DescribeDefaultClusterParametersPrivate(other, q)
+{
+
+}

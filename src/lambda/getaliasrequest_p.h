@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETALIASREQUEST_P_H
 #define QTAWS_GETALIASREQUEST_P_H
 
+#include "lambda_p.h"
+#include "getaliasrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetAliasRequest;
+
+class QTAWS_EXPORT GetAliasRequestPrivate : public LambdaPrivate {
+
+public:
+    GetAliasRequestPrivate(const Lambda::Action action,
+                                   GetAliasRequest * const q);
+    GetAliasRequestPrivate(const GetAliasRequestPrivate &other,
+                                   GetAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAliasRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

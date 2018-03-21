@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_P_H
 #define QTAWS_UPDATEALIASREQUEST_P_H
 
+#include "lambda_p.h"
+#include "updatealiasrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateAliasRequest;
+
+class QTAWS_EXPORT UpdateAliasRequestPrivate : public LambdaPrivate {
+
+public:
+    UpdateAliasRequestPrivate(const Lambda::Action action,
+                                   UpdateAliasRequest * const q);
+    UpdateAliasRequestPrivate(const UpdateAliasRequestPrivate &other,
+                                   UpdateAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAliasRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

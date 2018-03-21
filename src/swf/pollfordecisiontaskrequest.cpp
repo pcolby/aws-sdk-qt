@@ -19,3 +19,107 @@
 
 #include "pollfordecisiontaskrequest.h"
 #include "pollfordecisiontaskrequest_p.h"
+#include "pollfordecisiontaskresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  PollForDecisionTaskRequest
+ *
+ * @brief  Implements SWF PollForDecisionTask requests.
+ *
+ * @see    SWFClient::pollForDecisionTask
+ */
+
+/**
+ * @brief  Constructs a new PollForDecisionTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForDecisionTaskResponse::PollForDecisionTaskResponse(
+
+/**
+ * @brief  Constructs a new PollForDecisionTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PollForDecisionTaskRequest::PollForDecisionTaskRequest(const PollForDecisionTaskRequest &other)
+    : SWFRequest(new PollForDecisionTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PollForDecisionTaskRequest object.
+ */
+PollForDecisionTaskRequest::PollForDecisionTaskRequest()
+    : SWFRequest(new PollForDecisionTaskRequestPrivate(SWFRequest::PollForDecisionTaskAction, this))
+{
+
+}
+
+bool PollForDecisionTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PollForDecisionTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PollForDecisionTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new PollForDecisionTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForDecisionTaskRequestPrivate
+ *
+ * @brief  Private implementation for PollForDecisionTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForDecisionTaskRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public PollForDecisionTaskRequest instance.
+ */
+PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
+    const SWFRequest::Action action, PollForDecisionTaskRequest * const q)
+    : PollForDecisionTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForDecisionTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PollForDecisionTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PollForDecisionTaskRequest instance.
+ */
+PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
+    const PollForDecisionTaskRequestPrivate &other, PollForDecisionTaskRequest * const q)
+    : PollForDecisionTaskPrivate(other, q)
+{
+
+}

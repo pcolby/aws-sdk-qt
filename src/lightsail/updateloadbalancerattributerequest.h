@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATELOADBALANCERATTRIBUTEREQUEST_H
 #define QTAWS_UPDATELOADBALANCERATTRIBUTEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class UpdateLoadBalancerAttributeRequestPrivate;
+
+class QTAWS_EXPORT UpdateLoadBalancerAttributeRequest : public LightsailRequest {
+
+public:
+    UpdateLoadBalancerAttributeRequest(const UpdateLoadBalancerAttributeRequest &other);
+    UpdateLoadBalancerAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLoadBalancerAttributeRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACCOUNTBALANCEREQUEST_P_H
 #define QTAWS_GETACCOUNTBALANCEREQUEST_P_H
 
+#include "mturk_p.h"
+#include "getaccountbalancerequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetAccountBalanceRequest;
+
+class QTAWS_EXPORT GetAccountBalanceRequestPrivate : public MTurkPrivate {
+
+public:
+    GetAccountBalanceRequestPrivate(const MTurk::Action action,
+                                   GetAccountBalanceRequest * const q);
+    GetAccountBalanceRequestPrivate(const GetAccountBalanceRequestPrivate &other,
+                                   GetAccountBalanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountBalanceRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

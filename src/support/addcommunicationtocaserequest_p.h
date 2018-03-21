@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_P_H
 #define QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_P_H
 
+#include "support_p.h"
+#include "addcommunicationtocaserequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class AddCommunicationToCaseRequest;
+
+class QTAWS_EXPORT AddCommunicationToCaseRequestPrivate : public SupportPrivate {
+
+public:
+    AddCommunicationToCaseRequestPrivate(const Support::Action action,
+                                   AddCommunicationToCaseRequest * const q);
+    AddCommunicationToCaseRequestPrivate(const AddCommunicationToCaseRequestPrivate &other,
+                                   AddCommunicationToCaseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddCommunicationToCaseRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

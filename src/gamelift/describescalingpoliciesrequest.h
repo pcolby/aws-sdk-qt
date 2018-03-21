@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESCALINGPOLICIESREQUEST_H
 #define QTAWS_DESCRIBESCALINGPOLICIESREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeScalingPoliciesRequestPrivate;
+
+class QTAWS_EXPORT DescribeScalingPoliciesRequest : public GameLiftRequest {
+
+public:
+    DescribeScalingPoliciesRequest(const DescribeScalingPoliciesRequest &other);
+    DescribeScalingPoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScalingPoliciesRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

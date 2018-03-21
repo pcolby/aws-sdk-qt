@@ -19,3 +19,107 @@
 
 #include "indexfacesrequest.h"
 #include "indexfacesrequest_p.h"
+#include "indexfacesresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  IndexFacesRequest
+ *
+ * @brief  Implements Rekognition IndexFaces requests.
+ *
+ * @see    RekognitionClient::indexFaces
+ */
+
+/**
+ * @brief  Constructs a new IndexFacesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IndexFacesResponse::IndexFacesResponse(
+
+/**
+ * @brief  Constructs a new IndexFacesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+IndexFacesRequest::IndexFacesRequest(const IndexFacesRequest &other)
+    : RekognitionRequest(new IndexFacesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new IndexFacesRequest object.
+ */
+IndexFacesRequest::IndexFacesRequest()
+    : RekognitionRequest(new IndexFacesRequestPrivate(RekognitionRequest::IndexFacesAction, this))
+{
+
+}
+
+bool IndexFacesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an IndexFacesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An IndexFacesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * const reply) const
+{
+    return new IndexFacesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  IndexFacesRequestPrivate
+ *
+ * @brief  Private implementation for IndexFacesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexFacesRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public IndexFacesRequest instance.
+ */
+IndexFacesRequestPrivate::IndexFacesRequestPrivate(
+    const RekognitionRequest::Action action, IndexFacesRequest * const q)
+    : IndexFacesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IndexFacesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the IndexFacesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public IndexFacesRequest instance.
+ */
+IndexFacesRequestPrivate::IndexFacesRequestPrivate(
+    const IndexFacesRequestPrivate &other, IndexFacesRequest * const q)
+    : IndexFacesPrivate(other, q)
+{
+
+}

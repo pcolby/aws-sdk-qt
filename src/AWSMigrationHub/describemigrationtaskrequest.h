@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMIGRATIONTASKREQUEST_H
 #define QTAWS_DESCRIBEMIGRATIONTASKREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DescribeMigrationTaskRequestPrivate;
+
+class QTAWS_EXPORT DescribeMigrationTaskRequest : public MigrationHubRequest {
+
+public:
+    DescribeMigrationTaskRequest(const DescribeMigrationTaskRequest &other);
+    DescribeMigrationTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMigrationTaskRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

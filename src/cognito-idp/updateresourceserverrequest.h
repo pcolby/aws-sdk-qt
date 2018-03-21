@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATERESOURCESERVERREQUEST_H
 #define QTAWS_UPDATERESOURCESERVERREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateResourceServerRequestPrivate;
+
+class QTAWS_EXPORT UpdateResourceServerRequest : public CognitoIdentityProviderRequest {
+
+public:
+    UpdateResourceServerRequest(const UpdateResourceServerRequest &other);
+    UpdateResourceServerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateResourceServerRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

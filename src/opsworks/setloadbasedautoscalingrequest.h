@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETLOADBASEDAUTOSCALINGREQUEST_H
 #define QTAWS_SETLOADBASEDAUTOSCALINGREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class SetLoadBasedAutoScalingRequestPrivate;
+
+class QTAWS_EXPORT SetLoadBasedAutoScalingRequest : public OpsWorksRequest {
+
+public:
+    SetLoadBasedAutoScalingRequest(const SetLoadBasedAutoScalingRequest &other);
+    SetLoadBasedAutoScalingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetLoadBasedAutoScalingRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

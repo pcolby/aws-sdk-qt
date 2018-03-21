@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETONPREMISESINSTANCEREQUEST_H
 #define QTAWS_GETONPREMISESINSTANCEREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class GetOnPremisesInstanceRequestPrivate;
+
+class QTAWS_EXPORT GetOnPremisesInstanceRequest : public CodeDeployRequest {
+
+public:
+    GetOnPremisesInstanceRequest(const GetOnPremisesInstanceRequest &other);
+    GetOnPremisesInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOnPremisesInstanceRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

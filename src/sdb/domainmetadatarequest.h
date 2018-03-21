@@ -20,4 +20,32 @@
 #ifndef QTAWS_DOMAINMETADATAREQUEST_H
 #define QTAWS_DOMAINMETADATAREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DomainMetadataRequestPrivate;
+
+class QTAWS_EXPORT DomainMetadataRequest : public SimpleDBRequest {
+
+public:
+    DomainMetadataRequest(const DomainMetadataRequest &other);
+    DomainMetadataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DomainMetadataRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

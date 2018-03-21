@@ -19,3 +19,107 @@
 
 #include "adminlistuserautheventsrequest.h"
 #include "adminlistuserautheventsrequest_p.h"
+#include "adminlistuserautheventsresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminListUserAuthEventsRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminListUserAuthEvents requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminListUserAuthEvents
+ */
+
+/**
+ * @brief  Constructs a new AdminListUserAuthEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminListUserAuthEventsResponse::AdminListUserAuthEventsResponse(
+
+/**
+ * @brief  Constructs a new AdminListUserAuthEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest(const AdminListUserAuthEventsRequest &other)
+    : CognitoIdentityProviderRequest(new AdminListUserAuthEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminListUserAuthEventsRequest object.
+ */
+AdminListUserAuthEventsRequest::AdminListUserAuthEventsRequest()
+    : CognitoIdentityProviderRequest(new AdminListUserAuthEventsRequestPrivate(CognitoIdentityProviderRequest::AdminListUserAuthEventsAction, this))
+{
+
+}
+
+bool AdminListUserAuthEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminListUserAuthEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminListUserAuthEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminListUserAuthEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminListUserAuthEventsRequestPrivate
+ *
+ * @brief  Private implementation for AdminListUserAuthEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminListUserAuthEventsRequest instance.
+ */
+AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminListUserAuthEventsRequest * const q)
+    : AdminListUserAuthEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminListUserAuthEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminListUserAuthEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminListUserAuthEventsRequest instance.
+ */
+AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
+    const AdminListUserAuthEventsRequestPrivate &other, AdminListUserAuthEventsRequest * const q)
+    : AdminListUserAuthEventsPrivate(other, q)
+{
+
+}

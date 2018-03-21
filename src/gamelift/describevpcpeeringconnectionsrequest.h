@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEVPCPEERINGCONNECTIONSREQUEST_H
 #define QTAWS_DESCRIBEVPCPEERINGCONNECTIONSREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeVpcPeeringConnectionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeVpcPeeringConnectionsRequest : public GameLiftRequest {
+
+public:
+    DescribeVpcPeeringConnectionsRequest(const DescribeVpcPeeringConnectionsRequest &other);
+    DescribeVpcPeeringConnectionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcPeeringConnectionsRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESFORROLEREQUEST_P_H
 #define QTAWS_LISTINSTANCEPROFILESFORROLEREQUEST_P_H
 
+#include "iam_p.h"
+#include "listinstanceprofilesforrolerequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListInstanceProfilesForRoleRequest;
+
+class QTAWS_EXPORT ListInstanceProfilesForRoleRequestPrivate : public IAMPrivate {
+
+public:
+    ListInstanceProfilesForRoleRequestPrivate(const IAM::Action action,
+                                   ListInstanceProfilesForRoleRequest * const q);
+    ListInstanceProfilesForRoleRequestPrivate(const ListInstanceProfilesForRoleRequestPrivate &other,
+                                   ListInstanceProfilesForRoleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListInstanceProfilesForRoleRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

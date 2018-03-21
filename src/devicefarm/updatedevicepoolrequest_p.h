@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDEVICEPOOLREQUEST_P_H
 #define QTAWS_UPDATEDEVICEPOOLREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "updatedevicepoolrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class UpdateDevicePoolRequest;
+
+class QTAWS_EXPORT UpdateDevicePoolRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    UpdateDevicePoolRequestPrivate(const DeviceFarm::Action action,
+                                   UpdateDevicePoolRequest * const q);
+    UpdateDevicePoolRequestPrivate(const UpdateDevicePoolRequestPrivate &other,
+                                   UpdateDevicePoolRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDevicePoolRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

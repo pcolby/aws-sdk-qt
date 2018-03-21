@@ -19,3 +19,107 @@
 
 #include "describeconfigruleevaluationstatusrequest.h"
 #include "describeconfigruleevaluationstatusrequest_p.h"
+#include "describeconfigruleevaluationstatusresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  DescribeConfigRuleEvaluationStatusRequest
+ *
+ * @brief  Implements ConfigService DescribeConfigRuleEvaluationStatus requests.
+ *
+ * @see    ConfigServiceClient::describeConfigRuleEvaluationStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConfigRuleEvaluationStatusRequest::DescribeConfigRuleEvaluationStatusRequest(const DescribeConfigRuleEvaluationStatusRequest &other)
+    : ConfigServiceRequest(new DescribeConfigRuleEvaluationStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequest object.
+ */
+DescribeConfigRuleEvaluationStatusRequest::DescribeConfigRuleEvaluationStatusRequest()
+    : ConfigServiceRequest(new DescribeConfigRuleEvaluationStatusRequestPrivate(ConfigServiceRequest::DescribeConfigRuleEvaluationStatusAction, this))
+{
+
+}
+
+bool DescribeConfigRuleEvaluationStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConfigRuleEvaluationStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConfigRuleEvaluationStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * DescribeConfigRuleEvaluationStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConfigRuleEvaluationStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigRuleEvaluationStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConfigRuleEvaluationStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public DescribeConfigRuleEvaluationStatusRequest instance.
+ */
+DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
+    const ConfigServiceRequest::Action action, DescribeConfigRuleEvaluationStatusRequest * const q)
+    : DescribeConfigRuleEvaluationStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigRuleEvaluationStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConfigRuleEvaluationStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConfigRuleEvaluationStatusRequest instance.
+ */
+DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
+    const DescribeConfigRuleEvaluationStatusRequestPrivate &other, DescribeConfigRuleEvaluationStatusRequest * const q)
+    : DescribeConfigRuleEvaluationStatusPrivate(other, q)
+{
+
+}

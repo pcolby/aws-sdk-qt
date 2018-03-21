@@ -19,3 +19,107 @@
 
 #include "describekeyrequest.h"
 #include "describekeyrequest_p.h"
+#include "describekeyresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  DescribeKeyRequest
+ *
+ * @brief  Implements KMS DescribeKey requests.
+ *
+ * @see    KMSClient::describeKey
+ */
+
+/**
+ * @brief  Constructs a new DescribeKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeKeyResponse::DescribeKeyResponse(
+
+/**
+ * @brief  Constructs a new DescribeKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeKeyRequest::DescribeKeyRequest(const DescribeKeyRequest &other)
+    : KMSRequest(new DescribeKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeKeyRequest object.
+ */
+DescribeKeyRequest::DescribeKeyRequest()
+    : KMSRequest(new DescribeKeyRequestPrivate(KMSRequest::DescribeKeyAction, this))
+{
+
+}
+
+bool DescribeKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeKeyRequestPrivate
+ *
+ * @brief  Private implementation for DescribeKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeKeyRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public DescribeKeyRequest instance.
+ */
+DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
+    const KMSRequest::Action action, DescribeKeyRequest * const q)
+    : DescribeKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeKeyRequest instance.
+ */
+DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
+    const DescribeKeyRequestPrivate &other, DescribeKeyRequest * const q)
+    : DescribeKeyPrivate(other, q)
+{
+
+}

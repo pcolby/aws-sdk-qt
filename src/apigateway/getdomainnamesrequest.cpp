@@ -19,3 +19,107 @@
 
 #include "getdomainnamesrequest.h"
 #include "getdomainnamesrequest_p.h"
+#include "getdomainnamesresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDomainNamesRequest
+ *
+ * @brief  Implements APIGateway GetDomainNames requests.
+ *
+ * @see    APIGatewayClient::getDomainNames
+ */
+
+/**
+ * @brief  Constructs a new GetDomainNamesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainNamesResponse::GetDomainNamesResponse(
+
+/**
+ * @brief  Constructs a new GetDomainNamesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDomainNamesRequest::GetDomainNamesRequest(const GetDomainNamesRequest &other)
+    : APIGatewayRequest(new GetDomainNamesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDomainNamesRequest object.
+ */
+GetDomainNamesRequest::GetDomainNamesRequest()
+    : APIGatewayRequest(new GetDomainNamesRequestPrivate(APIGatewayRequest::GetDomainNamesAction, this))
+{
+
+}
+
+bool GetDomainNamesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDomainNamesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDomainNamesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetDomainNamesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDomainNamesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainNamesRequestPrivate
+ *
+ * @brief  Private implementation for GetDomainNamesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainNamesRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetDomainNamesRequest instance.
+ */
+GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
+    const APIGatewayRequest::Action action, GetDomainNamesRequest * const q)
+    : GetDomainNamesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainNamesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDomainNamesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDomainNamesRequest instance.
+ */
+GetDomainNamesRequestPrivate::GetDomainNamesRequestPrivate(
+    const GetDomainNamesRequestPrivate &other, GetDomainNamesRequest * const q)
+    : GetDomainNamesPrivate(other, q)
+{
+
+}

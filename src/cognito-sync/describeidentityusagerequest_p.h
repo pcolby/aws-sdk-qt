@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIDENTITYUSAGEREQUEST_P_H
 #define QTAWS_DESCRIBEIDENTITYUSAGEREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "describeidentityusagerequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class DescribeIdentityUsageRequest;
+
+class QTAWS_EXPORT DescribeIdentityUsageRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    DescribeIdentityUsageRequestPrivate(const CognitoSync::Action action,
+                                   DescribeIdentityUsageRequest * const q);
+    DescribeIdentityUsageRequestPrivate(const DescribeIdentityUsageRequestPrivate &other,
+                                   DescribeIdentityUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIdentityUsageRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

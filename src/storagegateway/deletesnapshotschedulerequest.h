@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESNAPSHOTSCHEDULEREQUEST_H
 #define QTAWS_DELETESNAPSHOTSCHEDULEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteSnapshotScheduleRequestPrivate;
+
+class QTAWS_EXPORT DeleteSnapshotScheduleRequest : public StorageGatewayRequest {
+
+public:
+    DeleteSnapshotScheduleRequest(const DeleteSnapshotScheduleRequest &other);
+    DeleteSnapshotScheduleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotScheduleRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_TRANSLATETEXTREQUEST_H
 #define QTAWS_TRANSLATETEXTREQUEST_H
 
+#include "translaterequest.h"
+
+namespace AWS {
+
+namespace Translate {
+
+class TranslateTextRequestPrivate;
+
+class QTAWS_EXPORT TranslateTextRequest : public TranslateRequest {
+
+public:
+    TranslateTextRequest(const TranslateTextRequest &other);
+    TranslateTextRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TranslateTextRequest)
+
+}
+
+} // namespace Translate
+} // namespace AWS
+
 #endif

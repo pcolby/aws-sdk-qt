@@ -19,3 +19,107 @@
 
 #include "modifyinstancefleetrequest.h"
 #include "modifyinstancefleetrequest_p.h"
+#include "modifyinstancefleetresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ModifyInstanceFleetRequest
+ *
+ * @brief  Implements EMR ModifyInstanceFleet requests.
+ *
+ * @see    EMRClient::modifyInstanceFleet
+ */
+
+/**
+ * @brief  Constructs a new ModifyInstanceFleetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
+
+/**
+ * @brief  Constructs a new ModifyInstanceFleetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyInstanceFleetRequest::ModifyInstanceFleetRequest(const ModifyInstanceFleetRequest &other)
+    : EMRRequest(new ModifyInstanceFleetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyInstanceFleetRequest object.
+ */
+ModifyInstanceFleetRequest::ModifyInstanceFleetRequest()
+    : EMRRequest(new ModifyInstanceFleetRequestPrivate(EMRRequest::ModifyInstanceFleetAction, this))
+{
+
+}
+
+bool ModifyInstanceFleetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyInstanceFleetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyInstanceFleetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyInstanceFleetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyInstanceFleetRequestPrivate
+ *
+ * @brief  Private implementation for ModifyInstanceFleetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public ModifyInstanceFleetRequest instance.
+ */
+ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
+    const EMRRequest::Action action, ModifyInstanceFleetRequest * const q)
+    : ModifyInstanceFleetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyInstanceFleetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyInstanceFleetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyInstanceFleetRequest instance.
+ */
+ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
+    const ModifyInstanceFleetRequestPrivate &other, ModifyInstanceFleetRequest * const q)
+    : ModifyInstanceFleetPrivate(other, q)
+{
+
+}

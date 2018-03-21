@@ -19,3 +19,107 @@
 
 #include "describetimebasedautoscalingrequest.h"
 #include "describetimebasedautoscalingrequest_p.h"
+#include "describetimebasedautoscalingresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeTimeBasedAutoScalingRequest
+ *
+ * @brief  Implements OpsWorks DescribeTimeBasedAutoScaling requests.
+ *
+ * @see    OpsWorksClient::describeTimeBasedAutoScaling
+ */
+
+/**
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
+
+/**
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTimeBasedAutoScalingRequest::DescribeTimeBasedAutoScalingRequest(const DescribeTimeBasedAutoScalingRequest &other)
+    : OpsWorksRequest(new DescribeTimeBasedAutoScalingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingRequest object.
+ */
+DescribeTimeBasedAutoScalingRequest::DescribeTimeBasedAutoScalingRequest()
+    : OpsWorksRequest(new DescribeTimeBasedAutoScalingRequestPrivate(OpsWorksRequest::DescribeTimeBasedAutoScalingAction, this))
+{
+
+}
+
+bool DescribeTimeBasedAutoScalingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTimeBasedAutoScalingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTimeBasedAutoScalingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeTimeBasedAutoScalingRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTimeBasedAutoScalingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTimeBasedAutoScalingRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTimeBasedAutoScalingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeTimeBasedAutoScalingRequest instance.
+ */
+DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeTimeBasedAutoScalingRequest * const q)
+    : DescribeTimeBasedAutoScalingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTimeBasedAutoScalingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTimeBasedAutoScalingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTimeBasedAutoScalingRequest instance.
+ */
+DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestPrivate(
+    const DescribeTimeBasedAutoScalingRequestPrivate &other, DescribeTimeBasedAutoScalingRequest * const q)
+    : DescribeTimeBasedAutoScalingPrivate(other, q)
+{
+
+}

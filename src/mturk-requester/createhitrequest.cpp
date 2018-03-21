@@ -19,3 +19,107 @@
 
 #include "createhitrequest.h"
 #include "createhitrequest_p.h"
+#include "createhitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  CreateHITRequest
+ *
+ * @brief  Implements MTurk CreateHIT requests.
+ *
+ * @see    MTurkClient::createHIT
+ */
+
+/**
+ * @brief  Constructs a new CreateHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHITResponse::CreateHITResponse(
+
+/**
+ * @brief  Constructs a new CreateHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHITRequest::CreateHITRequest(const CreateHITRequest &other)
+    : MTurkRequest(new CreateHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHITRequest object.
+ */
+CreateHITRequest::CreateHITRequest()
+    : MTurkRequest(new CreateHITRequestPrivate(MTurkRequest::CreateHITAction, this))
+{
+
+}
+
+bool CreateHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * CreateHITRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHITRequestPrivate
+ *
+ * @brief  Private implementation for CreateHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public CreateHITRequest instance.
+ */
+CreateHITRequestPrivate::CreateHITRequestPrivate(
+    const MTurkRequest::Action action, CreateHITRequest * const q)
+    : CreateHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHITRequest instance.
+ */
+CreateHITRequestPrivate::CreateHITRequestPrivate(
+    const CreateHITRequestPrivate &other, CreateHITRequest * const q)
+    : CreateHITPrivate(other, q)
+{
+
+}

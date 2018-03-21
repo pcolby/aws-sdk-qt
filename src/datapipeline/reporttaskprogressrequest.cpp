@@ -19,3 +19,107 @@
 
 #include "reporttaskprogressrequest.h"
 #include "reporttaskprogressrequest_p.h"
+#include "reporttaskprogressresponse.h"
+#include "datapipelinerequest_p.h"
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  ReportTaskProgressRequest
+ *
+ * @brief  Implements DataPipeline ReportTaskProgress requests.
+ *
+ * @see    DataPipelineClient::reportTaskProgress
+ */
+
+/**
+ * @brief  Constructs a new ReportTaskProgressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReportTaskProgressResponse::ReportTaskProgressResponse(
+
+/**
+ * @brief  Constructs a new ReportTaskProgressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReportTaskProgressRequest::ReportTaskProgressRequest(const ReportTaskProgressRequest &other)
+    : DataPipelineRequest(new ReportTaskProgressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReportTaskProgressRequest object.
+ */
+ReportTaskProgressRequest::ReportTaskProgressRequest()
+    : DataPipelineRequest(new ReportTaskProgressRequestPrivate(DataPipelineRequest::ReportTaskProgressAction, this))
+{
+
+}
+
+bool ReportTaskProgressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReportTaskProgressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReportTaskProgressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DataPipelineClient::send
+ */
+AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkReply * const reply) const
+{
+    return new ReportTaskProgressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReportTaskProgressRequestPrivate
+ *
+ * @brief  Private implementation for ReportTaskProgressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReportTaskProgressRequestPrivate object.
+ *
+ * @param  action  DataPipeline action being performed.
+ * @param  q       Pointer to this object's public ReportTaskProgressRequest instance.
+ */
+ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
+    const DataPipelineRequest::Action action, ReportTaskProgressRequest * const q)
+    : ReportTaskProgressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReportTaskProgressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReportTaskProgressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReportTaskProgressRequest instance.
+ */
+ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
+    const ReportTaskProgressRequestPrivate &other, ReportTaskProgressRequest * const q)
+    : ReportTaskProgressPrivate(other, q)
+{
+
+}

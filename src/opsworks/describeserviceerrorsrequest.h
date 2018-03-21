@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSREQUEST_H
 #define QTAWS_DESCRIBESERVICEERRORSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeServiceErrorsRequestPrivate;
+
+class QTAWS_EXPORT DescribeServiceErrorsRequest : public OpsWorksRequest {
+
+public:
+    DescribeServiceErrorsRequest(const DescribeServiceErrorsRequest &other);
+    DescribeServiceErrorsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeServiceErrorsRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

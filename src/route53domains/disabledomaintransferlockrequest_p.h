@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLEDOMAINTRANSFERLOCKREQUEST_P_H
 #define QTAWS_DISABLEDOMAINTRANSFERLOCKREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "disabledomaintransferlockrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class DisableDomainTransferLockRequest;
+
+class QTAWS_EXPORT DisableDomainTransferLockRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    DisableDomainTransferLockRequestPrivate(const Route53Domains::Action action,
+                                   DisableDomainTransferLockRequest * const q);
+    DisableDomainTransferLockRequestPrivate(const DisableDomainTransferLockRequestPrivate &other,
+                                   DisableDomainTransferLockRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableDomainTransferLockRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

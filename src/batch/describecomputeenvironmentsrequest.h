@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_H
 #define QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class DescribeComputeEnvironmentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeComputeEnvironmentsRequest : public BatchRequest {
+
+public:
+    DescribeComputeEnvironmentsRequest(const DescribeComputeEnvironmentsRequest &other);
+    DescribeComputeEnvironmentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeComputeEnvironmentsRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

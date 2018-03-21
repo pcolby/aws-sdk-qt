@@ -19,3 +19,107 @@
 
 #include "describeprovisioningparametersrequest.h"
 #include "describeprovisioningparametersrequest_p.h"
+#include "describeprovisioningparametersresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProvisioningParametersRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeProvisioningParameters requests.
+ *
+ * @see    ServiceCatalogClient::describeProvisioningParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeProvisioningParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProvisioningParametersResponse::DescribeProvisioningParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeProvisioningParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest(const DescribeProvisioningParametersRequest &other)
+    : ServiceCatalogRequest(new DescribeProvisioningParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeProvisioningParametersRequest object.
+ */
+DescribeProvisioningParametersRequest::DescribeProvisioningParametersRequest()
+    : ServiceCatalogRequest(new DescribeProvisioningParametersRequestPrivate(ServiceCatalogRequest::DescribeProvisioningParametersAction, this))
+{
+
+}
+
+bool DescribeProvisioningParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeProvisioningParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeProvisioningParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeProvisioningParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeProvisioningParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProvisioningParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeProvisioningParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeProvisioningParametersRequest instance.
+ */
+DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeProvisioningParametersRequest * const q)
+    : DescribeProvisioningParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProvisioningParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeProvisioningParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeProvisioningParametersRequest instance.
+ */
+DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
+    const DescribeProvisioningParametersRequestPrivate &other, DescribeProvisioningParametersRequest * const q)
+    : DescribeProvisioningParametersPrivate(other, q)
+{
+
+}

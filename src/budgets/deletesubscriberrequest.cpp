@@ -19,3 +19,107 @@
 
 #include "deletesubscriberrequest.h"
 #include "deletesubscriberrequest_p.h"
+#include "deletesubscriberresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DeleteSubscriberRequest
+ *
+ * @brief  Implements Budgets DeleteSubscriber requests.
+ *
+ * @see    BudgetsClient::deleteSubscriber
+ */
+
+/**
+ * @brief  Constructs a new DeleteSubscriberResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSubscriberResponse::DeleteSubscriberResponse(
+
+/**
+ * @brief  Constructs a new DeleteSubscriberRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSubscriberRequest::DeleteSubscriberRequest(const DeleteSubscriberRequest &other)
+    : BudgetsRequest(new DeleteSubscriberRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSubscriberRequest object.
+ */
+DeleteSubscriberRequest::DeleteSubscriberRequest()
+    : BudgetsRequest(new DeleteSubscriberRequestPrivate(BudgetsRequest::DeleteSubscriberAction, this))
+{
+
+}
+
+bool DeleteSubscriberRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSubscriberResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSubscriberResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSubscriberResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSubscriberRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSubscriberRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriberRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public DeleteSubscriberRequest instance.
+ */
+DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
+    const BudgetsRequest::Action action, DeleteSubscriberRequest * const q)
+    : DeleteSubscriberPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriberRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSubscriberRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSubscriberRequest instance.
+ */
+DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
+    const DeleteSubscriberRequestPrivate &other, DeleteSubscriberRequest * const q)
+    : DeleteSubscriberPrivate(other, q)
+{
+
+}

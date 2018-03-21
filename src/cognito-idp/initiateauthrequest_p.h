@@ -20,4 +20,29 @@
 #ifndef QTAWS_INITIATEAUTHREQUEST_P_H
 #define QTAWS_INITIATEAUTHREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "initiateauthrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class InitiateAuthRequest;
+
+class QTAWS_EXPORT InitiateAuthRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    InitiateAuthRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   InitiateAuthRequest * const q);
+    InitiateAuthRequestPrivate(const InitiateAuthRequestPrivate &other,
+                                   InitiateAuthRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateAuthRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatenotebookinstancelifecycleconfigrequest.h"
 #include "updatenotebookinstancelifecycleconfigrequest_p.h"
+#include "updatenotebookinstancelifecycleconfigresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  UpdateNotebookInstanceLifecycleConfigRequest
+ *
+ * @brief  Implements SageMaker UpdateNotebookInstanceLifecycleConfig requests.
+ *
+ * @see    SageMakerClient::updateNotebookInstanceLifecycleConfig
+ */
+
+/**
+ * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNotebookInstanceLifecycleConfigResponse::UpdateNotebookInstanceLifecycleConfigResponse(
+
+/**
+ * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleConfigRequest(const UpdateNotebookInstanceLifecycleConfigRequest &other)
+    : SageMakerRequest(new UpdateNotebookInstanceLifecycleConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequest object.
+ */
+UpdateNotebookInstanceLifecycleConfigRequest::UpdateNotebookInstanceLifecycleConfigRequest()
+    : SageMakerRequest(new UpdateNotebookInstanceLifecycleConfigRequestPrivate(SageMakerRequest::UpdateNotebookInstanceLifecycleConfigAction, this))
+{
+
+}
+
+bool UpdateNotebookInstanceLifecycleConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateNotebookInstanceLifecycleConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateNotebookInstanceLifecycleConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateNotebookInstanceLifecycleConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNotebookInstanceLifecycleConfigRequestPrivate
+ *
+ * @brief  Private implementation for UpdateNotebookInstanceLifecycleConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public UpdateNotebookInstanceLifecycleConfigRequest instance.
+ */
+UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifecycleConfigRequestPrivate(
+    const SageMakerRequest::Action action, UpdateNotebookInstanceLifecycleConfigRequest * const q)
+    : UpdateNotebookInstanceLifecycleConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNotebookInstanceLifecycleConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateNotebookInstanceLifecycleConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateNotebookInstanceLifecycleConfigRequest instance.
+ */
+UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifecycleConfigRequestPrivate(
+    const UpdateNotebookInstanceLifecycleConfigRequestPrivate &other, UpdateNotebookInstanceLifecycleConfigRequest * const q)
+    : UpdateNotebookInstanceLifecycleConfigPrivate(other, q)
+{
+
+}

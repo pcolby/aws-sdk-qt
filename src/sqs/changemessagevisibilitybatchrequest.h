@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYBATCHREQUEST_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYBATCHREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ChangeMessageVisibilityBatchRequestPrivate;
+
+class QTAWS_EXPORT ChangeMessageVisibilityBatchRequest : public SQSRequest {
+
+public:
+    ChangeMessageVisibilityBatchRequest(const ChangeMessageVisibilityBatchRequest &other);
+    ChangeMessageVisibilityBatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ChangeMessageVisibilityBatchRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

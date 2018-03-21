@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESTREAMINGURLREQUEST_P_H
 #define QTAWS_CREATESTREAMINGURLREQUEST_P_H
 
+#include "appstream_p.h"
+#include "createstreamingurlrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateStreamingURLRequest;
+
+class QTAWS_EXPORT CreateStreamingURLRequestPrivate : public AppStreamPrivate {
+
+public:
+    CreateStreamingURLRequestPrivate(const AppStream::Action action,
+                                   CreateStreamingURLRequest * const q);
+    CreateStreamingURLRequestPrivate(const CreateStreamingURLRequestPrivate &other,
+                                   CreateStreamingURLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStreamingURLRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETJOBDETAILSREQUEST_P_H
 #define QTAWS_GETJOBDETAILSREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "getjobdetailsrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetJobDetailsRequest;
+
+class QTAWS_EXPORT GetJobDetailsRequestPrivate : public CodePipelinePrivate {
+
+public:
+    GetJobDetailsRequestPrivate(const CodePipeline::Action action,
+                                   GetJobDetailsRequest * const q);
+    GetJobDetailsRequestPrivate(const GetJobDetailsRequestPrivate &other,
+                                   GetJobDetailsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetJobDetailsRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

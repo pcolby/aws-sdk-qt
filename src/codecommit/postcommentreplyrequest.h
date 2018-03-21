@@ -20,4 +20,32 @@
 #ifndef QTAWS_POSTCOMMENTREPLYREQUEST_H
 #define QTAWS_POSTCOMMENTREPLYREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PostCommentReplyRequestPrivate;
+
+class QTAWS_EXPORT PostCommentReplyRequest : public CodeCommitRequest {
+
+public:
+    PostCommentReplyRequest(const PostCommentReplyRequest &other);
+    PostCommentReplyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PostCommentReplyRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

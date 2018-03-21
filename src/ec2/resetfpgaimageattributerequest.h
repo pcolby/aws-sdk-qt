@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETFPGAIMAGEATTRIBUTEREQUEST_H
 #define QTAWS_RESETFPGAIMAGEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetFpgaImageAttributeRequestPrivate;
+
+class QTAWS_EXPORT ResetFpgaImageAttributeRequest : public EC2Request {
+
+public:
+    ResetFpgaImageAttributeRequest(const ResetFpgaImageAttributeRequest &other);
+    ResetFpgaImageAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetFpgaImageAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

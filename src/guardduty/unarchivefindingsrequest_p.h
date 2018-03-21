@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNARCHIVEFINDINGSREQUEST_P_H
 #define QTAWS_UNARCHIVEFINDINGSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "unarchivefindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UnarchiveFindingsRequest;
+
+class QTAWS_EXPORT UnarchiveFindingsRequestPrivate : public GuardDutyPrivate {
+
+public:
+    UnarchiveFindingsRequestPrivate(const GuardDuty::Action action,
+                                   UnarchiveFindingsRequest * const q);
+    UnarchiveFindingsRequestPrivate(const UnarchiveFindingsRequestPrivate &other,
+                                   UnarchiveFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnarchiveFindingsRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

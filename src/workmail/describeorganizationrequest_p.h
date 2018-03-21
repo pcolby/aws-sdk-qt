@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONREQUEST_P_H
 #define QTAWS_DESCRIBEORGANIZATIONREQUEST_P_H
 
+#include "workmail_p.h"
+#include "describeorganizationrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DescribeOrganizationRequest;
+
+class QTAWS_EXPORT DescribeOrganizationRequestPrivate : public WorkMailPrivate {
+
+public:
+    DescribeOrganizationRequestPrivate(const WorkMail::Action action,
+                                   DescribeOrganizationRequest * const q);
+    DescribeOrganizationRequestPrivate(const DescribeOrganizationRequestPrivate &other,
+                                   DescribeOrganizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeOrganizationRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

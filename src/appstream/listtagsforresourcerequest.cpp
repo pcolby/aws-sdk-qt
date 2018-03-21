@@ -19,3 +19,107 @@
 
 #include "listtagsforresourcerequest.h"
 #include "listtagsforresourcerequest_p.h"
+#include "listtagsforresourceresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  ListTagsForResourceRequest
+ *
+ * @brief  Implements AppStream ListTagsForResource requests.
+ *
+ * @see    AppStreamClient::listTagsForResource
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForResourceResponse::ListTagsForResourceResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForResourceRequest::ListTagsForResourceRequest(const ListTagsForResourceRequest &other)
+    : AppStreamRequest(new ListTagsForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForResourceRequest object.
+ */
+ListTagsForResourceRequest::ListTagsForResourceRequest()
+    : AppStreamRequest(new ListTagsForResourceRequestPrivate(AppStreamRequest::ListTagsForResourceAction, this))
+{
+
+}
+
+bool ListTagsForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * ListTagsForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForResourceRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourceRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public ListTagsForResourceRequest instance.
+ */
+ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
+    const AppStreamRequest::Action action, ListTagsForResourceRequest * const q)
+    : ListTagsForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForResourceRequest instance.
+ */
+ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
+    const ListTagsForResourceRequestPrivate &other, ListTagsForResourceRequest * const q)
+    : ListTagsForResourcePrivate(other, q)
+{
+
+}

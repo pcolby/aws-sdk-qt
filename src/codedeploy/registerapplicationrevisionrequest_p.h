@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERAPPLICATIONREVISIONREQUEST_P_H
 #define QTAWS_REGISTERAPPLICATIONREVISIONREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "registerapplicationrevisionrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RegisterApplicationRevisionRequest;
+
+class QTAWS_EXPORT RegisterApplicationRevisionRequestPrivate : public CodeDeployPrivate {
+
+public:
+    RegisterApplicationRevisionRequestPrivate(const CodeDeploy::Action action,
+                                   RegisterApplicationRevisionRequest * const q);
+    RegisterApplicationRevisionRequestPrivate(const RegisterApplicationRevisionRequestPrivate &other,
+                                   RegisterApplicationRevisionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterApplicationRevisionRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

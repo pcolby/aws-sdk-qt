@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSREQUEST_P_H
 #define QTAWS_DISASSOCIATEMEMBERSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "disassociatemembersrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DisassociateMembersRequest;
+
+class QTAWS_EXPORT DisassociateMembersRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DisassociateMembersRequestPrivate(const GuardDuty::Action action,
+                                   DisassociateMembersRequest * const q);
+    DisassociateMembersRequestPrivate(const DisassociateMembersRequestPrivate &other,
+                                   DisassociateMembersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateMembersRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

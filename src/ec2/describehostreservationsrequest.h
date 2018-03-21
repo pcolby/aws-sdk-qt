@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEHOSTRESERVATIONSREQUEST_H
 #define QTAWS_DESCRIBEHOSTRESERVATIONSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeHostReservationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeHostReservationsRequest : public EC2Request {
+
+public:
+    DescribeHostReservationsRequest(const DescribeHostReservationsRequest &other);
+    DescribeHostReservationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeHostReservationsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createnamedqueryrequest.h"
 #include "createnamedqueryrequest_p.h"
+#include "createnamedqueryresponse.h"
+#include "athenarequest_p.h"
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  CreateNamedQueryRequest
+ *
+ * @brief  Implements Athena CreateNamedQuery requests.
+ *
+ * @see    AthenaClient::createNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new CreateNamedQueryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNamedQueryResponse::CreateNamedQueryResponse(
+
+/**
+ * @brief  Constructs a new CreateNamedQueryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateNamedQueryRequest::CreateNamedQueryRequest(const CreateNamedQueryRequest &other)
+    : AthenaRequest(new CreateNamedQueryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateNamedQueryRequest object.
+ */
+CreateNamedQueryRequest::CreateNamedQueryRequest()
+    : AthenaRequest(new CreateNamedQueryRequestPrivate(AthenaRequest::CreateNamedQueryAction, this))
+{
+
+}
+
+bool CreateNamedQueryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateNamedQueryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateNamedQueryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AthenaClient::send
+ */
+AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateNamedQueryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNamedQueryRequestPrivate
+ *
+ * @brief  Private implementation for CreateNamedQueryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNamedQueryRequestPrivate object.
+ *
+ * @param  action  Athena action being performed.
+ * @param  q       Pointer to this object's public CreateNamedQueryRequest instance.
+ */
+CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
+    const AthenaRequest::Action action, CreateNamedQueryRequest * const q)
+    : CreateNamedQueryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNamedQueryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateNamedQueryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateNamedQueryRequest instance.
+ */
+CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
+    const CreateNamedQueryRequestPrivate &other, CreateNamedQueryRequest * const q)
+    : CreateNamedQueryPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "restorefromclustersnapshotrequest.h"
 #include "restorefromclustersnapshotrequest_p.h"
+#include "restorefromclustersnapshotresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  RestoreFromClusterSnapshotRequest
+ *
+ * @brief  Implements Redshift RestoreFromClusterSnapshot requests.
+ *
+ * @see    RedshiftClient::restoreFromClusterSnapshot
+ */
+
+/**
+ * @brief  Constructs a new RestoreFromClusterSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreFromClusterSnapshotResponse::RestoreFromClusterSnapshotResponse(
+
+/**
+ * @brief  Constructs a new RestoreFromClusterSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RestoreFromClusterSnapshotRequest::RestoreFromClusterSnapshotRequest(const RestoreFromClusterSnapshotRequest &other)
+    : RedshiftRequest(new RestoreFromClusterSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RestoreFromClusterSnapshotRequest object.
+ */
+RestoreFromClusterSnapshotRequest::RestoreFromClusterSnapshotRequest()
+    : RedshiftRequest(new RestoreFromClusterSnapshotRequestPrivate(RedshiftRequest::RestoreFromClusterSnapshotAction, this))
+{
+
+}
+
+bool RestoreFromClusterSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RestoreFromClusterSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RestoreFromClusterSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * RestoreFromClusterSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new RestoreFromClusterSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreFromClusterSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for RestoreFromClusterSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreFromClusterSnapshotRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public RestoreFromClusterSnapshotRequest instance.
+ */
+RestoreFromClusterSnapshotRequestPrivate::RestoreFromClusterSnapshotRequestPrivate(
+    const RedshiftRequest::Action action, RestoreFromClusterSnapshotRequest * const q)
+    : RestoreFromClusterSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreFromClusterSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RestoreFromClusterSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RestoreFromClusterSnapshotRequest instance.
+ */
+RestoreFromClusterSnapshotRequestPrivate::RestoreFromClusterSnapshotRequestPrivate(
+    const RestoreFromClusterSnapshotRequestPrivate &other, RestoreFromClusterSnapshotRequest * const q)
+    : RestoreFromClusterSnapshotPrivate(other, q)
+{
+
+}

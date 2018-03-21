@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSESSIONTOKENREQUEST_P_H
 #define QTAWS_GETSESSIONTOKENREQUEST_P_H
 
+#include "sts_p.h"
+#include "getsessiontokenrequest.h"
+
+namespace AWS {
+
+namespace STS {
+
+class GetSessionTokenRequest;
+
+class QTAWS_EXPORT GetSessionTokenRequestPrivate : public STSPrivate {
+
+public:
+    GetSessionTokenRequestPrivate(const STS::Action action,
+                                   GetSessionTokenRequest * const q);
+    GetSessionTokenRequestPrivate(const GetSessionTokenRequestPrivate &other,
+                                   GetSessionTokenRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSessionTokenRequest)
+
+};
+
+} // namespace STS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPORTFOLIOACCESSREQUEST_H
 #define QTAWS_LISTPORTFOLIOACCESSREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListPortfolioAccessRequestPrivate;
+
+class QTAWS_EXPORT ListPortfolioAccessRequest : public ServiceCatalogRequest {
+
+public:
+    ListPortfolioAccessRequest(const ListPortfolioAccessRequest &other);
+    ListPortfolioAccessRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPortfolioAccessRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "splitshardrequest.h"
 #include "splitshardrequest_p.h"
+#include "splitshardresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  SplitShardRequest
+ *
+ * @brief  Implements Kinesis SplitShard requests.
+ *
+ * @see    KinesisClient::splitShard
+ */
+
+/**
+ * @brief  Constructs a new SplitShardResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SplitShardResponse::SplitShardResponse(
+
+/**
+ * @brief  Constructs a new SplitShardRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SplitShardRequest::SplitShardRequest(const SplitShardRequest &other)
+    : KinesisRequest(new SplitShardRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SplitShardRequest object.
+ */
+SplitShardRequest::SplitShardRequest()
+    : KinesisRequest(new SplitShardRequestPrivate(KinesisRequest::SplitShardAction, this))
+{
+
+}
+
+bool SplitShardRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SplitShardResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SplitShardResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * const reply) const
+{
+    return new SplitShardResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SplitShardRequestPrivate
+ *
+ * @brief  Private implementation for SplitShardRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SplitShardRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public SplitShardRequest instance.
+ */
+SplitShardRequestPrivate::SplitShardRequestPrivate(
+    const KinesisRequest::Action action, SplitShardRequest * const q)
+    : SplitShardPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SplitShardRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SplitShardRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SplitShardRequest instance.
+ */
+SplitShardRequestPrivate::SplitShardRequestPrivate(
+    const SplitShardRequestPrivate &other, SplitShardRequest * const q)
+    : SplitShardPrivate(other, q)
+{
+
+}

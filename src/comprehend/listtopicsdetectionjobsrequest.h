@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTOPICSDETECTIONJOBSREQUEST_H
 #define QTAWS_LISTTOPICSDETECTIONJOBSREQUEST_H
 
+#include "comprehendrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class ListTopicsDetectionJobsRequestPrivate;
+
+class QTAWS_EXPORT ListTopicsDetectionJobsRequest : public ComprehendRequest {
+
+public:
+    ListTopicsDetectionJobsRequest(const ListTopicsDetectionJobsRequest &other);
+    ListTopicsDetectionJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTopicsDetectionJobsRequest)
+
+}
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

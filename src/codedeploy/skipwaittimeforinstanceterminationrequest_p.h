@@ -20,4 +20,29 @@
 #ifndef QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_P_H
 #define QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "skipwaittimeforinstanceterminationrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class SkipWaitTimeForInstanceTerminationRequest;
+
+class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployPrivate {
+
+public:
+    SkipWaitTimeForInstanceTerminationRequestPrivate(const CodeDeploy::Action action,
+                                   SkipWaitTimeForInstanceTerminationRequest * const q);
+    SkipWaitTimeForInstanceTerminationRequestPrivate(const SkipWaitTimeForInstanceTerminationRequestPrivate &other,
+                                   SkipWaitTimeForInstanceTerminationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SkipWaitTimeForInstanceTerminationRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

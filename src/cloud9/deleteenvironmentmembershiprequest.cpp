@@ -19,3 +19,107 @@
 
 #include "deleteenvironmentmembershiprequest.h"
 #include "deleteenvironmentmembershiprequest_p.h"
+#include "deleteenvironmentmembershipresponse.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  DeleteEnvironmentMembershipRequest
+ *
+ * @brief  Implements Cloud9 DeleteEnvironmentMembership requests.
+ *
+ * @see    Cloud9Client::deleteEnvironmentMembership
+ */
+
+/**
+ * @brief  Constructs a new DeleteEnvironmentMembershipResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
+
+/**
+ * @brief  Constructs a new DeleteEnvironmentMembershipRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteEnvironmentMembershipRequest::DeleteEnvironmentMembershipRequest(const DeleteEnvironmentMembershipRequest &other)
+    : Cloud9Request(new DeleteEnvironmentMembershipRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteEnvironmentMembershipRequest object.
+ */
+DeleteEnvironmentMembershipRequest::DeleteEnvironmentMembershipRequest()
+    : Cloud9Request(new DeleteEnvironmentMembershipRequestPrivate(Cloud9Request::DeleteEnvironmentMembershipAction, this))
+{
+
+}
+
+bool DeleteEnvironmentMembershipRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteEnvironmentMembershipResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteEnvironmentMembershipResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * DeleteEnvironmentMembershipRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteEnvironmentMembershipResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteEnvironmentMembershipRequestPrivate
+ *
+ * @brief  Private implementation for DeleteEnvironmentMembershipRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEnvironmentMembershipRequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public DeleteEnvironmentMembershipRequest instance.
+ */
+DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
+    const Cloud9Request::Action action, DeleteEnvironmentMembershipRequest * const q)
+    : DeleteEnvironmentMembershipPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteEnvironmentMembershipRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteEnvironmentMembershipRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteEnvironmentMembershipRequest instance.
+ */
+DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
+    const DeleteEnvironmentMembershipRequestPrivate &other, DeleteEnvironmentMembershipRequest * const q)
+    : DeleteEnvironmentMembershipPrivate(other, q)
+{
+
+}

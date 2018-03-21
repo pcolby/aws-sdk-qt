@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEDIRECTORYREQUEST_H
 #define QTAWS_ENABLEDIRECTORYREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class EnableDirectoryRequestPrivate;
+
+class QTAWS_EXPORT EnableDirectoryRequest : public CloudDirectoryRequest {
+
+public:
+    EnableDirectoryRequest(const EnableDirectoryRequest &other);
+    EnableDirectoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableDirectoryRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

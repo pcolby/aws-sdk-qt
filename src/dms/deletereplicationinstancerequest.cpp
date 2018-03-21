@@ -19,3 +19,107 @@
 
 #include "deletereplicationinstancerequest.h"
 #include "deletereplicationinstancerequest_p.h"
+#include "deletereplicationinstanceresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DeleteReplicationInstanceRequest
+ *
+ * @brief  Implements DatabaseMigrationService DeleteReplicationInstance requests.
+ *
+ * @see    DatabaseMigrationServiceClient::deleteReplicationInstance
+ */
+
+/**
+ * @brief  Constructs a new DeleteReplicationInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeleteReplicationInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest(const DeleteReplicationInstanceRequest &other)
+    : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReplicationInstanceRequest object.
+ */
+DeleteReplicationInstanceRequest::DeleteReplicationInstanceRequest()
+    : DatabaseMigrationServiceRequest(new DeleteReplicationInstanceRequestPrivate(DatabaseMigrationServiceRequest::DeleteReplicationInstanceAction, this))
+{
+
+}
+
+bool DeleteReplicationInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReplicationInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReplicationInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReplicationInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReplicationInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DeleteReplicationInstanceRequest instance.
+ */
+DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DeleteReplicationInstanceRequest * const q)
+    : DeleteReplicationInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReplicationInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReplicationInstanceRequest instance.
+ */
+DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
+    const DeleteReplicationInstanceRequestPrivate &other, DeleteReplicationInstanceRequest * const q)
+    : DeleteReplicationInstancePrivate(other, q)
+{
+
+}

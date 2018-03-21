@@ -19,3 +19,107 @@
 
 #include "getuserrequest.h"
 #include "getuserrequest_p.h"
+#include "getuserresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetUserRequest
+ *
+ * @brief  Implements IAM GetUser requests.
+ *
+ * @see    IAMClient::getUser
+ */
+
+/**
+ * @brief  Constructs a new GetUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserResponse::GetUserResponse(
+
+/**
+ * @brief  Constructs a new GetUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetUserRequest::GetUserRequest(const GetUserRequest &other)
+    : IAMRequest(new GetUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetUserRequest object.
+ */
+GetUserRequest::GetUserRequest()
+    : IAMRequest(new GetUserRequestPrivate(IAMRequest::GetUserAction, this))
+{
+
+}
+
+bool GetUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetUserRequest::response(QNetworkReply * const reply) const
+{
+    return new GetUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserRequestPrivate
+ *
+ * @brief  Private implementation for GetUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetUserRequest instance.
+ */
+GetUserRequestPrivate::GetUserRequestPrivate(
+    const IAMRequest::Action action, GetUserRequest * const q)
+    : GetUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetUserRequest instance.
+ */
+GetUserRequestPrivate::GetUserRequestPrivate(
+    const GetUserRequestPrivate &other, GetUserRequest * const q)
+    : GetUserPrivate(other, q)
+{
+
+}

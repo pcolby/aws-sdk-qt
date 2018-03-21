@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREPLICATIONGROUPREQUEST_H
 #define QTAWS_DELETEREPLICATIONGROUPREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteReplicationGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteReplicationGroupRequest : public ElastiCacheRequest {
+
+public:
+    DeleteReplicationGroupRequest(const DeleteReplicationGroupRequest &other);
+    DeleteReplicationGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteReplicationGroupRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

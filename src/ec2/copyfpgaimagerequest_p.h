@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYFPGAIMAGEREQUEST_P_H
 #define QTAWS_COPYFPGAIMAGEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "copyfpgaimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopyFpgaImageRequest;
+
+class QTAWS_EXPORT CopyFpgaImageRequestPrivate : public EC2Private {
+
+public:
+    CopyFpgaImageRequestPrivate(const EC2::Action action,
+                                   CopyFpgaImageRequest * const q);
+    CopyFpgaImageRequestPrivate(const CopyFpgaImageRequestPrivate &other,
+                                   CopyFpgaImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopyFpgaImageRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

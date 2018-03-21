@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTCHANNELREQUEST_H
 #define QTAWS_STARTCHANNELREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class StartChannelRequestPrivate;
+
+class QTAWS_EXPORT StartChannelRequest : public MediaLiveRequest {
+
+public:
+    StartChannelRequest(const StartChannelRequest &other);
+    StartChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartChannelRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

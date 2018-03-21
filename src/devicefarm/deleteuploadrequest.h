@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUPLOADREQUEST_H
 #define QTAWS_DELETEUPLOADREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteUploadRequestPrivate;
+
+class QTAWS_EXPORT DeleteUploadRequest : public DeviceFarmRequest {
+
+public:
+    DeleteUploadRequest(const DeleteUploadRequest &other);
+    DeleteUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUploadRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

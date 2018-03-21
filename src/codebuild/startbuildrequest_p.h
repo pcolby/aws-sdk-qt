@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTBUILDREQUEST_P_H
 #define QTAWS_STARTBUILDREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "startbuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class StartBuildRequest;
+
+class QTAWS_EXPORT StartBuildRequestPrivate : public CodeBuildPrivate {
+
+public:
+    StartBuildRequestPrivate(const CodeBuild::Action action,
+                                   StartBuildRequest * const q);
+    StartBuildRequestPrivate(const StartBuildRequestPrivate &other,
+                                   StartBuildRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartBuildRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

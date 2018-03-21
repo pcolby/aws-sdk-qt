@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCOREDEFINITIONSREQUEST_P_H
 #define QTAWS_LISTCOREDEFINITIONSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listcoredefinitionsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListCoreDefinitionsRequest;
+
+class QTAWS_EXPORT ListCoreDefinitionsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListCoreDefinitionsRequestPrivate(const Greengrass::Action action,
+                                   ListCoreDefinitionsRequest * const q);
+    ListCoreDefinitionsRequestPrivate(const ListCoreDefinitionsRequestPrivate &other,
+                                   ListCoreDefinitionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListCoreDefinitionsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "modifycachesubnetgrouprequest.h"
 #include "modifycachesubnetgrouprequest_p.h"
+#include "modifycachesubnetgroupresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ModifyCacheSubnetGroupRequest
+ *
+ * @brief  Implements ElastiCache ModifyCacheSubnetGroup requests.
+ *
+ * @see    ElastiCacheClient::modifyCacheSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new ModifyCacheSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyCacheSubnetGroupResponse::ModifyCacheSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new ModifyCacheSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyCacheSubnetGroupRequest::ModifyCacheSubnetGroupRequest(const ModifyCacheSubnetGroupRequest &other)
+    : ElastiCacheRequest(new ModifyCacheSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyCacheSubnetGroupRequest object.
+ */
+ModifyCacheSubnetGroupRequest::ModifyCacheSubnetGroupRequest()
+    : ElastiCacheRequest(new ModifyCacheSubnetGroupRequestPrivate(ElastiCacheRequest::ModifyCacheSubnetGroupAction, this))
+{
+
+}
+
+bool ModifyCacheSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyCacheSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyCacheSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * ModifyCacheSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyCacheSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyCacheSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for ModifyCacheSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheSubnetGroupRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public ModifyCacheSubnetGroupRequest instance.
+ */
+ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
+    const ElastiCacheRequest::Action action, ModifyCacheSubnetGroupRequest * const q)
+    : ModifyCacheSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyCacheSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyCacheSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyCacheSubnetGroupRequest instance.
+ */
+ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
+    const ModifyCacheSubnetGroupRequestPrivate &other, ModifyCacheSubnetGroupRequest * const q)
+    : ModifyCacheSubnetGroupPrivate(other, q)
+{
+
+}

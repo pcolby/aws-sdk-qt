@@ -19,3 +19,107 @@
 
 #include "sendtaskfailurerequest.h"
 #include "sendtaskfailurerequest_p.h"
+#include "sendtaskfailureresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  SendTaskFailureRequest
+ *
+ * @brief  Implements SFN SendTaskFailure requests.
+ *
+ * @see    SFNClient::sendTaskFailure
+ */
+
+/**
+ * @brief  Constructs a new SendTaskFailureResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendTaskFailureResponse::SendTaskFailureResponse(
+
+/**
+ * @brief  Constructs a new SendTaskFailureRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendTaskFailureRequest::SendTaskFailureRequest(const SendTaskFailureRequest &other)
+    : SFNRequest(new SendTaskFailureRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendTaskFailureRequest object.
+ */
+SendTaskFailureRequest::SendTaskFailureRequest()
+    : SFNRequest(new SendTaskFailureRequestPrivate(SFNRequest::SendTaskFailureAction, this))
+{
+
+}
+
+bool SendTaskFailureRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendTaskFailureResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendTaskFailureResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * SendTaskFailureRequest::response(QNetworkReply * const reply) const
+{
+    return new SendTaskFailureResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendTaskFailureRequestPrivate
+ *
+ * @brief  Private implementation for SendTaskFailureRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTaskFailureRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public SendTaskFailureRequest instance.
+ */
+SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
+    const SFNRequest::Action action, SendTaskFailureRequest * const q)
+    : SendTaskFailurePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendTaskFailureRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendTaskFailureRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendTaskFailureRequest instance.
+ */
+SendTaskFailureRequestPrivate::SendTaskFailureRequestPrivate(
+    const SendTaskFailureRequestPrivate &other, SendTaskFailureRequest * const q)
+    : SendTaskFailurePrivate(other, q)
+{
+
+}

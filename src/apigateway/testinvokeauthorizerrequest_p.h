@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 #define QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "testinvokeauthorizerrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class TestInvokeAuthorizerRequest;
+
+class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public APIGatewayPrivate {
+
+public:
+    TestInvokeAuthorizerRequestPrivate(const APIGateway::Action action,
+                                   TestInvokeAuthorizerRequest * const q);
+    TestInvokeAuthorizerRequestPrivate(const TestInvokeAuthorizerRequestPrivate &other,
+                                   TestInvokeAuthorizerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestInvokeAuthorizerRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

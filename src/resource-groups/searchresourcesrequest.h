@@ -20,4 +20,32 @@
 #ifndef QTAWS_SEARCHRESOURCESREQUEST_H
 #define QTAWS_SEARCHRESOURCESREQUEST_H
 
+#include "resourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class SearchResourcesRequestPrivate;
+
+class QTAWS_EXPORT SearchResourcesRequest : public ResourceGroupsRequest {
+
+public:
+    SearchResourcesRequest(const SearchResourcesRequest &other);
+    SearchResourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SearchResourcesRequest)
+
+}
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

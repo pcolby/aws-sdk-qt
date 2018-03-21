@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESOLVECASEREQUEST_P_H
 #define QTAWS_RESOLVECASEREQUEST_P_H
 
+#include "support_p.h"
+#include "resolvecaserequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class ResolveCaseRequest;
+
+class QTAWS_EXPORT ResolveCaseRequestPrivate : public SupportPrivate {
+
+public:
+    ResolveCaseRequestPrivate(const Support::Action action,
+                                   ResolveCaseRequest * const q);
+    ResolveCaseRequestPrivate(const ResolveCaseRequestPrivate &other,
+                                   ResolveCaseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResolveCaseRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

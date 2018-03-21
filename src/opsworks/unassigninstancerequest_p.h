@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNASSIGNINSTANCEREQUEST_P_H
 #define QTAWS_UNASSIGNINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "unassigninstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UnassignInstanceRequest;
+
+class QTAWS_EXPORT UnassignInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    UnassignInstanceRequestPrivate(const OpsWorks::Action action,
+                                   UnassignInstanceRequest * const q);
+    UnassignInstanceRequestPrivate(const UnassignInstanceRequestPrivate &other,
+                                   UnassignInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnassignInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

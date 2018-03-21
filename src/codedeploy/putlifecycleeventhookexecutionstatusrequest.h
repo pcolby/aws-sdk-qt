@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_H
 #define QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class PutLifecycleEventHookExecutionStatusRequestPrivate;
+
+class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequest : public CodeDeployRequest {
+
+public:
+    PutLifecycleEventHookExecutionStatusRequest(const PutLifecycleEventHookExecutionStatusRequest &other);
+    PutLifecycleEventHookExecutionStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecycleEventHookExecutionStatusRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

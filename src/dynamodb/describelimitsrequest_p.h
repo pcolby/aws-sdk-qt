@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELIMITSREQUEST_P_H
 #define QTAWS_DESCRIBELIMITSREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "describelimitsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class DescribeLimitsRequest;
+
+class QTAWS_EXPORT DescribeLimitsRequestPrivate : public DynamoDBPrivate {
+
+public:
+    DescribeLimitsRequestPrivate(const DynamoDB::Action action,
+                                   DescribeLimitsRequest * const q);
+    DescribeLimitsRequestPrivate(const DescribeLimitsRequestPrivate &other,
+                                   DescribeLimitsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeLimitsRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getfunctiondefinitionversionrequest.h"
 #include "getfunctiondefinitionversionrequest_p.h"
+#include "getfunctiondefinitionversionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetFunctionDefinitionVersionRequest
+ *
+ * @brief  Implements Greengrass GetFunctionDefinitionVersion requests.
+ *
+ * @see    GreengrassClient::getFunctionDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new GetFunctionDefinitionVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetFunctionDefinitionVersionResponse::GetFunctionDefinitionVersionResponse(
+
+/**
+ * @brief  Constructs a new GetFunctionDefinitionVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest(const GetFunctionDefinitionVersionRequest &other)
+    : GreengrassRequest(new GetFunctionDefinitionVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetFunctionDefinitionVersionRequest object.
+ */
+GetFunctionDefinitionVersionRequest::GetFunctionDefinitionVersionRequest()
+    : GreengrassRequest(new GetFunctionDefinitionVersionRequestPrivate(GreengrassRequest::GetFunctionDefinitionVersionAction, this))
+{
+
+}
+
+bool GetFunctionDefinitionVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetFunctionDefinitionVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetFunctionDefinitionVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetFunctionDefinitionVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetFunctionDefinitionVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetFunctionDefinitionVersionRequestPrivate
+ *
+ * @brief  Private implementation for GetFunctionDefinitionVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetFunctionDefinitionVersionRequest instance.
+ */
+GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestPrivate(
+    const GreengrassRequest::Action action, GetFunctionDefinitionVersionRequest * const q)
+    : GetFunctionDefinitionVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetFunctionDefinitionVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetFunctionDefinitionVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetFunctionDefinitionVersionRequest instance.
+ */
+GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestPrivate(
+    const GetFunctionDefinitionVersionRequestPrivate &other, GetFunctionDefinitionVersionRequest * const q)
+    : GetFunctionDefinitionVersionPrivate(other, q)
+{
+
+}

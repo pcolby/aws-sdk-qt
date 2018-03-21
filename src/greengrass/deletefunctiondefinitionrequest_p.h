@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFUNCTIONDEFINITIONREQUEST_P_H
 #define QTAWS_DELETEFUNCTIONDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "deletefunctiondefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteFunctionDefinitionRequest;
+
+class QTAWS_EXPORT DeleteFunctionDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    DeleteFunctionDefinitionRequestPrivate(const Greengrass::Action action,
+                                   DeleteFunctionDefinitionRequest * const q);
+    DeleteFunctionDefinitionRequestPrivate(const DeleteFunctionDefinitionRequestPrivate &other,
+                                   DeleteFunctionDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFunctionDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

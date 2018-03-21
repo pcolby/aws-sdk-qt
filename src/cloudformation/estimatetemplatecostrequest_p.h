@@ -20,4 +20,29 @@
 #ifndef QTAWS_ESTIMATETEMPLATECOSTREQUEST_P_H
 #define QTAWS_ESTIMATETEMPLATECOSTREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "estimatetemplatecostrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class EstimateTemplateCostRequest;
+
+class QTAWS_EXPORT EstimateTemplateCostRequestPrivate : public CloudFormationPrivate {
+
+public:
+    EstimateTemplateCostRequestPrivate(const CloudFormation::Action action,
+                                   EstimateTemplateCostRequest * const q);
+    EstimateTemplateCostRequestPrivate(const EstimateTemplateCostRequestPrivate &other,
+                                   EstimateTemplateCostRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(EstimateTemplateCostRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

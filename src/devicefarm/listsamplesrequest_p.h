@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSAMPLESREQUEST_P_H
 #define QTAWS_LISTSAMPLESREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listsamplesrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListSamplesRequest;
+
+class QTAWS_EXPORT ListSamplesRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListSamplesRequestPrivate(const DeviceFarm::Action action,
+                                   ListSamplesRequest * const q);
+    ListSamplesRequestPrivate(const ListSamplesRequestPrivate &other,
+                                   ListSamplesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSamplesRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

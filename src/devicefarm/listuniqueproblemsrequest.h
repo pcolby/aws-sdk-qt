@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTUNIQUEPROBLEMSREQUEST_H
 #define QTAWS_LISTUNIQUEPROBLEMSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListUniqueProblemsRequestPrivate;
+
+class QTAWS_EXPORT ListUniqueProblemsRequest : public DeviceFarmRequest {
+
+public:
+    ListUniqueProblemsRequest(const ListUniqueProblemsRequest &other);
+    ListUniqueProblemsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListUniqueProblemsRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

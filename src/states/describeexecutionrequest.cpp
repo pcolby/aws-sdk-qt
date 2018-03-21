@@ -19,3 +19,107 @@
 
 #include "describeexecutionrequest.h"
 #include "describeexecutionrequest_p.h"
+#include "describeexecutionresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DescribeExecutionRequest
+ *
+ * @brief  Implements SFN DescribeExecution requests.
+ *
+ * @see    SFNClient::describeExecution
+ */
+
+/**
+ * @brief  Constructs a new DescribeExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExecutionResponse::DescribeExecutionResponse(
+
+/**
+ * @brief  Constructs a new DescribeExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeExecutionRequest::DescribeExecutionRequest(const DescribeExecutionRequest &other)
+    : SFNRequest(new DescribeExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeExecutionRequest object.
+ */
+DescribeExecutionRequest::DescribeExecutionRequest()
+    : SFNRequest(new DescribeExecutionRequestPrivate(SFNRequest::DescribeExecutionAction, this))
+{
+
+}
+
+bool DescribeExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * DescribeExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExecutionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExecutionRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public DescribeExecutionRequest instance.
+ */
+DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
+    const SFNRequest::Action action, DescribeExecutionRequest * const q)
+    : DescribeExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeExecutionRequest instance.
+ */
+DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
+    const DescribeExecutionRequestPrivate &other, DescribeExecutionRequest * const q)
+    : DescribeExecutionPrivate(other, q)
+{
+
+}

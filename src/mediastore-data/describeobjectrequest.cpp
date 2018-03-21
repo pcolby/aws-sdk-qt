@@ -19,3 +19,107 @@
 
 #include "describeobjectrequest.h"
 #include "describeobjectrequest_p.h"
+#include "describeobjectresponse.h"
+#include "mediastoredatarequest_p.h"
+
+namespace AWS {
+namespace MediaStoreData {
+
+/**
+ * @class  DescribeObjectRequest
+ *
+ * @brief  Implements MediaStoreData DescribeObject requests.
+ *
+ * @see    MediaStoreDataClient::describeObject
+ */
+
+/**
+ * @brief  Constructs a new DescribeObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeObjectResponse::DescribeObjectResponse(
+
+/**
+ * @brief  Constructs a new DescribeObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeObjectRequest::DescribeObjectRequest(const DescribeObjectRequest &other)
+    : MediaStoreDataRequest(new DescribeObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeObjectRequest object.
+ */
+DescribeObjectRequest::DescribeObjectRequest()
+    : MediaStoreDataRequest(new DescribeObjectRequestPrivate(MediaStoreDataRequest::DescribeObjectAction, this))
+{
+
+}
+
+bool DescribeObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreDataClient::send
+ */
+AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeObjectRequestPrivate
+ *
+ * @brief  Private implementation for DescribeObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeObjectRequestPrivate object.
+ *
+ * @param  action  MediaStoreData action being performed.
+ * @param  q       Pointer to this object's public DescribeObjectRequest instance.
+ */
+DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
+    const MediaStoreDataRequest::Action action, DescribeObjectRequest * const q)
+    : DescribeObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeObjectRequest instance.
+ */
+DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
+    const DescribeObjectRequestPrivate &other, DescribeObjectRequest * const q)
+    : DescribeObjectPrivate(other, q)
+{
+
+}

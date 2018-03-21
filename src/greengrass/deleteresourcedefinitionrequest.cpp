@@ -19,3 +19,107 @@
 
 #include "deleteresourcedefinitionrequest.h"
 #include "deleteresourcedefinitionrequest_p.h"
+#include "deleteresourcedefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteResourceDefinitionRequest
+ *
+ * @brief  Implements Greengrass DeleteResourceDefinition requests.
+ *
+ * @see    GreengrassClient::deleteResourceDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeleteResourceDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteResourceDefinitionResponse::DeleteResourceDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeleteResourceDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteResourceDefinitionRequest::DeleteResourceDefinitionRequest(const DeleteResourceDefinitionRequest &other)
+    : GreengrassRequest(new DeleteResourceDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteResourceDefinitionRequest object.
+ */
+DeleteResourceDefinitionRequest::DeleteResourceDefinitionRequest()
+    : GreengrassRequest(new DeleteResourceDefinitionRequestPrivate(GreengrassRequest::DeleteResourceDefinitionAction, this))
+{
+
+}
+
+bool DeleteResourceDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteResourceDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteResourceDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DeleteResourceDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteResourceDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteResourceDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteResourceDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DeleteResourceDefinitionRequest instance.
+ */
+DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, DeleteResourceDefinitionRequest * const q)
+    : DeleteResourceDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteResourceDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteResourceDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteResourceDefinitionRequest instance.
+ */
+DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
+    const DeleteResourceDefinitionRequestPrivate &other, DeleteResourceDefinitionRequest * const q)
+    : DeleteResourceDefinitionPrivate(other, q)
+{
+
+}

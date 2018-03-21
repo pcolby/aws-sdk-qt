@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTIMAGEREQUEST_P_H
 #define QTAWS_PUTIMAGEREQUEST_P_H
 
+#include "ecr_p.h"
+#include "putimagerequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class PutImageRequest;
+
+class QTAWS_EXPORT PutImageRequestPrivate : public ECRPrivate {
+
+public:
+    PutImageRequestPrivate(const ECR::Action action,
+                                   PutImageRequest * const q);
+    PutImageRequestPrivate(const PutImageRequestPrivate &other,
+                                   PutImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutImageRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

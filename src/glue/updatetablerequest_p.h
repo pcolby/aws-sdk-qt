@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETABLEREQUEST_P_H
 #define QTAWS_UPDATETABLEREQUEST_P_H
 
+#include "glue_p.h"
+#include "updatetablerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateTableRequest;
+
+class QTAWS_EXPORT UpdateTableRequestPrivate : public GluePrivate {
+
+public:
+    UpdateTableRequestPrivate(const Glue::Action action,
+                                   UpdateTableRequest * const q);
+    UpdateTableRequestPrivate(const UpdateTableRequestPrivate &other,
+                                   UpdateTableRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTableRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

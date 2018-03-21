@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESUBNETREQUEST_H
 #define QTAWS_CREATESUBNETREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateSubnetRequestPrivate;
+
+class QTAWS_EXPORT CreateSubnetRequest : public EC2Request {
+
+public:
+    CreateSubnetRequest(const CreateSubnetRequest &other);
+    CreateSubnetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubnetRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

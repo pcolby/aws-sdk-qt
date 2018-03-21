@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDASHBOARDSREQUEST_P_H
 #define QTAWS_LISTDASHBOARDSREQUEST_P_H
 
+#include "cloudwatch_p.h"
+#include "listdashboardsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class ListDashboardsRequest;
+
+class QTAWS_EXPORT ListDashboardsRequestPrivate : public CloudWatchPrivate {
+
+public:
+    ListDashboardsRequestPrivate(const CloudWatch::Action action,
+                                   ListDashboardsRequest * const q);
+    ListDashboardsRequestPrivate(const ListDashboardsRequestPrivate &other,
+                                   ListDashboardsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDashboardsRequest)
+
+};
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

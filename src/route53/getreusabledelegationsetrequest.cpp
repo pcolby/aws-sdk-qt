@@ -19,3 +19,107 @@
 
 #include "getreusabledelegationsetrequest.h"
 #include "getreusabledelegationsetrequest_p.h"
+#include "getreusabledelegationsetresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetReusableDelegationSetRequest
+ *
+ * @brief  Implements Route53 GetReusableDelegationSet requests.
+ *
+ * @see    Route53Client::getReusableDelegationSet
+ */
+
+/**
+ * @brief  Constructs a new GetReusableDelegationSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetReusableDelegationSetResponse::GetReusableDelegationSetResponse(
+
+/**
+ * @brief  Constructs a new GetReusableDelegationSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetReusableDelegationSetRequest::GetReusableDelegationSetRequest(const GetReusableDelegationSetRequest &other)
+    : Route53Request(new GetReusableDelegationSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetReusableDelegationSetRequest object.
+ */
+GetReusableDelegationSetRequest::GetReusableDelegationSetRequest()
+    : Route53Request(new GetReusableDelegationSetRequestPrivate(Route53Request::GetReusableDelegationSetAction, this))
+{
+
+}
+
+bool GetReusableDelegationSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetReusableDelegationSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetReusableDelegationSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetReusableDelegationSetRequest::response(QNetworkReply * const reply) const
+{
+    return new GetReusableDelegationSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetReusableDelegationSetRequestPrivate
+ *
+ * @brief  Private implementation for GetReusableDelegationSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetReusableDelegationSetRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetReusableDelegationSetRequest instance.
+ */
+GetReusableDelegationSetRequestPrivate::GetReusableDelegationSetRequestPrivate(
+    const Route53Request::Action action, GetReusableDelegationSetRequest * const q)
+    : GetReusableDelegationSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetReusableDelegationSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetReusableDelegationSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetReusableDelegationSetRequest instance.
+ */
+GetReusableDelegationSetRequestPrivate::GetReusableDelegationSetRequestPrivate(
+    const GetReusableDelegationSetRequestPrivate &other, GetReusableDelegationSetRequest * const q)
+    : GetReusableDelegationSetPrivate(other, q)
+{
+
+}

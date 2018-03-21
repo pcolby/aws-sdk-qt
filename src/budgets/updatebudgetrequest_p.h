@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEBUDGETREQUEST_P_H
 #define QTAWS_UPDATEBUDGETREQUEST_P_H
 
+#include "budgets_p.h"
+#include "updatebudgetrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class UpdateBudgetRequest;
+
+class QTAWS_EXPORT UpdateBudgetRequestPrivate : public BudgetsPrivate {
+
+public:
+    UpdateBudgetRequestPrivate(const Budgets::Action action,
+                                   UpdateBudgetRequest * const q);
+    UpdateBudgetRequestPrivate(const UpdateBudgetRequestPrivate &other,
+                                   UpdateBudgetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateBudgetRequest)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

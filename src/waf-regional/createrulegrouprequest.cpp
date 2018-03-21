@@ -19,3 +19,107 @@
 
 #include "createrulegrouprequest.h"
 #include "createrulegrouprequest_p.h"
+#include "createrulegroupresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  CreateRuleGroupRequest
+ *
+ * @brief  Implements WAFRegional CreateRuleGroup requests.
+ *
+ * @see    WAFRegionalClient::createRuleGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateRuleGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRuleGroupResponse::CreateRuleGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateRuleGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRuleGroupRequest::CreateRuleGroupRequest(const CreateRuleGroupRequest &other)
+    : WAFRegionalRequest(new CreateRuleGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRuleGroupRequest object.
+ */
+CreateRuleGroupRequest::CreateRuleGroupRequest()
+    : WAFRegionalRequest(new CreateRuleGroupRequestPrivate(WAFRegionalRequest::CreateRuleGroupAction, this))
+{
+
+}
+
+bool CreateRuleGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRuleGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRuleGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * CreateRuleGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRuleGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRuleGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateRuleGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRuleGroupRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public CreateRuleGroupRequest instance.
+ */
+CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
+    const WAFRegionalRequest::Action action, CreateRuleGroupRequest * const q)
+    : CreateRuleGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRuleGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRuleGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRuleGroupRequest instance.
+ */
+CreateRuleGroupRequestPrivate::CreateRuleGroupRequestPrivate(
+    const CreateRuleGroupRequestPrivate &other, CreateRuleGroupRequest * const q)
+    : CreateRuleGroupPrivate(other, q)
+{
+
+}

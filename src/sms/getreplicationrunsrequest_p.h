@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREPLICATIONRUNSREQUEST_P_H
 #define QTAWS_GETREPLICATIONRUNSREQUEST_P_H
 
+#include "sms_p.h"
+#include "getreplicationrunsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class GetReplicationRunsRequest;
+
+class QTAWS_EXPORT GetReplicationRunsRequestPrivate : public SMSPrivate {
+
+public:
+    GetReplicationRunsRequestPrivate(const SMS::Action action,
+                                   GetReplicationRunsRequest * const q);
+    GetReplicationRunsRequestPrivate(const GetReplicationRunsRequestPrivate &other,
+                                   GetReplicationRunsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetReplicationRunsRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

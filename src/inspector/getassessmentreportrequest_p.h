@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETASSESSMENTREPORTREQUEST_P_H
 #define QTAWS_GETASSESSMENTREPORTREQUEST_P_H
 
+#include "inspector_p.h"
+#include "getassessmentreportrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class GetAssessmentReportRequest;
+
+class QTAWS_EXPORT GetAssessmentReportRequestPrivate : public InspectorPrivate {
+
+public:
+    GetAssessmentReportRequestPrivate(const Inspector::Action action,
+                                   GetAssessmentReportRequest * const q);
+    GetAssessmentReportRequestPrivate(const GetAssessmentReportRequestPrivate &other,
+                                   GetAssessmentReportRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAssessmentReportRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

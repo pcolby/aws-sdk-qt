@@ -19,3 +19,107 @@
 
 #include "listthingprincipalsrequest.h"
 #include "listthingprincipalsrequest_p.h"
+#include "listthingprincipalsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingPrincipalsRequest
+ *
+ * @brief  Implements IoT ListThingPrincipals requests.
+ *
+ * @see    IoTClient::listThingPrincipals
+ */
+
+/**
+ * @brief  Constructs a new ListThingPrincipalsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingPrincipalsResponse::ListThingPrincipalsResponse(
+
+/**
+ * @brief  Constructs a new ListThingPrincipalsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListThingPrincipalsRequest::ListThingPrincipalsRequest(const ListThingPrincipalsRequest &other)
+    : IoTRequest(new ListThingPrincipalsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListThingPrincipalsRequest object.
+ */
+ListThingPrincipalsRequest::ListThingPrincipalsRequest()
+    : IoTRequest(new ListThingPrincipalsRequestPrivate(IoTRequest::ListThingPrincipalsAction, this))
+{
+
+}
+
+bool ListThingPrincipalsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListThingPrincipalsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListThingPrincipalsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListThingPrincipalsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListThingPrincipalsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingPrincipalsRequestPrivate
+ *
+ * @brief  Private implementation for ListThingPrincipalsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingPrincipalsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListThingPrincipalsRequest instance.
+ */
+ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
+    const IoTRequest::Action action, ListThingPrincipalsRequest * const q)
+    : ListThingPrincipalsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingPrincipalsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListThingPrincipalsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListThingPrincipalsRequest instance.
+ */
+ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
+    const ListThingPrincipalsRequestPrivate &other, ListThingPrincipalsRequest * const q)
+    : ListThingPrincipalsPrivate(other, q)
+{
+
+}

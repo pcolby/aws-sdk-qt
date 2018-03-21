@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTATTACHEDUSERPOLICIESREQUEST_H
 #define QTAWS_LISTATTACHEDUSERPOLICIESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAttachedUserPoliciesRequestPrivate;
+
+class QTAWS_EXPORT ListAttachedUserPoliciesRequest : public IAMRequest {
+
+public:
+    ListAttachedUserPoliciesRequest(const ListAttachedUserPoliciesRequest &other);
+    ListAttachedUserPoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAttachedUserPoliciesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

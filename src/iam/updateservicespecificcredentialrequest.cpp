@@ -19,3 +19,107 @@
 
 #include "updateservicespecificcredentialrequest.h"
 #include "updateservicespecificcredentialrequest_p.h"
+#include "updateservicespecificcredentialresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateServiceSpecificCredentialRequest
+ *
+ * @brief  Implements IAM UpdateServiceSpecificCredential requests.
+ *
+ * @see    IAMClient::updateServiceSpecificCredential
+ */
+
+/**
+ * @brief  Constructs a new UpdateServiceSpecificCredentialResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse(
+
+/**
+ * @brief  Constructs a new UpdateServiceSpecificCredentialRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateServiceSpecificCredentialRequest::UpdateServiceSpecificCredentialRequest(const UpdateServiceSpecificCredentialRequest &other)
+    : IAMRequest(new UpdateServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateServiceSpecificCredentialRequest object.
+ */
+UpdateServiceSpecificCredentialRequest::UpdateServiceSpecificCredentialRequest()
+    : IAMRequest(new UpdateServiceSpecificCredentialRequestPrivate(IAMRequest::UpdateServiceSpecificCredentialAction, this))
+{
+
+}
+
+bool UpdateServiceSpecificCredentialRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateServiceSpecificCredentialResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateServiceSpecificCredentialResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateServiceSpecificCredentialResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServiceSpecificCredentialRequestPrivate
+ *
+ * @brief  Private implementation for UpdateServiceSpecificCredentialRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceSpecificCredentialRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateServiceSpecificCredentialRequest instance.
+ */
+UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
+    const IAMRequest::Action action, UpdateServiceSpecificCredentialRequest * const q)
+    : UpdateServiceSpecificCredentialPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceSpecificCredentialRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateServiceSpecificCredentialRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateServiceSpecificCredentialRequest instance.
+ */
+UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
+    const UpdateServiceSpecificCredentialRequestPrivate &other, UpdateServiceSpecificCredentialRequest * const q)
+    : UpdateServiceSpecificCredentialPrivate(other, q)
+{
+
+}

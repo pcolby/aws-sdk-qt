@@ -19,3 +19,107 @@
 
 #include "updateloadbalancerattributerequest.h"
 #include "updateloadbalancerattributerequest_p.h"
+#include "updateloadbalancerattributeresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  UpdateLoadBalancerAttributeRequest
+ *
+ * @brief  Implements Lightsail UpdateLoadBalancerAttribute requests.
+ *
+ * @see    LightsailClient::updateLoadBalancerAttribute
+ */
+
+/**
+ * @brief  Constructs a new UpdateLoadBalancerAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLoadBalancerAttributeResponse::UpdateLoadBalancerAttributeResponse(
+
+/**
+ * @brief  Constructs a new UpdateLoadBalancerAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateLoadBalancerAttributeRequest::UpdateLoadBalancerAttributeRequest(const UpdateLoadBalancerAttributeRequest &other)
+    : LightsailRequest(new UpdateLoadBalancerAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateLoadBalancerAttributeRequest object.
+ */
+UpdateLoadBalancerAttributeRequest::UpdateLoadBalancerAttributeRequest()
+    : LightsailRequest(new UpdateLoadBalancerAttributeRequestPrivate(LightsailRequest::UpdateLoadBalancerAttributeAction, this))
+{
+
+}
+
+bool UpdateLoadBalancerAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateLoadBalancerAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateLoadBalancerAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateLoadBalancerAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLoadBalancerAttributeRequestPrivate
+ *
+ * @brief  Private implementation for UpdateLoadBalancerAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLoadBalancerAttributeRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public UpdateLoadBalancerAttributeRequest instance.
+ */
+UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
+    const LightsailRequest::Action action, UpdateLoadBalancerAttributeRequest * const q)
+    : UpdateLoadBalancerAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLoadBalancerAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateLoadBalancerAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateLoadBalancerAttributeRequest instance.
+ */
+UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
+    const UpdateLoadBalancerAttributeRequestPrivate &other, UpdateLoadBalancerAttributeRequest * const q)
+    : UpdateLoadBalancerAttributePrivate(other, q)
+{
+
+}

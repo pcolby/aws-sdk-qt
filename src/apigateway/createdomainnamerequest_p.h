@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDOMAINNAMEREQUEST_P_H
 #define QTAWS_CREATEDOMAINNAMEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "createdomainnamerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateDomainNameRequest;
+
+class QTAWS_EXPORT CreateDomainNameRequestPrivate : public APIGatewayPrivate {
+
+public:
+    CreateDomainNameRequestPrivate(const APIGateway::Action action,
+                                   CreateDomainNameRequest * const q);
+    CreateDomainNameRequestPrivate(const CreateDomainNameRequestPrivate &other,
+                                   CreateDomainNameRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDomainNameRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

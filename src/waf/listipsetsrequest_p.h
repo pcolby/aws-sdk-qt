@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIPSETSREQUEST_P_H
 #define QTAWS_LISTIPSETSREQUEST_P_H
 
+#include "waf_p.h"
+#include "listipsetsrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListIPSetsRequest;
+
+class QTAWS_EXPORT ListIPSetsRequestPrivate : public WAFPrivate {
+
+public:
+    ListIPSetsRequestPrivate(const WAF::Action action,
+                                   ListIPSetsRequest * const q);
+    ListIPSetsRequestPrivate(const ListIPSetsRequestPrivate &other,
+                                   ListIPSetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIPSetsRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEVALUATIONRESULTSREQUEST_H
 #define QTAWS_DELETEEVALUATIONRESULTSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteEvaluationResultsRequestPrivate;
+
+class QTAWS_EXPORT DeleteEvaluationResultsRequest : public ConfigServiceRequest {
+
+public:
+    DeleteEvaluationResultsRequest(const DeleteEvaluationResultsRequest &other);
+    DeleteEvaluationResultsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEvaluationResultsRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

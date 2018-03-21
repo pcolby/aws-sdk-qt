@@ -19,3 +19,107 @@
 
 #include "lookupeventsrequest.h"
 #include "lookupeventsrequest_p.h"
+#include "lookupeventsresponse.h"
+#include "cloudtrailrequest_p.h"
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  LookupEventsRequest
+ *
+ * @brief  Implements CloudTrail LookupEvents requests.
+ *
+ * @see    CloudTrailClient::lookupEvents
+ */
+
+/**
+ * @brief  Constructs a new LookupEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+LookupEventsResponse::LookupEventsResponse(
+
+/**
+ * @brief  Constructs a new LookupEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+LookupEventsRequest::LookupEventsRequest(const LookupEventsRequest &other)
+    : CloudTrailRequest(new LookupEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new LookupEventsRequest object.
+ */
+LookupEventsRequest::LookupEventsRequest()
+    : CloudTrailRequest(new LookupEventsRequestPrivate(CloudTrailRequest::LookupEventsAction, this))
+{
+
+}
+
+bool LookupEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an LookupEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An LookupEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudTrailClient::send
+ */
+AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new LookupEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  LookupEventsRequestPrivate
+ *
+ * @brief  Private implementation for LookupEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new LookupEventsRequestPrivate object.
+ *
+ * @param  action  CloudTrail action being performed.
+ * @param  q       Pointer to this object's public LookupEventsRequest instance.
+ */
+LookupEventsRequestPrivate::LookupEventsRequestPrivate(
+    const CloudTrailRequest::Action action, LookupEventsRequest * const q)
+    : LookupEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new LookupEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the LookupEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public LookupEventsRequest instance.
+ */
+LookupEventsRequestPrivate::LookupEventsRequestPrivate(
+    const LookupEventsRequestPrivate &other, LookupEventsRequest * const q)
+    : LookupEventsPrivate(other, q)
+{
+
+}

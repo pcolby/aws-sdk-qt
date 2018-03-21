@@ -19,3 +19,107 @@
 
 #include "creategamesessionqueuerequest.h"
 #include "creategamesessionqueuerequest_p.h"
+#include "creategamesessionqueueresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreateGameSessionQueueRequest
+ *
+ * @brief  Implements GameLift CreateGameSessionQueue requests.
+ *
+ * @see    GameLiftClient::createGameSessionQueue
+ */
+
+/**
+ * @brief  Constructs a new CreateGameSessionQueueResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateGameSessionQueueResponse::CreateGameSessionQueueResponse(
+
+/**
+ * @brief  Constructs a new CreateGameSessionQueueRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateGameSessionQueueRequest::CreateGameSessionQueueRequest(const CreateGameSessionQueueRequest &other)
+    : GameLiftRequest(new CreateGameSessionQueueRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateGameSessionQueueRequest object.
+ */
+CreateGameSessionQueueRequest::CreateGameSessionQueueRequest()
+    : GameLiftRequest(new CreateGameSessionQueueRequestPrivate(GameLiftRequest::CreateGameSessionQueueAction, this))
+{
+
+}
+
+bool CreateGameSessionQueueRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateGameSessionQueueResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateGameSessionQueueResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * CreateGameSessionQueueRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateGameSessionQueueResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateGameSessionQueueRequestPrivate
+ *
+ * @brief  Private implementation for CreateGameSessionQueueRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGameSessionQueueRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public CreateGameSessionQueueRequest instance.
+ */
+CreateGameSessionQueueRequestPrivate::CreateGameSessionQueueRequestPrivate(
+    const GameLiftRequest::Action action, CreateGameSessionQueueRequest * const q)
+    : CreateGameSessionQueuePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateGameSessionQueueRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateGameSessionQueueRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateGameSessionQueueRequest instance.
+ */
+CreateGameSessionQueueRequestPrivate::CreateGameSessionQueueRequestPrivate(
+    const CreateGameSessionQueueRequestPrivate &other, CreateGameSessionQueueRequest * const q)
+    : CreateGameSessionQueuePrivate(other, q)
+{
+
+}

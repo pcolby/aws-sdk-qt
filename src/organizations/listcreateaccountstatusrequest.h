@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCREATEACCOUNTSTATUSREQUEST_H
 #define QTAWS_LISTCREATEACCOUNTSTATUSREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListCreateAccountStatusRequestPrivate;
+
+class QTAWS_EXPORT ListCreateAccountStatusRequest : public OrganizationsRequest {
+
+public:
+    ListCreateAccountStatusRequest(const ListCreateAccountStatusRequest &other);
+    ListCreateAccountStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListCreateAccountStatusRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REVOKESECURITYGROUPEGRESSREQUEST_P_H
 #define QTAWS_REVOKESECURITYGROUPEGRESSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "revokesecuritygroupegressrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RevokeSecurityGroupEgressRequest;
+
+class QTAWS_EXPORT RevokeSecurityGroupEgressRequestPrivate : public EC2Private {
+
+public:
+    RevokeSecurityGroupEgressRequestPrivate(const EC2::Action action,
+                                   RevokeSecurityGroupEgressRequest * const q);
+    RevokeSecurityGroupEgressRequestPrivate(const RevokeSecurityGroupEgressRequestPrivate &other,
+                                   RevokeSecurityGroupEgressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RevokeSecurityGroupEgressRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

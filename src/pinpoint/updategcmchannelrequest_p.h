@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGCMCHANNELREQUEST_P_H
 #define QTAWS_UPDATEGCMCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updategcmchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateGcmChannelRequest;
+
+class QTAWS_EXPORT UpdateGcmChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateGcmChannelRequestPrivate(const Pinpoint::Action action,
+                                   UpdateGcmChannelRequest * const q);
+    UpdateGcmChannelRequestPrivate(const UpdateGcmChannelRequestPrivate &other,
+                                   UpdateGcmChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGcmChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "createtagsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class CreateTagsRequest;
+
+class QTAWS_EXPORT CreateTagsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    CreateTagsRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   CreateTagsRequest * const q);
+    CreateTagsRequestPrivate(const CreateTagsRequestPrivate &other,
+                                   CreateTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTagsRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ABORTDOCUMENTVERSIONUPLOADREQUEST_P_H
 #define QTAWS_ABORTDOCUMENTVERSIONUPLOADREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "abortdocumentversionuploadrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class AbortDocumentVersionUploadRequest;
+
+class QTAWS_EXPORT AbortDocumentVersionUploadRequestPrivate : public WorkDocsPrivate {
+
+public:
+    AbortDocumentVersionUploadRequestPrivate(const WorkDocs::Action action,
+                                   AbortDocumentVersionUploadRequest * const q);
+    AbortDocumentVersionUploadRequestPrivate(const AbortDocumentVersionUploadRequestPrivate &other,
+                                   AbortDocumentVersionUploadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AbortDocumentVersionUploadRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESERVERREQUEST_P_H
 #define QTAWS_DELETESERVERREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "deleteserverrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DeleteServerRequest;
+
+class QTAWS_EXPORT DeleteServerRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    DeleteServerRequestPrivate(const OpsWorksCM::Action action,
+                                   DeleteServerRequest * const q);
+    DeleteServerRequestPrivate(const DeleteServerRequestPrivate &other,
+                                   DeleteServerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteServerRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

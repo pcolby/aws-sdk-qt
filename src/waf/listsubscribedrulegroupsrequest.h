@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_H
 #define QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListSubscribedRuleGroupsRequestPrivate;
+
+class QTAWS_EXPORT ListSubscribedRuleGroupsRequest : public WAFRequest {
+
+public:
+    ListSubscribedRuleGroupsRequest(const ListSubscribedRuleGroupsRequest &other);
+    ListSubscribedRuleGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListSubscribedRuleGroupsRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

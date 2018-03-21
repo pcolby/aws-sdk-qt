@@ -19,3 +19,107 @@
 
 #include "listinventoryentriesrequest.h"
 #include "listinventoryentriesrequest_p.h"
+#include "listinventoryentriesresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListInventoryEntriesRequest
+ *
+ * @brief  Implements SSM ListInventoryEntries requests.
+ *
+ * @see    SSMClient::listInventoryEntries
+ */
+
+/**
+ * @brief  Constructs a new ListInventoryEntriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListInventoryEntriesResponse::ListInventoryEntriesResponse(
+
+/**
+ * @brief  Constructs a new ListInventoryEntriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListInventoryEntriesRequest::ListInventoryEntriesRequest(const ListInventoryEntriesRequest &other)
+    : SSMRequest(new ListInventoryEntriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListInventoryEntriesRequest object.
+ */
+ListInventoryEntriesRequest::ListInventoryEntriesRequest()
+    : SSMRequest(new ListInventoryEntriesRequestPrivate(SSMRequest::ListInventoryEntriesAction, this))
+{
+
+}
+
+bool ListInventoryEntriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListInventoryEntriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListInventoryEntriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListInventoryEntriesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListInventoryEntriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListInventoryEntriesRequestPrivate
+ *
+ * @brief  Private implementation for ListInventoryEntriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInventoryEntriesRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListInventoryEntriesRequest instance.
+ */
+ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
+    const SSMRequest::Action action, ListInventoryEntriesRequest * const q)
+    : ListInventoryEntriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListInventoryEntriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListInventoryEntriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListInventoryEntriesRequest instance.
+ */
+ListInventoryEntriesRequestPrivate::ListInventoryEntriesRequestPrivate(
+    const ListInventoryEntriesRequestPrivate &other, ListInventoryEntriesRequest * const q)
+    : ListInventoryEntriesPrivate(other, q)
+{
+
+}

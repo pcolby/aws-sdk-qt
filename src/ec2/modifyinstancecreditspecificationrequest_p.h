@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_P_H
 #define QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyinstancecreditspecificationrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstanceCreditSpecificationRequest;
+
+class QTAWS_EXPORT ModifyInstanceCreditSpecificationRequestPrivate : public EC2Private {
+
+public:
+    ModifyInstanceCreditSpecificationRequestPrivate(const EC2::Action action,
+                                   ModifyInstanceCreditSpecificationRequest * const q);
+    ModifyInstanceCreditSpecificationRequestPrivate(const ModifyInstanceCreditSpecificationRequestPrivate &other,
+                                   ModifyInstanceCreditSpecificationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstanceCreditSpecificationRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

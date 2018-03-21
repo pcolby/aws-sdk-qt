@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBSUBNETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEDBSUBNETGROUPSREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedbsubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBSubnetGroupsRequest;
+
+class QTAWS_EXPORT DescribeDBSubnetGroupsRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBSubnetGroupsRequestPrivate(const RDS::Action action,
+                                   DescribeDBSubnetGroupsRequest * const q);
+    DescribeDBSubnetGroupsRequestPrivate(const DescribeDBSubnetGroupsRequestPrivate &other,
+                                   DescribeDBSubnetGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBSubnetGroupsRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

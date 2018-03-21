@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESLOTTYPEREQUEST_H
 #define QTAWS_DELETESLOTTYPEREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteSlotTypeRequestPrivate;
+
+class QTAWS_EXPORT DeleteSlotTypeRequest : public LexModelBuildingServiceRequest {
+
+public:
+    DeleteSlotTypeRequest(const DeleteSlotTypeRequest &other);
+    DeleteSlotTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSlotTypeRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

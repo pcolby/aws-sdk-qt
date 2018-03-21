@@ -19,3 +19,107 @@
 
 #include "createimagebuilderstreamingurlrequest.h"
 #include "createimagebuilderstreamingurlrequest_p.h"
+#include "createimagebuilderstreamingurlresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  CreateImageBuilderStreamingURLRequest
+ *
+ * @brief  Implements AppStream CreateImageBuilderStreamingURL requests.
+ *
+ * @see    AppStreamClient::createImageBuilderStreamingURL
+ */
+
+/**
+ * @brief  Constructs a new CreateImageBuilderStreamingURLResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateImageBuilderStreamingURLResponse::CreateImageBuilderStreamingURLResponse(
+
+/**
+ * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest(const CreateImageBuilderStreamingURLRequest &other)
+    : AppStreamRequest(new CreateImageBuilderStreamingURLRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateImageBuilderStreamingURLRequest object.
+ */
+CreateImageBuilderStreamingURLRequest::CreateImageBuilderStreamingURLRequest()
+    : AppStreamRequest(new CreateImageBuilderStreamingURLRequestPrivate(AppStreamRequest::CreateImageBuilderStreamingURLAction, this))
+{
+
+}
+
+bool CreateImageBuilderStreamingURLRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateImageBuilderStreamingURLResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateImageBuilderStreamingURLResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * CreateImageBuilderStreamingURLRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateImageBuilderStreamingURLResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateImageBuilderStreamingURLRequestPrivate
+ *
+ * @brief  Private implementation for CreateImageBuilderStreamingURLRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public CreateImageBuilderStreamingURLRequest instance.
+ */
+CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
+    const AppStreamRequest::Action action, CreateImageBuilderStreamingURLRequest * const q)
+    : CreateImageBuilderStreamingURLPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImageBuilderStreamingURLRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateImageBuilderStreamingURLRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateImageBuilderStreamingURLRequest instance.
+ */
+CreateImageBuilderStreamingURLRequestPrivate::CreateImageBuilderStreamingURLRequestPrivate(
+    const CreateImageBuilderStreamingURLRequestPrivate &other, CreateImageBuilderStreamingURLRequest * const q)
+    : CreateImageBuilderStreamingURLPrivate(other, q)
+{
+
+}

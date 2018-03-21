@@ -19,3 +19,107 @@
 
 #include "getqueryexecutionrequest.h"
 #include "getqueryexecutionrequest_p.h"
+#include "getqueryexecutionresponse.h"
+#include "athenarequest_p.h"
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  GetQueryExecutionRequest
+ *
+ * @brief  Implements Athena GetQueryExecution requests.
+ *
+ * @see    AthenaClient::getQueryExecution
+ */
+
+/**
+ * @brief  Constructs a new GetQueryExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetQueryExecutionResponse::GetQueryExecutionResponse(
+
+/**
+ * @brief  Constructs a new GetQueryExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetQueryExecutionRequest::GetQueryExecutionRequest(const GetQueryExecutionRequest &other)
+    : AthenaRequest(new GetQueryExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetQueryExecutionRequest object.
+ */
+GetQueryExecutionRequest::GetQueryExecutionRequest()
+    : AthenaRequest(new GetQueryExecutionRequestPrivate(AthenaRequest::GetQueryExecutionAction, this))
+{
+
+}
+
+bool GetQueryExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetQueryExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetQueryExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AthenaClient::send
+ */
+AwsAbstractResponse * GetQueryExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetQueryExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetQueryExecutionRequestPrivate
+ *
+ * @brief  Private implementation for GetQueryExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryExecutionRequestPrivate object.
+ *
+ * @param  action  Athena action being performed.
+ * @param  q       Pointer to this object's public GetQueryExecutionRequest instance.
+ */
+GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
+    const AthenaRequest::Action action, GetQueryExecutionRequest * const q)
+    : GetQueryExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetQueryExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetQueryExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetQueryExecutionRequest instance.
+ */
+GetQueryExecutionRequestPrivate::GetQueryExecutionRequestPrivate(
+    const GetQueryExecutionRequestPrivate &other, GetQueryExecutionRequest * const q)
+    : GetQueryExecutionPrivate(other, q)
+{
+
+}

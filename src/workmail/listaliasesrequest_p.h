@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTALIASESREQUEST_P_H
 #define QTAWS_LISTALIASESREQUEST_P_H
 
+#include "workmail_p.h"
+#include "listaliasesrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class ListAliasesRequest;
+
+class QTAWS_EXPORT ListAliasesRequestPrivate : public WorkMailPrivate {
+
+public:
+    ListAliasesRequestPrivate(const WorkMail::Action action,
+                                   ListAliasesRequest * const q);
+    ListAliasesRequestPrivate(const ListAliasesRequestPrivate &other,
+                                   ListAliasesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAliasesRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

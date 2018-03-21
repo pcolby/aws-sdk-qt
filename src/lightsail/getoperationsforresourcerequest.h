@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOPERATIONSFORRESOURCEREQUEST_H
 #define QTAWS_GETOPERATIONSFORRESOURCEREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetOperationsForResourceRequestPrivate;
+
+class QTAWS_EXPORT GetOperationsForResourceRequest : public LightsailRequest {
+
+public:
+    GetOperationsForResourceRequest(const GetOperationsForResourceRequest &other);
+    GetOperationsForResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationsForResourceRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

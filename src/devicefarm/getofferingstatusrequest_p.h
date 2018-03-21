@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOFFERINGSTATUSREQUEST_P_H
 #define QTAWS_GETOFFERINGSTATUSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getofferingstatusrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetOfferingStatusRequest;
+
+class QTAWS_EXPORT GetOfferingStatusRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetOfferingStatusRequestPrivate(const DeviceFarm::Action action,
+                                   GetOfferingStatusRequest * const q);
+    GetOfferingStatusRequestPrivate(const GetOfferingStatusRequestPrivate &other,
+                                   GetOfferingStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetOfferingStatusRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

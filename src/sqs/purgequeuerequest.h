@@ -20,4 +20,32 @@
 #ifndef QTAWS_PURGEQUEUEREQUEST_H
 #define QTAWS_PURGEQUEUEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class PurgeQueueRequestPrivate;
+
+class QTAWS_EXPORT PurgeQueueRequest : public SQSRequest {
+
+public:
+    PurgeQueueRequest(const PurgeQueueRequest &other);
+    PurgeQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PurgeQueueRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

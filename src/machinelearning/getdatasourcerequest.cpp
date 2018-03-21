@@ -19,3 +19,107 @@
 
 #include "getdatasourcerequest.h"
 #include "getdatasourcerequest_p.h"
+#include "getdatasourceresponse.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  GetDataSourceRequest
+ *
+ * @brief  Implements MachineLearning GetDataSource requests.
+ *
+ * @see    MachineLearningClient::getDataSource
+ */
+
+/**
+ * @brief  Constructs a new GetDataSourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDataSourceResponse::GetDataSourceResponse(
+
+/**
+ * @brief  Constructs a new GetDataSourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDataSourceRequest::GetDataSourceRequest(const GetDataSourceRequest &other)
+    : MachineLearningRequest(new GetDataSourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDataSourceRequest object.
+ */
+GetDataSourceRequest::GetDataSourceRequest()
+    : MachineLearningRequest(new GetDataSourceRequestPrivate(MachineLearningRequest::GetDataSourceAction, this))
+{
+
+}
+
+bool GetDataSourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDataSourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDataSourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDataSourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDataSourceRequestPrivate
+ *
+ * @brief  Private implementation for GetDataSourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataSourceRequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public GetDataSourceRequest instance.
+ */
+GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
+    const MachineLearningRequest::Action action, GetDataSourceRequest * const q)
+    : GetDataSourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDataSourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDataSourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDataSourceRequest instance.
+ */
+GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
+    const GetDataSourceRequestPrivate &other, GetDataSourceRequest * const q)
+    : GetDataSourcePrivate(other, q)
+{
+
+}

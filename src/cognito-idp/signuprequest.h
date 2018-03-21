@@ -20,4 +20,32 @@
 #ifndef QTAWS_SIGNUPREQUEST_H
 #define QTAWS_SIGNUPREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class SignUpRequestPrivate;
+
+class QTAWS_EXPORT SignUpRequest : public CognitoIdentityProviderRequest {
+
+public:
+    SignUpRequest(const SignUpRequest &other);
+    SignUpRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SignUpRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

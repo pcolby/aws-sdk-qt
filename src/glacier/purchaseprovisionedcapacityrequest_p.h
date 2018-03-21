@@ -20,4 +20,29 @@
 #ifndef QTAWS_PURCHASEPROVISIONEDCAPACITYREQUEST_P_H
 #define QTAWS_PURCHASEPROVISIONEDCAPACITYREQUEST_P_H
 
+#include "glacier_p.h"
+#include "purchaseprovisionedcapacityrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class PurchaseProvisionedCapacityRequest;
+
+class QTAWS_EXPORT PurchaseProvisionedCapacityRequestPrivate : public GlacierPrivate {
+
+public:
+    PurchaseProvisionedCapacityRequestPrivate(const Glacier::Action action,
+                                   PurchaseProvisionedCapacityRequest * const q);
+    PurchaseProvisionedCapacityRequestPrivate(const PurchaseProvisionedCapacityRequestPrivate &other,
+                                   PurchaseProvisionedCapacityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseProvisionedCapacityRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

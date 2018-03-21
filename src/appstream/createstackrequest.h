@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESTACKREQUEST_H
 #define QTAWS_CREATESTACKREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CreateStackRequestPrivate;
+
+class QTAWS_EXPORT CreateStackRequest : public AppStreamRequest {
+
+public:
+    CreateStackRequest(const CreateStackRequest &other);
+    CreateStackRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateStackRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

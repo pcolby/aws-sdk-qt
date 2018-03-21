@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEAUTHORIZERREQUEST_H
 #define QTAWS_UPDATEAUTHORIZERREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT UpdateAuthorizerRequest : public IoTRequest {
+
+public:
+    UpdateAuthorizerRequest(const UpdateAuthorizerRequest &other);
+    UpdateAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAuthorizerRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

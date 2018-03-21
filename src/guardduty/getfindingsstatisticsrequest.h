@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETFINDINGSSTATISTICSREQUEST_H
 #define QTAWS_GETFINDINGSSTATISTICSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class GetFindingsStatisticsRequestPrivate;
+
+class QTAWS_EXPORT GetFindingsStatisticsRequest : public GuardDutyRequest {
+
+public:
+    GetFindingsStatisticsRequest(const GetFindingsStatisticsRequest &other);
+    GetFindingsStatisticsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetFindingsStatisticsRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

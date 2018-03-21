@@ -19,3 +19,107 @@
 
 #include "describemounttargetsecuritygroupsrequest.h"
 #include "describemounttargetsecuritygroupsrequest_p.h"
+#include "describemounttargetsecuritygroupsresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DescribeMountTargetSecurityGroupsRequest
+ *
+ * @brief  Implements EFS DescribeMountTargetSecurityGroups requests.
+ *
+ * @see    EFSClient::describeMountTargetSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMountTargetSecurityGroupsResponse::DescribeMountTargetSecurityGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsRequest(const DescribeMountTargetSecurityGroupsRequest &other)
+    : EFSRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequest object.
+ */
+DescribeMountTargetSecurityGroupsRequest::DescribeMountTargetSecurityGroupsRequest()
+    : EFSRequest(new DescribeMountTargetSecurityGroupsRequestPrivate(EFSRequest::DescribeMountTargetSecurityGroupsAction, this))
+{
+
+}
+
+bool DescribeMountTargetSecurityGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMountTargetSecurityGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMountTargetSecurityGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMountTargetSecurityGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMountTargetSecurityGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMountTargetSecurityGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public DescribeMountTargetSecurityGroupsRequest instance.
+ */
+DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
+    const EFSRequest::Action action, DescribeMountTargetSecurityGroupsRequest * const q)
+    : DescribeMountTargetSecurityGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMountTargetSecurityGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMountTargetSecurityGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMountTargetSecurityGroupsRequest instance.
+ */
+DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
+    const DescribeMountTargetSecurityGroupsRequestPrivate &other, DescribeMountTargetSecurityGroupsRequest * const q)
+    : DescribeMountTargetSecurityGroupsPrivate(other, q)
+{
+
+}

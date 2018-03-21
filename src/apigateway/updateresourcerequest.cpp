@@ -19,3 +19,107 @@
 
 #include "updateresourcerequest.h"
 #include "updateresourcerequest_p.h"
+#include "updateresourceresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateResourceRequest
+ *
+ * @brief  Implements APIGateway UpdateResource requests.
+ *
+ * @see    APIGatewayClient::updateResource
+ */
+
+/**
+ * @brief  Constructs a new UpdateResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateResourceResponse::UpdateResourceResponse(
+
+/**
+ * @brief  Constructs a new UpdateResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateResourceRequest::UpdateResourceRequest(const UpdateResourceRequest &other)
+    : APIGatewayRequest(new UpdateResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateResourceRequest object.
+ */
+UpdateResourceRequest::UpdateResourceRequest()
+    : APIGatewayRequest(new UpdateResourceRequestPrivate(APIGatewayRequest::UpdateResourceAction, this))
+{
+
+}
+
+bool UpdateResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateResourceRequestPrivate
+ *
+ * @brief  Private implementation for UpdateResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateResourceRequest instance.
+ */
+UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateResourceRequest * const q)
+    : UpdateResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateResourceRequest instance.
+ */
+UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
+    const UpdateResourceRequestPrivate &other, UpdateResourceRequest * const q)
+    : UpdateResourcePrivate(other, q)
+{
+
+}

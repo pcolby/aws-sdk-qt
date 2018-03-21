@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYIDENTITYIDFORMATREQUEST_H
 #define QTAWS_MODIFYIDENTITYIDFORMATREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyIdentityIdFormatRequestPrivate;
+
+class QTAWS_EXPORT ModifyIdentityIdFormatRequest : public EC2Request {
+
+public:
+    ModifyIdentityIdFormatRequest(const ModifyIdentityIdFormatRequest &other);
+    ModifyIdentityIdFormatRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyIdentityIdFormatRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

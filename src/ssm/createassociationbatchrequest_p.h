@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEASSOCIATIONBATCHREQUEST_P_H
 #define QTAWS_CREATEASSOCIATIONBATCHREQUEST_P_H
 
+#include "ssm_p.h"
+#include "createassociationbatchrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateAssociationBatchRequest;
+
+class QTAWS_EXPORT CreateAssociationBatchRequestPrivate : public SSMPrivate {
+
+public:
+    CreateAssociationBatchRequestPrivate(const SSM::Action action,
+                                   CreateAssociationBatchRequest * const q);
+    CreateAssociationBatchRequestPrivate(const CreateAssociationBatchRequestPrivate &other,
+                                   CreateAssociationBatchRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAssociationBatchRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

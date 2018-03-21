@@ -19,3 +19,107 @@
 
 #include "updateinstancecustomhealthstatusrequest.h"
 #include "updateinstancecustomhealthstatusrequest_p.h"
+#include "updateinstancecustomhealthstatusresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  UpdateInstanceCustomHealthStatusRequest
+ *
+ * @brief  Implements ServiceDiscovery UpdateInstanceCustomHealthStatus requests.
+ *
+ * @see    ServiceDiscoveryClient::updateInstanceCustomHealthStatus
+ */
+
+/**
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateInstanceCustomHealthStatusResponse::UpdateInstanceCustomHealthStatusResponse(
+
+/**
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest(const UpdateInstanceCustomHealthStatusRequest &other)
+    : ServiceDiscoveryRequest(new UpdateInstanceCustomHealthStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequest object.
+ */
+UpdateInstanceCustomHealthStatusRequest::UpdateInstanceCustomHealthStatusRequest()
+    : ServiceDiscoveryRequest(new UpdateInstanceCustomHealthStatusRequestPrivate(ServiceDiscoveryRequest::UpdateInstanceCustomHealthStatusAction, this))
+{
+
+}
+
+bool UpdateInstanceCustomHealthStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateInstanceCustomHealthStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateInstanceCustomHealthStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateInstanceCustomHealthStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateInstanceCustomHealthStatusRequestPrivate
+ *
+ * @brief  Private implementation for UpdateInstanceCustomHealthStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public UpdateInstanceCustomHealthStatusRequest instance.
+ */
+UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, UpdateInstanceCustomHealthStatusRequest * const q)
+    : UpdateInstanceCustomHealthStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceCustomHealthStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateInstanceCustomHealthStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateInstanceCustomHealthStatusRequest instance.
+ */
+UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
+    const UpdateInstanceCustomHealthStatusRequestPrivate &other, UpdateInstanceCustomHealthStatusRequest * const q)
+    : UpdateInstanceCustomHealthStatusPrivate(other, q)
+{
+
+}

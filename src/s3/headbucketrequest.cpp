@@ -19,3 +19,107 @@
 
 #include "headbucketrequest.h"
 #include "headbucketrequest_p.h"
+#include "headbucketresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  HeadBucketRequest
+ *
+ * @brief  Implements S3 HeadBucket requests.
+ *
+ * @see    S3Client::headBucket
+ */
+
+/**
+ * @brief  Constructs a new HeadBucketResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+HeadBucketResponse::HeadBucketResponse(
+
+/**
+ * @brief  Constructs a new HeadBucketRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+HeadBucketRequest::HeadBucketRequest(const HeadBucketRequest &other)
+    : S3Request(new HeadBucketRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new HeadBucketRequest object.
+ */
+HeadBucketRequest::HeadBucketRequest()
+    : S3Request(new HeadBucketRequestPrivate(S3Request::HeadBucketAction, this))
+{
+
+}
+
+bool HeadBucketRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an HeadBucketResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An HeadBucketResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * HeadBucketRequest::response(QNetworkReply * const reply) const
+{
+    return new HeadBucketResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  HeadBucketRequestPrivate
+ *
+ * @brief  Private implementation for HeadBucketRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new HeadBucketRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public HeadBucketRequest instance.
+ */
+HeadBucketRequestPrivate::HeadBucketRequestPrivate(
+    const S3Request::Action action, HeadBucketRequest * const q)
+    : HeadBucketPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new HeadBucketRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the HeadBucketRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public HeadBucketRequest instance.
+ */
+HeadBucketRequestPrivate::HeadBucketRequestPrivate(
+    const HeadBucketRequestPrivate &other, HeadBucketRequest * const q)
+    : HeadBucketPrivate(other, q)
+{
+
+}

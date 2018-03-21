@@ -19,3 +19,107 @@
 
 #include "listdevicedefinitionsrequest.h"
 #include "listdevicedefinitionsrequest_p.h"
+#include "listdevicedefinitionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListDeviceDefinitionsRequest
+ *
+ * @brief  Implements Greengrass ListDeviceDefinitions requests.
+ *
+ * @see    GreengrassClient::listDeviceDefinitions
+ */
+
+/**
+ * @brief  Constructs a new ListDeviceDefinitionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
+
+/**
+ * @brief  Constructs a new ListDeviceDefinitionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDeviceDefinitionsRequest::ListDeviceDefinitionsRequest(const ListDeviceDefinitionsRequest &other)
+    : GreengrassRequest(new ListDeviceDefinitionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDeviceDefinitionsRequest object.
+ */
+ListDeviceDefinitionsRequest::ListDeviceDefinitionsRequest()
+    : GreengrassRequest(new ListDeviceDefinitionsRequestPrivate(GreengrassRequest::ListDeviceDefinitionsAction, this))
+{
+
+}
+
+bool ListDeviceDefinitionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDeviceDefinitionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDeviceDefinitionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListDeviceDefinitionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDeviceDefinitionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeviceDefinitionsRequestPrivate
+ *
+ * @brief  Private implementation for ListDeviceDefinitionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeviceDefinitionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListDeviceDefinitionsRequest instance.
+ */
+ListDeviceDefinitionsRequestPrivate::ListDeviceDefinitionsRequestPrivate(
+    const GreengrassRequest::Action action, ListDeviceDefinitionsRequest * const q)
+    : ListDeviceDefinitionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeviceDefinitionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDeviceDefinitionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDeviceDefinitionsRequest instance.
+ */
+ListDeviceDefinitionsRequestPrivate::ListDeviceDefinitionsRequestPrivate(
+    const ListDeviceDefinitionsRequestPrivate &other, ListDeviceDefinitionsRequest * const q)
+    : ListDeviceDefinitionsPrivate(other, q)
+{
+
+}

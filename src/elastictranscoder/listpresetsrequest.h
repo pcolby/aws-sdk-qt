@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTPRESETSREQUEST_H
 #define QTAWS_LISTPRESETSREQUEST_H
 
+#include "elastictranscoderrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ListPresetsRequestPrivate;
+
+class QTAWS_EXPORT ListPresetsRequest : public ElasticTranscoderRequest {
+
+public:
+    ListPresetsRequest(const ListPresetsRequest &other);
+    ListPresetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListPresetsRequest)
+
+}
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

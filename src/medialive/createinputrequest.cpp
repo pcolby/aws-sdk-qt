@@ -19,3 +19,107 @@
 
 #include "createinputrequest.h"
 #include "createinputrequest_p.h"
+#include "createinputresponse.h"
+#include "medialiverequest_p.h"
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  CreateInputRequest
+ *
+ * @brief  Implements MediaLive CreateInput requests.
+ *
+ * @see    MediaLiveClient::createInput
+ */
+
+/**
+ * @brief  Constructs a new CreateInputResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInputResponse::CreateInputResponse(
+
+/**
+ * @brief  Constructs a new CreateInputRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInputRequest::CreateInputRequest(const CreateInputRequest &other)
+    : MediaLiveRequest(new CreateInputRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInputRequest object.
+ */
+CreateInputRequest::CreateInputRequest()
+    : MediaLiveRequest(new CreateInputRequestPrivate(MediaLiveRequest::CreateInputAction, this))
+{
+
+}
+
+bool CreateInputRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInputResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInputResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaLiveClient::send
+ */
+AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInputResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInputRequestPrivate
+ *
+ * @brief  Private implementation for CreateInputRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInputRequestPrivate object.
+ *
+ * @param  action  MediaLive action being performed.
+ * @param  q       Pointer to this object's public CreateInputRequest instance.
+ */
+CreateInputRequestPrivate::CreateInputRequestPrivate(
+    const MediaLiveRequest::Action action, CreateInputRequest * const q)
+    : CreateInputPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInputRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInputRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInputRequest instance.
+ */
+CreateInputRequestPrivate::CreateInputRequestPrivate(
+    const CreateInputRequestPrivate &other, CreateInputRequest * const q)
+    : CreateInputPrivate(other, q)
+{
+
+}

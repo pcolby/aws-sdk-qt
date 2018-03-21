@@ -20,4 +20,29 @@
 #ifndef QTAWS_ACCEPTHANDSHAKEREQUEST_P_H
 #define QTAWS_ACCEPTHANDSHAKEREQUEST_P_H
 
+#include "organizations_p.h"
+#include "accepthandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class AcceptHandshakeRequest;
+
+class QTAWS_EXPORT AcceptHandshakeRequestPrivate : public OrganizationsPrivate {
+
+public:
+    AcceptHandshakeRequestPrivate(const Organizations::Action action,
+                                   AcceptHandshakeRequest * const q);
+    AcceptHandshakeRequestPrivate(const AcceptHandshakeRequestPrivate &other,
+                                   AcceptHandshakeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AcceptHandshakeRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

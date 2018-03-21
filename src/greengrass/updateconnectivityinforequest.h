@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONNECTIVITYINFOREQUEST_H
 #define QTAWS_UPDATECONNECTIVITYINFOREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateConnectivityInfoRequestPrivate;
+
+class QTAWS_EXPORT UpdateConnectivityInfoRequest : public GreengrassRequest {
+
+public:
+    UpdateConnectivityInfoRequest(const UpdateConnectivityInfoRequest &other);
+    UpdateConnectivityInfoRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConnectivityInfoRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

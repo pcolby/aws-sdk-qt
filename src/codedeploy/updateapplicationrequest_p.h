@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "updateapplicationrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class UpdateApplicationRequest;
+
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public CodeDeployPrivate {
+
+public:
+    UpdateApplicationRequestPrivate(const CodeDeploy::Action action,
+                                   UpdateApplicationRequest * const q);
+    UpdateApplicationRequestPrivate(const UpdateApplicationRequestPrivate &other,
+                                   UpdateApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApplicationRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

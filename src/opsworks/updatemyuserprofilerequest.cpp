@@ -19,3 +19,107 @@
 
 #include "updatemyuserprofilerequest.h"
 #include "updatemyuserprofilerequest_p.h"
+#include "updatemyuserprofileresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateMyUserProfileRequest
+ *
+ * @brief  Implements OpsWorks UpdateMyUserProfile requests.
+ *
+ * @see    OpsWorksClient::updateMyUserProfile
+ */
+
+/**
+ * @brief  Constructs a new UpdateMyUserProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateMyUserProfileResponse::UpdateMyUserProfileResponse(
+
+/**
+ * @brief  Constructs a new UpdateMyUserProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateMyUserProfileRequest::UpdateMyUserProfileRequest(const UpdateMyUserProfileRequest &other)
+    : OpsWorksRequest(new UpdateMyUserProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateMyUserProfileRequest object.
+ */
+UpdateMyUserProfileRequest::UpdateMyUserProfileRequest()
+    : OpsWorksRequest(new UpdateMyUserProfileRequestPrivate(OpsWorksRequest::UpdateMyUserProfileAction, this))
+{
+
+}
+
+bool UpdateMyUserProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateMyUserProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateMyUserProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * UpdateMyUserProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateMyUserProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateMyUserProfileRequestPrivate
+ *
+ * @brief  Private implementation for UpdateMyUserProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMyUserProfileRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public UpdateMyUserProfileRequest instance.
+ */
+UpdateMyUserProfileRequestPrivate::UpdateMyUserProfileRequestPrivate(
+    const OpsWorksRequest::Action action, UpdateMyUserProfileRequest * const q)
+    : UpdateMyUserProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMyUserProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateMyUserProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateMyUserProfileRequest instance.
+ */
+UpdateMyUserProfileRequestPrivate::UpdateMyUserProfileRequestPrivate(
+    const UpdateMyUserProfileRequestPrivate &other, UpdateMyUserProfileRequest * const q)
+    : UpdateMyUserProfilePrivate(other, q)
+{
+
+}

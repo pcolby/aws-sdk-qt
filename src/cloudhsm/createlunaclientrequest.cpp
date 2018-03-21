@@ -19,3 +19,107 @@
 
 #include "createlunaclientrequest.h"
 #include "createlunaclientrequest_p.h"
+#include "createlunaclientresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  CreateLunaClientRequest
+ *
+ * @brief  Implements CloudHSM CreateLunaClient requests.
+ *
+ * @see    CloudHSMClient::createLunaClient
+ */
+
+/**
+ * @brief  Constructs a new CreateLunaClientResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLunaClientResponse::CreateLunaClientResponse(
+
+/**
+ * @brief  Constructs a new CreateLunaClientRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLunaClientRequest::CreateLunaClientRequest(const CreateLunaClientRequest &other)
+    : CloudHSMRequest(new CreateLunaClientRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLunaClientRequest object.
+ */
+CreateLunaClientRequest::CreateLunaClientRequest()
+    : CloudHSMRequest(new CreateLunaClientRequestPrivate(CloudHSMRequest::CreateLunaClientAction, this))
+{
+
+}
+
+bool CreateLunaClientRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLunaClientResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLunaClientResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * CreateLunaClientRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLunaClientResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLunaClientRequestPrivate
+ *
+ * @brief  Private implementation for CreateLunaClientRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLunaClientRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public CreateLunaClientRequest instance.
+ */
+CreateLunaClientRequestPrivate::CreateLunaClientRequestPrivate(
+    const CloudHSMRequest::Action action, CreateLunaClientRequest * const q)
+    : CreateLunaClientPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLunaClientRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLunaClientRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLunaClientRequest instance.
+ */
+CreateLunaClientRequestPrivate::CreateLunaClientRequestPrivate(
+    const CreateLunaClientRequestPrivate &other, CreateLunaClientRequest * const q)
+    : CreateLunaClientPrivate(other, q)
+{
+
+}

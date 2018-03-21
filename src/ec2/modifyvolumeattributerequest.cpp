@@ -19,3 +19,107 @@
 
 #include "modifyvolumeattributerequest.h"
 #include "modifyvolumeattributerequest_p.h"
+#include "modifyvolumeattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVolumeAttributeRequest
+ *
+ * @brief  Implements EC2 ModifyVolumeAttribute requests.
+ *
+ * @see    EC2Client::modifyVolumeAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifyVolumeAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVolumeAttributeResponse::ModifyVolumeAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifyVolumeAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest(const ModifyVolumeAttributeRequest &other)
+    : EC2Request(new ModifyVolumeAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyVolumeAttributeRequest object.
+ */
+ModifyVolumeAttributeRequest::ModifyVolumeAttributeRequest()
+    : EC2Request(new ModifyVolumeAttributeRequestPrivate(EC2Request::ModifyVolumeAttributeAction, this))
+{
+
+}
+
+bool ModifyVolumeAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyVolumeAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyVolumeAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyVolumeAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVolumeAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifyVolumeAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyVolumeAttributeRequest instance.
+ */
+ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
+    const EC2Request::Action action, ModifyVolumeAttributeRequest * const q)
+    : ModifyVolumeAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVolumeAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyVolumeAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyVolumeAttributeRequest instance.
+ */
+ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
+    const ModifyVolumeAttributeRequestPrivate &other, ModifyVolumeAttributeRequest * const q)
+    : ModifyVolumeAttributePrivate(other, q)
+{
+
+}

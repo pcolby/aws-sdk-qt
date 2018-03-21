@@ -19,3 +19,107 @@
 
 #include "updatecampaignrequest.h"
 #include "updatecampaignrequest_p.h"
+#include "updatecampaignresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateCampaignRequest
+ *
+ * @brief  Implements Pinpoint UpdateCampaign requests.
+ *
+ * @see    PinpointClient::updateCampaign
+ */
+
+/**
+ * @brief  Constructs a new UpdateCampaignResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCampaignResponse::UpdateCampaignResponse(
+
+/**
+ * @brief  Constructs a new UpdateCampaignRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCampaignRequest::UpdateCampaignRequest(const UpdateCampaignRequest &other)
+    : PinpointRequest(new UpdateCampaignRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCampaignRequest object.
+ */
+UpdateCampaignRequest::UpdateCampaignRequest()
+    : PinpointRequest(new UpdateCampaignRequestPrivate(PinpointRequest::UpdateCampaignAction, this))
+{
+
+}
+
+bool UpdateCampaignRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCampaignResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCampaignResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateCampaignRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCampaignResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCampaignRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCampaignRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCampaignRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateCampaignRequest instance.
+ */
+UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
+    const PinpointRequest::Action action, UpdateCampaignRequest * const q)
+    : UpdateCampaignPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCampaignRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCampaignRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCampaignRequest instance.
+ */
+UpdateCampaignRequestPrivate::UpdateCampaignRequestPrivate(
+    const UpdateCampaignRequestPrivate &other, UpdateCampaignRequest * const q)
+    : UpdateCampaignPrivate(other, q)
+{
+
+}

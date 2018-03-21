@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONFIRMCONNECTIONREQUEST_P_H
 #define QTAWS_CONFIRMCONNECTIONREQUEST_P_H
 
+#include "directconnect_p.h"
+#include "confirmconnectionrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class ConfirmConnectionRequest;
+
+class QTAWS_EXPORT ConfirmConnectionRequestPrivate : public DirectConnectPrivate {
+
+public:
+    ConfirmConnectionRequestPrivate(const DirectConnect::Action action,
+                                   ConfirmConnectionRequest * const q);
+    ConfirmConnectionRequestPrivate(const ConfirmConnectionRequestPrivate &other,
+                                   ConfirmConnectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmConnectionRequest)
+
+};
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

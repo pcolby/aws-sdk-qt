@@ -19,3 +19,107 @@
 
 #include "filterlogeventsrequest.h"
 #include "filterlogeventsrequest_p.h"
+#include "filterlogeventsresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  FilterLogEventsRequest
+ *
+ * @brief  Implements CloudWatchLogs FilterLogEvents requests.
+ *
+ * @see    CloudWatchLogsClient::filterLogEvents
+ */
+
+/**
+ * @brief  Constructs a new FilterLogEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+FilterLogEventsResponse::FilterLogEventsResponse(
+
+/**
+ * @brief  Constructs a new FilterLogEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+FilterLogEventsRequest::FilterLogEventsRequest(const FilterLogEventsRequest &other)
+    : CloudWatchLogsRequest(new FilterLogEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new FilterLogEventsRequest object.
+ */
+FilterLogEventsRequest::FilterLogEventsRequest()
+    : CloudWatchLogsRequest(new FilterLogEventsRequestPrivate(CloudWatchLogsRequest::FilterLogEventsAction, this))
+{
+
+}
+
+bool FilterLogEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an FilterLogEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An FilterLogEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new FilterLogEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  FilterLogEventsRequestPrivate
+ *
+ * @brief  Private implementation for FilterLogEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FilterLogEventsRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public FilterLogEventsRequest instance.
+ */
+FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
+    const CloudWatchLogsRequest::Action action, FilterLogEventsRequest * const q)
+    : FilterLogEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new FilterLogEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the FilterLogEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public FilterLogEventsRequest instance.
+ */
+FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
+    const FilterLogEventsRequestPrivate &other, FilterLogEventsRequest * const q)
+    : FilterLogEventsPrivate(other, q)
+{
+
+}

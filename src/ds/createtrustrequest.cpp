@@ -19,3 +19,107 @@
 
 #include "createtrustrequest.h"
 #include "createtrustrequest_p.h"
+#include "createtrustresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  CreateTrustRequest
+ *
+ * @brief  Implements DirectoryService CreateTrust requests.
+ *
+ * @see    DirectoryServiceClient::createTrust
+ */
+
+/**
+ * @brief  Constructs a new CreateTrustResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTrustResponse::CreateTrustResponse(
+
+/**
+ * @brief  Constructs a new CreateTrustRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTrustRequest::CreateTrustRequest(const CreateTrustRequest &other)
+    : DirectoryServiceRequest(new CreateTrustRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTrustRequest object.
+ */
+CreateTrustRequest::CreateTrustRequest()
+    : DirectoryServiceRequest(new CreateTrustRequestPrivate(DirectoryServiceRequest::CreateTrustAction, this))
+{
+
+}
+
+bool CreateTrustRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTrustResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTrustResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * CreateTrustRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTrustResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTrustRequestPrivate
+ *
+ * @brief  Private implementation for CreateTrustRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrustRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public CreateTrustRequest instance.
+ */
+CreateTrustRequestPrivate::CreateTrustRequestPrivate(
+    const DirectoryServiceRequest::Action action, CreateTrustRequest * const q)
+    : CreateTrustPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrustRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTrustRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTrustRequest instance.
+ */
+CreateTrustRequestPrivate::CreateTrustRequestPrivate(
+    const CreateTrustRequestPrivate &other, CreateTrustRequest * const q)
+    : CreateTrustPrivate(other, q)
+{
+
+}

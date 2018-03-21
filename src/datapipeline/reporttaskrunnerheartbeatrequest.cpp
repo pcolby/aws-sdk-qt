@@ -19,3 +19,107 @@
 
 #include "reporttaskrunnerheartbeatrequest.h"
 #include "reporttaskrunnerheartbeatrequest_p.h"
+#include "reporttaskrunnerheartbeatresponse.h"
+#include "datapipelinerequest_p.h"
+
+namespace AWS {
+namespace DataPipeline {
+
+/**
+ * @class  ReportTaskRunnerHeartbeatRequest
+ *
+ * @brief  Implements DataPipeline ReportTaskRunnerHeartbeat requests.
+ *
+ * @see    DataPipelineClient::reportTaskRunnerHeartbeat
+ */
+
+/**
+ * @brief  Constructs a new ReportTaskRunnerHeartbeatResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
+
+/**
+ * @brief  Constructs a new ReportTaskRunnerHeartbeatRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReportTaskRunnerHeartbeatRequest::ReportTaskRunnerHeartbeatRequest(const ReportTaskRunnerHeartbeatRequest &other)
+    : DataPipelineRequest(new ReportTaskRunnerHeartbeatRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReportTaskRunnerHeartbeatRequest object.
+ */
+ReportTaskRunnerHeartbeatRequest::ReportTaskRunnerHeartbeatRequest()
+    : DataPipelineRequest(new ReportTaskRunnerHeartbeatRequestPrivate(DataPipelineRequest::ReportTaskRunnerHeartbeatAction, this))
+{
+
+}
+
+bool ReportTaskRunnerHeartbeatRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReportTaskRunnerHeartbeatResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReportTaskRunnerHeartbeatResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DataPipelineClient::send
+ */
+AwsAbstractResponse * ReportTaskRunnerHeartbeatRequest::response(QNetworkReply * const reply) const
+{
+    return new ReportTaskRunnerHeartbeatResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReportTaskRunnerHeartbeatRequestPrivate
+ *
+ * @brief  Private implementation for ReportTaskRunnerHeartbeatRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReportTaskRunnerHeartbeatRequestPrivate object.
+ *
+ * @param  action  DataPipeline action being performed.
+ * @param  q       Pointer to this object's public ReportTaskRunnerHeartbeatRequest instance.
+ */
+ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
+    const DataPipelineRequest::Action action, ReportTaskRunnerHeartbeatRequest * const q)
+    : ReportTaskRunnerHeartbeatPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReportTaskRunnerHeartbeatRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReportTaskRunnerHeartbeatRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReportTaskRunnerHeartbeatRequest instance.
+ */
+ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
+    const ReportTaskRunnerHeartbeatRequestPrivate &other, ReportTaskRunnerHeartbeatRequest * const q)
+    : ReportTaskRunnerHeartbeatPrivate(other, q)
+{
+
+}

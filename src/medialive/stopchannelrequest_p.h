@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPCHANNELREQUEST_P_H
 #define QTAWS_STOPCHANNELREQUEST_P_H
 
+#include "medialive_p.h"
+#include "stopchannelrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class StopChannelRequest;
+
+class QTAWS_EXPORT StopChannelRequestPrivate : public MediaLivePrivate {
+
+public:
+    StopChannelRequestPrivate(const MediaLive::Action action,
+                                   StopChannelRequest * const q);
+    StopChannelRequestPrivate(const StopChannelRequestPrivate &other,
+                                   StopChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopChannelRequest)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

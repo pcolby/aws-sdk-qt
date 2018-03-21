@@ -20,4 +20,29 @@
 #ifndef QTAWS_SETVAULTACCESSPOLICYREQUEST_P_H
 #define QTAWS_SETVAULTACCESSPOLICYREQUEST_P_H
 
+#include "glacier_p.h"
+#include "setvaultaccesspolicyrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class SetVaultAccessPolicyRequest;
+
+class QTAWS_EXPORT SetVaultAccessPolicyRequestPrivate : public GlacierPrivate {
+
+public:
+    SetVaultAccessPolicyRequestPrivate(const Glacier::Action action,
+                                   SetVaultAccessPolicyRequest * const q);
+    SetVaultAccessPolicyRequestPrivate(const SetVaultAccessPolicyRequestPrivate &other,
+                                   SetVaultAccessPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SetVaultAccessPolicyRequest)
+
+};
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

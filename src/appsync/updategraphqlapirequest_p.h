@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGRAPHQLAPIREQUEST_P_H
 #define QTAWS_UPDATEGRAPHQLAPIREQUEST_P_H
 
+#include "appsync_p.h"
+#include "updategraphqlapirequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class UpdateGraphqlApiRequest;
+
+class QTAWS_EXPORT UpdateGraphqlApiRequestPrivate : public AppSyncPrivate {
+
+public:
+    UpdateGraphqlApiRequestPrivate(const AppSync::Action action,
+                                   UpdateGraphqlApiRequest * const q);
+    UpdateGraphqlApiRequestPrivate(const UpdateGraphqlApiRequestPrivate &other,
+                                   UpdateGraphqlApiRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGraphqlApiRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletelifecyclepolicyrequest.h"
 #include "deletelifecyclepolicyrequest_p.h"
+#include "deletelifecyclepolicyresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  DeleteLifecyclePolicyRequest
+ *
+ * @brief  Implements ECR DeleteLifecyclePolicy requests.
+ *
+ * @see    ECRClient::deleteLifecyclePolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteLifecyclePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLifecyclePolicyResponse::DeleteLifecyclePolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteLifecyclePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest(const DeleteLifecyclePolicyRequest &other)
+    : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLifecyclePolicyRequest object.
+ */
+DeleteLifecyclePolicyRequest::DeleteLifecyclePolicyRequest()
+    : ECRRequest(new DeleteLifecyclePolicyRequestPrivate(ECRRequest::DeleteLifecyclePolicyAction, this))
+{
+
+}
+
+bool DeleteLifecyclePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLifecyclePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLifecyclePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLifecyclePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLifecyclePolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLifecyclePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public DeleteLifecyclePolicyRequest instance.
+ */
+DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
+    const ECRRequest::Action action, DeleteLifecyclePolicyRequest * const q)
+    : DeleteLifecyclePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLifecyclePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLifecyclePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLifecyclePolicyRequest instance.
+ */
+DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
+    const DeleteLifecyclePolicyRequestPrivate &other, DeleteLifecyclePolicyRequest * const q)
+    : DeleteLifecyclePolicyPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEECSCLUSTERSREQUEST_H
 #define QTAWS_DESCRIBEECSCLUSTERSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeEcsClustersRequestPrivate;
+
+class QTAWS_EXPORT DescribeEcsClustersRequest : public OpsWorksRequest {
+
+public:
+    DescribeEcsClustersRequest(const DescribeEcsClustersRequest &other);
+    DescribeEcsClustersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEcsClustersRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

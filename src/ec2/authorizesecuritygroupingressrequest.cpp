@@ -19,3 +19,107 @@
 
 #include "authorizesecuritygroupingressrequest.h"
 #include "authorizesecuritygroupingressrequest_p.h"
+#include "authorizesecuritygroupingressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AuthorizeSecurityGroupIngressRequest
+ *
+ * @brief  Implements EC2 AuthorizeSecurityGroupIngress requests.
+ *
+ * @see    EC2Client::authorizeSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new AuthorizeSecurityGroupIngressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AuthorizeSecurityGroupIngressResponse::AuthorizeSecurityGroupIngressResponse(
+
+/**
+ * @brief  Constructs a new AuthorizeSecurityGroupIngressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AuthorizeSecurityGroupIngressRequest::AuthorizeSecurityGroupIngressRequest(const AuthorizeSecurityGroupIngressRequest &other)
+    : EC2Request(new AuthorizeSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AuthorizeSecurityGroupIngressRequest object.
+ */
+AuthorizeSecurityGroupIngressRequest::AuthorizeSecurityGroupIngressRequest()
+    : EC2Request(new AuthorizeSecurityGroupIngressRequestPrivate(EC2Request::AuthorizeSecurityGroupIngressAction, this))
+{
+
+}
+
+bool AuthorizeSecurityGroupIngressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AuthorizeSecurityGroupIngressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AuthorizeSecurityGroupIngressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AuthorizeSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+{
+    return new AuthorizeSecurityGroupIngressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AuthorizeSecurityGroupIngressRequestPrivate
+ *
+ * @brief  Private implementation for AuthorizeSecurityGroupIngressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeSecurityGroupIngressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AuthorizeSecurityGroupIngressRequest instance.
+ */
+AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
+    const EC2Request::Action action, AuthorizeSecurityGroupIngressRequest * const q)
+    : AuthorizeSecurityGroupIngressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AuthorizeSecurityGroupIngressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AuthorizeSecurityGroupIngressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AuthorizeSecurityGroupIngressRequest instance.
+ */
+AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
+    const AuthorizeSecurityGroupIngressRequestPrivate &other, AuthorizeSecurityGroupIngressRequest * const q)
+    : AuthorizeSecurityGroupIngressPrivate(other, q)
+{
+
+}

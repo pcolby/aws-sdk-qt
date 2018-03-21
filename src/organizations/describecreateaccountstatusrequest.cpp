@@ -19,3 +19,107 @@
 
 #include "describecreateaccountstatusrequest.h"
 #include "describecreateaccountstatusrequest_p.h"
+#include "describecreateaccountstatusresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DescribeCreateAccountStatusRequest
+ *
+ * @brief  Implements Organizations DescribeCreateAccountStatus requests.
+ *
+ * @see    OrganizationsClient::describeCreateAccountStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeCreateAccountStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCreateAccountStatusResponse::DescribeCreateAccountStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeCreateAccountStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCreateAccountStatusRequest::DescribeCreateAccountStatusRequest(const DescribeCreateAccountStatusRequest &other)
+    : OrganizationsRequest(new DescribeCreateAccountStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCreateAccountStatusRequest object.
+ */
+DescribeCreateAccountStatusRequest::DescribeCreateAccountStatusRequest()
+    : OrganizationsRequest(new DescribeCreateAccountStatusRequestPrivate(OrganizationsRequest::DescribeCreateAccountStatusAction, this))
+{
+
+}
+
+bool DescribeCreateAccountStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCreateAccountStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCreateAccountStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * DescribeCreateAccountStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCreateAccountStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCreateAccountStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCreateAccountStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCreateAccountStatusRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public DescribeCreateAccountStatusRequest instance.
+ */
+DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
+    const OrganizationsRequest::Action action, DescribeCreateAccountStatusRequest * const q)
+    : DescribeCreateAccountStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCreateAccountStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCreateAccountStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCreateAccountStatusRequest instance.
+ */
+DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
+    const DescribeCreateAccountStatusRequestPrivate &other, DescribeCreateAccountStatusRequest * const q)
+    : DescribeCreateAccountStatusPrivate(other, q)
+{
+
+}

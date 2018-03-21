@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTONDEMANDREPLICATIONRUNREQUEST_P_H
 #define QTAWS_STARTONDEMANDREPLICATIONRUNREQUEST_P_H
 
+#include "sms_p.h"
+#include "startondemandreplicationrunrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class StartOnDemandReplicationRunRequest;
+
+class QTAWS_EXPORT StartOnDemandReplicationRunRequestPrivate : public SMSPrivate {
+
+public:
+    StartOnDemandReplicationRunRequestPrivate(const SMS::Action action,
+                                   StartOnDemandReplicationRunRequest * const q);
+    StartOnDemandReplicationRunRequestPrivate(const StartOnDemandReplicationRunRequestPrivate &other,
+                                   StartOnDemandReplicationRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartOnDemandReplicationRunRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

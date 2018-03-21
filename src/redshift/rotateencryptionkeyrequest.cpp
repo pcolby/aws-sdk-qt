@@ -19,3 +19,107 @@
 
 #include "rotateencryptionkeyrequest.h"
 #include "rotateencryptionkeyrequest_p.h"
+#include "rotateencryptionkeyresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  RotateEncryptionKeyRequest
+ *
+ * @brief  Implements Redshift RotateEncryptionKey requests.
+ *
+ * @see    RedshiftClient::rotateEncryptionKey
+ */
+
+/**
+ * @brief  Constructs a new RotateEncryptionKeyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
+
+/**
+ * @brief  Constructs a new RotateEncryptionKeyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RotateEncryptionKeyRequest::RotateEncryptionKeyRequest(const RotateEncryptionKeyRequest &other)
+    : RedshiftRequest(new RotateEncryptionKeyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RotateEncryptionKeyRequest object.
+ */
+RotateEncryptionKeyRequest::RotateEncryptionKeyRequest()
+    : RedshiftRequest(new RotateEncryptionKeyRequestPrivate(RedshiftRequest::RotateEncryptionKeyAction, this))
+{
+
+}
+
+bool RotateEncryptionKeyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RotateEncryptionKeyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RotateEncryptionKeyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetworkReply * const reply) const
+{
+    return new RotateEncryptionKeyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RotateEncryptionKeyRequestPrivate
+ *
+ * @brief  Private implementation for RotateEncryptionKeyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RotateEncryptionKeyRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public RotateEncryptionKeyRequest instance.
+ */
+RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
+    const RedshiftRequest::Action action, RotateEncryptionKeyRequest * const q)
+    : RotateEncryptionKeyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RotateEncryptionKeyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RotateEncryptionKeyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RotateEncryptionKeyRequest instance.
+ */
+RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
+    const RotateEncryptionKeyRequestPrivate &other, RotateEncryptionKeyRequest * const q)
+    : RotateEncryptionKeyPrivate(other, q)
+{
+
+}

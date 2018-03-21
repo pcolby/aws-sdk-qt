@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEROLEFROMDBCLUSTERREQUEST_H
 #define QTAWS_REMOVEROLEFROMDBCLUSTERREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RemoveRoleFromDBClusterRequestPrivate;
+
+class QTAWS_EXPORT RemoveRoleFromDBClusterRequest : public RDSRequest {
+
+public:
+    RemoveRoleFromDBClusterRequest(const RemoveRoleFromDBClusterRequest &other);
+    RemoveRoleFromDBClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveRoleFromDBClusterRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

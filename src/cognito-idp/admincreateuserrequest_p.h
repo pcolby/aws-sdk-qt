@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINCREATEUSERREQUEST_P_H
 #define QTAWS_ADMINCREATEUSERREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "admincreateuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminCreateUserRequest;
+
+class QTAWS_EXPORT AdminCreateUserRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminCreateUserRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminCreateUserRequest * const q);
+    AdminCreateUserRequestPrivate(const AdminCreateUserRequestPrivate &other,
+                                   AdminCreateUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminCreateUserRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

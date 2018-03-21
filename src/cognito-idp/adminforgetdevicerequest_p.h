@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINFORGETDEVICEREQUEST_P_H
 #define QTAWS_ADMINFORGETDEVICEREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminforgetdevicerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminForgetDeviceRequest;
+
+class QTAWS_EXPORT AdminForgetDeviceRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminForgetDeviceRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminForgetDeviceRequest * const q);
+    AdminForgetDeviceRequestPrivate(const AdminForgetDeviceRequestPrivate &other,
+                                   AdminForgetDeviceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminForgetDeviceRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

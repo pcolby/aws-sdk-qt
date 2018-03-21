@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUNDLESREQUEST_P_H
 #define QTAWS_GETBUNDLESREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "getbundlesrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetBundlesRequest;
+
+class QTAWS_EXPORT GetBundlesRequestPrivate : public LightsailPrivate {
+
+public:
+    GetBundlesRequestPrivate(const Lightsail::Action action,
+                                   GetBundlesRequest * const q);
+    GetBundlesRequestPrivate(const GetBundlesRequestPrivate &other,
+                                   GetBundlesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBundlesRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

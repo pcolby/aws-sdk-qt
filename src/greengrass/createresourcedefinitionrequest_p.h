@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERESOURCEDEFINITIONREQUEST_P_H
 #define QTAWS_CREATERESOURCEDEFINITIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "createresourcedefinitionrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateResourceDefinitionRequest;
+
+class QTAWS_EXPORT CreateResourceDefinitionRequestPrivate : public GreengrassPrivate {
+
+public:
+    CreateResourceDefinitionRequestPrivate(const Greengrass::Action action,
+                                   CreateResourceDefinitionRequest * const q);
+    CreateResourceDefinitionRequestPrivate(const CreateResourceDefinitionRequestPrivate &other,
+                                   CreateResourceDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateResourceDefinitionRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

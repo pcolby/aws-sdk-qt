@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELHANDSHAKEREQUEST_P_H
 #define QTAWS_CANCELHANDSHAKEREQUEST_P_H
 
+#include "organizations_p.h"
+#include "cancelhandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class CancelHandshakeRequest;
+
+class QTAWS_EXPORT CancelHandshakeRequestPrivate : public OrganizationsPrivate {
+
+public:
+    CancelHandshakeRequestPrivate(const Organizations::Action action,
+                                   CancelHandshakeRequest * const q);
+    CancelHandshakeRequestPrivate(const CancelHandshakeRequestPrivate &other,
+                                   CancelHandshakeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelHandshakeRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

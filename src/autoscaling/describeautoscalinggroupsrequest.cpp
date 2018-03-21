@@ -19,3 +19,107 @@
 
 #include "describeautoscalinggroupsrequest.h"
 #include "describeautoscalinggroupsrequest_p.h"
+#include "describeautoscalinggroupsresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeAutoScalingGroupsRequest
+ *
+ * @brief  Implements AutoScaling DescribeAutoScalingGroups requests.
+ *
+ * @see    AutoScalingClient::describeAutoScalingGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeAutoScalingGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAutoScalingGroupsResponse::DescribeAutoScalingGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeAutoScalingGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAutoScalingGroupsRequest::DescribeAutoScalingGroupsRequest(const DescribeAutoScalingGroupsRequest &other)
+    : AutoScalingRequest(new DescribeAutoScalingGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAutoScalingGroupsRequest object.
+ */
+DescribeAutoScalingGroupsRequest::DescribeAutoScalingGroupsRequest()
+    : AutoScalingRequest(new DescribeAutoScalingGroupsRequestPrivate(AutoScalingRequest::DescribeAutoScalingGroupsAction, this))
+{
+
+}
+
+bool DescribeAutoScalingGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAutoScalingGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAutoScalingGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DescribeAutoScalingGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAutoScalingGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAutoScalingGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAutoScalingGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutoScalingGroupsRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DescribeAutoScalingGroupsRequest instance.
+ */
+DescribeAutoScalingGroupsRequestPrivate::DescribeAutoScalingGroupsRequestPrivate(
+    const AutoScalingRequest::Action action, DescribeAutoScalingGroupsRequest * const q)
+    : DescribeAutoScalingGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutoScalingGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAutoScalingGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAutoScalingGroupsRequest instance.
+ */
+DescribeAutoScalingGroupsRequestPrivate::DescribeAutoScalingGroupsRequestPrivate(
+    const DescribeAutoScalingGroupsRequestPrivate &other, DescribeAutoScalingGroupsRequest * const q)
+    : DescribeAutoScalingGroupsPrivate(other, q)
+{
+
+}

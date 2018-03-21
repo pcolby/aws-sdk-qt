@@ -19,3 +19,107 @@
 
 #include "deleteotaupdaterequest.h"
 #include "deleteotaupdaterequest_p.h"
+#include "deleteotaupdateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DeleteOTAUpdateRequest
+ *
+ * @brief  Implements IoT DeleteOTAUpdate requests.
+ *
+ * @see    IoTClient::deleteOTAUpdate
+ */
+
+/**
+ * @brief  Constructs a new DeleteOTAUpdateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteOTAUpdateResponse::DeleteOTAUpdateResponse(
+
+/**
+ * @brief  Constructs a new DeleteOTAUpdateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteOTAUpdateRequest::DeleteOTAUpdateRequest(const DeleteOTAUpdateRequest &other)
+    : IoTRequest(new DeleteOTAUpdateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteOTAUpdateRequest object.
+ */
+DeleteOTAUpdateRequest::DeleteOTAUpdateRequest()
+    : IoTRequest(new DeleteOTAUpdateRequestPrivate(IoTRequest::DeleteOTAUpdateAction, this))
+{
+
+}
+
+bool DeleteOTAUpdateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteOTAUpdateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteOTAUpdateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteOTAUpdateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteOTAUpdateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteOTAUpdateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOTAUpdateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DeleteOTAUpdateRequest instance.
+ */
+DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
+    const IoTRequest::Action action, DeleteOTAUpdateRequest * const q)
+    : DeleteOTAUpdatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteOTAUpdateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteOTAUpdateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteOTAUpdateRequest instance.
+ */
+DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
+    const DeleteOTAUpdateRequestPrivate &other, DeleteOTAUpdateRequest * const q)
+    : DeleteOTAUpdatePrivate(other, q)
+{
+
+}

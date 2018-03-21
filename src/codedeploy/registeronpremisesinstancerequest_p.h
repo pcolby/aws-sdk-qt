@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERONPREMISESINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERONPREMISESINSTANCEREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "registeronpremisesinstancerequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class RegisterOnPremisesInstanceRequest;
+
+class QTAWS_EXPORT RegisterOnPremisesInstanceRequestPrivate : public CodeDeployPrivate {
+
+public:
+    RegisterOnPremisesInstanceRequestPrivate(const CodeDeploy::Action action,
+                                   RegisterOnPremisesInstanceRequest * const q);
+    RegisterOnPremisesInstanceRequestPrivate(const RegisterOnPremisesInstanceRequestPrivate &other,
+                                   RegisterOnPremisesInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterOnPremisesInstanceRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

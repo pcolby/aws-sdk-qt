@@ -19,3 +19,107 @@
 
 #include "describehostsrequest.h"
 #include "describehostsrequest_p.h"
+#include "describehostsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeHostsRequest
+ *
+ * @brief  Implements EC2 DescribeHosts requests.
+ *
+ * @see    EC2Client::describeHosts
+ */
+
+/**
+ * @brief  Constructs a new DescribeHostsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeHostsResponse::DescribeHostsResponse(
+
+/**
+ * @brief  Constructs a new DescribeHostsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeHostsRequest::DescribeHostsRequest(const DescribeHostsRequest &other)
+    : EC2Request(new DescribeHostsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeHostsRequest object.
+ */
+DescribeHostsRequest::DescribeHostsRequest()
+    : EC2Request(new DescribeHostsRequestPrivate(EC2Request::DescribeHostsAction, this))
+{
+
+}
+
+bool DescribeHostsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeHostsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeHostsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeHostsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeHostsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeHostsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeHostsRequest instance.
+ */
+DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
+    const EC2Request::Action action, DescribeHostsRequest * const q)
+    : DescribeHostsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeHostsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeHostsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeHostsRequest instance.
+ */
+DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
+    const DescribeHostsRequestPrivate &other, DescribeHostsRequest * const q)
+    : DescribeHostsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINSTANCESHEALTHREQUEST_H
 #define QTAWS_DESCRIBEINSTANCESHEALTHREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeInstancesHealthRequestPrivate;
+
+class QTAWS_EXPORT DescribeInstancesHealthRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeInstancesHealthRequest(const DescribeInstancesHealthRequest &other);
+    DescribeInstancesHealthRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstancesHealthRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

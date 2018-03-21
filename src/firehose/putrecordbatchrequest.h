@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTRECORDBATCHREQUEST_H
 #define QTAWS_PUTRECORDBATCHREQUEST_H
 
+#include "firehoserequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class PutRecordBatchRequestPrivate;
+
+class QTAWS_EXPORT PutRecordBatchRequest : public FirehoseRequest {
+
+public:
+    PutRecordBatchRequest(const PutRecordBatchRequest &other);
+    PutRecordBatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutRecordBatchRequest)
+
+}
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

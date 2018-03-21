@@ -20,4 +20,32 @@
 #ifndef QTAWS_REFRESHCACHEREQUEST_H
 #define QTAWS_REFRESHCACHEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class RefreshCacheRequestPrivate;
+
+class QTAWS_EXPORT RefreshCacheRequest : public StorageGatewayRequest {
+
+public:
+    RefreshCacheRequest(const RefreshCacheRequest &other);
+    RefreshCacheRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RefreshCacheRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

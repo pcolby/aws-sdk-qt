@@ -19,3 +19,107 @@
 
 #include "createnetworkinterfacerequest.h"
 #include "createnetworkinterfacerequest_p.h"
+#include "createnetworkinterfaceresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateNetworkInterfaceRequest
+ *
+ * @brief  Implements EC2 CreateNetworkInterface requests.
+ *
+ * @see    EC2Client::createNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateNetworkInterfaceResponse::CreateNetworkInterfaceResponse(
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest(const CreateNetworkInterfaceRequest &other)
+    : EC2Request(new CreateNetworkInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateNetworkInterfaceRequest object.
+ */
+CreateNetworkInterfaceRequest::CreateNetworkInterfaceRequest()
+    : EC2Request(new CreateNetworkInterfaceRequestPrivate(EC2Request::CreateNetworkInterfaceAction, this))
+{
+
+}
+
+bool CreateNetworkInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateNetworkInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateNetworkInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateNetworkInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateNetworkInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for CreateNetworkInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateNetworkInterfaceRequest instance.
+ */
+CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
+    const EC2Request::Action action, CreateNetworkInterfaceRequest * const q)
+    : CreateNetworkInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateNetworkInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateNetworkInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateNetworkInterfaceRequest instance.
+ */
+CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
+    const CreateNetworkInterfaceRequestPrivate &other, CreateNetworkInterfaceRequest * const q)
+    : CreateNetworkInterfacePrivate(other, q)
+{
+
+}

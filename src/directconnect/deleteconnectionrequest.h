@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECONNECTIONREQUEST_H
 #define QTAWS_DELETECONNECTIONREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DeleteConnectionRequestPrivate;
+
+class QTAWS_EXPORT DeleteConnectionRequest : public DirectConnectRequest {
+
+public:
+    DeleteConnectionRequest(const DeleteConnectionRequest &other);
+    DeleteConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteConnectionRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

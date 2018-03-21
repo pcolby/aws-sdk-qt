@@ -19,3 +19,107 @@
 
 #include "putbucketrequestpaymentrequest.h"
 #include "putbucketrequestpaymentrequest_p.h"
+#include "putbucketrequestpaymentresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketRequestPaymentRequest
+ *
+ * @brief  Implements S3 PutBucketRequestPayment requests.
+ *
+ * @see    S3Client::putBucketRequestPayment
+ */
+
+/**
+ * @brief  Constructs a new PutBucketRequestPaymentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketRequestPaymentResponse::PutBucketRequestPaymentResponse(
+
+/**
+ * @brief  Constructs a new PutBucketRequestPaymentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest(const PutBucketRequestPaymentRequest &other)
+    : S3Request(new PutBucketRequestPaymentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketRequestPaymentRequest object.
+ */
+PutBucketRequestPaymentRequest::PutBucketRequestPaymentRequest()
+    : S3Request(new PutBucketRequestPaymentRequestPrivate(S3Request::PutBucketRequestPaymentAction, this))
+{
+
+}
+
+bool PutBucketRequestPaymentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketRequestPaymentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketRequestPaymentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketRequestPaymentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketRequestPaymentRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketRequestPaymentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketRequestPaymentRequest instance.
+ */
+PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
+    const S3Request::Action action, PutBucketRequestPaymentRequest * const q)
+    : PutBucketRequestPaymentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketRequestPaymentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketRequestPaymentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketRequestPaymentRequest instance.
+ */
+PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
+    const PutBucketRequestPaymentRequestPrivate &other, PutBucketRequestPaymentRequest * const q)
+    : PutBucketRequestPaymentPrivate(other, q)
+{
+
+}

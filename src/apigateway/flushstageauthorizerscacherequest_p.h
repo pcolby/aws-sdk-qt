@@ -20,4 +20,29 @@
 #ifndef QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_P_H
 #define QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "flushstageauthorizerscacherequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class FlushStageAuthorizersCacheRequest;
+
+class QTAWS_EXPORT FlushStageAuthorizersCacheRequestPrivate : public APIGatewayPrivate {
+
+public:
+    FlushStageAuthorizersCacheRequestPrivate(const APIGateway::Action action,
+                                   FlushStageAuthorizersCacheRequest * const q);
+    FlushStageAuthorizersCacheRequestPrivate(const FlushStageAuthorizersCacheRequestPrivate &other,
+                                   FlushStageAuthorizersCacheRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(FlushStageAuthorizersCacheRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

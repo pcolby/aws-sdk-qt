@@ -19,3 +19,107 @@
 
 #include "readpipelinerequest.h"
 #include "readpipelinerequest_p.h"
+#include "readpipelineresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  ReadPipelineRequest
+ *
+ * @brief  Implements ElasticTranscoder ReadPipeline requests.
+ *
+ * @see    ElasticTranscoderClient::readPipeline
+ */
+
+/**
+ * @brief  Constructs a new ReadPipelineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReadPipelineResponse::ReadPipelineResponse(
+
+/**
+ * @brief  Constructs a new ReadPipelineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReadPipelineRequest::ReadPipelineRequest(const ReadPipelineRequest &other)
+    : ElasticTranscoderRequest(new ReadPipelineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReadPipelineRequest object.
+ */
+ReadPipelineRequest::ReadPipelineRequest()
+    : ElasticTranscoderRequest(new ReadPipelineRequestPrivate(ElasticTranscoderRequest::ReadPipelineAction, this))
+{
+
+}
+
+bool ReadPipelineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReadPipelineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReadPipelineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply * const reply) const
+{
+    return new ReadPipelineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReadPipelineRequestPrivate
+ *
+ * @brief  Private implementation for ReadPipelineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadPipelineRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public ReadPipelineRequest instance.
+ */
+ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
+    const ElasticTranscoderRequest::Action action, ReadPipelineRequest * const q)
+    : ReadPipelinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReadPipelineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReadPipelineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReadPipelineRequest instance.
+ */
+ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
+    const ReadPipelineRequestPrivate &other, ReadPipelineRequest * const q)
+    : ReadPipelinePrivate(other, q)
+{
+
+}

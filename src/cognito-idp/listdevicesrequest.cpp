@@ -19,3 +19,107 @@
 
 #include "listdevicesrequest.h"
 #include "listdevicesrequest_p.h"
+#include "listdevicesresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  ListDevicesRequest
+ *
+ * @brief  Implements CognitoIdentityProvider ListDevices requests.
+ *
+ * @see    CognitoIdentityProviderClient::listDevices
+ */
+
+/**
+ * @brief  Constructs a new ListDevicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDevicesResponse::ListDevicesResponse(
+
+/**
+ * @brief  Constructs a new ListDevicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDevicesRequest::ListDevicesRequest(const ListDevicesRequest &other)
+    : CognitoIdentityProviderRequest(new ListDevicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDevicesRequest object.
+ */
+ListDevicesRequest::ListDevicesRequest()
+    : CognitoIdentityProviderRequest(new ListDevicesRequestPrivate(CognitoIdentityProviderRequest::ListDevicesAction, this))
+{
+
+}
+
+bool ListDevicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDevicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDevicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * ListDevicesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDevicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDevicesRequestPrivate
+ *
+ * @brief  Private implementation for ListDevicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevicesRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public ListDevicesRequest instance.
+ */
+ListDevicesRequestPrivate::ListDevicesRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, ListDevicesRequest * const q)
+    : ListDevicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDevicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDevicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDevicesRequest instance.
+ */
+ListDevicesRequestPrivate::ListDevicesRequestPrivate(
+    const ListDevicesRequestPrivate &other, ListDevicesRequest * const q)
+    : ListDevicesPrivate(other, q)
+{
+
+}

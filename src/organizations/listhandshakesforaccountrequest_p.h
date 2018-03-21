@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTHANDSHAKESFORACCOUNTREQUEST_P_H
 #define QTAWS_LISTHANDSHAKESFORACCOUNTREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listhandshakesforaccountrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListHandshakesForAccountRequest;
+
+class QTAWS_EXPORT ListHandshakesForAccountRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListHandshakesForAccountRequestPrivate(const Organizations::Action action,
+                                   ListHandshakesForAccountRequest * const q);
+    ListHandshakesForAccountRequestPrivate(const ListHandshakesForAccountRequestPrivate &other,
+                                   ListHandshakesForAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListHandshakesForAccountRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECHANNELREQUEST_P_H
 #define QTAWS_DESCRIBECHANNELREQUEST_P_H
 
+#include "medialive_p.h"
+#include "describechannelrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DescribeChannelRequest;
+
+class QTAWS_EXPORT DescribeChannelRequestPrivate : public MediaLivePrivate {
+
+public:
+    DescribeChannelRequestPrivate(const MediaLive::Action action,
+                                   DescribeChannelRequest * const q);
+    DescribeChannelRequestPrivate(const DescribeChannelRequestPrivate &other,
+                                   DescribeChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeChannelRequest)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

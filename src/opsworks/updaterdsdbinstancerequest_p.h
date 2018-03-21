@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERDSDBINSTANCEREQUEST_P_H
 #define QTAWS_UPDATERDSDBINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "updaterdsdbinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateRdsDbInstanceRequest;
+
+class QTAWS_EXPORT UpdateRdsDbInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    UpdateRdsDbInstanceRequestPrivate(const OpsWorks::Action action,
+                                   UpdateRdsDbInstanceRequest * const q);
+    UpdateRdsDbInstanceRequestPrivate(const UpdateRdsDbInstanceRequestPrivate &other,
+                                   UpdateRdsDbInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRdsDbInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

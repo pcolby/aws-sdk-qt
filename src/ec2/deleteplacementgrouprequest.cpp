@@ -19,3 +19,107 @@
 
 #include "deleteplacementgrouprequest.h"
 #include "deleteplacementgrouprequest_p.h"
+#include "deleteplacementgroupresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeletePlacementGroupRequest
+ *
+ * @brief  Implements EC2 DeletePlacementGroup requests.
+ *
+ * @see    EC2Client::deletePlacementGroup
+ */
+
+/**
+ * @brief  Constructs a new DeletePlacementGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeletePlacementGroupResponse::DeletePlacementGroupResponse(
+
+/**
+ * @brief  Constructs a new DeletePlacementGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeletePlacementGroupRequest::DeletePlacementGroupRequest(const DeletePlacementGroupRequest &other)
+    : EC2Request(new DeletePlacementGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeletePlacementGroupRequest object.
+ */
+DeletePlacementGroupRequest::DeletePlacementGroupRequest()
+    : EC2Request(new DeletePlacementGroupRequestPrivate(EC2Request::DeletePlacementGroupAction, this))
+{
+
+}
+
+bool DeletePlacementGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeletePlacementGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeletePlacementGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeletePlacementGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeletePlacementGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeletePlacementGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePlacementGroupRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeletePlacementGroupRequest instance.
+ */
+DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
+    const EC2Request::Action action, DeletePlacementGroupRequest * const q)
+    : DeletePlacementGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeletePlacementGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeletePlacementGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeletePlacementGroupRequest instance.
+ */
+DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
+    const DeletePlacementGroupRequestPrivate &other, DeletePlacementGroupRequest * const q)
+    : DeletePlacementGroupPrivate(other, q)
+{
+
+}

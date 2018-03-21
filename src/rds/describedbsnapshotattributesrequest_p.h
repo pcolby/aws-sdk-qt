@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBSNAPSHOTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEDBSNAPSHOTATTRIBUTESREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedbsnapshotattributesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBSnapshotAttributesRequest;
+
+class QTAWS_EXPORT DescribeDBSnapshotAttributesRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBSnapshotAttributesRequestPrivate(const RDS::Action action,
+                                   DescribeDBSnapshotAttributesRequest * const q);
+    DescribeDBSnapshotAttributesRequestPrivate(const DescribeDBSnapshotAttributesRequestPrivate &other,
+                                   DescribeDBSnapshotAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBSnapshotAttributesRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletenotificationrequest.h"
 #include "deletenotificationrequest_p.h"
+#include "deletenotificationresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DeleteNotificationRequest
+ *
+ * @brief  Implements Budgets DeleteNotification requests.
+ *
+ * @see    BudgetsClient::deleteNotification
+ */
+
+/**
+ * @brief  Constructs a new DeleteNotificationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNotificationResponse::DeleteNotificationResponse(
+
+/**
+ * @brief  Constructs a new DeleteNotificationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNotificationRequest::DeleteNotificationRequest(const DeleteNotificationRequest &other)
+    : BudgetsRequest(new DeleteNotificationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNotificationRequest object.
+ */
+DeleteNotificationRequest::DeleteNotificationRequest()
+    : BudgetsRequest(new DeleteNotificationRequestPrivate(BudgetsRequest::DeleteNotificationAction, this))
+{
+
+}
+
+bool DeleteNotificationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNotificationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNotificationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * DeleteNotificationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNotificationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNotificationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNotificationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public DeleteNotificationRequest instance.
+ */
+DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
+    const BudgetsRequest::Action action, DeleteNotificationRequest * const q)
+    : DeleteNotificationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNotificationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNotificationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNotificationRequest instance.
+ */
+DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
+    const DeleteNotificationRequestPrivate &other, DeleteNotificationRequest * const q)
+    : DeleteNotificationPrivate(other, q)
+{
+
+}

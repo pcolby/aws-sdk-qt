@@ -19,3 +19,107 @@
 
 #include "detachstaticiprequest.h"
 #include "detachstaticiprequest_p.h"
+#include "detachstaticipresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DetachStaticIpRequest
+ *
+ * @brief  Implements Lightsail DetachStaticIp requests.
+ *
+ * @see    LightsailClient::detachStaticIp
+ */
+
+/**
+ * @brief  Constructs a new DetachStaticIpResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachStaticIpResponse::DetachStaticIpResponse(
+
+/**
+ * @brief  Constructs a new DetachStaticIpRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachStaticIpRequest::DetachStaticIpRequest(const DetachStaticIpRequest &other)
+    : LightsailRequest(new DetachStaticIpRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachStaticIpRequest object.
+ */
+DetachStaticIpRequest::DetachStaticIpRequest()
+    : LightsailRequest(new DetachStaticIpRequestPrivate(LightsailRequest::DetachStaticIpAction, this))
+{
+
+}
+
+bool DetachStaticIpRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachStaticIpResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachStaticIpResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachStaticIpResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachStaticIpRequestPrivate
+ *
+ * @brief  Private implementation for DetachStaticIpRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachStaticIpRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public DetachStaticIpRequest instance.
+ */
+DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
+    const LightsailRequest::Action action, DetachStaticIpRequest * const q)
+    : DetachStaticIpPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachStaticIpRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachStaticIpRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachStaticIpRequest instance.
+ */
+DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
+    const DetachStaticIpRequestPrivate &other, DetachStaticIpRequest * const q)
+    : DetachStaticIpPrivate(other, q)
+{
+
+}

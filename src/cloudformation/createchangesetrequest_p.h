@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECHANGESETREQUEST_P_H
 #define QTAWS_CREATECHANGESETREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "createchangesetrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class CreateChangeSetRequest;
+
+class QTAWS_EXPORT CreateChangeSetRequestPrivate : public CloudFormationPrivate {
+
+public:
+    CreateChangeSetRequestPrivate(const CloudFormation::Action action,
+                                   CreateChangeSetRequest * const q);
+    CreateChangeSetRequestPrivate(const CreateChangeSetRequestPrivate &other,
+                                   CreateChangeSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateChangeSetRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

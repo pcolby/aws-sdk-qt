@@ -19,3 +19,107 @@
 
 #include "listenvironmentsrequest.h"
 #include "listenvironmentsrequest_p.h"
+#include "listenvironmentsresponse.h"
+#include "cloud9request_p.h"
+
+namespace AWS {
+namespace Cloud9 {
+
+/**
+ * @class  ListEnvironmentsRequest
+ *
+ * @brief  Implements Cloud9 ListEnvironments requests.
+ *
+ * @see    Cloud9Client::listEnvironments
+ */
+
+/**
+ * @brief  Constructs a new ListEnvironmentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEnvironmentsResponse::ListEnvironmentsResponse(
+
+/**
+ * @brief  Constructs a new ListEnvironmentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEnvironmentsRequest::ListEnvironmentsRequest(const ListEnvironmentsRequest &other)
+    : Cloud9Request(new ListEnvironmentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEnvironmentsRequest object.
+ */
+ListEnvironmentsRequest::ListEnvironmentsRequest()
+    : Cloud9Request(new ListEnvironmentsRequestPrivate(Cloud9Request::ListEnvironmentsAction, this))
+{
+
+}
+
+bool ListEnvironmentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEnvironmentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEnvironmentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Cloud9Client::send
+ */
+AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEnvironmentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEnvironmentsRequestPrivate
+ *
+ * @brief  Private implementation for ListEnvironmentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEnvironmentsRequestPrivate object.
+ *
+ * @param  action  Cloud9 action being performed.
+ * @param  q       Pointer to this object's public ListEnvironmentsRequest instance.
+ */
+ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
+    const Cloud9Request::Action action, ListEnvironmentsRequest * const q)
+    : ListEnvironmentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEnvironmentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEnvironmentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEnvironmentsRequest instance.
+ */
+ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
+    const ListEnvironmentsRequestPrivate &other, ListEnvironmentsRequest * const q)
+    : ListEnvironmentsPrivate(other, q)
+{
+
+}

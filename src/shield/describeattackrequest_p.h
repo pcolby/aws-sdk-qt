@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEATTACKREQUEST_P_H
 #define QTAWS_DESCRIBEATTACKREQUEST_P_H
 
+#include "shield_p.h"
+#include "describeattackrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DescribeAttackRequest;
+
+class QTAWS_EXPORT DescribeAttackRequestPrivate : public ShieldPrivate {
+
+public:
+    DescribeAttackRequestPrivate(const Shield::Action action,
+                                   DescribeAttackRequest * const q);
+    DescribeAttackRequestPrivate(const DescribeAttackRequestPrivate &other,
+                                   DescribeAttackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAttackRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

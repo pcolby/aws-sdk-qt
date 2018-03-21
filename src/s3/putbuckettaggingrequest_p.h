@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETTAGGINGREQUEST_P_H
 #define QTAWS_PUTBUCKETTAGGINGREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbuckettaggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketTaggingRequest;
+
+class QTAWS_EXPORT PutBucketTaggingRequestPrivate : public S3Private {
+
+public:
+    PutBucketTaggingRequestPrivate(const S3::Action action,
+                                   PutBucketTaggingRequest * const q);
+    PutBucketTaggingRequestPrivate(const PutBucketTaggingRequestPrivate &other,
+                                   PutBucketTaggingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketTaggingRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

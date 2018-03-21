@@ -19,3 +19,107 @@
 
 #include "getappliedschemaversionrequest.h"
 #include "getappliedschemaversionrequest_p.h"
+#include "getappliedschemaversionresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  GetAppliedSchemaVersionRequest
+ *
+ * @brief  Implements CloudDirectory GetAppliedSchemaVersion requests.
+ *
+ * @see    CloudDirectoryClient::getAppliedSchemaVersion
+ */
+
+/**
+ * @brief  Constructs a new GetAppliedSchemaVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
+
+/**
+ * @brief  Constructs a new GetAppliedSchemaVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest(const GetAppliedSchemaVersionRequest &other)
+    : CloudDirectoryRequest(new GetAppliedSchemaVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAppliedSchemaVersionRequest object.
+ */
+GetAppliedSchemaVersionRequest::GetAppliedSchemaVersionRequest()
+    : CloudDirectoryRequest(new GetAppliedSchemaVersionRequestPrivate(CloudDirectoryRequest::GetAppliedSchemaVersionAction, this))
+{
+
+}
+
+bool GetAppliedSchemaVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAppliedSchemaVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAppliedSchemaVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAppliedSchemaVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAppliedSchemaVersionRequestPrivate
+ *
+ * @brief  Private implementation for GetAppliedSchemaVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public GetAppliedSchemaVersionRequest instance.
+ */
+GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
+    const CloudDirectoryRequest::Action action, GetAppliedSchemaVersionRequest * const q)
+    : GetAppliedSchemaVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAppliedSchemaVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAppliedSchemaVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAppliedSchemaVersionRequest instance.
+ */
+GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
+    const GetAppliedSchemaVersionRequestPrivate &other, GetAppliedSchemaVersionRequest * const q)
+    : GetAppliedSchemaVersionPrivate(other, q)
+{
+
+}

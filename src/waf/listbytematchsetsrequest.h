@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTBYTEMATCHSETSREQUEST_H
 #define QTAWS_LISTBYTEMATCHSETSREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class ListByteMatchSetsRequestPrivate;
+
+class QTAWS_EXPORT ListByteMatchSetsRequest : public WAFRequest {
+
+public:
+    ListByteMatchSetsRequest(const ListByteMatchSetsRequest &other);
+    ListByteMatchSetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListByteMatchSetsRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "revokecachesecuritygroupingressrequest.h"
 #include "revokecachesecuritygroupingressrequest_p.h"
+#include "revokecachesecuritygroupingressresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  RevokeCacheSecurityGroupIngressRequest
+ *
+ * @brief  Implements ElastiCache RevokeCacheSecurityGroupIngress requests.
+ *
+ * @see    ElastiCacheClient::revokeCacheSecurityGroupIngress
+ */
+
+/**
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RevokeCacheSecurityGroupIngressResponse::RevokeCacheSecurityGroupIngressResponse(
+
+/**
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest(const RevokeCacheSecurityGroupIngressRequest &other)
+    : ElastiCacheRequest(new RevokeCacheSecurityGroupIngressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequest object.
+ */
+RevokeCacheSecurityGroupIngressRequest::RevokeCacheSecurityGroupIngressRequest()
+    : ElastiCacheRequest(new RevokeCacheSecurityGroupIngressRequestPrivate(ElastiCacheRequest::RevokeCacheSecurityGroupIngressAction, this))
+{
+
+}
+
+bool RevokeCacheSecurityGroupIngressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RevokeCacheSecurityGroupIngressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RevokeCacheSecurityGroupIngressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::response(QNetworkReply * const reply) const
+{
+    return new RevokeCacheSecurityGroupIngressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RevokeCacheSecurityGroupIngressRequestPrivate
+ *
+ * @brief  Private implementation for RevokeCacheSecurityGroupIngressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public RevokeCacheSecurityGroupIngressRequest instance.
+ */
+RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
+    const ElastiCacheRequest::Action action, RevokeCacheSecurityGroupIngressRequest * const q)
+    : RevokeCacheSecurityGroupIngressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RevokeCacheSecurityGroupIngressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RevokeCacheSecurityGroupIngressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RevokeCacheSecurityGroupIngressRequest instance.
+ */
+RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
+    const RevokeCacheSecurityGroupIngressRequestPrivate &other, RevokeCacheSecurityGroupIngressRequest * const q)
+    : RevokeCacheSecurityGroupIngressPrivate(other, q)
+{
+
+}

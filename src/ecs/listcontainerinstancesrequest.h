@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCONTAINERINSTANCESREQUEST_H
 #define QTAWS_LISTCONTAINERINSTANCESREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListContainerInstancesRequestPrivate;
+
+class QTAWS_EXPORT ListContainerInstancesRequest : public ECSRequest {
+
+public:
+    ListContainerInstancesRequest(const ListContainerInstancesRequest &other);
+    ListContainerInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListContainerInstancesRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

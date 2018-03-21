@@ -19,3 +19,107 @@
 
 #include "registerecsclusterrequest.h"
 #include "registerecsclusterrequest_p.h"
+#include "registerecsclusterresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  RegisterEcsClusterRequest
+ *
+ * @brief  Implements OpsWorks RegisterEcsCluster requests.
+ *
+ * @see    OpsWorksClient::registerEcsCluster
+ */
+
+/**
+ * @brief  Constructs a new RegisterEcsClusterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterEcsClusterResponse::RegisterEcsClusterResponse(
+
+/**
+ * @brief  Constructs a new RegisterEcsClusterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterEcsClusterRequest::RegisterEcsClusterRequest(const RegisterEcsClusterRequest &other)
+    : OpsWorksRequest(new RegisterEcsClusterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterEcsClusterRequest object.
+ */
+RegisterEcsClusterRequest::RegisterEcsClusterRequest()
+    : OpsWorksRequest(new RegisterEcsClusterRequestPrivate(OpsWorksRequest::RegisterEcsClusterAction, this))
+{
+
+}
+
+bool RegisterEcsClusterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterEcsClusterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterEcsClusterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterEcsClusterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterEcsClusterRequestPrivate
+ *
+ * @brief  Private implementation for RegisterEcsClusterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterEcsClusterRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public RegisterEcsClusterRequest instance.
+ */
+RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
+    const OpsWorksRequest::Action action, RegisterEcsClusterRequest * const q)
+    : RegisterEcsClusterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterEcsClusterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterEcsClusterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterEcsClusterRequest instance.
+ */
+RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
+    const RegisterEcsClusterRequestPrivate &other, RegisterEcsClusterRequest * const q)
+    : RegisterEcsClusterPrivate(other, q)
+{
+
+}

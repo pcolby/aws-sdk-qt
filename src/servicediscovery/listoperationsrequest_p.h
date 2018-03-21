@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOPERATIONSREQUEST_P_H
 #define QTAWS_LISTOPERATIONSREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "listoperationsrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class ListOperationsRequest;
+
+class QTAWS_EXPORT ListOperationsRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    ListOperationsRequestPrivate(const ServiceDiscovery::Action action,
+                                   ListOperationsRequest * const q);
+    ListOperationsRequestPrivate(const ListOperationsRequestPrivate &other,
+                                   ListOperationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOperationsRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

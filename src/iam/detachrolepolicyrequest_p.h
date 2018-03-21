@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHROLEPOLICYREQUEST_P_H
 #define QTAWS_DETACHROLEPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "detachrolepolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DetachRolePolicyRequest;
+
+class QTAWS_EXPORT DetachRolePolicyRequestPrivate : public IAMPrivate {
+
+public:
+    DetachRolePolicyRequestPrivate(const IAM::Action action,
+                                   DetachRolePolicyRequest * const q);
+    DetachRolePolicyRequestPrivate(const DetachRolePolicyRequestPrivate &other,
+                                   DetachRolePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachRolePolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

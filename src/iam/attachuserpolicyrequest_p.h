@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHUSERPOLICYREQUEST_P_H
 #define QTAWS_ATTACHUSERPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "attachuserpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AttachUserPolicyRequest;
+
+class QTAWS_EXPORT AttachUserPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    AttachUserPolicyRequestPrivate(const IAM::Action action,
+                                   AttachUserPolicyRequest * const q);
+    AttachUserPolicyRequestPrivate(const AttachUserPolicyRequestPrivate &other,
+                                   AttachUserPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachUserPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

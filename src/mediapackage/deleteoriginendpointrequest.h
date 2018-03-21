@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEORIGINENDPOINTREQUEST_H
 #define QTAWS_DELETEORIGINENDPOINTREQUEST_H
 
+#include "mediapackagerequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class DeleteOriginEndpointRequestPrivate;
+
+class QTAWS_EXPORT DeleteOriginEndpointRequest : public MediaPackageRequest {
+
+public:
+    DeleteOriginEndpointRequest(const DeleteOriginEndpointRequest &other);
+    DeleteOriginEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOriginEndpointRequest)
+
+}
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

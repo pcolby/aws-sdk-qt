@@ -19,3 +19,107 @@
 
 #include "listrulegroupsrequest.h"
 #include "listrulegroupsrequest_p.h"
+#include "listrulegroupsresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListRuleGroupsRequest
+ *
+ * @brief  Implements WAFRegional ListRuleGroups requests.
+ *
+ * @see    WAFRegionalClient::listRuleGroups
+ */
+
+/**
+ * @brief  Constructs a new ListRuleGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRuleGroupsResponse::ListRuleGroupsResponse(
+
+/**
+ * @brief  Constructs a new ListRuleGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRuleGroupsRequest::ListRuleGroupsRequest(const ListRuleGroupsRequest &other)
+    : WAFRegionalRequest(new ListRuleGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRuleGroupsRequest object.
+ */
+ListRuleGroupsRequest::ListRuleGroupsRequest()
+    : WAFRegionalRequest(new ListRuleGroupsRequestPrivate(WAFRegionalRequest::ListRuleGroupsAction, this))
+{
+
+}
+
+bool ListRuleGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRuleGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRuleGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * ListRuleGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRuleGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRuleGroupsRequestPrivate
+ *
+ * @brief  Private implementation for ListRuleGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRuleGroupsRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public ListRuleGroupsRequest instance.
+ */
+ListRuleGroupsRequestPrivate::ListRuleGroupsRequestPrivate(
+    const WAFRegionalRequest::Action action, ListRuleGroupsRequest * const q)
+    : ListRuleGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRuleGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRuleGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRuleGroupsRequest instance.
+ */
+ListRuleGroupsRequestPrivate::ListRuleGroupsRequestPrivate(
+    const ListRuleGroupsRequestPrivate &other, ListRuleGroupsRequest * const q)
+    : ListRuleGroupsPrivate(other, q)
+{
+
+}

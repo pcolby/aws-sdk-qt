@@ -19,3 +19,107 @@
 
 #include "cancelcertificatetransferrequest.h"
 #include "cancelcertificatetransferrequest_p.h"
+#include "cancelcertificatetransferresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CancelCertificateTransferRequest
+ *
+ * @brief  Implements IoT CancelCertificateTransfer requests.
+ *
+ * @see    IoTClient::cancelCertificateTransfer
+ */
+
+/**
+ * @brief  Constructs a new CancelCertificateTransferResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelCertificateTransferResponse::CancelCertificateTransferResponse(
+
+/**
+ * @brief  Constructs a new CancelCertificateTransferRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelCertificateTransferRequest::CancelCertificateTransferRequest(const CancelCertificateTransferRequest &other)
+    : IoTRequest(new CancelCertificateTransferRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelCertificateTransferRequest object.
+ */
+CancelCertificateTransferRequest::CancelCertificateTransferRequest()
+    : IoTRequest(new CancelCertificateTransferRequestPrivate(IoTRequest::CancelCertificateTransferAction, this))
+{
+
+}
+
+bool CancelCertificateTransferRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelCertificateTransferResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelCertificateTransferResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CancelCertificateTransferRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelCertificateTransferResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelCertificateTransferRequestPrivate
+ *
+ * @brief  Private implementation for CancelCertificateTransferRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelCertificateTransferRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CancelCertificateTransferRequest instance.
+ */
+CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate(
+    const IoTRequest::Action action, CancelCertificateTransferRequest * const q)
+    : CancelCertificateTransferPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelCertificateTransferRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelCertificateTransferRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelCertificateTransferRequest instance.
+ */
+CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate(
+    const CancelCertificateTransferRequestPrivate &other, CancelCertificateTransferRequest * const q)
+    : CancelCertificateTransferPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_LISTSUBSCRIPTIONSREQUEST_P_H
 
+#include "sns_p.h"
+#include "listsubscriptionsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class ListSubscriptionsRequest;
+
+class QTAWS_EXPORT ListSubscriptionsRequestPrivate : public SNSPrivate {
+
+public:
+    ListSubscriptionsRequestPrivate(const SNS::Action action,
+                                   ListSubscriptionsRequest * const q);
+    ListSubscriptionsRequestPrivate(const ListSubscriptionsRequestPrivate &other,
+                                   ListSubscriptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListSubscriptionsRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

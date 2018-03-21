@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESTALESECURITYGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBESTALESECURITYGROUPSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describestalesecuritygroupsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeStaleSecurityGroupsRequest;
+
+class QTAWS_EXPORT DescribeStaleSecurityGroupsRequestPrivate : public EC2Private {
+
+public:
+    DescribeStaleSecurityGroupsRequestPrivate(const EC2::Action action,
+                                   DescribeStaleSecurityGroupsRequest * const q);
+    DescribeStaleSecurityGroupsRequestPrivate(const DescribeStaleSecurityGroupsRequestPrivate &other,
+                                   DescribeStaleSecurityGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeStaleSecurityGroupsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

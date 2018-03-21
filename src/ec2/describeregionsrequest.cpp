@@ -19,3 +19,107 @@
 
 #include "describeregionsrequest.h"
 #include "describeregionsrequest_p.h"
+#include "describeregionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeRegionsRequest
+ *
+ * @brief  Implements EC2 DescribeRegions requests.
+ *
+ * @see    EC2Client::describeRegions
+ */
+
+/**
+ * @brief  Constructs a new DescribeRegionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRegionsResponse::DescribeRegionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeRegionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRegionsRequest::DescribeRegionsRequest(const DescribeRegionsRequest &other)
+    : EC2Request(new DescribeRegionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRegionsRequest object.
+ */
+DescribeRegionsRequest::DescribeRegionsRequest()
+    : EC2Request(new DescribeRegionsRequestPrivate(EC2Request::DescribeRegionsAction, this))
+{
+
+}
+
+bool DescribeRegionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRegionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRegionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRegionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRegionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRegionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRegionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeRegionsRequest instance.
+ */
+DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
+    const EC2Request::Action action, DescribeRegionsRequest * const q)
+    : DescribeRegionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRegionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRegionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRegionsRequest instance.
+ */
+DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
+    const DescribeRegionsRequestPrivate &other, DescribeRegionsRequest * const q)
+    : DescribeRegionsPrivate(other, q)
+{
+
+}

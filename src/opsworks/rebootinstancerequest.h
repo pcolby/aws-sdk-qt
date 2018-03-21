@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTINSTANCEREQUEST_H
 #define QTAWS_REBOOTINSTANCEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class RebootInstanceRequestPrivate;
+
+class QTAWS_EXPORT RebootInstanceRequest : public OpsWorksRequest {
+
+public:
+    RebootInstanceRequest(const RebootInstanceRequest &other);
+    RebootInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootInstanceRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEIMPORTEDKEYMATERIALREQUEST_P_H
 #define QTAWS_DELETEIMPORTEDKEYMATERIALREQUEST_P_H
 
+#include "kms_p.h"
+#include "deleteimportedkeymaterialrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DeleteImportedKeyMaterialRequest;
+
+class QTAWS_EXPORT DeleteImportedKeyMaterialRequestPrivate : public KMSPrivate {
+
+public:
+    DeleteImportedKeyMaterialRequestPrivate(const KMS::Action action,
+                                   DeleteImportedKeyMaterialRequest * const q);
+    DeleteImportedKeyMaterialRequestPrivate(const DeleteImportedKeyMaterialRequestPrivate &other,
+                                   DeleteImportedKeyMaterialRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteImportedKeyMaterialRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

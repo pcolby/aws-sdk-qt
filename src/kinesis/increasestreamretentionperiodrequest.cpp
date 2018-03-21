@@ -19,3 +19,107 @@
 
 #include "increasestreamretentionperiodrequest.h"
 #include "increasestreamretentionperiodrequest_p.h"
+#include "increasestreamretentionperiodresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  IncreaseStreamRetentionPeriodRequest
+ *
+ * @brief  Implements Kinesis IncreaseStreamRetentionPeriod requests.
+ *
+ * @see    KinesisClient::increaseStreamRetentionPeriod
+ */
+
+/**
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IncreaseStreamRetentionPeriodResponse::IncreaseStreamRetentionPeriodResponse(
+
+/**
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest(const IncreaseStreamRetentionPeriodRequest &other)
+    : KinesisRequest(new IncreaseStreamRetentionPeriodRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodRequest object.
+ */
+IncreaseStreamRetentionPeriodRequest::IncreaseStreamRetentionPeriodRequest()
+    : KinesisRequest(new IncreaseStreamRetentionPeriodRequestPrivate(KinesisRequest::IncreaseStreamRetentionPeriodAction, this))
+{
+
+}
+
+bool IncreaseStreamRetentionPeriodRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an IncreaseStreamRetentionPeriodResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An IncreaseStreamRetentionPeriodResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::response(QNetworkReply * const reply) const
+{
+    return new IncreaseStreamRetentionPeriodResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  IncreaseStreamRetentionPeriodRequestPrivate
+ *
+ * @brief  Private implementation for IncreaseStreamRetentionPeriodRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public IncreaseStreamRetentionPeriodRequest instance.
+ */
+IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
+    const KinesisRequest::Action action, IncreaseStreamRetentionPeriodRequest * const q)
+    : IncreaseStreamRetentionPeriodPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IncreaseStreamRetentionPeriodRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the IncreaseStreamRetentionPeriodRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public IncreaseStreamRetentionPeriodRequest instance.
+ */
+IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
+    const IncreaseStreamRetentionPeriodRequestPrivate &other, IncreaseStreamRetentionPeriodRequest * const q)
+    : IncreaseStreamRetentionPeriodPrivate(other, q)
+{
+
+}

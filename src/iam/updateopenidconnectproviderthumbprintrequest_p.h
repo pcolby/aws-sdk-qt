@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTREQUEST_P_H
 #define QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTREQUEST_P_H
 
+#include "iam_p.h"
+#include "updateopenidconnectproviderthumbprintrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateOpenIDConnectProviderThumbprintRequest;
+
+class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintRequestPrivate : public IAMPrivate {
+
+public:
+    UpdateOpenIDConnectProviderThumbprintRequestPrivate(const IAM::Action action,
+                                   UpdateOpenIDConnectProviderThumbprintRequest * const q);
+    UpdateOpenIDConnectProviderThumbprintRequestPrivate(const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other,
+                                   UpdateOpenIDConnectProviderThumbprintRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateOpenIDConnectProviderThumbprintRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

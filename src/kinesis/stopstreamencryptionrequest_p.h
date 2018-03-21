@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPSTREAMENCRYPTIONREQUEST_P_H
 #define QTAWS_STOPSTREAMENCRYPTIONREQUEST_P_H
 
+#include "kinesis_p.h"
+#include "stopstreamencryptionrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class StopStreamEncryptionRequest;
+
+class QTAWS_EXPORT StopStreamEncryptionRequestPrivate : public KinesisPrivate {
+
+public:
+    StopStreamEncryptionRequestPrivate(const Kinesis::Action action,
+                                   StopStreamEncryptionRequest * const q);
+    StopStreamEncryptionRequestPrivate(const StopStreamEncryptionRequestPrivate &other,
+                                   StopStreamEncryptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopStreamEncryptionRequest)
+
+};
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

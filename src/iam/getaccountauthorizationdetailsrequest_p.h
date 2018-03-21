@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_P_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_P_H
 
+#include "iam_p.h"
+#include "getaccountauthorizationdetailsrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccountAuthorizationDetailsRequest;
+
+class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IAMPrivate {
+
+public:
+    GetAccountAuthorizationDetailsRequestPrivate(const IAM::Action action,
+                                   GetAccountAuthorizationDetailsRequest * const q);
+    GetAccountAuthorizationDetailsRequestPrivate(const GetAccountAuthorizationDetailsRequestPrivate &other,
+                                   GetAccountAuthorizationDetailsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountAuthorizationDetailsRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

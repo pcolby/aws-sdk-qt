@@ -19,3 +19,107 @@
 
 #include "listfunctiondefinitionversionsrequest.h"
 #include "listfunctiondefinitionversionsrequest_p.h"
+#include "listfunctiondefinitionversionsresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListFunctionDefinitionVersionsRequest
+ *
+ * @brief  Implements Greengrass ListFunctionDefinitionVersions requests.
+ *
+ * @see    GreengrassClient::listFunctionDefinitionVersions
+ */
+
+/**
+ * @brief  Constructs a new ListFunctionDefinitionVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListFunctionDefinitionVersionsResponse::ListFunctionDefinitionVersionsResponse(
+
+/**
+ * @brief  Constructs a new ListFunctionDefinitionVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListFunctionDefinitionVersionsRequest::ListFunctionDefinitionVersionsRequest(const ListFunctionDefinitionVersionsRequest &other)
+    : GreengrassRequest(new ListFunctionDefinitionVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListFunctionDefinitionVersionsRequest object.
+ */
+ListFunctionDefinitionVersionsRequest::ListFunctionDefinitionVersionsRequest()
+    : GreengrassRequest(new ListFunctionDefinitionVersionsRequestPrivate(GreengrassRequest::ListFunctionDefinitionVersionsAction, this))
+{
+
+}
+
+bool ListFunctionDefinitionVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListFunctionDefinitionVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListFunctionDefinitionVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListFunctionDefinitionVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListFunctionDefinitionVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListFunctionDefinitionVersionsRequestPrivate
+ *
+ * @brief  Private implementation for ListFunctionDefinitionVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFunctionDefinitionVersionsRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListFunctionDefinitionVersionsRequest instance.
+ */
+ListFunctionDefinitionVersionsRequestPrivate::ListFunctionDefinitionVersionsRequestPrivate(
+    const GreengrassRequest::Action action, ListFunctionDefinitionVersionsRequest * const q)
+    : ListFunctionDefinitionVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListFunctionDefinitionVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListFunctionDefinitionVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListFunctionDefinitionVersionsRequest instance.
+ */
+ListFunctionDefinitionVersionsRequestPrivate::ListFunctionDefinitionVersionsRequestPrivate(
+    const ListFunctionDefinitionVersionsRequestPrivate &other, ListFunctionDefinitionVersionsRequest * const q)
+    : ListFunctionDefinitionVersionsPrivate(other, q)
+{
+
+}

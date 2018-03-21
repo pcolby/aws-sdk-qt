@@ -19,3 +19,107 @@
 
 #include "deprecateworkflowtyperequest.h"
 #include "deprecateworkflowtyperequest_p.h"
+#include "deprecateworkflowtyperesponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  DeprecateWorkflowTypeRequest
+ *
+ * @brief  Implements SWF DeprecateWorkflowType requests.
+ *
+ * @see    SWFClient::deprecateWorkflowType
+ */
+
+/**
+ * @brief  Constructs a new DeprecateWorkflowTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
+
+/**
+ * @brief  Constructs a new DeprecateWorkflowTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest(const DeprecateWorkflowTypeRequest &other)
+    : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeprecateWorkflowTypeRequest object.
+ */
+DeprecateWorkflowTypeRequest::DeprecateWorkflowTypeRequest()
+    : SWFRequest(new DeprecateWorkflowTypeRequestPrivate(SWFRequest::DeprecateWorkflowTypeAction, this))
+{
+
+}
+
+bool DeprecateWorkflowTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeprecateWorkflowTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeprecateWorkflowTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new DeprecateWorkflowTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeprecateWorkflowTypeRequestPrivate
+ *
+ * @brief  Private implementation for DeprecateWorkflowTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateWorkflowTypeRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public DeprecateWorkflowTypeRequest instance.
+ */
+DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
+    const SWFRequest::Action action, DeprecateWorkflowTypeRequest * const q)
+    : DeprecateWorkflowTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeprecateWorkflowTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeprecateWorkflowTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeprecateWorkflowTypeRequest instance.
+ */
+DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
+    const DeprecateWorkflowTypeRequestPrivate &other, DeprecateWorkflowTypeRequest * const q)
+    : DeprecateWorkflowTypePrivate(other, q)
+{
+
+}

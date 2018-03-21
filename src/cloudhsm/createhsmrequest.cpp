@@ -19,3 +19,107 @@
 
 #include "createhsmrequest.h"
 #include "createhsmrequest_p.h"
+#include "createhsmresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  CreateHsmRequest
+ *
+ * @brief  Implements CloudHSM CreateHsm requests.
+ *
+ * @see    CloudHSMClient::createHsm
+ */
+
+/**
+ * @brief  Constructs a new CreateHsmResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateHsmResponse::CreateHsmResponse(
+
+/**
+ * @brief  Constructs a new CreateHsmRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateHsmRequest::CreateHsmRequest(const CreateHsmRequest &other)
+    : CloudHSMRequest(new CreateHsmRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateHsmRequest object.
+ */
+CreateHsmRequest::CreateHsmRequest()
+    : CloudHSMRequest(new CreateHsmRequestPrivate(CloudHSMRequest::CreateHsmAction, this))
+{
+
+}
+
+bool CreateHsmRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateHsmResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateHsmResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateHsmResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateHsmRequestPrivate
+ *
+ * @brief  Private implementation for CreateHsmRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public CreateHsmRequest instance.
+ */
+CreateHsmRequestPrivate::CreateHsmRequestPrivate(
+    const CloudHSMRequest::Action action, CreateHsmRequest * const q)
+    : CreateHsmPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateHsmRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateHsmRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateHsmRequest instance.
+ */
+CreateHsmRequestPrivate::CreateHsmRequestPrivate(
+    const CreateHsmRequestPrivate &other, CreateHsmRequest * const q)
+    : CreateHsmPrivate(other, q)
+{
+
+}

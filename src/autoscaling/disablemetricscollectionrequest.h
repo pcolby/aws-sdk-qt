@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLEMETRICSCOLLECTIONREQUEST_H
 #define QTAWS_DISABLEMETRICSCOLLECTIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DisableMetricsCollectionRequestPrivate;
+
+class QTAWS_EXPORT DisableMetricsCollectionRequest : public AutoScalingRequest {
+
+public:
+    DisableMetricsCollectionRequest(const DisableMetricsCollectionRequest &other);
+    DisableMetricsCollectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableMetricsCollectionRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

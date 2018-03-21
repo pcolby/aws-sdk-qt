@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSOFRESOURCEREQUEST_H
 #define QTAWS_LISTTAGSOFRESOURCEREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListTagsOfResourceRequestPrivate;
+
+class QTAWS_EXPORT ListTagsOfResourceRequest : public DynamoDBRequest {
+
+public:
+    ListTagsOfResourceRequest(const ListTagsOfResourceRequest &other);
+    ListTagsOfResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsOfResourceRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

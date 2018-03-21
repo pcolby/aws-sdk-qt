@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEREGISTRATIONCODEREQUEST_H
 #define QTAWS_DELETEREGISTRATIONCODEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteRegistrationCodeRequestPrivate;
+
+class QTAWS_EXPORT DeleteRegistrationCodeRequest : public IoTRequest {
+
+public:
+    DeleteRegistrationCodeRequest(const DeleteRegistrationCodeRequest &other);
+    DeleteRegistrationCodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRegistrationCodeRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

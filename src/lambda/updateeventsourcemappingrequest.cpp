@@ -19,3 +19,107 @@
 
 #include "updateeventsourcemappingrequest.h"
 #include "updateeventsourcemappingrequest_p.h"
+#include "updateeventsourcemappingresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  UpdateEventSourceMappingRequest
+ *
+ * @brief  Implements Lambda UpdateEventSourceMapping requests.
+ *
+ * @see    LambdaClient::updateEventSourceMapping
+ */
+
+/**
+ * @brief  Constructs a new UpdateEventSourceMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEventSourceMappingResponse::UpdateEventSourceMappingResponse(
+
+/**
+ * @brief  Constructs a new UpdateEventSourceMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest(const UpdateEventSourceMappingRequest &other)
+    : LambdaRequest(new UpdateEventSourceMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEventSourceMappingRequest object.
+ */
+UpdateEventSourceMappingRequest::UpdateEventSourceMappingRequest()
+    : LambdaRequest(new UpdateEventSourceMappingRequestPrivate(LambdaRequest::UpdateEventSourceMappingAction, this))
+{
+
+}
+
+bool UpdateEventSourceMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEventSourceMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEventSourceMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * UpdateEventSourceMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEventSourceMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEventSourceMappingRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEventSourceMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public UpdateEventSourceMappingRequest instance.
+ */
+UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
+    const LambdaRequest::Action action, UpdateEventSourceMappingRequest * const q)
+    : UpdateEventSourceMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEventSourceMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEventSourceMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEventSourceMappingRequest instance.
+ */
+UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
+    const UpdateEventSourceMappingRequestPrivate &other, UpdateEventSourceMappingRequest * const q)
+    : UpdateEventSourceMappingPrivate(other, q)
+{
+
+}

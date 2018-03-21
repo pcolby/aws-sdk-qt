@@ -19,3 +19,107 @@
 
 #include "describeresourcepoliciesrequest.h"
 #include "describeresourcepoliciesrequest_p.h"
+#include "describeresourcepoliciesresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  DescribeResourcePoliciesRequest
+ *
+ * @brief  Implements CloudWatchLogs DescribeResourcePolicies requests.
+ *
+ * @see    CloudWatchLogsClient::describeResourcePolicies
+ */
+
+/**
+ * @brief  Constructs a new DescribeResourcePoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
+
+/**
+ * @brief  Constructs a new DescribeResourcePoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeResourcePoliciesRequest::DescribeResourcePoliciesRequest(const DescribeResourcePoliciesRequest &other)
+    : CloudWatchLogsRequest(new DescribeResourcePoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeResourcePoliciesRequest object.
+ */
+DescribeResourcePoliciesRequest::DescribeResourcePoliciesRequest()
+    : CloudWatchLogsRequest(new DescribeResourcePoliciesRequestPrivate(CloudWatchLogsRequest::DescribeResourcePoliciesAction, this))
+{
+
+}
+
+bool DescribeResourcePoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeResourcePoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeResourcePoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeResourcePoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeResourcePoliciesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeResourcePoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResourcePoliciesRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public DescribeResourcePoliciesRequest instance.
+ */
+DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
+    const CloudWatchLogsRequest::Action action, DescribeResourcePoliciesRequest * const q)
+    : DescribeResourcePoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeResourcePoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeResourcePoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeResourcePoliciesRequest instance.
+ */
+DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
+    const DescribeResourcePoliciesRequestPrivate &other, DescribeResourcePoliciesRequest * const q)
+    : DescribeResourcePoliciesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDOMAINCONTROLLERSREQUEST_P_H
 #define QTAWS_DESCRIBEDOMAINCONTROLLERSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "describedomaincontrollersrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeDomainControllersRequest;
+
+class QTAWS_EXPORT DescribeDomainControllersRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DescribeDomainControllersRequestPrivate(const DirectoryService::Action action,
+                                   DescribeDomainControllersRequest * const q);
+    DescribeDomainControllersRequestPrivate(const DescribeDomainControllersRequestPrivate &other,
+                                   DescribeDomainControllersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDomainControllersRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

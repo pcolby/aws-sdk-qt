@@ -19,3 +19,107 @@
 
 #include "updatedefaultbranchrequest.h"
 #include "updatedefaultbranchrequest_p.h"
+#include "updatedefaultbranchresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateDefaultBranchRequest
+ *
+ * @brief  Implements CodeCommit UpdateDefaultBranch requests.
+ *
+ * @see    CodeCommitClient::updateDefaultBranch
+ */
+
+/**
+ * @brief  Constructs a new UpdateDefaultBranchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDefaultBranchResponse::UpdateDefaultBranchResponse(
+
+/**
+ * @brief  Constructs a new UpdateDefaultBranchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDefaultBranchRequest::UpdateDefaultBranchRequest(const UpdateDefaultBranchRequest &other)
+    : CodeCommitRequest(new UpdateDefaultBranchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDefaultBranchRequest object.
+ */
+UpdateDefaultBranchRequest::UpdateDefaultBranchRequest()
+    : CodeCommitRequest(new UpdateDefaultBranchRequestPrivate(CodeCommitRequest::UpdateDefaultBranchAction, this))
+{
+
+}
+
+bool UpdateDefaultBranchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDefaultBranchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDefaultBranchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * UpdateDefaultBranchRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDefaultBranchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDefaultBranchRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDefaultBranchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDefaultBranchRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public UpdateDefaultBranchRequest instance.
+ */
+UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
+    const CodeCommitRequest::Action action, UpdateDefaultBranchRequest * const q)
+    : UpdateDefaultBranchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDefaultBranchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDefaultBranchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDefaultBranchRequest instance.
+ */
+UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
+    const UpdateDefaultBranchRequestPrivate &other, UpdateDefaultBranchRequest * const q)
+    : UpdateDefaultBranchPrivate(other, q)
+{
+
+}

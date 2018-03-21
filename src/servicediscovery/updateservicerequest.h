@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESERVICEREQUEST_H
 #define QTAWS_UPDATESERVICEREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class UpdateServiceRequestPrivate;
+
+class QTAWS_EXPORT UpdateServiceRequest : public ServiceDiscoveryRequest {
+
+public:
+    UpdateServiceRequest(const UpdateServiceRequest &other);
+    UpdateServiceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateServiceRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

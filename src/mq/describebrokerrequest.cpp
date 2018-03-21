@@ -19,3 +19,107 @@
 
 #include "describebrokerrequest.h"
 #include "describebrokerrequest_p.h"
+#include "describebrokerresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeBrokerRequest
+ *
+ * @brief  Implements MQ DescribeBroker requests.
+ *
+ * @see    MQClient::describeBroker
+ */
+
+/**
+ * @brief  Constructs a new DescribeBrokerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeBrokerResponse::DescribeBrokerResponse(
+
+/**
+ * @brief  Constructs a new DescribeBrokerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeBrokerRequest::DescribeBrokerRequest(const DescribeBrokerRequest &other)
+    : MQRequest(new DescribeBrokerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeBrokerRequest object.
+ */
+DescribeBrokerRequest::DescribeBrokerRequest()
+    : MQRequest(new DescribeBrokerRequestPrivate(MQRequest::DescribeBrokerAction, this))
+{
+
+}
+
+bool DescribeBrokerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeBrokerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeBrokerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeBrokerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeBrokerRequestPrivate
+ *
+ * @brief  Private implementation for DescribeBrokerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBrokerRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public DescribeBrokerRequest instance.
+ */
+DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
+    const MQRequest::Action action, DescribeBrokerRequest * const q)
+    : DescribeBrokerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeBrokerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeBrokerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeBrokerRequest instance.
+ */
+DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
+    const DescribeBrokerRequestPrivate &other, DescribeBrokerRequest * const q)
+    : DescribeBrokerPrivate(other, q)
+{
+
+}

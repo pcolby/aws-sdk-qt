@@ -19,3 +19,107 @@
 
 #include "createotaupdaterequest.h"
 #include "createotaupdaterequest_p.h"
+#include "createotaupdateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateOTAUpdateRequest
+ *
+ * @brief  Implements IoT CreateOTAUpdate requests.
+ *
+ * @see    IoTClient::createOTAUpdate
+ */
+
+/**
+ * @brief  Constructs a new CreateOTAUpdateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateOTAUpdateResponse::CreateOTAUpdateResponse(
+
+/**
+ * @brief  Constructs a new CreateOTAUpdateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateOTAUpdateRequest::CreateOTAUpdateRequest(const CreateOTAUpdateRequest &other)
+    : IoTRequest(new CreateOTAUpdateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateOTAUpdateRequest object.
+ */
+CreateOTAUpdateRequest::CreateOTAUpdateRequest()
+    : IoTRequest(new CreateOTAUpdateRequestPrivate(IoTRequest::CreateOTAUpdateAction, this))
+{
+
+}
+
+bool CreateOTAUpdateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateOTAUpdateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateOTAUpdateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CreateOTAUpdateRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateOTAUpdateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateOTAUpdateRequestPrivate
+ *
+ * @brief  Private implementation for CreateOTAUpdateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOTAUpdateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CreateOTAUpdateRequest instance.
+ */
+CreateOTAUpdateRequestPrivate::CreateOTAUpdateRequestPrivate(
+    const IoTRequest::Action action, CreateOTAUpdateRequest * const q)
+    : CreateOTAUpdatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateOTAUpdateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateOTAUpdateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateOTAUpdateRequest instance.
+ */
+CreateOTAUpdateRequestPrivate::CreateOTAUpdateRequestPrivate(
+    const CreateOTAUpdateRequestPrivate &other, CreateOTAUpdateRequest * const q)
+    : CreateOTAUpdatePrivate(other, q)
+{
+
+}

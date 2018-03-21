@@ -19,3 +19,107 @@
 
 #include "deletefilesharerequest.h"
 #include "deletefilesharerequest_p.h"
+#include "deletefileshareresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteFileShareRequest
+ *
+ * @brief  Implements StorageGateway DeleteFileShare requests.
+ *
+ * @see    StorageGatewayClient::deleteFileShare
+ */
+
+/**
+ * @brief  Constructs a new DeleteFileShareResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFileShareResponse::DeleteFileShareResponse(
+
+/**
+ * @brief  Constructs a new DeleteFileShareRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFileShareRequest::DeleteFileShareRequest(const DeleteFileShareRequest &other)
+    : StorageGatewayRequest(new DeleteFileShareRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFileShareRequest object.
+ */
+DeleteFileShareRequest::DeleteFileShareRequest()
+    : StorageGatewayRequest(new DeleteFileShareRequestPrivate(StorageGatewayRequest::DeleteFileShareAction, this))
+{
+
+}
+
+bool DeleteFileShareRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFileShareResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFileShareResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFileShareResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFileShareRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFileShareRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileShareRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteFileShareRequest instance.
+ */
+DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteFileShareRequest * const q)
+    : DeleteFileSharePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileShareRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFileShareRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFileShareRequest instance.
+ */
+DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
+    const DeleteFileShareRequestPrivate &other, DeleteFileShareRequest * const q)
+    : DeleteFileSharePrivate(other, q)
+{
+
+}

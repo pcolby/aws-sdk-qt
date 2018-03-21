@@ -19,3 +19,107 @@
 
 #include "getactivenamesrequest.h"
 #include "getactivenamesrequest_p.h"
+#include "getactivenamesresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetActiveNamesRequest
+ *
+ * @brief  Implements Lightsail GetActiveNames requests.
+ *
+ * @see    LightsailClient::getActiveNames
+ */
+
+/**
+ * @brief  Constructs a new GetActiveNamesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetActiveNamesResponse::GetActiveNamesResponse(
+
+/**
+ * @brief  Constructs a new GetActiveNamesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetActiveNamesRequest::GetActiveNamesRequest(const GetActiveNamesRequest &other)
+    : LightsailRequest(new GetActiveNamesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetActiveNamesRequest object.
+ */
+GetActiveNamesRequest::GetActiveNamesRequest()
+    : LightsailRequest(new GetActiveNamesRequestPrivate(LightsailRequest::GetActiveNamesAction, this))
+{
+
+}
+
+bool GetActiveNamesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetActiveNamesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetActiveNamesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetActiveNamesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetActiveNamesRequestPrivate
+ *
+ * @brief  Private implementation for GetActiveNamesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetActiveNamesRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetActiveNamesRequest instance.
+ */
+GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
+    const LightsailRequest::Action action, GetActiveNamesRequest * const q)
+    : GetActiveNamesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetActiveNamesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetActiveNamesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetActiveNamesRequest instance.
+ */
+GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
+    const GetActiveNamesRequestPrivate &other, GetActiveNamesRequest * const q)
+    : GetActiveNamesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_SEARCHFACESBYIMAGEREQUEST_P_H
 #define QTAWS_SEARCHFACESBYIMAGEREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "searchfacesbyimagerequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class SearchFacesByImageRequest;
+
+class QTAWS_EXPORT SearchFacesByImageRequestPrivate : public RekognitionPrivate {
+
+public:
+    SearchFacesByImageRequestPrivate(const Rekognition::Action action,
+                                   SearchFacesByImageRequest * const q);
+    SearchFacesByImageRequestPrivate(const SearchFacesByImageRequestPrivate &other,
+                                   SearchFacesByImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SearchFacesByImageRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

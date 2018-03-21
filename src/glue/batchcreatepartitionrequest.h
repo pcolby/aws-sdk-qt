@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHCREATEPARTITIONREQUEST_H
 #define QTAWS_BATCHCREATEPARTITIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class BatchCreatePartitionRequestPrivate;
+
+class QTAWS_EXPORT BatchCreatePartitionRequest : public GlueRequest {
+
+public:
+    BatchCreatePartitionRequest(const BatchCreatePartitionRequest &other);
+    BatchCreatePartitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchCreatePartitionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

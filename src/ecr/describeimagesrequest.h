@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DescribeImagesRequestPrivate;
+
+class QTAWS_EXPORT DescribeImagesRequest : public ECRRequest {
+
+public:
+    DescribeImagesRequest(const DescribeImagesRequest &other);
+    DescribeImagesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImagesRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

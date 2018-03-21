@@ -19,3 +19,107 @@
 
 #include "getcatalogimportstatusrequest.h"
 #include "getcatalogimportstatusrequest_p.h"
+#include "getcatalogimportstatusresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetCatalogImportStatusRequest
+ *
+ * @brief  Implements Glue GetCatalogImportStatus requests.
+ *
+ * @see    GlueClient::getCatalogImportStatus
+ */
+
+/**
+ * @brief  Constructs a new GetCatalogImportStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCatalogImportStatusResponse::GetCatalogImportStatusResponse(
+
+/**
+ * @brief  Constructs a new GetCatalogImportStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCatalogImportStatusRequest::GetCatalogImportStatusRequest(const GetCatalogImportStatusRequest &other)
+    : GlueRequest(new GetCatalogImportStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCatalogImportStatusRequest object.
+ */
+GetCatalogImportStatusRequest::GetCatalogImportStatusRequest()
+    : GlueRequest(new GetCatalogImportStatusRequestPrivate(GlueRequest::GetCatalogImportStatusAction, this))
+{
+
+}
+
+bool GetCatalogImportStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCatalogImportStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCatalogImportStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCatalogImportStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCatalogImportStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetCatalogImportStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCatalogImportStatusRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetCatalogImportStatusRequest instance.
+ */
+GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
+    const GlueRequest::Action action, GetCatalogImportStatusRequest * const q)
+    : GetCatalogImportStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCatalogImportStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCatalogImportStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCatalogImportStatusRequest instance.
+ */
+GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
+    const GetCatalogImportStatusRequestPrivate &other, GetCatalogImportStatusRequest * const q)
+    : GetCatalogImportStatusPrivate(other, q)
+{
+
+}

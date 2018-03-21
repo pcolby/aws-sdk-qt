@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREPOSITORYREQUEST_P_H
 #define QTAWS_GETREPOSITORYREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "getrepositoryrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetRepositoryRequest;
+
+class QTAWS_EXPORT GetRepositoryRequestPrivate : public CodeCommitPrivate {
+
+public:
+    GetRepositoryRequestPrivate(const CodeCommit::Action action,
+                                   GetRepositoryRequest * const q);
+    GetRepositoryRequestPrivate(const GetRepositoryRequestPrivate &other,
+                                   GetRepositoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRepositoryRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listeventsubscriptionsrequest.h"
 #include "listeventsubscriptionsrequest_p.h"
+#include "listeventsubscriptionsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListEventSubscriptionsRequest
+ *
+ * @brief  Implements Inspector ListEventSubscriptions requests.
+ *
+ * @see    InspectorClient::listEventSubscriptions
+ */
+
+/**
+ * @brief  Constructs a new ListEventSubscriptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEventSubscriptionsResponse::ListEventSubscriptionsResponse(
+
+/**
+ * @brief  Constructs a new ListEventSubscriptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEventSubscriptionsRequest::ListEventSubscriptionsRequest(const ListEventSubscriptionsRequest &other)
+    : InspectorRequest(new ListEventSubscriptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEventSubscriptionsRequest object.
+ */
+ListEventSubscriptionsRequest::ListEventSubscriptionsRequest()
+    : InspectorRequest(new ListEventSubscriptionsRequestPrivate(InspectorRequest::ListEventSubscriptionsAction, this))
+{
+
+}
+
+bool ListEventSubscriptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEventSubscriptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEventSubscriptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEventSubscriptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEventSubscriptionsRequestPrivate
+ *
+ * @brief  Private implementation for ListEventSubscriptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public ListEventSubscriptionsRequest instance.
+ */
+ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
+    const InspectorRequest::Action action, ListEventSubscriptionsRequest * const q)
+    : ListEventSubscriptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEventSubscriptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEventSubscriptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEventSubscriptionsRequest instance.
+ */
+ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
+    const ListEventSubscriptionsRequestPrivate &other, ListEventSubscriptionsRequest * const q)
+    : ListEventSubscriptionsPrivate(other, q)
+{
+
+}

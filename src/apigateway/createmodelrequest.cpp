@@ -19,3 +19,107 @@
 
 #include "createmodelrequest.h"
 #include "createmodelrequest_p.h"
+#include "createmodelresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateModelRequest
+ *
+ * @brief  Implements APIGateway CreateModel requests.
+ *
+ * @see    APIGatewayClient::createModel
+ */
+
+/**
+ * @brief  Constructs a new CreateModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateModelResponse::CreateModelResponse(
+
+/**
+ * @brief  Constructs a new CreateModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateModelRequest::CreateModelRequest(const CreateModelRequest &other)
+    : APIGatewayRequest(new CreateModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateModelRequest object.
+ */
+CreateModelRequest::CreateModelRequest()
+    : APIGatewayRequest(new CreateModelRequestPrivate(APIGatewayRequest::CreateModelAction, this))
+{
+
+}
+
+bool CreateModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * CreateModelRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateModelRequestPrivate
+ *
+ * @brief  Private implementation for CreateModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateModelRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public CreateModelRequest instance.
+ */
+CreateModelRequestPrivate::CreateModelRequestPrivate(
+    const APIGatewayRequest::Action action, CreateModelRequest * const q)
+    : CreateModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateModelRequest instance.
+ */
+CreateModelRequestPrivate::CreateModelRequestPrivate(
+    const CreateModelRequestPrivate &other, CreateModelRequest * const q)
+    : CreateModelPrivate(other, q)
+{
+
+}

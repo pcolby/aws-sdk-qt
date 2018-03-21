@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEENDPOINTCONFIGREQUEST_H
 #define QTAWS_DELETEENDPOINTCONFIGREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteEndpointConfigRequestPrivate;
+
+class QTAWS_EXPORT DeleteEndpointConfigRequest : public SageMakerRequest {
+
+public:
+    DeleteEndpointConfigRequest(const DeleteEndpointConfigRequest &other);
+    DeleteEndpointConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEndpointConfigRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

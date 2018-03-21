@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEPLOYMENTCONFIGSREQUEST_P_H
 #define QTAWS_LISTDEPLOYMENTCONFIGSREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "listdeploymentconfigsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListDeploymentConfigsRequest;
+
+class QTAWS_EXPORT ListDeploymentConfigsRequestPrivate : public CodeDeployPrivate {
+
+public:
+    ListDeploymentConfigsRequestPrivate(const CodeDeploy::Action action,
+                                   ListDeploymentConfigsRequest * const q);
+    ListDeploymentConfigsRequestPrivate(const ListDeploymentConfigsRequestPrivate &other,
+                                   ListDeploymentConfigsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeploymentConfigsRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

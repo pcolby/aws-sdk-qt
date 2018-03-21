@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTREAMPROCESSORREQUEST_P_H
 #define QTAWS_DELETESTREAMPROCESSORREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "deletestreamprocessorrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DeleteStreamProcessorRequest;
+
+class QTAWS_EXPORT DeleteStreamProcessorRequestPrivate : public RekognitionPrivate {
+
+public:
+    DeleteStreamProcessorRequestPrivate(const Rekognition::Action action,
+                                   DeleteStreamProcessorRequest * const q);
+    DeleteStreamProcessorRequestPrivate(const DeleteStreamProcessorRequestPrivate &other,
+                                   DeleteStreamProcessorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStreamProcessorRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

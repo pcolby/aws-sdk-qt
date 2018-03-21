@@ -19,3 +19,107 @@
 
 #include "listbootstrapactionsrequest.h"
 #include "listbootstrapactionsrequest_p.h"
+#include "listbootstrapactionsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  ListBootstrapActionsRequest
+ *
+ * @brief  Implements EMR ListBootstrapActions requests.
+ *
+ * @see    EMRClient::listBootstrapActions
+ */
+
+/**
+ * @brief  Constructs a new ListBootstrapActionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListBootstrapActionsResponse::ListBootstrapActionsResponse(
+
+/**
+ * @brief  Constructs a new ListBootstrapActionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListBootstrapActionsRequest::ListBootstrapActionsRequest(const ListBootstrapActionsRequest &other)
+    : EMRRequest(new ListBootstrapActionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListBootstrapActionsRequest object.
+ */
+ListBootstrapActionsRequest::ListBootstrapActionsRequest()
+    : EMRRequest(new ListBootstrapActionsRequestPrivate(EMRRequest::ListBootstrapActionsAction, this))
+{
+
+}
+
+bool ListBootstrapActionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListBootstrapActionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListBootstrapActionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListBootstrapActionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListBootstrapActionsRequestPrivate
+ *
+ * @brief  Private implementation for ListBootstrapActionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBootstrapActionsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public ListBootstrapActionsRequest instance.
+ */
+ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
+    const EMRRequest::Action action, ListBootstrapActionsRequest * const q)
+    : ListBootstrapActionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListBootstrapActionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListBootstrapActionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListBootstrapActionsRequest instance.
+ */
+ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
+    const ListBootstrapActionsRequestPrivate &other, ListBootstrapActionsRequest * const q)
+    : ListBootstrapActionsPrivate(other, q)
+{
+
+}

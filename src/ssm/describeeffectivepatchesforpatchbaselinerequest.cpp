@@ -19,3 +19,107 @@
 
 #include "describeeffectivepatchesforpatchbaselinerequest.h"
 #include "describeeffectivepatchesforpatchbaselinerequest_p.h"
+#include "describeeffectivepatchesforpatchbaselineresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeEffectivePatchesForPatchBaselineRequest
+ *
+ * @brief  Implements SSM DescribeEffectivePatchesForPatchBaseline requests.
+ *
+ * @see    SSMClient::describeEffectivePatchesForPatchBaseline
+ */
+
+/**
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPatchBaselineResponse(
+
+/**
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest(const DescribeEffectivePatchesForPatchBaselineRequest &other)
+    : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequest object.
+ */
+DescribeEffectivePatchesForPatchBaselineRequest::DescribeEffectivePatchesForPatchBaselineRequest()
+    : SSMRequest(new DescribeEffectivePatchesForPatchBaselineRequestPrivate(SSMRequest::DescribeEffectivePatchesForPatchBaselineAction, this))
+{
+
+}
+
+bool DescribeEffectivePatchesForPatchBaselineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEffectivePatchesForPatchBaselineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEffectivePatchesForPatchBaselineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEffectivePatchesForPatchBaselineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEffectivePatchesForPatchBaselineRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEffectivePatchesForPatchBaselineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeEffectivePatchesForPatchBaselineRequest instance.
+ */
+DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
+    const SSMRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)
+    : DescribeEffectivePatchesForPatchBaselinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEffectivePatchesForPatchBaselineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEffectivePatchesForPatchBaselineRequest instance.
+ */
+DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
+    const DescribeEffectivePatchesForPatchBaselineRequestPrivate &other, DescribeEffectivePatchesForPatchBaselineRequest * const q)
+    : DescribeEffectivePatchesForPatchBaselinePrivate(other, q)
+{
+
+}

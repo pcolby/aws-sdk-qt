@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEEVALUATIONREQUEST_H
 #define QTAWS_CREATEEVALUATIONREQUEST_H
 
+#include "machinelearningrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateEvaluationRequestPrivate;
+
+class QTAWS_EXPORT CreateEvaluationRequest : public MachineLearningRequest {
+
+public:
+    CreateEvaluationRequest(const CreateEvaluationRequest &other);
+    CreateEvaluationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateEvaluationRequest)
+
+}
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

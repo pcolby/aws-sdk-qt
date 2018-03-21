@@ -19,3 +19,107 @@
 
 #include "deletecloudfrontoriginaccessidentityrequest.h"
 #include "deletecloudfrontoriginaccessidentityrequest_p.h"
+#include "deletecloudfrontoriginaccessidentityresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  DeleteCloudFrontOriginAccessIdentityRequest
+ *
+ * @brief  Implements CloudFront DeleteCloudFrontOriginAccessIdentity requests.
+ *
+ * @see    CloudFrontClient::deleteCloudFrontOriginAccessIdentity
+ */
+
+/**
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCloudFrontOriginAccessIdentityResponse::DeleteCloudFrontOriginAccessIdentityResponse(
+
+/**
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentityRequest(const DeleteCloudFrontOriginAccessIdentityRequest &other)
+    : CloudFrontRequest(new DeleteCloudFrontOriginAccessIdentityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequest object.
+ */
+DeleteCloudFrontOriginAccessIdentityRequest::DeleteCloudFrontOriginAccessIdentityRequest()
+    : CloudFrontRequest(new DeleteCloudFrontOriginAccessIdentityRequestPrivate(CloudFrontRequest::DeleteCloudFrontOriginAccessIdentityAction, this))
+{
+
+}
+
+bool DeleteCloudFrontOriginAccessIdentityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteCloudFrontOriginAccessIdentityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteCloudFrontOriginAccessIdentityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteCloudFrontOriginAccessIdentityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCloudFrontOriginAccessIdentityRequestPrivate
+ *
+ * @brief  Private implementation for DeleteCloudFrontOriginAccessIdentityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public DeleteCloudFrontOriginAccessIdentityRequest instance.
+ */
+DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
+    const CloudFrontRequest::Action action, DeleteCloudFrontOriginAccessIdentityRequest * const q)
+    : DeleteCloudFrontOriginAccessIdentityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteCloudFrontOriginAccessIdentityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteCloudFrontOriginAccessIdentityRequest instance.
+ */
+DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
+    const DeleteCloudFrontOriginAccessIdentityRequestPrivate &other, DeleteCloudFrontOriginAccessIdentityRequest * const q)
+    : DeleteCloudFrontOriginAccessIdentityPrivate(other, q)
+{
+
+}

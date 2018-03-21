@@ -20,4 +20,32 @@
 #ifndef QTAWS_REVOKEDBSECURITYGROUPINGRESSREQUEST_H
 #define QTAWS_REVOKEDBSECURITYGROUPINGRESSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RevokeDBSecurityGroupIngressRequestPrivate;
+
+class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequest : public RDSRequest {
+
+public:
+    RevokeDBSecurityGroupIngressRequest(const RevokeDBSecurityGroupIngressRequest &other);
+    RevokeDBSecurityGroupIngressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RevokeDBSecurityGroupIngressRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

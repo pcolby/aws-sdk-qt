@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTATTACHEDINDICESREQUEST_P_H
 #define QTAWS_LISTATTACHEDINDICESREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listattachedindicesrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListAttachedIndicesRequest;
+
+class QTAWS_EXPORT ListAttachedIndicesRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListAttachedIndicesRequestPrivate(const CloudDirectory::Action action,
+                                   ListAttachedIndicesRequest * const q);
+    ListAttachedIndicesRequestPrivate(const ListAttachedIndicesRequestPrivate &other,
+                                   ListAttachedIndicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAttachedIndicesRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

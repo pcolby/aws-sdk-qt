@@ -19,3 +19,107 @@
 
 #include "registercrossaccountaccessrolerequest.h"
 #include "registercrossaccountaccessrolerequest_p.h"
+#include "registercrossaccountaccessroleresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  RegisterCrossAccountAccessRoleRequest
+ *
+ * @brief  Implements Inspector RegisterCrossAccountAccessRole requests.
+ *
+ * @see    InspectorClient::registerCrossAccountAccessRole
+ */
+
+/**
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterCrossAccountAccessRoleResponse::RegisterCrossAccountAccessRoleResponse(
+
+/**
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest(const RegisterCrossAccountAccessRoleRequest &other)
+    : InspectorRequest(new RegisterCrossAccountAccessRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleRequest object.
+ */
+RegisterCrossAccountAccessRoleRequest::RegisterCrossAccountAccessRoleRequest()
+    : InspectorRequest(new RegisterCrossAccountAccessRoleRequestPrivate(InspectorRequest::RegisterCrossAccountAccessRoleAction, this))
+{
+
+}
+
+bool RegisterCrossAccountAccessRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterCrossAccountAccessRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterCrossAccountAccessRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterCrossAccountAccessRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterCrossAccountAccessRoleRequestPrivate
+ *
+ * @brief  Private implementation for RegisterCrossAccountAccessRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public RegisterCrossAccountAccessRoleRequest instance.
+ */
+RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
+    const InspectorRequest::Action action, RegisterCrossAccountAccessRoleRequest * const q)
+    : RegisterCrossAccountAccessRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterCrossAccountAccessRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterCrossAccountAccessRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterCrossAccountAccessRoleRequest instance.
+ */
+RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
+    const RegisterCrossAccountAccessRoleRequestPrivate &other, RegisterCrossAccountAccessRoleRequest * const q)
+    : RegisterCrossAccountAccessRolePrivate(other, q)
+{
+
+}

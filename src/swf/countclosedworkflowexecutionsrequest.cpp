@@ -19,3 +19,107 @@
 
 #include "countclosedworkflowexecutionsrequest.h"
 #include "countclosedworkflowexecutionsrequest_p.h"
+#include "countclosedworkflowexecutionsresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  CountClosedWorkflowExecutionsRequest
+ *
+ * @brief  Implements SWF CountClosedWorkflowExecutions requests.
+ *
+ * @see    SWFClient::countClosedWorkflowExecutions
+ */
+
+/**
+ * @brief  Constructs a new CountClosedWorkflowExecutionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CountClosedWorkflowExecutionsResponse::CountClosedWorkflowExecutionsResponse(
+
+/**
+ * @brief  Constructs a new CountClosedWorkflowExecutionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CountClosedWorkflowExecutionsRequest::CountClosedWorkflowExecutionsRequest(const CountClosedWorkflowExecutionsRequest &other)
+    : SWFRequest(new CountClosedWorkflowExecutionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CountClosedWorkflowExecutionsRequest object.
+ */
+CountClosedWorkflowExecutionsRequest::CountClosedWorkflowExecutionsRequest()
+    : SWFRequest(new CountClosedWorkflowExecutionsRequestPrivate(SWFRequest::CountClosedWorkflowExecutionsAction, this))
+{
+
+}
+
+bool CountClosedWorkflowExecutionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CountClosedWorkflowExecutionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CountClosedWorkflowExecutionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::response(QNetworkReply * const reply) const
+{
+    return new CountClosedWorkflowExecutionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CountClosedWorkflowExecutionsRequestPrivate
+ *
+ * @brief  Private implementation for CountClosedWorkflowExecutionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CountClosedWorkflowExecutionsRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public CountClosedWorkflowExecutionsRequest instance.
+ */
+CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsRequestPrivate(
+    const SWFRequest::Action action, CountClosedWorkflowExecutionsRequest * const q)
+    : CountClosedWorkflowExecutionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CountClosedWorkflowExecutionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CountClosedWorkflowExecutionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CountClosedWorkflowExecutionsRequest instance.
+ */
+CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsRequestPrivate(
+    const CountClosedWorkflowExecutionsRequestPrivate &other, CountClosedWorkflowExecutionsRequest * const q)
+    : CountClosedWorkflowExecutionsPrivate(other, q)
+{
+
+}

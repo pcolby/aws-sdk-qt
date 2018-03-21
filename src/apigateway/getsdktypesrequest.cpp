@@ -19,3 +19,107 @@
 
 #include "getsdktypesrequest.h"
 #include "getsdktypesrequest_p.h"
+#include "getsdktypesresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetSdkTypesRequest
+ *
+ * @brief  Implements APIGateway GetSdkTypes requests.
+ *
+ * @see    APIGatewayClient::getSdkTypes
+ */
+
+/**
+ * @brief  Constructs a new GetSdkTypesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSdkTypesResponse::GetSdkTypesResponse(
+
+/**
+ * @brief  Constructs a new GetSdkTypesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSdkTypesRequest::GetSdkTypesRequest(const GetSdkTypesRequest &other)
+    : APIGatewayRequest(new GetSdkTypesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSdkTypesRequest object.
+ */
+GetSdkTypesRequest::GetSdkTypesRequest()
+    : APIGatewayRequest(new GetSdkTypesRequestPrivate(APIGatewayRequest::GetSdkTypesAction, this))
+{
+
+}
+
+bool GetSdkTypesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSdkTypesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSdkTypesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetSdkTypesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSdkTypesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSdkTypesRequestPrivate
+ *
+ * @brief  Private implementation for GetSdkTypesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSdkTypesRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetSdkTypesRequest instance.
+ */
+GetSdkTypesRequestPrivate::GetSdkTypesRequestPrivate(
+    const APIGatewayRequest::Action action, GetSdkTypesRequest * const q)
+    : GetSdkTypesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSdkTypesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSdkTypesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSdkTypesRequest instance.
+ */
+GetSdkTypesRequestPrivate::GetSdkTypesRequestPrivate(
+    const GetSdkTypesRequestPrivate &other, GetSdkTypesRequest * const q)
+    : GetSdkTypesPrivate(other, q)
+{
+
+}

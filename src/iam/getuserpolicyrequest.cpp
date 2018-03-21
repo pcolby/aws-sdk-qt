@@ -19,3 +19,107 @@
 
 #include "getuserpolicyrequest.h"
 #include "getuserpolicyrequest_p.h"
+#include "getuserpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetUserPolicyRequest
+ *
+ * @brief  Implements IAM GetUserPolicy requests.
+ *
+ * @see    IAMClient::getUserPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetUserPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetUserPolicyResponse::GetUserPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetUserPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetUserPolicyRequest::GetUserPolicyRequest(const GetUserPolicyRequest &other)
+    : IAMRequest(new GetUserPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetUserPolicyRequest object.
+ */
+GetUserPolicyRequest::GetUserPolicyRequest()
+    : IAMRequest(new GetUserPolicyRequestPrivate(IAMRequest::GetUserPolicyAction, this))
+{
+
+}
+
+bool GetUserPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetUserPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetUserPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetUserPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetUserPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetUserPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetUserPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetUserPolicyRequest instance.
+ */
+GetUserPolicyRequestPrivate::GetUserPolicyRequestPrivate(
+    const IAMRequest::Action action, GetUserPolicyRequest * const q)
+    : GetUserPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetUserPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetUserPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetUserPolicyRequest instance.
+ */
+GetUserPolicyRequestPrivate::GetUserPolicyRequestPrivate(
+    const GetUserPolicyRequestPrivate &other, GetUserPolicyRequest * const q)
+    : GetUserPolicyPrivate(other, q)
+{
+
+}

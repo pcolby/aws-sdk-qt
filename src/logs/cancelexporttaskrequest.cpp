@@ -19,3 +19,107 @@
 
 #include "cancelexporttaskrequest.h"
 #include "cancelexporttaskrequest_p.h"
+#include "cancelexporttaskresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  CancelExportTaskRequest
+ *
+ * @brief  Implements CloudWatchLogs CancelExportTask requests.
+ *
+ * @see    CloudWatchLogsClient::cancelExportTask
+ */
+
+/**
+ * @brief  Constructs a new CancelExportTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelExportTaskResponse::CancelExportTaskResponse(
+
+/**
+ * @brief  Constructs a new CancelExportTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelExportTaskRequest::CancelExportTaskRequest(const CancelExportTaskRequest &other)
+    : CloudWatchLogsRequest(new CancelExportTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelExportTaskRequest object.
+ */
+CancelExportTaskRequest::CancelExportTaskRequest()
+    : CloudWatchLogsRequest(new CancelExportTaskRequestPrivate(CloudWatchLogsRequest::CancelExportTaskAction, this))
+{
+
+}
+
+bool CancelExportTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelExportTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelExportTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelExportTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelExportTaskRequestPrivate
+ *
+ * @brief  Private implementation for CancelExportTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelExportTaskRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public CancelExportTaskRequest instance.
+ */
+CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
+    const CloudWatchLogsRequest::Action action, CancelExportTaskRequest * const q)
+    : CancelExportTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelExportTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelExportTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelExportTaskRequest instance.
+ */
+CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
+    const CancelExportTaskRequestPrivate &other, CancelExportTaskRequest * const q)
+    : CancelExportTaskPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBOTALIASESREQUEST_H
 #define QTAWS_GETBOTALIASESREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class GetBotAliasesRequestPrivate;
+
+class QTAWS_EXPORT GetBotAliasesRequest : public LexModelBuildingServiceRequest {
+
+public:
+    GetBotAliasesRequest(const GetBotAliasesRequest &other);
+    GetBotAliasesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBotAliasesRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

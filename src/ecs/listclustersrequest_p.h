@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCLUSTERSREQUEST_P_H
 #define QTAWS_LISTCLUSTERSREQUEST_P_H
 
+#include "ecs_p.h"
+#include "listclustersrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListClustersRequest;
+
+class QTAWS_EXPORT ListClustersRequestPrivate : public ECSPrivate {
+
+public:
+    ListClustersRequestPrivate(const ECS::Action action,
+                                   ListClustersRequest * const q);
+    ListClustersRequestPrivate(const ListClustersRequestPrivate &other,
+                                   ListClustersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListClustersRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

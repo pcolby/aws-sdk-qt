@@ -19,3 +19,107 @@
 
 #include "deletenetworkaclrequest.h"
 #include "deletenetworkaclrequest_p.h"
+#include "deletenetworkaclresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteNetworkAclRequest
+ *
+ * @brief  Implements EC2 DeleteNetworkAcl requests.
+ *
+ * @see    EC2Client::deleteNetworkAcl
+ */
+
+/**
+ * @brief  Constructs a new DeleteNetworkAclResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNetworkAclResponse::DeleteNetworkAclResponse(
+
+/**
+ * @brief  Constructs a new DeleteNetworkAclRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNetworkAclRequest::DeleteNetworkAclRequest(const DeleteNetworkAclRequest &other)
+    : EC2Request(new DeleteNetworkAclRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNetworkAclRequest object.
+ */
+DeleteNetworkAclRequest::DeleteNetworkAclRequest()
+    : EC2Request(new DeleteNetworkAclRequestPrivate(EC2Request::DeleteNetworkAclAction, this))
+{
+
+}
+
+bool DeleteNetworkAclRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNetworkAclResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNetworkAclResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteNetworkAclRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNetworkAclResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNetworkAclRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNetworkAclRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkAclRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteNetworkAclRequest instance.
+ */
+DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
+    const EC2Request::Action action, DeleteNetworkAclRequest * const q)
+    : DeleteNetworkAclPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkAclRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNetworkAclRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNetworkAclRequest instance.
+ */
+DeleteNetworkAclRequestPrivate::DeleteNetworkAclRequestPrivate(
+    const DeleteNetworkAclRequestPrivate &other, DeleteNetworkAclRequest * const q)
+    : DeleteNetworkAclPrivate(other, q)
+{
+
+}

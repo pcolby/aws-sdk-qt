@@ -19,3 +19,107 @@
 
 #include "retrieveenvironmentinforequest.h"
 #include "retrieveenvironmentinforequest_p.h"
+#include "retrieveenvironmentinforesponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  RetrieveEnvironmentInfoRequest
+ *
+ * @brief  Implements ElasticBeanstalk RetrieveEnvironmentInfo requests.
+ *
+ * @see    ElasticBeanstalkClient::retrieveEnvironmentInfo
+ */
+
+/**
+ * @brief  Constructs a new RetrieveEnvironmentInfoResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetrieveEnvironmentInfoResponse::RetrieveEnvironmentInfoResponse(
+
+/**
+ * @brief  Constructs a new RetrieveEnvironmentInfoRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RetrieveEnvironmentInfoRequest::RetrieveEnvironmentInfoRequest(const RetrieveEnvironmentInfoRequest &other)
+    : ElasticBeanstalkRequest(new RetrieveEnvironmentInfoRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RetrieveEnvironmentInfoRequest object.
+ */
+RetrieveEnvironmentInfoRequest::RetrieveEnvironmentInfoRequest()
+    : ElasticBeanstalkRequest(new RetrieveEnvironmentInfoRequestPrivate(ElasticBeanstalkRequest::RetrieveEnvironmentInfoAction, this))
+{
+
+}
+
+bool RetrieveEnvironmentInfoRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RetrieveEnvironmentInfoResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RetrieveEnvironmentInfoResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * RetrieveEnvironmentInfoRequest::response(QNetworkReply * const reply) const
+{
+    return new RetrieveEnvironmentInfoResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RetrieveEnvironmentInfoRequestPrivate
+ *
+ * @brief  Private implementation for RetrieveEnvironmentInfoRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveEnvironmentInfoRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public RetrieveEnvironmentInfoRequest instance.
+ */
+RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, RetrieveEnvironmentInfoRequest * const q)
+    : RetrieveEnvironmentInfoPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetrieveEnvironmentInfoRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RetrieveEnvironmentInfoRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RetrieveEnvironmentInfoRequest instance.
+ */
+RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
+    const RetrieveEnvironmentInfoRequestPrivate &other, RetrieveEnvironmentInfoRequest * const q)
+    : RetrieveEnvironmentInfoPrivate(other, q)
+{
+
+}

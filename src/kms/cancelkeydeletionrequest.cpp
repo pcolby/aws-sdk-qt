@@ -19,3 +19,107 @@
 
 #include "cancelkeydeletionrequest.h"
 #include "cancelkeydeletionrequest_p.h"
+#include "cancelkeydeletionresponse.h"
+#include "kmsrequest_p.h"
+
+namespace AWS {
+namespace KMS {
+
+/**
+ * @class  CancelKeyDeletionRequest
+ *
+ * @brief  Implements KMS CancelKeyDeletion requests.
+ *
+ * @see    KMSClient::cancelKeyDeletion
+ */
+
+/**
+ * @brief  Constructs a new CancelKeyDeletionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelKeyDeletionResponse::CancelKeyDeletionResponse(
+
+/**
+ * @brief  Constructs a new CancelKeyDeletionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelKeyDeletionRequest::CancelKeyDeletionRequest(const CancelKeyDeletionRequest &other)
+    : KMSRequest(new CancelKeyDeletionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelKeyDeletionRequest object.
+ */
+CancelKeyDeletionRequest::CancelKeyDeletionRequest()
+    : KMSRequest(new CancelKeyDeletionRequestPrivate(KMSRequest::CancelKeyDeletionAction, this))
+{
+
+}
+
+bool CancelKeyDeletionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelKeyDeletionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelKeyDeletionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KMSClient::send
+ */
+AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelKeyDeletionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelKeyDeletionRequestPrivate
+ *
+ * @brief  Private implementation for CancelKeyDeletionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelKeyDeletionRequestPrivate object.
+ *
+ * @param  action  KMS action being performed.
+ * @param  q       Pointer to this object's public CancelKeyDeletionRequest instance.
+ */
+CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
+    const KMSRequest::Action action, CancelKeyDeletionRequest * const q)
+    : CancelKeyDeletionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelKeyDeletionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelKeyDeletionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelKeyDeletionRequest instance.
+ */
+CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
+    const CancelKeyDeletionRequestPrivate &other, CancelKeyDeletionRequest * const q)
+    : CancelKeyDeletionPrivate(other, q)
+{
+
+}

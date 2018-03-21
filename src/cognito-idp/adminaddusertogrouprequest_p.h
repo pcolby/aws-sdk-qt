@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINADDUSERTOGROUPREQUEST_P_H
 #define QTAWS_ADMINADDUSERTOGROUPREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminaddusertogrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminAddUserToGroupRequest;
+
+class QTAWS_EXPORT AdminAddUserToGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminAddUserToGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminAddUserToGroupRequest * const q);
+    AdminAddUserToGroupRequestPrivate(const AdminAddUserToGroupRequestPrivate &other,
+                                   AdminAddUserToGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminAddUserToGroupRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

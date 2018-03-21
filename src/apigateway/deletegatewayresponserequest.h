@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGATEWAYRESPONSEREQUEST_H
 #define QTAWS_DELETEGATEWAYRESPONSEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteGatewayResponseRequestPrivate;
+
+class QTAWS_EXPORT DeleteGatewayResponseRequest : public APIGatewayRequest {
+
+public:
+    DeleteGatewayResponseRequest(const DeleteGatewayResponseRequest &other);
+    DeleteGatewayResponseRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGatewayResponseRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

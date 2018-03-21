@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEROUTETABLEREQUEST_P_H
 #define QTAWS_DISASSOCIATEROUTETABLEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "disassociateroutetablerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateRouteTableRequest;
+
+class QTAWS_EXPORT DisassociateRouteTableRequestPrivate : public EC2Private {
+
+public:
+    DisassociateRouteTableRequestPrivate(const EC2::Action action,
+                                   DisassociateRouteTableRequest * const q);
+    DisassociateRouteTableRequestPrivate(const DisassociateRouteTableRequestPrivate &other,
+                                   DisassociateRouteTableRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateRouteTableRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

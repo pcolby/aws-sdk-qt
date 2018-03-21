@@ -20,4 +20,32 @@
 #ifndef QTAWS_ROTATECHANNELCREDENTIALSREQUEST_H
 #define QTAWS_ROTATECHANNELCREDENTIALSREQUEST_H
 
+#include "mediapackagerequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class RotateChannelCredentialsRequestPrivate;
+
+class QTAWS_EXPORT RotateChannelCredentialsRequest : public MediaPackageRequest {
+
+public:
+    RotateChannelCredentialsRequest(const RotateChannelCredentialsRequest &other);
+    RotateChannelCredentialsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RotateChannelCredentialsRequest)
+
+}
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEBROKERREQUEST_P_H
 #define QTAWS_CREATEBROKERREQUEST_P_H
 
+#include "mq_p.h"
+#include "createbrokerrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class CreateBrokerRequest;
+
+class QTAWS_EXPORT CreateBrokerRequestPrivate : public MQPrivate {
+
+public:
+    CreateBrokerRequestPrivate(const MQ::Action action,
+                                   CreateBrokerRequest * const q);
+    CreateBrokerRequestPrivate(const CreateBrokerRequestPrivate &other,
+                                   CreateBrokerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateBrokerRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

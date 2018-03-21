@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETELIFECYCLEHOOKREQUEST_H
 #define QTAWS_DELETELIFECYCLEHOOKREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DeleteLifecycleHookRequestPrivate;
+
+class QTAWS_EXPORT DeleteLifecycleHookRequest : public AutoScalingRequest {
+
+public:
+    DeleteLifecycleHookRequest(const DeleteLifecycleHookRequest &other);
+    DeleteLifecycleHookRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteLifecycleHookRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

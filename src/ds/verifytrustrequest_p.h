@@ -20,4 +20,29 @@
 #ifndef QTAWS_VERIFYTRUSTREQUEST_P_H
 #define QTAWS_VERIFYTRUSTREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "verifytrustrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class VerifyTrustRequest;
+
+class QTAWS_EXPORT VerifyTrustRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    VerifyTrustRequestPrivate(const DirectoryService::Action action,
+                                   VerifyTrustRequest * const q);
+    VerifyTrustRequestPrivate(const VerifyTrustRequestPrivate &other,
+                                   VerifyTrustRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyTrustRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

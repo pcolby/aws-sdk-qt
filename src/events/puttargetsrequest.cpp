@@ -19,3 +19,107 @@
 
 #include "puttargetsrequest.h"
 #include "puttargetsrequest_p.h"
+#include "puttargetsresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  PutTargetsRequest
+ *
+ * @brief  Implements CloudWatchEvents PutTargets requests.
+ *
+ * @see    CloudWatchEventsClient::putTargets
+ */
+
+/**
+ * @brief  Constructs a new PutTargetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutTargetsResponse::PutTargetsResponse(
+
+/**
+ * @brief  Constructs a new PutTargetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutTargetsRequest::PutTargetsRequest(const PutTargetsRequest &other)
+    : CloudWatchEventsRequest(new PutTargetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutTargetsRequest object.
+ */
+PutTargetsRequest::PutTargetsRequest()
+    : CloudWatchEventsRequest(new PutTargetsRequestPrivate(CloudWatchEventsRequest::PutTargetsAction, this))
+{
+
+}
+
+bool PutTargetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutTargetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutTargetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * PutTargetsRequest::response(QNetworkReply * const reply) const
+{
+    return new PutTargetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutTargetsRequestPrivate
+ *
+ * @brief  Private implementation for PutTargetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTargetsRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public PutTargetsRequest instance.
+ */
+PutTargetsRequestPrivate::PutTargetsRequestPrivate(
+    const CloudWatchEventsRequest::Action action, PutTargetsRequest * const q)
+    : PutTargetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutTargetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutTargetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutTargetsRequest instance.
+ */
+PutTargetsRequestPrivate::PutTargetsRequestPrivate(
+    const PutTargetsRequestPrivate &other, PutTargetsRequest * const q)
+    : PutTargetsPrivate(other, q)
+{
+
+}

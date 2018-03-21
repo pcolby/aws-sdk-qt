@@ -19,3 +19,107 @@
 
 #include "getblobrequest.h"
 #include "getblobrequest_p.h"
+#include "getblobresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetBlobRequest
+ *
+ * @brief  Implements CodeCommit GetBlob requests.
+ *
+ * @see    CodeCommitClient::getBlob
+ */
+
+/**
+ * @brief  Constructs a new GetBlobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBlobResponse::GetBlobResponse(
+
+/**
+ * @brief  Constructs a new GetBlobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBlobRequest::GetBlobRequest(const GetBlobRequest &other)
+    : CodeCommitRequest(new GetBlobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBlobRequest object.
+ */
+GetBlobRequest::GetBlobRequest()
+    : CodeCommitRequest(new GetBlobRequestPrivate(CodeCommitRequest::GetBlobAction, this))
+{
+
+}
+
+bool GetBlobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBlobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBlobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBlobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBlobRequestPrivate
+ *
+ * @brief  Private implementation for GetBlobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBlobRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public GetBlobRequest instance.
+ */
+GetBlobRequestPrivate::GetBlobRequestPrivate(
+    const CodeCommitRequest::Action action, GetBlobRequest * const q)
+    : GetBlobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBlobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBlobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBlobRequest instance.
+ */
+GetBlobRequestPrivate::GetBlobRequestPrivate(
+    const GetBlobRequestPrivate &other, GetBlobRequest * const q)
+    : GetBlobPrivate(other, q)
+{
+
+}

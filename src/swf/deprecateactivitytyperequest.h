@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEPRECATEACTIVITYTYPEREQUEST_H
 #define QTAWS_DEPRECATEACTIVITYTYPEREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DeprecateActivityTypeRequestPrivate;
+
+class QTAWS_EXPORT DeprecateActivityTypeRequest : public SWFRequest {
+
+public:
+    DeprecateActivityTypeRequest(const DeprecateActivityTypeRequest &other);
+    DeprecateActivityTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeprecateActivityTypeRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

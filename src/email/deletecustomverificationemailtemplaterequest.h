@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_H
 #define QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteCustomVerificationEmailTemplateRequestPrivate;
+
+class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequest : public SESRequest {
+
+public:
+    DeleteCustomVerificationEmailTemplateRequest(const DeleteCustomVerificationEmailTemplateRequest &other);
+    DeleteCustomVerificationEmailTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomVerificationEmailTemplateRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

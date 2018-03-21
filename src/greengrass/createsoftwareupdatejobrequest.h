@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESOFTWAREUPDATEJOBREQUEST_H
 #define QTAWS_CREATESOFTWAREUPDATEJOBREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateSoftwareUpdateJobRequestPrivate;
+
+class QTAWS_EXPORT CreateSoftwareUpdateJobRequest : public GreengrassRequest {
+
+public:
+    CreateSoftwareUpdateJobRequest(const CreateSoftwareUpdateJobRequest &other);
+    CreateSoftwareUpdateJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSoftwareUpdateJobRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

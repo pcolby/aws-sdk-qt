@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHECKIFPHONENUMBERISOPTEDOUTREQUEST_H
 #define QTAWS_CHECKIFPHONENUMBERISOPTEDOUTREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class CheckIfPhoneNumberIsOptedOutRequestPrivate;
+
+class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutRequest : public SNSRequest {
+
+public:
+    CheckIfPhoneNumberIsOptedOutRequest(const CheckIfPhoneNumberIsOptedOutRequest &other);
+    CheckIfPhoneNumberIsOptedOutRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CheckIfPhoneNumberIsOptedOutRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

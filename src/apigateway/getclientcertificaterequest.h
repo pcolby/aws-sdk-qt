@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCLIENTCERTIFICATEREQUEST_H
 #define QTAWS_GETCLIENTCERTIFICATEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetClientCertificateRequestPrivate;
+
+class QTAWS_EXPORT GetClientCertificateRequest : public APIGatewayRequest {
+
+public:
+    GetClientCertificateRequest(const GetClientCertificateRequest &other);
+    GetClientCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetClientCertificateRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

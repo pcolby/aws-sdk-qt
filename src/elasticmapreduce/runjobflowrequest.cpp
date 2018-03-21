@@ -19,3 +19,107 @@
 
 #include "runjobflowrequest.h"
 #include "runjobflowrequest_p.h"
+#include "runjobflowresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  RunJobFlowRequest
+ *
+ * @brief  Implements EMR RunJobFlow requests.
+ *
+ * @see    EMRClient::runJobFlow
+ */
+
+/**
+ * @brief  Constructs a new RunJobFlowResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RunJobFlowResponse::RunJobFlowResponse(
+
+/**
+ * @brief  Constructs a new RunJobFlowRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RunJobFlowRequest::RunJobFlowRequest(const RunJobFlowRequest &other)
+    : EMRRequest(new RunJobFlowRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RunJobFlowRequest object.
+ */
+RunJobFlowRequest::RunJobFlowRequest()
+    : EMRRequest(new RunJobFlowRequestPrivate(EMRRequest::RunJobFlowAction, this))
+{
+
+}
+
+bool RunJobFlowRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RunJobFlowResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RunJobFlowResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * const reply) const
+{
+    return new RunJobFlowResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RunJobFlowRequestPrivate
+ *
+ * @brief  Private implementation for RunJobFlowRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RunJobFlowRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public RunJobFlowRequest instance.
+ */
+RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
+    const EMRRequest::Action action, RunJobFlowRequest * const q)
+    : RunJobFlowPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RunJobFlowRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RunJobFlowRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RunJobFlowRequest instance.
+ */
+RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
+    const RunJobFlowRequestPrivate &other, RunJobFlowRequest * const q)
+    : RunJobFlowPrivate(other, q)
+{
+
+}

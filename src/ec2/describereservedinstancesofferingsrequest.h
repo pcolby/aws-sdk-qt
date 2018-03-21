@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESERVEDINSTANCESOFFERINGSREQUEST_H
 #define QTAWS_DESCRIBERESERVEDINSTANCESOFFERINGSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeReservedInstancesOfferingsRequestPrivate;
+
+class QTAWS_EXPORT DescribeReservedInstancesOfferingsRequest : public EC2Request {
+
+public:
+    DescribeReservedInstancesOfferingsRequest(const DescribeReservedInstancesOfferingsRequest &other);
+    DescribeReservedInstancesOfferingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReservedInstancesOfferingsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

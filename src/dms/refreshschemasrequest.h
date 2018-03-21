@@ -20,4 +20,32 @@
 #ifndef QTAWS_REFRESHSCHEMASREQUEST_H
 #define QTAWS_REFRESHSCHEMASREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class RefreshSchemasRequestPrivate;
+
+class QTAWS_EXPORT RefreshSchemasRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    RefreshSchemasRequest(const RefreshSchemasRequest &other);
+    RefreshSchemasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RefreshSchemasRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

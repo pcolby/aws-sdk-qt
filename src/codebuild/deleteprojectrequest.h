@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_H
 #define QTAWS_DELETEPROJECTREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class DeleteProjectRequestPrivate;
+
+class QTAWS_EXPORT DeleteProjectRequest : public CodeBuildRequest {
+
+public:
+    DeleteProjectRequest(const DeleteProjectRequest &other);
+    DeleteProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteProjectRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

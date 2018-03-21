@@ -19,3 +19,107 @@
 
 #include "getsubscriptionattributesrequest.h"
 #include "getsubscriptionattributesrequest_p.h"
+#include "getsubscriptionattributesresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  GetSubscriptionAttributesRequest
+ *
+ * @brief  Implements SNS GetSubscriptionAttributes requests.
+ *
+ * @see    SNSClient::getSubscriptionAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetSubscriptionAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSubscriptionAttributesResponse::GetSubscriptionAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetSubscriptionAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSubscriptionAttributesRequest::GetSubscriptionAttributesRequest(const GetSubscriptionAttributesRequest &other)
+    : SNSRequest(new GetSubscriptionAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSubscriptionAttributesRequest object.
+ */
+GetSubscriptionAttributesRequest::GetSubscriptionAttributesRequest()
+    : SNSRequest(new GetSubscriptionAttributesRequestPrivate(SNSRequest::GetSubscriptionAttributesAction, this))
+{
+
+}
+
+bool GetSubscriptionAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSubscriptionAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSubscriptionAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * GetSubscriptionAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSubscriptionAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSubscriptionAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetSubscriptionAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSubscriptionAttributesRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public GetSubscriptionAttributesRequest instance.
+ */
+GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate(
+    const SNSRequest::Action action, GetSubscriptionAttributesRequest * const q)
+    : GetSubscriptionAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSubscriptionAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSubscriptionAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSubscriptionAttributesRequest instance.
+ */
+GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate(
+    const GetSubscriptionAttributesRequestPrivate &other, GetSubscriptionAttributesRequest * const q)
+    : GetSubscriptionAttributesPrivate(other, q)
+{
+
+}

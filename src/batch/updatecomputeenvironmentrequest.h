@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_H
 #define QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_H
 
+#include "batchrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class UpdateComputeEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT UpdateComputeEnvironmentRequest : public BatchRequest {
+
+public:
+    UpdateComputeEnvironmentRequest(const UpdateComputeEnvironmentRequest &other);
+    UpdateComputeEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateComputeEnvironmentRequest)
+
+}
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

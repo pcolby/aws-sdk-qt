@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEMAINTENANCEWINDOWREQUEST_H
 #define QTAWS_UPDATEMAINTENANCEWINDOWREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateMaintenanceWindowRequestPrivate;
+
+class QTAWS_EXPORT UpdateMaintenanceWindowRequest : public SSMRequest {
+
+public:
+    UpdateMaintenanceWindowRequest(const UpdateMaintenanceWindowRequest &other);
+    UpdateMaintenanceWindowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateMaintenanceWindowRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

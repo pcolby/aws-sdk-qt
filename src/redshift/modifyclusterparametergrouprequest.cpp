@@ -19,3 +19,107 @@
 
 #include "modifyclusterparametergrouprequest.h"
 #include "modifyclusterparametergrouprequest_p.h"
+#include "modifyclusterparametergroupresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  ModifyClusterParameterGroupRequest
+ *
+ * @brief  Implements Redshift ModifyClusterParameterGroup requests.
+ *
+ * @see    RedshiftClient::modifyClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new ModifyClusterParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyClusterParameterGroupResponse::ModifyClusterParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new ModifyClusterParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyClusterParameterGroupRequest::ModifyClusterParameterGroupRequest(const ModifyClusterParameterGroupRequest &other)
+    : RedshiftRequest(new ModifyClusterParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyClusterParameterGroupRequest object.
+ */
+ModifyClusterParameterGroupRequest::ModifyClusterParameterGroupRequest()
+    : RedshiftRequest(new ModifyClusterParameterGroupRequestPrivate(RedshiftRequest::ModifyClusterParameterGroupAction, this))
+{
+
+}
+
+bool ModifyClusterParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyClusterParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyClusterParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyClusterParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyClusterParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for ModifyClusterParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterParameterGroupRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public ModifyClusterParameterGroupRequest instance.
+ */
+ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPrivate(
+    const RedshiftRequest::Action action, ModifyClusterParameterGroupRequest * const q)
+    : ModifyClusterParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyClusterParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyClusterParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyClusterParameterGroupRequest instance.
+ */
+ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPrivate(
+    const ModifyClusterParameterGroupRequestPrivate &other, ModifyClusterParameterGroupRequest * const q)
+    : ModifyClusterParameterGroupPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEUSERDEFINEDFUNCTIONREQUEST_H
 #define QTAWS_CREATEUSERDEFINEDFUNCTIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateUserDefinedFunctionRequestPrivate;
+
+class QTAWS_EXPORT CreateUserDefinedFunctionRequest : public GlueRequest {
+
+public:
+    CreateUserDefinedFunctionRequest(const CreateUserDefinedFunctionRequest &other);
+    CreateUserDefinedFunctionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserDefinedFunctionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

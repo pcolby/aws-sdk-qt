@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETWEBACLREQUEST_P_H
 #define QTAWS_GETWEBACLREQUEST_P_H
 
+#include "waf_p.h"
+#include "getwebaclrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetWebACLRequest;
+
+class QTAWS_EXPORT GetWebACLRequestPrivate : public WAFPrivate {
+
+public:
+    GetWebACLRequestPrivate(const WAF::Action action,
+                                   GetWebACLRequest * const q);
+    GetWebACLRequestPrivate(const GetWebACLRequestPrivate &other,
+                                   GetWebACLRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetWebACLRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

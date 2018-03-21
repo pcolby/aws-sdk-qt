@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPOLICYVERSIONREQUEST_P_H
 #define QTAWS_CREATEPOLICYVERSIONREQUEST_P_H
 
+#include "iam_p.h"
+#include "createpolicyversionrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class CreatePolicyVersionRequest;
+
+class QTAWS_EXPORT CreatePolicyVersionRequestPrivate : public IAMPrivate {
+
+public:
+    CreatePolicyVersionRequestPrivate(const IAM::Action action,
+                                   CreatePolicyVersionRequest * const q);
+    CreatePolicyVersionRequestPrivate(const CreatePolicyVersionRequestPrivate &other,
+                                   CreatePolicyVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreatePolicyVersionRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

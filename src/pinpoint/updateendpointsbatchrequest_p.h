@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEENDPOINTSBATCHREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTSBATCHREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updateendpointsbatchrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateEndpointsBatchRequest;
+
+class QTAWS_EXPORT UpdateEndpointsBatchRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateEndpointsBatchRequestPrivate(const Pinpoint::Action action,
+                                   UpdateEndpointsBatchRequest * const q);
+    UpdateEndpointsBatchRequestPrivate(const UpdateEndpointsBatchRequestPrivate &other,
+                                   UpdateEndpointsBatchRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEndpointsBatchRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

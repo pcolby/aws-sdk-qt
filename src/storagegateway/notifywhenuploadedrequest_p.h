@@ -20,4 +20,29 @@
 #ifndef QTAWS_NOTIFYWHENUPLOADEDREQUEST_P_H
 #define QTAWS_NOTIFYWHENUPLOADEDREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "notifywhenuploadedrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class NotifyWhenUploadedRequest;
+
+class QTAWS_EXPORT NotifyWhenUploadedRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    NotifyWhenUploadedRequestPrivate(const StorageGateway::Action action,
+                                   NotifyWhenUploadedRequest * const q);
+    NotifyWhenUploadedRequestPrivate(const NotifyWhenUploadedRequestPrivate &other,
+                                   NotifyWhenUploadedRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(NotifyWhenUploadedRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

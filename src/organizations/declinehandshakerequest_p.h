@@ -20,4 +20,29 @@
 #ifndef QTAWS_DECLINEHANDSHAKEREQUEST_P_H
 #define QTAWS_DECLINEHANDSHAKEREQUEST_P_H
 
+#include "organizations_p.h"
+#include "declinehandshakerequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeclineHandshakeRequest;
+
+class QTAWS_EXPORT DeclineHandshakeRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DeclineHandshakeRequestPrivate(const Organizations::Action action,
+                                   DeclineHandshakeRequest * const q);
+    DeclineHandshakeRequestPrivate(const DeclineHandshakeRequestPrivate &other,
+                                   DeclineHandshakeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeclineHandshakeRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEHITTYPEOFHITREQUEST_P_H
 #define QTAWS_UPDATEHITTYPEOFHITREQUEST_P_H
 
+#include "mturk_p.h"
+#include "updatehittypeofhitrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class UpdateHITTypeOfHITRequest;
+
+class QTAWS_EXPORT UpdateHITTypeOfHITRequestPrivate : public MTurkPrivate {
+
+public:
+    UpdateHITTypeOfHITRequestPrivate(const MTurk::Action action,
+                                   UpdateHITTypeOfHITRequest * const q);
+    UpdateHITTypeOfHITRequestPrivate(const UpdateHITTypeOfHITRequestPrivate &other,
+                                   UpdateHITTypeOfHITRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateHITTypeOfHITRequest)
+
+};
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "createapplicationrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class CreateApplicationRequest;
+
+class QTAWS_EXPORT CreateApplicationRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    CreateApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   CreateApplicationRequest * const q);
+    CreateApplicationRequestPrivate(const CreateApplicationRequestPrivate &other,
+                                   CreateApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateApplicationRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

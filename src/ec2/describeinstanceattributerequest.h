@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINSTANCEATTRIBUTEREQUEST_H
 #define QTAWS_DESCRIBEINSTANCEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeInstanceAttributeRequestPrivate;
+
+class QTAWS_EXPORT DescribeInstanceAttributeRequest : public EC2Request {
+
+public:
+    DescribeInstanceAttributeRequest(const DescribeInstanceAttributeRequest &other);
+    DescribeInstanceAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstanceAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

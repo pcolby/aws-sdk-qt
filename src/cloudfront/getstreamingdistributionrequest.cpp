@@ -19,3 +19,107 @@
 
 #include "getstreamingdistributionrequest.h"
 #include "getstreamingdistributionrequest_p.h"
+#include "getstreamingdistributionresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  GetStreamingDistributionRequest
+ *
+ * @brief  Implements CloudFront GetStreamingDistribution requests.
+ *
+ * @see    CloudFrontClient::getStreamingDistribution
+ */
+
+/**
+ * @brief  Constructs a new GetStreamingDistributionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetStreamingDistributionResponse::GetStreamingDistributionResponse(
+
+/**
+ * @brief  Constructs a new GetStreamingDistributionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetStreamingDistributionRequest::GetStreamingDistributionRequest(const GetStreamingDistributionRequest &other)
+    : CloudFrontRequest(new GetStreamingDistributionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetStreamingDistributionRequest object.
+ */
+GetStreamingDistributionRequest::GetStreamingDistributionRequest()
+    : CloudFrontRequest(new GetStreamingDistributionRequestPrivate(CloudFrontRequest::GetStreamingDistributionAction, this))
+{
+
+}
+
+bool GetStreamingDistributionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetStreamingDistributionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetStreamingDistributionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * GetStreamingDistributionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetStreamingDistributionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetStreamingDistributionRequestPrivate
+ *
+ * @brief  Private implementation for GetStreamingDistributionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStreamingDistributionRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public GetStreamingDistributionRequest instance.
+ */
+GetStreamingDistributionRequestPrivate::GetStreamingDistributionRequestPrivate(
+    const CloudFrontRequest::Action action, GetStreamingDistributionRequest * const q)
+    : GetStreamingDistributionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetStreamingDistributionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetStreamingDistributionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetStreamingDistributionRequest instance.
+ */
+GetStreamingDistributionRequestPrivate::GetStreamingDistributionRequestPrivate(
+    const GetStreamingDistributionRequestPrivate &other, GetStreamingDistributionRequest * const q)
+    : GetStreamingDistributionPrivate(other, q)
+{
+
+}

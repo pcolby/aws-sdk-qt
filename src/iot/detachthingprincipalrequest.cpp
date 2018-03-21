@@ -19,3 +19,107 @@
 
 #include "detachthingprincipalrequest.h"
 #include "detachthingprincipalrequest_p.h"
+#include "detachthingprincipalresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DetachThingPrincipalRequest
+ *
+ * @brief  Implements IoT DetachThingPrincipal requests.
+ *
+ * @see    IoTClient::detachThingPrincipal
+ */
+
+/**
+ * @brief  Constructs a new DetachThingPrincipalResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachThingPrincipalResponse::DetachThingPrincipalResponse(
+
+/**
+ * @brief  Constructs a new DetachThingPrincipalRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachThingPrincipalRequest::DetachThingPrincipalRequest(const DetachThingPrincipalRequest &other)
+    : IoTRequest(new DetachThingPrincipalRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachThingPrincipalRequest object.
+ */
+DetachThingPrincipalRequest::DetachThingPrincipalRequest()
+    : IoTRequest(new DetachThingPrincipalRequestPrivate(IoTRequest::DetachThingPrincipalAction, this))
+{
+
+}
+
+bool DetachThingPrincipalRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachThingPrincipalResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachThingPrincipalResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachThingPrincipalResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachThingPrincipalRequestPrivate
+ *
+ * @brief  Private implementation for DetachThingPrincipalRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachThingPrincipalRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DetachThingPrincipalRequest instance.
+ */
+DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
+    const IoTRequest::Action action, DetachThingPrincipalRequest * const q)
+    : DetachThingPrincipalPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachThingPrincipalRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachThingPrincipalRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachThingPrincipalRequest instance.
+ */
+DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
+    const DetachThingPrincipalRequestPrivate &other, DetachThingPrincipalRequest * const q)
+    : DetachThingPrincipalPrivate(other, q)
+{
+
+}

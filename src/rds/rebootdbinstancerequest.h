@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTDBINSTANCEREQUEST_H
 #define QTAWS_REBOOTDBINSTANCEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class RebootDBInstanceRequestPrivate;
+
+class QTAWS_EXPORT RebootDBInstanceRequest : public RDSRequest {
+
+public:
+    RebootDBInstanceRequest(const RebootDBInstanceRequest &other);
+    RebootDBInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootDBInstanceRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

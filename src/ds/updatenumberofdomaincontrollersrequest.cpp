@@ -19,3 +19,107 @@
 
 #include "updatenumberofdomaincontrollersrequest.h"
 #include "updatenumberofdomaincontrollersrequest_p.h"
+#include "updatenumberofdomaincontrollersresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  UpdateNumberOfDomainControllersRequest
+ *
+ * @brief  Implements DirectoryService UpdateNumberOfDomainControllers requests.
+ *
+ * @see    DirectoryServiceClient::updateNumberOfDomainControllers
+ */
+
+/**
+ * @brief  Constructs a new UpdateNumberOfDomainControllersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateNumberOfDomainControllersResponse::UpdateNumberOfDomainControllersResponse(
+
+/**
+ * @brief  Constructs a new UpdateNumberOfDomainControllersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateNumberOfDomainControllersRequest::UpdateNumberOfDomainControllersRequest(const UpdateNumberOfDomainControllersRequest &other)
+    : DirectoryServiceRequest(new UpdateNumberOfDomainControllersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateNumberOfDomainControllersRequest object.
+ */
+UpdateNumberOfDomainControllersRequest::UpdateNumberOfDomainControllersRequest()
+    : DirectoryServiceRequest(new UpdateNumberOfDomainControllersRequestPrivate(DirectoryServiceRequest::UpdateNumberOfDomainControllersAction, this))
+{
+
+}
+
+bool UpdateNumberOfDomainControllersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateNumberOfDomainControllersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateNumberOfDomainControllersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * UpdateNumberOfDomainControllersRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateNumberOfDomainControllersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateNumberOfDomainControllersRequestPrivate
+ *
+ * @brief  Private implementation for UpdateNumberOfDomainControllersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNumberOfDomainControllersRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public UpdateNumberOfDomainControllersRequest instance.
+ */
+UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
+    const DirectoryServiceRequest::Action action, UpdateNumberOfDomainControllersRequest * const q)
+    : UpdateNumberOfDomainControllersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateNumberOfDomainControllersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateNumberOfDomainControllersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateNumberOfDomainControllersRequest instance.
+ */
+UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
+    const UpdateNumberOfDomainControllersRequestPrivate &other, UpdateNumberOfDomainControllersRequest * const q)
+    : UpdateNumberOfDomainControllersPrivate(other, q)
+{
+
+}

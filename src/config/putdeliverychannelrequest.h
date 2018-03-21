@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTDELIVERYCHANNELREQUEST_H
 #define QTAWS_PUTDELIVERYCHANNELREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutDeliveryChannelRequestPrivate;
+
+class QTAWS_EXPORT PutDeliveryChannelRequest : public ConfigServiceRequest {
+
+public:
+    PutDeliveryChannelRequest(const PutDeliveryChannelRequest &other);
+    PutDeliveryChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutDeliveryChannelRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

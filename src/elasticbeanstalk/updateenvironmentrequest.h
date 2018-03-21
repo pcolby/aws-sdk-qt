@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEENVIRONMENTREQUEST_H
 #define QTAWS_UPDATEENVIRONMENTREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class UpdateEnvironmentRequestPrivate;
+
+class QTAWS_EXPORT UpdateEnvironmentRequest : public ElasticBeanstalkRequest {
+
+public:
+    UpdateEnvironmentRequest(const UpdateEnvironmentRequest &other);
+    UpdateEnvironmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEnvironmentRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

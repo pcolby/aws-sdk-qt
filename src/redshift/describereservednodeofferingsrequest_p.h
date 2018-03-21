@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERESERVEDNODEOFFERINGSREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDNODEOFFERINGSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describereservednodeofferingsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeReservedNodeOfferingsRequest;
+
+class QTAWS_EXPORT DescribeReservedNodeOfferingsRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeReservedNodeOfferingsRequestPrivate(const Redshift::Action action,
+                                   DescribeReservedNodeOfferingsRequest * const q);
+    DescribeReservedNodeOfferingsRequestPrivate(const DescribeReservedNodeOfferingsRequestPrivate &other,
+                                   DescribeReservedNodeOfferingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReservedNodeOfferingsRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

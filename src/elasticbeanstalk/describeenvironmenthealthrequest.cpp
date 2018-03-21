@@ -19,3 +19,107 @@
 
 #include "describeenvironmenthealthrequest.h"
 #include "describeenvironmenthealthrequest_p.h"
+#include "describeenvironmenthealthresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeEnvironmentHealthRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeEnvironmentHealth requests.
+ *
+ * @see    ElasticBeanstalkClient::describeEnvironmentHealth
+ */
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentHealthResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEnvironmentHealthResponse::DescribeEnvironmentHealthResponse(
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentHealthRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEnvironmentHealthRequest::DescribeEnvironmentHealthRequest(const DescribeEnvironmentHealthRequest &other)
+    : ElasticBeanstalkRequest(new DescribeEnvironmentHealthRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEnvironmentHealthRequest object.
+ */
+DescribeEnvironmentHealthRequest::DescribeEnvironmentHealthRequest()
+    : ElasticBeanstalkRequest(new DescribeEnvironmentHealthRequestPrivate(ElasticBeanstalkRequest::DescribeEnvironmentHealthAction, this))
+{
+
+}
+
+bool DescribeEnvironmentHealthRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEnvironmentHealthResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEnvironmentHealthResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEnvironmentHealthResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEnvironmentHealthRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEnvironmentHealthRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentHealthRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeEnvironmentHealthRequest instance.
+ */
+DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeEnvironmentHealthRequest * const q)
+    : DescribeEnvironmentHealthPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEnvironmentHealthRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEnvironmentHealthRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEnvironmentHealthRequest instance.
+ */
+DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
+    const DescribeEnvironmentHealthRequestPrivate &other, DescribeEnvironmentHealthRequest * const q)
+    : DescribeEnvironmentHealthPrivate(other, q)
+{
+
+}

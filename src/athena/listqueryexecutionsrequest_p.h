@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTQUERYEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTQUERYEXECUTIONSREQUEST_P_H
 
+#include "athena_p.h"
+#include "listqueryexecutionsrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class ListQueryExecutionsRequest;
+
+class QTAWS_EXPORT ListQueryExecutionsRequestPrivate : public AthenaPrivate {
+
+public:
+    ListQueryExecutionsRequestPrivate(const Athena::Action action,
+                                   ListQueryExecutionsRequest * const q);
+    ListQueryExecutionsRequestPrivate(const ListQueryExecutionsRequestPrivate &other,
+                                   ListQueryExecutionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListQueryExecutionsRequest)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

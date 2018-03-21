@@ -19,3 +19,107 @@
 
 #include "updatebaiduchannelrequest.h"
 #include "updatebaiduchannelrequest_p.h"
+#include "updatebaiduchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateBaiduChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateBaiduChannel requests.
+ *
+ * @see    PinpointClient::updateBaiduChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateBaiduChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBaiduChannelResponse::UpdateBaiduChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateBaiduChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBaiduChannelRequest::UpdateBaiduChannelRequest(const UpdateBaiduChannelRequest &other)
+    : PinpointRequest(new UpdateBaiduChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBaiduChannelRequest object.
+ */
+UpdateBaiduChannelRequest::UpdateBaiduChannelRequest()
+    : PinpointRequest(new UpdateBaiduChannelRequestPrivate(PinpointRequest::UpdateBaiduChannelAction, this))
+{
+
+}
+
+bool UpdateBaiduChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBaiduChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBaiduChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBaiduChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBaiduChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBaiduChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBaiduChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateBaiduChannelRequest instance.
+ */
+UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateBaiduChannelRequest * const q)
+    : UpdateBaiduChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBaiduChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBaiduChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBaiduChannelRequest instance.
+ */
+UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
+    const UpdateBaiduChannelRequestPrivate &other, UpdateBaiduChannelRequest * const q)
+    : UpdateBaiduChannelPrivate(other, q)
+{
+
+}

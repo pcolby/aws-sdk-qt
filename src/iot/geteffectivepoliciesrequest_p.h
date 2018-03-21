@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETEFFECTIVEPOLICIESREQUEST_P_H
 #define QTAWS_GETEFFECTIVEPOLICIESREQUEST_P_H
 
+#include "iot_p.h"
+#include "geteffectivepoliciesrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetEffectivePoliciesRequest;
+
+class QTAWS_EXPORT GetEffectivePoliciesRequestPrivate : public IoTPrivate {
+
+public:
+    GetEffectivePoliciesRequestPrivate(const IoT::Action action,
+                                   GetEffectivePoliciesRequest * const q);
+    GetEffectivePoliciesRequestPrivate(const GetEffectivePoliciesRequestPrivate &other,
+                                   GetEffectivePoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetEffectivePoliciesRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

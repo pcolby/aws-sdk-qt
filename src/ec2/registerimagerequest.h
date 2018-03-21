@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERIMAGEREQUEST_H
 #define QTAWS_REGISTERIMAGEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RegisterImageRequestPrivate;
+
+class QTAWS_EXPORT RegisterImageRequest : public EC2Request {
+
+public:
+    RegisterImageRequest(const RegisterImageRequest &other);
+    RegisterImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterImageRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

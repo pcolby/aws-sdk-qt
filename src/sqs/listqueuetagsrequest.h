@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTQUEUETAGSREQUEST_H
 #define QTAWS_LISTQUEUETAGSREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListQueueTagsRequestPrivate;
+
+class QTAWS_EXPORT ListQueueTagsRequest : public SQSRequest {
+
+public:
+    ListQueueTagsRequest(const ListQueueTagsRequest &other);
+    ListQueueTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListQueueTagsRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

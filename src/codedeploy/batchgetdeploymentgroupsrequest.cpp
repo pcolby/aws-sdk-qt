@@ -19,3 +19,107 @@
 
 #include "batchgetdeploymentgroupsrequest.h"
 #include "batchgetdeploymentgroupsrequest_p.h"
+#include "batchgetdeploymentgroupsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  BatchGetDeploymentGroupsRequest
+ *
+ * @brief  Implements CodeDeploy BatchGetDeploymentGroups requests.
+ *
+ * @see    CodeDeployClient::batchGetDeploymentGroups
+ */
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetDeploymentGroupsResponse::BatchGetDeploymentGroupsResponse(
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetDeploymentGroupsRequest::BatchGetDeploymentGroupsRequest(const BatchGetDeploymentGroupsRequest &other)
+    : CodeDeployRequest(new BatchGetDeploymentGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetDeploymentGroupsRequest object.
+ */
+BatchGetDeploymentGroupsRequest::BatchGetDeploymentGroupsRequest()
+    : CodeDeployRequest(new BatchGetDeploymentGroupsRequestPrivate(CodeDeployRequest::BatchGetDeploymentGroupsAction, this))
+{
+
+}
+
+bool BatchGetDeploymentGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetDeploymentGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetDeploymentGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * BatchGetDeploymentGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetDeploymentGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetDeploymentGroupsRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetDeploymentGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentGroupsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public BatchGetDeploymentGroupsRequest instance.
+ */
+BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
+    const CodeDeployRequest::Action action, BatchGetDeploymentGroupsRequest * const q)
+    : BatchGetDeploymentGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetDeploymentGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetDeploymentGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetDeploymentGroupsRequest instance.
+ */
+BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
+    const BatchGetDeploymentGroupsRequestPrivate &other, BatchGetDeploymentGroupsRequest * const q)
+    : BatchGetDeploymentGroupsPrivate(other, q)
+{
+
+}

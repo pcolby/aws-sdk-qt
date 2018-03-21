@@ -19,3 +19,107 @@
 
 #include "updatetrafficpolicycommentrequest.h"
 #include "updatetrafficpolicycommentrequest_p.h"
+#include "updatetrafficpolicycommentresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  UpdateTrafficPolicyCommentRequest
+ *
+ * @brief  Implements Route53 UpdateTrafficPolicyComment requests.
+ *
+ * @see    Route53Client::updateTrafficPolicyComment
+ */
+
+/**
+ * @brief  Constructs a new UpdateTrafficPolicyCommentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateTrafficPolicyCommentResponse::UpdateTrafficPolicyCommentResponse(
+
+/**
+ * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest(const UpdateTrafficPolicyCommentRequest &other)
+    : Route53Request(new UpdateTrafficPolicyCommentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateTrafficPolicyCommentRequest object.
+ */
+UpdateTrafficPolicyCommentRequest::UpdateTrafficPolicyCommentRequest()
+    : Route53Request(new UpdateTrafficPolicyCommentRequestPrivate(Route53Request::UpdateTrafficPolicyCommentAction, this))
+{
+
+}
+
+bool UpdateTrafficPolicyCommentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateTrafficPolicyCommentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateTrafficPolicyCommentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * UpdateTrafficPolicyCommentRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateTrafficPolicyCommentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateTrafficPolicyCommentRequestPrivate
+ *
+ * @brief  Private implementation for UpdateTrafficPolicyCommentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public UpdateTrafficPolicyCommentRequest instance.
+ */
+UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPrivate(
+    const Route53Request::Action action, UpdateTrafficPolicyCommentRequest * const q)
+    : UpdateTrafficPolicyCommentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateTrafficPolicyCommentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateTrafficPolicyCommentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateTrafficPolicyCommentRequest instance.
+ */
+UpdateTrafficPolicyCommentRequestPrivate::UpdateTrafficPolicyCommentRequestPrivate(
+    const UpdateTrafficPolicyCommentRequestPrivate &other, UpdateTrafficPolicyCommentRequest * const q)
+    : UpdateTrafficPolicyCommentPrivate(other, q)
+{
+
+}

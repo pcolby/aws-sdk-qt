@@ -19,3 +19,107 @@
 
 #include "getinstancesnapshotsrequest.h"
 #include "getinstancesnapshotsrequest_p.h"
+#include "getinstancesnapshotsresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetInstanceSnapshotsRequest
+ *
+ * @brief  Implements Lightsail GetInstanceSnapshots requests.
+ *
+ * @see    LightsailClient::getInstanceSnapshots
+ */
+
+/**
+ * @brief  Constructs a new GetInstanceSnapshotsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceSnapshotsResponse::GetInstanceSnapshotsResponse(
+
+/**
+ * @brief  Constructs a new GetInstanceSnapshotsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInstanceSnapshotsRequest::GetInstanceSnapshotsRequest(const GetInstanceSnapshotsRequest &other)
+    : LightsailRequest(new GetInstanceSnapshotsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInstanceSnapshotsRequest object.
+ */
+GetInstanceSnapshotsRequest::GetInstanceSnapshotsRequest()
+    : LightsailRequest(new GetInstanceSnapshotsRequestPrivate(LightsailRequest::GetInstanceSnapshotsAction, this))
+{
+
+}
+
+bool GetInstanceSnapshotsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInstanceSnapshotsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInstanceSnapshotsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetInstanceSnapshotsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInstanceSnapshotsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceSnapshotsRequestPrivate
+ *
+ * @brief  Private implementation for GetInstanceSnapshotsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceSnapshotsRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetInstanceSnapshotsRequest instance.
+ */
+GetInstanceSnapshotsRequestPrivate::GetInstanceSnapshotsRequestPrivate(
+    const LightsailRequest::Action action, GetInstanceSnapshotsRequest * const q)
+    : GetInstanceSnapshotsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceSnapshotsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInstanceSnapshotsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInstanceSnapshotsRequest instance.
+ */
+GetInstanceSnapshotsRequestPrivate::GetInstanceSnapshotsRequestPrivate(
+    const GetInstanceSnapshotsRequestPrivate &other, GetInstanceSnapshotsRequest * const q)
+    : GetInstanceSnapshotsPrivate(other, q)
+{
+
+}

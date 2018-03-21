@@ -19,3 +19,107 @@
 
 #include "deletecontainerrequest.h"
 #include "deletecontainerrequest_p.h"
+#include "deletecontainerresponse.h"
+#include "mediastorerequest_p.h"
+
+namespace AWS {
+namespace MediaStore {
+
+/**
+ * @class  DeleteContainerRequest
+ *
+ * @brief  Implements MediaStore DeleteContainer requests.
+ *
+ * @see    MediaStoreClient::deleteContainer
+ */
+
+/**
+ * @brief  Constructs a new DeleteContainerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteContainerResponse::DeleteContainerResponse(
+
+/**
+ * @brief  Constructs a new DeleteContainerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteContainerRequest::DeleteContainerRequest(const DeleteContainerRequest &other)
+    : MediaStoreRequest(new DeleteContainerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteContainerRequest object.
+ */
+DeleteContainerRequest::DeleteContainerRequest()
+    : MediaStoreRequest(new DeleteContainerRequestPrivate(MediaStoreRequest::DeleteContainerAction, this))
+{
+
+}
+
+bool DeleteContainerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteContainerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteContainerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaStoreClient::send
+ */
+AwsAbstractResponse * DeleteContainerRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteContainerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteContainerRequestPrivate
+ *
+ * @brief  Private implementation for DeleteContainerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteContainerRequestPrivate object.
+ *
+ * @param  action  MediaStore action being performed.
+ * @param  q       Pointer to this object's public DeleteContainerRequest instance.
+ */
+DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
+    const MediaStoreRequest::Action action, DeleteContainerRequest * const q)
+    : DeleteContainerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteContainerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteContainerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteContainerRequest instance.
+ */
+DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
+    const DeleteContainerRequestPrivate &other, DeleteContainerRequest * const q)
+    : DeleteContainerPrivate(other, q)
+{
+
+}

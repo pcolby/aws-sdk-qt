@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVEATTRIBUTESFROMFINDINGSREQUEST_P_H
 #define QTAWS_REMOVEATTRIBUTESFROMFINDINGSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "removeattributesfromfindingsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class RemoveAttributesFromFindingsRequest;
+
+class QTAWS_EXPORT RemoveAttributesFromFindingsRequestPrivate : public InspectorPrivate {
+
+public:
+    RemoveAttributesFromFindingsRequestPrivate(const Inspector::Action action,
+                                   RemoveAttributesFromFindingsRequest * const q);
+    RemoveAttributesFromFindingsRequestPrivate(const RemoveAttributesFromFindingsRequestPrivate &other,
+                                   RemoveAttributesFromFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveAttributesFromFindingsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

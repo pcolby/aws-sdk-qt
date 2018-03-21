@@ -19,3 +19,107 @@
 
 #include "setusermfapreferencerequest.h"
 #include "setusermfapreferencerequest_p.h"
+#include "setusermfapreferenceresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SetUserMFAPreferenceRequest
+ *
+ * @brief  Implements CognitoIdentityProvider SetUserMFAPreference requests.
+ *
+ * @see    CognitoIdentityProviderClient::setUserMFAPreference
+ */
+
+/**
+ * @brief  Constructs a new SetUserMFAPreferenceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
+
+/**
+ * @brief  Constructs a new SetUserMFAPreferenceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest(const SetUserMFAPreferenceRequest &other)
+    : CognitoIdentityProviderRequest(new SetUserMFAPreferenceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetUserMFAPreferenceRequest object.
+ */
+SetUserMFAPreferenceRequest::SetUserMFAPreferenceRequest()
+    : CognitoIdentityProviderRequest(new SetUserMFAPreferenceRequestPrivate(CognitoIdentityProviderRequest::SetUserMFAPreferenceAction, this))
+{
+
+}
+
+bool SetUserMFAPreferenceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetUserMFAPreferenceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetUserMFAPreferenceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
+{
+    return new SetUserMFAPreferenceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetUserMFAPreferenceRequestPrivate
+ *
+ * @brief  Private implementation for SetUserMFAPreferenceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public SetUserMFAPreferenceRequest instance.
+ */
+SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, SetUserMFAPreferenceRequest * const q)
+    : SetUserMFAPreferencePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserMFAPreferenceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetUserMFAPreferenceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetUserMFAPreferenceRequest instance.
+ */
+SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
+    const SetUserMFAPreferenceRequestPrivate &other, SetUserMFAPreferenceRequest * const q)
+    : SetUserMFAPreferencePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeinstancepatchstatesforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstancePatchStatesForPatchGroupRequest;
+
+class QTAWS_EXPORT DescribeInstancePatchStatesForPatchGroupRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeInstancePatchStatesForPatchGroupRequestPrivate(const SSM::Action action,
+                                   DescribeInstancePatchStatesForPatchGroupRequest * const q);
+    DescribeInstancePatchStatesForPatchGroupRequestPrivate(const DescribeInstancePatchStatesForPatchGroupRequestPrivate &other,
+                                   DescribeInstancePatchStatesForPatchGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstancePatchStatesForPatchGroupRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

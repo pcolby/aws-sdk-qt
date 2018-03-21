@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESPOTPRICEHISTORYREQUEST_P_H
 #define QTAWS_DESCRIBESPOTPRICEHISTORYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describespotpricehistoryrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeSpotPriceHistoryRequest;
+
+class QTAWS_EXPORT DescribeSpotPriceHistoryRequestPrivate : public EC2Private {
+
+public:
+    DescribeSpotPriceHistoryRequestPrivate(const EC2::Action action,
+                                   DescribeSpotPriceHistoryRequest * const q);
+    DescribeSpotPriceHistoryRequestPrivate(const DescribeSpotPriceHistoryRequestPrivate &other,
+                                   DescribeSpotPriceHistoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSpotPriceHistoryRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

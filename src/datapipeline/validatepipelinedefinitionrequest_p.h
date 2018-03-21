@@ -20,4 +20,29 @@
 #ifndef QTAWS_VALIDATEPIPELINEDEFINITIONREQUEST_P_H
 #define QTAWS_VALIDATEPIPELINEDEFINITIONREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "validatepipelinedefinitionrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ValidatePipelineDefinitionRequest;
+
+class QTAWS_EXPORT ValidatePipelineDefinitionRequestPrivate : public DataPipelinePrivate {
+
+public:
+    ValidatePipelineDefinitionRequestPrivate(const DataPipeline::Action action,
+                                   ValidatePipelineDefinitionRequest * const q);
+    ValidatePipelineDefinitionRequestPrivate(const ValidatePipelineDefinitionRequestPrivate &other,
+                                   ValidatePipelineDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ValidatePipelineDefinitionRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

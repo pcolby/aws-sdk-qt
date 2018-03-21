@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEBACKUPSREQUEST_P_H
 #define QTAWS_DESCRIBEBACKUPSREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "describebackupsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DescribeBackupsRequest;
+
+class QTAWS_EXPORT DescribeBackupsRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    DescribeBackupsRequestPrivate(const OpsWorksCM::Action action,
+                                   DescribeBackupsRequest * const q);
+    DescribeBackupsRequestPrivate(const DescribeBackupsRequestPrivate &other,
+                                   DescribeBackupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBackupsRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETROOMSKILLPARAMETERREQUEST_H
 #define QTAWS_GETROOMSKILLPARAMETERREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetRoomSkillParameterRequestPrivate;
+
+class QTAWS_EXPORT GetRoomSkillParameterRequest : public AlexaForBusinessRequest {
+
+public:
+    GetRoomSkillParameterRequest(const GetRoomSkillParameterRequest &other);
+    GetRoomSkillParameterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRoomSkillParameterRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

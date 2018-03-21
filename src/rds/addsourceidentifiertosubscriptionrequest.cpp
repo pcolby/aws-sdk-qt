@@ -19,3 +19,107 @@
 
 #include "addsourceidentifiertosubscriptionrequest.h"
 #include "addsourceidentifiertosubscriptionrequest_p.h"
+#include "addsourceidentifiertosubscriptionresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  AddSourceIdentifierToSubscriptionRequest
+ *
+ * @brief  Implements RDS AddSourceIdentifierToSubscription requests.
+ *
+ * @see    RDSClient::addSourceIdentifierToSubscription
+ */
+
+/**
+ * @brief  Constructs a new AddSourceIdentifierToSubscriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResponse(
+
+/**
+ * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest(const AddSourceIdentifierToSubscriptionRequest &other)
+    : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequest object.
+ */
+AddSourceIdentifierToSubscriptionRequest::AddSourceIdentifierToSubscriptionRequest()
+    : RDSRequest(new AddSourceIdentifierToSubscriptionRequestPrivate(RDSRequest::AddSourceIdentifierToSubscriptionAction, this))
+{
+
+}
+
+bool AddSourceIdentifierToSubscriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddSourceIdentifierToSubscriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddSourceIdentifierToSubscriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new AddSourceIdentifierToSubscriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddSourceIdentifierToSubscriptionRequestPrivate
+ *
+ * @brief  Private implementation for AddSourceIdentifierToSubscriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public AddSourceIdentifierToSubscriptionRequest instance.
+ */
+AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
+    const RDSRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)
+    : AddSourceIdentifierToSubscriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddSourceIdentifierToSubscriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddSourceIdentifierToSubscriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddSourceIdentifierToSubscriptionRequest instance.
+ */
+AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
+    const AddSourceIdentifierToSubscriptionRequestPrivate &other, AddSourceIdentifierToSubscriptionRequest * const q)
+    : AddSourceIdentifierToSubscriptionPrivate(other, q)
+{
+
+}

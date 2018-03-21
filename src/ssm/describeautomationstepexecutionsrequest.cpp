@@ -19,3 +19,107 @@
 
 #include "describeautomationstepexecutionsrequest.h"
 #include "describeautomationstepexecutionsrequest_p.h"
+#include "describeautomationstepexecutionsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeAutomationStepExecutionsRequest
+ *
+ * @brief  Implements SSM DescribeAutomationStepExecutions requests.
+ *
+ * @see    SSMClient::describeAutomationStepExecutions
+ */
+
+/**
+ * @brief  Constructs a new DescribeAutomationStepExecutionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAutomationStepExecutionsResponse::DescribeAutomationStepExecutionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeAutomationStepExecutionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAutomationStepExecutionsRequest::DescribeAutomationStepExecutionsRequest(const DescribeAutomationStepExecutionsRequest &other)
+    : SSMRequest(new DescribeAutomationStepExecutionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAutomationStepExecutionsRequest object.
+ */
+DescribeAutomationStepExecutionsRequest::DescribeAutomationStepExecutionsRequest()
+    : SSMRequest(new DescribeAutomationStepExecutionsRequestPrivate(SSMRequest::DescribeAutomationStepExecutionsAction, this))
+{
+
+}
+
+bool DescribeAutomationStepExecutionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAutomationStepExecutionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAutomationStepExecutionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeAutomationStepExecutionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAutomationStepExecutionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAutomationStepExecutionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAutomationStepExecutionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutomationStepExecutionsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeAutomationStepExecutionsRequest instance.
+ */
+DescribeAutomationStepExecutionsRequestPrivate::DescribeAutomationStepExecutionsRequestPrivate(
+    const SSMRequest::Action action, DescribeAutomationStepExecutionsRequest * const q)
+    : DescribeAutomationStepExecutionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAutomationStepExecutionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAutomationStepExecutionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAutomationStepExecutionsRequest instance.
+ */
+DescribeAutomationStepExecutionsRequestPrivate::DescribeAutomationStepExecutionsRequestPrivate(
+    const DescribeAutomationStepExecutionsRequestPrivate &other, DescribeAutomationStepExecutionsRequest * const q)
+    : DescribeAutomationStepExecutionsPrivate(other, q)
+{
+
+}

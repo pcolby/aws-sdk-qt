@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTYPESREQUEST_H
 #define QTAWS_LISTTYPESREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListTypesRequestPrivate;
+
+class QTAWS_EXPORT ListTypesRequest : public AppSyncRequest {
+
+public:
+    ListTypesRequest(const ListTypesRequest &other);
+    ListTypesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTypesRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

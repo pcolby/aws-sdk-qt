@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEVPCFROMHOSTEDZONEREQUEST_P_H
 #define QTAWS_DISASSOCIATEVPCFROMHOSTEDZONEREQUEST_P_H
 
+#include "route53_p.h"
+#include "disassociatevpcfromhostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DisassociateVPCFromHostedZoneRequest;
+
+class QTAWS_EXPORT DisassociateVPCFromHostedZoneRequestPrivate : public Route53Private {
+
+public:
+    DisassociateVPCFromHostedZoneRequestPrivate(const Route53::Action action,
+                                   DisassociateVPCFromHostedZoneRequest * const q);
+    DisassociateVPCFromHostedZoneRequestPrivate(const DisassociateVPCFromHostedZoneRequestPrivate &other,
+                                   DisassociateVPCFromHostedZoneRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateVPCFromHostedZoneRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

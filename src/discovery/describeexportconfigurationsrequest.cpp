@@ -19,3 +19,107 @@
 
 #include "describeexportconfigurationsrequest.h"
 #include "describeexportconfigurationsrequest_p.h"
+#include "describeexportconfigurationsresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DescribeExportConfigurationsRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService DescribeExportConfigurations requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::describeExportConfigurations
+ */
+
+/**
+ * @brief  Constructs a new DescribeExportConfigurationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExportConfigurationsResponse::DescribeExportConfigurationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeExportConfigurationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeExportConfigurationsRequest::DescribeExportConfigurationsRequest(const DescribeExportConfigurationsRequest &other)
+    : ApplicationDiscoveryServiceRequest(new DescribeExportConfigurationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeExportConfigurationsRequest object.
+ */
+DescribeExportConfigurationsRequest::DescribeExportConfigurationsRequest()
+    : ApplicationDiscoveryServiceRequest(new DescribeExportConfigurationsRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeExportConfigurationsAction, this))
+{
+
+}
+
+bool DescribeExportConfigurationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeExportConfigurationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeExportConfigurationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * DescribeExportConfigurationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeExportConfigurationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExportConfigurationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeExportConfigurationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExportConfigurationsRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public DescribeExportConfigurationsRequest instance.
+ */
+DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, DescribeExportConfigurationsRequest * const q)
+    : DescribeExportConfigurationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExportConfigurationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeExportConfigurationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeExportConfigurationsRequest instance.
+ */
+DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestPrivate(
+    const DescribeExportConfigurationsRequestPrivate &other, DescribeExportConfigurationsRequest * const q)
+    : DescribeExportConfigurationsPrivate(other, q)
+{
+
+}

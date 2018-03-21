@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_P_H
 #define QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "updatefindingsfeedbackrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UpdateFindingsFeedbackRequest;
+
+class QTAWS_EXPORT UpdateFindingsFeedbackRequestPrivate : public GuardDutyPrivate {
+
+public:
+    UpdateFindingsFeedbackRequestPrivate(const GuardDuty::Action action,
+                                   UpdateFindingsFeedbackRequest * const q);
+    UpdateFindingsFeedbackRequestPrivate(const UpdateFindingsFeedbackRequestPrivate &other,
+                                   UpdateFindingsFeedbackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateFindingsFeedbackRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

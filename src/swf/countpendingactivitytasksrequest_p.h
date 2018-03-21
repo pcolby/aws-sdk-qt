@@ -20,4 +20,29 @@
 #ifndef QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_P_H
 #define QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_P_H
 
+#include "swf_p.h"
+#include "countpendingactivitytasksrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class CountPendingActivityTasksRequest;
+
+class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SWFPrivate {
+
+public:
+    CountPendingActivityTasksRequestPrivate(const SWF::Action action,
+                                   CountPendingActivityTasksRequest * const q);
+    CountPendingActivityTasksRequestPrivate(const CountPendingActivityTasksRequestPrivate &other,
+                                   CountPendingActivityTasksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CountPendingActivityTasksRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

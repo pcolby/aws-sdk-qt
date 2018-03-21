@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESFORROLEREQUEST_H
 #define QTAWS_LISTINSTANCEPROFILESFORROLEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListInstanceProfilesForRoleRequestPrivate;
+
+class QTAWS_EXPORT ListInstanceProfilesForRoleRequest : public IAMRequest {
+
+public:
+    ListInstanceProfilesForRoleRequest(const ListInstanceProfilesForRoleRequest &other);
+    ListInstanceProfilesForRoleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListInstanceProfilesForRoleRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

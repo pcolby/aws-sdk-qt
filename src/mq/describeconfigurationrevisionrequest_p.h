@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_P_H
 
+#include "mq_p.h"
+#include "describeconfigurationrevisionrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeConfigurationRevisionRequest;
+
+class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MQPrivate {
+
+public:
+    DescribeConfigurationRevisionRequestPrivate(const MQ::Action action,
+                                   DescribeConfigurationRevisionRequest * const q);
+    DescribeConfigurationRevisionRequestPrivate(const DescribeConfigurationRevisionRequestPrivate &other,
+                                   DescribeConfigurationRevisionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConfigurationRevisionRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

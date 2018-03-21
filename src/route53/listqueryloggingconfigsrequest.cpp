@@ -19,3 +19,107 @@
 
 #include "listqueryloggingconfigsrequest.h"
 #include "listqueryloggingconfigsrequest_p.h"
+#include "listqueryloggingconfigsresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListQueryLoggingConfigsRequest
+ *
+ * @brief  Implements Route53 ListQueryLoggingConfigs requests.
+ *
+ * @see    Route53Client::listQueryLoggingConfigs
+ */
+
+/**
+ * @brief  Constructs a new ListQueryLoggingConfigsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListQueryLoggingConfigsResponse::ListQueryLoggingConfigsResponse(
+
+/**
+ * @brief  Constructs a new ListQueryLoggingConfigsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest(const ListQueryLoggingConfigsRequest &other)
+    : Route53Request(new ListQueryLoggingConfigsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListQueryLoggingConfigsRequest object.
+ */
+ListQueryLoggingConfigsRequest::ListQueryLoggingConfigsRequest()
+    : Route53Request(new ListQueryLoggingConfigsRequestPrivate(Route53Request::ListQueryLoggingConfigsAction, this))
+{
+
+}
+
+bool ListQueryLoggingConfigsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListQueryLoggingConfigsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListQueryLoggingConfigsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListQueryLoggingConfigsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListQueryLoggingConfigsRequestPrivate
+ *
+ * @brief  Private implementation for ListQueryLoggingConfigsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListQueryLoggingConfigsRequest instance.
+ */
+ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
+    const Route53Request::Action action, ListQueryLoggingConfigsRequest * const q)
+    : ListQueryLoggingConfigsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListQueryLoggingConfigsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListQueryLoggingConfigsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListQueryLoggingConfigsRequest instance.
+ */
+ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
+    const ListQueryLoggingConfigsRequestPrivate &other, ListQueryLoggingConfigsRequest * const q)
+    : ListQueryLoggingConfigsPrivate(other, q)
+{
+
+}

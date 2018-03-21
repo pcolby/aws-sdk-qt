@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEEVENTCONFIGURATIONSREQUEST_P_H
 #define QTAWS_UPDATEEVENTCONFIGURATIONSREQUEST_P_H
 
+#include "iot_p.h"
+#include "updateeventconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateEventConfigurationsRequest;
+
+class QTAWS_EXPORT UpdateEventConfigurationsRequestPrivate : public IoTPrivate {
+
+public:
+    UpdateEventConfigurationsRequestPrivate(const IoT::Action action,
+                                   UpdateEventConfigurationsRequest * const q);
+    UpdateEventConfigurationsRequestPrivate(const UpdateEventConfigurationsRequestPrivate &other,
+                                   UpdateEventConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateEventConfigurationsRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

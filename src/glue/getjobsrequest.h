@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETJOBSREQUEST_H
 #define QTAWS_GETJOBSREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetJobsRequestPrivate;
+
+class QTAWS_EXPORT GetJobsRequest : public GlueRequest {
+
+public:
+    GetJobsRequest(const GetJobsRequest &other);
+    GetJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetJobsRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

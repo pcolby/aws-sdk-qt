@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "describeenvironmentstatusrequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DescribeEnvironmentStatusRequest;
+
+class QTAWS_EXPORT DescribeEnvironmentStatusRequestPrivate : public Cloud9Private {
+
+public:
+    DescribeEnvironmentStatusRequestPrivate(const Cloud9::Action action,
+                                   DescribeEnvironmentStatusRequest * const q);
+    DescribeEnvironmentStatusRequestPrivate(const DescribeEnvironmentStatusRequestPrivate &other,
+                                   DescribeEnvironmentStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentStatusRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

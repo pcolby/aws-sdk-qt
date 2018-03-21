@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENDPOINTREQUEST_H
 #define QTAWS_DESCRIBEENDPOINTREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DescribeEndpointRequestPrivate;
+
+class QTAWS_EXPORT DescribeEndpointRequest : public SageMakerRequest {
+
+public:
+    DescribeEndpointRequest(const DescribeEndpointRequest &other);
+    DescribeEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEndpointRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDOCUMENTREQUEST_P_H
 #define QTAWS_GETDOCUMENTREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getdocumentrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetDocumentRequest;
+
+class QTAWS_EXPORT GetDocumentRequestPrivate : public SSMPrivate {
+
+public:
+    GetDocumentRequestPrivate(const SSM::Action action,
+                                   GetDocumentRequest * const q);
+    GetDocumentRequestPrivate(const GetDocumentRequestPrivate &other,
+                                   GetDocumentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDocumentRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

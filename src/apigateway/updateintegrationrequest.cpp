@@ -19,3 +19,107 @@
 
 #include "updateintegrationrequest.h"
 #include "updateintegrationrequest_p.h"
+#include "updateintegrationresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateIntegrationRequest
+ *
+ * @brief  Implements APIGateway UpdateIntegration requests.
+ *
+ * @see    APIGatewayClient::updateIntegration
+ */
+
+/**
+ * @brief  Constructs a new UpdateIntegrationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateIntegrationResponse::UpdateIntegrationResponse(
+
+/**
+ * @brief  Constructs a new UpdateIntegrationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateIntegrationRequest::UpdateIntegrationRequest(const UpdateIntegrationRequest &other)
+    : APIGatewayRequest(new UpdateIntegrationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateIntegrationRequest object.
+ */
+UpdateIntegrationRequest::UpdateIntegrationRequest()
+    : APIGatewayRequest(new UpdateIntegrationRequestPrivate(APIGatewayRequest::UpdateIntegrationAction, this))
+{
+
+}
+
+bool UpdateIntegrationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateIntegrationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateIntegrationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateIntegrationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateIntegrationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateIntegrationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateIntegrationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIntegrationRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateIntegrationRequest instance.
+ */
+UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateIntegrationRequest * const q)
+    : UpdateIntegrationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateIntegrationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateIntegrationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateIntegrationRequest instance.
+ */
+UpdateIntegrationRequestPrivate::UpdateIntegrationRequestPrivate(
+    const UpdateIntegrationRequestPrivate &other, UpdateIntegrationRequest * const q)
+    : UpdateIntegrationPrivate(other, q)
+{
+
+}

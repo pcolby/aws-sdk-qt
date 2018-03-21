@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGROUPREQUEST_P_H
 #define QTAWS_UPDATEGROUPREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "updategrouprequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateGroupRequest;
+
+class QTAWS_EXPORT UpdateGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    UpdateGroupRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   UpdateGroupRequest * const q);
+    UpdateGroupRequestPrivate(const UpdateGroupRequestPrivate &other,
+                                   UpdateGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

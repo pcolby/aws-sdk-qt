@@ -20,4 +20,29 @@
 #ifndef QTAWS_CLONESTACKREQUEST_P_H
 #define QTAWS_CLONESTACKREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "clonestackrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CloneStackRequest;
+
+class QTAWS_EXPORT CloneStackRequestPrivate : public OpsWorksPrivate {
+
+public:
+    CloneStackRequestPrivate(const OpsWorks::Action action,
+                                   CloneStackRequest * const q);
+    CloneStackRequestPrivate(const CloneStackRequestPrivate &other,
+                                   CloneStackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CloneStackRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

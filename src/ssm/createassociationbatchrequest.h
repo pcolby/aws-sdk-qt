@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEASSOCIATIONBATCHREQUEST_H
 #define QTAWS_CREATEASSOCIATIONBATCHREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class CreateAssociationBatchRequestPrivate;
+
+class QTAWS_EXPORT CreateAssociationBatchRequest : public SSMRequest {
+
+public:
+    CreateAssociationBatchRequest(const CreateAssociationBatchRequest &other);
+    CreateAssociationBatchRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateAssociationBatchRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

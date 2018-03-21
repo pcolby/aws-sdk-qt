@@ -19,3 +19,107 @@
 
 #include "replacetopicrulerequest.h"
 #include "replacetopicrulerequest_p.h"
+#include "replacetopicruleresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ReplaceTopicRuleRequest
+ *
+ * @brief  Implements IoT ReplaceTopicRule requests.
+ *
+ * @see    IoTClient::replaceTopicRule
+ */
+
+/**
+ * @brief  Constructs a new ReplaceTopicRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ReplaceTopicRuleResponse::ReplaceTopicRuleResponse(
+
+/**
+ * @brief  Constructs a new ReplaceTopicRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ReplaceTopicRuleRequest::ReplaceTopicRuleRequest(const ReplaceTopicRuleRequest &other)
+    : IoTRequest(new ReplaceTopicRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ReplaceTopicRuleRequest object.
+ */
+ReplaceTopicRuleRequest::ReplaceTopicRuleRequest()
+    : IoTRequest(new ReplaceTopicRuleRequestPrivate(IoTRequest::ReplaceTopicRuleAction, this))
+{
+
+}
+
+bool ReplaceTopicRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ReplaceTopicRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ReplaceTopicRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ReplaceTopicRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new ReplaceTopicRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ReplaceTopicRuleRequestPrivate
+ *
+ * @brief  Private implementation for ReplaceTopicRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceTopicRuleRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ReplaceTopicRuleRequest instance.
+ */
+ReplaceTopicRuleRequestPrivate::ReplaceTopicRuleRequestPrivate(
+    const IoTRequest::Action action, ReplaceTopicRuleRequest * const q)
+    : ReplaceTopicRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ReplaceTopicRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ReplaceTopicRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ReplaceTopicRuleRequest instance.
+ */
+ReplaceTopicRuleRequestPrivate::ReplaceTopicRuleRequestPrivate(
+    const ReplaceTopicRuleRequestPrivate &other, ReplaceTopicRuleRequest * const q)
+    : ReplaceTopicRulePrivate(other, q)
+{
+
+}

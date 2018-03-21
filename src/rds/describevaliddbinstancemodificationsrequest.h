@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSREQUEST_H
 #define QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeValidDBInstanceModificationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequest : public RDSRequest {
+
+public:
+    DescribeValidDBInstanceModificationsRequest(const DescribeValidDBInstanceModificationsRequest &other);
+    DescribeValidDBInstanceModificationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeValidDBInstanceModificationsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

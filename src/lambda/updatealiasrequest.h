@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_H
 #define QTAWS_UPDATEALIASREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateAliasRequestPrivate;
+
+class QTAWS_EXPORT UpdateAliasRequest : public LambdaRequest {
+
+public:
+    UpdateAliasRequest(const UpdateAliasRequest &other);
+    UpdateAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAliasRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

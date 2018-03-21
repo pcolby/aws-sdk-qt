@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPOPTIONSREQUEST_H
 #define QTAWS_DESCRIBEOPTIONGROUPOPTIONSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOptionGroupOptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeOptionGroupOptionsRequest : public RDSRequest {
+
+public:
+    DescribeOptionGroupOptionsRequest(const DescribeOptionGroupOptionsRequest &other);
+    DescribeOptionGroupOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOptionGroupOptionsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

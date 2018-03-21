@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDEVICEDEFINITIONSREQUEST_H
 #define QTAWS_LISTDEVICEDEFINITIONSREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListDeviceDefinitionsRequestPrivate;
+
+class QTAWS_EXPORT ListDeviceDefinitionsRequest : public GreengrassRequest {
+
+public:
+    ListDeviceDefinitionsRequest(const ListDeviceDefinitionsRequest &other);
+    ListDeviceDefinitionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDeviceDefinitionsRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

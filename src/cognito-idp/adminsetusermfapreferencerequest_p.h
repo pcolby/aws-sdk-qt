@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINSETUSERMFAPREFERENCEREQUEST_P_H
 #define QTAWS_ADMINSETUSERMFAPREFERENCEREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminsetusermfapreferencerequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminSetUserMFAPreferenceRequest;
+
+class QTAWS_EXPORT AdminSetUserMFAPreferenceRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminSetUserMFAPreferenceRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminSetUserMFAPreferenceRequest * const q);
+    AdminSetUserMFAPreferenceRequestPrivate(const AdminSetUserMFAPreferenceRequestPrivate &other,
+                                   AdminSetUserMFAPreferenceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminSetUserMFAPreferenceRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEUSERATTRIBUTESREQUEST_P_H
 #define QTAWS_UPDATEUSERATTRIBUTESREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "updateuserattributesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class UpdateUserAttributesRequest;
+
+class QTAWS_EXPORT UpdateUserAttributesRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    UpdateUserAttributesRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   UpdateUserAttributesRequest * const q);
+    UpdateUserAttributesRequestPrivate(const UpdateUserAttributesRequestPrivate &other,
+                                   UpdateUserAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateUserAttributesRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

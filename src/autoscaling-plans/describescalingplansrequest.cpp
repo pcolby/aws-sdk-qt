@@ -19,3 +19,107 @@
 
 #include "describescalingplansrequest.h"
 #include "describescalingplansrequest_p.h"
+#include "describescalingplansresponse.h"
+#include "autoscalingplansrequest_p.h"
+
+namespace AWS {
+namespace AutoScalingPlans {
+
+/**
+ * @class  DescribeScalingPlansRequest
+ *
+ * @brief  Implements AutoScalingPlans DescribeScalingPlans requests.
+ *
+ * @see    AutoScalingPlansClient::describeScalingPlans
+ */
+
+/**
+ * @brief  Constructs a new DescribeScalingPlansResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingPlansResponse::DescribeScalingPlansResponse(
+
+/**
+ * @brief  Constructs a new DescribeScalingPlansRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeScalingPlansRequest::DescribeScalingPlansRequest(const DescribeScalingPlansRequest &other)
+    : AutoScalingPlansRequest(new DescribeScalingPlansRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeScalingPlansRequest object.
+ */
+DescribeScalingPlansRequest::DescribeScalingPlansRequest()
+    : AutoScalingPlansRequest(new DescribeScalingPlansRequestPrivate(AutoScalingPlansRequest::DescribeScalingPlansAction, this))
+{
+
+}
+
+bool DescribeScalingPlansRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeScalingPlansResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeScalingPlansResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingPlansClient::send
+ */
+AwsAbstractResponse * DescribeScalingPlansRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeScalingPlansResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingPlansRequestPrivate
+ *
+ * @brief  Private implementation for DescribeScalingPlansRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPlansRequestPrivate object.
+ *
+ * @param  action  AutoScalingPlans action being performed.
+ * @param  q       Pointer to this object's public DescribeScalingPlansRequest instance.
+ */
+DescribeScalingPlansRequestPrivate::DescribeScalingPlansRequestPrivate(
+    const AutoScalingPlansRequest::Action action, DescribeScalingPlansRequest * const q)
+    : DescribeScalingPlansPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPlansRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeScalingPlansRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeScalingPlansRequest instance.
+ */
+DescribeScalingPlansRequestPrivate::DescribeScalingPlansRequestPrivate(
+    const DescribeScalingPlansRequestPrivate &other, DescribeScalingPlansRequest * const q)
+    : DescribeScalingPlansPrivate(other, q)
+{
+
+}

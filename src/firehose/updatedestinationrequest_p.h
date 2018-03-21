@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEDESTINATIONREQUEST_P_H
 #define QTAWS_UPDATEDESTINATIONREQUEST_P_H
 
+#include "firehose_p.h"
+#include "updatedestinationrequest.h"
+
+namespace AWS {
+
+namespace Firehose {
+
+class UpdateDestinationRequest;
+
+class QTAWS_EXPORT UpdateDestinationRequestPrivate : public FirehosePrivate {
+
+public:
+    UpdateDestinationRequestPrivate(const Firehose::Action action,
+                                   UpdateDestinationRequest * const q);
+    UpdateDestinationRequestPrivate(const UpdateDestinationRequestPrivate &other,
+                                   UpdateDestinationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateDestinationRequest)
+
+};
+
+} // namespace Firehose
+} // namespace AWS
+
 #endif

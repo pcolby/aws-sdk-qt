@@ -19,3 +19,107 @@
 
 #include "deletebucketreplicationrequest.h"
 #include "deletebucketreplicationrequest_p.h"
+#include "deletebucketreplicationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  DeleteBucketReplicationRequest
+ *
+ * @brief  Implements S3 DeleteBucketReplication requests.
+ *
+ * @see    S3Client::deleteBucketReplication
+ */
+
+/**
+ * @brief  Constructs a new DeleteBucketReplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBucketReplicationResponse::DeleteBucketReplicationResponse(
+
+/**
+ * @brief  Constructs a new DeleteBucketReplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBucketReplicationRequest::DeleteBucketReplicationRequest(const DeleteBucketReplicationRequest &other)
+    : S3Request(new DeleteBucketReplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBucketReplicationRequest object.
+ */
+DeleteBucketReplicationRequest::DeleteBucketReplicationRequest()
+    : S3Request(new DeleteBucketReplicationRequestPrivate(S3Request::DeleteBucketReplicationAction, this))
+{
+
+}
+
+bool DeleteBucketReplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBucketReplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBucketReplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBucketReplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBucketReplicationRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBucketReplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketReplicationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public DeleteBucketReplicationRequest instance.
+ */
+DeleteBucketReplicationRequestPrivate::DeleteBucketReplicationRequestPrivate(
+    const S3Request::Action action, DeleteBucketReplicationRequest * const q)
+    : DeleteBucketReplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBucketReplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBucketReplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBucketReplicationRequest instance.
+ */
+DeleteBucketReplicationRequestPrivate::DeleteBucketReplicationRequestPrivate(
+    const DeleteBucketReplicationRequestPrivate &other, DeleteBucketReplicationRequest * const q)
+    : DeleteBucketReplicationPrivate(other, q)
+{
+
+}

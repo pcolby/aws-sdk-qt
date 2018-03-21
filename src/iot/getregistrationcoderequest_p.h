@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREGISTRATIONCODEREQUEST_P_H
 #define QTAWS_GETREGISTRATIONCODEREQUEST_P_H
 
+#include "iot_p.h"
+#include "getregistrationcoderequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class GetRegistrationCodeRequest;
+
+class QTAWS_EXPORT GetRegistrationCodeRequestPrivate : public IoTPrivate {
+
+public:
+    GetRegistrationCodeRequestPrivate(const IoT::Action action,
+                                   GetRegistrationCodeRequest * const q);
+    GetRegistrationCodeRequestPrivate(const GetRegistrationCodeRequestPrivate &other,
+                                   GetRegistrationCodeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRegistrationCodeRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

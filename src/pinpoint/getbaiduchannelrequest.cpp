@@ -19,3 +19,107 @@
 
 #include "getbaiduchannelrequest.h"
 #include "getbaiduchannelrequest_p.h"
+#include "getbaiduchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetBaiduChannelRequest
+ *
+ * @brief  Implements Pinpoint GetBaiduChannel requests.
+ *
+ * @see    PinpointClient::getBaiduChannel
+ */
+
+/**
+ * @brief  Constructs a new GetBaiduChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBaiduChannelResponse::GetBaiduChannelResponse(
+
+/**
+ * @brief  Constructs a new GetBaiduChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBaiduChannelRequest::GetBaiduChannelRequest(const GetBaiduChannelRequest &other)
+    : PinpointRequest(new GetBaiduChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBaiduChannelRequest object.
+ */
+GetBaiduChannelRequest::GetBaiduChannelRequest()
+    : PinpointRequest(new GetBaiduChannelRequestPrivate(PinpointRequest::GetBaiduChannelAction, this))
+{
+
+}
+
+bool GetBaiduChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBaiduChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBaiduChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetBaiduChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBaiduChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBaiduChannelRequestPrivate
+ *
+ * @brief  Private implementation for GetBaiduChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBaiduChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetBaiduChannelRequest instance.
+ */
+GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
+    const PinpointRequest::Action action, GetBaiduChannelRequest * const q)
+    : GetBaiduChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBaiduChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBaiduChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBaiduChannelRequest instance.
+ */
+GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
+    const GetBaiduChannelRequestPrivate &other, GetBaiduChannelRequest * const q)
+    : GetBaiduChannelPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_VERIFYEMAILADDRESSREQUEST_P_H
 #define QTAWS_VERIFYEMAILADDRESSREQUEST_P_H
 
+#include "ses_p.h"
+#include "verifyemailaddressrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class VerifyEmailAddressRequest;
+
+class QTAWS_EXPORT VerifyEmailAddressRequestPrivate : public SESPrivate {
+
+public:
+    VerifyEmailAddressRequestPrivate(const SES::Action action,
+                                   VerifyEmailAddressRequest * const q);
+    VerifyEmailAddressRequestPrivate(const VerifyEmailAddressRequestPrivate &other,
+                                   VerifyEmailAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(VerifyEmailAddressRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

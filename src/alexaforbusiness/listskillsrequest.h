@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSKILLSREQUEST_H
 #define QTAWS_LISTSKILLSREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class ListSkillsRequestPrivate;
+
+class QTAWS_EXPORT ListSkillsRequest : public AlexaForBusinessRequest {
+
+public:
+    ListSkillsRequest(const ListSkillsRequest &other);
+    ListSkillsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListSkillsRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

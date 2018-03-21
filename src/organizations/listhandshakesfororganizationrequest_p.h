@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTHANDSHAKESFORORGANIZATIONREQUEST_P_H
 #define QTAWS_LISTHANDSHAKESFORORGANIZATIONREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listhandshakesfororganizationrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListHandshakesForOrganizationRequest;
+
+class QTAWS_EXPORT ListHandshakesForOrganizationRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListHandshakesForOrganizationRequestPrivate(const Organizations::Action action,
+                                   ListHandshakesForOrganizationRequest * const q);
+    ListHandshakesForOrganizationRequestPrivate(const ListHandshakesForOrganizationRequestPrivate &other,
+                                   ListHandshakesForOrganizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListHandshakesForOrganizationRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

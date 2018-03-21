@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTFILEREQUEST_H
 #define QTAWS_PUTFILEREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PutFileRequestPrivate;
+
+class QTAWS_EXPORT PutFileRequest : public CodeCommitRequest {
+
+public:
+    PutFileRequest(const PutFileRequest &other);
+    PutFileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutFileRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

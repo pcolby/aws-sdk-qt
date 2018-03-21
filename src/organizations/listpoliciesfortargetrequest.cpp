@@ -19,3 +19,107 @@
 
 #include "listpoliciesfortargetrequest.h"
 #include "listpoliciesfortargetrequest_p.h"
+#include "listpoliciesfortargetresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListPoliciesForTargetRequest
+ *
+ * @brief  Implements Organizations ListPoliciesForTarget requests.
+ *
+ * @see    OrganizationsClient::listPoliciesForTarget
+ */
+
+/**
+ * @brief  Constructs a new ListPoliciesForTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPoliciesForTargetResponse::ListPoliciesForTargetResponse(
+
+/**
+ * @brief  Constructs a new ListPoliciesForTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPoliciesForTargetRequest::ListPoliciesForTargetRequest(const ListPoliciesForTargetRequest &other)
+    : OrganizationsRequest(new ListPoliciesForTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPoliciesForTargetRequest object.
+ */
+ListPoliciesForTargetRequest::ListPoliciesForTargetRequest()
+    : OrganizationsRequest(new ListPoliciesForTargetRequestPrivate(OrganizationsRequest::ListPoliciesForTargetAction, this))
+{
+
+}
+
+bool ListPoliciesForTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPoliciesForTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPoliciesForTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListPoliciesForTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPoliciesForTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPoliciesForTargetRequestPrivate
+ *
+ * @brief  Private implementation for ListPoliciesForTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPoliciesForTargetRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListPoliciesForTargetRequest instance.
+ */
+ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
+    const OrganizationsRequest::Action action, ListPoliciesForTargetRequest * const q)
+    : ListPoliciesForTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPoliciesForTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPoliciesForTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPoliciesForTargetRequest instance.
+ */
+ListPoliciesForTargetRequestPrivate::ListPoliciesForTargetRequestPrivate(
+    const ListPoliciesForTargetRequestPrivate &other, ListPoliciesForTargetRequest * const q)
+    : ListPoliciesForTargetPrivate(other, q)
+{
+
+}

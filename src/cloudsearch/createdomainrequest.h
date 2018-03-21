@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDOMAINREQUEST_H
 #define QTAWS_CREATEDOMAINREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class CreateDomainRequestPrivate;
+
+class QTAWS_EXPORT CreateDomainRequest : public CloudSearchRequest {
+
+public:
+    CreateDomainRequest(const CreateDomainRequest &other);
+    CreateDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDomainRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

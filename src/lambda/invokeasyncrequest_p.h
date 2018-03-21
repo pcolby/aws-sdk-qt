@@ -20,4 +20,29 @@
 #ifndef QTAWS_INVOKEASYNCREQUEST_P_H
 #define QTAWS_INVOKEASYNCREQUEST_P_H
 
+#include "lambda_p.h"
+#include "invokeasyncrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class InvokeAsyncRequest;
+
+class QTAWS_EXPORT InvokeAsyncRequestPrivate : public LambdaPrivate {
+
+public:
+    InvokeAsyncRequestPrivate(const Lambda::Action action,
+                                   InvokeAsyncRequest * const q);
+    InvokeAsyncRequestPrivate(const InvokeAsyncRequestPrivate &other,
+                                   InvokeAsyncRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InvokeAsyncRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

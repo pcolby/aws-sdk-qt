@@ -19,3 +19,107 @@
 
 #include "removetagsrequest.h"
 #include "removetagsrequest_p.h"
+#include "removetagsresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  RemoveTagsRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 RemoveTags requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::removeTags
+ */
+
+/**
+ * @brief  Constructs a new RemoveTagsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsResponse::RemoveTagsResponse(
+
+/**
+ * @brief  Constructs a new RemoveTagsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveTagsRequest::RemoveTagsRequest(const RemoveTagsRequest &other)
+    : ElasticLoadBalancingv2Request(new RemoveTagsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveTagsRequest object.
+ */
+RemoveTagsRequest::RemoveTagsRequest()
+    : ElasticLoadBalancingv2Request(new RemoveTagsRequestPrivate(ElasticLoadBalancingv2Request::RemoveTagsAction, this))
+{
+
+}
+
+bool RemoveTagsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveTagsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveTagsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveTagsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsRequestPrivate
+ *
+ * @brief  Private implementation for RemoveTagsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public RemoveTagsRequest instance.
+ */
+RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, RemoveTagsRequest * const q)
+    : RemoveTagsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveTagsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveTagsRequest instance.
+ */
+RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
+    const RemoveTagsRequestPrivate &other, RemoveTagsRequest * const q)
+    : RemoveTagsPrivate(other, q)
+{
+
+}

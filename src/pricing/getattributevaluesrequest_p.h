@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETATTRIBUTEVALUESREQUEST_P_H
 #define QTAWS_GETATTRIBUTEVALUESREQUEST_P_H
 
+#include "pricing_p.h"
+#include "getattributevaluesrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class GetAttributeValuesRequest;
+
+class QTAWS_EXPORT GetAttributeValuesRequestPrivate : public PricingPrivate {
+
+public:
+    GetAttributeValuesRequestPrivate(const Pricing::Action action,
+                                   GetAttributeValuesRequest * const q);
+    GetAttributeValuesRequestPrivate(const GetAttributeValuesRequestPrivate &other,
+                                   GetAttributeValuesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAttributeValuesRequest)
+
+};
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

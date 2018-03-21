@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDBINSTANCEREADREPLICAREQUEST_H
 #define QTAWS_CREATEDBINSTANCEREADREPLICAREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBInstanceReadReplicaRequestPrivate;
+
+class QTAWS_EXPORT CreateDBInstanceReadReplicaRequest : public RDSRequest {
+
+public:
+    CreateDBInstanceReadReplicaRequest(const CreateDBInstanceReadReplicaRequest &other);
+    CreateDBInstanceReadReplicaRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDBInstanceReadReplicaRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

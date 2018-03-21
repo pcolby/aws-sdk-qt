@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEXPRESSIONREQUEST_H
 #define QTAWS_DELETEEXPRESSIONREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteExpressionRequestPrivate;
+
+class QTAWS_EXPORT DeleteExpressionRequest : public CloudSearchRequest {
+
+public:
+    DeleteExpressionRequest(const DeleteExpressionRequest &other);
+    DeleteExpressionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteExpressionRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

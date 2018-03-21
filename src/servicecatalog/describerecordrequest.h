@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERECORDREQUEST_H
 #define QTAWS_DESCRIBERECORDREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeRecordRequestPrivate;
+
+class QTAWS_EXPORT DescribeRecordRequest : public ServiceCatalogRequest {
+
+public:
+    DescribeRecordRequest(const DescribeRecordRequest &other);
+    DescribeRecordRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRecordRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

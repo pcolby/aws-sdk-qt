@@ -19,3 +19,107 @@
 
 #include "addinstancegroupsrequest.h"
 #include "addinstancegroupsrequest_p.h"
+#include "addinstancegroupsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  AddInstanceGroupsRequest
+ *
+ * @brief  Implements EMR AddInstanceGroups requests.
+ *
+ * @see    EMRClient::addInstanceGroups
+ */
+
+/**
+ * @brief  Constructs a new AddInstanceGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddInstanceGroupsResponse::AddInstanceGroupsResponse(
+
+/**
+ * @brief  Constructs a new AddInstanceGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddInstanceGroupsRequest::AddInstanceGroupsRequest(const AddInstanceGroupsRequest &other)
+    : EMRRequest(new AddInstanceGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddInstanceGroupsRequest object.
+ */
+AddInstanceGroupsRequest::AddInstanceGroupsRequest()
+    : EMRRequest(new AddInstanceGroupsRequestPrivate(EMRRequest::AddInstanceGroupsAction, this))
+{
+
+}
+
+bool AddInstanceGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddInstanceGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddInstanceGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new AddInstanceGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddInstanceGroupsRequestPrivate
+ *
+ * @brief  Private implementation for AddInstanceGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddInstanceGroupsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public AddInstanceGroupsRequest instance.
+ */
+AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
+    const EMRRequest::Action action, AddInstanceGroupsRequest * const q)
+    : AddInstanceGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddInstanceGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddInstanceGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddInstanceGroupsRequest instance.
+ */
+AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
+    const AddInstanceGroupsRequestPrivate &other, AddInstanceGroupsRequest * const q)
+    : AddInstanceGroupsPrivate(other, q)
+{
+
+}

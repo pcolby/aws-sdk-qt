@@ -19,3 +19,107 @@
 
 #include "adminsetusermfapreferencerequest.h"
 #include "adminsetusermfapreferencerequest_p.h"
+#include "adminsetusermfapreferenceresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminSetUserMFAPreferenceRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminSetUserMFAPreference requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminSetUserMFAPreference
+ */
+
+/**
+ * @brief  Constructs a new AdminSetUserMFAPreferenceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminSetUserMFAPreferenceResponse::AdminSetUserMFAPreferenceResponse(
+
+/**
+ * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest(const AdminSetUserMFAPreferenceRequest &other)
+    : CognitoIdentityProviderRequest(new AdminSetUserMFAPreferenceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminSetUserMFAPreferenceRequest object.
+ */
+AdminSetUserMFAPreferenceRequest::AdminSetUserMFAPreferenceRequest()
+    : CognitoIdentityProviderRequest(new AdminSetUserMFAPreferenceRequestPrivate(CognitoIdentityProviderRequest::AdminSetUserMFAPreferenceAction, this))
+{
+
+}
+
+bool AdminSetUserMFAPreferenceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminSetUserMFAPreferenceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminSetUserMFAPreferenceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminSetUserMFAPreferenceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminSetUserMFAPreferenceRequestPrivate
+ *
+ * @brief  Private implementation for AdminSetUserMFAPreferenceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminSetUserMFAPreferenceRequest instance.
+ */
+AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminSetUserMFAPreferenceRequest * const q)
+    : AdminSetUserMFAPreferencePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminSetUserMFAPreferenceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminSetUserMFAPreferenceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminSetUserMFAPreferenceRequest instance.
+ */
+AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
+    const AdminSetUserMFAPreferenceRequestPrivate &other, AdminSetUserMFAPreferenceRequest * const q)
+    : AdminSetUserMFAPreferencePrivate(other, q)
+{
+
+}

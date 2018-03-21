@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEREPORTDEFINITIONSREQUEST_H
 #define QTAWS_DESCRIBEREPORTDEFINITIONSREQUEST_H
 
+#include "costandusagereportservicerequest.h"
+
+namespace AWS {
+
+namespace CostandUsageReportService {
+
+class DescribeReportDefinitionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeReportDefinitionsRequest : public CostandUsageReportServiceRequest {
+
+public:
+    DescribeReportDefinitionsRequest(const DescribeReportDefinitionsRequest &other);
+    DescribeReportDefinitionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReportDefinitionsRequest)
+
+}
+
+} // namespace CostandUsageReportService
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createinstancesrequest.h"
 #include "createinstancesrequest_p.h"
+#include "createinstancesresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  CreateInstancesRequest
+ *
+ * @brief  Implements Lightsail CreateInstances requests.
+ *
+ * @see    LightsailClient::createInstances
+ */
+
+/**
+ * @brief  Constructs a new CreateInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstancesResponse::CreateInstancesResponse(
+
+/**
+ * @brief  Constructs a new CreateInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInstancesRequest::CreateInstancesRequest(const CreateInstancesRequest &other)
+    : LightsailRequest(new CreateInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInstancesRequest object.
+ */
+CreateInstancesRequest::CreateInstancesRequest()
+    : LightsailRequest(new CreateInstancesRequestPrivate(LightsailRequest::CreateInstancesAction, this))
+{
+
+}
+
+bool CreateInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * CreateInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstancesRequestPrivate
+ *
+ * @brief  Private implementation for CreateInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstancesRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public CreateInstancesRequest instance.
+ */
+CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
+    const LightsailRequest::Action action, CreateInstancesRequest * const q)
+    : CreateInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInstancesRequest instance.
+ */
+CreateInstancesRequestPrivate::CreateInstancesRequestPrivate(
+    const CreateInstancesRequestPrivate &other, CreateInstancesRequest * const q)
+    : CreateInstancesPrivate(other, q)
+{
+
+}

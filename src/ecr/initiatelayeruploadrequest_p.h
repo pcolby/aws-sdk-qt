@@ -20,4 +20,29 @@
 #ifndef QTAWS_INITIATELAYERUPLOADREQUEST_P_H
 #define QTAWS_INITIATELAYERUPLOADREQUEST_P_H
 
+#include "ecr_p.h"
+#include "initiatelayeruploadrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class InitiateLayerUploadRequest;
+
+class QTAWS_EXPORT InitiateLayerUploadRequestPrivate : public ECRPrivate {
+
+public:
+    InitiateLayerUploadRequestPrivate(const ECR::Action action,
+                                   InitiateLayerUploadRequest * const q);
+    InitiateLayerUploadRequestPrivate(const InitiateLayerUploadRequestPrivate &other,
+                                   InitiateLayerUploadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(InitiateLayerUploadRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

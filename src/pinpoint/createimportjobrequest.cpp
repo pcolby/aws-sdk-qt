@@ -19,3 +19,107 @@
 
 #include "createimportjobrequest.h"
 #include "createimportjobrequest_p.h"
+#include "createimportjobresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  CreateImportJobRequest
+ *
+ * @brief  Implements Pinpoint CreateImportJob requests.
+ *
+ * @see    PinpointClient::createImportJob
+ */
+
+/**
+ * @brief  Constructs a new CreateImportJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateImportJobResponse::CreateImportJobResponse(
+
+/**
+ * @brief  Constructs a new CreateImportJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateImportJobRequest::CreateImportJobRequest(const CreateImportJobRequest &other)
+    : PinpointRequest(new CreateImportJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateImportJobRequest object.
+ */
+CreateImportJobRequest::CreateImportJobRequest()
+    : PinpointRequest(new CreateImportJobRequestPrivate(PinpointRequest::CreateImportJobAction, this))
+{
+
+}
+
+bool CreateImportJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateImportJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateImportJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * CreateImportJobRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateImportJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateImportJobRequestPrivate
+ *
+ * @brief  Private implementation for CreateImportJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImportJobRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public CreateImportJobRequest instance.
+ */
+CreateImportJobRequestPrivate::CreateImportJobRequestPrivate(
+    const PinpointRequest::Action action, CreateImportJobRequest * const q)
+    : CreateImportJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateImportJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateImportJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateImportJobRequest instance.
+ */
+CreateImportJobRequestPrivate::CreateImportJobRequestPrivate(
+    const CreateImportJobRequestPrivate &other, CreateImportJobRequest * const q)
+    : CreateImportJobPrivate(other, q)
+{
+
+}

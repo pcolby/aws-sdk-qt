@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESUBSCRIPTIONREQUEST_H
 #define QTAWS_CREATESUBSCRIPTIONREQUEST_H
 
+#include "shieldrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class CreateSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT CreateSubscriptionRequest : public ShieldRequest {
+
+public:
+    CreateSubscriptionRequest(const CreateSubscriptionRequest &other);
+    CreateSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSubscriptionRequest)
+
+}
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDOCUMENTREQUEST_H
 #define QTAWS_DELETEDOCUMENTREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteDocumentRequestPrivate;
+
+class QTAWS_EXPORT DeleteDocumentRequest : public SSMRequest {
+
+public:
+    DeleteDocumentRequest(const DeleteDocumentRequest &other);
+    DeleteDocumentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDocumentRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEGATEWAYSOFTWARENOWREQUEST_H
 #define QTAWS_UPDATEGATEWAYSOFTWARENOWREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateGatewaySoftwareNowRequestPrivate;
+
+class QTAWS_EXPORT UpdateGatewaySoftwareNowRequest : public StorageGatewayRequest {
+
+public:
+    UpdateGatewaySoftwareNowRequest(const UpdateGatewaySoftwareNowRequest &other);
+    UpdateGatewaySoftwareNowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGatewaySoftwareNowRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

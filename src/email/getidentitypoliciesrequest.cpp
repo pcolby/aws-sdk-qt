@@ -19,3 +19,107 @@
 
 #include "getidentitypoliciesrequest.h"
 #include "getidentitypoliciesrequest_p.h"
+#include "getidentitypoliciesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityPoliciesRequest
+ *
+ * @brief  Implements SES GetIdentityPolicies requests.
+ *
+ * @see    SESClient::getIdentityPolicies
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityPoliciesRequest::GetIdentityPoliciesRequest(const GetIdentityPoliciesRequest &other)
+    : SESRequest(new GetIdentityPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityPoliciesRequest object.
+ */
+GetIdentityPoliciesRequest::GetIdentityPoliciesRequest()
+    : SESRequest(new GetIdentityPoliciesRequestPrivate(SESRequest::GetIdentityPoliciesAction, this))
+{
+
+}
+
+bool GetIdentityPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityPoliciesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetIdentityPoliciesRequest instance.
+ */
+GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
+    const SESRequest::Action action, GetIdentityPoliciesRequest * const q)
+    : GetIdentityPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityPoliciesRequest instance.
+ */
+GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
+    const GetIdentityPoliciesRequestPrivate &other, GetIdentityPoliciesRequest * const q)
+    : GetIdentityPoliciesPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "copyobjectrequest.h"
 #include "copyobjectrequest_p.h"
+#include "copyobjectresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  CopyObjectRequest
+ *
+ * @brief  Implements S3 CopyObject requests.
+ *
+ * @see    S3Client::copyObject
+ */
+
+/**
+ * @brief  Constructs a new CopyObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyObjectResponse::CopyObjectResponse(
+
+/**
+ * @brief  Constructs a new CopyObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyObjectRequest::CopyObjectRequest(const CopyObjectRequest &other)
+    : S3Request(new CopyObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyObjectRequest object.
+ */
+CopyObjectRequest::CopyObjectRequest()
+    : S3Request(new CopyObjectRequestPrivate(S3Request::CopyObjectAction, this))
+{
+
+}
+
+bool CopyObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyObjectRequestPrivate
+ *
+ * @brief  Private implementation for CopyObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyObjectRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public CopyObjectRequest instance.
+ */
+CopyObjectRequestPrivate::CopyObjectRequestPrivate(
+    const S3Request::Action action, CopyObjectRequest * const q)
+    : CopyObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyObjectRequest instance.
+ */
+CopyObjectRequestPrivate::CopyObjectRequestPrivate(
+    const CopyObjectRequestPrivate &other, CopyObjectRequest * const q)
+    : CopyObjectPrivate(other, q)
+{
+
+}

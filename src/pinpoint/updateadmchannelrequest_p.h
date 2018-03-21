@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEADMCHANNELREQUEST_P_H
 #define QTAWS_UPDATEADMCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "updateadmchannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class UpdateAdmChannelRequest;
+
+class QTAWS_EXPORT UpdateAdmChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    UpdateAdmChannelRequestPrivate(const Pinpoint::Action action,
+                                   UpdateAdmChannelRequest * const q);
+    UpdateAdmChannelRequestPrivate(const UpdateAdmChannelRequestPrivate &other,
+                                   UpdateAdmChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAdmChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

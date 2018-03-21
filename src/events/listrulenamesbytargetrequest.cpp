@@ -19,3 +19,107 @@
 
 #include "listrulenamesbytargetrequest.h"
 #include "listrulenamesbytargetrequest_p.h"
+#include "listrulenamesbytargetresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  ListRuleNamesByTargetRequest
+ *
+ * @brief  Implements CloudWatchEvents ListRuleNamesByTarget requests.
+ *
+ * @see    CloudWatchEventsClient::listRuleNamesByTarget
+ */
+
+/**
+ * @brief  Constructs a new ListRuleNamesByTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRuleNamesByTargetResponse::ListRuleNamesByTargetResponse(
+
+/**
+ * @brief  Constructs a new ListRuleNamesByTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRuleNamesByTargetRequest::ListRuleNamesByTargetRequest(const ListRuleNamesByTargetRequest &other)
+    : CloudWatchEventsRequest(new ListRuleNamesByTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRuleNamesByTargetRequest object.
+ */
+ListRuleNamesByTargetRequest::ListRuleNamesByTargetRequest()
+    : CloudWatchEventsRequest(new ListRuleNamesByTargetRequestPrivate(CloudWatchEventsRequest::ListRuleNamesByTargetAction, this))
+{
+
+}
+
+bool ListRuleNamesByTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRuleNamesByTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRuleNamesByTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * ListRuleNamesByTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRuleNamesByTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRuleNamesByTargetRequestPrivate
+ *
+ * @brief  Private implementation for ListRuleNamesByTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRuleNamesByTargetRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public ListRuleNamesByTargetRequest instance.
+ */
+ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
+    const CloudWatchEventsRequest::Action action, ListRuleNamesByTargetRequest * const q)
+    : ListRuleNamesByTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRuleNamesByTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRuleNamesByTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRuleNamesByTargetRequest instance.
+ */
+ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
+    const ListRuleNamesByTargetRequestPrivate &other, ListRuleNamesByTargetRequest * const q)
+    : ListRuleNamesByTargetPrivate(other, q)
+{
+
+}

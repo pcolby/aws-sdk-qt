@@ -20,4 +20,29 @@
 #ifndef QTAWS_REPORTTASKPROGRESSREQUEST_P_H
 #define QTAWS_REPORTTASKPROGRESSREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "reporttaskprogressrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class ReportTaskProgressRequest;
+
+class QTAWS_EXPORT ReportTaskProgressRequestPrivate : public DataPipelinePrivate {
+
+public:
+    ReportTaskProgressRequestPrivate(const DataPipeline::Action action,
+                                   ReportTaskProgressRequest * const q);
+    ReportTaskProgressRequestPrivate(const ReportTaskProgressRequestPrivate &other,
+                                   ReportTaskProgressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReportTaskProgressRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

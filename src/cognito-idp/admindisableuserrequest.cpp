@@ -19,3 +19,107 @@
 
 #include "admindisableuserrequest.h"
 #include "admindisableuserrequest_p.h"
+#include "admindisableuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminDisableUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminDisableUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminDisableUser
+ */
+
+/**
+ * @brief  Constructs a new AdminDisableUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminDisableUserResponse::AdminDisableUserResponse(
+
+/**
+ * @brief  Constructs a new AdminDisableUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminDisableUserRequest::AdminDisableUserRequest(const AdminDisableUserRequest &other)
+    : CognitoIdentityProviderRequest(new AdminDisableUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminDisableUserRequest object.
+ */
+AdminDisableUserRequest::AdminDisableUserRequest()
+    : CognitoIdentityProviderRequest(new AdminDisableUserRequestPrivate(CognitoIdentityProviderRequest::AdminDisableUserAction, this))
+{
+
+}
+
+bool AdminDisableUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminDisableUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminDisableUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminDisableUserRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminDisableUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminDisableUserRequestPrivate
+ *
+ * @brief  Private implementation for AdminDisableUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDisableUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminDisableUserRequest instance.
+ */
+AdminDisableUserRequestPrivate::AdminDisableUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminDisableUserRequest * const q)
+    : AdminDisableUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminDisableUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminDisableUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminDisableUserRequest instance.
+ */
+AdminDisableUserRequestPrivate::AdminDisableUserRequestPrivate(
+    const AdminDisableUserRequestPrivate &other, AdminDisableUserRequest * const q)
+    : AdminDisableUserPrivate(other, q)
+{
+
+}

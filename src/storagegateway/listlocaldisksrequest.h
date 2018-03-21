@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTLOCALDISKSREQUEST_H
 #define QTAWS_LISTLOCALDISKSREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListLocalDisksRequestPrivate;
+
+class QTAWS_EXPORT ListLocalDisksRequest : public StorageGatewayRequest {
+
+public:
+    ListLocalDisksRequest(const ListLocalDisksRequest &other);
+    ListLocalDisksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListLocalDisksRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

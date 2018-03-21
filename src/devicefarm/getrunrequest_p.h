@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRUNREQUEST_P_H
 #define QTAWS_GETRUNREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getrunrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetRunRequest;
+
+class QTAWS_EXPORT GetRunRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetRunRequestPrivate(const DeviceFarm::Action action,
+                                   GetRunRequest * const q);
+    GetRunRequestPrivate(const GetRunRequestPrivate &other,
+                                   GetRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRunRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

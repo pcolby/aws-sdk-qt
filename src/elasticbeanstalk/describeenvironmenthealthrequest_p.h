@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "describeenvironmenthealthrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentHealthRequest;
+
+class QTAWS_EXPORT DescribeEnvironmentHealthRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DescribeEnvironmentHealthRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DescribeEnvironmentHealthRequest * const q);
+    DescribeEnvironmentHealthRequestPrivate(const DescribeEnvironmentHealthRequestPrivate &other,
+                                   DescribeEnvironmentHealthRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentHealthRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

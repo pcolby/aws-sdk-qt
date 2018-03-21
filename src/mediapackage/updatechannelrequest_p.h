@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECHANNELREQUEST_P_H
 #define QTAWS_UPDATECHANNELREQUEST_P_H
 
+#include "mediapackage_p.h"
+#include "updatechannelrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class UpdateChannelRequest;
+
+class QTAWS_EXPORT UpdateChannelRequestPrivate : public MediaPackagePrivate {
+
+public:
+    UpdateChannelRequestPrivate(const MediaPackage::Action action,
+                                   UpdateChannelRequest * const q);
+    UpdateChannelRequestPrivate(const UpdateChannelRequestPrivate &other,
+                                   UpdateChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateChannelRequest)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

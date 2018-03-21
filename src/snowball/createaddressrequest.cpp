@@ -19,3 +19,107 @@
 
 #include "createaddressrequest.h"
 #include "createaddressrequest_p.h"
+#include "createaddressresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  CreateAddressRequest
+ *
+ * @brief  Implements Snowball CreateAddress requests.
+ *
+ * @see    SnowballClient::createAddress
+ */
+
+/**
+ * @brief  Constructs a new CreateAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateAddressResponse::CreateAddressResponse(
+
+/**
+ * @brief  Constructs a new CreateAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateAddressRequest::CreateAddressRequest(const CreateAddressRequest &other)
+    : SnowballRequest(new CreateAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateAddressRequest object.
+ */
+CreateAddressRequest::CreateAddressRequest()
+    : SnowballRequest(new CreateAddressRequestPrivate(SnowballRequest::CreateAddressAction, this))
+{
+
+}
+
+bool CreateAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateAddressRequestPrivate
+ *
+ * @brief  Private implementation for CreateAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAddressRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public CreateAddressRequest instance.
+ */
+CreateAddressRequestPrivate::CreateAddressRequestPrivate(
+    const SnowballRequest::Action action, CreateAddressRequest * const q)
+    : CreateAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateAddressRequest instance.
+ */
+CreateAddressRequestPrivate::CreateAddressRequestPrivate(
+    const CreateAddressRequestPrivate &other, CreateAddressRequest * const q)
+    : CreateAddressPrivate(other, q)
+{
+
+}

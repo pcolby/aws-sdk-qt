@@ -20,4 +20,32 @@
 #ifndef QTAWS_COMPAREFACESREQUEST_H
 #define QTAWS_COMPAREFACESREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class CompareFacesRequestPrivate;
+
+class QTAWS_EXPORT CompareFacesRequest : public RekognitionRequest {
+
+public:
+    CompareFacesRequest(const CompareFacesRequest &other);
+    CompareFacesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CompareFacesRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

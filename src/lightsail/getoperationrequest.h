@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOPERATIONREQUEST_H
 #define QTAWS_GETOPERATIONREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class GetOperationRequestPrivate;
+
+class QTAWS_EXPORT GetOperationRequest : public LightsailRequest {
+
+public:
+    GetOperationRequest(const GetOperationRequest &other);
+    GetOperationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

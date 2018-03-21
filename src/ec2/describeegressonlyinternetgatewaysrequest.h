@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEGRESSONLYINTERNETGATEWAYSREQUEST_H
 #define QTAWS_DESCRIBEEGRESSONLYINTERNETGATEWAYSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeEgressOnlyInternetGatewaysRequestPrivate;
+
+class QTAWS_EXPORT DescribeEgressOnlyInternetGatewaysRequest : public EC2Request {
+
+public:
+    DescribeEgressOnlyInternetGatewaysRequest(const DescribeEgressOnlyInternetGatewaysRequest &other);
+    DescribeEgressOnlyInternetGatewaysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEgressOnlyInternetGatewaysRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

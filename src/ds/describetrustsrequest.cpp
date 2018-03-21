@@ -19,3 +19,107 @@
 
 #include "describetrustsrequest.h"
 #include "describetrustsrequest_p.h"
+#include "describetrustsresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DescribeTrustsRequest
+ *
+ * @brief  Implements DirectoryService DescribeTrusts requests.
+ *
+ * @see    DirectoryServiceClient::describeTrusts
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrustsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrustsResponse::DescribeTrustsResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrustsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrustsRequest::DescribeTrustsRequest(const DescribeTrustsRequest &other)
+    : DirectoryServiceRequest(new DescribeTrustsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrustsRequest object.
+ */
+DescribeTrustsRequest::DescribeTrustsRequest()
+    : DirectoryServiceRequest(new DescribeTrustsRequestPrivate(DirectoryServiceRequest::DescribeTrustsAction, this))
+{
+
+}
+
+bool DescribeTrustsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrustsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrustsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrustsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrustsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrustsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustsRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DescribeTrustsRequest instance.
+ */
+DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
+    const DirectoryServiceRequest::Action action, DescribeTrustsRequest * const q)
+    : DescribeTrustsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrustsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrustsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrustsRequest instance.
+ */
+DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
+    const DescribeTrustsRequestPrivate &other, DescribeTrustsRequest * const q)
+    : DescribeTrustsPrivate(other, q)
+{
+
+}

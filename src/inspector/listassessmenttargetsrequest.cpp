@@ -19,3 +19,107 @@
 
 #include "listassessmenttargetsrequest.h"
 #include "listassessmenttargetsrequest_p.h"
+#include "listassessmenttargetsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  ListAssessmentTargetsRequest
+ *
+ * @brief  Implements Inspector ListAssessmentTargets requests.
+ *
+ * @see    InspectorClient::listAssessmentTargets
+ */
+
+/**
+ * @brief  Constructs a new ListAssessmentTargetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAssessmentTargetsResponse::ListAssessmentTargetsResponse(
+
+/**
+ * @brief  Constructs a new ListAssessmentTargetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAssessmentTargetsRequest::ListAssessmentTargetsRequest(const ListAssessmentTargetsRequest &other)
+    : InspectorRequest(new ListAssessmentTargetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAssessmentTargetsRequest object.
+ */
+ListAssessmentTargetsRequest::ListAssessmentTargetsRequest()
+    : InspectorRequest(new ListAssessmentTargetsRequestPrivate(InspectorRequest::ListAssessmentTargetsAction, this))
+{
+
+}
+
+bool ListAssessmentTargetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAssessmentTargetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAssessmentTargetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * ListAssessmentTargetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAssessmentTargetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAssessmentTargetsRequestPrivate
+ *
+ * @brief  Private implementation for ListAssessmentTargetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentTargetsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public ListAssessmentTargetsRequest instance.
+ */
+ListAssessmentTargetsRequestPrivate::ListAssessmentTargetsRequestPrivate(
+    const InspectorRequest::Action action, ListAssessmentTargetsRequest * const q)
+    : ListAssessmentTargetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAssessmentTargetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAssessmentTargetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAssessmentTargetsRequest instance.
+ */
+ListAssessmentTargetsRequestPrivate::ListAssessmentTargetsRequestPrivate(
+    const ListAssessmentTargetsRequestPrivate &other, ListAssessmentTargetsRequest * const q)
+    : ListAssessmentTargetsPrivate(other, q)
+{
+
+}

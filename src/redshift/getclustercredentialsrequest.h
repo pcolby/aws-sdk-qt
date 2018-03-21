@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCLUSTERCREDENTIALSREQUEST_H
 #define QTAWS_GETCLUSTERCREDENTIALSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class GetClusterCredentialsRequestPrivate;
+
+class QTAWS_EXPORT GetClusterCredentialsRequest : public RedshiftRequest {
+
+public:
+    GetClusterCredentialsRequest(const GetClusterCredentialsRequest &other);
+    GetClusterCredentialsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetClusterCredentialsRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

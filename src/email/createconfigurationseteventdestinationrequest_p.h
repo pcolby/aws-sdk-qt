@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 
+#include "ses_p.h"
+#include "createconfigurationseteventdestinationrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateConfigurationSetEventDestinationRequest;
+
+class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequestPrivate : public SESPrivate {
+
+public:
+    CreateConfigurationSetEventDestinationRequestPrivate(const SES::Action action,
+                                   CreateConfigurationSetEventDestinationRequest * const q);
+    CreateConfigurationSetEventDestinationRequestPrivate(const CreateConfigurationSetEventDestinationRequestPrivate &other,
+                                   CreateConfigurationSetEventDestinationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateConfigurationSetEventDestinationRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

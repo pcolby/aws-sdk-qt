@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESTACKREQUEST_H
 #define QTAWS_UPDATESTACKREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class UpdateStackRequestPrivate;
+
+class QTAWS_EXPORT UpdateStackRequest : public AppStreamRequest {
+
+public:
+    UpdateStackRequest(const UpdateStackRequest &other);
+    UpdateStackRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStackRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

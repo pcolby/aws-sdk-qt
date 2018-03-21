@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEHAPGREQUEST_P_H
 #define QTAWS_CREATEHAPGREQUEST_P_H
 
+#include "cloudhsm_p.h"
+#include "createhapgrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class CreateHapgRequest;
+
+class QTAWS_EXPORT CreateHapgRequestPrivate : public CloudHSMPrivate {
+
+public:
+    CreateHapgRequestPrivate(const CloudHSM::Action action,
+                                   CreateHapgRequest * const q);
+    CreateHapgRequestPrivate(const CreateHapgRequestPrivate &other,
+                                   CreateHapgRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateHapgRequest)
+
+};
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

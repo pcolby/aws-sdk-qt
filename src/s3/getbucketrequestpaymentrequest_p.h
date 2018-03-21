@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUCKETREQUESTPAYMENTREQUEST_P_H
 #define QTAWS_GETBUCKETREQUESTPAYMENTREQUEST_P_H
 
+#include "s3_p.h"
+#include "getbucketrequestpaymentrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketRequestPaymentRequest;
+
+class QTAWS_EXPORT GetBucketRequestPaymentRequestPrivate : public S3Private {
+
+public:
+    GetBucketRequestPaymentRequestPrivate(const S3::Action action,
+                                   GetBucketRequestPaymentRequest * const q);
+    GetBucketRequestPaymentRequestPrivate(const GetBucketRequestPaymentRequestPrivate &other,
+                                   GetBucketRequestPaymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketRequestPaymentRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

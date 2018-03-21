@@ -19,3 +19,107 @@
 
 #include "updateoriginendpointrequest.h"
 #include "updateoriginendpointrequest_p.h"
+#include "updateoriginendpointresponse.h"
+#include "mediapackagerequest_p.h"
+
+namespace AWS {
+namespace MediaPackage {
+
+/**
+ * @class  UpdateOriginEndpointRequest
+ *
+ * @brief  Implements MediaPackage UpdateOriginEndpoint requests.
+ *
+ * @see    MediaPackageClient::updateOriginEndpoint
+ */
+
+/**
+ * @brief  Constructs a new UpdateOriginEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateOriginEndpointResponse::UpdateOriginEndpointResponse(
+
+/**
+ * @brief  Constructs a new UpdateOriginEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateOriginEndpointRequest::UpdateOriginEndpointRequest(const UpdateOriginEndpointRequest &other)
+    : MediaPackageRequest(new UpdateOriginEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateOriginEndpointRequest object.
+ */
+UpdateOriginEndpointRequest::UpdateOriginEndpointRequest()
+    : MediaPackageRequest(new UpdateOriginEndpointRequestPrivate(MediaPackageRequest::UpdateOriginEndpointAction, this))
+{
+
+}
+
+bool UpdateOriginEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateOriginEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateOriginEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaPackageClient::send
+ */
+AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateOriginEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateOriginEndpointRequestPrivate
+ *
+ * @brief  Private implementation for UpdateOriginEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object.
+ *
+ * @param  action  MediaPackage action being performed.
+ * @param  q       Pointer to this object's public UpdateOriginEndpointRequest instance.
+ */
+UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
+    const MediaPackageRequest::Action action, UpdateOriginEndpointRequest * const q)
+    : UpdateOriginEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateOriginEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateOriginEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateOriginEndpointRequest instance.
+ */
+UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
+    const UpdateOriginEndpointRequestPrivate &other, UpdateOriginEndpointRequest * const q)
+    : UpdateOriginEndpointPrivate(other, q)
+{
+
+}

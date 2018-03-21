@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
+#include "codestar_p.h"
+#include "deleteprojectrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class DeleteProjectRequest;
+
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeStarPrivate {
+
+public:
+    DeleteProjectRequestPrivate(const CodeStar::Action action,
+                                   DeleteProjectRequest * const q);
+    DeleteProjectRequestPrivate(const DeleteProjectRequestPrivate &other,
+                                   DeleteProjectRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProjectRequest)
+
+};
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

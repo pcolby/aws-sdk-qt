@@ -20,4 +20,32 @@
 #ifndef QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSREQUEST_H
 #define QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class AuthorizeDBSecurityGroupIngressRequestPrivate;
+
+class QTAWS_EXPORT AuthorizeDBSecurityGroupIngressRequest : public RDSRequest {
+
+public:
+    AuthorizeDBSecurityGroupIngressRequest(const AuthorizeDBSecurityGroupIngressRequest &other);
+    AuthorizeDBSecurityGroupIngressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AuthorizeDBSecurityGroupIngressRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

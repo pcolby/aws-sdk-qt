@@ -19,3 +19,107 @@
 
 #include "deletescalingpolicyrequest.h"
 #include "deletescalingpolicyrequest_p.h"
+#include "deletescalingpolicyresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DeleteScalingPolicyRequest
+ *
+ * @brief  Implements GameLift DeleteScalingPolicy requests.
+ *
+ * @see    GameLiftClient::deleteScalingPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteScalingPolicyRequest::DeleteScalingPolicyRequest(const DeleteScalingPolicyRequest &other)
+    : GameLiftRequest(new DeleteScalingPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteScalingPolicyRequest object.
+ */
+DeleteScalingPolicyRequest::DeleteScalingPolicyRequest()
+    : GameLiftRequest(new DeleteScalingPolicyRequestPrivate(GameLiftRequest::DeleteScalingPolicyAction, this))
+{
+
+}
+
+bool DeleteScalingPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteScalingPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteScalingPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteScalingPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteScalingPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteScalingPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DeleteScalingPolicyRequest instance.
+ */
+DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
+    const GameLiftRequest::Action action, DeleteScalingPolicyRequest * const q)
+    : DeleteScalingPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteScalingPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteScalingPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteScalingPolicyRequest instance.
+ */
+DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
+    const DeleteScalingPolicyRequestPrivate &other, DeleteScalingPolicyRequest * const q)
+    : DeleteScalingPolicyPrivate(other, q)
+{
+
+}

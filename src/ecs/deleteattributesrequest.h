@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEATTRIBUTESREQUEST_H
 #define QTAWS_DELETEATTRIBUTESREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeleteAttributesRequestPrivate;
+
+class QTAWS_EXPORT DeleteAttributesRequest : public ECSRequest {
+
+public:
+    DeleteAttributesRequest(const DeleteAttributesRequest &other);
+    DeleteAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAttributesRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

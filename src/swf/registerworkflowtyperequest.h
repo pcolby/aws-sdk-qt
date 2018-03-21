@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERWORKFLOWTYPEREQUEST_H
 #define QTAWS_REGISTERWORKFLOWTYPEREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterWorkflowTypeRequestPrivate;
+
+class QTAWS_EXPORT RegisterWorkflowTypeRequest : public SWFRequest {
+
+public:
+    RegisterWorkflowTypeRequest(const RegisterWorkflowTypeRequest &other);
+    RegisterWorkflowTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterWorkflowTypeRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

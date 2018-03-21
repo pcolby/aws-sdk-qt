@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESTACKINSTANCESREQUEST_P_H
 #define QTAWS_UPDATESTACKINSTANCESREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "updatestackinstancesrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class UpdateStackInstancesRequest;
+
+class QTAWS_EXPORT UpdateStackInstancesRequestPrivate : public CloudFormationPrivate {
+
+public:
+    UpdateStackInstancesRequestPrivate(const CloudFormation::Action action,
+                                   UpdateStackInstancesRequest * const q);
+    UpdateStackInstancesRequestPrivate(const UpdateStackInstancesRequestPrivate &other,
+                                   UpdateStackInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStackInstancesRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

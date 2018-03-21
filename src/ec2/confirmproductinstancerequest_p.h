@@ -20,4 +20,29 @@
 #ifndef QTAWS_CONFIRMPRODUCTINSTANCEREQUEST_P_H
 #define QTAWS_CONFIRMPRODUCTINSTANCEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "confirmproductinstancerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ConfirmProductInstanceRequest;
+
+class QTAWS_EXPORT ConfirmProductInstanceRequestPrivate : public EC2Private {
+
+public:
+    ConfirmProductInstanceRequestPrivate(const EC2::Action action,
+                                   ConfirmProductInstanceRequest * const q);
+    ConfirmProductInstanceRequestPrivate(const ConfirmProductInstanceRequestPrivate &other,
+                                   ConfirmProductInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ConfirmProductInstanceRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

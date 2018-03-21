@@ -19,3 +19,107 @@
 
 #include "testconnectionrequest.h"
 #include "testconnectionrequest_p.h"
+#include "testconnectionresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  TestConnectionRequest
+ *
+ * @brief  Implements DatabaseMigrationService TestConnection requests.
+ *
+ * @see    DatabaseMigrationServiceClient::testConnection
+ */
+
+/**
+ * @brief  Constructs a new TestConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestConnectionResponse::TestConnectionResponse(
+
+/**
+ * @brief  Constructs a new TestConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TestConnectionRequest::TestConnectionRequest(const TestConnectionRequest &other)
+    : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TestConnectionRequest object.
+ */
+TestConnectionRequest::TestConnectionRequest()
+    : DatabaseMigrationServiceRequest(new TestConnectionRequestPrivate(DatabaseMigrationServiceRequest::TestConnectionAction, this))
+{
+
+}
+
+bool TestConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TestConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TestConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new TestConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TestConnectionRequestPrivate
+ *
+ * @brief  Private implementation for TestConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestConnectionRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public TestConnectionRequest instance.
+ */
+TestConnectionRequestPrivate::TestConnectionRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, TestConnectionRequest * const q)
+    : TestConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TestConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TestConnectionRequest instance.
+ */
+TestConnectionRequestPrivate::TestConnectionRequestPrivate(
+    const TestConnectionRequestPrivate &other, TestConnectionRequest * const q)
+    : TestConnectionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESREQUEST_P_H
 #define QTAWS_ADDCUSTOMATTRIBUTESREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "addcustomattributesrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AddCustomAttributesRequest;
+
+class QTAWS_EXPORT AddCustomAttributesRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AddCustomAttributesRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AddCustomAttributesRequest * const q);
+    AddCustomAttributesRequestPrivate(const AddCustomAttributesRequestPrivate &other,
+                                   AddCustomAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddCustomAttributesRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

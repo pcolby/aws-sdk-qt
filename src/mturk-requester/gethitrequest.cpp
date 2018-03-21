@@ -19,3 +19,107 @@
 
 #include "gethitrequest.h"
 #include "gethitrequest_p.h"
+#include "gethitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetHITRequest
+ *
+ * @brief  Implements MTurk GetHIT requests.
+ *
+ * @see    MTurkClient::getHIT
+ */
+
+/**
+ * @brief  Constructs a new GetHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetHITResponse::GetHITResponse(
+
+/**
+ * @brief  Constructs a new GetHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetHITRequest::GetHITRequest(const GetHITRequest &other)
+    : MTurkRequest(new GetHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetHITRequest object.
+ */
+GetHITRequest::GetHITRequest()
+    : MTurkRequest(new GetHITRequestPrivate(MTurkRequest::GetHITAction, this))
+{
+
+}
+
+bool GetHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * GetHITRequest::response(QNetworkReply * const reply) const
+{
+    return new GetHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetHITRequestPrivate
+ *
+ * @brief  Private implementation for GetHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public GetHITRequest instance.
+ */
+GetHITRequestPrivate::GetHITRequestPrivate(
+    const MTurkRequest::Action action, GetHITRequest * const q)
+    : GetHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetHITRequest instance.
+ */
+GetHITRequestPrivate::GetHITRequestPrivate(
+    const GetHITRequestPrivate &other, GetHITRequest * const q)
+    : GetHITPrivate(other, q)
+{
+
+}

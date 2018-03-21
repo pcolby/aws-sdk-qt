@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESCALINGPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBESCALINGPOLICIESREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "describescalingpoliciesrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeScalingPoliciesRequest;
+
+class QTAWS_EXPORT DescribeScalingPoliciesRequestPrivate : public GameLiftPrivate {
+
+public:
+    DescribeScalingPoliciesRequestPrivate(const GameLift::Action action,
+                                   DescribeScalingPoliciesRequest * const q);
+    DescribeScalingPoliciesRequestPrivate(const DescribeScalingPoliciesRequestPrivate &other,
+                                   DescribeScalingPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScalingPoliciesRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

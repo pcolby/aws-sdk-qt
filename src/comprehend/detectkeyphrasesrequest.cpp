@@ -19,3 +19,107 @@
 
 #include "detectkeyphrasesrequest.h"
 #include "detectkeyphrasesrequest_p.h"
+#include "detectkeyphrasesresponse.h"
+#include "comprehendrequest_p.h"
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DetectKeyPhrasesRequest
+ *
+ * @brief  Implements Comprehend DetectKeyPhrases requests.
+ *
+ * @see    ComprehendClient::detectKeyPhrases
+ */
+
+/**
+ * @brief  Constructs a new DetectKeyPhrasesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectKeyPhrasesResponse::DetectKeyPhrasesResponse(
+
+/**
+ * @brief  Constructs a new DetectKeyPhrasesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetectKeyPhrasesRequest::DetectKeyPhrasesRequest(const DetectKeyPhrasesRequest &other)
+    : ComprehendRequest(new DetectKeyPhrasesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetectKeyPhrasesRequest object.
+ */
+DetectKeyPhrasesRequest::DetectKeyPhrasesRequest()
+    : ComprehendRequest(new DetectKeyPhrasesRequestPrivate(ComprehendRequest::DetectKeyPhrasesAction, this))
+{
+
+}
+
+bool DetectKeyPhrasesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetectKeyPhrasesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetectKeyPhrasesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ComprehendClient::send
+ */
+AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkReply * const reply) const
+{
+    return new DetectKeyPhrasesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectKeyPhrasesRequestPrivate
+ *
+ * @brief  Private implementation for DetectKeyPhrasesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object.
+ *
+ * @param  action  Comprehend action being performed.
+ * @param  q       Pointer to this object's public DetectKeyPhrasesRequest instance.
+ */
+DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
+    const ComprehendRequest::Action action, DetectKeyPhrasesRequest * const q)
+    : DetectKeyPhrasesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectKeyPhrasesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetectKeyPhrasesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetectKeyPhrasesRequest instance.
+ */
+DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
+    const DetectKeyPhrasesRequestPrivate &other, DetectKeyPhrasesRequest * const q)
+    : DetectKeyPhrasesPrivate(other, q)
+{
+
+}

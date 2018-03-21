@@ -19,3 +19,107 @@
 
 #include "createfpgaimagerequest.h"
 #include "createfpgaimagerequest_p.h"
+#include "createfpgaimageresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateFpgaImageRequest
+ *
+ * @brief  Implements EC2 CreateFpgaImage requests.
+ *
+ * @see    EC2Client::createFpgaImage
+ */
+
+/**
+ * @brief  Constructs a new CreateFpgaImageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFpgaImageResponse::CreateFpgaImageResponse(
+
+/**
+ * @brief  Constructs a new CreateFpgaImageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateFpgaImageRequest::CreateFpgaImageRequest(const CreateFpgaImageRequest &other)
+    : EC2Request(new CreateFpgaImageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateFpgaImageRequest object.
+ */
+CreateFpgaImageRequest::CreateFpgaImageRequest()
+    : EC2Request(new CreateFpgaImageRequestPrivate(EC2Request::CreateFpgaImageAction, this))
+{
+
+}
+
+bool CreateFpgaImageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateFpgaImageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateFpgaImageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateFpgaImageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFpgaImageRequestPrivate
+ *
+ * @brief  Private implementation for CreateFpgaImageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFpgaImageRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateFpgaImageRequest instance.
+ */
+CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
+    const EC2Request::Action action, CreateFpgaImageRequest * const q)
+    : CreateFpgaImagePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFpgaImageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateFpgaImageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateFpgaImageRequest instance.
+ */
+CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
+    const CreateFpgaImageRequestPrivate &other, CreateFpgaImageRequest * const q)
+    : CreateFpgaImagePrivate(other, q)
+{
+
+}

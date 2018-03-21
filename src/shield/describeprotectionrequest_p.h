@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPROTECTIONREQUEST_P_H
 #define QTAWS_DESCRIBEPROTECTIONREQUEST_P_H
 
+#include "shield_p.h"
+#include "describeprotectionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DescribeProtectionRequest;
+
+class QTAWS_EXPORT DescribeProtectionRequestPrivate : public ShieldPrivate {
+
+public:
+    DescribeProtectionRequestPrivate(const Shield::Action action,
+                                   DescribeProtectionRequest * const q);
+    DescribeProtectionRequestPrivate(const DescribeProtectionRequestPrivate &other,
+                                   DescribeProtectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeProtectionRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

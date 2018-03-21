@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEPLOYMENTGROUPSREQUEST_P_H
 #define QTAWS_LISTDEPLOYMENTGROUPSREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "listdeploymentgroupsrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListDeploymentGroupsRequest;
+
+class QTAWS_EXPORT ListDeploymentGroupsRequestPrivate : public CodeDeployPrivate {
+
+public:
+    ListDeploymentGroupsRequestPrivate(const CodeDeploy::Action action,
+                                   ListDeploymentGroupsRequest * const q);
+    ListDeploymentGroupsRequestPrivate(const ListDeploymentGroupsRequestPrivate &other,
+                                   ListDeploymentGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeploymentGroupsRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

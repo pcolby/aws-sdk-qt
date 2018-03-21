@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEVPCPEERINGCONNECTIONREQUEST_H
 #define QTAWS_CREATEVPCPEERINGCONNECTIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateVpcPeeringConnectionRequestPrivate;
+
+class QTAWS_EXPORT CreateVpcPeeringConnectionRequest : public EC2Request {
+
+public:
+    CreateVpcPeeringConnectionRequest(const CreateVpcPeeringConnectionRequest &other);
+    CreateVpcPeeringConnectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateVpcPeeringConnectionRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTCONFIGRULESEVALUATIONREQUEST_H
 #define QTAWS_STARTCONFIGRULESEVALUATIONREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class StartConfigRulesEvaluationRequestPrivate;
+
+class QTAWS_EXPORT StartConfigRulesEvaluationRequest : public ConfigServiceRequest {
+
+public:
+    StartConfigRulesEvaluationRequest(const StartConfigRulesEvaluationRequest &other);
+    StartConfigRulesEvaluationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartConfigRulesEvaluationRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

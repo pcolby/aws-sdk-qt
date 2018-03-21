@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDTASKHEARTBEATREQUEST_H
 #define QTAWS_SENDTASKHEARTBEATREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class SendTaskHeartbeatRequestPrivate;
+
+class QTAWS_EXPORT SendTaskHeartbeatRequest : public SFNRequest {
+
+public:
+    SendTaskHeartbeatRequest(const SendTaskHeartbeatRequest &other);
+    SendTaskHeartbeatRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendTaskHeartbeatRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

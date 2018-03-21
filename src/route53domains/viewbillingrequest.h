@@ -20,4 +20,32 @@
 #ifndef QTAWS_VIEWBILLINGREQUEST_H
 #define QTAWS_VIEWBILLINGREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ViewBillingRequestPrivate;
+
+class QTAWS_EXPORT ViewBillingRequest : public Route53DomainsRequest {
+
+public:
+    ViewBillingRequest(const ViewBillingRequest &other);
+    ViewBillingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ViewBillingRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

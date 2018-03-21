@@ -20,4 +20,29 @@
 #ifndef QTAWS_POSTCOMMENTFORPULLREQUESTREQUEST_P_H
 #define QTAWS_POSTCOMMENTFORPULLREQUESTREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "postcommentforpullrequestrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class PostCommentForPullRequestRequest;
+
+class QTAWS_EXPORT PostCommentForPullRequestRequestPrivate : public CodeCommitPrivate {
+
+public:
+    PostCommentForPullRequestRequestPrivate(const CodeCommit::Action action,
+                                   PostCommentForPullRequestRequest * const q);
+    PostCommentForPullRequestRequestPrivate(const PostCommentForPullRequestRequestPrivate &other,
+                                   PostCommentForPullRequestRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PostCommentForPullRequestRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

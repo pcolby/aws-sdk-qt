@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESIGNINGCERTIFICATEREQUEST_P_H
 #define QTAWS_DELETESIGNINGCERTIFICATEREQUEST_P_H
 
+#include "iam_p.h"
+#include "deletesigningcertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteSigningCertificateRequest;
+
+class QTAWS_EXPORT DeleteSigningCertificateRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteSigningCertificateRequestPrivate(const IAM::Action action,
+                                   DeleteSigningCertificateRequest * const q);
+    DeleteSigningCertificateRequestPrivate(const DeleteSigningCertificateRequestPrivate &other,
+                                   DeleteSigningCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteSigningCertificateRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

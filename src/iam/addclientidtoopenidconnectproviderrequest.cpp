@@ -19,3 +19,107 @@
 
 #include "addclientidtoopenidconnectproviderrequest.h"
 #include "addclientidtoopenidconnectproviderrequest_p.h"
+#include "addclientidtoopenidconnectproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  AddClientIDToOpenIDConnectProviderRequest
+ *
+ * @brief  Implements IAM AddClientIDToOpenIDConnectProvider requests.
+ *
+ * @see    IAMClient::addClientIDToOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddClientIDToOpenIDConnectProviderResponse::AddClientIDToOpenIDConnectProviderResponse(
+
+/**
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest(const AddClientIDToOpenIDConnectProviderRequest &other)
+    : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequest object.
+ */
+AddClientIDToOpenIDConnectProviderRequest::AddClientIDToOpenIDConnectProviderRequest()
+    : IAMRequest(new AddClientIDToOpenIDConnectProviderRequestPrivate(IAMRequest::AddClientIDToOpenIDConnectProviderAction, this))
+{
+
+}
+
+bool AddClientIDToOpenIDConnectProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddClientIDToOpenIDConnectProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddClientIDToOpenIDConnectProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * AddClientIDToOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new AddClientIDToOpenIDConnectProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddClientIDToOpenIDConnectProviderRequestPrivate
+ *
+ * @brief  Private implementation for AddClientIDToOpenIDConnectProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public AddClientIDToOpenIDConnectProviderRequest instance.
+ */
+AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
+    const IAMRequest::Action action, AddClientIDToOpenIDConnectProviderRequest * const q)
+    : AddClientIDToOpenIDConnectProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddClientIDToOpenIDConnectProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddClientIDToOpenIDConnectProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddClientIDToOpenIDConnectProviderRequest instance.
+ */
+AddClientIDToOpenIDConnectProviderRequestPrivate::AddClientIDToOpenIDConnectProviderRequestPrivate(
+    const AddClientIDToOpenIDConnectProviderRequestPrivate &other, AddClientIDToOpenIDConnectProviderRequest * const q)
+    : AddClientIDToOpenIDConnectProviderPrivate(other, q)
+{
+
+}

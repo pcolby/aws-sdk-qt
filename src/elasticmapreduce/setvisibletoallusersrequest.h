@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSREQUEST_H
 #define QTAWS_SETVISIBLETOALLUSERSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class SetVisibleToAllUsersRequestPrivate;
+
+class QTAWS_EXPORT SetVisibleToAllUsersRequest : public EMRRequest {
+
+public:
+    SetVisibleToAllUsersRequest(const SetVisibleToAllUsersRequest &other);
+    SetVisibleToAllUsersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetVisibleToAllUsersRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

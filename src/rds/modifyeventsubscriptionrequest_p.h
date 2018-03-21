@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 
+#include "rds_p.h"
+#include "modifyeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyEventSubscriptionRequest;
+
+class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public RDSPrivate {
+
+public:
+    ModifyEventSubscriptionRequestPrivate(const RDS::Action action,
+                                   ModifyEventSubscriptionRequest * const q);
+    ModifyEventSubscriptionRequestPrivate(const ModifyEventSubscriptionRequestPrivate &other,
+                                   ModifyEventSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyEventSubscriptionRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

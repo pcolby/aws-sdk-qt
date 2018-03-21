@@ -19,3 +19,107 @@
 
 #include "describelaunchconfigurationsrequest.h"
 #include "describelaunchconfigurationsrequest_p.h"
+#include "describelaunchconfigurationsresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DescribeLaunchConfigurationsRequest
+ *
+ * @brief  Implements AutoScaling DescribeLaunchConfigurations requests.
+ *
+ * @see    AutoScalingClient::describeLaunchConfigurations
+ */
+
+/**
+ * @brief  Constructs a new DescribeLaunchConfigurationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLaunchConfigurationsResponse::DescribeLaunchConfigurationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeLaunchConfigurationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest(const DescribeLaunchConfigurationsRequest &other)
+    : AutoScalingRequest(new DescribeLaunchConfigurationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLaunchConfigurationsRequest object.
+ */
+DescribeLaunchConfigurationsRequest::DescribeLaunchConfigurationsRequest()
+    : AutoScalingRequest(new DescribeLaunchConfigurationsRequestPrivate(AutoScalingRequest::DescribeLaunchConfigurationsAction, this))
+{
+
+}
+
+bool DescribeLaunchConfigurationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLaunchConfigurationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLaunchConfigurationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLaunchConfigurationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLaunchConfigurationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLaunchConfigurationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DescribeLaunchConfigurationsRequest instance.
+ */
+DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestPrivate(
+    const AutoScalingRequest::Action action, DescribeLaunchConfigurationsRequest * const q)
+    : DescribeLaunchConfigurationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLaunchConfigurationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLaunchConfigurationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLaunchConfigurationsRequest instance.
+ */
+DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestPrivate(
+    const DescribeLaunchConfigurationsRequestPrivate &other, DescribeLaunchConfigurationsRequest * const q)
+    : DescribeLaunchConfigurationsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describecacertificaterequest.h"
 #include "describecacertificaterequest_p.h"
+#include "describecacertificateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeCACertificateRequest
+ *
+ * @brief  Implements IoT DescribeCACertificate requests.
+ *
+ * @see    IoTClient::describeCACertificate
+ */
+
+/**
+ * @brief  Constructs a new DescribeCACertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCACertificateResponse::DescribeCACertificateResponse(
+
+/**
+ * @brief  Constructs a new DescribeCACertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCACertificateRequest::DescribeCACertificateRequest(const DescribeCACertificateRequest &other)
+    : IoTRequest(new DescribeCACertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCACertificateRequest object.
+ */
+DescribeCACertificateRequest::DescribeCACertificateRequest()
+    : IoTRequest(new DescribeCACertificateRequestPrivate(IoTRequest::DescribeCACertificateAction, this))
+{
+
+}
+
+bool DescribeCACertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCACertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCACertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeCACertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCACertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCACertificateRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCACertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCACertificateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeCACertificateRequest instance.
+ */
+DescribeCACertificateRequestPrivate::DescribeCACertificateRequestPrivate(
+    const IoTRequest::Action action, DescribeCACertificateRequest * const q)
+    : DescribeCACertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCACertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCACertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCACertificateRequest instance.
+ */
+DescribeCACertificateRequestPrivate::DescribeCACertificateRequestPrivate(
+    const DescribeCACertificateRequestPrivate &other, DescribeCACertificateRequest * const q)
+    : DescribeCACertificatePrivate(other, q)
+{
+
+}

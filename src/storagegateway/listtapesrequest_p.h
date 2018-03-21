@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAPESREQUEST_P_H
 #define QTAWS_LISTTAPESREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "listtapesrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListTapesRequest;
+
+class QTAWS_EXPORT ListTapesRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    ListTapesRequestPrivate(const StorageGateway::Action action,
+                                   ListTapesRequest * const q);
+    ListTapesRequestPrivate(const ListTapesRequestPrivate &other,
+                                   ListTapesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTapesRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

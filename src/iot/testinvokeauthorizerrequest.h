@@ -20,4 +20,32 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERREQUEST_H
 #define QTAWS_TESTINVOKEAUTHORIZERREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class TestInvokeAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT TestInvokeAuthorizerRequest : public IoTRequest {
+
+public:
+    TestInvokeAuthorizerRequest(const TestInvokeAuthorizerRequest &other);
+    TestInvokeAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TestInvokeAuthorizerRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

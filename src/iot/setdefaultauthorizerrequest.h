@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETDEFAULTAUTHORIZERREQUEST_H
 #define QTAWS_SETDEFAULTAUTHORIZERREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SetDefaultAuthorizerRequestPrivate;
+
+class QTAWS_EXPORT SetDefaultAuthorizerRequest : public IoTRequest {
+
+public:
+    SetDefaultAuthorizerRequest(const SetDefaultAuthorizerRequest &other);
+    SetDefaultAuthorizerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetDefaultAuthorizerRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

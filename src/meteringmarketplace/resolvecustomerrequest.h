@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESOLVECUSTOMERREQUEST_H
 #define QTAWS_RESOLVECUSTOMERREQUEST_H
 
+#include "marketplacemeteringrequest.h"
+
+namespace AWS {
+
+namespace MarketplaceMetering {
+
+class ResolveCustomerRequestPrivate;
+
+class QTAWS_EXPORT ResolveCustomerRequest : public MarketplaceMeteringRequest {
+
+public:
+    ResolveCustomerRequest(const ResolveCustomerRequest &other);
+    ResolveCustomerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResolveCustomerRequest)
+
+}
+
+} // namespace MarketplaceMetering
+} // namespace AWS
+
 #endif

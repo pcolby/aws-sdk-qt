@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSTATUSREQUEST_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSTATUSREQUEST_H
 
+#include "configservicerequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DescribeDeliveryChannelStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeDeliveryChannelStatusRequest : public ConfigServiceRequest {
+
+public:
+    DescribeDeliveryChannelStatusRequest(const DescribeDeliveryChannelStatusRequest &other);
+    DescribeDeliveryChannelStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDeliveryChannelStatusRequest)
+
+}
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

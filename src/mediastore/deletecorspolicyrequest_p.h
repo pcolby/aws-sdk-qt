@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECORSPOLICYREQUEST_P_H
 #define QTAWS_DELETECORSPOLICYREQUEST_P_H
 
+#include "mediastore_p.h"
+#include "deletecorspolicyrequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class DeleteCorsPolicyRequest;
+
+class QTAWS_EXPORT DeleteCorsPolicyRequestPrivate : public MediaStorePrivate {
+
+public:
+    DeleteCorsPolicyRequestPrivate(const MediaStore::Action action,
+                                   DeleteCorsPolicyRequest * const q);
+    DeleteCorsPolicyRequestPrivate(const DeleteCorsPolicyRequestPrivate &other,
+                                   DeleteCorsPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCorsPolicyRequest)
+
+};
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

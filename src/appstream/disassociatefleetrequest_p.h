@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEFLEETREQUEST_P_H
 #define QTAWS_DISASSOCIATEFLEETREQUEST_P_H
 
+#include "appstream_p.h"
+#include "disassociatefleetrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DisassociateFleetRequest;
+
+class QTAWS_EXPORT DisassociateFleetRequestPrivate : public AppStreamPrivate {
+
+public:
+    DisassociateFleetRequestPrivate(const AppStream::Action action,
+                                   DisassociateFleetRequest * const q);
+    DisassociateFleetRequestPrivate(const DisassociateFleetRequestPrivate &other,
+                                   DisassociateFleetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateFleetRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

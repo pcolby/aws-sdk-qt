@@ -19,3 +19,107 @@
 
 #include "listportfolioaccessrequest.h"
 #include "listportfolioaccessrequest_p.h"
+#include "listportfolioaccessresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ListPortfolioAccessRequest
+ *
+ * @brief  Implements ServiceCatalog ListPortfolioAccess requests.
+ *
+ * @see    ServiceCatalogClient::listPortfolioAccess
+ */
+
+/**
+ * @brief  Constructs a new ListPortfolioAccessResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListPortfolioAccessResponse::ListPortfolioAccessResponse(
+
+/**
+ * @brief  Constructs a new ListPortfolioAccessRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListPortfolioAccessRequest::ListPortfolioAccessRequest(const ListPortfolioAccessRequest &other)
+    : ServiceCatalogRequest(new ListPortfolioAccessRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListPortfolioAccessRequest object.
+ */
+ListPortfolioAccessRequest::ListPortfolioAccessRequest()
+    : ServiceCatalogRequest(new ListPortfolioAccessRequestPrivate(ServiceCatalogRequest::ListPortfolioAccessAction, this))
+{
+
+}
+
+bool ListPortfolioAccessRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListPortfolioAccessResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListPortfolioAccessResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetworkReply * const reply) const
+{
+    return new ListPortfolioAccessResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListPortfolioAccessRequestPrivate
+ *
+ * @brief  Private implementation for ListPortfolioAccessRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPortfolioAccessRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ListPortfolioAccessRequest instance.
+ */
+ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
+    const ServiceCatalogRequest::Action action, ListPortfolioAccessRequest * const q)
+    : ListPortfolioAccessPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListPortfolioAccessRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListPortfolioAccessRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListPortfolioAccessRequest instance.
+ */
+ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
+    const ListPortfolioAccessRequestPrivate &other, ListPortfolioAccessRequest * const q)
+    : ListPortfolioAccessPrivate(other, q)
+{
+
+}

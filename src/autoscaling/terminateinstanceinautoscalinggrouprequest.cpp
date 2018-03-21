@@ -19,3 +19,107 @@
 
 #include "terminateinstanceinautoscalinggrouprequest.h"
 #include "terminateinstanceinautoscalinggrouprequest_p.h"
+#include "terminateinstanceinautoscalinggroupresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  TerminateInstanceInAutoScalingGroupRequest
+ *
+ * @brief  Implements AutoScaling TerminateInstanceInAutoScalingGroup requests.
+ *
+ * @see    AutoScalingClient::terminateInstanceInAutoScalingGroup
+ */
+
+/**
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroupResponse(
+
+/**
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupRequest(const TerminateInstanceInAutoScalingGroupRequest &other)
+    : AutoScalingRequest(new TerminateInstanceInAutoScalingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequest object.
+ */
+TerminateInstanceInAutoScalingGroupRequest::TerminateInstanceInAutoScalingGroupRequest()
+    : AutoScalingRequest(new TerminateInstanceInAutoScalingGroupRequestPrivate(AutoScalingRequest::TerminateInstanceInAutoScalingGroupAction, this))
+{
+
+}
+
+bool TerminateInstanceInAutoScalingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TerminateInstanceInAutoScalingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TerminateInstanceInAutoScalingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new TerminateInstanceInAutoScalingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TerminateInstanceInAutoScalingGroupRequestPrivate
+ *
+ * @brief  Private implementation for TerminateInstanceInAutoScalingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public TerminateInstanceInAutoScalingGroupRequest instance.
+ */
+TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
+    const AutoScalingRequest::Action action, TerminateInstanceInAutoScalingGroupRequest * const q)
+    : TerminateInstanceInAutoScalingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TerminateInstanceInAutoScalingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TerminateInstanceInAutoScalingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TerminateInstanceInAutoScalingGroupRequest instance.
+ */
+TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
+    const TerminateInstanceInAutoScalingGroupRequestPrivate &other, TerminateInstanceInAutoScalingGroupRequest * const q)
+    : TerminateInstanceInAutoScalingGroupPrivate(other, q)
+{
+
+}

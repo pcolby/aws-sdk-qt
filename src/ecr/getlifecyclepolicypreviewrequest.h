@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETLIFECYCLEPOLICYPREVIEWREQUEST_H
 #define QTAWS_GETLIFECYCLEPOLICYPREVIEWREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class GetLifecyclePolicyPreviewRequestPrivate;
+
+class QTAWS_EXPORT GetLifecyclePolicyPreviewRequest : public ECRRequest {
+
+public:
+    GetLifecyclePolicyPreviewRequest(const GetLifecyclePolicyPreviewRequest &other);
+    GetLifecyclePolicyPreviewRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetLifecyclePolicyPreviewRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

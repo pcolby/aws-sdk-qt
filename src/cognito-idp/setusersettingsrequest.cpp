@@ -19,3 +19,107 @@
 
 #include "setusersettingsrequest.h"
 #include "setusersettingsrequest_p.h"
+#include "setusersettingsresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SetUserSettingsRequest
+ *
+ * @brief  Implements CognitoIdentityProvider SetUserSettings requests.
+ *
+ * @see    CognitoIdentityProviderClient::setUserSettings
+ */
+
+/**
+ * @brief  Constructs a new SetUserSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetUserSettingsResponse::SetUserSettingsResponse(
+
+/**
+ * @brief  Constructs a new SetUserSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetUserSettingsRequest::SetUserSettingsRequest(const SetUserSettingsRequest &other)
+    : CognitoIdentityProviderRequest(new SetUserSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetUserSettingsRequest object.
+ */
+SetUserSettingsRequest::SetUserSettingsRequest()
+    : CognitoIdentityProviderRequest(new SetUserSettingsRequestPrivate(CognitoIdentityProviderRequest::SetUserSettingsAction, this))
+{
+
+}
+
+bool SetUserSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetUserSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetUserSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new SetUserSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetUserSettingsRequestPrivate
+ *
+ * @brief  Private implementation for SetUserSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserSettingsRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public SetUserSettingsRequest instance.
+ */
+SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, SetUserSettingsRequest * const q)
+    : SetUserSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetUserSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetUserSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetUserSettingsRequest instance.
+ */
+SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
+    const SetUserSettingsRequestPrivate &other, SetUserSettingsRequest * const q)
+    : SetUserSettingsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEOPENIDCONNECTPROVIDERREQUEST_P_H
 #define QTAWS_DELETEOPENIDCONNECTPROVIDERREQUEST_P_H
 
+#include "iam_p.h"
+#include "deleteopenidconnectproviderrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteOpenIDConnectProviderRequest;
+
+class QTAWS_EXPORT DeleteOpenIDConnectProviderRequestPrivate : public IAMPrivate {
+
+public:
+    DeleteOpenIDConnectProviderRequestPrivate(const IAM::Action action,
+                                   DeleteOpenIDConnectProviderRequest * const q);
+    DeleteOpenIDConnectProviderRequestPrivate(const DeleteOpenIDConnectProviderRequestPrivate &other,
+                                   DeleteOpenIDConnectProviderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOpenIDConnectProviderRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

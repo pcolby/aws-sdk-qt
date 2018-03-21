@@ -20,4 +20,29 @@
 #ifndef QTAWS_ACCEPTVPCENDPOINTCONNECTIONSREQUEST_P_H
 #define QTAWS_ACCEPTVPCENDPOINTCONNECTIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "acceptvpcendpointconnectionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AcceptVpcEndpointConnectionsRequest;
+
+class QTAWS_EXPORT AcceptVpcEndpointConnectionsRequestPrivate : public EC2Private {
+
+public:
+    AcceptVpcEndpointConnectionsRequestPrivate(const EC2::Action action,
+                                   AcceptVpcEndpointConnectionsRequest * const q);
+    AcceptVpcEndpointConnectionsRequestPrivate(const AcceptVpcEndpointConnectionsRequestPrivate &other,
+                                   AcceptVpcEndpointConnectionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AcceptVpcEndpointConnectionsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

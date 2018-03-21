@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESPONDTOAUTHCHALLENGEREQUEST_H
 #define QTAWS_RESPONDTOAUTHCHALLENGEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class RespondToAuthChallengeRequestPrivate;
+
+class QTAWS_EXPORT RespondToAuthChallengeRequest : public CognitoIdentityProviderRequest {
+
+public:
+    RespondToAuthChallengeRequest(const RespondToAuthChallengeRequest &other);
+    RespondToAuthChallengeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RespondToAuthChallengeRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

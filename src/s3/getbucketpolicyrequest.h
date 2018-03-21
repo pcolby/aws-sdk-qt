@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBUCKETPOLICYREQUEST_H
 #define QTAWS_GETBUCKETPOLICYREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketPolicyRequestPrivate;
+
+class QTAWS_EXPORT GetBucketPolicyRequest : public S3Request {
+
+public:
+    GetBucketPolicyRequest(const GetBucketPolicyRequest &other);
+    GetBucketPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBucketPolicyRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

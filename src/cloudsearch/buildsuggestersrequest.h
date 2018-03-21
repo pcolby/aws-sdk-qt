@@ -20,4 +20,32 @@
 #ifndef QTAWS_BUILDSUGGESTERSREQUEST_H
 #define QTAWS_BUILDSUGGESTERSREQUEST_H
 
+#include "cloudsearchrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class BuildSuggestersRequestPrivate;
+
+class QTAWS_EXPORT BuildSuggestersRequest : public CloudSearchRequest {
+
+public:
+    BuildSuggestersRequest(const BuildSuggestersRequest &other);
+    BuildSuggestersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BuildSuggestersRequest)
+
+}
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

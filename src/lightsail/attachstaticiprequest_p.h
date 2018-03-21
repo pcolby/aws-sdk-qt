@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHSTATICIPREQUEST_P_H
 #define QTAWS_ATTACHSTATICIPREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "attachstaticiprequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class AttachStaticIpRequest;
+
+class QTAWS_EXPORT AttachStaticIpRequestPrivate : public LightsailPrivate {
+
+public:
+    AttachStaticIpRequestPrivate(const Lightsail::Action action,
+                                   AttachStaticIpRequest * const q);
+    AttachStaticIpRequestPrivate(const AttachStaticIpRequestPrivate &other,
+                                   AttachStaticIpRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachStaticIpRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

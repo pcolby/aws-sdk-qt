@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETRAININGJOBREQUEST_P_H
 #define QTAWS_CREATETRAININGJOBREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "createtrainingjobrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class CreateTrainingJobRequest;
+
+class QTAWS_EXPORT CreateTrainingJobRequestPrivate : public SageMakerPrivate {
+
+public:
+    CreateTrainingJobRequestPrivate(const SageMaker::Action action,
+                                   CreateTrainingJobRequest * const q);
+    CreateTrainingJobRequestPrivate(const CreateTrainingJobRequestPrivate &other,
+                                   CreateTrainingJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTrainingJobRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

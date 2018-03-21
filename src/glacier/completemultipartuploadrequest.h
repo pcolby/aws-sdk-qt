@@ -20,4 +20,32 @@
 #ifndef QTAWS_COMPLETEMULTIPARTUPLOADREQUEST_H
 #define QTAWS_COMPLETEMULTIPARTUPLOADREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class CompleteMultipartUploadRequestPrivate;
+
+class QTAWS_EXPORT CompleteMultipartUploadRequest : public GlacierRequest {
+
+public:
+    CompleteMultipartUploadRequest(const CompleteMultipartUploadRequest &other);
+    CompleteMultipartUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CompleteMultipartUploadRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

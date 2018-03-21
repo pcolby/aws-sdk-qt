@@ -19,3 +19,107 @@
 
 #include "describefleeteventsrequest.h"
 #include "describefleeteventsrequest_p.h"
+#include "describefleeteventsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  DescribeFleetEventsRequest
+ *
+ * @brief  Implements GameLift DescribeFleetEvents requests.
+ *
+ * @see    GameLiftClient::describeFleetEvents
+ */
+
+/**
+ * @brief  Constructs a new DescribeFleetEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeFleetEventsResponse::DescribeFleetEventsResponse(
+
+/**
+ * @brief  Constructs a new DescribeFleetEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeFleetEventsRequest::DescribeFleetEventsRequest(const DescribeFleetEventsRequest &other)
+    : GameLiftRequest(new DescribeFleetEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeFleetEventsRequest object.
+ */
+DescribeFleetEventsRequest::DescribeFleetEventsRequest()
+    : GameLiftRequest(new DescribeFleetEventsRequestPrivate(GameLiftRequest::DescribeFleetEventsAction, this))
+{
+
+}
+
+bool DescribeFleetEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeFleetEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeFleetEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeFleetEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeFleetEventsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeFleetEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetEventsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public DescribeFleetEventsRequest instance.
+ */
+DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
+    const GameLiftRequest::Action action, DescribeFleetEventsRequest * const q)
+    : DescribeFleetEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeFleetEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeFleetEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeFleetEventsRequest instance.
+ */
+DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
+    const DescribeFleetEventsRequestPrivate &other, DescribeFleetEventsRequest * const q)
+    : DescribeFleetEventsPrivate(other, q)
+{
+
+}

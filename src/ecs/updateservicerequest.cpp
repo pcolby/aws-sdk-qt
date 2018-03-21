@@ -19,3 +19,107 @@
 
 #include "updateservicerequest.h"
 #include "updateservicerequest_p.h"
+#include "updateserviceresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  UpdateServiceRequest
+ *
+ * @brief  Implements ECS UpdateService requests.
+ *
+ * @see    ECSClient::updateService
+ */
+
+/**
+ * @brief  Constructs a new UpdateServiceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateServiceResponse::UpdateServiceResponse(
+
+/**
+ * @brief  Constructs a new UpdateServiceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateServiceRequest::UpdateServiceRequest(const UpdateServiceRequest &other)
+    : ECSRequest(new UpdateServiceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateServiceRequest object.
+ */
+UpdateServiceRequest::UpdateServiceRequest()
+    : ECSRequest(new UpdateServiceRequestPrivate(ECSRequest::UpdateServiceAction, this))
+{
+
+}
+
+bool UpdateServiceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateServiceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateServiceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateServiceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateServiceRequestPrivate
+ *
+ * @brief  Private implementation for UpdateServiceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public UpdateServiceRequest instance.
+ */
+UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
+    const ECSRequest::Action action, UpdateServiceRequest * const q)
+    : UpdateServicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateServiceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateServiceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateServiceRequest instance.
+ */
+UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
+    const UpdateServiceRequestPrivate &other, UpdateServiceRequest * const q)
+    : UpdateServicePrivate(other, q)
+{
+
+}

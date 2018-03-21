@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYREPLICATIONSUBNETGROUPREQUEST_P_H
 #define QTAWS_MODIFYREPLICATIONSUBNETGROUPREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "modifyreplicationsubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ModifyReplicationSubnetGroupRequest;
+
+class QTAWS_EXPORT ModifyReplicationSubnetGroupRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    ModifyReplicationSubnetGroupRequestPrivate(const DatabaseMigrationService::Action action,
+                                   ModifyReplicationSubnetGroupRequest * const q);
+    ModifyReplicationSubnetGroupRequestPrivate(const ModifyReplicationSubnetGroupRequestPrivate &other,
+                                   ModifyReplicationSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyReplicationSubnetGroupRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

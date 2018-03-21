@@ -19,3 +19,107 @@
 
 #include "getdevendpointrequest.h"
 #include "getdevendpointrequest_p.h"
+#include "getdevendpointresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetDevEndpointRequest
+ *
+ * @brief  Implements Glue GetDevEndpoint requests.
+ *
+ * @see    GlueClient::getDevEndpoint
+ */
+
+/**
+ * @brief  Constructs a new GetDevEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDevEndpointResponse::GetDevEndpointResponse(
+
+/**
+ * @brief  Constructs a new GetDevEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDevEndpointRequest::GetDevEndpointRequest(const GetDevEndpointRequest &other)
+    : GlueRequest(new GetDevEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDevEndpointRequest object.
+ */
+GetDevEndpointRequest::GetDevEndpointRequest()
+    : GlueRequest(new GetDevEndpointRequestPrivate(GlueRequest::GetDevEndpointAction, this))
+{
+
+}
+
+bool GetDevEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDevEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDevEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetDevEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDevEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDevEndpointRequestPrivate
+ *
+ * @brief  Private implementation for GetDevEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDevEndpointRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetDevEndpointRequest instance.
+ */
+GetDevEndpointRequestPrivate::GetDevEndpointRequestPrivate(
+    const GlueRequest::Action action, GetDevEndpointRequest * const q)
+    : GetDevEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDevEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDevEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDevEndpointRequest instance.
+ */
+GetDevEndpointRequestPrivate::GetDevEndpointRequestPrivate(
+    const GetDevEndpointRequestPrivate &other, GetDevEndpointRequest * const q)
+    : GetDevEndpointPrivate(other, q)
+{
+
+}

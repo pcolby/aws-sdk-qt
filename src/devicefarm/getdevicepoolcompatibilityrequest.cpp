@@ -19,3 +19,107 @@
 
 #include "getdevicepoolcompatibilityrequest.h"
 #include "getdevicepoolcompatibilityrequest_p.h"
+#include "getdevicepoolcompatibilityresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetDevicePoolCompatibilityRequest
+ *
+ * @brief  Implements DeviceFarm GetDevicePoolCompatibility requests.
+ *
+ * @see    DeviceFarmClient::getDevicePoolCompatibility
+ */
+
+/**
+ * @brief  Constructs a new GetDevicePoolCompatibilityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDevicePoolCompatibilityResponse::GetDevicePoolCompatibilityResponse(
+
+/**
+ * @brief  Constructs a new GetDevicePoolCompatibilityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest(const GetDevicePoolCompatibilityRequest &other)
+    : DeviceFarmRequest(new GetDevicePoolCompatibilityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDevicePoolCompatibilityRequest object.
+ */
+GetDevicePoolCompatibilityRequest::GetDevicePoolCompatibilityRequest()
+    : DeviceFarmRequest(new GetDevicePoolCompatibilityRequestPrivate(DeviceFarmRequest::GetDevicePoolCompatibilityAction, this))
+{
+
+}
+
+bool GetDevicePoolCompatibilityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDevicePoolCompatibilityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDevicePoolCompatibilityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDevicePoolCompatibilityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDevicePoolCompatibilityRequestPrivate
+ *
+ * @brief  Private implementation for GetDevicePoolCompatibilityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public GetDevicePoolCompatibilityRequest instance.
+ */
+GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
+    const DeviceFarmRequest::Action action, GetDevicePoolCompatibilityRequest * const q)
+    : GetDevicePoolCompatibilityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDevicePoolCompatibilityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDevicePoolCompatibilityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDevicePoolCompatibilityRequest instance.
+ */
+GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
+    const GetDevicePoolCompatibilityRequestPrivate &other, GetDevicePoolCompatibilityRequest * const q)
+    : GetDevicePoolCompatibilityPrivate(other, q)
+{
+
+}

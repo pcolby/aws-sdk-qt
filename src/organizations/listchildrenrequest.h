@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCHILDRENREQUEST_H
 #define QTAWS_LISTCHILDRENREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListChildrenRequestPrivate;
+
+class QTAWS_EXPORT ListChildrenRequest : public OrganizationsRequest {
+
+public:
+    ListChildrenRequest(const ListChildrenRequest &other);
+    ListChildrenRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListChildrenRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

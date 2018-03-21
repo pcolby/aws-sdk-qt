@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYSUBNETATTRIBUTEREQUEST_H
 #define QTAWS_MODIFYSUBNETATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifySubnetAttributeRequestPrivate;
+
+class QTAWS_EXPORT ModifySubnetAttributeRequest : public EC2Request {
+
+public:
+    ModifySubnetAttributeRequest(const ModifySubnetAttributeRequest &other);
+    ModifySubnetAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifySubnetAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "getintrospectionschemarequest.h"
 #include "getintrospectionschemarequest_p.h"
+#include "getintrospectionschemaresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  GetIntrospectionSchemaRequest
+ *
+ * @brief  Implements AppSync GetIntrospectionSchema requests.
+ *
+ * @see    AppSyncClient::getIntrospectionSchema
+ */
+
+/**
+ * @brief  Constructs a new GetIntrospectionSchemaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIntrospectionSchemaResponse::GetIntrospectionSchemaResponse(
+
+/**
+ * @brief  Constructs a new GetIntrospectionSchemaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest(const GetIntrospectionSchemaRequest &other)
+    : AppSyncRequest(new GetIntrospectionSchemaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIntrospectionSchemaRequest object.
+ */
+GetIntrospectionSchemaRequest::GetIntrospectionSchemaRequest()
+    : AppSyncRequest(new GetIntrospectionSchemaRequestPrivate(AppSyncRequest::GetIntrospectionSchemaAction, this))
+{
+
+}
+
+bool GetIntrospectionSchemaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIntrospectionSchemaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIntrospectionSchemaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIntrospectionSchemaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIntrospectionSchemaRequestPrivate
+ *
+ * @brief  Private implementation for GetIntrospectionSchemaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public GetIntrospectionSchemaRequest instance.
+ */
+GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
+    const AppSyncRequest::Action action, GetIntrospectionSchemaRequest * const q)
+    : GetIntrospectionSchemaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIntrospectionSchemaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIntrospectionSchemaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIntrospectionSchemaRequest instance.
+ */
+GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
+    const GetIntrospectionSchemaRequestPrivate &other, GetIntrospectionSchemaRequest * const q)
+    : GetIntrospectionSchemaPrivate(other, q)
+{
+
+}

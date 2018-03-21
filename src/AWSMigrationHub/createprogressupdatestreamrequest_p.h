@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEPROGRESSUPDATESTREAMREQUEST_P_H
 #define QTAWS_CREATEPROGRESSUPDATESTREAMREQUEST_P_H
 
+#include "migrationhub_p.h"
+#include "createprogressupdatestreamrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class CreateProgressUpdateStreamRequest;
+
+class QTAWS_EXPORT CreateProgressUpdateStreamRequestPrivate : public MigrationHubPrivate {
+
+public:
+    CreateProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,
+                                   CreateProgressUpdateStreamRequest * const q);
+    CreateProgressUpdateStreamRequestPrivate(const CreateProgressUpdateStreamRequestPrivate &other,
+                                   CreateProgressUpdateStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateProgressUpdateStreamRequest)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

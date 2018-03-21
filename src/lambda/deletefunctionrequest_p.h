@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFUNCTIONREQUEST_P_H
 #define QTAWS_DELETEFUNCTIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "deletefunctionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteFunctionRequest;
+
+class QTAWS_EXPORT DeleteFunctionRequestPrivate : public LambdaPrivate {
+
+public:
+    DeleteFunctionRequestPrivate(const Lambda::Action action,
+                                   DeleteFunctionRequest * const q);
+    DeleteFunctionRequestPrivate(const DeleteFunctionRequestPrivate &other,
+                                   DeleteFunctionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFunctionRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

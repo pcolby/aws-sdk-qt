@@ -19,3 +19,107 @@
 
 #include "startpipelineexecutionrequest.h"
 #include "startpipelineexecutionrequest_p.h"
+#include "startpipelineexecutionresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  StartPipelineExecutionRequest
+ *
+ * @brief  Implements CodePipeline StartPipelineExecution requests.
+ *
+ * @see    CodePipelineClient::startPipelineExecution
+ */
+
+/**
+ * @brief  Constructs a new StartPipelineExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartPipelineExecutionResponse::StartPipelineExecutionResponse(
+
+/**
+ * @brief  Constructs a new StartPipelineExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartPipelineExecutionRequest::StartPipelineExecutionRequest(const StartPipelineExecutionRequest &other)
+    : CodePipelineRequest(new StartPipelineExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartPipelineExecutionRequest object.
+ */
+StartPipelineExecutionRequest::StartPipelineExecutionRequest()
+    : CodePipelineRequest(new StartPipelineExecutionRequestPrivate(CodePipelineRequest::StartPipelineExecutionAction, this))
+{
+
+}
+
+bool StartPipelineExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartPipelineExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartPipelineExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartPipelineExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartPipelineExecutionRequestPrivate
+ *
+ * @brief  Private implementation for StartPipelineExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartPipelineExecutionRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public StartPipelineExecutionRequest instance.
+ */
+StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
+    const CodePipelineRequest::Action action, StartPipelineExecutionRequest * const q)
+    : StartPipelineExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartPipelineExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartPipelineExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartPipelineExecutionRequest instance.
+ */
+StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
+    const StartPipelineExecutionRequestPrivate &other, StartPipelineExecutionRequest * const q)
+    : StartPipelineExecutionPrivate(other, q)
+{
+
+}

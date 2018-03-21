@@ -19,3 +19,107 @@
 
 #include "startautomationexecutionrequest.h"
 #include "startautomationexecutionrequest_p.h"
+#include "startautomationexecutionresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  StartAutomationExecutionRequest
+ *
+ * @brief  Implements SSM StartAutomationExecution requests.
+ *
+ * @see    SSMClient::startAutomationExecution
+ */
+
+/**
+ * @brief  Constructs a new StartAutomationExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartAutomationExecutionResponse::StartAutomationExecutionResponse(
+
+/**
+ * @brief  Constructs a new StartAutomationExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartAutomationExecutionRequest::StartAutomationExecutionRequest(const StartAutomationExecutionRequest &other)
+    : SSMRequest(new StartAutomationExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartAutomationExecutionRequest object.
+ */
+StartAutomationExecutionRequest::StartAutomationExecutionRequest()
+    : SSMRequest(new StartAutomationExecutionRequestPrivate(SSMRequest::StartAutomationExecutionAction, this))
+{
+
+}
+
+bool StartAutomationExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartAutomationExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartAutomationExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * StartAutomationExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new StartAutomationExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartAutomationExecutionRequestPrivate
+ *
+ * @brief  Private implementation for StartAutomationExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartAutomationExecutionRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public StartAutomationExecutionRequest instance.
+ */
+StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
+    const SSMRequest::Action action, StartAutomationExecutionRequest * const q)
+    : StartAutomationExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartAutomationExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartAutomationExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartAutomationExecutionRequest instance.
+ */
+StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
+    const StartAutomationExecutionRequestPrivate &other, StartAutomationExecutionRequest * const q)
+    : StartAutomationExecutionPrivate(other, q)
+{
+
+}

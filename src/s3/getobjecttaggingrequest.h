@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOBJECTTAGGINGREQUEST_H
 #define QTAWS_GETOBJECTTAGGINGREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetObjectTaggingRequestPrivate;
+
+class QTAWS_EXPORT GetObjectTaggingRequest : public S3Request {
+
+public:
+    GetObjectTaggingRequest(const GetObjectTaggingRequest &other);
+    GetObjectTaggingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetObjectTaggingRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

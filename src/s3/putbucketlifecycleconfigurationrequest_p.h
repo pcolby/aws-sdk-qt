@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETLIFECYCLECONFIGURATIONREQUEST_P_H
 #define QTAWS_PUTBUCKETLIFECYCLECONFIGURATIONREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketlifecycleconfigurationrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketLifecycleConfigurationRequest;
+
+class QTAWS_EXPORT PutBucketLifecycleConfigurationRequestPrivate : public S3Private {
+
+public:
+    PutBucketLifecycleConfigurationRequestPrivate(const S3::Action action,
+                                   PutBucketLifecycleConfigurationRequest * const q);
+    PutBucketLifecycleConfigurationRequestPrivate(const PutBucketLifecycleConfigurationRequestPrivate &other,
+                                   PutBucketLifecycleConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketLifecycleConfigurationRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

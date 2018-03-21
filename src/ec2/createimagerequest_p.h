@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEIMAGEREQUEST_P_H
 #define QTAWS_CREATEIMAGEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateImageRequest;
+
+class QTAWS_EXPORT CreateImageRequestPrivate : public EC2Private {
+
+public:
+    CreateImageRequestPrivate(const EC2::Action action,
+                                   CreateImageRequest * const q);
+    CreateImageRequestPrivate(const CreateImageRequestPrivate &other,
+                                   CreateImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateImageRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

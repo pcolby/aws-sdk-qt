@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSAMPLEDREQUESTSREQUEST_H
 #define QTAWS_GETSAMPLEDREQUESTSREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class GetSampledRequestsRequestPrivate;
+
+class QTAWS_EXPORT GetSampledRequestsRequest : public WAFRegionalRequest {
+
+public:
+    GetSampledRequestsRequest(const GetSampledRequestsRequest &other);
+    GetSampledRequestsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSampledRequestsRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

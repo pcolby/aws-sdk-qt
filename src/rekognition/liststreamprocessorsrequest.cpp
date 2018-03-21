@@ -19,3 +19,107 @@
 
 #include "liststreamprocessorsrequest.h"
 #include "liststreamprocessorsrequest_p.h"
+#include "liststreamprocessorsresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  ListStreamProcessorsRequest
+ *
+ * @brief  Implements Rekognition ListStreamProcessors requests.
+ *
+ * @see    RekognitionClient::listStreamProcessors
+ */
+
+/**
+ * @brief  Constructs a new ListStreamProcessorsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStreamProcessorsResponse::ListStreamProcessorsResponse(
+
+/**
+ * @brief  Constructs a new ListStreamProcessorsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListStreamProcessorsRequest::ListStreamProcessorsRequest(const ListStreamProcessorsRequest &other)
+    : RekognitionRequest(new ListStreamProcessorsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListStreamProcessorsRequest object.
+ */
+ListStreamProcessorsRequest::ListStreamProcessorsRequest()
+    : RekognitionRequest(new ListStreamProcessorsRequestPrivate(RekognitionRequest::ListStreamProcessorsAction, this))
+{
+
+}
+
+bool ListStreamProcessorsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListStreamProcessorsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListStreamProcessorsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListStreamProcessorsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStreamProcessorsRequestPrivate
+ *
+ * @brief  Private implementation for ListStreamProcessorsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStreamProcessorsRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public ListStreamProcessorsRequest instance.
+ */
+ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
+    const RekognitionRequest::Action action, ListStreamProcessorsRequest * const q)
+    : ListStreamProcessorsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStreamProcessorsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListStreamProcessorsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListStreamProcessorsRequest instance.
+ */
+ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
+    const ListStreamProcessorsRequestPrivate &other, ListStreamProcessorsRequest * const q)
+    : ListStreamProcessorsPrivate(other, q)
+{
+
+}

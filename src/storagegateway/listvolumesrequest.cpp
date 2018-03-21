@@ -19,3 +19,107 @@
 
 #include "listvolumesrequest.h"
 #include "listvolumesrequest_p.h"
+#include "listvolumesresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  ListVolumesRequest
+ *
+ * @brief  Implements StorageGateway ListVolumes requests.
+ *
+ * @see    StorageGatewayClient::listVolumes
+ */
+
+/**
+ * @brief  Constructs a new ListVolumesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListVolumesResponse::ListVolumesResponse(
+
+/**
+ * @brief  Constructs a new ListVolumesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListVolumesRequest::ListVolumesRequest(const ListVolumesRequest &other)
+    : StorageGatewayRequest(new ListVolumesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListVolumesRequest object.
+ */
+ListVolumesRequest::ListVolumesRequest()
+    : StorageGatewayRequest(new ListVolumesRequestPrivate(StorageGatewayRequest::ListVolumesAction, this))
+{
+
+}
+
+bool ListVolumesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListVolumesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListVolumesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * ListVolumesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListVolumesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListVolumesRequestPrivate
+ *
+ * @brief  Private implementation for ListVolumesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVolumesRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public ListVolumesRequest instance.
+ */
+ListVolumesRequestPrivate::ListVolumesRequestPrivate(
+    const StorageGatewayRequest::Action action, ListVolumesRequest * const q)
+    : ListVolumesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListVolumesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListVolumesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListVolumesRequest instance.
+ */
+ListVolumesRequestPrivate::ListVolumesRequestPrivate(
+    const ListVolumesRequestPrivate &other, ListVolumesRequest * const q)
+    : ListVolumesPrivate(other, q)
+{
+
+}

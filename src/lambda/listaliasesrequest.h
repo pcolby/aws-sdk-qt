@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTALIASESREQUEST_H
 #define QTAWS_LISTALIASESREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListAliasesRequestPrivate;
+
+class QTAWS_EXPORT ListAliasesRequest : public LambdaRequest {
+
+public:
+    ListAliasesRequest(const ListAliasesRequest &other);
+    ListAliasesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAliasesRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

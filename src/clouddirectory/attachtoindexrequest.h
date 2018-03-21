@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHTOINDEXREQUEST_H
 #define QTAWS_ATTACHTOINDEXREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AttachToIndexRequestPrivate;
+
+class QTAWS_EXPORT AttachToIndexRequest : public CloudDirectoryRequest {
+
+public:
+    AttachToIndexRequest(const AttachToIndexRequest &other);
+    AttachToIndexRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachToIndexRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEAPPREQUEST_P_H
 #define QTAWS_CREATEAPPREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "createapprequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class CreateAppRequest;
+
+class QTAWS_EXPORT CreateAppRequestPrivate : public PinpointPrivate {
+
+public:
+    CreateAppRequestPrivate(const Pinpoint::Action action,
+                                   CreateAppRequest * const q);
+    CreateAppRequestPrivate(const CreateAppRequestPrivate &other,
+                                   CreateAppRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAppRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_P_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_P_H
 
+#include "sqs_p.h"
+#include "listdeadlettersourcequeuesrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListDeadLetterSourceQueuesRequest;
+
+class QTAWS_EXPORT ListDeadLetterSourceQueuesRequestPrivate : public SQSPrivate {
+
+public:
+    ListDeadLetterSourceQueuesRequestPrivate(const SQS::Action action,
+                                   ListDeadLetterSourceQueuesRequest * const q);
+    ListDeadLetterSourceQueuesRequestPrivate(const ListDeadLetterSourceQueuesRequestPrivate &other,
+                                   ListDeadLetterSourceQueuesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDeadLetterSourceQueuesRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

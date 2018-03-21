@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEFPGAIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEFPGAIMAGESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describefpgaimagesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeFpgaImagesRequest;
+
+class QTAWS_EXPORT DescribeFpgaImagesRequestPrivate : public EC2Private {
+
+public:
+    DescribeFpgaImagesRequestPrivate(const EC2::Action action,
+                                   DescribeFpgaImagesRequest * const q);
+    DescribeFpgaImagesRequestPrivate(const DescribeFpgaImagesRequestPrivate &other,
+                                   DescribeFpgaImagesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeFpgaImagesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

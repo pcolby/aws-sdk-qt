@@ -19,3 +19,107 @@
 
 #include "describeconnectionsrequest.h"
 #include "describeconnectionsrequest_p.h"
+#include "describeconnectionsresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeConnectionsRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeConnections requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeConnections
+ */
+
+/**
+ * @brief  Constructs a new DescribeConnectionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConnectionsResponse::DescribeConnectionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeConnectionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConnectionsRequest::DescribeConnectionsRequest(const DescribeConnectionsRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConnectionsRequest object.
+ */
+DescribeConnectionsRequest::DescribeConnectionsRequest()
+    : DatabaseMigrationServiceRequest(new DescribeConnectionsRequestPrivate(DatabaseMigrationServiceRequest::DescribeConnectionsAction, this))
+{
+
+}
+
+bool DescribeConnectionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConnectionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConnectionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeConnectionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConnectionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConnectionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConnectionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConnectionsRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeConnectionsRequest instance.
+ */
+DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeConnectionsRequest * const q)
+    : DescribeConnectionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConnectionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConnectionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConnectionsRequest instance.
+ */
+DescribeConnectionsRequestPrivate::DescribeConnectionsRequestPrivate(
+    const DescribeConnectionsRequestPrivate &other, DescribeConnectionsRequest * const q)
+    : DescribeConnectionsPrivate(other, q)
+{
+
+}

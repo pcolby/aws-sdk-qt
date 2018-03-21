@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_P_H
 #define QTAWS_UPDATEALIASREQUEST_P_H
 
+#include "kms_p.h"
+#include "updatealiasrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class UpdateAliasRequest;
+
+class QTAWS_EXPORT UpdateAliasRequestPrivate : public KMSPrivate {
+
+public:
+    UpdateAliasRequestPrivate(const KMS::Action action,
+                                   UpdateAliasRequest * const q);
+    UpdateAliasRequestPrivate(const UpdateAliasRequestPrivate &other,
+                                   UpdateAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAliasRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

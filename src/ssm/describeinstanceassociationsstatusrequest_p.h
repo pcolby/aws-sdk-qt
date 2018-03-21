@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeinstanceassociationsstatusrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstanceAssociationsStatusRequest;
+
+class QTAWS_EXPORT DescribeInstanceAssociationsStatusRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeInstanceAssociationsStatusRequestPrivate(const SSM::Action action,
+                                   DescribeInstanceAssociationsStatusRequest * const q);
+    DescribeInstanceAssociationsStatusRequestPrivate(const DescribeInstanceAssociationsStatusRequestPrivate &other,
+                                   DescribeInstanceAssociationsStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstanceAssociationsStatusRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTINVALIDATIONSREQUEST_P_H
 #define QTAWS_LISTINVALIDATIONSREQUEST_P_H
 
+#include "cloudfront_p.h"
+#include "listinvalidationsrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListInvalidationsRequest;
+
+class QTAWS_EXPORT ListInvalidationsRequestPrivate : public CloudFrontPrivate {
+
+public:
+    ListInvalidationsRequestPrivate(const CloudFront::Action action,
+                                   ListInvalidationsRequest * const q);
+    ListInvalidationsRequestPrivate(const ListInvalidationsRequestPrivate &other,
+                                   ListInvalidationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListInvalidationsRequest)
+
+};
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

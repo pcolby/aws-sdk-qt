@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEAPPREQUEST_P_H
 #define QTAWS_CREATEAPPREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "createapprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateAppRequest;
+
+class QTAWS_EXPORT CreateAppRequestPrivate : public OpsWorksPrivate {
+
+public:
+    CreateAppRequestPrivate(const OpsWorks::Action action,
+                                   CreateAppRequest * const q);
+    CreateAppRequestPrivate(const CreateAppRequestPrivate &other,
+                                   CreateAppRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAppRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

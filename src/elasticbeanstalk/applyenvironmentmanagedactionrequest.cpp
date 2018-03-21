@@ -19,3 +19,107 @@
 
 #include "applyenvironmentmanagedactionrequest.h"
 #include "applyenvironmentmanagedactionrequest_p.h"
+#include "applyenvironmentmanagedactionresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  ApplyEnvironmentManagedActionRequest
+ *
+ * @brief  Implements ElasticBeanstalk ApplyEnvironmentManagedAction requests.
+ *
+ * @see    ElasticBeanstalkClient::applyEnvironmentManagedAction
+ */
+
+/**
+ * @brief  Constructs a new ApplyEnvironmentManagedActionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
+
+/**
+ * @brief  Constructs a new ApplyEnvironmentManagedActionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ApplyEnvironmentManagedActionRequest::ApplyEnvironmentManagedActionRequest(const ApplyEnvironmentManagedActionRequest &other)
+    : ElasticBeanstalkRequest(new ApplyEnvironmentManagedActionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ApplyEnvironmentManagedActionRequest object.
+ */
+ApplyEnvironmentManagedActionRequest::ApplyEnvironmentManagedActionRequest()
+    : ElasticBeanstalkRequest(new ApplyEnvironmentManagedActionRequestPrivate(ElasticBeanstalkRequest::ApplyEnvironmentManagedActionAction, this))
+{
+
+}
+
+bool ApplyEnvironmentManagedActionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ApplyEnvironmentManagedActionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ApplyEnvironmentManagedActionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * ApplyEnvironmentManagedActionRequest::response(QNetworkReply * const reply) const
+{
+    return new ApplyEnvironmentManagedActionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ApplyEnvironmentManagedActionRequestPrivate
+ *
+ * @brief  Private implementation for ApplyEnvironmentManagedActionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApplyEnvironmentManagedActionRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public ApplyEnvironmentManagedActionRequest instance.
+ */
+ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, ApplyEnvironmentManagedActionRequest * const q)
+    : ApplyEnvironmentManagedActionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ApplyEnvironmentManagedActionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ApplyEnvironmentManagedActionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ApplyEnvironmentManagedActionRequest instance.
+ */
+ApplyEnvironmentManagedActionRequestPrivate::ApplyEnvironmentManagedActionRequestPrivate(
+    const ApplyEnvironmentManagedActionRequestPrivate &other, ApplyEnvironmentManagedActionRequest * const q)
+    : ApplyEnvironmentManagedActionPrivate(other, q)
+{
+
+}

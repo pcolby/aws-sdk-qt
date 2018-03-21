@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEAPPCOOKIESTICKINESSPOLICYREQUEST_P_H
 #define QTAWS_CREATEAPPCOOKIESTICKINESSPOLICYREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "createappcookiestickinesspolicyrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class CreateAppCookieStickinessPolicyRequest;
+
+class QTAWS_EXPORT CreateAppCookieStickinessPolicyRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    CreateAppCookieStickinessPolicyRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   CreateAppCookieStickinessPolicyRequest * const q);
+    CreateAppCookieStickinessPolicyRequestPrivate(const CreateAppCookieStickinessPolicyRequestPrivate &other,
+                                   CreateAppCookieStickinessPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateAppCookieStickinessPolicyRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

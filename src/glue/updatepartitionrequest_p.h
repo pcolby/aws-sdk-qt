@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEPARTITIONREQUEST_P_H
 #define QTAWS_UPDATEPARTITIONREQUEST_P_H
 
+#include "glue_p.h"
+#include "updatepartitionrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdatePartitionRequest;
+
+class QTAWS_EXPORT UpdatePartitionRequestPrivate : public GluePrivate {
+
+public:
+    UpdatePartitionRequestPrivate(const Glue::Action action,
+                                   UpdatePartitionRequest * const q);
+    UpdatePartitionRequestPrivate(const UpdatePartitionRequestPrivate &other,
+                                   UpdatePartitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdatePartitionRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

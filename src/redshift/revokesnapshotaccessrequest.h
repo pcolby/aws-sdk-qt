@@ -20,4 +20,32 @@
 #ifndef QTAWS_REVOKESNAPSHOTACCESSREQUEST_H
 #define QTAWS_REVOKESNAPSHOTACCESSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RevokeSnapshotAccessRequestPrivate;
+
+class QTAWS_EXPORT RevokeSnapshotAccessRequest : public RedshiftRequest {
+
+public:
+    RevokeSnapshotAccessRequest(const RevokeSnapshotAccessRequest &other);
+    RevokeSnapshotAccessRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RevokeSnapshotAccessRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

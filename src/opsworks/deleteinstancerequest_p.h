@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEINSTANCEREQUEST_P_H
 #define QTAWS_DELETEINSTANCEREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "deleteinstancerequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeleteInstanceRequest;
+
+class QTAWS_EXPORT DeleteInstanceRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DeleteInstanceRequestPrivate(const OpsWorks::Action action,
+                                   DeleteInstanceRequest * const q);
+    DeleteInstanceRequestPrivate(const DeleteInstanceRequestPrivate &other,
+                                   DeleteInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInstanceRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createremoteaccesssessionrequest.h"
 #include "createremoteaccesssessionrequest_p.h"
+#include "createremoteaccesssessionresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  CreateRemoteAccessSessionRequest
+ *
+ * @brief  Implements DeviceFarm CreateRemoteAccessSession requests.
+ *
+ * @see    DeviceFarmClient::createRemoteAccessSession
+ */
+
+/**
+ * @brief  Constructs a new CreateRemoteAccessSessionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRemoteAccessSessionResponse::CreateRemoteAccessSessionResponse(
+
+/**
+ * @brief  Constructs a new CreateRemoteAccessSessionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest(const CreateRemoteAccessSessionRequest &other)
+    : DeviceFarmRequest(new CreateRemoteAccessSessionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRemoteAccessSessionRequest object.
+ */
+CreateRemoteAccessSessionRequest::CreateRemoteAccessSessionRequest()
+    : DeviceFarmRequest(new CreateRemoteAccessSessionRequestPrivate(DeviceFarmRequest::CreateRemoteAccessSessionAction, this))
+{
+
+}
+
+bool CreateRemoteAccessSessionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRemoteAccessSessionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRemoteAccessSessionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRemoteAccessSessionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRemoteAccessSessionRequestPrivate
+ *
+ * @brief  Private implementation for CreateRemoteAccessSessionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public CreateRemoteAccessSessionRequest instance.
+ */
+CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate(
+    const DeviceFarmRequest::Action action, CreateRemoteAccessSessionRequest * const q)
+    : CreateRemoteAccessSessionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRemoteAccessSessionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRemoteAccessSessionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRemoteAccessSessionRequest instance.
+ */
+CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate(
+    const CreateRemoteAccessSessionRequestPrivate &other, CreateRemoteAccessSessionRequest * const q)
+    : CreateRemoteAccessSessionPrivate(other, q)
+{
+
+}

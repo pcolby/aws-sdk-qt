@@ -20,4 +20,32 @@
 #ifndef QTAWS_ENABLEAWSSERVICEACCESSREQUEST_H
 #define QTAWS_ENABLEAWSSERVICEACCESSREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class EnableAWSServiceAccessRequestPrivate;
+
+class QTAWS_EXPORT EnableAWSServiceAccessRequest : public OrganizationsRequest {
+
+public:
+    EnableAWSServiceAccessRequest(const EnableAWSServiceAccessRequest &other);
+    EnableAWSServiceAccessRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(EnableAWSServiceAccessRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

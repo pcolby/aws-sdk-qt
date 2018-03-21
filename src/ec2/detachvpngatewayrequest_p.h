@@ -20,4 +20,29 @@
 #ifndef QTAWS_DETACHVPNGATEWAYREQUEST_P_H
 #define QTAWS_DETACHVPNGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "detachvpngatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachVpnGatewayRequest;
+
+class QTAWS_EXPORT DetachVpnGatewayRequestPrivate : public EC2Private {
+
+public:
+    DetachVpnGatewayRequestPrivate(const EC2::Action action,
+                                   DetachVpnGatewayRequest * const q);
+    DetachVpnGatewayRequestPrivate(const DetachVpnGatewayRequestPrivate &other,
+                                   DetachVpnGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DetachVpnGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

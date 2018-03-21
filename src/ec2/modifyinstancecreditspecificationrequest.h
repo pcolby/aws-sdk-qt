@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_H
 #define QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyInstanceCreditSpecificationRequestPrivate;
+
+class QTAWS_EXPORT ModifyInstanceCreditSpecificationRequest : public EC2Request {
+
+public:
+    ModifyInstanceCreditSpecificationRequest(const ModifyInstanceCreditSpecificationRequest &other);
+    ModifyInstanceCreditSpecificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyInstanceCreditSpecificationRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

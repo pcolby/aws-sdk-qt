@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETINSTANCEATTRIBUTEREQUEST_H
 #define QTAWS_RESETINSTANCEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetInstanceAttributeRequestPrivate;
+
+class QTAWS_EXPORT ResetInstanceAttributeRequest : public EC2Request {
+
+public:
+    ResetInstanceAttributeRequest(const ResetInstanceAttributeRequest &other);
+    ResetInstanceAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetInstanceAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

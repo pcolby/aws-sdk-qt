@@ -19,3 +19,107 @@
 
 #include "deletevpcrequest.h"
 #include "deletevpcrequest_p.h"
+#include "deletevpcresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteVpcRequest
+ *
+ * @brief  Implements EC2 DeleteVpc requests.
+ *
+ * @see    EC2Client::deleteVpc
+ */
+
+/**
+ * @brief  Constructs a new DeleteVpcResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVpcResponse::DeleteVpcResponse(
+
+/**
+ * @brief  Constructs a new DeleteVpcRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVpcRequest::DeleteVpcRequest(const DeleteVpcRequest &other)
+    : EC2Request(new DeleteVpcRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVpcRequest object.
+ */
+DeleteVpcRequest::DeleteVpcRequest()
+    : EC2Request(new DeleteVpcRequestPrivate(EC2Request::DeleteVpcAction, this))
+{
+
+}
+
+bool DeleteVpcRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVpcResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVpcResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteVpcRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVpcResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVpcRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVpcRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteVpcRequest instance.
+ */
+DeleteVpcRequestPrivate::DeleteVpcRequestPrivate(
+    const EC2Request::Action action, DeleteVpcRequest * const q)
+    : DeleteVpcPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVpcRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVpcRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVpcRequest instance.
+ */
+DeleteVpcRequestPrivate::DeleteVpcRequestPrivate(
+    const DeleteVpcRequestPrivate &other, DeleteVpcRequest * const q)
+    : DeleteVpcPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTAGKEYSREQUEST_H
 #define QTAWS_GETTAGKEYSREQUEST_H
 
+#include "resourcegroupstaggingapirequest.h"
+
+namespace AWS {
+
+namespace ResourceGroupsTaggingAPI {
+
+class GetTagKeysRequestPrivate;
+
+class QTAWS_EXPORT GetTagKeysRequest : public ResourceGroupsTaggingAPIRequest {
+
+public:
+    GetTagKeysRequest(const GetTagKeysRequest &other);
+    GetTagKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTagKeysRequest)
+
+}
+
+} // namespace ResourceGroupsTaggingAPI
+} // namespace AWS
+
 #endif

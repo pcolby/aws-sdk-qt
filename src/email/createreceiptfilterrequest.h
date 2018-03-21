@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERECEIPTFILTERREQUEST_H
 #define QTAWS_CREATERECEIPTFILTERREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateReceiptFilterRequestPrivate;
+
+class QTAWS_EXPORT CreateReceiptFilterRequest : public SESRequest {
+
+public:
+    CreateReceiptFilterRequest(const CreateReceiptFilterRequest &other);
+    CreateReceiptFilterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateReceiptFilterRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

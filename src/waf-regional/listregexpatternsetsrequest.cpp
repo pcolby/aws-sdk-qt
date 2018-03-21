@@ -19,3 +19,107 @@
 
 #include "listregexpatternsetsrequest.h"
 #include "listregexpatternsetsrequest_p.h"
+#include "listregexpatternsetsresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListRegexPatternSetsRequest
+ *
+ * @brief  Implements WAFRegional ListRegexPatternSets requests.
+ *
+ * @see    WAFRegionalClient::listRegexPatternSets
+ */
+
+/**
+ * @brief  Constructs a new ListRegexPatternSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
+
+/**
+ * @brief  Constructs a new ListRegexPatternSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRegexPatternSetsRequest::ListRegexPatternSetsRequest(const ListRegexPatternSetsRequest &other)
+    : WAFRegionalRequest(new ListRegexPatternSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRegexPatternSetsRequest object.
+ */
+ListRegexPatternSetsRequest::ListRegexPatternSetsRequest()
+    : WAFRegionalRequest(new ListRegexPatternSetsRequestPrivate(WAFRegionalRequest::ListRegexPatternSetsAction, this))
+{
+
+}
+
+bool ListRegexPatternSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRegexPatternSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRegexPatternSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * ListRegexPatternSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRegexPatternSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRegexPatternSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListRegexPatternSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRegexPatternSetsRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public ListRegexPatternSetsRequest instance.
+ */
+ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
+    const WAFRegionalRequest::Action action, ListRegexPatternSetsRequest * const q)
+    : ListRegexPatternSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRegexPatternSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRegexPatternSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRegexPatternSetsRequest instance.
+ */
+ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
+    const ListRegexPatternSetsRequestPrivate &other, ListRegexPatternSetsRequest * const q)
+    : ListRegexPatternSetsPrivate(other, q)
+{
+
+}

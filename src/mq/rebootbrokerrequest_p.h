@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBOOTBROKERREQUEST_P_H
 #define QTAWS_REBOOTBROKERREQUEST_P_H
 
+#include "mq_p.h"
+#include "rebootbrokerrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class RebootBrokerRequest;
+
+class QTAWS_EXPORT RebootBrokerRequestPrivate : public MQPrivate {
+
+public:
+    RebootBrokerRequestPrivate(const MQ::Action action,
+                                   RebootBrokerRequest * const q);
+    RebootBrokerRequestPrivate(const RebootBrokerRequestPrivate &other,
+                                   RebootBrokerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebootBrokerRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

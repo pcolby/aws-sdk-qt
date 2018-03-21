@@ -19,3 +19,107 @@
 
 #include "updatemaintenancewindowtargetrequest.h"
 #include "updatemaintenancewindowtargetrequest_p.h"
+#include "updatemaintenancewindowtargetresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdateMaintenanceWindowTargetRequest
+ *
+ * @brief  Implements SSM UpdateMaintenanceWindowTarget requests.
+ *
+ * @see    SSMClient::updateMaintenanceWindowTarget
+ */
+
+/**
+ * @brief  Constructs a new UpdateMaintenanceWindowTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateMaintenanceWindowTargetResponse::UpdateMaintenanceWindowTargetResponse(
+
+/**
+ * @brief  Constructs a new UpdateMaintenanceWindowTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateMaintenanceWindowTargetRequest::UpdateMaintenanceWindowTargetRequest(const UpdateMaintenanceWindowTargetRequest &other)
+    : SSMRequest(new UpdateMaintenanceWindowTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateMaintenanceWindowTargetRequest object.
+ */
+UpdateMaintenanceWindowTargetRequest::UpdateMaintenanceWindowTargetRequest()
+    : SSMRequest(new UpdateMaintenanceWindowTargetRequestPrivate(SSMRequest::UpdateMaintenanceWindowTargetAction, this))
+{
+
+}
+
+bool UpdateMaintenanceWindowTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateMaintenanceWindowTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateMaintenanceWindowTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * UpdateMaintenanceWindowTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateMaintenanceWindowTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateMaintenanceWindowTargetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateMaintenanceWindowTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMaintenanceWindowTargetRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public UpdateMaintenanceWindowTargetRequest instance.
+ */
+UpdateMaintenanceWindowTargetRequestPrivate::UpdateMaintenanceWindowTargetRequestPrivate(
+    const SSMRequest::Action action, UpdateMaintenanceWindowTargetRequest * const q)
+    : UpdateMaintenanceWindowTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMaintenanceWindowTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateMaintenanceWindowTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateMaintenanceWindowTargetRequest instance.
+ */
+UpdateMaintenanceWindowTargetRequestPrivate::UpdateMaintenanceWindowTargetRequestPrivate(
+    const UpdateMaintenanceWindowTargetRequestPrivate &other, UpdateMaintenanceWindowTargetRequest * const q)
+    : UpdateMaintenanceWindowTargetPrivate(other, q)
+{
+
+}

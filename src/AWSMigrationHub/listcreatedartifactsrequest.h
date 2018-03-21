@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCREATEDARTIFACTSREQUEST_H
 #define QTAWS_LISTCREATEDARTIFACTSREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class ListCreatedArtifactsRequestPrivate;
+
+class QTAWS_EXPORT ListCreatedArtifactsRequest : public MigrationHubRequest {
+
+public:
+    ListCreatedArtifactsRequest(const ListCreatedArtifactsRequest &other);
+    ListCreatedArtifactsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListCreatedArtifactsRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

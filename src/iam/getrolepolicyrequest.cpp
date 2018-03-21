@@ -19,3 +19,107 @@
 
 #include "getrolepolicyrequest.h"
 #include "getrolepolicyrequest_p.h"
+#include "getrolepolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetRolePolicyRequest
+ *
+ * @brief  Implements IAM GetRolePolicy requests.
+ *
+ * @see    IAMClient::getRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new GetRolePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRolePolicyResponse::GetRolePolicyResponse(
+
+/**
+ * @brief  Constructs a new GetRolePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRolePolicyRequest::GetRolePolicyRequest(const GetRolePolicyRequest &other)
+    : IAMRequest(new GetRolePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRolePolicyRequest object.
+ */
+GetRolePolicyRequest::GetRolePolicyRequest()
+    : IAMRequest(new GetRolePolicyRequestPrivate(IAMRequest::GetRolePolicyAction, this))
+{
+
+}
+
+bool GetRolePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRolePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRolePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetRolePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRolePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRolePolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetRolePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRolePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetRolePolicyRequest instance.
+ */
+GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
+    const IAMRequest::Action action, GetRolePolicyRequest * const q)
+    : GetRolePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRolePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRolePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRolePolicyRequest instance.
+ */
+GetRolePolicyRequestPrivate::GetRolePolicyRequestPrivate(
+    const GetRolePolicyRequestPrivate &other, GetRolePolicyRequest * const q)
+    : GetRolePolicyPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "describemounttargetsrequest.h"
 #include "describemounttargetsrequest_p.h"
+#include "describemounttargetsresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DescribeMountTargetsRequest
+ *
+ * @brief  Implements EFS DescribeMountTargets requests.
+ *
+ * @see    EFSClient::describeMountTargets
+ */
+
+/**
+ * @brief  Constructs a new DescribeMountTargetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMountTargetsResponse::DescribeMountTargetsResponse(
+
+/**
+ * @brief  Constructs a new DescribeMountTargetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMountTargetsRequest::DescribeMountTargetsRequest(const DescribeMountTargetsRequest &other)
+    : EFSRequest(new DescribeMountTargetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMountTargetsRequest object.
+ */
+DescribeMountTargetsRequest::DescribeMountTargetsRequest()
+    : EFSRequest(new DescribeMountTargetsRequestPrivate(EFSRequest::DescribeMountTargetsAction, this))
+{
+
+}
+
+bool DescribeMountTargetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMountTargetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMountTargetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMountTargetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMountTargetsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMountTargetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMountTargetsRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public DescribeMountTargetsRequest instance.
+ */
+DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
+    const EFSRequest::Action action, DescribeMountTargetsRequest * const q)
+    : DescribeMountTargetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMountTargetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMountTargetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMountTargetsRequest instance.
+ */
+DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
+    const DescribeMountTargetsRequestPrivate &other, DescribeMountTargetsRequest * const q)
+    : DescribeMountTargetsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGRAPHQLAPIREQUEST_H
 #define QTAWS_DELETEGRAPHQLAPIREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteGraphqlApiRequestPrivate;
+
+class QTAWS_EXPORT DeleteGraphqlApiRequest : public AppSyncRequest {
+
+public:
+    DeleteGraphqlApiRequest(const DeleteGraphqlApiRequest &other);
+    DeleteGraphqlApiRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGraphqlApiRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

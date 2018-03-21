@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPROVISIONINGARTIFACTREQUEST_H
 #define QTAWS_UPDATEPROVISIONINGARTIFACTREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class UpdateProvisioningArtifactRequestPrivate;
+
+class QTAWS_EXPORT UpdateProvisioningArtifactRequest : public ServiceCatalogRequest {
+
+public:
+    UpdateProvisioningArtifactRequest(const UpdateProvisioningArtifactRequest &other);
+    UpdateProvisioningArtifactRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProvisioningArtifactRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

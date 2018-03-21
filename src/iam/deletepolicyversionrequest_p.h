@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 #define QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 
+#include "iam_p.h"
+#include "deletepolicyversionrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeletePolicyVersionRequest;
+
+class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IAMPrivate {
+
+public:
+    DeletePolicyVersionRequestPrivate(const IAM::Action action,
+                                   DeletePolicyVersionRequest * const q);
+    DeletePolicyVersionRequestPrivate(const DeletePolicyVersionRequestPrivate &other,
+                                   DeletePolicyVersionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeletePolicyVersionRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

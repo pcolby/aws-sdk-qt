@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTELASTICSEARCHVERSIONSREQUEST_H
 #define QTAWS_LISTELASTICSEARCHVERSIONSREQUEST_H
 
+#include "elasticsearchservicerequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class ListElasticsearchVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListElasticsearchVersionsRequest : public ElasticsearchServiceRequest {
+
+public:
+    ListElasticsearchVersionsRequest(const ListElasticsearchVersionsRequest &other);
+    ListElasticsearchVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListElasticsearchVersionsRequest)
+
+}
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

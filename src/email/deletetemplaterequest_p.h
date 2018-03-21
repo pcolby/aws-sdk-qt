@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETEMPLATEREQUEST_P_H
 #define QTAWS_DELETETEMPLATEREQUEST_P_H
 
+#include "ses_p.h"
+#include "deletetemplaterequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteTemplateRequest;
+
+class QTAWS_EXPORT DeleteTemplateRequestPrivate : public SESPrivate {
+
+public:
+    DeleteTemplateRequestPrivate(const SES::Action action,
+                                   DeleteTemplateRequest * const q);
+    DeleteTemplateRequestPrivate(const DeleteTemplateRequestPrivate &other,
+                                   DeleteTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTemplateRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

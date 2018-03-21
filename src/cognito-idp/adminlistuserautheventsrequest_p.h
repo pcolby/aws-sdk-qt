@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINLISTUSERAUTHEVENTSREQUEST_P_H
 #define QTAWS_ADMINLISTUSERAUTHEVENTSREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminlistuserautheventsrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminListUserAuthEventsRequest;
+
+class QTAWS_EXPORT AdminListUserAuthEventsRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminListUserAuthEventsRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminListUserAuthEventsRequest * const q);
+    AdminListUserAuthEventsRequestPrivate(const AdminListUserAuthEventsRequestPrivate &other,
+                                   AdminListUserAuthEventsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminListUserAuthEventsRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

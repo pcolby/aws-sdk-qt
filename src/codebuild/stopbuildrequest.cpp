@@ -19,3 +19,107 @@
 
 #include "stopbuildrequest.h"
 #include "stopbuildrequest_p.h"
+#include "stopbuildresponse.h"
+#include "codebuildrequest_p.h"
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  StopBuildRequest
+ *
+ * @brief  Implements CodeBuild StopBuild requests.
+ *
+ * @see    CodeBuildClient::stopBuild
+ */
+
+/**
+ * @brief  Constructs a new StopBuildResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopBuildResponse::StopBuildResponse(
+
+/**
+ * @brief  Constructs a new StopBuildRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopBuildRequest::StopBuildRequest(const StopBuildRequest &other)
+    : CodeBuildRequest(new StopBuildRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopBuildRequest object.
+ */
+StopBuildRequest::StopBuildRequest()
+    : CodeBuildRequest(new StopBuildRequestPrivate(CodeBuildRequest::StopBuildAction, this))
+{
+
+}
+
+bool StopBuildRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopBuildResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopBuildResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeBuildClient::send
+ */
+AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * const reply) const
+{
+    return new StopBuildResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopBuildRequestPrivate
+ *
+ * @brief  Private implementation for StopBuildRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopBuildRequestPrivate object.
+ *
+ * @param  action  CodeBuild action being performed.
+ * @param  q       Pointer to this object's public StopBuildRequest instance.
+ */
+StopBuildRequestPrivate::StopBuildRequestPrivate(
+    const CodeBuildRequest::Action action, StopBuildRequest * const q)
+    : StopBuildPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopBuildRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopBuildRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopBuildRequest instance.
+ */
+StopBuildRequestPrivate::StopBuildRequestPrivate(
+    const StopBuildRequestPrivate &other, StopBuildRequest * const q)
+    : StopBuildPrivate(other, q)
+{
+
+}

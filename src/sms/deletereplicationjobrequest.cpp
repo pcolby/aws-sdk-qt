@@ -19,3 +19,107 @@
 
 #include "deletereplicationjobrequest.h"
 #include "deletereplicationjobrequest_p.h"
+#include "deletereplicationjobresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  DeleteReplicationJobRequest
+ *
+ * @brief  Implements SMS DeleteReplicationJob requests.
+ *
+ * @see    SMSClient::deleteReplicationJob
+ */
+
+/**
+ * @brief  Constructs a new DeleteReplicationJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReplicationJobResponse::DeleteReplicationJobResponse(
+
+/**
+ * @brief  Constructs a new DeleteReplicationJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReplicationJobRequest::DeleteReplicationJobRequest(const DeleteReplicationJobRequest &other)
+    : SMSRequest(new DeleteReplicationJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReplicationJobRequest object.
+ */
+DeleteReplicationJobRequest::DeleteReplicationJobRequest()
+    : SMSRequest(new DeleteReplicationJobRequestPrivate(SMSRequest::DeleteReplicationJobAction, this))
+{
+
+}
+
+bool DeleteReplicationJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReplicationJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReplicationJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReplicationJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReplicationJobRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReplicationJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationJobRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public DeleteReplicationJobRequest instance.
+ */
+DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
+    const SMSRequest::Action action, DeleteReplicationJobRequest * const q)
+    : DeleteReplicationJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReplicationJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReplicationJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReplicationJobRequest instance.
+ */
+DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
+    const DeleteReplicationJobRequestPrivate &other, DeleteReplicationJobRequest * const q)
+    : DeleteReplicationJobPrivate(other, q)
+{
+
+}

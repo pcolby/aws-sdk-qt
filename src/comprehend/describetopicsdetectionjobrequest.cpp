@@ -19,3 +19,107 @@
 
 #include "describetopicsdetectionjobrequest.h"
 #include "describetopicsdetectionjobrequest_p.h"
+#include "describetopicsdetectionjobresponse.h"
+#include "comprehendrequest_p.h"
+
+namespace AWS {
+namespace Comprehend {
+
+/**
+ * @class  DescribeTopicsDetectionJobRequest
+ *
+ * @brief  Implements Comprehend DescribeTopicsDetectionJob requests.
+ *
+ * @see    ComprehendClient::describeTopicsDetectionJob
+ */
+
+/**
+ * @brief  Constructs a new DescribeTopicsDetectionJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTopicsDetectionJobResponse::DescribeTopicsDetectionJobResponse(
+
+/**
+ * @brief  Constructs a new DescribeTopicsDetectionJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest(const DescribeTopicsDetectionJobRequest &other)
+    : ComprehendRequest(new DescribeTopicsDetectionJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTopicsDetectionJobRequest object.
+ */
+DescribeTopicsDetectionJobRequest::DescribeTopicsDetectionJobRequest()
+    : ComprehendRequest(new DescribeTopicsDetectionJobRequestPrivate(ComprehendRequest::DescribeTopicsDetectionJobAction, this))
+{
+
+}
+
+bool DescribeTopicsDetectionJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTopicsDetectionJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTopicsDetectionJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ComprehendClient::send
+ */
+AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTopicsDetectionJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTopicsDetectionJobRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTopicsDetectionJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object.
+ *
+ * @param  action  Comprehend action being performed.
+ * @param  q       Pointer to this object's public DescribeTopicsDetectionJobRequest instance.
+ */
+DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
+    const ComprehendRequest::Action action, DescribeTopicsDetectionJobRequest * const q)
+    : DescribeTopicsDetectionJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTopicsDetectionJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTopicsDetectionJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTopicsDetectionJobRequest instance.
+ */
+DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
+    const DescribeTopicsDetectionJobRequestPrivate &other, DescribeTopicsDetectionJobRequest * const q)
+    : DescribeTopicsDetectionJobPrivate(other, q)
+{
+
+}

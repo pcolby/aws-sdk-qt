@@ -19,3 +19,107 @@
 
 #include "putdestinationrequest.h"
 #include "putdestinationrequest_p.h"
+#include "putdestinationresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutDestinationRequest
+ *
+ * @brief  Implements CloudWatchLogs PutDestination requests.
+ *
+ * @see    CloudWatchLogsClient::putDestination
+ */
+
+/**
+ * @brief  Constructs a new PutDestinationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutDestinationResponse::PutDestinationResponse(
+
+/**
+ * @brief  Constructs a new PutDestinationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutDestinationRequest::PutDestinationRequest(const PutDestinationRequest &other)
+    : CloudWatchLogsRequest(new PutDestinationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutDestinationRequest object.
+ */
+PutDestinationRequest::PutDestinationRequest()
+    : CloudWatchLogsRequest(new PutDestinationRequestPrivate(CloudWatchLogsRequest::PutDestinationAction, this))
+{
+
+}
+
+bool PutDestinationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutDestinationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutDestinationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutDestinationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutDestinationRequestPrivate
+ *
+ * @brief  Private implementation for PutDestinationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutDestinationRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public PutDestinationRequest instance.
+ */
+PutDestinationRequestPrivate::PutDestinationRequestPrivate(
+    const CloudWatchLogsRequest::Action action, PutDestinationRequest * const q)
+    : PutDestinationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutDestinationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutDestinationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutDestinationRequest instance.
+ */
+PutDestinationRequestPrivate::PutDestinationRequestPrivate(
+    const PutDestinationRequestPrivate &other, PutDestinationRequest * const q)
+    : PutDestinationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSUBSCRIPTIONATTRIBUTESREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONATTRIBUTESREQUEST_P_H
 
+#include "sns_p.h"
+#include "getsubscriptionattributesrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class GetSubscriptionAttributesRequest;
+
+class QTAWS_EXPORT GetSubscriptionAttributesRequestPrivate : public SNSPrivate {
+
+public:
+    GetSubscriptionAttributesRequestPrivate(const SNS::Action action,
+                                   GetSubscriptionAttributesRequest * const q);
+    GetSubscriptionAttributesRequestPrivate(const GetSubscriptionAttributesRequestPrivate &other,
+                                   GetSubscriptionAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSubscriptionAttributesRequest)
+
+};
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

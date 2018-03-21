@@ -19,3 +19,107 @@
 
 #include "listreviewpolicyresultsforhitrequest.h"
 #include "listreviewpolicyresultsforhitrequest_p.h"
+#include "listreviewpolicyresultsforhitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  ListReviewPolicyResultsForHITRequest
+ *
+ * @brief  Implements MTurk ListReviewPolicyResultsForHIT requests.
+ *
+ * @see    MTurkClient::listReviewPolicyResultsForHIT
+ */
+
+/**
+ * @brief  Constructs a new ListReviewPolicyResultsForHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListReviewPolicyResultsForHITResponse::ListReviewPolicyResultsForHITResponse(
+
+/**
+ * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest(const ListReviewPolicyResultsForHITRequest &other)
+    : MTurkRequest(new ListReviewPolicyResultsForHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListReviewPolicyResultsForHITRequest object.
+ */
+ListReviewPolicyResultsForHITRequest::ListReviewPolicyResultsForHITRequest()
+    : MTurkRequest(new ListReviewPolicyResultsForHITRequestPrivate(MTurkRequest::ListReviewPolicyResultsForHITAction, this))
+{
+
+}
+
+bool ListReviewPolicyResultsForHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListReviewPolicyResultsForHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListReviewPolicyResultsForHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::response(QNetworkReply * const reply) const
+{
+    return new ListReviewPolicyResultsForHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListReviewPolicyResultsForHITRequestPrivate
+ *
+ * @brief  Private implementation for ListReviewPolicyResultsForHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public ListReviewPolicyResultsForHITRequest instance.
+ */
+ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
+    const MTurkRequest::Action action, ListReviewPolicyResultsForHITRequest * const q)
+    : ListReviewPolicyResultsForHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListReviewPolicyResultsForHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListReviewPolicyResultsForHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListReviewPolicyResultsForHITRequest instance.
+ */
+ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
+    const ListReviewPolicyResultsForHITRequestPrivate &other, ListReviewPolicyResultsForHITRequest * const q)
+    : ListReviewPolicyResultsForHITPrivate(other, q)
+{
+
+}

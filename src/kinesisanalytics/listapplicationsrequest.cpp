@@ -19,3 +19,107 @@
 
 #include "listapplicationsrequest.h"
 #include "listapplicationsrequest_p.h"
+#include "listapplicationsresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  ListApplicationsRequest
+ *
+ * @brief  Implements KinesisAnalytics ListApplications requests.
+ *
+ * @see    KinesisAnalyticsClient::listApplications
+ */
+
+/**
+ * @brief  Constructs a new ListApplicationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListApplicationsResponse::ListApplicationsResponse(
+
+/**
+ * @brief  Constructs a new ListApplicationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListApplicationsRequest::ListApplicationsRequest(const ListApplicationsRequest &other)
+    : KinesisAnalyticsRequest(new ListApplicationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListApplicationsRequest object.
+ */
+ListApplicationsRequest::ListApplicationsRequest()
+    : KinesisAnalyticsRequest(new ListApplicationsRequestPrivate(KinesisAnalyticsRequest::ListApplicationsAction, this))
+{
+
+}
+
+bool ListApplicationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListApplicationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListApplicationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * ListApplicationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListApplicationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListApplicationsRequestPrivate
+ *
+ * @brief  Private implementation for ListApplicationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationsRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public ListApplicationsRequest instance.
+ */
+ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, ListApplicationsRequest * const q)
+    : ListApplicationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListApplicationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListApplicationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListApplicationsRequest instance.
+ */
+ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
+    const ListApplicationsRequestPrivate &other, ListApplicationsRequest * const q)
+    : ListApplicationsPrivate(other, q)
+{
+
+}

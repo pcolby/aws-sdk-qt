@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEALIASREQUEST_H
 #define QTAWS_CREATEALIASREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class CreateAliasRequestPrivate;
+
+class QTAWS_EXPORT CreateAliasRequest : public DirectoryServiceRequest {
+
+public:
+    CreateAliasRequest(const CreateAliasRequest &other);
+    CreateAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateAliasRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

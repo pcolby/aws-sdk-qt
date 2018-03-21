@@ -19,3 +19,107 @@
 
 #include "removeautoscalingpolicyrequest.h"
 #include "removeautoscalingpolicyrequest_p.h"
+#include "removeautoscalingpolicyresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  RemoveAutoScalingPolicyRequest
+ *
+ * @brief  Implements EMR RemoveAutoScalingPolicy requests.
+ *
+ * @see    EMRClient::removeAutoScalingPolicy
+ */
+
+/**
+ * @brief  Constructs a new RemoveAutoScalingPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveAutoScalingPolicyResponse::RemoveAutoScalingPolicyResponse(
+
+/**
+ * @brief  Constructs a new RemoveAutoScalingPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest(const RemoveAutoScalingPolicyRequest &other)
+    : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveAutoScalingPolicyRequest object.
+ */
+RemoveAutoScalingPolicyRequest::RemoveAutoScalingPolicyRequest()
+    : EMRRequest(new RemoveAutoScalingPolicyRequestPrivate(EMRRequest::RemoveAutoScalingPolicyAction, this))
+{
+
+}
+
+bool RemoveAutoScalingPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveAutoScalingPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveAutoScalingPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveAutoScalingPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveAutoScalingPolicyRequestPrivate
+ *
+ * @brief  Private implementation for RemoveAutoScalingPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public RemoveAutoScalingPolicyRequest instance.
+ */
+RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
+    const EMRRequest::Action action, RemoveAutoScalingPolicyRequest * const q)
+    : RemoveAutoScalingPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveAutoScalingPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveAutoScalingPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveAutoScalingPolicyRequest instance.
+ */
+RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
+    const RemoveAutoScalingPolicyRequestPrivate &other, RemoveAutoScalingPolicyRequest * const q)
+    : RemoveAutoScalingPolicyPrivate(other, q)
+{
+
+}

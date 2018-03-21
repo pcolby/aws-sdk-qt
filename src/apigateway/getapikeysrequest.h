@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETAPIKEYSREQUEST_H
 #define QTAWS_GETAPIKEYSREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetApiKeysRequestPrivate;
+
+class QTAWS_EXPORT GetApiKeysRequest : public APIGatewayRequest {
+
+public:
+    GetApiKeysRequest(const GetApiKeysRequest &other);
+    GetApiKeysRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetApiKeysRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

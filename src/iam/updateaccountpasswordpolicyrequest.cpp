@@ -19,3 +19,107 @@
 
 #include "updateaccountpasswordpolicyrequest.h"
 #include "updateaccountpasswordpolicyrequest_p.h"
+#include "updateaccountpasswordpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateAccountPasswordPolicyRequest
+ *
+ * @brief  Implements IAM UpdateAccountPasswordPolicy requests.
+ *
+ * @see    IAMClient::updateAccountPasswordPolicy
+ */
+
+/**
+ * @brief  Constructs a new UpdateAccountPasswordPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
+
+/**
+ * @brief  Constructs a new UpdateAccountPasswordPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest(const UpdateAccountPasswordPolicyRequest &other)
+    : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateAccountPasswordPolicyRequest object.
+ */
+UpdateAccountPasswordPolicyRequest::UpdateAccountPasswordPolicyRequest()
+    : IAMRequest(new UpdateAccountPasswordPolicyRequestPrivate(IAMRequest::UpdateAccountPasswordPolicyAction, this))
+{
+
+}
+
+bool UpdateAccountPasswordPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateAccountPasswordPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateAccountPasswordPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateAccountPasswordPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAccountPasswordPolicyRequestPrivate
+ *
+ * @brief  Private implementation for UpdateAccountPasswordPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAccountPasswordPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateAccountPasswordPolicyRequest instance.
+ */
+UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
+    const IAMRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)
+    : UpdateAccountPasswordPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAccountPasswordPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateAccountPasswordPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateAccountPasswordPolicyRequest instance.
+ */
+UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
+    const UpdateAccountPasswordPolicyRequestPrivate &other, UpdateAccountPasswordPolicyRequest * const q)
+    : UpdateAccountPasswordPolicyPrivate(other, q)
+{
+
+}

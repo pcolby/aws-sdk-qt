@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETRAILREQUEST_H
 #define QTAWS_DELETETRAILREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class DeleteTrailRequestPrivate;
+
+class QTAWS_EXPORT DeleteTrailRequest : public CloudTrailRequest {
+
+public:
+    DeleteTrailRequest(const DeleteTrailRequest &other);
+    DeleteTrailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrailRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

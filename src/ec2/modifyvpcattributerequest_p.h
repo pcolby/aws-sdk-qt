@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYVPCATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYVPCATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "modifyvpcattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcAttributeRequest;
+
+class QTAWS_EXPORT ModifyVpcAttributeRequestPrivate : public EC2Private {
+
+public:
+    ModifyVpcAttributeRequestPrivate(const EC2::Action action,
+                                   ModifyVpcAttributeRequest * const q);
+    ModifyVpcAttributeRequestPrivate(const ModifyVpcAttributeRequestPrivate &other,
+                                   ModifyVpcAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyVpcAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

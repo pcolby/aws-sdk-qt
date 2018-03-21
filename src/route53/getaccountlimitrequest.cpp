@@ -19,3 +19,107 @@
 
 #include "getaccountlimitrequest.h"
 #include "getaccountlimitrequest_p.h"
+#include "getaccountlimitresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetAccountLimitRequest
+ *
+ * @brief  Implements Route53 GetAccountLimit requests.
+ *
+ * @see    Route53Client::getAccountLimit
+ */
+
+/**
+ * @brief  Constructs a new GetAccountLimitResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountLimitResponse::GetAccountLimitResponse(
+
+/**
+ * @brief  Constructs a new GetAccountLimitRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAccountLimitRequest::GetAccountLimitRequest(const GetAccountLimitRequest &other)
+    : Route53Request(new GetAccountLimitRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAccountLimitRequest object.
+ */
+GetAccountLimitRequest::GetAccountLimitRequest()
+    : Route53Request(new GetAccountLimitRequestPrivate(Route53Request::GetAccountLimitAction, this))
+{
+
+}
+
+bool GetAccountLimitRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAccountLimitResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAccountLimitResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAccountLimitResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountLimitRequestPrivate
+ *
+ * @brief  Private implementation for GetAccountLimitRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountLimitRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetAccountLimitRequest instance.
+ */
+GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
+    const Route53Request::Action action, GetAccountLimitRequest * const q)
+    : GetAccountLimitPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountLimitRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAccountLimitRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAccountLimitRequest instance.
+ */
+GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
+    const GetAccountLimitRequestPrivate &other, GetAccountLimitRequest * const q)
+    : GetAccountLimitPrivate(other, q)
+{
+
+}

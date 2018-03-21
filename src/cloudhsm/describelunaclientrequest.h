@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBELUNACLIENTREQUEST_H
 #define QTAWS_DESCRIBELUNACLIENTREQUEST_H
 
+#include "cloudhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class DescribeLunaClientRequestPrivate;
+
+class QTAWS_EXPORT DescribeLunaClientRequest : public CloudHSMRequest {
+
+public:
+    DescribeLunaClientRequest(const DescribeLunaClientRequest &other);
+    DescribeLunaClientRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLunaClientRequest)
+
+}
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

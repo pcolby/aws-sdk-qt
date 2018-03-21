@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTCONNECTIONNOTIFICATIONREQUEST_H
 #define QTAWS_MODIFYVPCENDPOINTCONNECTIONNOTIFICATIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyVpcEndpointConnectionNotificationRequestPrivate;
+
+class QTAWS_EXPORT ModifyVpcEndpointConnectionNotificationRequest : public EC2Request {
+
+public:
+    ModifyVpcEndpointConnectionNotificationRequest(const ModifyVpcEndpointConnectionNotificationRequest &other);
+    ModifyVpcEndpointConnectionNotificationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyVpcEndpointConnectionNotificationRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatedevendpointrequest.h"
 #include "updatedevendpointrequest_p.h"
+#include "updatedevendpointresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateDevEndpointRequest
+ *
+ * @brief  Implements Glue UpdateDevEndpoint requests.
+ *
+ * @see    GlueClient::updateDevEndpoint
+ */
+
+/**
+ * @brief  Constructs a new UpdateDevEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDevEndpointResponse::UpdateDevEndpointResponse(
+
+/**
+ * @brief  Constructs a new UpdateDevEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDevEndpointRequest::UpdateDevEndpointRequest(const UpdateDevEndpointRequest &other)
+    : GlueRequest(new UpdateDevEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDevEndpointRequest object.
+ */
+UpdateDevEndpointRequest::UpdateDevEndpointRequest()
+    : GlueRequest(new UpdateDevEndpointRequestPrivate(GlueRequest::UpdateDevEndpointAction, this))
+{
+
+}
+
+bool UpdateDevEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDevEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDevEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDevEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDevEndpointRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDevEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDevEndpointRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public UpdateDevEndpointRequest instance.
+ */
+UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
+    const GlueRequest::Action action, UpdateDevEndpointRequest * const q)
+    : UpdateDevEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDevEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDevEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDevEndpointRequest instance.
+ */
+UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
+    const UpdateDevEndpointRequestPrivate &other, UpdateDevEndpointRequest * const q)
+    : UpdateDevEndpointPrivate(other, q)
+{
+
+}

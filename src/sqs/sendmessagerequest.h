@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDMESSAGEREQUEST_H
 #define QTAWS_SENDMESSAGEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SendMessageRequestPrivate;
+
+class QTAWS_EXPORT SendMessageRequest : public SQSRequest {
+
+public:
+    SendMessageRequest(const SendMessageRequest &other);
+    SendMessageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendMessageRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

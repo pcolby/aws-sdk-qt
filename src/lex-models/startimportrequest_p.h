@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTIMPORTREQUEST_P_H
 #define QTAWS_STARTIMPORTREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "startimportrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class StartImportRequest;
+
+class QTAWS_EXPORT StartImportRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    StartImportRequestPrivate(const LexModelBuildingService::Action action,
+                                   StartImportRequest * const q);
+    StartImportRequestPrivate(const StartImportRequestPrivate &other,
+                                   StartImportRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartImportRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

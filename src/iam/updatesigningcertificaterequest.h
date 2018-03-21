@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESIGNINGCERTIFICATEREQUEST_H
 #define QTAWS_UPDATESIGNINGCERTIFICATEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateSigningCertificateRequestPrivate;
+
+class QTAWS_EXPORT UpdateSigningCertificateRequest : public IAMRequest {
+
+public:
+    UpdateSigningCertificateRequest(const UpdateSigningCertificateRequest &other);
+    UpdateSigningCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSigningCertificateRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

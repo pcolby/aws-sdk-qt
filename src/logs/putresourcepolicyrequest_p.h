@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYREQUEST_P_H
 #define QTAWS_PUTRESOURCEPOLICYREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "putresourcepolicyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutResourcePolicyRequest;
+
+class QTAWS_EXPORT PutResourcePolicyRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    PutResourcePolicyRequestPrivate(const CloudWatchLogs::Action action,
+                                   PutResourcePolicyRequest * const q);
+    PutResourcePolicyRequestPrivate(const PutResourcePolicyRequestPrivate &other,
+                                   PutResourcePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutResourcePolicyRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEFILESHAREREQUEST_H
 #define QTAWS_DELETEFILESHAREREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DeleteFileShareRequestPrivate;
+
+class QTAWS_EXPORT DeleteFileShareRequest : public StorageGatewayRequest {
+
+public:
+    DeleteFileShareRequest(const DeleteFileShareRequest &other);
+    DeleteFileShareRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFileShareRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

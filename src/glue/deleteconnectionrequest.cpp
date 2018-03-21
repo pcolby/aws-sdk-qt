@@ -19,3 +19,107 @@
 
 #include "deleteconnectionrequest.h"
 #include "deleteconnectionrequest_p.h"
+#include "deleteconnectionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteConnectionRequest
+ *
+ * @brief  Implements Glue DeleteConnection requests.
+ *
+ * @see    GlueClient::deleteConnection
+ */
+
+/**
+ * @brief  Constructs a new DeleteConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConnectionResponse::DeleteConnectionResponse(
+
+/**
+ * @brief  Constructs a new DeleteConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteConnectionRequest::DeleteConnectionRequest(const DeleteConnectionRequest &other)
+    : GlueRequest(new DeleteConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteConnectionRequest object.
+ */
+DeleteConnectionRequest::DeleteConnectionRequest()
+    : GlueRequest(new DeleteConnectionRequestPrivate(GlueRequest::DeleteConnectionAction, this))
+{
+
+}
+
+bool DeleteConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConnectionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConnectionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public DeleteConnectionRequest instance.
+ */
+DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
+    const GlueRequest::Action action, DeleteConnectionRequest * const q)
+    : DeleteConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteConnectionRequest instance.
+ */
+DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
+    const DeleteConnectionRequestPrivate &other, DeleteConnectionRequest * const q)
+    : DeleteConnectionPrivate(other, q)
+{
+
+}

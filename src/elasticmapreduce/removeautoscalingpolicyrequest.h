@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEAUTOSCALINGPOLICYREQUEST_H
 #define QTAWS_REMOVEAUTOSCALINGPOLICYREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class RemoveAutoScalingPolicyRequestPrivate;
+
+class QTAWS_EXPORT RemoveAutoScalingPolicyRequest : public EMRRequest {
+
+public:
+    RemoveAutoScalingPolicyRequest(const RemoveAutoScalingPolicyRequest &other);
+    RemoveAutoScalingPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAutoScalingPolicyRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

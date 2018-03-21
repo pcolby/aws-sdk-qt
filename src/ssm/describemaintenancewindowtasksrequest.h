@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCEWINDOWTASKSREQUEST_H
 #define QTAWS_DESCRIBEMAINTENANCEWINDOWTASKSREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeMaintenanceWindowTasksRequestPrivate;
+
+class QTAWS_EXPORT DescribeMaintenanceWindowTasksRequest : public SSMRequest {
+
+public:
+    DescribeMaintenanceWindowTasksRequest(const DescribeMaintenanceWindowTasksRequest &other);
+    DescribeMaintenanceWindowTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMaintenanceWindowTasksRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTLIFECYCLEHOOKREQUEST_P_H
 #define QTAWS_PUTLIFECYCLEHOOKREQUEST_P_H
 
+#include "autoscaling_p.h"
+#include "putlifecyclehookrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class PutLifecycleHookRequest;
+
+class QTAWS_EXPORT PutLifecycleHookRequestPrivate : public AutoScalingPrivate {
+
+public:
+    PutLifecycleHookRequestPrivate(const AutoScaling::Action action,
+                                   PutLifecycleHookRequest * const q);
+    PutLifecycleHookRequestPrivate(const PutLifecycleHookRequestPrivate &other,
+                                   PutLifecycleHookRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutLifecycleHookRequest)
+
+};
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

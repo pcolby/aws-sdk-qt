@@ -19,3 +19,107 @@
 
 #include "describeendpointconfigrequest.h"
 #include "describeendpointconfigrequest_p.h"
+#include "describeendpointconfigresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeEndpointConfigRequest
+ *
+ * @brief  Implements SageMaker DescribeEndpointConfig requests.
+ *
+ * @see    SageMakerClient::describeEndpointConfig
+ */
+
+/**
+ * @brief  Constructs a new DescribeEndpointConfigResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEndpointConfigResponse::DescribeEndpointConfigResponse(
+
+/**
+ * @brief  Constructs a new DescribeEndpointConfigRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEndpointConfigRequest::DescribeEndpointConfigRequest(const DescribeEndpointConfigRequest &other)
+    : SageMakerRequest(new DescribeEndpointConfigRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEndpointConfigRequest object.
+ */
+DescribeEndpointConfigRequest::DescribeEndpointConfigRequest()
+    : SageMakerRequest(new DescribeEndpointConfigRequestPrivate(SageMakerRequest::DescribeEndpointConfigAction, this))
+{
+
+}
+
+bool DescribeEndpointConfigRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEndpointConfigResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEndpointConfigResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * DescribeEndpointConfigRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEndpointConfigResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEndpointConfigRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEndpointConfigRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointConfigRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public DescribeEndpointConfigRequest instance.
+ */
+DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
+    const SageMakerRequest::Action action, DescribeEndpointConfigRequest * const q)
+    : DescribeEndpointConfigPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEndpointConfigRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEndpointConfigRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEndpointConfigRequest instance.
+ */
+DescribeEndpointConfigRequestPrivate::DescribeEndpointConfigRequestPrivate(
+    const DescribeEndpointConfigRequestPrivate &other, DescribeEndpointConfigRequest * const q)
+    : DescribeEndpointConfigPrivate(other, q)
+{
+
+}

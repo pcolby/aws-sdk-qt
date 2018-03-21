@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETINVENTORYREQUEST_P_H
 #define QTAWS_GETINVENTORYREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getinventoryrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetInventoryRequest;
+
+class QTAWS_EXPORT GetInventoryRequestPrivate : public SSMPrivate {
+
+public:
+    GetInventoryRequestPrivate(const SSM::Action action,
+                                   GetInventoryRequest * const q);
+    GetInventoryRequestPrivate(const GetInventoryRequestPrivate &other,
+                                   GetInventoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetInventoryRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

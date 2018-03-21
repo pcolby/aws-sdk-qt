@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDREQUEST_H
 #define QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class SetIdentityFeedbackForwardingEnabledRequestPrivate;
+
+class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledRequest : public SESRequest {
+
+public:
+    SetIdentityFeedbackForwardingEnabledRequest(const SetIdentityFeedbackForwardingEnabledRequest &other);
+    SetIdentityFeedbackForwardingEnabledRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetIdentityFeedbackForwardingEnabledRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

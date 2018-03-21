@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEEVENTSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTSREQUEST_P_H
 
+#include "dax_p.h"
+#include "describeeventsrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DescribeEventsRequest;
+
+class QTAWS_EXPORT DescribeEventsRequestPrivate : public DAXPrivate {
+
+public:
+    DescribeEventsRequestPrivate(const DAX::Action action,
+                                   DescribeEventsRequest * const q);
+    DescribeEventsRequestPrivate(const DescribeEventsRequestPrivate &other,
+                                   DescribeEventsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEventsRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

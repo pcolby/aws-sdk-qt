@@ -19,3 +19,107 @@
 
 #include "updateloginprofilerequest.h"
 #include "updateloginprofilerequest_p.h"
+#include "updateloginprofileresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateLoginProfileRequest
+ *
+ * @brief  Implements IAM UpdateLoginProfile requests.
+ *
+ * @see    IAMClient::updateLoginProfile
+ */
+
+/**
+ * @brief  Constructs a new UpdateLoginProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLoginProfileResponse::UpdateLoginProfileResponse(
+
+/**
+ * @brief  Constructs a new UpdateLoginProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateLoginProfileRequest::UpdateLoginProfileRequest(const UpdateLoginProfileRequest &other)
+    : IAMRequest(new UpdateLoginProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateLoginProfileRequest object.
+ */
+UpdateLoginProfileRequest::UpdateLoginProfileRequest()
+    : IAMRequest(new UpdateLoginProfileRequestPrivate(IAMRequest::UpdateLoginProfileAction, this))
+{
+
+}
+
+bool UpdateLoginProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateLoginProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateLoginProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateLoginProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLoginProfileRequestPrivate
+ *
+ * @brief  Private implementation for UpdateLoginProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLoginProfileRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateLoginProfileRequest instance.
+ */
+UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
+    const IAMRequest::Action action, UpdateLoginProfileRequest * const q)
+    : UpdateLoginProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLoginProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateLoginProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateLoginProfileRequest instance.
+ */
+UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
+    const UpdateLoginProfileRequestPrivate &other, UpdateLoginProfileRequest * const q)
+    : UpdateLoginProfilePrivate(other, q)
+{
+
+}

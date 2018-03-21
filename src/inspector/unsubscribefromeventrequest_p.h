@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMEVENTREQUEST_P_H
 #define QTAWS_UNSUBSCRIBEFROMEVENTREQUEST_P_H
 
+#include "inspector_p.h"
+#include "unsubscribefromeventrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class UnsubscribeFromEventRequest;
+
+class QTAWS_EXPORT UnsubscribeFromEventRequestPrivate : public InspectorPrivate {
+
+public:
+    UnsubscribeFromEventRequestPrivate(const Inspector::Action action,
+                                   UnsubscribeFromEventRequest * const q);
+    UnsubscribeFromEventRequestPrivate(const UnsubscribeFromEventRequestPrivate &other,
+                                   UnsubscribeFromEventRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnsubscribeFromEventRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

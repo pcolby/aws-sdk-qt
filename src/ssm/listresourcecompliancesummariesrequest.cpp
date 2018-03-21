@@ -19,3 +19,107 @@
 
 #include "listresourcecompliancesummariesrequest.h"
 #include "listresourcecompliancesummariesrequest_p.h"
+#include "listresourcecompliancesummariesresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  ListResourceComplianceSummariesRequest
+ *
+ * @brief  Implements SSM ListResourceComplianceSummaries requests.
+ *
+ * @see    SSMClient::listResourceComplianceSummaries
+ */
+
+/**
+ * @brief  Constructs a new ListResourceComplianceSummariesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceComplianceSummariesResponse::ListResourceComplianceSummariesResponse(
+
+/**
+ * @brief  Constructs a new ListResourceComplianceSummariesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourceComplianceSummariesRequest::ListResourceComplianceSummariesRequest(const ListResourceComplianceSummariesRequest &other)
+    : SSMRequest(new ListResourceComplianceSummariesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourceComplianceSummariesRequest object.
+ */
+ListResourceComplianceSummariesRequest::ListResourceComplianceSummariesRequest()
+    : SSMRequest(new ListResourceComplianceSummariesRequestPrivate(SSMRequest::ListResourceComplianceSummariesAction, this))
+{
+
+}
+
+bool ListResourceComplianceSummariesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourceComplianceSummariesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourceComplianceSummariesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * ListResourceComplianceSummariesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourceComplianceSummariesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceComplianceSummariesRequestPrivate
+ *
+ * @brief  Private implementation for ListResourceComplianceSummariesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceComplianceSummariesRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public ListResourceComplianceSummariesRequest instance.
+ */
+ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
+    const SSMRequest::Action action, ListResourceComplianceSummariesRequest * const q)
+    : ListResourceComplianceSummariesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceComplianceSummariesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourceComplianceSummariesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourceComplianceSummariesRequest instance.
+ */
+ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
+    const ListResourceComplianceSummariesRequestPrivate &other, ListResourceComplianceSummariesRequest * const q)
+    : ListResourceComplianceSummariesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETADMCHANNELREQUEST_H
 #define QTAWS_GETADMCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetAdmChannelRequestPrivate;
+
+class QTAWS_EXPORT GetAdmChannelRequest : public PinpointRequest {
+
+public:
+    GetAdmChannelRequest(const GetAdmChannelRequest &other);
+    GetAdmChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAdmChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

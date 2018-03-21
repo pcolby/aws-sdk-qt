@@ -19,3 +19,107 @@
 
 #include "deletenetworkinterfacerequest.h"
 #include "deletenetworkinterfacerequest_p.h"
+#include "deletenetworkinterfaceresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DeleteNetworkInterfaceRequest
+ *
+ * @brief  Implements EC2 DeleteNetworkInterface requests.
+ *
+ * @see    EC2Client::deleteNetworkInterface
+ */
+
+/**
+ * @brief  Constructs a new DeleteNetworkInterfaceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
+
+/**
+ * @brief  Constructs a new DeleteNetworkInterfaceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest(const DeleteNetworkInterfaceRequest &other)
+    : EC2Request(new DeleteNetworkInterfaceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteNetworkInterfaceRequest object.
+ */
+DeleteNetworkInterfaceRequest::DeleteNetworkInterfaceRequest()
+    : EC2Request(new DeleteNetworkInterfaceRequestPrivate(EC2Request::DeleteNetworkInterfaceAction, this))
+{
+
+}
+
+bool DeleteNetworkInterfaceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteNetworkInterfaceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteNetworkInterfaceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteNetworkInterfaceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteNetworkInterfaceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteNetworkInterfaceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DeleteNetworkInterfaceRequest instance.
+ */
+DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
+    const EC2Request::Action action, DeleteNetworkInterfaceRequest * const q)
+    : DeleteNetworkInterfacePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteNetworkInterfaceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteNetworkInterfaceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteNetworkInterfaceRequest instance.
+ */
+DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
+    const DeleteNetworkInterfaceRequestPrivate &other, DeleteNetworkInterfaceRequest * const q)
+    : DeleteNetworkInterfacePrivate(other, q)
+{
+
+}

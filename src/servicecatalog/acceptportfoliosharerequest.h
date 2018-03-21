@@ -20,4 +20,32 @@
 #ifndef QTAWS_ACCEPTPORTFOLIOSHAREREQUEST_H
 #define QTAWS_ACCEPTPORTFOLIOSHAREREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class AcceptPortfolioShareRequestPrivate;
+
+class QTAWS_EXPORT AcceptPortfolioShareRequest : public ServiceCatalogRequest {
+
+public:
+    AcceptPortfolioShareRequest(const AcceptPortfolioShareRequest &other);
+    AcceptPortfolioShareRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AcceptPortfolioShareRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

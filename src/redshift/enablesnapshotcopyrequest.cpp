@@ -19,3 +19,107 @@
 
 #include "enablesnapshotcopyrequest.h"
 #include "enablesnapshotcopyrequest_p.h"
+#include "enablesnapshotcopyresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  EnableSnapshotCopyRequest
+ *
+ * @brief  Implements Redshift EnableSnapshotCopy requests.
+ *
+ * @see    RedshiftClient::enableSnapshotCopy
+ */
+
+/**
+ * @brief  Constructs a new EnableSnapshotCopyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableSnapshotCopyResponse::EnableSnapshotCopyResponse(
+
+/**
+ * @brief  Constructs a new EnableSnapshotCopyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableSnapshotCopyRequest::EnableSnapshotCopyRequest(const EnableSnapshotCopyRequest &other)
+    : RedshiftRequest(new EnableSnapshotCopyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableSnapshotCopyRequest object.
+ */
+EnableSnapshotCopyRequest::EnableSnapshotCopyRequest()
+    : RedshiftRequest(new EnableSnapshotCopyRequestPrivate(RedshiftRequest::EnableSnapshotCopyAction, this))
+{
+
+}
+
+bool EnableSnapshotCopyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableSnapshotCopyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableSnapshotCopyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * EnableSnapshotCopyRequest::response(QNetworkReply * const reply) const
+{
+    return new EnableSnapshotCopyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableSnapshotCopyRequestPrivate
+ *
+ * @brief  Private implementation for EnableSnapshotCopyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableSnapshotCopyRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public EnableSnapshotCopyRequest instance.
+ */
+EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
+    const RedshiftRequest::Action action, EnableSnapshotCopyRequest * const q)
+    : EnableSnapshotCopyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableSnapshotCopyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableSnapshotCopyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableSnapshotCopyRequest instance.
+ */
+EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
+    const EnableSnapshotCopyRequestPrivate &other, EnableSnapshotCopyRequest * const q)
+    : EnableSnapshotCopyPrivate(other, q)
+{
+
+}

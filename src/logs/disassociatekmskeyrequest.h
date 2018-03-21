@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEKMSKEYREQUEST_H
 #define QTAWS_DISASSOCIATEKMSKEYREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DisassociateKmsKeyRequestPrivate;
+
+class QTAWS_EXPORT DisassociateKmsKeyRequest : public CloudWatchLogsRequest {
+
+public:
+    DisassociateKmsKeyRequest(const DisassociateKmsKeyRequest &other);
+    DisassociateKmsKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateKmsKeyRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

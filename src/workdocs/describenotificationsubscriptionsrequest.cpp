@@ -19,3 +19,107 @@
 
 #include "describenotificationsubscriptionsrequest.h"
 #include "describenotificationsubscriptionsrequest_p.h"
+#include "describenotificationsubscriptionsresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeNotificationSubscriptionsRequest
+ *
+ * @brief  Implements WorkDocs DescribeNotificationSubscriptions requests.
+ *
+ * @see    WorkDocsClient::describeNotificationSubscriptions
+ */
+
+/**
+ * @brief  Constructs a new DescribeNotificationSubscriptionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeNotificationSubscriptionsResponse::DescribeNotificationSubscriptionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeNotificationSubscriptionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeNotificationSubscriptionsRequest::DescribeNotificationSubscriptionsRequest(const DescribeNotificationSubscriptionsRequest &other)
+    : WorkDocsRequest(new DescribeNotificationSubscriptionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeNotificationSubscriptionsRequest object.
+ */
+DescribeNotificationSubscriptionsRequest::DescribeNotificationSubscriptionsRequest()
+    : WorkDocsRequest(new DescribeNotificationSubscriptionsRequestPrivate(WorkDocsRequest::DescribeNotificationSubscriptionsAction, this))
+{
+
+}
+
+bool DescribeNotificationSubscriptionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeNotificationSubscriptionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeNotificationSubscriptionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DescribeNotificationSubscriptionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeNotificationSubscriptionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeNotificationSubscriptionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeNotificationSubscriptionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationSubscriptionsRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DescribeNotificationSubscriptionsRequest instance.
+ */
+DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
+    const WorkDocsRequest::Action action, DescribeNotificationSubscriptionsRequest * const q)
+    : DescribeNotificationSubscriptionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeNotificationSubscriptionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeNotificationSubscriptionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeNotificationSubscriptionsRequest instance.
+ */
+DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
+    const DescribeNotificationSubscriptionsRequestPrivate &other, DescribeNotificationSubscriptionsRequest * const q)
+    : DescribeNotificationSubscriptionsPrivate(other, q)
+{
+
+}

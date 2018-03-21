@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETROOMREQUEST_P_H
 #define QTAWS_GETROOMREQUEST_P_H
 
+#include "alexaforbusiness_p.h"
+#include "getroomrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class GetRoomRequest;
+
+class QTAWS_EXPORT GetRoomRequestPrivate : public AlexaForBusinessPrivate {
+
+public:
+    GetRoomRequestPrivate(const AlexaForBusiness::Action action,
+                                   GetRoomRequest * const q);
+    GetRoomRequestPrivate(const GetRoomRequestPrivate &other,
+                                   GetRoomRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRoomRequest)
+
+};
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

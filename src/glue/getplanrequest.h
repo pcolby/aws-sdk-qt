@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPLANREQUEST_H
 #define QTAWS_GETPLANREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetPlanRequestPrivate;
+
+class QTAWS_EXPORT GetPlanRequest : public GlueRequest {
+
+public:
+    GetPlanRequest(const GetPlanRequest &other);
+    GetPlanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPlanRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

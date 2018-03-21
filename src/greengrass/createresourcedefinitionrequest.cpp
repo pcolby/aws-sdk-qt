@@ -19,3 +19,107 @@
 
 #include "createresourcedefinitionrequest.h"
 #include "createresourcedefinitionrequest_p.h"
+#include "createresourcedefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateResourceDefinitionRequest
+ *
+ * @brief  Implements Greengrass CreateResourceDefinition requests.
+ *
+ * @see    GreengrassClient::createResourceDefinition
+ */
+
+/**
+ * @brief  Constructs a new CreateResourceDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateResourceDefinitionResponse::CreateResourceDefinitionResponse(
+
+/**
+ * @brief  Constructs a new CreateResourceDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateResourceDefinitionRequest::CreateResourceDefinitionRequest(const CreateResourceDefinitionRequest &other)
+    : GreengrassRequest(new CreateResourceDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateResourceDefinitionRequest object.
+ */
+CreateResourceDefinitionRequest::CreateResourceDefinitionRequest()
+    : GreengrassRequest(new CreateResourceDefinitionRequestPrivate(GreengrassRequest::CreateResourceDefinitionAction, this))
+{
+
+}
+
+bool CreateResourceDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateResourceDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateResourceDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * CreateResourceDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateResourceDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateResourceDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for CreateResourceDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public CreateResourceDefinitionRequest instance.
+ */
+CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, CreateResourceDefinitionRequest * const q)
+    : CreateResourceDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateResourceDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateResourceDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateResourceDefinitionRequest instance.
+ */
+CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
+    const CreateResourceDefinitionRequestPrivate &other, CreateResourceDefinitionRequest * const q)
+    : CreateResourceDefinitionPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createconstraintrequest.h"
 #include "createconstraintrequest_p.h"
+#include "createconstraintresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  CreateConstraintRequest
+ *
+ * @brief  Implements ServiceCatalog CreateConstraint requests.
+ *
+ * @see    ServiceCatalogClient::createConstraint
+ */
+
+/**
+ * @brief  Constructs a new CreateConstraintResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConstraintResponse::CreateConstraintResponse(
+
+/**
+ * @brief  Constructs a new CreateConstraintRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateConstraintRequest::CreateConstraintRequest(const CreateConstraintRequest &other)
+    : ServiceCatalogRequest(new CreateConstraintRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateConstraintRequest object.
+ */
+CreateConstraintRequest::CreateConstraintRequest()
+    : ServiceCatalogRequest(new CreateConstraintRequestPrivate(ServiceCatalogRequest::CreateConstraintAction, this))
+{
+
+}
+
+bool CreateConstraintRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateConstraintResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateConstraintResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * CreateConstraintRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateConstraintResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConstraintRequestPrivate
+ *
+ * @brief  Private implementation for CreateConstraintRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConstraintRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public CreateConstraintRequest instance.
+ */
+CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
+    const ServiceCatalogRequest::Action action, CreateConstraintRequest * const q)
+    : CreateConstraintPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConstraintRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateConstraintRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateConstraintRequest instance.
+ */
+CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
+    const CreateConstraintRequestPrivate &other, CreateConstraintRequest * const q)
+    : CreateConstraintPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createtablerequest.h"
 #include "createtablerequest_p.h"
+#include "createtableresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  CreateTableRequest
+ *
+ * @brief  Implements DynamoDB CreateTable requests.
+ *
+ * @see    DynamoDBClient::createTable
+ */
+
+/**
+ * @brief  Constructs a new CreateTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTableResponse::CreateTableResponse(
+
+/**
+ * @brief  Constructs a new CreateTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTableRequest::CreateTableRequest(const CreateTableRequest &other)
+    : DynamoDBRequest(new CreateTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTableRequest object.
+ */
+CreateTableRequest::CreateTableRequest()
+    : DynamoDBRequest(new CreateTableRequestPrivate(DynamoDBRequest::CreateTableAction, this))
+{
+
+}
+
+bool CreateTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTableRequestPrivate
+ *
+ * @brief  Private implementation for CreateTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTableRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public CreateTableRequest instance.
+ */
+CreateTableRequestPrivate::CreateTableRequestPrivate(
+    const DynamoDBRequest::Action action, CreateTableRequest * const q)
+    : CreateTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTableRequest instance.
+ */
+CreateTableRequestPrivate::CreateTableRequestPrivate(
+    const CreateTableRequestPrivate &other, CreateTableRequest * const q)
+    : CreateTablePrivate(other, q)
+{
+
+}

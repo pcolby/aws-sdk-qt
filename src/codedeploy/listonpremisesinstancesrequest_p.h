@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_LISTONPREMISESINSTANCESREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "listonpremisesinstancesrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListOnPremisesInstancesRequest;
+
+class QTAWS_EXPORT ListOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+
+public:
+    ListOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,
+                                   ListOnPremisesInstancesRequest * const q);
+    ListOnPremisesInstancesRequestPrivate(const ListOnPremisesInstancesRequestPrivate &other,
+                                   ListOnPremisesInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListOnPremisesInstancesRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERINSTANCEREQUEST_P_H
 
+#include "servicediscovery_p.h"
+#include "registerinstancerequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class RegisterInstanceRequest;
+
+class QTAWS_EXPORT RegisterInstanceRequestPrivate : public ServiceDiscoveryPrivate {
+
+public:
+    RegisterInstanceRequestPrivate(const ServiceDiscovery::Action action,
+                                   RegisterInstanceRequest * const q);
+    RegisterInstanceRequestPrivate(const RegisterInstanceRequestPrivate &other,
+                                   RegisterInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterInstanceRequest)
+
+};
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

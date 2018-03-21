@@ -19,3 +19,107 @@
 
 #include "deletedomainentryrequest.h"
 #include "deletedomainentryrequest_p.h"
+#include "deletedomainentryresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DeleteDomainEntryRequest
+ *
+ * @brief  Implements Lightsail DeleteDomainEntry requests.
+ *
+ * @see    LightsailClient::deleteDomainEntry
+ */
+
+/**
+ * @brief  Constructs a new DeleteDomainEntryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDomainEntryResponse::DeleteDomainEntryResponse(
+
+/**
+ * @brief  Constructs a new DeleteDomainEntryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDomainEntryRequest::DeleteDomainEntryRequest(const DeleteDomainEntryRequest &other)
+    : LightsailRequest(new DeleteDomainEntryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDomainEntryRequest object.
+ */
+DeleteDomainEntryRequest::DeleteDomainEntryRequest()
+    : LightsailRequest(new DeleteDomainEntryRequestPrivate(LightsailRequest::DeleteDomainEntryAction, this))
+{
+
+}
+
+bool DeleteDomainEntryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDomainEntryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDomainEntryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * DeleteDomainEntryRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDomainEntryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDomainEntryRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDomainEntryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainEntryRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public DeleteDomainEntryRequest instance.
+ */
+DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
+    const LightsailRequest::Action action, DeleteDomainEntryRequest * const q)
+    : DeleteDomainEntryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDomainEntryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDomainEntryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDomainEntryRequest instance.
+ */
+DeleteDomainEntryRequestPrivate::DeleteDomainEntryRequestPrivate(
+    const DeleteDomainEntryRequestPrivate &other, DeleteDomainEntryRequest * const q)
+    : DeleteDomainEntryPrivate(other, q)
+{
+
+}

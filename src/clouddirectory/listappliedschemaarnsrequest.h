@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTAPPLIEDSCHEMAARNSREQUEST_H
 #define QTAWS_LISTAPPLIEDSCHEMAARNSREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListAppliedSchemaArnsRequestPrivate;
+
+class QTAWS_EXPORT ListAppliedSchemaArnsRequest : public CloudDirectoryRequest {
+
+public:
+    ListAppliedSchemaArnsRequest(const ListAppliedSchemaArnsRequest &other);
+    ListAppliedSchemaArnsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAppliedSchemaArnsRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "allocatehostedconnectionrequest.h"
 #include "allocatehostedconnectionrequest_p.h"
+#include "allocatehostedconnectionresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AllocateHostedConnectionRequest
+ *
+ * @brief  Implements DirectConnect AllocateHostedConnection requests.
+ *
+ * @see    DirectConnectClient::allocateHostedConnection
+ */
+
+/**
+ * @brief  Constructs a new AllocateHostedConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
+
+/**
+ * @brief  Constructs a new AllocateHostedConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AllocateHostedConnectionRequest::AllocateHostedConnectionRequest(const AllocateHostedConnectionRequest &other)
+    : DirectConnectRequest(new AllocateHostedConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AllocateHostedConnectionRequest object.
+ */
+AllocateHostedConnectionRequest::AllocateHostedConnectionRequest()
+    : DirectConnectRequest(new AllocateHostedConnectionRequestPrivate(DirectConnectRequest::AllocateHostedConnectionAction, this))
+{
+
+}
+
+bool AllocateHostedConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AllocateHostedConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AllocateHostedConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new AllocateHostedConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AllocateHostedConnectionRequestPrivate
+ *
+ * @brief  Private implementation for AllocateHostedConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateHostedConnectionRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public AllocateHostedConnectionRequest instance.
+ */
+AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
+    const DirectConnectRequest::Action action, AllocateHostedConnectionRequest * const q)
+    : AllocateHostedConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AllocateHostedConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AllocateHostedConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AllocateHostedConnectionRequest instance.
+ */
+AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
+    const AllocateHostedConnectionRequestPrivate &other, AllocateHostedConnectionRequest * const q)
+    : AllocateHostedConnectionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGEOMATCHSETREQUEST_H
 #define QTAWS_DELETEGEOMATCHSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteGeoMatchSetRequestPrivate;
+
+class QTAWS_EXPORT DeleteGeoMatchSetRequest : public WAFRequest {
+
+public:
+    DeleteGeoMatchSetRequest(const DeleteGeoMatchSetRequest &other);
+    DeleteGeoMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGeoMatchSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

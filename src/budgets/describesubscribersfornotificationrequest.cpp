@@ -19,3 +19,107 @@
 
 #include "describesubscribersfornotificationrequest.h"
 #include "describesubscribersfornotificationrequest_p.h"
+#include "describesubscribersfornotificationresponse.h"
+#include "budgetsrequest_p.h"
+
+namespace AWS {
+namespace Budgets {
+
+/**
+ * @class  DescribeSubscribersForNotificationRequest
+ *
+ * @brief  Implements Budgets DescribeSubscribersForNotification requests.
+ *
+ * @see    BudgetsClient::describeSubscribersForNotification
+ */
+
+/**
+ * @brief  Constructs a new DescribeSubscribersForNotificationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationResponse(
+
+/**
+ * @brief  Constructs a new DescribeSubscribersForNotificationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSubscribersForNotificationRequest::DescribeSubscribersForNotificationRequest(const DescribeSubscribersForNotificationRequest &other)
+    : BudgetsRequest(new DescribeSubscribersForNotificationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSubscribersForNotificationRequest object.
+ */
+DescribeSubscribersForNotificationRequest::DescribeSubscribersForNotificationRequest()
+    : BudgetsRequest(new DescribeSubscribersForNotificationRequestPrivate(BudgetsRequest::DescribeSubscribersForNotificationAction, this))
+{
+
+}
+
+bool DescribeSubscribersForNotificationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSubscribersForNotificationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSubscribersForNotificationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BudgetsClient::send
+ */
+AwsAbstractResponse * DescribeSubscribersForNotificationRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSubscribersForNotificationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSubscribersForNotificationRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSubscribersForNotificationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubscribersForNotificationRequestPrivate object.
+ *
+ * @param  action  Budgets action being performed.
+ * @param  q       Pointer to this object's public DescribeSubscribersForNotificationRequest instance.
+ */
+DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
+    const BudgetsRequest::Action action, DescribeSubscribersForNotificationRequest * const q)
+    : DescribeSubscribersForNotificationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSubscribersForNotificationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSubscribersForNotificationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSubscribersForNotificationRequest instance.
+ */
+DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
+    const DescribeSubscribersForNotificationRequestPrivate &other, DescribeSubscribersForNotificationRequest * const q)
+    : DescribeSubscribersForNotificationPrivate(other, q)
+{
+
+}

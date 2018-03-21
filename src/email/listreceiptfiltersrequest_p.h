@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRECEIPTFILTERSREQUEST_P_H
 #define QTAWS_LISTRECEIPTFILTERSREQUEST_P_H
 
+#include "ses_p.h"
+#include "listreceiptfiltersrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class ListReceiptFiltersRequest;
+
+class QTAWS_EXPORT ListReceiptFiltersRequestPrivate : public SESPrivate {
+
+public:
+    ListReceiptFiltersRequestPrivate(const SES::Action action,
+                                   ListReceiptFiltersRequest * const q);
+    ListReceiptFiltersRequestPrivate(const ListReceiptFiltersRequestPrivate &other,
+                                   ListReceiptFiltersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListReceiptFiltersRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

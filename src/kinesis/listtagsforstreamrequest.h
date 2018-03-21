@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTAGSFORSTREAMREQUEST_H
 #define QTAWS_LISTTAGSFORSTREAMREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListTagsForStreamRequestPrivate;
+
+class QTAWS_EXPORT ListTagsForStreamRequest : public KinesisRequest {
+
+public:
+    ListTagsForStreamRequest(const ListTagsForStreamRequest &other);
+    ListTagsForStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTagsForStreamRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

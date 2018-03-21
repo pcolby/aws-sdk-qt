@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETRIGGERREQUEST_P_H
 #define QTAWS_UPDATETRIGGERREQUEST_P_H
 
+#include "glue_p.h"
+#include "updatetriggerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateTriggerRequest;
+
+class QTAWS_EXPORT UpdateTriggerRequestPrivate : public GluePrivate {
+
+public:
+    UpdateTriggerRequestPrivate(const Glue::Action action,
+                                   UpdateTriggerRequest * const q);
+    UpdateTriggerRequestPrivate(const UpdateTriggerRequestPrivate &other,
+                                   UpdateTriggerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTriggerRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

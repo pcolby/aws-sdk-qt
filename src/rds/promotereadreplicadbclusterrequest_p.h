@@ -20,4 +20,29 @@
 #ifndef QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_P_H
 #define QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_P_H
 
+#include "rds_p.h"
+#include "promotereadreplicadbclusterrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PromoteReadReplicaDBClusterRequest;
+
+class QTAWS_EXPORT PromoteReadReplicaDBClusterRequestPrivate : public RDSPrivate {
+
+public:
+    PromoteReadReplicaDBClusterRequestPrivate(const RDS::Action action,
+                                   PromoteReadReplicaDBClusterRequest * const q);
+    PromoteReadReplicaDBClusterRequestPrivate(const PromoteReadReplicaDBClusterRequestPrivate &other,
+                                   PromoteReadReplicaDBClusterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PromoteReadReplicaDBClusterRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

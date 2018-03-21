@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEEVENTCONFIGURATIONSREQUEST_H
 #define QTAWS_UPDATEEVENTCONFIGURATIONSREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateEventConfigurationsRequestPrivate;
+
+class QTAWS_EXPORT UpdateEventConfigurationsRequest : public IoTRequest {
+
+public:
+    UpdateEventConfigurationsRequest(const UpdateEventConfigurationsRequest &other);
+    UpdateEventConfigurationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEventConfigurationsRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

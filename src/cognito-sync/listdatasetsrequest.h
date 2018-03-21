@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDATASETSREQUEST_H
 #define QTAWS_LISTDATASETSREQUEST_H
 
+#include "cognitosyncrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class ListDatasetsRequestPrivate;
+
+class QTAWS_EXPORT ListDatasetsRequest : public CognitoSyncRequest {
+
+public:
+    ListDatasetsRequest(const ListDatasetsRequest &other);
+    ListDatasetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDatasetsRequest)
+
+}
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

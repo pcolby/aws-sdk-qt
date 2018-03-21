@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDISCOVEREDRESOURCESREQUEST_H
 #define QTAWS_LISTDISCOVEREDRESOURCESREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class ListDiscoveredResourcesRequestPrivate;
+
+class QTAWS_EXPORT ListDiscoveredResourcesRequest : public MigrationHubRequest {
+
+public:
+    ListDiscoveredResourcesRequest(const ListDiscoveredResourcesRequest &other);
+    ListDiscoveredResourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDiscoveredResourcesRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

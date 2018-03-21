@@ -19,3 +19,107 @@
 
 #include "updatebytematchsetrequest.h"
 #include "updatebytematchsetrequest_p.h"
+#include "updatebytematchsetresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  UpdateByteMatchSetRequest
+ *
+ * @brief  Implements WAF UpdateByteMatchSet requests.
+ *
+ * @see    WAFClient::updateByteMatchSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateByteMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateByteMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateByteMatchSetRequest::UpdateByteMatchSetRequest(const UpdateByteMatchSetRequest &other)
+    : WAFRequest(new UpdateByteMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateByteMatchSetRequest object.
+ */
+UpdateByteMatchSetRequest::UpdateByteMatchSetRequest()
+    : WAFRequest(new UpdateByteMatchSetRequestPrivate(WAFRequest::UpdateByteMatchSetAction, this))
+{
+
+}
+
+bool UpdateByteMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateByteMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateByteMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateByteMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateByteMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateByteMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public UpdateByteMatchSetRequest instance.
+ */
+UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
+    const WAFRequest::Action action, UpdateByteMatchSetRequest * const q)
+    : UpdateByteMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateByteMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateByteMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateByteMatchSetRequest instance.
+ */
+UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
+    const UpdateByteMatchSetRequestPrivate &other, UpdateByteMatchSetRequest * const q)
+    : UpdateByteMatchSetPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createcloudformationchangesetrequest.h"
 #include "createcloudformationchangesetrequest_p.h"
+#include "createcloudformationchangesetresponse.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  CreateCloudFormationChangeSetRequest
+ *
+ * @brief  Implements ServerlessApplicationRepository CreateCloudFormationChangeSet requests.
+ *
+ * @see    ServerlessApplicationRepositoryClient::createCloudFormationChangeSet
+ */
+
+/**
+ * @brief  Constructs a new CreateCloudFormationChangeSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
+
+/**
+ * @brief  Constructs a new CreateCloudFormationChangeSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCloudFormationChangeSetRequest::CreateCloudFormationChangeSetRequest(const CreateCloudFormationChangeSetRequest &other)
+    : ServerlessApplicationRepositoryRequest(new CreateCloudFormationChangeSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCloudFormationChangeSetRequest object.
+ */
+CreateCloudFormationChangeSetRequest::CreateCloudFormationChangeSetRequest()
+    : ServerlessApplicationRepositoryRequest(new CreateCloudFormationChangeSetRequestPrivate(ServerlessApplicationRepositoryRequest::CreateCloudFormationChangeSetAction, this))
+{
+
+}
+
+bool CreateCloudFormationChangeSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCloudFormationChangeSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCloudFormationChangeSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServerlessApplicationRepositoryClient::send
+ */
+AwsAbstractResponse * CreateCloudFormationChangeSetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCloudFormationChangeSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCloudFormationChangeSetRequestPrivate
+ *
+ * @brief  Private implementation for CreateCloudFormationChangeSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCloudFormationChangeSetRequestPrivate object.
+ *
+ * @param  action  ServerlessApplicationRepository action being performed.
+ * @param  q       Pointer to this object's public CreateCloudFormationChangeSetRequest instance.
+ */
+CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
+    const ServerlessApplicationRepositoryRequest::Action action, CreateCloudFormationChangeSetRequest * const q)
+    : CreateCloudFormationChangeSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCloudFormationChangeSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCloudFormationChangeSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCloudFormationChangeSetRequest instance.
+ */
+CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
+    const CreateCloudFormationChangeSetRequestPrivate &other, CreateCloudFormationChangeSetRequest * const q)
+    : CreateCloudFormationChangeSetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECLUSTERSECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETECLUSTERSECURITYGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "deleteclustersecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DeleteClusterSecurityGroupRequest;
+
+class QTAWS_EXPORT DeleteClusterSecurityGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    DeleteClusterSecurityGroupRequestPrivate(const Redshift::Action action,
+                                   DeleteClusterSecurityGroupRequest * const q);
+    DeleteClusterSecurityGroupRequestPrivate(const DeleteClusterSecurityGroupRequestPrivate &other,
+                                   DeleteClusterSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteClusterSecurityGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

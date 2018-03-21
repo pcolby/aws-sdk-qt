@@ -19,3 +19,107 @@
 
 #include "describepolicyrequest.h"
 #include "describepolicyrequest_p.h"
+#include "describepolicyresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DescribePolicyRequest
+ *
+ * @brief  Implements Organizations DescribePolicy requests.
+ *
+ * @see    OrganizationsClient::describePolicy
+ */
+
+/**
+ * @brief  Constructs a new DescribePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePolicyResponse::DescribePolicyResponse(
+
+/**
+ * @brief  Constructs a new DescribePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePolicyRequest::DescribePolicyRequest(const DescribePolicyRequest &other)
+    : OrganizationsRequest(new DescribePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePolicyRequest object.
+ */
+DescribePolicyRequest::DescribePolicyRequest()
+    : OrganizationsRequest(new DescribePolicyRequestPrivate(OrganizationsRequest::DescribePolicyAction, this))
+{
+
+}
+
+bool DescribePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * DescribePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePolicyRequestPrivate
+ *
+ * @brief  Private implementation for DescribePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePolicyRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public DescribePolicyRequest instance.
+ */
+DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
+    const OrganizationsRequest::Action action, DescribePolicyRequest * const q)
+    : DescribePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePolicyRequest instance.
+ */
+DescribePolicyRequestPrivate::DescribePolicyRequestPrivate(
+    const DescribePolicyRequestPrivate &other, DescribePolicyRequest * const q)
+    : DescribePolicyPrivate(other, q)
+{
+
+}

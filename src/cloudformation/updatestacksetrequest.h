@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESTACKSETREQUEST_H
 #define QTAWS_UPDATESTACKSETREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class UpdateStackSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateStackSetRequest : public CloudFormationRequest {
+
+public:
+    UpdateStackSetRequest(const UpdateStackSetRequest &other);
+    UpdateStackSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateStackSetRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

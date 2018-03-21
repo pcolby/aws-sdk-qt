@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEKEYPAIRSREQUEST_P_H
 #define QTAWS_DESCRIBEKEYPAIRSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describekeypairsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeKeyPairsRequest;
+
+class QTAWS_EXPORT DescribeKeyPairsRequestPrivate : public EC2Private {
+
+public:
+    DescribeKeyPairsRequestPrivate(const EC2::Action action,
+                                   DescribeKeyPairsRequest * const q);
+    DescribeKeyPairsRequestPrivate(const DescribeKeyPairsRequestPrivate &other,
+                                   DescribeKeyPairsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeKeyPairsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

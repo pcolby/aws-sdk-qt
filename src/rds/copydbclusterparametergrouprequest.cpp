@@ -19,3 +19,107 @@
 
 #include "copydbclusterparametergrouprequest.h"
 #include "copydbclusterparametergrouprequest_p.h"
+#include "copydbclusterparametergroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyDBClusterParameterGroupRequest
+ *
+ * @brief  Implements RDS CopyDBClusterParameterGroup requests.
+ *
+ * @see    RDSClient::copyDBClusterParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CopyDBClusterParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CopyDBClusterParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest(const CopyDBClusterParameterGroupRequest &other)
+    : RDSRequest(new CopyDBClusterParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyDBClusterParameterGroupRequest object.
+ */
+CopyDBClusterParameterGroupRequest::CopyDBClusterParameterGroupRequest()
+    : RDSRequest(new CopyDBClusterParameterGroupRequestPrivate(RDSRequest::CopyDBClusterParameterGroupAction, this))
+{
+
+}
+
+bool CopyDBClusterParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyDBClusterParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyDBClusterParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyDBClusterParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyDBClusterParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CopyDBClusterParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBClusterParameterGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CopyDBClusterParameterGroupRequest instance.
+ */
+CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
+    const RDSRequest::Action action, CopyDBClusterParameterGroupRequest * const q)
+    : CopyDBClusterParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBClusterParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyDBClusterParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyDBClusterParameterGroupRequest instance.
+ */
+CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
+    const CopyDBClusterParameterGroupRequestPrivate &other, CopyDBClusterParameterGroupRequest * const q)
+    : CopyDBClusterParameterGroupPrivate(other, q)
+{
+
+}

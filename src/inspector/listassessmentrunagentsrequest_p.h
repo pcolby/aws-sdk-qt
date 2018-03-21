@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTASSESSMENTRUNAGENTSREQUEST_P_H
 #define QTAWS_LISTASSESSMENTRUNAGENTSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "listassessmentrunagentsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class ListAssessmentRunAgentsRequest;
+
+class QTAWS_EXPORT ListAssessmentRunAgentsRequestPrivate : public InspectorPrivate {
+
+public:
+    ListAssessmentRunAgentsRequestPrivate(const Inspector::Action action,
+                                   ListAssessmentRunAgentsRequest * const q);
+    ListAssessmentRunAgentsRequestPrivate(const ListAssessmentRunAgentsRequestPrivate &other,
+                                   ListAssessmentRunAgentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListAssessmentRunAgentsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

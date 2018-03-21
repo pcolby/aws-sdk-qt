@@ -19,3 +19,107 @@
 
 #include "deleteintentrequest.h"
 #include "deleteintentrequest_p.h"
+#include "deleteintentresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteIntentRequest
+ *
+ * @brief  Implements LexModelBuildingService DeleteIntent requests.
+ *
+ * @see    LexModelBuildingServiceClient::deleteIntent
+ */
+
+/**
+ * @brief  Constructs a new DeleteIntentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIntentResponse::DeleteIntentResponse(
+
+/**
+ * @brief  Constructs a new DeleteIntentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIntentRequest::DeleteIntentRequest(const DeleteIntentRequest &other)
+    : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIntentRequest object.
+ */
+DeleteIntentRequest::DeleteIntentRequest()
+    : LexModelBuildingServiceRequest(new DeleteIntentRequestPrivate(LexModelBuildingServiceRequest::DeleteIntentAction, this))
+{
+
+}
+
+bool DeleteIntentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIntentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIntentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIntentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIntentRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIntentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntentRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public DeleteIntentRequest instance.
+ */
+DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, DeleteIntentRequest * const q)
+    : DeleteIntentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIntentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIntentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIntentRequest instance.
+ */
+DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
+    const DeleteIntentRequestPrivate &other, DeleteIntentRequest * const q)
+    : DeleteIntentPrivate(other, q)
+{
+
+}

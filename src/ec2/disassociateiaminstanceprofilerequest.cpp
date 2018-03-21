@@ -19,3 +19,107 @@
 
 #include "disassociateiaminstanceprofilerequest.h"
 #include "disassociateiaminstanceprofilerequest_p.h"
+#include "disassociateiaminstanceprofileresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DisassociateIamInstanceProfileRequest
+ *
+ * @brief  Implements EC2 DisassociateIamInstanceProfile requests.
+ *
+ * @see    EC2Client::disassociateIamInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new DisassociateIamInstanceProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
+
+/**
+ * @brief  Constructs a new DisassociateIamInstanceProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest(const DisassociateIamInstanceProfileRequest &other)
+    : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateIamInstanceProfileRequest object.
+ */
+DisassociateIamInstanceProfileRequest::DisassociateIamInstanceProfileRequest()
+    : EC2Request(new DisassociateIamInstanceProfileRequestPrivate(EC2Request::DisassociateIamInstanceProfileAction, this))
+{
+
+}
+
+bool DisassociateIamInstanceProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateIamInstanceProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateIamInstanceProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DisassociateIamInstanceProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateIamInstanceProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateIamInstanceProfileRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateIamInstanceProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DisassociateIamInstanceProfileRequest instance.
+ */
+DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
+    const EC2Request::Action action, DisassociateIamInstanceProfileRequest * const q)
+    : DisassociateIamInstanceProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateIamInstanceProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateIamInstanceProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateIamInstanceProfileRequest instance.
+ */
+DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
+    const DisassociateIamInstanceProfileRequestPrivate &other, DisassociateIamInstanceProfileRequest * const q)
+    : DisassociateIamInstanceProfilePrivate(other, q)
+{
+
+}

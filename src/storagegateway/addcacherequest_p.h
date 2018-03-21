@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDCACHEREQUEST_P_H
 #define QTAWS_ADDCACHEREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "addcacherequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class AddCacheRequest;
+
+class QTAWS_EXPORT AddCacheRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    AddCacheRequestPrivate(const StorageGateway::Action action,
+                                   AddCacheRequest * const q);
+    AddCacheRequestPrivate(const AddCacheRequestPrivate &other,
+                                   AddCacheRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddCacheRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

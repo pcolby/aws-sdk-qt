@@ -19,3 +19,107 @@
 
 #include "putbucketaccelerateconfigurationrequest.h"
 #include "putbucketaccelerateconfigurationrequest_p.h"
+#include "putbucketaccelerateconfigurationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketAccelerateConfigurationRequest
+ *
+ * @brief  Implements S3 PutBucketAccelerateConfiguration requests.
+ *
+ * @see    S3Client::putBucketAccelerateConfiguration
+ */
+
+/**
+ * @brief  Constructs a new PutBucketAccelerateConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketAccelerateConfigurationResponse::PutBucketAccelerateConfigurationResponse(
+
+/**
+ * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest(const PutBucketAccelerateConfigurationRequest &other)
+    : S3Request(new PutBucketAccelerateConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketAccelerateConfigurationRequest object.
+ */
+PutBucketAccelerateConfigurationRequest::PutBucketAccelerateConfigurationRequest()
+    : S3Request(new PutBucketAccelerateConfigurationRequestPrivate(S3Request::PutBucketAccelerateConfigurationAction, this))
+{
+
+}
+
+bool PutBucketAccelerateConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketAccelerateConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketAccelerateConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketAccelerateConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketAccelerateConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketAccelerateConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketAccelerateConfigurationRequest instance.
+ */
+PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfigurationRequestPrivate(
+    const S3Request::Action action, PutBucketAccelerateConfigurationRequest * const q)
+    : PutBucketAccelerateConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketAccelerateConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketAccelerateConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketAccelerateConfigurationRequest instance.
+ */
+PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfigurationRequestPrivate(
+    const PutBucketAccelerateConfigurationRequestPrivate &other, PutBucketAccelerateConfigurationRequest * const q)
+    : PutBucketAccelerateConfigurationPrivate(other, q)
+{
+
+}

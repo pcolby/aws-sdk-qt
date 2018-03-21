@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_P_H
 #define QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_P_H
 
+#include "iot_p.h"
+#include "stopthingregistrationtaskrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class StopThingRegistrationTaskRequest;
+
+class QTAWS_EXPORT StopThingRegistrationTaskRequestPrivate : public IoTPrivate {
+
+public:
+    StopThingRegistrationTaskRequestPrivate(const IoT::Action action,
+                                   StopThingRegistrationTaskRequest * const q);
+    StopThingRegistrationTaskRequestPrivate(const StopThingRegistrationTaskRequestPrivate &other,
+                                   StopThingRegistrationTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopThingRegistrationTaskRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

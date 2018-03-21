@@ -19,3 +19,107 @@
 
 #include "deletefilesystemrequest.h"
 #include "deletefilesystemrequest_p.h"
+#include "deletefilesystemresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  DeleteFileSystemRequest
+ *
+ * @brief  Implements EFS DeleteFileSystem requests.
+ *
+ * @see    EFSClient::deleteFileSystem
+ */
+
+/**
+ * @brief  Constructs a new DeleteFileSystemResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteFileSystemResponse::DeleteFileSystemResponse(
+
+/**
+ * @brief  Constructs a new DeleteFileSystemRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteFileSystemRequest::DeleteFileSystemRequest(const DeleteFileSystemRequest &other)
+    : EFSRequest(new DeleteFileSystemRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteFileSystemRequest object.
+ */
+DeleteFileSystemRequest::DeleteFileSystemRequest()
+    : EFSRequest(new DeleteFileSystemRequestPrivate(EFSRequest::DeleteFileSystemAction, this))
+{
+
+}
+
+bool DeleteFileSystemRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteFileSystemResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteFileSystemResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteFileSystemResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteFileSystemRequestPrivate
+ *
+ * @brief  Private implementation for DeleteFileSystemRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileSystemRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public DeleteFileSystemRequest instance.
+ */
+DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
+    const EFSRequest::Action action, DeleteFileSystemRequest * const q)
+    : DeleteFileSystemPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteFileSystemRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteFileSystemRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteFileSystemRequest instance.
+ */
+DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
+    const DeleteFileSystemRequestPrivate &other, DeleteFileSystemRequest * const q)
+    : DeleteFileSystemPrivate(other, q)
+{
+
+}

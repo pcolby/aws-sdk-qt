@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeOrderableReplicationInstancesRequestPrivate;
+
+class QTAWS_EXPORT DescribeOrderableReplicationInstancesRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    DescribeOrderableReplicationInstancesRequest(const DescribeOrderableReplicationInstancesRequest &other);
+    DescribeOrderableReplicationInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrderableReplicationInstancesRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

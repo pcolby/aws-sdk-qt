@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_H
 #define QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_H
 
+#include "cloud9request.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DescribeEnvironmentStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentStatusRequest : public Cloud9Request {
+
+public:
+    DescribeEnvironmentStatusRequest(const DescribeEnvironmentStatusRequest &other);
+    DescribeEnvironmentStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentStatusRequest)
+
+}
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

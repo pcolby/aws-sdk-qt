@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEUSAGEPLANKEYREQUEST_H
 #define QTAWS_CREATEUSAGEPLANKEYREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateUsagePlanKeyRequestPrivate;
+
+class QTAWS_EXPORT CreateUsagePlanKeyRequest : public APIGatewayRequest {
+
+public:
+    CreateUsagePlanKeyRequest(const CreateUsagePlanKeyRequest &other);
+    CreateUsagePlanKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateUsagePlanKeyRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

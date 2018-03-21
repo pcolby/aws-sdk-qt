@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "createdeploymentrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateDeploymentRequest;
+
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public OpsWorksPrivate {
+
+public:
+    CreateDeploymentRequestPrivate(const OpsWorks::Action action,
+                                   CreateDeploymentRequest * const q);
+    CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
+                                   CreateDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDeploymentRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

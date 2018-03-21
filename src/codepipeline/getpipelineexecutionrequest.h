@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPIPELINEEXECUTIONREQUEST_H
 #define QTAWS_GETPIPELINEEXECUTIONREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class GetPipelineExecutionRequestPrivate;
+
+class QTAWS_EXPORT GetPipelineExecutionRequest : public CodePipelineRequest {
+
+public:
+    GetPipelineExecutionRequest(const GetPipelineExecutionRequest &other);
+    GetPipelineExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPipelineExecutionRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTLAUNCHPATHSREQUEST_H
 #define QTAWS_LISTLAUNCHPATHSREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class ListLaunchPathsRequestPrivate;
+
+class QTAWS_EXPORT ListLaunchPathsRequest : public ServiceCatalogRequest {
+
+public:
+    ListLaunchPathsRequest(const ListLaunchPathsRequest &other);
+    ListLaunchPathsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListLaunchPathsRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

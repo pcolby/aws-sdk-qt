@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETRECORDSREQUEST_H
 #define QTAWS_GETRECORDSREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class GetRecordsRequestPrivate;
+
+class QTAWS_EXPORT GetRecordsRequest : public KinesisRequest {
+
+public:
+    GetRecordsRequest(const GetRecordsRequest &other);
+    GetRecordsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRecordsRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

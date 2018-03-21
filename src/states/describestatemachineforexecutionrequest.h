@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONREQUEST_H
 #define QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONREQUEST_H
 
+#include "sfnrequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DescribeStateMachineForExecutionRequestPrivate;
+
+class QTAWS_EXPORT DescribeStateMachineForExecutionRequest : public SFNRequest {
+
+public:
+    DescribeStateMachineForExecutionRequest(const DescribeStateMachineForExecutionRequest &other);
+    DescribeStateMachineForExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStateMachineForExecutionRequest)
+
+}
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

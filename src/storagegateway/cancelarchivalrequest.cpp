@@ -19,3 +19,107 @@
 
 #include "cancelarchivalrequest.h"
 #include "cancelarchivalrequest_p.h"
+#include "cancelarchivalresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  CancelArchivalRequest
+ *
+ * @brief  Implements StorageGateway CancelArchival requests.
+ *
+ * @see    StorageGatewayClient::cancelArchival
+ */
+
+/**
+ * @brief  Constructs a new CancelArchivalResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelArchivalResponse::CancelArchivalResponse(
+
+/**
+ * @brief  Constructs a new CancelArchivalRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelArchivalRequest::CancelArchivalRequest(const CancelArchivalRequest &other)
+    : StorageGatewayRequest(new CancelArchivalRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelArchivalRequest object.
+ */
+CancelArchivalRequest::CancelArchivalRequest()
+    : StorageGatewayRequest(new CancelArchivalRequestPrivate(StorageGatewayRequest::CancelArchivalAction, this))
+{
+
+}
+
+bool CancelArchivalRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelArchivalResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelArchivalResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * CancelArchivalRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelArchivalResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelArchivalRequestPrivate
+ *
+ * @brief  Private implementation for CancelArchivalRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelArchivalRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public CancelArchivalRequest instance.
+ */
+CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
+    const StorageGatewayRequest::Action action, CancelArchivalRequest * const q)
+    : CancelArchivalPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelArchivalRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelArchivalRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelArchivalRequest instance.
+ */
+CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
+    const CancelArchivalRequestPrivate &other, CancelArchivalRequest * const q)
+    : CancelArchivalPrivate(other, q)
+{
+
+}

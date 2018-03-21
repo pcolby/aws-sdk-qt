@@ -19,3 +19,107 @@
 
 #include "modifyoptiongrouprequest.h"
 #include "modifyoptiongrouprequest_p.h"
+#include "modifyoptiongroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyOptionGroupRequest
+ *
+ * @brief  Implements RDS ModifyOptionGroup requests.
+ *
+ * @see    RDSClient::modifyOptionGroup
+ */
+
+/**
+ * @brief  Constructs a new ModifyOptionGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyOptionGroupResponse::ModifyOptionGroupResponse(
+
+/**
+ * @brief  Constructs a new ModifyOptionGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyOptionGroupRequest::ModifyOptionGroupRequest(const ModifyOptionGroupRequest &other)
+    : RDSRequest(new ModifyOptionGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyOptionGroupRequest object.
+ */
+ModifyOptionGroupRequest::ModifyOptionGroupRequest()
+    : RDSRequest(new ModifyOptionGroupRequestPrivate(RDSRequest::ModifyOptionGroupAction, this))
+{
+
+}
+
+bool ModifyOptionGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyOptionGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyOptionGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyOptionGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyOptionGroupRequestPrivate
+ *
+ * @brief  Private implementation for ModifyOptionGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyOptionGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ModifyOptionGroupRequest instance.
+ */
+ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
+    const RDSRequest::Action action, ModifyOptionGroupRequest * const q)
+    : ModifyOptionGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyOptionGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyOptionGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyOptionGroupRequest instance.
+ */
+ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
+    const ModifyOptionGroupRequestPrivate &other, ModifyOptionGroupRequest * const q)
+    : ModifyOptionGroupPrivate(other, q)
+{
+
+}

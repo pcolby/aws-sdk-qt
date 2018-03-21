@@ -19,3 +19,107 @@
 
 #include "listcloudfrontoriginaccessidentitiesrequest.h"
 #include "listcloudfrontoriginaccessidentitiesrequest_p.h"
+#include "listcloudfrontoriginaccessidentitiesresponse.h"
+#include "cloudfrontrequest_p.h"
+
+namespace AWS {
+namespace CloudFront {
+
+/**
+ * @class  ListCloudFrontOriginAccessIdentitiesRequest
+ *
+ * @brief  Implements CloudFront ListCloudFrontOriginAccessIdentities requests.
+ *
+ * @see    CloudFrontClient::listCloudFrontOriginAccessIdentities
+ */
+
+/**
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListCloudFrontOriginAccessIdentitiesResponse::ListCloudFrontOriginAccessIdentitiesResponse(
+
+/**
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListCloudFrontOriginAccessIdentitiesRequest::ListCloudFrontOriginAccessIdentitiesRequest(const ListCloudFrontOriginAccessIdentitiesRequest &other)
+    : CloudFrontRequest(new ListCloudFrontOriginAccessIdentitiesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequest object.
+ */
+ListCloudFrontOriginAccessIdentitiesRequest::ListCloudFrontOriginAccessIdentitiesRequest()
+    : CloudFrontRequest(new ListCloudFrontOriginAccessIdentitiesRequestPrivate(CloudFrontRequest::ListCloudFrontOriginAccessIdentitiesAction, this))
+{
+
+}
+
+bool ListCloudFrontOriginAccessIdentitiesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListCloudFrontOriginAccessIdentitiesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListCloudFrontOriginAccessIdentitiesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFrontClient::send
+ */
+AwsAbstractResponse * ListCloudFrontOriginAccessIdentitiesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListCloudFrontOriginAccessIdentitiesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListCloudFrontOriginAccessIdentitiesRequestPrivate
+ *
+ * @brief  Private implementation for ListCloudFrontOriginAccessIdentitiesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequestPrivate object.
+ *
+ * @param  action  CloudFront action being performed.
+ * @param  q       Pointer to this object's public ListCloudFrontOriginAccessIdentitiesRequest instance.
+ */
+ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
+    const CloudFrontRequest::Action action, ListCloudFrontOriginAccessIdentitiesRequest * const q)
+    : ListCloudFrontOriginAccessIdentitiesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListCloudFrontOriginAccessIdentitiesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListCloudFrontOriginAccessIdentitiesRequest instance.
+ */
+ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
+    const ListCloudFrontOriginAccessIdentitiesRequestPrivate &other, ListCloudFrontOriginAccessIdentitiesRequest * const q)
+    : ListCloudFrontOriginAccessIdentitiesPrivate(other, q)
+{
+
+}

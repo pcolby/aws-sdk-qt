@@ -19,3 +19,107 @@
 
 #include "listgroupcertificateauthoritiesrequest.h"
 #include "listgroupcertificateauthoritiesrequest_p.h"
+#include "listgroupcertificateauthoritiesresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  ListGroupCertificateAuthoritiesRequest
+ *
+ * @brief  Implements Greengrass ListGroupCertificateAuthorities requests.
+ *
+ * @see    GreengrassClient::listGroupCertificateAuthorities
+ */
+
+/**
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListGroupCertificateAuthoritiesResponse::ListGroupCertificateAuthoritiesResponse(
+
+/**
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListGroupCertificateAuthoritiesRequest::ListGroupCertificateAuthoritiesRequest(const ListGroupCertificateAuthoritiesRequest &other)
+    : GreengrassRequest(new ListGroupCertificateAuthoritiesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesRequest object.
+ */
+ListGroupCertificateAuthoritiesRequest::ListGroupCertificateAuthoritiesRequest()
+    : GreengrassRequest(new ListGroupCertificateAuthoritiesRequestPrivate(GreengrassRequest::ListGroupCertificateAuthoritiesAction, this))
+{
+
+}
+
+bool ListGroupCertificateAuthoritiesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListGroupCertificateAuthoritiesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListGroupCertificateAuthoritiesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListGroupCertificateAuthoritiesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListGroupCertificateAuthoritiesRequestPrivate
+ *
+ * @brief  Private implementation for ListGroupCertificateAuthoritiesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public ListGroupCertificateAuthoritiesRequest instance.
+ */
+ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRequestPrivate(
+    const GreengrassRequest::Action action, ListGroupCertificateAuthoritiesRequest * const q)
+    : ListGroupCertificateAuthoritiesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListGroupCertificateAuthoritiesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListGroupCertificateAuthoritiesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListGroupCertificateAuthoritiesRequest instance.
+ */
+ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRequestPrivate(
+    const ListGroupCertificateAuthoritiesRequestPrivate &other, ListGroupCertificateAuthoritiesRequest * const q)
+    : ListGroupCertificateAuthoritiesPrivate(other, q)
+{
+
+}

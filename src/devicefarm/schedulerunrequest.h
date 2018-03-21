@@ -20,4 +20,32 @@
 #ifndef QTAWS_SCHEDULERUNREQUEST_H
 #define QTAWS_SCHEDULERUNREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ScheduleRunRequestPrivate;
+
+class QTAWS_EXPORT ScheduleRunRequest : public DeviceFarmRequest {
+
+public:
+    ScheduleRunRequest(const ScheduleRunRequest &other);
+    ScheduleRunRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ScheduleRunRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

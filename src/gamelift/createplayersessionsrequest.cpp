@@ -19,3 +19,107 @@
 
 #include "createplayersessionsrequest.h"
 #include "createplayersessionsrequest_p.h"
+#include "createplayersessionsresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  CreatePlayerSessionsRequest
+ *
+ * @brief  Implements GameLift CreatePlayerSessions requests.
+ *
+ * @see    GameLiftClient::createPlayerSessions
+ */
+
+/**
+ * @brief  Constructs a new CreatePlayerSessionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlayerSessionsResponse::CreatePlayerSessionsResponse(
+
+/**
+ * @brief  Constructs a new CreatePlayerSessionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePlayerSessionsRequest::CreatePlayerSessionsRequest(const CreatePlayerSessionsRequest &other)
+    : GameLiftRequest(new CreatePlayerSessionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePlayerSessionsRequest object.
+ */
+CreatePlayerSessionsRequest::CreatePlayerSessionsRequest()
+    : GameLiftRequest(new CreatePlayerSessionsRequestPrivate(GameLiftRequest::CreatePlayerSessionsAction, this))
+{
+
+}
+
+bool CreatePlayerSessionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePlayerSessionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePlayerSessionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * CreatePlayerSessionsRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePlayerSessionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlayerSessionsRequestPrivate
+ *
+ * @brief  Private implementation for CreatePlayerSessionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlayerSessionsRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public CreatePlayerSessionsRequest instance.
+ */
+CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
+    const GameLiftRequest::Action action, CreatePlayerSessionsRequest * const q)
+    : CreatePlayerSessionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlayerSessionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePlayerSessionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePlayerSessionsRequest instance.
+ */
+CreatePlayerSessionsRequestPrivate::CreatePlayerSessionsRequestPrivate(
+    const CreatePlayerSessionsRequestPrivate &other, CreatePlayerSessionsRequest * const q)
+    : CreatePlayerSessionsPrivate(other, q)
+{
+
+}

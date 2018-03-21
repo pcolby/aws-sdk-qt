@@ -19,3 +19,107 @@
 
 #include "putrecordrequest.h"
 #include "putrecordrequest_p.h"
+#include "putrecordresponse.h"
+#include "firehoserequest_p.h"
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  PutRecordRequest
+ *
+ * @brief  Implements Firehose PutRecord requests.
+ *
+ * @see    FirehoseClient::putRecord
+ */
+
+/**
+ * @brief  Constructs a new PutRecordResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRecordResponse::PutRecordResponse(
+
+/**
+ * @brief  Constructs a new PutRecordRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutRecordRequest::PutRecordRequest(const PutRecordRequest &other)
+    : FirehoseRequest(new PutRecordRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutRecordRequest object.
+ */
+PutRecordRequest::PutRecordRequest()
+    : FirehoseRequest(new PutRecordRequestPrivate(FirehoseRequest::PutRecordAction, this))
+{
+
+}
+
+bool PutRecordRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutRecordResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutRecordResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  FirehoseClient::send
+ */
+AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * const reply) const
+{
+    return new PutRecordResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRecordRequestPrivate
+ *
+ * @brief  Private implementation for PutRecordRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordRequestPrivate object.
+ *
+ * @param  action  Firehose action being performed.
+ * @param  q       Pointer to this object's public PutRecordRequest instance.
+ */
+PutRecordRequestPrivate::PutRecordRequestPrivate(
+    const FirehoseRequest::Action action, PutRecordRequest * const q)
+    : PutRecordPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutRecordRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutRecordRequest instance.
+ */
+PutRecordRequestPrivate::PutRecordRequestPrivate(
+    const PutRecordRequestPrivate &other, PutRecordRequest * const q)
+    : PutRecordPrivate(other, q)
+{
+
+}

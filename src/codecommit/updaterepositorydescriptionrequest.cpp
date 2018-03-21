@@ -19,3 +19,107 @@
 
 #include "updaterepositorydescriptionrequest.h"
 #include "updaterepositorydescriptionrequest_p.h"
+#include "updaterepositorydescriptionresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateRepositoryDescriptionRequest
+ *
+ * @brief  Implements CodeCommit UpdateRepositoryDescription requests.
+ *
+ * @see    CodeCommitClient::updateRepositoryDescription
+ */
+
+/**
+ * @brief  Constructs a new UpdateRepositoryDescriptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRepositoryDescriptionResponse::UpdateRepositoryDescriptionResponse(
+
+/**
+ * @brief  Constructs a new UpdateRepositoryDescriptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRepositoryDescriptionRequest::UpdateRepositoryDescriptionRequest(const UpdateRepositoryDescriptionRequest &other)
+    : CodeCommitRequest(new UpdateRepositoryDescriptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRepositoryDescriptionRequest object.
+ */
+UpdateRepositoryDescriptionRequest::UpdateRepositoryDescriptionRequest()
+    : CodeCommitRequest(new UpdateRepositoryDescriptionRequestPrivate(CodeCommitRequest::UpdateRepositoryDescriptionAction, this))
+{
+
+}
+
+bool UpdateRepositoryDescriptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRepositoryDescriptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRepositoryDescriptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRepositoryDescriptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRepositoryDescriptionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRepositoryDescriptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRepositoryDescriptionRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public UpdateRepositoryDescriptionRequest instance.
+ */
+UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
+    const CodeCommitRequest::Action action, UpdateRepositoryDescriptionRequest * const q)
+    : UpdateRepositoryDescriptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRepositoryDescriptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRepositoryDescriptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRepositoryDescriptionRequest instance.
+ */
+UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
+    const UpdateRepositoryDescriptionRequestPrivate &other, UpdateRepositoryDescriptionRequest * const q)
+    : UpdateRepositoryDescriptionPrivate(other, q)
+{
+
+}

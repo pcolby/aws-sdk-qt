@@ -19,3 +19,107 @@
 
 #include "assumerolerequest.h"
 #include "assumerolerequest_p.h"
+#include "assumeroleresponse.h"
+#include "stsrequest_p.h"
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  AssumeRoleRequest
+ *
+ * @brief  Implements STS AssumeRole requests.
+ *
+ * @see    STSClient::assumeRole
+ */
+
+/**
+ * @brief  Constructs a new AssumeRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssumeRoleResponse::AssumeRoleResponse(
+
+/**
+ * @brief  Constructs a new AssumeRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssumeRoleRequest::AssumeRoleRequest(const AssumeRoleRequest &other)
+    : STSRequest(new AssumeRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssumeRoleRequest object.
+ */
+AssumeRoleRequest::AssumeRoleRequest()
+    : STSRequest(new AssumeRoleRequestPrivate(STSRequest::AssumeRoleAction, this))
+{
+
+}
+
+bool AssumeRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssumeRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssumeRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  STSClient::send
+ */
+AwsAbstractResponse * AssumeRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new AssumeRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssumeRoleRequestPrivate
+ *
+ * @brief  Private implementation for AssumeRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssumeRoleRequestPrivate object.
+ *
+ * @param  action  STS action being performed.
+ * @param  q       Pointer to this object's public AssumeRoleRequest instance.
+ */
+AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
+    const STSRequest::Action action, AssumeRoleRequest * const q)
+    : AssumeRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssumeRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssumeRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssumeRoleRequest instance.
+ */
+AssumeRoleRequestPrivate::AssumeRoleRequestPrivate(
+    const AssumeRoleRequestPrivate &other, AssumeRoleRequest * const q)
+    : AssumeRolePrivate(other, q)
+{
+
+}

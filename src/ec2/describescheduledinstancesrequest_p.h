@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBESCHEDULEDINSTANCESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describescheduledinstancesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeScheduledInstancesRequest;
+
+class QTAWS_EXPORT DescribeScheduledInstancesRequestPrivate : public EC2Private {
+
+public:
+    DescribeScheduledInstancesRequestPrivate(const EC2::Action action,
+                                   DescribeScheduledInstancesRequest * const q);
+    DescribeScheduledInstancesRequestPrivate(const DescribeScheduledInstancesRequestPrivate &other,
+                                   DescribeScheduledInstancesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeScheduledInstancesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

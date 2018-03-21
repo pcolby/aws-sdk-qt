@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEGROUPREQUEST_H
 #define QTAWS_UPDATEGROUPREQUEST_H
 
+#include "resourcegroupsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class UpdateGroupRequestPrivate;
+
+class QTAWS_EXPORT UpdateGroupRequest : public ResourceGroupsRequest {
+
+public:
+    UpdateGroupRequest(const UpdateGroupRequest &other);
+    UpdateGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateGroupRequest)
+
+}
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

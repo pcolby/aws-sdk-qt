@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEKEYPAIRREQUEST_P_H
 #define QTAWS_DELETEKEYPAIRREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "deletekeypairrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteKeyPairRequest;
+
+class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public LightsailPrivate {
+
+public:
+    DeleteKeyPairRequestPrivate(const Lightsail::Action action,
+                                   DeleteKeyPairRequest * const q);
+    DeleteKeyPairRequestPrivate(const DeleteKeyPairRequestPrivate &other,
+                                   DeleteKeyPairRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteKeyPairRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

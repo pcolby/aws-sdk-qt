@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEINTEGRATIONRESPONSEREQUEST_P_H
 #define QTAWS_DELETEINTEGRATIONRESPONSEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "deleteintegrationresponserequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteIntegrationResponseRequest;
+
+class QTAWS_EXPORT DeleteIntegrationResponseRequestPrivate : public APIGatewayPrivate {
+
+public:
+    DeleteIntegrationResponseRequestPrivate(const APIGateway::Action action,
+                                   DeleteIntegrationResponseRequest * const q);
+    DeleteIntegrationResponseRequestPrivate(const DeleteIntegrationResponseRequestPrivate &other,
+                                   DeleteIntegrationResponseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIntegrationResponseRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

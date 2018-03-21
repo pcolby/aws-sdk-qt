@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPTRAININGJOBREQUEST_P_H
 #define QTAWS_STOPTRAININGJOBREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "stoptrainingjobrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class StopTrainingJobRequest;
+
+class QTAWS_EXPORT StopTrainingJobRequestPrivate : public SageMakerPrivate {
+
+public:
+    StopTrainingJobRequestPrivate(const SageMaker::Action action,
+                                   StopTrainingJobRequest * const q);
+    StopTrainingJobRequestPrivate(const StopTrainingJobRequestPrivate &other,
+                                   StopTrainingJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopTrainingJobRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_INITIATELAYERUPLOADREQUEST_H
 #define QTAWS_INITIATELAYERUPLOADREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class InitiateLayerUploadRequestPrivate;
+
+class QTAWS_EXPORT InitiateLayerUploadRequest : public ECRRequest {
+
+public:
+    InitiateLayerUploadRequest(const InitiateLayerUploadRequest &other);
+    InitiateLayerUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(InitiateLayerUploadRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

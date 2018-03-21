@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCEREQUEST_P_H
 #define QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCEREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getdeployablepatchsnapshotforinstancerequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetDeployablePatchSnapshotForInstanceRequest;
+
+class QTAWS_EXPORT GetDeployablePatchSnapshotForInstanceRequestPrivate : public SSMPrivate {
+
+public:
+    GetDeployablePatchSnapshotForInstanceRequestPrivate(const SSM::Action action,
+                                   GetDeployablePatchSnapshotForInstanceRequest * const q);
+    GetDeployablePatchSnapshotForInstanceRequestPrivate(const GetDeployablePatchSnapshotForInstanceRequestPrivate &other,
+                                   GetDeployablePatchSnapshotForInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeployablePatchSnapshotForInstanceRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

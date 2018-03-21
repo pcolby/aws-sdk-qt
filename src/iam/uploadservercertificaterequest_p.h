@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPLOADSERVERCERTIFICATEREQUEST_P_H
 #define QTAWS_UPLOADSERVERCERTIFICATEREQUEST_P_H
 
+#include "iam_p.h"
+#include "uploadservercertificaterequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UploadServerCertificateRequest;
+
+class QTAWS_EXPORT UploadServerCertificateRequestPrivate : public IAMPrivate {
+
+public:
+    UploadServerCertificateRequestPrivate(const IAM::Action action,
+                                   UploadServerCertificateRequest * const q);
+    UploadServerCertificateRequestPrivate(const UploadServerCertificateRequestPrivate &other,
+                                   UploadServerCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UploadServerCertificateRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

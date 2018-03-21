@@ -19,3 +19,107 @@
 
 #include "updatecomputeenvironmentrequest.h"
 #include "updatecomputeenvironmentrequest_p.h"
+#include "updatecomputeenvironmentresponse.h"
+#include "batchrequest_p.h"
+
+namespace AWS {
+namespace Batch {
+
+/**
+ * @class  UpdateComputeEnvironmentRequest
+ *
+ * @brief  Implements Batch UpdateComputeEnvironment requests.
+ *
+ * @see    BatchClient::updateComputeEnvironment
+ */
+
+/**
+ * @brief  Constructs a new UpdateComputeEnvironmentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
+
+/**
+ * @brief  Constructs a new UpdateComputeEnvironmentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateComputeEnvironmentRequest::UpdateComputeEnvironmentRequest(const UpdateComputeEnvironmentRequest &other)
+    : BatchRequest(new UpdateComputeEnvironmentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateComputeEnvironmentRequest object.
+ */
+UpdateComputeEnvironmentRequest::UpdateComputeEnvironmentRequest()
+    : BatchRequest(new UpdateComputeEnvironmentRequestPrivate(BatchRequest::UpdateComputeEnvironmentAction, this))
+{
+
+}
+
+bool UpdateComputeEnvironmentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateComputeEnvironmentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateComputeEnvironmentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  BatchClient::send
+ */
+AwsAbstractResponse * UpdateComputeEnvironmentRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateComputeEnvironmentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateComputeEnvironmentRequestPrivate
+ *
+ * @brief  Private implementation for UpdateComputeEnvironmentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateComputeEnvironmentRequestPrivate object.
+ *
+ * @param  action  Batch action being performed.
+ * @param  q       Pointer to this object's public UpdateComputeEnvironmentRequest instance.
+ */
+UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
+    const BatchRequest::Action action, UpdateComputeEnvironmentRequest * const q)
+    : UpdateComputeEnvironmentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateComputeEnvironmentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateComputeEnvironmentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateComputeEnvironmentRequest instance.
+ */
+UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
+    const UpdateComputeEnvironmentRequestPrivate &other, UpdateComputeEnvironmentRequest * const q)
+    : UpdateComputeEnvironmentPrivate(other, q)
+{
+
+}

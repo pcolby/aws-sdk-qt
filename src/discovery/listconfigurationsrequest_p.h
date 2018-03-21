@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "listconfigurationsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class ListConfigurationsRequest;
+
+class QTAWS_EXPORT ListConfigurationsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    ListConfigurationsRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   ListConfigurationsRequest * const q);
+    ListConfigurationsRequestPrivate(const ListConfigurationsRequestPrivate &other,
+                                   ListConfigurationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListConfigurationsRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

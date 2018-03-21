@@ -19,3 +19,107 @@
 
 #include "setsmsattributesrequest.h"
 #include "setsmsattributesrequest_p.h"
+#include "setsmsattributesresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  SetSMSAttributesRequest
+ *
+ * @brief  Implements SNS SetSMSAttributes requests.
+ *
+ * @see    SNSClient::setSMSAttributes
+ */
+
+/**
+ * @brief  Constructs a new SetSMSAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetSMSAttributesResponse::SetSMSAttributesResponse(
+
+/**
+ * @brief  Constructs a new SetSMSAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetSMSAttributesRequest::SetSMSAttributesRequest(const SetSMSAttributesRequest &other)
+    : SNSRequest(new SetSMSAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetSMSAttributesRequest object.
+ */
+SetSMSAttributesRequest::SetSMSAttributesRequest()
+    : SNSRequest(new SetSMSAttributesRequestPrivate(SNSRequest::SetSMSAttributesAction, this))
+{
+
+}
+
+bool SetSMSAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetSMSAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetSMSAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * SetSMSAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new SetSMSAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetSMSAttributesRequestPrivate
+ *
+ * @brief  Private implementation for SetSMSAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSMSAttributesRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public SetSMSAttributesRequest instance.
+ */
+SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
+    const SNSRequest::Action action, SetSMSAttributesRequest * const q)
+    : SetSMSAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetSMSAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetSMSAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetSMSAttributesRequest instance.
+ */
+SetSMSAttributesRequestPrivate::SetSMSAttributesRequestPrivate(
+    const SetSMSAttributesRequestPrivate &other, SetSMSAttributesRequest * const q)
+    : SetSMSAttributesPrivate(other, q)
+{
+
+}

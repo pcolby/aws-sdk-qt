@@ -19,3 +19,107 @@
 
 #include "addjobflowstepsrequest.h"
 #include "addjobflowstepsrequest_p.h"
+#include "addjobflowstepsresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  AddJobFlowStepsRequest
+ *
+ * @brief  Implements EMR AddJobFlowSteps requests.
+ *
+ * @see    EMRClient::addJobFlowSteps
+ */
+
+/**
+ * @brief  Constructs a new AddJobFlowStepsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddJobFlowStepsResponse::AddJobFlowStepsResponse(
+
+/**
+ * @brief  Constructs a new AddJobFlowStepsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddJobFlowStepsRequest::AddJobFlowStepsRequest(const AddJobFlowStepsRequest &other)
+    : EMRRequest(new AddJobFlowStepsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddJobFlowStepsRequest object.
+ */
+AddJobFlowStepsRequest::AddJobFlowStepsRequest()
+    : EMRRequest(new AddJobFlowStepsRequestPrivate(EMRRequest::AddJobFlowStepsAction, this))
+{
+
+}
+
+bool AddJobFlowStepsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddJobFlowStepsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddJobFlowStepsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkReply * const reply) const
+{
+    return new AddJobFlowStepsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddJobFlowStepsRequestPrivate
+ *
+ * @brief  Private implementation for AddJobFlowStepsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddJobFlowStepsRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public AddJobFlowStepsRequest instance.
+ */
+AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
+    const EMRRequest::Action action, AddJobFlowStepsRequest * const q)
+    : AddJobFlowStepsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddJobFlowStepsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddJobFlowStepsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddJobFlowStepsRequest instance.
+ */
+AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
+    const AddJobFlowStepsRequestPrivate &other, AddJobFlowStepsRequest * const q)
+    : AddJobFlowStepsPrivate(other, q)
+{
+
+}

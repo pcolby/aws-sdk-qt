@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBELOGGINGSTATUSREQUEST_H
 #define QTAWS_DESCRIBELOGGINGSTATUSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeLoggingStatusRequestPrivate;
+
+class QTAWS_EXPORT DescribeLoggingStatusRequest : public RedshiftRequest {
+
+public:
+    DescribeLoggingStatusRequest(const DescribeLoggingStatusRequest &other);
+    DescribeLoggingStatusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeLoggingStatusRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_H
 #define QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CloseInstancePublicPortsRequestPrivate;
+
+class QTAWS_EXPORT CloseInstancePublicPortsRequest : public LightsailRequest {
+
+public:
+    CloseInstancePublicPortsRequest(const CloseInstancePublicPortsRequest &other);
+    CloseInstancePublicPortsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CloseInstancePublicPortsRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTNOTIFICATIONCONFIGURATIONREQUEST_H
 #define QTAWS_PUTNOTIFICATIONCONFIGURATIONREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class PutNotificationConfigurationRequestPrivate;
+
+class QTAWS_EXPORT PutNotificationConfigurationRequest : public AutoScalingRequest {
+
+public:
+    PutNotificationConfigurationRequest(const PutNotificationConfigurationRequest &other);
+    PutNotificationConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutNotificationConfigurationRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSERVICEROLEFORACCOUNTREQUEST_P_H
 #define QTAWS_GETSERVICEROLEFORACCOUNTREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "getserviceroleforaccountrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetServiceRoleForAccountRequest;
+
+class QTAWS_EXPORT GetServiceRoleForAccountRequestPrivate : public GreengrassPrivate {
+
+public:
+    GetServiceRoleForAccountRequestPrivate(const Greengrass::Action action,
+                                   GetServiceRoleForAccountRequest * const q);
+    GetServiceRoleForAccountRequestPrivate(const GetServiceRoleForAccountRequestPrivate &other,
+                                   GetServiceRoleForAccountRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetServiceRoleForAccountRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "adminupdatedevicestatusrequest.h"
 #include "adminupdatedevicestatusrequest_p.h"
+#include "adminupdatedevicestatusresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminUpdateDeviceStatusRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminUpdateDeviceStatus requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminUpdateDeviceStatus
+ */
+
+/**
+ * @brief  Constructs a new AdminUpdateDeviceStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminUpdateDeviceStatusResponse::AdminUpdateDeviceStatusResponse(
+
+/**
+ * @brief  Constructs a new AdminUpdateDeviceStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminUpdateDeviceStatusRequest::AdminUpdateDeviceStatusRequest(const AdminUpdateDeviceStatusRequest &other)
+    : CognitoIdentityProviderRequest(new AdminUpdateDeviceStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminUpdateDeviceStatusRequest object.
+ */
+AdminUpdateDeviceStatusRequest::AdminUpdateDeviceStatusRequest()
+    : CognitoIdentityProviderRequest(new AdminUpdateDeviceStatusRequestPrivate(CognitoIdentityProviderRequest::AdminUpdateDeviceStatusAction, this))
+{
+
+}
+
+bool AdminUpdateDeviceStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminUpdateDeviceStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminUpdateDeviceStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminUpdateDeviceStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminUpdateDeviceStatusRequestPrivate
+ *
+ * @brief  Private implementation for AdminUpdateDeviceStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateDeviceStatusRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminUpdateDeviceStatusRequest instance.
+ */
+AdminUpdateDeviceStatusRequestPrivate::AdminUpdateDeviceStatusRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminUpdateDeviceStatusRequest * const q)
+    : AdminUpdateDeviceStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateDeviceStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminUpdateDeviceStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminUpdateDeviceStatusRequest instance.
+ */
+AdminUpdateDeviceStatusRequestPrivate::AdminUpdateDeviceStatusRequestPrivate(
+    const AdminUpdateDeviceStatusRequestPrivate &other, AdminUpdateDeviceStatusRequest * const q)
+    : AdminUpdateDeviceStatusPrivate(other, q)
+{
+
+}

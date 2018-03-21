@@ -19,3 +19,107 @@
 
 #include "createscriptrequest.h"
 #include "createscriptrequest_p.h"
+#include "createscriptresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateScriptRequest
+ *
+ * @brief  Implements Glue CreateScript requests.
+ *
+ * @see    GlueClient::createScript
+ */
+
+/**
+ * @brief  Constructs a new CreateScriptResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateScriptResponse::CreateScriptResponse(
+
+/**
+ * @brief  Constructs a new CreateScriptRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateScriptRequest::CreateScriptRequest(const CreateScriptRequest &other)
+    : GlueRequest(new CreateScriptRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateScriptRequest object.
+ */
+CreateScriptRequest::CreateScriptRequest()
+    : GlueRequest(new CreateScriptRequestPrivate(GlueRequest::CreateScriptAction, this))
+{
+
+}
+
+bool CreateScriptRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateScriptResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateScriptResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateScriptResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateScriptRequestPrivate
+ *
+ * @brief  Private implementation for CreateScriptRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScriptRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public CreateScriptRequest instance.
+ */
+CreateScriptRequestPrivate::CreateScriptRequestPrivate(
+    const GlueRequest::Action action, CreateScriptRequest * const q)
+    : CreateScriptPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateScriptRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateScriptRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateScriptRequest instance.
+ */
+CreateScriptRequestPrivate::CreateScriptRequestPrivate(
+    const CreateScriptRequestPrivate &other, CreateScriptRequest * const q)
+    : CreateScriptPrivate(other, q)
+{
+
+}

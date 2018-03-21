@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERULEGROUPREQUEST_P_H
 #define QTAWS_CREATERULEGROUPREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "createrulegrouprequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class CreateRuleGroupRequest;
+
+class QTAWS_EXPORT CreateRuleGroupRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    CreateRuleGroupRequestPrivate(const WAFRegional::Action action,
+                                   CreateRuleGroupRequest * const q);
+    CreateRuleGroupRequestPrivate(const CreateRuleGroupRequestPrivate &other,
+                                   CreateRuleGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRuleGroupRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

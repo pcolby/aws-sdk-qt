@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEGROUPSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "describegroupsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeGroupsRequest;
+
+class QTAWS_EXPORT DescribeGroupsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DescribeGroupsRequestPrivate(const WorkDocs::Action action,
+                                   DescribeGroupsRequest * const q);
+    DescribeGroupsRequestPrivate(const DescribeGroupsRequestPrivate &other,
+                                   DescribeGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeGroupsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

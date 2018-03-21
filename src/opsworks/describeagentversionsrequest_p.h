@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAGENTVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEAGENTVERSIONSREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "describeagentversionsrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeAgentVersionsRequest;
+
+class QTAWS_EXPORT DescribeAgentVersionsRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DescribeAgentVersionsRequestPrivate(const OpsWorks::Action action,
+                                   DescribeAgentVersionsRequest * const q);
+    DescribeAgentVersionsRequestPrivate(const DescribeAgentVersionsRequestPrivate &other,
+                                   DescribeAgentVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAgentVersionsRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

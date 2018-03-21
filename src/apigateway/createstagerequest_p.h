@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESTAGEREQUEST_P_H
 #define QTAWS_CREATESTAGEREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "createstagerequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class CreateStageRequest;
+
+class QTAWS_EXPORT CreateStageRequestPrivate : public APIGatewayPrivate {
+
+public:
+    CreateStageRequestPrivate(const APIGateway::Action action,
+                                   CreateStageRequest * const q);
+    CreateStageRequestPrivate(const CreateStageRequestPrivate &other,
+                                   CreateStageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateStageRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

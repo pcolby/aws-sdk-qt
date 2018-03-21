@@ -19,3 +19,107 @@
 
 #include "describeconfigurationrevisionrequest.h"
 #include "describeconfigurationrevisionrequest_p.h"
+#include "describeconfigurationrevisionresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  DescribeConfigurationRevisionRequest
+ *
+ * @brief  Implements MQ DescribeConfigurationRevision requests.
+ *
+ * @see    MQClient::describeConfigurationRevision
+ */
+
+/**
+ * @brief  Constructs a new DescribeConfigurationRevisionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationRevisionResponse::DescribeConfigurationRevisionResponse(
+
+/**
+ * @brief  Constructs a new DescribeConfigurationRevisionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest(const DescribeConfigurationRevisionRequest &other)
+    : MQRequest(new DescribeConfigurationRevisionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConfigurationRevisionRequest object.
+ */
+DescribeConfigurationRevisionRequest::DescribeConfigurationRevisionRequest()
+    : MQRequest(new DescribeConfigurationRevisionRequestPrivate(MQRequest::DescribeConfigurationRevisionAction, this))
+{
+
+}
+
+bool DescribeConfigurationRevisionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConfigurationRevisionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConfigurationRevisionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * DescribeConfigurationRevisionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConfigurationRevisionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationRevisionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationRevisionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public DescribeConfigurationRevisionRequest instance.
+ */
+DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
+    const MQRequest::Action action, DescribeConfigurationRevisionRequest * const q)
+    : DescribeConfigurationRevisionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationRevisionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConfigurationRevisionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConfigurationRevisionRequest instance.
+ */
+DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
+    const DescribeConfigurationRevisionRequestPrivate &other, DescribeConfigurationRevisionRequest * const q)
+    : DescribeConfigurationRevisionPrivate(other, q)
+{
+
+}

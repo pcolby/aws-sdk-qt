@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDIRECTORYCONFIGREQUEST_H
 #define QTAWS_DELETEDIRECTORYCONFIGREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteDirectoryConfigRequestPrivate;
+
+class QTAWS_EXPORT DeleteDirectoryConfigRequest : public AppStreamRequest {
+
+public:
+    DeleteDirectoryConfigRequest(const DeleteDirectoryConfigRequest &other);
+    DeleteDirectoryConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDirectoryConfigRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

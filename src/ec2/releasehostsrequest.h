@@ -20,4 +20,32 @@
 #ifndef QTAWS_RELEASEHOSTSREQUEST_H
 #define QTAWS_RELEASEHOSTSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReleaseHostsRequestPrivate;
+
+class QTAWS_EXPORT ReleaseHostsRequest : public EC2Request {
+
+public:
+    ReleaseHostsRequest(const ReleaseHostsRequest &other);
+    ReleaseHostsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReleaseHostsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

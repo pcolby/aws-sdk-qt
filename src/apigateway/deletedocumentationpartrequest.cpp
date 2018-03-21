@@ -19,3 +19,107 @@
 
 #include "deletedocumentationpartrequest.h"
 #include "deletedocumentationpartrequest_p.h"
+#include "deletedocumentationpartresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  DeleteDocumentationPartRequest
+ *
+ * @brief  Implements APIGateway DeleteDocumentationPart requests.
+ *
+ * @see    APIGatewayClient::deleteDocumentationPart
+ */
+
+/**
+ * @brief  Constructs a new DeleteDocumentationPartResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDocumentationPartResponse::DeleteDocumentationPartResponse(
+
+/**
+ * @brief  Constructs a new DeleteDocumentationPartRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDocumentationPartRequest::DeleteDocumentationPartRequest(const DeleteDocumentationPartRequest &other)
+    : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDocumentationPartRequest object.
+ */
+DeleteDocumentationPartRequest::DeleteDocumentationPartRequest()
+    : APIGatewayRequest(new DeleteDocumentationPartRequestPrivate(APIGatewayRequest::DeleteDocumentationPartAction, this))
+{
+
+}
+
+bool DeleteDocumentationPartRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDocumentationPartResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDocumentationPartResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDocumentationPartResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDocumentationPartRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDocumentationPartRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteDocumentationPartRequest instance.
+ */
+DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
+    const APIGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)
+    : DeleteDocumentationPartPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDocumentationPartRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDocumentationPartRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDocumentationPartRequest instance.
+ */
+DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
+    const DeleteDocumentationPartRequestPrivate &other, DeleteDocumentationPartRequest * const q)
+    : DeleteDocumentationPartPrivate(other, q)
+{
+
+}

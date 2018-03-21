@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETREQUEST_P_H
 #define QTAWS_UPDATEREGEXPATTERNSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updateregexpatternsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateRegexPatternSetRequest;
+
+class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateRegexPatternSetRequestPrivate(const WAF::Action action,
+                                   UpdateRegexPatternSetRequest * const q);
+    UpdateRegexPatternSetRequestPrivate(const UpdateRegexPatternSetRequestPrivate &other,
+                                   UpdateRegexPatternSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRegexPatternSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

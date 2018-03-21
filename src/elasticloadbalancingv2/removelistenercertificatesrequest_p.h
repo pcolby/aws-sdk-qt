@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVELISTENERCERTIFICATESREQUEST_P_H
 #define QTAWS_REMOVELISTENERCERTIFICATESREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "removelistenercertificatesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class RemoveListenerCertificatesRequest;
+
+class QTAWS_EXPORT RemoveListenerCertificatesRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    RemoveListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   RemoveListenerCertificatesRequest * const q);
+    RemoveListenerCertificatesRequestPrivate(const RemoveListenerCertificatesRequestPrivate &other,
+                                   RemoveListenerCertificatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveListenerCertificatesRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

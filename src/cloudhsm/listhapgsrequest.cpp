@@ -19,3 +19,107 @@
 
 #include "listhapgsrequest.h"
 #include "listhapgsrequest_p.h"
+#include "listhapgsresponse.h"
+#include "cloudhsmrequest_p.h"
+
+namespace AWS {
+namespace CloudHSM {
+
+/**
+ * @class  ListHapgsRequest
+ *
+ * @brief  Implements CloudHSM ListHapgs requests.
+ *
+ * @see    CloudHSMClient::listHapgs
+ */
+
+/**
+ * @brief  Constructs a new ListHapgsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListHapgsResponse::ListHapgsResponse(
+
+/**
+ * @brief  Constructs a new ListHapgsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListHapgsRequest::ListHapgsRequest(const ListHapgsRequest &other)
+    : CloudHSMRequest(new ListHapgsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListHapgsRequest object.
+ */
+ListHapgsRequest::ListHapgsRequest()
+    : CloudHSMRequest(new ListHapgsRequestPrivate(CloudHSMRequest::ListHapgsAction, this))
+{
+
+}
+
+bool ListHapgsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListHapgsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListHapgsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudHSMClient::send
+ */
+AwsAbstractResponse * ListHapgsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListHapgsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListHapgsRequestPrivate
+ *
+ * @brief  Private implementation for ListHapgsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHapgsRequestPrivate object.
+ *
+ * @param  action  CloudHSM action being performed.
+ * @param  q       Pointer to this object's public ListHapgsRequest instance.
+ */
+ListHapgsRequestPrivate::ListHapgsRequestPrivate(
+    const CloudHSMRequest::Action action, ListHapgsRequest * const q)
+    : ListHapgsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListHapgsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListHapgsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListHapgsRequest instance.
+ */
+ListHapgsRequestPrivate::ListHapgsRequestPrivate(
+    const ListHapgsRequestPrivate &other, ListHapgsRequest * const q)
+    : ListHapgsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSREQUEST_H
 #define QTAWS_GETACCOUNTSETTINGSREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetAccountSettingsRequestPrivate;
+
+class QTAWS_EXPORT GetAccountSettingsRequest : public DeviceFarmRequest {
+
+public:
+    GetAccountSettingsRequest(const GetAccountSettingsRequest &other);
+    GetAccountSettingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAccountSettingsRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

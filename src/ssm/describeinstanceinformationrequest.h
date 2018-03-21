@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINSTANCEINFORMATIONREQUEST_H
 #define QTAWS_DESCRIBEINSTANCEINFORMATIONREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstanceInformationRequestPrivate;
+
+class QTAWS_EXPORT DescribeInstanceInformationRequest : public SSMRequest {
+
+public:
+    DescribeInstanceInformationRequest(const DescribeInstanceInformationRequest &other);
+    DescribeInstanceInformationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeInstanceInformationRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

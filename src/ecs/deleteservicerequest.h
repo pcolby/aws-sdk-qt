@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESERVICEREQUEST_H
 #define QTAWS_DELETESERVICEREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class DeleteServiceRequestPrivate;
+
+class QTAWS_EXPORT DeleteServiceRequest : public ECSRequest {
+
+public:
+    DeleteServiceRequest(const DeleteServiceRequest &other);
+    DeleteServiceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

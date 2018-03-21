@@ -19,3 +19,107 @@
 
 #include "getcoredefinitionrequest.h"
 #include "getcoredefinitionrequest_p.h"
+#include "getcoredefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  GetCoreDefinitionRequest
+ *
+ * @brief  Implements Greengrass GetCoreDefinition requests.
+ *
+ * @see    GreengrassClient::getCoreDefinition
+ */
+
+/**
+ * @brief  Constructs a new GetCoreDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetCoreDefinitionResponse::GetCoreDefinitionResponse(
+
+/**
+ * @brief  Constructs a new GetCoreDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetCoreDefinitionRequest::GetCoreDefinitionRequest(const GetCoreDefinitionRequest &other)
+    : GreengrassRequest(new GetCoreDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetCoreDefinitionRequest object.
+ */
+GetCoreDefinitionRequest::GetCoreDefinitionRequest()
+    : GreengrassRequest(new GetCoreDefinitionRequestPrivate(GreengrassRequest::GetCoreDefinitionAction, this))
+{
+
+}
+
+bool GetCoreDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetCoreDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetCoreDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetCoreDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetCoreDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for GetCoreDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCoreDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public GetCoreDefinitionRequest instance.
+ */
+GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, GetCoreDefinitionRequest * const q)
+    : GetCoreDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetCoreDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetCoreDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetCoreDefinitionRequest instance.
+ */
+GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
+    const GetCoreDefinitionRequestPrivate &other, GetCoreDefinitionRequest * const q)
+    : GetCoreDefinitionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPARAMETERSBYPATHREQUEST_P_H
 #define QTAWS_GETPARAMETERSBYPATHREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getparametersbypathrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetParametersByPathRequest;
+
+class QTAWS_EXPORT GetParametersByPathRequestPrivate : public SSMPrivate {
+
+public:
+    GetParametersByPathRequestPrivate(const SSM::Action action,
+                                   GetParametersByPathRequest * const q);
+    GetParametersByPathRequestPrivate(const GetParametersByPathRequestPrivate &other,
+                                   GetParametersByPathRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetParametersByPathRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

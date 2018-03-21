@@ -19,3 +19,107 @@
 
 #include "assumerolewithsamlrequest.h"
 #include "assumerolewithsamlrequest_p.h"
+#include "assumerolewithsamlresponse.h"
+#include "stsrequest_p.h"
+
+namespace AWS {
+namespace STS {
+
+/**
+ * @class  AssumeRoleWithSAMLRequest
+ *
+ * @brief  Implements STS AssumeRoleWithSAML requests.
+ *
+ * @see    STSClient::assumeRoleWithSAML
+ */
+
+/**
+ * @brief  Constructs a new AssumeRoleWithSAMLResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
+
+/**
+ * @brief  Constructs a new AssumeRoleWithSAMLRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssumeRoleWithSAMLRequest::AssumeRoleWithSAMLRequest(const AssumeRoleWithSAMLRequest &other)
+    : STSRequest(new AssumeRoleWithSAMLRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssumeRoleWithSAMLRequest object.
+ */
+AssumeRoleWithSAMLRequest::AssumeRoleWithSAMLRequest()
+    : STSRequest(new AssumeRoleWithSAMLRequestPrivate(STSRequest::AssumeRoleWithSAMLAction, this))
+{
+
+}
+
+bool AssumeRoleWithSAMLRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssumeRoleWithSAMLResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssumeRoleWithSAMLResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  STSClient::send
+ */
+AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkReply * const reply) const
+{
+    return new AssumeRoleWithSAMLResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssumeRoleWithSAMLRequestPrivate
+ *
+ * @brief  Private implementation for AssumeRoleWithSAMLRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssumeRoleWithSAMLRequestPrivate object.
+ *
+ * @param  action  STS action being performed.
+ * @param  q       Pointer to this object's public AssumeRoleWithSAMLRequest instance.
+ */
+AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
+    const STSRequest::Action action, AssumeRoleWithSAMLRequest * const q)
+    : AssumeRoleWithSAMLPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssumeRoleWithSAMLRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssumeRoleWithSAMLRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssumeRoleWithSAMLRequest instance.
+ */
+AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
+    const AssumeRoleWithSAMLRequestPrivate &other, AssumeRoleWithSAMLRequest * const q)
+    : AssumeRoleWithSAMLPrivate(other, q)
+{
+
+}

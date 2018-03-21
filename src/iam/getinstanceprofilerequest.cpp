@@ -19,3 +19,107 @@
 
 #include "getinstanceprofilerequest.h"
 #include "getinstanceprofilerequest_p.h"
+#include "getinstanceprofileresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetInstanceProfileRequest
+ *
+ * @brief  Implements IAM GetInstanceProfile requests.
+ *
+ * @see    IAMClient::getInstanceProfile
+ */
+
+/**
+ * @brief  Constructs a new GetInstanceProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetInstanceProfileResponse::GetInstanceProfileResponse(
+
+/**
+ * @brief  Constructs a new GetInstanceProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetInstanceProfileRequest::GetInstanceProfileRequest(const GetInstanceProfileRequest &other)
+    : IAMRequest(new GetInstanceProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetInstanceProfileRequest object.
+ */
+GetInstanceProfileRequest::GetInstanceProfileRequest()
+    : IAMRequest(new GetInstanceProfileRequestPrivate(IAMRequest::GetInstanceProfileAction, this))
+{
+
+}
+
+bool GetInstanceProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetInstanceProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetInstanceProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new GetInstanceProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetInstanceProfileRequestPrivate
+ *
+ * @brief  Private implementation for GetInstanceProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceProfileRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetInstanceProfileRequest instance.
+ */
+GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
+    const IAMRequest::Action action, GetInstanceProfileRequest * const q)
+    : GetInstanceProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetInstanceProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetInstanceProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetInstanceProfileRequest instance.
+ */
+GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
+    const GetInstanceProfileRequestPrivate &other, GetInstanceProfileRequest * const q)
+    : GetInstanceProfilePrivate(other, q)
+{
+
+}

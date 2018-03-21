@@ -19,3 +19,107 @@
 
 #include "describevpcendpointservicepermissionsrequest.h"
 #include "describevpcendpointservicepermissionsrequest_p.h"
+#include "describevpcendpointservicepermissionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  DescribeVpcEndpointServicePermissionsRequest
+ *
+ * @brief  Implements EC2 DescribeVpcEndpointServicePermissions requests.
+ *
+ * @see    EC2Client::describeVpcEndpointServicePermissions
+ */
+
+/**
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermissionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeVpcEndpointServicePermissionsRequest::DescribeVpcEndpointServicePermissionsRequest(const DescribeVpcEndpointServicePermissionsRequest &other)
+    : EC2Request(new DescribeVpcEndpointServicePermissionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsRequest object.
+ */
+DescribeVpcEndpointServicePermissionsRequest::DescribeVpcEndpointServicePermissionsRequest()
+    : EC2Request(new DescribeVpcEndpointServicePermissionsRequestPrivate(EC2Request::DescribeVpcEndpointServicePermissionsAction, this))
+{
+
+}
+
+bool DescribeVpcEndpointServicePermissionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeVpcEndpointServicePermissionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeVpcEndpointServicePermissionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * DescribeVpcEndpointServicePermissionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeVpcEndpointServicePermissionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeVpcEndpointServicePermissionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeVpcEndpointServicePermissionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public DescribeVpcEndpointServicePermissionsRequest instance.
+ */
+DescribeVpcEndpointServicePermissionsRequestPrivate::DescribeVpcEndpointServicePermissionsRequestPrivate(
+    const EC2Request::Action action, DescribeVpcEndpointServicePermissionsRequest * const q)
+    : DescribeVpcEndpointServicePermissionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeVpcEndpointServicePermissionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeVpcEndpointServicePermissionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeVpcEndpointServicePermissionsRequest instance.
+ */
+DescribeVpcEndpointServicePermissionsRequestPrivate::DescribeVpcEndpointServicePermissionsRequestPrivate(
+    const DescribeVpcEndpointServicePermissionsRequestPrivate &other, DescribeVpcEndpointServicePermissionsRequest * const q)
+    : DescribeVpcEndpointServicePermissionsPrivate(other, q)
+{
+
+}

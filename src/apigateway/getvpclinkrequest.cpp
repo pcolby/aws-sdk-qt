@@ -19,3 +19,107 @@
 
 #include "getvpclinkrequest.h"
 #include "getvpclinkrequest_p.h"
+#include "getvpclinkresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetVpcLinkRequest
+ *
+ * @brief  Implements APIGateway GetVpcLink requests.
+ *
+ * @see    APIGatewayClient::getVpcLink
+ */
+
+/**
+ * @brief  Constructs a new GetVpcLinkResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetVpcLinkResponse::GetVpcLinkResponse(
+
+/**
+ * @brief  Constructs a new GetVpcLinkRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetVpcLinkRequest::GetVpcLinkRequest(const GetVpcLinkRequest &other)
+    : APIGatewayRequest(new GetVpcLinkRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetVpcLinkRequest object.
+ */
+GetVpcLinkRequest::GetVpcLinkRequest()
+    : APIGatewayRequest(new GetVpcLinkRequestPrivate(APIGatewayRequest::GetVpcLinkAction, this))
+{
+
+}
+
+bool GetVpcLinkRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetVpcLinkResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetVpcLinkResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetVpcLinkRequest::response(QNetworkReply * const reply) const
+{
+    return new GetVpcLinkResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetVpcLinkRequestPrivate
+ *
+ * @brief  Private implementation for GetVpcLinkRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetVpcLinkRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetVpcLinkRequest instance.
+ */
+GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
+    const APIGatewayRequest::Action action, GetVpcLinkRequest * const q)
+    : GetVpcLinkPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetVpcLinkRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetVpcLinkRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetVpcLinkRequest instance.
+ */
+GetVpcLinkRequestPrivate::GetVpcLinkRequestPrivate(
+    const GetVpcLinkRequestPrivate &other, GetVpcLinkRequest * const q)
+    : GetVpcLinkPrivate(other, q)
+{
+
+}

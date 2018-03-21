@@ -19,3 +19,107 @@
 
 #include "discoverpollendpointrequest.h"
 #include "discoverpollendpointrequest_p.h"
+#include "discoverpollendpointresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DiscoverPollEndpointRequest
+ *
+ * @brief  Implements ECS DiscoverPollEndpoint requests.
+ *
+ * @see    ECSClient::discoverPollEndpoint
+ */
+
+/**
+ * @brief  Constructs a new DiscoverPollEndpointResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
+
+/**
+ * @brief  Constructs a new DiscoverPollEndpointRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DiscoverPollEndpointRequest::DiscoverPollEndpointRequest(const DiscoverPollEndpointRequest &other)
+    : ECSRequest(new DiscoverPollEndpointRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DiscoverPollEndpointRequest object.
+ */
+DiscoverPollEndpointRequest::DiscoverPollEndpointRequest()
+    : ECSRequest(new DiscoverPollEndpointRequestPrivate(ECSRequest::DiscoverPollEndpointAction, this))
+{
+
+}
+
+bool DiscoverPollEndpointRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DiscoverPollEndpointResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DiscoverPollEndpointResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetworkReply * const reply) const
+{
+    return new DiscoverPollEndpointResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DiscoverPollEndpointRequestPrivate
+ *
+ * @brief  Private implementation for DiscoverPollEndpointRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverPollEndpointRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public DiscoverPollEndpointRequest instance.
+ */
+DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
+    const ECSRequest::Action action, DiscoverPollEndpointRequest * const q)
+    : DiscoverPollEndpointPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DiscoverPollEndpointRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DiscoverPollEndpointRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DiscoverPollEndpointRequest instance.
+ */
+DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
+    const DiscoverPollEndpointRequestPrivate &other, DiscoverPollEndpointRequest * const q)
+    : DiscoverPollEndpointPrivate(other, q)
+{
+
+}

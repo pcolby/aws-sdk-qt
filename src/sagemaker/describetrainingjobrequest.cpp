@@ -19,3 +19,107 @@
 
 #include "describetrainingjobrequest.h"
 #include "describetrainingjobrequest_p.h"
+#include "describetrainingjobresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeTrainingJobRequest
+ *
+ * @brief  Implements SageMaker DescribeTrainingJob requests.
+ *
+ * @see    SageMakerClient::describeTrainingJob
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrainingJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrainingJobResponse::DescribeTrainingJobResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrainingJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrainingJobRequest::DescribeTrainingJobRequest(const DescribeTrainingJobRequest &other)
+    : SageMakerRequest(new DescribeTrainingJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrainingJobRequest object.
+ */
+DescribeTrainingJobRequest::DescribeTrainingJobRequest()
+    : SageMakerRequest(new DescribeTrainingJobRequestPrivate(SageMakerRequest::DescribeTrainingJobAction, this))
+{
+
+}
+
+bool DescribeTrainingJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrainingJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrainingJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * DescribeTrainingJobRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrainingJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrainingJobRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrainingJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrainingJobRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public DescribeTrainingJobRequest instance.
+ */
+DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
+    const SageMakerRequest::Action action, DescribeTrainingJobRequest * const q)
+    : DescribeTrainingJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrainingJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrainingJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrainingJobRequest instance.
+ */
+DescribeTrainingJobRequestPrivate::DescribeTrainingJobRequestPrivate(
+    const DescribeTrainingJobRequestPrivate &other, DescribeTrainingJobRequest * const q)
+    : DescribeTrainingJobPrivate(other, q)
+{
+
+}

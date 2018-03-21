@@ -19,3 +19,107 @@
 
 #include "describerepositoriesrequest.h"
 #include "describerepositoriesrequest_p.h"
+#include "describerepositoriesresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  DescribeRepositoriesRequest
+ *
+ * @brief  Implements ECR DescribeRepositories requests.
+ *
+ * @see    ECRClient::describeRepositories
+ */
+
+/**
+ * @brief  Constructs a new DescribeRepositoriesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRepositoriesResponse::DescribeRepositoriesResponse(
+
+/**
+ * @brief  Constructs a new DescribeRepositoriesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRepositoriesRequest::DescribeRepositoriesRequest(const DescribeRepositoriesRequest &other)
+    : ECRRequest(new DescribeRepositoriesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRepositoriesRequest object.
+ */
+DescribeRepositoriesRequest::DescribeRepositoriesRequest()
+    : ECRRequest(new DescribeRepositoriesRequestPrivate(ECRRequest::DescribeRepositoriesAction, this))
+{
+
+}
+
+bool DescribeRepositoriesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRepositoriesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRepositoriesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRepositoriesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRepositoriesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRepositoriesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRepositoriesRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public DescribeRepositoriesRequest instance.
+ */
+DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
+    const ECRRequest::Action action, DescribeRepositoriesRequest * const q)
+    : DescribeRepositoriesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRepositoriesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRepositoriesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRepositoriesRequest instance.
+ */
+DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
+    const DescribeRepositoriesRequestPrivate &other, DescribeRepositoriesRequest * const q)
+    : DescribeRepositoriesPrivate(other, q)
+{
+
+}

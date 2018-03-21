@@ -19,3 +19,107 @@
 
 #include "createpolicyrequest.h"
 #include "createpolicyrequest_p.h"
+#include "createpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  CreatePolicyRequest
+ *
+ * @brief  Implements IAM CreatePolicy requests.
+ *
+ * @see    IAMClient::createPolicy
+ */
+
+/**
+ * @brief  Constructs a new CreatePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePolicyResponse::CreatePolicyResponse(
+
+/**
+ * @brief  Constructs a new CreatePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePolicyRequest::CreatePolicyRequest(const CreatePolicyRequest &other)
+    : IAMRequest(new CreatePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePolicyRequest object.
+ */
+CreatePolicyRequest::CreatePolicyRequest()
+    : IAMRequest(new CreatePolicyRequestPrivate(IAMRequest::CreatePolicyAction, this))
+{
+
+}
+
+bool CreatePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePolicyRequestPrivate
+ *
+ * @brief  Private implementation for CreatePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public CreatePolicyRequest instance.
+ */
+CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
+    const IAMRequest::Action action, CreatePolicyRequest * const q)
+    : CreatePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePolicyRequest instance.
+ */
+CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
+    const CreatePolicyRequestPrivate &other, CreatePolicyRequest * const q)
+    : CreatePolicyPrivate(other, q)
+{
+
+}

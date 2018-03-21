@@ -19,3 +19,107 @@
 
 #include "getapplicationpolicyrequest.h"
 #include "getapplicationpolicyrequest_p.h"
+#include "getapplicationpolicyresponse.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  GetApplicationPolicyRequest
+ *
+ * @brief  Implements ServerlessApplicationRepository GetApplicationPolicy requests.
+ *
+ * @see    ServerlessApplicationRepositoryClient::getApplicationPolicy
+ */
+
+/**
+ * @brief  Constructs a new GetApplicationPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationPolicyResponse::GetApplicationPolicyResponse(
+
+/**
+ * @brief  Constructs a new GetApplicationPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetApplicationPolicyRequest::GetApplicationPolicyRequest(const GetApplicationPolicyRequest &other)
+    : ServerlessApplicationRepositoryRequest(new GetApplicationPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetApplicationPolicyRequest object.
+ */
+GetApplicationPolicyRequest::GetApplicationPolicyRequest()
+    : ServerlessApplicationRepositoryRequest(new GetApplicationPolicyRequestPrivate(ServerlessApplicationRepositoryRequest::GetApplicationPolicyAction, this))
+{
+
+}
+
+bool GetApplicationPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetApplicationPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetApplicationPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServerlessApplicationRepositoryClient::send
+ */
+AwsAbstractResponse * GetApplicationPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetApplicationPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationPolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetApplicationPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationPolicyRequestPrivate object.
+ *
+ * @param  action  ServerlessApplicationRepository action being performed.
+ * @param  q       Pointer to this object's public GetApplicationPolicyRequest instance.
+ */
+GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
+    const ServerlessApplicationRepositoryRequest::Action action, GetApplicationPolicyRequest * const q)
+    : GetApplicationPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetApplicationPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetApplicationPolicyRequest instance.
+ */
+GetApplicationPolicyRequestPrivate::GetApplicationPolicyRequestPrivate(
+    const GetApplicationPolicyRequestPrivate &other, GetApplicationPolicyRequest * const q)
+    : GetApplicationPolicyPrivate(other, q)
+{
+
+}

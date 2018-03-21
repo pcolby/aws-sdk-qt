@@ -19,3 +19,107 @@
 
 #include "listcontainerinstancesrequest.h"
 #include "listcontainerinstancesrequest_p.h"
+#include "listcontainerinstancesresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  ListContainerInstancesRequest
+ *
+ * @brief  Implements ECS ListContainerInstances requests.
+ *
+ * @see    ECSClient::listContainerInstances
+ */
+
+/**
+ * @brief  Constructs a new ListContainerInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListContainerInstancesResponse::ListContainerInstancesResponse(
+
+/**
+ * @brief  Constructs a new ListContainerInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListContainerInstancesRequest::ListContainerInstancesRequest(const ListContainerInstancesRequest &other)
+    : ECSRequest(new ListContainerInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListContainerInstancesRequest object.
+ */
+ListContainerInstancesRequest::ListContainerInstancesRequest()
+    : ECSRequest(new ListContainerInstancesRequestPrivate(ECSRequest::ListContainerInstancesAction, this))
+{
+
+}
+
+bool ListContainerInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListContainerInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListContainerInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * ListContainerInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListContainerInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListContainerInstancesRequestPrivate
+ *
+ * @brief  Private implementation for ListContainerInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainerInstancesRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public ListContainerInstancesRequest instance.
+ */
+ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
+    const ECSRequest::Action action, ListContainerInstancesRequest * const q)
+    : ListContainerInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListContainerInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListContainerInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListContainerInstancesRequest instance.
+ */
+ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
+    const ListContainerInstancesRequestPrivate &other, ListContainerInstancesRequest * const q)
+    : ListContainerInstancesPrivate(other, q)
+{
+
+}

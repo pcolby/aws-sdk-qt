@@ -19,3 +19,107 @@
 
 #include "describeparametersrequest.h"
 #include "describeparametersrequest_p.h"
+#include "describeparametersresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeParametersRequest
+ *
+ * @brief  Implements SSM DescribeParameters requests.
+ *
+ * @see    SSMClient::describeParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeParametersResponse::DescribeParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeParametersRequest::DescribeParametersRequest(const DescribeParametersRequest &other)
+    : SSMRequest(new DescribeParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeParametersRequest object.
+ */
+DescribeParametersRequest::DescribeParametersRequest()
+    : SSMRequest(new DescribeParametersRequestPrivate(SSMRequest::DescribeParametersAction, this))
+{
+
+}
+
+bool DescribeParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeParametersRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeParametersRequest instance.
+ */
+DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
+    const SSMRequest::Action action, DescribeParametersRequest * const q)
+    : DescribeParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeParametersRequest instance.
+ */
+DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
+    const DescribeParametersRequestPrivate &other, DescribeParametersRequest * const q)
+    : DescribeParametersPrivate(other, q)
+{
+
+}

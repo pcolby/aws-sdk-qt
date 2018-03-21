@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTRAFFICPOLICYVERSIONSREQUEST_P_H
 #define QTAWS_LISTTRAFFICPOLICYVERSIONSREQUEST_P_H
 
+#include "route53_p.h"
+#include "listtrafficpolicyversionsrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListTrafficPolicyVersionsRequest;
+
+class QTAWS_EXPORT ListTrafficPolicyVersionsRequestPrivate : public Route53Private {
+
+public:
+    ListTrafficPolicyVersionsRequestPrivate(const Route53::Action action,
+                                   ListTrafficPolicyVersionsRequest * const q);
+    ListTrafficPolicyVersionsRequestPrivate(const ListTrafficPolicyVersionsRequestPrivate &other,
+                                   ListTrafficPolicyVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTrafficPolicyVersionsRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

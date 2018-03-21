@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYOPTIONGROUPREQUEST_H
 #define QTAWS_COPYOPTIONGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyOptionGroupRequestPrivate;
+
+class QTAWS_EXPORT CopyOptionGroupRequest : public RDSRequest {
+
+public:
+    CopyOptionGroupRequest(const CopyOptionGroupRequest &other);
+    CopyOptionGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopyOptionGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

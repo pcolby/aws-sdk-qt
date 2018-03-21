@@ -19,3 +19,107 @@
 
 #include "copydbparametergrouprequest.h"
 #include "copydbparametergrouprequest_p.h"
+#include "copydbparametergroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CopyDBParameterGroupRequest
+ *
+ * @brief  Implements RDS CopyDBParameterGroup requests.
+ *
+ * @see    RDSClient::copyDBParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CopyDBParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CopyDBParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CopyDBParameterGroupRequest::CopyDBParameterGroupRequest(const CopyDBParameterGroupRequest &other)
+    : RDSRequest(new CopyDBParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CopyDBParameterGroupRequest object.
+ */
+CopyDBParameterGroupRequest::CopyDBParameterGroupRequest()
+    : RDSRequest(new CopyDBParameterGroupRequestPrivate(RDSRequest::CopyDBParameterGroupAction, this))
+{
+
+}
+
+bool CopyDBParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CopyDBParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CopyDBParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CopyDBParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CopyDBParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CopyDBParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBParameterGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CopyDBParameterGroupRequest instance.
+ */
+CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
+    const RDSRequest::Action action, CopyDBParameterGroupRequest * const q)
+    : CopyDBParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CopyDBParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CopyDBParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CopyDBParameterGroupRequest instance.
+ */
+CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
+    const CopyDBParameterGroupRequestPrivate &other, CopyDBParameterGroupRequest * const q)
+    : CopyDBParameterGroupPrivate(other, q)
+{
+
+}

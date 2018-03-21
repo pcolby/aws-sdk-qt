@@ -19,3 +19,107 @@
 
 #include "listsshpublickeysrequest.h"
 #include "listsshpublickeysrequest_p.h"
+#include "listsshpublickeysresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListSSHPublicKeysRequest
+ *
+ * @brief  Implements IAM ListSSHPublicKeys requests.
+ *
+ * @see    IAMClient::listSSHPublicKeys
+ */
+
+/**
+ * @brief  Constructs a new ListSSHPublicKeysResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSSHPublicKeysResponse::ListSSHPublicKeysResponse(
+
+/**
+ * @brief  Constructs a new ListSSHPublicKeysRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSSHPublicKeysRequest::ListSSHPublicKeysRequest(const ListSSHPublicKeysRequest &other)
+    : IAMRequest(new ListSSHPublicKeysRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSSHPublicKeysRequest object.
+ */
+ListSSHPublicKeysRequest::ListSSHPublicKeysRequest()
+    : IAMRequest(new ListSSHPublicKeysRequestPrivate(IAMRequest::ListSSHPublicKeysAction, this))
+{
+
+}
+
+bool ListSSHPublicKeysRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSSHPublicKeysResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSSHPublicKeysResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListSSHPublicKeysRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSSHPublicKeysResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSSHPublicKeysRequestPrivate
+ *
+ * @brief  Private implementation for ListSSHPublicKeysRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSSHPublicKeysRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListSSHPublicKeysRequest instance.
+ */
+ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
+    const IAMRequest::Action action, ListSSHPublicKeysRequest * const q)
+    : ListSSHPublicKeysPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSSHPublicKeysRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSSHPublicKeysRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSSHPublicKeysRequest instance.
+ */
+ListSSHPublicKeysRequestPrivate::ListSSHPublicKeysRequestPrivate(
+    const ListSSHPublicKeysRequestPrivate &other, ListSSHPublicKeysRequest * const q)
+    : ListSSHPublicKeysPrivate(other, q)
+{
+
+}

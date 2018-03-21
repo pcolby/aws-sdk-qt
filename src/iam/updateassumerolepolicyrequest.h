@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEASSUMEROLEPOLICYREQUEST_H
 #define QTAWS_UPDATEASSUMEROLEPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateAssumeRolePolicyRequestPrivate;
+
+class QTAWS_EXPORT UpdateAssumeRolePolicyRequest : public IAMRequest {
+
+public:
+    UpdateAssumeRolePolicyRequest(const UpdateAssumeRolePolicyRequest &other);
+    UpdateAssumeRolePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateAssumeRolePolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

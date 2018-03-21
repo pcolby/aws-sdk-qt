@@ -19,3 +19,107 @@
 
 #include "updatedocumentdefaultversionrequest.h"
 #include "updatedocumentdefaultversionrequest_p.h"
+#include "updatedocumentdefaultversionresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdateDocumentDefaultVersionRequest
+ *
+ * @brief  Implements SSM UpdateDocumentDefaultVersion requests.
+ *
+ * @see    SSMClient::updateDocumentDefaultVersion
+ */
+
+/**
+ * @brief  Constructs a new UpdateDocumentDefaultVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
+
+/**
+ * @brief  Constructs a new UpdateDocumentDefaultVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest(const UpdateDocumentDefaultVersionRequest &other)
+    : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDocumentDefaultVersionRequest object.
+ */
+UpdateDocumentDefaultVersionRequest::UpdateDocumentDefaultVersionRequest()
+    : SSMRequest(new UpdateDocumentDefaultVersionRequestPrivate(SSMRequest::UpdateDocumentDefaultVersionAction, this))
+{
+
+}
+
+bool UpdateDocumentDefaultVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDocumentDefaultVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDocumentDefaultVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDocumentDefaultVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDocumentDefaultVersionRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDocumentDefaultVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentDefaultVersionRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public UpdateDocumentDefaultVersionRequest instance.
+ */
+UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
+    const SSMRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)
+    : UpdateDocumentDefaultVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDocumentDefaultVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDocumentDefaultVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDocumentDefaultVersionRequest instance.
+ */
+UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
+    const UpdateDocumentDefaultVersionRequestPrivate &other, UpdateDocumentDefaultVersionRequest * const q)
+    : UpdateDocumentDefaultVersionPrivate(other, q)
+{
+
+}

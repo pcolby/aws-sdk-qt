@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEAPPLICATIONSREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONSREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "deleteapplicationsrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class DeleteApplicationsRequest;
+
+class QTAWS_EXPORT DeleteApplicationsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    DeleteApplicationsRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   DeleteApplicationsRequest * const q);
+    DeleteApplicationsRequestPrivate(const DeleteApplicationsRequestPrivate &other,
+                                   DeleteApplicationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteApplicationsRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

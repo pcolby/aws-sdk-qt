@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOMAINNAMESREQUEST_H
 #define QTAWS_GETDOMAINNAMESREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetDomainNamesRequestPrivate;
+
+class QTAWS_EXPORT GetDomainNamesRequest : public APIGatewayRequest {
+
+public:
+    GetDomainNamesRequest(const GetDomainNamesRequest &other);
+    GetDomainNamesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDomainNamesRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

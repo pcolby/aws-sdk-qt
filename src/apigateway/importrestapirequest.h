@@ -20,4 +20,32 @@
 #ifndef QTAWS_IMPORTRESTAPIREQUEST_H
 #define QTAWS_IMPORTRESTAPIREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class ImportRestApiRequestPrivate;
+
+class QTAWS_EXPORT ImportRestApiRequest : public APIGatewayRequest {
+
+public:
+    ImportRestApiRequest(const ImportRestApiRequest &other);
+    ImportRestApiRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ImportRestApiRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

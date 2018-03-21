@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSHIPPINGLABELREQUEST_H
 #define QTAWS_GETSHIPPINGLABELREQUEST_H
 
+#include "importexportrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class GetShippingLabelRequestPrivate;
+
+class QTAWS_EXPORT GetShippingLabelRequest : public ImportExportRequest {
+
+public:
+    GetShippingLabelRequest(const GetShippingLabelRequest &other);
+    GetShippingLabelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetShippingLabelRequest)
+
+}
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

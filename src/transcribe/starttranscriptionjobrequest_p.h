@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTTRANSCRIPTIONJOBREQUEST_P_H
 #define QTAWS_STARTTRANSCRIPTIONJOBREQUEST_P_H
 
+#include "transcribeservice_p.h"
+#include "starttranscriptionjobrequest.h"
+
+namespace AWS {
+
+namespace TranscribeService {
+
+class StartTranscriptionJobRequest;
+
+class QTAWS_EXPORT StartTranscriptionJobRequestPrivate : public TranscribeServicePrivate {
+
+public:
+    StartTranscriptionJobRequestPrivate(const TranscribeService::Action action,
+                                   StartTranscriptionJobRequest * const q);
+    StartTranscriptionJobRequestPrivate(const StartTranscriptionJobRequestPrivate &other,
+                                   StartTranscriptionJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartTranscriptionJobRequest)
+
+};
+
+} // namespace TranscribeService
+} // namespace AWS
+
 #endif

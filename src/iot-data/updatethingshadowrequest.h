@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETHINGSHADOWREQUEST_H
 #define QTAWS_UPDATETHINGSHADOWREQUEST_H
 
+#include "iotdataplanerequest.h"
+
+namespace AWS {
+
+namespace IoTDataPlane {
+
+class UpdateThingShadowRequestPrivate;
+
+class QTAWS_EXPORT UpdateThingShadowRequest : public IoTDataPlaneRequest {
+
+public:
+    UpdateThingShadowRequest(const UpdateThingShadowRequest &other);
+    UpdateThingShadowRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateThingShadowRequest)
+
+}
+
+} // namespace IoTDataPlane
+} // namespace AWS
+
 #endif

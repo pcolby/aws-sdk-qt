@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEEVENTSTREAMREQUEST_P_H
 #define QTAWS_DELETEEVENTSTREAMREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "deleteeventstreamrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteEventStreamRequest;
+
+class QTAWS_EXPORT DeleteEventStreamRequestPrivate : public PinpointPrivate {
+
+public:
+    DeleteEventStreamRequestPrivate(const Pinpoint::Action action,
+                                   DeleteEventStreamRequest * const q);
+    DeleteEventStreamRequestPrivate(const DeleteEventStreamRequestPrivate &other,
+                                   DeleteEventStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventStreamRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

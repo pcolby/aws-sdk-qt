@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBUCKETANALYTICSCONFIGURATIONREQUEST_H
 #define QTAWS_DELETEBUCKETANALYTICSCONFIGURATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketAnalyticsConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteBucketAnalyticsConfigurationRequest : public S3Request {
+
+public:
+    DeleteBucketAnalyticsConfigurationRequest(const DeleteBucketAnalyticsConfigurationRequest &other);
+    DeleteBucketAnalyticsConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketAnalyticsConfigurationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SENDAUTOMATIONSIGNALREQUEST_H
 #define QTAWS_SENDAUTOMATIONSIGNALREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class SendAutomationSignalRequestPrivate;
+
+class QTAWS_EXPORT SendAutomationSignalRequest : public SSMRequest {
+
+public:
+    SendAutomationSignalRequest(const SendAutomationSignalRequest &other);
+    SendAutomationSignalRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SendAutomationSignalRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeinputsecuritygrouprequest.h"
 #include "describeinputsecuritygrouprequest_p.h"
+#include "describeinputsecuritygroupresponse.h"
+#include "medialiverequest_p.h"
+
+namespace AWS {
+namespace MediaLive {
+
+/**
+ * @class  DescribeInputSecurityGroupRequest
+ *
+ * @brief  Implements MediaLive DescribeInputSecurityGroup requests.
+ *
+ * @see    MediaLiveClient::describeInputSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new DescribeInputSecurityGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeInputSecurityGroupResponse::DescribeInputSecurityGroupResponse(
+
+/**
+ * @brief  Constructs a new DescribeInputSecurityGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest(const DescribeInputSecurityGroupRequest &other)
+    : MediaLiveRequest(new DescribeInputSecurityGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeInputSecurityGroupRequest object.
+ */
+DescribeInputSecurityGroupRequest::DescribeInputSecurityGroupRequest()
+    : MediaLiveRequest(new DescribeInputSecurityGroupRequestPrivate(MediaLiveRequest::DescribeInputSecurityGroupAction, this))
+{
+
+}
+
+bool DescribeInputSecurityGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeInputSecurityGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeInputSecurityGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaLiveClient::send
+ */
+AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeInputSecurityGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeInputSecurityGroupRequestPrivate
+ *
+ * @brief  Private implementation for DescribeInputSecurityGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object.
+ *
+ * @param  action  MediaLive action being performed.
+ * @param  q       Pointer to this object's public DescribeInputSecurityGroupRequest instance.
+ */
+DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPrivate(
+    const MediaLiveRequest::Action action, DescribeInputSecurityGroupRequest * const q)
+    : DescribeInputSecurityGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeInputSecurityGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeInputSecurityGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeInputSecurityGroupRequest instance.
+ */
+DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPrivate(
+    const DescribeInputSecurityGroupRequestPrivate &other, DescribeInputSecurityGroupRequest * const q)
+    : DescribeInputSecurityGroupPrivate(other, q)
+{
+
+}

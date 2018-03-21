@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATESAMPLEFINDINGSREQUEST_P_H
 #define QTAWS_CREATESAMPLEFINDINGSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "createsamplefindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateSampleFindingsRequest;
+
+class QTAWS_EXPORT CreateSampleFindingsRequestPrivate : public GuardDutyPrivate {
+
+public:
+    CreateSampleFindingsRequestPrivate(const GuardDuty::Action action,
+                                   CreateSampleFindingsRequest * const q);
+    CreateSampleFindingsRequestPrivate(const CreateSampleFindingsRequestPrivate &other,
+                                   CreateSampleFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateSampleFindingsRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

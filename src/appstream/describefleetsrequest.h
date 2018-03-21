@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEFLEETSREQUEST_H
 #define QTAWS_DESCRIBEFLEETSREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeFleetsRequestPrivate;
+
+class QTAWS_EXPORT DescribeFleetsRequest : public AppStreamRequest {
+
+public:
+    DescribeFleetsRequest(const DescribeFleetsRequest &other);
+    DescribeFleetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeFleetsRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

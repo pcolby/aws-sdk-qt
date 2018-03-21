@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLEVGWROUTEPROPAGATIONREQUEST_H
 #define QTAWS_DISABLEVGWROUTEPROPAGATIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisableVgwRoutePropagationRequestPrivate;
+
+class QTAWS_EXPORT DisableVgwRoutePropagationRequest : public EC2Request {
+
+public:
+    DisableVgwRoutePropagationRequest(const DisableVgwRoutePropagationRequest &other);
+    DisableVgwRoutePropagationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableVgwRoutePropagationRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

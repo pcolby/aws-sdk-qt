@@ -19,3 +19,107 @@
 
 #include "listthingsinthinggrouprequest.h"
 #include "listthingsinthinggrouprequest_p.h"
+#include "listthingsinthinggroupresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingsInThingGroupRequest
+ *
+ * @brief  Implements IoT ListThingsInThingGroup requests.
+ *
+ * @see    IoTClient::listThingsInThingGroup
+ */
+
+/**
+ * @brief  Constructs a new ListThingsInThingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingsInThingGroupResponse::ListThingsInThingGroupResponse(
+
+/**
+ * @brief  Constructs a new ListThingsInThingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListThingsInThingGroupRequest::ListThingsInThingGroupRequest(const ListThingsInThingGroupRequest &other)
+    : IoTRequest(new ListThingsInThingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListThingsInThingGroupRequest object.
+ */
+ListThingsInThingGroupRequest::ListThingsInThingGroupRequest()
+    : IoTRequest(new ListThingsInThingGroupRequestPrivate(IoTRequest::ListThingsInThingGroupAction, this))
+{
+
+}
+
+bool ListThingsInThingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListThingsInThingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListThingsInThingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListThingsInThingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new ListThingsInThingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingsInThingGroupRequestPrivate
+ *
+ * @brief  Private implementation for ListThingsInThingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingsInThingGroupRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListThingsInThingGroupRequest instance.
+ */
+ListThingsInThingGroupRequestPrivate::ListThingsInThingGroupRequestPrivate(
+    const IoTRequest::Action action, ListThingsInThingGroupRequest * const q)
+    : ListThingsInThingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingsInThingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListThingsInThingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListThingsInThingGroupRequest instance.
+ */
+ListThingsInThingGroupRequestPrivate::ListThingsInThingGroupRequestPrivate(
+    const ListThingsInThingGroupRequestPrivate &other, ListThingsInThingGroupRequest * const q)
+    : ListThingsInThingGroupPrivate(other, q)
+{
+
+}

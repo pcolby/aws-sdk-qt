@@ -19,3 +19,107 @@
 
 #include "getgatewayresponserequest.h"
 #include "getgatewayresponserequest_p.h"
+#include "getgatewayresponseresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetGatewayResponseRequest
+ *
+ * @brief  Implements APIGateway GetGatewayResponse requests.
+ *
+ * @see    APIGatewayClient::getGatewayResponse
+ */
+
+/**
+ * @brief  Constructs a new GetGatewayResponseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetGatewayResponseResponse::GetGatewayResponseResponse(
+
+/**
+ * @brief  Constructs a new GetGatewayResponseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetGatewayResponseRequest::GetGatewayResponseRequest(const GetGatewayResponseRequest &other)
+    : APIGatewayRequest(new GetGatewayResponseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetGatewayResponseRequest object.
+ */
+GetGatewayResponseRequest::GetGatewayResponseRequest()
+    : APIGatewayRequest(new GetGatewayResponseRequestPrivate(APIGatewayRequest::GetGatewayResponseAction, this))
+{
+
+}
+
+bool GetGatewayResponseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetGatewayResponseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetGatewayResponseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetGatewayResponseRequest::response(QNetworkReply * const reply) const
+{
+    return new GetGatewayResponseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetGatewayResponseRequestPrivate
+ *
+ * @brief  Private implementation for GetGatewayResponseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGatewayResponseRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetGatewayResponseRequest instance.
+ */
+GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
+    const APIGatewayRequest::Action action, GetGatewayResponseRequest * const q)
+    : GetGatewayResponsePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetGatewayResponseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetGatewayResponseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetGatewayResponseRequest instance.
+ */
+GetGatewayResponseRequestPrivate::GetGatewayResponseRequestPrivate(
+    const GetGatewayResponseRequestPrivate &other, GetGatewayResponseRequest * const q)
+    : GetGatewayResponsePrivate(other, q)
+{
+
+}

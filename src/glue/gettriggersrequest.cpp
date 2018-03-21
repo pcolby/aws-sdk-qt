@@ -19,3 +19,107 @@
 
 #include "gettriggersrequest.h"
 #include "gettriggersrequest_p.h"
+#include "gettriggersresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  GetTriggersRequest
+ *
+ * @brief  Implements Glue GetTriggers requests.
+ *
+ * @see    GlueClient::getTriggers
+ */
+
+/**
+ * @brief  Constructs a new GetTriggersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTriggersResponse::GetTriggersResponse(
+
+/**
+ * @brief  Constructs a new GetTriggersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTriggersRequest::GetTriggersRequest(const GetTriggersRequest &other)
+    : GlueRequest(new GetTriggersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTriggersRequest object.
+ */
+GetTriggersRequest::GetTriggersRequest()
+    : GlueRequest(new GetTriggersRequestPrivate(GlueRequest::GetTriggersAction, this))
+{
+
+}
+
+bool GetTriggersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTriggersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTriggersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * GetTriggersRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTriggersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTriggersRequestPrivate
+ *
+ * @brief  Private implementation for GetTriggersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTriggersRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public GetTriggersRequest instance.
+ */
+GetTriggersRequestPrivate::GetTriggersRequestPrivate(
+    const GlueRequest::Action action, GetTriggersRequest * const q)
+    : GetTriggersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTriggersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTriggersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTriggersRequest instance.
+ */
+GetTriggersRequestPrivate::GetTriggersRequestPrivate(
+    const GetTriggersRequestPrivate &other, GetTriggersRequest * const q)
+    : GetTriggersPrivate(other, q)
+{
+
+}

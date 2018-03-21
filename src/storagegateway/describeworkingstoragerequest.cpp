@@ -19,3 +19,107 @@
 
 #include "describeworkingstoragerequest.h"
 #include "describeworkingstoragerequest_p.h"
+#include "describeworkingstorageresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeWorkingStorageRequest
+ *
+ * @brief  Implements StorageGateway DescribeWorkingStorage requests.
+ *
+ * @see    StorageGatewayClient::describeWorkingStorage
+ */
+
+/**
+ * @brief  Constructs a new DescribeWorkingStorageResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeWorkingStorageResponse::DescribeWorkingStorageResponse(
+
+/**
+ * @brief  Constructs a new DescribeWorkingStorageRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeWorkingStorageRequest::DescribeWorkingStorageRequest(const DescribeWorkingStorageRequest &other)
+    : StorageGatewayRequest(new DescribeWorkingStorageRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeWorkingStorageRequest object.
+ */
+DescribeWorkingStorageRequest::DescribeWorkingStorageRequest()
+    : StorageGatewayRequest(new DescribeWorkingStorageRequestPrivate(StorageGatewayRequest::DescribeWorkingStorageAction, this))
+{
+
+}
+
+bool DescribeWorkingStorageRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeWorkingStorageResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeWorkingStorageResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeWorkingStorageRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeWorkingStorageResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeWorkingStorageRequestPrivate
+ *
+ * @brief  Private implementation for DescribeWorkingStorageRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkingStorageRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeWorkingStorageRequest instance.
+ */
+DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeWorkingStorageRequest * const q)
+    : DescribeWorkingStoragePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeWorkingStorageRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeWorkingStorageRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeWorkingStorageRequest instance.
+ */
+DescribeWorkingStorageRequestPrivate::DescribeWorkingStorageRequestPrivate(
+    const DescribeWorkingStorageRequestPrivate &other, DescribeWorkingStorageRequest * const q)
+    : DescribeWorkingStoragePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "listtablesrequest.h"
 #include "listtablesrequest_p.h"
+#include "listtablesresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  ListTablesRequest
+ *
+ * @brief  Implements DynamoDB ListTables requests.
+ *
+ * @see    DynamoDBClient::listTables
+ */
+
+/**
+ * @brief  Constructs a new ListTablesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTablesResponse::ListTablesResponse(
+
+/**
+ * @brief  Constructs a new ListTablesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTablesRequest::ListTablesRequest(const ListTablesRequest &other)
+    : DynamoDBRequest(new ListTablesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTablesRequest object.
+ */
+ListTablesRequest::ListTablesRequest()
+    : DynamoDBRequest(new ListTablesRequestPrivate(DynamoDBRequest::ListTablesAction, this))
+{
+
+}
+
+bool ListTablesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTablesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTablesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * ListTablesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTablesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTablesRequestPrivate
+ *
+ * @brief  Private implementation for ListTablesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTablesRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public ListTablesRequest instance.
+ */
+ListTablesRequestPrivate::ListTablesRequestPrivate(
+    const DynamoDBRequest::Action action, ListTablesRequest * const q)
+    : ListTablesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTablesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTablesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTablesRequest instance.
+ */
+ListTablesRequestPrivate::ListTablesRequestPrivate(
+    const ListTablesRequestPrivate &other, ListTablesRequest * const q)
+    : ListTablesPrivate(other, q)
+{
+
+}

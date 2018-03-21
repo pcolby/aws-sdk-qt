@@ -19,3 +19,107 @@
 
 #include "describeapplicationrequest.h"
 #include "describeapplicationrequest_p.h"
+#include "describeapplicationresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DescribeApplicationRequest
+ *
+ * @brief  Implements KinesisAnalytics DescribeApplication requests.
+ *
+ * @see    KinesisAnalyticsClient::describeApplication
+ */
+
+/**
+ * @brief  Constructs a new DescribeApplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeApplicationResponse::DescribeApplicationResponse(
+
+/**
+ * @brief  Constructs a new DescribeApplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeApplicationRequest::DescribeApplicationRequest(const DescribeApplicationRequest &other)
+    : KinesisAnalyticsRequest(new DescribeApplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeApplicationRequest object.
+ */
+DescribeApplicationRequest::DescribeApplicationRequest()
+    : KinesisAnalyticsRequest(new DescribeApplicationRequestPrivate(KinesisAnalyticsRequest::DescribeApplicationAction, this))
+{
+
+}
+
+bool DescribeApplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeApplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeApplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * DescribeApplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeApplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeApplicationRequestPrivate
+ *
+ * @brief  Private implementation for DescribeApplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public DescribeApplicationRequest instance.
+ */
+DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, DescribeApplicationRequest * const q)
+    : DescribeApplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeApplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeApplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeApplicationRequest instance.
+ */
+DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
+    const DescribeApplicationRequestPrivate &other, DescribeApplicationRequest * const q)
+    : DescribeApplicationPrivate(other, q)
+{
+
+}

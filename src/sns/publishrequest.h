@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUBLISHREQUEST_H
 #define QTAWS_PUBLISHREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class PublishRequestPrivate;
+
+class QTAWS_EXPORT PublishRequest : public SNSRequest {
+
+public:
+    PublishRequest(const PublishRequest &other);
+    PublishRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PublishRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPDBINSTANCEREQUEST_H
 #define QTAWS_STOPDBINSTANCEREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class StopDBInstanceRequestPrivate;
+
+class QTAWS_EXPORT StopDBInstanceRequest : public RDSRequest {
+
+public:
+    StopDBInstanceRequest(const StopDBInstanceRequest &other);
+    StopDBInstanceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopDBInstanceRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

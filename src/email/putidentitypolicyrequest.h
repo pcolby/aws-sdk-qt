@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTIDENTITYPOLICYREQUEST_H
 #define QTAWS_PUTIDENTITYPOLICYREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class PutIdentityPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutIdentityPolicyRequest : public SESRequest {
+
+public:
+    PutIdentityPolicyRequest(const PutIdentityPolicyRequest &other);
+    PutIdentityPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutIdentityPolicyRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

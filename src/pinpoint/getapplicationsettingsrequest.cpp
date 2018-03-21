@@ -19,3 +19,107 @@
 
 #include "getapplicationsettingsrequest.h"
 #include "getapplicationsettingsrequest_p.h"
+#include "getapplicationsettingsresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetApplicationSettingsRequest
+ *
+ * @brief  Implements Pinpoint GetApplicationSettings requests.
+ *
+ * @see    PinpointClient::getApplicationSettings
+ */
+
+/**
+ * @brief  Constructs a new GetApplicationSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetApplicationSettingsResponse::GetApplicationSettingsResponse(
+
+/**
+ * @brief  Constructs a new GetApplicationSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetApplicationSettingsRequest::GetApplicationSettingsRequest(const GetApplicationSettingsRequest &other)
+    : PinpointRequest(new GetApplicationSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetApplicationSettingsRequest object.
+ */
+GetApplicationSettingsRequest::GetApplicationSettingsRequest()
+    : PinpointRequest(new GetApplicationSettingsRequestPrivate(PinpointRequest::GetApplicationSettingsAction, this))
+{
+
+}
+
+bool GetApplicationSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetApplicationSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetApplicationSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetApplicationSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetApplicationSettingsRequestPrivate
+ *
+ * @brief  Private implementation for GetApplicationSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationSettingsRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetApplicationSettingsRequest instance.
+ */
+GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
+    const PinpointRequest::Action action, GetApplicationSettingsRequest * const q)
+    : GetApplicationSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetApplicationSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetApplicationSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetApplicationSettingsRequest instance.
+ */
+GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
+    const GetApplicationSettingsRequestPrivate &other, GetApplicationSettingsRequest * const q)
+    : GetApplicationSettingsPrivate(other, q)
+{
+
+}

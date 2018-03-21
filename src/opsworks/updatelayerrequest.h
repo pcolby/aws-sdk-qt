@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATELAYERREQUEST_H
 #define QTAWS_UPDATELAYERREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateLayerRequestPrivate;
+
+class QTAWS_EXPORT UpdateLayerRequest : public OpsWorksRequest {
+
+public:
+    UpdateLayerRequest(const UpdateLayerRequest &other);
+    UpdateLayerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateLayerRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

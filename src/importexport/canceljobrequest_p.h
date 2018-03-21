@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
+#include "importexport_p.h"
+#include "canceljobrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class CancelJobRequest;
+
+class QTAWS_EXPORT CancelJobRequestPrivate : public ImportExportPrivate {
+
+public:
+    CancelJobRequestPrivate(const ImportExport::Action action,
+                                   CancelJobRequest * const q);
+    CancelJobRequestPrivate(const CancelJobRequestPrivate &other,
+                                   CancelJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelJobRequest)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

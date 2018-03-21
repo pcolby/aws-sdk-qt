@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTPIPELINEDEFINITIONREQUEST_P_H
 #define QTAWS_PUTPIPELINEDEFINITIONREQUEST_P_H
 
+#include "datapipeline_p.h"
+#include "putpipelinedefinitionrequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class PutPipelineDefinitionRequest;
+
+class QTAWS_EXPORT PutPipelineDefinitionRequestPrivate : public DataPipelinePrivate {
+
+public:
+    PutPipelineDefinitionRequestPrivate(const DataPipeline::Action action,
+                                   PutPipelineDefinitionRequest * const q);
+    PutPipelineDefinitionRequestPrivate(const PutPipelineDefinitionRequestPrivate &other,
+                                   PutPipelineDefinitionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutPipelineDefinitionRequest)
+
+};
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

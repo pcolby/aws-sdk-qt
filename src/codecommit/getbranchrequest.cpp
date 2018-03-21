@@ -19,3 +19,107 @@
 
 #include "getbranchrequest.h"
 #include "getbranchrequest_p.h"
+#include "getbranchresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  GetBranchRequest
+ *
+ * @brief  Implements CodeCommit GetBranch requests.
+ *
+ * @see    CodeCommitClient::getBranch
+ */
+
+/**
+ * @brief  Constructs a new GetBranchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBranchResponse::GetBranchResponse(
+
+/**
+ * @brief  Constructs a new GetBranchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBranchRequest::GetBranchRequest(const GetBranchRequest &other)
+    : CodeCommitRequest(new GetBranchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBranchRequest object.
+ */
+GetBranchRequest::GetBranchRequest()
+    : CodeCommitRequest(new GetBranchRequestPrivate(CodeCommitRequest::GetBranchAction, this))
+{
+
+}
+
+bool GetBranchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBranchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBranchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * GetBranchRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBranchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBranchRequestPrivate
+ *
+ * @brief  Private implementation for GetBranchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBranchRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public GetBranchRequest instance.
+ */
+GetBranchRequestPrivate::GetBranchRequestPrivate(
+    const CodeCommitRequest::Action action, GetBranchRequest * const q)
+    : GetBranchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBranchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBranchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBranchRequest instance.
+ */
+GetBranchRequestPrivate::GetBranchRequestPrivate(
+    const GetBranchRequestPrivate &other, GetBranchRequest * const q)
+    : GetBranchPrivate(other, q)
+{
+
+}

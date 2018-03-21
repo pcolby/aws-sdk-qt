@@ -20,4 +20,32 @@
 #ifndef QTAWS_REQUESTSPOTFLEETREQUEST_H
 #define QTAWS_REQUESTSPOTFLEETREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class RequestSpotFleetRequestPrivate;
+
+class QTAWS_EXPORT RequestSpotFleetRequest : public EC2Request {
+
+public:
+    RequestSpotFleetRequest(const RequestSpotFleetRequest &other);
+    RequestSpotFleetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RequestSpotFleetRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDEVICESREQUEST_H
 #define QTAWS_LISTDEVICESREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ListDevicesRequestPrivate;
+
+class QTAWS_EXPORT ListDevicesRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ListDevicesRequest(const ListDevicesRequest &other);
+    ListDevicesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDevicesRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

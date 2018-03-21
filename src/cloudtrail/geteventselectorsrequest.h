@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETEVENTSELECTORSREQUEST_H
 #define QTAWS_GETEVENTSELECTORSREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class GetEventSelectorsRequestPrivate;
+
+class QTAWS_EXPORT GetEventSelectorsRequest : public CloudTrailRequest {
+
+public:
+    GetEventSelectorsRequest(const GetEventSelectorsRequest &other);
+    GetEventSelectorsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetEventSelectorsRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPMONITORINGMEMBERSREQUEST_H
 #define QTAWS_STOPMONITORINGMEMBERSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class StopMonitoringMembersRequestPrivate;
+
+class QTAWS_EXPORT StopMonitoringMembersRequest : public GuardDutyRequest {
+
+public:
+    StopMonitoringMembersRequest(const StopMonitoringMembersRequest &other);
+    StopMonitoringMembersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopMonitoringMembersRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

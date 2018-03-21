@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESERVICESPECIFICCREDENTIALREQUEST_H
 #define QTAWS_DELETESERVICESPECIFICCREDENTIALREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteServiceSpecificCredentialRequestPrivate;
+
+class QTAWS_EXPORT DeleteServiceSpecificCredentialRequest : public IAMRequest {
+
+public:
+    DeleteServiceSpecificCredentialRequest(const DeleteServiceSpecificCredentialRequest &other);
+    DeleteServiceSpecificCredentialRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteServiceSpecificCredentialRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

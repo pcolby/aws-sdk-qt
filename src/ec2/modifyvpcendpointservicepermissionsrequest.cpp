@@ -19,3 +19,107 @@
 
 #include "modifyvpcendpointservicepermissionsrequest.h"
 #include "modifyvpcendpointservicepermissionsrequest_p.h"
+#include "modifyvpcendpointservicepermissionsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifyVpcEndpointServicePermissionsRequest
+ *
+ * @brief  Implements EC2 ModifyVpcEndpointServicePermissions requests.
+ *
+ * @see    EC2Client::modifyVpcEndpointServicePermissions
+ */
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyVpcEndpointServicePermissionsResponse::ModifyVpcEndpointServicePermissionsResponse(
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest(const ModifyVpcEndpointServicePermissionsRequest &other)
+    : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequest object.
+ */
+ModifyVpcEndpointServicePermissionsRequest::ModifyVpcEndpointServicePermissionsRequest()
+    : EC2Request(new ModifyVpcEndpointServicePermissionsRequestPrivate(EC2Request::ModifyVpcEndpointServicePermissionsAction, this))
+{
+
+}
+
+bool ModifyVpcEndpointServicePermissionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyVpcEndpointServicePermissionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyVpcEndpointServicePermissionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyVpcEndpointServicePermissionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyVpcEndpointServicePermissionsRequestPrivate
+ *
+ * @brief  Private implementation for ModifyVpcEndpointServicePermissionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifyVpcEndpointServicePermissionsRequest instance.
+ */
+ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
+    const EC2Request::Action action, ModifyVpcEndpointServicePermissionsRequest * const q)
+    : ModifyVpcEndpointServicePermissionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyVpcEndpointServicePermissionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyVpcEndpointServicePermissionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyVpcEndpointServicePermissionsRequest instance.
+ */
+ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
+    const ModifyVpcEndpointServicePermissionsRequestPrivate &other, ModifyVpcEndpointServicePermissionsRequest * const q)
+    : ModifyVpcEndpointServicePermissionsPrivate(other, q)
+{
+
+}

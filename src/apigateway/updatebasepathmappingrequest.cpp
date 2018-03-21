@@ -19,3 +19,107 @@
 
 #include "updatebasepathmappingrequest.h"
 #include "updatebasepathmappingrequest_p.h"
+#include "updatebasepathmappingresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  UpdateBasePathMappingRequest
+ *
+ * @brief  Implements APIGateway UpdateBasePathMapping requests.
+ *
+ * @see    APIGatewayClient::updateBasePathMapping
+ */
+
+/**
+ * @brief  Constructs a new UpdateBasePathMappingResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
+
+/**
+ * @brief  Constructs a new UpdateBasePathMappingRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateBasePathMappingRequest::UpdateBasePathMappingRequest(const UpdateBasePathMappingRequest &other)
+    : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateBasePathMappingRequest object.
+ */
+UpdateBasePathMappingRequest::UpdateBasePathMappingRequest()
+    : APIGatewayRequest(new UpdateBasePathMappingRequestPrivate(APIGatewayRequest::UpdateBasePathMappingAction, this))
+{
+
+}
+
+bool UpdateBasePathMappingRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateBasePathMappingResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateBasePathMappingResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * UpdateBasePathMappingRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateBasePathMappingResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateBasePathMappingRequestPrivate
+ *
+ * @brief  Private implementation for UpdateBasePathMappingRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public UpdateBasePathMappingRequest instance.
+ */
+UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
+    const APIGatewayRequest::Action action, UpdateBasePathMappingRequest * const q)
+    : UpdateBasePathMappingPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateBasePathMappingRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateBasePathMappingRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateBasePathMappingRequest instance.
+ */
+UpdateBasePathMappingRequestPrivate::UpdateBasePathMappingRequestPrivate(
+    const UpdateBasePathMappingRequestPrivate &other, UpdateBasePathMappingRequest * const q)
+    : UpdateBasePathMappingPrivate(other, q)
+{
+
+}

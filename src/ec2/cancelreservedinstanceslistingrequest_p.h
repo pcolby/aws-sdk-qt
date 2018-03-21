@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELRESERVEDINSTANCESLISTINGREQUEST_P_H
 #define QTAWS_CANCELRESERVEDINSTANCESLISTINGREQUEST_P_H
 
+#include "ec2_p.h"
+#include "cancelreservedinstanceslistingrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelReservedInstancesListingRequest;
+
+class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public EC2Private {
+
+public:
+    CancelReservedInstancesListingRequestPrivate(const EC2::Action action,
+                                   CancelReservedInstancesListingRequest * const q);
+    CancelReservedInstancesListingRequestPrivate(const CancelReservedInstancesListingRequestPrivate &other,
+                                   CancelReservedInstancesListingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelReservedInstancesListingRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_P_H
 #define QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "closeinstancepublicportsrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class CloseInstancePublicPortsRequest;
+
+class QTAWS_EXPORT CloseInstancePublicPortsRequestPrivate : public LightsailPrivate {
+
+public:
+    CloseInstancePublicPortsRequestPrivate(const Lightsail::Action action,
+                                   CloseInstancePublicPortsRequest * const q);
+    CloseInstancePublicPortsRequestPrivate(const CloseInstancePublicPortsRequestPrivate &other,
+                                   CloseInstancePublicPortsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CloseInstancePublicPortsRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

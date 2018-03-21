@@ -19,3 +19,107 @@
 
 #include "pollforjobsrequest.h"
 #include "pollforjobsrequest_p.h"
+#include "pollforjobsresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  PollForJobsRequest
+ *
+ * @brief  Implements CodePipeline PollForJobs requests.
+ *
+ * @see    CodePipelineClient::pollForJobs
+ */
+
+/**
+ * @brief  Constructs a new PollForJobsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PollForJobsResponse::PollForJobsResponse(
+
+/**
+ * @brief  Constructs a new PollForJobsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PollForJobsRequest::PollForJobsRequest(const PollForJobsRequest &other)
+    : CodePipelineRequest(new PollForJobsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PollForJobsRequest object.
+ */
+PollForJobsRequest::PollForJobsRequest()
+    : CodePipelineRequest(new PollForJobsRequestPrivate(CodePipelineRequest::PollForJobsAction, this))
+{
+
+}
+
+bool PollForJobsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PollForJobsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PollForJobsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * PollForJobsRequest::response(QNetworkReply * const reply) const
+{
+    return new PollForJobsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PollForJobsRequestPrivate
+ *
+ * @brief  Private implementation for PollForJobsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForJobsRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public PollForJobsRequest instance.
+ */
+PollForJobsRequestPrivate::PollForJobsRequestPrivate(
+    const CodePipelineRequest::Action action, PollForJobsRequest * const q)
+    : PollForJobsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PollForJobsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PollForJobsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PollForJobsRequest instance.
+ */
+PollForJobsRequestPrivate::PollForJobsRequestPrivate(
+    const PollForJobsRequestPrivate &other, PollForJobsRequest * const q)
+    : PollForJobsPrivate(other, q)
+{
+
+}

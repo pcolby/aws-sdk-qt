@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETIDENTITYPOLICIESREQUEST_P_H
 #define QTAWS_GETIDENTITYPOLICIESREQUEST_P_H
 
+#include "ses_p.h"
+#include "getidentitypoliciesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityPoliciesRequest;
+
+class QTAWS_EXPORT GetIdentityPoliciesRequestPrivate : public SESPrivate {
+
+public:
+    GetIdentityPoliciesRequestPrivate(const SES::Action action,
+                                   GetIdentityPoliciesRequest * const q);
+    GetIdentityPoliciesRequestPrivate(const GetIdentityPoliciesRequestPrivate &other,
+                                   GetIdentityPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityPoliciesRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeexporttasksrequest.h"
 #include "describeexporttasksrequest_p.h"
+#include "describeexporttasksresponse.h"
+#include "applicationdiscoveryservicerequest_p.h"
+
+namespace AWS {
+namespace ApplicationDiscoveryService {
+
+/**
+ * @class  DescribeExportTasksRequest
+ *
+ * @brief  Implements ApplicationDiscoveryService DescribeExportTasks requests.
+ *
+ * @see    ApplicationDiscoveryServiceClient::describeExportTasks
+ */
+
+/**
+ * @brief  Constructs a new DescribeExportTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeExportTasksResponse::DescribeExportTasksResponse(
+
+/**
+ * @brief  Constructs a new DescribeExportTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeExportTasksRequest::DescribeExportTasksRequest(const DescribeExportTasksRequest &other)
+    : ApplicationDiscoveryServiceRequest(new DescribeExportTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeExportTasksRequest object.
+ */
+DescribeExportTasksRequest::DescribeExportTasksRequest()
+    : ApplicationDiscoveryServiceRequest(new DescribeExportTasksRequestPrivate(ApplicationDiscoveryServiceRequest::DescribeExportTasksAction, this))
+{
+
+}
+
+bool DescribeExportTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeExportTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeExportTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationDiscoveryServiceClient::send
+ */
+AwsAbstractResponse * DescribeExportTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeExportTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeExportTasksRequestPrivate
+ *
+ * @brief  Private implementation for DescribeExportTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExportTasksRequestPrivate object.
+ *
+ * @param  action  ApplicationDiscoveryService action being performed.
+ * @param  q       Pointer to this object's public DescribeExportTasksRequest instance.
+ */
+DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
+    const ApplicationDiscoveryServiceRequest::Action action, DescribeExportTasksRequest * const q)
+    : DescribeExportTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeExportTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeExportTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeExportTasksRequest instance.
+ */
+DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
+    const DescribeExportTasksRequestPrivate &other, DescribeExportTasksRequest * const q)
+    : DescribeExportTasksPrivate(other, q)
+{
+
+}

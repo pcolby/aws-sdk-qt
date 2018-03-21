@@ -19,3 +19,107 @@
 
 #include "admincreateuserrequest.h"
 #include "admincreateuserrequest_p.h"
+#include "admincreateuserresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminCreateUserRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminCreateUser requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminCreateUser
+ */
+
+/**
+ * @brief  Constructs a new AdminCreateUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminCreateUserResponse::AdminCreateUserResponse(
+
+/**
+ * @brief  Constructs a new AdminCreateUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminCreateUserRequest::AdminCreateUserRequest(const AdminCreateUserRequest &other)
+    : CognitoIdentityProviderRequest(new AdminCreateUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminCreateUserRequest object.
+ */
+AdminCreateUserRequest::AdminCreateUserRequest()
+    : CognitoIdentityProviderRequest(new AdminCreateUserRequestPrivate(CognitoIdentityProviderRequest::AdminCreateUserAction, this))
+{
+
+}
+
+bool AdminCreateUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminCreateUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminCreateUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminCreateUserRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminCreateUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminCreateUserRequestPrivate
+ *
+ * @brief  Private implementation for AdminCreateUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminCreateUserRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminCreateUserRequest instance.
+ */
+AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminCreateUserRequest * const q)
+    : AdminCreateUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminCreateUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminCreateUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminCreateUserRequest instance.
+ */
+AdminCreateUserRequestPrivate::AdminCreateUserRequestPrivate(
+    const AdminCreateUserRequestPrivate &other, AdminCreateUserRequest * const q)
+    : AdminCreateUserPrivate(other, q)
+{
+
+}

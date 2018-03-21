@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONDITIONALFORWARDERSREQUEST_P_H
 #define QTAWS_DESCRIBECONDITIONALFORWARDERSREQUEST_P_H
 
+#include "directoryservice_p.h"
+#include "describeconditionalforwardersrequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DescribeConditionalForwardersRequest;
+
+class QTAWS_EXPORT DescribeConditionalForwardersRequestPrivate : public DirectoryServicePrivate {
+
+public:
+    DescribeConditionalForwardersRequestPrivate(const DirectoryService::Action action,
+                                   DescribeConditionalForwardersRequest * const q);
+    DescribeConditionalForwardersRequestPrivate(const DescribeConditionalForwardersRequestPrivate &other,
+                                   DescribeConditionalForwardersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConditionalForwardersRequest)
+
+};
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

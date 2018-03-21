@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNTAGSTREAMREQUEST_P_H
 #define QTAWS_UNTAGSTREAMREQUEST_P_H
 
+#include "kinesisvideo_p.h"
+#include "untagstreamrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class UntagStreamRequest;
+
+class QTAWS_EXPORT UntagStreamRequestPrivate : public KinesisVideoPrivate {
+
+public:
+    UntagStreamRequestPrivate(const KinesisVideo::Action action,
+                                   UntagStreamRequest * const q);
+    UntagStreamRequestPrivate(const UntagStreamRequestPrivate &other,
+                                   UntagStreamRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UntagStreamRequest)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

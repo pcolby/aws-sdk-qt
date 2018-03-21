@@ -19,3 +19,107 @@
 
 #include "getdomainsrequest.h"
 #include "getdomainsrequest_p.h"
+#include "getdomainsresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetDomainsRequest
+ *
+ * @brief  Implements Lightsail GetDomains requests.
+ *
+ * @see    LightsailClient::getDomains
+ */
+
+/**
+ * @brief  Constructs a new GetDomainsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDomainsResponse::GetDomainsResponse(
+
+/**
+ * @brief  Constructs a new GetDomainsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDomainsRequest::GetDomainsRequest(const GetDomainsRequest &other)
+    : LightsailRequest(new GetDomainsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDomainsRequest object.
+ */
+GetDomainsRequest::GetDomainsRequest()
+    : LightsailRequest(new GetDomainsRequestPrivate(LightsailRequest::GetDomainsAction, this))
+{
+
+}
+
+bool GetDomainsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDomainsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDomainsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetDomainsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDomainsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDomainsRequestPrivate
+ *
+ * @brief  Private implementation for GetDomainsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainsRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetDomainsRequest instance.
+ */
+GetDomainsRequestPrivate::GetDomainsRequestPrivate(
+    const LightsailRequest::Action action, GetDomainsRequest * const q)
+    : GetDomainsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDomainsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDomainsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDomainsRequest instance.
+ */
+GetDomainsRequestPrivate::GetDomainsRequestPrivate(
+    const GetDomainsRequestPrivate &other, GetDomainsRequest * const q)
+    : GetDomainsPrivate(other, q)
+{
+
+}

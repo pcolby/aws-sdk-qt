@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTGROUPPOLICYREQUEST_H
 #define QTAWS_PUTGROUPPOLICYREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutGroupPolicyRequestPrivate;
+
+class QTAWS_EXPORT PutGroupPolicyRequest : public IAMRequest {
+
+public:
+    PutGroupPolicyRequest(const PutGroupPolicyRequest &other);
+    PutGroupPolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutGroupPolicyRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

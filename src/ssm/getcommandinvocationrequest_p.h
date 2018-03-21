@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCOMMANDINVOCATIONREQUEST_P_H
 #define QTAWS_GETCOMMANDINVOCATIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getcommandinvocationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetCommandInvocationRequest;
+
+class QTAWS_EXPORT GetCommandInvocationRequestPrivate : public SSMPrivate {
+
+public:
+    GetCommandInvocationRequestPrivate(const SSM::Action action,
+                                   GetCommandInvocationRequest * const q);
+    GetCommandInvocationRequestPrivate(const GetCommandInvocationRequestPrivate &other,
+                                   GetCommandInvocationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCommandInvocationRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

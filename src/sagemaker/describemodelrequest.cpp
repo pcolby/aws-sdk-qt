@@ -19,3 +19,107 @@
 
 #include "describemodelrequest.h"
 #include "describemodelrequest_p.h"
+#include "describemodelresponse.h"
+#include "sagemakerrequest_p.h"
+
+namespace AWS {
+namespace SageMaker {
+
+/**
+ * @class  DescribeModelRequest
+ *
+ * @brief  Implements SageMaker DescribeModel requests.
+ *
+ * @see    SageMakerClient::describeModel
+ */
+
+/**
+ * @brief  Constructs a new DescribeModelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeModelResponse::DescribeModelResponse(
+
+/**
+ * @brief  Constructs a new DescribeModelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeModelRequest::DescribeModelRequest(const DescribeModelRequest &other)
+    : SageMakerRequest(new DescribeModelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeModelRequest object.
+ */
+DescribeModelRequest::DescribeModelRequest()
+    : SageMakerRequest(new DescribeModelRequestPrivate(SageMakerRequest::DescribeModelAction, this))
+{
+
+}
+
+bool DescribeModelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeModelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeModelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SageMakerClient::send
+ */
+AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeModelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeModelRequestPrivate
+ *
+ * @brief  Private implementation for DescribeModelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeModelRequestPrivate object.
+ *
+ * @param  action  SageMaker action being performed.
+ * @param  q       Pointer to this object's public DescribeModelRequest instance.
+ */
+DescribeModelRequestPrivate::DescribeModelRequestPrivate(
+    const SageMakerRequest::Action action, DescribeModelRequest * const q)
+    : DescribeModelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeModelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeModelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeModelRequest instance.
+ */
+DescribeModelRequestPrivate::DescribeModelRequestPrivate(
+    const DescribeModelRequestPrivate &other, DescribeModelRequest * const q)
+    : DescribeModelPrivate(other, q)
+{
+
+}

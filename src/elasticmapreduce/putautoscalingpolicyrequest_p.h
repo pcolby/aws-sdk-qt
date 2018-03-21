@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYREQUEST_P_H
 #define QTAWS_PUTAUTOSCALINGPOLICYREQUEST_P_H
 
+#include "emr_p.h"
+#include "putautoscalingpolicyrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class PutAutoScalingPolicyRequest;
+
+class QTAWS_EXPORT PutAutoScalingPolicyRequestPrivate : public EMRPrivate {
+
+public:
+    PutAutoScalingPolicyRequestPrivate(const EMR::Action action,
+                                   PutAutoScalingPolicyRequest * const q);
+    PutAutoScalingPolicyRequestPrivate(const PutAutoScalingPolicyRequestPrivate &other,
+                                   PutAutoScalingPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutAutoScalingPolicyRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

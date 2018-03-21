@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYINSTANCEFLEETREQUEST_P_H
 #define QTAWS_MODIFYINSTANCEFLEETREQUEST_P_H
 
+#include "emr_p.h"
+#include "modifyinstancefleetrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ModifyInstanceFleetRequest;
+
+class QTAWS_EXPORT ModifyInstanceFleetRequestPrivate : public EMRPrivate {
+
+public:
+    ModifyInstanceFleetRequestPrivate(const EMR::Action action,
+                                   ModifyInstanceFleetRequest * const q);
+    ModifyInstanceFleetRequestPrivate(const ModifyInstanceFleetRequestPrivate &other,
+                                   ModifyInstanceFleetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyInstanceFleetRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

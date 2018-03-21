@@ -19,3 +19,107 @@
 
 #include "updateapnsvoipsandboxchannelrequest.h"
 #include "updateapnsvoipsandboxchannelrequest_p.h"
+#include "updateapnsvoipsandboxchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateApnsVoipSandboxChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateApnsVoipSandboxChannel requests.
+ *
+ * @see    PinpointClient::updateApnsVoipSandboxChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateApnsVoipSandboxChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateApnsVoipSandboxChannelResponse::UpdateApnsVoipSandboxChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest(const UpdateApnsVoipSandboxChannelRequest &other)
+    : PinpointRequest(new UpdateApnsVoipSandboxChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequest object.
+ */
+UpdateApnsVoipSandboxChannelRequest::UpdateApnsVoipSandboxChannelRequest()
+    : PinpointRequest(new UpdateApnsVoipSandboxChannelRequestPrivate(PinpointRequest::UpdateApnsVoipSandboxChannelAction, this))
+{
+
+}
+
+bool UpdateApnsVoipSandboxChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateApnsVoipSandboxChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateApnsVoipSandboxChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateApnsVoipSandboxChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateApnsVoipSandboxChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateApnsVoipSandboxChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateApnsVoipSandboxChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateApnsVoipSandboxChannelRequest instance.
+ */
+UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateApnsVoipSandboxChannelRequest * const q)
+    : UpdateApnsVoipSandboxChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateApnsVoipSandboxChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateApnsVoipSandboxChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateApnsVoipSandboxChannelRequest instance.
+ */
+UpdateApnsVoipSandboxChannelRequestPrivate::UpdateApnsVoipSandboxChannelRequestPrivate(
+    const UpdateApnsVoipSandboxChannelRequestPrivate &other, UpdateApnsVoipSandboxChannelRequest * const q)
+    : UpdateApnsVoipSandboxChannelPrivate(other, q)
+{
+
+}

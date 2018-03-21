@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSREQUEST_H
 #define QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeMountTargetSecurityGroupsRequestPrivate;
+
+class QTAWS_EXPORT DescribeMountTargetSecurityGroupsRequest : public EFSRequest {
+
+public:
+    DescribeMountTargetSecurityGroupsRequest(const DescribeMountTargetSecurityGroupsRequest &other);
+    DescribeMountTargetSecurityGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMountTargetSecurityGroupsRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

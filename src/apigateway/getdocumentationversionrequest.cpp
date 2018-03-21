@@ -19,3 +19,107 @@
 
 #include "getdocumentationversionrequest.h"
 #include "getdocumentationversionrequest_p.h"
+#include "getdocumentationversionresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetDocumentationVersionRequest
+ *
+ * @brief  Implements APIGateway GetDocumentationVersion requests.
+ *
+ * @see    APIGatewayClient::getDocumentationVersion
+ */
+
+/**
+ * @brief  Constructs a new GetDocumentationVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetDocumentationVersionResponse::GetDocumentationVersionResponse(
+
+/**
+ * @brief  Constructs a new GetDocumentationVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetDocumentationVersionRequest::GetDocumentationVersionRequest(const GetDocumentationVersionRequest &other)
+    : APIGatewayRequest(new GetDocumentationVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetDocumentationVersionRequest object.
+ */
+GetDocumentationVersionRequest::GetDocumentationVersionRequest()
+    : APIGatewayRequest(new GetDocumentationVersionRequestPrivate(APIGatewayRequest::GetDocumentationVersionAction, this))
+{
+
+}
+
+bool GetDocumentationVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetDocumentationVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetDocumentationVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetDocumentationVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new GetDocumentationVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetDocumentationVersionRequestPrivate
+ *
+ * @brief  Private implementation for GetDocumentationVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentationVersionRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetDocumentationVersionRequest instance.
+ */
+GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
+    const APIGatewayRequest::Action action, GetDocumentationVersionRequest * const q)
+    : GetDocumentationVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetDocumentationVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetDocumentationVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetDocumentationVersionRequest instance.
+ */
+GetDocumentationVersionRequestPrivate::GetDocumentationVersionRequestPrivate(
+    const GetDocumentationVersionRequestPrivate &other, GetDocumentationVersionRequest * const q)
+    : GetDocumentationVersionPrivate(other, q)
+{
+
+}

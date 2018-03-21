@@ -19,3 +19,107 @@
 
 #include "describeconfigurationsettingsrequest.h"
 #include "describeconfigurationsettingsrequest_p.h"
+#include "describeconfigurationsettingsresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  DescribeConfigurationSettingsRequest
+ *
+ * @brief  Implements ElasticBeanstalk DescribeConfigurationSettings requests.
+ *
+ * @see    ElasticBeanstalkClient::describeConfigurationSettings
+ */
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSettingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeConfigurationSettingsResponse::DescribeConfigurationSettingsResponse(
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSettingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeConfigurationSettingsRequest::DescribeConfigurationSettingsRequest(const DescribeConfigurationSettingsRequest &other)
+    : ElasticBeanstalkRequest(new DescribeConfigurationSettingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeConfigurationSettingsRequest object.
+ */
+DescribeConfigurationSettingsRequest::DescribeConfigurationSettingsRequest()
+    : ElasticBeanstalkRequest(new DescribeConfigurationSettingsRequestPrivate(ElasticBeanstalkRequest::DescribeConfigurationSettingsAction, this))
+{
+
+}
+
+bool DescribeConfigurationSettingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeConfigurationSettingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeConfigurationSettingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * DescribeConfigurationSettingsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeConfigurationSettingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeConfigurationSettingsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeConfigurationSettingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationSettingsRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public DescribeConfigurationSettingsRequest instance.
+ */
+DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, DescribeConfigurationSettingsRequest * const q)
+    : DescribeConfigurationSettingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeConfigurationSettingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeConfigurationSettingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeConfigurationSettingsRequest instance.
+ */
+DescribeConfigurationSettingsRequestPrivate::DescribeConfigurationSettingsRequestPrivate(
+    const DescribeConfigurationSettingsRequestPrivate &other, DescribeConfigurationSettingsRequest * const q)
+    : DescribeConfigurationSettingsPrivate(other, q)
+{
+
+}

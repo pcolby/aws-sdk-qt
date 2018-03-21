@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTUSERPOLICYREQUEST_P_H
 #define QTAWS_PUTUSERPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "putuserpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class PutUserPolicyRequest;
+
+class QTAWS_EXPORT PutUserPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    PutUserPolicyRequestPrivate(const IAM::Action action,
+                                   PutUserPolicyRequest * const q);
+    PutUserPolicyRequestPrivate(const PutUserPolicyRequestPrivate &other,
+                                   PutUserPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutUserPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

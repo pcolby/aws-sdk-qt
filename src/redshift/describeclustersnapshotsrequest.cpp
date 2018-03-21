@@ -19,3 +19,107 @@
 
 #include "describeclustersnapshotsrequest.h"
 #include "describeclustersnapshotsrequest_p.h"
+#include "describeclustersnapshotsresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeClusterSnapshotsRequest
+ *
+ * @brief  Implements Redshift DescribeClusterSnapshots requests.
+ *
+ * @see    RedshiftClient::describeClusterSnapshots
+ */
+
+/**
+ * @brief  Constructs a new DescribeClusterSnapshotsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterSnapshotsResponse::DescribeClusterSnapshotsResponse(
+
+/**
+ * @brief  Constructs a new DescribeClusterSnapshotsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeClusterSnapshotsRequest::DescribeClusterSnapshotsRequest(const DescribeClusterSnapshotsRequest &other)
+    : RedshiftRequest(new DescribeClusterSnapshotsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeClusterSnapshotsRequest object.
+ */
+DescribeClusterSnapshotsRequest::DescribeClusterSnapshotsRequest()
+    : RedshiftRequest(new DescribeClusterSnapshotsRequestPrivate(RedshiftRequest::DescribeClusterSnapshotsAction, this))
+{
+
+}
+
+bool DescribeClusterSnapshotsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeClusterSnapshotsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeClusterSnapshotsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeClusterSnapshotsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeClusterSnapshotsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterSnapshotsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeClusterSnapshotsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterSnapshotsRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeClusterSnapshotsRequest instance.
+ */
+DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
+    const RedshiftRequest::Action action, DescribeClusterSnapshotsRequest * const q)
+    : DescribeClusterSnapshotsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterSnapshotsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeClusterSnapshotsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeClusterSnapshotsRequest instance.
+ */
+DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
+    const DescribeClusterSnapshotsRequestPrivate &other, DescribeClusterSnapshotsRequest * const q)
+    : DescribeClusterSnapshotsPrivate(other, q)
+{
+
+}

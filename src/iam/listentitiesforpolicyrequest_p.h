@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTENTITIESFORPOLICYREQUEST_P_H
 #define QTAWS_LISTENTITIESFORPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "listentitiesforpolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListEntitiesForPolicyRequest;
+
+class QTAWS_EXPORT ListEntitiesForPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    ListEntitiesForPolicyRequestPrivate(const IAM::Action action,
+                                   ListEntitiesForPolicyRequest * const q);
+    ListEntitiesForPolicyRequestPrivate(const ListEntitiesForPolicyRequestPrivate &other,
+                                   ListEntitiesForPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListEntitiesForPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

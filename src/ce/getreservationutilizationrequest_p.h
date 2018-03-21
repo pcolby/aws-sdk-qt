@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONREQUEST_P_H
 #define QTAWS_GETRESERVATIONUTILIZATIONREQUEST_P_H
 
+#include "costexplorer_p.h"
+#include "getreservationutilizationrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationUtilizationRequest;
+
+class QTAWS_EXPORT GetReservationUtilizationRequestPrivate : public CostExplorerPrivate {
+
+public:
+    GetReservationUtilizationRequestPrivate(const CostExplorer::Action action,
+                                   GetReservationUtilizationRequest * const q);
+    GetReservationUtilizationRequestPrivate(const GetReservationUtilizationRequestPrivate &other,
+                                   GetReservationUtilizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservationUtilizationRequest)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

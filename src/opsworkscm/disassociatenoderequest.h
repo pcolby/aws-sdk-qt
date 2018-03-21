@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATENODEREQUEST_H
 #define QTAWS_DISASSOCIATENODEREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DisassociateNodeRequestPrivate;
+
+class QTAWS_EXPORT DisassociateNodeRequest : public OpsWorksCMRequest {
+
+public:
+    DisassociateNodeRequest(const DisassociateNodeRequest &other);
+    DisassociateNodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateNodeRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

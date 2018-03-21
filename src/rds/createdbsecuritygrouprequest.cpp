@@ -19,3 +19,107 @@
 
 #include "createdbsecuritygrouprequest.h"
 #include "createdbsecuritygrouprequest_p.h"
+#include "createdbsecuritygroupresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  CreateDBSecurityGroupRequest
+ *
+ * @brief  Implements RDS CreateDBSecurityGroup requests.
+ *
+ * @see    RDSClient::createDBSecurityGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateDBSecurityGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateDBSecurityGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDBSecurityGroupRequest::CreateDBSecurityGroupRequest(const CreateDBSecurityGroupRequest &other)
+    : RDSRequest(new CreateDBSecurityGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDBSecurityGroupRequest object.
+ */
+CreateDBSecurityGroupRequest::CreateDBSecurityGroupRequest()
+    : RDSRequest(new CreateDBSecurityGroupRequestPrivate(RDSRequest::CreateDBSecurityGroupAction, this))
+{
+
+}
+
+bool CreateDBSecurityGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDBSecurityGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDBSecurityGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDBSecurityGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDBSecurityGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateDBSecurityGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSecurityGroupRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public CreateDBSecurityGroupRequest instance.
+ */
+CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
+    const RDSRequest::Action action, CreateDBSecurityGroupRequest * const q)
+    : CreateDBSecurityGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDBSecurityGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDBSecurityGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDBSecurityGroupRequest instance.
+ */
+CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
+    const CreateDBSecurityGroupRequestPrivate &other, CreateDBSecurityGroupRequest * const q)
+    : CreateDBSecurityGroupPrivate(other, q)
+{
+
+}

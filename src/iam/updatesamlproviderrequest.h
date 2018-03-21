@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESAMLPROVIDERREQUEST_H
 #define QTAWS_UPDATESAMLPROVIDERREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateSAMLProviderRequestPrivate;
+
+class QTAWS_EXPORT UpdateSAMLProviderRequest : public IAMRequest {
+
+public:
+    UpdateSAMLProviderRequest(const UpdateSAMLProviderRequest &other);
+    UpdateSAMLProviderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSAMLProviderRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

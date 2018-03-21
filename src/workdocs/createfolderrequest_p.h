@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEFOLDERREQUEST_P_H
 #define QTAWS_CREATEFOLDERREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "createfolderrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class CreateFolderRequest;
+
+class QTAWS_EXPORT CreateFolderRequestPrivate : public WorkDocsPrivate {
+
+public:
+    CreateFolderRequestPrivate(const WorkDocs::Action action,
+                                   CreateFolderRequest * const q);
+    CreateFolderRequestPrivate(const CreateFolderRequestPrivate &other,
+                                   CreateFolderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateFolderRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

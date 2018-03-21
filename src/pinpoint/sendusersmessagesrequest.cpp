@@ -19,3 +19,107 @@
 
 #include "sendusersmessagesrequest.h"
 #include "sendusersmessagesrequest_p.h"
+#include "sendusersmessagesresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  SendUsersMessagesRequest
+ *
+ * @brief  Implements Pinpoint SendUsersMessages requests.
+ *
+ * @see    PinpointClient::sendUsersMessages
+ */
+
+/**
+ * @brief  Constructs a new SendUsersMessagesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendUsersMessagesResponse::SendUsersMessagesResponse(
+
+/**
+ * @brief  Constructs a new SendUsersMessagesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendUsersMessagesRequest::SendUsersMessagesRequest(const SendUsersMessagesRequest &other)
+    : PinpointRequest(new SendUsersMessagesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendUsersMessagesRequest object.
+ */
+SendUsersMessagesRequest::SendUsersMessagesRequest()
+    : PinpointRequest(new SendUsersMessagesRequestPrivate(PinpointRequest::SendUsersMessagesAction, this))
+{
+
+}
+
+bool SendUsersMessagesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendUsersMessagesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendUsersMessagesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkReply * const reply) const
+{
+    return new SendUsersMessagesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendUsersMessagesRequestPrivate
+ *
+ * @brief  Private implementation for SendUsersMessagesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendUsersMessagesRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public SendUsersMessagesRequest instance.
+ */
+SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
+    const PinpointRequest::Action action, SendUsersMessagesRequest * const q)
+    : SendUsersMessagesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendUsersMessagesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendUsersMessagesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendUsersMessagesRequest instance.
+ */
+SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
+    const SendUsersMessagesRequestPrivate &other, SendUsersMessagesRequest * const q)
+    : SendUsersMessagesPrivate(other, q)
+{
+
+}

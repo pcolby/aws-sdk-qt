@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEREPOSITORIESREQUEST_P_H
 #define QTAWS_DESCRIBEREPOSITORIESREQUEST_P_H
 
+#include "ecr_p.h"
+#include "describerepositoriesrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class DescribeRepositoriesRequest;
+
+class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRPrivate {
+
+public:
+    DescribeRepositoriesRequestPrivate(const ECR::Action action,
+                                   DescribeRepositoriesRequest * const q);
+    DescribeRepositoriesRequestPrivate(const DescribeRepositoriesRequestPrivate &other,
+                                   DescribeRepositoriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRepositoriesRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

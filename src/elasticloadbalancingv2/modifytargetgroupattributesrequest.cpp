@@ -19,3 +19,107 @@
 
 #include "modifytargetgroupattributesrequest.h"
 #include "modifytargetgroupattributesrequest_p.h"
+#include "modifytargetgroupattributesresponse.h"
+#include "elasticloadbalancingv2request_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancingv2 {
+
+/**
+ * @class  ModifyTargetGroupAttributesRequest
+ *
+ * @brief  Implements ElasticLoadBalancingv2 ModifyTargetGroupAttributes requests.
+ *
+ * @see    ElasticLoadBalancingv2Client::modifyTargetGroupAttributes
+ */
+
+/**
+ * @brief  Constructs a new ModifyTargetGroupAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyTargetGroupAttributesResponse::ModifyTargetGroupAttributesResponse(
+
+/**
+ * @brief  Constructs a new ModifyTargetGroupAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyTargetGroupAttributesRequest::ModifyTargetGroupAttributesRequest(const ModifyTargetGroupAttributesRequest &other)
+    : ElasticLoadBalancingv2Request(new ModifyTargetGroupAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyTargetGroupAttributesRequest object.
+ */
+ModifyTargetGroupAttributesRequest::ModifyTargetGroupAttributesRequest()
+    : ElasticLoadBalancingv2Request(new ModifyTargetGroupAttributesRequestPrivate(ElasticLoadBalancingv2Request::ModifyTargetGroupAttributesAction, this))
+{
+
+}
+
+bool ModifyTargetGroupAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyTargetGroupAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyTargetGroupAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingv2Client::send
+ */
+AwsAbstractResponse * ModifyTargetGroupAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyTargetGroupAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyTargetGroupAttributesRequestPrivate
+ *
+ * @brief  Private implementation for ModifyTargetGroupAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyTargetGroupAttributesRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancingv2 action being performed.
+ * @param  q       Pointer to this object's public ModifyTargetGroupAttributesRequest instance.
+ */
+ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPrivate(
+    const ElasticLoadBalancingv2Request::Action action, ModifyTargetGroupAttributesRequest * const q)
+    : ModifyTargetGroupAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyTargetGroupAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyTargetGroupAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyTargetGroupAttributesRequest instance.
+ */
+ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPrivate(
+    const ModifyTargetGroupAttributesRequestPrivate &other, ModifyTargetGroupAttributesRequest * const q)
+    : ModifyTargetGroupAttributesPrivate(other, q)
+{
+
+}

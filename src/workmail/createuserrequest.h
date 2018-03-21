@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEUSERREQUEST_H
 #define QTAWS_CREATEUSERREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class CreateUserRequestPrivate;
+
+class QTAWS_EXPORT CreateUserRequest : public WorkMailRequest {
+
+public:
+    CreateUserRequest(const CreateUserRequest &other);
+    CreateUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateUserRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

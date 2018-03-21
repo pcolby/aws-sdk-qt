@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECOMMENTREQUEST_H
 #define QTAWS_DELETECOMMENTREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DeleteCommentRequestPrivate;
+
+class QTAWS_EXPORT DeleteCommentRequest : public WorkDocsRequest {
+
+public:
+    DeleteCommentRequest(const DeleteCommentRequest &other);
+    DeleteCommentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCommentRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

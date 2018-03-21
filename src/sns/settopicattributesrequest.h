@@ -20,4 +20,32 @@
 #ifndef QTAWS_SETTOPICATTRIBUTESREQUEST_H
 #define QTAWS_SETTOPICATTRIBUTESREQUEST_H
 
+#include "snsrequest.h"
+
+namespace AWS {
+
+namespace SNS {
+
+class SetTopicAttributesRequestPrivate;
+
+class QTAWS_EXPORT SetTopicAttributesRequest : public SNSRequest {
+
+public:
+    SetTopicAttributesRequest(const SetTopicAttributesRequest &other);
+    SetTopicAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SetTopicAttributesRequest)
+
+}
+
+} // namespace SNS
+} // namespace AWS
+
 #endif

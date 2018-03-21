@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETRIGGERREQUEST_H
 #define QTAWS_DELETETRIGGERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTriggerRequestPrivate;
+
+class QTAWS_EXPORT DeleteTriggerRequest : public GlueRequest {
+
+public:
+    DeleteTriggerRequest(const DeleteTriggerRequest &other);
+    DeleteTriggerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTriggerRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

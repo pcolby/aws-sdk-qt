@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHCLASSICLINKVPCREQUEST_H
 #define QTAWS_DETACHCLASSICLINKVPCREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DetachClassicLinkVpcRequestPrivate;
+
+class QTAWS_EXPORT DetachClassicLinkVpcRequest : public EC2Request {
+
+public:
+    DetachClassicLinkVpcRequest(const DetachClassicLinkVpcRequest &other);
+    DetachClassicLinkVpcRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachClassicLinkVpcRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

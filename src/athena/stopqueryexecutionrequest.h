@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPQUERYEXECUTIONREQUEST_H
 #define QTAWS_STOPQUERYEXECUTIONREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class StopQueryExecutionRequestPrivate;
+
+class QTAWS_EXPORT StopQueryExecutionRequest : public AthenaRequest {
+
+public:
+    StopQueryExecutionRequest(const StopQueryExecutionRequest &other);
+    StopQueryExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopQueryExecutionRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

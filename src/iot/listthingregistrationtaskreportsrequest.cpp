@@ -19,3 +19,107 @@
 
 #include "listthingregistrationtaskreportsrequest.h"
 #include "listthingregistrationtaskreportsrequest_p.h"
+#include "listthingregistrationtaskreportsresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListThingRegistrationTaskReportsRequest
+ *
+ * @brief  Implements IoT ListThingRegistrationTaskReports requests.
+ *
+ * @see    IoTClient::listThingRegistrationTaskReports
+ */
+
+/**
+ * @brief  Constructs a new ListThingRegistrationTaskReportsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListThingRegistrationTaskReportsResponse::ListThingRegistrationTaskReportsResponse(
+
+/**
+ * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest(const ListThingRegistrationTaskReportsRequest &other)
+    : IoTRequest(new ListThingRegistrationTaskReportsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListThingRegistrationTaskReportsRequest object.
+ */
+ListThingRegistrationTaskReportsRequest::ListThingRegistrationTaskReportsRequest()
+    : IoTRequest(new ListThingRegistrationTaskReportsRequestPrivate(IoTRequest::ListThingRegistrationTaskReportsAction, this))
+{
+
+}
+
+bool ListThingRegistrationTaskReportsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListThingRegistrationTaskReportsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListThingRegistrationTaskReportsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListThingRegistrationTaskReportsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListThingRegistrationTaskReportsRequestPrivate
+ *
+ * @brief  Private implementation for ListThingRegistrationTaskReportsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListThingRegistrationTaskReportsRequest instance.
+ */
+ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReportsRequestPrivate(
+    const IoTRequest::Action action, ListThingRegistrationTaskReportsRequest * const q)
+    : ListThingRegistrationTaskReportsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListThingRegistrationTaskReportsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListThingRegistrationTaskReportsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListThingRegistrationTaskReportsRequest instance.
+ */
+ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReportsRequestPrivate(
+    const ListThingRegistrationTaskReportsRequestPrivate &other, ListThingRegistrationTaskReportsRequest * const q)
+    : ListThingRegistrationTaskReportsPrivate(other, q)
+{
+
+}

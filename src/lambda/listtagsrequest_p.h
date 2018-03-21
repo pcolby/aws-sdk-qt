@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
+#include "lambda_p.h"
+#include "listtagsrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class ListTagsRequest;
+
+class QTAWS_EXPORT ListTagsRequestPrivate : public LambdaPrivate {
+
+public:
+    ListTagsRequestPrivate(const Lambda::Action action,
+                                   ListTagsRequest * const q);
+    ListTagsRequestPrivate(const ListTagsRequestPrivate &other,
+                                   ListTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

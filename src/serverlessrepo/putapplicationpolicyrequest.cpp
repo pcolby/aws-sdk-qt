@@ -19,3 +19,107 @@
 
 #include "putapplicationpolicyrequest.h"
 #include "putapplicationpolicyrequest_p.h"
+#include "putapplicationpolicyresponse.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
+
+namespace AWS {
+namespace ServerlessApplicationRepository {
+
+/**
+ * @class  PutApplicationPolicyRequest
+ *
+ * @brief  Implements ServerlessApplicationRepository PutApplicationPolicy requests.
+ *
+ * @see    ServerlessApplicationRepositoryClient::putApplicationPolicy
+ */
+
+/**
+ * @brief  Constructs a new PutApplicationPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutApplicationPolicyResponse::PutApplicationPolicyResponse(
+
+/**
+ * @brief  Constructs a new PutApplicationPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutApplicationPolicyRequest::PutApplicationPolicyRequest(const PutApplicationPolicyRequest &other)
+    : ServerlessApplicationRepositoryRequest(new PutApplicationPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutApplicationPolicyRequest object.
+ */
+PutApplicationPolicyRequest::PutApplicationPolicyRequest()
+    : ServerlessApplicationRepositoryRequest(new PutApplicationPolicyRequestPrivate(ServerlessApplicationRepositoryRequest::PutApplicationPolicyAction, this))
+{
+
+}
+
+bool PutApplicationPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutApplicationPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutApplicationPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServerlessApplicationRepositoryClient::send
+ */
+AwsAbstractResponse * PutApplicationPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutApplicationPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutApplicationPolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutApplicationPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutApplicationPolicyRequestPrivate object.
+ *
+ * @param  action  ServerlessApplicationRepository action being performed.
+ * @param  q       Pointer to this object's public PutApplicationPolicyRequest instance.
+ */
+PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
+    const ServerlessApplicationRepositoryRequest::Action action, PutApplicationPolicyRequest * const q)
+    : PutApplicationPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutApplicationPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutApplicationPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutApplicationPolicyRequest instance.
+ */
+PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
+    const PutApplicationPolicyRequestPrivate &other, PutApplicationPolicyRequest * const q)
+    : PutApplicationPolicyPrivate(other, q)
+{
+
+}

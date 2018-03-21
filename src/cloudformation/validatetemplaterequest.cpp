@@ -19,3 +19,107 @@
 
 #include "validatetemplaterequest.h"
 #include "validatetemplaterequest_p.h"
+#include "validatetemplateresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ValidateTemplateRequest
+ *
+ * @brief  Implements CloudFormation ValidateTemplate requests.
+ *
+ * @see    CloudFormationClient::validateTemplate
+ */
+
+/**
+ * @brief  Constructs a new ValidateTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ValidateTemplateResponse::ValidateTemplateResponse(
+
+/**
+ * @brief  Constructs a new ValidateTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ValidateTemplateRequest::ValidateTemplateRequest(const ValidateTemplateRequest &other)
+    : CloudFormationRequest(new ValidateTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ValidateTemplateRequest object.
+ */
+ValidateTemplateRequest::ValidateTemplateRequest()
+    : CloudFormationRequest(new ValidateTemplateRequestPrivate(CloudFormationRequest::ValidateTemplateAction, this))
+{
+
+}
+
+bool ValidateTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ValidateTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ValidateTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ValidateTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new ValidateTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ValidateTemplateRequestPrivate
+ *
+ * @brief  Private implementation for ValidateTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateTemplateRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ValidateTemplateRequest instance.
+ */
+ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
+    const CloudFormationRequest::Action action, ValidateTemplateRequest * const q)
+    : ValidateTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ValidateTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ValidateTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ValidateTemplateRequest instance.
+ */
+ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
+    const ValidateTemplateRequestPrivate &other, ValidateTemplateRequest * const q)
+    : ValidateTemplatePrivate(other, q)
+{
+
+}

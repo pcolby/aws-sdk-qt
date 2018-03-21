@@ -19,3 +19,107 @@
 
 #include "disablegatewayrequest.h"
 #include "disablegatewayrequest_p.h"
+#include "disablegatewayresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DisableGatewayRequest
+ *
+ * @brief  Implements StorageGateway DisableGateway requests.
+ *
+ * @see    StorageGatewayClient::disableGateway
+ */
+
+/**
+ * @brief  Constructs a new DisableGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisableGatewayResponse::DisableGatewayResponse(
+
+/**
+ * @brief  Constructs a new DisableGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisableGatewayRequest::DisableGatewayRequest(const DisableGatewayRequest &other)
+    : StorageGatewayRequest(new DisableGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisableGatewayRequest object.
+ */
+DisableGatewayRequest::DisableGatewayRequest()
+    : StorageGatewayRequest(new DisableGatewayRequestPrivate(StorageGatewayRequest::DisableGatewayAction, this))
+{
+
+}
+
+bool DisableGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisableGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisableGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new DisableGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisableGatewayRequestPrivate
+ *
+ * @brief  Private implementation for DisableGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableGatewayRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DisableGatewayRequest instance.
+ */
+DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
+    const StorageGatewayRequest::Action action, DisableGatewayRequest * const q)
+    : DisableGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisableGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisableGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisableGatewayRequest instance.
+ */
+DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
+    const DisableGatewayRequestPrivate &other, DisableGatewayRequest * const q)
+    : DisableGatewayPrivate(other, q)
+{
+
+}

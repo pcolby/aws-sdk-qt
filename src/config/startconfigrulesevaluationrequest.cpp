@@ -19,3 +19,107 @@
 
 #include "startconfigrulesevaluationrequest.h"
 #include "startconfigrulesevaluationrequest_p.h"
+#include "startconfigrulesevaluationresponse.h"
+#include "configservicerequest_p.h"
+
+namespace AWS {
+namespace ConfigService {
+
+/**
+ * @class  StartConfigRulesEvaluationRequest
+ *
+ * @brief  Implements ConfigService StartConfigRulesEvaluation requests.
+ *
+ * @see    ConfigServiceClient::startConfigRulesEvaluation
+ */
+
+/**
+ * @brief  Constructs a new StartConfigRulesEvaluationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartConfigRulesEvaluationResponse::StartConfigRulesEvaluationResponse(
+
+/**
+ * @brief  Constructs a new StartConfigRulesEvaluationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartConfigRulesEvaluationRequest::StartConfigRulesEvaluationRequest(const StartConfigRulesEvaluationRequest &other)
+    : ConfigServiceRequest(new StartConfigRulesEvaluationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartConfigRulesEvaluationRequest object.
+ */
+StartConfigRulesEvaluationRequest::StartConfigRulesEvaluationRequest()
+    : ConfigServiceRequest(new StartConfigRulesEvaluationRequestPrivate(ConfigServiceRequest::StartConfigRulesEvaluationAction, this))
+{
+
+}
+
+bool StartConfigRulesEvaluationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartConfigRulesEvaluationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartConfigRulesEvaluationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ConfigServiceClient::send
+ */
+AwsAbstractResponse * StartConfigRulesEvaluationRequest::response(QNetworkReply * const reply) const
+{
+    return new StartConfigRulesEvaluationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartConfigRulesEvaluationRequestPrivate
+ *
+ * @brief  Private implementation for StartConfigRulesEvaluationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartConfigRulesEvaluationRequestPrivate object.
+ *
+ * @param  action  ConfigService action being performed.
+ * @param  q       Pointer to this object's public StartConfigRulesEvaluationRequest instance.
+ */
+StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
+    const ConfigServiceRequest::Action action, StartConfigRulesEvaluationRequest * const q)
+    : StartConfigRulesEvaluationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartConfigRulesEvaluationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartConfigRulesEvaluationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartConfigRulesEvaluationRequest instance.
+ */
+StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
+    const StartConfigRulesEvaluationRequestPrivate &other, StartConfigRulesEvaluationRequest * const q)
+    : StartConfigRulesEvaluationPrivate(other, q)
+{
+
+}

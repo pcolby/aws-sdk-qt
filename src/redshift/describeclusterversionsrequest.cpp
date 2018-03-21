@@ -19,3 +19,107 @@
 
 #include "describeclusterversionsrequest.h"
 #include "describeclusterversionsrequest_p.h"
+#include "describeclusterversionsresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeClusterVersionsRequest
+ *
+ * @brief  Implements Redshift DescribeClusterVersions requests.
+ *
+ * @see    RedshiftClient::describeClusterVersions
+ */
+
+/**
+ * @brief  Constructs a new DescribeClusterVersionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeClusterVersionsResponse::DescribeClusterVersionsResponse(
+
+/**
+ * @brief  Constructs a new DescribeClusterVersionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeClusterVersionsRequest::DescribeClusterVersionsRequest(const DescribeClusterVersionsRequest &other)
+    : RedshiftRequest(new DescribeClusterVersionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeClusterVersionsRequest object.
+ */
+DescribeClusterVersionsRequest::DescribeClusterVersionsRequest()
+    : RedshiftRequest(new DescribeClusterVersionsRequestPrivate(RedshiftRequest::DescribeClusterVersionsAction, this))
+{
+
+}
+
+bool DescribeClusterVersionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeClusterVersionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeClusterVersionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeClusterVersionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeClusterVersionsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeClusterVersionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterVersionsRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeClusterVersionsRequest instance.
+ */
+DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
+    const RedshiftRequest::Action action, DescribeClusterVersionsRequest * const q)
+    : DescribeClusterVersionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeClusterVersionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeClusterVersionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeClusterVersionsRequest instance.
+ */
+DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
+    const DescribeClusterVersionsRequestPrivate &other, DescribeClusterVersionsRequest * const q)
+    : DescribeClusterVersionsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_QUERYREQUEST_H
 #define QTAWS_QUERYREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class QueryRequestPrivate;
+
+class QTAWS_EXPORT QueryRequest : public DynamoDBRequest {
+
+public:
+    QueryRequest(const QueryRequest &other);
+    QueryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(QueryRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

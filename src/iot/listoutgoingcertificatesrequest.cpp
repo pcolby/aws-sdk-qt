@@ -19,3 +19,107 @@
 
 #include "listoutgoingcertificatesrequest.h"
 #include "listoutgoingcertificatesrequest_p.h"
+#include "listoutgoingcertificatesresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListOutgoingCertificatesRequest
+ *
+ * @brief  Implements IoT ListOutgoingCertificates requests.
+ *
+ * @see    IoTClient::listOutgoingCertificates
+ */
+
+/**
+ * @brief  Constructs a new ListOutgoingCertificatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOutgoingCertificatesResponse::ListOutgoingCertificatesResponse(
+
+/**
+ * @brief  Constructs a new ListOutgoingCertificatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest(const ListOutgoingCertificatesRequest &other)
+    : IoTRequest(new ListOutgoingCertificatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOutgoingCertificatesRequest object.
+ */
+ListOutgoingCertificatesRequest::ListOutgoingCertificatesRequest()
+    : IoTRequest(new ListOutgoingCertificatesRequestPrivate(IoTRequest::ListOutgoingCertificatesAction, this))
+{
+
+}
+
+bool ListOutgoingCertificatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOutgoingCertificatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOutgoingCertificatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOutgoingCertificatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOutgoingCertificatesRequestPrivate
+ *
+ * @brief  Private implementation for ListOutgoingCertificatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListOutgoingCertificatesRequest instance.
+ */
+ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
+    const IoTRequest::Action action, ListOutgoingCertificatesRequest * const q)
+    : ListOutgoingCertificatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingCertificatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOutgoingCertificatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOutgoingCertificatesRequest instance.
+ */
+ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
+    const ListOutgoingCertificatesRequestPrivate &other, ListOutgoingCertificatesRequest * const q)
+    : ListOutgoingCertificatesPrivate(other, q)
+{
+
+}

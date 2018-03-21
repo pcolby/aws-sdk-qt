@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETHOSTRESERVATIONPURCHASEPREVIEWREQUEST_H
 #define QTAWS_GETHOSTRESERVATIONPURCHASEPREVIEWREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetHostReservationPurchasePreviewRequestPrivate;
+
+class QTAWS_EXPORT GetHostReservationPurchasePreviewRequest : public EC2Request {
+
+public:
+    GetHostReservationPurchasePreviewRequest(const GetHostReservationPurchasePreviewRequest &other);
+    GetHostReservationPurchasePreviewRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetHostReservationPurchasePreviewRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

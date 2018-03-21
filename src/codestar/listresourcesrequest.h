@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCESREQUEST_H
 #define QTAWS_LISTRESOURCESREQUEST_H
 
+#include "codestarrequest.h"
+
+namespace AWS {
+
+namespace CodeStar {
+
+class ListResourcesRequestPrivate;
+
+class QTAWS_EXPORT ListResourcesRequest : public CodeStarRequest {
+
+public:
+    ListResourcesRequest(const ListResourcesRequest &other);
+    ListResourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourcesRequest)
+
+}
+
+} // namespace CodeStar
+} // namespace AWS
+
 #endif

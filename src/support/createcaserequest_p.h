@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECASEREQUEST_P_H
 #define QTAWS_CREATECASEREQUEST_P_H
 
+#include "support_p.h"
+#include "createcaserequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class CreateCaseRequest;
+
+class QTAWS_EXPORT CreateCaseRequestPrivate : public SupportPrivate {
+
+public:
+    CreateCaseRequestPrivate(const Support::Action action,
+                                   CreateCaseRequest * const q);
+    CreateCaseRequestPrivate(const CreateCaseRequestPrivate &other,
+                                   CreateCaseRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCaseRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

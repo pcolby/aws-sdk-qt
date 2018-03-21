@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEREPOSITORYREQUEST_H
 #define QTAWS_CREATEREPOSITORYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class CreateRepositoryRequestPrivate;
+
+class QTAWS_EXPORT CreateRepositoryRequest : public ECRRequest {
+
+public:
+    CreateRepositoryRequest(const CreateRepositoryRequest &other);
+    CreateRepositoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateRepositoryRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEORIGINENDPOINTREQUEST_H
 #define QTAWS_CREATEORIGINENDPOINTREQUEST_H
 
+#include "mediapackagerequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class CreateOriginEndpointRequestPrivate;
+
+class QTAWS_EXPORT CreateOriginEndpointRequest : public MediaPackageRequest {
+
+public:
+    CreateOriginEndpointRequest(const CreateOriginEndpointRequest &other);
+    CreateOriginEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateOriginEndpointRequest)
+
+}
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "invitemembersrequest.h"
 #include "invitemembersrequest_p.h"
+#include "invitemembersresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  InviteMembersRequest
+ *
+ * @brief  Implements GuardDuty InviteMembers requests.
+ *
+ * @see    GuardDutyClient::inviteMembers
+ */
+
+/**
+ * @brief  Constructs a new InviteMembersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InviteMembersResponse::InviteMembersResponse(
+
+/**
+ * @brief  Constructs a new InviteMembersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InviteMembersRequest::InviteMembersRequest(const InviteMembersRequest &other)
+    : GuardDutyRequest(new InviteMembersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InviteMembersRequest object.
+ */
+InviteMembersRequest::InviteMembersRequest()
+    : GuardDutyRequest(new InviteMembersRequestPrivate(GuardDutyRequest::InviteMembersAction, this))
+{
+
+}
+
+bool InviteMembersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InviteMembersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InviteMembersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply * const reply) const
+{
+    return new InviteMembersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InviteMembersRequestPrivate
+ *
+ * @brief  Private implementation for InviteMembersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InviteMembersRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public InviteMembersRequest instance.
+ */
+InviteMembersRequestPrivate::InviteMembersRequestPrivate(
+    const GuardDutyRequest::Action action, InviteMembersRequest * const q)
+    : InviteMembersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InviteMembersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InviteMembersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InviteMembersRequest instance.
+ */
+InviteMembersRequestPrivate::InviteMembersRequestPrivate(
+    const InviteMembersRequestPrivate &other, InviteMembersRequest * const q)
+    : InviteMembersPrivate(other, q)
+{
+
+}

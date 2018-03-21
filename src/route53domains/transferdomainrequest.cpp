@@ -19,3 +19,107 @@
 
 #include "transferdomainrequest.h"
 #include "transferdomainrequest_p.h"
+#include "transferdomainresponse.h"
+#include "route53domainsrequest_p.h"
+
+namespace AWS {
+namespace Route53Domains {
+
+/**
+ * @class  TransferDomainRequest
+ *
+ * @brief  Implements Route53Domains TransferDomain requests.
+ *
+ * @see    Route53DomainsClient::transferDomain
+ */
+
+/**
+ * @brief  Constructs a new TransferDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TransferDomainResponse::TransferDomainResponse(
+
+/**
+ * @brief  Constructs a new TransferDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TransferDomainRequest::TransferDomainRequest(const TransferDomainRequest &other)
+    : Route53DomainsRequest(new TransferDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TransferDomainRequest object.
+ */
+TransferDomainRequest::TransferDomainRequest()
+    : Route53DomainsRequest(new TransferDomainRequestPrivate(Route53DomainsRequest::TransferDomainAction, this))
+{
+
+}
+
+bool TransferDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TransferDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TransferDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53DomainsClient::send
+ */
+AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new TransferDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TransferDomainRequestPrivate
+ *
+ * @brief  Private implementation for TransferDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TransferDomainRequestPrivate object.
+ *
+ * @param  action  Route53Domains action being performed.
+ * @param  q       Pointer to this object's public TransferDomainRequest instance.
+ */
+TransferDomainRequestPrivate::TransferDomainRequestPrivate(
+    const Route53DomainsRequest::Action action, TransferDomainRequest * const q)
+    : TransferDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TransferDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TransferDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TransferDomainRequest instance.
+ */
+TransferDomainRequestPrivate::TransferDomainRequestPrivate(
+    const TransferDomainRequestPrivate &other, TransferDomainRequest * const q)
+    : TransferDomainPrivate(other, q)
+{
+
+}

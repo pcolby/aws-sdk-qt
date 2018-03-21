@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYNETWORKINTERFACEATTRIBUTEREQUEST_H
 #define QTAWS_MODIFYNETWORKINTERFACEATTRIBUTEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ModifyNetworkInterfaceAttributeRequestPrivate;
+
+class QTAWS_EXPORT ModifyNetworkInterfaceAttributeRequest : public EC2Request {
+
+public:
+    ModifyNetworkInterfaceAttributeRequest(const ModifyNetworkInterfaceAttributeRequest &other);
+    ModifyNetworkInterfaceAttributeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyNetworkInterfaceAttributeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

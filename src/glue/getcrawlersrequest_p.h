@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCRAWLERSREQUEST_P_H
 #define QTAWS_GETCRAWLERSREQUEST_P_H
 
+#include "glue_p.h"
+#include "getcrawlersrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class GetCrawlersRequest;
+
+class QTAWS_EXPORT GetCrawlersRequestPrivate : public GluePrivate {
+
+public:
+    GetCrawlersRequestPrivate(const Glue::Action action,
+                                   GetCrawlersRequest * const q);
+    GetCrawlersRequestPrivate(const GetCrawlersRequestPrivate &other,
+                                   GetCrawlersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCrawlersRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

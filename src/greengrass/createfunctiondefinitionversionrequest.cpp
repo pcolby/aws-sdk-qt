@@ -19,3 +19,107 @@
 
 #include "createfunctiondefinitionversionrequest.h"
 #include "createfunctiondefinitionversionrequest_p.h"
+#include "createfunctiondefinitionversionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  CreateFunctionDefinitionVersionRequest
+ *
+ * @brief  Implements Greengrass CreateFunctionDefinitionVersion requests.
+ *
+ * @see    GreengrassClient::createFunctionDefinitionVersion
+ */
+
+/**
+ * @brief  Constructs a new CreateFunctionDefinitionVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateFunctionDefinitionVersionResponse::CreateFunctionDefinitionVersionResponse(
+
+/**
+ * @brief  Constructs a new CreateFunctionDefinitionVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateFunctionDefinitionVersionRequest::CreateFunctionDefinitionVersionRequest(const CreateFunctionDefinitionVersionRequest &other)
+    : GreengrassRequest(new CreateFunctionDefinitionVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateFunctionDefinitionVersionRequest object.
+ */
+CreateFunctionDefinitionVersionRequest::CreateFunctionDefinitionVersionRequest()
+    : GreengrassRequest(new CreateFunctionDefinitionVersionRequestPrivate(GreengrassRequest::CreateFunctionDefinitionVersionAction, this))
+{
+
+}
+
+bool CreateFunctionDefinitionVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateFunctionDefinitionVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateFunctionDefinitionVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * CreateFunctionDefinitionVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateFunctionDefinitionVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateFunctionDefinitionVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreateFunctionDefinitionVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionDefinitionVersionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public CreateFunctionDefinitionVersionRequest instance.
+ */
+CreateFunctionDefinitionVersionRequestPrivate::CreateFunctionDefinitionVersionRequestPrivate(
+    const GreengrassRequest::Action action, CreateFunctionDefinitionVersionRequest * const q)
+    : CreateFunctionDefinitionVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateFunctionDefinitionVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateFunctionDefinitionVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateFunctionDefinitionVersionRequest instance.
+ */
+CreateFunctionDefinitionVersionRequestPrivate::CreateFunctionDefinitionVersionRequestPrivate(
+    const CreateFunctionDefinitionVersionRequestPrivate &other, CreateFunctionDefinitionVersionRequest * const q)
+    : CreateFunctionDefinitionVersionPrivate(other, q)
+{
+
+}

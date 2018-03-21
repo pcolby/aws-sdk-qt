@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTLOGEVENTSREQUEST_H
 #define QTAWS_PUTLOGEVENTSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class PutLogEventsRequestPrivate;
+
+class QTAWS_EXPORT PutLogEventsRequest : public CloudWatchLogsRequest {
+
+public:
+    PutLogEventsRequest(const PutLogEventsRequest &other);
+    PutLogEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutLogEventsRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_H
 #define QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListOrganizationalUnitsForParentRequestPrivate;
+
+class QTAWS_EXPORT ListOrganizationalUnitsForParentRequest : public OrganizationsRequest {
+
+public:
+    ListOrganizationalUnitsForParentRequest(const ListOrganizationalUnitsForParentRequest &other);
+    ListOrganizationalUnitsForParentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOrganizationalUnitsForParentRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

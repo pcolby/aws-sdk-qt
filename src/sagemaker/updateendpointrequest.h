@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEENDPOINTREQUEST_H
 #define QTAWS_UPDATEENDPOINTREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class UpdateEndpointRequestPrivate;
+
+class QTAWS_EXPORT UpdateEndpointRequest : public SageMakerRequest {
+
+public:
+    UpdateEndpointRequest(const UpdateEndpointRequest &other);
+    UpdateEndpointRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateEndpointRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

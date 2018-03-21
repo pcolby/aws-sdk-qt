@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPRODUCTREQUEST_P_H
 #define QTAWS_DELETEPRODUCTREQUEST_P_H
 
+#include "servicecatalog_p.h"
+#include "deleteproductrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DeleteProductRequest;
+
+class QTAWS_EXPORT DeleteProductRequestPrivate : public ServiceCatalogPrivate {
+
+public:
+    DeleteProductRequestPrivate(const ServiceCatalog::Action action,
+                                   DeleteProductRequest * const q);
+    DeleteProductRequestPrivate(const DeleteProductRequestPrivate &other,
+                                   DeleteProductRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProductRequest)
+
+};
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

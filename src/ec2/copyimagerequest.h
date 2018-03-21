@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYIMAGEREQUEST_H
 #define QTAWS_COPYIMAGEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CopyImageRequestPrivate;
+
+class QTAWS_EXPORT CopyImageRequest : public EC2Request {
+
+public:
+    CopyImageRequest(const CopyImageRequest &other);
+    CopyImageRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopyImageRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

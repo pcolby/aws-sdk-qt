@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECASESREQUEST_P_H
 #define QTAWS_DESCRIBECASESREQUEST_P_H
 
+#include "support_p.h"
+#include "describecasesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeCasesRequest;
+
+class QTAWS_EXPORT DescribeCasesRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeCasesRequestPrivate(const Support::Action action,
+                                   DescribeCasesRequest * const q);
+    DescribeCasesRequestPrivate(const DescribeCasesRequestPrivate &other,
+                                   DescribeCasesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeCasesRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

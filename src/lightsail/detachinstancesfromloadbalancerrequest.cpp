@@ -19,3 +19,107 @@
 
 #include "detachinstancesfromloadbalancerrequest.h"
 #include "detachinstancesfromloadbalancerrequest_p.h"
+#include "detachinstancesfromloadbalancerresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  DetachInstancesFromLoadBalancerRequest
+ *
+ * @brief  Implements Lightsail DetachInstancesFromLoadBalancer requests.
+ *
+ * @see    LightsailClient::detachInstancesFromLoadBalancer
+ */
+
+/**
+ * @brief  Constructs a new DetachInstancesFromLoadBalancerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse(
+
+/**
+ * @brief  Constructs a new DetachInstancesFromLoadBalancerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachInstancesFromLoadBalancerRequest::DetachInstancesFromLoadBalancerRequest(const DetachInstancesFromLoadBalancerRequest &other)
+    : LightsailRequest(new DetachInstancesFromLoadBalancerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachInstancesFromLoadBalancerRequest object.
+ */
+DetachInstancesFromLoadBalancerRequest::DetachInstancesFromLoadBalancerRequest()
+    : LightsailRequest(new DetachInstancesFromLoadBalancerRequestPrivate(LightsailRequest::DetachInstancesFromLoadBalancerAction, this))
+{
+
+}
+
+bool DetachInstancesFromLoadBalancerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachInstancesFromLoadBalancerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachInstancesFromLoadBalancerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * DetachInstancesFromLoadBalancerRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachInstancesFromLoadBalancerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachInstancesFromLoadBalancerRequestPrivate
+ *
+ * @brief  Private implementation for DetachInstancesFromLoadBalancerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInstancesFromLoadBalancerRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public DetachInstancesFromLoadBalancerRequest instance.
+ */
+DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRequestPrivate(
+    const LightsailRequest::Action action, DetachInstancesFromLoadBalancerRequest * const q)
+    : DetachInstancesFromLoadBalancerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachInstancesFromLoadBalancerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachInstancesFromLoadBalancerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachInstancesFromLoadBalancerRequest instance.
+ */
+DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRequestPrivate(
+    const DetachInstancesFromLoadBalancerRequestPrivate &other, DetachInstancesFromLoadBalancerRequest * const q)
+    : DetachInstancesFromLoadBalancerPrivate(other, q)
+{
+
+}

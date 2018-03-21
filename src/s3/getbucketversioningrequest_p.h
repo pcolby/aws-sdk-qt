@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETBUCKETVERSIONINGREQUEST_P_H
 #define QTAWS_GETBUCKETVERSIONINGREQUEST_P_H
 
+#include "s3_p.h"
+#include "getbucketversioningrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetBucketVersioningRequest;
+
+class QTAWS_EXPORT GetBucketVersioningRequestPrivate : public S3Private {
+
+public:
+    GetBucketVersioningRequestPrivate(const S3::Action action,
+                                   GetBucketVersioningRequest * const q);
+    GetBucketVersioningRequestPrivate(const GetBucketVersioningRequestPrivate &other,
+                                   GetBucketVersioningRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetBucketVersioningRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

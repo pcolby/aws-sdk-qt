@@ -19,3 +19,107 @@
 
 #include "describescalingactivitiesrequest.h"
 #include "describescalingactivitiesrequest_p.h"
+#include "describescalingactivitiesresponse.h"
+#include "applicationautoscalingrequest_p.h"
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DescribeScalingActivitiesRequest
+ *
+ * @brief  Implements ApplicationAutoScaling DescribeScalingActivities requests.
+ *
+ * @see    ApplicationAutoScalingClient::describeScalingActivities
+ */
+
+/**
+ * @brief  Constructs a new DescribeScalingActivitiesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingActivitiesResponse::DescribeScalingActivitiesResponse(
+
+/**
+ * @brief  Constructs a new DescribeScalingActivitiesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest(const DescribeScalingActivitiesRequest &other)
+    : ApplicationAutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeScalingActivitiesRequest object.
+ */
+DescribeScalingActivitiesRequest::DescribeScalingActivitiesRequest()
+    : ApplicationAutoScalingRequest(new DescribeScalingActivitiesRequestPrivate(ApplicationAutoScalingRequest::DescribeScalingActivitiesAction, this))
+{
+
+}
+
+bool DescribeScalingActivitiesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeScalingActivitiesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeScalingActivitiesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationAutoScalingClient::send
+ */
+AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeScalingActivitiesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingActivitiesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeScalingActivitiesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object.
+ *
+ * @param  action  ApplicationAutoScaling action being performed.
+ * @param  q       Pointer to this object's public DescribeScalingActivitiesRequest instance.
+ */
+DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
+    const ApplicationAutoScalingRequest::Action action, DescribeScalingActivitiesRequest * const q)
+    : DescribeScalingActivitiesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingActivitiesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeScalingActivitiesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeScalingActivitiesRequest instance.
+ */
+DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
+    const DescribeScalingActivitiesRequestPrivate &other, DescribeScalingActivitiesRequest * const q)
+    : DescribeScalingActivitiesPrivate(other, q)
+{
+
+}

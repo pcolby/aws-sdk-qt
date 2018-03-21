@@ -19,3 +19,107 @@
 
 #include "disassociatecreatedartifactrequest.h"
 #include "disassociatecreatedartifactrequest_p.h"
+#include "disassociatecreatedartifactresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DisassociateCreatedArtifactRequest
+ *
+ * @brief  Implements MigrationHub DisassociateCreatedArtifact requests.
+ *
+ * @see    MigrationHubClient::disassociateCreatedArtifact
+ */
+
+/**
+ * @brief  Constructs a new DisassociateCreatedArtifactResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
+
+/**
+ * @brief  Constructs a new DisassociateCreatedArtifactRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateCreatedArtifactRequest::DisassociateCreatedArtifactRequest(const DisassociateCreatedArtifactRequest &other)
+    : MigrationHubRequest(new DisassociateCreatedArtifactRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateCreatedArtifactRequest object.
+ */
+DisassociateCreatedArtifactRequest::DisassociateCreatedArtifactRequest()
+    : MigrationHubRequest(new DisassociateCreatedArtifactRequestPrivate(MigrationHubRequest::DisassociateCreatedArtifactAction, this))
+{
+
+}
+
+bool DisassociateCreatedArtifactRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateCreatedArtifactResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateCreatedArtifactResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateCreatedArtifactResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateCreatedArtifactRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateCreatedArtifactRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateCreatedArtifactRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public DisassociateCreatedArtifactRequest instance.
+ */
+DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPrivate(
+    const MigrationHubRequest::Action action, DisassociateCreatedArtifactRequest * const q)
+    : DisassociateCreatedArtifactPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateCreatedArtifactRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateCreatedArtifactRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateCreatedArtifactRequest instance.
+ */
+DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPrivate(
+    const DisassociateCreatedArtifactRequestPrivate &other, DisassociateCreatedArtifactRequest * const q)
+    : DisassociateCreatedArtifactPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "deleterolerequest.h"
 #include "deleterolerequest_p.h"
+#include "deleteroleresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteRoleRequest
+ *
+ * @brief  Implements IAM DeleteRole requests.
+ *
+ * @see    IAMClient::deleteRole
+ */
+
+/**
+ * @brief  Constructs a new DeleteRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRoleResponse::DeleteRoleResponse(
+
+/**
+ * @brief  Constructs a new DeleteRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRoleRequest::DeleteRoleRequest(const DeleteRoleRequest &other)
+    : IAMRequest(new DeleteRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRoleRequest object.
+ */
+DeleteRoleRequest::DeleteRoleRequest()
+    : IAMRequest(new DeleteRoleRequestPrivate(IAMRequest::DeleteRoleAction, this))
+{
+
+}
+
+bool DeleteRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRoleRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRoleRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteRoleRequest instance.
+ */
+DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
+    const IAMRequest::Action action, DeleteRoleRequest * const q)
+    : DeleteRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRoleRequest instance.
+ */
+DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
+    const DeleteRoleRequestPrivate &other, DeleteRoleRequest * const q)
+    : DeleteRolePrivate(other, q)
+{
+
+}

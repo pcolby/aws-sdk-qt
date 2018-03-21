@@ -19,3 +19,107 @@
 
 #include "describetablerequest.h"
 #include "describetablerequest_p.h"
+#include "describetableresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  DescribeTableRequest
+ *
+ * @brief  Implements DynamoDB DescribeTable requests.
+ *
+ * @see    DynamoDBClient::describeTable
+ */
+
+/**
+ * @brief  Constructs a new DescribeTableResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTableResponse::DescribeTableResponse(
+
+/**
+ * @brief  Constructs a new DescribeTableRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTableRequest::DescribeTableRequest(const DescribeTableRequest &other)
+    : DynamoDBRequest(new DescribeTableRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTableRequest object.
+ */
+DescribeTableRequest::DescribeTableRequest()
+    : DynamoDBRequest(new DescribeTableRequestPrivate(DynamoDBRequest::DescribeTableAction, this))
+{
+
+}
+
+bool DescribeTableRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTableResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTableResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * DescribeTableRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTableResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTableRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTableRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public DescribeTableRequest instance.
+ */
+DescribeTableRequestPrivate::DescribeTableRequestPrivate(
+    const DynamoDBRequest::Action action, DescribeTableRequest * const q)
+    : DescribeTablePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTableRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTableRequest instance.
+ */
+DescribeTableRequestPrivate::DescribeTableRequestPrivate(
+    const DescribeTableRequestPrivate &other, DescribeTableRequest * const q)
+    : DescribeTablePrivate(other, q)
+{
+
+}

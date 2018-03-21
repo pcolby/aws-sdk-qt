@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELUPDATESTACKREQUEST_P_H
 #define QTAWS_CANCELUPDATESTACKREQUEST_P_H
 
+#include "cloudformation_p.h"
+#include "cancelupdatestackrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class CancelUpdateStackRequest;
+
+class QTAWS_EXPORT CancelUpdateStackRequestPrivate : public CloudFormationPrivate {
+
+public:
+    CancelUpdateStackRequestPrivate(const CloudFormation::Action action,
+                                   CancelUpdateStackRequest * const q);
+    CancelUpdateStackRequestPrivate(const CancelUpdateStackRequestPrivate &other,
+                                   CancelUpdateStackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelUpdateStackRequest)
+
+};
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

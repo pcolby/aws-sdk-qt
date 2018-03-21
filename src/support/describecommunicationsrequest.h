@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECOMMUNICATIONSREQUEST_H
 #define QTAWS_DESCRIBECOMMUNICATIONSREQUEST_H
 
+#include "supportrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeCommunicationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeCommunicationsRequest : public SupportRequest {
+
+public:
+    DescribeCommunicationsRequest(const DescribeCommunicationsRequest &other);
+    DescribeCommunicationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCommunicationsRequest)
+
+}
+
+} // namespace Support
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createcertificatefromcsrrequest.h"
 #include "createcertificatefromcsrrequest_p.h"
+#include "createcertificatefromcsrresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreateCertificateFromCsrRequest
+ *
+ * @brief  Implements IoT CreateCertificateFromCsr requests.
+ *
+ * @see    IoTClient::createCertificateFromCsr
+ */
+
+/**
+ * @brief  Constructs a new CreateCertificateFromCsrResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
+
+/**
+ * @brief  Constructs a new CreateCertificateFromCsrRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest(const CreateCertificateFromCsrRequest &other)
+    : IoTRequest(new CreateCertificateFromCsrRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCertificateFromCsrRequest object.
+ */
+CreateCertificateFromCsrRequest::CreateCertificateFromCsrRequest()
+    : IoTRequest(new CreateCertificateFromCsrRequestPrivate(IoTRequest::CreateCertificateFromCsrAction, this))
+{
+
+}
+
+bool CreateCertificateFromCsrRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCertificateFromCsrResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCertificateFromCsrResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCertificateFromCsrResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCertificateFromCsrRequestPrivate
+ *
+ * @brief  Private implementation for CreateCertificateFromCsrRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CreateCertificateFromCsrRequest instance.
+ */
+CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
+    const IoTRequest::Action action, CreateCertificateFromCsrRequest * const q)
+    : CreateCertificateFromCsrPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCertificateFromCsrRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCertificateFromCsrRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCertificateFromCsrRequest instance.
+ */
+CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
+    const CreateCertificateFromCsrRequestPrivate &other, CreateCertificateFromCsrRequest * const q)
+    : CreateCertificateFromCsrPrivate(other, q)
+{
+
+}

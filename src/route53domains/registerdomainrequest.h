@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERDOMAINREQUEST_H
 #define QTAWS_REGISTERDOMAINREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class RegisterDomainRequestPrivate;
+
+class QTAWS_EXPORT RegisterDomainRequest : public Route53DomainsRequest {
+
+public:
+    RegisterDomainRequest(const RegisterDomainRequest &other);
+    RegisterDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterDomainRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_H
 #define QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateDomainNameserversRequestPrivate;
+
+class QTAWS_EXPORT UpdateDomainNameserversRequest : public Route53DomainsRequest {
+
+public:
+    UpdateDomainNameserversRequest(const UpdateDomainNameserversRequest &other);
+    UpdateDomainNameserversRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDomainNameserversRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

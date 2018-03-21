@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTBUCKETWEBSITEREQUEST_P_H
 #define QTAWS_PUTBUCKETWEBSITEREQUEST_P_H
 
+#include "s3_p.h"
+#include "putbucketwebsiterequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketWebsiteRequest;
+
+class QTAWS_EXPORT PutBucketWebsiteRequestPrivate : public S3Private {
+
+public:
+    PutBucketWebsiteRequestPrivate(const S3::Action action,
+                                   PutBucketWebsiteRequest * const q);
+    PutBucketWebsiteRequestPrivate(const PutBucketWebsiteRequestPrivate &other,
+                                   PutBucketWebsiteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutBucketWebsiteRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

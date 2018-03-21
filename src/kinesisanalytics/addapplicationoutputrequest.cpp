@@ -19,3 +19,107 @@
 
 #include "addapplicationoutputrequest.h"
 #include "addapplicationoutputrequest_p.h"
+#include "addapplicationoutputresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  AddApplicationOutputRequest
+ *
+ * @brief  Implements KinesisAnalytics AddApplicationOutput requests.
+ *
+ * @see    KinesisAnalyticsClient::addApplicationOutput
+ */
+
+/**
+ * @brief  Constructs a new AddApplicationOutputResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddApplicationOutputResponse::AddApplicationOutputResponse(
+
+/**
+ * @brief  Constructs a new AddApplicationOutputRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddApplicationOutputRequest::AddApplicationOutputRequest(const AddApplicationOutputRequest &other)
+    : KinesisAnalyticsRequest(new AddApplicationOutputRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddApplicationOutputRequest object.
+ */
+AddApplicationOutputRequest::AddApplicationOutputRequest()
+    : KinesisAnalyticsRequest(new AddApplicationOutputRequestPrivate(KinesisAnalyticsRequest::AddApplicationOutputAction, this))
+{
+
+}
+
+bool AddApplicationOutputRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddApplicationOutputResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddApplicationOutputResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * AddApplicationOutputRequest::response(QNetworkReply * const reply) const
+{
+    return new AddApplicationOutputResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddApplicationOutputRequestPrivate
+ *
+ * @brief  Private implementation for AddApplicationOutputRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationOutputRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public AddApplicationOutputRequest instance.
+ */
+AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, AddApplicationOutputRequest * const q)
+    : AddApplicationOutputPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddApplicationOutputRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddApplicationOutputRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddApplicationOutputRequest instance.
+ */
+AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
+    const AddApplicationOutputRequestPrivate &other, AddApplicationOutputRequest * const q)
+    : AddApplicationOutputPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONFIGURATIONTEMPLATEREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONTEMPLATEREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "deleteconfigurationtemplaterequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteConfigurationTemplateRequest;
+
+class QTAWS_EXPORT DeleteConfigurationTemplateRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DeleteConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DeleteConfigurationTemplateRequest * const q);
+    DeleteConfigurationTemplateRequestPrivate(const DeleteConfigurationTemplateRequestPrivate &other,
+                                   DeleteConfigurationTemplateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationTemplateRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

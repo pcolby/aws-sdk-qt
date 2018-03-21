@@ -19,3 +19,107 @@
 
 #include "executechangesetrequest.h"
 #include "executechangesetrequest_p.h"
+#include "executechangesetresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  ExecuteChangeSetRequest
+ *
+ * @brief  Implements CloudFormation ExecuteChangeSet requests.
+ *
+ * @see    CloudFormationClient::executeChangeSet
+ */
+
+/**
+ * @brief  Constructs a new ExecuteChangeSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ExecuteChangeSetResponse::ExecuteChangeSetResponse(
+
+/**
+ * @brief  Constructs a new ExecuteChangeSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ExecuteChangeSetRequest::ExecuteChangeSetRequest(const ExecuteChangeSetRequest &other)
+    : CloudFormationRequest(new ExecuteChangeSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ExecuteChangeSetRequest object.
+ */
+ExecuteChangeSetRequest::ExecuteChangeSetRequest()
+    : CloudFormationRequest(new ExecuteChangeSetRequestPrivate(CloudFormationRequest::ExecuteChangeSetAction, this))
+{
+
+}
+
+bool ExecuteChangeSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ExecuteChangeSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ExecuteChangeSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * ExecuteChangeSetRequest::response(QNetworkReply * const reply) const
+{
+    return new ExecuteChangeSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ExecuteChangeSetRequestPrivate
+ *
+ * @brief  Private implementation for ExecuteChangeSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecuteChangeSetRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public ExecuteChangeSetRequest instance.
+ */
+ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
+    const CloudFormationRequest::Action action, ExecuteChangeSetRequest * const q)
+    : ExecuteChangeSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ExecuteChangeSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ExecuteChangeSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ExecuteChangeSetRequest instance.
+ */
+ExecuteChangeSetRequestPrivate::ExecuteChangeSetRequestPrivate(
+    const ExecuteChangeSetRequestPrivate &other, ExecuteChangeSetRequest * const q)
+    : ExecuteChangeSetPrivate(other, q)
+{
+
+}

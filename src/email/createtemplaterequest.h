@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATETEMPLATEREQUEST_H
 #define QTAWS_CREATETEMPLATEREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateTemplateRequestPrivate;
+
+class QTAWS_EXPORT CreateTemplateRequest : public SESRequest {
+
+public:
+    CreateTemplateRequest(const CreateTemplateRequest &other);
+    CreateTemplateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateTemplateRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

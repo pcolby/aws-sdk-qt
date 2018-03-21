@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTMATCHBACKFILLREQUEST_P_H
 #define QTAWS_STARTMATCHBACKFILLREQUEST_P_H
 
+#include "gamelift_p.h"
+#include "startmatchbackfillrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class StartMatchBackfillRequest;
+
+class QTAWS_EXPORT StartMatchBackfillRequestPrivate : public GameLiftPrivate {
+
+public:
+    StartMatchBackfillRequestPrivate(const GameLift::Action action,
+                                   StartMatchBackfillRequest * const q);
+    StartMatchBackfillRequestPrivate(const StartMatchBackfillRequestPrivate &other,
+                                   StartMatchBackfillRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartMatchBackfillRequest)
+
+};
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

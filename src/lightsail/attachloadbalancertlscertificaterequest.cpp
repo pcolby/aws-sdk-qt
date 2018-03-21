@@ -19,3 +19,107 @@
 
 #include "attachloadbalancertlscertificaterequest.h"
 #include "attachloadbalancertlscertificaterequest_p.h"
+#include "attachloadbalancertlscertificateresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  AttachLoadBalancerTlsCertificateRequest
+ *
+ * @brief  Implements Lightsail AttachLoadBalancerTlsCertificate requests.
+ *
+ * @see    LightsailClient::attachLoadBalancerTlsCertificate
+ */
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerTlsCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AttachLoadBalancerTlsCertificateResponse::AttachLoadBalancerTlsCertificateResponse(
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AttachLoadBalancerTlsCertificateRequest::AttachLoadBalancerTlsCertificateRequest(const AttachLoadBalancerTlsCertificateRequest &other)
+    : LightsailRequest(new AttachLoadBalancerTlsCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequest object.
+ */
+AttachLoadBalancerTlsCertificateRequest::AttachLoadBalancerTlsCertificateRequest()
+    : LightsailRequest(new AttachLoadBalancerTlsCertificateRequestPrivate(LightsailRequest::AttachLoadBalancerTlsCertificateAction, this))
+{
+
+}
+
+bool AttachLoadBalancerTlsCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AttachLoadBalancerTlsCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AttachLoadBalancerTlsCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new AttachLoadBalancerTlsCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AttachLoadBalancerTlsCertificateRequestPrivate
+ *
+ * @brief  Private implementation for AttachLoadBalancerTlsCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public AttachLoadBalancerTlsCertificateRequest instance.
+ */
+AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificateRequestPrivate(
+    const LightsailRequest::Action action, AttachLoadBalancerTlsCertificateRequest * const q)
+    : AttachLoadBalancerTlsCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AttachLoadBalancerTlsCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AttachLoadBalancerTlsCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AttachLoadBalancerTlsCertificateRequest instance.
+ */
+AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificateRequestPrivate(
+    const AttachLoadBalancerTlsCertificateRequestPrivate &other, AttachLoadBalancerTlsCertificateRequest * const q)
+    : AttachLoadBalancerTlsCertificatePrivate(other, q)
+{
+
+}

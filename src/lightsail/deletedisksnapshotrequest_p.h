@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDISKSNAPSHOTREQUEST_P_H
 #define QTAWS_DELETEDISKSNAPSHOTREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "deletedisksnapshotrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DeleteDiskSnapshotRequest;
+
+class QTAWS_EXPORT DeleteDiskSnapshotRequestPrivate : public LightsailPrivate {
+
+public:
+    DeleteDiskSnapshotRequestPrivate(const Lightsail::Action action,
+                                   DeleteDiskSnapshotRequest * const q);
+    DeleteDiskSnapshotRequestPrivate(const DeleteDiskSnapshotRequestPrivate &other,
+                                   DeleteDiskSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDiskSnapshotRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

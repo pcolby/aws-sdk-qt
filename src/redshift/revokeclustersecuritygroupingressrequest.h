@@ -20,4 +20,32 @@
 #ifndef QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSREQUEST_H
 #define QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class RevokeClusterSecurityGroupIngressRequestPrivate;
+
+class QTAWS_EXPORT RevokeClusterSecurityGroupIngressRequest : public RedshiftRequest {
+
+public:
+    RevokeClusterSecurityGroupIngressRequest(const RevokeClusterSecurityGroupIngressRequest &other);
+    RevokeClusterSecurityGroupIngressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RevokeClusterSecurityGroupIngressRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

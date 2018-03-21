@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTFUNCTIONCONCURRENCYREQUEST_P_H
 #define QTAWS_PUTFUNCTIONCONCURRENCYREQUEST_P_H
 
+#include "lambda_p.h"
+#include "putfunctionconcurrencyrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class PutFunctionConcurrencyRequest;
+
+class QTAWS_EXPORT PutFunctionConcurrencyRequestPrivate : public LambdaPrivate {
+
+public:
+    PutFunctionConcurrencyRequestPrivate(const Lambda::Action action,
+                                   PutFunctionConcurrencyRequest * const q);
+    PutFunctionConcurrencyRequestPrivate(const PutFunctionConcurrencyRequestPrivate &other,
+                                   PutFunctionConcurrencyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutFunctionConcurrencyRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

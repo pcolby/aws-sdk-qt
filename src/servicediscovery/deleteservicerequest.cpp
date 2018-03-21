@@ -19,3 +19,107 @@
 
 #include "deleteservicerequest.h"
 #include "deleteservicerequest_p.h"
+#include "deleteserviceresponse.h"
+#include "servicediscoveryrequest_p.h"
+
+namespace AWS {
+namespace ServiceDiscovery {
+
+/**
+ * @class  DeleteServiceRequest
+ *
+ * @brief  Implements ServiceDiscovery DeleteService requests.
+ *
+ * @see    ServiceDiscoveryClient::deleteService
+ */
+
+/**
+ * @brief  Constructs a new DeleteServiceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServiceResponse::DeleteServiceResponse(
+
+/**
+ * @brief  Constructs a new DeleteServiceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteServiceRequest::DeleteServiceRequest(const DeleteServiceRequest &other)
+    : ServiceDiscoveryRequest(new DeleteServiceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteServiceRequest object.
+ */
+DeleteServiceRequest::DeleteServiceRequest()
+    : ServiceDiscoveryRequest(new DeleteServiceRequestPrivate(ServiceDiscoveryRequest::DeleteServiceAction, this))
+{
+
+}
+
+bool DeleteServiceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteServiceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteServiceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceDiscoveryClient::send
+ */
+AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteServiceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServiceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteServiceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceRequestPrivate object.
+ *
+ * @param  action  ServiceDiscovery action being performed.
+ * @param  q       Pointer to this object's public DeleteServiceRequest instance.
+ */
+DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
+    const ServiceDiscoveryRequest::Action action, DeleteServiceRequest * const q)
+    : DeleteServicePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteServiceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteServiceRequest instance.
+ */
+DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
+    const DeleteServiceRequestPrivate &other, DeleteServiceRequest * const q)
+    : DeleteServicePrivate(other, q)
+{
+
+}

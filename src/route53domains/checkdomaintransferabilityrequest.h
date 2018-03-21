@@ -20,4 +20,32 @@
 #ifndef QTAWS_CHECKDOMAINTRANSFERABILITYREQUEST_H
 #define QTAWS_CHECKDOMAINTRANSFERABILITYREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class CheckDomainTransferabilityRequestPrivate;
+
+class QTAWS_EXPORT CheckDomainTransferabilityRequest : public Route53DomainsRequest {
+
+public:
+    CheckDomainTransferabilityRequest(const CheckDomainTransferabilityRequest &other);
+    CheckDomainTransferabilityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CheckDomainTransferabilityRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

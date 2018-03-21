@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATELAYERREQUEST_H
 #define QTAWS_CREATELAYERREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class CreateLayerRequestPrivate;
+
+class QTAWS_EXPORT CreateLayerRequest : public OpsWorksRequest {
+
+public:
+    CreateLayerRequest(const CreateLayerRequest &other);
+    CreateLayerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateLayerRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

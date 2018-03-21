@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLEAWSSERVICEACCESSREQUEST_P_H
 #define QTAWS_DISABLEAWSSERVICEACCESSREQUEST_P_H
 
+#include "organizations_p.h"
+#include "disableawsserviceaccessrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DisableAWSServiceAccessRequest;
+
+class QTAWS_EXPORT DisableAWSServiceAccessRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DisableAWSServiceAccessRequestPrivate(const Organizations::Action action,
+                                   DisableAWSServiceAccessRequest * const q);
+    DisableAWSServiceAccessRequestPrivate(const DisableAWSServiceAccessRequestPrivate &other,
+                                   DisableAWSServiceAccessRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableAWSServiceAccessRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

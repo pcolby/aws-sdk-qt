@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTRESOURCETAGSREQUEST_P_H
 #define QTAWS_LISTRESOURCETAGSREQUEST_P_H
 
+#include "kms_p.h"
+#include "listresourcetagsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ListResourceTagsRequest;
+
+class QTAWS_EXPORT ListResourceTagsRequestPrivate : public KMSPrivate {
+
+public:
+    ListResourceTagsRequestPrivate(const KMS::Action action,
+                                   ListResourceTagsRequest * const q);
+    ListResourceTagsRequestPrivate(const ListResourceTagsRequestPrivate &other,
+                                   ListResourceTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListResourceTagsRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

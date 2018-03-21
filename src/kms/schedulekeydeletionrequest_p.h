@@ -20,4 +20,29 @@
 #ifndef QTAWS_SCHEDULEKEYDELETIONREQUEST_P_H
 #define QTAWS_SCHEDULEKEYDELETIONREQUEST_P_H
 
+#include "kms_p.h"
+#include "schedulekeydeletionrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class ScheduleKeyDeletionRequest;
+
+class QTAWS_EXPORT ScheduleKeyDeletionRequestPrivate : public KMSPrivate {
+
+public:
+    ScheduleKeyDeletionRequestPrivate(const KMS::Action action,
+                                   ScheduleKeyDeletionRequest * const q);
+    ScheduleKeyDeletionRequestPrivate(const ScheduleKeyDeletionRequestPrivate &other,
+                                   ScheduleKeyDeletionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ScheduleKeyDeletionRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

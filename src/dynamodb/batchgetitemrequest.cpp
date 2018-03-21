@@ -19,3 +19,107 @@
 
 #include "batchgetitemrequest.h"
 #include "batchgetitemrequest_p.h"
+#include "batchgetitemresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  BatchGetItemRequest
+ *
+ * @brief  Implements DynamoDB BatchGetItem requests.
+ *
+ * @see    DynamoDBClient::batchGetItem
+ */
+
+/**
+ * @brief  Constructs a new BatchGetItemResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BatchGetItemResponse::BatchGetItemResponse(
+
+/**
+ * @brief  Constructs a new BatchGetItemRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BatchGetItemRequest::BatchGetItemRequest(const BatchGetItemRequest &other)
+    : DynamoDBRequest(new BatchGetItemRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BatchGetItemRequest object.
+ */
+BatchGetItemRequest::BatchGetItemRequest()
+    : DynamoDBRequest(new BatchGetItemRequestPrivate(DynamoDBRequest::BatchGetItemAction, this))
+{
+
+}
+
+bool BatchGetItemRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BatchGetItemResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BatchGetItemResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * BatchGetItemRequest::response(QNetworkReply * const reply) const
+{
+    return new BatchGetItemResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BatchGetItemRequestPrivate
+ *
+ * @brief  Private implementation for BatchGetItemRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetItemRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public BatchGetItemRequest instance.
+ */
+BatchGetItemRequestPrivate::BatchGetItemRequestPrivate(
+    const DynamoDBRequest::Action action, BatchGetItemRequest * const q)
+    : BatchGetItemPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BatchGetItemRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BatchGetItemRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BatchGetItemRequest instance.
+ */
+BatchGetItemRequestPrivate::BatchGetItemRequestPrivate(
+    const BatchGetItemRequestPrivate &other, BatchGetItemRequest * const q)
+    : BatchGetItemPrivate(other, q)
+{
+
+}

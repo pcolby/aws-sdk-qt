@@ -19,3 +19,107 @@
 
 #include "deleteinstancerequest.h"
 #include "deleteinstancerequest_p.h"
+#include "deleteinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeleteInstanceRequest
+ *
+ * @brief  Implements OpsWorks DeleteInstance requests.
+ *
+ * @see    OpsWorksClient::deleteInstance
+ */
+
+/**
+ * @brief  Constructs a new DeleteInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteInstanceResponse::DeleteInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeleteInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteInstanceRequest::DeleteInstanceRequest(const DeleteInstanceRequest &other)
+    : OpsWorksRequest(new DeleteInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteInstanceRequest object.
+ */
+DeleteInstanceRequest::DeleteInstanceRequest()
+    : OpsWorksRequest(new DeleteInstanceRequestPrivate(OpsWorksRequest::DeleteInstanceAction, this))
+{
+
+}
+
+bool DeleteInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeleteInstanceRequest instance.
+ */
+DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, DeleteInstanceRequest * const q)
+    : DeleteInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteInstanceRequest instance.
+ */
+DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
+    const DeleteInstanceRequestPrivate &other, DeleteInstanceRequest * const q)
+    : DeleteInstancePrivate(other, q)
+{
+
+}

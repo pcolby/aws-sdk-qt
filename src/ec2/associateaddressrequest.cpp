@@ -19,3 +19,107 @@
 
 #include "associateaddressrequest.h"
 #include "associateaddressrequest_p.h"
+#include "associateaddressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  AssociateAddressRequest
+ *
+ * @brief  Implements EC2 AssociateAddress requests.
+ *
+ * @see    EC2Client::associateAddress
+ */
+
+/**
+ * @brief  Constructs a new AssociateAddressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateAddressResponse::AssociateAddressResponse(
+
+/**
+ * @brief  Constructs a new AssociateAddressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateAddressRequest::AssociateAddressRequest(const AssociateAddressRequest &other)
+    : EC2Request(new AssociateAddressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateAddressRequest object.
+ */
+AssociateAddressRequest::AssociateAddressRequest()
+    : EC2Request(new AssociateAddressRequestPrivate(EC2Request::AssociateAddressAction, this))
+{
+
+}
+
+bool AssociateAddressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateAddressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateAddressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * AssociateAddressRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateAddressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateAddressRequestPrivate
+ *
+ * @brief  Private implementation for AssociateAddressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateAddressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public AssociateAddressRequest instance.
+ */
+AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
+    const EC2Request::Action action, AssociateAddressRequest * const q)
+    : AssociateAddressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateAddressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateAddressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateAddressRequest instance.
+ */
+AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
+    const AssociateAddressRequestPrivate &other, AssociateAddressRequest * const q)
+    : AssociateAddressPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFACESREQUEST_P_H
 #define QTAWS_DELETEFACESREQUEST_P_H
 
+#include "rekognition_p.h"
+#include "deletefacesrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DeleteFacesRequest;
+
+class QTAWS_EXPORT DeleteFacesRequestPrivate : public RekognitionPrivate {
+
+public:
+    DeleteFacesRequestPrivate(const Rekognition::Action action,
+                                   DeleteFacesRequest * const q);
+    DeleteFacesRequestPrivate(const DeleteFacesRequestPrivate &other,
+                                   DeleteFacesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFacesRequest)
+
+};
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

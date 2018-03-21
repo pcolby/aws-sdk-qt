@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETIDENTITYDKIMATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYDKIMATTRIBUTESREQUEST_P_H
 
+#include "ses_p.h"
+#include "getidentitydkimattributesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityDkimAttributesRequest;
+
+class QTAWS_EXPORT GetIdentityDkimAttributesRequestPrivate : public SESPrivate {
+
+public:
+    GetIdentityDkimAttributesRequestPrivate(const SES::Action action,
+                                   GetIdentityDkimAttributesRequest * const q);
+    GetIdentityDkimAttributesRequestPrivate(const GetIdentityDkimAttributesRequestPrivate &other,
+                                   GetIdentityDkimAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityDkimAttributesRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

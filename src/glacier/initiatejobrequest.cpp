@@ -19,3 +19,107 @@
 
 #include "initiatejobrequest.h"
 #include "initiatejobrequest_p.h"
+#include "initiatejobresponse.h"
+#include "glacierrequest_p.h"
+
+namespace AWS {
+namespace Glacier {
+
+/**
+ * @class  InitiateJobRequest
+ *
+ * @brief  Implements Glacier InitiateJob requests.
+ *
+ * @see    GlacierClient::initiateJob
+ */
+
+/**
+ * @brief  Constructs a new InitiateJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+InitiateJobResponse::InitiateJobResponse(
+
+/**
+ * @brief  Constructs a new InitiateJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+InitiateJobRequest::InitiateJobRequest(const InitiateJobRequest &other)
+    : GlacierRequest(new InitiateJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new InitiateJobRequest object.
+ */
+InitiateJobRequest::InitiateJobRequest()
+    : GlacierRequest(new InitiateJobRequestPrivate(GlacierRequest::InitiateJobAction, this))
+{
+
+}
+
+bool InitiateJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an InitiateJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An InitiateJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlacierClient::send
+ */
+AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * const reply) const
+{
+    return new InitiateJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  InitiateJobRequestPrivate
+ *
+ * @brief  Private implementation for InitiateJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateJobRequestPrivate object.
+ *
+ * @param  action  Glacier action being performed.
+ * @param  q       Pointer to this object's public InitiateJobRequest instance.
+ */
+InitiateJobRequestPrivate::InitiateJobRequestPrivate(
+    const GlacierRequest::Action action, InitiateJobRequest * const q)
+    : InitiateJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new InitiateJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the InitiateJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public InitiateJobRequest instance.
+ */
+InitiateJobRequestPrivate::InitiateJobRequestPrivate(
+    const InitiateJobRequestPrivate &other, InitiateJobRequest * const q)
+    : InitiateJobPrivate(other, q)
+{
+
+}

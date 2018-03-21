@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECHANNELREQUEST_P_H
 #define QTAWS_DESCRIBECHANNELREQUEST_P_H
 
+#include "mediapackage_p.h"
+#include "describechannelrequest.h"
+
+namespace AWS {
+
+namespace MediaPackage {
+
+class DescribeChannelRequest;
+
+class QTAWS_EXPORT DescribeChannelRequestPrivate : public MediaPackagePrivate {
+
+public:
+    DescribeChannelRequestPrivate(const MediaPackage::Action action,
+                                   DescribeChannelRequest * const q);
+    DescribeChannelRequestPrivate(const DescribeChannelRequestPrivate &other,
+                                   DescribeChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeChannelRequest)
+
+};
+
+} // namespace MediaPackage
+} // namespace AWS
+
 #endif

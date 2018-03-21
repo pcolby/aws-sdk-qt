@@ -19,3 +19,107 @@
 
 #include "deletelagrequest.h"
 #include "deletelagrequest_p.h"
+#include "deletelagresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteLagRequest
+ *
+ * @brief  Implements DirectConnect DeleteLag requests.
+ *
+ * @see    DirectConnectClient::deleteLag
+ */
+
+/**
+ * @brief  Constructs a new DeleteLagResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteLagResponse::DeleteLagResponse(
+
+/**
+ * @brief  Constructs a new DeleteLagRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteLagRequest::DeleteLagRequest(const DeleteLagRequest &other)
+    : DirectConnectRequest(new DeleteLagRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteLagRequest object.
+ */
+DeleteLagRequest::DeleteLagRequest()
+    : DirectConnectRequest(new DeleteLagRequestPrivate(DirectConnectRequest::DeleteLagAction, this))
+{
+
+}
+
+bool DeleteLagRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteLagResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteLagResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DeleteLagRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteLagResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteLagRequestPrivate
+ *
+ * @brief  Private implementation for DeleteLagRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLagRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DeleteLagRequest instance.
+ */
+DeleteLagRequestPrivate::DeleteLagRequestPrivate(
+    const DirectConnectRequest::Action action, DeleteLagRequest * const q)
+    : DeleteLagPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteLagRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteLagRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteLagRequest instance.
+ */
+DeleteLagRequestPrivate::DeleteLagRequestPrivate(
+    const DeleteLagRequestPrivate &other, DeleteLagRequest * const q)
+    : DeleteLagPrivate(other, q)
+{
+
+}

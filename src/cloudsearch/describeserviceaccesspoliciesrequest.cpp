@@ -19,3 +19,107 @@
 
 #include "describeserviceaccesspoliciesrequest.h"
 #include "describeserviceaccesspoliciesrequest_p.h"
+#include "describeserviceaccesspoliciesresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeServiceAccessPoliciesRequest
+ *
+ * @brief  Implements CloudSearch DescribeServiceAccessPolicies requests.
+ *
+ * @see    CloudSearchClient::describeServiceAccessPolicies
+ */
+
+/**
+ * @brief  Constructs a new DescribeServiceAccessPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
+
+/**
+ * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest(const DescribeServiceAccessPoliciesRequest &other)
+    : CloudSearchRequest(new DescribeServiceAccessPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeServiceAccessPoliciesRequest object.
+ */
+DescribeServiceAccessPoliciesRequest::DescribeServiceAccessPoliciesRequest()
+    : CloudSearchRequest(new DescribeServiceAccessPoliciesRequestPrivate(CloudSearchRequest::DescribeServiceAccessPoliciesAction, this))
+{
+
+}
+
+bool DescribeServiceAccessPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeServiceAccessPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeServiceAccessPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeServiceAccessPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServiceAccessPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeServiceAccessPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DescribeServiceAccessPoliciesRequest instance.
+ */
+DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
+    const CloudSearchRequest::Action action, DescribeServiceAccessPoliciesRequest * const q)
+    : DescribeServiceAccessPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServiceAccessPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeServiceAccessPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeServiceAccessPoliciesRequest instance.
+ */
+DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
+    const DescribeServiceAccessPoliciesRequestPrivate &other, DescribeServiceAccessPoliciesRequest * const q)
+    : DescribeServiceAccessPoliciesPrivate(other, q)
+{
+
+}

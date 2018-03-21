@@ -20,4 +20,29 @@
 #ifndef QTAWS_RETIREGRANTREQUEST_P_H
 #define QTAWS_RETIREGRANTREQUEST_P_H
 
+#include "kms_p.h"
+#include "retiregrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class RetireGrantRequest;
+
+class QTAWS_EXPORT RetireGrantRequestPrivate : public KMSPrivate {
+
+public:
+    RetireGrantRequestPrivate(const KMS::Action action,
+                                   RetireGrantRequest * const q);
+    RetireGrantRequestPrivate(const RetireGrantRequestPrivate &other,
+                                   RetireGrantRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RetireGrantRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_COPYIMAGEREQUEST_P_H
 #define QTAWS_COPYIMAGEREQUEST_P_H
 
+#include "appstream_p.h"
+#include "copyimagerequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class CopyImageRequest;
+
+class QTAWS_EXPORT CopyImageRequestPrivate : public AppStreamPrivate {
+
+public:
+    CopyImageRequestPrivate(const AppStream::Action action,
+                                   CopyImageRequest * const q);
+    CopyImageRequestPrivate(const CopyImageRequestPrivate &other,
+                                   CopyImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CopyImageRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

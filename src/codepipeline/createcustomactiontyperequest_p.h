@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECUSTOMACTIONTYPEREQUEST_P_H
 #define QTAWS_CREATECUSTOMACTIONTYPEREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "createcustomactiontyperequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class CreateCustomActionTypeRequest;
+
+class QTAWS_EXPORT CreateCustomActionTypeRequestPrivate : public CodePipelinePrivate {
+
+public:
+    CreateCustomActionTypeRequestPrivate(const CodePipeline::Action action,
+                                   CreateCustomActionTypeRequest * const q);
+    CreateCustomActionTypeRequestPrivate(const CreateCustomActionTypeRequestPrivate &other,
+                                   CreateCustomActionTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateCustomActionTypeRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

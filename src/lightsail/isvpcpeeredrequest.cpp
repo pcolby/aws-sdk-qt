@@ -19,3 +19,107 @@
 
 #include "isvpcpeeredrequest.h"
 #include "isvpcpeeredrequest_p.h"
+#include "isvpcpeeredresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  IsVpcPeeredRequest
+ *
+ * @brief  Implements Lightsail IsVpcPeered requests.
+ *
+ * @see    LightsailClient::isVpcPeered
+ */
+
+/**
+ * @brief  Constructs a new IsVpcPeeredResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+IsVpcPeeredResponse::IsVpcPeeredResponse(
+
+/**
+ * @brief  Constructs a new IsVpcPeeredRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+IsVpcPeeredRequest::IsVpcPeeredRequest(const IsVpcPeeredRequest &other)
+    : LightsailRequest(new IsVpcPeeredRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new IsVpcPeeredRequest object.
+ */
+IsVpcPeeredRequest::IsVpcPeeredRequest()
+    : LightsailRequest(new IsVpcPeeredRequestPrivate(LightsailRequest::IsVpcPeeredAction, this))
+{
+
+}
+
+bool IsVpcPeeredRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an IsVpcPeeredResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An IsVpcPeeredResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * const reply) const
+{
+    return new IsVpcPeeredResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  IsVpcPeeredRequestPrivate
+ *
+ * @brief  Private implementation for IsVpcPeeredRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IsVpcPeeredRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public IsVpcPeeredRequest instance.
+ */
+IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
+    const LightsailRequest::Action action, IsVpcPeeredRequest * const q)
+    : IsVpcPeeredPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new IsVpcPeeredRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the IsVpcPeeredRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public IsVpcPeeredRequest instance.
+ */
+IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
+    const IsVpcPeeredRequestPrivate &other, IsVpcPeeredRequest * const q)
+    : IsVpcPeeredPrivate(other, q)
+{
+
+}

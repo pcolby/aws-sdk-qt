@@ -19,3 +19,107 @@
 
 #include "updatepullrequesttitlerequest.h"
 #include "updatepullrequesttitlerequest_p.h"
+#include "updatepullrequesttitleresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdatePullRequestTitleRequest
+ *
+ * @brief  Implements CodeCommit UpdatePullRequestTitle requests.
+ *
+ * @see    CodeCommitClient::updatePullRequestTitle
+ */
+
+/**
+ * @brief  Constructs a new UpdatePullRequestTitleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePullRequestTitleResponse::UpdatePullRequestTitleResponse(
+
+/**
+ * @brief  Constructs a new UpdatePullRequestTitleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdatePullRequestTitleRequest::UpdatePullRequestTitleRequest(const UpdatePullRequestTitleRequest &other)
+    : CodeCommitRequest(new UpdatePullRequestTitleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdatePullRequestTitleRequest object.
+ */
+UpdatePullRequestTitleRequest::UpdatePullRequestTitleRequest()
+    : CodeCommitRequest(new UpdatePullRequestTitleRequestPrivate(CodeCommitRequest::UpdatePullRequestTitleAction, this))
+{
+
+}
+
+bool UpdatePullRequestTitleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdatePullRequestTitleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdatePullRequestTitleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * UpdatePullRequestTitleRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdatePullRequestTitleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePullRequestTitleRequestPrivate
+ *
+ * @brief  Private implementation for UpdatePullRequestTitleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePullRequestTitleRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public UpdatePullRequestTitleRequest instance.
+ */
+UpdatePullRequestTitleRequestPrivate::UpdatePullRequestTitleRequestPrivate(
+    const CodeCommitRequest::Action action, UpdatePullRequestTitleRequest * const q)
+    : UpdatePullRequestTitlePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePullRequestTitleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdatePullRequestTitleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdatePullRequestTitleRequest instance.
+ */
+UpdatePullRequestTitleRequestPrivate::UpdatePullRequestTitleRequestPrivate(
+    const UpdatePullRequestTitleRequestPrivate &other, UpdatePullRequestTitleRequest * const q)
+    : UpdatePullRequestTitlePrivate(other, q)
+{
+
+}

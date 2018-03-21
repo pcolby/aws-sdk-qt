@@ -19,3 +19,107 @@
 
 #include "deletesubscriptiondefinitionrequest.h"
 #include "deletesubscriptiondefinitionrequest_p.h"
+#include "deletesubscriptiondefinitionresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteSubscriptionDefinitionRequest
+ *
+ * @brief  Implements Greengrass DeleteSubscriptionDefinition requests.
+ *
+ * @see    GreengrassClient::deleteSubscriptionDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeleteSubscriptionDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSubscriptionDefinitionResponse::DeleteSubscriptionDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest(const DeleteSubscriptionDefinitionRequest &other)
+    : GreengrassRequest(new DeleteSubscriptionDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSubscriptionDefinitionRequest object.
+ */
+DeleteSubscriptionDefinitionRequest::DeleteSubscriptionDefinitionRequest()
+    : GreengrassRequest(new DeleteSubscriptionDefinitionRequestPrivate(GreengrassRequest::DeleteSubscriptionDefinitionAction, this))
+{
+
+}
+
+bool DeleteSubscriptionDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSubscriptionDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSubscriptionDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSubscriptionDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSubscriptionDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSubscriptionDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DeleteSubscriptionDefinitionRequest instance.
+ */
+DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
+    const GreengrassRequest::Action action, DeleteSubscriptionDefinitionRequest * const q)
+    : DeleteSubscriptionDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSubscriptionDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSubscriptionDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSubscriptionDefinitionRequest instance.
+ */
+DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
+    const DeleteSubscriptionDefinitionRequestPrivate &other, DeleteSubscriptionDefinitionRequest * const q)
+    : DeleteSubscriptionDefinitionPrivate(other, q)
+{
+
+}

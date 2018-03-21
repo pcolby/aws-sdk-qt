@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECACERTIFICATEREQUEST_H
 #define QTAWS_DELETECACERTIFICATEREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DeleteCACertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteCACertificateRequest : public IoTRequest {
+
+public:
+    DeleteCACertificateRequest(const DeleteCACertificateRequest &other);
+    DeleteCACertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCACertificateRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

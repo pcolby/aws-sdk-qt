@@ -19,3 +19,107 @@
 
 #include "listtagsforstreamrequest.h"
 #include "listtagsforstreamrequest_p.h"
+#include "listtagsforstreamresponse.h"
+#include "kinesisvideorequest_p.h"
+
+namespace AWS {
+namespace KinesisVideo {
+
+/**
+ * @class  ListTagsForStreamRequest
+ *
+ * @brief  Implements KinesisVideo ListTagsForStream requests.
+ *
+ * @see    KinesisVideoClient::listTagsForStream
+ */
+
+/**
+ * @brief  Constructs a new ListTagsForStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTagsForStreamResponse::ListTagsForStreamResponse(
+
+/**
+ * @brief  Constructs a new ListTagsForStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTagsForStreamRequest::ListTagsForStreamRequest(const ListTagsForStreamRequest &other)
+    : KinesisVideoRequest(new ListTagsForStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTagsForStreamRequest object.
+ */
+ListTagsForStreamRequest::ListTagsForStreamRequest()
+    : KinesisVideoRequest(new ListTagsForStreamRequestPrivate(KinesisVideoRequest::ListTagsForStreamAction, this))
+{
+
+}
+
+bool ListTagsForStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTagsForStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTagsForStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisVideoClient::send
+ */
+AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTagsForStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTagsForStreamRequestPrivate
+ *
+ * @brief  Private implementation for ListTagsForStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForStreamRequestPrivate object.
+ *
+ * @param  action  KinesisVideo action being performed.
+ * @param  q       Pointer to this object's public ListTagsForStreamRequest instance.
+ */
+ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
+    const KinesisVideoRequest::Action action, ListTagsForStreamRequest * const q)
+    : ListTagsForStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTagsForStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTagsForStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTagsForStreamRequest instance.
+ */
+ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
+    const ListTagsForStreamRequestPrivate &other, ListTagsForStreamRequest * const q)
+    : ListTagsForStreamPrivate(other, q)
+{
+
+}

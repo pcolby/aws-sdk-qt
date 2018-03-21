@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTACKEVENTSREQUEST_H
 #define QTAWS_DESCRIBESTACKEVENTSREQUEST_H
 
+#include "cloudformationrequest.h"
+
+namespace AWS {
+
+namespace CloudFormation {
+
+class DescribeStackEventsRequestPrivate;
+
+class QTAWS_EXPORT DescribeStackEventsRequest : public CloudFormationRequest {
+
+public:
+    DescribeStackEventsRequest(const DescribeStackEventsRequest &other);
+    DescribeStackEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStackEventsRequest)
+
+}
+
+} // namespace CloudFormation
+} // namespace AWS
+
 #endif

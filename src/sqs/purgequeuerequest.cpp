@@ -19,3 +19,107 @@
 
 #include "purgequeuerequest.h"
 #include "purgequeuerequest_p.h"
+#include "purgequeueresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  PurgeQueueRequest
+ *
+ * @brief  Implements SQS PurgeQueue requests.
+ *
+ * @see    SQSClient::purgeQueue
+ */
+
+/**
+ * @brief  Constructs a new PurgeQueueResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PurgeQueueResponse::PurgeQueueResponse(
+
+/**
+ * @brief  Constructs a new PurgeQueueRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PurgeQueueRequest::PurgeQueueRequest(const PurgeQueueRequest &other)
+    : SQSRequest(new PurgeQueueRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PurgeQueueRequest object.
+ */
+PurgeQueueRequest::PurgeQueueRequest()
+    : SQSRequest(new PurgeQueueRequestPrivate(SQSRequest::PurgeQueueAction, this))
+{
+
+}
+
+bool PurgeQueueRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PurgeQueueResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PurgeQueueResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * const reply) const
+{
+    return new PurgeQueueResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PurgeQueueRequestPrivate
+ *
+ * @brief  Private implementation for PurgeQueueRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurgeQueueRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public PurgeQueueRequest instance.
+ */
+PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
+    const SQSRequest::Action action, PurgeQueueRequest * const q)
+    : PurgeQueuePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PurgeQueueRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PurgeQueueRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PurgeQueueRequest instance.
+ */
+PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
+    const PurgeQueueRequestPrivate &other, PurgeQueueRequest * const q)
+    : PurgeQueuePrivate(other, q)
+{
+
+}

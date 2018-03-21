@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATELOADBALANCERREQUEST_P_H
 #define QTAWS_CREATELOADBALANCERREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "createloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class CreateLoadBalancerRequest;
+
+class QTAWS_EXPORT CreateLoadBalancerRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    CreateLoadBalancerRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   CreateLoadBalancerRequest * const q);
+    CreateLoadBalancerRequestPrivate(const CreateLoadBalancerRequestPrivate &other,
+                                   CreateLoadBalancerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateLoadBalancerRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

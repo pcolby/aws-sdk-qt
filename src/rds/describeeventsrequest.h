@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEVENTSREQUEST_H
 #define QTAWS_DESCRIBEEVENTSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeEventsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEventsRequest : public RDSRequest {
+
+public:
+    DescribeEventsRequest(const DescribeEventsRequest &other);
+    DescribeEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEventsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

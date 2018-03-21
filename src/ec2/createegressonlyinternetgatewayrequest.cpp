@@ -19,3 +19,107 @@
 
 #include "createegressonlyinternetgatewayrequest.h"
 #include "createegressonlyinternetgatewayrequest_p.h"
+#include "createegressonlyinternetgatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateEgressOnlyInternetGatewayRequest
+ *
+ * @brief  Implements EC2 CreateEgressOnlyInternetGateway requests.
+ *
+ * @see    EC2Client::createEgressOnlyInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new CreateEgressOnlyInternetGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateEgressOnlyInternetGatewayResponse::CreateEgressOnlyInternetGatewayResponse(
+
+/**
+ * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest(const CreateEgressOnlyInternetGatewayRequest &other)
+    : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequest object.
+ */
+CreateEgressOnlyInternetGatewayRequest::CreateEgressOnlyInternetGatewayRequest()
+    : EC2Request(new CreateEgressOnlyInternetGatewayRequestPrivate(EC2Request::CreateEgressOnlyInternetGatewayAction, this))
+{
+
+}
+
+bool CreateEgressOnlyInternetGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateEgressOnlyInternetGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateEgressOnlyInternetGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateEgressOnlyInternetGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateEgressOnlyInternetGatewayRequestPrivate
+ *
+ * @brief  Private implementation for CreateEgressOnlyInternetGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateEgressOnlyInternetGatewayRequest instance.
+ */
+CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
+    const EC2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)
+    : CreateEgressOnlyInternetGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateEgressOnlyInternetGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateEgressOnlyInternetGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateEgressOnlyInternetGatewayRequest instance.
+ */
+CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
+    const CreateEgressOnlyInternetGatewayRequestPrivate &other, CreateEgressOnlyInternetGatewayRequest * const q)
+    : CreateEgressOnlyInternetGatewayPrivate(other, q)
+{
+
+}

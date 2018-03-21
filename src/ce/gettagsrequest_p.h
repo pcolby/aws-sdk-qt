@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
+#include "costexplorer_p.h"
+#include "gettagsrequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetTagsRequest;
+
+class QTAWS_EXPORT GetTagsRequestPrivate : public CostExplorerPrivate {
+
+public:
+    GetTagsRequestPrivate(const CostExplorer::Action action,
+                                   GetTagsRequest * const q);
+    GetTagsRequestPrivate(const GetTagsRequestPrivate &other,
+                                   GetTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagsRequest)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

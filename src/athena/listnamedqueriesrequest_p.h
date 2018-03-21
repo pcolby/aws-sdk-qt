@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTNAMEDQUERIESREQUEST_P_H
 #define QTAWS_LISTNAMEDQUERIESREQUEST_P_H
 
+#include "athena_p.h"
+#include "listnamedqueriesrequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class ListNamedQueriesRequest;
+
+class QTAWS_EXPORT ListNamedQueriesRequestPrivate : public AthenaPrivate {
+
+public:
+    ListNamedQueriesRequestPrivate(const Athena::Action action,
+                                   ListNamedQueriesRequest * const q);
+    ListNamedQueriesRequestPrivate(const ListNamedQueriesRequestPrivate &other,
+                                   ListNamedQueriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListNamedQueriesRequest)
+
+};
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

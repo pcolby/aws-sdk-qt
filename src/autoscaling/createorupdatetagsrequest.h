@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEORUPDATETAGSREQUEST_H
 #define QTAWS_CREATEORUPDATETAGSREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class CreateOrUpdateTagsRequestPrivate;
+
+class QTAWS_EXPORT CreateOrUpdateTagsRequest : public AutoScalingRequest {
+
+public:
+    CreateOrUpdateTagsRequest(const CreateOrUpdateTagsRequest &other);
+    CreateOrUpdateTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateOrUpdateTagsRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

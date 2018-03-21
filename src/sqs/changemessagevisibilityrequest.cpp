@@ -19,3 +19,107 @@
 
 #include "changemessagevisibilityrequest.h"
 #include "changemessagevisibilityrequest_p.h"
+#include "changemessagevisibilityresponse.h"
+#include "sqsrequest_p.h"
+
+namespace AWS {
+namespace SQS {
+
+/**
+ * @class  ChangeMessageVisibilityRequest
+ *
+ * @brief  Implements SQS ChangeMessageVisibility requests.
+ *
+ * @see    SQSClient::changeMessageVisibility
+ */
+
+/**
+ * @brief  Constructs a new ChangeMessageVisibilityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
+
+/**
+ * @brief  Constructs a new ChangeMessageVisibilityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest(const ChangeMessageVisibilityRequest &other)
+    : SQSRequest(new ChangeMessageVisibilityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ChangeMessageVisibilityRequest object.
+ */
+ChangeMessageVisibilityRequest::ChangeMessageVisibilityRequest()
+    : SQSRequest(new ChangeMessageVisibilityRequestPrivate(SQSRequest::ChangeMessageVisibilityAction, this))
+{
+
+}
+
+bool ChangeMessageVisibilityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ChangeMessageVisibilityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ChangeMessageVisibilityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SQSClient::send
+ */
+AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNetworkReply * const reply) const
+{
+    return new ChangeMessageVisibilityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ChangeMessageVisibilityRequestPrivate
+ *
+ * @brief  Private implementation for ChangeMessageVisibilityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangeMessageVisibilityRequestPrivate object.
+ *
+ * @param  action  SQS action being performed.
+ * @param  q       Pointer to this object's public ChangeMessageVisibilityRequest instance.
+ */
+ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
+    const SQSRequest::Action action, ChangeMessageVisibilityRequest * const q)
+    : ChangeMessageVisibilityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ChangeMessageVisibilityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ChangeMessageVisibilityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ChangeMessageVisibilityRequest instance.
+ */
+ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
+    const ChangeMessageVisibilityRequestPrivate &other, ChangeMessageVisibilityRequest * const q)
+    : ChangeMessageVisibilityPrivate(other, q)
+{
+
+}

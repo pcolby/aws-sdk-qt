@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSREQUEST_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeReservedDBInstancesOfferingsRequestPrivate;
+
+class QTAWS_EXPORT DescribeReservedDBInstancesOfferingsRequest : public RDSRequest {
+
+public:
+    DescribeReservedDBInstancesOfferingsRequest(const DescribeReservedDBInstancesOfferingsRequest &other);
+    DescribeReservedDBInstancesOfferingsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeReservedDBInstancesOfferingsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

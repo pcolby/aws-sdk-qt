@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEANALYSISSCHEMEREQUEST_P_H
 #define QTAWS_DELETEANALYSISSCHEMEREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "deleteanalysisschemerequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DeleteAnalysisSchemeRequest;
+
+class QTAWS_EXPORT DeleteAnalysisSchemeRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DeleteAnalysisSchemeRequestPrivate(const CloudSearch::Action action,
+                                   DeleteAnalysisSchemeRequest * const q);
+    DeleteAnalysisSchemeRequestPrivate(const DeleteAnalysisSchemeRequestPrivate &other,
+                                   DeleteAnalysisSchemeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAnalysisSchemeRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

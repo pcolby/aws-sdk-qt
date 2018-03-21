@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLCLIENTREQUEST_P_H
 #define QTAWS_DESCRIBEUSERPOOLCLIENTREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "describeuserpoolclientrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeUserPoolClientRequest;
+
+class QTAWS_EXPORT DescribeUserPoolClientRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    DescribeUserPoolClientRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   DescribeUserPoolClientRequest * const q);
+    DescribeUserPoolClientRequestPrivate(const DescribeUserPoolClientRequestPrivate &other,
+                                   DescribeUserPoolClientRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserPoolClientRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

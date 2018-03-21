@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHINTERNETGATEWAYREQUEST_P_H
 #define QTAWS_ATTACHINTERNETGATEWAYREQUEST_P_H
 
+#include "ec2_p.h"
+#include "attachinternetgatewayrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachInternetGatewayRequest;
+
+class QTAWS_EXPORT AttachInternetGatewayRequestPrivate : public EC2Private {
+
+public:
+    AttachInternetGatewayRequestPrivate(const EC2::Action action,
+                                   AttachInternetGatewayRequest * const q);
+    AttachInternetGatewayRequestPrivate(const AttachInternetGatewayRequestPrivate &other,
+                                   AttachInternetGatewayRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachInternetGatewayRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

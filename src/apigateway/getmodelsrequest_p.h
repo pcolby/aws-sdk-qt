@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETMODELSREQUEST_P_H
 #define QTAWS_GETMODELSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getmodelsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetModelsRequest;
+
+class QTAWS_EXPORT GetModelsRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetModelsRequestPrivate(const APIGateway::Action action,
+                                   GetModelsRequest * const q);
+    GetModelsRequestPrivate(const GetModelsRequestPrivate &other,
+                                   GetModelsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetModelsRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

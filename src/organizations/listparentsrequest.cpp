@@ -19,3 +19,107 @@
 
 #include "listparentsrequest.h"
 #include "listparentsrequest_p.h"
+#include "listparentsresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListParentsRequest
+ *
+ * @brief  Implements Organizations ListParents requests.
+ *
+ * @see    OrganizationsClient::listParents
+ */
+
+/**
+ * @brief  Constructs a new ListParentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListParentsResponse::ListParentsResponse(
+
+/**
+ * @brief  Constructs a new ListParentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListParentsRequest::ListParentsRequest(const ListParentsRequest &other)
+    : OrganizationsRequest(new ListParentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListParentsRequest object.
+ */
+ListParentsRequest::ListParentsRequest()
+    : OrganizationsRequest(new ListParentsRequestPrivate(OrganizationsRequest::ListParentsAction, this))
+{
+
+}
+
+bool ListParentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListParentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListParentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListParentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListParentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListParentsRequestPrivate
+ *
+ * @brief  Private implementation for ListParentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListParentsRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListParentsRequest instance.
+ */
+ListParentsRequestPrivate::ListParentsRequestPrivate(
+    const OrganizationsRequest::Action action, ListParentsRequest * const q)
+    : ListParentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListParentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListParentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListParentsRequest instance.
+ */
+ListParentsRequestPrivate::ListParentsRequestPrivate(
+    const ListParentsRequestPrivate &other, ListParentsRequest * const q)
+    : ListParentsPrivate(other, q)
+{
+
+}

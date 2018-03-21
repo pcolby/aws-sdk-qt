@@ -19,3 +19,107 @@
 
 #include "listopenidconnectprovidersrequest.h"
 #include "listopenidconnectprovidersrequest_p.h"
+#include "listopenidconnectprovidersresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListOpenIDConnectProvidersRequest
+ *
+ * @brief  Implements IAM ListOpenIDConnectProviders requests.
+ *
+ * @see    IAMClient::listOpenIDConnectProviders
+ */
+
+/**
+ * @brief  Constructs a new ListOpenIDConnectProvidersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOpenIDConnectProvidersResponse::ListOpenIDConnectProvidersResponse(
+
+/**
+ * @brief  Constructs a new ListOpenIDConnectProvidersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest(const ListOpenIDConnectProvidersRequest &other)
+    : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOpenIDConnectProvidersRequest object.
+ */
+ListOpenIDConnectProvidersRequest::ListOpenIDConnectProvidersRequest()
+    : IAMRequest(new ListOpenIDConnectProvidersRequestPrivate(IAMRequest::ListOpenIDConnectProvidersAction, this))
+{
+
+}
+
+bool ListOpenIDConnectProvidersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOpenIDConnectProvidersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOpenIDConnectProvidersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListOpenIDConnectProvidersRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOpenIDConnectProvidersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOpenIDConnectProvidersRequestPrivate
+ *
+ * @brief  Private implementation for ListOpenIDConnectProvidersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenIDConnectProvidersRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListOpenIDConnectProvidersRequest instance.
+ */
+ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
+    const IAMRequest::Action action, ListOpenIDConnectProvidersRequest * const q)
+    : ListOpenIDConnectProvidersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOpenIDConnectProvidersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOpenIDConnectProvidersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOpenIDConnectProvidersRequest instance.
+ */
+ListOpenIDConnectProvidersRequestPrivate::ListOpenIDConnectProvidersRequestPrivate(
+    const ListOpenIDConnectProvidersRequestPrivate &other, ListOpenIDConnectProvidersRequest * const q)
+    : ListOpenIDConnectProvidersPrivate(other, q)
+{
+
+}

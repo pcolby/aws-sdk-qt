@@ -19,3 +19,107 @@
 
 #include "startimportrequest.h"
 #include "startimportrequest_p.h"
+#include "startimportresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  StartImportRequest
+ *
+ * @brief  Implements LexModelBuildingService StartImport requests.
+ *
+ * @see    LexModelBuildingServiceClient::startImport
+ */
+
+/**
+ * @brief  Constructs a new StartImportResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartImportResponse::StartImportResponse(
+
+/**
+ * @brief  Constructs a new StartImportRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartImportRequest::StartImportRequest(const StartImportRequest &other)
+    : LexModelBuildingServiceRequest(new StartImportRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartImportRequest object.
+ */
+StartImportRequest::StartImportRequest()
+    : LexModelBuildingServiceRequest(new StartImportRequestPrivate(LexModelBuildingServiceRequest::StartImportAction, this))
+{
+
+}
+
+bool StartImportRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartImportResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartImportResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * StartImportRequest::response(QNetworkReply * const reply) const
+{
+    return new StartImportResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartImportRequestPrivate
+ *
+ * @brief  Private implementation for StartImportRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartImportRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public StartImportRequest instance.
+ */
+StartImportRequestPrivate::StartImportRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, StartImportRequest * const q)
+    : StartImportPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartImportRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartImportRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartImportRequest instance.
+ */
+StartImportRequestPrivate::StartImportRequestPrivate(
+    const StartImportRequestPrivate &other, StartImportRequest * const q)
+    : StartImportPrivate(other, q)
+{
+
+}

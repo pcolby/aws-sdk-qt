@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDISTRIBUTIONWITHTAGSREQUEST_H
 #define QTAWS_CREATEDISTRIBUTIONWITHTAGSREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class CreateDistributionWithTagsRequestPrivate;
+
+class QTAWS_EXPORT CreateDistributionWithTagsRequest : public CloudFrontRequest {
+
+public:
+    CreateDistributionWithTagsRequest(const CreateDistributionWithTagsRequest &other);
+    CreateDistributionWithTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDistributionWithTagsRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

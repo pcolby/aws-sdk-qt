@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACCESSKEYLASTUSEDREQUEST_P_H
 #define QTAWS_GETACCESSKEYLASTUSEDREQUEST_P_H
 
+#include "iam_p.h"
+#include "getaccesskeylastusedrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetAccessKeyLastUsedRequest;
+
+class QTAWS_EXPORT GetAccessKeyLastUsedRequestPrivate : public IAMPrivate {
+
+public:
+    GetAccessKeyLastUsedRequestPrivate(const IAM::Action action,
+                                   GetAccessKeyLastUsedRequest * const q);
+    GetAccessKeyLastUsedRequestPrivate(const GetAccessKeyLastUsedRequestPrivate &other,
+                                   GetAccessKeyLastUsedRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccessKeyLastUsedRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

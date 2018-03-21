@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERESOURCEDATASYNCREQUEST_H
 #define QTAWS_DELETERESOURCEDATASYNCREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteResourceDataSyncRequestPrivate;
+
+class QTAWS_EXPORT DeleteResourceDataSyncRequest : public SSMRequest {
+
+public:
+    DeleteResourceDataSyncRequest(const DeleteResourceDataSyncRequest &other);
+    DeleteResourceDataSyncRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteResourceDataSyncRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

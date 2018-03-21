@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESREQUEST_H
 #define QTAWS_DESCRIBECERTIFICATESREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeCertificatesRequestPrivate;
+
+class QTAWS_EXPORT DescribeCertificatesRequest : public RDSRequest {
+
+public:
+    DescribeCertificatesRequest(const DescribeCertificatesRequest &other);
+    DescribeCertificatesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeCertificatesRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

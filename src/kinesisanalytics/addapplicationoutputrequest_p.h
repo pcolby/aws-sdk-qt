@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDAPPLICATIONOUTPUTREQUEST_P_H
 #define QTAWS_ADDAPPLICATIONOUTPUTREQUEST_P_H
 
+#include "kinesisanalytics_p.h"
+#include "addapplicationoutputrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationOutputRequest;
+
+class QTAWS_EXPORT AddApplicationOutputRequestPrivate : public KinesisAnalyticsPrivate {
+
+public:
+    AddApplicationOutputRequestPrivate(const KinesisAnalytics::Action action,
+                                   AddApplicationOutputRequest * const q);
+    AddApplicationOutputRequestPrivate(const AddApplicationOutputRequestPrivate &other,
+                                   AddApplicationOutputRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddApplicationOutputRequest)
+
+};
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteuserrequest.h"
 #include "deleteuserrequest_p.h"
+#include "deleteuserresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DeleteUserRequest
+ *
+ * @brief  Implements WorkDocs DeleteUser requests.
+ *
+ * @see    WorkDocsClient::deleteUser
+ */
+
+/**
+ * @brief  Constructs a new DeleteUserResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUserResponse::DeleteUserResponse(
+
+/**
+ * @brief  Constructs a new DeleteUserRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteUserRequest::DeleteUserRequest(const DeleteUserRequest &other)
+    : WorkDocsRequest(new DeleteUserRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteUserRequest object.
+ */
+DeleteUserRequest::DeleteUserRequest()
+    : WorkDocsRequest(new DeleteUserRequestPrivate(WorkDocsRequest::DeleteUserAction, this))
+{
+
+}
+
+bool DeleteUserRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteUserResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteUserResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteUserResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUserRequestPrivate
+ *
+ * @brief  Private implementation for DeleteUserRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DeleteUserRequest instance.
+ */
+DeleteUserRequestPrivate::DeleteUserRequestPrivate(
+    const WorkDocsRequest::Action action, DeleteUserRequest * const q)
+    : DeleteUserPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUserRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteUserRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteUserRequest instance.
+ */
+DeleteUserRequestPrivate::DeleteUserRequestPrivate(
+    const DeleteUserRequestPrivate &other, DeleteUserRequest * const q)
+    : DeleteUserPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSOFRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSOFRESOURCEREQUEST_P_H
 
+#include "dynamodb_p.h"
+#include "listtagsofresourcerequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListTagsOfResourceRequest;
+
+class QTAWS_EXPORT ListTagsOfResourceRequestPrivate : public DynamoDBPrivate {
+
+public:
+    ListTagsOfResourceRequestPrivate(const DynamoDB::Action action,
+                                   ListTagsOfResourceRequest * const q);
+    ListTagsOfResourceRequestPrivate(const ListTagsOfResourceRequestPrivate &other,
+                                   ListTagsOfResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsOfResourceRequest)
+
+};
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

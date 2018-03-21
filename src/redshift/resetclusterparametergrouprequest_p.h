@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_RESETCLUSTERPARAMETERGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "resetclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ResetClusterParameterGroupRequest;
+
+class QTAWS_EXPORT ResetClusterParameterGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    ResetClusterParameterGroupRequestPrivate(const Redshift::Action action,
+                                   ResetClusterParameterGroupRequest * const q);
+    ResetClusterParameterGroupRequestPrivate(const ResetClusterParameterGroupRequestPrivate &other,
+                                   ResetClusterParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetClusterParameterGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

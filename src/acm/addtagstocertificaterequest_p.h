@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDTAGSTOCERTIFICATEREQUEST_P_H
 #define QTAWS_ADDTAGSTOCERTIFICATEREQUEST_P_H
 
+#include "acm_p.h"
+#include "addtagstocertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class AddTagsToCertificateRequest;
+
+class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public ACMPrivate {
+
+public:
+    AddTagsToCertificateRequestPrivate(const ACM::Action action,
+                                   AddTagsToCertificateRequest * const q);
+    AddTagsToCertificateRequestPrivate(const AddTagsToCertificateRequestPrivate &other,
+                                   AddTagsToCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddTagsToCertificateRequest)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPRODUCTSREQUEST_H
 #define QTAWS_GETPRODUCTSREQUEST_H
 
+#include "pricingrequest.h"
+
+namespace AWS {
+
+namespace Pricing {
+
+class GetProductsRequestPrivate;
+
+class QTAWS_EXPORT GetProductsRequest : public PricingRequest {
+
+public:
+    GetProductsRequest(const GetProductsRequest &other);
+    GetProductsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetProductsRequest)
+
+}
+
+} // namespace Pricing
+} // namespace AWS
+
 #endif

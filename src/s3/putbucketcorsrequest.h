@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTBUCKETCORSREQUEST_H
 #define QTAWS_PUTBUCKETCORSREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class PutBucketCorsRequestPrivate;
+
+class QTAWS_EXPORT PutBucketCorsRequest : public S3Request {
+
+public:
+    PutBucketCorsRequest(const PutBucketCorsRequest &other);
+    PutBucketCorsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutBucketCorsRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

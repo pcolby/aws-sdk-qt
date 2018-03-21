@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEACTIVITYTYPEREQUEST_P_H
 #define QTAWS_DESCRIBEACTIVITYTYPEREQUEST_P_H
 
+#include "swf_p.h"
+#include "describeactivitytyperequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeActivityTypeRequest;
+
+class QTAWS_EXPORT DescribeActivityTypeRequestPrivate : public SWFPrivate {
+
+public:
+    DescribeActivityTypeRequestPrivate(const SWF::Action action,
+                                   DescribeActivityTypeRequest * const q);
+    DescribeActivityTypeRequestPrivate(const DescribeActivityTypeRequestPrivate &other,
+                                   DescribeActivityTypeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeActivityTypeRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

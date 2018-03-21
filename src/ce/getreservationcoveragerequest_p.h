@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGEREQUEST_P_H
 #define QTAWS_GETRESERVATIONCOVERAGEREQUEST_P_H
 
+#include "costexplorer_p.h"
+#include "getreservationcoveragerequest.h"
+
+namespace AWS {
+
+namespace CostExplorer {
+
+class GetReservationCoverageRequest;
+
+class QTAWS_EXPORT GetReservationCoverageRequestPrivate : public CostExplorerPrivate {
+
+public:
+    GetReservationCoverageRequestPrivate(const CostExplorer::Action action,
+                                   GetReservationCoverageRequest * const q);
+    GetReservationCoverageRequestPrivate(const GetReservationCoverageRequestPrivate &other,
+                                   GetReservationCoverageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetReservationCoverageRequest)
+
+};
+
+} // namespace CostExplorer
+} // namespace AWS
+
 #endif

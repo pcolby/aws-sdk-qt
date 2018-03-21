@@ -20,4 +20,32 @@
 #ifndef QTAWS_COMPOSEENVIRONMENTSREQUEST_H
 #define QTAWS_COMPOSEENVIRONMENTSREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class ComposeEnvironmentsRequestPrivate;
+
+class QTAWS_EXPORT ComposeEnvironmentsRequest : public ElasticBeanstalkRequest {
+
+public:
+    ComposeEnvironmentsRequest(const ComposeEnvironmentsRequest &other);
+    ComposeEnvironmentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ComposeEnvironmentsRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

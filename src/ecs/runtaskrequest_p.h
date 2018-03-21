@@ -20,4 +20,29 @@
 #ifndef QTAWS_RUNTASKREQUEST_P_H
 #define QTAWS_RUNTASKREQUEST_P_H
 
+#include "ecs_p.h"
+#include "runtaskrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class RunTaskRequest;
+
+class QTAWS_EXPORT RunTaskRequestPrivate : public ECSPrivate {
+
+public:
+    RunTaskRequestPrivate(const ECS::Action action,
+                                   RunTaskRequest * const q);
+    RunTaskRequestPrivate(const RunTaskRequestPrivate &other,
+                                   RunTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RunTaskRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_H
 #define QTAWS_DELETEGROUPREQUEST_H
 
+#include "workmailrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeleteGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteGroupRequest : public WorkMailRequest {
+
+public:
+    DeleteGroupRequest(const DeleteGroupRequest &other);
+    DeleteGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteGroupRequest)
+
+}
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

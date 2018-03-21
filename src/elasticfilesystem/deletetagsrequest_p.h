@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
+#include "efs_p.h"
+#include "deletetagsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DeleteTagsRequest;
+
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public EFSPrivate {
+
+public:
+    DeleteTagsRequestPrivate(const EFS::Action action,
+                                   DeleteTagsRequest * const q);
+    DeleteTagsRequestPrivate(const DeleteTagsRequestPrivate &other,
+                                   DeleteTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTagsRequest)
+
+};
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

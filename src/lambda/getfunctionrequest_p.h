@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETFUNCTIONREQUEST_P_H
 #define QTAWS_GETFUNCTIONREQUEST_P_H
 
+#include "lambda_p.h"
+#include "getfunctionrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class GetFunctionRequest;
+
+class QTAWS_EXPORT GetFunctionRequestPrivate : public LambdaPrivate {
+
+public:
+    GetFunctionRequestPrivate(const Lambda::Action action,
+                                   GetFunctionRequest * const q);
+    GetFunctionRequestPrivate(const GetFunctionRequestPrivate &other,
+                                   GetFunctionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetFunctionRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

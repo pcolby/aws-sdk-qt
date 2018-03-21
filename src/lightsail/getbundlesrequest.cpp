@@ -19,3 +19,107 @@
 
 #include "getbundlesrequest.h"
 #include "getbundlesrequest_p.h"
+#include "getbundlesresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  GetBundlesRequest
+ *
+ * @brief  Implements Lightsail GetBundles requests.
+ *
+ * @see    LightsailClient::getBundles
+ */
+
+/**
+ * @brief  Constructs a new GetBundlesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBundlesResponse::GetBundlesResponse(
+
+/**
+ * @brief  Constructs a new GetBundlesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBundlesRequest::GetBundlesRequest(const GetBundlesRequest &other)
+    : LightsailRequest(new GetBundlesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBundlesRequest object.
+ */
+GetBundlesRequest::GetBundlesRequest()
+    : LightsailRequest(new GetBundlesRequestPrivate(LightsailRequest::GetBundlesAction, this))
+{
+
+}
+
+bool GetBundlesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBundlesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBundlesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBundlesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBundlesRequestPrivate
+ *
+ * @brief  Private implementation for GetBundlesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBundlesRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public GetBundlesRequest instance.
+ */
+GetBundlesRequestPrivate::GetBundlesRequestPrivate(
+    const LightsailRequest::Action action, GetBundlesRequest * const q)
+    : GetBundlesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBundlesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBundlesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBundlesRequest instance.
+ */
+GetBundlesRequestPrivate::GetBundlesRequestPrivate(
+    const GetBundlesRequestPrivate &other, GetBundlesRequest * const q)
+    : GetBundlesPrivate(other, q)
+{
+
+}

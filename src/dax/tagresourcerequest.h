@@ -20,4 +20,32 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_H
 #define QTAWS_TAGRESOURCEREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class TagResourceRequestPrivate;
+
+class QTAWS_EXPORT TagResourceRequest : public DAXRequest {
+
+public:
+    TagResourceRequest(const TagResourceRequest &other);
+    TagResourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TagResourceRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

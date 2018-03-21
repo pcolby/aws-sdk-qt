@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVEALLRESOURCEPERMISSIONSREQUEST_H
 #define QTAWS_REMOVEALLRESOURCEPERMISSIONSREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class RemoveAllResourcePermissionsRequestPrivate;
+
+class QTAWS_EXPORT RemoveAllResourcePermissionsRequest : public WorkDocsRequest {
+
+public:
+    RemoveAllResourcePermissionsRequest(const RemoveAllResourcePermissionsRequest &other);
+    RemoveAllResourcePermissionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveAllResourcePermissionsRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

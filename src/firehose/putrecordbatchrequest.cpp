@@ -19,3 +19,107 @@
 
 #include "putrecordbatchrequest.h"
 #include "putrecordbatchrequest_p.h"
+#include "putrecordbatchresponse.h"
+#include "firehoserequest_p.h"
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  PutRecordBatchRequest
+ *
+ * @brief  Implements Firehose PutRecordBatch requests.
+ *
+ * @see    FirehoseClient::putRecordBatch
+ */
+
+/**
+ * @brief  Constructs a new PutRecordBatchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutRecordBatchResponse::PutRecordBatchResponse(
+
+/**
+ * @brief  Constructs a new PutRecordBatchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutRecordBatchRequest::PutRecordBatchRequest(const PutRecordBatchRequest &other)
+    : FirehoseRequest(new PutRecordBatchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutRecordBatchRequest object.
+ */
+PutRecordBatchRequest::PutRecordBatchRequest()
+    : FirehoseRequest(new PutRecordBatchRequestPrivate(FirehoseRequest::PutRecordBatchAction, this))
+{
+
+}
+
+bool PutRecordBatchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutRecordBatchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutRecordBatchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  FirehoseClient::send
+ */
+AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply * const reply) const
+{
+    return new PutRecordBatchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutRecordBatchRequestPrivate
+ *
+ * @brief  Private implementation for PutRecordBatchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordBatchRequestPrivate object.
+ *
+ * @param  action  Firehose action being performed.
+ * @param  q       Pointer to this object's public PutRecordBatchRequest instance.
+ */
+PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
+    const FirehoseRequest::Action action, PutRecordBatchRequest * const q)
+    : PutRecordBatchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutRecordBatchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutRecordBatchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutRecordBatchRequest instance.
+ */
+PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
+    const PutRecordBatchRequestPrivate &other, PutRecordBatchRequest * const q)
+    : PutRecordBatchPrivate(other, q)
+{
+
+}

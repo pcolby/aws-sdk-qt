@@ -19,3 +19,107 @@
 
 #include "getworkflowexecutionhistoryrequest.h"
 #include "getworkflowexecutionhistoryrequest_p.h"
+#include "getworkflowexecutionhistoryresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  GetWorkflowExecutionHistoryRequest
+ *
+ * @brief  Implements SWF GetWorkflowExecutionHistory requests.
+ *
+ * @see    SWFClient::getWorkflowExecutionHistory
+ */
+
+/**
+ * @brief  Constructs a new GetWorkflowExecutionHistoryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
+
+/**
+ * @brief  Constructs a new GetWorkflowExecutionHistoryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest(const GetWorkflowExecutionHistoryRequest &other)
+    : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetWorkflowExecutionHistoryRequest object.
+ */
+GetWorkflowExecutionHistoryRequest::GetWorkflowExecutionHistoryRequest()
+    : SWFRequest(new GetWorkflowExecutionHistoryRequestPrivate(SWFRequest::GetWorkflowExecutionHistoryAction, this))
+{
+
+}
+
+bool GetWorkflowExecutionHistoryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetWorkflowExecutionHistoryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetWorkflowExecutionHistoryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetWorkflowExecutionHistoryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetWorkflowExecutionHistoryRequestPrivate
+ *
+ * @brief  Private implementation for GetWorkflowExecutionHistoryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetWorkflowExecutionHistoryRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public GetWorkflowExecutionHistoryRequest instance.
+ */
+GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
+    const SWFRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)
+    : GetWorkflowExecutionHistoryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetWorkflowExecutionHistoryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetWorkflowExecutionHistoryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetWorkflowExecutionHistoryRequest instance.
+ */
+GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
+    const GetWorkflowExecutionHistoryRequestPrivate &other, GetWorkflowExecutionHistoryRequest * const q)
+    : GetWorkflowExecutionHistoryPrivate(other, q)
+{
+
+}

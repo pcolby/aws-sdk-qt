@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_H
 #define QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_H
 
+#include "workspacesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspaceBundlesRequestPrivate;
+
+class QTAWS_EXPORT DescribeWorkspaceBundlesRequest : public WorkSpacesRequest {
+
+public:
+    DescribeWorkspaceBundlesRequest(const DescribeWorkspaceBundlesRequest &other);
+    DescribeWorkspaceBundlesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkspaceBundlesRequest)
+
+}
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

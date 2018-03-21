@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSREQUEST_H
 #define QTAWS_DISASSOCIATEMEMBERSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DisassociateMembersRequestPrivate;
+
+class QTAWS_EXPORT DisassociateMembersRequest : public GuardDutyRequest {
+
+public:
+    DisassociateMembersRequest(const DisassociateMembersRequest &other);
+    DisassociateMembersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateMembersRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

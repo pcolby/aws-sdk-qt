@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETGROUPPOLICYREQUEST_P_H
 #define QTAWS_GETGROUPPOLICYREQUEST_P_H
 
+#include "iam_p.h"
+#include "getgrouppolicyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetGroupPolicyRequest;
+
+class QTAWS_EXPORT GetGroupPolicyRequestPrivate : public IAMPrivate {
+
+public:
+    GetGroupPolicyRequestPrivate(const IAM::Action action,
+                                   GetGroupPolicyRequest * const q);
+    GetGroupPolicyRequestPrivate(const GetGroupPolicyRequestPrivate &other,
+                                   GetGroupPolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetGroupPolicyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

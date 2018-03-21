@@ -20,4 +20,32 @@
 #ifndef QTAWS_QUERYOBJECTSREQUEST_H
 #define QTAWS_QUERYOBJECTSREQUEST_H
 
+#include "datapipelinerequest.h"
+
+namespace AWS {
+
+namespace DataPipeline {
+
+class QueryObjectsRequestPrivate;
+
+class QTAWS_EXPORT QueryObjectsRequest : public DataPipelineRequest {
+
+public:
+    QueryObjectsRequest(const QueryObjectsRequest &other);
+    QueryObjectsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(QueryObjectsRequest)
+
+}
+
+} // namespace DataPipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_CREATEEVENTSUBSCRIPTIONREQUEST_P_H
 
+#include "rds_p.h"
+#include "createeventsubscriptionrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateEventSubscriptionRequest;
+
+class QTAWS_EXPORT CreateEventSubscriptionRequestPrivate : public RDSPrivate {
+
+public:
+    CreateEventSubscriptionRequestPrivate(const RDS::Action action,
+                                   CreateEventSubscriptionRequest * const q);
+    CreateEventSubscriptionRequestPrivate(const CreateEventSubscriptionRequestPrivate &other,
+                                   CreateEventSubscriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateEventSubscriptionRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

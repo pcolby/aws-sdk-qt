@@ -19,3 +19,107 @@
 
 #include "getlifecyclepolicyrequest.h"
 #include "getlifecyclepolicyrequest_p.h"
+#include "getlifecyclepolicyresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  GetLifecyclePolicyRequest
+ *
+ * @brief  Implements ECR GetLifecyclePolicy requests.
+ *
+ * @see    ECRClient::getLifecyclePolicy
+ */
+
+/**
+ * @brief  Constructs a new GetLifecyclePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLifecyclePolicyResponse::GetLifecyclePolicyResponse(
+
+/**
+ * @brief  Constructs a new GetLifecyclePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLifecyclePolicyRequest::GetLifecyclePolicyRequest(const GetLifecyclePolicyRequest &other)
+    : ECRRequest(new GetLifecyclePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLifecyclePolicyRequest object.
+ */
+GetLifecyclePolicyRequest::GetLifecyclePolicyRequest()
+    : ECRRequest(new GetLifecyclePolicyRequestPrivate(ECRRequest::GetLifecyclePolicyAction, this))
+{
+
+}
+
+bool GetLifecyclePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLifecyclePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLifecyclePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * GetLifecyclePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLifecyclePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLifecyclePolicyRequestPrivate
+ *
+ * @brief  Private implementation for GetLifecyclePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLifecyclePolicyRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public GetLifecyclePolicyRequest instance.
+ */
+GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
+    const ECRRequest::Action action, GetLifecyclePolicyRequest * const q)
+    : GetLifecyclePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLifecyclePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLifecyclePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLifecyclePolicyRequest instance.
+ */
+GetLifecyclePolicyRequestPrivate::GetLifecyclePolicyRequestPrivate(
+    const GetLifecyclePolicyRequestPrivate &other, GetLifecyclePolicyRequest * const q)
+    : GetLifecyclePolicyPrivate(other, q)
+{
+
+}

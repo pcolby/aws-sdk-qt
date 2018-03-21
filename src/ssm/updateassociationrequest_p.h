@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEASSOCIATIONREQUEST_P_H
 #define QTAWS_UPDATEASSOCIATIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "updateassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class UpdateAssociationRequest;
+
+class QTAWS_EXPORT UpdateAssociationRequestPrivate : public SSMPrivate {
+
+public:
+    UpdateAssociationRequestPrivate(const SSM::Action action,
+                                   UpdateAssociationRequest * const q);
+    UpdateAssociationRequestPrivate(const UpdateAssociationRequestPrivate &other,
+                                   UpdateAssociationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateAssociationRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

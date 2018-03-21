@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEBUDGETSREQUEST_H
 #define QTAWS_DESCRIBEBUDGETSREQUEST_H
 
+#include "budgetsrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeBudgetsRequestPrivate;
+
+class QTAWS_EXPORT DescribeBudgetsRequest : public BudgetsRequest {
+
+public:
+    DescribeBudgetsRequest(const DescribeBudgetsRequest &other);
+    DescribeBudgetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeBudgetsRequest)
+
+}
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

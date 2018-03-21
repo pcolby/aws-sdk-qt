@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETJOBMANIFESTREQUEST_H
 #define QTAWS_GETJOBMANIFESTREQUEST_H
 
+#include "snowballrequest.h"
+
+namespace AWS {
+
+namespace Snowball {
+
+class GetJobManifestRequestPrivate;
+
+class QTAWS_EXPORT GetJobManifestRequest : public SnowballRequest {
+
+public:
+    GetJobManifestRequest(const GetJobManifestRequest &other);
+    GetJobManifestRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetJobManifestRequest)
+
+}
+
+} // namespace Snowball
+} // namespace AWS
+
 #endif

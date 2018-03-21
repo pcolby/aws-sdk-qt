@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESYNCMFADEVICEREQUEST_H
 #define QTAWS_RESYNCMFADEVICEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ResyncMFADeviceRequestPrivate;
+
+class QTAWS_EXPORT ResyncMFADeviceRequest : public IAMRequest {
+
+public:
+    ResyncMFADeviceRequest(const ResyncMFADeviceRequest &other);
+    ResyncMFADeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResyncMFADeviceRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

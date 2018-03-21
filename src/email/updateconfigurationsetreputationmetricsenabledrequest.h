@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class UpdateConfigurationSetReputationMetricsEnabledRequestPrivate;
+
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequest : public SESRequest {
+
+public:
+    UpdateConfigurationSetReputationMetricsEnabledRequest(const UpdateConfigurationSetReputationMetricsEnabledRequest &other);
+    UpdateConfigurationSetReputationMetricsEnabledRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateConfigurationSetReputationMetricsEnabledRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

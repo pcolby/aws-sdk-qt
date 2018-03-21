@@ -20,4 +20,32 @@
 #ifndef QTAWS_SEARCHINDEXREQUEST_H
 #define QTAWS_SEARCHINDEXREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class SearchIndexRequestPrivate;
+
+class QTAWS_EXPORT SearchIndexRequest : public IoTRequest {
+
+public:
+    SearchIndexRequest(const SearchIndexRequest &other);
+    SearchIndexRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SearchIndexRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listmetricsrequest.h"
 #include "listmetricsrequest_p.h"
+#include "listmetricsresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  ListMetricsRequest
+ *
+ * @brief  Implements CloudWatch ListMetrics requests.
+ *
+ * @see    CloudWatchClient::listMetrics
+ */
+
+/**
+ * @brief  Constructs a new ListMetricsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListMetricsResponse::ListMetricsResponse(
+
+/**
+ * @brief  Constructs a new ListMetricsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListMetricsRequest::ListMetricsRequest(const ListMetricsRequest &other)
+    : CloudWatchRequest(new ListMetricsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListMetricsRequest object.
+ */
+ListMetricsRequest::ListMetricsRequest()
+    : CloudWatchRequest(new ListMetricsRequestPrivate(CloudWatchRequest::ListMetricsAction, this))
+{
+
+}
+
+bool ListMetricsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListMetricsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListMetricsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListMetricsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListMetricsRequestPrivate
+ *
+ * @brief  Private implementation for ListMetricsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMetricsRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public ListMetricsRequest instance.
+ */
+ListMetricsRequestPrivate::ListMetricsRequestPrivate(
+    const CloudWatchRequest::Action action, ListMetricsRequest * const q)
+    : ListMetricsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListMetricsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListMetricsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListMetricsRequest instance.
+ */
+ListMetricsRequestPrivate::ListMetricsRequestPrivate(
+    const ListMetricsRequestPrivate &other, ListMetricsRequest * const q)
+    : ListMetricsPrivate(other, q)
+{
+
+}

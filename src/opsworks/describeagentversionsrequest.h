@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAGENTVERSIONSREQUEST_H
 #define QTAWS_DESCRIBEAGENTVERSIONSREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DescribeAgentVersionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeAgentVersionsRequest : public OpsWorksRequest {
+
+public:
+    DescribeAgentVersionsRequest(const DescribeAgentVersionsRequest &other);
+    DescribeAgentVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAgentVersionsRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

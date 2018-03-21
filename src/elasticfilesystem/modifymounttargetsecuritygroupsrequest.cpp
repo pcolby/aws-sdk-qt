@@ -19,3 +19,107 @@
 
 #include "modifymounttargetsecuritygroupsrequest.h"
 #include "modifymounttargetsecuritygroupsrequest_p.h"
+#include "modifymounttargetsecuritygroupsresponse.h"
+#include "efsrequest_p.h"
+
+namespace AWS {
+namespace EFS {
+
+/**
+ * @class  ModifyMountTargetSecurityGroupsRequest
+ *
+ * @brief  Implements EFS ModifyMountTargetSecurityGroups requests.
+ *
+ * @see    EFSClient::modifyMountTargetSecurityGroups
+ */
+
+/**
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyMountTargetSecurityGroupsResponse::ModifyMountTargetSecurityGroupsResponse(
+
+/**
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest(const ModifyMountTargetSecurityGroupsRequest &other)
+    : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequest object.
+ */
+ModifyMountTargetSecurityGroupsRequest::ModifyMountTargetSecurityGroupsRequest()
+    : EFSRequest(new ModifyMountTargetSecurityGroupsRequestPrivate(EFSRequest::ModifyMountTargetSecurityGroupsAction, this))
+{
+
+}
+
+bool ModifyMountTargetSecurityGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyMountTargetSecurityGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyMountTargetSecurityGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EFSClient::send
+ */
+AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyMountTargetSecurityGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyMountTargetSecurityGroupsRequestPrivate
+ *
+ * @brief  Private implementation for ModifyMountTargetSecurityGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequestPrivate object.
+ *
+ * @param  action  EFS action being performed.
+ * @param  q       Pointer to this object's public ModifyMountTargetSecurityGroupsRequest instance.
+ */
+ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
+    const EFSRequest::Action action, ModifyMountTargetSecurityGroupsRequest * const q)
+    : ModifyMountTargetSecurityGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyMountTargetSecurityGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyMountTargetSecurityGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyMountTargetSecurityGroupsRequest instance.
+ */
+ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
+    const ModifyMountTargetSecurityGroupsRequestPrivate &other, ModifyMountTargetSecurityGroupsRequest * const q)
+    : ModifyMountTargetSecurityGroupsPrivate(other, q)
+{
+
+}

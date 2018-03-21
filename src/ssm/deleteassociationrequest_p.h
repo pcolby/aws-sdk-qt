@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEASSOCIATIONREQUEST_P_H
 #define QTAWS_DELETEASSOCIATIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deleteassociationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeleteAssociationRequest;
+
+class QTAWS_EXPORT DeleteAssociationRequestPrivate : public SSMPrivate {
+
+public:
+    DeleteAssociationRequestPrivate(const SSM::Action action,
+                                   DeleteAssociationRequest * const q);
+    DeleteAssociationRequestPrivate(const DeleteAssociationRequestPrivate &other,
+                                   DeleteAssociationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAssociationRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

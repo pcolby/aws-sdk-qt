@@ -19,3 +19,107 @@
 
 #include "updatestatemachinerequest.h"
 #include "updatestatemachinerequest_p.h"
+#include "updatestatemachineresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  UpdateStateMachineRequest
+ *
+ * @brief  Implements SFN UpdateStateMachine requests.
+ *
+ * @see    SFNClient::updateStateMachine
+ */
+
+/**
+ * @brief  Constructs a new UpdateStateMachineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateStateMachineResponse::UpdateStateMachineResponse(
+
+/**
+ * @brief  Constructs a new UpdateStateMachineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateStateMachineRequest::UpdateStateMachineRequest(const UpdateStateMachineRequest &other)
+    : SFNRequest(new UpdateStateMachineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateStateMachineRequest object.
+ */
+UpdateStateMachineRequest::UpdateStateMachineRequest()
+    : SFNRequest(new UpdateStateMachineRequestPrivate(SFNRequest::UpdateStateMachineAction, this))
+{
+
+}
+
+bool UpdateStateMachineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateStateMachineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateStateMachineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateStateMachineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateStateMachineRequestPrivate
+ *
+ * @brief  Private implementation for UpdateStateMachineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStateMachineRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public UpdateStateMachineRequest instance.
+ */
+UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
+    const SFNRequest::Action action, UpdateStateMachineRequest * const q)
+    : UpdateStateMachinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateStateMachineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateStateMachineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateStateMachineRequest instance.
+ */
+UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
+    const UpdateStateMachineRequestPrivate &other, UpdateStateMachineRequest * const q)
+    : UpdateStateMachinePrivate(other, q)
+{
+
+}

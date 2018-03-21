@@ -19,3 +19,107 @@
 
 #include "putlogeventsrequest.h"
 #include "putlogeventsrequest_p.h"
+#include "putlogeventsresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutLogEventsRequest
+ *
+ * @brief  Implements CloudWatchLogs PutLogEvents requests.
+ *
+ * @see    CloudWatchLogsClient::putLogEvents
+ */
+
+/**
+ * @brief  Constructs a new PutLogEventsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutLogEventsResponse::PutLogEventsResponse(
+
+/**
+ * @brief  Constructs a new PutLogEventsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutLogEventsRequest::PutLogEventsRequest(const PutLogEventsRequest &other)
+    : CloudWatchLogsRequest(new PutLogEventsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutLogEventsRequest object.
+ */
+PutLogEventsRequest::PutLogEventsRequest()
+    : CloudWatchLogsRequest(new PutLogEventsRequestPrivate(CloudWatchLogsRequest::PutLogEventsAction, this))
+{
+
+}
+
+bool PutLogEventsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutLogEventsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutLogEventsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * PutLogEventsRequest::response(QNetworkReply * const reply) const
+{
+    return new PutLogEventsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutLogEventsRequestPrivate
+ *
+ * @brief  Private implementation for PutLogEventsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLogEventsRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public PutLogEventsRequest instance.
+ */
+PutLogEventsRequestPrivate::PutLogEventsRequestPrivate(
+    const CloudWatchLogsRequest::Action action, PutLogEventsRequest * const q)
+    : PutLogEventsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutLogEventsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutLogEventsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutLogEventsRequest instance.
+ */
+PutLogEventsRequestPrivate::PutLogEventsRequestPrivate(
+    const PutLogEventsRequestPrivate &other, PutLogEventsRequest * const q)
+    : PutLogEventsPrivate(other, q)
+{
+
+}

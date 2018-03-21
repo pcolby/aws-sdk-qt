@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESNAPSHOTREQUEST_H
 #define QTAWS_DELETESNAPSHOTREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteSnapshotRequestPrivate;
+
+class QTAWS_EXPORT DeleteSnapshotRequest : public DirectoryServiceRequest {
+
+public:
+    DeleteSnapshotRequest(const DeleteSnapshotRequest &other);
+    DeleteSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSnapshotRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

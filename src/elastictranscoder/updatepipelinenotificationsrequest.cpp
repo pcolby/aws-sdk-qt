@@ -19,3 +19,107 @@
 
 #include "updatepipelinenotificationsrequest.h"
 #include "updatepipelinenotificationsrequest_p.h"
+#include "updatepipelinenotificationsresponse.h"
+#include "elastictranscoderrequest_p.h"
+
+namespace AWS {
+namespace ElasticTranscoder {
+
+/**
+ * @class  UpdatePipelineNotificationsRequest
+ *
+ * @brief  Implements ElasticTranscoder UpdatePipelineNotifications requests.
+ *
+ * @see    ElasticTranscoderClient::updatePipelineNotifications
+ */
+
+/**
+ * @brief  Constructs a new UpdatePipelineNotificationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdatePipelineNotificationsResponse::UpdatePipelineNotificationsResponse(
+
+/**
+ * @brief  Constructs a new UpdatePipelineNotificationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest(const UpdatePipelineNotificationsRequest &other)
+    : ElasticTranscoderRequest(new UpdatePipelineNotificationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdatePipelineNotificationsRequest object.
+ */
+UpdatePipelineNotificationsRequest::UpdatePipelineNotificationsRequest()
+    : ElasticTranscoderRequest(new UpdatePipelineNotificationsRequestPrivate(ElasticTranscoderRequest::UpdatePipelineNotificationsAction, this))
+{
+
+}
+
+bool UpdatePipelineNotificationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdatePipelineNotificationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdatePipelineNotificationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticTranscoderClient::send
+ */
+AwsAbstractResponse * UpdatePipelineNotificationsRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdatePipelineNotificationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdatePipelineNotificationsRequestPrivate
+ *
+ * @brief  Private implementation for UpdatePipelineNotificationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object.
+ *
+ * @param  action  ElasticTranscoder action being performed.
+ * @param  q       Pointer to this object's public UpdatePipelineNotificationsRequest instance.
+ */
+UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPrivate(
+    const ElasticTranscoderRequest::Action action, UpdatePipelineNotificationsRequest * const q)
+    : UpdatePipelineNotificationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdatePipelineNotificationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdatePipelineNotificationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdatePipelineNotificationsRequest instance.
+ */
+UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPrivate(
+    const UpdatePipelineNotificationsRequestPrivate &other, UpdatePipelineNotificationsRequest * const q)
+    : UpdatePipelineNotificationsPrivate(other, q)
+{
+
+}

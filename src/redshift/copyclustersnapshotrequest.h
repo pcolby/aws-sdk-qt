@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYCLUSTERSNAPSHOTREQUEST_H
 #define QTAWS_COPYCLUSTERSNAPSHOTREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CopyClusterSnapshotRequestPrivate;
+
+class QTAWS_EXPORT CopyClusterSnapshotRequest : public RedshiftRequest {
+
+public:
+    CopyClusterSnapshotRequest(const CopyClusterSnapshotRequest &other);
+    CopyClusterSnapshotRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopyClusterSnapshotRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

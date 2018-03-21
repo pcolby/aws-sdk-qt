@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYDBCLUSTERREQUEST_H
 #define QTAWS_MODIFYDBCLUSTERREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class ModifyDBClusterRequestPrivate;
+
+class QTAWS_EXPORT ModifyDBClusterRequest : public RDSRequest {
+
+public:
+    ModifyDBClusterRequest(const ModifyDBClusterRequest &other);
+    ModifyDBClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyDBClusterRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

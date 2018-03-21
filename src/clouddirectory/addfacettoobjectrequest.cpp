@@ -19,3 +19,107 @@
 
 #include "addfacettoobjectrequest.h"
 #include "addfacettoobjectrequest_p.h"
+#include "addfacettoobjectresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  AddFacetToObjectRequest
+ *
+ * @brief  Implements CloudDirectory AddFacetToObject requests.
+ *
+ * @see    CloudDirectoryClient::addFacetToObject
+ */
+
+/**
+ * @brief  Constructs a new AddFacetToObjectResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddFacetToObjectResponse::AddFacetToObjectResponse(
+
+/**
+ * @brief  Constructs a new AddFacetToObjectRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddFacetToObjectRequest::AddFacetToObjectRequest(const AddFacetToObjectRequest &other)
+    : CloudDirectoryRequest(new AddFacetToObjectRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddFacetToObjectRequest object.
+ */
+AddFacetToObjectRequest::AddFacetToObjectRequest()
+    : CloudDirectoryRequest(new AddFacetToObjectRequestPrivate(CloudDirectoryRequest::AddFacetToObjectAction, this))
+{
+
+}
+
+bool AddFacetToObjectRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddFacetToObjectResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddFacetToObjectResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * AddFacetToObjectRequest::response(QNetworkReply * const reply) const
+{
+    return new AddFacetToObjectResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddFacetToObjectRequestPrivate
+ *
+ * @brief  Private implementation for AddFacetToObjectRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddFacetToObjectRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public AddFacetToObjectRequest instance.
+ */
+AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
+    const CloudDirectoryRequest::Action action, AddFacetToObjectRequest * const q)
+    : AddFacetToObjectPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddFacetToObjectRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddFacetToObjectRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddFacetToObjectRequest instance.
+ */
+AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
+    const AddFacetToObjectRequestPrivate &other, AddFacetToObjectRequest * const q)
+    : AddFacetToObjectPrivate(other, q)
+{
+
+}

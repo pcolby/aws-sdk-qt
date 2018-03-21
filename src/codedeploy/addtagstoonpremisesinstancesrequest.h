@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDTAGSTOONPREMISESINSTANCESREQUEST_H
 #define QTAWS_ADDTAGSTOONPREMISESINSTANCESREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class AddTagsToOnPremisesInstancesRequestPrivate;
+
+class QTAWS_EXPORT AddTagsToOnPremisesInstancesRequest : public CodeDeployRequest {
+
+public:
+    AddTagsToOnPremisesInstancesRequest(const AddTagsToOnPremisesInstancesRequest &other);
+    AddTagsToOnPremisesInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddTagsToOnPremisesInstancesRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

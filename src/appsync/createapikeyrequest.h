@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEAPIKEYREQUEST_H
 #define QTAWS_CREATEAPIKEYREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateApiKeyRequestPrivate;
+
+class QTAWS_EXPORT CreateApiKeyRequest : public AppSyncRequest {
+
+public:
+    CreateApiKeyRequest(const CreateApiKeyRequest &other);
+    CreateApiKeyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateApiKeyRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

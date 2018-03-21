@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "rebootreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class RebootReplicationInstanceRequest;
+
+class QTAWS_EXPORT RebootReplicationInstanceRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    RebootReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+                                   RebootReplicationInstanceRequest * const q);
+    RebootReplicationInstanceRequestPrivate(const RebootReplicationInstanceRequestPrivate &other,
+                                   RebootReplicationInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebootReplicationInstanceRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

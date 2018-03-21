@@ -19,3 +19,107 @@
 
 #include "getbuiltinintentsrequest.h"
 #include "getbuiltinintentsrequest_p.h"
+#include "getbuiltinintentsresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  GetBuiltinIntentsRequest
+ *
+ * @brief  Implements LexModelBuildingService GetBuiltinIntents requests.
+ *
+ * @see    LexModelBuildingServiceClient::getBuiltinIntents
+ */
+
+/**
+ * @brief  Constructs a new GetBuiltinIntentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetBuiltinIntentsResponse::GetBuiltinIntentsResponse(
+
+/**
+ * @brief  Constructs a new GetBuiltinIntentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetBuiltinIntentsRequest::GetBuiltinIntentsRequest(const GetBuiltinIntentsRequest &other)
+    : LexModelBuildingServiceRequest(new GetBuiltinIntentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetBuiltinIntentsRequest object.
+ */
+GetBuiltinIntentsRequest::GetBuiltinIntentsRequest()
+    : LexModelBuildingServiceRequest(new GetBuiltinIntentsRequestPrivate(LexModelBuildingServiceRequest::GetBuiltinIntentsAction, this))
+{
+
+}
+
+bool GetBuiltinIntentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetBuiltinIntentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetBuiltinIntentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * GetBuiltinIntentsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetBuiltinIntentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetBuiltinIntentsRequestPrivate
+ *
+ * @brief  Private implementation for GetBuiltinIntentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinIntentsRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public GetBuiltinIntentsRequest instance.
+ */
+GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, GetBuiltinIntentsRequest * const q)
+    : GetBuiltinIntentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetBuiltinIntentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetBuiltinIntentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetBuiltinIntentsRequest instance.
+ */
+GetBuiltinIntentsRequestPrivate::GetBuiltinIntentsRequestPrivate(
+    const GetBuiltinIntentsRequestPrivate &other, GetBuiltinIntentsRequest * const q)
+    : GetBuiltinIntentsPrivate(other, q)
+{
+
+}

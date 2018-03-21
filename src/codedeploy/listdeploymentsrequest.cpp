@@ -19,3 +19,107 @@
 
 #include "listdeploymentsrequest.h"
 #include "listdeploymentsrequest_p.h"
+#include "listdeploymentsresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListDeploymentsRequest
+ *
+ * @brief  Implements CodeDeploy ListDeployments requests.
+ *
+ * @see    CodeDeployClient::listDeployments
+ */
+
+/**
+ * @brief  Constructs a new ListDeploymentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListDeploymentsResponse::ListDeploymentsResponse(
+
+/**
+ * @brief  Constructs a new ListDeploymentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListDeploymentsRequest::ListDeploymentsRequest(const ListDeploymentsRequest &other)
+    : CodeDeployRequest(new ListDeploymentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListDeploymentsRequest object.
+ */
+ListDeploymentsRequest::ListDeploymentsRequest()
+    : CodeDeployRequest(new ListDeploymentsRequestPrivate(CodeDeployRequest::ListDeploymentsAction, this))
+{
+
+}
+
+bool ListDeploymentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListDeploymentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListDeploymentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListDeploymentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListDeploymentsRequestPrivate
+ *
+ * @brief  Private implementation for ListDeploymentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeploymentsRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ListDeploymentsRequest instance.
+ */
+ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
+    const CodeDeployRequest::Action action, ListDeploymentsRequest * const q)
+    : ListDeploymentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListDeploymentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListDeploymentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListDeploymentsRequest instance.
+ */
+ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
+    const ListDeploymentsRequestPrivate &other, ListDeploymentsRequest * const q)
+    : ListDeploymentsPrivate(other, q)
+{
+
+}

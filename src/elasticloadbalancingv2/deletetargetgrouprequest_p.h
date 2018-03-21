@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETARGETGROUPREQUEST_P_H
 #define QTAWS_DELETETARGETGROUPREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "deletetargetgrouprequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DeleteTargetGroupRequest;
+
+class QTAWS_EXPORT DeleteTargetGroupRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DeleteTargetGroupRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DeleteTargetGroupRequest * const q);
+    DeleteTargetGroupRequestPrivate(const DeleteTargetGroupRequestPrivate &other,
+                                   DeleteTargetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTargetGroupRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

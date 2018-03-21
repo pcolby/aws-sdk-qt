@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINLISTGROUPSFORUSERREQUEST_H
 #define QTAWS_ADMINLISTGROUPSFORUSERREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminListGroupsForUserRequestPrivate;
+
+class QTAWS_EXPORT AdminListGroupsForUserRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminListGroupsForUserRequest(const AdminListGroupsForUserRequest &other);
+    AdminListGroupsForUserRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminListGroupsForUserRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

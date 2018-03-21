@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETLIMITREQUEST_H
 #define QTAWS_GETREUSABLEDELEGATIONSETLIMITREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetReusableDelegationSetLimitRequestPrivate;
+
+class QTAWS_EXPORT GetReusableDelegationSetLimitRequest : public Route53Request {
+
+public:
+    GetReusableDelegationSetLimitRequest(const GetReusableDelegationSetLimitRequest &other);
+    GetReusableDelegationSetLimitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetReusableDelegationSetLimitRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

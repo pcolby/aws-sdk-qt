@@ -19,3 +19,107 @@
 
 #include "updatefunctionconfigurationrequest.h"
 #include "updatefunctionconfigurationrequest_p.h"
+#include "updatefunctionconfigurationresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  UpdateFunctionConfigurationRequest
+ *
+ * @brief  Implements Lambda UpdateFunctionConfiguration requests.
+ *
+ * @see    LambdaClient::updateFunctionConfiguration
+ */
+
+/**
+ * @brief  Constructs a new UpdateFunctionConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFunctionConfigurationResponse::UpdateFunctionConfigurationResponse(
+
+/**
+ * @brief  Constructs a new UpdateFunctionConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest(const UpdateFunctionConfigurationRequest &other)
+    : LambdaRequest(new UpdateFunctionConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateFunctionConfigurationRequest object.
+ */
+UpdateFunctionConfigurationRequest::UpdateFunctionConfigurationRequest()
+    : LambdaRequest(new UpdateFunctionConfigurationRequestPrivate(LambdaRequest::UpdateFunctionConfigurationAction, this))
+{
+
+}
+
+bool UpdateFunctionConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateFunctionConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateFunctionConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * UpdateFunctionConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateFunctionConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFunctionConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateFunctionConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionConfigurationRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public UpdateFunctionConfigurationRequest instance.
+ */
+UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
+    const LambdaRequest::Action action, UpdateFunctionConfigurationRequest * const q)
+    : UpdateFunctionConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFunctionConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateFunctionConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateFunctionConfigurationRequest instance.
+ */
+UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
+    const UpdateFunctionConfigurationRequestPrivate &other, UpdateFunctionConfigurationRequest * const q)
+    : UpdateFunctionConfigurationPrivate(other, q)
+{
+
+}

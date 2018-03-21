@@ -20,4 +20,29 @@
 #ifndef QTAWS_REPORTINSTANCESTATUSREQUEST_P_H
 #define QTAWS_REPORTINSTANCESTATUSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "reportinstancestatusrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReportInstanceStatusRequest;
+
+class QTAWS_EXPORT ReportInstanceStatusRequestPrivate : public EC2Private {
+
+public:
+    ReportInstanceStatusRequestPrivate(const EC2::Action action,
+                                   ReportInstanceStatusRequest * const q);
+    ReportInstanceStatusRequestPrivate(const ReportInstanceStatusRequestPrivate &other,
+                                   ReportInstanceStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReportInstanceStatusRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

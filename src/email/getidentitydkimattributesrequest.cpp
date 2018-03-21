@@ -19,3 +19,107 @@
 
 #include "getidentitydkimattributesrequest.h"
 #include "getidentitydkimattributesrequest_p.h"
+#include "getidentitydkimattributesresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  GetIdentityDkimAttributesRequest
+ *
+ * @brief  Implements SES GetIdentityDkimAttributes requests.
+ *
+ * @see    SESClient::getIdentityDkimAttributes
+ */
+
+/**
+ * @brief  Constructs a new GetIdentityDkimAttributesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetIdentityDkimAttributesResponse::GetIdentityDkimAttributesResponse(
+
+/**
+ * @brief  Constructs a new GetIdentityDkimAttributesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetIdentityDkimAttributesRequest::GetIdentityDkimAttributesRequest(const GetIdentityDkimAttributesRequest &other)
+    : SESRequest(new GetIdentityDkimAttributesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetIdentityDkimAttributesRequest object.
+ */
+GetIdentityDkimAttributesRequest::GetIdentityDkimAttributesRequest()
+    : SESRequest(new GetIdentityDkimAttributesRequestPrivate(SESRequest::GetIdentityDkimAttributesAction, this))
+{
+
+}
+
+bool GetIdentityDkimAttributesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetIdentityDkimAttributesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetIdentityDkimAttributesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QNetworkReply * const reply) const
+{
+    return new GetIdentityDkimAttributesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetIdentityDkimAttributesRequestPrivate
+ *
+ * @brief  Private implementation for GetIdentityDkimAttributesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityDkimAttributesRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public GetIdentityDkimAttributesRequest instance.
+ */
+GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate(
+    const SESRequest::Action action, GetIdentityDkimAttributesRequest * const q)
+    : GetIdentityDkimAttributesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetIdentityDkimAttributesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetIdentityDkimAttributesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetIdentityDkimAttributesRequest instance.
+ */
+GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate(
+    const GetIdentityDkimAttributesRequestPrivate &other, GetIdentityDkimAttributesRequest * const q)
+    : GetIdentityDkimAttributesPrivate(other, q)
+{
+
+}

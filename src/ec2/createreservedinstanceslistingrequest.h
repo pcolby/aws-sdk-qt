@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATERESERVEDINSTANCESLISTINGREQUEST_H
 #define QTAWS_CREATERESERVEDINSTANCESLISTINGREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateReservedInstancesListingRequestPrivate;
+
+class QTAWS_EXPORT CreateReservedInstancesListingRequest : public EC2Request {
+
+public:
+    CreateReservedInstancesListingRequest(const CreateReservedInstancesListingRequest &other);
+    CreateReservedInstancesListingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateReservedInstancesListingRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

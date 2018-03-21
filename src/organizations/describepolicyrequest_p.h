@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPOLICYREQUEST_P_H
 #define QTAWS_DESCRIBEPOLICYREQUEST_P_H
 
+#include "organizations_p.h"
+#include "describepolicyrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DescribePolicyRequest;
+
+class QTAWS_EXPORT DescribePolicyRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DescribePolicyRequestPrivate(const Organizations::Action action,
+                                   DescribePolicyRequest * const q);
+    DescribePolicyRequestPrivate(const DescribePolicyRequestPrivate &other,
+                                   DescribePolicyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePolicyRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

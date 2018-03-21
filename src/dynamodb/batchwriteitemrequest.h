@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHWRITEITEMREQUEST_H
 #define QTAWS_BATCHWRITEITEMREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class BatchWriteItemRequestPrivate;
+
+class QTAWS_EXPORT BatchWriteItemRequest : public DynamoDBRequest {
+
+public:
+    BatchWriteItemRequest(const BatchWriteItemRequest &other);
+    BatchWriteItemRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchWriteItemRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDEVICEPOOLREQUEST_P_H
 #define QTAWS_DELETEDEVICEPOOLREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "deletedevicepoolrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class DeleteDevicePoolRequest;
+
+class QTAWS_EXPORT DeleteDevicePoolRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    DeleteDevicePoolRequestPrivate(const DeviceFarm::Action action,
+                                   DeleteDevicePoolRequest * const q);
+    DeleteDevicePoolRequestPrivate(const DeleteDevicePoolRequestPrivate &other,
+                                   DeleteDevicePoolRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDevicePoolRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

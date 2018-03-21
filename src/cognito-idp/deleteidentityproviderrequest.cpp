@@ -19,3 +19,107 @@
 
 #include "deleteidentityproviderrequest.h"
 #include "deleteidentityproviderrequest_p.h"
+#include "deleteidentityproviderresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DeleteIdentityProviderRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DeleteIdentityProvider requests.
+ *
+ * @see    CognitoIdentityProviderClient::deleteIdentityProvider
+ */
+
+/**
+ * @brief  Constructs a new DeleteIdentityProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
+
+/**
+ * @brief  Constructs a new DeleteIdentityProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteIdentityProviderRequest::DeleteIdentityProviderRequest(const DeleteIdentityProviderRequest &other)
+    : CognitoIdentityProviderRequest(new DeleteIdentityProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteIdentityProviderRequest object.
+ */
+DeleteIdentityProviderRequest::DeleteIdentityProviderRequest()
+    : CognitoIdentityProviderRequest(new DeleteIdentityProviderRequestPrivate(CognitoIdentityProviderRequest::DeleteIdentityProviderAction, this))
+{
+
+}
+
+bool DeleteIdentityProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteIdentityProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteIdentityProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DeleteIdentityProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteIdentityProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteIdentityProviderRequestPrivate
+ *
+ * @brief  Private implementation for DeleteIdentityProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityProviderRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DeleteIdentityProviderRequest instance.
+ */
+DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DeleteIdentityProviderRequest * const q)
+    : DeleteIdentityProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteIdentityProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteIdentityProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteIdentityProviderRequest instance.
+ */
+DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
+    const DeleteIdentityProviderRequestPrivate &other, DeleteIdentityProviderRequest * const q)
+    : DeleteIdentityProviderPrivate(other, q)
+{
+
+}

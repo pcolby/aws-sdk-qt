@@ -19,3 +19,107 @@
 
 #include "listtrafficpolicyinstancesbypolicyrequest.h"
 #include "listtrafficpolicyinstancesbypolicyrequest_p.h"
+#include "listtrafficpolicyinstancesbypolicyresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListTrafficPolicyInstancesByPolicyRequest
+ *
+ * @brief  Implements Route53 ListTrafficPolicyInstancesByPolicy requests.
+ *
+ * @see    Route53Client::listTrafficPolicyInstancesByPolicy
+ */
+
+/**
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTrafficPolicyInstancesByPolicyResponse::ListTrafficPolicyInstancesByPolicyResponse(
+
+/**
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyRequest(const ListTrafficPolicyInstancesByPolicyRequest &other)
+    : Route53Request(new ListTrafficPolicyInstancesByPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequest object.
+ */
+ListTrafficPolicyInstancesByPolicyRequest::ListTrafficPolicyInstancesByPolicyRequest()
+    : Route53Request(new ListTrafficPolicyInstancesByPolicyRequestPrivate(Route53Request::ListTrafficPolicyInstancesByPolicyAction, this))
+{
+
+}
+
+bool ListTrafficPolicyInstancesByPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTrafficPolicyInstancesByPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTrafficPolicyInstancesByPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListTrafficPolicyInstancesByPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTrafficPolicyInstancesByPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTrafficPolicyInstancesByPolicyRequestPrivate
+ *
+ * @brief  Private implementation for ListTrafficPolicyInstancesByPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListTrafficPolicyInstancesByPolicyRequest instance.
+ */
+ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
+    const Route53Request::Action action, ListTrafficPolicyInstancesByPolicyRequest * const q)
+    : ListTrafficPolicyInstancesByPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrafficPolicyInstancesByPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTrafficPolicyInstancesByPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTrafficPolicyInstancesByPolicyRequest instance.
+ */
+ListTrafficPolicyInstancesByPolicyRequestPrivate::ListTrafficPolicyInstancesByPolicyRequestPrivate(
+    const ListTrafficPolicyInstancesByPolicyRequestPrivate &other, ListTrafficPolicyInstancesByPolicyRequest * const q)
+    : ListTrafficPolicyInstancesByPolicyPrivate(other, q)
+{
+
+}

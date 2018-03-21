@@ -19,3 +19,107 @@
 
 #include "updatedevicepoolrequest.h"
 #include "updatedevicepoolrequest_p.h"
+#include "updatedevicepoolresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  UpdateDevicePoolRequest
+ *
+ * @brief  Implements DeviceFarm UpdateDevicePool requests.
+ *
+ * @see    DeviceFarmClient::updateDevicePool
+ */
+
+/**
+ * @brief  Constructs a new UpdateDevicePoolResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDevicePoolResponse::UpdateDevicePoolResponse(
+
+/**
+ * @brief  Constructs a new UpdateDevicePoolRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDevicePoolRequest::UpdateDevicePoolRequest(const UpdateDevicePoolRequest &other)
+    : DeviceFarmRequest(new UpdateDevicePoolRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDevicePoolRequest object.
+ */
+UpdateDevicePoolRequest::UpdateDevicePoolRequest()
+    : DeviceFarmRequest(new UpdateDevicePoolRequestPrivate(DeviceFarmRequest::UpdateDevicePoolAction, this))
+{
+
+}
+
+bool UpdateDevicePoolRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDevicePoolResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDevicePoolResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDevicePoolResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDevicePoolRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDevicePoolRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDevicePoolRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public UpdateDevicePoolRequest instance.
+ */
+UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
+    const DeviceFarmRequest::Action action, UpdateDevicePoolRequest * const q)
+    : UpdateDevicePoolPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDevicePoolRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDevicePoolRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDevicePoolRequest instance.
+ */
+UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
+    const UpdateDevicePoolRequestPrivate &other, UpdateDevicePoolRequest * const q)
+    : UpdateDevicePoolPrivate(other, q)
+{
+
+}

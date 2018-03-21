@@ -20,4 +20,32 @@
 #ifndef QTAWS_COPYDBPARAMETERGROUPREQUEST_H
 #define QTAWS_COPYDBPARAMETERGROUPREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CopyDBParameterGroupRequestPrivate;
+
+class QTAWS_EXPORT CopyDBParameterGroupRequest : public RDSRequest {
+
+public:
+    CopyDBParameterGroupRequest(const CopyDBParameterGroupRequest &other);
+    CopyDBParameterGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CopyDBParameterGroupRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

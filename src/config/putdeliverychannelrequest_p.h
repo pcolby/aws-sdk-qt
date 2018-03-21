@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTDELIVERYCHANNELREQUEST_P_H
 #define QTAWS_PUTDELIVERYCHANNELREQUEST_P_H
 
+#include "configservice_p.h"
+#include "putdeliverychannelrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class PutDeliveryChannelRequest;
+
+class QTAWS_EXPORT PutDeliveryChannelRequestPrivate : public ConfigServicePrivate {
+
+public:
+    PutDeliveryChannelRequestPrivate(const ConfigService::Action action,
+                                   PutDeliveryChannelRequest * const q);
+    PutDeliveryChannelRequestPrivate(const PutDeliveryChannelRequestPrivate &other,
+                                   PutDeliveryChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutDeliveryChannelRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

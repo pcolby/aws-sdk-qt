@@ -19,3 +19,107 @@
 
 #include "cancelimporttaskrequest.h"
 #include "cancelimporttaskrequest_p.h"
+#include "cancelimporttaskresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CancelImportTaskRequest
+ *
+ * @brief  Implements EC2 CancelImportTask requests.
+ *
+ * @see    EC2Client::cancelImportTask
+ */
+
+/**
+ * @brief  Constructs a new CancelImportTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelImportTaskResponse::CancelImportTaskResponse(
+
+/**
+ * @brief  Constructs a new CancelImportTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelImportTaskRequest::CancelImportTaskRequest(const CancelImportTaskRequest &other)
+    : EC2Request(new CancelImportTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelImportTaskRequest object.
+ */
+CancelImportTaskRequest::CancelImportTaskRequest()
+    : EC2Request(new CancelImportTaskRequestPrivate(EC2Request::CancelImportTaskAction, this))
+{
+
+}
+
+bool CancelImportTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelImportTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelImportTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CancelImportTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelImportTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelImportTaskRequestPrivate
+ *
+ * @brief  Private implementation for CancelImportTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelImportTaskRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CancelImportTaskRequest instance.
+ */
+CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
+    const EC2Request::Action action, CancelImportTaskRequest * const q)
+    : CancelImportTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelImportTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelImportTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelImportTaskRequest instance.
+ */
+CancelImportTaskRequestPrivate::CancelImportTaskRequestPrivate(
+    const CancelImportTaskRequestPrivate &other, CancelImportTaskRequest * const q)
+    : CancelImportTaskPrivate(other, q)
+{
+
+}

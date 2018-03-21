@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEUSERDEFINEDFUNCTIONREQUEST_H
 #define QTAWS_DELETEUSERDEFINEDFUNCTIONREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteUserDefinedFunctionRequestPrivate;
+
+class QTAWS_EXPORT DeleteUserDefinedFunctionRequest : public GlueRequest {
+
+public:
+    DeleteUserDefinedFunctionRequest(const DeleteUserDefinedFunctionRequest &other);
+    DeleteUserDefinedFunctionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteUserDefinedFunctionRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

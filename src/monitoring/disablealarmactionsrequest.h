@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLEALARMACTIONSREQUEST_H
 #define QTAWS_DISABLEALARMACTIONSREQUEST_H
 
+#include "cloudwatchrequest.h"
+
+namespace AWS {
+
+namespace CloudWatch {
+
+class DisableAlarmActionsRequestPrivate;
+
+class QTAWS_EXPORT DisableAlarmActionsRequest : public CloudWatchRequest {
+
+public:
+    DisableAlarmActionsRequest(const DisableAlarmActionsRequest &other);
+    DisableAlarmActionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableAlarmActionsRequest)
+
+}
+
+} // namespace CloudWatch
+} // namespace AWS
+
 #endif

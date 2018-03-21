@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEUPLOADREQUEST_H
 #define QTAWS_CREATEUPLOADREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateUploadRequestPrivate;
+
+class QTAWS_EXPORT CreateUploadRequest : public DeviceFarmRequest {
+
+public:
+    CreateUploadRequest(const CreateUploadRequest &other);
+    CreateUploadRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateUploadRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

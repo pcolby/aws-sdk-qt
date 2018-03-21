@@ -19,3 +19,107 @@
 
 #include "describeassessmenttargetsrequest.h"
 #include "describeassessmenttargetsrequest_p.h"
+#include "describeassessmenttargetsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  DescribeAssessmentTargetsRequest
+ *
+ * @brief  Implements Inspector DescribeAssessmentTargets requests.
+ *
+ * @see    InspectorClient::describeAssessmentTargets
+ */
+
+/**
+ * @brief  Constructs a new DescribeAssessmentTargetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAssessmentTargetsResponse::DescribeAssessmentTargetsResponse(
+
+/**
+ * @brief  Constructs a new DescribeAssessmentTargetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest(const DescribeAssessmentTargetsRequest &other)
+    : InspectorRequest(new DescribeAssessmentTargetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAssessmentTargetsRequest object.
+ */
+DescribeAssessmentTargetsRequest::DescribeAssessmentTargetsRequest()
+    : InspectorRequest(new DescribeAssessmentTargetsRequestPrivate(InspectorRequest::DescribeAssessmentTargetsAction, this))
+{
+
+}
+
+bool DescribeAssessmentTargetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAssessmentTargetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAssessmentTargetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * DescribeAssessmentTargetsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAssessmentTargetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAssessmentTargetsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAssessmentTargetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public DescribeAssessmentTargetsRequest instance.
+ */
+DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
+    const InspectorRequest::Action action, DescribeAssessmentTargetsRequest * const q)
+    : DescribeAssessmentTargetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAssessmentTargetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAssessmentTargetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAssessmentTargetsRequest instance.
+ */
+DescribeAssessmentTargetsRequestPrivate::DescribeAssessmentTargetsRequestPrivate(
+    const DescribeAssessmentTargetsRequestPrivate &other, DescribeAssessmentTargetsRequest * const q)
+    : DescribeAssessmentTargetsPrivate(other, q)
+{
+
+}

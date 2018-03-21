@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEFLEETREQUEST_H
 #define QTAWS_DELETEFLEETREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DeleteFleetRequestPrivate;
+
+class QTAWS_EXPORT DeleteFleetRequest : public AppStreamRequest {
+
+public:
+    DeleteFleetRequest(const DeleteFleetRequest &other);
+    DeleteFleetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteFleetRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

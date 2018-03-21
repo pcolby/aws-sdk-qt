@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTDOMAINSREQUEST_P_H
 #define QTAWS_LISTDOMAINSREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "listdomainsrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class ListDomainsRequest;
+
+class QTAWS_EXPORT ListDomainsRequestPrivate : public SimpleDBPrivate {
+
+public:
+    ListDomainsRequestPrivate(const SimpleDB::Action action,
+                                   ListDomainsRequest * const q);
+    ListDomainsRequestPrivate(const ListDomainsRequestPrivate &other,
+                                   ListDomainsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListDomainsRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

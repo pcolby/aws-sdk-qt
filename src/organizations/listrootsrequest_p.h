@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTROOTSREQUEST_P_H
 #define QTAWS_LISTROOTSREQUEST_P_H
 
+#include "organizations_p.h"
+#include "listrootsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListRootsRequest;
+
+class QTAWS_EXPORT ListRootsRequestPrivate : public OrganizationsPrivate {
+
+public:
+    ListRootsRequestPrivate(const Organizations::Action action,
+                                   ListRootsRequest * const q);
+    ListRootsRequestPrivate(const ListRootsRequestPrivate &other,
+                                   ListRootsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListRootsRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

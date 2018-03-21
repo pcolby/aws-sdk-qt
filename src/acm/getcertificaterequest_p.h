@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCERTIFICATEREQUEST_P_H
 #define QTAWS_GETCERTIFICATEREQUEST_P_H
 
+#include "acm_p.h"
+#include "getcertificaterequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class GetCertificateRequest;
+
+class QTAWS_EXPORT GetCertificateRequestPrivate : public ACMPrivate {
+
+public:
+    GetCertificateRequestPrivate(const ACM::Action action,
+                                   GetCertificateRequest * const q);
+    GetCertificateRequestPrivate(const GetCertificateRequestPrivate &other,
+                                   GetCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCertificateRequest)
+
+};
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

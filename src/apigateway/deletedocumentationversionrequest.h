@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONVERSIONREQUEST_H
 #define QTAWS_DELETEDOCUMENTATIONVERSIONREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteDocumentationVersionRequestPrivate;
+
+class QTAWS_EXPORT DeleteDocumentationVersionRequest : public APIGatewayRequest {
+
+public:
+    DeleteDocumentationVersionRequest(const DeleteDocumentationVersionRequest &other);
+    DeleteDocumentationVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDocumentationVersionRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

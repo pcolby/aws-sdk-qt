@@ -19,3 +19,107 @@
 
 #include "getaccountrequest.h"
 #include "getaccountrequest_p.h"
+#include "getaccountresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  GetAccountRequest
+ *
+ * @brief  Implements APIGateway GetAccount requests.
+ *
+ * @see    APIGatewayClient::getAccount
+ */
+
+/**
+ * @brief  Constructs a new GetAccountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountResponse::GetAccountResponse(
+
+/**
+ * @brief  Constructs a new GetAccountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAccountRequest::GetAccountRequest(const GetAccountRequest &other)
+    : APIGatewayRequest(new GetAccountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAccountRequest object.
+ */
+GetAccountRequest::GetAccountRequest()
+    : APIGatewayRequest(new GetAccountRequestPrivate(APIGatewayRequest::GetAccountAction, this))
+{
+
+}
+
+bool GetAccountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAccountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAccountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAccountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountRequestPrivate
+ *
+ * @brief  Private implementation for GetAccountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public GetAccountRequest instance.
+ */
+GetAccountRequestPrivate::GetAccountRequestPrivate(
+    const APIGatewayRequest::Action action, GetAccountRequest * const q)
+    : GetAccountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAccountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAccountRequest instance.
+ */
+GetAccountRequestPrivate::GetAccountRequestPrivate(
+    const GetAccountRequestPrivate &other, GetAccountRequest * const q)
+    : GetAccountPrivate(other, q)
+{
+
+}

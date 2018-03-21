@@ -20,4 +20,32 @@
 #ifndef QTAWS_FORGETDEVICEREQUEST_H
 #define QTAWS_FORGETDEVICEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class ForgetDeviceRequestPrivate;
+
+class QTAWS_EXPORT ForgetDeviceRequest : public CognitoIdentityProviderRequest {
+
+public:
+    ForgetDeviceRequest(const ForgetDeviceRequest &other);
+    ForgetDeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ForgetDeviceRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

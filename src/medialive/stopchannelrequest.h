@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPCHANNELREQUEST_H
 #define QTAWS_STOPCHANNELREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class StopChannelRequestPrivate;
+
+class QTAWS_EXPORT StopChannelRequest : public MediaLiveRequest {
+
+public:
+    StopChannelRequest(const StopChannelRequest &other);
+    StopChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopChannelRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

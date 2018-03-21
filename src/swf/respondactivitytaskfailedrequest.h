@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RespondActivityTaskFailedRequestPrivate;
+
+class QTAWS_EXPORT RespondActivityTaskFailedRequest : public SWFRequest {
+
+public:
+    RespondActivityTaskFailedRequest(const RespondActivityTaskFailedRequest &other);
+    RespondActivityTaskFailedRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RespondActivityTaskFailedRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

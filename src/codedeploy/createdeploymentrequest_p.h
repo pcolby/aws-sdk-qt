@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
+#include "codedeploy_p.h"
+#include "createdeploymentrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class CreateDeploymentRequest;
+
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public CodeDeployPrivate {
+
+public:
+    CreateDeploymentRequestPrivate(const CodeDeploy::Action action,
+                                   CreateDeploymentRequest * const q);
+    CreateDeploymentRequestPrivate(const CreateDeploymentRequestPrivate &other,
+                                   CreateDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDeploymentRequest)
+
+};
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

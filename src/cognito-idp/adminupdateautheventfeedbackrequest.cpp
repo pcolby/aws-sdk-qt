@@ -19,3 +19,107 @@
 
 #include "adminupdateautheventfeedbackrequest.h"
 #include "adminupdateautheventfeedbackrequest_p.h"
+#include "adminupdateautheventfeedbackresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminUpdateAuthEventFeedbackRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminUpdateAuthEventFeedback requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminUpdateAuthEventFeedback
+ */
+
+/**
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminUpdateAuthEventFeedbackResponse::AdminUpdateAuthEventFeedbackResponse(
+
+/**
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest(const AdminUpdateAuthEventFeedbackRequest &other)
+    : CognitoIdentityProviderRequest(new AdminUpdateAuthEventFeedbackRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequest object.
+ */
+AdminUpdateAuthEventFeedbackRequest::AdminUpdateAuthEventFeedbackRequest()
+    : CognitoIdentityProviderRequest(new AdminUpdateAuthEventFeedbackRequestPrivate(CognitoIdentityProviderRequest::AdminUpdateAuthEventFeedbackAction, this))
+{
+
+}
+
+bool AdminUpdateAuthEventFeedbackRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminUpdateAuthEventFeedbackResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminUpdateAuthEventFeedbackResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminUpdateAuthEventFeedbackResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminUpdateAuthEventFeedbackRequestPrivate
+ *
+ * @brief  Private implementation for AdminUpdateAuthEventFeedbackRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminUpdateAuthEventFeedbackRequest instance.
+ */
+AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminUpdateAuthEventFeedbackRequest * const q)
+    : AdminUpdateAuthEventFeedbackPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminUpdateAuthEventFeedbackRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminUpdateAuthEventFeedbackRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminUpdateAuthEventFeedbackRequest instance.
+ */
+AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestPrivate(
+    const AdminUpdateAuthEventFeedbackRequestPrivate &other, AdminUpdateAuthEventFeedbackRequest * const q)
+    : AdminUpdateAuthEventFeedbackPrivate(other, q)
+{
+
+}

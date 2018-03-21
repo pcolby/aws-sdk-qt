@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEINDEXREQUEST_H
 #define QTAWS_DESCRIBEINDEXREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeIndexRequestPrivate;
+
+class QTAWS_EXPORT DescribeIndexRequest : public IoTRequest {
+
+public:
+    DescribeIndexRequest(const DescribeIndexRequest &other);
+    DescribeIndexRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIndexRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

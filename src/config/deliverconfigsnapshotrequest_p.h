@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_P_H
 #define QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_P_H
 
+#include "configservice_p.h"
+#include "deliverconfigsnapshotrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeliverConfigSnapshotRequest;
+
+class QTAWS_EXPORT DeliverConfigSnapshotRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DeliverConfigSnapshotRequestPrivate(const ConfigService::Action action,
+                                   DeliverConfigSnapshotRequest * const q);
+    DeliverConfigSnapshotRequestPrivate(const DeliverConfigSnapshotRequestPrivate &other,
+                                   DeliverConfigSnapshotRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeliverConfigSnapshotRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

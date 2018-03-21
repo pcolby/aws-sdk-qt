@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDETECTORREQUEST_P_H
 #define QTAWS_CREATEDETECTORREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "createdetectorrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class CreateDetectorRequest;
+
+class QTAWS_EXPORT CreateDetectorRequestPrivate : public GuardDutyPrivate {
+
+public:
+    CreateDetectorRequestPrivate(const GuardDuty::Action action,
+                                   CreateDetectorRequest * const q);
+    CreateDetectorRequestPrivate(const CreateDetectorRequestPrivate &other,
+                                   CreateDetectorRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDetectorRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

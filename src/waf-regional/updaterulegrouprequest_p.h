@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATERULEGROUPREQUEST_P_H
 #define QTAWS_UPDATERULEGROUPREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "updaterulegrouprequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class UpdateRuleGroupRequest;
+
+class QTAWS_EXPORT UpdateRuleGroupRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    UpdateRuleGroupRequestPrivate(const WAFRegional::Action action,
+                                   UpdateRuleGroupRequest * const q);
+    UpdateRuleGroupRequestPrivate(const UpdateRuleGroupRequestPrivate &other,
+                                   UpdateRuleGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRuleGroupRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

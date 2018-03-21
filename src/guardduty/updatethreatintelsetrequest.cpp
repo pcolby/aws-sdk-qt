@@ -19,3 +19,107 @@
 
 #include "updatethreatintelsetrequest.h"
 #include "updatethreatintelsetrequest_p.h"
+#include "updatethreatintelsetresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  UpdateThreatIntelSetRequest
+ *
+ * @brief  Implements GuardDuty UpdateThreatIntelSet requests.
+ *
+ * @see    GuardDutyClient::updateThreatIntelSet
+ */
+
+/**
+ * @brief  Constructs a new UpdateThreatIntelSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateThreatIntelSetResponse::UpdateThreatIntelSetResponse(
+
+/**
+ * @brief  Constructs a new UpdateThreatIntelSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateThreatIntelSetRequest::UpdateThreatIntelSetRequest(const UpdateThreatIntelSetRequest &other)
+    : GuardDutyRequest(new UpdateThreatIntelSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateThreatIntelSetRequest object.
+ */
+UpdateThreatIntelSetRequest::UpdateThreatIntelSetRequest()
+    : GuardDutyRequest(new UpdateThreatIntelSetRequestPrivate(GuardDutyRequest::UpdateThreatIntelSetAction, this))
+{
+
+}
+
+bool UpdateThreatIntelSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateThreatIntelSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateThreatIntelSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * UpdateThreatIntelSetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateThreatIntelSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateThreatIntelSetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateThreatIntelSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThreatIntelSetRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public UpdateThreatIntelSetRequest instance.
+ */
+UpdateThreatIntelSetRequestPrivate::UpdateThreatIntelSetRequestPrivate(
+    const GuardDutyRequest::Action action, UpdateThreatIntelSetRequest * const q)
+    : UpdateThreatIntelSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateThreatIntelSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateThreatIntelSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateThreatIntelSetRequest instance.
+ */
+UpdateThreatIntelSetRequestPrivate::UpdateThreatIntelSetRequestPrivate(
+    const UpdateThreatIntelSetRequestPrivate &other, UpdateThreatIntelSetRequest * const q)
+    : UpdateThreatIntelSetPrivate(other, q)
+{
+
+}

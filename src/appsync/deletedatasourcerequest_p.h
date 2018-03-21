@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDATASOURCEREQUEST_P_H
 #define QTAWS_DELETEDATASOURCEREQUEST_P_H
 
+#include "appsync_p.h"
+#include "deletedatasourcerequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class DeleteDataSourceRequest;
+
+class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public AppSyncPrivate {
+
+public:
+    DeleteDataSourceRequestPrivate(const AppSync::Action action,
+                                   DeleteDataSourceRequest * const q);
+    DeleteDataSourceRequestPrivate(const DeleteDataSourceRequestPrivate &other,
+                                   DeleteDataSourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDataSourceRequest)
+
+};
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

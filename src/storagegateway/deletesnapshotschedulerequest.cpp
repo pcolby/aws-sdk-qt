@@ -19,3 +19,107 @@
 
 #include "deletesnapshotschedulerequest.h"
 #include "deletesnapshotschedulerequest_p.h"
+#include "deletesnapshotscheduleresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteSnapshotScheduleRequest
+ *
+ * @brief  Implements StorageGateway DeleteSnapshotSchedule requests.
+ *
+ * @see    StorageGatewayClient::deleteSnapshotSchedule
+ */
+
+/**
+ * @brief  Constructs a new DeleteSnapshotScheduleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteSnapshotScheduleResponse::DeleteSnapshotScheduleResponse(
+
+/**
+ * @brief  Constructs a new DeleteSnapshotScheduleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteSnapshotScheduleRequest::DeleteSnapshotScheduleRequest(const DeleteSnapshotScheduleRequest &other)
+    : StorageGatewayRequest(new DeleteSnapshotScheduleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteSnapshotScheduleRequest object.
+ */
+DeleteSnapshotScheduleRequest::DeleteSnapshotScheduleRequest()
+    : StorageGatewayRequest(new DeleteSnapshotScheduleRequestPrivate(StorageGatewayRequest::DeleteSnapshotScheduleAction, this))
+{
+
+}
+
+bool DeleteSnapshotScheduleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteSnapshotScheduleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteSnapshotScheduleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteSnapshotScheduleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteSnapshotScheduleRequestPrivate
+ *
+ * @brief  Private implementation for DeleteSnapshotScheduleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotScheduleRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteSnapshotScheduleRequest instance.
+ */
+DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteSnapshotScheduleRequest * const q)
+    : DeleteSnapshotSchedulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteSnapshotScheduleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteSnapshotScheduleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteSnapshotScheduleRequest instance.
+ */
+DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
+    const DeleteSnapshotScheduleRequestPrivate &other, DeleteSnapshotScheduleRequest * const q)
+    : DeleteSnapshotSchedulePrivate(other, q)
+{
+
+}

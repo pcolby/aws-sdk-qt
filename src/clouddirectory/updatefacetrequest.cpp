@@ -19,3 +19,107 @@
 
 #include "updatefacetrequest.h"
 #include "updatefacetrequest_p.h"
+#include "updatefacetresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpdateFacetRequest
+ *
+ * @brief  Implements CloudDirectory UpdateFacet requests.
+ *
+ * @see    CloudDirectoryClient::updateFacet
+ */
+
+/**
+ * @brief  Constructs a new UpdateFacetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateFacetResponse::UpdateFacetResponse(
+
+/**
+ * @brief  Constructs a new UpdateFacetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateFacetRequest::UpdateFacetRequest(const UpdateFacetRequest &other)
+    : CloudDirectoryRequest(new UpdateFacetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateFacetRequest object.
+ */
+UpdateFacetRequest::UpdateFacetRequest()
+    : CloudDirectoryRequest(new UpdateFacetRequestPrivate(CloudDirectoryRequest::UpdateFacetAction, this))
+{
+
+}
+
+bool UpdateFacetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateFacetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateFacetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateFacetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateFacetRequestPrivate
+ *
+ * @brief  Private implementation for UpdateFacetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFacetRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public UpdateFacetRequest instance.
+ */
+UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
+    const CloudDirectoryRequest::Action action, UpdateFacetRequest * const q)
+    : UpdateFacetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateFacetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateFacetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateFacetRequest instance.
+ */
+UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
+    const UpdateFacetRequestPrivate &other, UpdateFacetRequest * const q)
+    : UpdateFacetPrivate(other, q)
+{
+
+}

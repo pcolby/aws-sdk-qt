@@ -19,3 +19,107 @@
 
 #include "describescalingpoliciesrequest.h"
 #include "describescalingpoliciesrequest_p.h"
+#include "describescalingpoliciesresponse.h"
+#include "applicationautoscalingrequest_p.h"
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DescribeScalingPoliciesRequest
+ *
+ * @brief  Implements ApplicationAutoScaling DescribeScalingPolicies requests.
+ *
+ * @see    ApplicationAutoScalingClient::describeScalingPolicies
+ */
+
+/**
+ * @brief  Constructs a new DescribeScalingPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
+
+/**
+ * @brief  Constructs a new DescribeScalingPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeScalingPoliciesRequest::DescribeScalingPoliciesRequest(const DescribeScalingPoliciesRequest &other)
+    : ApplicationAutoScalingRequest(new DescribeScalingPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeScalingPoliciesRequest object.
+ */
+DescribeScalingPoliciesRequest::DescribeScalingPoliciesRequest()
+    : ApplicationAutoScalingRequest(new DescribeScalingPoliciesRequestPrivate(ApplicationAutoScalingRequest::DescribeScalingPoliciesAction, this))
+{
+
+}
+
+bool DescribeScalingPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeScalingPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeScalingPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationAutoScalingClient::send
+ */
+AwsAbstractResponse * DescribeScalingPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeScalingPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeScalingPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPoliciesRequestPrivate object.
+ *
+ * @param  action  ApplicationAutoScaling action being performed.
+ * @param  q       Pointer to this object's public DescribeScalingPoliciesRequest instance.
+ */
+DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
+    const ApplicationAutoScalingRequest::Action action, DescribeScalingPoliciesRequest * const q)
+    : DescribeScalingPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeScalingPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeScalingPoliciesRequest instance.
+ */
+DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
+    const DescribeScalingPoliciesRequestPrivate &other, DescribeScalingPoliciesRequest * const q)
+    : DescribeScalingPoliciesPrivate(other, q)
+{
+
+}

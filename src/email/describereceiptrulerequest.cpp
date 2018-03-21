@@ -19,3 +19,107 @@
 
 #include "describereceiptrulerequest.h"
 #include "describereceiptrulerequest_p.h"
+#include "describereceiptruleresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  DescribeReceiptRuleRequest
+ *
+ * @brief  Implements SES DescribeReceiptRule requests.
+ *
+ * @see    SESClient::describeReceiptRule
+ */
+
+/**
+ * @brief  Constructs a new DescribeReceiptRuleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeReceiptRuleResponse::DescribeReceiptRuleResponse(
+
+/**
+ * @brief  Constructs a new DescribeReceiptRuleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeReceiptRuleRequest::DescribeReceiptRuleRequest(const DescribeReceiptRuleRequest &other)
+    : SESRequest(new DescribeReceiptRuleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeReceiptRuleRequest object.
+ */
+DescribeReceiptRuleRequest::DescribeReceiptRuleRequest()
+    : SESRequest(new DescribeReceiptRuleRequestPrivate(SESRequest::DescribeReceiptRuleAction, this))
+{
+
+}
+
+bool DescribeReceiptRuleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeReceiptRuleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeReceiptRuleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * DescribeReceiptRuleRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeReceiptRuleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeReceiptRuleRequestPrivate
+ *
+ * @brief  Private implementation for DescribeReceiptRuleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReceiptRuleRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public DescribeReceiptRuleRequest instance.
+ */
+DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
+    const SESRequest::Action action, DescribeReceiptRuleRequest * const q)
+    : DescribeReceiptRulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeReceiptRuleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeReceiptRuleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeReceiptRuleRequest instance.
+ */
+DescribeReceiptRuleRequestPrivate::DescribeReceiptRuleRequestPrivate(
+    const DescribeReceiptRuleRequestPrivate &other, DescribeReceiptRuleRequest * const q)
+    : DescribeReceiptRulePrivate(other, q)
+{
+
+}

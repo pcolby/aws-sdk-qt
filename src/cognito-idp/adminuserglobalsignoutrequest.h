@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTREQUEST_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminUserGlobalSignOutRequestPrivate;
+
+class QTAWS_EXPORT AdminUserGlobalSignOutRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminUserGlobalSignOutRequest(const AdminUserGlobalSignOutRequest &other);
+    AdminUserGlobalSignOutRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminUserGlobalSignOutRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

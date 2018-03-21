@@ -19,3 +19,107 @@
 
 #include "getrunrequest.h"
 #include "getrunrequest_p.h"
+#include "getrunresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  GetRunRequest
+ *
+ * @brief  Implements DeviceFarm GetRun requests.
+ *
+ * @see    DeviceFarmClient::getRun
+ */
+
+/**
+ * @brief  Constructs a new GetRunResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRunResponse::GetRunResponse(
+
+/**
+ * @brief  Constructs a new GetRunRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRunRequest::GetRunRequest(const GetRunRequest &other)
+    : DeviceFarmRequest(new GetRunRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRunRequest object.
+ */
+GetRunRequest::GetRunRequest()
+    : DeviceFarmRequest(new GetRunRequestPrivate(DeviceFarmRequest::GetRunAction, this))
+{
+
+}
+
+bool GetRunRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRunResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRunResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * GetRunRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRunResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRunRequestPrivate
+ *
+ * @brief  Private implementation for GetRunRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRunRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public GetRunRequest instance.
+ */
+GetRunRequestPrivate::GetRunRequestPrivate(
+    const DeviceFarmRequest::Action action, GetRunRequest * const q)
+    : GetRunPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRunRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRunRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRunRequest instance.
+ */
+GetRunRequestPrivate::GetRunRequestPrivate(
+    const GetRunRequestPrivate &other, GetRunRequest * const q)
+    : GetRunPrivate(other, q)
+{
+
+}

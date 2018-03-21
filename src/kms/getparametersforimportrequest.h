@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTREQUEST_H
 #define QTAWS_GETPARAMETERSFORIMPORTREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class GetParametersForImportRequestPrivate;
+
+class QTAWS_EXPORT GetParametersForImportRequest : public KMSRequest {
+
+public:
+    GetParametersForImportRequest(const GetParametersForImportRequest &other);
+    GetParametersForImportRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetParametersForImportRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

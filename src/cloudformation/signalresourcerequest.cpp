@@ -19,3 +19,107 @@
 
 #include "signalresourcerequest.h"
 #include "signalresourcerequest_p.h"
+#include "signalresourceresponse.h"
+#include "cloudformationrequest_p.h"
+
+namespace AWS {
+namespace CloudFormation {
+
+/**
+ * @class  SignalResourceRequest
+ *
+ * @brief  Implements CloudFormation SignalResource requests.
+ *
+ * @see    CloudFormationClient::signalResource
+ */
+
+/**
+ * @brief  Constructs a new SignalResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SignalResourceResponse::SignalResourceResponse(
+
+/**
+ * @brief  Constructs a new SignalResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SignalResourceRequest::SignalResourceRequest(const SignalResourceRequest &other)
+    : CloudFormationRequest(new SignalResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SignalResourceRequest object.
+ */
+SignalResourceRequest::SignalResourceRequest()
+    : CloudFormationRequest(new SignalResourceRequestPrivate(CloudFormationRequest::SignalResourceAction, this))
+{
+
+}
+
+bool SignalResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SignalResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SignalResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudFormationClient::send
+ */
+AwsAbstractResponse * SignalResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new SignalResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SignalResourceRequestPrivate
+ *
+ * @brief  Private implementation for SignalResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignalResourceRequestPrivate object.
+ *
+ * @param  action  CloudFormation action being performed.
+ * @param  q       Pointer to this object's public SignalResourceRequest instance.
+ */
+SignalResourceRequestPrivate::SignalResourceRequestPrivate(
+    const CloudFormationRequest::Action action, SignalResourceRequest * const q)
+    : SignalResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignalResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SignalResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SignalResourceRequest instance.
+ */
+SignalResourceRequestPrivate::SignalResourceRequestPrivate(
+    const SignalResourceRequestPrivate &other, SignalResourceRequest * const q)
+    : SignalResourcePrivate(other, q)
+{
+
+}

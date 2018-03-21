@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICESREQUEST_P_H
 
+#include "support_p.h"
+#include "describeservicesrequest.h"
+
+namespace AWS {
+
+namespace Support {
+
+class DescribeServicesRequest;
+
+class QTAWS_EXPORT DescribeServicesRequestPrivate : public SupportPrivate {
+
+public:
+    DescribeServicesRequestPrivate(const Support::Action action,
+                                   DescribeServicesRequest * const q);
+    DescribeServicesRequestPrivate(const DescribeServicesRequestPrivate &other,
+                                   DescribeServicesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServicesRequest)
+
+};
+
+} // namespace Support
+} // namespace AWS
+
 #endif

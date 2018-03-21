@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONHISTORYREQUEST_H
 #define QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONHISTORYREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentManagedActionHistoryRequestPrivate;
+
+class QTAWS_EXPORT DescribeEnvironmentManagedActionHistoryRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeEnvironmentManagedActionHistoryRequest(const DescribeEnvironmentManagedActionHistoryRequest &other);
+    DescribeEnvironmentManagedActionHistoryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEnvironmentManagedActionHistoryRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

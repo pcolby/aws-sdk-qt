@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHDISKREQUEST_H
 #define QTAWS_DETACHDISKREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class DetachDiskRequestPrivate;
+
+class QTAWS_EXPORT DetachDiskRequest : public LightsailRequest {
+
+public:
+    DetachDiskRequest(const DetachDiskRequest &other);
+    DetachDiskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachDiskRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

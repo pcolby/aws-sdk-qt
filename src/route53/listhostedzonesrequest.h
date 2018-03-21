@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTHOSTEDZONESREQUEST_H
 #define QTAWS_LISTHOSTEDZONESREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListHostedZonesRequestPrivate;
+
+class QTAWS_EXPORT ListHostedZonesRequest : public Route53Request {
+
+public:
+    ListHostedZonesRequest(const ListHostedZonesRequest &other);
+    ListHostedZonesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListHostedZonesRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

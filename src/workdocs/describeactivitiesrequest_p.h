@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEACTIVITIESREQUEST_P_H
 #define QTAWS_DESCRIBEACTIVITIESREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "describeactivitiesrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeActivitiesRequest;
+
+class QTAWS_EXPORT DescribeActivitiesRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DescribeActivitiesRequestPrivate(const WorkDocs::Action action,
+                                   DescribeActivitiesRequest * const q);
+    DescribeActivitiesRequestPrivate(const DescribeActivitiesRequestPrivate &other,
+                                   DescribeActivitiesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeActivitiesRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

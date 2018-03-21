@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_H
 #define QTAWS_DESCRIBETAGSREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class DescribeTagsRequestPrivate;
+
+class QTAWS_EXPORT DescribeTagsRequest : public AutoScalingRequest {
+
+public:
+    DescribeTagsRequest(const DescribeTagsRequest &other);
+    DescribeTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTagsRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

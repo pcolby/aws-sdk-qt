@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_H
 #define QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetDevicePoolCompatibilityRequestPrivate;
+
+class QTAWS_EXPORT GetDevicePoolCompatibilityRequest : public DeviceFarmRequest {
+
+public:
+    GetDevicePoolCompatibilityRequest(const GetDevicePoolCompatibilityRequest &other);
+    GetDevicePoolCompatibilityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDevicePoolCompatibilityRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

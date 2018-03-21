@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESREQUEST_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESREQUEST_H
 
+#include "sesrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class GetIdentityVerificationAttributesRequestPrivate;
+
+class QTAWS_EXPORT GetIdentityVerificationAttributesRequest : public SESRequest {
+
+public:
+    GetIdentityVerificationAttributesRequest(const GetIdentityVerificationAttributesRequest &other);
+    GetIdentityVerificationAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetIdentityVerificationAttributesRequest)
+
+}
+
+} // namespace SES
+} // namespace AWS
+
 #endif

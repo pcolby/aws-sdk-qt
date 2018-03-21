@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECHAPCREDENTIALSREQUEST_H
 #define QTAWS_UPDATECHAPCREDENTIALSREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class UpdateChapCredentialsRequestPrivate;
+
+class QTAWS_EXPORT UpdateChapCredentialsRequest : public StorageGatewayRequest {
+
+public:
+    UpdateChapCredentialsRequest(const UpdateChapCredentialsRequest &other);
+    UpdateChapCredentialsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateChapCredentialsRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

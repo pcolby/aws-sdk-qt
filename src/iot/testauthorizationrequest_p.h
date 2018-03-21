@@ -20,4 +20,29 @@
 #ifndef QTAWS_TESTAUTHORIZATIONREQUEST_P_H
 #define QTAWS_TESTAUTHORIZATIONREQUEST_P_H
 
+#include "iot_p.h"
+#include "testauthorizationrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class TestAuthorizationRequest;
+
+class QTAWS_EXPORT TestAuthorizationRequestPrivate : public IoTPrivate {
+
+public:
+    TestAuthorizationRequestPrivate(const IoT::Action action,
+                                   TestAuthorizationRequest * const q);
+    TestAuthorizationRequestPrivate(const TestAuthorizationRequestPrivate &other,
+                                   TestAuthorizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(TestAuthorizationRequest)
+
+};
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

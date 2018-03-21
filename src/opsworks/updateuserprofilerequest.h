@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEUSERPROFILEREQUEST_H
 #define QTAWS_UPDATEUSERPROFILEREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateUserProfileRequestPrivate;
+
+class QTAWS_EXPORT UpdateUserProfileRequest : public OpsWorksRequest {
+
+public:
+    UpdateUserProfileRequest(const UpdateUserProfileRequest &other);
+    UpdateUserProfileRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateUserProfileRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

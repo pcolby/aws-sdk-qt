@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESUBNETGROUPREQUEST_H
 #define QTAWS_DELETESUBNETGROUPREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class DeleteSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteSubnetGroupRequest : public DAXRequest {
+
+public:
+    DeleteSubnetGroupRequest(const DeleteSubnetGroupRequest &other);
+    DeleteSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteSubnetGroupRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

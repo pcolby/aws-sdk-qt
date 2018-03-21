@@ -19,3 +19,107 @@
 
 #include "simulatecustompolicyrequest.h"
 #include "simulatecustompolicyrequest_p.h"
+#include "simulatecustompolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  SimulateCustomPolicyRequest
+ *
+ * @brief  Implements IAM SimulateCustomPolicy requests.
+ *
+ * @see    IAMClient::simulateCustomPolicy
+ */
+
+/**
+ * @brief  Constructs a new SimulateCustomPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
+
+/**
+ * @brief  Constructs a new SimulateCustomPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SimulateCustomPolicyRequest::SimulateCustomPolicyRequest(const SimulateCustomPolicyRequest &other)
+    : IAMRequest(new SimulateCustomPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SimulateCustomPolicyRequest object.
+ */
+SimulateCustomPolicyRequest::SimulateCustomPolicyRequest()
+    : IAMRequest(new SimulateCustomPolicyRequestPrivate(IAMRequest::SimulateCustomPolicyAction, this))
+{
+
+}
+
+bool SimulateCustomPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SimulateCustomPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SimulateCustomPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new SimulateCustomPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SimulateCustomPolicyRequestPrivate
+ *
+ * @brief  Private implementation for SimulateCustomPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SimulateCustomPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public SimulateCustomPolicyRequest instance.
+ */
+SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
+    const IAMRequest::Action action, SimulateCustomPolicyRequest * const q)
+    : SimulateCustomPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SimulateCustomPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SimulateCustomPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SimulateCustomPolicyRequest instance.
+ */
+SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
+    const SimulateCustomPolicyRequestPrivate &other, SimulateCustomPolicyRequest * const q)
+    : SimulateCustomPolicyPrivate(other, q)
+{
+
+}

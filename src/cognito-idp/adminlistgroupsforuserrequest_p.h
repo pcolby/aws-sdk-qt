@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADMINLISTGROUPSFORUSERREQUEST_P_H
 #define QTAWS_ADMINLISTGROUPSFORUSERREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "adminlistgroupsforuserrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminListGroupsForUserRequest;
+
+class QTAWS_EXPORT AdminListGroupsForUserRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    AdminListGroupsForUserRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   AdminListGroupsForUserRequest * const q);
+    AdminListGroupsForUserRequestPrivate(const AdminListGroupsForUserRequestPrivate &other,
+                                   AdminListGroupsForUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AdminListGroupsForUserRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

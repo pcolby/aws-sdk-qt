@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTPROJECTSREQUEST_P_H
 #define QTAWS_LISTPROJECTSREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "listprojectsrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class ListProjectsRequest;
+
+class QTAWS_EXPORT ListProjectsRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    ListProjectsRequestPrivate(const DeviceFarm::Action action,
+                                   ListProjectsRequest * const q);
+    ListProjectsRequestPrivate(const ListProjectsRequestPrivate &other,
+                                   ListProjectsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListProjectsRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

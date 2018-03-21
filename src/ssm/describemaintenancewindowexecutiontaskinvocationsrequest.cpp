@@ -19,3 +19,107 @@
 
 #include "describemaintenancewindowexecutiontaskinvocationsrequest.h"
 #include "describemaintenancewindowexecutiontaskinvocationsrequest_p.h"
+#include "describemaintenancewindowexecutiontaskinvocationsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribeMaintenanceWindowExecutionTaskInvocationsRequest
+ *
+ * @brief  Implements SSM DescribeMaintenanceWindowExecutionTaskInvocations requests.
+ *
+ * @see    SSMClient::describeMaintenanceWindowExecutionTaskInvocations
+ */
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsResponse::DescribeMaintenanceWindowExecutionTaskInvocationsResponse(
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest(const DescribeMaintenanceWindowExecutionTaskInvocationsRequest &other)
+    : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequest object.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsRequest::DescribeMaintenanceWindowExecutionTaskInvocationsRequest()
+    : SSMRequest(new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(SSMRequest::DescribeMaintenanceWindowExecutionTaskInvocationsAction, this))
+{
+
+}
+
+bool DescribeMaintenanceWindowExecutionTaskInvocationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeMaintenanceWindowExecutionTaskInvocationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeMaintenanceWindowExecutionTaskInvocationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribeMaintenanceWindowExecutionTaskInvocationsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeMaintenanceWindowExecutionTaskInvocationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeMaintenanceWindowExecutionTaskInvocationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsRequest instance.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
+    const SSMRequest::Action action, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
+    : DescribeMaintenanceWindowExecutionTaskInvocationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeMaintenanceWindowExecutionTaskInvocationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeMaintenanceWindowExecutionTaskInvocationsRequest instance.
+ */
+DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate::DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate(
+    const DescribeMaintenanceWindowExecutionTaskInvocationsRequestPrivate &other, DescribeMaintenanceWindowExecutionTaskInvocationsRequest * const q)
+    : DescribeMaintenanceWindowExecutionTaskInvocationsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHDETECTKEYPHRASESREQUEST_P_H
 #define QTAWS_BATCHDETECTKEYPHRASESREQUEST_P_H
 
+#include "comprehend_p.h"
+#include "batchdetectkeyphrasesrequest.h"
+
+namespace AWS {
+
+namespace Comprehend {
+
+class BatchDetectKeyPhrasesRequest;
+
+class QTAWS_EXPORT BatchDetectKeyPhrasesRequestPrivate : public ComprehendPrivate {
+
+public:
+    BatchDetectKeyPhrasesRequestPrivate(const Comprehend::Action action,
+                                   BatchDetectKeyPhrasesRequest * const q);
+    BatchDetectKeyPhrasesRequestPrivate(const BatchDetectKeyPhrasesRequestPrivate &other,
+                                   BatchDetectKeyPhrasesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchDetectKeyPhrasesRequest)
+
+};
+
+} // namespace Comprehend
+} // namespace AWS
+
 #endif

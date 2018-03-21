@@ -19,3 +19,107 @@
 
 #include "grantaccessrequest.h"
 #include "grantaccessrequest_p.h"
+#include "grantaccessresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  GrantAccessRequest
+ *
+ * @brief  Implements OpsWorks GrantAccess requests.
+ *
+ * @see    OpsWorksClient::grantAccess
+ */
+
+/**
+ * @brief  Constructs a new GrantAccessResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GrantAccessResponse::GrantAccessResponse(
+
+/**
+ * @brief  Constructs a new GrantAccessRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GrantAccessRequest::GrantAccessRequest(const GrantAccessRequest &other)
+    : OpsWorksRequest(new GrantAccessRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GrantAccessRequest object.
+ */
+GrantAccessRequest::GrantAccessRequest()
+    : OpsWorksRequest(new GrantAccessRequestPrivate(OpsWorksRequest::GrantAccessAction, this))
+{
+
+}
+
+bool GrantAccessRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GrantAccessResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GrantAccessResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * const reply) const
+{
+    return new GrantAccessResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GrantAccessRequestPrivate
+ *
+ * @brief  Private implementation for GrantAccessRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GrantAccessRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public GrantAccessRequest instance.
+ */
+GrantAccessRequestPrivate::GrantAccessRequestPrivate(
+    const OpsWorksRequest::Action action, GrantAccessRequest * const q)
+    : GrantAccessPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GrantAccessRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GrantAccessRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GrantAccessRequest instance.
+ */
+GrantAccessRequestPrivate::GrantAccessRequestPrivate(
+    const GrantAccessRequestPrivate &other, GrantAccessRequest * const q)
+    : GrantAccessPrivate(other, q)
+{
+
+}

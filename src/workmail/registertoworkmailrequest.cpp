@@ -19,3 +19,107 @@
 
 #include "registertoworkmailrequest.h"
 #include "registertoworkmailrequest_p.h"
+#include "registertoworkmailresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  RegisterToWorkMailRequest
+ *
+ * @brief  Implements WorkMail RegisterToWorkMail requests.
+ *
+ * @see    WorkMailClient::registerToWorkMail
+ */
+
+/**
+ * @brief  Constructs a new RegisterToWorkMailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterToWorkMailResponse::RegisterToWorkMailResponse(
+
+/**
+ * @brief  Constructs a new RegisterToWorkMailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterToWorkMailRequest::RegisterToWorkMailRequest(const RegisterToWorkMailRequest &other)
+    : WorkMailRequest(new RegisterToWorkMailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterToWorkMailRequest object.
+ */
+RegisterToWorkMailRequest::RegisterToWorkMailRequest()
+    : WorkMailRequest(new RegisterToWorkMailRequestPrivate(WorkMailRequest::RegisterToWorkMailAction, this))
+{
+
+}
+
+bool RegisterToWorkMailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterToWorkMailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterToWorkMailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * RegisterToWorkMailRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterToWorkMailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterToWorkMailRequestPrivate
+ *
+ * @brief  Private implementation for RegisterToWorkMailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterToWorkMailRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public RegisterToWorkMailRequest instance.
+ */
+RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
+    const WorkMailRequest::Action action, RegisterToWorkMailRequest * const q)
+    : RegisterToWorkMailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterToWorkMailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterToWorkMailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterToWorkMailRequest instance.
+ */
+RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
+    const RegisterToWorkMailRequestPrivate &other, RegisterToWorkMailRequest * const q)
+    : RegisterToWorkMailPrivate(other, q)
+{
+
+}

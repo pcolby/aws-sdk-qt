@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETRAILREQUEST_H
 #define QTAWS_UPDATETRAILREQUEST_H
 
+#include "cloudtrailrequest.h"
+
+namespace AWS {
+
+namespace CloudTrail {
+
+class UpdateTrailRequestPrivate;
+
+class QTAWS_EXPORT UpdateTrailRequest : public CloudTrailRequest {
+
+public:
+    UpdateTrailRequest(const UpdateTrailRequest &other);
+    UpdateTrailRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTrailRequest)
+
+}
+
+} // namespace CloudTrail
+} // namespace AWS
+
 #endif

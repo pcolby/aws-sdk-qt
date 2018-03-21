@@ -19,3 +19,107 @@
 
 #include "modifydbsnapshotrequest.h"
 #include "modifydbsnapshotrequest_p.h"
+#include "modifydbsnapshotresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  ModifyDBSnapshotRequest
+ *
+ * @brief  Implements RDS ModifyDBSnapshot requests.
+ *
+ * @see    RDSClient::modifyDBSnapshot
+ */
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyDBSnapshotResponse::ModifyDBSnapshotResponse(
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyDBSnapshotRequest::ModifyDBSnapshotRequest(const ModifyDBSnapshotRequest &other)
+    : RDSRequest(new ModifyDBSnapshotRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyDBSnapshotRequest object.
+ */
+ModifyDBSnapshotRequest::ModifyDBSnapshotRequest()
+    : RDSRequest(new ModifyDBSnapshotRequestPrivate(RDSRequest::ModifyDBSnapshotAction, this))
+{
+
+}
+
+bool ModifyDBSnapshotRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyDBSnapshotResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyDBSnapshotResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyDBSnapshotResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyDBSnapshotRequestPrivate
+ *
+ * @brief  Private implementation for ModifyDBSnapshotRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBSnapshotRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public ModifyDBSnapshotRequest instance.
+ */
+ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
+    const RDSRequest::Action action, ModifyDBSnapshotRequest * const q)
+    : ModifyDBSnapshotPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyDBSnapshotRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyDBSnapshotRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyDBSnapshotRequest instance.
+ */
+ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
+    const ModifyDBSnapshotRequestPrivate &other, ModifyDBSnapshotRequest * const q)
+    : ModifyDBSnapshotPrivate(other, q)
+{
+
+}

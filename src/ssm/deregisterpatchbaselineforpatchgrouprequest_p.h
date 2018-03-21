@@ -20,4 +20,29 @@
 #ifndef QTAWS_DEREGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 #define QTAWS_DEREGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 
+#include "ssm_p.h"
+#include "deregisterpatchbaselineforpatchgrouprequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DeregisterPatchBaselineForPatchGroupRequest;
+
+class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupRequestPrivate : public SSMPrivate {
+
+public:
+    DeregisterPatchBaselineForPatchGroupRequestPrivate(const SSM::Action action,
+                                   DeregisterPatchBaselineForPatchGroupRequest * const q);
+    DeregisterPatchBaselineForPatchGroupRequestPrivate(const DeregisterPatchBaselineForPatchGroupRequestPrivate &other,
+                                   DeregisterPatchBaselineForPatchGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeregisterPatchBaselineForPatchGroupRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

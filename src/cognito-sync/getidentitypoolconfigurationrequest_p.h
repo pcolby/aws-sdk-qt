@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETIDENTITYPOOLCONFIGURATIONREQUEST_P_H
 #define QTAWS_GETIDENTITYPOOLCONFIGURATIONREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "getidentitypoolconfigurationrequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class GetIdentityPoolConfigurationRequest;
+
+class QTAWS_EXPORT GetIdentityPoolConfigurationRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    GetIdentityPoolConfigurationRequestPrivate(const CognitoSync::Action action,
+                                   GetIdentityPoolConfigurationRequest * const q);
+    GetIdentityPoolConfigurationRequestPrivate(const GetIdentityPoolConfigurationRequestPrivate &other,
+                                   GetIdentityPoolConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetIdentityPoolConfigurationRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

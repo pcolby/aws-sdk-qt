@@ -19,3 +19,107 @@
 
 #include "describeriskconfigurationrequest.h"
 #include "describeriskconfigurationrequest_p.h"
+#include "describeriskconfigurationresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeRiskConfigurationRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DescribeRiskConfiguration requests.
+ *
+ * @see    CognitoIdentityProviderClient::describeRiskConfiguration
+ */
+
+/**
+ * @brief  Constructs a new DescribeRiskConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeRiskConfigurationResponse::DescribeRiskConfigurationResponse(
+
+/**
+ * @brief  Constructs a new DescribeRiskConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest(const DescribeRiskConfigurationRequest &other)
+    : CognitoIdentityProviderRequest(new DescribeRiskConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeRiskConfigurationRequest object.
+ */
+DescribeRiskConfigurationRequest::DescribeRiskConfigurationRequest()
+    : CognitoIdentityProviderRequest(new DescribeRiskConfigurationRequestPrivate(CognitoIdentityProviderRequest::DescribeRiskConfigurationAction, this))
+{
+
+}
+
+bool DescribeRiskConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeRiskConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeRiskConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeRiskConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeRiskConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for DescribeRiskConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DescribeRiskConfigurationRequest instance.
+ */
+DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DescribeRiskConfigurationRequest * const q)
+    : DescribeRiskConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeRiskConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeRiskConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeRiskConfigurationRequest instance.
+ */
+DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate(
+    const DescribeRiskConfigurationRequestPrivate &other, DescribeRiskConfigurationRequest * const q)
+    : DescribeRiskConfigurationPrivate(other, q)
+{
+
+}

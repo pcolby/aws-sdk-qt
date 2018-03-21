@@ -19,3 +19,107 @@
 
 #include "createstatemachinerequest.h"
 #include "createstatemachinerequest_p.h"
+#include "createstatemachineresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  CreateStateMachineRequest
+ *
+ * @brief  Implements SFN CreateStateMachine requests.
+ *
+ * @see    SFNClient::createStateMachine
+ */
+
+/**
+ * @brief  Constructs a new CreateStateMachineResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateStateMachineResponse::CreateStateMachineResponse(
+
+/**
+ * @brief  Constructs a new CreateStateMachineRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateStateMachineRequest::CreateStateMachineRequest(const CreateStateMachineRequest &other)
+    : SFNRequest(new CreateStateMachineRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateStateMachineRequest object.
+ */
+CreateStateMachineRequest::CreateStateMachineRequest()
+    : SFNRequest(new CreateStateMachineRequestPrivate(SFNRequest::CreateStateMachineAction, this))
+{
+
+}
+
+bool CreateStateMachineRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateStateMachineResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateStateMachineResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateStateMachineResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateStateMachineRequestPrivate
+ *
+ * @brief  Private implementation for CreateStateMachineRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStateMachineRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public CreateStateMachineRequest instance.
+ */
+CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
+    const SFNRequest::Action action, CreateStateMachineRequest * const q)
+    : CreateStateMachinePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateStateMachineRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateStateMachineRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateStateMachineRequest instance.
+ */
+CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
+    const CreateStateMachineRequestPrivate &other, CreateStateMachineRequest * const q)
+    : CreateStateMachinePrivate(other, q)
+{
+
+}

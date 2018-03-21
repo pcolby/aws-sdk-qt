@@ -19,3 +19,107 @@
 
 #include "countpendingactivitytasksrequest.h"
 #include "countpendingactivitytasksrequest_p.h"
+#include "countpendingactivitytasksresponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  CountPendingActivityTasksRequest
+ *
+ * @brief  Implements SWF CountPendingActivityTasks requests.
+ *
+ * @see    SWFClient::countPendingActivityTasks
+ */
+
+/**
+ * @brief  Constructs a new CountPendingActivityTasksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
+
+/**
+ * @brief  Constructs a new CountPendingActivityTasksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CountPendingActivityTasksRequest::CountPendingActivityTasksRequest(const CountPendingActivityTasksRequest &other)
+    : SWFRequest(new CountPendingActivityTasksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CountPendingActivityTasksRequest object.
+ */
+CountPendingActivityTasksRequest::CountPendingActivityTasksRequest()
+    : SWFRequest(new CountPendingActivityTasksRequestPrivate(SWFRequest::CountPendingActivityTasksAction, this))
+{
+
+}
+
+bool CountPendingActivityTasksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CountPendingActivityTasksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CountPendingActivityTasksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * CountPendingActivityTasksRequest::response(QNetworkReply * const reply) const
+{
+    return new CountPendingActivityTasksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CountPendingActivityTasksRequestPrivate
+ *
+ * @brief  Private implementation for CountPendingActivityTasksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public CountPendingActivityTasksRequest instance.
+ */
+CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
+    const SWFRequest::Action action, CountPendingActivityTasksRequest * const q)
+    : CountPendingActivityTasksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CountPendingActivityTasksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CountPendingActivityTasksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CountPendingActivityTasksRequest instance.
+ */
+CountPendingActivityTasksRequestPrivate::CountPendingActivityTasksRequestPrivate(
+    const CountPendingActivityTasksRequestPrivate &other, CountPendingActivityTasksRequest * const q)
+    : CountPendingActivityTasksPrivate(other, q)
+{
+
+}

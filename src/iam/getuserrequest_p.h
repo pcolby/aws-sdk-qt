@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETUSERREQUEST_P_H
 #define QTAWS_GETUSERREQUEST_P_H
 
+#include "iam_p.h"
+#include "getuserrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetUserRequest;
+
+class QTAWS_EXPORT GetUserRequestPrivate : public IAMPrivate {
+
+public:
+    GetUserRequestPrivate(const IAM::Action action,
+                                   GetUserRequest * const q);
+    GetUserRequestPrivate(const GetUserRequestPrivate &other,
+                                   GetUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetUserRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

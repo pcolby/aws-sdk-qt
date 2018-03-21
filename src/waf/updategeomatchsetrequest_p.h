@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGEOMATCHSETREQUEST_P_H
 #define QTAWS_UPDATEGEOMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "updategeomatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateGeoMatchSetRequest;
+
+class QTAWS_EXPORT UpdateGeoMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    UpdateGeoMatchSetRequestPrivate(const WAF::Action action,
+                                   UpdateGeoMatchSetRequest * const q);
+    UpdateGeoMatchSetRequestPrivate(const UpdateGeoMatchSetRequestPrivate &other,
+                                   UpdateGeoMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGeoMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

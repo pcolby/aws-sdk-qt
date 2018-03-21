@@ -20,4 +20,32 @@
 #ifndef QTAWS_ALLOCATEHOSTSREQUEST_H
 #define QTAWS_ALLOCATEHOSTSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AllocateHostsRequestPrivate;
+
+class QTAWS_EXPORT AllocateHostsRequest : public EC2Request {
+
+public:
+    AllocateHostsRequest(const AllocateHostsRequest &other);
+    AllocateHostsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AllocateHostsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

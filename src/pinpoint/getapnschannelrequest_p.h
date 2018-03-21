@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETAPNSCHANNELREQUEST_P_H
 #define QTAWS_GETAPNSCHANNELREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getapnschannelrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetApnsChannelRequest;
+
+class QTAWS_EXPORT GetApnsChannelRequestPrivate : public PinpointPrivate {
+
+public:
+    GetApnsChannelRequestPrivate(const Pinpoint::Action action,
+                                   GetApnsChannelRequest * const q);
+    GetApnsChannelRequestPrivate(const GetApnsChannelRequestPrivate &other,
+                                   GetApnsChannelRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetApnsChannelRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

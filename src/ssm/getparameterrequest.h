@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPARAMETERREQUEST_H
 #define QTAWS_GETPARAMETERREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetParameterRequestPrivate;
+
+class QTAWS_EXPORT GetParameterRequest : public SSMRequest {
+
+public:
+    GetParameterRequest(const GetParameterRequest &other);
+    GetParameterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetParameterRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

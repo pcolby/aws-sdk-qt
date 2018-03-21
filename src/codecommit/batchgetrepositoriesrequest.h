@@ -20,4 +20,32 @@
 #ifndef QTAWS_BATCHGETREPOSITORIESREQUEST_H
 #define QTAWS_BATCHGETREPOSITORIESREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class BatchGetRepositoriesRequestPrivate;
+
+class QTAWS_EXPORT BatchGetRepositoriesRequest : public CodeCommitRequest {
+
+public:
+    BatchGetRepositoriesRequest(const BatchGetRepositoriesRequest &other);
+    BatchGetRepositoriesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(BatchGetRepositoriesRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

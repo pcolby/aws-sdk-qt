@@ -19,3 +19,107 @@
 
 #include "promotereadreplicarequest.h"
 #include "promotereadreplicarequest_p.h"
+#include "promotereadreplicaresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  PromoteReadReplicaRequest
+ *
+ * @brief  Implements RDS PromoteReadReplica requests.
+ *
+ * @see    RDSClient::promoteReadReplica
+ */
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PromoteReadReplicaResponse::PromoteReadReplicaResponse(
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PromoteReadReplicaRequest::PromoteReadReplicaRequest(const PromoteReadReplicaRequest &other)
+    : RDSRequest(new PromoteReadReplicaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PromoteReadReplicaRequest object.
+ */
+PromoteReadReplicaRequest::PromoteReadReplicaRequest()
+    : RDSRequest(new PromoteReadReplicaRequestPrivate(RDSRequest::PromoteReadReplicaAction, this))
+{
+
+}
+
+bool PromoteReadReplicaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PromoteReadReplicaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PromoteReadReplicaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkReply * const reply) const
+{
+    return new PromoteReadReplicaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PromoteReadReplicaRequestPrivate
+ *
+ * @brief  Private implementation for PromoteReadReplicaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PromoteReadReplicaRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public PromoteReadReplicaRequest instance.
+ */
+PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
+    const RDSRequest::Action action, PromoteReadReplicaRequest * const q)
+    : PromoteReadReplicaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PromoteReadReplicaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PromoteReadReplicaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PromoteReadReplicaRequest instance.
+ */
+PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
+    const PromoteReadReplicaRequestPrivate &other, PromoteReadReplicaRequest * const q)
+    : PromoteReadReplicaPrivate(other, q)
+{
+
+}

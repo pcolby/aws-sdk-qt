@@ -19,3 +19,107 @@
 
 #include "describeoptiongroupsrequest.h"
 #include "describeoptiongroupsrequest_p.h"
+#include "describeoptiongroupsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeOptionGroupsRequest
+ *
+ * @brief  Implements RDS DescribeOptionGroups requests.
+ *
+ * @see    RDSClient::describeOptionGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribeOptionGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeOptionGroupsResponse::DescribeOptionGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribeOptionGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeOptionGroupsRequest::DescribeOptionGroupsRequest(const DescribeOptionGroupsRequest &other)
+    : RDSRequest(new DescribeOptionGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeOptionGroupsRequest object.
+ */
+DescribeOptionGroupsRequest::DescribeOptionGroupsRequest()
+    : RDSRequest(new DescribeOptionGroupsRequestPrivate(RDSRequest::DescribeOptionGroupsAction, this))
+{
+
+}
+
+bool DescribeOptionGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeOptionGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeOptionGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeOptionGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeOptionGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeOptionGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeOptionGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOptionGroupsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeOptionGroupsRequest instance.
+ */
+DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
+    const RDSRequest::Action action, DescribeOptionGroupsRequest * const q)
+    : DescribeOptionGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeOptionGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeOptionGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeOptionGroupsRequest instance.
+ */
+DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
+    const DescribeOptionGroupsRequestPrivate &other, DescribeOptionGroupsRequest * const q)
+    : DescribeOptionGroupsPrivate(other, q)
+{
+
+}

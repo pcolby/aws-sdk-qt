@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATEREQUEST_H
 #define QTAWS_GETSIGNINGCERTIFICATEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class GetSigningCertificateRequestPrivate;
+
+class QTAWS_EXPORT GetSigningCertificateRequest : public CognitoIdentityProviderRequest {
+
+public:
+    GetSigningCertificateRequest(const GetSigningCertificateRequest &other);
+    GetSigningCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetSigningCertificateRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

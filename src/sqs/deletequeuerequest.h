@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEQUEUEREQUEST_H
 #define QTAWS_DELETEQUEUEREQUEST_H
 
+#include "sqsrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class DeleteQueueRequestPrivate;
+
+class QTAWS_EXPORT DeleteQueueRequest : public SQSRequest {
+
+public:
+    DeleteQueueRequest(const DeleteQueueRequest &other);
+    DeleteQueueRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteQueueRequest)
+
+}
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

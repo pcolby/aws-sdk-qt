@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRULESREQUEST_H
 #define QTAWS_LISTRULESREQUEST_H
 
+#include "cloudwatcheventsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class ListRulesRequestPrivate;
+
+class QTAWS_EXPORT ListRulesRequest : public CloudWatchEventsRequest {
+
+public:
+    ListRulesRequest(const ListRulesRequest &other);
+    ListRulesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRulesRequest)
+
+}
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

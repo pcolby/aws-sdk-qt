@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDIRECTORYLIMITSREQUEST_H
 #define QTAWS_GETDIRECTORYLIMITSREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class GetDirectoryLimitsRequestPrivate;
+
+class QTAWS_EXPORT GetDirectoryLimitsRequest : public DirectoryServiceRequest {
+
+public:
+    GetDirectoryLimitsRequest(const GetDirectoryLimitsRequest &other);
+    GetDirectoryLimitsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDirectoryLimitsRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

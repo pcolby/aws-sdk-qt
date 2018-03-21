@@ -20,4 +20,32 @@
 #ifndef QTAWS_DEREGISTERELASTICIPREQUEST_H
 #define QTAWS_DEREGISTERELASTICIPREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DeregisterElasticIpRequestPrivate;
+
+class QTAWS_EXPORT DeregisterElasticIpRequest : public OpsWorksRequest {
+
+public:
+    DeregisterElasticIpRequest(const DeregisterElasticIpRequest &other);
+    DeregisterElasticIpRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeregisterElasticIpRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

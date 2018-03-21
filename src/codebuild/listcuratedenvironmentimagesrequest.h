@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_H
 
+#include "codebuildrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class ListCuratedEnvironmentImagesRequestPrivate;
+
+class QTAWS_EXPORT ListCuratedEnvironmentImagesRequest : public CodeBuildRequest {
+
+public:
+    ListCuratedEnvironmentImagesRequest(const ListCuratedEnvironmentImagesRequest &other);
+    ListCuratedEnvironmentImagesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListCuratedEnvironmentImagesRequest)
+
+}
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

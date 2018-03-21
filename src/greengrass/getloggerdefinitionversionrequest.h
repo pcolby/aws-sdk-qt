@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETLOGGERDEFINITIONVERSIONREQUEST_H
 #define QTAWS_GETLOGGERDEFINITIONVERSIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class GetLoggerDefinitionVersionRequestPrivate;
+
+class QTAWS_EXPORT GetLoggerDefinitionVersionRequest : public GreengrassRequest {
+
+public:
+    GetLoggerDefinitionVersionRequest(const GetLoggerDefinitionVersionRequest &other);
+    GetLoggerDefinitionVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetLoggerDefinitionVersionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletedevicepoolrequest.h"
 #include "deletedevicepoolrequest_p.h"
+#include "deletedevicepoolresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  DeleteDevicePoolRequest
+ *
+ * @brief  Implements DeviceFarm DeleteDevicePool requests.
+ *
+ * @see    DeviceFarmClient::deleteDevicePool
+ */
+
+/**
+ * @brief  Constructs a new DeleteDevicePoolResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDevicePoolResponse::DeleteDevicePoolResponse(
+
+/**
+ * @brief  Constructs a new DeleteDevicePoolRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDevicePoolRequest::DeleteDevicePoolRequest(const DeleteDevicePoolRequest &other)
+    : DeviceFarmRequest(new DeleteDevicePoolRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDevicePoolRequest object.
+ */
+DeleteDevicePoolRequest::DeleteDevicePoolRequest()
+    : DeviceFarmRequest(new DeleteDevicePoolRequestPrivate(DeviceFarmRequest::DeleteDevicePoolAction, this))
+{
+
+}
+
+bool DeleteDevicePoolRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDevicePoolResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDevicePoolResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * DeleteDevicePoolRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDevicePoolResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDevicePoolRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDevicePoolRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDevicePoolRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public DeleteDevicePoolRequest instance.
+ */
+DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
+    const DeviceFarmRequest::Action action, DeleteDevicePoolRequest * const q)
+    : DeleteDevicePoolPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDevicePoolRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDevicePoolRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDevicePoolRequest instance.
+ */
+DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
+    const DeleteDevicePoolRequestPrivate &other, DeleteDevicePoolRequest * const q)
+    : DeleteDevicePoolPrivate(other, q)
+{
+
+}

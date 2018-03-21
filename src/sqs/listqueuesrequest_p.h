@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTQUEUESREQUEST_P_H
 #define QTAWS_LISTQUEUESREQUEST_P_H
 
+#include "sqs_p.h"
+#include "listqueuesrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ListQueuesRequest;
+
+class QTAWS_EXPORT ListQueuesRequestPrivate : public SQSPrivate {
+
+public:
+    ListQueuesRequestPrivate(const SQS::Action action,
+                                   ListQueuesRequest * const q);
+    ListQueuesRequestPrivate(const ListQueuesRequestPrivate &other,
+                                   ListQueuesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListQueuesRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

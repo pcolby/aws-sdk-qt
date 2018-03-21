@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETREQUEST_H
 #define QTAWS_UPDATEXSSMATCHSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class UpdateXssMatchSetRequestPrivate;
+
+class QTAWS_EXPORT UpdateXssMatchSetRequest : public WAFRequest {
+
+public:
+    UpdateXssMatchSetRequest(const UpdateXssMatchSetRequest &other);
+    UpdateXssMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateXssMatchSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

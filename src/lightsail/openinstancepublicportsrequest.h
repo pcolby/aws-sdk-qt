@@ -20,4 +20,32 @@
 #ifndef QTAWS_OPENINSTANCEPUBLICPORTSREQUEST_H
 #define QTAWS_OPENINSTANCEPUBLICPORTSREQUEST_H
 
+#include "lightsailrequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class OpenInstancePublicPortsRequestPrivate;
+
+class QTAWS_EXPORT OpenInstancePublicPortsRequest : public LightsailRequest {
+
+public:
+    OpenInstancePublicPortsRequest(const OpenInstancePublicPortsRequest &other);
+    OpenInstancePublicPortsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(OpenInstancePublicPortsRequest)
+
+}
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

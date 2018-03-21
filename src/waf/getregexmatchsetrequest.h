@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETREGEXMATCHSETREQUEST_H
 #define QTAWS_GETREGEXMATCHSETREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetRegexMatchSetRequestPrivate;
+
+class QTAWS_EXPORT GetRegexMatchSetRequest : public WAFRequest {
+
+public:
+    GetRegexMatchSetRequest(const GetRegexMatchSetRequest &other);
+    GetRegexMatchSetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetRegexMatchSetRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

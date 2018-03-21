@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTMONITORINGMEMBERSREQUEST_H
 #define QTAWS_STARTMONITORINGMEMBERSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class StartMonitoringMembersRequestPrivate;
+
+class QTAWS_EXPORT StartMonitoringMembersRequest : public GuardDutyRequest {
+
+public:
+    StartMonitoringMembersRequest(const StartMonitoringMembersRequest &other);
+    StartMonitoringMembersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartMonitoringMembersRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

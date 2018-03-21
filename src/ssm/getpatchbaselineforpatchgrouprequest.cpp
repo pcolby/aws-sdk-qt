@@ -19,3 +19,107 @@
 
 #include "getpatchbaselineforpatchgrouprequest.h"
 #include "getpatchbaselineforpatchgrouprequest_p.h"
+#include "getpatchbaselineforpatchgroupresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  GetPatchBaselineForPatchGroupRequest
+ *
+ * @brief  Implements SSM GetPatchBaselineForPatchGroup requests.
+ *
+ * @see    SSMClient::getPatchBaselineForPatchGroup
+ */
+
+/**
+ * @brief  Constructs a new GetPatchBaselineForPatchGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetPatchBaselineForPatchGroupResponse::GetPatchBaselineForPatchGroupResponse(
+
+/**
+ * @brief  Constructs a new GetPatchBaselineForPatchGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest(const GetPatchBaselineForPatchGroupRequest &other)
+    : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetPatchBaselineForPatchGroupRequest object.
+ */
+GetPatchBaselineForPatchGroupRequest::GetPatchBaselineForPatchGroupRequest()
+    : SSMRequest(new GetPatchBaselineForPatchGroupRequestPrivate(SSMRequest::GetPatchBaselineForPatchGroupAction, this))
+{
+
+}
+
+bool GetPatchBaselineForPatchGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetPatchBaselineForPatchGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetPatchBaselineForPatchGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * GetPatchBaselineForPatchGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new GetPatchBaselineForPatchGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetPatchBaselineForPatchGroupRequestPrivate
+ *
+ * @brief  Private implementation for GetPatchBaselineForPatchGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPatchBaselineForPatchGroupRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public GetPatchBaselineForPatchGroupRequest instance.
+ */
+GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
+    const SSMRequest::Action action, GetPatchBaselineForPatchGroupRequest * const q)
+    : GetPatchBaselineForPatchGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetPatchBaselineForPatchGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetPatchBaselineForPatchGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetPatchBaselineForPatchGroupRequest instance.
+ */
+GetPatchBaselineForPatchGroupRequestPrivate::GetPatchBaselineForPatchGroupRequestPrivate(
+    const GetPatchBaselineForPatchGroupRequestPrivate &other, GetPatchBaselineForPatchGroupRequest * const q)
+    : GetPatchBaselineForPatchGroupPrivate(other, q)
+{
+
+}

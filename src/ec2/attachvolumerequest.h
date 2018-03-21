@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHVOLUMEREQUEST_H
 #define QTAWS_ATTACHVOLUMEREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AttachVolumeRequestPrivate;
+
+class QTAWS_EXPORT AttachVolumeRequest : public EC2Request {
+
+public:
+    AttachVolumeRequest(const AttachVolumeRequest &other);
+    AttachVolumeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachVolumeRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

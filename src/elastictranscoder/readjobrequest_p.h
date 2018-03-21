@@ -20,4 +20,29 @@
 #ifndef QTAWS_READJOBREQUEST_P_H
 #define QTAWS_READJOBREQUEST_P_H
 
+#include "elastictranscoder_p.h"
+#include "readjobrequest.h"
+
+namespace AWS {
+
+namespace ElasticTranscoder {
+
+class ReadJobRequest;
+
+class QTAWS_EXPORT ReadJobRequestPrivate : public ElasticTranscoderPrivate {
+
+public:
+    ReadJobRequestPrivate(const ElasticTranscoder::Action action,
+                                   ReadJobRequest * const q);
+    ReadJobRequestPrivate(const ReadJobRequestPrivate &other,
+                                   ReadJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReadJobRequest)
+
+};
+
+} // namespace ElasticTranscoder
+} // namespace AWS
+
 #endif

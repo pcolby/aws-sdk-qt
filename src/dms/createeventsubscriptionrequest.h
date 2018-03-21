@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEEVENTSUBSCRIPTIONREQUEST_H
 #define QTAWS_CREATEEVENTSUBSCRIPTIONREQUEST_H
 
+#include "databasemigrationservicerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class CreateEventSubscriptionRequestPrivate;
+
+class QTAWS_EXPORT CreateEventSubscriptionRequest : public DatabaseMigrationServiceRequest {
+
+public:
+    CreateEventSubscriptionRequest(const CreateEventSubscriptionRequest &other);
+    CreateEventSubscriptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateEventSubscriptionRequest)
+
+}
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

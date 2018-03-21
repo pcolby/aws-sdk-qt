@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEINSTANCEINFORMATIONREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCEINFORMATIONREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeinstanceinformationrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeInstanceInformationRequest;
+
+class QTAWS_EXPORT DescribeInstanceInformationRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeInstanceInformationRequestPrivate(const SSM::Action action,
+                                   DescribeInstanceInformationRequest * const q);
+    DescribeInstanceInformationRequestPrivate(const DescribeInstanceInformationRequestPrivate &other,
+                                   DescribeInstanceInformationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeInstanceInformationRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

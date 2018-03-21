@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTOBJECTVERSIONSREQUEST_P_H
 #define QTAWS_LISTOBJECTVERSIONSREQUEST_P_H
 
+#include "s3_p.h"
+#include "listobjectversionsrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListObjectVersionsRequest;
+
+class QTAWS_EXPORT ListObjectVersionsRequestPrivate : public S3Private {
+
+public:
+    ListObjectVersionsRequestPrivate(const S3::Action action,
+                                   ListObjectVersionsRequest * const q);
+    ListObjectVersionsRequestPrivate(const ListObjectVersionsRequestPrivate &other,
+                                   ListObjectVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListObjectVersionsRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

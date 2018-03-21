@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEGRANTREQUEST_P_H
 #define QTAWS_CREATEGRANTREQUEST_P_H
 
+#include "kms_p.h"
+#include "creategrantrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class CreateGrantRequest;
+
+class QTAWS_EXPORT CreateGrantRequestPrivate : public KMSPrivate {
+
+public:
+    CreateGrantRequestPrivate(const KMS::Action action,
+                                   CreateGrantRequest * const q);
+    CreateGrantRequestPrivate(const CreateGrantRequestPrivate &other,
+                                   CreateGrantRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateGrantRequest)
+
+};
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

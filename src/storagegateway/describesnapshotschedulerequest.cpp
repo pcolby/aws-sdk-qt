@@ -19,3 +19,107 @@
 
 #include "describesnapshotschedulerequest.h"
 #include "describesnapshotschedulerequest_p.h"
+#include "describesnapshotscheduleresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DescribeSnapshotScheduleRequest
+ *
+ * @brief  Implements StorageGateway DescribeSnapshotSchedule requests.
+ *
+ * @see    StorageGatewayClient::describeSnapshotSchedule
+ */
+
+/**
+ * @brief  Constructs a new DescribeSnapshotScheduleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeSnapshotScheduleResponse::DescribeSnapshotScheduleResponse(
+
+/**
+ * @brief  Constructs a new DescribeSnapshotScheduleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeSnapshotScheduleRequest::DescribeSnapshotScheduleRequest(const DescribeSnapshotScheduleRequest &other)
+    : StorageGatewayRequest(new DescribeSnapshotScheduleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeSnapshotScheduleRequest object.
+ */
+DescribeSnapshotScheduleRequest::DescribeSnapshotScheduleRequest()
+    : StorageGatewayRequest(new DescribeSnapshotScheduleRequestPrivate(StorageGatewayRequest::DescribeSnapshotScheduleAction, this))
+{
+
+}
+
+bool DescribeSnapshotScheduleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeSnapshotScheduleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeSnapshotScheduleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DescribeSnapshotScheduleRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeSnapshotScheduleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeSnapshotScheduleRequestPrivate
+ *
+ * @brief  Private implementation for DescribeSnapshotScheduleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotScheduleRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DescribeSnapshotScheduleRequest instance.
+ */
+DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
+    const StorageGatewayRequest::Action action, DescribeSnapshotScheduleRequest * const q)
+    : DescribeSnapshotSchedulePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeSnapshotScheduleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeSnapshotScheduleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeSnapshotScheduleRequest instance.
+ */
+DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
+    const DescribeSnapshotScheduleRequestPrivate &other, DescribeSnapshotScheduleRequest * const q)
+    : DescribeSnapshotSchedulePrivate(other, q)
+{
+
+}

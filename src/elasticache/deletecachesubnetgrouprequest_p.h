@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECACHESUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETECACHESUBNETGROUPREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "deletecachesubnetgrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class DeleteCacheSubnetGroupRequest;
+
+class QTAWS_EXPORT DeleteCacheSubnetGroupRequestPrivate : public ElastiCachePrivate {
+
+public:
+    DeleteCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,
+                                   DeleteCacheSubnetGroupRequest * const q);
+    DeleteCacheSubnetGroupRequestPrivate(const DeleteCacheSubnetGroupRequestPrivate &other,
+                                   DeleteCacheSubnetGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteCacheSubnetGroupRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOPERATIONREQUEST_H
 #define QTAWS_GETOPERATIONREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class GetOperationRequestPrivate;
+
+class QTAWS_EXPORT GetOperationRequest : public ServiceDiscoveryRequest {
+
+public:
+    GetOperationRequest(const GetOperationRequest &other);
+    GetOperationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetOperationRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

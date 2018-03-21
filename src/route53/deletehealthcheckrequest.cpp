@@ -19,3 +19,107 @@
 
 #include "deletehealthcheckrequest.h"
 #include "deletehealthcheckrequest_p.h"
+#include "deletehealthcheckresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteHealthCheckRequest
+ *
+ * @brief  Implements Route53 DeleteHealthCheck requests.
+ *
+ * @see    Route53Client::deleteHealthCheck
+ */
+
+/**
+ * @brief  Constructs a new DeleteHealthCheckResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteHealthCheckResponse::DeleteHealthCheckResponse(
+
+/**
+ * @brief  Constructs a new DeleteHealthCheckRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteHealthCheckRequest::DeleteHealthCheckRequest(const DeleteHealthCheckRequest &other)
+    : Route53Request(new DeleteHealthCheckRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteHealthCheckRequest object.
+ */
+DeleteHealthCheckRequest::DeleteHealthCheckRequest()
+    : Route53Request(new DeleteHealthCheckRequestPrivate(Route53Request::DeleteHealthCheckAction, this))
+{
+
+}
+
+bool DeleteHealthCheckRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteHealthCheckResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteHealthCheckResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteHealthCheckResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteHealthCheckRequestPrivate
+ *
+ * @brief  Private implementation for DeleteHealthCheckRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHealthCheckRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public DeleteHealthCheckRequest instance.
+ */
+DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
+    const Route53Request::Action action, DeleteHealthCheckRequest * const q)
+    : DeleteHealthCheckPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteHealthCheckRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteHealthCheckRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteHealthCheckRequest instance.
+ */
+DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
+    const DeleteHealthCheckRequestPrivate &other, DeleteHealthCheckRequest * const q)
+    : DeleteHealthCheckPrivate(other, q)
+{
+
+}

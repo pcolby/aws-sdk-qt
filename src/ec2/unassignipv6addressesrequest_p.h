@@ -20,4 +20,29 @@
 #ifndef QTAWS_UNASSIGNIPV6ADDRESSESREQUEST_P_H
 #define QTAWS_UNASSIGNIPV6ADDRESSESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "unassignipv6addressesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class UnassignIpv6AddressesRequest;
+
+class QTAWS_EXPORT UnassignIpv6AddressesRequestPrivate : public EC2Private {
+
+public:
+    UnassignIpv6AddressesRequestPrivate(const EC2::Action action,
+                                   UnassignIpv6AddressesRequest * const q);
+    UnassignIpv6AddressesRequestPrivate(const UnassignIpv6AddressesRequestPrivate &other,
+                                   UnassignIpv6AddressesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UnassignIpv6AddressesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

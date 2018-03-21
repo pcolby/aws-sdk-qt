@@ -19,3 +19,107 @@
 
 #include "getnamedqueryrequest.h"
 #include "getnamedqueryrequest_p.h"
+#include "getnamedqueryresponse.h"
+#include "athenarequest_p.h"
+
+namespace AWS {
+namespace Athena {
+
+/**
+ * @class  GetNamedQueryRequest
+ *
+ * @brief  Implements Athena GetNamedQuery requests.
+ *
+ * @see    AthenaClient::getNamedQuery
+ */
+
+/**
+ * @brief  Constructs a new GetNamedQueryResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetNamedQueryResponse::GetNamedQueryResponse(
+
+/**
+ * @brief  Constructs a new GetNamedQueryRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetNamedQueryRequest::GetNamedQueryRequest(const GetNamedQueryRequest &other)
+    : AthenaRequest(new GetNamedQueryRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetNamedQueryRequest object.
+ */
+GetNamedQueryRequest::GetNamedQueryRequest()
+    : AthenaRequest(new GetNamedQueryRequestPrivate(AthenaRequest::GetNamedQueryAction, this))
+{
+
+}
+
+bool GetNamedQueryRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetNamedQueryResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetNamedQueryResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AthenaClient::send
+ */
+AwsAbstractResponse * GetNamedQueryRequest::response(QNetworkReply * const reply) const
+{
+    return new GetNamedQueryResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetNamedQueryRequestPrivate
+ *
+ * @brief  Private implementation for GetNamedQueryRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamedQueryRequestPrivate object.
+ *
+ * @param  action  Athena action being performed.
+ * @param  q       Pointer to this object's public GetNamedQueryRequest instance.
+ */
+GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
+    const AthenaRequest::Action action, GetNamedQueryRequest * const q)
+    : GetNamedQueryPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetNamedQueryRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetNamedQueryRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetNamedQueryRequest instance.
+ */
+GetNamedQueryRequestPrivate::GetNamedQueryRequestPrivate(
+    const GetNamedQueryRequestPrivate &other, GetNamedQueryRequest * const q)
+    : GetNamedQueryPrivate(other, q)
+{
+
+}

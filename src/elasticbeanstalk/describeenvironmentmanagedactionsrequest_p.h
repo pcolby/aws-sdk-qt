@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTMANAGEDACTIONSREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "describeenvironmentmanagedactionsrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeEnvironmentManagedActionsRequest;
+
+class QTAWS_EXPORT DescribeEnvironmentManagedActionsRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DescribeEnvironmentManagedActionsRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DescribeEnvironmentManagedActionsRequest * const q);
+    DescribeEnvironmentManagedActionsRequestPrivate(const DescribeEnvironmentManagedActionsRequestPrivate &other,
+                                   DescribeEnvironmentManagedActionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEnvironmentManagedActionsRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

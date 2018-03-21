@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTABLESREQUEST_H
 #define QTAWS_LISTTABLESREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ListTablesRequestPrivate;
+
+class QTAWS_EXPORT ListTablesRequest : public DynamoDBRequest {
+
+public:
+    ListTablesRequest(const ListTablesRequest &other);
+    ListTablesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTablesRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

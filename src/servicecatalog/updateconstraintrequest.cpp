@@ -19,3 +19,107 @@
 
 #include "updateconstraintrequest.h"
 #include "updateconstraintrequest_p.h"
+#include "updateconstraintresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  UpdateConstraintRequest
+ *
+ * @brief  Implements ServiceCatalog UpdateConstraint requests.
+ *
+ * @see    ServiceCatalogClient::updateConstraint
+ */
+
+/**
+ * @brief  Constructs a new UpdateConstraintResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConstraintResponse::UpdateConstraintResponse(
+
+/**
+ * @brief  Constructs a new UpdateConstraintRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateConstraintRequest::UpdateConstraintRequest(const UpdateConstraintRequest &other)
+    : ServiceCatalogRequest(new UpdateConstraintRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateConstraintRequest object.
+ */
+UpdateConstraintRequest::UpdateConstraintRequest()
+    : ServiceCatalogRequest(new UpdateConstraintRequestPrivate(ServiceCatalogRequest::UpdateConstraintAction, this))
+{
+
+}
+
+bool UpdateConstraintRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateConstraintResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateConstraintResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateConstraintResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConstraintRequestPrivate
+ *
+ * @brief  Private implementation for UpdateConstraintRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConstraintRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public UpdateConstraintRequest instance.
+ */
+UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
+    const ServiceCatalogRequest::Action action, UpdateConstraintRequest * const q)
+    : UpdateConstraintPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConstraintRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateConstraintRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateConstraintRequest instance.
+ */
+UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
+    const UpdateConstraintRequestPrivate &other, UpdateConstraintRequest * const q)
+    : UpdateConstraintPrivate(other, q)
+{
+
+}

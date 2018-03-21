@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeaccountattributesrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeAccountAttributesRequest;
+
+class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public EC2Private {
+
+public:
+    DescribeAccountAttributesRequestPrivate(const EC2::Action action,
+                                   DescribeAccountAttributesRequest * const q);
+    DescribeAccountAttributesRequestPrivate(const DescribeAccountAttributesRequestPrivate &other,
+                                   DescribeAccountAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAccountAttributesRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

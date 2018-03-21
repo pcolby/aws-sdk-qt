@@ -19,3 +19,107 @@
 
 #include "createbackuprequest.h"
 #include "createbackuprequest_p.h"
+#include "createbackupresponse.h"
+#include "opsworkscmrequest_p.h"
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  CreateBackupRequest
+ *
+ * @brief  Implements OpsWorksCM CreateBackup requests.
+ *
+ * @see    OpsWorksCMClient::createBackup
+ */
+
+/**
+ * @brief  Constructs a new CreateBackupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBackupResponse::CreateBackupResponse(
+
+/**
+ * @brief  Constructs a new CreateBackupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateBackupRequest::CreateBackupRequest(const CreateBackupRequest &other)
+    : OpsWorksCMRequest(new CreateBackupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateBackupRequest object.
+ */
+CreateBackupRequest::CreateBackupRequest()
+    : OpsWorksCMRequest(new CreateBackupRequestPrivate(OpsWorksCMRequest::CreateBackupAction, this))
+{
+
+}
+
+bool CreateBackupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateBackupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateBackupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksCMClient::send
+ */
+AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateBackupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBackupRequestPrivate
+ *
+ * @brief  Private implementation for CreateBackupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBackupRequestPrivate object.
+ *
+ * @param  action  OpsWorksCM action being performed.
+ * @param  q       Pointer to this object's public CreateBackupRequest instance.
+ */
+CreateBackupRequestPrivate::CreateBackupRequestPrivate(
+    const OpsWorksCMRequest::Action action, CreateBackupRequest * const q)
+    : CreateBackupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBackupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateBackupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateBackupRequest instance.
+ */
+CreateBackupRequestPrivate::CreateBackupRequestPrivate(
+    const CreateBackupRequestPrivate &other, CreateBackupRequest * const q)
+    : CreateBackupPrivate(other, q)
+{
+
+}

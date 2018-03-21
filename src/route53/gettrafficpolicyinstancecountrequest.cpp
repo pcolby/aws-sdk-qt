@@ -19,3 +19,107 @@
 
 #include "gettrafficpolicyinstancecountrequest.h"
 #include "gettrafficpolicyinstancecountrequest_p.h"
+#include "gettrafficpolicyinstancecountresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  GetTrafficPolicyInstanceCountRequest
+ *
+ * @brief  Implements Route53 GetTrafficPolicyInstanceCount requests.
+ *
+ * @see    Route53Client::getTrafficPolicyInstanceCount
+ */
+
+/**
+ * @brief  Constructs a new GetTrafficPolicyInstanceCountResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
+
+/**
+ * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest(const GetTrafficPolicyInstanceCountRequest &other)
+    : Route53Request(new GetTrafficPolicyInstanceCountRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetTrafficPolicyInstanceCountRequest object.
+ */
+GetTrafficPolicyInstanceCountRequest::GetTrafficPolicyInstanceCountRequest()
+    : Route53Request(new GetTrafficPolicyInstanceCountRequestPrivate(Route53Request::GetTrafficPolicyInstanceCountAction, this))
+{
+
+}
+
+bool GetTrafficPolicyInstanceCountRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetTrafficPolicyInstanceCountResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetTrafficPolicyInstanceCountResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::response(QNetworkReply * const reply) const
+{
+    return new GetTrafficPolicyInstanceCountResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetTrafficPolicyInstanceCountRequestPrivate
+ *
+ * @brief  Private implementation for GetTrafficPolicyInstanceCountRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public GetTrafficPolicyInstanceCountRequest instance.
+ */
+GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
+    const Route53Request::Action action, GetTrafficPolicyInstanceCountRequest * const q)
+    : GetTrafficPolicyInstanceCountPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetTrafficPolicyInstanceCountRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetTrafficPolicyInstanceCountRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetTrafficPolicyInstanceCountRequest instance.
+ */
+GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
+    const GetTrafficPolicyInstanceCountRequestPrivate &other, GetTrafficPolicyInstanceCountRequest * const q)
+    : GetTrafficPolicyInstanceCountPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPPLICATIONOUTPUTREQUEST_H
 #define QTAWS_DELETEAPPLICATIONOUTPUTREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class DeleteApplicationOutputRequestPrivate;
+
+class QTAWS_EXPORT DeleteApplicationOutputRequest : public KinesisAnalyticsRequest {
+
+public:
+    DeleteApplicationOutputRequest(const DeleteApplicationOutputRequest &other);
+    DeleteApplicationOutputRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApplicationOutputRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

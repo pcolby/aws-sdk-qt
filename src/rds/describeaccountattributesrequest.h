@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeAccountAttributesRequestPrivate;
+
+class QTAWS_EXPORT DescribeAccountAttributesRequest : public RDSRequest {
+
+public:
+    DescribeAccountAttributesRequest(const DescribeAccountAttributesRequest &other);
+    DescribeAccountAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeAccountAttributesRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "putresourcepolicyrequest.h"
 #include "putresourcepolicyrequest_p.h"
+#include "putresourcepolicyresponse.h"
+#include "cloudwatchlogsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchLogs {
+
+/**
+ * @class  PutResourcePolicyRequest
+ *
+ * @brief  Implements CloudWatchLogs PutResourcePolicy requests.
+ *
+ * @see    CloudWatchLogsClient::putResourcePolicy
+ */
+
+/**
+ * @brief  Constructs a new PutResourcePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutResourcePolicyResponse::PutResourcePolicyResponse(
+
+/**
+ * @brief  Constructs a new PutResourcePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutResourcePolicyRequest::PutResourcePolicyRequest(const PutResourcePolicyRequest &other)
+    : CloudWatchLogsRequest(new PutResourcePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutResourcePolicyRequest object.
+ */
+PutResourcePolicyRequest::PutResourcePolicyRequest()
+    : CloudWatchLogsRequest(new PutResourcePolicyRequestPrivate(CloudWatchLogsRequest::PutResourcePolicyAction, this))
+{
+
+}
+
+bool PutResourcePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutResourcePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutResourcePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchLogsClient::send
+ */
+AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new PutResourcePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutResourcePolicyRequestPrivate
+ *
+ * @brief  Private implementation for PutResourcePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutResourcePolicyRequestPrivate object.
+ *
+ * @param  action  CloudWatchLogs action being performed.
+ * @param  q       Pointer to this object's public PutResourcePolicyRequest instance.
+ */
+PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
+    const CloudWatchLogsRequest::Action action, PutResourcePolicyRequest * const q)
+    : PutResourcePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutResourcePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutResourcePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutResourcePolicyRequest instance.
+ */
+PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
+    const PutResourcePolicyRequestPrivate &other, PutResourcePolicyRequest * const q)
+    : PutResourcePolicyPrivate(other, q)
+{
+
+}

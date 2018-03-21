@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECLASSIFIERREQUEST_H
 #define QTAWS_CREATECLASSIFIERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class CreateClassifierRequestPrivate;
+
+class QTAWS_EXPORT CreateClassifierRequest : public GlueRequest {
+
+public:
+    CreateClassifierRequest(const CreateClassifierRequest &other);
+    CreateClassifierRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateClassifierRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

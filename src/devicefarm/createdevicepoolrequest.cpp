@@ -19,3 +19,107 @@
 
 #include "createdevicepoolrequest.h"
 #include "createdevicepoolrequest_p.h"
+#include "createdevicepoolresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  CreateDevicePoolRequest
+ *
+ * @brief  Implements DeviceFarm CreateDevicePool requests.
+ *
+ * @see    DeviceFarmClient::createDevicePool
+ */
+
+/**
+ * @brief  Constructs a new CreateDevicePoolResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDevicePoolResponse::CreateDevicePoolResponse(
+
+/**
+ * @brief  Constructs a new CreateDevicePoolRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDevicePoolRequest::CreateDevicePoolRequest(const CreateDevicePoolRequest &other)
+    : DeviceFarmRequest(new CreateDevicePoolRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDevicePoolRequest object.
+ */
+CreateDevicePoolRequest::CreateDevicePoolRequest()
+    : DeviceFarmRequest(new CreateDevicePoolRequestPrivate(DeviceFarmRequest::CreateDevicePoolAction, this))
+{
+
+}
+
+bool CreateDevicePoolRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDevicePoolResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDevicePoolResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * CreateDevicePoolRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDevicePoolResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDevicePoolRequestPrivate
+ *
+ * @brief  Private implementation for CreateDevicePoolRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDevicePoolRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public CreateDevicePoolRequest instance.
+ */
+CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
+    const DeviceFarmRequest::Action action, CreateDevicePoolRequest * const q)
+    : CreateDevicePoolPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDevicePoolRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDevicePoolRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDevicePoolRequest instance.
+ */
+CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
+    const CreateDevicePoolRequestPrivate &other, CreateDevicePoolRequest * const q)
+    : CreateDevicePoolPrivate(other, q)
+{
+
+}

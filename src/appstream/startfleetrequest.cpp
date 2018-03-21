@@ -19,3 +19,107 @@
 
 #include "startfleetrequest.h"
 #include "startfleetrequest_p.h"
+#include "startfleetresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  StartFleetRequest
+ *
+ * @brief  Implements AppStream StartFleet requests.
+ *
+ * @see    AppStreamClient::startFleet
+ */
+
+/**
+ * @brief  Constructs a new StartFleetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartFleetResponse::StartFleetResponse(
+
+/**
+ * @brief  Constructs a new StartFleetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartFleetRequest::StartFleetRequest(const StartFleetRequest &other)
+    : AppStreamRequest(new StartFleetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartFleetRequest object.
+ */
+StartFleetRequest::StartFleetRequest()
+    : AppStreamRequest(new StartFleetRequestPrivate(AppStreamRequest::StartFleetAction, this))
+{
+
+}
+
+bool StartFleetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartFleetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartFleetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * const reply) const
+{
+    return new StartFleetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartFleetRequestPrivate
+ *
+ * @brief  Private implementation for StartFleetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFleetRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public StartFleetRequest instance.
+ */
+StartFleetRequestPrivate::StartFleetRequestPrivate(
+    const AppStreamRequest::Action action, StartFleetRequest * const q)
+    : StartFleetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartFleetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartFleetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartFleetRequest instance.
+ */
+StartFleetRequestPrivate::StartFleetRequestPrivate(
+    const StartFleetRequestPrivate &other, StartFleetRequest * const q)
+    : StartFleetPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_METERUSAGEREQUEST_P_H
 #define QTAWS_METERUSAGEREQUEST_P_H
 
+#include "marketplacemetering_p.h"
+#include "meterusagerequest.h"
+
+namespace AWS {
+
+namespace MarketplaceMetering {
+
+class MeterUsageRequest;
+
+class QTAWS_EXPORT MeterUsageRequestPrivate : public MarketplaceMeteringPrivate {
+
+public:
+    MeterUsageRequestPrivate(const MarketplaceMetering::Action action,
+                                   MeterUsageRequest * const q);
+    MeterUsageRequestPrivate(const MeterUsageRequestPrivate &other,
+                                   MeterUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(MeterUsageRequest)
+
+};
+
+} // namespace MarketplaceMetering
+} // namespace AWS
+
 #endif

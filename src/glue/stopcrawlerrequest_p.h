@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPCRAWLERREQUEST_P_H
 #define QTAWS_STOPCRAWLERREQUEST_P_H
 
+#include "glue_p.h"
+#include "stopcrawlerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StopCrawlerRequest;
+
+class QTAWS_EXPORT StopCrawlerRequestPrivate : public GluePrivate {
+
+public:
+    StopCrawlerRequestPrivate(const Glue::Action action,
+                                   StopCrawlerRequest * const q);
+    StopCrawlerRequestPrivate(const StopCrawlerRequestPrivate &other,
+                                   StopCrawlerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopCrawlerRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

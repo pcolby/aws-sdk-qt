@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREQUESTVALIDATORSREQUEST_P_H
 #define QTAWS_GETREQUESTVALIDATORSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getrequestvalidatorsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetRequestValidatorsRequest;
+
+class QTAWS_EXPORT GetRequestValidatorsRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetRequestValidatorsRequestPrivate(const APIGateway::Action action,
+                                   GetRequestValidatorsRequest * const q);
+    GetRequestValidatorsRequestPrivate(const GetRequestValidatorsRequestPrivate &other,
+                                   GetRequestValidatorsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRequestValidatorsRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

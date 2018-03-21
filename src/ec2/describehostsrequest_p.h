@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEHOSTSREQUEST_P_H
 #define QTAWS_DESCRIBEHOSTSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describehostsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeHostsRequest;
+
+class QTAWS_EXPORT DescribeHostsRequestPrivate : public EC2Private {
+
+public:
+    DescribeHostsRequestPrivate(const EC2::Action action,
+                                   DescribeHostsRequest * const q);
+    DescribeHostsRequestPrivate(const DescribeHostsRequestPrivate &other,
+                                   DescribeHostsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeHostsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

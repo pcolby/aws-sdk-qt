@@ -19,3 +19,107 @@
 
 #include "deregisterinstancerequest.h"
 #include "deregisterinstancerequest_p.h"
+#include "deregisterinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DeregisterInstanceRequest
+ *
+ * @brief  Implements OpsWorks DeregisterInstance requests.
+ *
+ * @see    OpsWorksClient::deregisterInstance
+ */
+
+/**
+ * @brief  Constructs a new DeregisterInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterInstanceResponse::DeregisterInstanceResponse(
+
+/**
+ * @brief  Constructs a new DeregisterInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterInstanceRequest::DeregisterInstanceRequest(const DeregisterInstanceRequest &other)
+    : OpsWorksRequest(new DeregisterInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterInstanceRequest object.
+ */
+DeregisterInstanceRequest::DeregisterInstanceRequest()
+    : OpsWorksRequest(new DeregisterInstanceRequestPrivate(OpsWorksRequest::DeregisterInstanceAction, this))
+{
+
+}
+
+bool DeregisterInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterInstanceRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DeregisterInstanceRequest instance.
+ */
+DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, DeregisterInstanceRequest * const q)
+    : DeregisterInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterInstanceRequest instance.
+ */
+DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
+    const DeregisterInstanceRequestPrivate &other, DeregisterInstanceRequest * const q)
+    : DeregisterInstancePrivate(other, q)
+{
+
+}

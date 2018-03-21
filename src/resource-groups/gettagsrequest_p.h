@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "gettagsrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class GetTagsRequest;
+
+class QTAWS_EXPORT GetTagsRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    GetTagsRequestPrivate(const ResourceGroups::Action action,
+                                   GetTagsRequest * const q);
+    GetTagsRequestPrivate(const GetTagsRequestPrivate &other,
+                                   GetTagsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetTagsRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

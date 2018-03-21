@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETACCOUNTLIMITREQUEST_P_H
 #define QTAWS_GETACCOUNTLIMITREQUEST_P_H
 
+#include "route53_p.h"
+#include "getaccountlimitrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetAccountLimitRequest;
+
+class QTAWS_EXPORT GetAccountLimitRequestPrivate : public Route53Private {
+
+public:
+    GetAccountLimitRequestPrivate(const Route53::Action action,
+                                   GetAccountLimitRequest * const q);
+    GetAccountLimitRequestPrivate(const GetAccountLimitRequestPrivate &other,
+                                   GetAccountLimitRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetAccountLimitRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

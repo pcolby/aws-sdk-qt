@@ -19,3 +19,107 @@
 
 #include "startbuildrequest.h"
 #include "startbuildrequest_p.h"
+#include "startbuildresponse.h"
+#include "codebuildrequest_p.h"
+
+namespace AWS {
+namespace CodeBuild {
+
+/**
+ * @class  StartBuildRequest
+ *
+ * @brief  Implements CodeBuild StartBuild requests.
+ *
+ * @see    CodeBuildClient::startBuild
+ */
+
+/**
+ * @brief  Constructs a new StartBuildResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartBuildResponse::StartBuildResponse(
+
+/**
+ * @brief  Constructs a new StartBuildRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartBuildRequest::StartBuildRequest(const StartBuildRequest &other)
+    : CodeBuildRequest(new StartBuildRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartBuildRequest object.
+ */
+StartBuildRequest::StartBuildRequest()
+    : CodeBuildRequest(new StartBuildRequestPrivate(CodeBuildRequest::StartBuildAction, this))
+{
+
+}
+
+bool StartBuildRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartBuildResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartBuildResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeBuildClient::send
+ */
+AwsAbstractResponse * StartBuildRequest::response(QNetworkReply * const reply) const
+{
+    return new StartBuildResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartBuildRequestPrivate
+ *
+ * @brief  Private implementation for StartBuildRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartBuildRequestPrivate object.
+ *
+ * @param  action  CodeBuild action being performed.
+ * @param  q       Pointer to this object's public StartBuildRequest instance.
+ */
+StartBuildRequestPrivate::StartBuildRequestPrivate(
+    const CodeBuildRequest::Action action, StartBuildRequest * const q)
+    : StartBuildPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartBuildRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartBuildRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartBuildRequest instance.
+ */
+StartBuildRequestPrivate::StartBuildRequestPrivate(
+    const StartBuildRequestPrivate &other, StartBuildRequest * const q)
+    : StartBuildPrivate(other, q)
+{
+
+}

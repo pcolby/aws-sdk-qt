@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEPROTECTIONREQUEST_P_H
 #define QTAWS_DELETEPROTECTIONREQUEST_P_H
 
+#include "shield_p.h"
+#include "deleteprotectionrequest.h"
+
+namespace AWS {
+
+namespace Shield {
+
+class DeleteProtectionRequest;
+
+class QTAWS_EXPORT DeleteProtectionRequestPrivate : public ShieldPrivate {
+
+public:
+    DeleteProtectionRequestPrivate(const Shield::Action action,
+                                   DeleteProtectionRequest * const q);
+    DeleteProtectionRequestPrivate(const DeleteProtectionRequestPrivate &other,
+                                   DeleteProtectionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteProtectionRequest)
+
+};
+
+} // namespace Shield
+} // namespace AWS
+
 #endif

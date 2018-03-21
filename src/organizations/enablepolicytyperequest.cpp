@@ -19,3 +19,107 @@
 
 #include "enablepolicytyperequest.h"
 #include "enablepolicytyperequest_p.h"
+#include "enablepolicytyperesponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  EnablePolicyTypeRequest
+ *
+ * @brief  Implements Organizations EnablePolicyType requests.
+ *
+ * @see    OrganizationsClient::enablePolicyType
+ */
+
+/**
+ * @brief  Constructs a new EnablePolicyTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnablePolicyTypeResponse::EnablePolicyTypeResponse(
+
+/**
+ * @brief  Constructs a new EnablePolicyTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnablePolicyTypeRequest::EnablePolicyTypeRequest(const EnablePolicyTypeRequest &other)
+    : OrganizationsRequest(new EnablePolicyTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnablePolicyTypeRequest object.
+ */
+EnablePolicyTypeRequest::EnablePolicyTypeRequest()
+    : OrganizationsRequest(new EnablePolicyTypeRequestPrivate(OrganizationsRequest::EnablePolicyTypeAction, this))
+{
+
+}
+
+bool EnablePolicyTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnablePolicyTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnablePolicyTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * EnablePolicyTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new EnablePolicyTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnablePolicyTypeRequestPrivate
+ *
+ * @brief  Private implementation for EnablePolicyTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnablePolicyTypeRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public EnablePolicyTypeRequest instance.
+ */
+EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
+    const OrganizationsRequest::Action action, EnablePolicyTypeRequest * const q)
+    : EnablePolicyTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnablePolicyTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnablePolicyTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnablePolicyTypeRequest instance.
+ */
+EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
+    const EnablePolicyTypeRequestPrivate &other, EnablePolicyTypeRequest * const q)
+    : EnablePolicyTypePrivate(other, q)
+{
+
+}

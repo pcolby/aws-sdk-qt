@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSREQUEST_H
 #define QTAWS_DESCRIBEAPPLICATIONSREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DescribeApplicationsRequestPrivate;
+
+class QTAWS_EXPORT DescribeApplicationsRequest : public ElasticBeanstalkRequest {
+
+public:
+    DescribeApplicationsRequest(const DescribeApplicationsRequest &other);
+    DescribeApplicationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeApplicationsRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

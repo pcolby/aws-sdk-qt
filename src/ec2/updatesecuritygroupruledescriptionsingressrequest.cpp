@@ -19,3 +19,107 @@
 
 #include "updatesecuritygroupruledescriptionsingressrequest.h"
 #include "updatesecuritygroupruledescriptionsingressrequest_p.h"
+#include "updatesecuritygroupruledescriptionsingressresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  UpdateSecurityGroupRuleDescriptionsIngressRequest
+ *
+ * @brief  Implements EC2 UpdateSecurityGroupRuleDescriptionsIngress requests.
+ *
+ * @see    EC2Client::updateSecurityGroupRuleDescriptionsIngress
+ */
+
+/**
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressResponse::UpdateSecurityGroupRuleDescriptionsIngressResponse(
+
+/**
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest(const UpdateSecurityGroupRuleDescriptionsIngressRequest &other)
+    : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequest object.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressRequest::UpdateSecurityGroupRuleDescriptionsIngressRequest()
+    : EC2Request(new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(EC2Request::UpdateSecurityGroupRuleDescriptionsIngressAction, this))
+{
+
+}
+
+bool UpdateSecurityGroupRuleDescriptionsIngressRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSecurityGroupRuleDescriptionsIngressResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSecurityGroupRuleDescriptionsIngressResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSecurityGroupRuleDescriptionsIngressResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSecurityGroupRuleDescriptionsIngressRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public UpdateSecurityGroupRuleDescriptionsIngressRequest instance.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
+    const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
+    : UpdateSecurityGroupRuleDescriptionsIngressPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSecurityGroupRuleDescriptionsIngressRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSecurityGroupRuleDescriptionsIngressRequest instance.
+ */
+UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
+    const UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate &other, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)
+    : UpdateSecurityGroupRuleDescriptionsIngressPrivate(other, q)
+{
+
+}

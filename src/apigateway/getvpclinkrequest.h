@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETVPCLINKREQUEST_H
 #define QTAWS_GETVPCLINKREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetVpcLinkRequestPrivate;
+
+class QTAWS_EXPORT GetVpcLinkRequest : public APIGatewayRequest {
+
+public:
+    GetVpcLinkRequest(const GetVpcLinkRequest &other);
+    GetVpcLinkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetVpcLinkRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEWEBACLREQUEST_H
 #define QTAWS_DISASSOCIATEWEBACLREQUEST_H
 
+#include "wafregionalrequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DisassociateWebACLRequestPrivate;
+
+class QTAWS_EXPORT DisassociateWebACLRequest : public WAFRegionalRequest {
+
+public:
+    DisassociateWebACLRequest(const DisassociateWebACLRequest &other);
+    DisassociateWebACLRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateWebACLRequest)
+
+}
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

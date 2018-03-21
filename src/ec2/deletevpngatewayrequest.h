@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVPNGATEWAYREQUEST_H
 #define QTAWS_DELETEVPNGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteVpnGatewayRequestPrivate;
+
+class QTAWS_EXPORT DeleteVpnGatewayRequest : public EC2Request {
+
+public:
+    DeleteVpnGatewayRequest(const DeleteVpnGatewayRequest &other);
+    DeleteVpnGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVpnGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

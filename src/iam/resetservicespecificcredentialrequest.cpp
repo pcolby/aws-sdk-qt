@@ -19,3 +19,107 @@
 
 #include "resetservicespecificcredentialrequest.h"
 #include "resetservicespecificcredentialrequest_p.h"
+#include "resetservicespecificcredentialresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ResetServiceSpecificCredentialRequest
+ *
+ * @brief  Implements IAM ResetServiceSpecificCredential requests.
+ *
+ * @see    IAMClient::resetServiceSpecificCredential
+ */
+
+/**
+ * @brief  Constructs a new ResetServiceSpecificCredentialResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
+
+/**
+ * @brief  Constructs a new ResetServiceSpecificCredentialRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest(const ResetServiceSpecificCredentialRequest &other)
+    : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ResetServiceSpecificCredentialRequest object.
+ */
+ResetServiceSpecificCredentialRequest::ResetServiceSpecificCredentialRequest()
+    : IAMRequest(new ResetServiceSpecificCredentialRequestPrivate(IAMRequest::ResetServiceSpecificCredentialAction, this))
+{
+
+}
+
+bool ResetServiceSpecificCredentialRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ResetServiceSpecificCredentialResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ResetServiceSpecificCredentialResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ResetServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+{
+    return new ResetServiceSpecificCredentialResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ResetServiceSpecificCredentialRequestPrivate
+ *
+ * @brief  Private implementation for ResetServiceSpecificCredentialRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetServiceSpecificCredentialRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ResetServiceSpecificCredentialRequest instance.
+ */
+ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
+    const IAMRequest::Action action, ResetServiceSpecificCredentialRequest * const q)
+    : ResetServiceSpecificCredentialPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ResetServiceSpecificCredentialRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ResetServiceSpecificCredentialRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ResetServiceSpecificCredentialRequest instance.
+ */
+ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
+    const ResetServiceSpecificCredentialRequestPrivate &other, ResetServiceSpecificCredentialRequest * const q)
+    : ResetServiceSpecificCredentialPrivate(other, q)
+{
+
+}

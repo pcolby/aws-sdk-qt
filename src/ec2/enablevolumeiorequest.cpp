@@ -19,3 +19,107 @@
 
 #include "enablevolumeiorequest.h"
 #include "enablevolumeiorequest_p.h"
+#include "enablevolumeioresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  EnableVolumeIORequest
+ *
+ * @brief  Implements EC2 EnableVolumeIO requests.
+ *
+ * @see    EC2Client::enableVolumeIO
+ */
+
+/**
+ * @brief  Constructs a new EnableVolumeIOResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+EnableVolumeIOResponse::EnableVolumeIOResponse(
+
+/**
+ * @brief  Constructs a new EnableVolumeIORequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+EnableVolumeIORequest::EnableVolumeIORequest(const EnableVolumeIORequest &other)
+    : EC2Request(new EnableVolumeIORequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new EnableVolumeIORequest object.
+ */
+EnableVolumeIORequest::EnableVolumeIORequest()
+    : EC2Request(new EnableVolumeIORequestPrivate(EC2Request::EnableVolumeIOAction, this))
+{
+
+}
+
+bool EnableVolumeIORequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an EnableVolumeIOResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An EnableVolumeIOResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply * const reply) const
+{
+    return new EnableVolumeIOResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  EnableVolumeIORequestPrivate
+ *
+ * @brief  Private implementation for EnableVolumeIORequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVolumeIORequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public EnableVolumeIORequest instance.
+ */
+EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
+    const EC2Request::Action action, EnableVolumeIORequest * const q)
+    : EnableVolumeIOPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new EnableVolumeIORequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the EnableVolumeIORequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public EnableVolumeIORequest instance.
+ */
+EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
+    const EnableVolumeIORequestPrivate &other, EnableVolumeIORequest * const q)
+    : EnableVolumeIOPrivate(other, q)
+{
+
+}

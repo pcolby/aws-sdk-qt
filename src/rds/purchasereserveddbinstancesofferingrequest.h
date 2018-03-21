@@ -20,4 +20,32 @@
 #ifndef QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGREQUEST_H
 #define QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PurchaseReservedDBInstancesOfferingRequestPrivate;
+
+class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingRequest : public RDSRequest {
+
+public:
+    PurchaseReservedDBInstancesOfferingRequest(const PurchaseReservedDBInstancesOfferingRequest &other);
+    PurchaseReservedDBInstancesOfferingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PurchaseReservedDBInstancesOfferingRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

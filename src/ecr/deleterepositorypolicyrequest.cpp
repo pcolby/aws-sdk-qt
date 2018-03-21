@@ -19,3 +19,107 @@
 
 #include "deleterepositorypolicyrequest.h"
 #include "deleterepositorypolicyrequest_p.h"
+#include "deleterepositorypolicyresponse.h"
+#include "ecrrequest_p.h"
+
+namespace AWS {
+namespace ECR {
+
+/**
+ * @class  DeleteRepositoryPolicyRequest
+ *
+ * @brief  Implements ECR DeleteRepositoryPolicy requests.
+ *
+ * @see    ECRClient::deleteRepositoryPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteRepositoryPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteRepositoryPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest(const DeleteRepositoryPolicyRequest &other)
+    : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteRepositoryPolicyRequest object.
+ */
+DeleteRepositoryPolicyRequest::DeleteRepositoryPolicyRequest()
+    : ECRRequest(new DeleteRepositoryPolicyRequestPrivate(ECRRequest::DeleteRepositoryPolicyAction, this))
+{
+
+}
+
+bool DeleteRepositoryPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteRepositoryPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteRepositoryPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECRClient::send
+ */
+AwsAbstractResponse * DeleteRepositoryPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteRepositoryPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteRepositoryPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteRepositoryPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object.
+ *
+ * @param  action  ECR action being performed.
+ * @param  q       Pointer to this object's public DeleteRepositoryPolicyRequest instance.
+ */
+DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
+    const ECRRequest::Action action, DeleteRepositoryPolicyRequest * const q)
+    : DeleteRepositoryPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteRepositoryPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteRepositoryPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteRepositoryPolicyRequest instance.
+ */
+DeleteRepositoryPolicyRequestPrivate::DeleteRepositoryPolicyRequestPrivate(
+    const DeleteRepositoryPolicyRequestPrivate &other, DeleteRepositoryPolicyRequest * const q)
+    : DeleteRepositoryPolicyPrivate(other, q)
+{
+
+}

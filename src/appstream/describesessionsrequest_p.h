@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESESSIONSREQUEST_P_H
 #define QTAWS_DESCRIBESESSIONSREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describesessionsrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeSessionsRequest;
+
+class QTAWS_EXPORT DescribeSessionsRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeSessionsRequestPrivate(const AppStream::Action action,
+                                   DescribeSessionsRequest * const q);
+    DescribeSessionsRequestPrivate(const DescribeSessionsRequestPrivate &other,
+                                   DescribeSessionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeSessionsRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

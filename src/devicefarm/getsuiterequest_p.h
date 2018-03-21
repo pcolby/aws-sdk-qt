@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSUITEREQUEST_P_H
 #define QTAWS_GETSUITEREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getsuiterequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetSuiteRequest;
+
+class QTAWS_EXPORT GetSuiteRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetSuiteRequestPrivate(const DeviceFarm::Action action,
+                                   GetSuiteRequest * const q);
+    GetSuiteRequestPrivate(const GetSuiteRequestPrivate &other,
+                                   GetSuiteRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSuiteRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

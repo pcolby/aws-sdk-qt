@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDATASOURCEREQUEST_P_H
 #define QTAWS_GETDATASOURCEREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "getdatasourcerequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class GetDataSourceRequest;
+
+class QTAWS_EXPORT GetDataSourceRequestPrivate : public MachineLearningPrivate {
+
+public:
+    GetDataSourceRequestPrivate(const MachineLearning::Action action,
+                                   GetDataSourceRequest * const q);
+    GetDataSourceRequestPrivate(const GetDataSourceRequestPrivate &other,
+                                   GetDataSourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataSourceRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

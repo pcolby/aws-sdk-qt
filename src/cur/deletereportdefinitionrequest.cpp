@@ -19,3 +19,107 @@
 
 #include "deletereportdefinitionrequest.h"
 #include "deletereportdefinitionrequest_p.h"
+#include "deletereportdefinitionresponse.h"
+#include "costandusagereportservicerequest_p.h"
+
+namespace AWS {
+namespace CostandUsageReportService {
+
+/**
+ * @class  DeleteReportDefinitionRequest
+ *
+ * @brief  Implements CostandUsageReportService DeleteReportDefinition requests.
+ *
+ * @see    CostandUsageReportServiceClient::deleteReportDefinition
+ */
+
+/**
+ * @brief  Constructs a new DeleteReportDefinitionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
+
+/**
+ * @brief  Constructs a new DeleteReportDefinitionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteReportDefinitionRequest::DeleteReportDefinitionRequest(const DeleteReportDefinitionRequest &other)
+    : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteReportDefinitionRequest object.
+ */
+DeleteReportDefinitionRequest::DeleteReportDefinitionRequest()
+    : CostandUsageReportServiceRequest(new DeleteReportDefinitionRequestPrivate(CostandUsageReportServiceRequest::DeleteReportDefinitionAction, this))
+{
+
+}
+
+bool DeleteReportDefinitionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteReportDefinitionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteReportDefinitionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CostandUsageReportServiceClient::send
+ */
+AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteReportDefinitionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteReportDefinitionRequestPrivate
+ *
+ * @brief  Private implementation for DeleteReportDefinitionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object.
+ *
+ * @param  action  CostandUsageReportService action being performed.
+ * @param  q       Pointer to this object's public DeleteReportDefinitionRequest instance.
+ */
+DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
+    const CostandUsageReportServiceRequest::Action action, DeleteReportDefinitionRequest * const q)
+    : DeleteReportDefinitionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteReportDefinitionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteReportDefinitionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteReportDefinitionRequest instance.
+ */
+DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
+    const DeleteReportDefinitionRequestPrivate &other, DeleteReportDefinitionRequest * const q)
+    : DeleteReportDefinitionPrivate(other, q)
+{
+
+}

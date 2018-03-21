@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATECOMMENTREQUEST_H
 #define QTAWS_UPDATECOMMENTREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class UpdateCommentRequestPrivate;
+
+class QTAWS_EXPORT UpdateCommentRequest : public CodeCommitRequest {
+
+public:
+    UpdateCommentRequest(const UpdateCommentRequest &other);
+    UpdateCommentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateCommentRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

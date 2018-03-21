@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCESTARTTIMEREQUEST_H
 #define QTAWS_DESCRIBEMAINTENANCESTARTTIMEREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeMaintenanceStartTimeRequestPrivate;
+
+class QTAWS_EXPORT DescribeMaintenanceStartTimeRequest : public StorageGatewayRequest {
+
+public:
+    DescribeMaintenanceStartTimeRequest(const DescribeMaintenanceStartTimeRequest &other);
+    DescribeMaintenanceStartTimeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeMaintenanceStartTimeRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

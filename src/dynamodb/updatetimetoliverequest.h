@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETIMETOLIVEREQUEST_H
 #define QTAWS_UPDATETIMETOLIVEREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class UpdateTimeToLiveRequestPrivate;
+
+class QTAWS_EXPORT UpdateTimeToLiveRequest : public DynamoDBRequest {
+
+public:
+    UpdateTimeToLiveRequest(const UpdateTimeToLiveRequest &other);
+    UpdateTimeToLiveRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTimeToLiveRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

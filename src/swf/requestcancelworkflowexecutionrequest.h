@@ -20,4 +20,32 @@
 #ifndef QTAWS_REQUESTCANCELWORKFLOWEXECUTIONREQUEST_H
 #define QTAWS_REQUESTCANCELWORKFLOWEXECUTIONREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RequestCancelWorkflowExecutionRequestPrivate;
+
+class QTAWS_EXPORT RequestCancelWorkflowExecutionRequest : public SWFRequest {
+
+public:
+    RequestCancelWorkflowExecutionRequest(const RequestCancelWorkflowExecutionRequest &other);
+    RequestCancelWorkflowExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RequestCancelWorkflowExecutionRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

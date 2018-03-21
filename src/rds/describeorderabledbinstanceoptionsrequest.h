@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeOrderableDBInstanceOptionsRequestPrivate;
+
+class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequest : public RDSRequest {
+
+public:
+    DescribeOrderableDBInstanceOptionsRequest(const DescribeOrderableDBInstanceOptionsRequest &other);
+    DescribeOrderableDBInstanceOptionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeOrderableDBInstanceOptionsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

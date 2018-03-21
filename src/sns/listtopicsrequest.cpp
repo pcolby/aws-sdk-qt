@@ -19,3 +19,107 @@
 
 #include "listtopicsrequest.h"
 #include "listtopicsrequest_p.h"
+#include "listtopicsresponse.h"
+#include "snsrequest_p.h"
+
+namespace AWS {
+namespace SNS {
+
+/**
+ * @class  ListTopicsRequest
+ *
+ * @brief  Implements SNS ListTopics requests.
+ *
+ * @see    SNSClient::listTopics
+ */
+
+/**
+ * @brief  Constructs a new ListTopicsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTopicsResponse::ListTopicsResponse(
+
+/**
+ * @brief  Constructs a new ListTopicsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTopicsRequest::ListTopicsRequest(const ListTopicsRequest &other)
+    : SNSRequest(new ListTopicsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTopicsRequest object.
+ */
+ListTopicsRequest::ListTopicsRequest()
+    : SNSRequest(new ListTopicsRequestPrivate(SNSRequest::ListTopicsAction, this))
+{
+
+}
+
+bool ListTopicsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTopicsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTopicsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SNSClient::send
+ */
+AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTopicsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTopicsRequestPrivate
+ *
+ * @brief  Private implementation for ListTopicsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTopicsRequestPrivate object.
+ *
+ * @param  action  SNS action being performed.
+ * @param  q       Pointer to this object's public ListTopicsRequest instance.
+ */
+ListTopicsRequestPrivate::ListTopicsRequestPrivate(
+    const SNSRequest::Action action, ListTopicsRequest * const q)
+    : ListTopicsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTopicsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTopicsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTopicsRequest instance.
+ */
+ListTopicsRequestPrivate::ListTopicsRequestPrivate(
+    const ListTopicsRequestPrivate &other, ListTopicsRequest * const q)
+    : ListTopicsPrivate(other, q)
+{
+
+}

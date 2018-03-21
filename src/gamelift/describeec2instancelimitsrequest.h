@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEEC2INSTANCELIMITSREQUEST_H
 #define QTAWS_DESCRIBEEC2INSTANCELIMITSREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeEC2InstanceLimitsRequestPrivate;
+
+class QTAWS_EXPORT DescribeEC2InstanceLimitsRequest : public GameLiftRequest {
+
+public:
+    DescribeEC2InstanceLimitsRequest(const DescribeEC2InstanceLimitsRequest &other);
+    DescribeEC2InstanceLimitsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeEC2InstanceLimitsRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

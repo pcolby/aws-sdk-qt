@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBELISTENERCERTIFICATESREQUEST_P_H
 #define QTAWS_DESCRIBELISTENERCERTIFICATESREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "describelistenercertificatesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeListenerCertificatesRequest;
+
+class QTAWS_EXPORT DescribeListenerCertificatesRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DescribeListenerCertificatesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DescribeListenerCertificatesRequest * const q);
+    DescribeListenerCertificatesRequestPrivate(const DescribeListenerCertificatesRequestPrivate &other,
+                                   DescribeListenerCertificatesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeListenerCertificatesRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

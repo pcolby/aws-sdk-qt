@@ -19,3 +19,107 @@
 
 #include "getroomskillparameterrequest.h"
 #include "getroomskillparameterrequest_p.h"
+#include "getroomskillparameterresponse.h"
+#include "alexaforbusinessrequest_p.h"
+
+namespace AWS {
+namespace AlexaForBusiness {
+
+/**
+ * @class  GetRoomSkillParameterRequest
+ *
+ * @brief  Implements AlexaForBusiness GetRoomSkillParameter requests.
+ *
+ * @see    AlexaForBusinessClient::getRoomSkillParameter
+ */
+
+/**
+ * @brief  Constructs a new GetRoomSkillParameterResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoomSkillParameterResponse::GetRoomSkillParameterResponse(
+
+/**
+ * @brief  Constructs a new GetRoomSkillParameterRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRoomSkillParameterRequest::GetRoomSkillParameterRequest(const GetRoomSkillParameterRequest &other)
+    : AlexaForBusinessRequest(new GetRoomSkillParameterRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRoomSkillParameterRequest object.
+ */
+GetRoomSkillParameterRequest::GetRoomSkillParameterRequest()
+    : AlexaForBusinessRequest(new GetRoomSkillParameterRequestPrivate(AlexaForBusinessRequest::GetRoomSkillParameterAction, this))
+{
+
+}
+
+bool GetRoomSkillParameterRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRoomSkillParameterResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRoomSkillParameterResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AlexaForBusinessClient::send
+ */
+AwsAbstractResponse * GetRoomSkillParameterRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRoomSkillParameterResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoomSkillParameterRequestPrivate
+ *
+ * @brief  Private implementation for GetRoomSkillParameterRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomSkillParameterRequestPrivate object.
+ *
+ * @param  action  AlexaForBusiness action being performed.
+ * @param  q       Pointer to this object's public GetRoomSkillParameterRequest instance.
+ */
+GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
+    const AlexaForBusinessRequest::Action action, GetRoomSkillParameterRequest * const q)
+    : GetRoomSkillParameterPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoomSkillParameterRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRoomSkillParameterRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRoomSkillParameterRequest instance.
+ */
+GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
+    const GetRoomSkillParameterRequestPrivate &other, GetRoomSkillParameterRequest * const q)
+    : GetRoomSkillParameterPrivate(other, q)
+{
+
+}

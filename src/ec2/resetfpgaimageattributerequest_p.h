@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETFPGAIMAGEATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETFPGAIMAGEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "resetfpgaimageattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetFpgaImageAttributeRequest;
+
+class QTAWS_EXPORT ResetFpgaImageAttributeRequestPrivate : public EC2Private {
+
+public:
+    ResetFpgaImageAttributeRequestPrivate(const EC2::Action action,
+                                   ResetFpgaImageAttributeRequest * const q);
+    ResetFpgaImageAttributeRequestPrivate(const ResetFpgaImageAttributeRequestPrivate &other,
+                                   ResetFpgaImageAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetFpgaImageAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEROLEREQUEST_H
 #define QTAWS_DELETEROLEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteRoleRequestPrivate;
+
+class QTAWS_EXPORT DeleteRoleRequest : public IAMRequest {
+
+public:
+    DeleteRoleRequest(const DeleteRoleRequest &other);
+    DeleteRoleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRoleRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

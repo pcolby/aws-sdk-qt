@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCLUSTERCREDENTIALSREQUEST_P_H
 #define QTAWS_GETCLUSTERCREDENTIALSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "getclustercredentialsrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class GetClusterCredentialsRequest;
+
+class QTAWS_EXPORT GetClusterCredentialsRequestPrivate : public RedshiftPrivate {
+
+public:
+    GetClusterCredentialsRequestPrivate(const Redshift::Action action,
+                                   GetClusterCredentialsRequest * const q);
+    GetClusterCredentialsRequestPrivate(const GetClusterCredentialsRequestPrivate &other,
+                                   GetClusterCredentialsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetClusterCredentialsRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

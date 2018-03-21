@@ -19,3 +19,107 @@
 
 #include "updateinstancerequest.h"
 #include "updateinstancerequest_p.h"
+#include "updateinstanceresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateInstanceRequest
+ *
+ * @brief  Implements OpsWorks UpdateInstance requests.
+ *
+ * @see    OpsWorksClient::updateInstance
+ */
+
+/**
+ * @brief  Constructs a new UpdateInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateInstanceResponse::UpdateInstanceResponse(
+
+/**
+ * @brief  Constructs a new UpdateInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateInstanceRequest::UpdateInstanceRequest(const UpdateInstanceRequest &other)
+    : OpsWorksRequest(new UpdateInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateInstanceRequest object.
+ */
+UpdateInstanceRequest::UpdateInstanceRequest()
+    : OpsWorksRequest(new UpdateInstanceRequestPrivate(OpsWorksRequest::UpdateInstanceAction, this))
+{
+
+}
+
+bool UpdateInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * UpdateInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateInstanceRequestPrivate
+ *
+ * @brief  Private implementation for UpdateInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public UpdateInstanceRequest instance.
+ */
+UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
+    const OpsWorksRequest::Action action, UpdateInstanceRequest * const q)
+    : UpdateInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateInstanceRequest instance.
+ */
+UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
+    const UpdateInstanceRequestPrivate &other, UpdateInstanceRequest * const q)
+    : UpdateInstancePrivate(other, q)
+{
+
+}

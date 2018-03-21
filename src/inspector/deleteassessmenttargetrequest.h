@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEASSESSMENTTARGETREQUEST_H
 #define QTAWS_DELETEASSESSMENTTARGETREQUEST_H
 
+#include "inspectorrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class DeleteAssessmentTargetRequestPrivate;
+
+class QTAWS_EXPORT DeleteAssessmentTargetRequest : public InspectorRequest {
+
+public:
+    DeleteAssessmentTargetRequest(const DeleteAssessmentTargetRequest &other);
+    DeleteAssessmentTargetRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteAssessmentTargetRequest)
+
+}
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

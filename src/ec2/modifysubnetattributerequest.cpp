@@ -19,3 +19,107 @@
 
 #include "modifysubnetattributerequest.h"
 #include "modifysubnetattributerequest_p.h"
+#include "modifysubnetattributeresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  ModifySubnetAttributeRequest
+ *
+ * @brief  Implements EC2 ModifySubnetAttribute requests.
+ *
+ * @see    EC2Client::modifySubnetAttribute
+ */
+
+/**
+ * @brief  Constructs a new ModifySubnetAttributeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
+
+/**
+ * @brief  Constructs a new ModifySubnetAttributeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifySubnetAttributeRequest::ModifySubnetAttributeRequest(const ModifySubnetAttributeRequest &other)
+    : EC2Request(new ModifySubnetAttributeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifySubnetAttributeRequest object.
+ */
+ModifySubnetAttributeRequest::ModifySubnetAttributeRequest()
+    : EC2Request(new ModifySubnetAttributeRequestPrivate(EC2Request::ModifySubnetAttributeAction, this))
+{
+
+}
+
+bool ModifySubnetAttributeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifySubnetAttributeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifySubnetAttributeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifySubnetAttributeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifySubnetAttributeRequestPrivate
+ *
+ * @brief  Private implementation for ModifySubnetAttributeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public ModifySubnetAttributeRequest instance.
+ */
+ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
+    const EC2Request::Action action, ModifySubnetAttributeRequest * const q)
+    : ModifySubnetAttributePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifySubnetAttributeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifySubnetAttributeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifySubnetAttributeRequest instance.
+ */
+ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
+    const ModifySubnetAttributeRequestPrivate &other, ModifySubnetAttributeRequest * const q)
+    : ModifySubnetAttributePrivate(other, q)
+{
+
+}

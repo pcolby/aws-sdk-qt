@@ -19,3 +19,107 @@
 
 #include "updateassumerolepolicyrequest.h"
 #include "updateassumerolepolicyrequest_p.h"
+#include "updateassumerolepolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateAssumeRolePolicyRequest
+ *
+ * @brief  Implements IAM UpdateAssumeRolePolicy requests.
+ *
+ * @see    IAMClient::updateAssumeRolePolicy
+ */
+
+/**
+ * @brief  Constructs a new UpdateAssumeRolePolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
+
+/**
+ * @brief  Constructs a new UpdateAssumeRolePolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateAssumeRolePolicyRequest::UpdateAssumeRolePolicyRequest(const UpdateAssumeRolePolicyRequest &other)
+    : IAMRequest(new UpdateAssumeRolePolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateAssumeRolePolicyRequest object.
+ */
+UpdateAssumeRolePolicyRequest::UpdateAssumeRolePolicyRequest()
+    : IAMRequest(new UpdateAssumeRolePolicyRequestPrivate(IAMRequest::UpdateAssumeRolePolicyAction, this))
+{
+
+}
+
+bool UpdateAssumeRolePolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateAssumeRolePolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateAssumeRolePolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateAssumeRolePolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateAssumeRolePolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateAssumeRolePolicyRequestPrivate
+ *
+ * @brief  Private implementation for UpdateAssumeRolePolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAssumeRolePolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateAssumeRolePolicyRequest instance.
+ */
+UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
+    const IAMRequest::Action action, UpdateAssumeRolePolicyRequest * const q)
+    : UpdateAssumeRolePolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateAssumeRolePolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateAssumeRolePolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateAssumeRolePolicyRequest instance.
+ */
+UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
+    const UpdateAssumeRolePolicyRequestPrivate &other, UpdateAssumeRolePolicyRequest * const q)
+    : UpdateAssumeRolePolicyPrivate(other, q)
+{
+
+}

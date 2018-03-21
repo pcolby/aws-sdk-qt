@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHLOADBALANCERFROMSUBNETSREQUEST_H
 #define QTAWS_DETACHLOADBALANCERFROMSUBNETSREQUEST_H
 
+#include "elasticloadbalancingrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class DetachLoadBalancerFromSubnetsRequestPrivate;
+
+class QTAWS_EXPORT DetachLoadBalancerFromSubnetsRequest : public ElasticLoadBalancingRequest {
+
+public:
+    DetachLoadBalancerFromSubnetsRequest(const DetachLoadBalancerFromSubnetsRequest &other);
+    DetachLoadBalancerFromSubnetsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachLoadBalancerFromSubnetsRequest)
+
+}
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

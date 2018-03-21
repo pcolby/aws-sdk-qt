@@ -19,3 +19,107 @@
 
 #include "updatedestinationrequest.h"
 #include "updatedestinationrequest_p.h"
+#include "updatedestinationresponse.h"
+#include "firehoserequest_p.h"
+
+namespace AWS {
+namespace Firehose {
+
+/**
+ * @class  UpdateDestinationRequest
+ *
+ * @brief  Implements Firehose UpdateDestination requests.
+ *
+ * @see    FirehoseClient::updateDestination
+ */
+
+/**
+ * @brief  Constructs a new UpdateDestinationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDestinationResponse::UpdateDestinationResponse(
+
+/**
+ * @brief  Constructs a new UpdateDestinationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDestinationRequest::UpdateDestinationRequest(const UpdateDestinationRequest &other)
+    : FirehoseRequest(new UpdateDestinationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDestinationRequest object.
+ */
+UpdateDestinationRequest::UpdateDestinationRequest()
+    : FirehoseRequest(new UpdateDestinationRequestPrivate(FirehoseRequest::UpdateDestinationAction, this))
+{
+
+}
+
+bool UpdateDestinationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDestinationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDestinationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  FirehoseClient::send
+ */
+AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDestinationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDestinationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDestinationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDestinationRequestPrivate object.
+ *
+ * @param  action  Firehose action being performed.
+ * @param  q       Pointer to this object's public UpdateDestinationRequest instance.
+ */
+UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
+    const FirehoseRequest::Action action, UpdateDestinationRequest * const q)
+    : UpdateDestinationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDestinationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDestinationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDestinationRequest instance.
+ */
+UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
+    const UpdateDestinationRequestPrivate &other, UpdateDestinationRequest * const q)
+    : UpdateDestinationPrivate(other, q)
+{
+
+}

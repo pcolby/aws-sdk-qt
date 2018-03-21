@@ -19,3 +19,107 @@
 
 #include "listactiontypesrequest.h"
 #include "listactiontypesrequest_p.h"
+#include "listactiontypesresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  ListActionTypesRequest
+ *
+ * @brief  Implements CodePipeline ListActionTypes requests.
+ *
+ * @see    CodePipelineClient::listActionTypes
+ */
+
+/**
+ * @brief  Constructs a new ListActionTypesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListActionTypesResponse::ListActionTypesResponse(
+
+/**
+ * @brief  Constructs a new ListActionTypesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListActionTypesRequest::ListActionTypesRequest(const ListActionTypesRequest &other)
+    : CodePipelineRequest(new ListActionTypesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListActionTypesRequest object.
+ */
+ListActionTypesRequest::ListActionTypesRequest()
+    : CodePipelineRequest(new ListActionTypesRequestPrivate(CodePipelineRequest::ListActionTypesAction, this))
+{
+
+}
+
+bool ListActionTypesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListActionTypesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListActionTypesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * ListActionTypesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListActionTypesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListActionTypesRequestPrivate
+ *
+ * @brief  Private implementation for ListActionTypesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListActionTypesRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public ListActionTypesRequest instance.
+ */
+ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
+    const CodePipelineRequest::Action action, ListActionTypesRequest * const q)
+    : ListActionTypesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListActionTypesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListActionTypesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListActionTypesRequest instance.
+ */
+ListActionTypesRequestPrivate::ListActionTypesRequestPrivate(
+    const ListActionTypesRequestPrivate &other, ListActionTypesRequest * const q)
+    : ListActionTypesPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "startinstancerequest.h"
 #include "startinstancerequest_p.h"
+#include "startinstanceresponse.h"
+#include "lightsailrequest_p.h"
+
+namespace AWS {
+namespace Lightsail {
+
+/**
+ * @class  StartInstanceRequest
+ *
+ * @brief  Implements Lightsail StartInstance requests.
+ *
+ * @see    LightsailClient::startInstance
+ */
+
+/**
+ * @brief  Constructs a new StartInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartInstanceResponse::StartInstanceResponse(
+
+/**
+ * @brief  Constructs a new StartInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartInstanceRequest::StartInstanceRequest(const StartInstanceRequest &other)
+    : LightsailRequest(new StartInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartInstanceRequest object.
+ */
+StartInstanceRequest::StartInstanceRequest()
+    : LightsailRequest(new StartInstanceRequestPrivate(LightsailRequest::StartInstanceAction, this))
+{
+
+}
+
+bool StartInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LightsailClient::send
+ */
+AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new StartInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartInstanceRequestPrivate
+ *
+ * @brief  Private implementation for StartInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartInstanceRequestPrivate object.
+ *
+ * @param  action  Lightsail action being performed.
+ * @param  q       Pointer to this object's public StartInstanceRequest instance.
+ */
+StartInstanceRequestPrivate::StartInstanceRequestPrivate(
+    const LightsailRequest::Action action, StartInstanceRequest * const q)
+    : StartInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartInstanceRequest instance.
+ */
+StartInstanceRequestPrivate::StartInstanceRequestPrivate(
+    const StartInstanceRequestPrivate &other, StartInstanceRequest * const q)
+    : StartInstancePrivate(other, q)
+{
+
+}

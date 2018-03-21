@@ -20,4 +20,32 @@
 #ifndef QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_H
 #define QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class PromoteReadReplicaDBClusterRequestPrivate;
+
+class QTAWS_EXPORT PromoteReadReplicaDBClusterRequest : public RDSRequest {
+
+public:
+    PromoteReadReplicaDBClusterRequest(const PromoteReadReplicaDBClusterRequest &other);
+    PromoteReadReplicaDBClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PromoteReadReplicaDBClusterRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

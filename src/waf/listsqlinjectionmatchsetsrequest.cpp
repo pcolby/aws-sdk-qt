@@ -19,3 +19,107 @@
 
 #include "listsqlinjectionmatchsetsrequest.h"
 #include "listsqlinjectionmatchsetsrequest_p.h"
+#include "listsqlinjectionmatchsetsresponse.h"
+#include "wafrequest_p.h"
+
+namespace AWS {
+namespace WAF {
+
+/**
+ * @class  ListSqlInjectionMatchSetsRequest
+ *
+ * @brief  Implements WAF ListSqlInjectionMatchSets requests.
+ *
+ * @see    WAFClient::listSqlInjectionMatchSets
+ */
+
+/**
+ * @brief  Constructs a new ListSqlInjectionMatchSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
+
+/**
+ * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest(const ListSqlInjectionMatchSetsRequest &other)
+    : WAFRequest(new ListSqlInjectionMatchSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSqlInjectionMatchSetsRequest object.
+ */
+ListSqlInjectionMatchSetsRequest::ListSqlInjectionMatchSetsRequest()
+    : WAFRequest(new ListSqlInjectionMatchSetsRequestPrivate(WAFRequest::ListSqlInjectionMatchSetsAction, this))
+{
+
+}
+
+bool ListSqlInjectionMatchSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSqlInjectionMatchSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSqlInjectionMatchSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFClient::send
+ */
+AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSqlInjectionMatchSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSqlInjectionMatchSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListSqlInjectionMatchSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object.
+ *
+ * @param  action  WAF action being performed.
+ * @param  q       Pointer to this object's public ListSqlInjectionMatchSetsRequest instance.
+ */
+ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
+    const WAFRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)
+    : ListSqlInjectionMatchSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSqlInjectionMatchSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSqlInjectionMatchSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSqlInjectionMatchSetsRequest instance.
+ */
+ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
+    const ListSqlInjectionMatchSetsRequestPrivate &other, ListSqlInjectionMatchSetsRequest * const q)
+    : ListSqlInjectionMatchSetsPrivate(other, q)
+{
+
+}

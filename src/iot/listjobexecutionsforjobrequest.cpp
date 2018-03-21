@@ -19,3 +19,107 @@
 
 #include "listjobexecutionsforjobrequest.h"
 #include "listjobexecutionsforjobrequest_p.h"
+#include "listjobexecutionsforjobresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  ListJobExecutionsForJobRequest
+ *
+ * @brief  Implements IoT ListJobExecutionsForJob requests.
+ *
+ * @see    IoTClient::listJobExecutionsForJob
+ */
+
+/**
+ * @brief  Constructs a new ListJobExecutionsForJobResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListJobExecutionsForJobResponse::ListJobExecutionsForJobResponse(
+
+/**
+ * @brief  Constructs a new ListJobExecutionsForJobRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListJobExecutionsForJobRequest::ListJobExecutionsForJobRequest(const ListJobExecutionsForJobRequest &other)
+    : IoTRequest(new ListJobExecutionsForJobRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListJobExecutionsForJobRequest object.
+ */
+ListJobExecutionsForJobRequest::ListJobExecutionsForJobRequest()
+    : IoTRequest(new ListJobExecutionsForJobRequestPrivate(IoTRequest::ListJobExecutionsForJobAction, this))
+{
+
+}
+
+bool ListJobExecutionsForJobRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListJobExecutionsForJobResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListJobExecutionsForJobResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * ListJobExecutionsForJobRequest::response(QNetworkReply * const reply) const
+{
+    return new ListJobExecutionsForJobResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListJobExecutionsForJobRequestPrivate
+ *
+ * @brief  Private implementation for ListJobExecutionsForJobRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobExecutionsForJobRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public ListJobExecutionsForJobRequest instance.
+ */
+ListJobExecutionsForJobRequestPrivate::ListJobExecutionsForJobRequestPrivate(
+    const IoTRequest::Action action, ListJobExecutionsForJobRequest * const q)
+    : ListJobExecutionsForJobPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListJobExecutionsForJobRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListJobExecutionsForJobRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListJobExecutionsForJobRequest instance.
+ */
+ListJobExecutionsForJobRequestPrivate::ListJobExecutionsForJobRequestPrivate(
+    const ListJobExecutionsForJobRequestPrivate &other, ListJobExecutionsForJobRequest * const q)
+    : ListJobExecutionsForJobPrivate(other, q)
+{
+
+}

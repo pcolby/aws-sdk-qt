@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSTATEREQUEST_H
 #define QTAWS_DESCRIBEAPPLICATIONSTATEREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DescribeApplicationStateRequestPrivate;
+
+class QTAWS_EXPORT DescribeApplicationStateRequest : public MigrationHubRequest {
+
+public:
+    DescribeApplicationStateRequest(const DescribeApplicationStateRequest &other);
+    DescribeApplicationStateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeApplicationStateRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

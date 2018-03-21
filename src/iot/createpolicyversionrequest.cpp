@@ -19,3 +19,107 @@
 
 #include "createpolicyversionrequest.h"
 #include "createpolicyversionrequest_p.h"
+#include "createpolicyversionresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  CreatePolicyVersionRequest
+ *
+ * @brief  Implements IoT CreatePolicyVersion requests.
+ *
+ * @see    IoTClient::createPolicyVersion
+ */
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePolicyVersionResponse::CreatePolicyVersionResponse(
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePolicyVersionRequest::CreatePolicyVersionRequest(const CreatePolicyVersionRequest &other)
+    : IoTRequest(new CreatePolicyVersionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePolicyVersionRequest object.
+ */
+CreatePolicyVersionRequest::CreatePolicyVersionRequest()
+    : IoTRequest(new CreatePolicyVersionRequestPrivate(IoTRequest::CreatePolicyVersionAction, this))
+{
+
+}
+
+bool CreatePolicyVersionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePolicyVersionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePolicyVersionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * CreatePolicyVersionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePolicyVersionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePolicyVersionRequestPrivate
+ *
+ * @brief  Private implementation for CreatePolicyVersionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyVersionRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public CreatePolicyVersionRequest instance.
+ */
+CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
+    const IoTRequest::Action action, CreatePolicyVersionRequest * const q)
+    : CreatePolicyVersionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePolicyVersionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePolicyVersionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePolicyVersionRequest instance.
+ */
+CreatePolicyVersionRequestPrivate::CreatePolicyVersionRequestPrivate(
+    const CreatePolicyVersionRequestPrivate &other, CreatePolicyVersionRequest * const q)
+    : CreatePolicyVersionPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETMERGECONFLICTSREQUEST_H
 #define QTAWS_GETMERGECONFLICTSREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetMergeConflictsRequestPrivate;
+
+class QTAWS_EXPORT GetMergeConflictsRequest : public CodeCommitRequest {
+
+public:
+    GetMergeConflictsRequest(const GetMergeConflictsRequest &other);
+    GetMergeConflictsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetMergeConflictsRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

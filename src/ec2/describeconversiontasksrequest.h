@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBECONVERSIONTASKSREQUEST_H
 #define QTAWS_DESCRIBECONVERSIONTASKSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeConversionTasksRequestPrivate;
+
+class QTAWS_EXPORT DescribeConversionTasksRequest : public EC2Request {
+
+public:
+    DescribeConversionTasksRequest(const DescribeConversionTasksRequest &other);
+    DescribeConversionTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeConversionTasksRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

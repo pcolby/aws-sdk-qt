@@ -20,4 +20,29 @@
 #ifndef QTAWS_SENDMESSAGEREQUEST_P_H
 #define QTAWS_SENDMESSAGEREQUEST_P_H
 
+#include "sqs_p.h"
+#include "sendmessagerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class SendMessageRequest;
+
+class QTAWS_EXPORT SendMessageRequestPrivate : public SQSPrivate {
+
+public:
+    SendMessageRequestPrivate(const SQS::Action action,
+                                   SendMessageRequest * const q);
+    SendMessageRequestPrivate(const SendMessageRequestPrivate &other,
+                                   SendMessageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SendMessageRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

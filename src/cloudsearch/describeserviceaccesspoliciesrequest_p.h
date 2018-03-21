@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBESERVICEACCESSPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICEACCESSPOLICIESREQUEST_P_H
 
+#include "cloudsearch_p.h"
+#include "describeserviceaccesspoliciesrequest.h"
+
+namespace AWS {
+
+namespace CloudSearch {
+
+class DescribeServiceAccessPoliciesRequest;
+
+class QTAWS_EXPORT DescribeServiceAccessPoliciesRequestPrivate : public CloudSearchPrivate {
+
+public:
+    DescribeServiceAccessPoliciesRequestPrivate(const CloudSearch::Action action,
+                                   DescribeServiceAccessPoliciesRequest * const q);
+    DescribeServiceAccessPoliciesRequestPrivate(const DescribeServiceAccessPoliciesRequestPrivate &other,
+                                   DescribeServiceAccessPoliciesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeServiceAccessPoliciesRequest)
+
+};
+
+} // namespace CloudSearch
+} // namespace AWS
+
 #endif

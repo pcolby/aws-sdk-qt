@@ -20,4 +20,32 @@
 #ifndef QTAWS_FILTERLOGEVENTSREQUEST_H
 #define QTAWS_FILTERLOGEVENTSREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class FilterLogEventsRequestPrivate;
+
+class QTAWS_EXPORT FilterLogEventsRequest : public CloudWatchLogsRequest {
+
+public:
+    FilterLogEventsRequest(const FilterLogEventsRequest &other);
+    FilterLogEventsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(FilterLogEventsRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

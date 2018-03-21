@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTENDPOINTSREQUEST_P_H
 #define QTAWS_LISTENDPOINTSREQUEST_P_H
 
+#include "sagemaker_p.h"
+#include "listendpointsrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class ListEndpointsRequest;
+
+class QTAWS_EXPORT ListEndpointsRequestPrivate : public SageMakerPrivate {
+
+public:
+    ListEndpointsRequestPrivate(const SageMaker::Action action,
+                                   ListEndpointsRequest * const q);
+    ListEndpointsRequestPrivate(const ListEndpointsRequestPrivate &other,
+                                   ListEndpointsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListEndpointsRequest)
+
+};
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createlaunchconfigurationrequest.h"
 #include "createlaunchconfigurationrequest_p.h"
+#include "createlaunchconfigurationresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  CreateLaunchConfigurationRequest
+ *
+ * @brief  Implements AutoScaling CreateLaunchConfiguration requests.
+ *
+ * @see    AutoScalingClient::createLaunchConfiguration
+ */
+
+/**
+ * @brief  Constructs a new CreateLaunchConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse(
+
+/**
+ * @brief  Constructs a new CreateLaunchConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest(const CreateLaunchConfigurationRequest &other)
+    : AutoScalingRequest(new CreateLaunchConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLaunchConfigurationRequest object.
+ */
+CreateLaunchConfigurationRequest::CreateLaunchConfigurationRequest()
+    : AutoScalingRequest(new CreateLaunchConfigurationRequestPrivate(AutoScalingRequest::CreateLaunchConfigurationAction, this))
+{
+
+}
+
+bool CreateLaunchConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLaunchConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLaunchConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * CreateLaunchConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLaunchConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLaunchConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for CreateLaunchConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public CreateLaunchConfigurationRequest instance.
+ */
+CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
+    const AutoScalingRequest::Action action, CreateLaunchConfigurationRequest * const q)
+    : CreateLaunchConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLaunchConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLaunchConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLaunchConfigurationRequest instance.
+ */
+CreateLaunchConfigurationRequestPrivate::CreateLaunchConfigurationRequestPrivate(
+    const CreateLaunchConfigurationRequestPrivate &other, CreateLaunchConfigurationRequest * const q)
+    : CreateLaunchConfigurationPrivate(other, q)
+{
+
+}

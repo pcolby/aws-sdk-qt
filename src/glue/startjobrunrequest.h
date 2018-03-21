@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTJOBRUNREQUEST_H
 #define QTAWS_STARTJOBRUNREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class StartJobRunRequestPrivate;
+
+class QTAWS_EXPORT StartJobRunRequest : public GlueRequest {
+
+public:
+    StartJobRunRequest(const StartJobRunRequest &other);
+    StartJobRunRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartJobRunRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

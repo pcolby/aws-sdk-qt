@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPLATFORMVERSIONREQUEST_H
 #define QTAWS_CREATEPLATFORMVERSIONREQUEST_H
 
+#include "elasticbeanstalkrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class CreatePlatformVersionRequestPrivate;
+
+class QTAWS_EXPORT CreatePlatformVersionRequest : public ElasticBeanstalkRequest {
+
+public:
+    CreatePlatformVersionRequest(const CreatePlatformVersionRequest &other);
+    CreatePlatformVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePlatformVersionRequest)
+
+}
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "createcustomergatewayrequest.h"
 #include "createcustomergatewayrequest_p.h"
+#include "createcustomergatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateCustomerGatewayRequest
+ *
+ * @brief  Implements EC2 CreateCustomerGateway requests.
+ *
+ * @see    EC2Client::createCustomerGateway
+ */
+
+/**
+ * @brief  Constructs a new CreateCustomerGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
+
+/**
+ * @brief  Constructs a new CreateCustomerGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateCustomerGatewayRequest::CreateCustomerGatewayRequest(const CreateCustomerGatewayRequest &other)
+    : EC2Request(new CreateCustomerGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateCustomerGatewayRequest object.
+ */
+CreateCustomerGatewayRequest::CreateCustomerGatewayRequest()
+    : EC2Request(new CreateCustomerGatewayRequestPrivate(EC2Request::CreateCustomerGatewayAction, this))
+{
+
+}
+
+bool CreateCustomerGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateCustomerGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateCustomerGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateCustomerGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateCustomerGatewayRequestPrivate
+ *
+ * @brief  Private implementation for CreateCustomerGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateCustomerGatewayRequest instance.
+ */
+CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
+    const EC2Request::Action action, CreateCustomerGatewayRequest * const q)
+    : CreateCustomerGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateCustomerGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateCustomerGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateCustomerGatewayRequest instance.
+ */
+CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
+    const CreateCustomerGatewayRequestPrivate &other, CreateCustomerGatewayRequest * const q)
+    : CreateCustomerGatewayPrivate(other, q)
+{
+
+}

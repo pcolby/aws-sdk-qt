@@ -19,3 +19,107 @@
 
 #include "listawsserviceaccessfororganizationrequest.h"
 #include "listawsserviceaccessfororganizationrequest_p.h"
+#include "listawsserviceaccessfororganizationresponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  ListAWSServiceAccessForOrganizationRequest
+ *
+ * @brief  Implements Organizations ListAWSServiceAccessForOrganization requests.
+ *
+ * @see    OrganizationsClient::listAWSServiceAccessForOrganization
+ */
+
+/**
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganizationResponse(
+
+/**
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAWSServiceAccessForOrganizationRequest::ListAWSServiceAccessForOrganizationRequest(const ListAWSServiceAccessForOrganizationRequest &other)
+    : OrganizationsRequest(new ListAWSServiceAccessForOrganizationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequest object.
+ */
+ListAWSServiceAccessForOrganizationRequest::ListAWSServiceAccessForOrganizationRequest()
+    : OrganizationsRequest(new ListAWSServiceAccessForOrganizationRequestPrivate(OrganizationsRequest::ListAWSServiceAccessForOrganizationAction, this))
+{
+
+}
+
+bool ListAWSServiceAccessForOrganizationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAWSServiceAccessForOrganizationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAWSServiceAccessForOrganizationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAWSServiceAccessForOrganizationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAWSServiceAccessForOrganizationRequestPrivate
+ *
+ * @brief  Private implementation for ListAWSServiceAccessForOrganizationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public ListAWSServiceAccessForOrganizationRequest instance.
+ */
+ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
+    const OrganizationsRequest::Action action, ListAWSServiceAccessForOrganizationRequest * const q)
+    : ListAWSServiceAccessForOrganizationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAWSServiceAccessForOrganizationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAWSServiceAccessForOrganizationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAWSServiceAccessForOrganizationRequest instance.
+ */
+ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
+    const ListAWSServiceAccessForOrganizationRequestPrivate &other, ListAWSServiceAccessForOrganizationRequest * const q)
+    : ListAWSServiceAccessForOrganizationPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTARGETSBYRULEREQUEST_P_H
 #define QTAWS_LISTTARGETSBYRULEREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "listtargetsbyrulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class ListTargetsByRuleRequest;
+
+class QTAWS_EXPORT ListTargetsByRuleRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    ListTargetsByRuleRequestPrivate(const CloudWatchEvents::Action action,
+                                   ListTargetsByRuleRequest * const q);
+    ListTargetsByRuleRequestPrivate(const ListTargetsByRuleRequestPrivate &other,
+                                   ListTargetsByRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTargetsByRuleRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

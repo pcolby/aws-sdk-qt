@@ -19,3 +19,107 @@
 
 #include "cancelspotfleetrequestsrequest.h"
 #include "cancelspotfleetrequestsrequest_p.h"
+#include "cancelspotfleetrequestsresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CancelSpotFleetRequestsRequest
+ *
+ * @brief  Implements EC2 CancelSpotFleetRequests requests.
+ *
+ * @see    EC2Client::cancelSpotFleetRequests
+ */
+
+/**
+ * @brief  Constructs a new CancelSpotFleetRequestsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
+
+/**
+ * @brief  Constructs a new CancelSpotFleetRequestsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest(const CancelSpotFleetRequestsRequest &other)
+    : EC2Request(new CancelSpotFleetRequestsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelSpotFleetRequestsRequest object.
+ */
+CancelSpotFleetRequestsRequest::CancelSpotFleetRequestsRequest()
+    : EC2Request(new CancelSpotFleetRequestsRequestPrivate(EC2Request::CancelSpotFleetRequestsAction, this))
+{
+
+}
+
+bool CancelSpotFleetRequestsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelSpotFleetRequestsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelSpotFleetRequestsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelSpotFleetRequestsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelSpotFleetRequestsRequestPrivate
+ *
+ * @brief  Private implementation for CancelSpotFleetRequestsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CancelSpotFleetRequestsRequest instance.
+ */
+CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
+    const EC2Request::Action action, CancelSpotFleetRequestsRequest * const q)
+    : CancelSpotFleetRequestsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelSpotFleetRequestsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelSpotFleetRequestsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelSpotFleetRequestsRequest instance.
+ */
+CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
+    const CancelSpotFleetRequestsRequestPrivate &other, CancelSpotFleetRequestsRequest * const q)
+    : CancelSpotFleetRequestsPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "listtrafficpoliciesrequest.h"
 #include "listtrafficpoliciesrequest_p.h"
+#include "listtrafficpoliciesresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListTrafficPoliciesRequest
+ *
+ * @brief  Implements Route53 ListTrafficPolicies requests.
+ *
+ * @see    Route53Client::listTrafficPolicies
+ */
+
+/**
+ * @brief  Constructs a new ListTrafficPoliciesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListTrafficPoliciesResponse::ListTrafficPoliciesResponse(
+
+/**
+ * @brief  Constructs a new ListTrafficPoliciesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListTrafficPoliciesRequest::ListTrafficPoliciesRequest(const ListTrafficPoliciesRequest &other)
+    : Route53Request(new ListTrafficPoliciesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListTrafficPoliciesRequest object.
+ */
+ListTrafficPoliciesRequest::ListTrafficPoliciesRequest()
+    : Route53Request(new ListTrafficPoliciesRequestPrivate(Route53Request::ListTrafficPoliciesAction, this))
+{
+
+}
+
+bool ListTrafficPoliciesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListTrafficPoliciesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListTrafficPoliciesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListTrafficPoliciesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListTrafficPoliciesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListTrafficPoliciesRequestPrivate
+ *
+ * @brief  Private implementation for ListTrafficPoliciesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrafficPoliciesRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListTrafficPoliciesRequest instance.
+ */
+ListTrafficPoliciesRequestPrivate::ListTrafficPoliciesRequestPrivate(
+    const Route53Request::Action action, ListTrafficPoliciesRequest * const q)
+    : ListTrafficPoliciesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListTrafficPoliciesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListTrafficPoliciesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListTrafficPoliciesRequest instance.
+ */
+ListTrafficPoliciesRequestPrivate::ListTrafficPoliciesRequestPrivate(
+    const ListTrafficPoliciesRequestPrivate &other, ListTrafficPoliciesRequest * const q)
+    : ListTrafficPoliciesPrivate(other, q)
+{
+
+}

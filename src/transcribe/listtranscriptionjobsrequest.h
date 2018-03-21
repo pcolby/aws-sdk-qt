@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTTRANSCRIPTIONJOBSREQUEST_H
 #define QTAWS_LISTTRANSCRIPTIONJOBSREQUEST_H
 
+#include "transcribeservicerequest.h"
+
+namespace AWS {
+
+namespace TranscribeService {
+
+class ListTranscriptionJobsRequestPrivate;
+
+class QTAWS_EXPORT ListTranscriptionJobsRequest : public TranscribeServiceRequest {
+
+public:
+    ListTranscriptionJobsRequest(const ListTranscriptionJobsRequest &other);
+    ListTranscriptionJobsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListTranscriptionJobsRequest)
+
+}
+
+} // namespace TranscribeService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENAMEDQUERYREQUEST_H
 #define QTAWS_DELETENAMEDQUERYREQUEST_H
 
+#include "athenarequest.h"
+
+namespace AWS {
+
+namespace Athena {
+
+class DeleteNamedQueryRequestPrivate;
+
+class QTAWS_EXPORT DeleteNamedQueryRequest : public AthenaRequest {
+
+public:
+    DeleteNamedQueryRequest(const DeleteNamedQueryRequest &other);
+    DeleteNamedQueryRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNamedQueryRequest)
+
+}
+
+} // namespace Athena
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTIDENTITYPOOLUSAGEREQUEST_P_H
 #define QTAWS_LISTIDENTITYPOOLUSAGEREQUEST_P_H
 
+#include "cognitosync_p.h"
+#include "listidentitypoolusagerequest.h"
+
+namespace AWS {
+
+namespace CognitoSync {
+
+class ListIdentityPoolUsageRequest;
+
+class QTAWS_EXPORT ListIdentityPoolUsageRequestPrivate : public CognitoSyncPrivate {
+
+public:
+    ListIdentityPoolUsageRequestPrivate(const CognitoSync::Action action,
+                                   ListIdentityPoolUsageRequest * const q);
+    ListIdentityPoolUsageRequestPrivate(const ListIdentityPoolUsageRequestPrivate &other,
+                                   ListIdentityPoolUsageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListIdentityPoolUsageRequest)
+
+};
+
+} // namespace CognitoSync
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTCLUSTERSREQUEST_H
 #define QTAWS_LISTCLUSTERSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListClustersRequestPrivate;
+
+class QTAWS_EXPORT ListClustersRequest : public EMRRequest {
+
+public:
+    ListClustersRequest(const ListClustersRequest &other);
+    ListClustersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListClustersRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

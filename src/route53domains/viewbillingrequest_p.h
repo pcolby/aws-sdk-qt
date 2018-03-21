@@ -20,4 +20,29 @@
 #ifndef QTAWS_VIEWBILLINGREQUEST_P_H
 #define QTAWS_VIEWBILLINGREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "viewbillingrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ViewBillingRequest;
+
+class QTAWS_EXPORT ViewBillingRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    ViewBillingRequestPrivate(const Route53Domains::Action action,
+                                   ViewBillingRequest * const q);
+    ViewBillingRequestPrivate(const ViewBillingRequestPrivate &other,
+                                   ViewBillingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ViewBillingRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

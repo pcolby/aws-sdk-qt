@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEUSERIMPORTJOBREQUEST_P_H
 #define QTAWS_DESCRIBEUSERIMPORTJOBREQUEST_P_H
 
+#include "cognitoidentityprovider_p.h"
+#include "describeuserimportjobrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class DescribeUserImportJobRequest;
+
+class QTAWS_EXPORT DescribeUserImportJobRequestPrivate : public CognitoIdentityProviderPrivate {
+
+public:
+    DescribeUserImportJobRequestPrivate(const CognitoIdentityProvider::Action action,
+                                   DescribeUserImportJobRequest * const q);
+    DescribeUserImportJobRequestPrivate(const DescribeUserImportJobRequestPrivate &other,
+                                   DescribeUserImportJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeUserImportJobRequest)
+
+};
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatesubnetgrouprequest.h"
 #include "updatesubnetgrouprequest_p.h"
+#include "updatesubnetgroupresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  UpdateSubnetGroupRequest
+ *
+ * @brief  Implements DAX UpdateSubnetGroup requests.
+ *
+ * @see    DAXClient::updateSubnetGroup
+ */
+
+/**
+ * @brief  Constructs a new UpdateSubnetGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
+
+/**
+ * @brief  Constructs a new UpdateSubnetGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSubnetGroupRequest::UpdateSubnetGroupRequest(const UpdateSubnetGroupRequest &other)
+    : DAXRequest(new UpdateSubnetGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSubnetGroupRequest object.
+ */
+UpdateSubnetGroupRequest::UpdateSubnetGroupRequest()
+    : DAXRequest(new UpdateSubnetGroupRequestPrivate(DAXRequest::UpdateSubnetGroupAction, this))
+{
+
+}
+
+bool UpdateSubnetGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSubnetGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSubnetGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSubnetGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSubnetGroupRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSubnetGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public UpdateSubnetGroupRequest instance.
+ */
+UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
+    const DAXRequest::Action action, UpdateSubnetGroupRequest * const q)
+    : UpdateSubnetGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSubnetGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSubnetGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSubnetGroupRequest instance.
+ */
+UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
+    const UpdateSubnetGroupRequestPrivate &other, UpdateSubnetGroupRequest * const q)
+    : UpdateSubnetGroupPrivate(other, q)
+{
+
+}

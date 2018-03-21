@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONREQUEST_H
 #define QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class DeleteBucketInventoryConfigurationRequestPrivate;
+
+class QTAWS_EXPORT DeleteBucketInventoryConfigurationRequest : public S3Request {
+
+public:
+    DeleteBucketInventoryConfigurationRequest(const DeleteBucketInventoryConfigurationRequest &other);
+    DeleteBucketInventoryConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBucketInventoryConfigurationRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMSTREAMREQUEST_H
 #define QTAWS_REMOVETAGSFROMSTREAMREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class RemoveTagsFromStreamRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromStreamRequest : public KinesisRequest {
+
+public:
+    RemoveTagsFromStreamRequest(const RemoveTagsFromStreamRequest &other);
+    RemoveTagsFromStreamRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromStreamRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

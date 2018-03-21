@@ -20,4 +20,32 @@
 #ifndef QTAWS_REMOVETAGSFROMVAULTREQUEST_H
 #define QTAWS_REMOVETAGSFROMVAULTREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class RemoveTagsFromVaultRequestPrivate;
+
+class QTAWS_EXPORT RemoveTagsFromVaultRequest : public GlacierRequest {
+
+public:
+    RemoveTagsFromVaultRequest(const RemoveTagsFromVaultRequest &other);
+    RemoveTagsFromVaultRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RemoveTagsFromVaultRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

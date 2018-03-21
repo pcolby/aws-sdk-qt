@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETIMPORTJOBREQUEST_P_H
 #define QTAWS_GETIMPORTJOBREQUEST_P_H
 
+#include "pinpoint_p.h"
+#include "getimportjobrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetImportJobRequest;
+
+class QTAWS_EXPORT GetImportJobRequestPrivate : public PinpointPrivate {
+
+public:
+    GetImportJobRequestPrivate(const Pinpoint::Action action,
+                                   GetImportJobRequest * const q);
+    GetImportJobRequestPrivate(const GetImportJobRequestPrivate &other,
+                                   GetImportJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetImportJobRequest)
+
+};
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

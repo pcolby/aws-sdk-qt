@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECLUSTERPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERPARAMETERSREQUEST_P_H
 
+#include "redshift_p.h"
+#include "describeclusterparametersrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class DescribeClusterParametersRequest;
+
+class QTAWS_EXPORT DescribeClusterParametersRequestPrivate : public RedshiftPrivate {
+
+public:
+    DescribeClusterParametersRequestPrivate(const Redshift::Action action,
+                                   DescribeClusterParametersRequest * const q);
+    DescribeClusterParametersRequestPrivate(const DescribeClusterParametersRequestPrivate &other,
+                                   DescribeClusterParametersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeClusterParametersRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

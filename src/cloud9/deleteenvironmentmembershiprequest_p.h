@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENVIRONMENTMEMBERSHIPREQUEST_P_H
 #define QTAWS_DELETEENVIRONMENTMEMBERSHIPREQUEST_P_H
 
+#include "cloud9_p.h"
+#include "deleteenvironmentmembershiprequest.h"
+
+namespace AWS {
+
+namespace Cloud9 {
+
+class DeleteEnvironmentMembershipRequest;
+
+class QTAWS_EXPORT DeleteEnvironmentMembershipRequestPrivate : public Cloud9Private {
+
+public:
+    DeleteEnvironmentMembershipRequestPrivate(const Cloud9::Action action,
+                                   DeleteEnvironmentMembershipRequest * const q);
+    DeleteEnvironmentMembershipRequestPrivate(const DeleteEnvironmentMembershipRequestPrivate &other,
+                                   DeleteEnvironmentMembershipRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEnvironmentMembershipRequest)
+
+};
+
+} // namespace Cloud9
+} // namespace AWS
+
 #endif

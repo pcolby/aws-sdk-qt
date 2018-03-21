@@ -19,3 +19,107 @@
 
 #include "listrulesrequest.h"
 #include "listrulesrequest_p.h"
+#include "listrulesresponse.h"
+#include "cloudwatcheventsrequest_p.h"
+
+namespace AWS {
+namespace CloudWatchEvents {
+
+/**
+ * @class  ListRulesRequest
+ *
+ * @brief  Implements CloudWatchEvents ListRules requests.
+ *
+ * @see    CloudWatchEventsClient::listRules
+ */
+
+/**
+ * @brief  Constructs a new ListRulesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRulesResponse::ListRulesResponse(
+
+/**
+ * @brief  Constructs a new ListRulesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRulesRequest::ListRulesRequest(const ListRulesRequest &other)
+    : CloudWatchEventsRequest(new ListRulesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRulesRequest object.
+ */
+ListRulesRequest::ListRulesRequest()
+    : CloudWatchEventsRequest(new ListRulesRequestPrivate(CloudWatchEventsRequest::ListRulesAction, this))
+{
+
+}
+
+bool ListRulesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRulesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRulesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchEventsClient::send
+ */
+AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRulesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRulesRequestPrivate
+ *
+ * @brief  Private implementation for ListRulesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRulesRequestPrivate object.
+ *
+ * @param  action  CloudWatchEvents action being performed.
+ * @param  q       Pointer to this object's public ListRulesRequest instance.
+ */
+ListRulesRequestPrivate::ListRulesRequestPrivate(
+    const CloudWatchEventsRequest::Action action, ListRulesRequest * const q)
+    : ListRulesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRulesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRulesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRulesRequest instance.
+ */
+ListRulesRequestPrivate::ListRulesRequestPrivate(
+    const ListRulesRequestPrivate &other, ListRulesRequest * const q)
+    : ListRulesPrivate(other, q)
+{
+
+}

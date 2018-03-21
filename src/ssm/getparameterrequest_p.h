@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETPARAMETERREQUEST_P_H
 #define QTAWS_GETPARAMETERREQUEST_P_H
 
+#include "ssm_p.h"
+#include "getparameterrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetParameterRequest;
+
+class QTAWS_EXPORT GetParameterRequestPrivate : public SSMPrivate {
+
+public:
+    GetParameterRequestPrivate(const SSM::Action action,
+                                   GetParameterRequest * const q);
+    GetParameterRequestPrivate(const GetParameterRequestPrivate &other,
+                                   GetParameterRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetParameterRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

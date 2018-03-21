@@ -19,3 +19,107 @@
 
 #include "listallowednodetypemodificationsrequest.h"
 #include "listallowednodetypemodificationsrequest_p.h"
+#include "listallowednodetypemodificationsresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  ListAllowedNodeTypeModificationsRequest
+ *
+ * @brief  Implements ElastiCache ListAllowedNodeTypeModifications requests.
+ *
+ * @see    ElastiCacheClient::listAllowedNodeTypeModifications
+ */
+
+/**
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsResponse(
+
+/**
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest(const ListAllowedNodeTypeModificationsRequest &other)
+    : ElastiCacheRequest(new ListAllowedNodeTypeModificationsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsRequest object.
+ */
+ListAllowedNodeTypeModificationsRequest::ListAllowedNodeTypeModificationsRequest()
+    : ElastiCacheRequest(new ListAllowedNodeTypeModificationsRequestPrivate(ElastiCacheRequest::ListAllowedNodeTypeModificationsAction, this))
+{
+
+}
+
+bool ListAllowedNodeTypeModificationsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListAllowedNodeTypeModificationsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListAllowedNodeTypeModificationsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListAllowedNodeTypeModificationsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListAllowedNodeTypeModificationsRequestPrivate
+ *
+ * @brief  Private implementation for ListAllowedNodeTypeModificationsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public ListAllowedNodeTypeModificationsRequest instance.
+ */
+ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
+    const ElastiCacheRequest::Action action, ListAllowedNodeTypeModificationsRequest * const q)
+    : ListAllowedNodeTypeModificationsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListAllowedNodeTypeModificationsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListAllowedNodeTypeModificationsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListAllowedNodeTypeModificationsRequest instance.
+ */
+ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
+    const ListAllowedNodeTypeModificationsRequestPrivate &other, ListAllowedNodeTypeModificationsRequest * const q)
+    : ListAllowedNodeTypeModificationsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEDESTINATIONREQUEST_H
 #define QTAWS_DELETEDESTINATIONREQUEST_H
 
+#include "cloudwatchlogsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DeleteDestinationRequestPrivate;
+
+class QTAWS_EXPORT DeleteDestinationRequest : public CloudWatchLogsRequest {
+
+public:
+    DeleteDestinationRequest(const DeleteDestinationRequest &other);
+    DeleteDestinationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteDestinationRequest)
+
+}
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

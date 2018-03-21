@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEIPSETREQUEST_P_H
 #define QTAWS_DELETEIPSETREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "deleteipsetrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteIPSetRequest;
+
+class QTAWS_EXPORT DeleteIPSetRequestPrivate : public GuardDutyPrivate {
+
+public:
+    DeleteIPSetRequestPrivate(const GuardDuty::Action action,
+                                   DeleteIPSetRequest * const q);
+    DeleteIPSetRequestPrivate(const DeleteIPSetRequestPrivate &other,
+                                   DeleteIPSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIPSetRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

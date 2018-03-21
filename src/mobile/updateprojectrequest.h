@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_H
 #define QTAWS_UPDATEPROJECTREQUEST_H
 
+#include "mobilerequest.h"
+
+namespace AWS {
+
+namespace Mobile {
+
+class UpdateProjectRequestPrivate;
+
+class QTAWS_EXPORT UpdateProjectRequest : public MobileRequest {
+
+public:
+    UpdateProjectRequest(const UpdateProjectRequest &other);
+    UpdateProjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateProjectRequest)
+
+}
+
+} // namespace Mobile
+} // namespace AWS
+
 #endif

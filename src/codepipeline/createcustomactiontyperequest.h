@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECUSTOMACTIONTYPEREQUEST_H
 #define QTAWS_CREATECUSTOMACTIONTYPEREQUEST_H
 
+#include "codepipelinerequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class CreateCustomActionTypeRequestPrivate;
+
+class QTAWS_EXPORT CreateCustomActionTypeRequest : public CodePipelineRequest {
+
+public:
+    CreateCustomActionTypeRequest(const CreateCustomActionTypeRequest &other);
+    CreateCustomActionTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCustomActionTypeRequest)
+
+}
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describepatchgroupsrequest.h"
 #include "describepatchgroupsrequest_p.h"
+#include "describepatchgroupsresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  DescribePatchGroupsRequest
+ *
+ * @brief  Implements SSM DescribePatchGroups requests.
+ *
+ * @see    SSMClient::describePatchGroups
+ */
+
+/**
+ * @brief  Constructs a new DescribePatchGroupsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribePatchGroupsResponse::DescribePatchGroupsResponse(
+
+/**
+ * @brief  Constructs a new DescribePatchGroupsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribePatchGroupsRequest::DescribePatchGroupsRequest(const DescribePatchGroupsRequest &other)
+    : SSMRequest(new DescribePatchGroupsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribePatchGroupsRequest object.
+ */
+DescribePatchGroupsRequest::DescribePatchGroupsRequest()
+    : SSMRequest(new DescribePatchGroupsRequestPrivate(SSMRequest::DescribePatchGroupsAction, this))
+{
+
+}
+
+bool DescribePatchGroupsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribePatchGroupsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribePatchGroupsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * DescribePatchGroupsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribePatchGroupsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribePatchGroupsRequestPrivate
+ *
+ * @brief  Private implementation for DescribePatchGroupsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePatchGroupsRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public DescribePatchGroupsRequest instance.
+ */
+DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
+    const SSMRequest::Action action, DescribePatchGroupsRequest * const q)
+    : DescribePatchGroupsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribePatchGroupsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribePatchGroupsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribePatchGroupsRequest instance.
+ */
+DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
+    const DescribePatchGroupsRequestPrivate &other, DescribePatchGroupsRequest * const q)
+    : DescribePatchGroupsPrivate(other, q)
+{
+
+}

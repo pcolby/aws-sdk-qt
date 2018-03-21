@@ -19,3 +19,107 @@
 
 #include "retrystageexecutionrequest.h"
 #include "retrystageexecutionrequest_p.h"
+#include "retrystageexecutionresponse.h"
+#include "codepipelinerequest_p.h"
+
+namespace AWS {
+namespace CodePipeline {
+
+/**
+ * @class  RetryStageExecutionRequest
+ *
+ * @brief  Implements CodePipeline RetryStageExecution requests.
+ *
+ * @see    CodePipelineClient::retryStageExecution
+ */
+
+/**
+ * @brief  Constructs a new RetryStageExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RetryStageExecutionResponse::RetryStageExecutionResponse(
+
+/**
+ * @brief  Constructs a new RetryStageExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RetryStageExecutionRequest::RetryStageExecutionRequest(const RetryStageExecutionRequest &other)
+    : CodePipelineRequest(new RetryStageExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RetryStageExecutionRequest object.
+ */
+RetryStageExecutionRequest::RetryStageExecutionRequest()
+    : CodePipelineRequest(new RetryStageExecutionRequestPrivate(CodePipelineRequest::RetryStageExecutionAction, this))
+{
+
+}
+
+bool RetryStageExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RetryStageExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RetryStageExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodePipelineClient::send
+ */
+AwsAbstractResponse * RetryStageExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new RetryStageExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RetryStageExecutionRequestPrivate
+ *
+ * @brief  Private implementation for RetryStageExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetryStageExecutionRequestPrivate object.
+ *
+ * @param  action  CodePipeline action being performed.
+ * @param  q       Pointer to this object's public RetryStageExecutionRequest instance.
+ */
+RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
+    const CodePipelineRequest::Action action, RetryStageExecutionRequest * const q)
+    : RetryStageExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RetryStageExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RetryStageExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RetryStageExecutionRequest instance.
+ */
+RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
+    const RetryStageExecutionRequestPrivate &other, RetryStageExecutionRequest * const q)
+    : RetryStageExecutionPrivate(other, q)
+{
+
+}

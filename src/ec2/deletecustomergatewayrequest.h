@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECUSTOMERGATEWAYREQUEST_H
 #define QTAWS_DELETECUSTOMERGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteCustomerGatewayRequestPrivate;
+
+class QTAWS_EXPORT DeleteCustomerGatewayRequest : public EC2Request {
+
+public:
+    DeleteCustomerGatewayRequest(const DeleteCustomerGatewayRequest &other);
+    DeleteCustomerGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCustomerGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETOBJECTINFORMATIONREQUEST_H
 #define QTAWS_GETOBJECTINFORMATIONREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class GetObjectInformationRequestPrivate;
+
+class QTAWS_EXPORT GetObjectInformationRequest : public CloudDirectoryRequest {
+
+public:
+    GetObjectInformationRequest(const GetObjectInformationRequest &other);
+    GetObjectInformationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetObjectInformationRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

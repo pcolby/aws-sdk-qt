@@ -19,3 +19,107 @@
 
 #include "describeenginedefaultparametersrequest.h"
 #include "describeenginedefaultparametersrequest_p.h"
+#include "describeenginedefaultparametersresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  DescribeEngineDefaultParametersRequest
+ *
+ * @brief  Implements ElastiCache DescribeEngineDefaultParameters requests.
+ *
+ * @see    ElastiCacheClient::describeEngineDefaultParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest(const DescribeEngineDefaultParametersRequest &other)
+    : ElastiCacheRequest(new DescribeEngineDefaultParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEngineDefaultParametersRequest object.
+ */
+DescribeEngineDefaultParametersRequest::DescribeEngineDefaultParametersRequest()
+    : ElastiCacheRequest(new DescribeEngineDefaultParametersRequestPrivate(ElastiCacheRequest::DescribeEngineDefaultParametersAction, this))
+{
+
+}
+
+bool DescribeEngineDefaultParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEngineDefaultParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEngineDefaultParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * DescribeEngineDefaultParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEngineDefaultParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEngineDefaultParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEngineDefaultParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
+ */
+DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
+    const ElastiCacheRequest::Action action, DescribeEngineDefaultParametersRequest * const q)
+    : DescribeEngineDefaultParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEngineDefaultParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEngineDefaultParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEngineDefaultParametersRequest instance.
+ */
+DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
+    const DescribeEngineDefaultParametersRequestPrivate &other, DescribeEngineDefaultParametersRequest * const q)
+    : DescribeEngineDefaultParametersPrivate(other, q)
+{
+
+}

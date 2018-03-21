@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESCALINGPLANRESOURCESREQUEST_H
 #define QTAWS_DESCRIBESCALINGPLANRESOURCESREQUEST_H
 
+#include "autoscalingplansrequest.h"
+
+namespace AWS {
+
+namespace AutoScalingPlans {
+
+class DescribeScalingPlanResourcesRequestPrivate;
+
+class QTAWS_EXPORT DescribeScalingPlanResourcesRequest : public AutoScalingPlansRequest {
+
+public:
+    DescribeScalingPlanResourcesRequest(const DescribeScalingPlanResourcesRequest &other);
+    DescribeScalingPlanResourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeScalingPlanResourcesRequest)
+
+}
+
+} // namespace AutoScalingPlans
+} // namespace AWS
+
 #endif

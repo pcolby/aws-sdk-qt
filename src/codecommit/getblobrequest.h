@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBLOBREQUEST_H
 #define QTAWS_GETBLOBREQUEST_H
 
+#include "codecommitrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetBlobRequestPrivate;
+
+class QTAWS_EXPORT GetBlobRequest : public CodeCommitRequest {
+
+public:
+    GetBlobRequest(const GetBlobRequest &other);
+    GetBlobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBlobRequest)
+
+}
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEELASTICIPREQUEST_H
 #define QTAWS_UPDATEELASTICIPREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateElasticIpRequestPrivate;
+
+class QTAWS_EXPORT UpdateElasticIpRequest : public OpsWorksRequest {
+
+public:
+    UpdateElasticIpRequest(const UpdateElasticIpRequest &other);
+    UpdateElasticIpRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateElasticIpRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

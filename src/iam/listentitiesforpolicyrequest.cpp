@@ -19,3 +19,107 @@
 
 #include "listentitiesforpolicyrequest.h"
 #include "listentitiesforpolicyrequest_p.h"
+#include "listentitiesforpolicyresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListEntitiesForPolicyRequest
+ *
+ * @brief  Implements IAM ListEntitiesForPolicy requests.
+ *
+ * @see    IAMClient::listEntitiesForPolicy
+ */
+
+/**
+ * @brief  Constructs a new ListEntitiesForPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
+
+/**
+ * @brief  Constructs a new ListEntitiesForPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest(const ListEntitiesForPolicyRequest &other)
+    : IAMRequest(new ListEntitiesForPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEntitiesForPolicyRequest object.
+ */
+ListEntitiesForPolicyRequest::ListEntitiesForPolicyRequest()
+    : IAMRequest(new ListEntitiesForPolicyRequestPrivate(IAMRequest::ListEntitiesForPolicyAction, this))
+{
+
+}
+
+bool ListEntitiesForPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEntitiesForPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEntitiesForPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEntitiesForPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEntitiesForPolicyRequestPrivate
+ *
+ * @brief  Private implementation for ListEntitiesForPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEntitiesForPolicyRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListEntitiesForPolicyRequest instance.
+ */
+ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
+    const IAMRequest::Action action, ListEntitiesForPolicyRequest * const q)
+    : ListEntitiesForPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEntitiesForPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEntitiesForPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEntitiesForPolicyRequest instance.
+ */
+ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
+    const ListEntitiesForPolicyRequestPrivate &other, ListEntitiesForPolicyRequest * const q)
+    : ListEntitiesForPolicyPrivate(other, q)
+{
+
+}

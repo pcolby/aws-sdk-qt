@@ -20,4 +20,32 @@
 #ifndef QTAWS_SELECTREQUEST_H
 #define QTAWS_SELECTREQUEST_H
 
+#include "simpledbrequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class SelectRequestPrivate;
+
+class QTAWS_EXPORT SelectRequest : public SimpleDBRequest {
+
+public:
+    SelectRequest(const SelectRequest &other);
+    SelectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SelectRequest)
+
+}
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deleteprogressupdatestreamrequest.h"
 #include "deleteprogressupdatestreamrequest_p.h"
+#include "deleteprogressupdatestreamresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DeleteProgressUpdateStreamRequest
+ *
+ * @brief  Implements MigrationHub DeleteProgressUpdateStream requests.
+ *
+ * @see    MigrationHubClient::deleteProgressUpdateStream
+ */
+
+/**
+ * @brief  Constructs a new DeleteProgressUpdateStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteProgressUpdateStreamResponse::DeleteProgressUpdateStreamResponse(
+
+/**
+ * @brief  Constructs a new DeleteProgressUpdateStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest(const DeleteProgressUpdateStreamRequest &other)
+    : MigrationHubRequest(new DeleteProgressUpdateStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteProgressUpdateStreamRequest object.
+ */
+DeleteProgressUpdateStreamRequest::DeleteProgressUpdateStreamRequest()
+    : MigrationHubRequest(new DeleteProgressUpdateStreamRequestPrivate(MigrationHubRequest::DeleteProgressUpdateStreamAction, this))
+{
+
+}
+
+bool DeleteProgressUpdateStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteProgressUpdateStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteProgressUpdateStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteProgressUpdateStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteProgressUpdateStreamRequestPrivate
+ *
+ * @brief  Private implementation for DeleteProgressUpdateStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public DeleteProgressUpdateStreamRequest instance.
+ */
+DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
+    const MigrationHubRequest::Action action, DeleteProgressUpdateStreamRequest * const q)
+    : DeleteProgressUpdateStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteProgressUpdateStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteProgressUpdateStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteProgressUpdateStreamRequest instance.
+ */
+DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
+    const DeleteProgressUpdateStreamRequestPrivate &other, DeleteProgressUpdateStreamRequest * const q)
+    : DeleteProgressUpdateStreamPrivate(other, q)
+{
+
+}

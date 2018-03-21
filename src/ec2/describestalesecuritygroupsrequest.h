@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBESTALESECURITYGROUPSREQUEST_H
 #define QTAWS_DESCRIBESTALESECURITYGROUPSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeStaleSecurityGroupsRequestPrivate;
+
+class QTAWS_EXPORT DescribeStaleSecurityGroupsRequest : public EC2Request {
+
+public:
+    DescribeStaleSecurityGroupsRequest(const DescribeStaleSecurityGroupsRequest &other);
+    DescribeStaleSecurityGroupsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeStaleSecurityGroupsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

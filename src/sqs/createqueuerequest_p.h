@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEQUEUEREQUEST_P_H
 #define QTAWS_CREATEQUEUEREQUEST_P_H
 
+#include "sqs_p.h"
+#include "createqueuerequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class CreateQueueRequest;
+
+class QTAWS_EXPORT CreateQueueRequestPrivate : public SQSPrivate {
+
+public:
+    CreateQueueRequestPrivate(const SQS::Action action,
+                                   CreateQueueRequest * const q);
+    CreateQueueRequestPrivate(const CreateQueueRequestPrivate &other,
+                                   CreateQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateQueueRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

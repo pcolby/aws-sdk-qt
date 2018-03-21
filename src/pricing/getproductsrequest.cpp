@@ -19,3 +19,107 @@
 
 #include "getproductsrequest.h"
 #include "getproductsrequest_p.h"
+#include "getproductsresponse.h"
+#include "pricingrequest_p.h"
+
+namespace AWS {
+namespace Pricing {
+
+/**
+ * @class  GetProductsRequest
+ *
+ * @brief  Implements Pricing GetProducts requests.
+ *
+ * @see    PricingClient::getProducts
+ */
+
+/**
+ * @brief  Constructs a new GetProductsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetProductsResponse::GetProductsResponse(
+
+/**
+ * @brief  Constructs a new GetProductsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetProductsRequest::GetProductsRequest(const GetProductsRequest &other)
+    : PricingRequest(new GetProductsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetProductsRequest object.
+ */
+GetProductsRequest::GetProductsRequest()
+    : PricingRequest(new GetProductsRequestPrivate(PricingRequest::GetProductsAction, this))
+{
+
+}
+
+bool GetProductsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetProductsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetProductsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PricingClient::send
+ */
+AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetProductsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetProductsRequestPrivate
+ *
+ * @brief  Private implementation for GetProductsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProductsRequestPrivate object.
+ *
+ * @param  action  Pricing action being performed.
+ * @param  q       Pointer to this object's public GetProductsRequest instance.
+ */
+GetProductsRequestPrivate::GetProductsRequestPrivate(
+    const PricingRequest::Action action, GetProductsRequest * const q)
+    : GetProductsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetProductsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetProductsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetProductsRequest instance.
+ */
+GetProductsRequestPrivate::GetProductsRequestPrivate(
+    const GetProductsRequestPrivate &other, GetProductsRequest * const q)
+    : GetProductsPrivate(other, q)
+{
+
+}

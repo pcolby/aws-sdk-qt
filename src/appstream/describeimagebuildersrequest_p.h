@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIMAGEBUILDERSREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGEBUILDERSREQUEST_P_H
 
+#include "appstream_p.h"
+#include "describeimagebuildersrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class DescribeImageBuildersRequest;
+
+class QTAWS_EXPORT DescribeImageBuildersRequestPrivate : public AppStreamPrivate {
+
+public:
+    DescribeImageBuildersRequestPrivate(const AppStream::Action action,
+                                   DescribeImageBuildersRequest * const q);
+    DescribeImageBuildersRequestPrivate(const DescribeImageBuildersRequestPrivate &other,
+                                   DescribeImageBuildersRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeImageBuildersRequest)
+
+};
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

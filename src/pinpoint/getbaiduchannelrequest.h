@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETBAIDUCHANNELREQUEST_H
 #define QTAWS_GETBAIDUCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class GetBaiduChannelRequestPrivate;
+
+class QTAWS_EXPORT GetBaiduChannelRequest : public PinpointRequest {
+
+public:
+    GetBaiduChannelRequest(const GetBaiduChannelRequest &other);
+    GetBaiduChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetBaiduChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

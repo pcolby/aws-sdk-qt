@@ -19,3 +19,107 @@
 
 #include "startmaintenancerequest.h"
 #include "startmaintenancerequest_p.h"
+#include "startmaintenanceresponse.h"
+#include "opsworkscmrequest_p.h"
+
+namespace AWS {
+namespace OpsWorksCM {
+
+/**
+ * @class  StartMaintenanceRequest
+ *
+ * @brief  Implements OpsWorksCM StartMaintenance requests.
+ *
+ * @see    OpsWorksCMClient::startMaintenance
+ */
+
+/**
+ * @brief  Constructs a new StartMaintenanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartMaintenanceResponse::StartMaintenanceResponse(
+
+/**
+ * @brief  Constructs a new StartMaintenanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartMaintenanceRequest::StartMaintenanceRequest(const StartMaintenanceRequest &other)
+    : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartMaintenanceRequest object.
+ */
+StartMaintenanceRequest::StartMaintenanceRequest()
+    : OpsWorksCMRequest(new StartMaintenanceRequestPrivate(OpsWorksCMRequest::StartMaintenanceAction, this))
+{
+
+}
+
+bool StartMaintenanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartMaintenanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartMaintenanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksCMClient::send
+ */
+AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkReply * const reply) const
+{
+    return new StartMaintenanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartMaintenanceRequestPrivate
+ *
+ * @brief  Private implementation for StartMaintenanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMaintenanceRequestPrivate object.
+ *
+ * @param  action  OpsWorksCM action being performed.
+ * @param  q       Pointer to this object's public StartMaintenanceRequest instance.
+ */
+StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
+    const OpsWorksCMRequest::Action action, StartMaintenanceRequest * const q)
+    : StartMaintenancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartMaintenanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartMaintenanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartMaintenanceRequest instance.
+ */
+StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
+    const StartMaintenanceRequestPrivate &other, StartMaintenanceRequest * const q)
+    : StartMaintenancePrivate(other, q)
+{
+
+}

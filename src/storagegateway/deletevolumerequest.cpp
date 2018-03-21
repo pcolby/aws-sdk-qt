@@ -19,3 +19,107 @@
 
 #include "deletevolumerequest.h"
 #include "deletevolumerequest_p.h"
+#include "deletevolumeresponse.h"
+#include "storagegatewayrequest_p.h"
+
+namespace AWS {
+namespace StorageGateway {
+
+/**
+ * @class  DeleteVolumeRequest
+ *
+ * @brief  Implements StorageGateway DeleteVolume requests.
+ *
+ * @see    StorageGatewayClient::deleteVolume
+ */
+
+/**
+ * @brief  Constructs a new DeleteVolumeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteVolumeResponse::DeleteVolumeResponse(
+
+/**
+ * @brief  Constructs a new DeleteVolumeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest &other)
+    : StorageGatewayRequest(new DeleteVolumeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteVolumeRequest object.
+ */
+DeleteVolumeRequest::DeleteVolumeRequest()
+    : StorageGatewayRequest(new DeleteVolumeRequestPrivate(StorageGatewayRequest::DeleteVolumeAction, this))
+{
+
+}
+
+bool DeleteVolumeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteVolumeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteVolumeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  StorageGatewayClient::send
+ */
+AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteVolumeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteVolumeRequestPrivate
+ *
+ * @brief  Private implementation for DeleteVolumeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVolumeRequestPrivate object.
+ *
+ * @param  action  StorageGateway action being performed.
+ * @param  q       Pointer to this object's public DeleteVolumeRequest instance.
+ */
+DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
+    const StorageGatewayRequest::Action action, DeleteVolumeRequest * const q)
+    : DeleteVolumePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteVolumeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteVolumeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteVolumeRequest instance.
+ */
+DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
+    const DeleteVolumeRequestPrivate &other, DeleteVolumeRequest * const q)
+    : DeleteVolumePrivate(other, q)
+{
+
+}

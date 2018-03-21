@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETIMAGEREQUEST_P_H
 #define QTAWS_BATCHGETIMAGEREQUEST_P_H
 
+#include "ecr_p.h"
+#include "batchgetimagerequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class BatchGetImageRequest;
+
+class QTAWS_EXPORT BatchGetImageRequestPrivate : public ECRPrivate {
+
+public:
+    BatchGetImageRequestPrivate(const ECR::Action action,
+                                   BatchGetImageRequest * const q);
+    BatchGetImageRequestPrivate(const BatchGetImageRequestPrivate &other,
+                                   BatchGetImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetImageRequest)
+
+};
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

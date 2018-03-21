@@ -19,3 +19,107 @@
 
 #include "createinstanceexporttaskrequest.h"
 #include "createinstanceexporttaskrequest_p.h"
+#include "createinstanceexporttaskresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateInstanceExportTaskRequest
+ *
+ * @brief  Implements EC2 CreateInstanceExportTask requests.
+ *
+ * @see    EC2Client::createInstanceExportTask
+ */
+
+/**
+ * @brief  Constructs a new CreateInstanceExportTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
+
+/**
+ * @brief  Constructs a new CreateInstanceExportTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest(const CreateInstanceExportTaskRequest &other)
+    : EC2Request(new CreateInstanceExportTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInstanceExportTaskRequest object.
+ */
+CreateInstanceExportTaskRequest::CreateInstanceExportTaskRequest()
+    : EC2Request(new CreateInstanceExportTaskRequestPrivate(EC2Request::CreateInstanceExportTaskAction, this))
+{
+
+}
+
+bool CreateInstanceExportTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInstanceExportTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInstanceExportTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInstanceExportTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInstanceExportTaskRequestPrivate
+ *
+ * @brief  Private implementation for CreateInstanceExportTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateInstanceExportTaskRequest instance.
+ */
+CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
+    const EC2Request::Action action, CreateInstanceExportTaskRequest * const q)
+    : CreateInstanceExportTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInstanceExportTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInstanceExportTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInstanceExportTaskRequest instance.
+ */
+CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
+    const CreateInstanceExportTaskRequestPrivate &other, CreateInstanceExportTaskRequest * const q)
+    : CreateInstanceExportTaskPrivate(other, q)
+{
+
+}

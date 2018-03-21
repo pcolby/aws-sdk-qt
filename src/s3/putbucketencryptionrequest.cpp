@@ -19,3 +19,107 @@
 
 #include "putbucketencryptionrequest.h"
 #include "putbucketencryptionrequest_p.h"
+#include "putbucketencryptionresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketEncryptionRequest
+ *
+ * @brief  Implements S3 PutBucketEncryption requests.
+ *
+ * @see    S3Client::putBucketEncryption
+ */
+
+/**
+ * @brief  Constructs a new PutBucketEncryptionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketEncryptionResponse::PutBucketEncryptionResponse(
+
+/**
+ * @brief  Constructs a new PutBucketEncryptionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketEncryptionRequest::PutBucketEncryptionRequest(const PutBucketEncryptionRequest &other)
+    : S3Request(new PutBucketEncryptionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketEncryptionRequest object.
+ */
+PutBucketEncryptionRequest::PutBucketEncryptionRequest()
+    : S3Request(new PutBucketEncryptionRequestPrivate(S3Request::PutBucketEncryptionAction, this))
+{
+
+}
+
+bool PutBucketEncryptionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketEncryptionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketEncryptionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketEncryptionRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketEncryptionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketEncryptionRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketEncryptionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketEncryptionRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketEncryptionRequest instance.
+ */
+PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
+    const S3Request::Action action, PutBucketEncryptionRequest * const q)
+    : PutBucketEncryptionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketEncryptionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketEncryptionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketEncryptionRequest instance.
+ */
+PutBucketEncryptionRequestPrivate::PutBucketEncryptionRequestPrivate(
+    const PutBucketEncryptionRequestPrivate &other, PutBucketEncryptionRequest * const q)
+    : PutBucketEncryptionPrivate(other, q)
+{
+
+}

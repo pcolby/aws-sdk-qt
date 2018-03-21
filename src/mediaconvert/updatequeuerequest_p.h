@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEQUEUEREQUEST_P_H
 #define QTAWS_UPDATEQUEUEREQUEST_P_H
 
+#include "mediaconvert_p.h"
+#include "updatequeuerequest.h"
+
+namespace AWS {
+
+namespace MediaConvert {
+
+class UpdateQueueRequest;
+
+class QTAWS_EXPORT UpdateQueueRequestPrivate : public MediaConvertPrivate {
+
+public:
+    UpdateQueueRequestPrivate(const MediaConvert::Action action,
+                                   UpdateQueueRequest * const q);
+    UpdateQueueRequestPrivate(const UpdateQueueRequestPrivate &other,
+                                   UpdateQueueRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateQueueRequest)
+
+};
+
+} // namespace MediaConvert
+} // namespace AWS
+
 #endif

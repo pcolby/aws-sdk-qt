@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCERTIFICATEREQUEST_H
 #define QTAWS_GETCERTIFICATEREQUEST_H
 
+#include "acmrequest.h"
+
+namespace AWS {
+
+namespace ACM {
+
+class GetCertificateRequestPrivate;
+
+class QTAWS_EXPORT GetCertificateRequest : public ACMRequest {
+
+public:
+    GetCertificateRequest(const GetCertificateRequest &other);
+    GetCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetCertificateRequest)
+
+}
+
+} // namespace ACM
+} // namespace AWS
+
 #endif

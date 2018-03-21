@@ -19,3 +19,107 @@
 
 #include "describeuserpooldomainrequest.h"
 #include "describeuserpooldomainrequest_p.h"
+#include "describeuserpooldomainresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  DescribeUserPoolDomainRequest
+ *
+ * @brief  Implements CognitoIdentityProvider DescribeUserPoolDomain requests.
+ *
+ * @see    CognitoIdentityProviderClient::describeUserPoolDomain
+ */
+
+/**
+ * @brief  Constructs a new DescribeUserPoolDomainResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeUserPoolDomainResponse::DescribeUserPoolDomainResponse(
+
+/**
+ * @brief  Constructs a new DescribeUserPoolDomainRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeUserPoolDomainRequest::DescribeUserPoolDomainRequest(const DescribeUserPoolDomainRequest &other)
+    : CognitoIdentityProviderRequest(new DescribeUserPoolDomainRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeUserPoolDomainRequest object.
+ */
+DescribeUserPoolDomainRequest::DescribeUserPoolDomainRequest()
+    : CognitoIdentityProviderRequest(new DescribeUserPoolDomainRequestPrivate(CognitoIdentityProviderRequest::DescribeUserPoolDomainAction, this))
+{
+
+}
+
+bool DescribeUserPoolDomainRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeUserPoolDomainResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeUserPoolDomainResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * DescribeUserPoolDomainRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeUserPoolDomainResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeUserPoolDomainRequestPrivate
+ *
+ * @brief  Private implementation for DescribeUserPoolDomainRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserPoolDomainRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public DescribeUserPoolDomainRequest instance.
+ */
+DescribeUserPoolDomainRequestPrivate::DescribeUserPoolDomainRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, DescribeUserPoolDomainRequest * const q)
+    : DescribeUserPoolDomainPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeUserPoolDomainRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeUserPoolDomainRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeUserPoolDomainRequest instance.
+ */
+DescribeUserPoolDomainRequestPrivate::DescribeUserPoolDomainRequestPrivate(
+    const DescribeUserPoolDomainRequestPrivate &other, DescribeUserPoolDomainRequest * const q)
+    : DescribeUserPoolDomainPrivate(other, q)
+{
+
+}

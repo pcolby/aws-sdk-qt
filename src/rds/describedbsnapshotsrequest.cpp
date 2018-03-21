@@ -19,3 +19,107 @@
 
 #include "describedbsnapshotsrequest.h"
 #include "describedbsnapshotsrequest_p.h"
+#include "describedbsnapshotsresponse.h"
+#include "rdsrequest_p.h"
+
+namespace AWS {
+namespace RDS {
+
+/**
+ * @class  DescribeDBSnapshotsRequest
+ *
+ * @brief  Implements RDS DescribeDBSnapshots requests.
+ *
+ * @see    RDSClient::describeDBSnapshots
+ */
+
+/**
+ * @brief  Constructs a new DescribeDBSnapshotsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeDBSnapshotsResponse::DescribeDBSnapshotsResponse(
+
+/**
+ * @brief  Constructs a new DescribeDBSnapshotsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeDBSnapshotsRequest::DescribeDBSnapshotsRequest(const DescribeDBSnapshotsRequest &other)
+    : RDSRequest(new DescribeDBSnapshotsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeDBSnapshotsRequest object.
+ */
+DescribeDBSnapshotsRequest::DescribeDBSnapshotsRequest()
+    : RDSRequest(new DescribeDBSnapshotsRequestPrivate(RDSRequest::DescribeDBSnapshotsAction, this))
+{
+
+}
+
+bool DescribeDBSnapshotsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeDBSnapshotsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeDBSnapshotsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RDSClient::send
+ */
+AwsAbstractResponse * DescribeDBSnapshotsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeDBSnapshotsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeDBSnapshotsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeDBSnapshotsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSnapshotsRequestPrivate object.
+ *
+ * @param  action  RDS action being performed.
+ * @param  q       Pointer to this object's public DescribeDBSnapshotsRequest instance.
+ */
+DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
+    const RDSRequest::Action action, DescribeDBSnapshotsRequest * const q)
+    : DescribeDBSnapshotsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeDBSnapshotsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeDBSnapshotsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeDBSnapshotsRequest instance.
+ */
+DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
+    const DescribeDBSnapshotsRequestPrivate &other, DescribeDBSnapshotsRequest * const q)
+    : DescribeDBSnapshotsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOCUMENTPATHREQUEST_H
 #define QTAWS_GETDOCUMENTPATHREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetDocumentPathRequestPrivate;
+
+class QTAWS_EXPORT GetDocumentPathRequest : public WorkDocsRequest {
+
+public:
+    GetDocumentPathRequest(const GetDocumentPathRequest &other);
+    GetDocumentPathRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDocumentPathRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

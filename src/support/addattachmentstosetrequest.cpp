@@ -19,3 +19,107 @@
 
 #include "addattachmentstosetrequest.h"
 #include "addattachmentstosetrequest_p.h"
+#include "addattachmentstosetresponse.h"
+#include "supportrequest_p.h"
+
+namespace AWS {
+namespace Support {
+
+/**
+ * @class  AddAttachmentsToSetRequest
+ *
+ * @brief  Implements Support AddAttachmentsToSet requests.
+ *
+ * @see    SupportClient::addAttachmentsToSet
+ */
+
+/**
+ * @brief  Constructs a new AddAttachmentsToSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
+
+/**
+ * @brief  Constructs a new AddAttachmentsToSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AddAttachmentsToSetRequest::AddAttachmentsToSetRequest(const AddAttachmentsToSetRequest &other)
+    : SupportRequest(new AddAttachmentsToSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AddAttachmentsToSetRequest object.
+ */
+AddAttachmentsToSetRequest::AddAttachmentsToSetRequest()
+    : SupportRequest(new AddAttachmentsToSetRequestPrivate(SupportRequest::AddAttachmentsToSetAction, this))
+{
+
+}
+
+bool AddAttachmentsToSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AddAttachmentsToSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AddAttachmentsToSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SupportClient::send
+ */
+AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetworkReply * const reply) const
+{
+    return new AddAttachmentsToSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AddAttachmentsToSetRequestPrivate
+ *
+ * @brief  Private implementation for AddAttachmentsToSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddAttachmentsToSetRequestPrivate object.
+ *
+ * @param  action  Support action being performed.
+ * @param  q       Pointer to this object's public AddAttachmentsToSetRequest instance.
+ */
+AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
+    const SupportRequest::Action action, AddAttachmentsToSetRequest * const q)
+    : AddAttachmentsToSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AddAttachmentsToSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AddAttachmentsToSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AddAttachmentsToSetRequest instance.
+ */
+AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
+    const AddAttachmentsToSetRequestPrivate &other, AddAttachmentsToSetRequest * const q)
+    : AddAttachmentsToSetPrivate(other, q)
+{
+
+}

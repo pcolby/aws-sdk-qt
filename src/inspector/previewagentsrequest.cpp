@@ -19,3 +19,107 @@
 
 #include "previewagentsrequest.h"
 #include "previewagentsrequest_p.h"
+#include "previewagentsresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  PreviewAgentsRequest
+ *
+ * @brief  Implements Inspector PreviewAgents requests.
+ *
+ * @see    InspectorClient::previewAgents
+ */
+
+/**
+ * @brief  Constructs a new PreviewAgentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PreviewAgentsResponse::PreviewAgentsResponse(
+
+/**
+ * @brief  Constructs a new PreviewAgentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PreviewAgentsRequest::PreviewAgentsRequest(const PreviewAgentsRequest &other)
+    : InspectorRequest(new PreviewAgentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PreviewAgentsRequest object.
+ */
+PreviewAgentsRequest::PreviewAgentsRequest()
+    : InspectorRequest(new PreviewAgentsRequestPrivate(InspectorRequest::PreviewAgentsAction, this))
+{
+
+}
+
+bool PreviewAgentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PreviewAgentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PreviewAgentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply * const reply) const
+{
+    return new PreviewAgentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PreviewAgentsRequestPrivate
+ *
+ * @brief  Private implementation for PreviewAgentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PreviewAgentsRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public PreviewAgentsRequest instance.
+ */
+PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
+    const InspectorRequest::Action action, PreviewAgentsRequest * const q)
+    : PreviewAgentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PreviewAgentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PreviewAgentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PreviewAgentsRequest instance.
+ */
+PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
+    const PreviewAgentsRequestPrivate &other, PreviewAgentsRequest * const q)
+    : PreviewAgentsPrivate(other, q)
+{
+
+}

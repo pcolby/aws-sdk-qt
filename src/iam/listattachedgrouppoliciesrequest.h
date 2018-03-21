@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_H
 #define QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class ListAttachedGroupPoliciesRequestPrivate;
+
+class QTAWS_EXPORT ListAttachedGroupPoliciesRequest : public IAMRequest {
+
+public:
+    ListAttachedGroupPoliciesRequest(const ListAttachedGroupPoliciesRequest &other);
+    ListAttachedGroupPoliciesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAttachedGroupPoliciesRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

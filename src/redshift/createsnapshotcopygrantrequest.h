@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESNAPSHOTCOPYGRANTREQUEST_H
 #define QTAWS_CREATESNAPSHOTCOPYGRANTREQUEST_H
 
+#include "redshiftrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateSnapshotCopyGrantRequestPrivate;
+
+class QTAWS_EXPORT CreateSnapshotCopyGrantRequest : public RedshiftRequest {
+
+public:
+    CreateSnapshotCopyGrantRequest(const CreateSnapshotCopyGrantRequest &other);
+    CreateSnapshotCopyGrantRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateSnapshotCopyGrantRequest)
+
+}
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

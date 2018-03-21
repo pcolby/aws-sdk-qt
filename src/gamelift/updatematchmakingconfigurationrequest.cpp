@@ -19,3 +19,107 @@
 
 #include "updatematchmakingconfigurationrequest.h"
 #include "updatematchmakingconfigurationrequest_p.h"
+#include "updatematchmakingconfigurationresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateMatchmakingConfigurationRequest
+ *
+ * @brief  Implements GameLift UpdateMatchmakingConfiguration requests.
+ *
+ * @see    GameLiftClient::updateMatchmakingConfiguration
+ */
+
+/**
+ * @brief  Constructs a new UpdateMatchmakingConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateMatchmakingConfigurationResponse::UpdateMatchmakingConfigurationResponse(
+
+/**
+ * @brief  Constructs a new UpdateMatchmakingConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateMatchmakingConfigurationRequest::UpdateMatchmakingConfigurationRequest(const UpdateMatchmakingConfigurationRequest &other)
+    : GameLiftRequest(new UpdateMatchmakingConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateMatchmakingConfigurationRequest object.
+ */
+UpdateMatchmakingConfigurationRequest::UpdateMatchmakingConfigurationRequest()
+    : GameLiftRequest(new UpdateMatchmakingConfigurationRequestPrivate(GameLiftRequest::UpdateMatchmakingConfigurationAction, this))
+{
+
+}
+
+bool UpdateMatchmakingConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateMatchmakingConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateMatchmakingConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateMatchmakingConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateMatchmakingConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateMatchmakingConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateMatchmakingConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMatchmakingConfigurationRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateMatchmakingConfigurationRequest instance.
+ */
+UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
+    const GameLiftRequest::Action action, UpdateMatchmakingConfigurationRequest * const q)
+    : UpdateMatchmakingConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateMatchmakingConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateMatchmakingConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateMatchmakingConfigurationRequest instance.
+ */
+UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequestPrivate(
+    const UpdateMatchmakingConfigurationRequestPrivate &other, UpdateMatchmakingConfigurationRequest * const q)
+    : UpdateMatchmakingConfigurationPrivate(other, q)
+{
+
+}

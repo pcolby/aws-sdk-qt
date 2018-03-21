@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_P_H
 #define QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_P_H
 
+#include "batch_p.h"
+#include "updatecomputeenvironmentrequest.h"
+
+namespace AWS {
+
+namespace Batch {
+
+class UpdateComputeEnvironmentRequest;
+
+class QTAWS_EXPORT UpdateComputeEnvironmentRequestPrivate : public BatchPrivate {
+
+public:
+    UpdateComputeEnvironmentRequestPrivate(const Batch::Action action,
+                                   UpdateComputeEnvironmentRequest * const q);
+    UpdateComputeEnvironmentRequestPrivate(const UpdateComputeEnvironmentRequestPrivate &other,
+                                   UpdateComputeEnvironmentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateComputeEnvironmentRequest)
+
+};
+
+} // namespace Batch
+} // namespace AWS
+
 #endif

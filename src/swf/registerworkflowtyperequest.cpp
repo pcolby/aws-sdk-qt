@@ -19,3 +19,107 @@
 
 #include "registerworkflowtyperequest.h"
 #include "registerworkflowtyperequest_p.h"
+#include "registerworkflowtyperesponse.h"
+#include "swfrequest_p.h"
+
+namespace AWS {
+namespace SWF {
+
+/**
+ * @class  RegisterWorkflowTypeRequest
+ *
+ * @brief  Implements SWF RegisterWorkflowType requests.
+ *
+ * @see    SWFClient::registerWorkflowType
+ */
+
+/**
+ * @brief  Constructs a new RegisterWorkflowTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
+
+/**
+ * @brief  Constructs a new RegisterWorkflowTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest(const RegisterWorkflowTypeRequest &other)
+    : SWFRequest(new RegisterWorkflowTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RegisterWorkflowTypeRequest object.
+ */
+RegisterWorkflowTypeRequest::RegisterWorkflowTypeRequest()
+    : SWFRequest(new RegisterWorkflowTypeRequestPrivate(SWFRequest::RegisterWorkflowTypeAction, this))
+{
+
+}
+
+bool RegisterWorkflowTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RegisterWorkflowTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RegisterWorkflowTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SWFClient::send
+ */
+AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new RegisterWorkflowTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RegisterWorkflowTypeRequestPrivate
+ *
+ * @brief  Private implementation for RegisterWorkflowTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object.
+ *
+ * @param  action  SWF action being performed.
+ * @param  q       Pointer to this object's public RegisterWorkflowTypeRequest instance.
+ */
+RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
+    const SWFRequest::Action action, RegisterWorkflowTypeRequest * const q)
+    : RegisterWorkflowTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RegisterWorkflowTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RegisterWorkflowTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RegisterWorkflowTypeRequest instance.
+ */
+RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
+    const RegisterWorkflowTypeRequestPrivate &other, RegisterWorkflowTypeRequest * const q)
+    : RegisterWorkflowTypePrivate(other, q)
+{
+
+}

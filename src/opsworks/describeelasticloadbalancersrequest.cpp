@@ -19,3 +19,107 @@
 
 #include "describeelasticloadbalancersrequest.h"
 #include "describeelasticloadbalancersrequest_p.h"
+#include "describeelasticloadbalancersresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DescribeElasticLoadBalancersRequest
+ *
+ * @brief  Implements OpsWorks DescribeElasticLoadBalancers requests.
+ *
+ * @see    OpsWorksClient::describeElasticLoadBalancers
+ */
+
+/**
+ * @brief  Constructs a new DescribeElasticLoadBalancersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeElasticLoadBalancersResponse::DescribeElasticLoadBalancersResponse(
+
+/**
+ * @brief  Constructs a new DescribeElasticLoadBalancersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeElasticLoadBalancersRequest::DescribeElasticLoadBalancersRequest(const DescribeElasticLoadBalancersRequest &other)
+    : OpsWorksRequest(new DescribeElasticLoadBalancersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeElasticLoadBalancersRequest object.
+ */
+DescribeElasticLoadBalancersRequest::DescribeElasticLoadBalancersRequest()
+    : OpsWorksRequest(new DescribeElasticLoadBalancersRequestPrivate(OpsWorksRequest::DescribeElasticLoadBalancersAction, this))
+{
+
+}
+
+bool DescribeElasticLoadBalancersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeElasticLoadBalancersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeElasticLoadBalancersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DescribeElasticLoadBalancersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeElasticLoadBalancersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeElasticLoadBalancersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeElasticLoadBalancersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticLoadBalancersRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DescribeElasticLoadBalancersRequest instance.
+ */
+DescribeElasticLoadBalancersRequestPrivate::DescribeElasticLoadBalancersRequestPrivate(
+    const OpsWorksRequest::Action action, DescribeElasticLoadBalancersRequest * const q)
+    : DescribeElasticLoadBalancersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeElasticLoadBalancersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeElasticLoadBalancersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeElasticLoadBalancersRequest instance.
+ */
+DescribeElasticLoadBalancersRequestPrivate::DescribeElasticLoadBalancersRequestPrivate(
+    const DescribeElasticLoadBalancersRequestPrivate &other, DescribeElasticLoadBalancersRequest * const q)
+    : DescribeElasticLoadBalancersPrivate(other, q)
+{
+
+}

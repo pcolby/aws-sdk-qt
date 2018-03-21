@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSTREAMSREQUEST_H
 #define QTAWS_LISTSTREAMSREQUEST_H
 
+#include "dynamodbstreamsrequest.h"
+
+namespace AWS {
+
+namespace DynamoDBStreams {
+
+class ListStreamsRequestPrivate;
+
+class QTAWS_EXPORT ListStreamsRequest : public DynamoDBStreamsRequest {
+
+public:
+    ListStreamsRequest(const ListStreamsRequest &other);
+    ListStreamsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListStreamsRequest)
+
+}
+
+} // namespace DynamoDBStreams
+} // namespace AWS
+
 #endif

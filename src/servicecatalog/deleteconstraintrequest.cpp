@@ -19,3 +19,107 @@
 
 #include "deleteconstraintrequest.h"
 #include "deleteconstraintrequest_p.h"
+#include "deleteconstraintresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DeleteConstraintRequest
+ *
+ * @brief  Implements ServiceCatalog DeleteConstraint requests.
+ *
+ * @see    ServiceCatalogClient::deleteConstraint
+ */
+
+/**
+ * @brief  Constructs a new DeleteConstraintResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteConstraintResponse::DeleteConstraintResponse(
+
+/**
+ * @brief  Constructs a new DeleteConstraintRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteConstraintRequest::DeleteConstraintRequest(const DeleteConstraintRequest &other)
+    : ServiceCatalogRequest(new DeleteConstraintRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteConstraintRequest object.
+ */
+DeleteConstraintRequest::DeleteConstraintRequest()
+    : ServiceCatalogRequest(new DeleteConstraintRequestPrivate(ServiceCatalogRequest::DeleteConstraintAction, this))
+{
+
+}
+
+bool DeleteConstraintRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteConstraintResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteConstraintResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteConstraintResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteConstraintRequestPrivate
+ *
+ * @brief  Private implementation for DeleteConstraintRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConstraintRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DeleteConstraintRequest instance.
+ */
+DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
+    const ServiceCatalogRequest::Action action, DeleteConstraintRequest * const q)
+    : DeleteConstraintPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteConstraintRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteConstraintRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteConstraintRequest instance.
+ */
+DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
+    const DeleteConstraintRequestPrivate &other, DeleteConstraintRequest * const q)
+    : DeleteConstraintPrivate(other, q)
+{
+
+}

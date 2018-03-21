@@ -20,4 +20,32 @@
 #ifndef QTAWS_STARTTASKREQUEST_H
 #define QTAWS_STARTTASKREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class StartTaskRequestPrivate;
+
+class QTAWS_EXPORT StartTaskRequest : public ECSRequest {
+
+public:
+    StartTaskRequest(const StartTaskRequest &other);
+    StartTaskRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StartTaskRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

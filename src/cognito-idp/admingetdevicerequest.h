@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINGETDEVICEREQUEST_H
 #define QTAWS_ADMINGETDEVICEREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminGetDeviceRequestPrivate;
+
+class QTAWS_EXPORT AdminGetDeviceRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminGetDeviceRequest(const AdminGetDeviceRequest &other);
+    AdminGetDeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminGetDeviceRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEORGANIZATIONALUNITREQUEST_P_H
 #define QTAWS_DELETEORGANIZATIONALUNITREQUEST_P_H
 
+#include "organizations_p.h"
+#include "deleteorganizationalunitrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeleteOrganizationalUnitRequest;
+
+class QTAWS_EXPORT DeleteOrganizationalUnitRequestPrivate : public OrganizationsPrivate {
+
+public:
+    DeleteOrganizationalUnitRequestPrivate(const Organizations::Action action,
+                                   DeleteOrganizationalUnitRequest * const q);
+    DeleteOrganizationalUnitRequestPrivate(const DeleteOrganizationalUnitRequestPrivate &other,
+                                   DeleteOrganizationalUnitRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteOrganizationalUnitRequest)
+
+};
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

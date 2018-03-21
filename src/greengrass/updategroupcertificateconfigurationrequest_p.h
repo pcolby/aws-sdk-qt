@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "updategroupcertificateconfigurationrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class UpdateGroupCertificateConfigurationRequest;
+
+class QTAWS_EXPORT UpdateGroupCertificateConfigurationRequestPrivate : public GreengrassPrivate {
+
+public:
+    UpdateGroupCertificateConfigurationRequestPrivate(const Greengrass::Action action,
+                                   UpdateGroupCertificateConfigurationRequest * const q);
+    UpdateGroupCertificateConfigurationRequestPrivate(const UpdateGroupCertificateConfigurationRequestPrivate &other,
+                                   UpdateGroupCertificateConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateGroupCertificateConfigurationRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

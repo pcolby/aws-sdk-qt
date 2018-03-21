@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEDIRECTORIESREQUEST_P_H
 #define QTAWS_DESCRIBEWORKSPACEDIRECTORIESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "describeworkspacedirectoriesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspaceDirectoriesRequest;
+
+class QTAWS_EXPORT DescribeWorkspaceDirectoriesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    DescribeWorkspaceDirectoriesRequestPrivate(const WorkSpaces::Action action,
+                                   DescribeWorkspaceDirectoriesRequest * const q);
+    DescribeWorkspaceDirectoriesRequestPrivate(const DescribeWorkspaceDirectoriesRequestPrivate &other,
+                                   DescribeWorkspaceDirectoriesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspaceDirectoriesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

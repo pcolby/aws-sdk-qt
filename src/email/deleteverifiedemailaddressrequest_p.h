@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVERIFIEDEMAILADDRESSREQUEST_P_H
 #define QTAWS_DELETEVERIFIEDEMAILADDRESSREQUEST_P_H
 
+#include "ses_p.h"
+#include "deleteverifiedemailaddressrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteVerifiedEmailAddressRequest;
+
+class QTAWS_EXPORT DeleteVerifiedEmailAddressRequestPrivate : public SESPrivate {
+
+public:
+    DeleteVerifiedEmailAddressRequestPrivate(const SES::Action action,
+                                   DeleteVerifiedEmailAddressRequest * const q);
+    DeleteVerifiedEmailAddressRequestPrivate(const DeleteVerifiedEmailAddressRequestPrivate &other,
+                                   DeleteVerifiedEmailAddressRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVerifiedEmailAddressRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

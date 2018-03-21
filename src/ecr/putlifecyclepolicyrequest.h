@@ -20,4 +20,32 @@
 #ifndef QTAWS_PUTLIFECYCLEPOLICYREQUEST_H
 #define QTAWS_PUTLIFECYCLEPOLICYREQUEST_H
 
+#include "ecrrequest.h"
+
+namespace AWS {
+
+namespace ECR {
+
+class PutLifecyclePolicyRequestPrivate;
+
+class QTAWS_EXPORT PutLifecyclePolicyRequest : public ECRRequest {
+
+public:
+    PutLifecyclePolicyRequest(const PutLifecyclePolicyRequest &other);
+    PutLifecyclePolicyRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(PutLifecyclePolicyRequest)
+
+}
+
+} // namespace ECR
+} // namespace AWS
+
 #endif

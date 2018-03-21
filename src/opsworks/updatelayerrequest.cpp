@@ -19,3 +19,107 @@
 
 #include "updatelayerrequest.h"
 #include "updatelayerrequest_p.h"
+#include "updatelayerresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  UpdateLayerRequest
+ *
+ * @brief  Implements OpsWorks UpdateLayer requests.
+ *
+ * @see    OpsWorksClient::updateLayer
+ */
+
+/**
+ * @brief  Constructs a new UpdateLayerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLayerResponse::UpdateLayerResponse(
+
+/**
+ * @brief  Constructs a new UpdateLayerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateLayerRequest::UpdateLayerRequest(const UpdateLayerRequest &other)
+    : OpsWorksRequest(new UpdateLayerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateLayerRequest object.
+ */
+UpdateLayerRequest::UpdateLayerRequest()
+    : OpsWorksRequest(new UpdateLayerRequestPrivate(OpsWorksRequest::UpdateLayerAction, this))
+{
+
+}
+
+bool UpdateLayerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateLayerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateLayerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * UpdateLayerRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateLayerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLayerRequestPrivate
+ *
+ * @brief  Private implementation for UpdateLayerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLayerRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public UpdateLayerRequest instance.
+ */
+UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
+    const OpsWorksRequest::Action action, UpdateLayerRequest * const q)
+    : UpdateLayerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLayerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateLayerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateLayerRequest instance.
+ */
+UpdateLayerRequestPrivate::UpdateLayerRequestPrivate(
+    const UpdateLayerRequestPrivate &other, UpdateLayerRequest * const q)
+    : UpdateLayerPrivate(other, q)
+{
+
+}

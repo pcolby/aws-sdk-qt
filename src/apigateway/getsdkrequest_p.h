@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSDKREQUEST_P_H
 #define QTAWS_GETSDKREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getsdkrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetSdkRequest;
+
+class QTAWS_EXPORT GetSdkRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetSdkRequestPrivate(const APIGateway::Action action,
+                                   GetSdkRequest * const q);
+    GetSdkRequestPrivate(const GetSdkRequestPrivate &other,
+                                   GetSdkRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSdkRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

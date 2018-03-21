@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPASSWORDDATAREQUEST_H
 #define QTAWS_GETPASSWORDDATAREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class GetPasswordDataRequestPrivate;
+
+class QTAWS_EXPORT GetPasswordDataRequest : public EC2Request {
+
+public:
+    GetPasswordDataRequest(const GetPasswordDataRequest &other);
+    GetPasswordDataRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPasswordDataRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

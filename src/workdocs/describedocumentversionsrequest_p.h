@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "describedocumentversionsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeDocumentVersionsRequest;
+
+class QTAWS_EXPORT DescribeDocumentVersionsRequestPrivate : public WorkDocsPrivate {
+
+public:
+    DescribeDocumentVersionsRequestPrivate(const WorkDocs::Action action,
+                                   DescribeDocumentVersionsRequest * const q);
+    DescribeDocumentVersionsRequestPrivate(const DescribeDocumentVersionsRequestPrivate &other,
+                                   DescribeDocumentVersionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDocumentVersionsRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

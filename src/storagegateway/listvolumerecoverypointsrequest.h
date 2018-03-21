@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_H
 #define QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class ListVolumeRecoveryPointsRequestPrivate;
+
+class QTAWS_EXPORT ListVolumeRecoveryPointsRequest : public StorageGatewayRequest {
+
+public:
+    ListVolumeRecoveryPointsRequest(const ListVolumeRecoveryPointsRequest &other);
+    ListVolumeRecoveryPointsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListVolumeRecoveryPointsRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

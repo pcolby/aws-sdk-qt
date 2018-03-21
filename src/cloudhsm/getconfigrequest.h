@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETCONFIGREQUEST_H
 #define QTAWS_GETCONFIGREQUEST_H
 
+#include "cloudhsmrequest.h"
+
+namespace AWS {
+
+namespace CloudHSM {
+
+class GetConfigRequestPrivate;
+
+class QTAWS_EXPORT GetConfigRequest : public CloudHSMRequest {
+
+public:
+    GetConfigRequest(const GetConfigRequest &other);
+    GetConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetConfigRequest)
+
+}
+
+} // namespace CloudHSM
+} // namespace AWS
+
 #endif

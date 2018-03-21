@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEBROKERREQUEST_P_H
 #define QTAWS_DESCRIBEBROKERREQUEST_P_H
 
+#include "mq_p.h"
+#include "describebrokerrequest.h"
+
+namespace AWS {
+
+namespace MQ {
+
+class DescribeBrokerRequest;
+
+class QTAWS_EXPORT DescribeBrokerRequestPrivate : public MQPrivate {
+
+public:
+    DescribeBrokerRequestPrivate(const MQ::Action action,
+                                   DescribeBrokerRequest * const q);
+    DescribeBrokerRequestPrivate(const DescribeBrokerRequestPrivate &other,
+                                   DescribeBrokerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBrokerRequest)
+
+};
+
+} // namespace MQ
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPOLICYVERSIONREQUEST_H
 #define QTAWS_CREATEPOLICYVERSIONREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class CreatePolicyVersionRequestPrivate;
+
+class QTAWS_EXPORT CreatePolicyVersionRequest : public IoTRequest {
+
+public:
+    CreatePolicyVersionRequest(const CreatePolicyVersionRequest &other);
+    CreatePolicyVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePolicyVersionRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

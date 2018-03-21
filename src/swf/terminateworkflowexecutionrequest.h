@@ -20,4 +20,32 @@
 #ifndef QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_H
 #define QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class TerminateWorkflowExecutionRequestPrivate;
+
+class QTAWS_EXPORT TerminateWorkflowExecutionRequest : public SWFRequest {
+
+public:
+    TerminateWorkflowExecutionRequest(const TerminateWorkflowExecutionRequest &other);
+    TerminateWorkflowExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(TerminateWorkflowExecutionRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

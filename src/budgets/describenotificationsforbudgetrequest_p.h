@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONSFORBUDGETREQUEST_P_H
 #define QTAWS_DESCRIBENOTIFICATIONSFORBUDGETREQUEST_P_H
 
+#include "budgets_p.h"
+#include "describenotificationsforbudgetrequest.h"
+
+namespace AWS {
+
+namespace Budgets {
+
+class DescribeNotificationsForBudgetRequest;
+
+class QTAWS_EXPORT DescribeNotificationsForBudgetRequestPrivate : public BudgetsPrivate {
+
+public:
+    DescribeNotificationsForBudgetRequestPrivate(const Budgets::Action action,
+                                   DescribeNotificationsForBudgetRequest * const q);
+    DescribeNotificationsForBudgetRequestPrivate(const DescribeNotificationsForBudgetRequestPrivate &other,
+                                   DescribeNotificationsForBudgetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeNotificationsForBudgetRequest)
+
+};
+
+} // namespace Budgets
+} // namespace AWS
+
 #endif

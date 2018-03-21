@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETRESOURCECONFIGHISTORYREQUEST_P_H
 #define QTAWS_GETRESOURCECONFIGHISTORYREQUEST_P_H
 
+#include "configservice_p.h"
+#include "getresourceconfighistoryrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class GetResourceConfigHistoryRequest;
+
+class QTAWS_EXPORT GetResourceConfigHistoryRequestPrivate : public ConfigServicePrivate {
+
+public:
+    GetResourceConfigHistoryRequestPrivate(const ConfigService::Action action,
+                                   GetResourceConfigHistoryRequest * const q);
+    GetResourceConfigHistoryRequestPrivate(const GetResourceConfigHistoryRequestPrivate &other,
+                                   GetResourceConfigHistoryRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetResourceConfigHistoryRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

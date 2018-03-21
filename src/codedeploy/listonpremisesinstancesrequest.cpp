@@ -19,3 +19,107 @@
 
 #include "listonpremisesinstancesrequest.h"
 #include "listonpremisesinstancesrequest_p.h"
+#include "listonpremisesinstancesresponse.h"
+#include "codedeployrequest_p.h"
+
+namespace AWS {
+namespace CodeDeploy {
+
+/**
+ * @class  ListOnPremisesInstancesRequest
+ *
+ * @brief  Implements CodeDeploy ListOnPremisesInstances requests.
+ *
+ * @see    CodeDeployClient::listOnPremisesInstances
+ */
+
+/**
+ * @brief  Constructs a new ListOnPremisesInstancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOnPremisesInstancesResponse::ListOnPremisesInstancesResponse(
+
+/**
+ * @brief  Constructs a new ListOnPremisesInstancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOnPremisesInstancesRequest::ListOnPremisesInstancesRequest(const ListOnPremisesInstancesRequest &other)
+    : CodeDeployRequest(new ListOnPremisesInstancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOnPremisesInstancesRequest object.
+ */
+ListOnPremisesInstancesRequest::ListOnPremisesInstancesRequest()
+    : CodeDeployRequest(new ListOnPremisesInstancesRequestPrivate(CodeDeployRequest::ListOnPremisesInstancesAction, this))
+{
+
+}
+
+bool ListOnPremisesInstancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOnPremisesInstancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOnPremisesInstancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeDeployClient::send
+ */
+AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOnPremisesInstancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOnPremisesInstancesRequestPrivate
+ *
+ * @brief  Private implementation for ListOnPremisesInstancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOnPremisesInstancesRequestPrivate object.
+ *
+ * @param  action  CodeDeploy action being performed.
+ * @param  q       Pointer to this object's public ListOnPremisesInstancesRequest instance.
+ */
+ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
+    const CodeDeployRequest::Action action, ListOnPremisesInstancesRequest * const q)
+    : ListOnPremisesInstancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOnPremisesInstancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOnPremisesInstancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOnPremisesInstancesRequest instance.
+ */
+ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
+    const ListOnPremisesInstancesRequestPrivate &other, ListOnPremisesInstancesRequest * const q)
+    : ListOnPremisesInstancesPrivate(other, q)
+{
+
+}

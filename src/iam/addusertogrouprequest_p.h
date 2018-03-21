@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDUSERTOGROUPREQUEST_P_H
 #define QTAWS_ADDUSERTOGROUPREQUEST_P_H
 
+#include "iam_p.h"
+#include "addusertogrouprequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class AddUserToGroupRequest;
+
+class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IAMPrivate {
+
+public:
+    AddUserToGroupRequestPrivate(const IAM::Action action,
+                                   AddUserToGroupRequest * const q);
+    AddUserToGroupRequestPrivate(const AddUserToGroupRequestPrivate &other,
+                                   AddUserToGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddUserToGroupRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

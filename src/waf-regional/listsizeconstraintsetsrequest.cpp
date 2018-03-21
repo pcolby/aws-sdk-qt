@@ -19,3 +19,107 @@
 
 #include "listsizeconstraintsetsrequest.h"
 #include "listsizeconstraintsetsrequest_p.h"
+#include "listsizeconstraintsetsresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  ListSizeConstraintSetsRequest
+ *
+ * @brief  Implements WAFRegional ListSizeConstraintSets requests.
+ *
+ * @see    WAFRegionalClient::listSizeConstraintSets
+ */
+
+/**
+ * @brief  Constructs a new ListSizeConstraintSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
+
+/**
+ * @brief  Constructs a new ListSizeConstraintSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest(const ListSizeConstraintSetsRequest &other)
+    : WAFRegionalRequest(new ListSizeConstraintSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListSizeConstraintSetsRequest object.
+ */
+ListSizeConstraintSetsRequest::ListSizeConstraintSetsRequest()
+    : WAFRegionalRequest(new ListSizeConstraintSetsRequestPrivate(WAFRegionalRequest::ListSizeConstraintSetsAction, this))
+{
+
+}
+
+bool ListSizeConstraintSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListSizeConstraintSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListSizeConstraintSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListSizeConstraintSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListSizeConstraintSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListSizeConstraintSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public ListSizeConstraintSetsRequest instance.
+ */
+ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
+    const WAFRegionalRequest::Action action, ListSizeConstraintSetsRequest * const q)
+    : ListSizeConstraintSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListSizeConstraintSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListSizeConstraintSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListSizeConstraintSetsRequest instance.
+ */
+ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
+    const ListSizeConstraintSetsRequestPrivate &other, ListSizeConstraintSetsRequest * const q)
+    : ListSizeConstraintSetsPrivate(other, q)
+{
+
+}

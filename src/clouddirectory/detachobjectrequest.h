@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETACHOBJECTREQUEST_H
 #define QTAWS_DETACHOBJECTREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class DetachObjectRequestPrivate;
+
+class QTAWS_EXPORT DetachObjectRequest : public CloudDirectoryRequest {
+
+public:
+    DetachObjectRequest(const DetachObjectRequest &other);
+    DetachObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetachObjectRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletecrawlerrequest.h"
 #include "deletecrawlerrequest_p.h"
+#include "deletecrawlerresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  DeleteCrawlerRequest
+ *
+ * @brief  Implements Glue DeleteCrawler requests.
+ *
+ * @see    GlueClient::deleteCrawler
+ */
+
+/**
+ * @brief  Constructs a new DeleteCrawlerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteCrawlerResponse::DeleteCrawlerResponse(
+
+/**
+ * @brief  Constructs a new DeleteCrawlerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteCrawlerRequest::DeleteCrawlerRequest(const DeleteCrawlerRequest &other)
+    : GlueRequest(new DeleteCrawlerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteCrawlerRequest object.
+ */
+DeleteCrawlerRequest::DeleteCrawlerRequest()
+    : GlueRequest(new DeleteCrawlerRequestPrivate(GlueRequest::DeleteCrawlerAction, this))
+{
+
+}
+
+bool DeleteCrawlerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteCrawlerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteCrawlerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteCrawlerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteCrawlerRequestPrivate
+ *
+ * @brief  Private implementation for DeleteCrawlerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCrawlerRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public DeleteCrawlerRequest instance.
+ */
+DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
+    const GlueRequest::Action action, DeleteCrawlerRequest * const q)
+    : DeleteCrawlerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteCrawlerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteCrawlerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteCrawlerRequest instance.
+ */
+DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
+    const DeleteCrawlerRequestPrivate &other, DeleteCrawlerRequest * const q)
+    : DeleteCrawlerPrivate(other, q)
+{
+
+}

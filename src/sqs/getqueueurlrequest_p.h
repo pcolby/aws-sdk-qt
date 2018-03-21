@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETQUEUEURLREQUEST_P_H
 #define QTAWS_GETQUEUEURLREQUEST_P_H
 
+#include "sqs_p.h"
+#include "getqueueurlrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class GetQueueUrlRequest;
+
+class QTAWS_EXPORT GetQueueUrlRequestPrivate : public SQSPrivate {
+
+public:
+    GetQueueUrlRequestPrivate(const SQS::Action action,
+                                   GetQueueUrlRequest * const q);
+    GetQueueUrlRequestPrivate(const GetQueueUrlRequestPrivate &other,
+                                   GetQueueUrlRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetQueueUrlRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

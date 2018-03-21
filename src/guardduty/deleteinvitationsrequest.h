@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINVITATIONSREQUEST_H
 #define QTAWS_DELETEINVITATIONSREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class DeleteInvitationsRequestPrivate;
+
+class QTAWS_EXPORT DeleteInvitationsRequest : public GuardDutyRequest {
+
+public:
+    DeleteInvitationsRequest(const DeleteInvitationsRequest &other);
+    DeleteInvitationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInvitationsRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

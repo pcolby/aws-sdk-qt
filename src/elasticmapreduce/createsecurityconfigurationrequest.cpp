@@ -19,3 +19,107 @@
 
 #include "createsecurityconfigurationrequest.h"
 #include "createsecurityconfigurationrequest_p.h"
+#include "createsecurityconfigurationresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  CreateSecurityConfigurationRequest
+ *
+ * @brief  Implements EMR CreateSecurityConfiguration requests.
+ *
+ * @see    EMRClient::createSecurityConfiguration
+ */
+
+/**
+ * @brief  Constructs a new CreateSecurityConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
+
+/**
+ * @brief  Constructs a new CreateSecurityConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest(const CreateSecurityConfigurationRequest &other)
+    : EMRRequest(new CreateSecurityConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSecurityConfigurationRequest object.
+ */
+CreateSecurityConfigurationRequest::CreateSecurityConfigurationRequest()
+    : EMRRequest(new CreateSecurityConfigurationRequestPrivate(EMRRequest::CreateSecurityConfigurationAction, this))
+{
+
+}
+
+bool CreateSecurityConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSecurityConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSecurityConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * CreateSecurityConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSecurityConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSecurityConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for CreateSecurityConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public CreateSecurityConfigurationRequest instance.
+ */
+CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
+    const EMRRequest::Action action, CreateSecurityConfigurationRequest * const q)
+    : CreateSecurityConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSecurityConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSecurityConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSecurityConfigurationRequest instance.
+ */
+CreateSecurityConfigurationRequestPrivate::CreateSecurityConfigurationRequestPrivate(
+    const CreateSecurityConfigurationRequestPrivate &other, CreateSecurityConfigurationRequest * const q)
+    : CreateSecurityConfigurationPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "createparametergrouprequest.h"
 #include "createparametergrouprequest_p.h"
+#include "createparametergroupresponse.h"
+#include "daxrequest_p.h"
+
+namespace AWS {
+namespace DAX {
+
+/**
+ * @class  CreateParameterGroupRequest
+ *
+ * @brief  Implements DAX CreateParameterGroup requests.
+ *
+ * @see    DAXClient::createParameterGroup
+ */
+
+/**
+ * @brief  Constructs a new CreateParameterGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateParameterGroupResponse::CreateParameterGroupResponse(
+
+/**
+ * @brief  Constructs a new CreateParameterGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateParameterGroupRequest::CreateParameterGroupRequest(const CreateParameterGroupRequest &other)
+    : DAXRequest(new CreateParameterGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateParameterGroupRequest object.
+ */
+CreateParameterGroupRequest::CreateParameterGroupRequest()
+    : DAXRequest(new CreateParameterGroupRequestPrivate(DAXRequest::CreateParameterGroupAction, this))
+{
+
+}
+
+bool CreateParameterGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateParameterGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateParameterGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DAXClient::send
+ */
+AwsAbstractResponse * CreateParameterGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateParameterGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateParameterGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreateParameterGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateParameterGroupRequestPrivate object.
+ *
+ * @param  action  DAX action being performed.
+ * @param  q       Pointer to this object's public CreateParameterGroupRequest instance.
+ */
+CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
+    const DAXRequest::Action action, CreateParameterGroupRequest * const q)
+    : CreateParameterGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateParameterGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateParameterGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateParameterGroupRequest instance.
+ */
+CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
+    const CreateParameterGroupRequestPrivate &other, CreateParameterGroupRequest * const q)
+    : CreateParameterGroupPrivate(other, q)
+{
+
+}

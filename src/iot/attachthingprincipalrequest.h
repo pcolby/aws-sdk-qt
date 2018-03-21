@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHTHINGPRINCIPALREQUEST_H
 #define QTAWS_ATTACHTHINGPRINCIPALREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class AttachThingPrincipalRequestPrivate;
+
+class QTAWS_EXPORT AttachThingPrincipalRequest : public IoTRequest {
+
+public:
+    AttachThingPrincipalRequest(const AttachThingPrincipalRequest &other);
+    AttachThingPrincipalRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachThingPrincipalRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

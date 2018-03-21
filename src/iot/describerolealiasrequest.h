@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEROLEALIASREQUEST_H
 #define QTAWS_DESCRIBEROLEALIASREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class DescribeRoleAliasRequestPrivate;
+
+class QTAWS_EXPORT DescribeRoleAliasRequest : public IoTRequest {
+
+public:
+    DescribeRoleAliasRequest(const DescribeRoleAliasRequest &other);
+    DescribeRoleAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRoleAliasRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

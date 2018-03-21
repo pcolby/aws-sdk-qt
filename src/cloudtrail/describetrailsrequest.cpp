@@ -19,3 +19,107 @@
 
 #include "describetrailsrequest.h"
 #include "describetrailsrequest_p.h"
+#include "describetrailsresponse.h"
+#include "cloudtrailrequest_p.h"
+
+namespace AWS {
+namespace CloudTrail {
+
+/**
+ * @class  DescribeTrailsRequest
+ *
+ * @brief  Implements CloudTrail DescribeTrails requests.
+ *
+ * @see    CloudTrailClient::describeTrails
+ */
+
+/**
+ * @brief  Constructs a new DescribeTrailsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTrailsResponse::DescribeTrailsResponse(
+
+/**
+ * @brief  Constructs a new DescribeTrailsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTrailsRequest::DescribeTrailsRequest(const DescribeTrailsRequest &other)
+    : CloudTrailRequest(new DescribeTrailsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTrailsRequest object.
+ */
+DescribeTrailsRequest::DescribeTrailsRequest()
+    : CloudTrailRequest(new DescribeTrailsRequestPrivate(CloudTrailRequest::DescribeTrailsAction, this))
+{
+
+}
+
+bool DescribeTrailsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTrailsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTrailsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudTrailClient::send
+ */
+AwsAbstractResponse * DescribeTrailsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTrailsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTrailsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTrailsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrailsRequestPrivate object.
+ *
+ * @param  action  CloudTrail action being performed.
+ * @param  q       Pointer to this object's public DescribeTrailsRequest instance.
+ */
+DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
+    const CloudTrailRequest::Action action, DescribeTrailsRequest * const q)
+    : DescribeTrailsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTrailsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTrailsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTrailsRequest instance.
+ */
+DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
+    const DescribeTrailsRequestPrivate &other, DescribeTrailsRequest * const q)
+    : DescribeTrailsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETCURRENTUSERREQUEST_P_H
 #define QTAWS_GETCURRENTUSERREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "getcurrentuserrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetCurrentUserRequest;
+
+class QTAWS_EXPORT GetCurrentUserRequestPrivate : public WorkDocsPrivate {
+
+public:
+    GetCurrentUserRequestPrivate(const WorkDocs::Action action,
+                                   GetCurrentUserRequest * const q);
+    GetCurrentUserRequestPrivate(const GetCurrentUserRequestPrivate &other,
+                                   GetCurrentUserRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetCurrentUserRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

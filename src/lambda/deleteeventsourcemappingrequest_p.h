@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEEVENTSOURCEMAPPINGREQUEST_P_H
 #define QTAWS_DELETEEVENTSOURCEMAPPINGREQUEST_P_H
 
+#include "lambda_p.h"
+#include "deleteeventsourcemappingrequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class DeleteEventSourceMappingRequest;
+
+class QTAWS_EXPORT DeleteEventSourceMappingRequestPrivate : public LambdaPrivate {
+
+public:
+    DeleteEventSourceMappingRequestPrivate(const Lambda::Action action,
+                                   DeleteEventSourceMappingRequest * const q);
+    DeleteEventSourceMappingRequestPrivate(const DeleteEventSourceMappingRequestPrivate &other,
+                                   DeleteEventSourceMappingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEventSourceMappingRequest)
+
+};
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

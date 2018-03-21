@@ -19,3 +19,107 @@
 
 #include "listprotectionsrequest.h"
 #include "listprotectionsrequest_p.h"
+#include "listprotectionsresponse.h"
+#include "shieldrequest_p.h"
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  ListProtectionsRequest
+ *
+ * @brief  Implements Shield ListProtections requests.
+ *
+ * @see    ShieldClient::listProtections
+ */
+
+/**
+ * @brief  Constructs a new ListProtectionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListProtectionsResponse::ListProtectionsResponse(
+
+/**
+ * @brief  Constructs a new ListProtectionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListProtectionsRequest::ListProtectionsRequest(const ListProtectionsRequest &other)
+    : ShieldRequest(new ListProtectionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListProtectionsRequest object.
+ */
+ListProtectionsRequest::ListProtectionsRequest()
+    : ShieldRequest(new ListProtectionsRequestPrivate(ShieldRequest::ListProtectionsAction, this))
+{
+
+}
+
+bool ListProtectionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListProtectionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListProtectionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ShieldClient::send
+ */
+AwsAbstractResponse * ListProtectionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListProtectionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListProtectionsRequestPrivate
+ *
+ * @brief  Private implementation for ListProtectionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProtectionsRequestPrivate object.
+ *
+ * @param  action  Shield action being performed.
+ * @param  q       Pointer to this object's public ListProtectionsRequest instance.
+ */
+ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
+    const ShieldRequest::Action action, ListProtectionsRequest * const q)
+    : ListProtectionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListProtectionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListProtectionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListProtectionsRequest instance.
+ */
+ListProtectionsRequestPrivate::ListProtectionsRequestPrivate(
+    const ListProtectionsRequestPrivate &other, ListProtectionsRequest * const q)
+    : ListProtectionsPrivate(other, q)
+{
+
+}

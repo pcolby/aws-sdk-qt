@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTWORKFLOWTYPESREQUEST_P_H
 #define QTAWS_LISTWORKFLOWTYPESREQUEST_P_H
 
+#include "swf_p.h"
+#include "listworkflowtypesrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class ListWorkflowTypesRequest;
+
+class QTAWS_EXPORT ListWorkflowTypesRequestPrivate : public SWFPrivate {
+
+public:
+    ListWorkflowTypesRequestPrivate(const SWF::Action action,
+                                   ListWorkflowTypesRequest * const q);
+    ListWorkflowTypesRequestPrivate(const ListWorkflowTypesRequestPrivate &other,
+                                   ListWorkflowTypesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListWorkflowTypesRequest)
+
+};
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_H
 #define QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RecordActivityTaskHeartbeatRequestPrivate;
+
+class QTAWS_EXPORT RecordActivityTaskHeartbeatRequest : public SWFRequest {
+
+public:
+    RecordActivityTaskHeartbeatRequest(const RecordActivityTaskHeartbeatRequest &other);
+    RecordActivityTaskHeartbeatRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RecordActivityTaskHeartbeatRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

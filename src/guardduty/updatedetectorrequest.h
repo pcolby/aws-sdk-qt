@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEDETECTORREQUEST_H
 #define QTAWS_UPDATEDETECTORREQUEST_H
 
+#include "guarddutyrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class UpdateDetectorRequestPrivate;
+
+class QTAWS_EXPORT UpdateDetectorRequest : public GuardDutyRequest {
+
+public:
+    UpdateDetectorRequest(const UpdateDetectorRequest &other);
+    UpdateDetectorRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateDetectorRequest)
+
+}
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

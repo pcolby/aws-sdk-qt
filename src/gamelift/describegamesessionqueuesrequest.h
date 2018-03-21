@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONQUEUESREQUEST_H
 #define QTAWS_DESCRIBEGAMESESSIONQUEUESREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class DescribeGameSessionQueuesRequestPrivate;
+
+class QTAWS_EXPORT DescribeGameSessionQueuesRequest : public GameLiftRequest {
+
+public:
+    DescribeGameSessionQueuesRequest(const DescribeGameSessionQueuesRequest &other);
+    DescribeGameSessionQueuesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeGameSessionQueuesRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

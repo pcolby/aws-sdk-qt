@@ -19,3 +19,107 @@
 
 #include "updatemanagedinstancerolerequest.h"
 #include "updatemanagedinstancerolerequest_p.h"
+#include "updatemanagedinstanceroleresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  UpdateManagedInstanceRoleRequest
+ *
+ * @brief  Implements SSM UpdateManagedInstanceRole requests.
+ *
+ * @see    SSMClient::updateManagedInstanceRole
+ */
+
+/**
+ * @brief  Constructs a new UpdateManagedInstanceRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
+
+/**
+ * @brief  Constructs a new UpdateManagedInstanceRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest(const UpdateManagedInstanceRoleRequest &other)
+    : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateManagedInstanceRoleRequest object.
+ */
+UpdateManagedInstanceRoleRequest::UpdateManagedInstanceRoleRequest()
+    : SSMRequest(new UpdateManagedInstanceRoleRequestPrivate(SSMRequest::UpdateManagedInstanceRoleAction, this))
+{
+
+}
+
+bool UpdateManagedInstanceRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateManagedInstanceRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateManagedInstanceRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateManagedInstanceRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateManagedInstanceRoleRequestPrivate
+ *
+ * @brief  Private implementation for UpdateManagedInstanceRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateManagedInstanceRoleRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public UpdateManagedInstanceRoleRequest instance.
+ */
+UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
+    const SSMRequest::Action action, UpdateManagedInstanceRoleRequest * const q)
+    : UpdateManagedInstanceRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateManagedInstanceRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateManagedInstanceRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateManagedInstanceRoleRequest instance.
+ */
+UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
+    const UpdateManagedInstanceRoleRequestPrivate &other, UpdateManagedInstanceRoleRequest * const q)
+    : UpdateManagedInstanceRolePrivate(other, q)
+{
+
+}

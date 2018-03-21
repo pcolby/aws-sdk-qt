@@ -19,3 +19,107 @@
 
 #include "getservicelinkedroledeletionstatusrequest.h"
 #include "getservicelinkedroledeletionstatusrequest_p.h"
+#include "getservicelinkedroledeletionstatusresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetServiceLinkedRoleDeletionStatusRequest
+ *
+ * @brief  Implements IAM GetServiceLinkedRoleDeletionStatus requests.
+ *
+ * @see    IAMClient::getServiceLinkedRoleDeletionStatus
+ */
+
+/**
+ * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusResponse(
+
+/**
+ * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest(const GetServiceLinkedRoleDeletionStatusRequest &other)
+    : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequest object.
+ */
+GetServiceLinkedRoleDeletionStatusRequest::GetServiceLinkedRoleDeletionStatusRequest()
+    : IAMRequest(new GetServiceLinkedRoleDeletionStatusRequestPrivate(IAMRequest::GetServiceLinkedRoleDeletionStatusAction, this))
+{
+
+}
+
+bool GetServiceLinkedRoleDeletionStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetServiceLinkedRoleDeletionStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetServiceLinkedRoleDeletionStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new GetServiceLinkedRoleDeletionStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetServiceLinkedRoleDeletionStatusRequestPrivate
+ *
+ * @brief  Private implementation for GetServiceLinkedRoleDeletionStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetServiceLinkedRoleDeletionStatusRequest instance.
+ */
+GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
+    const IAMRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)
+    : GetServiceLinkedRoleDeletionStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetServiceLinkedRoleDeletionStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetServiceLinkedRoleDeletionStatusRequest instance.
+ */
+GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
+    const GetServiceLinkedRoleDeletionStatusRequestPrivate &other, GetServiceLinkedRoleDeletionStatusRequest * const q)
+    : GetServiceLinkedRoleDeletionStatusPrivate(other, q)
+{
+
+}

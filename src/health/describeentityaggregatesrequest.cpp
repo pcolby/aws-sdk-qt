@@ -19,3 +19,107 @@
 
 #include "describeentityaggregatesrequest.h"
 #include "describeentityaggregatesrequest_p.h"
+#include "describeentityaggregatesresponse.h"
+#include "healthrequest_p.h"
+
+namespace AWS {
+namespace Health {
+
+/**
+ * @class  DescribeEntityAggregatesRequest
+ *
+ * @brief  Implements Health DescribeEntityAggregates requests.
+ *
+ * @see    HealthClient::describeEntityAggregates
+ */
+
+/**
+ * @brief  Constructs a new DescribeEntityAggregatesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
+
+/**
+ * @brief  Constructs a new DescribeEntityAggregatesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeEntityAggregatesRequest::DescribeEntityAggregatesRequest(const DescribeEntityAggregatesRequest &other)
+    : HealthRequest(new DescribeEntityAggregatesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeEntityAggregatesRequest object.
+ */
+DescribeEntityAggregatesRequest::DescribeEntityAggregatesRequest()
+    : HealthRequest(new DescribeEntityAggregatesRequestPrivate(HealthRequest::DescribeEntityAggregatesAction, this))
+{
+
+}
+
+bool DescribeEntityAggregatesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeEntityAggregatesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeEntityAggregatesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  HealthClient::send
+ */
+AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeEntityAggregatesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeEntityAggregatesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeEntityAggregatesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEntityAggregatesRequestPrivate object.
+ *
+ * @param  action  Health action being performed.
+ * @param  q       Pointer to this object's public DescribeEntityAggregatesRequest instance.
+ */
+DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
+    const HealthRequest::Action action, DescribeEntityAggregatesRequest * const q)
+    : DescribeEntityAggregatesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeEntityAggregatesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeEntityAggregatesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeEntityAggregatesRequest instance.
+ */
+DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
+    const DescribeEntityAggregatesRequestPrivate &other, DescribeEntityAggregatesRequest * const q)
+    : DescribeEntityAggregatesPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "translatetextrequest.h"
 #include "translatetextrequest_p.h"
+#include "translatetextresponse.h"
+#include "translaterequest_p.h"
+
+namespace AWS {
+namespace Translate {
+
+/**
+ * @class  TranslateTextRequest
+ *
+ * @brief  Implements Translate TranslateText requests.
+ *
+ * @see    TranslateClient::translateText
+ */
+
+/**
+ * @brief  Constructs a new TranslateTextResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TranslateTextResponse::TranslateTextResponse(
+
+/**
+ * @brief  Constructs a new TranslateTextRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TranslateTextRequest::TranslateTextRequest(const TranslateTextRequest &other)
+    : TranslateRequest(new TranslateTextRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TranslateTextRequest object.
+ */
+TranslateTextRequest::TranslateTextRequest()
+    : TranslateRequest(new TranslateTextRequestPrivate(TranslateRequest::TranslateTextAction, this))
+{
+
+}
+
+bool TranslateTextRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TranslateTextResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TranslateTextResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  TranslateClient::send
+ */
+AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply * const reply) const
+{
+    return new TranslateTextResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TranslateTextRequestPrivate
+ *
+ * @brief  Private implementation for TranslateTextRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TranslateTextRequestPrivate object.
+ *
+ * @param  action  Translate action being performed.
+ * @param  q       Pointer to this object's public TranslateTextRequest instance.
+ */
+TranslateTextRequestPrivate::TranslateTextRequestPrivate(
+    const TranslateRequest::Action action, TranslateTextRequest * const q)
+    : TranslateTextPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TranslateTextRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TranslateTextRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TranslateTextRequest instance.
+ */
+TranslateTextRequestPrivate::TranslateTextRequestPrivate(
+    const TranslateTextRequestPrivate &other, TranslateTextRequest * const q)
+    : TranslateTextPrivate(other, q)
+{
+
+}

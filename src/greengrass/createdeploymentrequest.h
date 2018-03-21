@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class CreateDeploymentRequestPrivate;
+
+class QTAWS_EXPORT CreateDeploymentRequest : public GreengrassRequest {
+
+public:
+    CreateDeploymentRequest(const CreateDeploymentRequest &other);
+    CreateDeploymentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDeploymentRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

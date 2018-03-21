@@ -19,3 +19,107 @@
 
 #include "createloadbalancerlistenersrequest.h"
 #include "createloadbalancerlistenersrequest_p.h"
+#include "createloadbalancerlistenersresponse.h"
+#include "elasticloadbalancingrequest_p.h"
+
+namespace AWS {
+namespace ElasticLoadBalancing {
+
+/**
+ * @class  CreateLoadBalancerListenersRequest
+ *
+ * @brief  Implements ElasticLoadBalancing CreateLoadBalancerListeners requests.
+ *
+ * @see    ElasticLoadBalancingClient::createLoadBalancerListeners
+ */
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerListenersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateLoadBalancerListenersResponse::CreateLoadBalancerListenersResponse(
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerListenersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateLoadBalancerListenersRequest::CreateLoadBalancerListenersRequest(const CreateLoadBalancerListenersRequest &other)
+    : ElasticLoadBalancingRequest(new CreateLoadBalancerListenersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateLoadBalancerListenersRequest object.
+ */
+CreateLoadBalancerListenersRequest::CreateLoadBalancerListenersRequest()
+    : ElasticLoadBalancingRequest(new CreateLoadBalancerListenersRequestPrivate(ElasticLoadBalancingRequest::CreateLoadBalancerListenersAction, this))
+{
+
+}
+
+bool CreateLoadBalancerListenersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateLoadBalancerListenersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateLoadBalancerListenersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticLoadBalancingClient::send
+ */
+AwsAbstractResponse * CreateLoadBalancerListenersRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateLoadBalancerListenersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateLoadBalancerListenersRequestPrivate
+ *
+ * @brief  Private implementation for CreateLoadBalancerListenersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerListenersRequestPrivate object.
+ *
+ * @param  action  ElasticLoadBalancing action being performed.
+ * @param  q       Pointer to this object's public CreateLoadBalancerListenersRequest instance.
+ */
+CreateLoadBalancerListenersRequestPrivate::CreateLoadBalancerListenersRequestPrivate(
+    const ElasticLoadBalancingRequest::Action action, CreateLoadBalancerListenersRequest * const q)
+    : CreateLoadBalancerListenersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateLoadBalancerListenersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateLoadBalancerListenersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateLoadBalancerListenersRequest instance.
+ */
+CreateLoadBalancerListenersRequestPrivate::CreateLoadBalancerListenersRequestPrivate(
+    const CreateLoadBalancerListenersRequestPrivate &other, CreateLoadBalancerListenersRequest * const q)
+    : CreateLoadBalancerListenersPrivate(other, q)
+{
+
+}

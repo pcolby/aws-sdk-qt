@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETREMOTEACCESSSESSIONREQUEST_P_H
 #define QTAWS_GETREMOTEACCESSSESSIONREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getremoteaccesssessionrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetRemoteAccessSessionRequest;
+
+class QTAWS_EXPORT GetRemoteAccessSessionRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,
+                                   GetRemoteAccessSessionRequest * const q);
+    GetRemoteAccessSessionRequestPrivate(const GetRemoteAccessSessionRequestPrivate &other,
+                                   GetRemoteAccessSessionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetRemoteAccessSessionRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

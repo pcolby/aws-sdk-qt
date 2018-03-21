@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEDEVICEWITHROOMREQUEST_H
 #define QTAWS_ASSOCIATEDEVICEWITHROOMREQUEST_H
 
+#include "alexaforbusinessrequest.h"
+
+namespace AWS {
+
+namespace AlexaForBusiness {
+
+class AssociateDeviceWithRoomRequestPrivate;
+
+class QTAWS_EXPORT AssociateDeviceWithRoomRequest : public AlexaForBusinessRequest {
+
+public:
+    AssociateDeviceWithRoomRequest(const AssociateDeviceWithRoomRequest &other);
+    AssociateDeviceWithRoomRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateDeviceWithRoomRequest)
+
+}
+
+} // namespace AlexaForBusiness
+} // namespace AWS
+
 #endif

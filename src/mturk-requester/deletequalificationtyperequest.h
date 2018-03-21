@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEQUALIFICATIONTYPEREQUEST_H
 #define QTAWS_DELETEQUALIFICATIONTYPEREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteQualificationTypeRequestPrivate;
+
+class QTAWS_EXPORT DeleteQualificationTypeRequest : public MTurkRequest {
+
+public:
+    DeleteQualificationTypeRequest(const DeleteQualificationTypeRequest &other);
+    DeleteQualificationTypeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteQualificationTypeRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

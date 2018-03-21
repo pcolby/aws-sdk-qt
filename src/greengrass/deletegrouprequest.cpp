@@ -19,3 +19,107 @@
 
 #include "deletegrouprequest.h"
 #include "deletegrouprequest_p.h"
+#include "deletegroupresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DeleteGroupRequest
+ *
+ * @brief  Implements Greengrass DeleteGroup requests.
+ *
+ * @see    GreengrassClient::deleteGroup
+ */
+
+/**
+ * @brief  Constructs a new DeleteGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteGroupResponse::DeleteGroupResponse(
+
+/**
+ * @brief  Constructs a new DeleteGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteGroupRequest::DeleteGroupRequest(const DeleteGroupRequest &other)
+    : GreengrassRequest(new DeleteGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteGroupRequest object.
+ */
+DeleteGroupRequest::DeleteGroupRequest()
+    : GreengrassRequest(new DeleteGroupRequestPrivate(GreengrassRequest::DeleteGroupAction, this))
+{
+
+}
+
+bool DeleteGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteGroupRequestPrivate
+ *
+ * @brief  Private implementation for DeleteGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGroupRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DeleteGroupRequest instance.
+ */
+DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
+    const GreengrassRequest::Action action, DeleteGroupRequest * const q)
+    : DeleteGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteGroupRequest instance.
+ */
+DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
+    const DeleteGroupRequestPrivate &other, DeleteGroupRequest * const q)
+    : DeleteGroupPrivate(other, q)
+{
+
+}

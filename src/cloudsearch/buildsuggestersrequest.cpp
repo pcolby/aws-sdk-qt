@@ -19,3 +19,107 @@
 
 #include "buildsuggestersrequest.h"
 #include "buildsuggestersrequest_p.h"
+#include "buildsuggestersresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  BuildSuggestersRequest
+ *
+ * @brief  Implements CloudSearch BuildSuggesters requests.
+ *
+ * @see    CloudSearchClient::buildSuggesters
+ */
+
+/**
+ * @brief  Constructs a new BuildSuggestersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+BuildSuggestersResponse::BuildSuggestersResponse(
+
+/**
+ * @brief  Constructs a new BuildSuggestersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+BuildSuggestersRequest::BuildSuggestersRequest(const BuildSuggestersRequest &other)
+    : CloudSearchRequest(new BuildSuggestersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new BuildSuggestersRequest object.
+ */
+BuildSuggestersRequest::BuildSuggestersRequest()
+    : CloudSearchRequest(new BuildSuggestersRequestPrivate(CloudSearchRequest::BuildSuggestersAction, this))
+{
+
+}
+
+bool BuildSuggestersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an BuildSuggestersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An BuildSuggestersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkReply * const reply) const
+{
+    return new BuildSuggestersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  BuildSuggestersRequestPrivate
+ *
+ * @brief  Private implementation for BuildSuggestersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BuildSuggestersRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public BuildSuggestersRequest instance.
+ */
+BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
+    const CloudSearchRequest::Action action, BuildSuggestersRequest * const q)
+    : BuildSuggestersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new BuildSuggestersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the BuildSuggestersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public BuildSuggestersRequest instance.
+ */
+BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
+    const BuildSuggestersRequestPrivate &other, BuildSuggestersRequest * const q)
+    : BuildSuggestersPrivate(other, q)
+{
+
+}

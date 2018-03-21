@@ -19,3 +19,107 @@
 
 #include "putbucketreplicationrequest.h"
 #include "putbucketreplicationrequest_p.h"
+#include "putbucketreplicationresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketReplicationRequest
+ *
+ * @brief  Implements S3 PutBucketReplication requests.
+ *
+ * @see    S3Client::putBucketReplication
+ */
+
+/**
+ * @brief  Constructs a new PutBucketReplicationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketReplicationResponse::PutBucketReplicationResponse(
+
+/**
+ * @brief  Constructs a new PutBucketReplicationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketReplicationRequest::PutBucketReplicationRequest(const PutBucketReplicationRequest &other)
+    : S3Request(new PutBucketReplicationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketReplicationRequest object.
+ */
+PutBucketReplicationRequest::PutBucketReplicationRequest()
+    : S3Request(new PutBucketReplicationRequestPrivate(S3Request::PutBucketReplicationAction, this))
+{
+
+}
+
+bool PutBucketReplicationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketReplicationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketReplicationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketReplicationRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketReplicationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketReplicationRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketReplicationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketReplicationRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketReplicationRequest instance.
+ */
+PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
+    const S3Request::Action action, PutBucketReplicationRequest * const q)
+    : PutBucketReplicationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketReplicationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketReplicationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketReplicationRequest instance.
+ */
+PutBucketReplicationRequestPrivate::PutBucketReplicationRequestPrivate(
+    const PutBucketReplicationRequestPrivate &other, PutBucketReplicationRequest * const q)
+    : PutBucketReplicationPrivate(other, q)
+{
+
+}

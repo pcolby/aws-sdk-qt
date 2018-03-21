@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEDHCPOPTIONSREQUEST_P_H
 #define QTAWS_DELETEDHCPOPTIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletedhcpoptionsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteDhcpOptionsRequest;
+
+class QTAWS_EXPORT DeleteDhcpOptionsRequestPrivate : public EC2Private {
+
+public:
+    DeleteDhcpOptionsRequestPrivate(const EC2::Action action,
+                                   DeleteDhcpOptionsRequest * const q);
+    DeleteDhcpOptionsRequestPrivate(const DeleteDhcpOptionsRequestPrivate &other,
+                                   DeleteDhcpOptionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteDhcpOptionsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

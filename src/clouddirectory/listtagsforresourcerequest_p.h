@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "listtagsforresourcerequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class ListTagsForResourceRequest;
+
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    ListTagsForResourceRequestPrivate(const CloudDirectory::Action action,
+                                   ListTagsForResourceRequest * const q);
+    ListTagsForResourceRequestPrivate(const ListTagsForResourceRequestPrivate &other,
+                                   ListTagsForResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTagsForResourceRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

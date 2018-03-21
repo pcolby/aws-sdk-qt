@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEEGRESSONLYINTERNETGATEWAYREQUEST_H
 #define QTAWS_DELETEEGRESSONLYINTERNETGATEWAYREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteEgressOnlyInternetGatewayRequestPrivate;
+
+class QTAWS_EXPORT DeleteEgressOnlyInternetGatewayRequest : public EC2Request {
+
+public:
+    DeleteEgressOnlyInternetGatewayRequest(const DeleteEgressOnlyInternetGatewayRequest &other);
+    DeleteEgressOnlyInternetGatewayRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteEgressOnlyInternetGatewayRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

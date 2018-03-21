@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESREQUEST_P_H
 #define QTAWS_MODIFYCLUSTERIAMROLESREQUEST_P_H
 
+#include "redshift_p.h"
+#include "modifyclusteriamrolesrequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class ModifyClusterIamRolesRequest;
+
+class QTAWS_EXPORT ModifyClusterIamRolesRequestPrivate : public RedshiftPrivate {
+
+public:
+    ModifyClusterIamRolesRequestPrivate(const Redshift::Action action,
+                                   ModifyClusterIamRolesRequest * const q);
+    ModifyClusterIamRolesRequestPrivate(const ModifyClusterIamRolesRequestPrivate &other,
+                                   ModifyClusterIamRolesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyClusterIamRolesRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

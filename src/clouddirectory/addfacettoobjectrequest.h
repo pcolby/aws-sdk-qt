@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDFACETTOOBJECTREQUEST_H
 #define QTAWS_ADDFACETTOOBJECTREQUEST_H
 
+#include "clouddirectoryrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class AddFacetToObjectRequestPrivate;
+
+class QTAWS_EXPORT AddFacetToObjectRequest : public CloudDirectoryRequest {
+
+public:
+    AddFacetToObjectRequest(const AddFacetToObjectRequest &other);
+    AddFacetToObjectRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddFacetToObjectRequest)
+
+}
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

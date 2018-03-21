@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTSREQUEST_H
 #define QTAWS_DESCRIBEVPCENDPOINTSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeVpcEndpointsRequestPrivate;
+
+class QTAWS_EXPORT DescribeVpcEndpointsRequest : public EC2Request {
+
+public:
+    DescribeVpcEndpointsRequest(const DescribeVpcEndpointsRequest &other);
+    DescribeVpcEndpointsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeVpcEndpointsRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

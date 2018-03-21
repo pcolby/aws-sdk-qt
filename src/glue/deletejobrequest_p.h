@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEJOBREQUEST_P_H
 #define QTAWS_DELETEJOBREQUEST_P_H
 
+#include "glue_p.h"
+#include "deletejobrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteJobRequest;
+
+class QTAWS_EXPORT DeleteJobRequestPrivate : public GluePrivate {
+
+public:
+    DeleteJobRequestPrivate(const Glue::Action action,
+                                   DeleteJobRequest * const q);
+    DeleteJobRequestPrivate(const DeleteJobRequestPrivate &other,
+                                   DeleteJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteJobRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

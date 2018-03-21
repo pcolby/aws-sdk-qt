@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTATTRIBUTESREQUEST_P_H
 #define QTAWS_PUTATTRIBUTESREQUEST_P_H
 
+#include "ecs_p.h"
+#include "putattributesrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class PutAttributesRequest;
+
+class QTAWS_EXPORT PutAttributesRequestPrivate : public ECSPrivate {
+
+public:
+    PutAttributesRequestPrivate(const ECS::Action action,
+                                   PutAttributesRequest * const q);
+    PutAttributesRequestPrivate(const PutAttributesRequestPrivate &other,
+                                   PutAttributesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutAttributesRequest)
+
+};
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

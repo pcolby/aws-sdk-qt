@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEJOBFLOWSREQUEST_P_H
 #define QTAWS_DESCRIBEJOBFLOWSREQUEST_P_H
 
+#include "emr_p.h"
+#include "describejobflowsrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeJobFlowsRequest;
+
+class QTAWS_EXPORT DescribeJobFlowsRequestPrivate : public EMRPrivate {
+
+public:
+    DescribeJobFlowsRequestPrivate(const EMR::Action action,
+                                   DescribeJobFlowsRequest * const q);
+    DescribeJobFlowsRequestPrivate(const DescribeJobFlowsRequestPrivate &other,
+                                   DescribeJobFlowsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeJobFlowsRequest)
+
+};
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

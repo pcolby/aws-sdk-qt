@@ -19,3 +19,107 @@
 
 #include "describetablestatisticsrequest.h"
 #include "describetablestatisticsrequest_p.h"
+#include "describetablestatisticsresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  DescribeTableStatisticsRequest
+ *
+ * @brief  Implements DatabaseMigrationService DescribeTableStatistics requests.
+ *
+ * @see    DatabaseMigrationServiceClient::describeTableStatistics
+ */
+
+/**
+ * @brief  Constructs a new DescribeTableStatisticsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeTableStatisticsResponse::DescribeTableStatisticsResponse(
+
+/**
+ * @brief  Constructs a new DescribeTableStatisticsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeTableStatisticsRequest::DescribeTableStatisticsRequest(const DescribeTableStatisticsRequest &other)
+    : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeTableStatisticsRequest object.
+ */
+DescribeTableStatisticsRequest::DescribeTableStatisticsRequest()
+    : DatabaseMigrationServiceRequest(new DescribeTableStatisticsRequestPrivate(DatabaseMigrationServiceRequest::DescribeTableStatisticsAction, this))
+{
+
+}
+
+bool DescribeTableStatisticsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeTableStatisticsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeTableStatisticsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeTableStatisticsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeTableStatisticsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeTableStatisticsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableStatisticsRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public DescribeTableStatisticsRequest instance.
+ */
+DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, DescribeTableStatisticsRequest * const q)
+    : DescribeTableStatisticsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeTableStatisticsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeTableStatisticsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeTableStatisticsRequest instance.
+ */
+DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
+    const DescribeTableStatisticsRequestPrivate &other, DescribeTableStatisticsRequest * const q)
+    : DescribeTableStatisticsPrivate(other, q)
+{
+
+}

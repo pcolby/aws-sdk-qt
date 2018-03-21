@@ -19,3 +19,107 @@
 
 #include "adminremoveuserfromgrouprequest.h"
 #include "adminremoveuserfromgrouprequest_p.h"
+#include "adminremoveuserfromgroupresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  AdminRemoveUserFromGroupRequest
+ *
+ * @brief  Implements CognitoIdentityProvider AdminRemoveUserFromGroup requests.
+ *
+ * @see    CognitoIdentityProviderClient::adminRemoveUserFromGroup
+ */
+
+/**
+ * @brief  Constructs a new AdminRemoveUserFromGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
+
+/**
+ * @brief  Constructs a new AdminRemoveUserFromGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest(const AdminRemoveUserFromGroupRequest &other)
+    : CognitoIdentityProviderRequest(new AdminRemoveUserFromGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AdminRemoveUserFromGroupRequest object.
+ */
+AdminRemoveUserFromGroupRequest::AdminRemoveUserFromGroupRequest()
+    : CognitoIdentityProviderRequest(new AdminRemoveUserFromGroupRequestPrivate(CognitoIdentityProviderRequest::AdminRemoveUserFromGroupAction, this))
+{
+
+}
+
+bool AdminRemoveUserFromGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AdminRemoveUserFromGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AdminRemoveUserFromGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new AdminRemoveUserFromGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AdminRemoveUserFromGroupRequestPrivate
+ *
+ * @brief  Private implementation for AdminRemoveUserFromGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public AdminRemoveUserFromGroupRequest instance.
+ */
+AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, AdminRemoveUserFromGroupRequest * const q)
+    : AdminRemoveUserFromGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AdminRemoveUserFromGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AdminRemoveUserFromGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AdminRemoveUserFromGroupRequest instance.
+ */
+AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
+    const AdminRemoveUserFromGroupRequestPrivate &other, AdminRemoveUserFromGroupRequest * const q)
+    : AdminRemoveUserFromGroupPrivate(other, q)
+{
+
+}

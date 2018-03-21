@@ -19,3 +19,107 @@
 
 #include "removetagsfromstreamrequest.h"
 #include "removetagsfromstreamrequest_p.h"
+#include "removetagsfromstreamresponse.h"
+#include "kinesisrequest_p.h"
+
+namespace AWS {
+namespace Kinesis {
+
+/**
+ * @class  RemoveTagsFromStreamRequest
+ *
+ * @brief  Implements Kinesis RemoveTagsFromStream requests.
+ *
+ * @see    KinesisClient::removeTagsFromStream
+ */
+
+/**
+ * @brief  Constructs a new RemoveTagsFromStreamResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
+
+/**
+ * @brief  Constructs a new RemoveTagsFromStreamRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest(const RemoveTagsFromStreamRequest &other)
+    : KinesisRequest(new RemoveTagsFromStreamRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RemoveTagsFromStreamRequest object.
+ */
+RemoveTagsFromStreamRequest::RemoveTagsFromStreamRequest()
+    : KinesisRequest(new RemoveTagsFromStreamRequestPrivate(KinesisRequest::RemoveTagsFromStreamAction, this))
+{
+
+}
+
+bool RemoveTagsFromStreamRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RemoveTagsFromStreamResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RemoveTagsFromStreamResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisClient::send
+ */
+AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetworkReply * const reply) const
+{
+    return new RemoveTagsFromStreamResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RemoveTagsFromStreamRequestPrivate
+ *
+ * @brief  Private implementation for RemoveTagsFromStreamRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object.
+ *
+ * @param  action  Kinesis action being performed.
+ * @param  q       Pointer to this object's public RemoveTagsFromStreamRequest instance.
+ */
+RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
+    const KinesisRequest::Action action, RemoveTagsFromStreamRequest * const q)
+    : RemoveTagsFromStreamPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RemoveTagsFromStreamRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RemoveTagsFromStreamRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RemoveTagsFromStreamRequest instance.
+ */
+RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
+    const RemoveTagsFromStreamRequestPrivate &other, RemoveTagsFromStreamRequest * const q)
+    : RemoveTagsFromStreamPrivate(other, q)
+{
+
+}

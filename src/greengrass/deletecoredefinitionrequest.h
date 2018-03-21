@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECOREDEFINITIONREQUEST_H
 #define QTAWS_DELETECOREDEFINITIONREQUEST_H
 
+#include "greengrassrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class DeleteCoreDefinitionRequestPrivate;
+
+class QTAWS_EXPORT DeleteCoreDefinitionRequest : public GreengrassRequest {
+
+public:
+    DeleteCoreDefinitionRequest(const DeleteCoreDefinitionRequest &other);
+    DeleteCoreDefinitionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCoreDefinitionRequest)
+
+}
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

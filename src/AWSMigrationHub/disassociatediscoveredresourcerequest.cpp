@@ -19,3 +19,107 @@
 
 #include "disassociatediscoveredresourcerequest.h"
 #include "disassociatediscoveredresourcerequest_p.h"
+#include "disassociatediscoveredresourceresponse.h"
+#include "migrationhubrequest_p.h"
+
+namespace AWS {
+namespace MigrationHub {
+
+/**
+ * @class  DisassociateDiscoveredResourceRequest
+ *
+ * @brief  Implements MigrationHub DisassociateDiscoveredResource requests.
+ *
+ * @see    MigrationHubClient::disassociateDiscoveredResource
+ */
+
+/**
+ * @brief  Constructs a new DisassociateDiscoveredResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateDiscoveredResourceResponse::DisassociateDiscoveredResourceResponse(
+
+/**
+ * @brief  Constructs a new DisassociateDiscoveredResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateDiscoveredResourceRequest::DisassociateDiscoveredResourceRequest(const DisassociateDiscoveredResourceRequest &other)
+    : MigrationHubRequest(new DisassociateDiscoveredResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateDiscoveredResourceRequest object.
+ */
+DisassociateDiscoveredResourceRequest::DisassociateDiscoveredResourceRequest()
+    : MigrationHubRequest(new DisassociateDiscoveredResourceRequestPrivate(MigrationHubRequest::DisassociateDiscoveredResourceAction, this))
+{
+
+}
+
+bool DisassociateDiscoveredResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateDiscoveredResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateDiscoveredResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MigrationHubClient::send
+ */
+AwsAbstractResponse * DisassociateDiscoveredResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateDiscoveredResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateDiscoveredResourceRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateDiscoveredResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateDiscoveredResourceRequestPrivate object.
+ *
+ * @param  action  MigrationHub action being performed.
+ * @param  q       Pointer to this object's public DisassociateDiscoveredResourceRequest instance.
+ */
+DisassociateDiscoveredResourceRequestPrivate::DisassociateDiscoveredResourceRequestPrivate(
+    const MigrationHubRequest::Action action, DisassociateDiscoveredResourceRequest * const q)
+    : DisassociateDiscoveredResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateDiscoveredResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateDiscoveredResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateDiscoveredResourceRequest instance.
+ */
+DisassociateDiscoveredResourceRequestPrivate::DisassociateDiscoveredResourceRequestPrivate(
+    const DisassociateDiscoveredResourceRequestPrivate &other, DisassociateDiscoveredResourceRequest * const q)
+    : DisassociateDiscoveredResourcePrivate(other, q)
+{
+
+}

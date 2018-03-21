@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTGROUPSREQUEST_P_H
 #define QTAWS_LISTGROUPSREQUEST_P_H
 
+#include "greengrass_p.h"
+#include "listgroupsrequest.h"
+
+namespace AWS {
+
+namespace Greengrass {
+
+class ListGroupsRequest;
+
+class QTAWS_EXPORT ListGroupsRequestPrivate : public GreengrassPrivate {
+
+public:
+    ListGroupsRequestPrivate(const Greengrass::Action action,
+                                   ListGroupsRequest * const q);
+    ListGroupsRequestPrivate(const ListGroupsRequestPrivate &other,
+                                   ListGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListGroupsRequest)
+
+};
+
+} // namespace Greengrass
+} // namespace AWS
+
 #endif

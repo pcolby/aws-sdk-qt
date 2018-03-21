@@ -20,4 +20,29 @@
 #ifndef QTAWS_MOVEADDRESSTOVPCREQUEST_P_H
 #define QTAWS_MOVEADDRESSTOVPCREQUEST_P_H
 
+#include "ec2_p.h"
+#include "moveaddresstovpcrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class MoveAddressToVpcRequest;
+
+class QTAWS_EXPORT MoveAddressToVpcRequestPrivate : public EC2Private {
+
+public:
+    MoveAddressToVpcRequestPrivate(const EC2::Action action,
+                                   MoveAddressToVpcRequest * const q);
+    MoveAddressToVpcRequestPrivate(const MoveAddressToVpcRequestPrivate &other,
+                                   MoveAddressToVpcRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(MoveAddressToVpcRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

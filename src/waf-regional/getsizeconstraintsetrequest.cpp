@@ -19,3 +19,107 @@
 
 #include "getsizeconstraintsetrequest.h"
 #include "getsizeconstraintsetrequest_p.h"
+#include "getsizeconstraintsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetSizeConstraintSetRequest
+ *
+ * @brief  Implements WAFRegional GetSizeConstraintSet requests.
+ *
+ * @see    WAFRegionalClient::getSizeConstraintSet
+ */
+
+/**
+ * @brief  Constructs a new GetSizeConstraintSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
+
+/**
+ * @brief  Constructs a new GetSizeConstraintSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSizeConstraintSetRequest::GetSizeConstraintSetRequest(const GetSizeConstraintSetRequest &other)
+    : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSizeConstraintSetRequest object.
+ */
+GetSizeConstraintSetRequest::GetSizeConstraintSetRequest()
+    : WAFRegionalRequest(new GetSizeConstraintSetRequestPrivate(WAFRegionalRequest::GetSizeConstraintSetAction, this))
+{
+
+}
+
+bool GetSizeConstraintSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSizeConstraintSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSizeConstraintSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSizeConstraintSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSizeConstraintSetRequestPrivate
+ *
+ * @brief  Private implementation for GetSizeConstraintSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetSizeConstraintSetRequest instance.
+ */
+GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
+    const WAFRegionalRequest::Action action, GetSizeConstraintSetRequest * const q)
+    : GetSizeConstraintSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSizeConstraintSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSizeConstraintSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSizeConstraintSetRequest instance.
+ */
+GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
+    const GetSizeConstraintSetRequestPrivate &other, GetSizeConstraintSetRequest * const q)
+    : GetSizeConstraintSetPrivate(other, q)
+{
+
+}

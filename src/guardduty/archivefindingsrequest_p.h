@@ -20,4 +20,29 @@
 #ifndef QTAWS_ARCHIVEFINDINGSREQUEST_P_H
 #define QTAWS_ARCHIVEFINDINGSREQUEST_P_H
 
+#include "guardduty_p.h"
+#include "archivefindingsrequest.h"
+
+namespace AWS {
+
+namespace GuardDuty {
+
+class ArchiveFindingsRequest;
+
+class QTAWS_EXPORT ArchiveFindingsRequestPrivate : public GuardDutyPrivate {
+
+public:
+    ArchiveFindingsRequestPrivate(const GuardDuty::Action action,
+                                   ArchiveFindingsRequest * const q);
+    ArchiveFindingsRequestPrivate(const ArchiveFindingsRequestPrivate &other,
+                                   ArchiveFindingsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ArchiveFindingsRequest)
+
+};
+
+} // namespace GuardDuty
+} // namespace AWS
+
 #endif

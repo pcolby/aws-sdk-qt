@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECONTAINERREQUEST_H
 #define QTAWS_DELETECONTAINERREQUEST_H
 
+#include "mediastorerequest.h"
+
+namespace AWS {
+
+namespace MediaStore {
+
+class DeleteContainerRequestPrivate;
+
+class QTAWS_EXPORT DeleteContainerRequest : public MediaStoreRequest {
+
+public:
+    DeleteContainerRequest(const DeleteContainerRequest &other);
+    DeleteContainerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteContainerRequest)
+
+}
+
+} // namespace MediaStore
+} // namespace AWS
+
 #endif

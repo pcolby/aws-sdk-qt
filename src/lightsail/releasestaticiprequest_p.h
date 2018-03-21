@@ -20,4 +20,29 @@
 #ifndef QTAWS_RELEASESTATICIPREQUEST_P_H
 #define QTAWS_RELEASESTATICIPREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "releasestaticiprequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class ReleaseStaticIpRequest;
+
+class QTAWS_EXPORT ReleaseStaticIpRequestPrivate : public LightsailPrivate {
+
+public:
+    ReleaseStaticIpRequestPrivate(const Lightsail::Action action,
+                                   ReleaseStaticIpRequest * const q);
+    ReleaseStaticIpRequestPrivate(const ReleaseStaticIpRequestPrivate &other,
+                                   ReleaseStaticIpRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ReleaseStaticIpRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

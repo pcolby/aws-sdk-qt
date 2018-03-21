@@ -19,3 +19,107 @@
 
 #include "startimagebuilderrequest.h"
 #include "startimagebuilderrequest_p.h"
+#include "startimagebuilderresponse.h"
+#include "appstreamrequest_p.h"
+
+namespace AWS {
+namespace AppStream {
+
+/**
+ * @class  StartImageBuilderRequest
+ *
+ * @brief  Implements AppStream StartImageBuilder requests.
+ *
+ * @see    AppStreamClient::startImageBuilder
+ */
+
+/**
+ * @brief  Constructs a new StartImageBuilderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StartImageBuilderResponse::StartImageBuilderResponse(
+
+/**
+ * @brief  Constructs a new StartImageBuilderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StartImageBuilderRequest::StartImageBuilderRequest(const StartImageBuilderRequest &other)
+    : AppStreamRequest(new StartImageBuilderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StartImageBuilderRequest object.
+ */
+StartImageBuilderRequest::StartImageBuilderRequest()
+    : AppStreamRequest(new StartImageBuilderRequestPrivate(AppStreamRequest::StartImageBuilderAction, this))
+{
+
+}
+
+bool StartImageBuilderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StartImageBuilderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StartImageBuilderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppStreamClient::send
+ */
+AwsAbstractResponse * StartImageBuilderRequest::response(QNetworkReply * const reply) const
+{
+    return new StartImageBuilderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StartImageBuilderRequestPrivate
+ *
+ * @brief  Private implementation for StartImageBuilderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartImageBuilderRequestPrivate object.
+ *
+ * @param  action  AppStream action being performed.
+ * @param  q       Pointer to this object's public StartImageBuilderRequest instance.
+ */
+StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
+    const AppStreamRequest::Action action, StartImageBuilderRequest * const q)
+    : StartImageBuilderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StartImageBuilderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StartImageBuilderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StartImageBuilderRequest instance.
+ */
+StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
+    const StartImageBuilderRequestPrivate &other, StartImageBuilderRequest * const q)
+    : StartImageBuilderPrivate(other, q)
+{
+
+}

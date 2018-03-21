@@ -20,4 +20,29 @@
 #ifndef QTAWS_LISTTRAFFICPOLICYINSTANCESBYHOSTEDZONEREQUEST_P_H
 #define QTAWS_LISTTRAFFICPOLICYINSTANCESBYHOSTEDZONEREQUEST_P_H
 
+#include "route53_p.h"
+#include "listtrafficpolicyinstancesbyhostedzonerequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class ListTrafficPolicyInstancesByHostedZoneRequest;
+
+class QTAWS_EXPORT ListTrafficPolicyInstancesByHostedZoneRequestPrivate : public Route53Private {
+
+public:
+    ListTrafficPolicyInstancesByHostedZoneRequestPrivate(const Route53::Action action,
+                                   ListTrafficPolicyInstancesByHostedZoneRequest * const q);
+    ListTrafficPolicyInstancesByHostedZoneRequestPrivate(const ListTrafficPolicyInstancesByHostedZoneRequestPrivate &other,
+                                   ListTrafficPolicyInstancesByHostedZoneRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ListTrafficPolicyInstancesByHostedZoneRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

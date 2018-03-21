@@ -19,3 +19,107 @@
 
 #include "describeprotectionrequest.h"
 #include "describeprotectionrequest_p.h"
+#include "describeprotectionresponse.h"
+#include "shieldrequest_p.h"
+
+namespace AWS {
+namespace Shield {
+
+/**
+ * @class  DescribeProtectionRequest
+ *
+ * @brief  Implements Shield DescribeProtection requests.
+ *
+ * @see    ShieldClient::describeProtection
+ */
+
+/**
+ * @brief  Constructs a new DescribeProtectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProtectionResponse::DescribeProtectionResponse(
+
+/**
+ * @brief  Constructs a new DescribeProtectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeProtectionRequest::DescribeProtectionRequest(const DescribeProtectionRequest &other)
+    : ShieldRequest(new DescribeProtectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeProtectionRequest object.
+ */
+DescribeProtectionRequest::DescribeProtectionRequest()
+    : ShieldRequest(new DescribeProtectionRequestPrivate(ShieldRequest::DescribeProtectionAction, this))
+{
+
+}
+
+bool DescribeProtectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeProtectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeProtectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ShieldClient::send
+ */
+AwsAbstractResponse * DescribeProtectionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeProtectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProtectionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeProtectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProtectionRequestPrivate object.
+ *
+ * @param  action  Shield action being performed.
+ * @param  q       Pointer to this object's public DescribeProtectionRequest instance.
+ */
+DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
+    const ShieldRequest::Action action, DescribeProtectionRequest * const q)
+    : DescribeProtectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProtectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeProtectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeProtectionRequest instance.
+ */
+DescribeProtectionRequestPrivate::DescribeProtectionRequestPrivate(
+    const DescribeProtectionRequestPrivate &other, DescribeProtectionRequest * const q)
+    : DescribeProtectionPrivate(other, q)
+{
+
+}

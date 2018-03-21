@@ -19,3 +19,107 @@
 
 #include "updateopenidconnectproviderthumbprintrequest.h"
 #include "updateopenidconnectproviderthumbprintrequest_p.h"
+#include "updateopenidconnectproviderthumbprintresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  UpdateOpenIDConnectProviderThumbprintRequest
+ *
+ * @brief  Implements IAM UpdateOpenIDConnectProviderThumbprint requests.
+ *
+ * @see    IAMClient::updateOpenIDConnectProviderThumbprint
+ */
+
+/**
+ * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbprintResponse(
+
+/**
+ * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest(const UpdateOpenIDConnectProviderThumbprintRequest &other)
+    : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequest object.
+ */
+UpdateOpenIDConnectProviderThumbprintRequest::UpdateOpenIDConnectProviderThumbprintRequest()
+    : IAMRequest(new UpdateOpenIDConnectProviderThumbprintRequestPrivate(IAMRequest::UpdateOpenIDConnectProviderThumbprintAction, this))
+{
+
+}
+
+bool UpdateOpenIDConnectProviderThumbprintRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateOpenIDConnectProviderThumbprintResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateOpenIDConnectProviderThumbprintResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateOpenIDConnectProviderThumbprintResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateOpenIDConnectProviderThumbprintRequestPrivate
+ *
+ * @brief  Private implementation for UpdateOpenIDConnectProviderThumbprintRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public UpdateOpenIDConnectProviderThumbprintRequest instance.
+ */
+UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
+    const IAMRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)
+    : UpdateOpenIDConnectProviderThumbprintPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateOpenIDConnectProviderThumbprintRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateOpenIDConnectProviderThumbprintRequest instance.
+ */
+UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
+    const UpdateOpenIDConnectProviderThumbprintRequestPrivate &other, UpdateOpenIDConnectProviderThumbprintRequest * const q)
+    : UpdateOpenIDConnectProviderThumbprintPrivate(other, q)
+{
+
+}

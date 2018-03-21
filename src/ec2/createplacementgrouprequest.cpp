@@ -19,3 +19,107 @@
 
 #include "createplacementgrouprequest.h"
 #include "createplacementgrouprequest_p.h"
+#include "createplacementgroupresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreatePlacementGroupRequest
+ *
+ * @brief  Implements EC2 CreatePlacementGroup requests.
+ *
+ * @see    EC2Client::createPlacementGroup
+ */
+
+/**
+ * @brief  Constructs a new CreatePlacementGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreatePlacementGroupResponse::CreatePlacementGroupResponse(
+
+/**
+ * @brief  Constructs a new CreatePlacementGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreatePlacementGroupRequest::CreatePlacementGroupRequest(const CreatePlacementGroupRequest &other)
+    : EC2Request(new CreatePlacementGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreatePlacementGroupRequest object.
+ */
+CreatePlacementGroupRequest::CreatePlacementGroupRequest()
+    : EC2Request(new CreatePlacementGroupRequestPrivate(EC2Request::CreatePlacementGroupAction, this))
+{
+
+}
+
+bool CreatePlacementGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreatePlacementGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreatePlacementGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new CreatePlacementGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreatePlacementGroupRequestPrivate
+ *
+ * @brief  Private implementation for CreatePlacementGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlacementGroupRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreatePlacementGroupRequest instance.
+ */
+CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
+    const EC2Request::Action action, CreatePlacementGroupRequest * const q)
+    : CreatePlacementGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreatePlacementGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreatePlacementGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreatePlacementGroupRequest instance.
+ */
+CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
+    const CreatePlacementGroupRequestPrivate &other, CreatePlacementGroupRequest * const q)
+    : CreatePlacementGroupPrivate(other, q)
+{
+
+}

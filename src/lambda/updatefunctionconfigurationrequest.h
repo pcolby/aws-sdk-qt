@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_H
 #define QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_H
 
+#include "lambdarequest.h"
+
+namespace AWS {
+
+namespace Lambda {
+
+class UpdateFunctionConfigurationRequestPrivate;
+
+class QTAWS_EXPORT UpdateFunctionConfigurationRequest : public LambdaRequest {
+
+public:
+    UpdateFunctionConfigurationRequest(const UpdateFunctionConfigurationRequest &other);
+    UpdateFunctionConfigurationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateFunctionConfigurationRequest)
+
+}
+
+} // namespace Lambda
+} // namespace AWS
+
 #endif

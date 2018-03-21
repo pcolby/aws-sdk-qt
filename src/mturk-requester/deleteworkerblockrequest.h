@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEWORKERBLOCKREQUEST_H
 #define QTAWS_DELETEWORKERBLOCKREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class DeleteWorkerBlockRequestPrivate;
+
+class QTAWS_EXPORT DeleteWorkerBlockRequest : public MTurkRequest {
+
+public:
+    DeleteWorkerBlockRequest(const DeleteWorkerBlockRequest &other);
+    DeleteWorkerBlockRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteWorkerBlockRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

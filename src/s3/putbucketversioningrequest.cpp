@@ -19,3 +19,107 @@
 
 #include "putbucketversioningrequest.h"
 #include "putbucketversioningrequest_p.h"
+#include "putbucketversioningresponse.h"
+#include "s3request_p.h"
+
+namespace AWS {
+namespace S3 {
+
+/**
+ * @class  PutBucketVersioningRequest
+ *
+ * @brief  Implements S3 PutBucketVersioning requests.
+ *
+ * @see    S3Client::putBucketVersioning
+ */
+
+/**
+ * @brief  Constructs a new PutBucketVersioningResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutBucketVersioningResponse::PutBucketVersioningResponse(
+
+/**
+ * @brief  Constructs a new PutBucketVersioningRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutBucketVersioningRequest::PutBucketVersioningRequest(const PutBucketVersioningRequest &other)
+    : S3Request(new PutBucketVersioningRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutBucketVersioningRequest object.
+ */
+PutBucketVersioningRequest::PutBucketVersioningRequest()
+    : S3Request(new PutBucketVersioningRequestPrivate(S3Request::PutBucketVersioningAction, this))
+{
+
+}
+
+bool PutBucketVersioningRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutBucketVersioningResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutBucketVersioningResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  S3Client::send
+ */
+AwsAbstractResponse * PutBucketVersioningRequest::response(QNetworkReply * const reply) const
+{
+    return new PutBucketVersioningResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutBucketVersioningRequestPrivate
+ *
+ * @brief  Private implementation for PutBucketVersioningRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketVersioningRequestPrivate object.
+ *
+ * @param  action  S3 action being performed.
+ * @param  q       Pointer to this object's public PutBucketVersioningRequest instance.
+ */
+PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
+    const S3Request::Action action, PutBucketVersioningRequest * const q)
+    : PutBucketVersioningPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutBucketVersioningRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutBucketVersioningRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutBucketVersioningRequest instance.
+ */
+PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
+    const PutBucketVersioningRequestPrivate &other, PutBucketVersioningRequest * const q)
+    : PutBucketVersioningPrivate(other, q)
+{
+
+}

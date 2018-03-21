@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYREQUEST_H
 #define QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteCloudFrontOriginAccessIdentityRequestPrivate;
+
+class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityRequest : public CloudFrontRequest {
+
+public:
+    DeleteCloudFrontOriginAccessIdentityRequest(const DeleteCloudFrontOriginAccessIdentityRequest &other);
+    DeleteCloudFrontOriginAccessIdentityRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteCloudFrontOriginAccessIdentityRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

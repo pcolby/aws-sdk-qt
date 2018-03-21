@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESETJOBBOOKMARKREQUEST_H
 #define QTAWS_RESETJOBBOOKMARKREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class ResetJobBookmarkRequestPrivate;
+
+class QTAWS_EXPORT ResetJobBookmarkRequest : public GlueRequest {
+
+public:
+    ResetJobBookmarkRequest(const ResetJobBookmarkRequest &other);
+    ResetJobBookmarkRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResetJobBookmarkRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

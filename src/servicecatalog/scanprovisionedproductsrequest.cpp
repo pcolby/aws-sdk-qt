@@ -19,3 +19,107 @@
 
 #include "scanprovisionedproductsrequest.h"
 #include "scanprovisionedproductsrequest_p.h"
+#include "scanprovisionedproductsresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ScanProvisionedProductsRequest
+ *
+ * @brief  Implements ServiceCatalog ScanProvisionedProducts requests.
+ *
+ * @see    ServiceCatalogClient::scanProvisionedProducts
+ */
+
+/**
+ * @brief  Constructs a new ScanProvisionedProductsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ScanProvisionedProductsResponse::ScanProvisionedProductsResponse(
+
+/**
+ * @brief  Constructs a new ScanProvisionedProductsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ScanProvisionedProductsRequest::ScanProvisionedProductsRequest(const ScanProvisionedProductsRequest &other)
+    : ServiceCatalogRequest(new ScanProvisionedProductsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ScanProvisionedProductsRequest object.
+ */
+ScanProvisionedProductsRequest::ScanProvisionedProductsRequest()
+    : ServiceCatalogRequest(new ScanProvisionedProductsRequestPrivate(ServiceCatalogRequest::ScanProvisionedProductsAction, this))
+{
+
+}
+
+bool ScanProvisionedProductsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ScanProvisionedProductsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ScanProvisionedProductsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNetworkReply * const reply) const
+{
+    return new ScanProvisionedProductsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ScanProvisionedProductsRequestPrivate
+ *
+ * @brief  Private implementation for ScanProvisionedProductsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ScanProvisionedProductsRequest instance.
+ */
+ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
+    const ServiceCatalogRequest::Action action, ScanProvisionedProductsRequest * const q)
+    : ScanProvisionedProductsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ScanProvisionedProductsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ScanProvisionedProductsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ScanProvisionedProductsRequest instance.
+ */
+ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
+    const ScanProvisionedProductsRequestPrivate &other, ScanProvisionedProductsRequest * const q)
+    : ScanProvisionedProductsPrivate(other, q)
+{
+
+}

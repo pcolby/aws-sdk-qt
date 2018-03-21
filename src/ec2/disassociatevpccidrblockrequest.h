@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATEVPCCIDRBLOCKREQUEST_H
 #define QTAWS_DISASSOCIATEVPCCIDRBLOCKREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DisassociateVpcCidrBlockRequestPrivate;
+
+class QTAWS_EXPORT DisassociateVpcCidrBlockRequest : public EC2Request {
+
+public:
+    DisassociateVpcCidrBlockRequest(const DisassociateVpcCidrBlockRequest &other);
+    DisassociateVpcCidrBlockRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateVpcCidrBlockRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

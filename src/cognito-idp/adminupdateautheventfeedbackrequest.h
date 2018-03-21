@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_H
 #define QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_H
 
+#include "cognitoidentityproviderrequest.h"
+
+namespace AWS {
+
+namespace CognitoIdentityProvider {
+
+class AdminUpdateAuthEventFeedbackRequestPrivate;
+
+class QTAWS_EXPORT AdminUpdateAuthEventFeedbackRequest : public CognitoIdentityProviderRequest {
+
+public:
+    AdminUpdateAuthEventFeedbackRequest(const AdminUpdateAuthEventFeedbackRequest &other);
+    AdminUpdateAuthEventFeedbackRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AdminUpdateAuthEventFeedbackRequest)
+
+}
+
+} // namespace CognitoIdentityProvider
+} // namespace AWS
+
 #endif

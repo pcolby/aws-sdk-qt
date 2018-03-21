@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBETAPERECOVERYPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBETAPERECOVERYPOINTSREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "describetaperecoverypointsrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeTapeRecoveryPointsRequest;
+
+class QTAWS_EXPORT DescribeTapeRecoveryPointsRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    DescribeTapeRecoveryPointsRequestPrivate(const StorageGateway::Action action,
+                                   DescribeTapeRecoveryPointsRequest * const q);
+    DescribeTapeRecoveryPointsRequestPrivate(const DescribeTapeRecoveryPointsRequestPrivate &other,
+                                   DescribeTapeRecoveryPointsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeTapeRecoveryPointsRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

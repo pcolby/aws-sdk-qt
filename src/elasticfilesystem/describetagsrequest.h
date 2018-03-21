@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_H
 #define QTAWS_DESCRIBETAGSREQUEST_H
 
+#include "efsrequest.h"
+
+namespace AWS {
+
+namespace EFS {
+
+class DescribeTagsRequestPrivate;
+
+class QTAWS_EXPORT DescribeTagsRequest : public EFSRequest {
+
+public:
+    DescribeTagsRequest(const DescribeTagsRequest &other);
+    DescribeTagsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTagsRequest)
+
+}
+
+} // namespace EFS
+} // namespace AWS
+
 #endif

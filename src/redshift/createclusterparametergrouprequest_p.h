@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_CREATECLUSTERPARAMETERGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "createclusterparametergrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateClusterParameterGroupRequest;
+
+class QTAWS_EXPORT CreateClusterParameterGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    CreateClusterParameterGroupRequestPrivate(const Redshift::Action action,
+                                   CreateClusterParameterGroupRequest * const q);
+    CreateClusterParameterGroupRequestPrivate(const CreateClusterParameterGroupRequestPrivate &other,
+                                   CreateClusterParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterParameterGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

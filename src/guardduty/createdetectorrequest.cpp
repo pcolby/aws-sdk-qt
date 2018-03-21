@@ -19,3 +19,107 @@
 
 #include "createdetectorrequest.h"
 #include "createdetectorrequest_p.h"
+#include "createdetectorresponse.h"
+#include "guarddutyrequest_p.h"
+
+namespace AWS {
+namespace GuardDuty {
+
+/**
+ * @class  CreateDetectorRequest
+ *
+ * @brief  Implements GuardDuty CreateDetector requests.
+ *
+ * @see    GuardDutyClient::createDetector
+ */
+
+/**
+ * @brief  Constructs a new CreateDetectorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDetectorResponse::CreateDetectorResponse(
+
+/**
+ * @brief  Constructs a new CreateDetectorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDetectorRequest::CreateDetectorRequest(const CreateDetectorRequest &other)
+    : GuardDutyRequest(new CreateDetectorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDetectorRequest object.
+ */
+CreateDetectorRequest::CreateDetectorRequest()
+    : GuardDutyRequest(new CreateDetectorRequestPrivate(GuardDutyRequest::CreateDetectorAction, this))
+{
+
+}
+
+bool CreateDetectorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDetectorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDetectorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GuardDutyClient::send
+ */
+AwsAbstractResponse * CreateDetectorRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateDetectorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDetectorRequestPrivate
+ *
+ * @brief  Private implementation for CreateDetectorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDetectorRequestPrivate object.
+ *
+ * @param  action  GuardDuty action being performed.
+ * @param  q       Pointer to this object's public CreateDetectorRequest instance.
+ */
+CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
+    const GuardDutyRequest::Action action, CreateDetectorRequest * const q)
+    : CreateDetectorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDetectorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDetectorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDetectorRequest instance.
+ */
+CreateDetectorRequestPrivate::CreateDetectorRequestPrivate(
+    const CreateDetectorRequestPrivate &other, CreateDetectorRequest * const q)
+    : CreateDetectorPrivate(other, q)
+{
+
+}

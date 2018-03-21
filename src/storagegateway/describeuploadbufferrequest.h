@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEUPLOADBUFFERREQUEST_H
 #define QTAWS_DESCRIBEUPLOADBUFFERREQUEST_H
 
+#include "storagegatewayrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class DescribeUploadBufferRequestPrivate;
+
+class QTAWS_EXPORT DescribeUploadBufferRequest : public StorageGatewayRequest {
+
+public:
+    DescribeUploadBufferRequest(const DescribeUploadBufferRequest &other);
+    DescribeUploadBufferRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeUploadBufferRequest)
+
+}
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

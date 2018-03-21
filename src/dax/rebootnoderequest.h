@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTNODEREQUEST_H
 #define QTAWS_REBOOTNODEREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class RebootNodeRequestPrivate;
+
+class QTAWS_EXPORT RebootNodeRequest : public DAXRequest {
+
+public:
+    RebootNodeRequest(const RebootNodeRequest &other);
+    RebootNodeRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootNodeRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

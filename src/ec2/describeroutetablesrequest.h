@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEROUTETABLESREQUEST_H
 #define QTAWS_DESCRIBEROUTETABLESREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeRouteTablesRequestPrivate;
+
+class QTAWS_EXPORT DescribeRouteTablesRequest : public EC2Request {
+
+public:
+    DescribeRouteTablesRequest(const DescribeRouteTablesRequest &other);
+    DescribeRouteTablesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeRouteTablesRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

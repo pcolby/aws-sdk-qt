@@ -19,3 +19,107 @@
 
 #include "createmaintenancewindowrequest.h"
 #include "createmaintenancewindowrequest_p.h"
+#include "createmaintenancewindowresponse.h"
+#include "ssmrequest_p.h"
+
+namespace AWS {
+namespace SSM {
+
+/**
+ * @class  CreateMaintenanceWindowRequest
+ *
+ * @brief  Implements SSM CreateMaintenanceWindow requests.
+ *
+ * @see    SSMClient::createMaintenanceWindow
+ */
+
+/**
+ * @brief  Constructs a new CreateMaintenanceWindowResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateMaintenanceWindowResponse::CreateMaintenanceWindowResponse(
+
+/**
+ * @brief  Constructs a new CreateMaintenanceWindowRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateMaintenanceWindowRequest::CreateMaintenanceWindowRequest(const CreateMaintenanceWindowRequest &other)
+    : SSMRequest(new CreateMaintenanceWindowRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateMaintenanceWindowRequest object.
+ */
+CreateMaintenanceWindowRequest::CreateMaintenanceWindowRequest()
+    : SSMRequest(new CreateMaintenanceWindowRequestPrivate(SSMRequest::CreateMaintenanceWindowAction, this))
+{
+
+}
+
+bool CreateMaintenanceWindowRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateMaintenanceWindowResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateMaintenanceWindowResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SSMClient::send
+ */
+AwsAbstractResponse * CreateMaintenanceWindowRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateMaintenanceWindowResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateMaintenanceWindowRequestPrivate
+ *
+ * @brief  Private implementation for CreateMaintenanceWindowRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMaintenanceWindowRequestPrivate object.
+ *
+ * @param  action  SSM action being performed.
+ * @param  q       Pointer to this object's public CreateMaintenanceWindowRequest instance.
+ */
+CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
+    const SSMRequest::Action action, CreateMaintenanceWindowRequest * const q)
+    : CreateMaintenanceWindowPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateMaintenanceWindowRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateMaintenanceWindowRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateMaintenanceWindowRequest instance.
+ */
+CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
+    const CreateMaintenanceWindowRequestPrivate &other, CreateMaintenanceWindowRequest * const q)
+    : CreateMaintenanceWindowPrivate(other, q)
+{
+
+}

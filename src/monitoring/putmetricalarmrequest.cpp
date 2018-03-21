@@ -19,3 +19,107 @@
 
 #include "putmetricalarmrequest.h"
 #include "putmetricalarmrequest_p.h"
+#include "putmetricalarmresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  PutMetricAlarmRequest
+ *
+ * @brief  Implements CloudWatch PutMetricAlarm requests.
+ *
+ * @see    CloudWatchClient::putMetricAlarm
+ */
+
+/**
+ * @brief  Constructs a new PutMetricAlarmResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutMetricAlarmResponse::PutMetricAlarmResponse(
+
+/**
+ * @brief  Constructs a new PutMetricAlarmRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutMetricAlarmRequest::PutMetricAlarmRequest(const PutMetricAlarmRequest &other)
+    : CloudWatchRequest(new PutMetricAlarmRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutMetricAlarmRequest object.
+ */
+PutMetricAlarmRequest::PutMetricAlarmRequest()
+    : CloudWatchRequest(new PutMetricAlarmRequestPrivate(CloudWatchRequest::PutMetricAlarmAction, this))
+{
+
+}
+
+bool PutMetricAlarmRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutMetricAlarmResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutMetricAlarmResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * PutMetricAlarmRequest::response(QNetworkReply * const reply) const
+{
+    return new PutMetricAlarmResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutMetricAlarmRequestPrivate
+ *
+ * @brief  Private implementation for PutMetricAlarmRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMetricAlarmRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public PutMetricAlarmRequest instance.
+ */
+PutMetricAlarmRequestPrivate::PutMetricAlarmRequestPrivate(
+    const CloudWatchRequest::Action action, PutMetricAlarmRequest * const q)
+    : PutMetricAlarmPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMetricAlarmRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutMetricAlarmRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutMetricAlarmRequest instance.
+ */
+PutMetricAlarmRequestPrivate::PutMetricAlarmRequestPrivate(
+    const PutMetricAlarmRequestPrivate &other, PutMetricAlarmRequest * const q)
+    : PutMetricAlarmPrivate(other, q)
+{
+
+}

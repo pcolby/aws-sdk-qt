@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINPUTSECURITYGROUPREQUEST_H
 #define QTAWS_DELETEINPUTSECURITYGROUPREQUEST_H
 
+#include "medialiverequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DeleteInputSecurityGroupRequestPrivate;
+
+class QTAWS_EXPORT DeleteInputSecurityGroupRequest : public MediaLiveRequest {
+
+public:
+    DeleteInputSecurityGroupRequest(const DeleteInputSecurityGroupRequest &other);
+    DeleteInputSecurityGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteInputSecurityGroupRequest)
+
+}
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listrolesrequest.h"
 #include "listrolesrequest_p.h"
+#include "listrolesresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  ListRolesRequest
+ *
+ * @brief  Implements IAM ListRoles requests.
+ *
+ * @see    IAMClient::listRoles
+ */
+
+/**
+ * @brief  Constructs a new ListRolesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRolesResponse::ListRolesResponse(
+
+/**
+ * @brief  Constructs a new ListRolesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRolesRequest::ListRolesRequest(const ListRolesRequest &other)
+    : IAMRequest(new ListRolesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRolesRequest object.
+ */
+ListRolesRequest::ListRolesRequest()
+    : IAMRequest(new ListRolesRequestPrivate(IAMRequest::ListRolesAction, this))
+{
+
+}
+
+bool ListRolesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRolesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRolesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRolesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRolesRequestPrivate
+ *
+ * @brief  Private implementation for ListRolesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRolesRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public ListRolesRequest instance.
+ */
+ListRolesRequestPrivate::ListRolesRequestPrivate(
+    const IAMRequest::Action action, ListRolesRequest * const q)
+    : ListRolesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRolesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRolesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRolesRequest instance.
+ */
+ListRolesRequestPrivate::ListRolesRequestPrivate(
+    const ListRolesRequestPrivate &other, ListRolesRequest * const q)
+    : ListRolesPrivate(other, q)
+{
+
+}

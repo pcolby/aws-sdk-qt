@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISABLERULEREQUEST_P_H
 #define QTAWS_DISABLERULEREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "disablerulerequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class DisableRuleRequest;
+
+class QTAWS_EXPORT DisableRuleRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    DisableRuleRequestPrivate(const CloudWatchEvents::Action action,
+                                   DisableRuleRequest * const q);
+    DisableRuleRequestPrivate(const DisableRuleRequestPrivate &other,
+                                   DisableRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisableRuleRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETUPLOADREQUEST_P_H
 #define QTAWS_GETUPLOADREQUEST_P_H
 
+#include "devicefarm_p.h"
+#include "getuploadrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class GetUploadRequest;
+
+class QTAWS_EXPORT GetUploadRequestPrivate : public DeviceFarmPrivate {
+
+public:
+    GetUploadRequestPrivate(const DeviceFarm::Action action,
+                                   GetUploadRequest * const q);
+    GetUploadRequestPrivate(const GetUploadRequestPrivate &other,
+                                   GetUploadRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetUploadRequest)
+
+};
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

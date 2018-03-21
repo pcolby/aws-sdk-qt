@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_H
 #define QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_H
 
+#include "rdsrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribePendingMaintenanceActionsRequestPrivate;
+
+class QTAWS_EXPORT DescribePendingMaintenanceActionsRequest : public RDSRequest {
+
+public:
+    DescribePendingMaintenanceActionsRequest(const DescribePendingMaintenanceActionsRequest &other);
+    DescribePendingMaintenanceActionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribePendingMaintenanceActionsRequest)
+
+}
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

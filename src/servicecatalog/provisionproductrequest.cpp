@@ -19,3 +19,107 @@
 
 #include "provisionproductrequest.h"
 #include "provisionproductrequest_p.h"
+#include "provisionproductresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  ProvisionProductRequest
+ *
+ * @brief  Implements ServiceCatalog ProvisionProduct requests.
+ *
+ * @see    ServiceCatalogClient::provisionProduct
+ */
+
+/**
+ * @brief  Constructs a new ProvisionProductResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ProvisionProductResponse::ProvisionProductResponse(
+
+/**
+ * @brief  Constructs a new ProvisionProductRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ProvisionProductRequest::ProvisionProductRequest(const ProvisionProductRequest &other)
+    : ServiceCatalogRequest(new ProvisionProductRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ProvisionProductRequest object.
+ */
+ProvisionProductRequest::ProvisionProductRequest()
+    : ServiceCatalogRequest(new ProvisionProductRequestPrivate(ServiceCatalogRequest::ProvisionProductAction, this))
+{
+
+}
+
+bool ProvisionProductRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ProvisionProductResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ProvisionProductResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * ProvisionProductRequest::response(QNetworkReply * const reply) const
+{
+    return new ProvisionProductResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ProvisionProductRequestPrivate
+ *
+ * @brief  Private implementation for ProvisionProductRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ProvisionProductRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public ProvisionProductRequest instance.
+ */
+ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
+    const ServiceCatalogRequest::Action action, ProvisionProductRequest * const q)
+    : ProvisionProductPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ProvisionProductRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ProvisionProductRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ProvisionProductRequest instance.
+ */
+ProvisionProductRequestPrivate::ProvisionProductRequestPrivate(
+    const ProvisionProductRequestPrivate &other, ProvisionProductRequest * const q)
+    : ProvisionProductPrivate(other, q)
+{
+
+}

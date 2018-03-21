@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEREALTIMEENDPOINTREQUEST_P_H
 #define QTAWS_CREATEREALTIMEENDPOINTREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "createrealtimeendpointrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class CreateRealtimeEndpointRequest;
+
+class QTAWS_EXPORT CreateRealtimeEndpointRequestPrivate : public MachineLearningPrivate {
+
+public:
+    CreateRealtimeEndpointRequestPrivate(const MachineLearning::Action action,
+                                   CreateRealtimeEndpointRequest * const q);
+    CreateRealtimeEndpointRequestPrivate(const CreateRealtimeEndpointRequestPrivate &other,
+                                   CreateRealtimeEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateRealtimeEndpointRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

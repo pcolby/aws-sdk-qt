@@ -19,3 +19,107 @@
 
 #include "getlexiconrequest.h"
 #include "getlexiconrequest_p.h"
+#include "getlexiconresponse.h"
+#include "pollyrequest_p.h"
+
+namespace AWS {
+namespace Polly {
+
+/**
+ * @class  GetLexiconRequest
+ *
+ * @brief  Implements Polly GetLexicon requests.
+ *
+ * @see    PollyClient::getLexicon
+ */
+
+/**
+ * @brief  Constructs a new GetLexiconResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetLexiconResponse::GetLexiconResponse(
+
+/**
+ * @brief  Constructs a new GetLexiconRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetLexiconRequest::GetLexiconRequest(const GetLexiconRequest &other)
+    : PollyRequest(new GetLexiconRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetLexiconRequest object.
+ */
+GetLexiconRequest::GetLexiconRequest()
+    : PollyRequest(new GetLexiconRequestPrivate(PollyRequest::GetLexiconAction, this))
+{
+
+}
+
+bool GetLexiconRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetLexiconResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetLexiconResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PollyClient::send
+ */
+AwsAbstractResponse * GetLexiconRequest::response(QNetworkReply * const reply) const
+{
+    return new GetLexiconResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetLexiconRequestPrivate
+ *
+ * @brief  Private implementation for GetLexiconRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLexiconRequestPrivate object.
+ *
+ * @param  action  Polly action being performed.
+ * @param  q       Pointer to this object's public GetLexiconRequest instance.
+ */
+GetLexiconRequestPrivate::GetLexiconRequestPrivate(
+    const PollyRequest::Action action, GetLexiconRequest * const q)
+    : GetLexiconPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetLexiconRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetLexiconRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetLexiconRequest instance.
+ */
+GetLexiconRequestPrivate::GetLexiconRequestPrivate(
+    const GetLexiconRequestPrivate &other, GetLexiconRequest * const q)
+    : GetLexiconPrivate(other, q)
+{
+
+}

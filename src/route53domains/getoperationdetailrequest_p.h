@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOPERATIONDETAILREQUEST_P_H
 #define QTAWS_GETOPERATIONDETAILREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "getoperationdetailrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class GetOperationDetailRequest;
+
+class QTAWS_EXPORT GetOperationDetailRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    GetOperationDetailRequestPrivate(const Route53Domains::Action action,
+                                   GetOperationDetailRequest * const q);
+    GetOperationDetailRequestPrivate(const GetOperationDetailRequestPrivate &other,
+                                   GetOperationDetailRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetOperationDetailRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFPGAIMAGEREQUEST_P_H
 #define QTAWS_DELETEFPGAIMAGEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deletefpgaimagerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFpgaImageRequest;
+
+class QTAWS_EXPORT DeleteFpgaImageRequestPrivate : public EC2Private {
+
+public:
+    DeleteFpgaImageRequestPrivate(const EC2::Action action,
+                                   DeleteFpgaImageRequest * const q);
+    DeleteFpgaImageRequestPrivate(const DeleteFpgaImageRequestPrivate &other,
+                                   DeleteFpgaImageRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFpgaImageRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

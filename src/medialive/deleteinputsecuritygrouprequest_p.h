@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEINPUTSECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETEINPUTSECURITYGROUPREQUEST_P_H
 
+#include "medialive_p.h"
+#include "deleteinputsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class DeleteInputSecurityGroupRequest;
+
+class QTAWS_EXPORT DeleteInputSecurityGroupRequestPrivate : public MediaLivePrivate {
+
+public:
+    DeleteInputSecurityGroupRequestPrivate(const MediaLive::Action action,
+                                   DeleteInputSecurityGroupRequest * const q);
+    DeleteInputSecurityGroupRequestPrivate(const DeleteInputSecurityGroupRequestPrivate &other,
+                                   DeleteInputSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteInputSecurityGroupRequest)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

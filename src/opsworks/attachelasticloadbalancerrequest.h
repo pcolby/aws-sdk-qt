@@ -20,4 +20,32 @@
 #ifndef QTAWS_ATTACHELASTICLOADBALANCERREQUEST_H
 #define QTAWS_ATTACHELASTICLOADBALANCERREQUEST_H
 
+#include "opsworksrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class AttachElasticLoadBalancerRequestPrivate;
+
+class QTAWS_EXPORT AttachElasticLoadBalancerRequest : public OpsWorksRequest {
+
+public:
+    AttachElasticLoadBalancerRequest(const AttachElasticLoadBalancerRequest &other);
+    AttachElasticLoadBalancerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AttachElasticLoadBalancerRequest)
+
+}
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

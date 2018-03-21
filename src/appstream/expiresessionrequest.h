@@ -20,4 +20,32 @@
 #ifndef QTAWS_EXPIRESESSIONREQUEST_H
 #define QTAWS_EXPIRESESSIONREQUEST_H
 
+#include "appstreamrequest.h"
+
+namespace AWS {
+
+namespace AppStream {
+
+class ExpireSessionRequestPrivate;
+
+class QTAWS_EXPORT ExpireSessionRequest : public AppStreamRequest {
+
+public:
+    ExpireSessionRequest(const ExpireSessionRequest &other);
+    ExpireSessionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ExpireSessionRequest)
+
+}
+
+} // namespace AppStream
+} // namespace AWS
+
 #endif

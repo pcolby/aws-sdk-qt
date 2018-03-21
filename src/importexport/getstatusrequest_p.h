@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSTATUSREQUEST_P_H
 #define QTAWS_GETSTATUSREQUEST_P_H
 
+#include "importexport_p.h"
+#include "getstatusrequest.h"
+
+namespace AWS {
+
+namespace ImportExport {
+
+class GetStatusRequest;
+
+class QTAWS_EXPORT GetStatusRequestPrivate : public ImportExportPrivate {
+
+public:
+    GetStatusRequestPrivate(const ImportExport::Action action,
+                                   GetStatusRequest * const q);
+    GetStatusRequestPrivate(const GetStatusRequestPrivate &other,
+                                   GetStatusRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetStatusRequest)
+
+};
+
+} // namespace ImportExport
+} // namespace AWS
+
 #endif

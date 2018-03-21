@@ -19,3 +19,107 @@
 
 #include "sendemailrequest.h"
 #include "sendemailrequest_p.h"
+#include "sendemailresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  SendEmailRequest
+ *
+ * @brief  Implements SES SendEmail requests.
+ *
+ * @see    SESClient::sendEmail
+ */
+
+/**
+ * @brief  Constructs a new SendEmailResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SendEmailResponse::SendEmailResponse(
+
+/**
+ * @brief  Constructs a new SendEmailRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SendEmailRequest::SendEmailRequest(const SendEmailRequest &other)
+    : SESRequest(new SendEmailRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SendEmailRequest object.
+ */
+SendEmailRequest::SendEmailRequest()
+    : SESRequest(new SendEmailRequestPrivate(SESRequest::SendEmailAction, this))
+{
+
+}
+
+bool SendEmailRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SendEmailResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SendEmailResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * const reply) const
+{
+    return new SendEmailResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SendEmailRequestPrivate
+ *
+ * @brief  Private implementation for SendEmailRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendEmailRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public SendEmailRequest instance.
+ */
+SendEmailRequestPrivate::SendEmailRequestPrivate(
+    const SESRequest::Action action, SendEmailRequest * const q)
+    : SendEmailPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SendEmailRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SendEmailRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SendEmailRequest instance.
+ */
+SendEmailRequestPrivate::SendEmailRequestPrivate(
+    const SendEmailRequestPrivate &other, SendEmailRequest * const q)
+    : SendEmailPrivate(other, q)
+{
+
+}

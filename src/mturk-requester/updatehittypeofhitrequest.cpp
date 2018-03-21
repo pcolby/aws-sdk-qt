@@ -19,3 +19,107 @@
 
 #include "updatehittypeofhitrequest.h"
 #include "updatehittypeofhitrequest_p.h"
+#include "updatehittypeofhitresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  UpdateHITTypeOfHITRequest
+ *
+ * @brief  Implements MTurk UpdateHITTypeOfHIT requests.
+ *
+ * @see    MTurkClient::updateHITTypeOfHIT
+ */
+
+/**
+ * @brief  Constructs a new UpdateHITTypeOfHITResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
+
+/**
+ * @brief  Constructs a new UpdateHITTypeOfHITRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest(const UpdateHITTypeOfHITRequest &other)
+    : MTurkRequest(new UpdateHITTypeOfHITRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateHITTypeOfHITRequest object.
+ */
+UpdateHITTypeOfHITRequest::UpdateHITTypeOfHITRequest()
+    : MTurkRequest(new UpdateHITTypeOfHITRequestPrivate(MTurkRequest::UpdateHITTypeOfHITAction, this))
+{
+
+}
+
+bool UpdateHITTypeOfHITRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateHITTypeOfHITResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateHITTypeOfHITResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateHITTypeOfHITResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateHITTypeOfHITRequestPrivate
+ *
+ * @brief  Private implementation for UpdateHITTypeOfHITRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public UpdateHITTypeOfHITRequest instance.
+ */
+UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
+    const MTurkRequest::Action action, UpdateHITTypeOfHITRequest * const q)
+    : UpdateHITTypeOfHITPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateHITTypeOfHITRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateHITTypeOfHITRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateHITTypeOfHITRequest instance.
+ */
+UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
+    const UpdateHITTypeOfHITRequestPrivate &other, UpdateHITTypeOfHITRequest * const q)
+    : UpdateHITTypeOfHITPrivate(other, q)
+{
+
+}

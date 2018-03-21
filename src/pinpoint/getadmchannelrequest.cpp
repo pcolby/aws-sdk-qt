@@ -19,3 +19,107 @@
 
 #include "getadmchannelrequest.h"
 #include "getadmchannelrequest_p.h"
+#include "getadmchannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  GetAdmChannelRequest
+ *
+ * @brief  Implements Pinpoint GetAdmChannel requests.
+ *
+ * @see    PinpointClient::getAdmChannel
+ */
+
+/**
+ * @brief  Constructs a new GetAdmChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAdmChannelResponse::GetAdmChannelResponse(
+
+/**
+ * @brief  Constructs a new GetAdmChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAdmChannelRequest::GetAdmChannelRequest(const GetAdmChannelRequest &other)
+    : PinpointRequest(new GetAdmChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAdmChannelRequest object.
+ */
+GetAdmChannelRequest::GetAdmChannelRequest()
+    : PinpointRequest(new GetAdmChannelRequestPrivate(PinpointRequest::GetAdmChannelAction, this))
+{
+
+}
+
+bool GetAdmChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAdmChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAdmChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAdmChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAdmChannelRequestPrivate
+ *
+ * @brief  Private implementation for GetAdmChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAdmChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public GetAdmChannelRequest instance.
+ */
+GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
+    const PinpointRequest::Action action, GetAdmChannelRequest * const q)
+    : GetAdmChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAdmChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAdmChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAdmChannelRequest instance.
+ */
+GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
+    const GetAdmChannelRequestPrivate &other, GetAdmChannelRequest * const q)
+    : GetAdmChannelPrivate(other, q)
+{
+
+}

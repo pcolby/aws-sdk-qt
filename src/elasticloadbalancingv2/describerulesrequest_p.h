@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBERULESREQUEST_P_H
 #define QTAWS_DESCRIBERULESREQUEST_P_H
 
+#include "elasticloadbalancingv2_p.h"
+#include "describerulesrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class DescribeRulesRequest;
+
+class QTAWS_EXPORT DescribeRulesRequestPrivate : public ElasticLoadBalancingv2Private {
+
+public:
+    DescribeRulesRequestPrivate(const ElasticLoadBalancingv2::Action action,
+                                   DescribeRulesRequest * const q);
+    DescribeRulesRequestPrivate(const DescribeRulesRequestPrivate &other,
+                                   DescribeRulesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeRulesRequest)
+
+};
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

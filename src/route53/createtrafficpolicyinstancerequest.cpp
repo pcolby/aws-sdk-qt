@@ -19,3 +19,107 @@
 
 #include "createtrafficpolicyinstancerequest.h"
 #include "createtrafficpolicyinstancerequest_p.h"
+#include "createtrafficpolicyinstanceresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  CreateTrafficPolicyInstanceRequest
+ *
+ * @brief  Implements Route53 CreateTrafficPolicyInstance requests.
+ *
+ * @see    Route53Client::createTrafficPolicyInstance
+ */
+
+/**
+ * @brief  Constructs a new CreateTrafficPolicyInstanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateTrafficPolicyInstanceResponse::CreateTrafficPolicyInstanceResponse(
+
+/**
+ * @brief  Constructs a new CreateTrafficPolicyInstanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateTrafficPolicyInstanceRequest::CreateTrafficPolicyInstanceRequest(const CreateTrafficPolicyInstanceRequest &other)
+    : Route53Request(new CreateTrafficPolicyInstanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateTrafficPolicyInstanceRequest object.
+ */
+CreateTrafficPolicyInstanceRequest::CreateTrafficPolicyInstanceRequest()
+    : Route53Request(new CreateTrafficPolicyInstanceRequestPrivate(Route53Request::CreateTrafficPolicyInstanceAction, this))
+{
+
+}
+
+bool CreateTrafficPolicyInstanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateTrafficPolicyInstanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateTrafficPolicyInstanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * CreateTrafficPolicyInstanceRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateTrafficPolicyInstanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateTrafficPolicyInstanceRequestPrivate
+ *
+ * @brief  Private implementation for CreateTrafficPolicyInstanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrafficPolicyInstanceRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public CreateTrafficPolicyInstanceRequest instance.
+ */
+CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPrivate(
+    const Route53Request::Action action, CreateTrafficPolicyInstanceRequest * const q)
+    : CreateTrafficPolicyInstancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateTrafficPolicyInstanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateTrafficPolicyInstanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateTrafficPolicyInstanceRequest instance.
+ */
+CreateTrafficPolicyInstanceRequestPrivate::CreateTrafficPolicyInstanceRequestPrivate(
+    const CreateTrafficPolicyInstanceRequestPrivate &other, CreateTrafficPolicyInstanceRequest * const q)
+    : CreateTrafficPolicyInstancePrivate(other, q)
+{
+
+}

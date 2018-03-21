@@ -19,3 +19,107 @@
 
 #include "describeservicesrequest.h"
 #include "describeservicesrequest_p.h"
+#include "describeservicesresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  DescribeServicesRequest
+ *
+ * @brief  Implements ECS DescribeServices requests.
+ *
+ * @see    ECSClient::describeServices
+ */
+
+/**
+ * @brief  Constructs a new DescribeServicesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeServicesResponse::DescribeServicesResponse(
+
+/**
+ * @brief  Constructs a new DescribeServicesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeServicesRequest::DescribeServicesRequest(const DescribeServicesRequest &other)
+    : ECSRequest(new DescribeServicesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeServicesRequest object.
+ */
+DescribeServicesRequest::DescribeServicesRequest()
+    : ECSRequest(new DescribeServicesRequestPrivate(ECSRequest::DescribeServicesAction, this))
+{
+
+}
+
+bool DescribeServicesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeServicesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeServicesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * DescribeServicesRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeServicesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeServicesRequestPrivate
+ *
+ * @brief  Private implementation for DescribeServicesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServicesRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public DescribeServicesRequest instance.
+ */
+DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
+    const ECSRequest::Action action, DescribeServicesRequest * const q)
+    : DescribeServicesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeServicesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeServicesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeServicesRequest instance.
+ */
+DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
+    const DescribeServicesRequestPrivate &other, DescribeServicesRequest * const q)
+    : DescribeServicesPrivate(other, q)
+{
+
+}

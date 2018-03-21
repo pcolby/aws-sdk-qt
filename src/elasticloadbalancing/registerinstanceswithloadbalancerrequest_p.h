@@ -20,4 +20,29 @@
 #ifndef QTAWS_REGISTERINSTANCESWITHLOADBALANCERREQUEST_P_H
 #define QTAWS_REGISTERINSTANCESWITHLOADBALANCERREQUEST_P_H
 
+#include "elasticloadbalancing_p.h"
+#include "registerinstanceswithloadbalancerrequest.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancing {
+
+class RegisterInstancesWithLoadBalancerRequest;
+
+class QTAWS_EXPORT RegisterInstancesWithLoadBalancerRequestPrivate : public ElasticLoadBalancingPrivate {
+
+public:
+    RegisterInstancesWithLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,
+                                   RegisterInstancesWithLoadBalancerRequest * const q);
+    RegisterInstancesWithLoadBalancerRequestPrivate(const RegisterInstancesWithLoadBalancerRequestPrivate &other,
+                                   RegisterInstancesWithLoadBalancerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RegisterInstancesWithLoadBalancerRequest)
+
+};
+
+} // namespace ElasticLoadBalancing
+} // namespace AWS
+
 #endif

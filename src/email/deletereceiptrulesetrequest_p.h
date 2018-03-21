@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERECEIPTRULESETREQUEST_P_H
 #define QTAWS_DELETERECEIPTRULESETREQUEST_P_H
 
+#include "ses_p.h"
+#include "deletereceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class DeleteReceiptRuleSetRequest;
+
+class QTAWS_EXPORT DeleteReceiptRuleSetRequestPrivate : public SESPrivate {
+
+public:
+    DeleteReceiptRuleSetRequestPrivate(const SES::Action action,
+                                   DeleteReceiptRuleSetRequest * const q);
+    DeleteReceiptRuleSetRequestPrivate(const DeleteReceiptRuleSetRequestPrivate &other,
+                                   DeleteReceiptRuleSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteReceiptRuleSetRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

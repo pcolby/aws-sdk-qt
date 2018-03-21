@@ -19,3 +19,107 @@
 
 #include "listoutgoingtypedlinksrequest.h"
 #include "listoutgoingtypedlinksrequest_p.h"
+#include "listoutgoingtypedlinksresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  ListOutgoingTypedLinksRequest
+ *
+ * @brief  Implements CloudDirectory ListOutgoingTypedLinks requests.
+ *
+ * @see    CloudDirectoryClient::listOutgoingTypedLinks
+ */
+
+/**
+ * @brief  Constructs a new ListOutgoingTypedLinksResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListOutgoingTypedLinksResponse::ListOutgoingTypedLinksResponse(
+
+/**
+ * @brief  Constructs a new ListOutgoingTypedLinksRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListOutgoingTypedLinksRequest::ListOutgoingTypedLinksRequest(const ListOutgoingTypedLinksRequest &other)
+    : CloudDirectoryRequest(new ListOutgoingTypedLinksRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListOutgoingTypedLinksRequest object.
+ */
+ListOutgoingTypedLinksRequest::ListOutgoingTypedLinksRequest()
+    : CloudDirectoryRequest(new ListOutgoingTypedLinksRequestPrivate(CloudDirectoryRequest::ListOutgoingTypedLinksAction, this))
+{
+
+}
+
+bool ListOutgoingTypedLinksRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListOutgoingTypedLinksResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListOutgoingTypedLinksResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * ListOutgoingTypedLinksRequest::response(QNetworkReply * const reply) const
+{
+    return new ListOutgoingTypedLinksResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListOutgoingTypedLinksRequestPrivate
+ *
+ * @brief  Private implementation for ListOutgoingTypedLinksRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingTypedLinksRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public ListOutgoingTypedLinksRequest instance.
+ */
+ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
+    const CloudDirectoryRequest::Action action, ListOutgoingTypedLinksRequest * const q)
+    : ListOutgoingTypedLinksPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListOutgoingTypedLinksRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListOutgoingTypedLinksRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListOutgoingTypedLinksRequest instance.
+ */
+ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
+    const ListOutgoingTypedLinksRequestPrivate &other, ListOutgoingTypedLinksRequest * const q)
+    : ListOutgoingTypedLinksPrivate(other, q)
+{
+
+}

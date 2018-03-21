@@ -19,3 +19,107 @@
 
 #include "deregisterscalabletargetrequest.h"
 #include "deregisterscalabletargetrequest_p.h"
+#include "deregisterscalabletargetresponse.h"
+#include "applicationautoscalingrequest_p.h"
+
+namespace AWS {
+namespace ApplicationAutoScaling {
+
+/**
+ * @class  DeregisterScalableTargetRequest
+ *
+ * @brief  Implements ApplicationAutoScaling DeregisterScalableTarget requests.
+ *
+ * @see    ApplicationAutoScalingClient::deregisterScalableTarget
+ */
+
+/**
+ * @brief  Constructs a new DeregisterScalableTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
+
+/**
+ * @brief  Constructs a new DeregisterScalableTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeregisterScalableTargetRequest::DeregisterScalableTargetRequest(const DeregisterScalableTargetRequest &other)
+    : ApplicationAutoScalingRequest(new DeregisterScalableTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeregisterScalableTargetRequest object.
+ */
+DeregisterScalableTargetRequest::DeregisterScalableTargetRequest()
+    : ApplicationAutoScalingRequest(new DeregisterScalableTargetRequestPrivate(ApplicationAutoScalingRequest::DeregisterScalableTargetAction, this))
+{
+
+}
+
+bool DeregisterScalableTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeregisterScalableTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeregisterScalableTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ApplicationAutoScalingClient::send
+ */
+AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeregisterScalableTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeregisterScalableTargetRequestPrivate
+ *
+ * @brief  Private implementation for DeregisterScalableTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterScalableTargetRequestPrivate object.
+ *
+ * @param  action  ApplicationAutoScaling action being performed.
+ * @param  q       Pointer to this object's public DeregisterScalableTargetRequest instance.
+ */
+DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
+    const ApplicationAutoScalingRequest::Action action, DeregisterScalableTargetRequest * const q)
+    : DeregisterScalableTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeregisterScalableTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeregisterScalableTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeregisterScalableTargetRequest instance.
+ */
+DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
+    const DeregisterScalableTargetRequestPrivate &other, DeregisterScalableTargetRequest * const q)
+    : DeregisterScalableTargetPrivate(other, q)
+{
+
+}

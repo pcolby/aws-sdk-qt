@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCECOMPLIANCESUMMARIESREQUEST_H
 #define QTAWS_LISTRESOURCECOMPLIANCESUMMARIESREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListResourceComplianceSummariesRequestPrivate;
+
+class QTAWS_EXPORT ListResourceComplianceSummariesRequest : public SSMRequest {
+
+public:
+    ListResourceComplianceSummariesRequest(const ListResourceComplianceSummariesRequest &other);
+    ListResourceComplianceSummariesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceComplianceSummariesRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

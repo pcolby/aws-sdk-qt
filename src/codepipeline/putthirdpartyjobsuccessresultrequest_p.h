@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTREQUEST_P_H
 #define QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTREQUEST_P_H
 
+#include "codepipeline_p.h"
+#include "putthirdpartyjobsuccessresultrequest.h"
+
+namespace AWS {
+
+namespace CodePipeline {
+
+class PutThirdPartyJobSuccessResultRequest;
+
+class QTAWS_EXPORT PutThirdPartyJobSuccessResultRequestPrivate : public CodePipelinePrivate {
+
+public:
+    PutThirdPartyJobSuccessResultRequestPrivate(const CodePipeline::Action action,
+                                   PutThirdPartyJobSuccessResultRequest * const q);
+    PutThirdPartyJobSuccessResultRequestPrivate(const PutThirdPartyJobSuccessResultRequestPrivate &other,
+                                   PutThirdPartyJobSuccessResultRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutThirdPartyJobSuccessResultRequest)
+
+};
+
+} // namespace CodePipeline
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETHINGGROUPSFORTHINGREQUEST_H
 #define QTAWS_UPDATETHINGGROUPSFORTHINGREQUEST_H
 
+#include "iotrequest.h"
+
+namespace AWS {
+
+namespace IoT {
+
+class UpdateThingGroupsForThingRequestPrivate;
+
+class QTAWS_EXPORT UpdateThingGroupsForThingRequest : public IoTRequest {
+
+public:
+    UpdateThingGroupsForThingRequest(const UpdateThingGroupsForThingRequest &other);
+    UpdateThingGroupsForThingRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateThingGroupsForThingRequest)
+
+}
+
+} // namespace IoT
+} // namespace AWS
+
 #endif

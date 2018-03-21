@@ -19,3 +19,107 @@
 
 #include "getconnectorsrequest.h"
 #include "getconnectorsrequest_p.h"
+#include "getconnectorsresponse.h"
+#include "smsrequest_p.h"
+
+namespace AWS {
+namespace SMS {
+
+/**
+ * @class  GetConnectorsRequest
+ *
+ * @brief  Implements SMS GetConnectors requests.
+ *
+ * @see    SMSClient::getConnectors
+ */
+
+/**
+ * @brief  Constructs a new GetConnectorsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetConnectorsResponse::GetConnectorsResponse(
+
+/**
+ * @brief  Constructs a new GetConnectorsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetConnectorsRequest::GetConnectorsRequest(const GetConnectorsRequest &other)
+    : SMSRequest(new GetConnectorsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetConnectorsRequest object.
+ */
+GetConnectorsRequest::GetConnectorsRequest()
+    : SMSRequest(new GetConnectorsRequestPrivate(SMSRequest::GetConnectorsAction, this))
+{
+
+}
+
+bool GetConnectorsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetConnectorsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetConnectorsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SMSClient::send
+ */
+AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply * const reply) const
+{
+    return new GetConnectorsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetConnectorsRequestPrivate
+ *
+ * @brief  Private implementation for GetConnectorsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectorsRequestPrivate object.
+ *
+ * @param  action  SMS action being performed.
+ * @param  q       Pointer to this object's public GetConnectorsRequest instance.
+ */
+GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
+    const SMSRequest::Action action, GetConnectorsRequest * const q)
+    : GetConnectorsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetConnectorsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetConnectorsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetConnectorsRequest instance.
+ */
+GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
+    const GetConnectorsRequestPrivate &other, GetConnectorsRequest * const q)
+    : GetConnectorsPrivate(other, q)
+{
+
+}

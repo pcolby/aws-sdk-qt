@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEREPLICATIONJOBREQUEST_P_H
 #define QTAWS_UPDATEREPLICATIONJOBREQUEST_P_H
 
+#include "sms_p.h"
+#include "updatereplicationjobrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class UpdateReplicationJobRequest;
+
+class QTAWS_EXPORT UpdateReplicationJobRequestPrivate : public SMSPrivate {
+
+public:
+    UpdateReplicationJobRequestPrivate(const SMS::Action action,
+                                   UpdateReplicationJobRequest * const q);
+    UpdateReplicationJobRequestPrivate(const UpdateReplicationJobRequestPrivate &other,
+                                   UpdateReplicationJobRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateReplicationJobRequest)
+
+};
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

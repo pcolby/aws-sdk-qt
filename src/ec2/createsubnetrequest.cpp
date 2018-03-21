@@ -19,3 +19,107 @@
 
 #include "createsubnetrequest.h"
 #include "createsubnetrequest_p.h"
+#include "createsubnetresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateSubnetRequest
+ *
+ * @brief  Implements EC2 CreateSubnet requests.
+ *
+ * @see    EC2Client::createSubnet
+ */
+
+/**
+ * @brief  Constructs a new CreateSubnetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateSubnetResponse::CreateSubnetResponse(
+
+/**
+ * @brief  Constructs a new CreateSubnetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateSubnetRequest::CreateSubnetRequest(const CreateSubnetRequest &other)
+    : EC2Request(new CreateSubnetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateSubnetRequest object.
+ */
+CreateSubnetRequest::CreateSubnetRequest()
+    : EC2Request(new CreateSubnetRequestPrivate(EC2Request::CreateSubnetAction, this))
+{
+
+}
+
+bool CreateSubnetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateSubnetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateSubnetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateSubnetRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateSubnetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateSubnetRequestPrivate
+ *
+ * @brief  Private implementation for CreateSubnetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSubnetRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateSubnetRequest instance.
+ */
+CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
+    const EC2Request::Action action, CreateSubnetRequest * const q)
+    : CreateSubnetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateSubnetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateSubnetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateSubnetRequest instance.
+ */
+CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
+    const CreateSubnetRequestPrivate &other, CreateSubnetRequest * const q)
+    : CreateSubnetPrivate(other, q)
+{
+
+}

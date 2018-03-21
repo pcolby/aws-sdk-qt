@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEINTENTREQUEST_P_H
 #define QTAWS_DELETEINTENTREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "deleteintentrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteIntentRequest;
+
+class QTAWS_EXPORT DeleteIntentRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    DeleteIntentRequestPrivate(const LexModelBuildingService::Action action,
+                                   DeleteIntentRequest * const q);
+    DeleteIntentRequestPrivate(const DeleteIntentRequestPrivate &other,
+                                   DeleteIntentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteIntentRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

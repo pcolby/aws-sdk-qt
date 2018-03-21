@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATETYPEDLINKFACETREQUEST_P_H
 #define QTAWS_CREATETYPEDLINKFACETREQUEST_P_H
 
+#include "clouddirectory_p.h"
+#include "createtypedlinkfacetrequest.h"
+
+namespace AWS {
+
+namespace CloudDirectory {
+
+class CreateTypedLinkFacetRequest;
+
+class QTAWS_EXPORT CreateTypedLinkFacetRequestPrivate : public CloudDirectoryPrivate {
+
+public:
+    CreateTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,
+                                   CreateTypedLinkFacetRequest * const q);
+    CreateTypedLinkFacetRequestPrivate(const CreateTypedLinkFacetRequestPrivate &other,
+                                   CreateTypedLinkFacetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateTypedLinkFacetRequest)
+
+};
+
+} // namespace CloudDirectory
+} // namespace AWS
+
 #endif

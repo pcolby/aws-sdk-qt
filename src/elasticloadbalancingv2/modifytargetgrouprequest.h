@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYTARGETGROUPREQUEST_H
 #define QTAWS_MODIFYTARGETGROUPREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class ModifyTargetGroupRequestPrivate;
+
+class QTAWS_EXPORT ModifyTargetGroupRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    ModifyTargetGroupRequest(const ModifyTargetGroupRequest &other);
+    ModifyTargetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyTargetGroupRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

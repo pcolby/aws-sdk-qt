@@ -19,3 +19,107 @@
 
 #include "deleteservicespecificcredentialrequest.h"
 #include "deleteservicespecificcredentialrequest_p.h"
+#include "deleteservicespecificcredentialresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  DeleteServiceSpecificCredentialRequest
+ *
+ * @brief  Implements IAM DeleteServiceSpecificCredential requests.
+ *
+ * @see    IAMClient::deleteServiceSpecificCredential
+ */
+
+/**
+ * @brief  Constructs a new DeleteServiceSpecificCredentialResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse(
+
+/**
+ * @brief  Constructs a new DeleteServiceSpecificCredentialRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest(const DeleteServiceSpecificCredentialRequest &other)
+    : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteServiceSpecificCredentialRequest object.
+ */
+DeleteServiceSpecificCredentialRequest::DeleteServiceSpecificCredentialRequest()
+    : IAMRequest(new DeleteServiceSpecificCredentialRequestPrivate(IAMRequest::DeleteServiceSpecificCredentialAction, this))
+{
+
+}
+
+bool DeleteServiceSpecificCredentialRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteServiceSpecificCredentialResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteServiceSpecificCredentialResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteServiceSpecificCredentialResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteServiceSpecificCredentialRequestPrivate
+ *
+ * @brief  Private implementation for DeleteServiceSpecificCredentialRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceSpecificCredentialRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public DeleteServiceSpecificCredentialRequest instance.
+ */
+DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
+    const IAMRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)
+    : DeleteServiceSpecificCredentialPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteServiceSpecificCredentialRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteServiceSpecificCredentialRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteServiceSpecificCredentialRequest instance.
+ */
+DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
+    const DeleteServiceSpecificCredentialRequestPrivate &other, DeleteServiceSpecificCredentialRequest * const q)
+    : DeleteServiceSpecificCredentialPrivate(other, q)
+{
+
+}

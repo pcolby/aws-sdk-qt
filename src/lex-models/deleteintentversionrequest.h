@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEINTENTVERSIONREQUEST_H
 #define QTAWS_DELETEINTENTVERSIONREQUEST_H
 
+#include "lexmodelbuildingservicerequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteIntentVersionRequestPrivate;
+
+class QTAWS_EXPORT DeleteIntentVersionRequest : public LexModelBuildingServiceRequest {
+
+public:
+    DeleteIntentVersionRequest(const DeleteIntentVersionRequest &other);
+    DeleteIntentVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteIntentVersionRequest)
+
+}
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

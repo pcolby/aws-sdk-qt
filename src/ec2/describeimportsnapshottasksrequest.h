@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIMPORTSNAPSHOTTASKSREQUEST_H
 #define QTAWS_DESCRIBEIMPORTSNAPSHOTTASKSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeImportSnapshotTasksRequestPrivate;
+
+class QTAWS_EXPORT DescribeImportSnapshotTasksRequest : public EC2Request {
+
+public:
+    DescribeImportSnapshotTasksRequest(const DescribeImportSnapshotTasksRequest &other);
+    DescribeImportSnapshotTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeImportSnapshotTasksRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

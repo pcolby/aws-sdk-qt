@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEJOBREQUEST_H
 #define QTAWS_UPDATEJOBREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateJobRequestPrivate;
+
+class QTAWS_EXPORT UpdateJobRequest : public GlueRequest {
+
+public:
+    UpdateJobRequest(const UpdateJobRequest &other);
+    UpdateJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateJobRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

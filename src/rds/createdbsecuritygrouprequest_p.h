@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDBSECURITYGROUPREQUEST_P_H
 #define QTAWS_CREATEDBSECURITYGROUPREQUEST_P_H
 
+#include "rds_p.h"
+#include "createdbsecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class CreateDBSecurityGroupRequest;
+
+class QTAWS_EXPORT CreateDBSecurityGroupRequestPrivate : public RDSPrivate {
+
+public:
+    CreateDBSecurityGroupRequestPrivate(const RDS::Action action,
+                                   CreateDBSecurityGroupRequest * const q);
+    CreateDBSecurityGroupRequestPrivate(const CreateDBSecurityGroupRequestPrivate &other,
+                                   CreateDBSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDBSecurityGroupRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

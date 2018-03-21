@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_P_H
 #define QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describeavailablepatchesrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribeAvailablePatchesRequest;
+
+class QTAWS_EXPORT DescribeAvailablePatchesRequestPrivate : public SSMPrivate {
+
+public:
+    DescribeAvailablePatchesRequestPrivate(const SSM::Action action,
+                                   DescribeAvailablePatchesRequest * const q);
+    DescribeAvailablePatchesRequestPrivate(const DescribeAvailablePatchesRequestPrivate &other,
+                                   DescribeAvailablePatchesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeAvailablePatchesRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

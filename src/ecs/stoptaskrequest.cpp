@@ -19,3 +19,107 @@
 
 #include "stoptaskrequest.h"
 #include "stoptaskrequest_p.h"
+#include "stoptaskresponse.h"
+#include "ecsrequest_p.h"
+
+namespace AWS {
+namespace ECS {
+
+/**
+ * @class  StopTaskRequest
+ *
+ * @brief  Implements ECS StopTask requests.
+ *
+ * @see    ECSClient::stopTask
+ */
+
+/**
+ * @brief  Constructs a new StopTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopTaskResponse::StopTaskResponse(
+
+/**
+ * @brief  Constructs a new StopTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopTaskRequest::StopTaskRequest(const StopTaskRequest &other)
+    : ECSRequest(new StopTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopTaskRequest object.
+ */
+StopTaskRequest::StopTaskRequest()
+    : ECSRequest(new StopTaskRequestPrivate(ECSRequest::StopTaskAction, this))
+{
+
+}
+
+bool StopTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ECSClient::send
+ */
+AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new StopTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopTaskRequestPrivate
+ *
+ * @brief  Private implementation for StopTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTaskRequestPrivate object.
+ *
+ * @param  action  ECS action being performed.
+ * @param  q       Pointer to this object's public StopTaskRequest instance.
+ */
+StopTaskRequestPrivate::StopTaskRequestPrivate(
+    const ECSRequest::Action action, StopTaskRequest * const q)
+    : StopTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopTaskRequest instance.
+ */
+StopTaskRequestPrivate::StopTaskRequestPrivate(
+    const StopTaskRequestPrivate &other, StopTaskRequest * const q)
+    : StopTaskPrivate(other, q)
+{
+
+}

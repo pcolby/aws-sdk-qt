@@ -20,4 +20,29 @@
 #ifndef QTAWS_ADDUPLOADBUFFERREQUEST_P_H
 #define QTAWS_ADDUPLOADBUFFERREQUEST_P_H
 
+#include "storagegateway_p.h"
+#include "adduploadbufferrequest.h"
+
+namespace AWS {
+
+namespace StorageGateway {
+
+class AddUploadBufferRequest;
+
+class QTAWS_EXPORT AddUploadBufferRequestPrivate : public StorageGatewayPrivate {
+
+public:
+    AddUploadBufferRequestPrivate(const StorageGateway::Action action,
+                                   AddUploadBufferRequest * const q);
+    AddUploadBufferRequestPrivate(const AddUploadBufferRequestPrivate &other,
+                                   AddUploadBufferRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AddUploadBufferRequest)
+
+};
+
+} // namespace StorageGateway
+} // namespace AWS
+
 #endif

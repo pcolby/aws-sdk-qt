@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSREQUEST_H
 #define QTAWS_LISTBOOTSTRAPACTIONSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class ListBootstrapActionsRequestPrivate;
+
+class QTAWS_EXPORT ListBootstrapActionsRequest : public EMRRequest {
+
+public:
+    ListBootstrapActionsRequest(const ListBootstrapActionsRequest &other);
+    ListBootstrapActionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListBootstrapActionsRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

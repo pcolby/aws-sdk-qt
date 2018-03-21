@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTONPREMISESINSTANCESREQUEST_H
 #define QTAWS_LISTONPREMISESINSTANCESREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class ListOnPremisesInstancesRequestPrivate;
+
+class QTAWS_EXPORT ListOnPremisesInstancesRequest : public CodeDeployRequest {
+
+public:
+    ListOnPremisesInstancesRequest(const ListOnPremisesInstancesRequest &other);
+    ListOnPremisesInstancesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOnPremisesInstancesRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

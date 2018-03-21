@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEDEFAULTSUBNETREQUEST_P_H
 #define QTAWS_CREATEDEFAULTSUBNETREQUEST_P_H
 
+#include "ec2_p.h"
+#include "createdefaultsubnetrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CreateDefaultSubnetRequest;
+
+class QTAWS_EXPORT CreateDefaultSubnetRequestPrivate : public EC2Private {
+
+public:
+    CreateDefaultSubnetRequestPrivate(const EC2::Action action,
+                                   CreateDefaultSubnetRequest * const q);
+    CreateDefaultSubnetRequestPrivate(const CreateDefaultSubnetRequestPrivate &other,
+                                   CreateDefaultSubnetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateDefaultSubnetRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

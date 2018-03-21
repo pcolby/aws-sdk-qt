@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEIDFORMATREQUEST_H
 #define QTAWS_DESCRIBEIDFORMATREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeIdFormatRequestPrivate;
+
+class QTAWS_EXPORT DescribeIdFormatRequest : public EC2Request {
+
+public:
+    DescribeIdFormatRequest(const DescribeIdFormatRequest &other);
+    DescribeIdFormatRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeIdFormatRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

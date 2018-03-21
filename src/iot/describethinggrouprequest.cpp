@@ -19,3 +19,107 @@
 
 #include "describethinggrouprequest.h"
 #include "describethinggrouprequest_p.h"
+#include "describethinggroupresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  DescribeThingGroupRequest
+ *
+ * @brief  Implements IoT DescribeThingGroup requests.
+ *
+ * @see    IoTClient::describeThingGroup
+ */
+
+/**
+ * @brief  Constructs a new DescribeThingGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeThingGroupResponse::DescribeThingGroupResponse(
+
+/**
+ * @brief  Constructs a new DescribeThingGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeThingGroupRequest::DescribeThingGroupRequest(const DescribeThingGroupRequest &other)
+    : IoTRequest(new DescribeThingGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeThingGroupRequest object.
+ */
+DescribeThingGroupRequest::DescribeThingGroupRequest()
+    : IoTRequest(new DescribeThingGroupRequestPrivate(IoTRequest::DescribeThingGroupAction, this))
+{
+
+}
+
+bool DescribeThingGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeThingGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeThingGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * DescribeThingGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeThingGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeThingGroupRequestPrivate
+ *
+ * @brief  Private implementation for DescribeThingGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingGroupRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public DescribeThingGroupRequest instance.
+ */
+DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
+    const IoTRequest::Action action, DescribeThingGroupRequest * const q)
+    : DescribeThingGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeThingGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeThingGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeThingGroupRequest instance.
+ */
+DescribeThingGroupRequestPrivate::DescribeThingGroupRequestPrivate(
+    const DescribeThingGroupRequestPrivate &other, DescribeThingGroupRequest * const q)
+    : DescribeThingGroupPrivate(other, q)
+{
+
+}

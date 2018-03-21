@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETESTREAMINGDISTRIBUTIONREQUEST_H
 #define QTAWS_DELETESTREAMINGDISTRIBUTIONREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class DeleteStreamingDistributionRequestPrivate;
+
+class QTAWS_EXPORT DeleteStreamingDistributionRequest : public CloudFrontRequest {
+
+public:
+    DeleteStreamingDistributionRequest(const DeleteStreamingDistributionRequest &other);
+    DeleteStreamingDistributionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteStreamingDistributionRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

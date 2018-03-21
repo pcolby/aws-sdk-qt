@@ -20,4 +20,32 @@
 #ifndef QTAWS_STOPAPPLICATIONREQUEST_H
 #define QTAWS_STOPAPPLICATIONREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class StopApplicationRequestPrivate;
+
+class QTAWS_EXPORT StopApplicationRequest : public KinesisAnalyticsRequest {
+
+public:
+    StopApplicationRequest(const StopApplicationRequest &other);
+    StopApplicationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(StopApplicationRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

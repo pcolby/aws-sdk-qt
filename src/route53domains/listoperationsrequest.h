@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOPERATIONSREQUEST_H
 #define QTAWS_LISTOPERATIONSREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class ListOperationsRequestPrivate;
+
+class QTAWS_EXPORT ListOperationsRequest : public Route53DomainsRequest {
+
+public:
+    ListOperationsRequest(const ListOperationsRequest &other);
+    ListOperationsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListOperationsRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

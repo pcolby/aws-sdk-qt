@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEKMSKEYREQUEST_P_H
 #define QTAWS_DISASSOCIATEKMSKEYREQUEST_P_H
 
+#include "cloudwatchlogs_p.h"
+#include "disassociatekmskeyrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchLogs {
+
+class DisassociateKmsKeyRequest;
+
+class QTAWS_EXPORT DisassociateKmsKeyRequestPrivate : public CloudWatchLogsPrivate {
+
+public:
+    DisassociateKmsKeyRequestPrivate(const CloudWatchLogs::Action action,
+                                   DisassociateKmsKeyRequest * const q);
+    DisassociateKmsKeyRequestPrivate(const DisassociateKmsKeyRequestPrivate &other,
+                                   DisassociateKmsKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateKmsKeyRequest)
+
+};
+
+} // namespace CloudWatchLogs
+} // namespace AWS
+
 #endif

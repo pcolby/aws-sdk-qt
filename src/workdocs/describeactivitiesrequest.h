@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEACTIVITIESREQUEST_H
 #define QTAWS_DESCRIBEACTIVITIESREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class DescribeActivitiesRequestPrivate;
+
+class QTAWS_EXPORT DescribeActivitiesRequest : public WorkDocsRequest {
+
+public:
+    DescribeActivitiesRequest(const DescribeActivitiesRequest &other);
+    DescribeActivitiesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeActivitiesRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

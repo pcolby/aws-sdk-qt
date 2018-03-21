@@ -19,3 +19,107 @@
 
 #include "updatecommentrequest.h"
 #include "updatecommentrequest_p.h"
+#include "updatecommentresponse.h"
+#include "codecommitrequest_p.h"
+
+namespace AWS {
+namespace CodeCommit {
+
+/**
+ * @class  UpdateCommentRequest
+ *
+ * @brief  Implements CodeCommit UpdateComment requests.
+ *
+ * @see    CodeCommitClient::updateComment
+ */
+
+/**
+ * @brief  Constructs a new UpdateCommentResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCommentResponse::UpdateCommentResponse(
+
+/**
+ * @brief  Constructs a new UpdateCommentRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCommentRequest::UpdateCommentRequest(const UpdateCommentRequest &other)
+    : CodeCommitRequest(new UpdateCommentRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCommentRequest object.
+ */
+UpdateCommentRequest::UpdateCommentRequest()
+    : CodeCommitRequest(new UpdateCommentRequestPrivate(CodeCommitRequest::UpdateCommentAction, this))
+{
+
+}
+
+bool UpdateCommentRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCommentResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCommentResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CodeCommitClient::send
+ */
+AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCommentResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCommentRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCommentRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCommentRequestPrivate object.
+ *
+ * @param  action  CodeCommit action being performed.
+ * @param  q       Pointer to this object's public UpdateCommentRequest instance.
+ */
+UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
+    const CodeCommitRequest::Action action, UpdateCommentRequest * const q)
+    : UpdateCommentPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCommentRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCommentRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCommentRequest instance.
+ */
+UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
+    const UpdateCommentRequestPrivate &other, UpdateCommentRequest * const q)
+    : UpdateCommentPrivate(other, q)
+{
+
+}

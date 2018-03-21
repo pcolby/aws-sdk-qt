@@ -20,4 +20,32 @@
 #ifndef QTAWS_REGISTERDOMAINREQUEST_H
 #define QTAWS_REGISTERDOMAINREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class RegisterDomainRequestPrivate;
+
+class QTAWS_EXPORT RegisterDomainRequest : public SWFRequest {
+
+public:
+    RegisterDomainRequest(const RegisterDomainRequest &other);
+    RegisterDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RegisterDomainRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

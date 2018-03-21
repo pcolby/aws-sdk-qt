@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATESTACKREQUEST_P_H
 #define QTAWS_UPDATESTACKREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "updatestackrequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class UpdateStackRequest;
+
+class QTAWS_EXPORT UpdateStackRequestPrivate : public OpsWorksPrivate {
+
+public:
+    UpdateStackRequestPrivate(const OpsWorks::Action action,
+                                   UpdateStackRequest * const q);
+    UpdateStackRequestPrivate(const UpdateStackRequestPrivate &other,
+                                   UpdateStackRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateStackRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

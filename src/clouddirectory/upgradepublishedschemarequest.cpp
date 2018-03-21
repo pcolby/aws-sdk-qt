@@ -19,3 +19,107 @@
 
 #include "upgradepublishedschemarequest.h"
 #include "upgradepublishedschemarequest_p.h"
+#include "upgradepublishedschemaresponse.h"
+#include "clouddirectoryrequest_p.h"
+
+namespace AWS {
+namespace CloudDirectory {
+
+/**
+ * @class  UpgradePublishedSchemaRequest
+ *
+ * @brief  Implements CloudDirectory UpgradePublishedSchema requests.
+ *
+ * @see    CloudDirectoryClient::upgradePublishedSchema
+ */
+
+/**
+ * @brief  Constructs a new UpgradePublishedSchemaResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpgradePublishedSchemaResponse::UpgradePublishedSchemaResponse(
+
+/**
+ * @brief  Constructs a new UpgradePublishedSchemaRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpgradePublishedSchemaRequest::UpgradePublishedSchemaRequest(const UpgradePublishedSchemaRequest &other)
+    : CloudDirectoryRequest(new UpgradePublishedSchemaRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpgradePublishedSchemaRequest object.
+ */
+UpgradePublishedSchemaRequest::UpgradePublishedSchemaRequest()
+    : CloudDirectoryRequest(new UpgradePublishedSchemaRequestPrivate(CloudDirectoryRequest::UpgradePublishedSchemaAction, this))
+{
+
+}
+
+bool UpgradePublishedSchemaRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpgradePublishedSchemaResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpgradePublishedSchemaResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudDirectoryClient::send
+ */
+AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetworkReply * const reply) const
+{
+    return new UpgradePublishedSchemaResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpgradePublishedSchemaRequestPrivate
+ *
+ * @brief  Private implementation for UpgradePublishedSchemaRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpgradePublishedSchemaRequestPrivate object.
+ *
+ * @param  action  CloudDirectory action being performed.
+ * @param  q       Pointer to this object's public UpgradePublishedSchemaRequest instance.
+ */
+UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
+    const CloudDirectoryRequest::Action action, UpgradePublishedSchemaRequest * const q)
+    : UpgradePublishedSchemaPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpgradePublishedSchemaRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpgradePublishedSchemaRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpgradePublishedSchemaRequest instance.
+ */
+UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
+    const UpgradePublishedSchemaRequestPrivate &other, UpgradePublishedSchemaRequest * const q)
+    : UpgradePublishedSchemaPrivate(other, q)
+{
+
+}

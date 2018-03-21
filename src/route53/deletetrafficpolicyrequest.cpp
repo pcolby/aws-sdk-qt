@@ -19,3 +19,107 @@
 
 #include "deletetrafficpolicyrequest.h"
 #include "deletetrafficpolicyrequest_p.h"
+#include "deletetrafficpolicyresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  DeleteTrafficPolicyRequest
+ *
+ * @brief  Implements Route53 DeleteTrafficPolicy requests.
+ *
+ * @see    Route53Client::deleteTrafficPolicy
+ */
+
+/**
+ * @brief  Constructs a new DeleteTrafficPolicyResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTrafficPolicyResponse::DeleteTrafficPolicyResponse(
+
+/**
+ * @brief  Constructs a new DeleteTrafficPolicyRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest(const DeleteTrafficPolicyRequest &other)
+    : Route53Request(new DeleteTrafficPolicyRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteTrafficPolicyRequest object.
+ */
+DeleteTrafficPolicyRequest::DeleteTrafficPolicyRequest()
+    : Route53Request(new DeleteTrafficPolicyRequestPrivate(Route53Request::DeleteTrafficPolicyAction, this))
+{
+
+}
+
+bool DeleteTrafficPolicyRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteTrafficPolicyResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteTrafficPolicyResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteTrafficPolicyResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTrafficPolicyRequestPrivate
+ *
+ * @brief  Private implementation for DeleteTrafficPolicyRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public DeleteTrafficPolicyRequest instance.
+ */
+DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
+    const Route53Request::Action action, DeleteTrafficPolicyRequest * const q)
+    : DeleteTrafficPolicyPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrafficPolicyRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteTrafficPolicyRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteTrafficPolicyRequest instance.
+ */
+DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
+    const DeleteTrafficPolicyRequestPrivate &other, DeleteTrafficPolicyRequest * const q)
+    : DeleteTrafficPolicyPrivate(other, q)
+{
+
+}

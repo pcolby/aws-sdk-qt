@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERULEREQUEST_P_H
 #define QTAWS_DELETERULEREQUEST_P_H
 
+#include "waf_p.h"
+#include "deleterulerequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteRuleRequest;
+
+class QTAWS_EXPORT DeleteRuleRequestPrivate : public WAFPrivate {
+
+public:
+    DeleteRuleRequestPrivate(const WAF::Action action,
+                                   DeleteRuleRequest * const q);
+    DeleteRuleRequestPrivate(const DeleteRuleRequestPrivate &other,
+                                   DeleteRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRuleRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

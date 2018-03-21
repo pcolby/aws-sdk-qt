@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETOBJECTTAGGINGREQUEST_P_H
 #define QTAWS_GETOBJECTTAGGINGREQUEST_P_H
 
+#include "s3_p.h"
+#include "getobjecttaggingrequest.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class GetObjectTaggingRequest;
+
+class QTAWS_EXPORT GetObjectTaggingRequestPrivate : public S3Private {
+
+public:
+    GetObjectTaggingRequestPrivate(const S3::Action action,
+                                   GetObjectTaggingRequest * const q);
+    GetObjectTaggingRequestPrivate(const GetObjectTaggingRequestPrivate &other,
+                                   GetObjectTaggingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetObjectTaggingRequest)
+
+};
+
+} // namespace S3
+} // namespace AWS
+
 #endif

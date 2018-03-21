@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYCACHEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_MODIFYCACHEPARAMETERGROUPREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "modifycacheparametergrouprequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class ModifyCacheParameterGroupRequest;
+
+class QTAWS_EXPORT ModifyCacheParameterGroupRequestPrivate : public ElastiCachePrivate {
+
+public:
+    ModifyCacheParameterGroupRequestPrivate(const ElastiCache::Action action,
+                                   ModifyCacheParameterGroupRequest * const q);
+    ModifyCacheParameterGroupRequestPrivate(const ModifyCacheParameterGroupRequestPrivate &other,
+                                   ModifyCacheParameterGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyCacheParameterGroupRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

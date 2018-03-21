@@ -19,3 +19,107 @@
 
 #include "getaccountbalancerequest.h"
 #include "getaccountbalancerequest_p.h"
+#include "getaccountbalanceresponse.h"
+#include "mturkrequest_p.h"
+
+namespace AWS {
+namespace MTurk {
+
+/**
+ * @class  GetAccountBalanceRequest
+ *
+ * @brief  Implements MTurk GetAccountBalance requests.
+ *
+ * @see    MTurkClient::getAccountBalance
+ */
+
+/**
+ * @brief  Constructs a new GetAccountBalanceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetAccountBalanceResponse::GetAccountBalanceResponse(
+
+/**
+ * @brief  Constructs a new GetAccountBalanceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetAccountBalanceRequest::GetAccountBalanceRequest(const GetAccountBalanceRequest &other)
+    : MTurkRequest(new GetAccountBalanceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetAccountBalanceRequest object.
+ */
+GetAccountBalanceRequest::GetAccountBalanceRequest()
+    : MTurkRequest(new GetAccountBalanceRequestPrivate(MTurkRequest::GetAccountBalanceAction, this))
+{
+
+}
+
+bool GetAccountBalanceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetAccountBalanceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetAccountBalanceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MTurkClient::send
+ */
+AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetAccountBalanceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetAccountBalanceRequestPrivate
+ *
+ * @brief  Private implementation for GetAccountBalanceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountBalanceRequestPrivate object.
+ *
+ * @param  action  MTurk action being performed.
+ * @param  q       Pointer to this object's public GetAccountBalanceRequest instance.
+ */
+GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
+    const MTurkRequest::Action action, GetAccountBalanceRequest * const q)
+    : GetAccountBalancePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetAccountBalanceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetAccountBalanceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetAccountBalanceRequest instance.
+ */
+GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
+    const GetAccountBalanceRequestPrivate &other, GetAccountBalanceRequest * const q)
+    : GetAccountBalancePrivate(other, q)
+{
+
+}

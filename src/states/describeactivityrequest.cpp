@@ -19,3 +19,107 @@
 
 #include "describeactivityrequest.h"
 #include "describeactivityrequest_p.h"
+#include "describeactivityresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DescribeActivityRequest
+ *
+ * @brief  Implements SFN DescribeActivity requests.
+ *
+ * @see    SFNClient::describeActivity
+ */
+
+/**
+ * @brief  Constructs a new DescribeActivityResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeActivityResponse::DescribeActivityResponse(
+
+/**
+ * @brief  Constructs a new DescribeActivityRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeActivityRequest::DescribeActivityRequest(const DescribeActivityRequest &other)
+    : SFNRequest(new DescribeActivityRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeActivityRequest object.
+ */
+DescribeActivityRequest::DescribeActivityRequest()
+    : SFNRequest(new DescribeActivityRequestPrivate(SFNRequest::DescribeActivityAction, this))
+{
+
+}
+
+bool DescribeActivityRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeActivityResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeActivityResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * DescribeActivityRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeActivityResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeActivityRequestPrivate
+ *
+ * @brief  Private implementation for DescribeActivityRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivityRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public DescribeActivityRequest instance.
+ */
+DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
+    const SFNRequest::Action action, DescribeActivityRequest * const q)
+    : DescribeActivityPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeActivityRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeActivityRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeActivityRequest instance.
+ */
+DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
+    const DescribeActivityRequestPrivate &other, DescribeActivityRequest * const q)
+    : DescribeActivityPrivate(other, q)
+{
+
+}

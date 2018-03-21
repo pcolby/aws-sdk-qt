@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEHOSTEDZONECOMMENTREQUEST_P_H
 #define QTAWS_UPDATEHOSTEDZONECOMMENTREQUEST_P_H
 
+#include "route53_p.h"
+#include "updatehostedzonecommentrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class UpdateHostedZoneCommentRequest;
+
+class QTAWS_EXPORT UpdateHostedZoneCommentRequestPrivate : public Route53Private {
+
+public:
+    UpdateHostedZoneCommentRequestPrivate(const Route53::Action action,
+                                   UpdateHostedZoneCommentRequest * const q);
+    UpdateHostedZoneCommentRequestPrivate(const UpdateHostedZoneCommentRequestPrivate &other,
+                                   UpdateHostedZoneCommentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateHostedZoneCommentRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

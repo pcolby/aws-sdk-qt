@@ -20,4 +20,32 @@
 #ifndef QTAWS_RESOLVEALIASREQUEST_H
 #define QTAWS_RESOLVEALIASREQUEST_H
 
+#include "gameliftrequest.h"
+
+namespace AWS {
+
+namespace GameLift {
+
+class ResolveAliasRequestPrivate;
+
+class QTAWS_EXPORT ResolveAliasRequest : public GameLiftRequest {
+
+public:
+    ResolveAliasRequest(const ResolveAliasRequest &other);
+    ResolveAliasRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ResolveAliasRequest)
+
+}
+
+} // namespace GameLift
+} // namespace AWS
+
 #endif

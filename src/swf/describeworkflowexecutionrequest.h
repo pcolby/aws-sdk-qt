@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEWORKFLOWEXECUTIONREQUEST_H
 #define QTAWS_DESCRIBEWORKFLOWEXECUTIONREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class DescribeWorkflowExecutionRequestPrivate;
+
+class QTAWS_EXPORT DescribeWorkflowExecutionRequest : public SWFRequest {
+
+public:
+    DescribeWorkflowExecutionRequest(const DescribeWorkflowExecutionRequest &other);
+    DescribeWorkflowExecutionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeWorkflowExecutionRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

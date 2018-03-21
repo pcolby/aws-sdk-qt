@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEDISCOVEREDRESOURCEREQUEST_P_H
 #define QTAWS_ASSOCIATEDISCOVEREDRESOURCEREQUEST_P_H
 
+#include "migrationhub_p.h"
+#include "associatediscoveredresourcerequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class AssociateDiscoveredResourceRequest;
+
+class QTAWS_EXPORT AssociateDiscoveredResourceRequestPrivate : public MigrationHubPrivate {
+
+public:
+    AssociateDiscoveredResourceRequestPrivate(const MigrationHub::Action action,
+                                   AssociateDiscoveredResourceRequest * const q);
+    AssociateDiscoveredResourceRequestPrivate(const AssociateDiscoveredResourceRequestPrivate &other,
+                                   AssociateDiscoveredResourceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateDiscoveredResourceRequest)
+
+};
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

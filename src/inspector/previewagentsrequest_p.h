@@ -20,4 +20,29 @@
 #ifndef QTAWS_PREVIEWAGENTSREQUEST_P_H
 #define QTAWS_PREVIEWAGENTSREQUEST_P_H
 
+#include "inspector_p.h"
+#include "previewagentsrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class PreviewAgentsRequest;
+
+class QTAWS_EXPORT PreviewAgentsRequestPrivate : public InspectorPrivate {
+
+public:
+    PreviewAgentsRequestPrivate(const Inspector::Action action,
+                                   PreviewAgentsRequest * const q);
+    PreviewAgentsRequestPrivate(const PreviewAgentsRequestPrivate &other,
+                                   PreviewAgentsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PreviewAgentsRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

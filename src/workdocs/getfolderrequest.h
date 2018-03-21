@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETFOLDERREQUEST_H
 #define QTAWS_GETFOLDERREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetFolderRequestPrivate;
+
+class QTAWS_EXPORT GetFolderRequest : public WorkDocsRequest {
+
+public:
+    GetFolderRequest(const GetFolderRequest &other);
+    GetFolderRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetFolderRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

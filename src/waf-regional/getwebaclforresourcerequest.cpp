@@ -19,3 +19,107 @@
 
 #include "getwebaclforresourcerequest.h"
 #include "getwebaclforresourcerequest_p.h"
+#include "getwebaclforresourceresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetWebACLForResourceRequest
+ *
+ * @brief  Implements WAFRegional GetWebACLForResource requests.
+ *
+ * @see    WAFRegionalClient::getWebACLForResource
+ */
+
+/**
+ * @brief  Constructs a new GetWebACLForResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetWebACLForResourceResponse::GetWebACLForResourceResponse(
+
+/**
+ * @brief  Constructs a new GetWebACLForResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetWebACLForResourceRequest::GetWebACLForResourceRequest(const GetWebACLForResourceRequest &other)
+    : WAFRegionalRequest(new GetWebACLForResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetWebACLForResourceRequest object.
+ */
+GetWebACLForResourceRequest::GetWebACLForResourceRequest()
+    : WAFRegionalRequest(new GetWebACLForResourceRequestPrivate(WAFRegionalRequest::GetWebACLForResourceAction, this))
+{
+
+}
+
+bool GetWebACLForResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetWebACLForResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetWebACLForResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetWebACLForResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new GetWebACLForResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetWebACLForResourceRequestPrivate
+ *
+ * @brief  Private implementation for GetWebACLForResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetWebACLForResourceRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetWebACLForResourceRequest instance.
+ */
+GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
+    const WAFRegionalRequest::Action action, GetWebACLForResourceRequest * const q)
+    : GetWebACLForResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetWebACLForResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetWebACLForResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetWebACLForResourceRequest instance.
+ */
+GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
+    const GetWebACLForResourceRequestPrivate &other, GetWebACLForResourceRequest * const q)
+    : GetWebACLForResourcePrivate(other, q)
+{
+
+}

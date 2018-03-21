@@ -19,3 +19,107 @@
 
 #include "defineexpressionrequest.h"
 #include "defineexpressionrequest_p.h"
+#include "defineexpressionresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineExpressionRequest
+ *
+ * @brief  Implements CloudSearch DefineExpression requests.
+ *
+ * @see    CloudSearchClient::defineExpression
+ */
+
+/**
+ * @brief  Constructs a new DefineExpressionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineExpressionResponse::DefineExpressionResponse(
+
+/**
+ * @brief  Constructs a new DefineExpressionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DefineExpressionRequest::DefineExpressionRequest(const DefineExpressionRequest &other)
+    : CloudSearchRequest(new DefineExpressionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DefineExpressionRequest object.
+ */
+DefineExpressionRequest::DefineExpressionRequest()
+    : CloudSearchRequest(new DefineExpressionRequestPrivate(CloudSearchRequest::DefineExpressionAction, this))
+{
+
+}
+
+bool DefineExpressionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DefineExpressionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DefineExpressionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DefineExpressionRequest::response(QNetworkReply * const reply) const
+{
+    return new DefineExpressionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineExpressionRequestPrivate
+ *
+ * @brief  Private implementation for DefineExpressionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineExpressionRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DefineExpressionRequest instance.
+ */
+DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
+    const CloudSearchRequest::Action action, DefineExpressionRequest * const q)
+    : DefineExpressionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineExpressionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DefineExpressionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DefineExpressionRequest instance.
+ */
+DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
+    const DefineExpressionRequestPrivate &other, DefineExpressionRequest * const q)
+    : DefineExpressionPrivate(other, q)
+{
+
+}

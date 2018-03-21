@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISABLERADIUSREQUEST_H
 #define QTAWS_DISABLERADIUSREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DisableRadiusRequestPrivate;
+
+class QTAWS_EXPORT DisableRadiusRequest : public DirectoryServiceRequest {
+
+public:
+    DisableRadiusRequest(const DisableRadiusRequest &other);
+    DisableRadiusRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisableRadiusRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif

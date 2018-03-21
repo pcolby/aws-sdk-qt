@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEJOBFLOWSREQUEST_H
 #define QTAWS_DESCRIBEJOBFLOWSREQUEST_H
 
+#include "emrrequest.h"
+
+namespace AWS {
+
+namespace EMR {
+
+class DescribeJobFlowsRequestPrivate;
+
+class QTAWS_EXPORT DescribeJobFlowsRequest : public EMRRequest {
+
+public:
+    DescribeJobFlowsRequest(const DescribeJobFlowsRequest &other);
+    DescribeJobFlowsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeJobFlowsRequest)
+
+}
+
+} // namespace EMR
+} // namespace AWS
+
 #endif

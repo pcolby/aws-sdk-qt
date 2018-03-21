@@ -20,4 +20,32 @@
 #ifndef QTAWS_INITIALIZECLUSTERREQUEST_H
 #define QTAWS_INITIALIZECLUSTERREQUEST_H
 
+#include "cloudhsmv2request.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class InitializeClusterRequestPrivate;
+
+class QTAWS_EXPORT InitializeClusterRequest : public CloudHSMV2Request {
+
+public:
+    InitializeClusterRequest(const InitializeClusterRequest &other);
+    InitializeClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(InitializeClusterRequest)
+
+}
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

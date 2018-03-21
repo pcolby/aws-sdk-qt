@@ -20,4 +20,29 @@
 #ifndef QTAWS_SEARCHRESOURCESREQUEST_P_H
 #define QTAWS_SEARCHRESOURCESREQUEST_P_H
 
+#include "resourcegroups_p.h"
+#include "searchresourcesrequest.h"
+
+namespace AWS {
+
+namespace ResourceGroups {
+
+class SearchResourcesRequest;
+
+class QTAWS_EXPORT SearchResourcesRequestPrivate : public ResourceGroupsPrivate {
+
+public:
+    SearchResourcesRequestPrivate(const ResourceGroups::Action action,
+                                   SearchResourcesRequest * const q);
+    SearchResourcesRequestPrivate(const SearchResourcesRequestPrivate &other,
+                                   SearchResourcesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(SearchResourcesRequest)
+
+};
+
+} // namespace ResourceGroups
+} // namespace AWS
+
 #endif

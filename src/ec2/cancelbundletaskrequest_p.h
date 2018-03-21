@@ -20,4 +20,29 @@
 #ifndef QTAWS_CANCELBUNDLETASKREQUEST_P_H
 #define QTAWS_CANCELBUNDLETASKREQUEST_P_H
 
+#include "ec2_p.h"
+#include "cancelbundletaskrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class CancelBundleTaskRequest;
+
+class QTAWS_EXPORT CancelBundleTaskRequestPrivate : public EC2Private {
+
+public:
+    CancelBundleTaskRequestPrivate(const EC2::Action action,
+                                   CancelBundleTaskRequest * const q);
+    CancelBundleTaskRequestPrivate(const CancelBundleTaskRequestPrivate &other,
+                                   CancelBundleTaskRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CancelBundleTaskRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

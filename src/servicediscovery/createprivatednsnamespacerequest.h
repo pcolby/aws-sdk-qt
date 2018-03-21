@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEPRIVATEDNSNAMESPACEREQUEST_H
 #define QTAWS_CREATEPRIVATEDNSNAMESPACEREQUEST_H
 
+#include "servicediscoveryrequest.h"
+
+namespace AWS {
+
+namespace ServiceDiscovery {
+
+class CreatePrivateDnsNamespaceRequestPrivate;
+
+class QTAWS_EXPORT CreatePrivateDnsNamespaceRequest : public ServiceDiscoveryRequest {
+
+public:
+    CreatePrivateDnsNamespaceRequest(const CreatePrivateDnsNamespaceRequest &other);
+    CreatePrivateDnsNamespaceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreatePrivateDnsNamespaceRequest)
+
+}
+
+} // namespace ServiceDiscovery
+} // namespace AWS
+
 #endif

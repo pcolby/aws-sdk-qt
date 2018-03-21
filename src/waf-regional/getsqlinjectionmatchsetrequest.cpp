@@ -19,3 +19,107 @@
 
 #include "getsqlinjectionmatchsetrequest.h"
 #include "getsqlinjectionmatchsetrequest_p.h"
+#include "getsqlinjectionmatchsetresponse.h"
+#include "wafregionalrequest_p.h"
+
+namespace AWS {
+namespace WAFRegional {
+
+/**
+ * @class  GetSqlInjectionMatchSetRequest
+ *
+ * @brief  Implements WAFRegional GetSqlInjectionMatchSet requests.
+ *
+ * @see    WAFRegionalClient::getSqlInjectionMatchSet
+ */
+
+/**
+ * @brief  Constructs a new GetSqlInjectionMatchSetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetSqlInjectionMatchSetResponse::GetSqlInjectionMatchSetResponse(
+
+/**
+ * @brief  Constructs a new GetSqlInjectionMatchSetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest(const GetSqlInjectionMatchSetRequest &other)
+    : WAFRegionalRequest(new GetSqlInjectionMatchSetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetSqlInjectionMatchSetRequest object.
+ */
+GetSqlInjectionMatchSetRequest::GetSqlInjectionMatchSetRequest()
+    : WAFRegionalRequest(new GetSqlInjectionMatchSetRequestPrivate(WAFRegionalRequest::GetSqlInjectionMatchSetAction, this))
+{
+
+}
+
+bool GetSqlInjectionMatchSetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetSqlInjectionMatchSetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetSqlInjectionMatchSetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WAFRegionalClient::send
+ */
+AwsAbstractResponse * GetSqlInjectionMatchSetRequest::response(QNetworkReply * const reply) const
+{
+    return new GetSqlInjectionMatchSetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetSqlInjectionMatchSetRequestPrivate
+ *
+ * @brief  Private implementation for GetSqlInjectionMatchSetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object.
+ *
+ * @param  action  WAFRegional action being performed.
+ * @param  q       Pointer to this object's public GetSqlInjectionMatchSetRequest instance.
+ */
+GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
+    const WAFRegionalRequest::Action action, GetSqlInjectionMatchSetRequest * const q)
+    : GetSqlInjectionMatchSetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetSqlInjectionMatchSetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetSqlInjectionMatchSetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetSqlInjectionMatchSetRequest instance.
+ */
+GetSqlInjectionMatchSetRequestPrivate::GetSqlInjectionMatchSetRequestPrivate(
+    const GetSqlInjectionMatchSetRequestPrivate &other, GetSqlInjectionMatchSetRequest * const q)
+    : GetSqlInjectionMatchSetPrivate(other, q)
+{
+
+}

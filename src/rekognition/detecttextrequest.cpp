@@ -19,3 +19,107 @@
 
 #include "detecttextrequest.h"
 #include "detecttextrequest_p.h"
+#include "detecttextresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  DetectTextRequest
+ *
+ * @brief  Implements Rekognition DetectText requests.
+ *
+ * @see    RekognitionClient::detectText
+ */
+
+/**
+ * @brief  Constructs a new DetectTextResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetectTextResponse::DetectTextResponse(
+
+/**
+ * @brief  Constructs a new DetectTextRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetectTextRequest::DetectTextRequest(const DetectTextRequest &other)
+    : RekognitionRequest(new DetectTextRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetectTextRequest object.
+ */
+DetectTextRequest::DetectTextRequest()
+    : RekognitionRequest(new DetectTextRequestPrivate(RekognitionRequest::DetectTextAction, this))
+{
+
+}
+
+bool DetectTextRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetectTextResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetectTextResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * const reply) const
+{
+    return new DetectTextResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetectTextRequestPrivate
+ *
+ * @brief  Private implementation for DetectTextRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectTextRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public DetectTextRequest instance.
+ */
+DetectTextRequestPrivate::DetectTextRequestPrivate(
+    const RekognitionRequest::Action action, DetectTextRequest * const q)
+    : DetectTextPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetectTextRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetectTextRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetectTextRequest instance.
+ */
+DetectTextRequestPrivate::DetectTextRequestPrivate(
+    const DetectTextRequestPrivate &other, DetectTextRequest * const q)
+    : DetectTextPrivate(other, q)
+{
+
+}

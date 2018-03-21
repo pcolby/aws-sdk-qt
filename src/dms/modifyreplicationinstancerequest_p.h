@@ -20,4 +20,29 @@
 #ifndef QTAWS_MODIFYREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_MODIFYREPLICATIONINSTANCEREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "modifyreplicationinstancerequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ModifyReplicationInstanceRequest;
+
+class QTAWS_EXPORT ModifyReplicationInstanceRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    ModifyReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,
+                                   ModifyReplicationInstanceRequest * const q);
+    ModifyReplicationInstanceRequestPrivate(const ModifyReplicationInstanceRequestPrivate &other,
+                                   ModifyReplicationInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ModifyReplicationInstanceRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEDBLOGFILESREQUEST_P_H
 #define QTAWS_DESCRIBEDBLOGFILESREQUEST_P_H
 
+#include "rds_p.h"
+#include "describedblogfilesrequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class DescribeDBLogFilesRequest;
+
+class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RDSPrivate {
+
+public:
+    DescribeDBLogFilesRequestPrivate(const RDS::Action action,
+                                   DescribeDBLogFilesRequest * const q);
+    DescribeDBLogFilesRequestPrivate(const DescribeDBLogFilesRequestPrivate &other,
+                                   DescribeDBLogFilesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeDBLogFilesRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

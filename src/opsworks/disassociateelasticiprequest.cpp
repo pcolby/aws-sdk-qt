@@ -19,3 +19,107 @@
 
 #include "disassociateelasticiprequest.h"
 #include "disassociateelasticiprequest_p.h"
+#include "disassociateelasticipresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  DisassociateElasticIpRequest
+ *
+ * @brief  Implements OpsWorks DisassociateElasticIp requests.
+ *
+ * @see    OpsWorksClient::disassociateElasticIp
+ */
+
+/**
+ * @brief  Constructs a new DisassociateElasticIpResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateElasticIpResponse::DisassociateElasticIpResponse(
+
+/**
+ * @brief  Constructs a new DisassociateElasticIpRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateElasticIpRequest::DisassociateElasticIpRequest(const DisassociateElasticIpRequest &other)
+    : OpsWorksRequest(new DisassociateElasticIpRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateElasticIpRequest object.
+ */
+DisassociateElasticIpRequest::DisassociateElasticIpRequest()
+    : OpsWorksRequest(new DisassociateElasticIpRequestPrivate(OpsWorksRequest::DisassociateElasticIpAction, this))
+{
+
+}
+
+bool DisassociateElasticIpRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateElasticIpResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateElasticIpResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateElasticIpResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateElasticIpRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateElasticIpRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateElasticIpRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public DisassociateElasticIpRequest instance.
+ */
+DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
+    const OpsWorksRequest::Action action, DisassociateElasticIpRequest * const q)
+    : DisassociateElasticIpPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateElasticIpRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateElasticIpRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateElasticIpRequest instance.
+ */
+DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
+    const DisassociateElasticIpRequestPrivate &other, DisassociateElasticIpRequest * const q)
+    : DisassociateElasticIpPrivate(other, q)
+{
+
+}

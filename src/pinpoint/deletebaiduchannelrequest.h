@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEBAIDUCHANNELREQUEST_H
 #define QTAWS_DELETEBAIDUCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteBaiduChannelRequestPrivate;
+
+class QTAWS_EXPORT DeleteBaiduChannelRequest : public PinpointRequest {
+
+public:
+    DeleteBaiduChannelRequest(const DeleteBaiduChannelRequest &other);
+    DeleteBaiduChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteBaiduChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

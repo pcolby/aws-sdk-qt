@@ -19,3 +19,107 @@
 
 #include "modifyreplicationtaskrequest.h"
 #include "modifyreplicationtaskrequest_p.h"
+#include "modifyreplicationtaskresponse.h"
+#include "databasemigrationservicerequest_p.h"
+
+namespace AWS {
+namespace DatabaseMigrationService {
+
+/**
+ * @class  ModifyReplicationTaskRequest
+ *
+ * @brief  Implements DatabaseMigrationService ModifyReplicationTask requests.
+ *
+ * @see    DatabaseMigrationServiceClient::modifyReplicationTask
+ */
+
+/**
+ * @brief  Constructs a new ModifyReplicationTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ModifyReplicationTaskResponse::ModifyReplicationTaskResponse(
+
+/**
+ * @brief  Constructs a new ModifyReplicationTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ModifyReplicationTaskRequest::ModifyReplicationTaskRequest(const ModifyReplicationTaskRequest &other)
+    : DatabaseMigrationServiceRequest(new ModifyReplicationTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ModifyReplicationTaskRequest object.
+ */
+ModifyReplicationTaskRequest::ModifyReplicationTaskRequest()
+    : DatabaseMigrationServiceRequest(new ModifyReplicationTaskRequestPrivate(DatabaseMigrationServiceRequest::ModifyReplicationTaskAction, this))
+{
+
+}
+
+bool ModifyReplicationTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ModifyReplicationTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ModifyReplicationTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DatabaseMigrationServiceClient::send
+ */
+AwsAbstractResponse * ModifyReplicationTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new ModifyReplicationTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ModifyReplicationTaskRequestPrivate
+ *
+ * @brief  Private implementation for ModifyReplicationTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationTaskRequestPrivate object.
+ *
+ * @param  action  DatabaseMigrationService action being performed.
+ * @param  q       Pointer to this object's public ModifyReplicationTaskRequest instance.
+ */
+ModifyReplicationTaskRequestPrivate::ModifyReplicationTaskRequestPrivate(
+    const DatabaseMigrationServiceRequest::Action action, ModifyReplicationTaskRequest * const q)
+    : ModifyReplicationTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ModifyReplicationTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ModifyReplicationTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ModifyReplicationTaskRequest instance.
+ */
+ModifyReplicationTaskRequestPrivate::ModifyReplicationTaskRequestPrivate(
+    const ModifyReplicationTaskRequestPrivate &other, ModifyReplicationTaskRequest * const q)
+    : ModifyReplicationTaskPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBOTALIASREQUEST_P_H
 #define QTAWS_DELETEBOTALIASREQUEST_P_H
 
+#include "lexmodelbuildingservice_p.h"
+#include "deletebotaliasrequest.h"
+
+namespace AWS {
+
+namespace LexModelBuildingService {
+
+class DeleteBotAliasRequest;
+
+class QTAWS_EXPORT DeleteBotAliasRequestPrivate : public LexModelBuildingServicePrivate {
+
+public:
+    DeleteBotAliasRequestPrivate(const LexModelBuildingService::Action action,
+                                   DeleteBotAliasRequest * const q);
+    DeleteBotAliasRequestPrivate(const DeleteBotAliasRequestPrivate &other,
+                                   DeleteBotAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBotAliasRequest)
+
+};
+
+} // namespace LexModelBuildingService
+} // namespace AWS
+
 #endif

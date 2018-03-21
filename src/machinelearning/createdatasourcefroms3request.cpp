@@ -19,3 +19,107 @@
 
 #include "createdatasourcefroms3request.h"
 #include "createdatasourcefroms3request_p.h"
+#include "createdatasourcefroms3response.h"
+#include "machinelearningrequest_p.h"
+
+namespace AWS {
+namespace MachineLearning {
+
+/**
+ * @class  CreateDataSourceFromS3Request
+ *
+ * @brief  Implements MachineLearning CreateDataSourceFromS3 requests.
+ *
+ * @see    MachineLearningClient::createDataSourceFromS3
+ */
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromS3Response object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateDataSourceFromS3Response::CreateDataSourceFromS3Response(
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromS3Request object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateDataSourceFromS3Request::CreateDataSourceFromS3Request(const CreateDataSourceFromS3Request &other)
+    : MachineLearningRequest(new CreateDataSourceFromS3RequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateDataSourceFromS3Request object.
+ */
+CreateDataSourceFromS3Request::CreateDataSourceFromS3Request()
+    : MachineLearningRequest(new CreateDataSourceFromS3RequestPrivate(MachineLearningRequest::CreateDataSourceFromS3Action, this))
+{
+
+}
+
+bool CreateDataSourceFromS3Request::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateDataSourceFromS3Response object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateDataSourceFromS3Response instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MachineLearningClient::send
+ */
+AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetworkReply * const reply) const
+{
+    return new CreateDataSourceFromS3Response(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateDataSourceFromS3RequestPrivate
+ *
+ * @brief  Private implementation for CreateDataSourceFromS3Request.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromS3RequestPrivate object.
+ *
+ * @param  action  MachineLearning action being performed.
+ * @param  q       Pointer to this object's public CreateDataSourceFromS3Request instance.
+ */
+CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
+    const MachineLearningRequest::Action action, CreateDataSourceFromS3Request * const q)
+    : CreateDataSourceFromS3Private(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateDataSourceFromS3RequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateDataSourceFromS3Request
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateDataSourceFromS3Request instance.
+ */
+CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
+    const CreateDataSourceFromS3RequestPrivate &other, CreateDataSourceFromS3Request * const q)
+    : CreateDataSourceFromS3Private(other, q)
+{
+
+}

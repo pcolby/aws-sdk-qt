@@ -19,3 +19,107 @@
 
 #include "updateruntimeconfigurationrequest.h"
 #include "updateruntimeconfigurationrequest_p.h"
+#include "updateruntimeconfigurationresponse.h"
+#include "gameliftrequest_p.h"
+
+namespace AWS {
+namespace GameLift {
+
+/**
+ * @class  UpdateRuntimeConfigurationRequest
+ *
+ * @brief  Implements GameLift UpdateRuntimeConfiguration requests.
+ *
+ * @see    GameLiftClient::updateRuntimeConfiguration
+ */
+
+/**
+ * @brief  Constructs a new UpdateRuntimeConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
+
+/**
+ * @brief  Constructs a new UpdateRuntimeConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateRuntimeConfigurationRequest::UpdateRuntimeConfigurationRequest(const UpdateRuntimeConfigurationRequest &other)
+    : GameLiftRequest(new UpdateRuntimeConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateRuntimeConfigurationRequest object.
+ */
+UpdateRuntimeConfigurationRequest::UpdateRuntimeConfigurationRequest()
+    : GameLiftRequest(new UpdateRuntimeConfigurationRequestPrivate(GameLiftRequest::UpdateRuntimeConfigurationAction, this))
+{
+
+}
+
+bool UpdateRuntimeConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateRuntimeConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateRuntimeConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GameLiftClient::send
+ */
+AwsAbstractResponse * UpdateRuntimeConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateRuntimeConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateRuntimeConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for UpdateRuntimeConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRuntimeConfigurationRequestPrivate object.
+ *
+ * @param  action  GameLift action being performed.
+ * @param  q       Pointer to this object's public UpdateRuntimeConfigurationRequest instance.
+ */
+UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
+    const GameLiftRequest::Action action, UpdateRuntimeConfigurationRequest * const q)
+    : UpdateRuntimeConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateRuntimeConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateRuntimeConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateRuntimeConfigurationRequest instance.
+ */
+UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
+    const UpdateRuntimeConfigurationRequestPrivate &other, UpdateRuntimeConfigurationRequest * const q)
+    : UpdateRuntimeConfigurationPrivate(other, q)
+{
+
+}

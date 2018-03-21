@@ -20,4 +20,29 @@
 #ifndef QTAWS_PUTTARGETSREQUEST_P_H
 #define QTAWS_PUTTARGETSREQUEST_P_H
 
+#include "cloudwatchevents_p.h"
+#include "puttargetsrequest.h"
+
+namespace AWS {
+
+namespace CloudWatchEvents {
+
+class PutTargetsRequest;
+
+class QTAWS_EXPORT PutTargetsRequestPrivate : public CloudWatchEventsPrivate {
+
+public:
+    PutTargetsRequestPrivate(const CloudWatchEvents::Action action,
+                                   PutTargetsRequest * const q);
+    PutTargetsRequestPrivate(const PutTargetsRequestPrivate &other,
+                                   PutTargetsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PutTargetsRequest)
+
+};
+
+} // namespace CloudWatchEvents
+} // namespace AWS
+
 #endif

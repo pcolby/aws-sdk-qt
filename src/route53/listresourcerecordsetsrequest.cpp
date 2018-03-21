@@ -19,3 +19,107 @@
 
 #include "listresourcerecordsetsrequest.h"
 #include "listresourcerecordsetsrequest_p.h"
+#include "listresourcerecordsetsresponse.h"
+#include "route53request_p.h"
+
+namespace AWS {
+namespace Route53 {
+
+/**
+ * @class  ListResourceRecordSetsRequest
+ *
+ * @brief  Implements Route53 ListResourceRecordSets requests.
+ *
+ * @see    Route53Client::listResourceRecordSets
+ */
+
+/**
+ * @brief  Constructs a new ListResourceRecordSetsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListResourceRecordSetsResponse::ListResourceRecordSetsResponse(
+
+/**
+ * @brief  Constructs a new ListResourceRecordSetsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListResourceRecordSetsRequest::ListResourceRecordSetsRequest(const ListResourceRecordSetsRequest &other)
+    : Route53Request(new ListResourceRecordSetsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListResourceRecordSetsRequest object.
+ */
+ListResourceRecordSetsRequest::ListResourceRecordSetsRequest()
+    : Route53Request(new ListResourceRecordSetsRequestPrivate(Route53Request::ListResourceRecordSetsAction, this))
+{
+
+}
+
+bool ListResourceRecordSetsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListResourceRecordSetsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListResourceRecordSetsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  Route53Client::send
+ */
+AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListResourceRecordSetsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListResourceRecordSetsRequestPrivate
+ *
+ * @brief  Private implementation for ListResourceRecordSetsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object.
+ *
+ * @param  action  Route53 action being performed.
+ * @param  q       Pointer to this object's public ListResourceRecordSetsRequest instance.
+ */
+ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
+    const Route53Request::Action action, ListResourceRecordSetsRequest * const q)
+    : ListResourceRecordSetsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListResourceRecordSetsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListResourceRecordSetsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListResourceRecordSetsRequest instance.
+ */
+ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
+    const ListResourceRecordSetsRequestPrivate &other, ListResourceRecordSetsRequest * const q)
+    : ListResourceRecordSetsPrivate(other, q)
+{
+
+}

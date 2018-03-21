@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCREQUEST_H
 #define QTAWS_LISTRESOURCEDATASYNCREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class ListResourceDataSyncRequestPrivate;
+
+class QTAWS_EXPORT ListResourceDataSyncRequest : public SSMRequest {
+
+public:
+    ListResourceDataSyncRequest(const ListResourceDataSyncRequest &other);
+    ListResourceDataSyncRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListResourceDataSyncRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

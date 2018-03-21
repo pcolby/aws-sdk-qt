@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDATASOURCESREQUEST_H
 #define QTAWS_LISTDATASOURCESREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListDataSourcesRequestPrivate;
+
+class QTAWS_EXPORT ListDataSourcesRequest : public AppSyncRequest {
+
+public:
+    ListDataSourcesRequest(const ListDataSourcesRequest &other);
+    ListDataSourcesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDataSourcesRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

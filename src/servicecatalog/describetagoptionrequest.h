@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBETAGOPTIONREQUEST_H
 #define QTAWS_DESCRIBETAGOPTIONREQUEST_H
 
+#include "servicecatalogrequest.h"
+
+namespace AWS {
+
+namespace ServiceCatalog {
+
+class DescribeTagOptionRequestPrivate;
+
+class QTAWS_EXPORT DescribeTagOptionRequest : public ServiceCatalogRequest {
+
+public:
+    DescribeTagOptionRequest(const DescribeTagOptionRequest &other);
+    DescribeTagOptionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeTagOptionRequest)
+
+}
+
+} // namespace ServiceCatalog
+} // namespace AWS
+
 #endif

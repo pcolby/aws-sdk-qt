@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESCALINGPLANREQUEST_P_H
 #define QTAWS_DELETESCALINGPLANREQUEST_P_H
 
+#include "autoscalingplans_p.h"
+#include "deletescalingplanrequest.h"
+
+namespace AWS {
+
+namespace AutoScalingPlans {
+
+class DeleteScalingPlanRequest;
+
+class QTAWS_EXPORT DeleteScalingPlanRequestPrivate : public AutoScalingPlansPrivate {
+
+public:
+    DeleteScalingPlanRequestPrivate(const AutoScalingPlans::Action action,
+                                   DeleteScalingPlanRequest * const q);
+    DeleteScalingPlanRequestPrivate(const DeleteScalingPlanRequestPrivate &other,
+                                   DeleteScalingPlanRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteScalingPlanRequest)
+
+};
+
+} // namespace AutoScalingPlans
+} // namespace AWS
+
 #endif

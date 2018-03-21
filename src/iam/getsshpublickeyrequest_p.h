@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSSHPUBLICKEYREQUEST_P_H
 #define QTAWS_GETSSHPUBLICKEYREQUEST_P_H
 
+#include "iam_p.h"
+#include "getsshpublickeyrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class GetSSHPublicKeyRequest;
+
+class QTAWS_EXPORT GetSSHPublicKeyRequestPrivate : public IAMPrivate {
+
+public:
+    GetSSHPublicKeyRequestPrivate(const IAM::Action action,
+                                   GetSSHPublicKeyRequest * const q);
+    GetSSHPublicKeyRequestPrivate(const GetSSHPublicKeyRequestPrivate &other,
+                                   GetSSHPublicKeyRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSSHPublicKeyRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

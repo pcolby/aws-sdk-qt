@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEALIASREQUEST_P_H
 #define QTAWS_DELETEALIASREQUEST_P_H
 
+#include "workmail_p.h"
+#include "deletealiasrequest.h"
+
+namespace AWS {
+
+namespace WorkMail {
+
+class DeleteAliasRequest;
+
+class QTAWS_EXPORT DeleteAliasRequestPrivate : public WorkMailPrivate {
+
+public:
+    DeleteAliasRequestPrivate(const WorkMail::Action action,
+                                   DeleteAliasRequest * const q);
+    DeleteAliasRequestPrivate(const DeleteAliasRequestPrivate &other,
+                                   DeleteAliasRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteAliasRequest)
+
+};
+
+} // namespace WorkMail
+} // namespace AWS
+
 #endif

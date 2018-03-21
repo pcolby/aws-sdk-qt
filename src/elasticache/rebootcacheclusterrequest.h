@@ -20,4 +20,32 @@
 #ifndef QTAWS_REBOOTCACHECLUSTERREQUEST_H
 #define QTAWS_REBOOTCACHECLUSTERREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class RebootCacheClusterRequestPrivate;
+
+class QTAWS_EXPORT RebootCacheClusterRequest : public ElastiCacheRequest {
+
+public:
+    RebootCacheClusterRequest(const RebootCacheClusterRequest &other);
+    RebootCacheClusterRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(RebootCacheClusterRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

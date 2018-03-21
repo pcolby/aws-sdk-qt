@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATESUBNETGROUPREQUEST_H
 #define QTAWS_UPDATESUBNETGROUPREQUEST_H
 
+#include "daxrequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class UpdateSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT UpdateSubnetGroupRequest : public DAXRequest {
+
+public:
+    UpdateSubnetGroupRequest(const UpdateSubnetGroupRequest &other);
+    UpdateSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateSubnetGroupRequest)
+
+}
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEPATCHGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEPATCHGROUPSREQUEST_P_H
 
+#include "ssm_p.h"
+#include "describepatchgroupsrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class DescribePatchGroupsRequest;
+
+class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SSMPrivate {
+
+public:
+    DescribePatchGroupsRequestPrivate(const SSM::Action action,
+                                   DescribePatchGroupsRequest * const q);
+    DescribePatchGroupsRequestPrivate(const DescribePatchGroupsRequestPrivate &other,
+                                   DescribePatchGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribePatchGroupsRequest)
+
+};
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

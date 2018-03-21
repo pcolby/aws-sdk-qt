@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETERATEBASEDRULEREQUEST_P_H
 #define QTAWS_DELETERATEBASEDRULEREQUEST_P_H
 
+#include "wafregional_p.h"
+#include "deleteratebasedrulerequest.h"
+
+namespace AWS {
+
+namespace WAFRegional {
+
+class DeleteRateBasedRuleRequest;
+
+class QTAWS_EXPORT DeleteRateBasedRuleRequestPrivate : public WAFRegionalPrivate {
+
+public:
+    DeleteRateBasedRuleRequestPrivate(const WAFRegional::Action action,
+                                   DeleteRateBasedRuleRequest * const q);
+    DeleteRateBasedRuleRequestPrivate(const DeleteRateBasedRuleRequestPrivate &other,
+                                   DeleteRateBasedRuleRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteRateBasedRuleRequest)
+
+};
+
+} // namespace WAFRegional
+} // namespace AWS
+
 #endif

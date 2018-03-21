@@ -19,3 +19,107 @@
 
 #include "createuserprofilerequest.h"
 #include "createuserprofilerequest_p.h"
+#include "createuserprofileresponse.h"
+#include "opsworksrequest_p.h"
+
+namespace AWS {
+namespace OpsWorks {
+
+/**
+ * @class  CreateUserProfileRequest
+ *
+ * @brief  Implements OpsWorks CreateUserProfile requests.
+ *
+ * @see    OpsWorksClient::createUserProfile
+ */
+
+/**
+ * @brief  Constructs a new CreateUserProfileResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateUserProfileResponse::CreateUserProfileResponse(
+
+/**
+ * @brief  Constructs a new CreateUserProfileRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateUserProfileRequest::CreateUserProfileRequest(const CreateUserProfileRequest &other)
+    : OpsWorksRequest(new CreateUserProfileRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateUserProfileRequest object.
+ */
+CreateUserProfileRequest::CreateUserProfileRequest()
+    : OpsWorksRequest(new CreateUserProfileRequestPrivate(OpsWorksRequest::CreateUserProfileAction, this))
+{
+
+}
+
+bool CreateUserProfileRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateUserProfileResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateUserProfileResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OpsWorksClient::send
+ */
+AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateUserProfileResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateUserProfileRequestPrivate
+ *
+ * @brief  Private implementation for CreateUserProfileRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserProfileRequestPrivate object.
+ *
+ * @param  action  OpsWorks action being performed.
+ * @param  q       Pointer to this object's public CreateUserProfileRequest instance.
+ */
+CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
+    const OpsWorksRequest::Action action, CreateUserProfileRequest * const q)
+    : CreateUserProfilePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateUserProfileRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateUserProfileRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateUserProfileRequest instance.
+ */
+CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
+    const CreateUserProfileRequestPrivate &other, CreateUserProfileRequest * const q)
+    : CreateUserProfilePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETECONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONRECORDERREQUEST_P_H
 
+#include "configservice_p.h"
+#include "deleteconfigurationrecorderrequest.h"
+
+namespace AWS {
+
+namespace ConfigService {
+
+class DeleteConfigurationRecorderRequest;
+
+class QTAWS_EXPORT DeleteConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+
+public:
+    DeleteConfigurationRecorderRequestPrivate(const ConfigService::Action action,
+                                   DeleteConfigurationRecorderRequest * const q);
+    DeleteConfigurationRecorderRequestPrivate(const DeleteConfigurationRecorderRequestPrivate &other,
+                                   DeleteConfigurationRecorderRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteConfigurationRecorderRequest)
+
+};
+
+} // namespace ConfigService
+} // namespace AWS
+
 #endif

@@ -20,4 +20,32 @@
 #ifndef QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_H
 #define QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_H
 
+#include "codedeployrequest.h"
+
+namespace AWS {
+
+namespace CodeDeploy {
+
+class SkipWaitTimeForInstanceTerminationRequestPrivate;
+
+class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequest : public CodeDeployRequest {
+
+public:
+    SkipWaitTimeForInstanceTerminationRequest(const SkipWaitTimeForInstanceTerminationRequest &other);
+    SkipWaitTimeForInstanceTerminationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SkipWaitTimeForInstanceTerminationRequest)
+
+}
+
+} // namespace CodeDeploy
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "disassociaterolefromgrouprequest.h"
 #include "disassociaterolefromgrouprequest_p.h"
+#include "disassociaterolefromgroupresponse.h"
+#include "greengrassrequest_p.h"
+
+namespace AWS {
+namespace Greengrass {
+
+/**
+ * @class  DisassociateRoleFromGroupRequest
+ *
+ * @brief  Implements Greengrass DisassociateRoleFromGroup requests.
+ *
+ * @see    GreengrassClient::disassociateRoleFromGroup
+ */
+
+/**
+ * @brief  Constructs a new DisassociateRoleFromGroupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociateRoleFromGroupResponse::DisassociateRoleFromGroupResponse(
+
+/**
+ * @brief  Constructs a new DisassociateRoleFromGroupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest(const DisassociateRoleFromGroupRequest &other)
+    : GreengrassRequest(new DisassociateRoleFromGroupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociateRoleFromGroupRequest object.
+ */
+DisassociateRoleFromGroupRequest::DisassociateRoleFromGroupRequest()
+    : GreengrassRequest(new DisassociateRoleFromGroupRequestPrivate(GreengrassRequest::DisassociateRoleFromGroupAction, this))
+{
+
+}
+
+bool DisassociateRoleFromGroupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociateRoleFromGroupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociateRoleFromGroupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GreengrassClient::send
+ */
+AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociateRoleFromGroupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociateRoleFromGroupRequestPrivate
+ *
+ * @brief  Private implementation for DisassociateRoleFromGroupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object.
+ *
+ * @param  action  Greengrass action being performed.
+ * @param  q       Pointer to this object's public DisassociateRoleFromGroupRequest instance.
+ */
+DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
+    const GreengrassRequest::Action action, DisassociateRoleFromGroupRequest * const q)
+    : DisassociateRoleFromGroupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociateRoleFromGroupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociateRoleFromGroupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociateRoleFromGroupRequest instance.
+ */
+DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
+    const DisassociateRoleFromGroupRequestPrivate &other, DisassociateRoleFromGroupRequest * const q)
+    : DisassociateRoleFromGroupPrivate(other, q)
+{
+
+}

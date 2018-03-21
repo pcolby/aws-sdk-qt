@@ -20,4 +20,32 @@
 #ifndef QTAWS_REPLACENETWORKACLASSOCIATIONREQUEST_H
 #define QTAWS_REPLACENETWORKACLASSOCIATIONREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ReplaceNetworkAclAssociationRequestPrivate;
+
+class QTAWS_EXPORT ReplaceNetworkAclAssociationRequest : public EC2Request {
+
+public:
+    ReplaceNetworkAclAssociationRequest(const ReplaceNetworkAclAssociationRequest &other);
+    ReplaceNetworkAclAssociationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ReplaceNetworkAclAssociationRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

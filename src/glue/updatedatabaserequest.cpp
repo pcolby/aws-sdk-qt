@@ -19,3 +19,107 @@
 
 #include "updatedatabaserequest.h"
 #include "updatedatabaserequest_p.h"
+#include "updatedatabaseresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  UpdateDatabaseRequest
+ *
+ * @brief  Implements Glue UpdateDatabase requests.
+ *
+ * @see    GlueClient::updateDatabase
+ */
+
+/**
+ * @brief  Constructs a new UpdateDatabaseResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateDatabaseResponse::UpdateDatabaseResponse(
+
+/**
+ * @brief  Constructs a new UpdateDatabaseRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateDatabaseRequest::UpdateDatabaseRequest(const UpdateDatabaseRequest &other)
+    : GlueRequest(new UpdateDatabaseRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateDatabaseRequest object.
+ */
+UpdateDatabaseRequest::UpdateDatabaseRequest()
+    : GlueRequest(new UpdateDatabaseRequestPrivate(GlueRequest::UpdateDatabaseAction, this))
+{
+
+}
+
+bool UpdateDatabaseRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateDatabaseResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateDatabaseResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * UpdateDatabaseRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateDatabaseResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateDatabaseRequestPrivate
+ *
+ * @brief  Private implementation for UpdateDatabaseRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDatabaseRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public UpdateDatabaseRequest instance.
+ */
+UpdateDatabaseRequestPrivate::UpdateDatabaseRequestPrivate(
+    const GlueRequest::Action action, UpdateDatabaseRequest * const q)
+    : UpdateDatabasePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateDatabaseRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateDatabaseRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateDatabaseRequest instance.
+ */
+UpdateDatabaseRequestPrivate::UpdateDatabaseRequestPrivate(
+    const UpdateDatabaseRequestPrivate &other, UpdateDatabaseRequest * const q)
+    : UpdateDatabasePrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "associatedelegatetoresourcerequest.h"
 #include "associatedelegatetoresourcerequest_p.h"
+#include "associatedelegatetoresourceresponse.h"
+#include "workmailrequest_p.h"
+
+namespace AWS {
+namespace WorkMail {
+
+/**
+ * @class  AssociateDelegateToResourceRequest
+ *
+ * @brief  Implements WorkMail AssociateDelegateToResource requests.
+ *
+ * @see    WorkMailClient::associateDelegateToResource
+ */
+
+/**
+ * @brief  Constructs a new AssociateDelegateToResourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateDelegateToResourceResponse::AssociateDelegateToResourceResponse(
+
+/**
+ * @brief  Constructs a new AssociateDelegateToResourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateDelegateToResourceRequest::AssociateDelegateToResourceRequest(const AssociateDelegateToResourceRequest &other)
+    : WorkMailRequest(new AssociateDelegateToResourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateDelegateToResourceRequest object.
+ */
+AssociateDelegateToResourceRequest::AssociateDelegateToResourceRequest()
+    : WorkMailRequest(new AssociateDelegateToResourceRequestPrivate(WorkMailRequest::AssociateDelegateToResourceAction, this))
+{
+
+}
+
+bool AssociateDelegateToResourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateDelegateToResourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateDelegateToResourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkMailClient::send
+ */
+AwsAbstractResponse * AssociateDelegateToResourceRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateDelegateToResourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateDelegateToResourceRequestPrivate
+ *
+ * @brief  Private implementation for AssociateDelegateToResourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateDelegateToResourceRequestPrivate object.
+ *
+ * @param  action  WorkMail action being performed.
+ * @param  q       Pointer to this object's public AssociateDelegateToResourceRequest instance.
+ */
+AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
+    const WorkMailRequest::Action action, AssociateDelegateToResourceRequest * const q)
+    : AssociateDelegateToResourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateDelegateToResourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateDelegateToResourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateDelegateToResourceRequest instance.
+ */
+AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
+    const AssociateDelegateToResourceRequestPrivate &other, AssociateDelegateToResourceRequest * const q)
+    : AssociateDelegateToResourcePrivate(other, q)
+{
+
+}

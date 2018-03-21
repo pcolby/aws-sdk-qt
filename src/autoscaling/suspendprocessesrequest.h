@@ -20,4 +20,32 @@
 #ifndef QTAWS_SUSPENDPROCESSESREQUEST_H
 #define QTAWS_SUSPENDPROCESSESREQUEST_H
 
+#include "autoscalingrequest.h"
+
+namespace AWS {
+
+namespace AutoScaling {
+
+class SuspendProcessesRequestPrivate;
+
+class QTAWS_EXPORT SuspendProcessesRequest : public AutoScalingRequest {
+
+public:
+    SuspendProcessesRequest(const SuspendProcessesRequest &other);
+    SuspendProcessesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(SuspendProcessesRequest)
+
+}
+
+} // namespace AutoScaling
+} // namespace AWS
+
 #endif

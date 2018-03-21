@@ -19,3 +19,107 @@
 
 #include "createinternetgatewayrequest.h"
 #include "createinternetgatewayrequest_p.h"
+#include "createinternetgatewayresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CreateInternetGatewayRequest
+ *
+ * @brief  Implements EC2 CreateInternetGateway requests.
+ *
+ * @see    EC2Client::createInternetGateway
+ */
+
+/**
+ * @brief  Constructs a new CreateInternetGatewayResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateInternetGatewayResponse::CreateInternetGatewayResponse(
+
+/**
+ * @brief  Constructs a new CreateInternetGatewayRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateInternetGatewayRequest::CreateInternetGatewayRequest(const CreateInternetGatewayRequest &other)
+    : EC2Request(new CreateInternetGatewayRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateInternetGatewayRequest object.
+ */
+CreateInternetGatewayRequest::CreateInternetGatewayRequest()
+    : EC2Request(new CreateInternetGatewayRequestPrivate(EC2Request::CreateInternetGatewayAction, this))
+{
+
+}
+
+bool CreateInternetGatewayRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateInternetGatewayResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateInternetGatewayResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CreateInternetGatewayRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateInternetGatewayResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateInternetGatewayRequestPrivate
+ *
+ * @brief  Private implementation for CreateInternetGatewayRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInternetGatewayRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CreateInternetGatewayRequest instance.
+ */
+CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
+    const EC2Request::Action action, CreateInternetGatewayRequest * const q)
+    : CreateInternetGatewayPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateInternetGatewayRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateInternetGatewayRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateInternetGatewayRequest instance.
+ */
+CreateInternetGatewayRequestPrivate::CreateInternetGatewayRequestPrivate(
+    const CreateInternetGatewayRequestPrivate &other, CreateInternetGatewayRequest * const q)
+    : CreateInternetGatewayPrivate(other, q)
+{
+
+}

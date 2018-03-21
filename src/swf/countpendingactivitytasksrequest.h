@@ -20,4 +20,32 @@
 #ifndef QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_H
 #define QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class CountPendingActivityTasksRequestPrivate;
+
+class QTAWS_EXPORT CountPendingActivityTasksRequest : public SWFRequest {
+
+public:
+    CountPendingActivityTasksRequest(const CountPendingActivityTasksRequest &other);
+    CountPendingActivityTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CountPendingActivityTasksRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

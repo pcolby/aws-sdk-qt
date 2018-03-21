@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETDOCUMENTVERSIONREQUEST_H
 #define QTAWS_GETDOCUMENTVERSIONREQUEST_H
 
+#include "workdocsrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class GetDocumentVersionRequestPrivate;
+
+class QTAWS_EXPORT GetDocumentVersionRequest : public WorkDocsRequest {
+
+public:
+    GetDocumentVersionRequest(const GetDocumentVersionRequest &other);
+    GetDocumentVersionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetDocumentVersionRequest)
+
+}
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

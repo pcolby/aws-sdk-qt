@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEENVIRONMENTCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETEENVIRONMENTCONFIGURATIONREQUEST_P_H
 
+#include "elasticbeanstalk_p.h"
+#include "deleteenvironmentconfigurationrequest.h"
+
+namespace AWS {
+
+namespace ElasticBeanstalk {
+
+class DeleteEnvironmentConfigurationRequest;
+
+class QTAWS_EXPORT DeleteEnvironmentConfigurationRequestPrivate : public ElasticBeanstalkPrivate {
+
+public:
+    DeleteEnvironmentConfigurationRequestPrivate(const ElasticBeanstalk::Action action,
+                                   DeleteEnvironmentConfigurationRequest * const q);
+    DeleteEnvironmentConfigurationRequestPrivate(const DeleteEnvironmentConfigurationRequestPrivate &other,
+                                   DeleteEnvironmentConfigurationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteEnvironmentConfigurationRequest)
+
+};
+
+} // namespace ElasticBeanstalk
+} // namespace AWS
+
 #endif

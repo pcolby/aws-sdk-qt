@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
+#include "applicationdiscoveryservice_p.h"
+#include "updateapplicationrequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class UpdateApplicationRequest;
+
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ApplicationDiscoveryServicePrivate {
+
+public:
+    UpdateApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,
+                                   UpdateApplicationRequest * const q);
+    UpdateApplicationRequestPrivate(const UpdateApplicationRequestPrivate &other,
+                                   UpdateApplicationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateApplicationRequest)
+
+};
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

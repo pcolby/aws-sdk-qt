@@ -19,3 +19,107 @@
 
 #include "disablepolicytyperequest.h"
 #include "disablepolicytyperequest_p.h"
+#include "disablepolicytyperesponse.h"
+#include "organizationsrequest_p.h"
+
+namespace AWS {
+namespace Organizations {
+
+/**
+ * @class  DisablePolicyTypeRequest
+ *
+ * @brief  Implements Organizations DisablePolicyType requests.
+ *
+ * @see    OrganizationsClient::disablePolicyType
+ */
+
+/**
+ * @brief  Constructs a new DisablePolicyTypeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisablePolicyTypeResponse::DisablePolicyTypeResponse(
+
+/**
+ * @brief  Constructs a new DisablePolicyTypeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisablePolicyTypeRequest::DisablePolicyTypeRequest(const DisablePolicyTypeRequest &other)
+    : OrganizationsRequest(new DisablePolicyTypeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisablePolicyTypeRequest object.
+ */
+DisablePolicyTypeRequest::DisablePolicyTypeRequest()
+    : OrganizationsRequest(new DisablePolicyTypeRequestPrivate(OrganizationsRequest::DisablePolicyTypeAction, this))
+{
+
+}
+
+bool DisablePolicyTypeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisablePolicyTypeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisablePolicyTypeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  OrganizationsClient::send
+ */
+AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkReply * const reply) const
+{
+    return new DisablePolicyTypeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisablePolicyTypeRequestPrivate
+ *
+ * @brief  Private implementation for DisablePolicyTypeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisablePolicyTypeRequestPrivate object.
+ *
+ * @param  action  Organizations action being performed.
+ * @param  q       Pointer to this object's public DisablePolicyTypeRequest instance.
+ */
+DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
+    const OrganizationsRequest::Action action, DisablePolicyTypeRequest * const q)
+    : DisablePolicyTypePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisablePolicyTypeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisablePolicyTypeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisablePolicyTypeRequest instance.
+ */
+DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
+    const DisablePolicyTypeRequestPrivate &other, DisablePolicyTypeRequest * const q)
+    : DisablePolicyTypePrivate(other, q)
+{
+
+}

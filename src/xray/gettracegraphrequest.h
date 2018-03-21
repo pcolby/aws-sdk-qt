@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETTRACEGRAPHREQUEST_H
 #define QTAWS_GETTRACEGRAPHREQUEST_H
 
+#include "xrayrequest.h"
+
+namespace AWS {
+
+namespace XRay {
+
+class GetTraceGraphRequestPrivate;
+
+class QTAWS_EXPORT GetTraceGraphRequest : public XRayRequest {
+
+public:
+    GetTraceGraphRequest(const GetTraceGraphRequest &other);
+    GetTraceGraphRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetTraceGraphRequest)
+
+}
+
+} // namespace XRay
+} // namespace AWS
+
 #endif

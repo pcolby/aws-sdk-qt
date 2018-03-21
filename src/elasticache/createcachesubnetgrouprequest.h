@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECACHESUBNETGROUPREQUEST_H
 #define QTAWS_CREATECACHESUBNETGROUPREQUEST_H
 
+#include "elasticacherequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class CreateCacheSubnetGroupRequestPrivate;
+
+class QTAWS_EXPORT CreateCacheSubnetGroupRequest : public ElastiCacheRequest {
+
+public:
+    CreateCacheSubnetGroupRequest(const CreateCacheSubnetGroupRequest &other);
+    CreateCacheSubnetGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCacheSubnetGroupRequest)
+
+}
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

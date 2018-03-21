@@ -19,3 +19,107 @@
 
 #include "stopthingregistrationtaskrequest.h"
 #include "stopthingregistrationtaskrequest_p.h"
+#include "stopthingregistrationtaskresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  StopThingRegistrationTaskRequest
+ *
+ * @brief  Implements IoT StopThingRegistrationTask requests.
+ *
+ * @see    IoTClient::stopThingRegistrationTask
+ */
+
+/**
+ * @brief  Constructs a new StopThingRegistrationTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+StopThingRegistrationTaskResponse::StopThingRegistrationTaskResponse(
+
+/**
+ * @brief  Constructs a new StopThingRegistrationTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+StopThingRegistrationTaskRequest::StopThingRegistrationTaskRequest(const StopThingRegistrationTaskRequest &other)
+    : IoTRequest(new StopThingRegistrationTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new StopThingRegistrationTaskRequest object.
+ */
+StopThingRegistrationTaskRequest::StopThingRegistrationTaskRequest()
+    : IoTRequest(new StopThingRegistrationTaskRequestPrivate(IoTRequest::StopThingRegistrationTaskAction, this))
+{
+
+}
+
+bool StopThingRegistrationTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an StopThingRegistrationTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An StopThingRegistrationTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * StopThingRegistrationTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new StopThingRegistrationTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  StopThingRegistrationTaskRequestPrivate
+ *
+ * @brief  Private implementation for StopThingRegistrationTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopThingRegistrationTaskRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public StopThingRegistrationTaskRequest instance.
+ */
+StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
+    const IoTRequest::Action action, StopThingRegistrationTaskRequest * const q)
+    : StopThingRegistrationTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new StopThingRegistrationTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the StopThingRegistrationTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public StopThingRegistrationTaskRequest instance.
+ */
+StopThingRegistrationTaskRequestPrivate::StopThingRegistrationTaskRequestPrivate(
+    const StopThingRegistrationTaskRequestPrivate &other, StopThingRegistrationTaskRequest * const q)
+    : StopThingRegistrationTaskPrivate(other, q)
+{
+
+}

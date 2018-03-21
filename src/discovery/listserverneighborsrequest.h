@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSREQUEST_H
 #define QTAWS_LISTSERVERNEIGHBORSREQUEST_H
 
+#include "applicationdiscoveryservicerequest.h"
+
+namespace AWS {
+
+namespace ApplicationDiscoveryService {
+
+class ListServerNeighborsRequestPrivate;
+
+class QTAWS_EXPORT ListServerNeighborsRequest : public ApplicationDiscoveryServiceRequest {
+
+public:
+    ListServerNeighborsRequest(const ListServerNeighborsRequest &other);
+    ListServerNeighborsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListServerNeighborsRequest)
+
+}
+
+} // namespace ApplicationDiscoveryService
+} // namespace AWS
+
 #endif

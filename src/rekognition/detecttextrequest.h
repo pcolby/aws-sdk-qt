@@ -20,4 +20,32 @@
 #ifndef QTAWS_DETECTTEXTREQUEST_H
 #define QTAWS_DETECTTEXTREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class DetectTextRequestPrivate;
+
+class QTAWS_EXPORT DetectTextRequest : public RekognitionRequest {
+
+public:
+    DetectTextRequest(const DetectTextRequest &other);
+    DetectTextRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DetectTextRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

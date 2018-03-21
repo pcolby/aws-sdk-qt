@@ -19,3 +19,107 @@
 
 #include "getcontentmoderationrequest.h"
 #include "getcontentmoderationrequest_p.h"
+#include "getcontentmoderationresponse.h"
+#include "rekognitionrequest_p.h"
+
+namespace AWS {
+namespace Rekognition {
+
+/**
+ * @class  GetContentModerationRequest
+ *
+ * @brief  Implements Rekognition GetContentModeration requests.
+ *
+ * @see    RekognitionClient::getContentModeration
+ */
+
+/**
+ * @brief  Constructs a new GetContentModerationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetContentModerationResponse::GetContentModerationResponse(
+
+/**
+ * @brief  Constructs a new GetContentModerationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetContentModerationRequest::GetContentModerationRequest(const GetContentModerationRequest &other)
+    : RekognitionRequest(new GetContentModerationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetContentModerationRequest object.
+ */
+GetContentModerationRequest::GetContentModerationRequest()
+    : RekognitionRequest(new GetContentModerationRequestPrivate(RekognitionRequest::GetContentModerationAction, this))
+{
+
+}
+
+bool GetContentModerationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetContentModerationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetContentModerationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RekognitionClient::send
+ */
+AwsAbstractResponse * GetContentModerationRequest::response(QNetworkReply * const reply) const
+{
+    return new GetContentModerationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetContentModerationRequestPrivate
+ *
+ * @brief  Private implementation for GetContentModerationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContentModerationRequestPrivate object.
+ *
+ * @param  action  Rekognition action being performed.
+ * @param  q       Pointer to this object's public GetContentModerationRequest instance.
+ */
+GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
+    const RekognitionRequest::Action action, GetContentModerationRequest * const q)
+    : GetContentModerationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetContentModerationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetContentModerationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetContentModerationRequest instance.
+ */
+GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
+    const GetContentModerationRequestPrivate &other, GetContentModerationRequest * const q)
+    : GetContentModerationPrivate(other, q)
+{
+
+}

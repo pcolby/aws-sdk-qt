@@ -20,4 +20,32 @@
 #ifndef QTAWS_SCANREQUEST_H
 #define QTAWS_SCANREQUEST_H
 
+#include "dynamodbrequest.h"
+
+namespace AWS {
+
+namespace DynamoDB {
+
+class ScanRequestPrivate;
+
+class QTAWS_EXPORT ScanRequest : public DynamoDBRequest {
+
+public:
+    ScanRequest(const ScanRequest &other);
+    ScanRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ScanRequest)
+
+}
+
+} // namespace DynamoDB
+} // namespace AWS
+
 #endif

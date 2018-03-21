@@ -19,3 +19,107 @@
 
 #include "getrolerequest.h"
 #include "getrolerequest_p.h"
+#include "getroleresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetRoleRequest
+ *
+ * @brief  Implements IAM GetRole requests.
+ *
+ * @see    IAMClient::getRole
+ */
+
+/**
+ * @brief  Constructs a new GetRoleResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetRoleResponse::GetRoleResponse(
+
+/**
+ * @brief  Constructs a new GetRoleRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetRoleRequest::GetRoleRequest(const GetRoleRequest &other)
+    : IAMRequest(new GetRoleRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetRoleRequest object.
+ */
+GetRoleRequest::GetRoleRequest()
+    : IAMRequest(new GetRoleRequestPrivate(IAMRequest::GetRoleAction, this))
+{
+
+}
+
+bool GetRoleRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetRoleResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetRoleResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetRoleRequest::response(QNetworkReply * const reply) const
+{
+    return new GetRoleResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetRoleRequestPrivate
+ *
+ * @brief  Private implementation for GetRoleRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoleRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetRoleRequest instance.
+ */
+GetRoleRequestPrivate::GetRoleRequestPrivate(
+    const IAMRequest::Action action, GetRoleRequest * const q)
+    : GetRolePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetRoleRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetRoleRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetRoleRequest instance.
+ */
+GetRoleRequestPrivate::GetRoleRequestPrivate(
+    const GetRoleRequestPrivate &other, GetRoleRequest * const q)
+    : GetRolePrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETETRIGGERREQUEST_P_H
 #define QTAWS_DELETETRIGGERREQUEST_P_H
 
+#include "glue_p.h"
+#include "deletetriggerrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class DeleteTriggerRequest;
+
+class QTAWS_EXPORT DeleteTriggerRequestPrivate : public GluePrivate {
+
+public:
+    DeleteTriggerRequestPrivate(const Glue::Action action,
+                                   DeleteTriggerRequest * const q);
+    DeleteTriggerRequestPrivate(const DeleteTriggerRequestPrivate &other,
+                                   DeleteTriggerRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteTriggerRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

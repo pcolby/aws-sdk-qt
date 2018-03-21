@@ -20,4 +20,29 @@
 #ifndef QTAWS_BATCHGETBUILDSREQUEST_P_H
 #define QTAWS_BATCHGETBUILDSREQUEST_P_H
 
+#include "codebuild_p.h"
+#include "batchgetbuildsrequest.h"
+
+namespace AWS {
+
+namespace CodeBuild {
+
+class BatchGetBuildsRequest;
+
+class QTAWS_EXPORT BatchGetBuildsRequestPrivate : public CodeBuildPrivate {
+
+public:
+    BatchGetBuildsRequestPrivate(const CodeBuild::Action action,
+                                   BatchGetBuildsRequest * const q);
+    BatchGetBuildsRequestPrivate(const BatchGetBuildsRequestPrivate &other,
+                                   BatchGetBuildsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(BatchGetBuildsRequest)
+
+};
+
+} // namespace CodeBuild
+} // namespace AWS
+
 #endif

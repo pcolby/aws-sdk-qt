@@ -20,4 +20,32 @@
 #ifndef QTAWS_MODIFYRULEREQUEST_H
 #define QTAWS_MODIFYRULEREQUEST_H
 
+#include "elasticloadbalancingv2request.h"
+
+namespace AWS {
+
+namespace ElasticLoadBalancingv2 {
+
+class ModifyRuleRequestPrivate;
+
+class QTAWS_EXPORT ModifyRuleRequest : public ElasticLoadBalancingv2Request {
+
+public:
+    ModifyRuleRequest(const ModifyRuleRequest &other);
+    ModifyRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ModifyRuleRequest)
+
+}
+
+} // namespace ElasticLoadBalancingv2
+} // namespace AWS
+
 #endif

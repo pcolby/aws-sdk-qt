@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEVPCASSOCIATIONAUTHORIZATIONREQUEST_P_H
 #define QTAWS_DELETEVPCASSOCIATIONAUTHORIZATIONREQUEST_P_H
 
+#include "route53_p.h"
+#include "deletevpcassociationauthorizationrequest.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class DeleteVPCAssociationAuthorizationRequest;
+
+class QTAWS_EXPORT DeleteVPCAssociationAuthorizationRequestPrivate : public Route53Private {
+
+public:
+    DeleteVPCAssociationAuthorizationRequestPrivate(const Route53::Action action,
+                                   DeleteVPCAssociationAuthorizationRequest * const q);
+    DeleteVPCAssociationAuthorizationRequestPrivate(const DeleteVPCAssociationAuthorizationRequestPrivate &other,
+                                   DeleteVPCAssociationAuthorizationRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteVPCAssociationAuthorizationRequest)
+
+};
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

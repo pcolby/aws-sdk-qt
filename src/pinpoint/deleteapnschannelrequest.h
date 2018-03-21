@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEAPNSCHANNELREQUEST_H
 #define QTAWS_DELETEAPNSCHANNELREQUEST_H
 
+#include "pinpointrequest.h"
+
+namespace AWS {
+
+namespace Pinpoint {
+
+class DeleteApnsChannelRequestPrivate;
+
+class QTAWS_EXPORT DeleteApnsChannelRequest : public PinpointRequest {
+
+public:
+    DeleteApnsChannelRequest(const DeleteApnsChannelRequest &other);
+    DeleteApnsChannelRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteApnsChannelRequest)
+
+}
+
+} // namespace Pinpoint
+} // namespace AWS
+
 #endif

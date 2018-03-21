@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETPATCHBASELINEFORPATCHGROUPREQUEST_H
 #define QTAWS_GETPATCHBASELINEFORPATCHGROUPREQUEST_H
 
+#include "ssmrequest.h"
+
+namespace AWS {
+
+namespace SSM {
+
+class GetPatchBaselineForPatchGroupRequestPrivate;
+
+class QTAWS_EXPORT GetPatchBaselineForPatchGroupRequest : public SSMRequest {
+
+public:
+    GetPatchBaselineForPatchGroupRequest(const GetPatchBaselineForPatchGroupRequest &other);
+    GetPatchBaselineForPatchGroupRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetPatchBaselineForPatchGroupRequest)
+
+}
+
+} // namespace SSM
+} // namespace AWS
+
 #endif

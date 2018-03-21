@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETREQUEST_P_H
 #define QTAWS_CREATEBYTEMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "createbytematchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class CreateByteMatchSetRequest;
+
+class QTAWS_EXPORT CreateByteMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    CreateByteMatchSetRequestPrivate(const WAF::Action action,
+                                   CreateByteMatchSetRequest * const q);
+    CreateByteMatchSetRequestPrivate(const CreateByteMatchSetRequestPrivate &other,
+                                   CreateByteMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateByteMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

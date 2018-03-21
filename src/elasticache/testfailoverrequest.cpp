@@ -19,3 +19,107 @@
 
 #include "testfailoverrequest.h"
 #include "testfailoverrequest_p.h"
+#include "testfailoverresponse.h"
+#include "elasticacherequest_p.h"
+
+namespace AWS {
+namespace ElastiCache {
+
+/**
+ * @class  TestFailoverRequest
+ *
+ * @brief  Implements ElastiCache TestFailover requests.
+ *
+ * @see    ElastiCacheClient::testFailover
+ */
+
+/**
+ * @brief  Constructs a new TestFailoverResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+TestFailoverResponse::TestFailoverResponse(
+
+/**
+ * @brief  Constructs a new TestFailoverRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+TestFailoverRequest::TestFailoverRequest(const TestFailoverRequest &other)
+    : ElastiCacheRequest(new TestFailoverRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new TestFailoverRequest object.
+ */
+TestFailoverRequest::TestFailoverRequest()
+    : ElastiCacheRequest(new TestFailoverRequestPrivate(ElastiCacheRequest::TestFailoverAction, this))
+{
+
+}
+
+bool TestFailoverRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an TestFailoverResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An TestFailoverResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElastiCacheClient::send
+ */
+AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply * const reply) const
+{
+    return new TestFailoverResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  TestFailoverRequestPrivate
+ *
+ * @brief  Private implementation for TestFailoverRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestFailoverRequestPrivate object.
+ *
+ * @param  action  ElastiCache action being performed.
+ * @param  q       Pointer to this object's public TestFailoverRequest instance.
+ */
+TestFailoverRequestPrivate::TestFailoverRequestPrivate(
+    const ElastiCacheRequest::Action action, TestFailoverRequest * const q)
+    : TestFailoverPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new TestFailoverRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the TestFailoverRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public TestFailoverRequest instance.
+ */
+TestFailoverRequestPrivate::TestFailoverRequestPrivate(
+    const TestFailoverRequestPrivate &other, TestFailoverRequest * const q)
+    : TestFailoverPrivate(other, q)
+{
+
+}

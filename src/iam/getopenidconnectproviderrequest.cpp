@@ -19,3 +19,107 @@
 
 #include "getopenidconnectproviderrequest.h"
 #include "getopenidconnectproviderrequest_p.h"
+#include "getopenidconnectproviderresponse.h"
+#include "iamrequest_p.h"
+
+namespace AWS {
+namespace IAM {
+
+/**
+ * @class  GetOpenIDConnectProviderRequest
+ *
+ * @brief  Implements IAM GetOpenIDConnectProvider requests.
+ *
+ * @see    IAMClient::getOpenIDConnectProvider
+ */
+
+/**
+ * @brief  Constructs a new GetOpenIDConnectProviderResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
+
+/**
+ * @brief  Constructs a new GetOpenIDConnectProviderRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetOpenIDConnectProviderRequest::GetOpenIDConnectProviderRequest(const GetOpenIDConnectProviderRequest &other)
+    : IAMRequest(new GetOpenIDConnectProviderRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetOpenIDConnectProviderRequest object.
+ */
+GetOpenIDConnectProviderRequest::GetOpenIDConnectProviderRequest()
+    : IAMRequest(new GetOpenIDConnectProviderRequestPrivate(IAMRequest::GetOpenIDConnectProviderAction, this))
+{
+
+}
+
+bool GetOpenIDConnectProviderRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetOpenIDConnectProviderResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetOpenIDConnectProviderResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IAMClient::send
+ */
+AwsAbstractResponse * GetOpenIDConnectProviderRequest::response(QNetworkReply * const reply) const
+{
+    return new GetOpenIDConnectProviderResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetOpenIDConnectProviderRequestPrivate
+ *
+ * @brief  Private implementation for GetOpenIDConnectProviderRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOpenIDConnectProviderRequestPrivate object.
+ *
+ * @param  action  IAM action being performed.
+ * @param  q       Pointer to this object's public GetOpenIDConnectProviderRequest instance.
+ */
+GetOpenIDConnectProviderRequestPrivate::GetOpenIDConnectProviderRequestPrivate(
+    const IAMRequest::Action action, GetOpenIDConnectProviderRequest * const q)
+    : GetOpenIDConnectProviderPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetOpenIDConnectProviderRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetOpenIDConnectProviderRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetOpenIDConnectProviderRequest instance.
+ */
+GetOpenIDConnectProviderRequestPrivate::GetOpenIDConnectProviderRequestPrivate(
+    const GetOpenIDConnectProviderRequestPrivate &other, GetOpenIDConnectProviderRequest * const q)
+    : GetOpenIDConnectProviderPrivate(other, q)
+{
+
+}

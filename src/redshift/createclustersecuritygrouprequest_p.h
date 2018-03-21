@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATECLUSTERSECURITYGROUPREQUEST_P_H
 #define QTAWS_CREATECLUSTERSECURITYGROUPREQUEST_P_H
 
+#include "redshift_p.h"
+#include "createclustersecuritygrouprequest.h"
+
+namespace AWS {
+
+namespace Redshift {
+
+class CreateClusterSecurityGroupRequest;
+
+class QTAWS_EXPORT CreateClusterSecurityGroupRequestPrivate : public RedshiftPrivate {
+
+public:
+    CreateClusterSecurityGroupRequestPrivate(const Redshift::Action action,
+                                   CreateClusterSecurityGroupRequest * const q);
+    CreateClusterSecurityGroupRequestPrivate(const CreateClusterSecurityGroupRequestPrivate &other,
+                                   CreateClusterSecurityGroupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateClusterSecurityGroupRequest)
+
+};
+
+} // namespace Redshift
+} // namespace AWS
+
 #endif

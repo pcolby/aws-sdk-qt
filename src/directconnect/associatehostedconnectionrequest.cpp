@@ -19,3 +19,107 @@
 
 #include "associatehostedconnectionrequest.h"
 #include "associatehostedconnectionrequest_p.h"
+#include "associatehostedconnectionresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AssociateHostedConnectionRequest
+ *
+ * @brief  Implements DirectConnect AssociateHostedConnection requests.
+ *
+ * @see    DirectConnectClient::associateHostedConnection
+ */
+
+/**
+ * @brief  Constructs a new AssociateHostedConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateHostedConnectionResponse::AssociateHostedConnectionResponse(
+
+/**
+ * @brief  Constructs a new AssociateHostedConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateHostedConnectionRequest::AssociateHostedConnectionRequest(const AssociateHostedConnectionRequest &other)
+    : DirectConnectRequest(new AssociateHostedConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateHostedConnectionRequest object.
+ */
+AssociateHostedConnectionRequest::AssociateHostedConnectionRequest()
+    : DirectConnectRequest(new AssociateHostedConnectionRequestPrivate(DirectConnectRequest::AssociateHostedConnectionAction, this))
+{
+
+}
+
+bool AssociateHostedConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateHostedConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateHostedConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * AssociateHostedConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateHostedConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateHostedConnectionRequestPrivate
+ *
+ * @brief  Private implementation for AssociateHostedConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateHostedConnectionRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public AssociateHostedConnectionRequest instance.
+ */
+AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate(
+    const DirectConnectRequest::Action action, AssociateHostedConnectionRequest * const q)
+    : AssociateHostedConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateHostedConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateHostedConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateHostedConnectionRequest instance.
+ */
+AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate(
+    const AssociateHostedConnectionRequestPrivate &other, AssociateHostedConnectionRequest * const q)
+    : AssociateHostedConnectionPrivate(other, q)
+{
+
+}

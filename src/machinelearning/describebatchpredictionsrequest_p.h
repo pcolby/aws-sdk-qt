@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEBATCHPREDICTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEBATCHPREDICTIONSREQUEST_P_H
 
+#include "machinelearning_p.h"
+#include "describebatchpredictionsrequest.h"
+
+namespace AWS {
+
+namespace MachineLearning {
+
+class DescribeBatchPredictionsRequest;
+
+class QTAWS_EXPORT DescribeBatchPredictionsRequestPrivate : public MachineLearningPrivate {
+
+public:
+    DescribeBatchPredictionsRequestPrivate(const MachineLearning::Action action,
+                                   DescribeBatchPredictionsRequest * const q);
+    DescribeBatchPredictionsRequestPrivate(const DescribeBatchPredictionsRequestPrivate &other,
+                                   DescribeBatchPredictionsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeBatchPredictionsRequest)
+
+};
+
+} // namespace MachineLearning
+} // namespace AWS
+
 #endif

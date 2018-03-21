@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETERATEBASEDRULEREQUEST_H
 #define QTAWS_DELETERATEBASEDRULEREQUEST_H
 
+#include "wafrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class DeleteRateBasedRuleRequestPrivate;
+
+class QTAWS_EXPORT DeleteRateBasedRuleRequest : public WAFRequest {
+
+public:
+    DeleteRateBasedRuleRequest(const DeleteRateBasedRuleRequest &other);
+    DeleteRateBasedRuleRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteRateBasedRuleRequest)
+
+}
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

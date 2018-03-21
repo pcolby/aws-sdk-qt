@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETHOSTEDZONECOUNTREQUEST_H
 #define QTAWS_GETHOSTEDZONECOUNTREQUEST_H
 
+#include "route53request.h"
+
+namespace AWS {
+
+namespace Route53 {
+
+class GetHostedZoneCountRequestPrivate;
+
+class QTAWS_EXPORT GetHostedZoneCountRequest : public Route53Request {
+
+public:
+    GetHostedZoneCountRequest(const GetHostedZoneCountRequest &other);
+    GetHostedZoneCountRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetHostedZoneCountRequest)
+
+}
+
+} // namespace Route53
+} // namespace AWS
+
 #endif

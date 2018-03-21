@@ -19,3 +19,107 @@
 
 #include "requestspotfleetrequest.h"
 #include "requestspotfleetrequest_p.h"
+#include "requestspotfleetresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  RequestSpotFleetRequest
+ *
+ * @brief  Implements EC2 RequestSpotFleet requests.
+ *
+ * @see    EC2Client::requestSpotFleet
+ */
+
+/**
+ * @brief  Constructs a new RequestSpotFleetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RequestSpotFleetResponse::RequestSpotFleetResponse(
+
+/**
+ * @brief  Constructs a new RequestSpotFleetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RequestSpotFleetRequest::RequestSpotFleetRequest(const RequestSpotFleetRequest &other)
+    : EC2Request(new RequestSpotFleetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RequestSpotFleetRequest object.
+ */
+RequestSpotFleetRequest::RequestSpotFleetRequest()
+    : EC2Request(new RequestSpotFleetRequestPrivate(EC2Request::RequestSpotFleetAction, this))
+{
+
+}
+
+bool RequestSpotFleetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RequestSpotFleetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RequestSpotFleetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkReply * const reply) const
+{
+    return new RequestSpotFleetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RequestSpotFleetRequestPrivate
+ *
+ * @brief  Private implementation for RequestSpotFleetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestSpotFleetRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public RequestSpotFleetRequest instance.
+ */
+RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
+    const EC2Request::Action action, RequestSpotFleetRequest * const q)
+    : RequestSpotFleetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RequestSpotFleetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RequestSpotFleetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RequestSpotFleetRequest instance.
+ */
+RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
+    const RequestSpotFleetRequestPrivate &other, RequestSpotFleetRequest * const q)
+    : RequestSpotFleetPrivate(other, q)
+{
+
+}

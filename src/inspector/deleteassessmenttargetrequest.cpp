@@ -19,3 +19,107 @@
 
 #include "deleteassessmenttargetrequest.h"
 #include "deleteassessmenttargetrequest_p.h"
+#include "deleteassessmenttargetresponse.h"
+#include "inspectorrequest_p.h"
+
+namespace AWS {
+namespace Inspector {
+
+/**
+ * @class  DeleteAssessmentTargetRequest
+ *
+ * @brief  Implements Inspector DeleteAssessmentTarget requests.
+ *
+ * @see    InspectorClient::deleteAssessmentTarget
+ */
+
+/**
+ * @brief  Constructs a new DeleteAssessmentTargetResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteAssessmentTargetResponse::DeleteAssessmentTargetResponse(
+
+/**
+ * @brief  Constructs a new DeleteAssessmentTargetRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest(const DeleteAssessmentTargetRequest &other)
+    : InspectorRequest(new DeleteAssessmentTargetRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteAssessmentTargetRequest object.
+ */
+DeleteAssessmentTargetRequest::DeleteAssessmentTargetRequest()
+    : InspectorRequest(new DeleteAssessmentTargetRequestPrivate(InspectorRequest::DeleteAssessmentTargetAction, this))
+{
+
+}
+
+bool DeleteAssessmentTargetRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteAssessmentTargetResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteAssessmentTargetResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  InspectorClient::send
+ */
+AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteAssessmentTargetResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteAssessmentTargetRequestPrivate
+ *
+ * @brief  Private implementation for DeleteAssessmentTargetRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object.
+ *
+ * @param  action  Inspector action being performed.
+ * @param  q       Pointer to this object's public DeleteAssessmentTargetRequest instance.
+ */
+DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
+    const InspectorRequest::Action action, DeleteAssessmentTargetRequest * const q)
+    : DeleteAssessmentTargetPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteAssessmentTargetRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteAssessmentTargetRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteAssessmentTargetRequest instance.
+ */
+DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
+    const DeleteAssessmentTargetRequestPrivate &other, DeleteAssessmentTargetRequest * const q)
+    : DeleteAssessmentTargetPrivate(other, q)
+{
+
+}

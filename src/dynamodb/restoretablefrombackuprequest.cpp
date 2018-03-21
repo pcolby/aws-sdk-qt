@@ -19,3 +19,107 @@
 
 #include "restoretablefrombackuprequest.h"
 #include "restoretablefrombackuprequest_p.h"
+#include "restoretablefrombackupresponse.h"
+#include "dynamodbrequest_p.h"
+
+namespace AWS {
+namespace DynamoDB {
+
+/**
+ * @class  RestoreTableFromBackupRequest
+ *
+ * @brief  Implements DynamoDB RestoreTableFromBackup requests.
+ *
+ * @see    DynamoDBClient::restoreTableFromBackup
+ */
+
+/**
+ * @brief  Constructs a new RestoreTableFromBackupResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
+
+/**
+ * @brief  Constructs a new RestoreTableFromBackupRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+RestoreTableFromBackupRequest::RestoreTableFromBackupRequest(const RestoreTableFromBackupRequest &other)
+    : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new RestoreTableFromBackupRequest object.
+ */
+RestoreTableFromBackupRequest::RestoreTableFromBackupRequest()
+    : DynamoDBRequest(new RestoreTableFromBackupRequestPrivate(DynamoDBRequest::RestoreTableFromBackupAction, this))
+{
+
+}
+
+bool RestoreTableFromBackupRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an RestoreTableFromBackupResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An RestoreTableFromBackupResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DynamoDBClient::send
+ */
+AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetworkReply * const reply) const
+{
+    return new RestoreTableFromBackupResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  RestoreTableFromBackupRequestPrivate
+ *
+ * @brief  Private implementation for RestoreTableFromBackupRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreTableFromBackupRequestPrivate object.
+ *
+ * @param  action  DynamoDB action being performed.
+ * @param  q       Pointer to this object's public RestoreTableFromBackupRequest instance.
+ */
+RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
+    const DynamoDBRequest::Action action, RestoreTableFromBackupRequest * const q)
+    : RestoreTableFromBackupPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new RestoreTableFromBackupRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the RestoreTableFromBackupRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public RestoreTableFromBackupRequest instance.
+ */
+RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
+    const RestoreTableFromBackupRequestPrivate &other, RestoreTableFromBackupRequest * const q)
+    : RestoreTableFromBackupPrivate(other, q)
+{
+
+}

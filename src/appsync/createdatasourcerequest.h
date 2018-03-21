@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEDATASOURCEREQUEST_H
 #define QTAWS_CREATEDATASOURCEREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class CreateDataSourceRequestPrivate;
+
+class QTAWS_EXPORT CreateDataSourceRequest : public AppSyncRequest {
+
+public:
+    CreateDataSourceRequest(const CreateDataSourceRequest &other);
+    CreateDataSourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateDataSourceRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

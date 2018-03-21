@@ -19,3 +19,107 @@
 
 #include "updatesmschannelrequest.h"
 #include "updatesmschannelrequest_p.h"
+#include "updatesmschannelresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateSmsChannelRequest
+ *
+ * @brief  Implements Pinpoint UpdateSmsChannel requests.
+ *
+ * @see    PinpointClient::updateSmsChannel
+ */
+
+/**
+ * @brief  Constructs a new UpdateSmsChannelResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateSmsChannelResponse::UpdateSmsChannelResponse(
+
+/**
+ * @brief  Constructs a new UpdateSmsChannelRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateSmsChannelRequest::UpdateSmsChannelRequest(const UpdateSmsChannelRequest &other)
+    : PinpointRequest(new UpdateSmsChannelRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateSmsChannelRequest object.
+ */
+UpdateSmsChannelRequest::UpdateSmsChannelRequest()
+    : PinpointRequest(new UpdateSmsChannelRequestPrivate(PinpointRequest::UpdateSmsChannelAction, this))
+{
+
+}
+
+bool UpdateSmsChannelRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateSmsChannelResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateSmsChannelResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateSmsChannelResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateSmsChannelRequestPrivate
+ *
+ * @brief  Private implementation for UpdateSmsChannelRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSmsChannelRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateSmsChannelRequest instance.
+ */
+UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
+    const PinpointRequest::Action action, UpdateSmsChannelRequest * const q)
+    : UpdateSmsChannelPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateSmsChannelRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateSmsChannelRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateSmsChannelRequest instance.
+ */
+UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
+    const UpdateSmsChannelRequestPrivate &other, UpdateSmsChannelRequest * const q)
+    : UpdateSmsChannelPrivate(other, q)
+{
+
+}

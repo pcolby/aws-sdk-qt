@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTATTRIBUTESREQUEST_H
 #define QTAWS_LISTATTRIBUTESREQUEST_H
 
+#include "ecsrequest.h"
+
+namespace AWS {
+
+namespace ECS {
+
+class ListAttributesRequestPrivate;
+
+class QTAWS_EXPORT ListAttributesRequest : public ECSRequest {
+
+public:
+    ListAttributesRequest(const ListAttributesRequest &other);
+    ListAttributesRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListAttributesRequest)
+
+}
+
+} // namespace ECS
+} // namespace AWS
+
 #endif

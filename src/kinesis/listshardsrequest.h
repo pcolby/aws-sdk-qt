@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTSHARDSREQUEST_H
 #define QTAWS_LISTSHARDSREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class ListShardsRequestPrivate;
+
+class QTAWS_EXPORT ListShardsRequest : public KinesisRequest {
+
+public:
+    ListShardsRequest(const ListShardsRequest &other);
+    ListShardsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListShardsRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

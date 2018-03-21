@@ -19,3 +19,107 @@
 
 #include "createconnectionrequest.h"
 #include "createconnectionrequest_p.h"
+#include "createconnectionresponse.h"
+#include "gluerequest_p.h"
+
+namespace AWS {
+namespace Glue {
+
+/**
+ * @class  CreateConnectionRequest
+ *
+ * @brief  Implements Glue CreateConnection requests.
+ *
+ * @see    GlueClient::createConnection
+ */
+
+/**
+ * @brief  Constructs a new CreateConnectionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConnectionResponse::CreateConnectionResponse(
+
+/**
+ * @brief  Constructs a new CreateConnectionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateConnectionRequest::CreateConnectionRequest(const CreateConnectionRequest &other)
+    : GlueRequest(new CreateConnectionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateConnectionRequest object.
+ */
+CreateConnectionRequest::CreateConnectionRequest()
+    : GlueRequest(new CreateConnectionRequestPrivate(GlueRequest::CreateConnectionAction, this))
+{
+
+}
+
+bool CreateConnectionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateConnectionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateConnectionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  GlueClient::send
+ */
+AwsAbstractResponse * CreateConnectionRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateConnectionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConnectionRequestPrivate
+ *
+ * @brief  Private implementation for CreateConnectionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConnectionRequestPrivate object.
+ *
+ * @param  action  Glue action being performed.
+ * @param  q       Pointer to this object's public CreateConnectionRequest instance.
+ */
+CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
+    const GlueRequest::Action action, CreateConnectionRequest * const q)
+    : CreateConnectionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConnectionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateConnectionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateConnectionRequest instance.
+ */
+CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
+    const CreateConnectionRequestPrivate &other, CreateConnectionRequest * const q)
+    : CreateConnectionPrivate(other, q)
+{
+
+}

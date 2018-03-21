@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETINVALIDATIONREQUEST_H
 #define QTAWS_GETINVALIDATIONREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class GetInvalidationRequestPrivate;
+
+class QTAWS_EXPORT GetInvalidationRequest : public CloudFrontRequest {
+
+public:
+    GetInvalidationRequest(const GetInvalidationRequest &other);
+    GetInvalidationRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetInvalidationRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describescalingparametersrequest.h"
 #include "describescalingparametersrequest_p.h"
+#include "describescalingparametersresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DescribeScalingParametersRequest
+ *
+ * @brief  Implements CloudSearch DescribeScalingParameters requests.
+ *
+ * @see    CloudSearchClient::describeScalingParameters
+ */
+
+/**
+ * @brief  Constructs a new DescribeScalingParametersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeScalingParametersResponse::DescribeScalingParametersResponse(
+
+/**
+ * @brief  Constructs a new DescribeScalingParametersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeScalingParametersRequest::DescribeScalingParametersRequest(const DescribeScalingParametersRequest &other)
+    : CloudSearchRequest(new DescribeScalingParametersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeScalingParametersRequest object.
+ */
+DescribeScalingParametersRequest::DescribeScalingParametersRequest()
+    : CloudSearchRequest(new DescribeScalingParametersRequestPrivate(CloudSearchRequest::DescribeScalingParametersAction, this))
+{
+
+}
+
+bool DescribeScalingParametersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeScalingParametersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeScalingParametersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DescribeScalingParametersRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeScalingParametersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeScalingParametersRequestPrivate
+ *
+ * @brief  Private implementation for DescribeScalingParametersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingParametersRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DescribeScalingParametersRequest instance.
+ */
+DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate(
+    const CloudSearchRequest::Action action, DescribeScalingParametersRequest * const q)
+    : DescribeScalingParametersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeScalingParametersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeScalingParametersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeScalingParametersRequest instance.
+ */
+DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate(
+    const DescribeScalingParametersRequestPrivate &other, DescribeScalingParametersRequest * const q)
+    : DescribeScalingParametersPrivate(other, q)
+{
+
+}

@@ -19,3 +19,107 @@
 
 #include "liststatemachinesrequest.h"
 #include "liststatemachinesrequest_p.h"
+#include "liststatemachinesresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  ListStateMachinesRequest
+ *
+ * @brief  Implements SFN ListStateMachines requests.
+ *
+ * @see    SFNClient::listStateMachines
+ */
+
+/**
+ * @brief  Constructs a new ListStateMachinesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListStateMachinesResponse::ListStateMachinesResponse(
+
+/**
+ * @brief  Constructs a new ListStateMachinesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListStateMachinesRequest::ListStateMachinesRequest(const ListStateMachinesRequest &other)
+    : SFNRequest(new ListStateMachinesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListStateMachinesRequest object.
+ */
+ListStateMachinesRequest::ListStateMachinesRequest()
+    : SFNRequest(new ListStateMachinesRequestPrivate(SFNRequest::ListStateMachinesAction, this))
+{
+
+}
+
+bool ListStateMachinesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListStateMachinesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListStateMachinesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkReply * const reply) const
+{
+    return new ListStateMachinesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListStateMachinesRequestPrivate
+ *
+ * @brief  Private implementation for ListStateMachinesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStateMachinesRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public ListStateMachinesRequest instance.
+ */
+ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
+    const SFNRequest::Action action, ListStateMachinesRequest * const q)
+    : ListStateMachinesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListStateMachinesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListStateMachinesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListStateMachinesRequest instance.
+ */
+ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
+    const ListStateMachinesRequestPrivate &other, ListStateMachinesRequest * const q)
+    : ListStateMachinesPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_REBOOTNODEREQUEST_P_H
 #define QTAWS_REBOOTNODEREQUEST_P_H
 
+#include "dax_p.h"
+#include "rebootnoderequest.h"
+
+namespace AWS {
+
+namespace DAX {
+
+class RebootNodeRequest;
+
+class QTAWS_EXPORT RebootNodeRequestPrivate : public DAXPrivate {
+
+public:
+    RebootNodeRequestPrivate(const DAX::Action action,
+                                   RebootNodeRequest * const q);
+    RebootNodeRequestPrivate(const RebootNodeRequestPrivate &other,
+                                   RebootNodeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RebootNodeRequest)
+
+};
+
+} // namespace DAX
+} // namespace AWS
+
 #endif

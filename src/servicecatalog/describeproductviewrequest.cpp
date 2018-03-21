@@ -19,3 +19,107 @@
 
 #include "describeproductviewrequest.h"
 #include "describeproductviewrequest_p.h"
+#include "describeproductviewresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DescribeProductViewRequest
+ *
+ * @brief  Implements ServiceCatalog DescribeProductView requests.
+ *
+ * @see    ServiceCatalogClient::describeProductView
+ */
+
+/**
+ * @brief  Constructs a new DescribeProductViewResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeProductViewResponse::DescribeProductViewResponse(
+
+/**
+ * @brief  Constructs a new DescribeProductViewRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeProductViewRequest::DescribeProductViewRequest(const DescribeProductViewRequest &other)
+    : ServiceCatalogRequest(new DescribeProductViewRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeProductViewRequest object.
+ */
+DescribeProductViewRequest::DescribeProductViewRequest()
+    : ServiceCatalogRequest(new DescribeProductViewRequestPrivate(ServiceCatalogRequest::DescribeProductViewAction, this))
+{
+
+}
+
+bool DescribeProductViewRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeProductViewResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeProductViewResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DescribeProductViewRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeProductViewResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeProductViewRequestPrivate
+ *
+ * @brief  Private implementation for DescribeProductViewRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProductViewRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DescribeProductViewRequest instance.
+ */
+DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
+    const ServiceCatalogRequest::Action action, DescribeProductViewRequest * const q)
+    : DescribeProductViewPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeProductViewRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeProductViewRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeProductViewRequest instance.
+ */
+DescribeProductViewRequestPrivate::DescribeProductViewRequestPrivate(
+    const DescribeProductViewRequestPrivate &other, DescribeProductViewRequest * const q)
+    : DescribeProductViewPrivate(other, q)
+{
+
+}

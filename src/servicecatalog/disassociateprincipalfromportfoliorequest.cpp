@@ -19,3 +19,107 @@
 
 #include "disassociateprincipalfromportfoliorequest.h"
 #include "disassociateprincipalfromportfoliorequest_p.h"
+#include "disassociateprincipalfromportfolioresponse.h"
+#include "servicecatalogrequest_p.h"
+
+namespace AWS {
+namespace ServiceCatalog {
+
+/**
+ * @class  DisassociatePrincipalFromPortfolioRequest
+ *
+ * @brief  Implements ServiceCatalog DisassociatePrincipalFromPortfolio requests.
+ *
+ * @see    ServiceCatalogClient::disassociatePrincipalFromPortfolio
+ */
+
+/**
+ * @brief  Constructs a new DisassociatePrincipalFromPortfolioResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DisassociatePrincipalFromPortfolioResponse::DisassociatePrincipalFromPortfolioResponse(
+
+/**
+ * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioRequest(const DisassociatePrincipalFromPortfolioRequest &other)
+    : ServiceCatalogRequest(new DisassociatePrincipalFromPortfolioRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequest object.
+ */
+DisassociatePrincipalFromPortfolioRequest::DisassociatePrincipalFromPortfolioRequest()
+    : ServiceCatalogRequest(new DisassociatePrincipalFromPortfolioRequestPrivate(ServiceCatalogRequest::DisassociatePrincipalFromPortfolioAction, this))
+{
+
+}
+
+bool DisassociatePrincipalFromPortfolioRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DisassociatePrincipalFromPortfolioResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DisassociatePrincipalFromPortfolioResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ServiceCatalogClient::send
+ */
+AwsAbstractResponse * DisassociatePrincipalFromPortfolioRequest::response(QNetworkReply * const reply) const
+{
+    return new DisassociatePrincipalFromPortfolioResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DisassociatePrincipalFromPortfolioRequestPrivate
+ *
+ * @brief  Private implementation for DisassociatePrincipalFromPortfolioRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object.
+ *
+ * @param  action  ServiceCatalog action being performed.
+ * @param  q       Pointer to this object's public DisassociatePrincipalFromPortfolioRequest instance.
+ */
+DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortfolioRequestPrivate(
+    const ServiceCatalogRequest::Action action, DisassociatePrincipalFromPortfolioRequest * const q)
+    : DisassociatePrincipalFromPortfolioPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DisassociatePrincipalFromPortfolioRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DisassociatePrincipalFromPortfolioRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DisassociatePrincipalFromPortfolioRequest instance.
+ */
+DisassociatePrincipalFromPortfolioRequestPrivate::DisassociatePrincipalFromPortfolioRequestPrivate(
+    const DisassociatePrincipalFromPortfolioRequestPrivate &other, DisassociatePrincipalFromPortfolioRequest * const q)
+    : DisassociatePrincipalFromPortfolioPrivate(other, q)
+{
+
+}

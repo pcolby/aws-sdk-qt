@@ -19,3 +19,107 @@
 
 #include "createbgppeerrequest.h"
 #include "createbgppeerrequest_p.h"
+#include "createbgppeerresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  CreateBGPPeerRequest
+ *
+ * @brief  Implements DirectConnect CreateBGPPeer requests.
+ *
+ * @see    DirectConnectClient::createBGPPeer
+ */
+
+/**
+ * @brief  Constructs a new CreateBGPPeerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateBGPPeerResponse::CreateBGPPeerResponse(
+
+/**
+ * @brief  Constructs a new CreateBGPPeerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateBGPPeerRequest::CreateBGPPeerRequest(const CreateBGPPeerRequest &other)
+    : DirectConnectRequest(new CreateBGPPeerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateBGPPeerRequest object.
+ */
+CreateBGPPeerRequest::CreateBGPPeerRequest()
+    : DirectConnectRequest(new CreateBGPPeerRequestPrivate(DirectConnectRequest::CreateBGPPeerAction, this))
+{
+
+}
+
+bool CreateBGPPeerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateBGPPeerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateBGPPeerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateBGPPeerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateBGPPeerRequestPrivate
+ *
+ * @brief  Private implementation for CreateBGPPeerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBGPPeerRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public CreateBGPPeerRequest instance.
+ */
+CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
+    const DirectConnectRequest::Action action, CreateBGPPeerRequest * const q)
+    : CreateBGPPeerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateBGPPeerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateBGPPeerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateBGPPeerRequest instance.
+ */
+CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
+    const CreateBGPPeerRequestPrivate &other, CreateBGPPeerRequest * const q)
+    : CreateBGPPeerPrivate(other, q)
+{
+
+}

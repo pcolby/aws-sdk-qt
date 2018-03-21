@@ -19,3 +19,107 @@
 
 #include "listeventsourcemappingsrequest.h"
 #include "listeventsourcemappingsrequest_p.h"
+#include "listeventsourcemappingsresponse.h"
+#include "lambdarequest_p.h"
+
+namespace AWS {
+namespace Lambda {
+
+/**
+ * @class  ListEventSourceMappingsRequest
+ *
+ * @brief  Implements Lambda ListEventSourceMappings requests.
+ *
+ * @see    LambdaClient::listEventSourceMappings
+ */
+
+/**
+ * @brief  Constructs a new ListEventSourceMappingsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListEventSourceMappingsResponse::ListEventSourceMappingsResponse(
+
+/**
+ * @brief  Constructs a new ListEventSourceMappingsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListEventSourceMappingsRequest::ListEventSourceMappingsRequest(const ListEventSourceMappingsRequest &other)
+    : LambdaRequest(new ListEventSourceMappingsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListEventSourceMappingsRequest object.
+ */
+ListEventSourceMappingsRequest::ListEventSourceMappingsRequest()
+    : LambdaRequest(new ListEventSourceMappingsRequestPrivate(LambdaRequest::ListEventSourceMappingsAction, this))
+{
+
+}
+
+bool ListEventSourceMappingsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListEventSourceMappingsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListEventSourceMappingsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LambdaClient::send
+ */
+AwsAbstractResponse * ListEventSourceMappingsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListEventSourceMappingsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListEventSourceMappingsRequestPrivate
+ *
+ * @brief  Private implementation for ListEventSourceMappingsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object.
+ *
+ * @param  action  Lambda action being performed.
+ * @param  q       Pointer to this object's public ListEventSourceMappingsRequest instance.
+ */
+ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
+    const LambdaRequest::Action action, ListEventSourceMappingsRequest * const q)
+    : ListEventSourceMappingsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListEventSourceMappingsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListEventSourceMappingsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListEventSourceMappingsRequest instance.
+ */
+ListEventSourceMappingsRequestPrivate::ListEventSourceMappingsRequestPrivate(
+    const ListEventSourceMappingsRequestPrivate &other, ListEventSourceMappingsRequest * const q)
+    : ListEventSourceMappingsPrivate(other, q)
+{
+
+}

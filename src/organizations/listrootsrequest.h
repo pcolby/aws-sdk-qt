@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTROOTSREQUEST_H
 #define QTAWS_LISTROOTSREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class ListRootsRequestPrivate;
+
+class QTAWS_EXPORT ListRootsRequest : public OrganizationsRequest {
+
+public:
+    ListRootsRequest(const ListRootsRequest &other);
+    ListRootsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListRootsRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

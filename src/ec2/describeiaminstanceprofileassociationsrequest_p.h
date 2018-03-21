@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIAMINSTANCEPROFILEASSOCIATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEIAMINSTANCEPROFILEASSOCIATIONSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeiaminstanceprofileassociationsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeIamInstanceProfileAssociationsRequest;
+
+class QTAWS_EXPORT DescribeIamInstanceProfileAssociationsRequestPrivate : public EC2Private {
+
+public:
+    DescribeIamInstanceProfileAssociationsRequestPrivate(const EC2::Action action,
+                                   DescribeIamInstanceProfileAssociationsRequest * const q);
+    DescribeIamInstanceProfileAssociationsRequestPrivate(const DescribeIamInstanceProfileAssociationsRequestPrivate &other,
+                                   DescribeIamInstanceProfileAssociationsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIamInstanceProfileAssociationsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "updatecertificaterequest.h"
 #include "updatecertificaterequest_p.h"
+#include "updatecertificateresponse.h"
+#include "iotrequest_p.h"
+
+namespace AWS {
+namespace IoT {
+
+/**
+ * @class  UpdateCertificateRequest
+ *
+ * @brief  Implements IoT UpdateCertificate requests.
+ *
+ * @see    IoTClient::updateCertificate
+ */
+
+/**
+ * @brief  Constructs a new UpdateCertificateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateCertificateResponse::UpdateCertificateResponse(
+
+/**
+ * @brief  Constructs a new UpdateCertificateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateCertificateRequest::UpdateCertificateRequest(const UpdateCertificateRequest &other)
+    : IoTRequest(new UpdateCertificateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateCertificateRequest object.
+ */
+UpdateCertificateRequest::UpdateCertificateRequest()
+    : IoTRequest(new UpdateCertificateRequestPrivate(IoTRequest::UpdateCertificateAction, this))
+{
+
+}
+
+bool UpdateCertificateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateCertificateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateCertificateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  IoTClient::send
+ */
+AwsAbstractResponse * UpdateCertificateRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateCertificateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateCertificateRequestPrivate
+ *
+ * @brief  Private implementation for UpdateCertificateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCertificateRequestPrivate object.
+ *
+ * @param  action  IoT action being performed.
+ * @param  q       Pointer to this object's public UpdateCertificateRequest instance.
+ */
+UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
+    const IoTRequest::Action action, UpdateCertificateRequest * const q)
+    : UpdateCertificatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateCertificateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateCertificateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateCertificateRequest instance.
+ */
+UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
+    const UpdateCertificateRequestPrivate &other, UpdateCertificateRequest * const q)
+    : UpdateCertificatePrivate(other, q)
+{
+
+}

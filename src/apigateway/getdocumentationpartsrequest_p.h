@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDOCUMENTATIONPARTSREQUEST_P_H
 #define QTAWS_GETDOCUMENTATIONPARTSREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getdocumentationpartsrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetDocumentationPartsRequest;
+
+class QTAWS_EXPORT GetDocumentationPartsRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetDocumentationPartsRequestPrivate(const APIGateway::Action action,
+                                   GetDocumentationPartsRequest * const q);
+    GetDocumentationPartsRequestPrivate(const GetDocumentationPartsRequestPrivate &other,
+                                   GetDocumentationPartsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDocumentationPartsRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

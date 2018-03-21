@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETAGSFORDOMAINREQUEST_H
 #define QTAWS_DELETETAGSFORDOMAINREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class DeleteTagsForDomainRequestPrivate;
+
+class QTAWS_EXPORT DeleteTagsForDomainRequest : public Route53DomainsRequest {
+
+public:
+    DeleteTagsForDomainRequest(const DeleteTagsForDomainRequest &other);
+    DeleteTagsForDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTagsForDomainRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

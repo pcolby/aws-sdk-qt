@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTGRAPHQLAPISREQUEST_H
 #define QTAWS_LISTGRAPHQLAPISREQUEST_H
 
+#include "appsyncrequest.h"
+
+namespace AWS {
+
+namespace AppSync {
+
+class ListGraphqlApisRequestPrivate;
+
+class QTAWS_EXPORT ListGraphqlApisRequest : public AppSyncRequest {
+
+public:
+    ListGraphqlApisRequest(const ListGraphqlApisRequest &other);
+    ListGraphqlApisRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListGraphqlApisRequest)
+
+}
+
+} // namespace AppSync
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "setvisibletoallusersrequest.h"
 #include "setvisibletoallusersrequest_p.h"
+#include "setvisibletoallusersresponse.h"
+#include "emrrequest_p.h"
+
+namespace AWS {
+namespace EMR {
+
+/**
+ * @class  SetVisibleToAllUsersRequest
+ *
+ * @brief  Implements EMR SetVisibleToAllUsers requests.
+ *
+ * @see    EMRClient::setVisibleToAllUsers
+ */
+
+/**
+ * @brief  Constructs a new SetVisibleToAllUsersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
+
+/**
+ * @brief  Constructs a new SetVisibleToAllUsersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest(const SetVisibleToAllUsersRequest &other)
+    : EMRRequest(new SetVisibleToAllUsersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SetVisibleToAllUsersRequest object.
+ */
+SetVisibleToAllUsersRequest::SetVisibleToAllUsersRequest()
+    : EMRRequest(new SetVisibleToAllUsersRequestPrivate(EMRRequest::SetVisibleToAllUsersAction, this))
+{
+
+}
+
+bool SetVisibleToAllUsersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SetVisibleToAllUsersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SetVisibleToAllUsersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EMRClient::send
+ */
+AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetworkReply * const reply) const
+{
+    return new SetVisibleToAllUsersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SetVisibleToAllUsersRequestPrivate
+ *
+ * @brief  Private implementation for SetVisibleToAllUsersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object.
+ *
+ * @param  action  EMR action being performed.
+ * @param  q       Pointer to this object's public SetVisibleToAllUsersRequest instance.
+ */
+SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
+    const EMRRequest::Action action, SetVisibleToAllUsersRequest * const q)
+    : SetVisibleToAllUsersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SetVisibleToAllUsersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SetVisibleToAllUsersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SetVisibleToAllUsersRequest instance.
+ */
+SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
+    const SetVisibleToAllUsersRequestPrivate &other, SetVisibleToAllUsersRequest * const q)
+    : SetVisibleToAllUsersPrivate(other, q)
+{
+
+}

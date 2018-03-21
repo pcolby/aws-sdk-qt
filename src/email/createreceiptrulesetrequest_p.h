@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATERECEIPTRULESETREQUEST_P_H
 #define QTAWS_CREATERECEIPTRULESETREQUEST_P_H
 
+#include "ses_p.h"
+#include "createreceiptrulesetrequest.h"
+
+namespace AWS {
+
+namespace SES {
+
+class CreateReceiptRuleSetRequest;
+
+class QTAWS_EXPORT CreateReceiptRuleSetRequestPrivate : public SESPrivate {
+
+public:
+    CreateReceiptRuleSetRequestPrivate(const SES::Action action,
+                                   CreateReceiptRuleSetRequest * const q);
+    CreateReceiptRuleSetRequestPrivate(const CreateReceiptRuleSetRequestPrivate &other,
+                                   CreateReceiptRuleSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateReceiptRuleSetRequest)
+
+};
+
+} // namespace SES
+} // namespace AWS
+
 #endif

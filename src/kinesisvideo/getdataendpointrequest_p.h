@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDATAENDPOINTREQUEST_P_H
 #define QTAWS_GETDATAENDPOINTREQUEST_P_H
 
+#include "kinesisvideo_p.h"
+#include "getdataendpointrequest.h"
+
+namespace AWS {
+
+namespace KinesisVideo {
+
+class GetDataEndpointRequest;
+
+class QTAWS_EXPORT GetDataEndpointRequestPrivate : public KinesisVideoPrivate {
+
+public:
+    GetDataEndpointRequestPrivate(const KinesisVideo::Action action,
+                                   GetDataEndpointRequest * const q);
+    GetDataEndpointRequestPrivate(const GetDataEndpointRequestPrivate &other,
+                                   GetDataEndpointRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDataEndpointRequest)
+
+};
+
+} // namespace KinesisVideo
+} // namespace AWS
+
 #endif

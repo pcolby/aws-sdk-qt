@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTOBJECTVERSIONSREQUEST_H
 #define QTAWS_LISTOBJECTVERSIONSREQUEST_H
 
+#include "s3request.h"
+
+namespace AWS {
+
+namespace S3 {
+
+class ListObjectVersionsRequestPrivate;
+
+class QTAWS_EXPORT ListObjectVersionsRequest : public S3Request {
+
+public:
+    ListObjectVersionsRequest(const ListObjectVersionsRequest &other);
+    ListObjectVersionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListObjectVersionsRequest)
+
+}
+
+} // namespace S3
+} // namespace AWS
+
 #endif

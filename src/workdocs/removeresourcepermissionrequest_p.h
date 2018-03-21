@@ -20,4 +20,29 @@
 #ifndef QTAWS_REMOVERESOURCEPERMISSIONREQUEST_P_H
 #define QTAWS_REMOVERESOURCEPERMISSIONREQUEST_P_H
 
+#include "workdocs_p.h"
+#include "removeresourcepermissionrequest.h"
+
+namespace AWS {
+
+namespace WorkDocs {
+
+class RemoveResourcePermissionRequest;
+
+class QTAWS_EXPORT RemoveResourcePermissionRequestPrivate : public WorkDocsPrivate {
+
+public:
+    RemoveResourcePermissionRequestPrivate(const WorkDocs::Action action,
+                                   RemoveResourcePermissionRequest * const q);
+    RemoveResourcePermissionRequestPrivate(const RemoveResourcePermissionRequestPrivate &other,
+                                   RemoveResourcePermissionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(RemoveResourcePermissionRequest)
+
+};
+
+} // namespace WorkDocs
+} // namespace AWS
+
 #endif

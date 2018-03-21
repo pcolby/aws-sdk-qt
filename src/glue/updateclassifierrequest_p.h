@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATECLASSIFIERREQUEST_P_H
 #define QTAWS_UPDATECLASSIFIERREQUEST_P_H
 
+#include "glue_p.h"
+#include "updateclassifierrequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateClassifierRequest;
+
+class QTAWS_EXPORT UpdateClassifierRequestPrivate : public GluePrivate {
+
+public:
+    UpdateClassifierRequestPrivate(const Glue::Action action,
+                                   UpdateClassifierRequest * const q);
+    UpdateClassifierRequestPrivate(const UpdateClassifierRequestPrivate &other,
+                                   UpdateClassifierRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateClassifierRequest)
+
+};
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "deletetrustrequest.h"
 #include "deletetrustrequest_p.h"
+#include "deletetrustresponse.h"
+#include "directoryservicerequest_p.h"
+
+namespace AWS {
+namespace DirectoryService {
+
+/**
+ * @class  DeleteTrustRequest
+ *
+ * @brief  Implements DirectoryService DeleteTrust requests.
+ *
+ * @see    DirectoryServiceClient::deleteTrust
+ */
+
+/**
+ * @brief  Constructs a new DeleteTrustResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteTrustResponse::DeleteTrustResponse(
+
+/**
+ * @brief  Constructs a new DeleteTrustRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteTrustRequest::DeleteTrustRequest(const DeleteTrustRequest &other)
+    : DirectoryServiceRequest(new DeleteTrustRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteTrustRequest object.
+ */
+DeleteTrustRequest::DeleteTrustRequest()
+    : DirectoryServiceRequest(new DeleteTrustRequestPrivate(DirectoryServiceRequest::DeleteTrustAction, this))
+{
+
+}
+
+bool DeleteTrustRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteTrustResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteTrustResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectoryServiceClient::send
+ */
+AwsAbstractResponse * DeleteTrustRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteTrustResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteTrustRequestPrivate
+ *
+ * @brief  Private implementation for DeleteTrustRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrustRequestPrivate object.
+ *
+ * @param  action  DirectoryService action being performed.
+ * @param  q       Pointer to this object's public DeleteTrustRequest instance.
+ */
+DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
+    const DirectoryServiceRequest::Action action, DeleteTrustRequest * const q)
+    : DeleteTrustPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteTrustRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteTrustRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteTrustRequest instance.
+ */
+DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
+    const DeleteTrustRequestPrivate &other, DeleteTrustRequest * const q)
+    : DeleteTrustPrivate(other, q)
+{
+
+}

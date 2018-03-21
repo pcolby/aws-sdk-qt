@@ -20,4 +20,29 @@
 #ifndef QTAWS_RESETNETWORKINTERFACEATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETNETWORKINTERFACEATTRIBUTEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "resetnetworkinterfaceattributerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class ResetNetworkInterfaceAttributeRequest;
+
+class QTAWS_EXPORT ResetNetworkInterfaceAttributeRequestPrivate : public EC2Private {
+
+public:
+    ResetNetworkInterfaceAttributeRequestPrivate(const EC2::Action action,
+                                   ResetNetworkInterfaceAttributeRequest * const q);
+    ResetNetworkInterfaceAttributeRequestPrivate(const ResetNetworkInterfaceAttributeRequestPrivate &other,
+                                   ResetNetworkInterfaceAttributeRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ResetNetworkInterfaceAttributeRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

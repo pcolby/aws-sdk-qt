@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETSERVERSREQUEST_H
 #define QTAWS_GETSERVERSREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class GetServersRequestPrivate;
+
+class QTAWS_EXPORT GetServersRequest : public SMSRequest {
+
+public:
+    GetServersRequest(const GetServersRequest &other);
+    GetServersRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetServersRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

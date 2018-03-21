@@ -19,3 +19,107 @@
 
 #include "deleteutterancesrequest.h"
 #include "deleteutterancesrequest_p.h"
+#include "deleteutterancesresponse.h"
+#include "lexmodelbuildingservicerequest_p.h"
+
+namespace AWS {
+namespace LexModelBuildingService {
+
+/**
+ * @class  DeleteUtterancesRequest
+ *
+ * @brief  Implements LexModelBuildingService DeleteUtterances requests.
+ *
+ * @see    LexModelBuildingServiceClient::deleteUtterances
+ */
+
+/**
+ * @brief  Constructs a new DeleteUtterancesResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteUtterancesResponse::DeleteUtterancesResponse(
+
+/**
+ * @brief  Constructs a new DeleteUtterancesRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteUtterancesRequest::DeleteUtterancesRequest(const DeleteUtterancesRequest &other)
+    : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteUtterancesRequest object.
+ */
+DeleteUtterancesRequest::DeleteUtterancesRequest()
+    : LexModelBuildingServiceRequest(new DeleteUtterancesRequestPrivate(LexModelBuildingServiceRequest::DeleteUtterancesAction, this))
+{
+
+}
+
+bool DeleteUtterancesRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteUtterancesResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteUtterancesResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  LexModelBuildingServiceClient::send
+ */
+AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteUtterancesResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteUtterancesRequestPrivate
+ *
+ * @brief  Private implementation for DeleteUtterancesRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUtterancesRequestPrivate object.
+ *
+ * @param  action  LexModelBuildingService action being performed.
+ * @param  q       Pointer to this object's public DeleteUtterancesRequest instance.
+ */
+DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
+    const LexModelBuildingServiceRequest::Action action, DeleteUtterancesRequest * const q)
+    : DeleteUtterancesPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteUtterancesRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteUtterancesRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteUtterancesRequest instance.
+ */
+DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
+    const DeleteUtterancesRequestPrivate &other, DeleteUtterancesRequest * const q)
+    : DeleteUtterancesPrivate(other, q)
+{
+
+}

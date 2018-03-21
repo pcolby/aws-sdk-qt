@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDEPLOYMENTREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTREQUEST_P_H
 
+#include "apigateway_p.h"
+#include "getdeploymentrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class GetDeploymentRequest;
+
+class QTAWS_EXPORT GetDeploymentRequestPrivate : public APIGatewayPrivate {
+
+public:
+    GetDeploymentRequestPrivate(const APIGateway::Action action,
+                                   GetDeploymentRequest * const q);
+    GetDeploymentRequestPrivate(const GetDeploymentRequestPrivate &other,
+                                   GetDeploymentRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDeploymentRequest)
+
+};
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

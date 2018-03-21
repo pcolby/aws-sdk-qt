@@ -20,4 +20,32 @@
 #ifndef QTAWS_ASSOCIATEADDRESSREQUEST_H
 #define QTAWS_ASSOCIATEADDRESSREQUEST_H
 
+#include "ec2request.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateAddressRequestPrivate;
+
+class QTAWS_EXPORT AssociateAddressRequest : public EC2Request {
+
+public:
+    AssociateAddressRequest(const AssociateAddressRequest &other);
+    AssociateAddressRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AssociateAddressRequest)
+
+}
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

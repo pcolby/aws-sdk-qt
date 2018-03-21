@@ -19,3 +19,107 @@
 
 #include "detachloadbalancersrequest.h"
 #include "detachloadbalancersrequest_p.h"
+#include "detachloadbalancersresponse.h"
+#include "autoscalingrequest_p.h"
+
+namespace AWS {
+namespace AutoScaling {
+
+/**
+ * @class  DetachLoadBalancersRequest
+ *
+ * @brief  Implements AutoScaling DetachLoadBalancers requests.
+ *
+ * @see    AutoScalingClient::detachLoadBalancers
+ */
+
+/**
+ * @brief  Constructs a new DetachLoadBalancersResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DetachLoadBalancersResponse::DetachLoadBalancersResponse(
+
+/**
+ * @brief  Constructs a new DetachLoadBalancersRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DetachLoadBalancersRequest::DetachLoadBalancersRequest(const DetachLoadBalancersRequest &other)
+    : AutoScalingRequest(new DetachLoadBalancersRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DetachLoadBalancersRequest object.
+ */
+DetachLoadBalancersRequest::DetachLoadBalancersRequest()
+    : AutoScalingRequest(new DetachLoadBalancersRequestPrivate(AutoScalingRequest::DetachLoadBalancersAction, this))
+{
+
+}
+
+bool DetachLoadBalancersRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DetachLoadBalancersResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DetachLoadBalancersResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AutoScalingClient::send
+ */
+AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetworkReply * const reply) const
+{
+    return new DetachLoadBalancersResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DetachLoadBalancersRequestPrivate
+ *
+ * @brief  Private implementation for DetachLoadBalancersRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachLoadBalancersRequestPrivate object.
+ *
+ * @param  action  AutoScaling action being performed.
+ * @param  q       Pointer to this object's public DetachLoadBalancersRequest instance.
+ */
+DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
+    const AutoScalingRequest::Action action, DetachLoadBalancersRequest * const q)
+    : DetachLoadBalancersPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DetachLoadBalancersRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DetachLoadBalancersRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DetachLoadBalancersRequest instance.
+ */
+DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
+    const DetachLoadBalancersRequestPrivate &other, DetachLoadBalancersRequest * const q)
+    : DetachLoadBalancersPrivate(other, q)
+{
+
+}

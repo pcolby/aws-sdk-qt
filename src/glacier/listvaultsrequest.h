@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTVAULTSREQUEST_H
 #define QTAWS_LISTVAULTSREQUEST_H
 
+#include "glacierrequest.h"
+
+namespace AWS {
+
+namespace Glacier {
+
+class ListVaultsRequestPrivate;
+
+class QTAWS_EXPORT ListVaultsRequest : public GlacierRequest {
+
+public:
+    ListVaultsRequest(const ListVaultsRequest &other);
+    ListVaultsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListVaultsRequest)
+
+}
+
+} // namespace Glacier
+} // namespace AWS
+
 #endif

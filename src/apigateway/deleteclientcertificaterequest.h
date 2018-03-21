@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETECLIENTCERTIFICATEREQUEST_H
 #define QTAWS_DELETECLIENTCERTIFICATEREQUEST_H
 
+#include "apigatewayrequest.h"
+
+namespace AWS {
+
+namespace APIGateway {
+
+class DeleteClientCertificateRequestPrivate;
+
+class QTAWS_EXPORT DeleteClientCertificateRequest : public APIGatewayRequest {
+
+public:
+    DeleteClientCertificateRequest(const DeleteClientCertificateRequest &other);
+    DeleteClientCertificateRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteClientCertificateRequest)
+
+}
+
+} // namespace APIGateway
+} // namespace AWS
+
 #endif

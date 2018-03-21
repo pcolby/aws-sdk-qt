@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETRIGGERREQUEST_H
 #define QTAWS_UPDATETRIGGERREQUEST_H
 
+#include "gluerequest.h"
+
+namespace AWS {
+
+namespace Glue {
+
+class UpdateTriggerRequestPrivate;
+
+class QTAWS_EXPORT UpdateTriggerRequest : public GlueRequest {
+
+public:
+    UpdateTriggerRequest(const UpdateTriggerRequest &other);
+    UpdateTriggerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTriggerRequest)
+
+}
+
+} // namespace Glue
+} // namespace AWS
+
 #endif

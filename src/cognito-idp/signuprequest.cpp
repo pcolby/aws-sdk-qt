@@ -19,3 +19,107 @@
 
 #include "signuprequest.h"
 #include "signuprequest_p.h"
+#include "signupresponse.h"
+#include "cognitoidentityproviderrequest_p.h"
+
+namespace AWS {
+namespace CognitoIdentityProvider {
+
+/**
+ * @class  SignUpRequest
+ *
+ * @brief  Implements CognitoIdentityProvider SignUp requests.
+ *
+ * @see    CognitoIdentityProviderClient::signUp
+ */
+
+/**
+ * @brief  Constructs a new SignUpResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+SignUpResponse::SignUpResponse(
+
+/**
+ * @brief  Constructs a new SignUpRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+SignUpRequest::SignUpRequest(const SignUpRequest &other)
+    : CognitoIdentityProviderRequest(new SignUpRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new SignUpRequest object.
+ */
+SignUpRequest::SignUpRequest()
+    : CognitoIdentityProviderRequest(new SignUpRequestPrivate(CognitoIdentityProviderRequest::SignUpAction, this))
+{
+
+}
+
+bool SignUpRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an SignUpResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An SignUpResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CognitoIdentityProviderClient::send
+ */
+AwsAbstractResponse * SignUpRequest::response(QNetworkReply * const reply) const
+{
+    return new SignUpResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  SignUpRequestPrivate
+ *
+ * @brief  Private implementation for SignUpRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignUpRequestPrivate object.
+ *
+ * @param  action  CognitoIdentityProvider action being performed.
+ * @param  q       Pointer to this object's public SignUpRequest instance.
+ */
+SignUpRequestPrivate::SignUpRequestPrivate(
+    const CognitoIdentityProviderRequest::Action action, SignUpRequest * const q)
+    : SignUpPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new SignUpRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the SignUpRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public SignUpRequest instance.
+ */
+SignUpRequestPrivate::SignUpRequestPrivate(
+    const SignUpRequestPrivate &other, SignUpRequest * const q)
+    : SignUpPrivate(other, q)
+{
+
+}

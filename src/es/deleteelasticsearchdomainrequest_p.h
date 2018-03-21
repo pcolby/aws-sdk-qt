@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEELASTICSEARCHDOMAINREQUEST_P_H
 #define QTAWS_DELETEELASTICSEARCHDOMAINREQUEST_P_H
 
+#include "elasticsearchservice_p.h"
+#include "deleteelasticsearchdomainrequest.h"
+
+namespace AWS {
+
+namespace ElasticsearchService {
+
+class DeleteElasticsearchDomainRequest;
+
+class QTAWS_EXPORT DeleteElasticsearchDomainRequestPrivate : public ElasticsearchServicePrivate {
+
+public:
+    DeleteElasticsearchDomainRequestPrivate(const ElasticsearchService::Action action,
+                                   DeleteElasticsearchDomainRequest * const q);
+    DeleteElasticsearchDomainRequestPrivate(const DeleteElasticsearchDomainRequestPrivate &other,
+                                   DeleteElasticsearchDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteElasticsearchDomainRequest)
+
+};
+
+} // namespace ElasticsearchService
+} // namespace AWS
+
 #endif

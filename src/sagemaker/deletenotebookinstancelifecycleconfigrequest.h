@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_H
 #define QTAWS_DELETENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_H
 
+#include "sagemakerrequest.h"
+
+namespace AWS {
+
+namespace SageMaker {
+
+class DeleteNotebookInstanceLifecycleConfigRequestPrivate;
+
+class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigRequest : public SageMakerRequest {
+
+public:
+    DeleteNotebookInstanceLifecycleConfigRequest(const DeleteNotebookInstanceLifecycleConfigRequest &other);
+    DeleteNotebookInstanceLifecycleConfigRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteNotebookInstanceLifecycleConfigRequest)
+
+}
+
+} // namespace SageMaker
+} // namespace AWS
+
 #endif

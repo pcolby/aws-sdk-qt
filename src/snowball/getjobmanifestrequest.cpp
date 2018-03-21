@@ -19,3 +19,107 @@
 
 #include "getjobmanifestrequest.h"
 #include "getjobmanifestrequest_p.h"
+#include "getjobmanifestresponse.h"
+#include "snowballrequest_p.h"
+
+namespace AWS {
+namespace Snowball {
+
+/**
+ * @class  GetJobManifestRequest
+ *
+ * @brief  Implements Snowball GetJobManifest requests.
+ *
+ * @see    SnowballClient::getJobManifest
+ */
+
+/**
+ * @brief  Constructs a new GetJobManifestResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+GetJobManifestResponse::GetJobManifestResponse(
+
+/**
+ * @brief  Constructs a new GetJobManifestRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+GetJobManifestRequest::GetJobManifestRequest(const GetJobManifestRequest &other)
+    : SnowballRequest(new GetJobManifestRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new GetJobManifestRequest object.
+ */
+GetJobManifestRequest::GetJobManifestRequest()
+    : SnowballRequest(new GetJobManifestRequestPrivate(SnowballRequest::GetJobManifestAction, this))
+{
+
+}
+
+bool GetJobManifestRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an GetJobManifestResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An GetJobManifestResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SnowballClient::send
+ */
+AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply * const reply) const
+{
+    return new GetJobManifestResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  GetJobManifestRequestPrivate
+ *
+ * @brief  Private implementation for GetJobManifestRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobManifestRequestPrivate object.
+ *
+ * @param  action  Snowball action being performed.
+ * @param  q       Pointer to this object's public GetJobManifestRequest instance.
+ */
+GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
+    const SnowballRequest::Action action, GetJobManifestRequest * const q)
+    : GetJobManifestPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new GetJobManifestRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the GetJobManifestRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public GetJobManifestRequest instance.
+ */
+GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
+    const GetJobManifestRequestPrivate &other, GetJobManifestRequest * const q)
+    : GetJobManifestPrivate(other, q)
+{
+
+}

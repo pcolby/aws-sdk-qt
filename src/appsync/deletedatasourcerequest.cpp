@@ -19,3 +19,107 @@
 
 #include "deletedatasourcerequest.h"
 #include "deletedatasourcerequest_p.h"
+#include "deletedatasourceresponse.h"
+#include "appsyncrequest_p.h"
+
+namespace AWS {
+namespace AppSync {
+
+/**
+ * @class  DeleteDataSourceRequest
+ *
+ * @brief  Implements AppSync DeleteDataSource requests.
+ *
+ * @see    AppSyncClient::deleteDataSource
+ */
+
+/**
+ * @brief  Constructs a new DeleteDataSourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteDataSourceResponse::DeleteDataSourceResponse(
+
+/**
+ * @brief  Constructs a new DeleteDataSourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteDataSourceRequest::DeleteDataSourceRequest(const DeleteDataSourceRequest &other)
+    : AppSyncRequest(new DeleteDataSourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteDataSourceRequest object.
+ */
+DeleteDataSourceRequest::DeleteDataSourceRequest()
+    : AppSyncRequest(new DeleteDataSourceRequestPrivate(AppSyncRequest::DeleteDataSourceAction, this))
+{
+
+}
+
+bool DeleteDataSourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteDataSourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteDataSourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  AppSyncClient::send
+ */
+AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteDataSourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteDataSourceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteDataSourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDataSourceRequestPrivate object.
+ *
+ * @param  action  AppSync action being performed.
+ * @param  q       Pointer to this object's public DeleteDataSourceRequest instance.
+ */
+DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
+    const AppSyncRequest::Action action, DeleteDataSourceRequest * const q)
+    : DeleteDataSourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteDataSourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteDataSourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteDataSourceRequest instance.
+ */
+DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
+    const DeleteDataSourceRequestPrivate &other, DeleteDataSourceRequest * const q)
+    : DeleteDataSourcePrivate(other, q)
+{
+
+}

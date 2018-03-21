@@ -19,3 +19,107 @@
 
 #include "updatelagrequest.h"
 #include "updatelagrequest_p.h"
+#include "updatelagresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  UpdateLagRequest
+ *
+ * @brief  Implements DirectConnect UpdateLag requests.
+ *
+ * @see    DirectConnectClient::updateLag
+ */
+
+/**
+ * @brief  Constructs a new UpdateLagResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateLagResponse::UpdateLagResponse(
+
+/**
+ * @brief  Constructs a new UpdateLagRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateLagRequest::UpdateLagRequest(const UpdateLagRequest &other)
+    : DirectConnectRequest(new UpdateLagRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateLagRequest object.
+ */
+UpdateLagRequest::UpdateLagRequest()
+    : DirectConnectRequest(new UpdateLagRequestPrivate(DirectConnectRequest::UpdateLagAction, this))
+{
+
+}
+
+bool UpdateLagRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateLagResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateLagResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * UpdateLagRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateLagResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateLagRequestPrivate
+ *
+ * @brief  Private implementation for UpdateLagRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLagRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public UpdateLagRequest instance.
+ */
+UpdateLagRequestPrivate::UpdateLagRequestPrivate(
+    const DirectConnectRequest::Action action, UpdateLagRequest * const q)
+    : UpdateLagPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateLagRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateLagRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateLagRequest instance.
+ */
+UpdateLagRequestPrivate::UpdateLagRequestPrivate(
+    const UpdateLagRequestPrivate &other, UpdateLagRequest * const q)
+    : UpdateLagPrivate(other, q)
+{
+
+}

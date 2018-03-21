@@ -19,3 +19,107 @@
 
 #include "deletebgppeerrequest.h"
 #include "deletebgppeerrequest_p.h"
+#include "deletebgppeerresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  DeleteBGPPeerRequest
+ *
+ * @brief  Implements DirectConnect DeleteBGPPeer requests.
+ *
+ * @see    DirectConnectClient::deleteBGPPeer
+ */
+
+/**
+ * @brief  Constructs a new DeleteBGPPeerResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteBGPPeerResponse::DeleteBGPPeerResponse(
+
+/**
+ * @brief  Constructs a new DeleteBGPPeerRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteBGPPeerRequest::DeleteBGPPeerRequest(const DeleteBGPPeerRequest &other)
+    : DirectConnectRequest(new DeleteBGPPeerRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteBGPPeerRequest object.
+ */
+DeleteBGPPeerRequest::DeleteBGPPeerRequest()
+    : DirectConnectRequest(new DeleteBGPPeerRequestPrivate(DirectConnectRequest::DeleteBGPPeerAction, this))
+{
+
+}
+
+bool DeleteBGPPeerRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteBGPPeerResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteBGPPeerResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * DeleteBGPPeerRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteBGPPeerResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteBGPPeerRequestPrivate
+ *
+ * @brief  Private implementation for DeleteBGPPeerRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBGPPeerRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public DeleteBGPPeerRequest instance.
+ */
+DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
+    const DirectConnectRequest::Action action, DeleteBGPPeerRequest * const q)
+    : DeleteBGPPeerPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteBGPPeerRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteBGPPeerRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteBGPPeerRequest instance.
+ */
+DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
+    const DeleteBGPPeerRequestPrivate &other, DeleteBGPPeerRequest * const q)
+    : DeleteBGPPeerPrivate(other, q)
+{
+
+}

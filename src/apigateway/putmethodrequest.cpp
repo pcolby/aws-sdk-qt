@@ -19,3 +19,107 @@
 
 #include "putmethodrequest.h"
 #include "putmethodrequest_p.h"
+#include "putmethodresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  PutMethodRequest
+ *
+ * @brief  Implements APIGateway PutMethod requests.
+ *
+ * @see    APIGatewayClient::putMethod
+ */
+
+/**
+ * @brief  Constructs a new PutMethodResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+PutMethodResponse::PutMethodResponse(
+
+/**
+ * @brief  Constructs a new PutMethodRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+PutMethodRequest::PutMethodRequest(const PutMethodRequest &other)
+    : APIGatewayRequest(new PutMethodRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new PutMethodRequest object.
+ */
+PutMethodRequest::PutMethodRequest()
+    : APIGatewayRequest(new PutMethodRequestPrivate(APIGatewayRequest::PutMethodAction, this))
+{
+
+}
+
+bool PutMethodRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an PutMethodResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An PutMethodResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * const reply) const
+{
+    return new PutMethodResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  PutMethodRequestPrivate
+ *
+ * @brief  Private implementation for PutMethodRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMethodRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public PutMethodRequest instance.
+ */
+PutMethodRequestPrivate::PutMethodRequestPrivate(
+    const APIGatewayRequest::Action action, PutMethodRequest * const q)
+    : PutMethodPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new PutMethodRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the PutMethodRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public PutMethodRequest instance.
+ */
+PutMethodRequestPrivate::PutMethodRequestPrivate(
+    const PutMethodRequestPrivate &other, PutMethodRequest * const q)
+    : PutMethodPrivate(other, q)
+{
+
+}

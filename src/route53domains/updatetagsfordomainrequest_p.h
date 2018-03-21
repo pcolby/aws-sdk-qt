@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATETAGSFORDOMAINREQUEST_P_H
 #define QTAWS_UPDATETAGSFORDOMAINREQUEST_P_H
 
+#include "route53domains_p.h"
+#include "updatetagsfordomainrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateTagsForDomainRequest;
+
+class QTAWS_EXPORT UpdateTagsForDomainRequestPrivate : public Route53DomainsPrivate {
+
+public:
+    UpdateTagsForDomainRequestPrivate(const Route53Domains::Action action,
+                                   UpdateTagsForDomainRequest * const q);
+    UpdateTagsForDomainRequestPrivate(const UpdateTagsForDomainRequestPrivate &other,
+                                   UpdateTagsForDomainRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateTagsForDomainRequest)
+
+};
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

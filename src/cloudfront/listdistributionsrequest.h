@@ -20,4 +20,32 @@
 #ifndef QTAWS_LISTDISTRIBUTIONSREQUEST_H
 #define QTAWS_LISTDISTRIBUTIONSREQUEST_H
 
+#include "cloudfrontrequest.h"
+
+namespace AWS {
+
+namespace CloudFront {
+
+class ListDistributionsRequestPrivate;
+
+class QTAWS_EXPORT ListDistributionsRequest : public CloudFrontRequest {
+
+public:
+    ListDistributionsRequest(const ListDistributionsRequest &other);
+    ListDistributionsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(ListDistributionsRequest)
+
+}
+
+} // namespace CloudFront
+} // namespace AWS
+
 #endif

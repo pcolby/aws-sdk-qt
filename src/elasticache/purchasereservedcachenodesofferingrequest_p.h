@@ -20,4 +20,29 @@
 #ifndef QTAWS_PURCHASERESERVEDCACHENODESOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASERESERVEDCACHENODESOFFERINGREQUEST_P_H
 
+#include "elasticache_p.h"
+#include "purchasereservedcachenodesofferingrequest.h"
+
+namespace AWS {
+
+namespace ElastiCache {
+
+class PurchaseReservedCacheNodesOfferingRequest;
+
+class QTAWS_EXPORT PurchaseReservedCacheNodesOfferingRequestPrivate : public ElastiCachePrivate {
+
+public:
+    PurchaseReservedCacheNodesOfferingRequestPrivate(const ElastiCache::Action action,
+                                   PurchaseReservedCacheNodesOfferingRequest * const q);
+    PurchaseReservedCacheNodesOfferingRequestPrivate(const PurchaseReservedCacheNodesOfferingRequestPrivate &other,
+                                   PurchaseReservedCacheNodesOfferingRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(PurchaseReservedCacheNodesOfferingRequest)
+
+};
+
+} // namespace ElastiCache
+} // namespace AWS
+
 #endif

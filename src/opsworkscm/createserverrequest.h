@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATESERVERREQUEST_H
 #define QTAWS_CREATESERVERREQUEST_H
 
+#include "opsworkscmrequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class CreateServerRequestPrivate;
+
+class QTAWS_EXPORT CreateServerRequest : public OpsWorksCMRequest {
+
+public:
+    CreateServerRequest(const CreateServerRequest &other);
+    CreateServerRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateServerRequest)
+
+}
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

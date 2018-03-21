@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETSQLINJECTIONMATCHSETREQUEST_P_H
 #define QTAWS_GETSQLINJECTIONMATCHSETREQUEST_P_H
 
+#include "waf_p.h"
+#include "getsqlinjectionmatchsetrequest.h"
+
+namespace AWS {
+
+namespace WAF {
+
+class GetSqlInjectionMatchSetRequest;
+
+class QTAWS_EXPORT GetSqlInjectionMatchSetRequestPrivate : public WAFPrivate {
+
+public:
+    GetSqlInjectionMatchSetRequestPrivate(const WAF::Action action,
+                                   GetSqlInjectionMatchSetRequest * const q);
+    GetSqlInjectionMatchSetRequestPrivate(const GetSqlInjectionMatchSetRequestPrivate &other,
+                                   GetSqlInjectionMatchSetRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetSqlInjectionMatchSetRequest)
+
+};
+
+} // namespace WAF
+} // namespace AWS
+
 #endif

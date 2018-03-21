@@ -20,4 +20,32 @@
 #ifndef QTAWS_ADDAPPLICATIONREFERENCEDATASOURCEREQUEST_H
 #define QTAWS_ADDAPPLICATIONREFERENCEDATASOURCEREQUEST_H
 
+#include "kinesisanalyticsrequest.h"
+
+namespace AWS {
+
+namespace KinesisAnalytics {
+
+class AddApplicationReferenceDataSourceRequestPrivate;
+
+class QTAWS_EXPORT AddApplicationReferenceDataSourceRequest : public KinesisAnalyticsRequest {
+
+public:
+    AddApplicationReferenceDataSourceRequest(const AddApplicationReferenceDataSourceRequest &other);
+    AddApplicationReferenceDataSourceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(AddApplicationReferenceDataSourceRequest)
+
+}
+
+} // namespace KinesisAnalytics
+} // namespace AWS
+
 #endif

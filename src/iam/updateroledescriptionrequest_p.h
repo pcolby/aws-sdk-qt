@@ -20,4 +20,29 @@
 #ifndef QTAWS_UPDATEROLEDESCRIPTIONREQUEST_P_H
 #define QTAWS_UPDATEROLEDESCRIPTIONREQUEST_P_H
 
+#include "iam_p.h"
+#include "updateroledescriptionrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class UpdateRoleDescriptionRequest;
+
+class QTAWS_EXPORT UpdateRoleDescriptionRequestPrivate : public IAMPrivate {
+
+public:
+    UpdateRoleDescriptionRequestPrivate(const IAM::Action action,
+                                   UpdateRoleDescriptionRequest * const q);
+    UpdateRoleDescriptionRequestPrivate(const UpdateRoleDescriptionRequestPrivate &other,
+                                   UpdateRoleDescriptionRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(UpdateRoleDescriptionRequest)
+
+};
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describeloggingstatusrequest.h"
 #include "describeloggingstatusrequest_p.h"
+#include "describeloggingstatusresponse.h"
+#include "redshiftrequest_p.h"
+
+namespace AWS {
+namespace Redshift {
+
+/**
+ * @class  DescribeLoggingStatusRequest
+ *
+ * @brief  Implements Redshift DescribeLoggingStatus requests.
+ *
+ * @see    RedshiftClient::describeLoggingStatus
+ */
+
+/**
+ * @brief  Constructs a new DescribeLoggingStatusResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
+
+/**
+ * @brief  Constructs a new DescribeLoggingStatusRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeLoggingStatusRequest::DescribeLoggingStatusRequest(const DescribeLoggingStatusRequest &other)
+    : RedshiftRequest(new DescribeLoggingStatusRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeLoggingStatusRequest object.
+ */
+DescribeLoggingStatusRequest::DescribeLoggingStatusRequest()
+    : RedshiftRequest(new DescribeLoggingStatusRequestPrivate(RedshiftRequest::DescribeLoggingStatusAction, this))
+{
+
+}
+
+bool DescribeLoggingStatusRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeLoggingStatusResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeLoggingStatusResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  RedshiftClient::send
+ */
+AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeLoggingStatusResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeLoggingStatusRequestPrivate
+ *
+ * @brief  Private implementation for DescribeLoggingStatusRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoggingStatusRequestPrivate object.
+ *
+ * @param  action  Redshift action being performed.
+ * @param  q       Pointer to this object's public DescribeLoggingStatusRequest instance.
+ */
+DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
+    const RedshiftRequest::Action action, DescribeLoggingStatusRequest * const q)
+    : DescribeLoggingStatusPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeLoggingStatusRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeLoggingStatusRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeLoggingStatusRequest instance.
+ */
+DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
+    const DescribeLoggingStatusRequestPrivate &other, DescribeLoggingStatusRequest * const q)
+    : DescribeLoggingStatusPrivate(other, q)
+{
+
+}

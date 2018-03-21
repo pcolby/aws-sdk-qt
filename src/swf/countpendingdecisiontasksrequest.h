@@ -20,4 +20,32 @@
 #ifndef QTAWS_COUNTPENDINGDECISIONTASKSREQUEST_H
 #define QTAWS_COUNTPENDINGDECISIONTASKSREQUEST_H
 
+#include "swfrequest.h"
+
+namespace AWS {
+
+namespace SWF {
+
+class CountPendingDecisionTasksRequestPrivate;
+
+class QTAWS_EXPORT CountPendingDecisionTasksRequest : public SWFRequest {
+
+public:
+    CountPendingDecisionTasksRequest(const CountPendingDecisionTasksRequest &other);
+    CountPendingDecisionTasksRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CountPendingDecisionTasksRequest)
+
+}
+
+} // namespace SWF
+} // namespace AWS
+
 #endif

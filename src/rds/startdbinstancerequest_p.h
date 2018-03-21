@@ -20,4 +20,29 @@
 #ifndef QTAWS_STARTDBINSTANCEREQUEST_P_H
 #define QTAWS_STARTDBINSTANCEREQUEST_P_H
 
+#include "rds_p.h"
+#include "startdbinstancerequest.h"
+
+namespace AWS {
+
+namespace RDS {
+
+class StartDBInstanceRequest;
+
+class QTAWS_EXPORT StartDBInstanceRequestPrivate : public RDSPrivate {
+
+public:
+    StartDBInstanceRequestPrivate(const RDS::Action action,
+                                   StartDBInstanceRequest * const q);
+    StartDBInstanceRequestPrivate(const StartDBInstanceRequestPrivate &other,
+                                   StartDBInstanceRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StartDBInstanceRequest)
+
+};
+
+} // namespace RDS
+} // namespace AWS
+
 #endif

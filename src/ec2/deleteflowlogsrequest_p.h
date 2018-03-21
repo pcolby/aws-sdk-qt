@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEFLOWLOGSREQUEST_P_H
 #define QTAWS_DELETEFLOWLOGSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "deleteflowlogsrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DeleteFlowLogsRequest;
+
+class QTAWS_EXPORT DeleteFlowLogsRequestPrivate : public EC2Private {
+
+public:
+    DeleteFlowLogsRequestPrivate(const EC2::Action action,
+                                   DeleteFlowLogsRequest * const q);
+    DeleteFlowLogsRequestPrivate(const DeleteFlowLogsRequestPrivate &other,
+                                   DeleteFlowLogsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteFlowLogsRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBECONVERSIONTASKSREQUEST_P_H
 #define QTAWS_DESCRIBECONVERSIONTASKSREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeconversiontasksrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeConversionTasksRequest;
+
+class QTAWS_EXPORT DescribeConversionTasksRequestPrivate : public EC2Private {
+
+public:
+    DescribeConversionTasksRequestPrivate(const EC2::Action action,
+                                   DescribeConversionTasksRequest * const q);
+    DescribeConversionTasksRequestPrivate(const DescribeConversionTasksRequestPrivate &other,
+                                   DescribeConversionTasksRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeConversionTasksRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

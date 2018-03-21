@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEIMPORTEDKEYMATERIALREQUEST_H
 #define QTAWS_DELETEIMPORTEDKEYMATERIALREQUEST_H
 
+#include "kmsrequest.h"
+
+namespace AWS {
+
+namespace KMS {
+
+class DeleteImportedKeyMaterialRequestPrivate;
+
+class QTAWS_EXPORT DeleteImportedKeyMaterialRequest : public KMSRequest {
+
+public:
+    DeleteImportedKeyMaterialRequest(const DeleteImportedKeyMaterialRequest &other);
+    DeleteImportedKeyMaterialRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteImportedKeyMaterialRequest)
+
+}
+
+} // namespace KMS
+} // namespace AWS
+
 #endif

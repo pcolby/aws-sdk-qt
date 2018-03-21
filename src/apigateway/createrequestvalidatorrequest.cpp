@@ -19,3 +19,107 @@
 
 #include "createrequestvalidatorrequest.h"
 #include "createrequestvalidatorrequest_p.h"
+#include "createrequestvalidatorresponse.h"
+#include "apigatewayrequest_p.h"
+
+namespace AWS {
+namespace APIGateway {
+
+/**
+ * @class  CreateRequestValidatorRequest
+ *
+ * @brief  Implements APIGateway CreateRequestValidator requests.
+ *
+ * @see    APIGatewayClient::createRequestValidator
+ */
+
+/**
+ * @brief  Constructs a new CreateRequestValidatorResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateRequestValidatorResponse::CreateRequestValidatorResponse(
+
+/**
+ * @brief  Constructs a new CreateRequestValidatorRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateRequestValidatorRequest::CreateRequestValidatorRequest(const CreateRequestValidatorRequest &other)
+    : APIGatewayRequest(new CreateRequestValidatorRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateRequestValidatorRequest object.
+ */
+CreateRequestValidatorRequest::CreateRequestValidatorRequest()
+    : APIGatewayRequest(new CreateRequestValidatorRequestPrivate(APIGatewayRequest::CreateRequestValidatorAction, this))
+{
+
+}
+
+bool CreateRequestValidatorRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateRequestValidatorResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateRequestValidatorResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  APIGatewayClient::send
+ */
+AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateRequestValidatorResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateRequestValidatorRequestPrivate
+ *
+ * @brief  Private implementation for CreateRequestValidatorRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRequestValidatorRequestPrivate object.
+ *
+ * @param  action  APIGateway action being performed.
+ * @param  q       Pointer to this object's public CreateRequestValidatorRequest instance.
+ */
+CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
+    const APIGatewayRequest::Action action, CreateRequestValidatorRequest * const q)
+    : CreateRequestValidatorPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateRequestValidatorRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateRequestValidatorRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateRequestValidatorRequest instance.
+ */
+CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
+    const CreateRequestValidatorRequestPrivate &other, CreateRequestValidatorRequest * const q)
+    : CreateRequestValidatorPrivate(other, q)
+{
+
+}

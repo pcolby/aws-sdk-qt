@@ -20,4 +20,29 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTLSCERTIFICATEREQUEST_P_H
 #define QTAWS_ATTACHLOADBALANCERTLSCERTIFICATEREQUEST_P_H
 
+#include "lightsail_p.h"
+#include "attachloadbalancertlscertificaterequest.h"
+
+namespace AWS {
+
+namespace Lightsail {
+
+class AttachLoadBalancerTlsCertificateRequest;
+
+class QTAWS_EXPORT AttachLoadBalancerTlsCertificateRequestPrivate : public LightsailPrivate {
+
+public:
+    AttachLoadBalancerTlsCertificateRequestPrivate(const Lightsail::Action action,
+                                   AttachLoadBalancerTlsCertificateRequest * const q);
+    AttachLoadBalancerTlsCertificateRequestPrivate(const AttachLoadBalancerTlsCertificateRequestPrivate &other,
+                                   AttachLoadBalancerTlsCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AttachLoadBalancerTlsCertificateRequest)
+
+};
+
+} // namespace Lightsail
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "listremoteaccesssessionsrequest.h"
 #include "listremoteaccesssessionsrequest_p.h"
+#include "listremoteaccesssessionsresponse.h"
+#include "devicefarmrequest_p.h"
+
+namespace AWS {
+namespace DeviceFarm {
+
+/**
+ * @class  ListRemoteAccessSessionsRequest
+ *
+ * @brief  Implements DeviceFarm ListRemoteAccessSessions requests.
+ *
+ * @see    DeviceFarmClient::listRemoteAccessSessions
+ */
+
+/**
+ * @brief  Constructs a new ListRemoteAccessSessionsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+ListRemoteAccessSessionsResponse::ListRemoteAccessSessionsResponse(
+
+/**
+ * @brief  Constructs a new ListRemoteAccessSessionsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest(const ListRemoteAccessSessionsRequest &other)
+    : DeviceFarmRequest(new ListRemoteAccessSessionsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new ListRemoteAccessSessionsRequest object.
+ */
+ListRemoteAccessSessionsRequest::ListRemoteAccessSessionsRequest()
+    : DeviceFarmRequest(new ListRemoteAccessSessionsRequestPrivate(DeviceFarmRequest::ListRemoteAccessSessionsAction, this))
+{
+
+}
+
+bool ListRemoteAccessSessionsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an ListRemoteAccessSessionsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An ListRemoteAccessSessionsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DeviceFarmClient::send
+ */
+AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNetworkReply * const reply) const
+{
+    return new ListRemoteAccessSessionsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  ListRemoteAccessSessionsRequestPrivate
+ *
+ * @brief  Private implementation for ListRemoteAccessSessionsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object.
+ *
+ * @param  action  DeviceFarm action being performed.
+ * @param  q       Pointer to this object's public ListRemoteAccessSessionsRequest instance.
+ */
+ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
+    const DeviceFarmRequest::Action action, ListRemoteAccessSessionsRequest * const q)
+    : ListRemoteAccessSessionsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new ListRemoteAccessSessionsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the ListRemoteAccessSessionsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public ListRemoteAccessSessionsRequest instance.
+ */
+ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
+    const ListRemoteAccessSessionsRequestPrivate &other, ListRemoteAccessSessionsRequest * const q)
+    : ListRemoteAccessSessionsPrivate(other, q)
+{
+
+}

@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETESTATEMACHINEREQUEST_P_H
 #define QTAWS_DELETESTATEMACHINEREQUEST_P_H
 
+#include "sfn_p.h"
+#include "deletestatemachinerequest.h"
+
+namespace AWS {
+
+namespace SFN {
+
+class DeleteStateMachineRequest;
+
+class QTAWS_EXPORT DeleteStateMachineRequestPrivate : public SFNPrivate {
+
+public:
+    DeleteStateMachineRequestPrivate(const SFN::Action action,
+                                   DeleteStateMachineRequest * const q);
+    DeleteStateMachineRequestPrivate(const DeleteStateMachineRequestPrivate &other,
+                                   DeleteStateMachineRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteStateMachineRequest)
+
+};
+
+} // namespace SFN
+} // namespace AWS
+
 #endif

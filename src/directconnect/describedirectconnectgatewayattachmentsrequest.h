@@ -20,4 +20,32 @@
 #ifndef QTAWS_DESCRIBEDIRECTCONNECTGATEWAYATTACHMENTSREQUEST_H
 #define QTAWS_DESCRIBEDIRECTCONNECTGATEWAYATTACHMENTSREQUEST_H
 
+#include "directconnectrequest.h"
+
+namespace AWS {
+
+namespace DirectConnect {
+
+class DescribeDirectConnectGatewayAttachmentsRequestPrivate;
+
+class QTAWS_EXPORT DescribeDirectConnectGatewayAttachmentsRequest : public DirectConnectRequest {
+
+public:
+    DescribeDirectConnectGatewayAttachmentsRequest(const DescribeDirectConnectGatewayAttachmentsRequest &other);
+    DescribeDirectConnectGatewayAttachmentsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DescribeDirectConnectGatewayAttachmentsRequest)
+
+}
+
+} // namespace DirectConnect
+} // namespace AWS
+
 #endif

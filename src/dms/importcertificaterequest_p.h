@@ -20,4 +20,29 @@
 #ifndef QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 #define QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "importcertificaterequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class ImportCertificateRequest;
+
+class QTAWS_EXPORT ImportCertificateRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    ImportCertificateRequestPrivate(const DatabaseMigrationService::Action action,
+                                   ImportCertificateRequest * const q);
+    ImportCertificateRequestPrivate(const ImportCertificateRequestPrivate &other,
+                                   ImportCertificateRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ImportCertificateRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

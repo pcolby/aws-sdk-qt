@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATECOLLECTIONREQUEST_H
 #define QTAWS_CREATECOLLECTIONREQUEST_H
 
+#include "rekognitionrequest.h"
+
+namespace AWS {
+
+namespace Rekognition {
+
+class CreateCollectionRequestPrivate;
+
+class QTAWS_EXPORT CreateCollectionRequest : public RekognitionRequest {
+
+public:
+    CreateCollectionRequest(const CreateCollectionRequest &other);
+    CreateCollectionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateCollectionRequest)
+
+}
+
+} // namespace Rekognition
+} // namespace AWS
+
 #endif

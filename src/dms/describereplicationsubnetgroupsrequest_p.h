@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEREPLICATIONSUBNETGROUPSREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describereplicationsubnetgroupsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeReplicationSubnetGroupsRequest;
+
+class QTAWS_EXPORT DescribeReplicationSubnetGroupsRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeReplicationSubnetGroupsRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeReplicationSubnetGroupsRequest * const q);
+    DescribeReplicationSubnetGroupsRequestPrivate(const DescribeReplicationSubnetGroupsRequestPrivate &other,
+                                   DescribeReplicationSubnetGroupsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeReplicationSubnetGroupsRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

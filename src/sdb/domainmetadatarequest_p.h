@@ -20,4 +20,29 @@
 #ifndef QTAWS_DOMAINMETADATAREQUEST_P_H
 #define QTAWS_DOMAINMETADATAREQUEST_P_H
 
+#include "simpledb_p.h"
+#include "domainmetadatarequest.h"
+
+namespace AWS {
+
+namespace SimpleDB {
+
+class DomainMetadataRequest;
+
+class QTAWS_EXPORT DomainMetadataRequestPrivate : public SimpleDBPrivate {
+
+public:
+    DomainMetadataRequestPrivate(const SimpleDB::Action action,
+                                   DomainMetadataRequest * const q);
+    DomainMetadataRequestPrivate(const DomainMetadataRequestPrivate &other,
+                                   DomainMetadataRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DomainMetadataRequest)
+
+};
+
+} // namespace SimpleDB
+} // namespace AWS
+
 #endif

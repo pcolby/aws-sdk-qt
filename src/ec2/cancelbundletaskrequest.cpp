@@ -19,3 +19,107 @@
 
 #include "cancelbundletaskrequest.h"
 #include "cancelbundletaskrequest_p.h"
+#include "cancelbundletaskresponse.h"
+#include "ec2request_p.h"
+
+namespace AWS {
+namespace EC2 {
+
+/**
+ * @class  CancelBundleTaskRequest
+ *
+ * @brief  Implements EC2 CancelBundleTask requests.
+ *
+ * @see    EC2Client::cancelBundleTask
+ */
+
+/**
+ * @brief  Constructs a new CancelBundleTaskResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CancelBundleTaskResponse::CancelBundleTaskResponse(
+
+/**
+ * @brief  Constructs a new CancelBundleTaskRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CancelBundleTaskRequest::CancelBundleTaskRequest(const CancelBundleTaskRequest &other)
+    : EC2Request(new CancelBundleTaskRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CancelBundleTaskRequest object.
+ */
+CancelBundleTaskRequest::CancelBundleTaskRequest()
+    : EC2Request(new CancelBundleTaskRequestPrivate(EC2Request::CancelBundleTaskAction, this))
+{
+
+}
+
+bool CancelBundleTaskRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CancelBundleTaskResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CancelBundleTaskResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  EC2Client::send
+ */
+AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkReply * const reply) const
+{
+    return new CancelBundleTaskResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CancelBundleTaskRequestPrivate
+ *
+ * @brief  Private implementation for CancelBundleTaskRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelBundleTaskRequestPrivate object.
+ *
+ * @param  action  EC2 action being performed.
+ * @param  q       Pointer to this object's public CancelBundleTaskRequest instance.
+ */
+CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
+    const EC2Request::Action action, CancelBundleTaskRequest * const q)
+    : CancelBundleTaskPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CancelBundleTaskRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CancelBundleTaskRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CancelBundleTaskRequest instance.
+ */
+CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
+    const CancelBundleTaskRequestPrivate &other, CancelBundleTaskRequest * const q)
+    : CancelBundleTaskPrivate(other, q)
+{
+
+}

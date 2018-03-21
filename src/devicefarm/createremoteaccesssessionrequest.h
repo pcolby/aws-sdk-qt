@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEREMOTEACCESSSESSIONREQUEST_H
 #define QTAWS_CREATEREMOTEACCESSSESSIONREQUEST_H
 
+#include "devicefarmrequest.h"
+
+namespace AWS {
+
+namespace DeviceFarm {
+
+class CreateRemoteAccessSessionRequestPrivate;
+
+class QTAWS_EXPORT CreateRemoteAccessSessionRequest : public DeviceFarmRequest {
+
+public:
+    CreateRemoteAccessSessionRequest(const CreateRemoteAccessSessionRequest &other);
+    CreateRemoteAccessSessionRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateRemoteAccessSessionRequest)
+
+}
+
+} // namespace DeviceFarm
+} // namespace AWS
+
 #endif

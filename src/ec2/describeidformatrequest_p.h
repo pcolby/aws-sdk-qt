@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEIDFORMATREQUEST_P_H
 #define QTAWS_DESCRIBEIDFORMATREQUEST_P_H
 
+#include "ec2_p.h"
+#include "describeidformatrequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class DescribeIdFormatRequest;
+
+class QTAWS_EXPORT DescribeIdFormatRequestPrivate : public EC2Private {
+
+public:
+    DescribeIdFormatRequestPrivate(const EC2::Action action,
+                                   DescribeIdFormatRequest * const q);
+    DescribeIdFormatRequestPrivate(const DescribeIdFormatRequestPrivate &other,
+                                   DescribeIdFormatRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeIdFormatRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

@@ -19,3 +19,107 @@
 
 #include "describealarmsformetricrequest.h"
 #include "describealarmsformetricrequest_p.h"
+#include "describealarmsformetricresponse.h"
+#include "cloudwatchrequest_p.h"
+
+namespace AWS {
+namespace CloudWatch {
+
+/**
+ * @class  DescribeAlarmsForMetricRequest
+ *
+ * @brief  Implements CloudWatch DescribeAlarmsForMetric requests.
+ *
+ * @see    CloudWatchClient::describeAlarmsForMetric
+ */
+
+/**
+ * @brief  Constructs a new DescribeAlarmsForMetricResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeAlarmsForMetricResponse::DescribeAlarmsForMetricResponse(
+
+/**
+ * @brief  Constructs a new DescribeAlarmsForMetricRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeAlarmsForMetricRequest::DescribeAlarmsForMetricRequest(const DescribeAlarmsForMetricRequest &other)
+    : CloudWatchRequest(new DescribeAlarmsForMetricRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeAlarmsForMetricRequest object.
+ */
+DescribeAlarmsForMetricRequest::DescribeAlarmsForMetricRequest()
+    : CloudWatchRequest(new DescribeAlarmsForMetricRequestPrivate(CloudWatchRequest::DescribeAlarmsForMetricAction, this))
+{
+
+}
+
+bool DescribeAlarmsForMetricRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeAlarmsForMetricResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeAlarmsForMetricResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudWatchClient::send
+ */
+AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeAlarmsForMetricResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeAlarmsForMetricRequestPrivate
+ *
+ * @brief  Private implementation for DescribeAlarmsForMetricRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAlarmsForMetricRequestPrivate object.
+ *
+ * @param  action  CloudWatch action being performed.
+ * @param  q       Pointer to this object's public DescribeAlarmsForMetricRequest instance.
+ */
+DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
+    const CloudWatchRequest::Action action, DescribeAlarmsForMetricRequest * const q)
+    : DescribeAlarmsForMetricPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeAlarmsForMetricRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeAlarmsForMetricRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeAlarmsForMetricRequest instance.
+ */
+DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
+    const DescribeAlarmsForMetricRequestPrivate &other, DescribeAlarmsForMetricRequest * const q)
+    : DescribeAlarmsForMetricPrivate(other, q)
+{
+
+}

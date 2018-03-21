@@ -20,4 +20,29 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYREQUEST_P_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYREQUEST_P_H
 
+#include "sqs_p.h"
+#include "changemessagevisibilityrequest.h"
+
+namespace AWS {
+
+namespace SQS {
+
+class ChangeMessageVisibilityRequest;
+
+class QTAWS_EXPORT ChangeMessageVisibilityRequestPrivate : public SQSPrivate {
+
+public:
+    ChangeMessageVisibilityRequestPrivate(const SQS::Action action,
+                                   ChangeMessageVisibilityRequest * const q);
+    ChangeMessageVisibilityRequestPrivate(const ChangeMessageVisibilityRequestPrivate &other,
+                                   ChangeMessageVisibilityRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(ChangeMessageVisibilityRequest)
+
+};
+
+} // namespace SQS
+} // namespace AWS
+
 #endif

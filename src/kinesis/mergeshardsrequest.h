@@ -20,4 +20,32 @@
 #ifndef QTAWS_MERGESHARDSREQUEST_H
 #define QTAWS_MERGESHARDSREQUEST_H
 
+#include "kinesisrequest.h"
+
+namespace AWS {
+
+namespace Kinesis {
+
+class MergeShardsRequestPrivate;
+
+class QTAWS_EXPORT MergeShardsRequest : public KinesisRequest {
+
+public:
+    MergeShardsRequest(const MergeShardsRequest &other);
+    MergeShardsRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(MergeShardsRequest)
+
+}
+
+} // namespace Kinesis
+} // namespace AWS
+
 #endif

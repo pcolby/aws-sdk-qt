@@ -20,4 +20,29 @@
 #ifndef QTAWS_ASSOCIATEIAMINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_ASSOCIATEIAMINSTANCEPROFILEREQUEST_P_H
 
+#include "ec2_p.h"
+#include "associateiaminstanceprofilerequest.h"
+
+namespace AWS {
+
+namespace EC2 {
+
+class AssociateIamInstanceProfileRequest;
+
+class QTAWS_EXPORT AssociateIamInstanceProfileRequestPrivate : public EC2Private {
+
+public:
+    AssociateIamInstanceProfileRequestPrivate(const EC2::Action action,
+                                   AssociateIamInstanceProfileRequest * const q);
+    AssociateIamInstanceProfileRequestPrivate(const AssociateIamInstanceProfileRequestPrivate &other,
+                                   AssociateIamInstanceProfileRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(AssociateIamInstanceProfileRequest)
+
+};
+
+} // namespace EC2
+} // namespace AWS
+
 #endif

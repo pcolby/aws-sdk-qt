@@ -19,3 +19,107 @@
 
 #include "updateendpointsbatchrequest.h"
 #include "updateendpointsbatchrequest_p.h"
+#include "updateendpointsbatchresponse.h"
+#include "pinpointrequest_p.h"
+
+namespace AWS {
+namespace Pinpoint {
+
+/**
+ * @class  UpdateEndpointsBatchRequest
+ *
+ * @brief  Implements Pinpoint UpdateEndpointsBatch requests.
+ *
+ * @see    PinpointClient::updateEndpointsBatch
+ */
+
+/**
+ * @brief  Constructs a new UpdateEndpointsBatchResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
+
+/**
+ * @brief  Constructs a new UpdateEndpointsBatchRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest(const UpdateEndpointsBatchRequest &other)
+    : PinpointRequest(new UpdateEndpointsBatchRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateEndpointsBatchRequest object.
+ */
+UpdateEndpointsBatchRequest::UpdateEndpointsBatchRequest()
+    : PinpointRequest(new UpdateEndpointsBatchRequestPrivate(PinpointRequest::UpdateEndpointsBatchAction, this))
+{
+
+}
+
+bool UpdateEndpointsBatchRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateEndpointsBatchResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateEndpointsBatchResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  PinpointClient::send
+ */
+AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateEndpointsBatchResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateEndpointsBatchRequestPrivate
+ *
+ * @brief  Private implementation for UpdateEndpointsBatchRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object.
+ *
+ * @param  action  Pinpoint action being performed.
+ * @param  q       Pointer to this object's public UpdateEndpointsBatchRequest instance.
+ */
+UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
+    const PinpointRequest::Action action, UpdateEndpointsBatchRequest * const q)
+    : UpdateEndpointsBatchPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateEndpointsBatchRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateEndpointsBatchRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateEndpointsBatchRequest instance.
+ */
+UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
+    const UpdateEndpointsBatchRequestPrivate &other, UpdateEndpointsBatchRequest * const q)
+    : UpdateEndpointsBatchPrivate(other, q)
+{
+
+}

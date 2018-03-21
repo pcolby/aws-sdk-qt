@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 
+#include "databasemigrationservice_p.h"
+#include "describeendpointsrequest.h"
+
+namespace AWS {
+
+namespace DatabaseMigrationService {
+
+class DescribeEndpointsRequest;
+
+class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public DatabaseMigrationServicePrivate {
+
+public:
+    DescribeEndpointsRequestPrivate(const DatabaseMigrationService::Action action,
+                                   DescribeEndpointsRequest * const q);
+    DescribeEndpointsRequestPrivate(const DescribeEndpointsRequestPrivate &other,
+                                   DescribeEndpointsRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeEndpointsRequest)
+
+};
+
+} // namespace DatabaseMigrationService
+} // namespace AWS
+
 #endif

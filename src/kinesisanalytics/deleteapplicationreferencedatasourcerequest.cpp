@@ -19,3 +19,107 @@
 
 #include "deleteapplicationreferencedatasourcerequest.h"
 #include "deleteapplicationreferencedatasourcerequest_p.h"
+#include "deleteapplicationreferencedatasourceresponse.h"
+#include "kinesisanalyticsrequest_p.h"
+
+namespace AWS {
+namespace KinesisAnalytics {
+
+/**
+ * @class  DeleteApplicationReferenceDataSourceRequest
+ *
+ * @brief  Implements KinesisAnalytics DeleteApplicationReferenceDataSource requests.
+ *
+ * @see    KinesisAnalyticsClient::deleteApplicationReferenceDataSource
+ */
+
+/**
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSourceResponse(
+
+/**
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourceRequest(const DeleteApplicationReferenceDataSourceRequest &other)
+    : KinesisAnalyticsRequest(new DeleteApplicationReferenceDataSourceRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequest object.
+ */
+DeleteApplicationReferenceDataSourceRequest::DeleteApplicationReferenceDataSourceRequest()
+    : KinesisAnalyticsRequest(new DeleteApplicationReferenceDataSourceRequestPrivate(KinesisAnalyticsRequest::DeleteApplicationReferenceDataSourceAction, this))
+{
+
+}
+
+bool DeleteApplicationReferenceDataSourceRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteApplicationReferenceDataSourceResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteApplicationReferenceDataSourceResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  KinesisAnalyticsClient::send
+ */
+AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteApplicationReferenceDataSourceResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteApplicationReferenceDataSourceRequestPrivate
+ *
+ * @brief  Private implementation for DeleteApplicationReferenceDataSourceRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object.
+ *
+ * @param  action  KinesisAnalytics action being performed.
+ * @param  q       Pointer to this object's public DeleteApplicationReferenceDataSourceRequest instance.
+ */
+DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
+    const KinesisAnalyticsRequest::Action action, DeleteApplicationReferenceDataSourceRequest * const q)
+    : DeleteApplicationReferenceDataSourcePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteApplicationReferenceDataSourceRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteApplicationReferenceDataSourceRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteApplicationReferenceDataSourceRequest instance.
+ */
+DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
+    const DeleteApplicationReferenceDataSourceRequestPrivate &other, DeleteApplicationReferenceDataSourceRequest * const q)
+    : DeleteApplicationReferenceDataSourcePrivate(other, q)
+{
+
+}

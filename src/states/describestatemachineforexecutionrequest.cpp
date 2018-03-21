@@ -19,3 +19,107 @@
 
 #include "describestatemachineforexecutionrequest.h"
 #include "describestatemachineforexecutionrequest_p.h"
+#include "describestatemachineforexecutionresponse.h"
+#include "sfnrequest_p.h"
+
+namespace AWS {
+namespace SFN {
+
+/**
+ * @class  DescribeStateMachineForExecutionRequest
+ *
+ * @brief  Implements SFN DescribeStateMachineForExecution requests.
+ *
+ * @see    SFNClient::describeStateMachineForExecution
+ */
+
+/**
+ * @brief  Constructs a new DescribeStateMachineForExecutionResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeStateMachineForExecutionResponse::DescribeStateMachineForExecutionResponse(
+
+/**
+ * @brief  Constructs a new DescribeStateMachineForExecutionRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeStateMachineForExecutionRequest::DescribeStateMachineForExecutionRequest(const DescribeStateMachineForExecutionRequest &other)
+    : SFNRequest(new DescribeStateMachineForExecutionRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeStateMachineForExecutionRequest object.
+ */
+DescribeStateMachineForExecutionRequest::DescribeStateMachineForExecutionRequest()
+    : SFNRequest(new DescribeStateMachineForExecutionRequestPrivate(SFNRequest::DescribeStateMachineForExecutionAction, this))
+{
+
+}
+
+bool DescribeStateMachineForExecutionRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeStateMachineForExecutionResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeStateMachineForExecutionResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SFNClient::send
+ */
+AwsAbstractResponse * DescribeStateMachineForExecutionRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeStateMachineForExecutionResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeStateMachineForExecutionRequestPrivate
+ *
+ * @brief  Private implementation for DescribeStateMachineForExecutionRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStateMachineForExecutionRequestPrivate object.
+ *
+ * @param  action  SFN action being performed.
+ * @param  q       Pointer to this object's public DescribeStateMachineForExecutionRequest instance.
+ */
+DescribeStateMachineForExecutionRequestPrivate::DescribeStateMachineForExecutionRequestPrivate(
+    const SFNRequest::Action action, DescribeStateMachineForExecutionRequest * const q)
+    : DescribeStateMachineForExecutionPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeStateMachineForExecutionRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeStateMachineForExecutionRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeStateMachineForExecutionRequest instance.
+ */
+DescribeStateMachineForExecutionRequestPrivate::DescribeStateMachineForExecutionRequestPrivate(
+    const DescribeStateMachineForExecutionRequestPrivate &other, DescribeStateMachineForExecutionRequest * const q)
+    : DescribeStateMachineForExecutionPrivate(other, q)
+{
+
+}

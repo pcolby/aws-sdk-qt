@@ -19,3 +19,107 @@
 
 #include "updateconfigurationsetreputationmetricsenabledrequest.h"
 #include "updateconfigurationsetreputationmetricsenabledrequest_p.h"
+#include "updateconfigurationsetreputationmetricsenabledresponse.h"
+#include "sesrequest_p.h"
+
+namespace AWS {
+namespace SES {
+
+/**
+ * @class  UpdateConfigurationSetReputationMetricsEnabledRequest
+ *
+ * @brief  Implements SES UpdateConfigurationSetReputationMetricsEnabled requests.
+ *
+ * @see    SESClient::updateConfigurationSetReputationMetricsEnabled
+ */
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetReputationMetricsEnabledResponse(
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest(const UpdateConfigurationSetReputationMetricsEnabledRequest &other)
+    : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequest object.
+ */
+UpdateConfigurationSetReputationMetricsEnabledRequest::UpdateConfigurationSetReputationMetricsEnabledRequest()
+    : SESRequest(new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(SESRequest::UpdateConfigurationSetReputationMetricsEnabledAction, this))
+{
+
+}
+
+bool UpdateConfigurationSetReputationMetricsEnabledRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateConfigurationSetReputationMetricsEnabledResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateConfigurationSetReputationMetricsEnabledResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  SESClient::send
+ */
+AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnabledRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateConfigurationSetReputationMetricsEnabledResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationSetReputationMetricsEnabledRequestPrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationSetReputationMetricsEnabledRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object.
+ *
+ * @param  action  SES action being performed.
+ * @param  q       Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledRequest instance.
+ */
+UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
+    const SESRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
+    : UpdateConfigurationSetReputationMetricsEnabledPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateConfigurationSetReputationMetricsEnabledRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledRequest instance.
+ */
+UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
+    const UpdateConfigurationSetReputationMetricsEnabledRequestPrivate &other, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)
+    : UpdateConfigurationSetReputationMetricsEnabledPrivate(other, q)
+{
+
+}

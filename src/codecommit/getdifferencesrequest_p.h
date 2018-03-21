@@ -20,4 +20,29 @@
 #ifndef QTAWS_GETDIFFERENCESREQUEST_P_H
 #define QTAWS_GETDIFFERENCESREQUEST_P_H
 
+#include "codecommit_p.h"
+#include "getdifferencesrequest.h"
+
+namespace AWS {
+
+namespace CodeCommit {
+
+class GetDifferencesRequest;
+
+class QTAWS_EXPORT GetDifferencesRequestPrivate : public CodeCommitPrivate {
+
+public:
+    GetDifferencesRequestPrivate(const CodeCommit::Action action,
+                                   GetDifferencesRequest * const q);
+    GetDifferencesRequestPrivate(const GetDifferencesRequestPrivate &other,
+                                   GetDifferencesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(GetDifferencesRequest)
+
+};
+
+} // namespace CodeCommit
+} // namespace AWS
+
 #endif

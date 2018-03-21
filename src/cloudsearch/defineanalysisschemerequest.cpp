@@ -19,3 +19,107 @@
 
 #include "defineanalysisschemerequest.h"
 #include "defineanalysisschemerequest_p.h"
+#include "defineanalysisschemeresponse.h"
+#include "cloudsearchrequest_p.h"
+
+namespace AWS {
+namespace CloudSearch {
+
+/**
+ * @class  DefineAnalysisSchemeRequest
+ *
+ * @brief  Implements CloudSearch DefineAnalysisScheme requests.
+ *
+ * @see    CloudSearchClient::defineAnalysisScheme
+ */
+
+/**
+ * @brief  Constructs a new DefineAnalysisSchemeResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DefineAnalysisSchemeResponse::DefineAnalysisSchemeResponse(
+
+/**
+ * @brief  Constructs a new DefineAnalysisSchemeRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DefineAnalysisSchemeRequest::DefineAnalysisSchemeRequest(const DefineAnalysisSchemeRequest &other)
+    : CloudSearchRequest(new DefineAnalysisSchemeRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DefineAnalysisSchemeRequest object.
+ */
+DefineAnalysisSchemeRequest::DefineAnalysisSchemeRequest()
+    : CloudSearchRequest(new DefineAnalysisSchemeRequestPrivate(CloudSearchRequest::DefineAnalysisSchemeAction, this))
+{
+
+}
+
+bool DefineAnalysisSchemeRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DefineAnalysisSchemeResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DefineAnalysisSchemeResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  CloudSearchClient::send
+ */
+AwsAbstractResponse * DefineAnalysisSchemeRequest::response(QNetworkReply * const reply) const
+{
+    return new DefineAnalysisSchemeResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DefineAnalysisSchemeRequestPrivate
+ *
+ * @brief  Private implementation for DefineAnalysisSchemeRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineAnalysisSchemeRequestPrivate object.
+ *
+ * @param  action  CloudSearch action being performed.
+ * @param  q       Pointer to this object's public DefineAnalysisSchemeRequest instance.
+ */
+DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
+    const CloudSearchRequest::Action action, DefineAnalysisSchemeRequest * const q)
+    : DefineAnalysisSchemePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DefineAnalysisSchemeRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DefineAnalysisSchemeRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DefineAnalysisSchemeRequest instance.
+ */
+DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
+    const DefineAnalysisSchemeRequestPrivate &other, DefineAnalysisSchemeRequest * const q)
+    : DefineAnalysisSchemePrivate(other, q)
+{
+
+}

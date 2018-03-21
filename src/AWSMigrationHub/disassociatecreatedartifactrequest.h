@@ -20,4 +20,32 @@
 #ifndef QTAWS_DISASSOCIATECREATEDARTIFACTREQUEST_H
 #define QTAWS_DISASSOCIATECREATEDARTIFACTREQUEST_H
 
+#include "migrationhubrequest.h"
+
+namespace AWS {
+
+namespace MigrationHub {
+
+class DisassociateCreatedArtifactRequestPrivate;
+
+class QTAWS_EXPORT DisassociateCreatedArtifactRequest : public MigrationHubRequest {
+
+public:
+    DisassociateCreatedArtifactRequest(const DisassociateCreatedArtifactRequest &other);
+    DisassociateCreatedArtifactRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DisassociateCreatedArtifactRequest)
+
+}
+
+} // namespace MigrationHub
+} // namespace AWS
+
 #endif

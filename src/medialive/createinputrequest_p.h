@@ -20,4 +20,29 @@
 #ifndef QTAWS_CREATEINPUTREQUEST_P_H
 #define QTAWS_CREATEINPUTREQUEST_P_H
 
+#include "medialive_p.h"
+#include "createinputrequest.h"
+
+namespace AWS {
+
+namespace MediaLive {
+
+class CreateInputRequest;
+
+class QTAWS_EXPORT CreateInputRequestPrivate : public MediaLivePrivate {
+
+public:
+    CreateInputRequestPrivate(const MediaLive::Action action,
+                                   CreateInputRequest * const q);
+    CreateInputRequestPrivate(const CreateInputRequestPrivate &other,
+                                   CreateInputRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(CreateInputRequest)
+
+};
+
+} // namespace MediaLive
+} // namespace AWS
+
 #endif

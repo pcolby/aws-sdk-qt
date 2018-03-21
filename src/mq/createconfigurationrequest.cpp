@@ -19,3 +19,107 @@
 
 #include "createconfigurationrequest.h"
 #include "createconfigurationrequest_p.h"
+#include "createconfigurationresponse.h"
+#include "mqrequest_p.h"
+
+namespace AWS {
+namespace MQ {
+
+/**
+ * @class  CreateConfigurationRequest
+ *
+ * @brief  Implements MQ CreateConfiguration requests.
+ *
+ * @see    MQClient::createConfiguration
+ */
+
+/**
+ * @brief  Constructs a new CreateConfigurationResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+CreateConfigurationResponse::CreateConfigurationResponse(
+
+/**
+ * @brief  Constructs a new CreateConfigurationRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+CreateConfigurationRequest::CreateConfigurationRequest(const CreateConfigurationRequest &other)
+    : MQRequest(new CreateConfigurationRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new CreateConfigurationRequest object.
+ */
+CreateConfigurationRequest::CreateConfigurationRequest()
+    : MQRequest(new CreateConfigurationRequestPrivate(MQRequest::CreateConfigurationAction, this))
+{
+
+}
+
+bool CreateConfigurationRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an CreateConfigurationResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An CreateConfigurationResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MQClient::send
+ */
+AwsAbstractResponse * CreateConfigurationRequest::response(QNetworkReply * const reply) const
+{
+    return new CreateConfigurationResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  CreateConfigurationRequestPrivate
+ *
+ * @brief  Private implementation for CreateConfigurationRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConfigurationRequestPrivate object.
+ *
+ * @param  action  MQ action being performed.
+ * @param  q       Pointer to this object's public CreateConfigurationRequest instance.
+ */
+CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
+    const MQRequest::Action action, CreateConfigurationRequest * const q)
+    : CreateConfigurationPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new CreateConfigurationRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the CreateConfigurationRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public CreateConfigurationRequest instance.
+ */
+CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
+    const CreateConfigurationRequestPrivate &other, CreateConfigurationRequest * const q)
+    : CreateConfigurationPrivate(other, q)
+{
+
+}

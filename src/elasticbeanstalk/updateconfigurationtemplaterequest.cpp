@@ -19,3 +19,107 @@
 
 #include "updateconfigurationtemplaterequest.h"
 #include "updateconfigurationtemplaterequest_p.h"
+#include "updateconfigurationtemplateresponse.h"
+#include "elasticbeanstalkrequest_p.h"
+
+namespace AWS {
+namespace ElasticBeanstalk {
+
+/**
+ * @class  UpdateConfigurationTemplateRequest
+ *
+ * @brief  Implements ElasticBeanstalk UpdateConfigurationTemplate requests.
+ *
+ * @see    ElasticBeanstalkClient::updateConfigurationTemplate
+ */
+
+/**
+ * @brief  Constructs a new UpdateConfigurationTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
+
+/**
+ * @brief  Constructs a new UpdateConfigurationTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+UpdateConfigurationTemplateRequest::UpdateConfigurationTemplateRequest(const UpdateConfigurationTemplateRequest &other)
+    : ElasticBeanstalkRequest(new UpdateConfigurationTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new UpdateConfigurationTemplateRequest object.
+ */
+UpdateConfigurationTemplateRequest::UpdateConfigurationTemplateRequest()
+    : ElasticBeanstalkRequest(new UpdateConfigurationTemplateRequestPrivate(ElasticBeanstalkRequest::UpdateConfigurationTemplateAction, this))
+{
+
+}
+
+bool UpdateConfigurationTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an UpdateConfigurationTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An UpdateConfigurationTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  ElasticBeanstalkClient::send
+ */
+AwsAbstractResponse * UpdateConfigurationTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new UpdateConfigurationTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  UpdateConfigurationTemplateRequestPrivate
+ *
+ * @brief  Private implementation for UpdateConfigurationTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationTemplateRequestPrivate object.
+ *
+ * @param  action  ElasticBeanstalk action being performed.
+ * @param  q       Pointer to this object's public UpdateConfigurationTemplateRequest instance.
+ */
+UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
+    const ElasticBeanstalkRequest::Action action, UpdateConfigurationTemplateRequest * const q)
+    : UpdateConfigurationTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new UpdateConfigurationTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the UpdateConfigurationTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public UpdateConfigurationTemplateRequest instance.
+ */
+UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
+    const UpdateConfigurationTemplateRequestPrivate &other, UpdateConfigurationTemplateRequest * const q)
+    : UpdateConfigurationTemplatePrivate(other, q)
+{
+
+}

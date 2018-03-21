@@ -20,4 +20,29 @@
 #ifndef QTAWS_STOPASSESSMENTRUNREQUEST_P_H
 #define QTAWS_STOPASSESSMENTRUNREQUEST_P_H
 
+#include "inspector_p.h"
+#include "stopassessmentrunrequest.h"
+
+namespace AWS {
+
+namespace Inspector {
+
+class StopAssessmentRunRequest;
+
+class QTAWS_EXPORT StopAssessmentRunRequestPrivate : public InspectorPrivate {
+
+public:
+    StopAssessmentRunRequestPrivate(const Inspector::Action action,
+                                   StopAssessmentRunRequest * const q);
+    StopAssessmentRunRequestPrivate(const StopAssessmentRunRequestPrivate &other,
+                                   StopAssessmentRunRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(StopAssessmentRunRequest)
+
+};
+
+} // namespace Inspector
+} // namespace AWS
+
 #endif

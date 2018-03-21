@@ -19,3 +19,107 @@
 
 #include "describecommentsrequest.h"
 #include "describecommentsrequest_p.h"
+#include "describecommentsresponse.h"
+#include "workdocsrequest_p.h"
+
+namespace AWS {
+namespace WorkDocs {
+
+/**
+ * @class  DescribeCommentsRequest
+ *
+ * @brief  Implements WorkDocs DescribeComments requests.
+ *
+ * @see    WorkDocsClient::describeComments
+ */
+
+/**
+ * @brief  Constructs a new DescribeCommentsResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DescribeCommentsResponse::DescribeCommentsResponse(
+
+/**
+ * @brief  Constructs a new DescribeCommentsRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DescribeCommentsRequest::DescribeCommentsRequest(const DescribeCommentsRequest &other)
+    : WorkDocsRequest(new DescribeCommentsRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DescribeCommentsRequest object.
+ */
+DescribeCommentsRequest::DescribeCommentsRequest()
+    : WorkDocsRequest(new DescribeCommentsRequestPrivate(WorkDocsRequest::DescribeCommentsAction, this))
+{
+
+}
+
+bool DescribeCommentsRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DescribeCommentsResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DescribeCommentsResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  WorkDocsClient::send
+ */
+AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkReply * const reply) const
+{
+    return new DescribeCommentsResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DescribeCommentsRequestPrivate
+ *
+ * @brief  Private implementation for DescribeCommentsRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCommentsRequestPrivate object.
+ *
+ * @param  action  WorkDocs action being performed.
+ * @param  q       Pointer to this object's public DescribeCommentsRequest instance.
+ */
+DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
+    const WorkDocsRequest::Action action, DescribeCommentsRequest * const q)
+    : DescribeCommentsPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DescribeCommentsRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DescribeCommentsRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DescribeCommentsRequest instance.
+ */
+DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
+    const DescribeCommentsRequestPrivate &other, DescribeCommentsRequest * const q)
+    : DescribeCommentsPrivate(other, q)
+{
+
+}

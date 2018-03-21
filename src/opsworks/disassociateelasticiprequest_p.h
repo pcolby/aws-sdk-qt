@@ -20,4 +20,29 @@
 #ifndef QTAWS_DISASSOCIATEELASTICIPREQUEST_P_H
 #define QTAWS_DISASSOCIATEELASTICIPREQUEST_P_H
 
+#include "opsworks_p.h"
+#include "disassociateelasticiprequest.h"
+
+namespace AWS {
+
+namespace OpsWorks {
+
+class DisassociateElasticIpRequest;
+
+class QTAWS_EXPORT DisassociateElasticIpRequestPrivate : public OpsWorksPrivate {
+
+public:
+    DisassociateElasticIpRequestPrivate(const OpsWorks::Action action,
+                                   DisassociateElasticIpRequest * const q);
+    DisassociateElasticIpRequestPrivate(const DisassociateElasticIpRequestPrivate &other,
+                                   DisassociateElasticIpRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DisassociateElasticIpRequest)
+
+};
+
+} // namespace OpsWorks
+} // namespace AWS
+
 #endif

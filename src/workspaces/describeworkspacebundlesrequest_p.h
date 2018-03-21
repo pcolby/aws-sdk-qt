@@ -20,4 +20,29 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_P_H
 #define QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_P_H
 
+#include "workspaces_p.h"
+#include "describeworkspacebundlesrequest.h"
+
+namespace AWS {
+
+namespace WorkSpaces {
+
+class DescribeWorkspaceBundlesRequest;
+
+class QTAWS_EXPORT DescribeWorkspaceBundlesRequestPrivate : public WorkSpacesPrivate {
+
+public:
+    DescribeWorkspaceBundlesRequestPrivate(const WorkSpaces::Action action,
+                                   DescribeWorkspaceBundlesRequest * const q);
+    DescribeWorkspaceBundlesRequestPrivate(const DescribeWorkspaceBundlesRequestPrivate &other,
+                                   DescribeWorkspaceBundlesRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DescribeWorkspaceBundlesRequest)
+
+};
+
+} // namespace WorkSpaces
+} // namespace AWS
+
 #endif

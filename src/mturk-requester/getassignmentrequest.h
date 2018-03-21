@@ -20,4 +20,32 @@
 #ifndef QTAWS_GETASSIGNMENTREQUEST_H
 #define QTAWS_GETASSIGNMENTREQUEST_H
 
+#include "mturkrequest.h"
+
+namespace AWS {
+
+namespace MTurk {
+
+class GetAssignmentRequestPrivate;
+
+class QTAWS_EXPORT GetAssignmentRequest : public MTurkRequest {
+
+public:
+    GetAssignmentRequest(const GetAssignmentRequest &other);
+    GetAssignmentRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(GetAssignmentRequest)
+
+}
+
+} // namespace MTurk
+} // namespace AWS
+
 #endif

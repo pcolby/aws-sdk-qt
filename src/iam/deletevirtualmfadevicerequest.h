@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEVIRTUALMFADEVICEREQUEST_H
 #define QTAWS_DELETEVIRTUALMFADEVICEREQUEST_H
 
+#include "iamrequest.h"
+
+namespace AWS {
+
+namespace IAM {
+
+class DeleteVirtualMFADeviceRequestPrivate;
+
+class QTAWS_EXPORT DeleteVirtualMFADeviceRequest : public IAMRequest {
+
+public:
+    DeleteVirtualMFADeviceRequest(const DeleteVirtualMFADeviceRequest &other);
+    DeleteVirtualMFADeviceRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteVirtualMFADeviceRequest)
+
+}
+
+} // namespace IAM
+} // namespace AWS
+
 #endif

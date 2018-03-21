@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETEORGANIZATIONALUNITREQUEST_H
 #define QTAWS_DELETEORGANIZATIONALUNITREQUEST_H
 
+#include "organizationsrequest.h"
+
+namespace AWS {
+
+namespace Organizations {
+
+class DeleteOrganizationalUnitRequestPrivate;
+
+class QTAWS_EXPORT DeleteOrganizationalUnitRequest : public OrganizationsRequest {
+
+public:
+    DeleteOrganizationalUnitRequest(const DeleteOrganizationalUnitRequest &other);
+    DeleteOrganizationalUnitRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteOrganizationalUnitRequest)
+
+}
+
+} // namespace Organizations
+} // namespace AWS
+
 #endif

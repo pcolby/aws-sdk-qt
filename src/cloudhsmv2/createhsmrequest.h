@@ -20,4 +20,32 @@
 #ifndef QTAWS_CREATEHSMREQUEST_H
 #define QTAWS_CREATEHSMREQUEST_H
 
+#include "cloudhsmv2request.h"
+
+namespace AWS {
+
+namespace CloudHSMV2 {
+
+class CreateHsmRequestPrivate;
+
+class QTAWS_EXPORT CreateHsmRequest : public CloudHSMV2Request {
+
+public:
+    CreateHsmRequest(const CreateHsmRequest &other);
+    CreateHsmRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(CreateHsmRequest)
+
+}
+
+} // namespace CloudHSMV2
+} // namespace AWS
+
 #endif

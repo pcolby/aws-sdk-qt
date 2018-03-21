@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATETAGSFORDOMAINREQUEST_H
 #define QTAWS_UPDATETAGSFORDOMAINREQUEST_H
 
+#include "route53domainsrequest.h"
+
+namespace AWS {
+
+namespace Route53Domains {
+
+class UpdateTagsForDomainRequestPrivate;
+
+class QTAWS_EXPORT UpdateTagsForDomainRequest : public Route53DomainsRequest {
+
+public:
+    UpdateTagsForDomainRequest(const UpdateTagsForDomainRequest &other);
+    UpdateTagsForDomainRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateTagsForDomainRequest)
+
+}
+
+} // namespace Route53Domains
+} // namespace AWS
+
 #endif

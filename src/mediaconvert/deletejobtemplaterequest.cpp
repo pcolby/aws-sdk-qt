@@ -19,3 +19,107 @@
 
 #include "deletejobtemplaterequest.h"
 #include "deletejobtemplaterequest_p.h"
+#include "deletejobtemplateresponse.h"
+#include "mediaconvertrequest_p.h"
+
+namespace AWS {
+namespace MediaConvert {
+
+/**
+ * @class  DeleteJobTemplateRequest
+ *
+ * @brief  Implements MediaConvert DeleteJobTemplate requests.
+ *
+ * @see    MediaConvertClient::deleteJobTemplate
+ */
+
+/**
+ * @brief  Constructs a new DeleteJobTemplateResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+DeleteJobTemplateResponse::DeleteJobTemplateResponse(
+
+/**
+ * @brief  Constructs a new DeleteJobTemplateRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+DeleteJobTemplateRequest::DeleteJobTemplateRequest(const DeleteJobTemplateRequest &other)
+    : MediaConvertRequest(new DeleteJobTemplateRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new DeleteJobTemplateRequest object.
+ */
+DeleteJobTemplateRequest::DeleteJobTemplateRequest()
+    : MediaConvertRequest(new DeleteJobTemplateRequestPrivate(MediaConvertRequest::DeleteJobTemplateAction, this))
+{
+
+}
+
+bool DeleteJobTemplateRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an DeleteJobTemplateResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An DeleteJobTemplateResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  MediaConvertClient::send
+ */
+AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkReply * const reply) const
+{
+    return new DeleteJobTemplateResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  DeleteJobTemplateRequestPrivate
+ *
+ * @brief  Private implementation for DeleteJobTemplateRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteJobTemplateRequestPrivate object.
+ *
+ * @param  action  MediaConvert action being performed.
+ * @param  q       Pointer to this object's public DeleteJobTemplateRequest instance.
+ */
+DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
+    const MediaConvertRequest::Action action, DeleteJobTemplateRequest * const q)
+    : DeleteJobTemplatePrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new DeleteJobTemplateRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the DeleteJobTemplateRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public DeleteJobTemplateRequest instance.
+ */
+DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
+    const DeleteJobTemplateRequestPrivate &other, DeleteJobTemplateRequest * const q)
+    : DeleteJobTemplatePrivate(other, q)
+{
+
+}

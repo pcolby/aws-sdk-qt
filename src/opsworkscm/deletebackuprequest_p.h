@@ -20,4 +20,29 @@
 #ifndef QTAWS_DELETEBACKUPREQUEST_P_H
 #define QTAWS_DELETEBACKUPREQUEST_P_H
 
+#include "opsworkscm_p.h"
+#include "deletebackuprequest.h"
+
+namespace AWS {
+
+namespace OpsWorksCM {
+
+class DeleteBackupRequest;
+
+class QTAWS_EXPORT DeleteBackupRequestPrivate : public OpsWorksCMPrivate {
+
+public:
+    DeleteBackupRequestPrivate(const OpsWorksCM::Action action,
+                                   DeleteBackupRequest * const q);
+    DeleteBackupRequestPrivate(const DeleteBackupRequestPrivate &other,
+                                   DeleteBackupRequest * const q);
+
+private:
+    Q_DECLARE_PUBLIC(DeleteBackupRequest)
+
+};
+
+} // namespace OpsWorksCM
+} // namespace AWS
+
 #endif

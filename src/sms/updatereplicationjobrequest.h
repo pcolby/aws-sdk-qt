@@ -20,4 +20,32 @@
 #ifndef QTAWS_UPDATEREPLICATIONJOBREQUEST_H
 #define QTAWS_UPDATEREPLICATIONJOBREQUEST_H
 
+#include "smsrequest.h"
+
+namespace AWS {
+
+namespace SMS {
+
+class UpdateReplicationJobRequestPrivate;
+
+class QTAWS_EXPORT UpdateReplicationJobRequest : public SMSRequest {
+
+public:
+    UpdateReplicationJobRequest(const UpdateReplicationJobRequest &other);
+    UpdateReplicationJobRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(UpdateReplicationJobRequest)
+
+}
+
+} // namespace SMS
+} // namespace AWS
+
 #endif

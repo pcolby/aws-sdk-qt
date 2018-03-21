@@ -19,3 +19,107 @@
 
 #include "associateconnectionwithlagrequest.h"
 #include "associateconnectionwithlagrequest_p.h"
+#include "associateconnectionwithlagresponse.h"
+#include "directconnectrequest_p.h"
+
+namespace AWS {
+namespace DirectConnect {
+
+/**
+ * @class  AssociateConnectionWithLagRequest
+ *
+ * @brief  Implements DirectConnect AssociateConnectionWithLag requests.
+ *
+ * @see    DirectConnectClient::associateConnectionWithLag
+ */
+
+/**
+ * @brief  Constructs a new AssociateConnectionWithLagResponse object.
+ *
+ * @param  request  Original AWS request.
+ * @param  reply    AWS network response to observe.
+ * @param  parent   This object's parent.
+ */
+AssociateConnectionWithLagResponse::AssociateConnectionWithLagResponse(
+
+/**
+ * @brief  Constructs a new AssociateConnectionWithLagRequest object by copying another.
+ *
+ * @param  other  Instance to copy.
+ */
+AssociateConnectionWithLagRequest::AssociateConnectionWithLagRequest(const AssociateConnectionWithLagRequest &other)
+    : DirectConnectRequest(new AssociateConnectionWithLagRequestPrivate(*other.d_func(), this))
+{
+
+}
+
+/**
+ * @brief  Constructs a new AssociateConnectionWithLagRequest object.
+ */
+AssociateConnectionWithLagRequest::AssociateConnectionWithLagRequest()
+    : DirectConnectRequest(new AssociateConnectionWithLagRequestPrivate(DirectConnectRequest::AssociateConnectionWithLagAction, this))
+{
+
+}
+
+bool AssociateConnectionWithLagRequest::isValid() const
+{
+    return false;
+}
+
+
+/**
+ * @brief  Construct an AssociateConnectionWithLagResponse object.
+ *
+ * @param  reply  Network reply this response should observe.
+ *
+ * @return An AssociateConnectionWithLagResponse instance for \a reply.
+ *
+ * @see  AwsAbstractClient::send
+ * @see  DirectConnectClient::send
+ */
+AwsAbstractResponse * AssociateConnectionWithLagRequest::response(QNetworkReply * const reply) const
+{
+    return new AssociateConnectionWithLagResponse(*this, reply);
+}
+
+/**
+ * @internal
+ *
+ * @class  AssociateConnectionWithLagRequestPrivate
+ *
+ * @brief  Private implementation for AssociateConnectionWithLagRequest.
+ */
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConnectionWithLagRequestPrivate object.
+ *
+ * @param  action  DirectConnect action being performed.
+ * @param  q       Pointer to this object's public AssociateConnectionWithLagRequest instance.
+ */
+AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPrivate(
+    const DirectConnectRequest::Action action, AssociateConnectionWithLagRequest * const q)
+    : AssociateConnectionWithLagPrivate(action, q)
+{
+
+}
+
+/**
+ * @internal
+ *
+ * @brief  Constructs a new AssociateConnectionWithLagRequestPrivate object, copying another.
+ *
+ * This copy-like constructor exists for the benefit of the AssociateConnectionWithLagRequest
+ * class' copy constructor.
+ *
+ * @param  other  Instance to copy.
+ * @param  q      Pointer to this object's public AssociateConnectionWithLagRequest instance.
+ */
+AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPrivate(
+    const AssociateConnectionWithLagRequestPrivate &other, AssociateConnectionWithLagRequest * const q)
+    : AssociateConnectionWithLagPrivate(other, q)
+{
+
+}

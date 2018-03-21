@@ -20,4 +20,32 @@
 #ifndef QTAWS_DELETETRUSTREQUEST_H
 #define QTAWS_DELETETRUSTREQUEST_H
 
+#include "directoryservicerequest.h"
+
+namespace AWS {
+
+namespace DirectoryService {
+
+class DeleteTrustRequestPrivate;
+
+class QTAWS_EXPORT DeleteTrustRequest : public DirectoryServiceRequest {
+
+public:
+    DeleteTrustRequest(const DeleteTrustRequest &other);
+    DeleteTrustRequest();
+
+    virtual bool isValid() const;
+
+
+protected:
+    virtual AwsAbstractResponse * response(QNetworkReply * const reply) const;
+
+private:
+    Q_DECLARE_PRIVATE(DeleteTrustRequest)
+
+}
+
+} // namespace DirectoryService
+} // namespace AWS
+
 #endif
